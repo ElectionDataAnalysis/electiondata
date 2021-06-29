@@ -129,9 +129,9 @@ Candidate	Diane J. Savino	Diane J. Savino
 Candidate	Didi Barrett	Didi Barrett
 Candidate	Dion Powell	Dion Powell
 Candidate	Don Blankenship	Don Blankenship
+Candidate	Donald J. Trump	DONALD TRUMP
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
-Candidate	Donald J. Trump	DONALD TRUMP
 Candidate	Donald Skinner	Donald Skinner
 Candidate	Donna A. Lupardo	Donna A. Lupardo
 Candidate	Douglas L. Tuman	Douglas L. Tuman
@@ -261,8 +261,8 @@ Candidate	Joseph Kishore	Joseph Kishore
 Candidate	Joseph M. Giglio	Joseph M. Giglio
 Candidate	Joseph P. Addabbo, Jr.	Joseph P. Addabbo, Jr.
 Candidate	Joseph P. De Stefano	Joseph P. De Stefano
-Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harris
 Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harris
 Candidate	Joseph R. Naham	Joseph R. Naham
 Candidate	Joseph S. Seeman	Joseph S. Seeman
 Candidate	Joseph Totaro	Joseph Totaro
@@ -761,8 +761,8 @@ CandidateContest	US House NY District 6	6th CD
 CandidateContest	US House NY District 7	7th CD
 CandidateContest	US House NY District 8	8th CD
 CandidateContest	US House NY District 9	9th CD
-CandidateContest	US President (NY)	President
 CandidateContest	US President (NY)	PRESIDENT
+CandidateContest	US President (NY)	President
 CandidateContest	US President (NY)	US PRESIDENT
 CandidateContest	US Senate NY	US Senate NY
 CountItemType	total	TOTAL
@@ -798,126 +798,126 @@ Party	Write-In	Write-In
 Party	none or unknown	OTHER
 ReportingUnit	New York	New York
 ReportingUnit	New York;Albany County	Albany County
-ReportingUnit	New York;Albany County	36001
+ReportingUnit	New York;Albany County	fips36001
 ReportingUnit	New York;Allegany County	Allegany County
-ReportingUnit	New York;Allegany County	36003
+ReportingUnit	New York;Allegany County	fips36003
 ReportingUnit	New York;Bronx County	Bronx County
-ReportingUnit	New York;Bronx County	36005
+ReportingUnit	New York;Bronx County	fips36005
 ReportingUnit	New York;Broome County	Broome County
-ReportingUnit	New York;Broome County	36007
+ReportingUnit	New York;Broome County	fips36007
 ReportingUnit	New York;Cattaraugus County	Cattaraugus County
-ReportingUnit	New York;Cattaraugus County	36009
+ReportingUnit	New York;Cattaraugus County	fips36009
 ReportingUnit	New York;Cayuga County	Cayuga County
-ReportingUnit	New York;Cayuga County	36011
+ReportingUnit	New York;Cayuga County	fips36011
 ReportingUnit	New York;Chautauqua County	Chautauqua County
-ReportingUnit	New York;Chautauqua County	36013
+ReportingUnit	New York;Chautauqua County	fips36013
 ReportingUnit	New York;Chemung County	Chemung County
-ReportingUnit	New York;Chemung County	36015
+ReportingUnit	New York;Chemung County	fips36015
 ReportingUnit	New York;Chenango County	Chenango County
-ReportingUnit	New York;Chenango County	36017
+ReportingUnit	New York;Chenango County	fips36017
 ReportingUnit	New York;Clinton County	Clinton County
-ReportingUnit	New York;Clinton County	36019
+ReportingUnit	New York;Clinton County	fips36019
 ReportingUnit	New York;Columbia County	Columbia County
-ReportingUnit	New York;Columbia County	36021
+ReportingUnit	New York;Columbia County	fips36021
 ReportingUnit	New York;Cortland County	Cortland County
-ReportingUnit	New York;Cortland County	36023
+ReportingUnit	New York;Cortland County	fips36023
 ReportingUnit	New York;Delaware County	Delaware County
-ReportingUnit	New York;Delaware County	36025
+ReportingUnit	New York;Delaware County	fips36025
 ReportingUnit	New York;Dutchess County	Dutchess County
-ReportingUnit	New York;Dutchess County	36027
+ReportingUnit	New York;Dutchess County	fips36027
 ReportingUnit	New York;Erie County	Erie County
-ReportingUnit	New York;Erie County	36029
+ReportingUnit	New York;Erie County	fips36029
 ReportingUnit	New York;Essex County	Essex County
-ReportingUnit	New York;Essex County	36031
+ReportingUnit	New York;Essex County	fips36031
 ReportingUnit	New York;Franklin County	Franklin County
-ReportingUnit	New York;Franklin County	36033
+ReportingUnit	New York;Franklin County	fips36033
 ReportingUnit	New York;Fulton County	Fulton County
-ReportingUnit	New York;Fulton County	36035
+ReportingUnit	New York;Fulton County	fips36035
 ReportingUnit	New York;Genesee County	Genesee County
-ReportingUnit	New York;Genesee County	36037
+ReportingUnit	New York;Genesee County	fips36037
 ReportingUnit	New York;Greene County	Greene County
-ReportingUnit	New York;Greene County	36039
+ReportingUnit	New York;Greene County	fips36039
 ReportingUnit	New York;Hamilton County	Hamilton County
-ReportingUnit	New York;Hamilton County	36041
+ReportingUnit	New York;Hamilton County	fips36041
 ReportingUnit	New York;Herkimer County	Herkimer County
-ReportingUnit	New York;Herkimer County	36043
+ReportingUnit	New York;Herkimer County	fips36043
 ReportingUnit	New York;Jefferson County	Jefferson County
-ReportingUnit	New York;Jefferson County	36045
+ReportingUnit	New York;Jefferson County	fips36045
 ReportingUnit	New York;Kings County	Kings County
-ReportingUnit	New York;Kings County	36047
+ReportingUnit	New York;Kings County	fips36047
 ReportingUnit	New York;Lewis County	Lewis County
-ReportingUnit	New York;Lewis County	36049
+ReportingUnit	New York;Lewis County	fips36049
 ReportingUnit	New York;Livingston County	Livingston County
-ReportingUnit	New York;Livingston County	36051
+ReportingUnit	New York;Livingston County	fips36051
 ReportingUnit	New York;Madison County	Madison County
-ReportingUnit	New York;Madison County	36053
+ReportingUnit	New York;Madison County	fips36053
 ReportingUnit	New York;Monroe County	Monroe County
-ReportingUnit	New York;Monroe County	36055
+ReportingUnit	New York;Monroe County	fips36055
 ReportingUnit	New York;Montgomery County	Montgomery County
-ReportingUnit	New York;Montgomery County	36057
+ReportingUnit	New York;Montgomery County	fips36057
 ReportingUnit	New York;Nassau County	Nassau County
-ReportingUnit	New York;Nassau County	36059
+ReportingUnit	New York;Nassau County	fips36059
 ReportingUnit	New York;New York County	New York County
-ReportingUnit	New York;New York County	36061
+ReportingUnit	New York;New York County	fips36061
 ReportingUnit	New York;Niagara County	Niagara County
-ReportingUnit	New York;Niagara County	36063
+ReportingUnit	New York;Niagara County	fips36063
 ReportingUnit	New York;Oneida County	Oneida County
-ReportingUnit	New York;Oneida County	36065
+ReportingUnit	New York;Oneida County	fips36065
 ReportingUnit	New York;Onondaga County	Onondaga County
-ReportingUnit	New York;Onondaga County	36067
+ReportingUnit	New York;Onondaga County	fips36067
 ReportingUnit	New York;Ontario County	Ontario County
-ReportingUnit	New York;Ontario County	36069
+ReportingUnit	New York;Ontario County	fips36069
 ReportingUnit	New York;Orange County	Orange County
-ReportingUnit	New York;Orange County	36071
+ReportingUnit	New York;Orange County	fips36071
 ReportingUnit	New York;Orleans County	Orleans County
-ReportingUnit	New York;Orleans County	36073
+ReportingUnit	New York;Orleans County	fips36073
 ReportingUnit	New York;Oswego County	Oswego County
-ReportingUnit	New York;Oswego County	36075
+ReportingUnit	New York;Oswego County	fips36075
 ReportingUnit	New York;Otsego County	Otsego County
-ReportingUnit	New York;Otsego County	36077
+ReportingUnit	New York;Otsego County	fips36077
 ReportingUnit	New York;Putnam County	Putnam County
-ReportingUnit	New York;Putnam County	36079
+ReportingUnit	New York;Putnam County	fips36079
 ReportingUnit	New York;Queens County	Queens County
-ReportingUnit	New York;Queens County	36081
+ReportingUnit	New York;Queens County	fips36081
 ReportingUnit	New York;Rensselaer County	Rensselaer County
-ReportingUnit	New York;Rensselaer County	36083
+ReportingUnit	New York;Rensselaer County	fips36083
 ReportingUnit	New York;Richmond County	Richmond County
-ReportingUnit	New York;Richmond County	36085
+ReportingUnit	New York;Richmond County	fips36085
 ReportingUnit	New York;Rockland County	Rockland County
-ReportingUnit	New York;Rockland County	36087
+ReportingUnit	New York;Rockland County	fips36087
 ReportingUnit	New York;Saratoga County	Saratoga County
-ReportingUnit	New York;Saratoga County	36091
+ReportingUnit	New York;Saratoga County	fips36091
 ReportingUnit	New York;Schenectady County	Schenectady County
-ReportingUnit	New York;Schenectady County	36093
+ReportingUnit	New York;Schenectady County	fips36093
 ReportingUnit	New York;Schoharie County	Schoharie County
-ReportingUnit	New York;Schoharie County	36095
+ReportingUnit	New York;Schoharie County	fips36095
 ReportingUnit	New York;Schuyler County	Schuyler County
-ReportingUnit	New York;Schuyler County	36097
+ReportingUnit	New York;Schuyler County	fips36097
 ReportingUnit	New York;Seneca County	Seneca County
-ReportingUnit	New York;Seneca County	36099
+ReportingUnit	New York;Seneca County	fips36099
 ReportingUnit	New York;St. Lawrence County	St. Lawrence County
-ReportingUnit	New York;St. Lawrence County	36089
+ReportingUnit	New York;St. Lawrence County	fips36089
 ReportingUnit	New York;Steuben County	Steuben County
-ReportingUnit	New York;Steuben County	36101
+ReportingUnit	New York;Steuben County	fips36101
 ReportingUnit	New York;Suffolk County	Suffolk County
-ReportingUnit	New York;Suffolk County	36103
+ReportingUnit	New York;Suffolk County	fips36103
 ReportingUnit	New York;Sullivan County	Sullivan County
-ReportingUnit	New York;Sullivan County	36105
+ReportingUnit	New York;Sullivan County	fips36105
 ReportingUnit	New York;Tioga County	Tioga County
-ReportingUnit	New York;Tioga County	36107
+ReportingUnit	New York;Tioga County	fips36107
 ReportingUnit	New York;Tompkins County	Tompkins County
-ReportingUnit	New York;Tompkins County	36109
+ReportingUnit	New York;Tompkins County	fips36109
 ReportingUnit	New York;Ulster County	Ulster County
-ReportingUnit	New York;Ulster County	36111
+ReportingUnit	New York;Ulster County	fips36111
 ReportingUnit	New York;Warren County	Warren County
-ReportingUnit	New York;Warren County	36113
+ReportingUnit	New York;Warren County	fips36113
 ReportingUnit	New York;Washington County	Washington County
-ReportingUnit	New York;Washington County	36115
+ReportingUnit	New York;Washington County	fips36115
 ReportingUnit	New York;Wayne County	Wayne County
-ReportingUnit	New York;Wayne County	36117
+ReportingUnit	New York;Wayne County	fips36117
 ReportingUnit	New York;Westchester County	Westchester County
-ReportingUnit	New York;Westchester County	36119
+ReportingUnit	New York;Westchester County	fips36119
 ReportingUnit	New York;Wyoming County	Wyoming County
-ReportingUnit	New York;Wyoming County	36121
+ReportingUnit	New York;Wyoming County	fips36121
 ReportingUnit	New York;Yates County	Yates County
-ReportingUnit	New York;Yates County	36123
+ReportingUnit	New York;Yates County	fips36123

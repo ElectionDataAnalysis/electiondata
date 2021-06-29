@@ -21,8 +21,8 @@ Candidate	Dan Delaney	Dan Delaney
 Candidate	Daniel Burke	Daniel Burke
 Candidate	David Richt	David Richt
 Candidate	Don Blankenship	Don Blankenship ( Vice President William Mohr)
-Candidate	Donald J. Trump	Donald J. Trump * ( Vice President Michael R. Pence)
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump * ( Vice President Michael R. Pence)
 Candidate	Edward 'Nj Weedman' Forchion	Edward 'Nj Weedman' Forchion
 Candidate	FRANK PALLONE JR. (w)	FRANK PALLONE JR. (w) *
 Candidate	Frank T. Pallotta	Frank T. Pallotta
@@ -80,12 +80,12 @@ CandidateContest	US House NJ District 6	Sixth Congressional District
 CandidateContest	US House NJ District 7	Seventh Congressional District
 CandidateContest	US House NJ District 8	Eighth Congressional District
 CandidateContest	US House NJ District 9	Ninth Congressional District
-CandidateContest	US President (NJ)	President
 CandidateContest	US President (NJ)	PRESIDENT
+CandidateContest	US President (NJ)	President
 CandidateContest	US President (NJ)	US PRESIDENT
 CandidateContest	US Senate NJ	US Senate
-CountItemType	total	total
 CountItemType	total	TOTAL
+CountItemType	total	total
 Election	2016 General	2016 General
 Election	2018 General	2018 General
 Election	2020 General	2020 General
@@ -95,24 +95,24 @@ Party	American Values	AMERICAN VALUES
 Party	Building Your Legacy	BUILDING YOUR LEGACY
 Party	Common Sense Party	COMMON SENSE PARTY
 Party	Constitution Party	CONSTITUTION PARTY
-Party	Democratic Party	Democratic
 Party	Democratic Party	DEMOCRAT
+Party	Democratic Party	Democratic
 Party	For The People	FOR THE PEOPLE
-Party	Green Party	Green Party
-Party	Green Party	GREEN PARTY
 Party	Green Party	GREEN
+Party	Green Party	GREEN PARTY
+Party	Green Party	Green Party
 Party	Independent Constitutional Candidate	INDEPENDENT CONSTITUTIONAL CANDIDATE
 Party	Justice Mercy Humility	JUSTICE MERCY HUMILITY
 Party	Larouche Was Right	LAROUCHE WAS RIGHT
+Party	Libertarian Party	LIBERTARIAN
 Party	Libertarian Party	LIBERTARIAN PARTY
 Party	Libertarian Party	Libertarian Party
-Party	Libertarian Party	LIBERTARIAN
 Party	Make Change Happen	MAKE CHANGE HAPPEN
 Party	No Slogan	NO SLOGAN
 Party	No Slogan Filed	NO SLOGAN FILED
 Party	Of, By, For!	OF, BY, FOR!
-Party	Republican Party	Republican
 Party	Republican Party	REPUBLICAN
+Party	Republican Party	Republican
 Party	Socialism And Liberation	SOCIALISM AND LIBERATION
 Party	Truth Vision Hope	TRUTH VISION HOPE
 Party	Unity Party America	UNITY PARTY AMERICA
@@ -120,44 +120,44 @@ Party	Veteran For Change	VETERAN FOR CHANGE
 Party	none or unknown	OTHER
 ReportingUnit	New Jersey	New Jersey
 ReportingUnit	New Jersey;Atlantic County	ATLANTIC
-ReportingUnit	New Jersey;Atlantic County	34001
+ReportingUnit	New Jersey;Atlantic County	fips34001
 ReportingUnit	New Jersey;Bergen County	BERGEN
-ReportingUnit	New Jersey;Bergen County	34003
+ReportingUnit	New Jersey;Bergen County	fips34003
 ReportingUnit	New Jersey;Burlington County	BURLINGTON
-ReportingUnit	New Jersey;Burlington County	34005
+ReportingUnit	New Jersey;Burlington County	fips34005
 ReportingUnit	New Jersey;Camden County	CAMDEN
-ReportingUnit	New Jersey;Camden County	34007
+ReportingUnit	New Jersey;Camden County	fips34007
 ReportingUnit	New Jersey;Cape May County	CAPE MAY
-ReportingUnit	New Jersey;Cape May County	34009
+ReportingUnit	New Jersey;Cape May County	fips34009
 ReportingUnit	New Jersey;Cumberland County	CUMBERLAND
-ReportingUnit	New Jersey;Cumberland County	34011
+ReportingUnit	New Jersey;Cumberland County	fips34011
 ReportingUnit	New Jersey;Essex County	ESSEX
-ReportingUnit	New Jersey;Essex County	34013
+ReportingUnit	New Jersey;Essex County	fips34013
 ReportingUnit	New Jersey;Gloucester County	GLOUCESTER
-ReportingUnit	New Jersey;Gloucester County	34015
+ReportingUnit	New Jersey;Gloucester County	fips34015
 ReportingUnit	New Jersey;Hudson County	HUDSON
-ReportingUnit	New Jersey;Hudson County	34017
+ReportingUnit	New Jersey;Hudson County	fips34017
 ReportingUnit	New Jersey;Hunterdon County	HUNTERDON
-ReportingUnit	New Jersey;Hunterdon County	34019
+ReportingUnit	New Jersey;Hunterdon County	fips34019
 ReportingUnit	New Jersey;Mercer County	MERCER
-ReportingUnit	New Jersey;Mercer County	34021
+ReportingUnit	New Jersey;Mercer County	fips34021
 ReportingUnit	New Jersey;Middlesex County	MIDDLESEX
-ReportingUnit	New Jersey;Middlesex County	34023
+ReportingUnit	New Jersey;Middlesex County	fips34023
 ReportingUnit	New Jersey;Monmouth County	MONMOUTH
-ReportingUnit	New Jersey;Monmouth County	34025
+ReportingUnit	New Jersey;Monmouth County	fips34025
 ReportingUnit	New Jersey;Morris County	MORRIS
-ReportingUnit	New Jersey;Morris County	34027
+ReportingUnit	New Jersey;Morris County	fips34027
 ReportingUnit	New Jersey;Ocean County	OCEAN
-ReportingUnit	New Jersey;Ocean County	34029
+ReportingUnit	New Jersey;Ocean County	fips34029
 ReportingUnit	New Jersey;Passaic County	PASSAIC
-ReportingUnit	New Jersey;Passaic County	34031
+ReportingUnit	New Jersey;Passaic County	fips34031
 ReportingUnit	New Jersey;Salem County	SALEM
-ReportingUnit	New Jersey;Salem County	34033
+ReportingUnit	New Jersey;Salem County	fips34033
 ReportingUnit	New Jersey;Somerset County	SOMERSET
-ReportingUnit	New Jersey;Somerset County	34035
+ReportingUnit	New Jersey;Somerset County	fips34035
 ReportingUnit	New Jersey;Sussex County	SUSSEX
-ReportingUnit	New Jersey;Sussex County	34037
+ReportingUnit	New Jersey;Sussex County	fips34037
 ReportingUnit	New Jersey;Union County	UNION
-ReportingUnit	New Jersey;Union County	34039
+ReportingUnit	New Jersey;Union County	fips34039
 ReportingUnit	New Jersey;Warren County	WARREN
-ReportingUnit	New Jersey;Warren County	34041
+ReportingUnit	New Jersey;Warren County	fips34041

@@ -15,8 +15,8 @@ Candidate	Christopher Cole	Christopher Cole
 Candidate	Claudia Barragán	Claudia Barragán
 Candidate	Cornelia Weiss	Cornelia Weiss
 Candidate	David Krucoff	David Krucoff
-Candidate	Donald J. Trump	Donald J. Trump - Michael R. Pence
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump - Michael R. Pence
 Candidate	Ed Lazere	Ed Lazere
 Candidate	Eleanor Holmes Norton	Eleanor Holmes Norton
 Candidate	Eleanor Ory (Echo)	Eleanor Ory (Echo)
@@ -102,6 +102,7 @@ Party	Republican Party	REPUBLICAN
 Party	Socialist Workers Party	SWP
 Party	none or unknown	OTHER
 ReportingUnit	District of Columbia	District of Columbia
+ReportingUnit	District of Columbia	fips11001
 ReportingUnit	District of Columbia;DC House District 1	District of Columbia;DC House District 1
 ReportingUnit	District of Columbia;DC House District 2	District of Columbia;DC House District 2
 ReportingUnit	District of Columbia;DC House District 3	District of Columbia;DC House District 3

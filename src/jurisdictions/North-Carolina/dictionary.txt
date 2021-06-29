@@ -1,8 +1,8 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-BallotMeasureSelection	No	No
 BallotMeasureSelection	No	Against
-BallotMeasureSelection	Yes	Yes
+BallotMeasureSelection	No	No
 BallotMeasureSelection	Yes	For
+BallotMeasureSelection	Yes	Yes
 Candidate	A. Carroll Coleman	A. Carroll Coleman
 Candidate	A. Graham Shirley	A. Graham Shirley
 Candidate	A. L. (Buddy) Collins	A. L. (Buddy) Collins
@@ -1378,8 +1378,8 @@ Candidate	Donald C. Boswell	Donald C. Boswell
 Candidate	Donald Chapman	Donald Chapman
 Candidate	Donald Cureton, Jr.	Donald Cureton, Jr.
 Candidate	Donald Duck (Write-In)	Donald Duck (Write-In)
-Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald Kim Kirkland (Write-In)	Donald Kim Kirkland (Write-In)
 Candidate	Donald Kirkland	Donald Kirkland
 Candidate	Donald Long	Donald Long
@@ -1972,8 +1972,8 @@ Candidate	Herb McDowell	Herb McDowell
 Candidate	Herbert W. Wright	Herbert W. Wright
 Candidate	Herbie Long	Herbie Long
 Candidate	Herman Lee Tyson, Jr.	Herman Lee Tyson, Jr.
-Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hilton Keel, Jr.	Hilton Keel, Jr.
 Candidate	Holly Bowick	Holly Bowick
 Candidate	Holly Grange	Holly Grange
@@ -6730,21 +6730,21 @@ CandidateContest	NC Treasurer (Green Party)	NC TREASURER (GRE)
 CandidateContest	NC Treasurer (Libertarian Party)	NC TREASURER (LIB)
 CandidateContest	NC Treasurer (Republican Party)	NC TREASURER (REP)
 CandidateContest	NC Treasurer (Unaffiliated)	NC TREASURER (UNA)
+CandidateContest	US House NC District 1	US HOUSE OF REPRESENTATIVES DISTRICT 01
 CandidateContest	US House NC District 1	US HOUSE OF REPRESENTATIVES DISTRICT 1
 CandidateContest	US House NC District 1	US House NC District 1
-CandidateContest	US House NC District 1	US HOUSE OF REPRESENTATIVES DISTRICT 01
-CandidateContest	US House NC District 1 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 1 (CST)
 CandidateContest	US House NC District 1 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 01 (CST)
-CandidateContest	US House NC District 1 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 1 (DEM)
+CandidateContest	US House NC District 1 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 1 (CST)
 CandidateContest	US House NC District 1 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 01 (DEM)
-CandidateContest	US House NC District 1 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 1 (GRE)
+CandidateContest	US House NC District 1 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 1 (DEM)
 CandidateContest	US House NC District 1 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 01 (GRE)
-CandidateContest	US House NC District 1 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 1 (LIB)
+CandidateContest	US House NC District 1 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 1 (GRE)
 CandidateContest	US House NC District 1 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 01 (LIB)
-CandidateContest	US House NC District 1 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 1 (REP)
+CandidateContest	US House NC District 1 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 1 (LIB)
 CandidateContest	US House NC District 1 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 01 (REP)
-CandidateContest	US House NC District 1 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 1 (UNA)
+CandidateContest	US House NC District 1 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 1 (REP)
 CandidateContest	US House NC District 1 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 01 (UNA)
+CandidateContest	US House NC District 1 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 1 (UNA)
 CandidateContest	US House NC District 10	US HOUSE OF REPRESENTATIVES DISTRICT 10
 CandidateContest	US House NC District 10	US House NC District 10
 CandidateContest	US House NC District 10 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 10 (CST)
@@ -6777,141 +6777,141 @@ CandidateContest	US House NC District 13 (Green Party)	US HOUSE OF REPRESENTATIV
 CandidateContest	US House NC District 13 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 13 (LIB)
 CandidateContest	US House NC District 13 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 13 (REP)
 CandidateContest	US House NC District 13 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 13 (UNA)
+CandidateContest	US House NC District 2	US HOUSE OF REPRESENTATIVES DISTRICT 02
 CandidateContest	US House NC District 2	US HOUSE OF REPRESENTATIVES DISTRICT 2
 CandidateContest	US House NC District 2	US House NC District 2
-CandidateContest	US House NC District 2	US HOUSE OF REPRESENTATIVES DISTRICT 02
-CandidateContest	US House NC District 2 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 2 (CST)
 CandidateContest	US House NC District 2 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 02 (CST)
-CandidateContest	US House NC District 2 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 2 (DEM)
+CandidateContest	US House NC District 2 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 2 (CST)
 CandidateContest	US House NC District 2 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 02 (DEM)
-CandidateContest	US House NC District 2 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 2 (GRE)
+CandidateContest	US House NC District 2 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 2 (DEM)
 CandidateContest	US House NC District 2 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 02 (GRE)
-CandidateContest	US House NC District 2 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 2 (LIB)
+CandidateContest	US House NC District 2 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 2 (GRE)
 CandidateContest	US House NC District 2 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 02 (LIB)
-CandidateContest	US House NC District 2 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 2 (REP)
+CandidateContest	US House NC District 2 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 2 (LIB)
 CandidateContest	US House NC District 2 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 02 (REP)
-CandidateContest	US House NC District 2 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 2 (UNA)
+CandidateContest	US House NC District 2 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 2 (REP)
 CandidateContest	US House NC District 2 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 02 (UNA)
+CandidateContest	US House NC District 2 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 2 (UNA)
+CandidateContest	US House NC District 3	US HOUSE OF REPRESENTATIVES DISTRICT 03
 CandidateContest	US House NC District 3	US HOUSE OF REPRESENTATIVES DISTRICT 3
 CandidateContest	US House NC District 3	US House NC District 3
-CandidateContest	US House NC District 3	US HOUSE OF REPRESENTATIVES DISTRICT 03
-CandidateContest	US House NC District 3 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 3 (CST)
 CandidateContest	US House NC District 3 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 03 (CST)
-CandidateContest	US House NC District 3 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 3 (DEM)
+CandidateContest	US House NC District 3 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 3 (CST)
 CandidateContest	US House NC District 3 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 03 (DEM)
-CandidateContest	US House NC District 3 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 3 (GRE)
+CandidateContest	US House NC District 3 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 3 (DEM)
 CandidateContest	US House NC District 3 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 03 (GRE)
-CandidateContest	US House NC District 3 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 3 (LIB)
+CandidateContest	US House NC District 3 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 3 (GRE)
 CandidateContest	US House NC District 3 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 03 (LIB)
-CandidateContest	US House NC District 3 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 3 (REP)
+CandidateContest	US House NC District 3 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 3 (LIB)
 CandidateContest	US House NC District 3 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 03 (REP)
-CandidateContest	US House NC District 3 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 3 (UNA)
+CandidateContest	US House NC District 3 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 3 (REP)
 CandidateContest	US House NC District 3 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 03 (UNA)
+CandidateContest	US House NC District 3 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 3 (UNA)
+CandidateContest	US House NC District 4	US HOUSE OF REPRESENTATIVES DISTRICT 04
 CandidateContest	US House NC District 4	US HOUSE OF REPRESENTATIVES DISTRICT 4
 CandidateContest	US House NC District 4	US House NC District 4
-CandidateContest	US House NC District 4	US HOUSE OF REPRESENTATIVES DISTRICT 04
-CandidateContest	US House NC District 4 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 4 (CST)
 CandidateContest	US House NC District 4 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 04 (CST)
-CandidateContest	US House NC District 4 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 4 (DEM)
+CandidateContest	US House NC District 4 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 4 (CST)
 CandidateContest	US House NC District 4 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 04 (DEM)
-CandidateContest	US House NC District 4 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 4 (GRE)
+CandidateContest	US House NC District 4 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 4 (DEM)
 CandidateContest	US House NC District 4 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 04 (GRE)
-CandidateContest	US House NC District 4 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 4 (LIB)
+CandidateContest	US House NC District 4 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 4 (GRE)
 CandidateContest	US House NC District 4 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 04 (LIB)
-CandidateContest	US House NC District 4 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 4 (REP)
+CandidateContest	US House NC District 4 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 4 (LIB)
 CandidateContest	US House NC District 4 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 04 (REP)
-CandidateContest	US House NC District 4 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 4 (UNA)
+CandidateContest	US House NC District 4 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 4 (REP)
 CandidateContest	US House NC District 4 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 04 (UNA)
+CandidateContest	US House NC District 4 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 4 (UNA)
+CandidateContest	US House NC District 5	US HOUSE OF REPRESENTATIVES DISTRICT 05
 CandidateContest	US House NC District 5	US HOUSE OF REPRESENTATIVES DISTRICT 5
 CandidateContest	US House NC District 5	US House NC District 5
-CandidateContest	US House NC District 5	US HOUSE OF REPRESENTATIVES DISTRICT 05
-CandidateContest	US House NC District 5 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 5 (CST)
 CandidateContest	US House NC District 5 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 05 (CST)
-CandidateContest	US House NC District 5 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 5 (DEM)
+CandidateContest	US House NC District 5 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 5 (CST)
 CandidateContest	US House NC District 5 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 05 (DEM)
-CandidateContest	US House NC District 5 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 5 (GRE)
+CandidateContest	US House NC District 5 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 5 (DEM)
 CandidateContest	US House NC District 5 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 05 (GRE)
-CandidateContest	US House NC District 5 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 5 (LIB)
+CandidateContest	US House NC District 5 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 5 (GRE)
 CandidateContest	US House NC District 5 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 05 (LIB)
-CandidateContest	US House NC District 5 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 5 (REP)
+CandidateContest	US House NC District 5 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 5 (LIB)
 CandidateContest	US House NC District 5 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 05 (REP)
-CandidateContest	US House NC District 5 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 5 (UNA)
+CandidateContest	US House NC District 5 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 5 (REP)
 CandidateContest	US House NC District 5 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 05 (UNA)
+CandidateContest	US House NC District 5 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 5 (UNA)
+CandidateContest	US House NC District 6	US HOUSE OF REPRESENTATIVES DISTRICT 06
 CandidateContest	US House NC District 6	US HOUSE OF REPRESENTATIVES DISTRICT 6
 CandidateContest	US House NC District 6	US House NC District 6
-CandidateContest	US House NC District 6	US HOUSE OF REPRESENTATIVES DISTRICT 06
-CandidateContest	US House NC District 6 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 6 (CST)
 CandidateContest	US House NC District 6 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 06 (CST)
-CandidateContest	US House NC District 6 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 6 (DEM)
+CandidateContest	US House NC District 6 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 6 (CST)
 CandidateContest	US House NC District 6 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 06 (DEM)
-CandidateContest	US House NC District 6 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 6 (GRE)
+CandidateContest	US House NC District 6 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 6 (DEM)
 CandidateContest	US House NC District 6 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 06 (GRE)
-CandidateContest	US House NC District 6 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 6 (LIB)
+CandidateContest	US House NC District 6 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 6 (GRE)
 CandidateContest	US House NC District 6 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 06 (LIB)
-CandidateContest	US House NC District 6 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 6 (REP)
+CandidateContest	US House NC District 6 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 6 (LIB)
 CandidateContest	US House NC District 6 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 06 (REP)
-CandidateContest	US House NC District 6 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 6 (UNA)
+CandidateContest	US House NC District 6 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 6 (REP)
 CandidateContest	US House NC District 6 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 06 (UNA)
+CandidateContest	US House NC District 6 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 6 (UNA)
+CandidateContest	US House NC District 7	US HOUSE OF REPRESENTATIVES DISTRICT 07
 CandidateContest	US House NC District 7	US HOUSE OF REPRESENTATIVES DISTRICT 7
 CandidateContest	US House NC District 7	US House NC District 7
-CandidateContest	US House NC District 7	US HOUSE OF REPRESENTATIVES DISTRICT 07
-CandidateContest	US House NC District 7 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 7 (CST)
 CandidateContest	US House NC District 7 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 07 (CST)
-CandidateContest	US House NC District 7 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 7 (DEM)
+CandidateContest	US House NC District 7 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 7 (CST)
 CandidateContest	US House NC District 7 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 07 (DEM)
-CandidateContest	US House NC District 7 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 7 (GRE)
+CandidateContest	US House NC District 7 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 7 (DEM)
 CandidateContest	US House NC District 7 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 07 (GRE)
-CandidateContest	US House NC District 7 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 7 (LIB)
+CandidateContest	US House NC District 7 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 7 (GRE)
 CandidateContest	US House NC District 7 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 07 (LIB)
-CandidateContest	US House NC District 7 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 7 (REP)
+CandidateContest	US House NC District 7 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 7 (LIB)
 CandidateContest	US House NC District 7 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 07 (REP)
-CandidateContest	US House NC District 7 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 7 (UNA)
+CandidateContest	US House NC District 7 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 7 (REP)
 CandidateContest	US House NC District 7 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 07 (UNA)
+CandidateContest	US House NC District 7 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 7 (UNA)
+CandidateContest	US House NC District 8	US HOUSE OF REPRESENTATIVES DISTRICT 08
 CandidateContest	US House NC District 8	US HOUSE OF REPRESENTATIVES DISTRICT 8
 CandidateContest	US House NC District 8	US House NC District 8
-CandidateContest	US House NC District 8	US HOUSE OF REPRESENTATIVES DISTRICT 08
-CandidateContest	US House NC District 8 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 8 (CST)
 CandidateContest	US House NC District 8 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 08 (CST)
-CandidateContest	US House NC District 8 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 8 (DEM)
+CandidateContest	US House NC District 8 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 8 (CST)
 CandidateContest	US House NC District 8 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 08 (DEM)
-CandidateContest	US House NC District 8 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 8 (GRE)
+CandidateContest	US House NC District 8 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 8 (DEM)
 CandidateContest	US House NC District 8 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 08 (GRE)
-CandidateContest	US House NC District 8 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 8 (LIB)
+CandidateContest	US House NC District 8 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 8 (GRE)
 CandidateContest	US House NC District 8 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 08 (LIB)
-CandidateContest	US House NC District 8 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 8 (REP)
+CandidateContest	US House NC District 8 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 8 (LIB)
 CandidateContest	US House NC District 8 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 08 (REP)
-CandidateContest	US House NC District 8 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 8 (UNA)
+CandidateContest	US House NC District 8 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 8 (REP)
 CandidateContest	US House NC District 8 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 08 (UNA)
+CandidateContest	US House NC District 8 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 8 (UNA)
+CandidateContest	US House NC District 9	US HOUSE OF REPRESENTATIVES DISTRICT 09
 CandidateContest	US House NC District 9	US HOUSE OF REPRESENTATIVES DISTRICT 9
 CandidateContest	US House NC District 9	US House NC District 9
-CandidateContest	US House NC District 9	US HOUSE OF REPRESENTATIVES DISTRICT 09
-CandidateContest	US House NC District 9 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 9 (CST)
 CandidateContest	US House NC District 9 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 09 (CST)
-CandidateContest	US House NC District 9 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 9 (DEM)
+CandidateContest	US House NC District 9 (Constitution Party)	US HOUSE OF REPRESENTATIVES DISTRICT 9 (CST)
 CandidateContest	US House NC District 9 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 09 (DEM)
-CandidateContest	US House NC District 9 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 9 (GRE)
+CandidateContest	US House NC District 9 (Democratic Party)	US HOUSE OF REPRESENTATIVES DISTRICT 9 (DEM)
 CandidateContest	US House NC District 9 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 09 (GRE)
-CandidateContest	US House NC District 9 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 9 (LIB)
+CandidateContest	US House NC District 9 (Green Party)	US HOUSE OF REPRESENTATIVES DISTRICT 9 (GRE)
 CandidateContest	US House NC District 9 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 09 (LIB)
-CandidateContest	US House NC District 9 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 9 (REP)
+CandidateContest	US House NC District 9 (Libertarian Party)	US HOUSE OF REPRESENTATIVES DISTRICT 9 (LIB)
 CandidateContest	US House NC District 9 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 09 (REP)
-CandidateContest	US House NC District 9 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 9 (UNA)
+CandidateContest	US House NC District 9 (Republican Party)	US HOUSE OF REPRESENTATIVES DISTRICT 9 (REP)
 CandidateContest	US House NC District 9 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 09 (UNA)
+CandidateContest	US House NC District 9 (Unaffiliated)	US HOUSE OF REPRESENTATIVES DISTRICT 9 (UNA)
+CandidateContest	US President (NC)	PRESIDENT
 CandidateContest	US President (NC)	US PRESIDENT
 CandidateContest	US President (NC)	US President (NC)
-CandidateContest	US President (NC)	PRESIDENT
-CandidateContest	US President (NC) (Constitution Party)	US PRESIDENT (CST)
 CandidateContest	US President (NC) (Constitution Party)	PRESIDENTIAL PREFERENCE (CST)
-CandidateContest	US President (NC) (Democratic Party)	US PRESIDENT (DEM)
+CandidateContest	US President (NC) (Constitution Party)	US PRESIDENT (CST)
 CandidateContest	US President (NC) (Democratic Party)	PRESIDENTIAL PREFERENCE (DEM)
-CandidateContest	US President (NC) (Green Party)	US PRESIDENT (GRE)
+CandidateContest	US President (NC) (Democratic Party)	US PRESIDENT (DEM)
 CandidateContest	US President (NC) (Green Party)	PRESIDENTIAL PREFERENCE (GRE)
-CandidateContest	US President (NC) (Libertarian Party)	US PRESIDENT (LIB)
+CandidateContest	US President (NC) (Green Party)	US PRESIDENT (GRE)
 CandidateContest	US President (NC) (Libertarian Party)	PRESIDENTIAL PREFERENCE (LIB)
-CandidateContest	US President (NC) (Republican Party)	US PRESIDENT (REP)
+CandidateContest	US President (NC) (Libertarian Party)	US PRESIDENT (LIB)
 CandidateContest	US President (NC) (Republican Party)	PRESIDENTIAL PREFERENCE (REP)
-CandidateContest	US President (NC) (Unaffiliated)	US PRESIDENT (UNA)
+CandidateContest	US President (NC) (Republican Party)	US PRESIDENT (REP)
 CandidateContest	US President (NC) (Unaffiliated)	PRESIDENTIAL PREFERENCE (UNA)
+CandidateContest	US President (NC) (Unaffiliated)	US PRESIDENT (UNA)
 CandidateContest	US Senate NC	US SENATE
 CandidateContest	US Senate NC	US Senate NC
 CandidateContest	US Senate NC (Constitution Party)	US SENATE (CST)
@@ -6920,7 +6920,6 @@ CandidateContest	US Senate NC (Green Party)	US SENATE (GRE)
 CandidateContest	US Senate NC (Libertarian Party)	US SENATE (LIB)
 CandidateContest	US Senate NC (Republican Party)	US SENATE (REP)
 CandidateContest	US Senate NC (Unaffiliated)	US SENATE (UNA)
-CountItemType	absentee-mail	Absentee by Mail
 CountItemType	absentee-mail	ABS
 CountItemType	absentee-mail	ABS ADDTNL
 CountItemType	absentee-mail	ABS BY MAIL
@@ -6938,7 +6937,58 @@ CountItemType	absentee-mail	ABSENTEE BY MAIL 1-35
 CountItemType	absentee-mail	ABSENTEE BY MAIL 36-70
 CountItemType	absentee-mail	ABSENTEE BY MAIL 71-106
 CountItemType	absentee-mail	ABSENTEE MAIL
-CountItemType	early	One Stop
+CountItemType	absentee-mail	Absentee by Mail
+CountItemType	early	BOE
+CountItemType	early	CARRBORO TOWN HALL
+CountItemType	early	CHAPEL OF THE CROSS
+CountItemType	early	CLAYTON
+CountItemType	early	CLEVELAND
+CountItemType	early	EFLAND
+CountItemType	early	GASTON ONE STOP
+CountItemType	early	NASHVILLE OS
+CountItemType	early	OFFICE ONE STOP
+CountItemType	early	ONE STOP
+CountItemType	early	ONE STOP #1
+CountItemType	early	ONE STOP #2
+CountItemType	early	ONE STOP #3
+CountItemType	early	ONE STOP #4
+CountItemType	early	ONE STOP A 1-20
+CountItemType	early	ONE STOP A 21-45
+CountItemType	early	ONE STOP B 1-20
+CountItemType	early	ONE STOP B 21-45
+CountItemType	early	ONE STOP BOE
+CountItemType	early	ONE STOP C 1-20
+CountItemType	early	ONE STOP C 21-45
+CountItemType	early	ONE STOP D 1-20
+CountItemType	early	ONE STOP D 21-45
+CountItemType	early	ONE STOP DANBURY
+CountItemType	early	ONE STOP GARL
+CountItemType	early	ONE STOP KING
+CountItemType	early	ONE STOP LIBRARY
+CountItemType	early	ONE STOP MCSWAIN
+CountItemType	early	ONE STOP MILLERS CREEK
+CountItemType	early	ONE STOP NGRV
+CountItemType	early	ONE STOP OFFICE
+CountItemType	early	ONE STOP PLEASANT HILL
+CountItemType	early	ONE STOP WALNUT COVE
+CountItemType	early	OS ADMIN
+CountItemType	early	OS AG CENTER
+CountItemType	early	OS ANNEX PAPER
+CountItemType	early	OS ASU
+CountItemType	early	OS AURORA
+CountItemType	early	OS AVML
+CountItemType	early	OS BCPI
+CountItemType	early	OS BELHAVEN
+CountItemType	early	OS BLOWING ROCK
+CountItemType	early	OS BMBL
+CountItemType	early	OS BOE
+CountItemType	early	OS BOE LOBBY PAPER
+CountItemType	early	OS BOE PAPER
+CountItemType	early	OS CAB PAPER
+CountItemType	early	OS CFCC PAPER
+CountItemType	early	OS CHOCOWINITY
+CountItemType	early	OS COMMUNITY SCHOOLS
+CountItemType	early	OS COUNTY OFFICE
 CountItemType	early	OS DCC
 CountItemType	early	OS DEEP GAP
 CountItemType	early	OS DUKE
@@ -7013,67 +7063,17 @@ CountItemType	early	OSTA 81-95
 CountItemType	early	OSWA 1-40
 CountItemType	early	OSWA 41-80
 CountItemType	early	OSWA 81-95
+CountItemType	early	One Stop
 CountItemType	early	ROCKY MOUNT OS
 CountItemType	early	SEYMOUR SENIOR CENTER
 CountItemType	early	SMITHFIELD
-CountItemType	early	EFLAND
-CountItemType	early	GASTON ONE STOP
-CountItemType	early	NASHVILLE OS
-CountItemType	early	OFFICE ONE STOP
-CountItemType	early	ONE STOP
-CountItemType	early	ONE STOP #1
-CountItemType	early	ONE STOP #2
-CountItemType	early	ONE STOP #3
-CountItemType	early	ONE STOP #4
-CountItemType	early	ONE STOP A 1-20
-CountItemType	early	ONE STOP A 21-45
-CountItemType	early	ONE STOP B 1-20
-CountItemType	early	ONE STOP B 21-45
-CountItemType	early	ONE STOP BOE
-CountItemType	early	ONE STOP C 1-20
-CountItemType	early	ONE STOP C 21-45
-CountItemType	early	ONE STOP D 1-20
-CountItemType	early	ONE STOP D 21-45
-CountItemType	early	ONE STOP DANBURY
-CountItemType	early	ONE STOP GARL
-CountItemType	early	ONE STOP KING
-CountItemType	early	ONE STOP LIBRARY
-CountItemType	early	ONE STOP MCSWAIN
-CountItemType	early	ONE STOP MILLERS CREEK
-CountItemType	early	ONE STOP NGRV
-CountItemType	early	ONE STOP OFFICE
-CountItemType	early	ONE STOP PLEASANT HILL
-CountItemType	early	ONE STOP WALNUT COVE
-CountItemType	early	OS ADMIN
-CountItemType	early	OS AG CENTER
-CountItemType	early	OS ANNEX PAPER
-CountItemType	early	OS ASU
-CountItemType	early	OS AURORA
-CountItemType	early	OS AVML
-CountItemType	early	OS BCPI
-CountItemType	early	OS BELHAVEN
-CountItemType	early	OS BLOWING ROCK
-CountItemType	early	OS BMBL
-CountItemType	early	OS BOE
-CountItemType	early	OS BOE LOBBY PAPER
-CountItemType	early	OS BOE PAPER
-CountItemType	early	OS CAB PAPER
-CountItemType	early	OS CFCC PAPER
-CountItemType	early	OS CHOCOWINITY
-CountItemType	early	OS COMMUNITY SCHOOLS
-CountItemType	early	OS COUNTY OFFICE
-CountItemType	early	BOE
-CountItemType	early	CARRBORO TOWN HALL
-CountItemType	early	CHAPEL OF THE CROSS
-CountItemType	early	CLAYTON
-CountItemType	early	CLEVELAND
-CountItemType	election-day	Election Day
 CountItemType	election-day	CURBSIDE 1
 CountItemType	election-day	CURBSIDE 1-35
 CountItemType	election-day	CURBSIDE 2
 CountItemType	election-day	CURBSIDE 3
 CountItemType	election-day	CURBSIDE 36-70
 CountItemType	election-day	CURBSIDE 71-106
+CountItemType	election-day	Election Day
 CountItemType	election-day	OS CURBSIDE
 CountItemType	election-day	TRANS
 CountItemType	election-day	TRANS 1-40
@@ -7083,7 +7083,6 @@ CountItemType	election-day	TRANSFER
 CountItemType	election-day	TRANSFER 1-20
 CountItemType	election-day	TRANSFER 21-45
 CountItemType	election-day	TRANSFER PAPER
-CountItemType	provisional	Provisional
 CountItemType	provisional	PROV
 CountItemType	provisional	PROVI 1-40
 CountItemType	provisional	PROVI 41-80
@@ -7098,8 +7097,9 @@ CountItemType	provisional	PROVISIONAL 21-45
 CountItemType	provisional	PROVISIONAL 3
 CountItemType	provisional	PROVISIONAL 36-70
 CountItemType	provisional	PROVISIONAL 71-106
-CountItemType	total	Total Votes
+CountItemType	provisional	Provisional
 CountItemType	total	TOTAL
+CountItemType	total	Total Votes
 Election	2016 General	2016 General
 Election	2016 Primary	2016 Primary
 Election	2018 General	2018 General
@@ -7300,25 +7300,25 @@ Office	US Senate NC	US Senate NC
 Party	Constitution Party	CST
 Party	Constitution Party	Constitution Party
 Party	Democratic Party	DEM
-Party	Democratic Party	Democratic Party
 Party	Democratic Party	DEMOCRAT
+Party	Democratic Party	Democratic Party
 Party	Green Party	GRE
-Party	Green Party	Green Party
 Party	Green Party	GREEN
+Party	Green Party	Green Party
 Party	Libertarian Party	LIB
-Party	Libertarian Party	Libertarian Party
 Party	Libertarian Party	LIBERTARIAN
+Party	Libertarian Party	Libertarian Party
 Party	Republican Party	REP
-Party	Republican Party	Republican Party
 Party	Republican Party	REPUBLICAN
+Party	Republican Party	Republican Party
 Party	Unaffiliated	UNA
 Party	Unaffiliated	Unaffiliated
-Party	none or unknown	none or unknown
 Party	none or unknown	OTHER
+Party	none or unknown	none or unknown
 ReportingUnit	North Carolina	North Carolina
 ReportingUnit	North Carolina;Alamance County	ALAMANCE
 ReportingUnit	North Carolina;Alamance County	North Carolina;Alamance County
-ReportingUnit	North Carolina;Alamance County	37001
+ReportingUnit	North Carolina;Alamance County	fips37001
 ReportingUnit	North Carolina;Alamance County;01	ALAMANCE;01
 ReportingUnit	North Carolina;Alamance County;01	ALAMANCE;01 - Y
 ReportingUnit	North Carolina;Alamance County;02	ALAMANCE;02
@@ -7411,7 +7411,7 @@ ReportingUnit	North Carolina;Alamance County;PROVISIONAL	ALAMANCE;PROVISIONAL - 
 ReportingUnit	North Carolina;Alamance County;TRANSFER - N	ALAMANCE;TRANSFER - N
 ReportingUnit	North Carolina;Alexander County	ALEXANDER
 ReportingUnit	North Carolina;Alexander County	North Carolina;Alexander County
-ReportingUnit	North Carolina;Alexander County	37003
+ReportingUnit	North Carolina;Alexander County	fips37003
 ReportingUnit	North Carolina;Alexander County;B1	ALEXANDER;B1
 ReportingUnit	North Carolina;Alexander County;B1	ALEXANDER;B1 - Y
 ReportingUnit	North Carolina;Alexander County;B2	ALEXANDER;B2
@@ -7434,7 +7434,7 @@ ReportingUnit	North Carolina;Alexander County;W	ALEXANDER;W
 ReportingUnit	North Carolina;Alexander County;W	ALEXANDER;W - Y
 ReportingUnit	North Carolina;Alleghany County	ALLEGHANY
 ReportingUnit	North Carolina;Alleghany County	North Carolina;Alleghany County
-ReportingUnit	North Carolina;Alleghany County	37005
+ReportingUnit	North Carolina;Alleghany County	fips37005
 ReportingUnit	North Carolina;Alleghany County;01	ALLEGHANY;01
 ReportingUnit	North Carolina;Alleghany County;01	ALLEGHANY;01 - Y
 ReportingUnit	North Carolina;Alleghany County;03A	ALLEGHANY;03A
@@ -7453,7 +7453,7 @@ ReportingUnit	North Carolina;Alleghany County;PROVISIONAL	ALLEGHANY;PROVISIONAL
 ReportingUnit	North Carolina;Alleghany County;PROVISIONAL	ALLEGHANY;PROVISIONAL - N
 ReportingUnit	North Carolina;Anson County	ANSON
 ReportingUnit	North Carolina;Anson County	North Carolina;Anson County
-ReportingUnit	North Carolina;Anson County	37007
+ReportingUnit	North Carolina;Anson County	fips37007
 ReportingUnit	North Carolina;Anson County;ABSENTEE	ANSON;ABSENTEE
 ReportingUnit	North Carolina;Anson County;ANS	ANSON;ANS
 ReportingUnit	North Carolina;Anson County;ANS	ANSON;ANS - Y
@@ -7482,7 +7482,7 @@ ReportingUnit	North Carolina;Anson County;WS	ANSON;WS
 ReportingUnit	North Carolina;Anson County;WS	ANSON;WS - Y
 ReportingUnit	North Carolina;Ashe County	ASHE
 ReportingUnit	North Carolina;Ashe County	North Carolina;Ashe County
-ReportingUnit	North Carolina;Ashe County	37009
+ReportingUnit	North Carolina;Ashe County	fips37009
 ReportingUnit	North Carolina;Ashe County;02	ASHE;02
 ReportingUnit	North Carolina;Ashe County;02	ASHE;02 - Y
 ReportingUnit	North Carolina;Ashe County;03	ASHE;03
@@ -7535,7 +7535,7 @@ ReportingUnit	North Carolina;Ashe County;PROVISIONAL	ASHE;PROVISIONAL - N
 ReportingUnit	North Carolina;Ashe County;TRANSFER - N	ASHE;TRANSFER - N
 ReportingUnit	North Carolina;Avery County	AVERY
 ReportingUnit	North Carolina;Avery County	North Carolina;Avery County
-ReportingUnit	North Carolina;Avery County	37011
+ReportingUnit	North Carolina;Avery County	fips37011
 ReportingUnit	North Carolina;Avery County;01	AVERY;01
 ReportingUnit	North Carolina;Avery County;01	AVERY;01 - Y
 ReportingUnit	North Carolina;Avery County;02	AVERY;02
@@ -7593,7 +7593,7 @@ ReportingUnit	North Carolina;Avery County;PROVISIONAL	AVERY;PROVISIONAL
 ReportingUnit	North Carolina;Avery County;PROVISIONAL	AVERY;PROVISIONAL - N
 ReportingUnit	North Carolina;Beaufort County	BEAUFORT
 ReportingUnit	North Carolina;Beaufort County	North Carolina;Beaufort County
-ReportingUnit	North Carolina;Beaufort County	37013
+ReportingUnit	North Carolina;Beaufort County	fips37013
 ReportingUnit	North Carolina;Beaufort County;ABSENTEE	BEAUFORT;ABSENTEE
 ReportingUnit	North Carolina;Beaufort County;ABSENTEE	BEAUFORT;ABSENTEE - N
 ReportingUnit	North Carolina;Beaufort County;AUROR	BEAUFORT;AUROR
@@ -7655,7 +7655,7 @@ ReportingUnit	North Carolina;Beaufort County;WDPD	BEAUFORT;WDPD
 ReportingUnit	North Carolina;Beaufort County;WDPD	BEAUFORT;WDPD - Y
 ReportingUnit	North Carolina;Bertie County	BERTIE
 ReportingUnit	North Carolina;Bertie County	North Carolina;Bertie County
-ReportingUnit	North Carolina;Bertie County	37015
+ReportingUnit	North Carolina;Bertie County	fips37015
 ReportingUnit	North Carolina;Bertie County;ABSENTEE	BERTIE;ABSENTEE
 ReportingUnit	North Carolina;Bertie County;ABSENTEE BY MAIL	BERTIE;ABSENTEE BY MAIL - N
 ReportingUnit	North Carolina;Bertie County;C1	BERTIE;C1
@@ -7694,7 +7694,7 @@ ReportingUnit	North Carolina;Bertie County;WH	BERTIE;WH
 ReportingUnit	North Carolina;Bertie County;WH	BERTIE;WH - Y
 ReportingUnit	North Carolina;Bladen County	BLADEN
 ReportingUnit	North Carolina;Bladen County	North Carolina;Bladen County
-ReportingUnit	North Carolina;Bladen County	37017
+ReportingUnit	North Carolina;Bladen County	fips37017
 ReportingUnit	North Carolina;Bladen County;ABSENTEE	BLADEN;ABSENTEE - N
 ReportingUnit	North Carolina;Bladen County;BAY TREE FIRE DEPT - N	BLADEN;BAY TREE FIRE DEPT - N
 ReportingUnit	North Carolina;Bladen County;BLAD COUNTY GYM - N	BLADEN;BLAD COUNTY GYM - N
@@ -7752,7 +7752,7 @@ ReportingUnit	North Carolina;Bladen County;TRANSFER	BLADEN;TRANSFER
 ReportingUnit	North Carolina;Bladen County;TRANSFER	BLADEN;TRANSFER - N
 ReportingUnit	North Carolina;Brunswick County	BRUNSWICK
 ReportingUnit	North Carolina;Brunswick County	North Carolina;Brunswick County
-ReportingUnit	North Carolina;Brunswick County	37019
+ReportingUnit	North Carolina;Brunswick County	fips37019
 ReportingUnit	North Carolina;Brunswick County;01	BRUNSWICK;01
 ReportingUnit	North Carolina;Brunswick County;01	BRUNSWICK;01 - Y
 ReportingUnit	North Carolina;Brunswick County;02	BRUNSWICK;02
@@ -7822,7 +7822,7 @@ ReportingUnit	North Carolina;Brunswick County;PROVISIONAL	BRUNSWICK;PROVISIONAL
 ReportingUnit	North Carolina;Brunswick County;PROVISIONAL	BRUNSWICK;PROVISIONAL - N
 ReportingUnit	North Carolina;Buncombe County	BUNCOMBE
 ReportingUnit	North Carolina;Buncombe County	North Carolina;Buncombe County
-ReportingUnit	North Carolina;Buncombe County	37021
+ReportingUnit	North Carolina;Buncombe County	fips37021
 ReportingUnit	North Carolina;Buncombe County;01.1	BUNCOMBE;01.1
 ReportingUnit	North Carolina;Buncombe County;01.1	BUNCOMBE;01.1 - Y
 ReportingUnit	North Carolina;Buncombe County;02.1	BUNCOMBE;02.1
@@ -8059,7 +8059,7 @@ ReportingUnit	North Carolina;Buncombe County;WGSC - N	BUNCOMBE;WGSC - N
 ReportingUnit	North Carolina;Buncombe County;WVTH - N	BUNCOMBE;WVTH - N
 ReportingUnit	North Carolina;Burke County	BURKE
 ReportingUnit	North Carolina;Burke County	North Carolina;Burke County
-ReportingUnit	North Carolina;Burke County	37023
+ReportingUnit	North Carolina;Burke County	fips37023
 ReportingUnit	North Carolina;Burke County;0001	BURKE;0001
 ReportingUnit	North Carolina;Burke County;0001	BURKE;0001 - Y
 ReportingUnit	North Carolina;Burke County;0003	BURKE;0003
@@ -8166,7 +8166,7 @@ ReportingUnit	North Carolina;Burke County;PROVISIONAL	BURKE;PROVISIONAL - N
 ReportingUnit	North Carolina;Burke County;TRANSFER PAPER	BURKE;TRANSFER PAPER - N
 ReportingUnit	North Carolina;Cabarrus County	CABARRUS
 ReportingUnit	North Carolina;Cabarrus County	North Carolina;Cabarrus County
-ReportingUnit	North Carolina;Cabarrus County	37025
+ReportingUnit	North Carolina;Cabarrus County	fips37025
 ReportingUnit	North Carolina;Cabarrus County;01-02	CABARRUS;01-02
 ReportingUnit	North Carolina;Cabarrus County;01-02	CABARRUS;01-02 - Y
 ReportingUnit	North Carolina;Cabarrus County;01-04	CABARRUS;01-04
@@ -8326,7 +8326,7 @@ ReportingUnit	North Carolina;Cabarrus County;TRANSFER	CABARRUS;TRANSFER
 ReportingUnit	North Carolina;Cabarrus County;TRANSFER	CABARRUS;TRANSFER - N
 ReportingUnit	North Carolina;Caldwell County	CALDWELL
 ReportingUnit	North Carolina;Caldwell County	North Carolina;Caldwell County
-ReportingUnit	North Carolina;Caldwell County	37027
+ReportingUnit	North Carolina;Caldwell County	fips37027
 ReportingUnit	North Carolina;Caldwell County;ABSENTEE	CALDWELL;ABSENTEE
 ReportingUnit	North Carolina;Caldwell County;ABSENTEE	CALDWELL;ABSENTEE - N
 ReportingUnit	North Carolina;Caldwell County;ABSENTEE MAIL	CALDWELL;ABSENTEE MAIL - N
@@ -8383,7 +8383,7 @@ ReportingUnit	North Carolina;Caldwell County;PROVISIONAL	CALDWELL;PROVISIONAL - 
 ReportingUnit	North Carolina;Caldwell County;TRANSFER - N	CALDWELL;TRANSFER - N
 ReportingUnit	North Carolina;Camden County	CAMDEN
 ReportingUnit	North Carolina;Camden County	North Carolina;Camden County
-ReportingUnit	North Carolina;Camden County	37029
+ReportingUnit	North Carolina;Camden County	fips37029
 ReportingUnit	North Carolina;Camden County;ABSENTEE	CAMDEN;ABSENTEE
 ReportingUnit	North Carolina;Camden County;ABSENTEE	CAMDEN;ABSENTEE - N
 ReportingUnit	North Carolina;Camden County;CH	CAMDEN;CH
@@ -8400,7 +8400,7 @@ ReportingUnit	North Carolina;Camden County;TRANSFER	CAMDEN;TRANSFER
 ReportingUnit	North Carolina;Camden County;TRANSFER - N	CAMDEN;TRANSFER - N
 ReportingUnit	North Carolina;Carteret County	CARTERET
 ReportingUnit	North Carolina;Carteret County	North Carolina;Carteret County
-ReportingUnit	North Carolina;Carteret County	37031
+ReportingUnit	North Carolina;Carteret County	fips37031
 ReportingUnit	North Carolina;Carteret County;ABCH	CARTERET;ABCH
 ReportingUnit	North Carolina;Carteret County;ABCH	CARTERET;ABCH - Y
 ReportingUnit	North Carolina;Carteret County;ABSENTEE	CARTERET;ABSENTEE
@@ -8470,7 +8470,7 @@ ReportingUnit	North Carolina;Carteret County;WILD	CARTERET;WILD
 ReportingUnit	North Carolina;Carteret County;WILD	CARTERET;WILD - Y
 ReportingUnit	North Carolina;Caswell County	CASWELL
 ReportingUnit	North Carolina;Caswell County	North Carolina;Caswell County
-ReportingUnit	North Carolina;Caswell County	37033
+ReportingUnit	North Carolina;Caswell County	fips37033
 ReportingUnit	North Carolina;Caswell County;ABSENTEE	CASWELL;ABSENTEE
 ReportingUnit	North Carolina;Caswell County;ABSENTEE	CASWELL;ABSENTEE - N
 ReportingUnit	North Carolina;Caswell County;ANDE	CASWELL;ANDE
@@ -8498,7 +8498,7 @@ ReportingUnit	North Carolina;Caswell County;YANC	CASWELL;YANC
 ReportingUnit	North Carolina;Caswell County;YANC	CASWELL;YANC - Y
 ReportingUnit	North Carolina;Catawba County	CATAWBA
 ReportingUnit	North Carolina;Catawba County	North Carolina;Catawba County
-ReportingUnit	North Carolina;Catawba County	37035
+ReportingUnit	North Carolina;Catawba County	fips37035
 ReportingUnit	North Carolina;Catawba County;01	CATAWBA;01
 ReportingUnit	North Carolina;Catawba County;01	CATAWBA;01 - Y
 ReportingUnit	North Carolina;Catawba County;02	CATAWBA;02
@@ -8593,7 +8593,7 @@ ReportingUnit	North Carolina;Catawba County;CURBSIDE	CATAWBA;CURBSIDE
 ReportingUnit	North Carolina;Catawba County;PROVISIONAL	CATAWBA;PROVISIONAL
 ReportingUnit	North Carolina;Chatham County	CHATHAM
 ReportingUnit	North Carolina;Chatham County	North Carolina;Chatham County
-ReportingUnit	North Carolina;Chatham County	37037
+ReportingUnit	North Carolina;Chatham County	fips37037
 ReportingUnit	North Carolina;Chatham County;15	CHATHAM;15
 ReportingUnit	North Carolina;Chatham County;15	CHATHAM;15 - Y
 ReportingUnit	North Carolina;Chatham County;18	CHATHAM;18
@@ -8638,7 +8638,7 @@ ReportingUnit	North Carolina;Chatham County;PROVISIONAL	CHATHAM;PROVISIONAL
 ReportingUnit	North Carolina;Chatham County;PROVISIONAL	CHATHAM;PROVISIONAL - N
 ReportingUnit	North Carolina;Cherokee County	CHEROKEE
 ReportingUnit	North Carolina;Cherokee County	North Carolina;Cherokee County
-ReportingUnit	North Carolina;Cherokee County	37039
+ReportingUnit	North Carolina;Cherokee County	fips37039
 ReportingUnit	North Carolina;Cherokee County;ANNW	CHEROKEE;ANNW
 ReportingUnit	North Carolina;Cherokee County;ANNW	CHEROKEE;ANNW - Y
 ReportingUnit	North Carolina;Cherokee County;ANSW	CHEROKEE;ANSW
@@ -8673,7 +8673,7 @@ ReportingUnit	North Carolina;Cherokee County;UNKA	CHEROKEE;UNKA
 ReportingUnit	North Carolina;Cherokee County;UNKA	CHEROKEE;UNKA - Y
 ReportingUnit	North Carolina;Chowan County	CHOWAN
 ReportingUnit	North Carolina;Chowan County	North Carolina;Chowan County
-ReportingUnit	North Carolina;Chowan County	37041
+ReportingUnit	North Carolina;Chowan County	fips37041
 ReportingUnit	North Carolina;Chowan County;1	CHOWAN;1
 ReportingUnit	North Carolina;Chowan County;1	CHOWAN;1 - Y
 ReportingUnit	North Carolina;Chowan County;2	CHOWAN;2
@@ -8697,7 +8697,7 @@ ReportingUnit	North Carolina;Chowan County;TRANSFER	CHOWAN;TRANSFER
 ReportingUnit	North Carolina;Chowan County;TRANSFER	CHOWAN;TRANSFER - N
 ReportingUnit	North Carolina;Clay County	CLAY
 ReportingUnit	North Carolina;Clay County	North Carolina;Clay County
-ReportingUnit	North Carolina;Clay County	37043
+ReportingUnit	North Carolina;Clay County	fips37043
 ReportingUnit	North Carolina;Clay County;BRAS	CLAY;BRAS
 ReportingUnit	North Carolina;Clay County;BRAS	CLAY;BRAS - Y
 ReportingUnit	North Carolina;Clay County;HAY1	CLAY;HAY1
@@ -8718,7 +8718,7 @@ ReportingUnit	North Carolina;Clay County;WARN	CLAY;WARN
 ReportingUnit	North Carolina;Clay County;WARN	CLAY;WARN - Y
 ReportingUnit	North Carolina;Cleveland County	CLEVELAND
 ReportingUnit	North Carolina;Cleveland County	North Carolina;Cleveland County
-ReportingUnit	North Carolina;Cleveland County	37045
+ReportingUnit	North Carolina;Cleveland County	fips37045
 ReportingUnit	North Carolina;Cleveland County;BETHWR	CLEVELAND;BETHWR
 ReportingUnit	North Carolina;Cleveland County;BETHWR	CLEVELAND;BETHWR - Y
 ReportingUnit	North Carolina;Cleveland County;BR	CLEVELAND;BR
@@ -8763,7 +8763,7 @@ ReportingUnit	North Carolina;Cleveland County;WACO	CLEVELAND;WACO
 ReportingUnit	North Carolina;Cleveland County;WACO	CLEVELAND;WACO - Y
 ReportingUnit	North Carolina;Columbus County	COLUMBUS
 ReportingUnit	North Carolina;Columbus County	North Carolina;Columbus County
-ReportingUnit	North Carolina;Columbus County	37047
+ReportingUnit	North Carolina;Columbus County	fips37047
 ReportingUnit	North Carolina;Columbus County;ABSENTEE	COLUMBUS;ABSENTEE
 ReportingUnit	North Carolina;Columbus County;ABSENTEE	COLUMBUS;ABSENTEE - N
 ReportingUnit	North Carolina;Columbus County;CHADBOURN OS	COLUMBUS;CHADBOURN OS - N
@@ -8832,7 +8832,7 @@ ReportingUnit	North Carolina;Columbus County;PROVISIONAL	COLUMBUS;PROVISIONAL - 
 ReportingUnit	North Carolina;Columbus County;TABOR CITY OS	COLUMBUS;TABOR CITY OS - N
 ReportingUnit	North Carolina;Craven County	CRAVEN
 ReportingUnit	North Carolina;Craven County	North Carolina;Craven County
-ReportingUnit	North Carolina;Craven County	37049
+ReportingUnit	North Carolina;Craven County	fips37049
 ReportingUnit	North Carolina;Craven County;02	CRAVEN;02
 ReportingUnit	North Carolina;Craven County;02	CRAVEN;02 - Y
 ReportingUnit	North Carolina;Craven County;03	CRAVEN;03
@@ -8897,7 +8897,7 @@ ReportingUnit	North Carolina;Craven County;TE13	CRAVEN;TE13 - Y
 ReportingUnit	North Carolina;Craven County;VE14	CRAVEN;VE14 - Y
 ReportingUnit	North Carolina;Cumberland County	CUMBERLAND
 ReportingUnit	North Carolina;Cumberland County	North Carolina;Cumberland County
-ReportingUnit	North Carolina;Cumberland County	37051
+ReportingUnit	North Carolina;Cumberland County	fips37051
 ReportingUnit	North Carolina;Cumberland County;ABSENTEE	CUMBERLAND;ABSENTEE - N
 ReportingUnit	North Carolina;Cumberland County;ABSENTEE 1-20	CUMBERLAND;ABSENTEE 1-20 - N
 ReportingUnit	North Carolina;Cumberland County;ABSENTEE 1-30	CUMBERLAND;ABSENTEE 1-30
@@ -9106,7 +9106,7 @@ ReportingUnit	North Carolina;Cumberland County;TRANSFER 21-45	CUMBERLAND;TRANSFE
 ReportingUnit	North Carolina;Cumberland County;TRANSFER 31-57	CUMBERLAND;TRANSFER 31-57
 ReportingUnit	North Carolina;Currituck County	CURRITUCK
 ReportingUnit	North Carolina;Currituck County	North Carolina;Currituck County
-ReportingUnit	North Carolina;Currituck County	37053
+ReportingUnit	North Carolina;Currituck County	fips37053
 ReportingUnit	North Carolina;Currituck County;ABSENTEE	CURRITUCK;ABSENTEE
 ReportingUnit	North Carolina;Currituck County;ABSENTEE	CURRITUCK;ABSENTEE - N
 ReportingUnit	North Carolina;Currituck County;ABSENTEE MAIL	CURRITUCK;ABSENTEE MAIL - N
@@ -9139,7 +9139,7 @@ ReportingUnit	North Carolina;Currituck County;WH	CURRITUCK;WH
 ReportingUnit	North Carolina;Currituck County;WH	CURRITUCK;WH - Y
 ReportingUnit	North Carolina;Dare County	DARE
 ReportingUnit	North Carolina;Dare County	North Carolina;Dare County
-ReportingUnit	North Carolina;Dare County	37055
+ReportingUnit	North Carolina;Dare County	fips37055
 ReportingUnit	North Carolina;Dare County;ABSENTEE	DARE;ABSENTEE
 ReportingUnit	North Carolina;Dare County;ABSENTEE - N	DARE;ABSENTEE - N
 ReportingUnit	North Carolina;Dare County;ABSENTEE MAIL	DARE;ABSENTEE MAIL - N
@@ -9188,7 +9188,7 @@ ReportingUnit	North Carolina;Dare County;WAN	DARE;WAN
 ReportingUnit	North Carolina;Dare County;WAN	DARE;WAN - Y
 ReportingUnit	North Carolina;Davidson County	DAVIDSON
 ReportingUnit	North Carolina;Davidson County	North Carolina;Davidson County
-ReportingUnit	North Carolina;Davidson County	37057
+ReportingUnit	North Carolina;Davidson County	fips37057
 ReportingUnit	North Carolina;Davidson County;04	DAVIDSON;04
 ReportingUnit	North Carolina;Davidson County;04	DAVIDSON;04 - Y
 ReportingUnit	North Carolina;Davidson County;06	DAVIDSON;06
@@ -9293,7 +9293,7 @@ ReportingUnit	North Carolina;Davidson County;TRANSFER	DAVIDSON;TRANSFER
 ReportingUnit	North Carolina;Davidson County;TRANSFER	DAVIDSON;TRANSFER - N
 ReportingUnit	North Carolina;Davie County	DAVIE
 ReportingUnit	North Carolina;Davie County	North Carolina;Davie County
-ReportingUnit	North Carolina;Davie County	37059
+ReportingUnit	North Carolina;Davie County	fips37059
 ReportingUnit	North Carolina;Davie County;01	DAVIE;01
 ReportingUnit	North Carolina;Davie County;01	DAVIE;01 - Y
 ReportingUnit	North Carolina;Davie County;02	DAVIE;02
@@ -9341,7 +9341,7 @@ ReportingUnit	North Carolina;Davie County;PROVISIONAL	DAVIE;PROVISIONAL - N
 ReportingUnit	North Carolina;Davie County;TRANSFER	DAVIE;TRANSFER - N
 ReportingUnit	North Carolina;Duplin County	DUPLIN
 ReportingUnit	North Carolina;Duplin County	North Carolina;Duplin County
-ReportingUnit	North Carolina;Duplin County	37061
+ReportingUnit	North Carolina;Duplin County	fips37061
 ReportingUnit	North Carolina;Duplin County;ABSENTEE	DUPLIN;ABSENTEE
 ReportingUnit	North Carolina;Duplin County;ABSENTEE	DUPLIN;ABSENTEE - N
 ReportingUnit	North Carolina;Duplin County;ABSENTEE MAIL	DUPLIN;ABSENTEE MAIL - N
@@ -9393,7 +9393,7 @@ ReportingUnit	North Carolina;Duplin County;WOLF	DUPLIN;WOLF
 ReportingUnit	North Carolina;Duplin County;WOLF	DUPLIN;WOLF - Y
 ReportingUnit	North Carolina;Durham County	DURHAM
 ReportingUnit	North Carolina;Durham County	North Carolina;Durham County
-ReportingUnit	North Carolina;Durham County	37063
+ReportingUnit	North Carolina;Durham County	fips37063
 ReportingUnit	North Carolina;Durham County;01	DURHAM;01
 ReportingUnit	North Carolina;Durham County;01	DURHAM;01 - Y
 ReportingUnit	North Carolina;Durham County;02	DURHAM;02
@@ -9555,7 +9555,7 @@ ReportingUnit	North Carolina;Durham County;TRANSFER	DURHAM;TRANSFER
 ReportingUnit	North Carolina;Durham County;TRANSFER	DURHAM;TRANSFER - N
 ReportingUnit	North Carolina;Edgecombe County	EDGECOMBE
 ReportingUnit	North Carolina;Edgecombe County	North Carolina;Edgecombe County
-ReportingUnit	North Carolina;Edgecombe County	37065
+ReportingUnit	North Carolina;Edgecombe County	fips37065
 ReportingUnit	North Carolina;Edgecombe County;0101	EDGECOMBE;0101
 ReportingUnit	North Carolina;Edgecombe County;0101	EDGECOMBE;0101 - Y
 ReportingUnit	North Carolina;Edgecombe County;0102	EDGECOMBE;0102
@@ -9635,7 +9635,7 @@ ReportingUnit	North Carolina;Edgecombe County;TRANSFER	EDGECOMBE;TRANSFER
 ReportingUnit	North Carolina;Edgecombe County;TRANSFER	EDGECOMBE;TRANSFER - N
 ReportingUnit	North Carolina;Forsyth County	FORSYTH
 ReportingUnit	North Carolina;Forsyth County	North Carolina;Forsyth County
-ReportingUnit	North Carolina;Forsyth County	37067
+ReportingUnit	North Carolina;Forsyth County	fips37067
 ReportingUnit	North Carolina;Forsyth County;011	FORSYTH;011
 ReportingUnit	North Carolina;Forsyth County;011	FORSYTH;011 - Y
 ReportingUnit	North Carolina;Forsyth County;012	FORSYTH;012
@@ -9883,7 +9883,7 @@ ReportingUnit	North Carolina;Forsyth County;ONE-STOP	FORSYTH;ONE-STOP - N
 ReportingUnit	North Carolina;Forsyth County;PROVISIONAL	FORSYTH;PROVISIONAL - N
 ReportingUnit	North Carolina;Franklin County	FRANKLIN
 ReportingUnit	North Carolina;Franklin County	North Carolina;Franklin County
-ReportingUnit	North Carolina;Franklin County	37069
+ReportingUnit	North Carolina;Franklin County	fips37069
 ReportingUnit	North Carolina;Franklin County;01	FRANKLIN;01
 ReportingUnit	North Carolina;Franklin County;01	FRANKLIN;01 - Y
 ReportingUnit	North Carolina;Franklin County;02	FRANKLIN;02
@@ -9930,7 +9930,7 @@ ReportingUnit	North Carolina;Franklin County;8	FRANKLIN;8 - Y
 ReportingUnit	North Carolina;Franklin County;9	FRANKLIN;9 - Y
 ReportingUnit	North Carolina;Gaston County	GASTON
 ReportingUnit	North Carolina;Gaston County	North Carolina;Gaston County
-ReportingUnit	North Carolina;Gaston County	37071
+ReportingUnit	North Carolina;Gaston County	fips37071
 ReportingUnit	North Carolina;Gaston County;01	GASTON;01
 ReportingUnit	North Carolina;Gaston County;01	GASTON;01 - Y
 ReportingUnit	North Carolina;Gaston County;02	GASTON;02
@@ -10049,7 +10049,7 @@ ReportingUnit	North Carolina;Gaston County;PROVISIONAL	GASTON;PROVISIONAL - N
 ReportingUnit	North Carolina;Gaston County;TRANSFER	GASTON;TRANSFER
 ReportingUnit	North Carolina;Gates County	GATES
 ReportingUnit	North Carolina;Gates County	North Carolina;Gates County
-ReportingUnit	North Carolina;Gates County	37073
+ReportingUnit	North Carolina;Gates County	fips37073
 ReportingUnit	North Carolina;Gates County;1	GATES;1
 ReportingUnit	North Carolina;Gates County;1	GATES;1 - Y
 ReportingUnit	North Carolina;Gates County;2	GATES;2
@@ -10073,7 +10073,7 @@ ReportingUnit	North Carolina;Gates County;PROVISIONAL	GATES;PROVISIONAL
 ReportingUnit	North Carolina;Gates County;PROVISIONAL	GATES;PROVISIONAL - N
 ReportingUnit	North Carolina;Graham County	GRAHAM
 ReportingUnit	North Carolina;Graham County	North Carolina;Graham County
-ReportingUnit	North Carolina;Graham County	37075
+ReportingUnit	North Carolina;Graham County	fips37075
 ReportingUnit	North Carolina;Graham County;EAST	GRAHAM;EAST
 ReportingUnit	North Carolina;Graham County;EAST	GRAHAM;EAST - Y
 ReportingUnit	North Carolina;Graham County;STEC	GRAHAM;STEC
@@ -10084,7 +10084,7 @@ ReportingUnit	North Carolina;Graham County;WEST	GRAHAM;WEST
 ReportingUnit	North Carolina;Graham County;WEST	GRAHAM;WEST - Y
 ReportingUnit	North Carolina;Granville County	GRANVILLE
 ReportingUnit	North Carolina;Granville County	North Carolina;Granville County
-ReportingUnit	North Carolina;Granville County	37077
+ReportingUnit	North Carolina;Granville County	fips37077
 ReportingUnit	North Carolina;Granville County;ANTI	GRANVILLE;ANTI
 ReportingUnit	North Carolina;Granville County;ANTI	GRANVILLE;ANTI - Y
 ReportingUnit	North Carolina;Granville County;BERE	GRANVILLE;BERE
@@ -10117,7 +10117,7 @@ ReportingUnit	North Carolina;Granville County;WOEL	GRANVILLE;WOEL
 ReportingUnit	North Carolina;Granville County;WOEL	GRANVILLE;WOEL - Y
 ReportingUnit	North Carolina;Greene County	GREENE
 ReportingUnit	North Carolina;Greene County	North Carolina;Greene County
-ReportingUnit	North Carolina;Greene County	37079
+ReportingUnit	North Carolina;Greene County	fips37079
 ReportingUnit	North Carolina;Greene County;ABSENTEE	GREENE;ABSENTEE
 ReportingUnit	North Carolina;Greene County;ABSENTEE MAIL	GREENE;ABSENTEE MAIL - N
 ReportingUnit	North Carolina;Greene County;ARBA	GREENE;ARBA
@@ -10147,7 +10147,7 @@ ReportingUnit	North Carolina;Greene County;WALS	GREENE;WALS
 ReportingUnit	North Carolina;Greene County;WALS	GREENE;WALS - Y
 ReportingUnit	North Carolina;Guilford County	GUILFORD
 ReportingUnit	North Carolina;Guilford County	North Carolina;Guilford County
-ReportingUnit	North Carolina;Guilford County	37081
+ReportingUnit	North Carolina;Guilford County	fips37081
 ReportingUnit	North Carolina;Guilford County;ABS/CURB/PROV 4	GUILFORD;ABS/CURB/PROV 4
 ReportingUnit	North Carolina;Guilford County;ABS/PROV/CURB 1	GUILFORD;ABS/PROV/CURB 1
 ReportingUnit	North Carolina;Guilford County;ABS/PROV/CURB 2	GUILFORD;ABS/PROV/CURB 2
@@ -10496,7 +10496,7 @@ ReportingUnit	North Carolina;Guilford County;SWASH	GUILFORD;SWASH
 ReportingUnit	North Carolina;Guilford County;SWASH	GUILFORD;SWASH - Y
 ReportingUnit	North Carolina;Halifax County	HALIFAX
 ReportingUnit	North Carolina;Halifax County	North Carolina;Halifax County
-ReportingUnit	North Carolina;Halifax County	37083
+ReportingUnit	North Carolina;Halifax County	fips37083
 ReportingUnit	North Carolina;Halifax County;ABSENTEE	HALIFAX;ABSENTEE
 ReportingUnit	North Carolina;Halifax County;ABSENTEE	HALIFAX;ABSENTEE - N
 ReportingUnit	North Carolina;Halifax County;BUTWD	HALIFAX;BUTWD
@@ -10566,7 +10566,7 @@ ReportingUnit	North Carolina;Halifax County;WEL1-2	HALIFAX;WEL1-2
 ReportingUnit	North Carolina;Halifax County;WEL1-2	HALIFAX;WEL1-2 - Y
 ReportingUnit	North Carolina;Harnett County	HARNETT
 ReportingUnit	North Carolina;Harnett County	North Carolina;Harnett County
-ReportingUnit	North Carolina;Harnett County	37085
+ReportingUnit	North Carolina;Harnett County	fips37085
 ReportingUnit	North Carolina;Harnett County;ABSENTEE	HARNETT;ABSENTEE
 ReportingUnit	North Carolina;Harnett County;ABSENTEE	HARNETT;ABSENTEE - N
 ReportingUnit	North Carolina;Harnett County;ONE STOP ERWIN	HARNETT;ONE STOP ERWIN - N
@@ -10612,7 +10612,7 @@ ReportingUnit	North Carolina;Harnett County;PROVISIONAL	HARNETT;PROVISIONAL - N
 ReportingUnit	North Carolina;Harnett County;TRANSFER - N	HARNETT;TRANSFER - N
 ReportingUnit	North Carolina;Haywood County	HAYWOOD
 ReportingUnit	North Carolina;Haywood County	North Carolina;Haywood County
-ReportingUnit	North Carolina;Haywood County	37087
+ReportingUnit	North Carolina;Haywood County	fips37087
 ReportingUnit	North Carolina;Haywood County;ABSENTEE	HAYWOOD;ABSENTEE
 ReportingUnit	North Carolina;Haywood County;ABSENTEE	HAYWOOD;ABSENTEE - N
 ReportingUnit	North Carolina;Haywood County;AC	HAYWOOD;AC
@@ -10683,7 +10683,7 @@ ReportingUnit	North Carolina;Haywood County;WW	HAYWOOD;WW
 ReportingUnit	North Carolina;Haywood County;WW	HAYWOOD;WW - Y
 ReportingUnit	North Carolina;Henderson County	HENDERSON
 ReportingUnit	North Carolina;Henderson County	North Carolina;Henderson County
-ReportingUnit	North Carolina;Henderson County	37089
+ReportingUnit	North Carolina;Henderson County	fips37089
 ReportingUnit	North Carolina;Henderson County;ABSENTEE	HENDERSON;ABSENTEE
 ReportingUnit	North Carolina;Henderson County;ABSENTEE	HENDERSON;ABSENTEE - N
 ReportingUnit	North Carolina;Henderson County;AR	HENDERSON;AR
@@ -10769,7 +10769,7 @@ ReportingUnit	North Carolina;Henderson County;SW	HENDERSON;SW - Y
 ReportingUnit	North Carolina;Henderson County;TRANSFER	HENDERSON;TRANSFER - N
 ReportingUnit	North Carolina;Hertford County	HERTFORD
 ReportingUnit	North Carolina;Hertford County	North Carolina;Hertford County
-ReportingUnit	North Carolina;Hertford County	37091
+ReportingUnit	North Carolina;Hertford County	fips37091
 ReportingUnit	North Carolina;Hertford County;A1	HERTFORD;A1
 ReportingUnit	North Carolina;Hertford County;A1	HERTFORD;A1 - Y
 ReportingUnit	North Carolina;Hertford County;A2	HERTFORD;A2
@@ -10810,7 +10810,7 @@ ReportingUnit	North Carolina;Hertford County;WN	HERTFORD;WN
 ReportingUnit	North Carolina;Hertford County;WN	HERTFORD;WN - Y
 ReportingUnit	North Carolina;Hoke County	HOKE
 ReportingUnit	North Carolina;Hoke County	North Carolina;Hoke County
-ReportingUnit	North Carolina;Hoke County	37093
+ReportingUnit	North Carolina;Hoke County	fips37093
 ReportingUnit	North Carolina;Hoke County;01	HOKE;01
 ReportingUnit	North Carolina;Hoke County;01	HOKE;01 - Y
 ReportingUnit	North Carolina;Hoke County;02	HOKE;02
@@ -10848,7 +10848,7 @@ ReportingUnit	North Carolina;Hoke County;65	HOKE;65
 ReportingUnit	North Carolina;Hoke County;65	HOKE;65 - Y
 ReportingUnit	North Carolina;Hyde County	HYDE
 ReportingUnit	North Carolina;Hyde County	North Carolina;Hyde County
-ReportingUnit	North Carolina;Hyde County	37095
+ReportingUnit	North Carolina;Hyde County	fips37095
 ReportingUnit	North Carolina;Hyde County;ABS	HYDE;ABS - N
 ReportingUnit	North Carolina;Hyde County;ABSENTEE	HYDE;ABSENTEE
 ReportingUnit	North Carolina;Hyde County;ABSENTEE	HYDE;ABSENTEE - N
@@ -10880,7 +10880,7 @@ ReportingUnit	North Carolina;Hyde County;TRANSFER	HYDE;TRANSFER
 ReportingUnit	North Carolina;Hyde County;TRANSFER	HYDE;TRANSFER - N
 ReportingUnit	North Carolina;Iredell County	IREDELL
 ReportingUnit	North Carolina;Iredell County	North Carolina;Iredell County
-ReportingUnit	North Carolina;Iredell County	37097
+ReportingUnit	North Carolina;Iredell County	fips37097
 ReportingUnit	North Carolina;Iredell County;BA	IREDELL;BA
 ReportingUnit	North Carolina;Iredell County;BA	IREDELL;BA - Y
 ReportingUnit	North Carolina;Iredell County;BE	IREDELL;BE
@@ -10941,7 +10941,7 @@ ReportingUnit	North Carolina;Iredell County;UG	IREDELL;UG
 ReportingUnit	North Carolina;Iredell County;UG	IREDELL;UG - Y
 ReportingUnit	North Carolina;Jackson County	JACKSON
 ReportingUnit	North Carolina;Jackson County	North Carolina;Jackson County
-ReportingUnit	North Carolina;Jackson County	37099
+ReportingUnit	North Carolina;Jackson County	fips37099
 ReportingUnit	North Carolina;Jackson County;ABSENTEE	JACKSON;ABSENTEE
 ReportingUnit	North Carolina;Jackson County;ABSENTEE	JACKSON;ABSENTEE - N
 ReportingUnit	North Carolina;Jackson County;ABSENTEE MAIL	JACKSON;ABSENTEE MAIL - N
@@ -10988,7 +10988,7 @@ ReportingUnit	North Carolina;Jackson County;WEB	JACKSON;WEB
 ReportingUnit	North Carolina;Jackson County;WEB	JACKSON;WEB - Y
 ReportingUnit	North Carolina;Johnston County	JOHNSTON
 ReportingUnit	North Carolina;Johnston County	North Carolina;Johnston County
-ReportingUnit	North Carolina;Johnston County	37101
+ReportingUnit	North Carolina;Johnston County	fips37101
 ReportingUnit	North Carolina;Johnston County;ABSENTEE	JOHNSTON;ABSENTEE - N
 ReportingUnit	North Carolina;Johnston County;ABSENTEE BY MAIL	JOHNSTON;ABSENTEE BY MAIL
 ReportingUnit	North Carolina;Johnston County;ARCHER LODGE - N	JOHNSTON;ARCHER LODGE - N
@@ -11085,7 +11085,7 @@ ReportingUnit	North Carolina;Johnston County;TRANSFER	JOHNSTON;TRANSFER
 ReportingUnit	North Carolina;Johnston County;TRANSFER	JOHNSTON;TRANSFER - N
 ReportingUnit	North Carolina;Jones County	JONES
 ReportingUnit	North Carolina;Jones County	North Carolina;Jones County
-ReportingUnit	North Carolina;Jones County	37103
+ReportingUnit	North Carolina;Jones County	fips37103
 ReportingUnit	North Carolina;Jones County;ABSENTEE	JONES;ABSENTEE
 ReportingUnit	North Carolina;Jones County;ABSENTEE	JONES;ABSENTEE - N
 ReportingUnit	North Carolina;Jones County;ABSENTEE MAIL	JONES;ABSENTEE MAIL - N
@@ -11110,7 +11110,7 @@ ReportingUnit	North Carolina;Jones County;PROVISIONAL	JONES;PROVISIONAL - N
 ReportingUnit	North Carolina;Jones County;TRANSFER - N	JONES;TRANSFER - N
 ReportingUnit	North Carolina;Lee County	LEE
 ReportingUnit	North Carolina;Lee County	North Carolina;Lee County
-ReportingUnit	North Carolina;Lee County	37105
+ReportingUnit	North Carolina;Lee County	fips37105
 ReportingUnit	North Carolina;Lee County;A1	LEE;A1
 ReportingUnit	North Carolina;Lee County;A1	LEE;A1 - Y
 ReportingUnit	North Carolina;Lee County;A2	LEE;A2
@@ -11144,7 +11144,7 @@ ReportingUnit	North Carolina;Lee County;PROVISIONAL	LEE;PROVISIONAL - N
 ReportingUnit	North Carolina;Lee County;TRANSFER	LEE;TRANSFER - N
 ReportingUnit	North Carolina;Lenoir County	LENOIR
 ReportingUnit	North Carolina;Lenoir County	North Carolina;Lenoir County
-ReportingUnit	North Carolina;Lenoir County	37107
+ReportingUnit	North Carolina;Lenoir County	fips37107
 ReportingUnit	North Carolina;Lenoir County;ABSENTEE	LENOIR;ABSENTEE
 ReportingUnit	North Carolina;Lenoir County;ABSENTEE	LENOIR;ABSENTEE - N
 ReportingUnit	North Carolina;Lenoir County;ABSENTEE MAIL	LENOIR;ABSENTEE MAIL - N
@@ -11199,7 +11199,7 @@ ReportingUnit	North Carolina;Lenoir County;W	LENOIR;W
 ReportingUnit	North Carolina;Lenoir County;W	LENOIR;W - Y
 ReportingUnit	North Carolina;Lincoln County	LINCOLN
 ReportingUnit	North Carolina;Lincoln County	North Carolina;Lincoln County
-ReportingUnit	North Carolina;Lincoln County	37109
+ReportingUnit	North Carolina;Lincoln County	fips37109
 ReportingUnit	North Carolina;Lincoln County;ABSENTEE	LINCOLN;ABSENTEE
 ReportingUnit	North Carolina;Lincoln County;ABSENTEE MAIL	LINCOLN;ABSENTEE MAIL - N
 ReportingUnit	North Carolina;Lincoln County;AS25	LINCOLN;AS25
@@ -11264,7 +11264,7 @@ ReportingUnit	North Carolina;Lincoln County;WP32	LINCOLN;WP32
 ReportingUnit	North Carolina;Lincoln County;WP32	LINCOLN;WP32 - Y
 ReportingUnit	North Carolina;Macon County	MACON
 ReportingUnit	North Carolina;Macon County	North Carolina;Macon County
-ReportingUnit	North Carolina;Macon County	37113
+ReportingUnit	North Carolina;Macon County	fips37113
 ReportingUnit	North Carolina;Macon County;01	MACON;01
 ReportingUnit	North Carolina;Macon County;01	MACON;01 - Y
 ReportingUnit	North Carolina;Macon County;02	MACON;02
@@ -11319,7 +11319,7 @@ ReportingUnit	North Carolina;Macon County;TRANSFER	MACON;TRANSFER
 ReportingUnit	North Carolina;Macon County;TRANSFER	MACON;TRANSFER - N
 ReportingUnit	North Carolina;Madison County	MADISON
 ReportingUnit	North Carolina;Madison County	North Carolina;Madison County
-ReportingUnit	North Carolina;Madison County	37115
+ReportingUnit	North Carolina;Madison County	fips37115
 ReportingUnit	North Carolina;Madison County;BEECH	MADISON;BEECH
 ReportingUnit	North Carolina;Madison County;BEECH	MADISON;BEECH - Y
 ReportingUnit	North Carolina;Madison County;EBBS C	MADISON;EBBS C
@@ -11346,7 +11346,7 @@ ReportingUnit	North Carolina;Madison County;WALNUT	MADISON;WALNUT
 ReportingUnit	North Carolina;Madison County;WALNUT	MADISON;WALNUT - Y
 ReportingUnit	North Carolina;Martin County	MARTIN
 ReportingUnit	North Carolina;Martin County	North Carolina;Martin County
-ReportingUnit	North Carolina;Martin County	37117
+ReportingUnit	North Carolina;Martin County	fips37117
 ReportingUnit	North Carolina;Martin County;ABSENTEE	MARTIN;ABSENTEE
 ReportingUnit	North Carolina;Martin County;ABSENTEE	MARTIN;ABSENTEE - N
 ReportingUnit	North Carolina;Martin County;BG	MARTIN;BG
@@ -11381,54 +11381,54 @@ ReportingUnit	North Carolina;Martin County;W1	MARTIN;W1
 ReportingUnit	North Carolina;Martin County;W1	MARTIN;W1 - Y
 ReportingUnit	North Carolina;Martin County;W2	MARTIN;W2
 ReportingUnit	North Carolina;Martin County;W2	MARTIN;W2 - Y
-ReportingUnit	North Carolina;Mcdowell County	MCDOWELL
-ReportingUnit	North Carolina;Mcdowell County	North Carolina;Mcdowell County
-ReportingUnit	North Carolina;Mcdowell County	37111
-ReportingUnit	North Carolina;Mcdowell County;1-Mar	MCDOWELL;1-Mar - Y
-ReportingUnit	North Carolina;Mcdowell County;2-Mar	MCDOWELL;2-Mar - Y
-ReportingUnit	North Carolina;Mcdowell County;3-Mar	MCDOWELL;3-Mar - Y
-ReportingUnit	North Carolina;Mcdowell County;4-Mar	MCDOWELL;4-Mar - Y
-ReportingUnit	North Carolina;Mcdowell County;5-Mar	MCDOWELL;5-Mar - Y
-ReportingUnit	North Carolina;Mcdowell County;ABSENTEE	MCDOWELL;ABSENTEE - N
-ReportingUnit	North Carolina;Mcdowell County;CCREEK	MCDOWELL;CCREEK
-ReportingUnit	North Carolina;Mcdowell County;CCREEK	MCDOWELL;CCREEK - Y
-ReportingUnit	North Carolina;Mcdowell County;DYSART	MCDOWELL;DYSART
-ReportingUnit	North Carolina;Mcdowell County;DYSART	MCDOWELL;DYSART - Y
-ReportingUnit	North Carolina;Mcdowell County;FORT 1	MCDOWELL;FORT 1
-ReportingUnit	North Carolina;Mcdowell County;FORT 1	MCDOWELL;FORT 1 - Y
-ReportingUnit	North Carolina;Mcdowell County;FORT 2	MCDOWELL;FORT 2
-ReportingUnit	North Carolina;Mcdowell County;FORT 2	MCDOWELL;FORT 2 - Y
-ReportingUnit	North Carolina;Mcdowell County;GLENWD	MCDOWELL;GLENWD
-ReportingUnit	North Carolina;Mcdowell County;GLENWD	MCDOWELL;GLENWD - Y
-ReportingUnit	North Carolina;Mcdowell County;HIGGIN	MCDOWELL;HIGGIN
-ReportingUnit	North Carolina;Mcdowell County;HIGGIN	MCDOWELL;HIGGIN - Y
-ReportingUnit	North Carolina;Mcdowell County;M.COVE	MCDOWELL;M.COVE
-ReportingUnit	North Carolina;Mcdowell County;M.COVE	MCDOWELL;M.COVE - Y
-ReportingUnit	North Carolina;Mcdowell County;MAR 1	MCDOWELL;MAR 1
-ReportingUnit	North Carolina;Mcdowell County;MAR 1	MCDOWELL;MAR 1 - Y
-ReportingUnit	North Carolina;Mcdowell County;MAR 2	MCDOWELL;MAR 2
-ReportingUnit	North Carolina;Mcdowell County;MAR 2	MCDOWELL;MAR 2 - Y
-ReportingUnit	North Carolina;Mcdowell County;MAR 3	MCDOWELL;MAR 3
-ReportingUnit	North Carolina;Mcdowell County;MAR 3	MCDOWELL;MAR 3 - Y
-ReportingUnit	North Carolina;Mcdowell County;MAR 4	MCDOWELL;MAR 4
-ReportingUnit	North Carolina;Mcdowell County;MAR 4	MCDOWELL;MAR 4 - Y
-ReportingUnit	North Carolina;Mcdowell County;MAR 5	MCDOWELL;MAR 5
-ReportingUnit	North Carolina;Mcdowell County;MAR 5	MCDOWELL;MAR 5 - Y
-ReportingUnit	North Carolina;Mcdowell County;N.COVE	MCDOWELL;N.COVE
-ReportingUnit	North Carolina;Mcdowell County;N.COVE	MCDOWELL;N.COVE - Y
-ReportingUnit	North Carolina;Mcdowell County;NEBO	MCDOWELL;NEBO
-ReportingUnit	North Carolina;Mcdowell County;NEBO	MCDOWELL;NEBO - Y
-ReportingUnit	North Carolina;Mcdowell County;ONE STOP	MCDOWELL;ONE STOP - N
-ReportingUnit	North Carolina;Mcdowell County;PLEASA	MCDOWELL;PLEASA
-ReportingUnit	North Carolina;Mcdowell County;PLEASA	MCDOWELL;PLEASA - Y
-ReportingUnit	North Carolina;Mcdowell County;PROVISIONAL	MCDOWELL;PROVISIONAL - N
-ReportingUnit	North Carolina;Mcdowell County;T.COVE	MCDOWELL;T.COVE
-ReportingUnit	North Carolina;Mcdowell County;T.COVE	MCDOWELL;T.COVE - Y
-ReportingUnit	North Carolina;Mcdowell County;WEST M	MCDOWELL;WEST M
-ReportingUnit	North Carolina;Mcdowell County;WEST M	MCDOWELL;WEST M - Y
+ReportingUnit	North Carolina;McDowell County	MCDOWELL
+ReportingUnit	North Carolina;McDowell County	North Carolina;Mcdowell County
+ReportingUnit	North Carolina;McDowell County	fips37111
+ReportingUnit	North Carolina;McDowell County;1-Mar	MCDOWELL;1-Mar - Y
+ReportingUnit	North Carolina;McDowell County;2-Mar	MCDOWELL;2-Mar - Y
+ReportingUnit	North Carolina;McDowell County;3-Mar	MCDOWELL;3-Mar - Y
+ReportingUnit	North Carolina;McDowell County;4-Mar	MCDOWELL;4-Mar - Y
+ReportingUnit	North Carolina;McDowell County;5-Mar	MCDOWELL;5-Mar - Y
+ReportingUnit	North Carolina;McDowell County;ABSENTEE	MCDOWELL;ABSENTEE - N
+ReportingUnit	North Carolina;McDowell County;CCREEK	MCDOWELL;CCREEK
+ReportingUnit	North Carolina;McDowell County;CCREEK	MCDOWELL;CCREEK - Y
+ReportingUnit	North Carolina;McDowell County;DYSART	MCDOWELL;DYSART
+ReportingUnit	North Carolina;McDowell County;DYSART	MCDOWELL;DYSART - Y
+ReportingUnit	North Carolina;McDowell County;FORT 1	MCDOWELL;FORT 1
+ReportingUnit	North Carolina;McDowell County;FORT 1	MCDOWELL;FORT 1 - Y
+ReportingUnit	North Carolina;McDowell County;FORT 2	MCDOWELL;FORT 2
+ReportingUnit	North Carolina;McDowell County;FORT 2	MCDOWELL;FORT 2 - Y
+ReportingUnit	North Carolina;McDowell County;GLENWD	MCDOWELL;GLENWD
+ReportingUnit	North Carolina;McDowell County;GLENWD	MCDOWELL;GLENWD - Y
+ReportingUnit	North Carolina;McDowell County;HIGGIN	MCDOWELL;HIGGIN
+ReportingUnit	North Carolina;McDowell County;HIGGIN	MCDOWELL;HIGGIN - Y
+ReportingUnit	North Carolina;McDowell County;M.COVE	MCDOWELL;M.COVE
+ReportingUnit	North Carolina;McDowell County;M.COVE	MCDOWELL;M.COVE - Y
+ReportingUnit	North Carolina;McDowell County;MAR 1	MCDOWELL;MAR 1
+ReportingUnit	North Carolina;McDowell County;MAR 1	MCDOWELL;MAR 1 - Y
+ReportingUnit	North Carolina;McDowell County;MAR 2	MCDOWELL;MAR 2
+ReportingUnit	North Carolina;McDowell County;MAR 2	MCDOWELL;MAR 2 - Y
+ReportingUnit	North Carolina;McDowell County;MAR 3	MCDOWELL;MAR 3
+ReportingUnit	North Carolina;McDowell County;MAR 3	MCDOWELL;MAR 3 - Y
+ReportingUnit	North Carolina;McDowell County;MAR 4	MCDOWELL;MAR 4
+ReportingUnit	North Carolina;McDowell County;MAR 4	MCDOWELL;MAR 4 - Y
+ReportingUnit	North Carolina;McDowell County;MAR 5	MCDOWELL;MAR 5
+ReportingUnit	North Carolina;McDowell County;MAR 5	MCDOWELL;MAR 5 - Y
+ReportingUnit	North Carolina;McDowell County;N.COVE	MCDOWELL;N.COVE
+ReportingUnit	North Carolina;McDowell County;N.COVE	MCDOWELL;N.COVE - Y
+ReportingUnit	North Carolina;McDowell County;NEBO	MCDOWELL;NEBO
+ReportingUnit	North Carolina;McDowell County;NEBO	MCDOWELL;NEBO - Y
+ReportingUnit	North Carolina;McDowell County;ONE STOP	MCDOWELL;ONE STOP - N
+ReportingUnit	North Carolina;McDowell County;PLEASA	MCDOWELL;PLEASA
+ReportingUnit	North Carolina;McDowell County;PLEASA	MCDOWELL;PLEASA - Y
+ReportingUnit	North Carolina;McDowell County;PROVISIONAL	MCDOWELL;PROVISIONAL - N
+ReportingUnit	North Carolina;McDowell County;T.COVE	MCDOWELL;T.COVE
+ReportingUnit	North Carolina;McDowell County;T.COVE	MCDOWELL;T.COVE - Y
+ReportingUnit	North Carolina;McDowell County;WEST M	MCDOWELL;WEST M
+ReportingUnit	North Carolina;McDowell County;WEST M	MCDOWELL;WEST M - Y
 ReportingUnit	North Carolina;Mecklenburg County	MECKLENBURG
 ReportingUnit	North Carolina;Mecklenburg County	North Carolina;Mecklenburg County
-ReportingUnit	North Carolina;Mecklenburg County	37119
+ReportingUnit	North Carolina;Mecklenburg County	fips37119
 ReportingUnit	North Carolina;Mecklenburg County;001	MECKLENBURG;001
 ReportingUnit	North Carolina;Mecklenburg County;001	MECKLENBURG;001 - Y
 ReportingUnit	North Carolina;Mecklenburg County;002	MECKLENBURG;002
@@ -11946,7 +11946,7 @@ ReportingUnit	North Carolina;Mecklenburg County;PROVISIONAL 71-106	MECKLENBURG;P
 ReportingUnit	North Carolina;Mecklenburg County;PROVISIONAL 81-96	MECKLENBURG;PROVISIONAL 81-96
 ReportingUnit	North Carolina;Mitchell County	MITCHELL
 ReportingUnit	North Carolina;Mitchell County	North Carolina;Mitchell County
-ReportingUnit	North Carolina;Mitchell County	37121
+ReportingUnit	North Carolina;Mitchell County	fips37121
 ReportingUnit	North Carolina;Mitchell County;01	MITCHELL;01
 ReportingUnit	North Carolina;Mitchell County;01	MITCHELL;01 - Y
 ReportingUnit	North Carolina;Mitchell County;02	MITCHELL;02
@@ -11976,7 +11976,7 @@ ReportingUnit	North Carolina;Mitchell County;8	MITCHELL;8 - Y
 ReportingUnit	North Carolina;Mitchell County;9	MITCHELL;9 - Y
 ReportingUnit	North Carolina;Montgomery County	MONTGOMERY
 ReportingUnit	North Carolina;Montgomery County	North Carolina;Montgomery County
-ReportingUnit	North Carolina;Montgomery County	37123
+ReportingUnit	North Carolina;Montgomery County	fips37123
 ReportingUnit	North Carolina;Montgomery County;BIS	MONTGOMERY;BIS
 ReportingUnit	North Carolina;Montgomery County;BIS	MONTGOMERY;BIS - Y
 ReportingUnit	North Carolina;Montgomery County;CAN	MONTGOMERY;CAN
@@ -12007,7 +12007,7 @@ ReportingUnit	North Carolina;Montgomery County;WAD	MONTGOMERY;WAD
 ReportingUnit	North Carolina;Montgomery County;WAD	MONTGOMERY;WAD - Y
 ReportingUnit	North Carolina;Moore County	MOORE
 ReportingUnit	North Carolina;Moore County	North Carolina;Moore County
-ReportingUnit	North Carolina;Moore County	37125
+ReportingUnit	North Carolina;Moore County	fips37125
 ReportingUnit	North Carolina;Moore County;ABSENTEE	MOORE;ABSENTEE
 ReportingUnit	North Carolina;Moore County;ABSENTEE	MOORE;ABSENTEE - N
 ReportingUnit	North Carolina;Moore County;BEN	MOORE;BEN
@@ -12249,7 +12249,7 @@ ReportingUnit	North Carolina;NC Senate District 8	North Carolina;NC Senate Distr
 ReportingUnit	North Carolina;NC Senate District 9	North Carolina;NC Senate District 9
 ReportingUnit	North Carolina;Nash County	NASH
 ReportingUnit	North Carolina;Nash County	North Carolina;Nash County
-ReportingUnit	North Carolina;Nash County	37127
+ReportingUnit	North Carolina;Nash County	fips37127
 ReportingUnit	North Carolina;Nash County;ABSENTEE	NASH;ABSENTEE
 ReportingUnit	North Carolina;Nash County;ABSENTEE	NASH;ABSENTEE - N
 ReportingUnit	North Carolina;Nash County;MT PLEASANT OS	NASH;MT PLEASANT OS
@@ -12318,7 +12318,7 @@ ReportingUnit	North Carolina;Nash County;TRANSFER	NASH;TRANSFER
 ReportingUnit	North Carolina;Nash County;TRANSFER	NASH;TRANSFER - N
 ReportingUnit	North Carolina;New Hanover County	NEW HANOVER
 ReportingUnit	North Carolina;New Hanover County	North Carolina;New Hanover County
-ReportingUnit	North Carolina;New Hanover County	37129
+ReportingUnit	North Carolina;New Hanover County	fips37129
 ReportingUnit	North Carolina;New Hanover County;ABSENTEE	NEW HANOVER;ABSENTEE
 ReportingUnit	North Carolina;New Hanover County;ABSENTEE	NEW HANOVER;ABSENTEE - N
 ReportingUnit	North Carolina;New Hanover County;ABSENTEE MAIL	NEW HANOVER;ABSENTEE MAIL - N
@@ -12437,7 +12437,7 @@ ReportingUnit	North Carolina;New Hanover County;WB	NEW HANOVER;WB
 ReportingUnit	North Carolina;New Hanover County;WB	NEW HANOVER;WB - Y
 ReportingUnit	North Carolina;Northampton County	NORTHAMPTON
 ReportingUnit	North Carolina;Northampton County	North Carolina;Northampton County
-ReportingUnit	North Carolina;Northampton County	37131
+ReportingUnit	North Carolina;Northampton County	fips37131
 ReportingUnit	North Carolina;Northampton County;ABSENTEE	NORTHAMPTON;ABSENTEE - N
 ReportingUnit	North Carolina;Northampton County;ABSENTEE BY MAIL	NORTHAMPTON;ABSENTEE BY MAIL
 ReportingUnit	North Carolina;Northampton County;ABSENTEE BY MAIL	NORTHAMPTON;ABSENTEE BY MAIL - N
@@ -12498,9 +12498,9 @@ ReportingUnit	North Carolina;Northampton County;TRANSFER	NORTHAMPTON;TRANSFER - 
 ReportingUnit	North Carolina;Northampton County;WOODLA	NORTHAMPTON;WOODLA
 ReportingUnit	North Carolina;Northampton County;WOODLA	NORTHAMPTON;WOODLA - Y
 ReportingUnit	North Carolina;Northampton County;WOPO	NORTHAMPTON;WOPO - Y
-ReportingUnit	North Carolina;Onslow County	ONSLOW
 ReportingUnit	North Carolina;Onslow County	North Carolina;Onslow County
-ReportingUnit	North Carolina;Onslow County	37133
+ReportingUnit	North Carolina;Onslow County	ONSLOW
+ReportingUnit	North Carolina;Onslow County	fips37133
 ReportingUnit	North Carolina;Onslow County;ABSENTEE	ONSLOW;ABSENTEE
 ReportingUnit	North Carolina;Onslow County;BC21	ONSLOW;BC21
 ReportingUnit	North Carolina;Onslow County;BC21	ONSLOW;BC21 - Y
@@ -12555,9 +12555,9 @@ ReportingUnit	North Carolina;Onslow County;VR15	ONSLOW;VR15
 ReportingUnit	North Carolina;Onslow County;VR15	ONSLOW;VR15 - Y
 ReportingUnit	North Carolina;Onslow County;WN04	ONSLOW;WN04
 ReportingUnit	North Carolina;Onslow County;WN04	ONSLOW;WN04 - Y
-ReportingUnit	North Carolina;Orange County	ORANGE
 ReportingUnit	North Carolina;Orange County	North Carolina;Orange County
-ReportingUnit	North Carolina;Orange County	37135
+ReportingUnit	North Carolina;Orange County	ORANGE
+ReportingUnit	North Carolina;Orange County	fips37135
 ReportingUnit	North Carolina;Orange County;ABSENTEE	ORANGE;ABSENTEE - N
 ReportingUnit	North Carolina;Orange County;ABSENTEE BY MAIL	ORANGE;ABSENTEE BY MAIL
 ReportingUnit	North Carolina;Orange County;BC	ORANGE;BC
@@ -12673,9 +12673,9 @@ ReportingUnit	North Carolina;Orange County;WH	ORANGE;WH - Y
 ReportingUnit	North Carolina;Orange County;WW	ORANGE;WW
 ReportingUnit	North Carolina;Orange County;WW	ORANGE;WW - Y
 ReportingUnit	North Carolina;Orange County;WW1	ORANGE;WW1 - Y
-ReportingUnit	North Carolina;Pamlico County	PAMLICO
 ReportingUnit	North Carolina;Pamlico County	North Carolina;Pamlico County
-ReportingUnit	North Carolina;Pamlico County	37137
+ReportingUnit	North Carolina;Pamlico County	PAMLICO
+ReportingUnit	North Carolina;Pamlico County	fips37137
 ReportingUnit	North Carolina;Pamlico County;1AL A	PAMLICO;1AL A
 ReportingUnit	North Carolina;Pamlico County;1AL A	PAMLICO;1AL A - Y
 ReportingUnit	North Carolina;Pamlico County;1GB	PAMLICO;1GB
@@ -12704,9 +12704,9 @@ ReportingUnit	North Carolina;Pamlico County;CURBSIDE	PAMLICO;CURBSIDE - N
 ReportingUnit	North Carolina;Pamlico County;ONE STOP	PAMLICO;ONE STOP - N
 ReportingUnit	North Carolina;Pamlico County;PROVISIONAL	PAMLICO;PROVISIONAL
 ReportingUnit	North Carolina;Pamlico County;PROVISIONAL	PAMLICO;PROVISIONAL - N
-ReportingUnit	North Carolina;Pasquotank County	PASQUOTANK
 ReportingUnit	North Carolina;Pasquotank County	North Carolina;Pasquotank County
-ReportingUnit	North Carolina;Pasquotank County	37139
+ReportingUnit	North Carolina;Pasquotank County	PASQUOTANK
+ReportingUnit	North Carolina;Pasquotank County	fips37139
 ReportingUnit	North Carolina;Pasquotank County;ABSENTEE	PASQUOTANK;ABSENTEE
 ReportingUnit	North Carolina;Pasquotank County;ABSENTEE	PASQUOTANK;ABSENTEE - N
 ReportingUnit	North Carolina;Pasquotank County;EAST	PASQUOTANK;EAST
@@ -12733,9 +12733,9 @@ ReportingUnit	North Carolina;Pasquotank County;TRANSFER	PASQUOTANK;TRANSFER
 ReportingUnit	North Carolina;Pasquotank County;TRANSFER	PASQUOTANK;TRANSFER - N
 ReportingUnit	North Carolina;Pasquotank County;WEST	PASQUOTANK;WEST
 ReportingUnit	North Carolina;Pasquotank County;WEST	PASQUOTANK;WEST - Y
-ReportingUnit	North Carolina;Pender County	PENDER
 ReportingUnit	North Carolina;Pender County	North Carolina;Pender County
-ReportingUnit	North Carolina;Pender County	37141
+ReportingUnit	North Carolina;Pender County	PENDER
+ReportingUnit	North Carolina;Pender County	fips37141
 ReportingUnit	North Carolina;Pender County;ABSENTEE BY MAIL	PENDER;ABSENTEE BY MAIL
 ReportingUnit	North Carolina;Pender County;ABSENTEE MAIL	PENDER;ABSENTEE MAIL - N
 ReportingUnit	North Carolina;Pender County;CF11	PENDER;CF11
@@ -12783,9 +12783,9 @@ ReportingUnit	North Carolina;Pender County;UT14	PENDER;UT14
 ReportingUnit	North Carolina;Pender County;UT14	PENDER;UT14 - Y
 ReportingUnit	North Carolina;Pender County;UU17	PENDER;UU17
 ReportingUnit	North Carolina;Pender County;UU17	PENDER;UU17 - Y
-ReportingUnit	North Carolina;Perquimans County	PERQUIMANS
 ReportingUnit	North Carolina;Perquimans County	North Carolina;Perquimans County
-ReportingUnit	North Carolina;Perquimans County	37143
+ReportingUnit	North Carolina;Perquimans County	PERQUIMANS
+ReportingUnit	North Carolina;Perquimans County	fips37143
 ReportingUnit	North Carolina;Perquimans County;ABSENTEE	PERQUIMANS;ABSENTEE
 ReportingUnit	North Carolina;Perquimans County;ABSENTEE	PERQUIMANS;ABSENTEE - N
 ReportingUnit	North Carolina;Perquimans County;BELVID	PERQUIMANS;BELVID
@@ -12808,9 +12808,9 @@ ReportingUnit	North Carolina;Perquimans County;PROVISIONAL	PERQUIMANS;PROVISIONA
 ReportingUnit	North Carolina;Perquimans County;TRANSFER	PERQUIMANS;TRANSFER - N
 ReportingUnit	North Carolina;Perquimans County;WEST H	PERQUIMANS;WEST H
 ReportingUnit	North Carolina;Perquimans County;WEST H	PERQUIMANS;WEST H - Y
-ReportingUnit	North Carolina;Person County	PERSON
 ReportingUnit	North Carolina;Person County	North Carolina;Person County
-ReportingUnit	North Carolina;Person County	37145
+ReportingUnit	North Carolina;Person County	PERSON
+ReportingUnit	North Carolina;Person County	fips37145
 ReportingUnit	North Carolina;Person County;ALVI	PERSON;ALVI
 ReportingUnit	North Carolina;Person County;ALVI	PERSON;ALVI - Y
 ReportingUnit	North Carolina;Person County;CUCL	PERSON;CUCL
@@ -12833,9 +12833,9 @@ ReportingUnit	North Carolina;Person County;SWST	PERSON;SWST
 ReportingUnit	North Carolina;Person County;SWST	PERSON;SWST - Y
 ReportingUnit	North Carolina;Person County;WDSD	PERSON;WDSD
 ReportingUnit	North Carolina;Person County;WDSD	PERSON;WDSD - Y
-ReportingUnit	North Carolina;Pitt County	PITT
 ReportingUnit	North Carolina;Pitt County	North Carolina;Pitt County
-ReportingUnit	North Carolina;Pitt County	37147
+ReportingUnit	North Carolina;Pitt County	PITT
+ReportingUnit	North Carolina;Pitt County	fips37147
 ReportingUnit	North Carolina;Pitt County;0101	PITT;0101
 ReportingUnit	North Carolina;Pitt County;0101	PITT;0101 - Y
 ReportingUnit	North Carolina;Pitt County;0200A	PITT;0200A
@@ -12961,9 +12961,9 @@ ReportingUnit	North Carolina;Pitt County;PROVISIONAL #2	PITT;PROVISIONAL #2
 ReportingUnit	North Carolina;Pitt County;TRANSFER	PITT;TRANSFER - N
 ReportingUnit	North Carolina;Pitt County;TRANSFER #1	PITT;TRANSFER #1
 ReportingUnit	North Carolina;Pitt County;TRANSFER #2	PITT;TRANSFER #2
-ReportingUnit	North Carolina;Polk County	POLK
 ReportingUnit	North Carolina;Polk County	North Carolina;Polk County
-ReportingUnit	North Carolina;Polk County	37149
+ReportingUnit	North Carolina;Polk County	POLK
+ReportingUnit	North Carolina;Polk County	fips37149
 ReportingUnit	North Carolina;Polk County;ABSENTEE	POLK;ABSENTEE
 ReportingUnit	North Carolina;Polk County;ABSENTEE	POLK;ABSENTEE - N
 ReportingUnit	North Carolina;Polk County;CG05	POLK;CG05
@@ -12986,9 +12986,9 @@ ReportingUnit	North Carolina;Polk County;TR123	POLK;TR123 - Y
 ReportingUnit	North Carolina;Polk County;TRANSFER	POLK;TRANSFER - N
 ReportingUnit	North Carolina;Polk County;WO06	POLK;WO06
 ReportingUnit	North Carolina;Polk County;WO06	POLK;WO06 - Y
-ReportingUnit	North Carolina;Randolph County	RANDOLPH
 ReportingUnit	North Carolina;Randolph County	North Carolina;Randolph County
-ReportingUnit	North Carolina;Randolph County	37151
+ReportingUnit	North Carolina;Randolph County	RANDOLPH
+ReportingUnit	North Carolina;Randolph County	fips37151
 ReportingUnit	North Carolina;Randolph County;AE	RANDOLPH;AE
 ReportingUnit	North Carolina;Randolph County;AE	RANDOLPH;AE - Y
 ReportingUnit	North Carolina;Randolph County;AN	RANDOLPH;AN
@@ -13033,9 +13033,9 @@ ReportingUnit	North Carolina;Randolph County;TT	RANDOLPH;TT
 ReportingUnit	North Carolina;Randolph County;TT	RANDOLPH;TT - Y
 ReportingUnit	North Carolina;Randolph County;UG	RANDOLPH;UG
 ReportingUnit	North Carolina;Randolph County;UG	RANDOLPH;UG - Y
-ReportingUnit	North Carolina;Richmond County	RICHMOND
 ReportingUnit	North Carolina;Richmond County	North Carolina;Richmond County
-ReportingUnit	North Carolina;Richmond County	37153
+ReportingUnit	North Carolina;Richmond County	RICHMOND
+ReportingUnit	North Carolina;Richmond County	fips37153
 ReportingUnit	North Carolina;Richmond County;01	RICHMOND;01
 ReportingUnit	North Carolina;Richmond County;01	RICHMOND;01 - Y
 ReportingUnit	North Carolina;Richmond County;02	RICHMOND;02
@@ -13093,9 +13093,9 @@ ReportingUnit	North Carolina;Richmond County;PROVISIONAL	RICHMOND;PROVISIONAL
 ReportingUnit	North Carolina;Richmond County;PROVISIONAL	RICHMOND;PROVISIONAL - N
 ReportingUnit	North Carolina;Richmond County;TRANSFER	RICHMOND;TRANSFER
 ReportingUnit	North Carolina;Richmond County;TRANSFER - N	RICHMOND;TRANSFER - N
-ReportingUnit	North Carolina;Robeson County	ROBESON
 ReportingUnit	North Carolina;Robeson County	North Carolina;Robeson County
-ReportingUnit	North Carolina;Robeson County	37155
+ReportingUnit	North Carolina;Robeson County	ROBESON
+ReportingUnit	North Carolina;Robeson County	fips37155
 ReportingUnit	North Carolina;Robeson County;01	ROBESON;01
 ReportingUnit	North Carolina;Robeson County;01	ROBESON;01 - Y
 ReportingUnit	North Carolina;Robeson County;02	ROBESON;02
@@ -13198,9 +13198,9 @@ ReportingUnit	North Carolina;Robeson County;PROVISIONAL	ROBESON;PROVISIONAL - N
 ReportingUnit	North Carolina;Robeson County;REDS	ROBESON;REDS - N
 ReportingUnit	North Carolina;Robeson County;STP	ROBESON;STP - N
 ReportingUnit	North Carolina;Robeson County;TRANSFER	ROBESON;TRANSFER - N
-ReportingUnit	North Carolina;Rockingham County	ROCKINGHAM
 ReportingUnit	North Carolina;Rockingham County	North Carolina;Rockingham County
-ReportingUnit	North Carolina;Rockingham County	37157
+ReportingUnit	North Carolina;Rockingham County	ROCKINGHAM
+ReportingUnit	North Carolina;Rockingham County	fips37157
 ReportingUnit	North Carolina;Rockingham County;DR	ROCKINGHAM;DR
 ReportingUnit	North Carolina;Rockingham County;DR	ROCKINGHAM;DR - Y
 ReportingUnit	North Carolina;Rockingham County;EC	ROCKINGHAM;EC
@@ -13231,9 +13231,9 @@ ReportingUnit	North Carolina;Rockingham County;SE	ROCKINGHAM;SE
 ReportingUnit	North Carolina;Rockingham County;SE	ROCKINGHAM;SE - Y
 ReportingUnit	North Carolina;Rockingham County;WS	ROCKINGHAM;WS
 ReportingUnit	North Carolina;Rockingham County;WS	ROCKINGHAM;WS - Y
-ReportingUnit	North Carolina;Rowan County	ROWAN
 ReportingUnit	North Carolina;Rowan County	North Carolina;Rowan County
-ReportingUnit	North Carolina;Rowan County	37159
+ReportingUnit	North Carolina;Rowan County	ROWAN
+ReportingUnit	North Carolina;Rowan County	fips37159
 ReportingUnit	North Carolina;Rowan County;01	ROWAN;01
 ReportingUnit	North Carolina;Rowan County;01	ROWAN;01 - Y
 ReportingUnit	North Carolina;Rowan County;02	ROWAN;02
@@ -13323,9 +13323,9 @@ ReportingUnit	North Carolina;Rowan County;45	ROWAN;45 - Y
 ReportingUnit	North Carolina;Rowan County;7	ROWAN;7 - Y
 ReportingUnit	North Carolina;Rowan County;8	ROWAN;8 - Y
 ReportingUnit	North Carolina;Rowan County;9	ROWAN;9 - Y
-ReportingUnit	North Carolina;Rutherford County	RUTHERFORD
 ReportingUnit	North Carolina;Rutherford County	North Carolina;Rutherford County
-ReportingUnit	North Carolina;Rutherford County	37161
+ReportingUnit	North Carolina;Rutherford County	RUTHERFORD
+ReportingUnit	North Carolina;Rutherford County	fips37161
 ReportingUnit	North Carolina;Rutherford County;03A	RUTHERFORD;03A
 ReportingUnit	North Carolina;Rutherford County;03A	RUTHERFORD;03A - Y
 ReportingUnit	North Carolina;Rutherford County;04A	RUTHERFORD;04A
@@ -13371,9 +13371,9 @@ ReportingUnit	North Carolina;Rutherford County;OS-BOE PAPER	RUTHERFORD;OS-BOE PA
 ReportingUnit	North Carolina;Rutherford County;OS-ELLENBORO PAPER	RUTHERFORD;OS-ELLENBORO PAPER
 ReportingUnit	North Carolina;Rutherford County;PROVISIONAL	RUTHERFORD;PROVISIONAL
 ReportingUnit	North Carolina;Rutherford County;PROVISIONAL	RUTHERFORD;PROVISIONAL - N
-ReportingUnit	North Carolina;Sampson County	SAMPSON
 ReportingUnit	North Carolina;Sampson County	North Carolina;Sampson County
-ReportingUnit	North Carolina;Sampson County	37163
+ReportingUnit	North Carolina;Sampson County	SAMPSON
+ReportingUnit	North Carolina;Sampson County	fips37163
 ReportingUnit	North Carolina;Sampson County;ABSENTEE	SAMPSON;ABSENTEE
 ReportingUnit	North Carolina;Sampson County;ABSENTEE	SAMPSON;ABSENTEE - N
 ReportingUnit	North Carolina;Sampson County;ABSENTEE MAIL	SAMPSON;ABSENTEE MAIL - N
@@ -13436,9 +13436,9 @@ ReportingUnit	North Carolina;Sampson County;TURK	SAMPSON;TURK
 ReportingUnit	North Carolina;Sampson County;TURK	SAMPSON;TURK - Y
 ReportingUnit	North Carolina;Sampson County;WBRK	SAMPSON;WBRK
 ReportingUnit	North Carolina;Sampson County;WBRK	SAMPSON;WBRK - Y
-ReportingUnit	North Carolina;Scotland County	SCOTLAND
 ReportingUnit	North Carolina;Scotland County	North Carolina;Scotland County
-ReportingUnit	North Carolina;Scotland County	37165
+ReportingUnit	North Carolina;Scotland County	SCOTLAND
+ReportingUnit	North Carolina;Scotland County	fips37165
 ReportingUnit	North Carolina;Scotland County;01	SCOTLAND;01
 ReportingUnit	North Carolina;Scotland County;01	SCOTLAND;01 - Y
 ReportingUnit	North Carolina;Scotland County;01-16 - Y	SCOTLAND;01-16 - Y
@@ -13480,9 +13480,9 @@ ReportingUnit	North Carolina;Scotland County;PROVISIONAL	SCOTLAND;PROVISIONAL
 ReportingUnit	North Carolina;Scotland County;PROVISIONAL	SCOTLAND;PROVISIONAL - N
 ReportingUnit	North Carolina;Scotland County;TRANSFER	SCOTLAND;TRANSFER
 ReportingUnit	North Carolina;Scotland County;TRANSFER - N	SCOTLAND;TRANSFER - N
-ReportingUnit	North Carolina;Stanly County	STANLY
 ReportingUnit	North Carolina;Stanly County	North Carolina;Stanly County
-ReportingUnit	North Carolina;Stanly County	37167
+ReportingUnit	North Carolina;Stanly County	STANLY
+ReportingUnit	North Carolina;Stanly County	fips37167
 ReportingUnit	North Carolina;Stanly County;0002	STANLY;0002
 ReportingUnit	North Carolina;Stanly County;0002	STANLY;0002 - Y
 ReportingUnit	North Carolina;Stanly County;0003	STANLY;0003
@@ -13558,9 +13558,9 @@ ReportingUnit	North Carolina;Stanly County;OS BOE	STANLY;OS BOE - N
 ReportingUnit	North Carolina;Stanly County;OS LOC	STANLY;OS LOC - N
 ReportingUnit	North Carolina;Stanly County;PROVISIONAL	STANLY;PROVISIONAL - N
 ReportingUnit	North Carolina;Stanly County;TRANSFER	STANLY;TRANSFER - N
-ReportingUnit	North Carolina;Stokes County	STOKES
 ReportingUnit	North Carolina;Stokes County	North Carolina;Stokes County
-ReportingUnit	North Carolina;Stokes County	37169
+ReportingUnit	North Carolina;Stokes County	STOKES
+ReportingUnit	North Carolina;Stokes County	fips37169
 ReportingUnit	North Carolina;Stokes County;01	STOKES;01
 ReportingUnit	North Carolina;Stokes County;01	STOKES;01 - Y
 ReportingUnit	North Carolina;Stokes County;02	STOKES;02
@@ -13624,9 +13624,9 @@ ReportingUnit	North Carolina;Stokes County;OS WALNUT COVE	STOKES;OS WALNUT COVE
 ReportingUnit	North Carolina;Stokes County;PROVISIONAL	STOKES;PROVISIONAL
 ReportingUnit	North Carolina;Stokes County;PROVISIONAL	STOKES;PROVISIONAL - N
 ReportingUnit	North Carolina;Stokes County;TRANSFER - N	STOKES;TRANSFER - N
-ReportingUnit	North Carolina;Surry County	SURRY
 ReportingUnit	North Carolina;Surry County	North Carolina;Surry County
-ReportingUnit	North Carolina;Surry County	37171
+ReportingUnit	North Carolina;Surry County	SURRY
+ReportingUnit	North Carolina;Surry County	fips37171
 ReportingUnit	North Carolina;Surry County;01	SURRY;01
 ReportingUnit	North Carolina;Surry County;01	SURRY;01 - Y
 ReportingUnit	North Carolina;Surry County;02	SURRY;02
@@ -13706,9 +13706,9 @@ ReportingUnit	North Carolina;Surry County;PM OS - N	SURRY;PM OS - N
 ReportingUnit	North Carolina;Surry County;PROVISIONAL	SURRY;PROVISIONAL
 ReportingUnit	North Carolina;Surry County;PROVISIONAL	SURRY;PROVISIONAL - N
 ReportingUnit	North Carolina;Surry County;TRANSFER	SURRY;TRANSFER - N
-ReportingUnit	North Carolina;Swain County	SWAIN
 ReportingUnit	North Carolina;Swain County	North Carolina;Swain County
-ReportingUnit	North Carolina;Swain County	37173
+ReportingUnit	North Carolina;Swain County	SWAIN
+ReportingUnit	North Carolina;Swain County	fips37173
 ReportingUnit	North Carolina;Swain County;ABSENTEE	SWAIN;ABSENTEE - N
 ReportingUnit	North Carolina;Swain County;ALARKA	SWAIN;ALARKA
 ReportingUnit	North Carolina;Swain County;ALARKA	SWAIN;ALARKA - Y
@@ -13723,9 +13723,9 @@ ReportingUnit	North Carolina;Swain County;PROVISIONAL	SWAIN;PROVISIONAL - N
 ReportingUnit	North Carolina;Swain County;TRANSFER	SWAIN;TRANSFER - N
 ReportingUnit	North Carolina;Swain County;WHCH	SWAIN;WHCH
 ReportingUnit	North Carolina;Swain County;WHCH	SWAIN;WHCH - Y
-ReportingUnit	North Carolina;Transylvania County	TRANSYLVANIA
 ReportingUnit	North Carolina;Transylvania County	North Carolina;Transylvania County
-ReportingUnit	North Carolina;Transylvania County	37175
+ReportingUnit	North Carolina;Transylvania County	TRANSYLVANIA
+ReportingUnit	North Carolina;Transylvania County	fips37175
 ReportingUnit	North Carolina;Transylvania County;ABSENTEE	TRANSYLVANIA;ABSENTEE - N
 ReportingUnit	North Carolina;Transylvania County;B1	TRANSYLVANIA;B1
 ReportingUnit	North Carolina;Transylvania County;B1	TRANSYLVANIA;B1 - Y
@@ -13760,9 +13760,9 @@ ReportingUnit	North Carolina;Transylvania County;TC7	TRANSYLVANIA;TC7 - Y
 ReportingUnit	North Carolina;Transylvania County;TRANSFER	TRANSYLVANIA;TRANSFER - N
 ReportingUnit	North Carolina;Transylvania County;WC	TRANSYLVANIA;WC
 ReportingUnit	North Carolina;Transylvania County;WC	TRANSYLVANIA;WC - Y
-ReportingUnit	North Carolina;Tyrrell County	TYRRELL
 ReportingUnit	North Carolina;Tyrrell County	North Carolina;Tyrrell County
-ReportingUnit	North Carolina;Tyrrell County	37177
+ReportingUnit	North Carolina;Tyrrell County	TYRRELL
+ReportingUnit	North Carolina;Tyrrell County	fips37177
 ReportingUnit	North Carolina;Tyrrell County;1	TYRRELL;1
 ReportingUnit	North Carolina;Tyrrell County;1	TYRRELL;1 - Y
 ReportingUnit	North Carolina;Tyrrell County;14	TYRRELL;14
@@ -13796,9 +13796,9 @@ ReportingUnit	North Carolina;US House NC District 6	North Carolina;US House NC D
 ReportingUnit	North Carolina;US House NC District 7	North Carolina;US House NC District 7
 ReportingUnit	North Carolina;US House NC District 8	North Carolina;US House NC District 8
 ReportingUnit	North Carolina;US House NC District 9	North Carolina;US House NC District 9
-ReportingUnit	North Carolina;Union County	UNION
 ReportingUnit	North Carolina;Union County	North Carolina;Union County
-ReportingUnit	North Carolina;Union County	37179
+ReportingUnit	North Carolina;Union County	UNION
+ReportingUnit	North Carolina;Union County	fips37179
 ReportingUnit	North Carolina;Union County;001	UNION;001
 ReportingUnit	North Carolina;Union County;001	UNION;001 - Y
 ReportingUnit	North Carolina;Union County;002	UNION;002
@@ -13949,9 +13949,9 @@ ReportingUnit	North Carolina;Union County;PROVISIONAL	UNION;PROVISIONAL
 ReportingUnit	North Carolina;Union County;PROVISIONAL	UNION;PROVISIONAL - N
 ReportingUnit	North Carolina;Union County;TRANSFER	UNION;TRANSFER
 ReportingUnit	North Carolina;Union County;TRANSFER	UNION;TRANSFER - N
-ReportingUnit	North Carolina;Vance County	VANCE
 ReportingUnit	North Carolina;Vance County	North Carolina;Vance County
-ReportingUnit	North Carolina;Vance County	37181
+ReportingUnit	North Carolina;Vance County	VANCE
+ReportingUnit	North Carolina;Vance County	fips37181
 ReportingUnit	North Carolina;Vance County;CC	VANCE;CC
 ReportingUnit	North Carolina;Vance County;CC	VANCE;CC - Y
 ReportingUnit	North Carolina;Vance County;EH1	VANCE;EH1
@@ -13976,9 +13976,9 @@ ReportingUnit	North Carolina;Vance County;SH2	VANCE;SH2
 ReportingUnit	North Carolina;Vance County;SH2	VANCE;SH2 - Y
 ReportingUnit	North Carolina;Vance County;WH	VANCE;WH
 ReportingUnit	North Carolina;Vance County;WH	VANCE;WH - Y
-ReportingUnit	North Carolina;Wake County	WAKE
 ReportingUnit	North Carolina;Wake County	North Carolina;Wake County
-ReportingUnit	North Carolina;Wake County	37183
+ReportingUnit	North Carolina;Wake County	WAKE
+ReportingUnit	North Carolina;Wake County	fips37183
 ReportingUnit	North Carolina;Wake County;01-01	WAKE;01-01
 ReportingUnit	North Carolina;Wake County;01-01	WAKE;01-01 - Y
 ReportingUnit	North Carolina;Wake County;01-02	WAKE;01-02
@@ -14711,9 +14711,9 @@ ReportingUnit	North Carolina;Wake County;TRANS 41-80	WAKE;TRANS 41-80 - N
 ReportingUnit	North Carolina;Wake County;TRANS 81-120 - N	WAKE;TRANS 81-120 - N
 ReportingUnit	North Carolina;Wake County;TRANS 81-91	WAKE;TRANS 81-91
 ReportingUnit	North Carolina;Wake County;TRANS 81-95	WAKE;TRANS 81-95 - N
-ReportingUnit	North Carolina;Warren County	WARREN
 ReportingUnit	North Carolina;Warren County	North Carolina;Warren County
-ReportingUnit	North Carolina;Warren County	37185
+ReportingUnit	North Carolina;Warren County	WARREN
+ReportingUnit	North Carolina;Warren County	fips37185
 ReportingUnit	North Carolina;Warren County;001	WARREN;001
 ReportingUnit	North Carolina;Warren County;001	WARREN;001 - Y
 ReportingUnit	North Carolina;Warren County;002	WARREN;002
@@ -14756,9 +14756,9 @@ ReportingUnit	North Carolina;Warren County;6	WARREN;6 - Y
 ReportingUnit	North Carolina;Warren County;7	WARREN;7 - Y
 ReportingUnit	North Carolina;Warren County;8	WARREN;8 - Y
 ReportingUnit	North Carolina;Warren County;9	WARREN;9 - Y
-ReportingUnit	North Carolina;Washington County	WASHINGTON
 ReportingUnit	North Carolina;Washington County	North Carolina;Washington County
-ReportingUnit	North Carolina;Washington County	37187
+ReportingUnit	North Carolina;Washington County	WASHINGTON
+ReportingUnit	North Carolina;Washington County	fips37187
 ReportingUnit	North Carolina;Washington County;ABSENTEE	WASHINGTON;ABSENTEE
 ReportingUnit	North Carolina;Washington County;ABSENTEE	WASHINGTON;ABSENTEE - N
 ReportingUnit	North Carolina;Washington County;LM	WASHINGTON;LM
@@ -14778,9 +14778,9 @@ ReportingUnit	North Carolina;Washington County;SC	WASHINGTON;SC - Y
 ReportingUnit	North Carolina;Washington County;SK	WASHINGTON;SK
 ReportingUnit	North Carolina;Washington County;SK	WASHINGTON;SK - Y
 ReportingUnit	North Carolina;Washington County;TRANSFER - N	WASHINGTON;TRANSFER - N
-ReportingUnit	North Carolina;Watauga County	WATAUGA
 ReportingUnit	North Carolina;Watauga County	North Carolina;Watauga County
-ReportingUnit	North Carolina;Watauga County	37189
+ReportingUnit	North Carolina;Watauga County	WATAUGA
+ReportingUnit	North Carolina;Watauga County	fips37189
 ReportingUnit	North Carolina;Watauga County;01	WATAUGA;01
 ReportingUnit	North Carolina;Watauga County;01	WATAUGA;01 - Y
 ReportingUnit	North Carolina;Watauga County;02	WATAUGA;02
@@ -14860,9 +14860,9 @@ ReportingUnit	North Carolina;Watauga County;PROVISIONAL	WATAUGA;PROVISIONAL
 ReportingUnit	North Carolina;Watauga County;PROVISIONAL	WATAUGA;PROVISIONAL - N
 ReportingUnit	North Carolina;Watauga County;TRANSFER	WATAUGA;TRANSFER
 ReportingUnit	North Carolina;Watauga County;TRANSFER	WATAUGA;TRANSFER - N
-ReportingUnit	North Carolina;Wayne County	WAYNE
 ReportingUnit	North Carolina;Wayne County	North Carolina;Wayne County
-ReportingUnit	North Carolina;Wayne County	37191
+ReportingUnit	North Carolina;Wayne County	WAYNE
+ReportingUnit	North Carolina;Wayne County	fips37191
 ReportingUnit	North Carolina;Wayne County;01	WAYNE;01
 ReportingUnit	North Carolina;Wayne County;01	WAYNE;01 - Y
 ReportingUnit	North Carolina;Wayne County;02	WAYNE;02
@@ -14957,9 +14957,9 @@ ReportingUnit	North Carolina;Wayne County;PROVISIONAL	WAYNE;PROVISIONAL
 ReportingUnit	North Carolina;Wayne County;PROVISIONAL	WAYNE;PROVISIONAL - N
 ReportingUnit	North Carolina;Wayne County;TRANSFER	WAYNE;TRANSFER
 ReportingUnit	North Carolina;Wayne County;TRANSFER	WAYNE;TRANSFER - N
-ReportingUnit	North Carolina;Wilkes County	WILKES
 ReportingUnit	North Carolina;Wilkes County	North Carolina;Wilkes County
-ReportingUnit	North Carolina;Wilkes County	37193
+ReportingUnit	North Carolina;Wilkes County	WILKES
+ReportingUnit	North Carolina;Wilkes County	fips37193
 ReportingUnit	North Carolina;Wilkes County;101	WILKES;101
 ReportingUnit	North Carolina;Wilkes County;101	WILKES;101 - Y
 ReportingUnit	North Carolina;Wilkes County;102	WILKES;102
@@ -15035,9 +15035,9 @@ ReportingUnit	North Carolina;Wilkes County;PROVISIONAL	WILKES;PROVISIONAL
 ReportingUnit	North Carolina;Wilkes County;PROVISIONAL	WILKES;PROVISIONAL - N
 ReportingUnit	North Carolina;Wilkes County;TRANSFER	WILKES;TRANSFER
 ReportingUnit	North Carolina;Wilkes County;TRANSFER	WILKES;TRANSFER - N
-ReportingUnit	North Carolina;Wilson County	WILSON
 ReportingUnit	North Carolina;Wilson County	North Carolina;Wilson County
-ReportingUnit	North Carolina;Wilson County	37195
+ReportingUnit	North Carolina;Wilson County	WILSON
+ReportingUnit	North Carolina;Wilson County	fips37195
 ReportingUnit	North Carolina;Wilson County;ABSENTEE	WILSON;ABSENTEE
 ReportingUnit	North Carolina;Wilson County;CURBSIDE	WILSON;CURBSIDE
 ReportingUnit	North Carolina;Wilson County;ONE STOP BOE PAPER	WILSON;ONE STOP BOE PAPER
@@ -15091,9 +15091,9 @@ ReportingUnit	North Carolina;Wilson County;PRWQ	WILSON;PRWQ
 ReportingUnit	North Carolina;Wilson County;PRWQ	WILSON;PRWQ - Y
 ReportingUnit	North Carolina;Wilson County;PRWR	WILSON;PRWR
 ReportingUnit	North Carolina;Wilson County;PRWR	WILSON;PRWR - Y
-ReportingUnit	North Carolina;Yadkin County	YADKIN
 ReportingUnit	North Carolina;Yadkin County	North Carolina;Yadkin County
-ReportingUnit	North Carolina;Yadkin County	37197
+ReportingUnit	North Carolina;Yadkin County	YADKIN
+ReportingUnit	North Carolina;Yadkin County	fips37197
 ReportingUnit	North Carolina;Yadkin County;ABSENTEE	YADKIN;ABSENTEE
 ReportingUnit	North Carolina;Yadkin County;ABSENTEE	YADKIN;ABSENTEE - N
 ReportingUnit	North Carolina;Yadkin County;ABSENTEE MAIL	YADKIN;ABSENTEE MAIL - N
@@ -15126,9 +15126,9 @@ ReportingUnit	North Carolina;Yadkin County;SKNB	YADKIN;SKNB - Y
 ReportingUnit	North Carolina;Yadkin County;SLIB	YADKIN;SLIB
 ReportingUnit	North Carolina;Yadkin County;SLIB	YADKIN;SLIB - Y
 ReportingUnit	North Carolina;Yadkin County;TRANSFER - N	YADKIN;TRANSFER - N
-ReportingUnit	North Carolina;Yancey County	YANCEY
 ReportingUnit	North Carolina;Yancey County	North Carolina;Yancey County
-ReportingUnit	North Carolina;Yancey County	37199
+ReportingUnit	North Carolina;Yancey County	YANCEY
+ReportingUnit	North Carolina;Yancey County	fips37199
 ReportingUnit	North Carolina;Yancey County;01 BUR	YANCEY;01 BUR
 ReportingUnit	North Carolina;Yancey County;01 BUR	YANCEY;01 BUR - Y
 ReportingUnit	North Carolina;Yancey County;02 CAN	YANCEY;02 CAN

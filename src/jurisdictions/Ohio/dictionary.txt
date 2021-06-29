@@ -356,8 +356,8 @@ Candidate	Don Jones	Don Jones
 Candidate	Don Kissick	Don Kissick
 Candidate	Don Manning	Don Manning
 Candidate	Donald Edward Davis	Donald Edward Davis
-Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald P. Larson	Donald P. Larson
 Candidate	Donald Truex	Donald Truex
 Candidate	Donald Trump	Donald Trump
@@ -469,8 +469,8 @@ Candidate	Heather A. Freese	Heather A. Freese
 Candidate	Heather Bishoff	Heather Bishoff
 Candidate	Heidi Rosales	Heidi Rosales
 Candidate	Henry Todd	Henry Todd
-Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hillary Mueri	Hillary Mueri
 Candidate	Hillary O'Connor Mueri	Hillary O'Connor Mueri
 Candidate	Holly R. Elder	Holly R. Elder
@@ -1816,8 +1816,8 @@ CandidateContest	OH House District 8 (Democratic Party)	State Representative - D
 CandidateContest	OH House District 8 (Green Party)	State Representative - District 08 (G)
 CandidateContest	OH House District 8 (Libertarian Party)	State Representative - District 08 (L)
 CandidateContest	OH House District 8 (Republican Party)	State Representative - District 08 (R)
-CandidateContest	OH House District 80	State Representative - District 80
 CandidateContest	OH House District 80	State Repersenative - District 80
+CandidateContest	OH House District 80	State Representative - District 80
 CandidateContest	OH House District 80 (Democratic Party)	State Representative - District 80 (D)
 CandidateContest	OH House District 80 (Green Party)	State Representative - District 80 (G)
 CandidateContest	OH House District 80 (Libertarian Party)	State Representative - District 80 (L)
@@ -2177,10 +2177,10 @@ CandidateContest	US House OH District 9 (Democratic Party)	Representative to Con
 CandidateContest	US House OH District 9 (Green Party)	Representative to Congress - District 09 (G)
 CandidateContest	US House OH District 9 (Libertarian Party)	Representative to Congress - District 09 (L)
 CandidateContest	US House OH District 9 (Republican Party)	Representative to Congress - District 09 (R)
-CandidateContest	US President (OH)	President (at-large)
-CandidateContest	US President (OH)	President
-CandidateContest	US President (OH)	President and Vice President
 CandidateContest	US President (OH)	PRESIDENT
+CandidateContest	US President (OH)	President
+CandidateContest	US President (OH)	President (at-large)
+CandidateContest	US President (OH)	President and Vice President
 CandidateContest	US President (OH)	US PRESIDENT
 CandidateContest	US President (OH) (Democratic Party)	President (at-large) (D)
 CandidateContest	US President (OH) (Green Party)	President (at-large) (G)
@@ -2191,9 +2191,9 @@ CandidateContest	US Senate OH (Democratic Party)	U.S. Senator (D)
 CandidateContest	US Senate OH (Green Party)	U.S. Senator (G)
 CandidateContest	US Senate OH (Libertarian Party)	U.S. Senator (L)
 CandidateContest	US Senate OH (Republican Party)	U.S. Senator (R)
-CountItemType	total	total
-CountItemType	total	Total
 CountItemType	total	TOTAL
+CountItemType	total	Total
+CountItemType	total	total
 Election	2016 General	2016 General
 Election	2016 Primary	2016 Primary
 Election	2018 General	2018 General
@@ -2203,148 +2203,148 @@ Election	2020 Presidential Preference Primary	2020 Presidential Preference Prima
 Election	2020 Primary	2020 Primary
 Party	Democratic Party	D
 Party	Democratic Party	DEM
-Party	Democratic Party	Democratic
 Party	Democratic Party	DEMOCRAT
+Party	Democratic Party	Democratic
 Party	Green Party	G
 Party	Green Party	GREEN
 Party	Independent - NO ballot designation	Independent - NO ballot designation
 Party	Independent Party	Indep
 Party	Libertarian Party	L
 Party	Libertarian Party	LIB
-Party	Libertarian Party	Libertarian
 Party	Libertarian Party	LIBERTARIAN
-Party	Nonparty candidate	Nonprtycan
+Party	Libertarian Party	Libertarian
 Party	Nonparty candidate	Nonparty candidate
+Party	Nonparty candidate	Nonprtycan
 Party	Republican Party	R
 Party	Republican Party	REP
-Party	Republican Party	Republican
 Party	Republican Party	REPUBLICAN
-Party	Write-in	Write-in
+Party	Republican Party	Republican
 Party	Write-in	Not Applicable - WI
+Party	Write-in	Write-in
 Party	none or unknown	OTHER
 ReportingUnit	Ohio	Ohio
 ReportingUnit	Ohio;Adams County	Adams
-ReportingUnit	Ohio;Adams County	39001
+ReportingUnit	Ohio;Adams County	fips39001
 ReportingUnit	Ohio;Allen County	Allen
-ReportingUnit	Ohio;Allen County	39003
+ReportingUnit	Ohio;Allen County	fips39003
 ReportingUnit	Ohio;Ashland County	Ashland
-ReportingUnit	Ohio;Ashland County	39005
+ReportingUnit	Ohio;Ashland County	fips39005
 ReportingUnit	Ohio;Ashtabula County	Ashtabula
-ReportingUnit	Ohio;Ashtabula County	39007
+ReportingUnit	Ohio;Ashtabula County	fips39007
 ReportingUnit	Ohio;Athens County	Athens
-ReportingUnit	Ohio;Athens County	39009
+ReportingUnit	Ohio;Athens County	fips39009
 ReportingUnit	Ohio;Auglaize County	Auglaize
-ReportingUnit	Ohio;Auglaize County	39011
+ReportingUnit	Ohio;Auglaize County	fips39011
 ReportingUnit	Ohio;Belmont County	Belmont
-ReportingUnit	Ohio;Belmont County	39013
+ReportingUnit	Ohio;Belmont County	fips39013
 ReportingUnit	Ohio;Brown County	Brown
-ReportingUnit	Ohio;Brown County	39015
+ReportingUnit	Ohio;Brown County	fips39015
 ReportingUnit	Ohio;Butler County	Butler
-ReportingUnit	Ohio;Butler County	39017
+ReportingUnit	Ohio;Butler County	fips39017
 ReportingUnit	Ohio;Carroll County	Carroll
-ReportingUnit	Ohio;Carroll County	39019
+ReportingUnit	Ohio;Carroll County	fips39019
 ReportingUnit	Ohio;Champaign County	Champaign
-ReportingUnit	Ohio;Champaign County	39021
+ReportingUnit	Ohio;Champaign County	fips39021
 ReportingUnit	Ohio;Clark County	Clark
-ReportingUnit	Ohio;Clark County	39023
+ReportingUnit	Ohio;Clark County	fips39023
 ReportingUnit	Ohio;Clermont County	Clermont
-ReportingUnit	Ohio;Clermont County	39025
+ReportingUnit	Ohio;Clermont County	fips39025
 ReportingUnit	Ohio;Clinton County	Clinton
-ReportingUnit	Ohio;Clinton County	39027
+ReportingUnit	Ohio;Clinton County	fips39027
 ReportingUnit	Ohio;Columbiana County	Columbiana
-ReportingUnit	Ohio;Columbiana County	39029
+ReportingUnit	Ohio;Columbiana County	fips39029
 ReportingUnit	Ohio;Coshocton County	Coshocton
-ReportingUnit	Ohio;Coshocton County	39031
+ReportingUnit	Ohio;Coshocton County	fips39031
 ReportingUnit	Ohio;Crawford County	Crawford
-ReportingUnit	Ohio;Crawford County	39033
+ReportingUnit	Ohio;Crawford County	fips39033
 ReportingUnit	Ohio;Cuyahoga County	Cuyahoga
-ReportingUnit	Ohio;Cuyahoga County	39035
+ReportingUnit	Ohio;Cuyahoga County	fips39035
 ReportingUnit	Ohio;Darke County	Darke
-ReportingUnit	Ohio;Darke County	39037
+ReportingUnit	Ohio;Darke County	fips39037
 ReportingUnit	Ohio;Defiance County	Defiance
-ReportingUnit	Ohio;Defiance County	39039
+ReportingUnit	Ohio;Defiance County	fips39039
 ReportingUnit	Ohio;Delaware County	Delaware
-ReportingUnit	Ohio;Delaware County	39041
+ReportingUnit	Ohio;Delaware County	fips39041
 ReportingUnit	Ohio;Erie County	Erie
-ReportingUnit	Ohio;Erie County	39043
+ReportingUnit	Ohio;Erie County	fips39043
 ReportingUnit	Ohio;Fairfield County	Fairfield
-ReportingUnit	Ohio;Fairfield County	39045
+ReportingUnit	Ohio;Fairfield County	fips39045
 ReportingUnit	Ohio;Fayette County	Fayette
-ReportingUnit	Ohio;Fayette County	39047
+ReportingUnit	Ohio;Fayette County	fips39047
 ReportingUnit	Ohio;Franklin County	Franklin
-ReportingUnit	Ohio;Franklin County	39049
+ReportingUnit	Ohio;Franklin County	fips39049
 ReportingUnit	Ohio;Fulton County	Fulton
-ReportingUnit	Ohio;Fulton County	39051
+ReportingUnit	Ohio;Fulton County	fips39051
 ReportingUnit	Ohio;Gallia County	Gallia
-ReportingUnit	Ohio;Gallia County	39053
+ReportingUnit	Ohio;Gallia County	fips39053
 ReportingUnit	Ohio;Geauga County	Geauga
-ReportingUnit	Ohio;Geauga County	39055
+ReportingUnit	Ohio;Geauga County	fips39055
 ReportingUnit	Ohio;Greene County	Greene
-ReportingUnit	Ohio;Greene County	39057
+ReportingUnit	Ohio;Greene County	fips39057
 ReportingUnit	Ohio;Guernsey County	Guernsey
-ReportingUnit	Ohio;Guernsey County	39059
+ReportingUnit	Ohio;Guernsey County	fips39059
 ReportingUnit	Ohio;Hamilton County	Hamilton
-ReportingUnit	Ohio;Hamilton County	39061
+ReportingUnit	Ohio;Hamilton County	fips39061
 ReportingUnit	Ohio;Hancock County	Hancock
-ReportingUnit	Ohio;Hancock County	39063
+ReportingUnit	Ohio;Hancock County	fips39063
 ReportingUnit	Ohio;Hardin County	Hardin
-ReportingUnit	Ohio;Hardin County	39065
+ReportingUnit	Ohio;Hardin County	fips39065
 ReportingUnit	Ohio;Harrison County	Harrison
-ReportingUnit	Ohio;Harrison County	39067
+ReportingUnit	Ohio;Harrison County	fips39067
 ReportingUnit	Ohio;Henry County	Henry
-ReportingUnit	Ohio;Henry County	39069
+ReportingUnit	Ohio;Henry County	fips39069
 ReportingUnit	Ohio;Highland County	Highland
-ReportingUnit	Ohio;Highland County	39071
+ReportingUnit	Ohio;Highland County	fips39071
 ReportingUnit	Ohio;Hocking County	Hocking
-ReportingUnit	Ohio;Hocking County	39073
+ReportingUnit	Ohio;Hocking County	fips39073
 ReportingUnit	Ohio;Holmes County	Holmes
-ReportingUnit	Ohio;Holmes County	39075
+ReportingUnit	Ohio;Holmes County	fips39075
 ReportingUnit	Ohio;Huron County	Huron
-ReportingUnit	Ohio;Huron County	39077
+ReportingUnit	Ohio;Huron County	fips39077
 ReportingUnit	Ohio;Jackson County	Jackson
-ReportingUnit	Ohio;Jackson County	39079
+ReportingUnit	Ohio;Jackson County	fips39079
 ReportingUnit	Ohio;Jefferson County	Jefferson
-ReportingUnit	Ohio;Jefferson County	39081
+ReportingUnit	Ohio;Jefferson County	fips39081
 ReportingUnit	Ohio;Knox County	Knox
-ReportingUnit	Ohio;Knox County	39083
+ReportingUnit	Ohio;Knox County	fips39083
 ReportingUnit	Ohio;Lake County	Lake
-ReportingUnit	Ohio;Lake County	39085
+ReportingUnit	Ohio;Lake County	fips39085
 ReportingUnit	Ohio;Lawrence County	Lawrence
-ReportingUnit	Ohio;Lawrence County	39087
+ReportingUnit	Ohio;Lawrence County	fips39087
 ReportingUnit	Ohio;Licking County	Licking
-ReportingUnit	Ohio;Licking County	39089
+ReportingUnit	Ohio;Licking County	fips39089
 ReportingUnit	Ohio;Logan County	Logan
-ReportingUnit	Ohio;Logan County	39091
+ReportingUnit	Ohio;Logan County	fips39091
 ReportingUnit	Ohio;Lorain County	Lorain
-ReportingUnit	Ohio;Lorain County	39093
+ReportingUnit	Ohio;Lorain County	fips39093
 ReportingUnit	Ohio;Lucas County	Lucas
-ReportingUnit	Ohio;Lucas County	39095
+ReportingUnit	Ohio;Lucas County	fips39095
 ReportingUnit	Ohio;Madison County	Madison
-ReportingUnit	Ohio;Madison County	39097
+ReportingUnit	Ohio;Madison County	fips39097
 ReportingUnit	Ohio;Mahoning County	Mahoning
-ReportingUnit	Ohio;Mahoning County	39099
+ReportingUnit	Ohio;Mahoning County	fips39099
 ReportingUnit	Ohio;Marion County	Marion
-ReportingUnit	Ohio;Marion County	39101
+ReportingUnit	Ohio;Marion County	fips39101
 ReportingUnit	Ohio;Medina County	Medina
-ReportingUnit	Ohio;Medina County	39103
+ReportingUnit	Ohio;Medina County	fips39103
 ReportingUnit	Ohio;Meigs County	Meigs
-ReportingUnit	Ohio;Meigs County	39105
+ReportingUnit	Ohio;Meigs County	fips39105
 ReportingUnit	Ohio;Mercer County	Mercer
-ReportingUnit	Ohio;Mercer County	39107
+ReportingUnit	Ohio;Mercer County	fips39107
 ReportingUnit	Ohio;Miami County	Miami
-ReportingUnit	Ohio;Miami County	39109
+ReportingUnit	Ohio;Miami County	fips39109
 ReportingUnit	Ohio;Monroe County	Monroe
-ReportingUnit	Ohio;Monroe County	39111
+ReportingUnit	Ohio;Monroe County	fips39111
 ReportingUnit	Ohio;Montgomery County	Montgomery
-ReportingUnit	Ohio;Montgomery County	39113
+ReportingUnit	Ohio;Montgomery County	fips39113
 ReportingUnit	Ohio;Morgan County	Morgan
-ReportingUnit	Ohio;Morgan County	39115
+ReportingUnit	Ohio;Morgan County	fips39115
 ReportingUnit	Ohio;Morrow County	Morrow
-ReportingUnit	Ohio;Morrow County	39117
+ReportingUnit	Ohio;Morrow County	fips39117
 ReportingUnit	Ohio;Muskingum County	Muskingum
-ReportingUnit	Ohio;Muskingum County	39119
+ReportingUnit	Ohio;Muskingum County	fips39119
 ReportingUnit	Ohio;Noble County	Noble
-ReportingUnit	Ohio;Noble County	39121
+ReportingUnit	Ohio;Noble County	fips39121
 ReportingUnit	Ohio;OH House District 1	Ohio;OH House District 1
 ReportingUnit	Ohio;OH House District 10	Ohio;OH House District 10
 ReportingUnit	Ohio;OH House District 11	Ohio;OH House District 11
@@ -2478,41 +2478,41 @@ ReportingUnit	Ohio;OH Senate District 7	Ohio;OH Senate District 7
 ReportingUnit	Ohio;OH Senate District 8	Ohio;OH Senate District 8
 ReportingUnit	Ohio;OH Senate District 9	Ohio;OH Senate District 9
 ReportingUnit	Ohio;Ottawa County	Ottawa
-ReportingUnit	Ohio;Ottawa County	39123
+ReportingUnit	Ohio;Ottawa County	fips39123
 ReportingUnit	Ohio;Paulding County	Paulding
-ReportingUnit	Ohio;Paulding County	39125
+ReportingUnit	Ohio;Paulding County	fips39125
 ReportingUnit	Ohio;Perry County	Perry
-ReportingUnit	Ohio;Perry County	39127
+ReportingUnit	Ohio;Perry County	fips39127
 ReportingUnit	Ohio;Pickaway County	Pickaway
-ReportingUnit	Ohio;Pickaway County	39129
+ReportingUnit	Ohio;Pickaway County	fips39129
 ReportingUnit	Ohio;Pike County	Pike
-ReportingUnit	Ohio;Pike County	39131
+ReportingUnit	Ohio;Pike County	fips39131
 ReportingUnit	Ohio;Portage County	Portage
-ReportingUnit	Ohio;Portage County	39133
+ReportingUnit	Ohio;Portage County	fips39133
 ReportingUnit	Ohio;Preble County	Preble
-ReportingUnit	Ohio;Preble County	39135
+ReportingUnit	Ohio;Preble County	fips39135
 ReportingUnit	Ohio;Putnam County	Putnam
-ReportingUnit	Ohio;Putnam County	39137
+ReportingUnit	Ohio;Putnam County	fips39137
 ReportingUnit	Ohio;Richland County	Richland
-ReportingUnit	Ohio;Richland County	39139
+ReportingUnit	Ohio;Richland County	fips39139
 ReportingUnit	Ohio;Ross County	Ross
-ReportingUnit	Ohio;Ross County	39141
+ReportingUnit	Ohio;Ross County	fips39141
 ReportingUnit	Ohio;Sandusky County	Sandusky
-ReportingUnit	Ohio;Sandusky County	39143
+ReportingUnit	Ohio;Sandusky County	fips39143
 ReportingUnit	Ohio;Scioto County	Scioto
-ReportingUnit	Ohio;Scioto County	39145
+ReportingUnit	Ohio;Scioto County	fips39145
 ReportingUnit	Ohio;Seneca County	Seneca
-ReportingUnit	Ohio;Seneca County	39147
+ReportingUnit	Ohio;Seneca County	fips39147
 ReportingUnit	Ohio;Shelby County	Shelby
-ReportingUnit	Ohio;Shelby County	39149
+ReportingUnit	Ohio;Shelby County	fips39149
 ReportingUnit	Ohio;Stark County	Stark
-ReportingUnit	Ohio;Stark County	39151
+ReportingUnit	Ohio;Stark County	fips39151
 ReportingUnit	Ohio;Summit County	Summit
-ReportingUnit	Ohio;Summit County	39153
+ReportingUnit	Ohio;Summit County	fips39153
 ReportingUnit	Ohio;Trumbull County	Trumbull
-ReportingUnit	Ohio;Trumbull County	39155
+ReportingUnit	Ohio;Trumbull County	fips39155
 ReportingUnit	Ohio;Tuscarawas County	Tuscarawas
-ReportingUnit	Ohio;Tuscarawas County	39157
+ReportingUnit	Ohio;Tuscarawas County	fips39157
 ReportingUnit	Ohio;US House OH District 1	Ohio;US House OH District 1
 ReportingUnit	Ohio;US House OH District 10	Ohio;US House OH District 10
 ReportingUnit	Ohio;US House OH District 11	Ohio;US House OH District 11
@@ -2530,20 +2530,20 @@ ReportingUnit	Ohio;US House OH District 7	Ohio;US House OH District 7
 ReportingUnit	Ohio;US House OH District 8	Ohio;US House OH District 8
 ReportingUnit	Ohio;US House OH District 9	Ohio;US House OH District 9
 ReportingUnit	Ohio;Union County	Union
-ReportingUnit	Ohio;Union County	39159
+ReportingUnit	Ohio;Union County	fips39159
 ReportingUnit	Ohio;Van Wert County	Van Wert
-ReportingUnit	Ohio;Van Wert County	39161
+ReportingUnit	Ohio;Van Wert County	fips39161
 ReportingUnit	Ohio;Vinton County	Vinton
-ReportingUnit	Ohio;Vinton County	39163
+ReportingUnit	Ohio;Vinton County	fips39163
 ReportingUnit	Ohio;Warren County	Warren
-ReportingUnit	Ohio;Warren County	39165
+ReportingUnit	Ohio;Warren County	fips39165
 ReportingUnit	Ohio;Washington County	Washington
-ReportingUnit	Ohio;Washington County	39167
+ReportingUnit	Ohio;Washington County	fips39167
 ReportingUnit	Ohio;Wayne County	Wayne
-ReportingUnit	Ohio;Wayne County	39169
+ReportingUnit	Ohio;Wayne County	fips39169
 ReportingUnit	Ohio;Williams County	Williams
-ReportingUnit	Ohio;Williams County	39171
+ReportingUnit	Ohio;Williams County	fips39171
 ReportingUnit	Ohio;Wood County	Wood
-ReportingUnit	Ohio;Wood County	39173
+ReportingUnit	Ohio;Wood County	fips39173
 ReportingUnit	Ohio;Wyandot County	Wyandot
-ReportingUnit	Ohio;Wyandot County	39175
+ReportingUnit	Ohio;Wyandot County	fips39175

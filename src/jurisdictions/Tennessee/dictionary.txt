@@ -63,8 +63,8 @@ Candidate	Dennis Powers	Dennis Powers
 Candidate	Diana Harshbarger	Diana Harshbarger
 Candidate	Diane Michel Canada	Diane Michel Canada
 Candidate	Don Blankenship	Don Blankenship
-Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donna Tees	Donna Tees
 Candidate	Dwayne Thompson	Dwayne Thompson
 Candidate	Eddie Johnson	Eddie Johnson
@@ -398,27 +398,27 @@ CandidateContest	US House TN District 6	United States House of Representatives D
 CandidateContest	US House TN District 7	United States House of Representatives District 7
 CandidateContest	US House TN District 8	United States House of Representatives District 8
 CandidateContest	US House TN District 9	United States House of Representatives District 9
-CandidateContest	US President (TN)	United States President
 CandidateContest	US President (TN)	PRESIDENT
 CandidateContest	US President (TN)	US PRESIDENT
+CandidateContest	US President (TN)	United States President
 CandidateContest	US Senate TN	United States Senate
 CountItemType	total	TOTAL
 Election	2016 General	2016 General
 Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
-Party	Democratic Party	Democratic
 Party	Democratic Party	DEMOCRAT
-Party	Green Party	Green Party
+Party	Democratic Party	Democratic
 Party	Green Party	GREEN
+Party	Green Party	Green Party
 Party	Independent	Independent
-Party	Libertarian Party	Libertarian Party
 Party	Libertarian Party	LIBERTARIAN
-Party	Republican Party	Republican
+Party	Libertarian Party	Libertarian Party
 Party	Republican Party	REPUBLICAN
+Party	Republican Party	Republican
 Party	none or unknown	OTHER
 ReportingUnit	Tennessee;Anderson County	Anderson
-ReportingUnit	Tennessee;Anderson County	47001
+ReportingUnit	Tennessee;Anderson County	fips47001
 ReportingUnit	Tennessee;Anderson County;Andersonville	Anderson;Andersonville
 ReportingUnit	Tennessee;Anderson County;Briceville	Anderson;Briceville
 ReportingUnit	Tennessee;Anderson County;Bull Run	Anderson;Bull Run
@@ -447,7 +447,7 @@ ReportingUnit	Tennessee;Anderson County;South Clinton	Anderson;South Clinton
 ReportingUnit	Tennessee;Anderson County;West Hills	Anderson;West Hills
 ReportingUnit	Tennessee;Anderson County;Woodland	Anderson;Woodland
 ReportingUnit	Tennessee;Bedford County	Bedford
-ReportingUnit	Tennessee;Bedford County	47003
+ReportingUnit	Tennessee;Bedford County	fips47003
 ReportingUnit	Tennessee;Bedford County;1-1 Wartrace	Bedford;1-1 Wartrace
 ReportingUnit	Tennessee;Bedford County;1-2 Bell Buckle	Bedford;1-2 Bell Buckle
 ReportingUnit	Tennessee;Bedford County;2-3 Fair Haven	Bedford;2-3 Fair Haven
@@ -460,7 +460,7 @@ ReportingUnit	Tennessee;Bedford County;7-1 Deery Eakin	Bedford;7-1 Deery Eakin
 ReportingUnit	Tennessee;Bedford County;8-1 Thomas	Bedford;8-1 Thomas
 ReportingUnit	Tennessee;Bedford County;9-2 Southside	Bedford;9-2 Southside
 ReportingUnit	Tennessee;Benton County	Benton
-ReportingUnit	Tennessee;Benton County	47005
+ReportingUnit	Tennessee;Benton County	fips47005
 ReportingUnit	Tennessee;Benton County;1 Holladay	Benton;1 Holladay
 ReportingUnit	Tennessee;Benton County;2 Camden Jr High	Benton;2 Camden Jr High
 ReportingUnit	Tennessee;Benton County;3 Camden City Hall	Benton;3 Camden City Hall
@@ -468,7 +468,7 @@ ReportingUnit	Tennessee;Benton County;4 Camden Elementary	Benton;4 Camden Elemen
 ReportingUnit	Tennessee;Benton County;5 Library	Benton;5 Library
 ReportingUnit	Tennessee;Benton County;6 Big Sandy	Benton;6 Big Sandy
 ReportingUnit	Tennessee;Bledsoe County	Bledsoe
-ReportingUnit	Tennessee;Bledsoe County	47007
+ReportingUnit	Tennessee;Bledsoe County	fips47007
 ReportingUnit	Tennessee;Bledsoe County;1-1 Dill	Bledsoe;1-1 Dill
 ReportingUnit	Tennessee;Bledsoe County;1-2 Griffith	Bledsoe;1-2 Griffith
 ReportingUnit	Tennessee;Bledsoe County;1-3 Mt. Crest	Bledsoe;1-3 Mt. Crest
@@ -482,7 +482,7 @@ ReportingUnit	Tennessee;Bledsoe County;5-2 Nine Mile	Bledsoe;5-2 Nine Mile
 ReportingUnit	Tennessee;Bledsoe County;6-1 Lee Station	Bledsoe;6-1 Lee Station
 ReportingUnit	Tennessee;Bledsoe County;6-2 Lusk	Bledsoe;6-2 Lusk
 ReportingUnit	Tennessee;Blount County	Blount
-ReportingUnit	Tennessee;Blount County	47009
+ReportingUnit	Tennessee;Blount County	fips47009
 ReportingUnit	Tennessee;Blount County;Alcoa	Blount;Alcoa
 ReportingUnit	Tennessee;Blount County;Big Springs	Blount;Big Springs
 ReportingUnit	Tennessee;Blount County;Board of Education	Blount;Board of Education
@@ -515,7 +515,7 @@ ReportingUnit	Tennessee;Blount County;Walland	Blount;Walland
 ReportingUnit	Tennessee;Blount County;William Blount HS	Blount;William Blount HS
 ReportingUnit	Tennessee;Blount County;Wm Blount Academy	Blount;Wm Blount Academy
 ReportingUnit	Tennessee;Bradley County	Bradley
-ReportingUnit	Tennessee;Bradley County	47011
+ReportingUnit	Tennessee;Bradley County	fips47011
 ReportingUnit	Tennessee;Bradley County;1-1 McDonald	Bradley;1-1 McDonald
 ReportingUnit	Tennessee;Bradley County;1-2 Prospect	Bradley;1-2 Prospect
 ReportingUnit	Tennessee;Bradley County;1-3 Hopewell	Bradley;1-3 Hopewell
@@ -534,7 +534,7 @@ ReportingUnit	Tennessee;Bradley County;6-4 Black Fox	Bradley;6-4 Black Fox
 ReportingUnit	Tennessee;Bradley County;7-1 Stuart	Bradley;7-1 Stuart
 ReportingUnit	Tennessee;Bradley County;7-2 Cleveland High	Bradley;7-2 Cleveland High
 ReportingUnit	Tennessee;Campbell County	Campbell
-ReportingUnit	Tennessee;Campbell County	47013
+ReportingUnit	Tennessee;Campbell County	fips47013
 ReportingUnit	Tennessee;Campbell County;1-1 Alder Springs	Campbell;1-1 Alder Springs
 ReportingUnit	Tennessee;Campbell County;1-2 Demory	Campbell;1-2 Demory
 ReportingUnit	Tennessee;Campbell County;1-3 Pinecrest	Campbell;1-3 Pinecrest
@@ -556,7 +556,7 @@ ReportingUnit	Tennessee;Campbell County;5-3 Jellico	Campbell;5-3 Jellico
 ReportingUnit	Tennessee;Campbell County;5-4 Newcomb	Campbell;5-4 Newcomb
 ReportingUnit	Tennessee;Campbell County;5-5 White Oak	Campbell;5-5 White Oak
 ReportingUnit	Tennessee;Cannon County	Cannon
-ReportingUnit	Tennessee;Cannon County	47015
+ReportingUnit	Tennessee;Cannon County	fips47015
 ReportingUnit	Tennessee;Cannon County;1-1 Westside	Cannon;1-1 Westside
 ReportingUnit	Tennessee;Cannon County;2-1 Auburntown	Cannon;2-1 Auburntown
 ReportingUnit	Tennessee;Cannon County;2-2 Gassaway	Cannon;2-2 Gassaway
@@ -568,7 +568,7 @@ ReportingUnit	Tennessee;Cannon County;4-2 Short Mountain	Cannon;4-2 Short Mounta
 ReportingUnit	Tennessee;Cannon County;5-1 Woodbury	Cannon;5-1 Woodbury
 ReportingUnit	Tennessee;Cannon County;Absentee	Cannon;Absentee
 ReportingUnit	Tennessee;Carroll County	Carroll
-ReportingUnit	Tennessee;Carroll County	47017
+ReportingUnit	Tennessee;Carroll County	fips47017
 ReportingUnit	Tennessee;Carroll County;Atwood	Carroll;Atwood
 ReportingUnit	Tennessee;Carroll County;Bruceton	Carroll;Bruceton
 ReportingUnit	Tennessee;Carroll County;Buena Vista	Carroll;Buena Vista
@@ -589,7 +589,7 @@ ReportingUnit	Tennessee;Carroll County;Trezevant	Carroll;Trezevant
 ReportingUnit	Tennessee;Carroll County;Vale	Carroll;Vale
 ReportingUnit	Tennessee;Carroll County;Westport	Carroll;Westport
 ReportingUnit	Tennessee;Carter County	Carter
-ReportingUnit	Tennessee;Carter County	47019
+ReportingUnit	Tennessee;Carter County	fips47019
 ReportingUnit	Tennessee;Carter County;Central	Carter;Central
 ReportingUnit	Tennessee;Carter County;Courthouse	Carter;Courthouse
 ReportingUnit	Tennessee;Carter County;Eastside	Carter;Eastside
@@ -613,7 +613,7 @@ ReportingUnit	Tennessee;Carter County;Valley Forge	Carter;Valley Forge
 ReportingUnit	Tennessee;Carter County;Watauga	Carter;Watauga
 ReportingUnit	Tennessee;Carter County;Westside	Carter;Westside
 ReportingUnit	Tennessee;Cheatham County	Cheatham
-ReportingUnit	Tennessee;Cheatham County	47021
+ReportingUnit	Tennessee;Cheatham County	fips47021
 ReportingUnit	Tennessee;Cheatham County;1-1 County Library	Cheatham;1-1 County Library
 ReportingUnit	Tennessee;Cheatham County;2-2 East Cheatham	Cheatham;2-2 East Cheatham
 ReportingUnit	Tennessee;Cheatham County;3-1 Pleasant View	Cheatham;3-1 Pleasant View
@@ -623,7 +623,7 @@ ReportingUnit	Tennessee;Cheatham County;5-1 Greenbrier	Cheatham;5-1 Greenbrier
 ReportingUnit	Tennessee;Cheatham County;5-2 Pegram	Cheatham;5-2 Pegram
 ReportingUnit	Tennessee;Cheatham County;6-1 Harpeth	Cheatham;6-1 Harpeth
 ReportingUnit	Tennessee;Chester County	Chester
-ReportingUnit	Tennessee;Chester County	47023
+ReportingUnit	Tennessee;Chester County	fips47023
 ReportingUnit	Tennessee;Chester County;1-2 Enville	Chester;1-2 Enville
 ReportingUnit	Tennessee;Chester County;1-5 Sweetlips	Chester;1-5 Sweetlips
 ReportingUnit	Tennessee;Chester County;1-6 Harmony	Chester;1-6 Harmony
@@ -636,7 +636,7 @@ ReportingUnit	Tennessee;Chester County;4-1 West Chester	Chester;4-1 West Chester
 ReportingUnit	Tennessee;Chester County;5-1 East Chester	Chester;5-1 East Chester
 ReportingUnit	Tennessee;Chester County;6-1 City Hall	Chester;6-1 City Hall
 ReportingUnit	Tennessee;Claiborne County	Claiborne
-ReportingUnit	Tennessee;Claiborne County	47025
+ReportingUnit	Tennessee;Claiborne County	fips47025
 ReportingUnit	Tennessee;Claiborne County;1-1 Tazewell	Claiborne;1-1 Tazewell
 ReportingUnit	Tennessee;Claiborne County;2-1 Clouds	Claiborne;2-1 Clouds
 ReportingUnit	Tennessee;Claiborne County;2-2 Goin	Claiborne;2-2 Goin
@@ -654,7 +654,7 @@ ReportingUnit	Tennessee;Claiborne County;8-1 Rogers Mill	Claiborne;8-1 Rogers Mi
 ReportingUnit	Tennessee;Claiborne County;8-2 Vanbebber Sprngs	Claiborne;8-2 Vanbebber Sprngs
 ReportingUnit	Tennessee;Claiborne County;9-1 Clairfield	Claiborne;9-1 Clairfield
 ReportingUnit	Tennessee;Clay County	Clay
-ReportingUnit	Tennessee;Clay County	47027
+ReportingUnit	Tennessee;Clay County	fips47027
 ReportingUnit	Tennessee;Clay County;1 Dentons Cross Road	Clay;1 Dentons Cross Road
 ReportingUnit	Tennessee;Clay County;2 Hermitage Springs	Clay;2 Hermitage Springs
 ReportingUnit	Tennessee;Clay County;3 Celina	Clay;3 Celina
@@ -663,7 +663,7 @@ ReportingUnit	Tennessee;Clay County;4-2 Butlers Landing	Clay;4-2 Butlers Landing
 ReportingUnit	Tennessee;Clay County;5-1 Beech Bethany	Clay;5-1 Beech Bethany
 ReportingUnit	Tennessee;Clay County;5-2 Pea Ridge	Clay;5-2 Pea Ridge
 ReportingUnit	Tennessee;Cocke County	Cocke
-ReportingUnit	Tennessee;Cocke County	47029
+ReportingUnit	Tennessee;Cocke County	fips47029
 ReportingUnit	Tennessee;Cocke County;Armory	Cocke;Armory
 ReportingUnit	Tennessee;Cocke County;Bridgeport	Cocke;Bridgeport
 ReportingUnit	Tennessee;Cocke County;Centerview	Cocke;Centerview
@@ -684,7 +684,7 @@ ReportingUnit	Tennessee;Cocke County;Rankin	Cocke;Rankin
 ReportingUnit	Tennessee;Cocke County;Smoky Mountain	Cocke;Smoky Mountain
 ReportingUnit	Tennessee;Cocke County;West End	Cocke;West End
 ReportingUnit	Tennessee;Coffee County	Coffee
-ReportingUnit	Tennessee;Coffee County	47031
+ReportingUnit	Tennessee;Coffee County	fips47031
 ReportingUnit	Tennessee;Coffee County;1 Ada Wright CC	Coffee;1 Ada Wright CC
 ReportingUnit	Tennessee;Coffee County;10 Mt. Ararat	Coffee;10 Mt. Ararat
 ReportingUnit	Tennessee;Coffee County;11 Fredonia	Coffee;11 Fredonia
@@ -710,7 +710,7 @@ ReportingUnit	Tennessee;Coffee County;8 New Union	Coffee;8 New Union
 ReportingUnit	Tennessee;Coffee County;9-1 Pocahontas	Coffee;9-1 Pocahontas
 ReportingUnit	Tennessee;Coffee County;9-2 Summitville	Coffee;9-2 Summitville
 ReportingUnit	Tennessee;Crockett County	Crockett
-ReportingUnit	Tennessee;Crockett County	47033
+ReportingUnit	Tennessee;Crockett County	fips47033
 ReportingUnit	Tennessee;Crockett County;01	Crockett;01
 ReportingUnit	Tennessee;Crockett County;02	Crockett;02
 ReportingUnit	Tennessee;Crockett County;03	Crockett;03
@@ -724,7 +724,7 @@ ReportingUnit	Tennessee;Crockett County;10	Crockett;10
 ReportingUnit	Tennessee;Crockett County;11	Crockett;11
 ReportingUnit	Tennessee;Crockett County;12	Crockett;12
 ReportingUnit	Tennessee;Cumberland County	Cumberland
-ReportingUnit	Tennessee;Cumberland County	47035
+ReportingUnit	Tennessee;Cumberland County	fips47035
 ReportingUnit	Tennessee;Cumberland County;1 Cornerstone	Cumberland;1 Cornerstone
 ReportingUnit	Tennessee;Cumberland County;2 Complex 2	Cumberland;2 Complex 2
 ReportingUnit	Tennessee;Cumberland County;3 Big Lick	Cumberland;3 Big Lick
@@ -750,7 +750,7 @@ ReportingUnit	Tennessee;Cumberland County;8 Pomona	Cumberland;8 Pomona
 ReportingUnit	Tennessee;Cumberland County;9 Fairfield North	Cumberland;9 Fairfield North
 ReportingUnit	Tennessee;Cumberland County;9 Fairfield South	Cumberland;9 Fairfield South
 ReportingUnit	Tennessee;Davidson County	Davidson
-ReportingUnit	Tennessee;Davidson County	47037
+ReportingUnit	Tennessee;Davidson County	fips47037
 ReportingUnit	Tennessee;Davidson County;01-1	Davidson;01-1
 ReportingUnit	Tennessee;Davidson County;01-2	Davidson;01-2
 ReportingUnit	Tennessee;Davidson County;01-3	Davidson;01-3
@@ -913,39 +913,39 @@ ReportingUnit	Tennessee;Davidson County;35-3	Davidson;35-3
 ReportingUnit	Tennessee;Davidson County;35-4	Davidson;35-4
 ReportingUnit	Tennessee;Davidson County;Absentee	Davidson;Absentee
 ReportingUnit	Tennessee;DeKalb County	Dekalb
-ReportingUnit	Tennessee;DeKalb County	47041
-ReportingUnit	Tennessee;DeKalb County;1-1 Alexandria	Dekalb;1-1 Alexandria
+ReportingUnit	Tennessee;DeKalb County	fips47041
 ReportingUnit	Tennessee;DeKalb County;1-1 Alexandria	DeKalb;1-1 Alexandria
-ReportingUnit	Tennessee;DeKalb County;1-2 Temperence Hall	Dekalb;1-2 Temperence Hall
+ReportingUnit	Tennessee;DeKalb County;1-1 Alexandria	Dekalb;1-1 Alexandria
 ReportingUnit	Tennessee;DeKalb County;1-2 Temperence Hall	DeKalb;1-2 Temperence Hall
-ReportingUnit	Tennessee;DeKalb County;1-3 Edgar Evins Park	Dekalb;1-3 Edgar Evins Park
+ReportingUnit	Tennessee;DeKalb County;1-2 Temperence Hall	Dekalb;1-2 Temperence Hall
 ReportingUnit	Tennessee;DeKalb County;1-3 Edgar Evins Park	DeKalb;1-3 Edgar Evins Park
-ReportingUnit	Tennessee;DeKalb County;2-1 Liberty	Dekalb;2-1 Liberty
+ReportingUnit	Tennessee;DeKalb County;1-3 Edgar Evins Park	Dekalb;1-3 Edgar Evins Park
 ReportingUnit	Tennessee;DeKalb County;2-1 Liberty	DeKalb;2-1 Liberty
-ReportingUnit	Tennessee;DeKalb County;2-2 Dowelltown	Dekalb;2-2 Dowelltown
+ReportingUnit	Tennessee;DeKalb County;2-1 Liberty	Dekalb;2-1 Liberty
 ReportingUnit	Tennessee;DeKalb County;2-2 Dowelltown	DeKalb;2-2 Dowelltown
-ReportingUnit	Tennessee;DeKalb County;2-3 Snows Hill	Dekalb;2-3 Snows Hill
+ReportingUnit	Tennessee;DeKalb County;2-2 Dowelltown	Dekalb;2-2 Dowelltown
 ReportingUnit	Tennessee;DeKalb County;2-3 Snows Hill	DeKalb;2-3 Snows Hill
-ReportingUnit	Tennessee;DeKalb County;3-1 Church of God	Dekalb;3-1 Church of God
+ReportingUnit	Tennessee;DeKalb County;2-3 Snows Hill	Dekalb;2-3 Snows Hill
 ReportingUnit	Tennessee;DeKalb County;3-1 Church of God	DeKalb;3-1 Church of God
-ReportingUnit	Tennessee;DeKalb County;4-2 Rock Castle	Dekalb;4-2 Rock Castle
+ReportingUnit	Tennessee;DeKalb County;3-1 Church of God	Dekalb;3-1 Church of God
 ReportingUnit	Tennessee;DeKalb County;4-2 Rock Castle	DeKalb;4-2 Rock Castle
-ReportingUnit	Tennessee;DeKalb County;4-3 Courthouse	Dekalb;4-3 Courthouse
+ReportingUnit	Tennessee;DeKalb County;4-2 Rock Castle	Dekalb;4-2 Rock Castle
 ReportingUnit	Tennessee;DeKalb County;4-3 Courthouse	DeKalb;4-3 Courthouse
-ReportingUnit	Tennessee;DeKalb County;5-1 Johnson Chapel	Dekalb;5-1 Johnson Chapel
+ReportingUnit	Tennessee;DeKalb County;4-3 Courthouse	Dekalb;4-3 Courthouse
 ReportingUnit	Tennessee;DeKalb County;5-1 Johnson Chapel	DeKalb;5-1 Johnson Chapel
-ReportingUnit	Tennessee;DeKalb County;5-2 County Complex	Dekalb;5-2 County Complex
+ReportingUnit	Tennessee;DeKalb County;5-1 Johnson Chapel	Dekalb;5-1 Johnson Chapel
 ReportingUnit	Tennessee;DeKalb County;5-2 County Complex	DeKalb;5-2 County Complex
-ReportingUnit	Tennessee;DeKalb County;6-1 Belk	Dekalb;6-1 Belk
+ReportingUnit	Tennessee;DeKalb County;5-2 County Complex	Dekalb;5-2 County Complex
 ReportingUnit	Tennessee;DeKalb County;6-1 Belk	DeKalb;6-1 Belk
-ReportingUnit	Tennessee;DeKalb County;6-2 Keltonburg	Dekalb;6-2 Keltonburg
+ReportingUnit	Tennessee;DeKalb County;6-1 Belk	Dekalb;6-1 Belk
 ReportingUnit	Tennessee;DeKalb County;6-2 Keltonburg	DeKalb;6-2 Keltonburg
-ReportingUnit	Tennessee;DeKalb County;6-3 Blue Springs	Dekalb;6-3 Blue Springs
+ReportingUnit	Tennessee;DeKalb County;6-2 Keltonburg	Dekalb;6-2 Keltonburg
 ReportingUnit	Tennessee;DeKalb County;6-3 Blue Springs	DeKalb;6-3 Blue Springs
-ReportingUnit	Tennessee;DeKalb County;7-1 Church of Christ	Dekalb;7-1 Church of Christ
+ReportingUnit	Tennessee;DeKalb County;6-3 Blue Springs	Dekalb;6-3 Blue Springs
 ReportingUnit	Tennessee;DeKalb County;7-1 Church of Christ	DeKalb;7-1 Church of Christ
+ReportingUnit	Tennessee;DeKalb County;7-1 Church of Christ	Dekalb;7-1 Church of Christ
 ReportingUnit	Tennessee;Decatur County	Decatur
-ReportingUnit	Tennessee;Decatur County	47039
+ReportingUnit	Tennessee;Decatur County	fips47039
 ReportingUnit	Tennessee;Decatur County;1-1 Dunbar	Decatur;1-1 Dunbar
 ReportingUnit	Tennessee;Decatur County;2-1 Liberty	Decatur;2-1 Liberty
 ReportingUnit	Tennessee;Decatur County;2-2 Scotts Hill	Decatur;2-2 Scotts Hill
@@ -960,7 +960,7 @@ ReportingUnit	Tennessee;Decatur County;8-1 Parsons	Decatur;8-1 Parsons
 ReportingUnit	Tennessee;Decatur County;9-1 Beacon	Decatur;9-1 Beacon
 ReportingUnit	Tennessee;Decatur County;9-2 Hydro	Decatur;9-2 Hydro
 ReportingUnit	Tennessee;Dickson County	Dickson
-ReportingUnit	Tennessee;Dickson County	47043
+ReportingUnit	Tennessee;Dickson County	fips47043
 ReportingUnit	Tennessee;Dickson County;1-1	Dickson;1-1
 ReportingUnit	Tennessee;Dickson County;1-2	Dickson;1-2
 ReportingUnit	Tennessee;Dickson County;10-1	Dickson;10-1
@@ -979,7 +979,7 @@ ReportingUnit	Tennessee;Dickson County;7-1	Dickson;7-1
 ReportingUnit	Tennessee;Dickson County;8-1	Dickson;8-1
 ReportingUnit	Tennessee;Dickson County;9-1	Dickson;9-1
 ReportingUnit	Tennessee;Dyer County	Dyer
-ReportingUnit	Tennessee;Dyer County	47045
+ReportingUnit	Tennessee;Dyer County	fips47045
 ReportingUnit	Tennessee;Dyer County;A1- Bonicord	Dyer;A1- Bonicord
 ReportingUnit	Tennessee;Dyer County;A2- Fowlkes	Dyer;A2- Fowlkes
 ReportingUnit	Tennessee;Dyer County;B- Newbern	Dyer;B- Newbern
@@ -997,7 +997,7 @@ ReportingUnit	Tennessee;Dyer County;I1- Community Center	Dyer;I1- Community Cent
 ReportingUnit	Tennessee;Dyer County;I2- Hurricane Hill	Dyer;I2- Hurricane Hill
 ReportingUnit	Tennessee;Dyer County;J- North Dyersburg	Dyer;J- North Dyersburg
 ReportingUnit	Tennessee;Fayette County	Fayette
-ReportingUnit	Tennessee;Fayette County	47047
+ReportingUnit	Tennessee;Fayette County	fips47047
 ReportingUnit	Tennessee;Fayette County;Braden	Fayette;Braden
 ReportingUnit	Tennessee;Fayette County;Elba	Fayette;Elba
 ReportingUnit	Tennessee;Fayette County;Fayette Corner	Fayette;Fayette Corner
@@ -1014,7 +1014,7 @@ ReportingUnit	Tennessee;Fayette County;Rossville	Fayette;Rossville
 ReportingUnit	Tennessee;Fayette County;Somerville	Fayette;Somerville
 ReportingUnit	Tennessee;Fayette County;Williston	Fayette;Williston
 ReportingUnit	Tennessee;Fentress County	Fentress
-ReportingUnit	Tennessee;Fentress County	47049
+ReportingUnit	Tennessee;Fentress County	fips47049
 ReportingUnit	Tennessee;Fentress County;Allardt	Fentress;Allardt
 ReportingUnit	Tennessee;Fentress County;Armathwaite	Fentress;Armathwaite
 ReportingUnit	Tennessee;Fentress County;Banner	Fentress;Banner
@@ -1029,7 +1029,7 @@ ReportingUnit	Tennessee;Fentress County;Pine Haven	Fentress;Pine Haven
 ReportingUnit	Tennessee;Fentress County;Tinchtown	Fentress;Tinchtown
 ReportingUnit	Tennessee;Fentress County;West Fentress	Fentress;West Fentress
 ReportingUnit	Tennessee;Franklin County	Franklin
-ReportingUnit	Tennessee;Franklin County	47051
+ReportingUnit	Tennessee;Franklin County	fips47051
 ReportingUnit	Tennessee;Franklin County;1-1 Annex	Franklin;1-1 Annex
 ReportingUnit	Tennessee;Franklin County;2-1 Clark Memorial	Franklin;2-1 Clark Memorial
 ReportingUnit	Tennessee;Franklin County;3-1 Broadview	Franklin;3-1 Broadview
@@ -1049,7 +1049,7 @@ ReportingUnit	Tennessee;Franklin County;7-2 CG/Winchester Springs	Franklin;7-2 C
 ReportingUnit	Tennessee;Franklin County;8-1 Decherd	Franklin;8-1 Decherd
 ReportingUnit	Tennessee;Franklin County;8-2 Estill Springs	Franklin;8-2 Estill Springs
 ReportingUnit	Tennessee;Gibson County	Gibson
-ReportingUnit	Tennessee;Gibson County	47053
+ReportingUnit	Tennessee;Gibson County	fips47053
 ReportingUnit	Tennessee;Gibson County;1-1 Medina	Gibson;1-1 Medina
 ReportingUnit	Tennessee;Gibson County;1-2 Sitka	Gibson;1-2 Sitka
 ReportingUnit	Tennessee;Gibson County;10-22 Agri-Plex	Gibson;10-22 Agri-Plex
@@ -1079,7 +1079,7 @@ ReportingUnit	Tennessee;Gibson County;8-12 Edison	Gibson;8-12 Edison
 ReportingUnit	Tennessee;Gibson County;8-14 Brazil	Gibson;8-14 Brazil
 ReportingUnit	Tennessee;Gibson County;9-20 JC Building	Gibson;9-20 JC Building
 ReportingUnit	Tennessee;Giles County	Giles
-ReportingUnit	Tennessee;Giles County	47055
+ReportingUnit	Tennessee;Giles County	fips47055
 ReportingUnit	Tennessee;Giles County;1A Ardmore	Giles;1A Ardmore
 ReportingUnit	Tennessee;Giles County;1B Prospect	Giles;1B Prospect
 ReportingUnit	Tennessee;Giles County;2A Minor Hill	Giles;2A Minor Hill
@@ -1095,7 +1095,7 @@ ReportingUnit	Tennessee;Giles County;6B Bridgeforth	Giles;6B Bridgeforth
 ReportingUnit	Tennessee;Giles County;7A GCHS	Giles;7A GCHS
 ReportingUnit	Tennessee;Giles County;7B Rec Center	Giles;7B Rec Center
 ReportingUnit	Tennessee;Grainger County	Grainger
-ReportingUnit	Tennessee;Grainger County	47057
+ReportingUnit	Tennessee;Grainger County	fips47057
 ReportingUnit	Tennessee;Grainger County;1-1	Grainger;1-1
 ReportingUnit	Tennessee;Grainger County;1-2	Grainger;1-2
 ReportingUnit	Tennessee;Grainger County;2-1	Grainger;2-1
@@ -1107,7 +1107,7 @@ ReportingUnit	Tennessee;Grainger County;4-2	Grainger;4-2
 ReportingUnit	Tennessee;Grainger County;5-1	Grainger;5-1
 ReportingUnit	Tennessee;Grainger County;5-2	Grainger;5-2
 ReportingUnit	Tennessee;Greene County	Greene
-ReportingUnit	Tennessee;Greene County	47059
+ReportingUnit	Tennessee;Greene County	fips47059
 ReportingUnit	Tennessee;Greene County;1 Baileyton	Greene;1 Baileyton
 ReportingUnit	Tennessee;Greene County;1 Ottway	Greene;1 Ottway
 ReportingUnit	Tennessee;Greene County;1 West Pines	Greene;1 West Pines
@@ -1126,7 +1126,7 @@ ReportingUnit	Tennessee;Greene County;6 Mosheim	Greene;6 Mosheim
 ReportingUnit	Tennessee;Greene County;7 Glenwood	Greene;7 Glenwood
 ReportingUnit	Tennessee;Greene County;7 High School	Greene;7 High School
 ReportingUnit	Tennessee;Grundy County	Grundy
-ReportingUnit	Tennessee;Grundy County	47061
+ReportingUnit	Tennessee;Grundy County	fips47061
 ReportingUnit	Tennessee;Grundy County;Altamont	Grundy;Altamont
 ReportingUnit	Tennessee;Grundy County;Beersheba Springs	Grundy;Beersheba Springs
 ReportingUnit	Tennessee;Grundy County;Central	Grundy;Central
@@ -1138,7 +1138,7 @@ ReportingUnit	Tennessee;Grundy County;Palmer	Grundy;Palmer
 ReportingUnit	Tennessee;Grundy County;Pelham Valley	Grundy;Pelham Valley
 ReportingUnit	Tennessee;Grundy County;Tracy City	Grundy;Tracy City
 ReportingUnit	Tennessee;Hamblen County	Hamblen
-ReportingUnit	Tennessee;Hamblen County	47063
+ReportingUnit	Tennessee;Hamblen County	fips47063
 ReportingUnit	Tennessee;Hamblen County;01-1	Hamblen;01-1
 ReportingUnit	Tennessee;Hamblen County;02-1	Hamblen;02-1
 ReportingUnit	Tennessee;Hamblen County;03-1	Hamblen;03-1
@@ -1156,7 +1156,7 @@ ReportingUnit	Tennessee;Hamblen County;12-1	Hamblen;12-1
 ReportingUnit	Tennessee;Hamblen County;13-1	Hamblen;13-1
 ReportingUnit	Tennessee;Hamblen County;14-1	Hamblen;14-1
 ReportingUnit	Tennessee;Hamilton County	Hamilton
-ReportingUnit	Tennessee;Hamilton County	47065
+ReportingUnit	Tennessee;Hamilton County	fips47065
 ReportingUnit	Tennessee;Hamilton County;001 Falling Water	Hamilton;001 Falling Water
 ReportingUnit	Tennessee;Hamilton County;002 Signal Mountain 2	Hamilton;002 Signal Mountain 2
 ReportingUnit	Tennessee;Hamilton County;003 Lakesite	Hamilton;003 Lakesite
@@ -1293,7 +1293,7 @@ ReportingUnit	Tennessee;Hamilton County;133 Harrison 3	Hamilton;133 Harrison 3
 ReportingUnit	Tennessee;Hamilton County;134 Harrison 7	Hamilton;134 Harrison 7
 ReportingUnit	Tennessee;Hamilton County;135 Harrison 2	Hamilton;135 Harrison 2
 ReportingUnit	Tennessee;Hancock County	Hancock
-ReportingUnit	Tennessee;Hancock County	47067
+ReportingUnit	Tennessee;Hancock County	fips47067
 ReportingUnit	Tennessee;Hancock County;1st	Hancock;1st
 ReportingUnit	Tennessee;Hancock County;2nd	Hancock;2nd
 ReportingUnit	Tennessee;Hancock County;3rd	Hancock;3rd
@@ -1302,7 +1302,7 @@ ReportingUnit	Tennessee;Hancock County;5th	Hancock;5th
 ReportingUnit	Tennessee;Hancock County;6th	Hancock;6th
 ReportingUnit	Tennessee;Hancock County;7th	Hancock;7th
 ReportingUnit	Tennessee;Hardeman County	Hardeman
-ReportingUnit	Tennessee;Hardeman County	47069
+ReportingUnit	Tennessee;Hardeman County	fips47069
 ReportingUnit	Tennessee;Hardeman County;Bolivar	Hardeman;Bolivar
 ReportingUnit	Tennessee;Hardeman County;Dixie Hills	Hardeman;Dixie Hills
 ReportingUnit	Tennessee;Hardeman County;Grand Junction	Hardeman;Grand Junction
@@ -1317,7 +1317,7 @@ ReportingUnit	Tennessee;Hardeman County;Toone	Hardeman;Toone
 ReportingUnit	Tennessee;Hardeman County;West Bolivar	Hardeman;West Bolivar
 ReportingUnit	Tennessee;Hardeman County;Whiteville	Hardeman;Whiteville
 ReportingUnit	Tennessee;Hardin County	Hardin
-ReportingUnit	Tennessee;Hardin County	47071
+ReportingUnit	Tennessee;Hardin County	fips47071
 ReportingUnit	Tennessee;Hardin County;Cerro Gordo 6-1	Hardin;Cerro Gordo 6-1
 ReportingUnit	Tennessee;Hardin County;Counce 3-1	Hardin;Counce 3-1
 ReportingUnit	Tennessee;Hardin County;Crump 4-1	Hardin;Crump 4-1
@@ -1333,7 +1333,7 @@ ReportingUnit	Tennessee;Hardin County;Saltillo 5-1	Hardin;Saltillo 5-1
 ReportingUnit	Tennessee;Hardin County;Walnut Grove 7-2	Hardin;Walnut Grove 7-2
 ReportingUnit	Tennessee;Hardin County;Whites 7-1	Hardin;Whites 7-1
 ReportingUnit	Tennessee;Hawkins County	Hawkins
-ReportingUnit	Tennessee;Hawkins County	47073
+ReportingUnit	Tennessee;Hawkins County	fips47073
 ReportingUnit	Tennessee;Hawkins County;1 Allandale	Hawkins;1 Allandale
 ReportingUnit	Tennessee;Hawkins County;1 Mount Carmel	Hawkins;1 Mount Carmel
 ReportingUnit	Tennessee;Hawkins County;2 Church Hill	Hawkins;2 Church Hill
@@ -1355,7 +1355,7 @@ ReportingUnit	Tennessee;Hawkins County;7 Bulls Gap	Hawkins;7 Bulls Gap
 ReportingUnit	Tennessee;Hawkins County;7 Cherokee	Hawkins;7 Cherokee
 ReportingUnit	Tennessee;Hawkins County;7 St. Clair	Hawkins;7 St. Clair
 ReportingUnit	Tennessee;Haywood County	Haywood
-ReportingUnit	Tennessee;Haywood County	47075
+ReportingUnit	Tennessee;Haywood County	fips47075
 ReportingUnit	Tennessee;Haywood County;1-1	Haywood;1-1
 ReportingUnit	Tennessee;Haywood County;10-1	Haywood;10-1
 ReportingUnit	Tennessee;Haywood County;2-1	Haywood;2-1
@@ -1368,7 +1368,7 @@ ReportingUnit	Tennessee;Haywood County;8-1	Haywood;8-1
 ReportingUnit	Tennessee;Haywood County;9-1	Haywood;9-1
 ReportingUnit	Tennessee;Haywood County;9-2	Haywood;9-2
 ReportingUnit	Tennessee;Henderson County	Henderson
-ReportingUnit	Tennessee;Henderson County	47077
+ReportingUnit	Tennessee;Henderson County	fips47077
 ReportingUnit	Tennessee;Henderson County;1-1 Bargerton	Henderson;1-1 Bargerton
 ReportingUnit	Tennessee;Henderson County;1-2 Beaver	Henderson;1-2 Beaver
 ReportingUnit	Tennessee;Henderson County;2-14 South Haven	Henderson;2-14 South Haven
@@ -1384,7 +1384,7 @@ ReportingUnit	Tennessee;Henderson County;7-12 Sardis	Henderson;7-12 Sardis
 ReportingUnit	Tennessee;Henderson County;7-13 Scotts Hill	Henderson;7-13 Scotts Hill
 ReportingUnit	Tennessee;Henderson County;7-9 Middleburg	Henderson;7-9 Middleburg
 ReportingUnit	Tennessee;Henry County	Henry
-ReportingUnit	Tennessee;Henry County	47079
+ReportingUnit	Tennessee;Henry County	fips47079
 ReportingUnit	Tennessee;Henry County;1-1 Puryear	Henry;1-1 Puryear
 ReportingUnit	Tennessee;Henry County;1-2 Cottage Grove	Henry;1-2 Cottage Grove
 ReportingUnit	Tennessee;Henry County;1-3 Buchanan	Henry;1-3 Buchanan
@@ -1399,7 +1399,7 @@ ReportingUnit	Tennessee;Henry County;4-2 City Hall	Henry;4-2 City Hall
 ReportingUnit	Tennessee;Henry County;5-1 Henry Co High	Henry;5-1 Henry Co High
 ReportingUnit	Tennessee;Henry County;5-2 TN Tech Center	Henry;5-2 TN Tech Center
 ReportingUnit	Tennessee;Hickman County	Hickman
-ReportingUnit	Tennessee;Hickman County	47081
+ReportingUnit	Tennessee;Hickman County	fips47081
 ReportingUnit	Tennessee;Hickman County;1-1 Nunnelly	Hickman;1-1 Nunnelly
 ReportingUnit	Tennessee;Hickman County;1-2 Pinewood	Hickman;1-2 Pinewood
 ReportingUnit	Tennessee;Hickman County;2-2 Fairfield	Hickman;2-2 Fairfield
@@ -1415,7 +1415,7 @@ ReportingUnit	Tennessee;Hickman County;7-2 Pleasantville	Hickman;7-2 Pleasantvil
 ReportingUnit	Tennessee;Hickman County;7-3 Brushy	Hickman;7-3 Brushy
 ReportingUnit	Tennessee;Hickman County;7-4 Coble	Hickman;7-4 Coble
 ReportingUnit	Tennessee;Houston County	Houston
-ReportingUnit	Tennessee;Houston County	47083
+ReportingUnit	Tennessee;Houston County	fips47083
 ReportingUnit	Tennessee;Houston County;Arlington	Houston;Arlington
 ReportingUnit	Tennessee;Houston County;Erin	Houston;Erin
 ReportingUnit	Tennessee;Houston County;Erin Elementary	Houston;Erin Elementary
@@ -1424,7 +1424,7 @@ ReportingUnit	Tennessee;Houston County;Houston Co Middle	Houston;Houston Co Midd
 ReportingUnit	Tennessee;Houston County;Stewart	Houston;Stewart
 ReportingUnit	Tennessee;Houston County;Tennessee Ridge	Houston;Tennessee Ridge
 ReportingUnit	Tennessee;Humphreys County	Humphreys
-ReportingUnit	Tennessee;Humphreys County	47085
+ReportingUnit	Tennessee;Humphreys County	fips47085
 ReportingUnit	Tennessee;Humphreys County;1-1 Jera	Humphreys;1-1 Jera
 ReportingUnit	Tennessee;Humphreys County;1-2 Compassion Church	Humphreys;1-2 Compassion Church
 ReportingUnit	Tennessee;Humphreys County;2-3 WFS	Humphreys;2-3 WFS
@@ -1434,7 +1434,7 @@ ReportingUnit	Tennessee;Humphreys County;5-6 Wildwood	Humphreys;5-6 Wildwood
 ReportingUnit	Tennessee;Humphreys County;6-7 South McEwen	Humphreys;6-7 South McEwen
 ReportingUnit	Tennessee;Humphreys County;7-8 North McEwen	Humphreys;7-8 North McEwen
 ReportingUnit	Tennessee;Jackson County	Jackson
-ReportingUnit	Tennessee;Jackson County	47087
+ReportingUnit	Tennessee;Jackson County	fips47087
 ReportingUnit	Tennessee;Jackson County;1-1	Jackson;1-1
 ReportingUnit	Tennessee;Jackson County;1-2	Jackson;1-2
 ReportingUnit	Tennessee;Jackson County;2-1	Jackson;2-1
@@ -1448,7 +1448,7 @@ ReportingUnit	Tennessee;Jackson County;5-2	Jackson;5-2
 ReportingUnit	Tennessee;Jackson County;6-1	Jackson;6-1
 ReportingUnit	Tennessee;Jackson County;6-2	Jackson;6-2
 ReportingUnit	Tennessee;Jefferson County	Jefferson
-ReportingUnit	Tennessee;Jefferson County	47089
+ReportingUnit	Tennessee;Jefferson County	fips47089
 ReportingUnit	Tennessee;Jefferson County;1 Dandridge ES	Jefferson;1 Dandridge ES
 ReportingUnit	Tennessee;Jefferson County;10 Jeff City Fire Dp	Jefferson;10 Jeff City Fire Dp
 ReportingUnit	Tennessee;Jefferson County;2 Piedmont	Jefferson;2 Piedmont
@@ -1461,7 +1461,7 @@ ReportingUnit	Tennessee;Jefferson County;8-1 Chestnut Hill	Jefferson;8-1 Chestnu
 ReportingUnit	Tennessee;Jefferson County;8-2 Swannsylvania	Jefferson;8-2 Swannsylvania
 ReportingUnit	Tennessee;Jefferson County;9 Talbott School	Jefferson;9 Talbott School
 ReportingUnit	Tennessee;Johnson County	Johnson
-ReportingUnit	Tennessee;Johnson County	47091
+ReportingUnit	Tennessee;Johnson County	fips47091
 ReportingUnit	Tennessee;Johnson County;1A Laurel	Johnson;1A Laurel
 ReportingUnit	Tennessee;Johnson County;1B Cold Springs	Johnson;1B Cold Springs
 ReportingUnit	Tennessee;Johnson County;2 Forge/Shouns	Johnson;2 Forge/Shouns
@@ -1473,7 +1473,7 @@ ReportingUnit	Tennessee;Johnson County;5 Doe	Johnson;5 Doe
 ReportingUnit	Tennessee;Johnson County;6 Shady	Johnson;6 Shady
 ReportingUnit	Tennessee;Johnson County;7 City	Johnson;7 City
 ReportingUnit	Tennessee;Knox County	Knox
-ReportingUnit	Tennessee;Knox County	47093
+ReportingUnit	Tennessee;Knox County	fips47093
 ReportingUnit	Tennessee;Knox County;06 Green School	Knox;06 Green School
 ReportingUnit	Tennessee;Knox County;09 Eternal Life Harvest	Knox;09 Eternal Life Harvest
 ReportingUnit	Tennessee;Knox County;10N Fort Sanders	Knox;10N Fort Sanders
@@ -1564,12 +1564,12 @@ ReportingUnit	Tennessee;Knox County;90 South Doyle	Knox;90 South Doyle
 ReportingUnit	Tennessee;Knox County;92 Gap Creek	Knox;92 Gap Creek
 ReportingUnit	Tennessee;Knox County;93 Hopewell	Knox;93 Hopewell
 ReportingUnit	Tennessee;Lake County	Lake
-ReportingUnit	Tennessee;Lake County	47095
+ReportingUnit	Tennessee;Lake County	fips47095
 ReportingUnit	Tennessee;Lake County;1 Tiptonville SR Citizens	Lake;1 Tiptonville SR Citizens
 ReportingUnit	Tennessee;Lake County;2 Courthouse	Lake;2 Courthouse
 ReportingUnit	Tennessee;Lake County;3 Lake Co Middle	Lake;3 Lake Co Middle
 ReportingUnit	Tennessee;Lauderdale County	Lauderdale
-ReportingUnit	Tennessee;Lauderdale County	47097
+ReportingUnit	Tennessee;Lauderdale County	fips47097
 ReportingUnit	Tennessee;Lauderdale County;Central 6	Lauderdale;Central 6
 ReportingUnit	Tennessee;Lauderdale County;Edith 7	Lauderdale;Edith 7
 ReportingUnit	Tennessee;Lauderdale County;Gates 7	Lauderdale;Gates 7
@@ -1581,7 +1581,7 @@ ReportingUnit	Tennessee;Lauderdale County;Ripley 2	Lauderdale;Ripley 2
 ReportingUnit	Tennessee;Lauderdale County;Ripley 3	Lauderdale;Ripley 3
 ReportingUnit	Tennessee;Lauderdale County;Ripley 4	Lauderdale;Ripley 4
 ReportingUnit	Tennessee;Lawrence County	Lawrence
-ReportingUnit	Tennessee;Lawrence County	47099
+ReportingUnit	Tennessee;Lawrence County	fips47099
 ReportingUnit	Tennessee;Lawrence County;01-1 St. Joseph	Lawrence;01-1 St. Joseph
 ReportingUnit	Tennessee;Lawrence County;01-2 West Loretto	Lawrence;01-2 West Loretto
 ReportingUnit	Tennessee;Lawrence County;02-1 Loretto Civ Ctr	Lawrence;02-1 Loretto Civ Ctr
@@ -1607,7 +1607,7 @@ ReportingUnit	Tennessee;Lawrence County;16-1 Rotary Park	Lawrence;16-1 Rotary Pa
 ReportingUnit	Tennessee;Lawrence County;17-1 Sowell	Lawrence;17-1 Sowell
 ReportingUnit	Tennessee;Lawrence County;18-1 PSCoC	Lawrence;18-1 PSCoC
 ReportingUnit	Tennessee;Lewis County	Lewis
-ReportingUnit	Tennessee;Lewis County	47101
+ReportingUnit	Tennessee;Lewis County	fips47101
 ReportingUnit	Tennessee;Lewis County;1-1	Lewis;1-1
 ReportingUnit	Tennessee;Lewis County;2-1	Lewis;2-1
 ReportingUnit	Tennessee;Lewis County;3-1	Lewis;3-1
@@ -1618,7 +1618,7 @@ ReportingUnit	Tennessee;Lewis County;7-1	Lewis;7-1
 ReportingUnit	Tennessee;Lewis County;8-1	Lewis;8-1
 ReportingUnit	Tennessee;Lewis County;9-1	Lewis;9-1
 ReportingUnit	Tennessee;Lincoln County	Lincoln
-ReportingUnit	Tennessee;Lincoln County	47103
+ReportingUnit	Tennessee;Lincoln County	fips47103
 ReportingUnit	Tennessee;Lincoln County;1-1 Blanche	Lincoln;1-1 Blanche
 ReportingUnit	Tennessee;Lincoln County;1-2 Molino	Lincoln;1-2 Molino
 ReportingUnit	Tennessee;Lincoln County;1-3 Taft	Lincoln;1-3 Taft
@@ -1640,7 +1640,7 @@ ReportingUnit	Tennessee;Lincoln County;7-3 Kelso	Lincoln;7-3 Kelso
 ReportingUnit	Tennessee;Lincoln County;8-1 Lincoln	Lincoln;8-1 Lincoln
 ReportingUnit	Tennessee;Lincoln County;8-2 South Lincoln	Lincoln;8-2 South Lincoln
 ReportingUnit	Tennessee;Loudon County	Loudon
-ReportingUnit	Tennessee;Loudon County	47105
+ReportingUnit	Tennessee;Loudon County	fips47105
 ReportingUnit	Tennessee;Loudon County;Browder	Loudon;Browder
 ReportingUnit	Tennessee;Loudon County;Davis	Loudon;Davis
 ReportingUnit	Tennessee;Loudon County;Eaton	Loudon;Eaton
@@ -1657,7 +1657,7 @@ ReportingUnit	Tennessee;Loudon County;Philadelphia	Loudon;Philadelphia
 ReportingUnit	Tennessee;Loudon County;Tellico V. North	Loudon;Tellico V. North
 ReportingUnit	Tennessee;Loudon County;Tellico V. South	Loudon;Tellico V. South
 ReportingUnit	Tennessee;Macon County	Macon
-ReportingUnit	Tennessee;Macon County	47111
+ReportingUnit	Tennessee;Macon County	fips47111
 ReportingUnit	Tennessee;Macon County;Armory	Macon;Armory
 ReportingUnit	Tennessee;Macon County;Central	Macon;Central
 ReportingUnit	Tennessee;Macon County;County High School	Macon;County High School
@@ -1669,7 +1669,7 @@ ReportingUnit	Tennessee;Macon County;Welcome Center	Macon;Welcome Center
 ReportingUnit	Tennessee;Macon County;Westside	Macon;Westside
 ReportingUnit	Tennessee;Macon County;Willette	Macon;Willette
 ReportingUnit	Tennessee;Madison County	Madison
-ReportingUnit	Tennessee;Madison County	47113
+ReportingUnit	Tennessee;Madison County	fips47113
 ReportingUnit	Tennessee;Madison County;1-1 Civic Center	Madison;1-1 Civic Center
 ReportingUnit	Tennessee;Madison County;1-2 Mt Moriah	Madison;1-2 Mt Moriah
 ReportingUnit	Tennessee;Madison County;10-1 Spring Creek	Madison;10-1 Spring Creek
@@ -1704,7 +1704,7 @@ ReportingUnit	Tennessee;Madison County;9-1 VFW	Madison;9-1 VFW
 ReportingUnit	Tennessee;Madison County;9-2 Pope	Madison;9-2 Pope
 ReportingUnit	Tennessee;Madison County;9-3 Three Way	Madison;9-3 Three Way
 ReportingUnit	Tennessee;Marion County	Marion
-ReportingUnit	Tennessee;Marion County	47115
+ReportingUnit	Tennessee;Marion County	fips47115
 ReportingUnit	Tennessee;Marion County;Elder Mountain	Marion;Elder Mountain
 ReportingUnit	Tennessee;Marion County;Foster Falls	Marion;Foster Falls
 ReportingUnit	Tennessee;Marion County;Haletown-Ladd	Marion;Haletown-Ladd
@@ -1723,7 +1723,7 @@ ReportingUnit	Tennessee;Marion County;Walden's Ridge	Marion;Walden's Ridge
 ReportingUnit	Tennessee;Marion County;Whitwell	Marion;Whitwell
 ReportingUnit	Tennessee;Marion County;Whitwell Mountain	Marion;Whitwell Mountain
 ReportingUnit	Tennessee;Marshall County	Marshall
-ReportingUnit	Tennessee;Marshall County	47117
+ReportingUnit	Tennessee;Marshall County	fips47117
 ReportingUnit	Tennessee;Marshall County;1 Chapel Hill	Marshall;1 Chapel Hill
 ReportingUnit	Tennessee;Marshall County;2 Henry Horton Park	Marshall;2 Henry Horton Park
 ReportingUnit	Tennessee;Marshall County;3 Belfast	Marshall;3 Belfast
@@ -1734,7 +1734,7 @@ ReportingUnit	Tennessee;Marshall County;7 Hardison	Marshall;7 Hardison
 ReportingUnit	Tennessee;Marshall County;8 Lewisburg Gas	Marshall;8 Lewisburg Gas
 ReportingUnit	Tennessee;Marshall County;9 McKnight Center	Marshall;9 McKnight Center
 ReportingUnit	Tennessee;Maury County	Maury
-ReportingUnit	Tennessee;Maury County	47119
+ReportingUnit	Tennessee;Maury County	fips47119
 ReportingUnit	Tennessee;Maury County;Armory 7-1	Maury;Armory 7-1
 ReportingUnit	Tennessee;Maury County;Bear Creek 8-1	Maury;Bear Creek 8-1
 ReportingUnit	Tennessee;Maury County;Bigbyville 9-1	Maury;Bigbyville 9-1
@@ -1757,7 +1757,7 @@ ReportingUnit	Tennessee;Maury County;St. Catherine 4-1	Maury;St. Catherine 4-1
 ReportingUnit	Tennessee;Maury County;Theta 6-3	Maury;Theta 6-3
 ReportingUnit	Tennessee;Maury County;West End 1-2	Maury;West End 1-2
 ReportingUnit	Tennessee;McMinn County	McMinn
-ReportingUnit	Tennessee;McMinn County	47107
+ReportingUnit	Tennessee;McMinn County	fips47107
 ReportingUnit	Tennessee;McMinn County;Calhoun	McMinn;Calhoun
 ReportingUnit	Tennessee;McMinn County;Central	McMinn;Central
 ReportingUnit	Tennessee;McMinn County;City Park	McMinn;City Park
@@ -1774,7 +1774,7 @@ ReportingUnit	Tennessee;McMinn County;Riceville	McMinn;Riceville
 ReportingUnit	Tennessee;McMinn County;Rogers Creek	McMinn;Rogers Creek
 ReportingUnit	Tennessee;McMinn County;TCAT	McMinn;TCAT
 ReportingUnit	Tennessee;McNairy County	McNairy
-ReportingUnit	Tennessee;McNairy County	47109
+ReportingUnit	Tennessee;McNairy County	fips47109
 ReportingUnit	Tennessee;McNairy County;Adamsville 2-1	McNairy;Adamsville 2-1
 ReportingUnit	Tennessee;McNairy County;Bethel Springs 1-1	McNairy;Bethel Springs 1-1
 ReportingUnit	Tennessee;McNairy County;Courthouse SE 6-1	McNairy;Courthouse SE 6-1
@@ -1792,7 +1792,7 @@ ReportingUnit	Tennessee;McNairy County;Ramer 5-4	McNairy;Ramer 5-4
 ReportingUnit	Tennessee;McNairy County;Rose Creek 4-2	McNairy;Rose Creek 4-2
 ReportingUnit	Tennessee;McNairy County;Stantonville 7-2	McNairy;Stantonville 7-2
 ReportingUnit	Tennessee;Meigs County	Meigs
-ReportingUnit	Tennessee;Meigs County	47121
+ReportingUnit	Tennessee;Meigs County	fips47121
 ReportingUnit	Tennessee;Meigs County;1 Eastview	Meigs;1 Eastview
 ReportingUnit	Tennessee;Meigs County;2 Meigs South	Meigs;2 Meigs South
 ReportingUnit	Tennessee;Meigs County;3-1 City Hall	Meigs;3-1 City Hall
@@ -1800,7 +1800,7 @@ ReportingUnit	Tennessee;Meigs County;3-2 Courthouse	Meigs;3-2 Courthouse
 ReportingUnit	Tennessee;Meigs County;4 Meigs North	Meigs;4 Meigs North
 ReportingUnit	Tennessee;Meigs County;5 Ten Mile	Meigs;5 Ten Mile
 ReportingUnit	Tennessee;Monroe County	Monroe
-ReportingUnit	Tennessee;Monroe County	47123
+ReportingUnit	Tennessee;Monroe County	fips47123
 ReportingUnit	Tennessee;Monroe County;01	Monroe;01
 ReportingUnit	Tennessee;Monroe County;02	Monroe;02
 ReportingUnit	Tennessee;Monroe County;03	Monroe;03
@@ -1815,7 +1815,7 @@ ReportingUnit	Tennessee;Monroe County;11	Monroe;11
 ReportingUnit	Tennessee;Monroe County;12	Monroe;12
 ReportingUnit	Tennessee;Monroe County;14	Monroe;14
 ReportingUnit	Tennessee;Montgomery County	Montgomery
-ReportingUnit	Tennessee;Montgomery County	47125
+ReportingUnit	Tennessee;Montgomery County	fips47125
 ReportingUnit	Tennessee;Montgomery County;10 Minglewood	Montgomery;10 Minglewood
 ReportingUnit	Tennessee;Montgomery County;11 Northwest	Montgomery;11 Northwest
 ReportingUnit	Tennessee;Montgomery County;12 Ringgold	Montgomery;12 Ringgold
@@ -1847,14 +1847,14 @@ ReportingUnit	Tennessee;Montgomery County;8B Barkers Mill	Montgomery;8B Barkers 
 ReportingUnit	Tennessee;Montgomery County;9 Outlaw	Montgomery;9 Outlaw
 ReportingUnit	Tennessee;Montgomery County;Absentee	Montgomery;Absentee
 ReportingUnit	Tennessee;Moore County	Moore
-ReportingUnit	Tennessee;Moore County	47127
+ReportingUnit	Tennessee;Moore County	fips47127
 ReportingUnit	Tennessee;Moore County;1 Masonic Lodge	Moore;1 Masonic Lodge
 ReportingUnit	Tennessee;Moore County;2 High School	Moore;2 High School
 ReportingUnit	Tennessee;Moore County;3 Moore County Bldg	Moore;3 Moore County Bldg
 ReportingUnit	Tennessee;Moore County;4 Public Library	Moore;4 Public Library
 ReportingUnit	Tennessee;Moore County;5 Motlow College	Moore;5 Motlow College
 ReportingUnit	Tennessee;Morgan County	Morgan
-ReportingUnit	Tennessee;Morgan County	47129
+ReportingUnit	Tennessee;Morgan County	fips47129
 ReportingUnit	Tennessee;Morgan County;1-1 Coalfield	Morgan;1-1 Coalfield
 ReportingUnit	Tennessee;Morgan County;2-1 Oakdale High	Morgan;2-1 Oakdale High
 ReportingUnit	Tennessee;Morgan County;2-2 Oakdale	Morgan;2-2 Oakdale
@@ -1868,7 +1868,7 @@ ReportingUnit	Tennessee;Morgan County;6-1 Kellys	Morgan;6-1 Kellys
 ReportingUnit	Tennessee;Morgan County;6-2 Petros	Morgan;6-2 Petros
 ReportingUnit	Tennessee;Morgan County;6-3 Mossy Grove	Morgan;6-3 Mossy Grove
 ReportingUnit	Tennessee;Obion County	Obion
-ReportingUnit	Tennessee;Obion County	47131
+ReportingUnit	Tennessee;Obion County	fips47131
 ReportingUnit	Tennessee;Obion County;1-1 South Fulton	Obion;1-1 South Fulton
 ReportingUnit	Tennessee;Obion County;2-1 Eddie Cox Sr Ctr	Obion;2-1 Eddie Cox Sr Ctr
 ReportingUnit	Tennessee;Obion County;2-4 Woodland	Obion;2-4 Woodland
@@ -1882,7 +1882,7 @@ ReportingUnit	Tennessee;Obion County;6-1 Troy Sr Ctr	Obion;6-1 Troy Sr Ctr
 ReportingUnit	Tennessee;Obion County;6-2 Obion Sr Ctr	Obion;6-2 Obion Sr Ctr
 ReportingUnit	Tennessee;Obion County;7-2 Obion Co Library	Obion;7-2 Obion Co Library
 ReportingUnit	Tennessee;Overton County	Overton
-ReportingUnit	Tennessee;Overton County	47133
+ReportingUnit	Tennessee;Overton County	fips47133
 ReportingUnit	Tennessee;Overton County;1 Livingston	Overton;1 Livingston
 ReportingUnit	Tennessee;Overton County;2-1 Allons	Overton;2-1 Allons
 ReportingUnit	Tennessee;Overton County;2-3 Monroe	Overton;2-3 Monroe
@@ -1893,7 +1893,7 @@ ReportingUnit	Tennessee;Overton County;4-2 Rickman	Overton;4-2 Rickman
 ReportingUnit	Tennessee;Overton County;5-1 Hilham	Overton;5-1 Hilham
 ReportingUnit	Tennessee;Overton County;5-2 Fairgrounds	Overton;5-2 Fairgrounds
 ReportingUnit	Tennessee;Perry County	Perry
-ReportingUnit	Tennessee;Perry County	47135
+ReportingUnit	Tennessee;Perry County	fips47135
 ReportingUnit	Tennessee;Perry County;1-1 Cedar Creek	Perry;1-1 Cedar Creek
 ReportingUnit	Tennessee;Perry County;1-2 Marsh Creek	Perry;1-2 Marsh Creek
 ReportingUnit	Tennessee;Perry County;2-1 Pineview	Perry;2-1 Pineview
@@ -1905,7 +1905,7 @@ ReportingUnit	Tennessee;Perry County;4-3 Lobelville	Perry;4-3 Lobelville
 ReportingUnit	Tennessee;Perry County;5-1 Linden	Perry;5-1 Linden
 ReportingUnit	Tennessee;Perry County;6-1 Lobelville	Perry;6-1 Lobelville
 ReportingUnit	Tennessee;Pickett County	Pickett
-ReportingUnit	Tennessee;Pickett County	47137
+ReportingUnit	Tennessee;Pickett County	fips47137
 ReportingUnit	Tennessee;Pickett County;Barnes Ridge 4-3	Pickett;Barnes Ridge 4-3
 ReportingUnit	Tennessee;Pickett County;Bolestown 4-4	Pickett;Bolestown 4-4
 ReportingUnit	Tennessee;Pickett County;Boom 4-1	Pickett;Boom 4-1
@@ -1916,7 +1916,7 @@ ReportingUnit	Tennessee;Pickett County;Moodyville 1-2	Pickett;Moodyville 1-2
 ReportingUnit	Tennessee;Pickett County;Oak Hill 4-2	Pickett;Oak Hill 4-2
 ReportingUnit	Tennessee;Pickett County;Travisville 3-2	Pickett;Travisville 3-2
 ReportingUnit	Tennessee;Polk County	Polk
-ReportingUnit	Tennessee;Polk County	47139
+ReportingUnit	Tennessee;Polk County	fips47139
 ReportingUnit	Tennessee;Polk County;Chilhowee MS	Polk;Chilhowee MS
 ReportingUnit	Tennessee;Polk County;Community Center	Polk;Community Center
 ReportingUnit	Tennessee;Polk County;Delano	Polk;Delano
@@ -1927,7 +1927,7 @@ ReportingUnit	Tennessee;Polk County;South Polk School	Polk;South Polk School
 ReportingUnit	Tennessee;Polk County;Springtown Firehall	Polk;Springtown Firehall
 ReportingUnit	Tennessee;Polk County;Turtletown	Polk;Turtletown
 ReportingUnit	Tennessee;Putnam County	Putnam
-ReportingUnit	Tennessee;Putnam County	47141
+ReportingUnit	Tennessee;Putnam County	fips47141
 ReportingUnit	Tennessee;Putnam County;10A Pavilion	Putnam;10A Pavilion
 ReportingUnit	Tennessee;Putnam County;10B Sycamore	Putnam;10B Sycamore
 ReportingUnit	Tennessee;Putnam County;11A Bangham	Putnam;11A Bangham
@@ -1951,7 +1951,7 @@ ReportingUnit	Tennessee;Putnam County;8E Buffalo Valley	Putnam;8E Buffalo Valley
 ReportingUnit	Tennessee;Putnam County;8G Upperman	Putnam;8G Upperman
 ReportingUnit	Tennessee;Putnam County;9B Double Springs	Putnam;9B Double Springs
 ReportingUnit	Tennessee;Rhea County	Rhea
-ReportingUnit	Tennessee;Rhea County	47143
+ReportingUnit	Tennessee;Rhea County	fips47143
 ReportingUnit	Tennessee;Rhea County;1-1 Spring City North	Rhea;1-1 Spring City North
 ReportingUnit	Tennessee;Rhea County;1-2 Grandview	Rhea;1-2 Grandview
 ReportingUnit	Tennessee;Rhea County;2-1 Spring City South	Rhea;2-1 Spring City South
@@ -1965,7 +1965,7 @@ ReportingUnit	Tennessee;Rhea County;8-1 Garrison	Rhea;8-1 Garrison
 ReportingUnit	Tennessee;Rhea County;9-1 Graysville	Rhea;9-1 Graysville
 ReportingUnit	Tennessee;Rhea County;9-2 Waldens Ridge	Rhea;9-2 Waldens Ridge
 ReportingUnit	Tennessee;Roane County	Roane
-ReportingUnit	Tennessee;Roane County	47145
+ReportingUnit	Tennessee;Roane County	fips47145
 ReportingUnit	Tennessee;Roane County;Cave Creek	Roane;Cave Creek
 ReportingUnit	Tennessee;Roane County;Cherokee	Roane;Cherokee
 ReportingUnit	Tennessee;Roane County;Dyllis	Roane;Dyllis
@@ -1991,7 +1991,7 @@ ReportingUnit	Tennessee;Roane County;Rockwood Ward 1	Roane;Rockwood Ward 1
 ReportingUnit	Tennessee;Roane County;Rockwood Ward 2	Roane;Rockwood Ward 2
 ReportingUnit	Tennessee;Roane County;South Harriman	Roane;South Harriman
 ReportingUnit	Tennessee;Robertson County	Robertson
-ReportingUnit	Tennessee;Robertson County	47147
+ReportingUnit	Tennessee;Robertson County	fips47147
 ReportingUnit	Tennessee;Robertson County;01-1 East Robertson	Robertson;01-1 East Robertson
 ReportingUnit	Tennessee;Robertson County;02-1 Woodall	Robertson;02-1 Woodall
 ReportingUnit	Tennessee;Robertson County;03-1 Ebenezer	Robertson;03-1 Ebenezer
@@ -2011,7 +2011,7 @@ ReportingUnit	Tennessee;Robertson County;11-1 Westside	Robertson;11-1 Westside
 ReportingUnit	Tennessee;Robertson County;11-2 Heads	Robertson;11-2 Heads
 ReportingUnit	Tennessee;Robertson County;12-1 Bransford	Robertson;12-1 Bransford
 ReportingUnit	Tennessee;Rutherford County	Rutherford
-ReportingUnit	Tennessee;Rutherford County	47149
+ReportingUnit	Tennessee;Rutherford County	fips47149
 ReportingUnit	Tennessee;Rutherford County;1-1	Rutherford;1-1
 ReportingUnit	Tennessee;Rutherford County;10-1	Rutherford;10-1
 ReportingUnit	Tennessee;Rutherford County;10-2	Rutherford;10-2
@@ -2062,7 +2062,7 @@ ReportingUnit	Tennessee;Rutherford County;8-4	Rutherford;8-4
 ReportingUnit	Tennessee;Rutherford County;9-1	Rutherford;9-1
 ReportingUnit	Tennessee;Rutherford County;9-2	Rutherford;9-2
 ReportingUnit	Tennessee;Scott County	Scott
-ReportingUnit	Tennessee;Scott County	47151
+ReportingUnit	Tennessee;Scott County	fips47151
 ReportingUnit	Tennessee;Scott County;1-1 Fairview	Scott;1-1 Fairview
 ReportingUnit	Tennessee;Scott County;2-1 Elgin	Scott;2-1 Elgin
 ReportingUnit	Tennessee;Scott County;2-2 Robbins	Scott;2-2 Robbins
@@ -2074,7 +2074,7 @@ ReportingUnit	Tennessee;Scott County;5-2 Winfield	Scott;5-2 Winfield
 ReportingUnit	Tennessee;Scott County;6-1 Oneida	Scott;6-1 Oneida
 ReportingUnit	Tennessee;Scott County;7-1 West Oneida	Scott;7-1 West Oneida
 ReportingUnit	Tennessee;Sequatchie County	Sequatchie
-ReportingUnit	Tennessee;Sequatchie County	47153
+ReportingUnit	Tennessee;Sequatchie County	fips47153
 ReportingUnit	Tennessee;Sequatchie County;1 Lewis Chapel	Sequatchie;1 Lewis Chapel
 ReportingUnit	Tennessee;Sequatchie County;2 Cagle	Sequatchie;2 Cagle
 ReportingUnit	Tennessee;Sequatchie County;3 Courthouse	Sequatchie;3 Courthouse
@@ -2085,7 +2085,7 @@ ReportingUnit	Tennessee;Sequatchie County;7 Ewton's Annex	Sequatchie;7 Ewton's A
 ReportingUnit	Tennessee;Sequatchie County;8 Lone Oak	Sequatchie;8 Lone Oak
 ReportingUnit	Tennessee;Sequatchie County;9 Fredonia	Sequatchie;9 Fredonia
 ReportingUnit	Tennessee;Sevier County	Sevier
-ReportingUnit	Tennessee;Sevier County	47155
+ReportingUnit	Tennessee;Sevier County	fips47155
 ReportingUnit	Tennessee;Sevier County;1-1 Caton's Chapel	Sevier;1-1 Caton's Chapel
 ReportingUnit	Tennessee;Sevier County;1-2 Caton's Chapel	Sevier;1-2 Caton's Chapel
 ReportingUnit	Tennessee;Sevier County;1-3 Jones Cove	Sevier;1-3 Jones Cove
@@ -2112,7 +2112,7 @@ ReportingUnit	Tennessee;Sevier County;8-2 Kodak	Sevier;8-2 Kodak
 ReportingUnit	Tennessee;Sevier County;8-3 Underwood	Sevier;8-3 Underwood
 ReportingUnit	Tennessee;Sevier County;9-1 Seymour Primary	Sevier;9-1 Seymour Primary
 ReportingUnit	Tennessee;Shelby County	Shelby
-ReportingUnit	Tennessee;Shelby County	47157
+ReportingUnit	Tennessee;Shelby County	fips47157
 ReportingUnit	Tennessee;Shelby County;Arlington 01	Shelby;Arlington 01
 ReportingUnit	Tennessee;Shelby County;Arlington 02	Shelby;Arlington 02
 ReportingUnit	Tennessee;Shelby County;Bartlett 03	Shelby;Bartlett 03
@@ -2280,7 +2280,7 @@ ReportingUnit	Tennessee;Shelby County;Ross 15	Shelby;Ross 15
 ReportingUnit	Tennessee;Shelby County;Ross 16	Shelby;Ross 16
 ReportingUnit	Tennessee;Shelby County;Stewartville	Shelby;Stewartville
 ReportingUnit	Tennessee;Smith County	Smith
-ReportingUnit	Tennessee;Smith County	47159
+ReportingUnit	Tennessee;Smith County	fips47159
 ReportingUnit	Tennessee;Smith County;01 Defeated	Smith;01 Defeated
 ReportingUnit	Tennessee;Smith County;02 Tanglewood	Smith;02 Tanglewood
 ReportingUnit	Tennessee;Smith County;03 New Middleton	Smith;03 New Middleton
@@ -2290,7 +2290,7 @@ ReportingUnit	Tennessee;Smith County;06 Carthage	Smith;06 Carthage
 ReportingUnit	Tennessee;Smith County;07 South Carthage	Smith;07 South Carthage
 ReportingUnit	Tennessee;Smith County;08 Elmwood	Smith;08 Elmwood
 ReportingUnit	Tennessee;Stewart County	Stewart
-ReportingUnit	Tennessee;Stewart County	47161
+ReportingUnit	Tennessee;Stewart County	fips47161
 ReportingUnit	Tennessee;Stewart County;1-1 Indian Mound	Stewart;1-1 Indian Mound
 ReportingUnit	Tennessee;Stewart County;2-1 Big Rock	Stewart;2-1 Big Rock
 ReportingUnit	Tennessee;Stewart County;3-1 Bumpus Mills	Stewart;3-1 Bumpus Mills
@@ -2299,7 +2299,7 @@ ReportingUnit	Tennessee;Stewart County;5-1 Visitors Center	Stewart;5-1 Visitors 
 ReportingUnit	Tennessee;Stewart County;6-1 Public Library	Stewart;6-1 Public Library
 ReportingUnit	Tennessee;Stewart County;7-1 Cumberland City	Stewart;7-1 Cumberland City
 ReportingUnit	Tennessee;Sullivan County	Sullivan
-ReportingUnit	Tennessee;Sullivan County	47163
+ReportingUnit	Tennessee;Sullivan County	fips47163
 ReportingUnit	Tennessee;Sullivan County;10A	Sullivan;10A
 ReportingUnit	Tennessee;Sullivan County;10B	Sullivan;10B
 ReportingUnit	Tennessee;Sullivan County;11A	Sullivan;11A
@@ -2326,7 +2326,7 @@ ReportingUnit	Tennessee;Sullivan County;8B	Sullivan;8B
 ReportingUnit	Tennessee;Sullivan County;9A	Sullivan;9A
 ReportingUnit	Tennessee;Sullivan County;9B	Sullivan;9B
 ReportingUnit	Tennessee;Sumner County	Sumner
-ReportingUnit	Tennessee;Sumner County	47165
+ReportingUnit	Tennessee;Sumner County	fips47165
 ReportingUnit	Tennessee;Sumner County;1-1 Westmoreland	Sumner;1-1 Westmoreland
 ReportingUnit	Tennessee;Sumner County;1-3 Corinth	Sumner;1-3 Corinth
 ReportingUnit	Tennessee;Sumner County;10-1 Walton Ferry	Sumner;10-1 Walton Ferry
@@ -2356,7 +2356,7 @@ ReportingUnit	Tennessee;Sumner County;8-2 Hawkins	Sumner;8-2 Hawkins
 ReportingUnit	Tennessee;Sumner County;9-1 Hendersonville	Sumner;9-1 Hendersonville
 ReportingUnit	Tennessee;Sumner County;9-2 Indian Lake	Sumner;9-2 Indian Lake
 ReportingUnit	Tennessee;Tipton County	Tipton
-ReportingUnit	Tennessee;Tipton County	47167
+ReportingUnit	Tennessee;Tipton County	fips47167
 ReportingUnit	Tennessee;Tipton County;1-1 NE Covington	Tipton;1-1 NE Covington
 ReportingUnit	Tennessee;Tipton County;2-3 SE Covington	Tipton;2-3 SE Covington
 ReportingUnit	Tennessee;Tipton County;3-6 Tipton West	Tipton;3-6 Tipton West
@@ -2368,7 +2368,7 @@ ReportingUnit	Tennessee;Tipton County;8-21 Wilkinsville	Tipton;8-21 Wilkinsville
 ReportingUnit	Tennessee;Tipton County;9-22 Brighton	Tipton;9-22 Brighton
 ReportingUnit	Tennessee;Tipton County;Early Voting - Write-Ins	Tipton;Early Voting - Write-Ins
 ReportingUnit	Tennessee;Trousdale County	Trousdale
-ReportingUnit	Tennessee;Trousdale County	47169
+ReportingUnit	Tennessee;Trousdale County	fips47169
 ReportingUnit	Tennessee;Trousdale County;01 Senior Center	Trousdale;01 Senior Center
 ReportingUnit	Tennessee;Trousdale County;02 Cato	Trousdale;02 Cato
 ReportingUnit	Tennessee;Trousdale County;03 Beech Grove	Trousdale;03 Beech Grove
@@ -2380,7 +2380,7 @@ ReportingUnit	Tennessee;Trousdale County;08 Willard	Trousdale;08 Willard
 ReportingUnit	Tennessee;Trousdale County;09 City	Trousdale;09 City
 ReportingUnit	Tennessee;Trousdale County;10 Providence	Trousdale;10 Providence
 ReportingUnit	Tennessee;Unicoi County	Unicoi
-ReportingUnit	Tennessee;Unicoi County	47171
+ReportingUnit	Tennessee;Unicoi County	fips47171
 ReportingUnit	Tennessee;Unicoi County;Fishery	Unicoi;Fishery
 ReportingUnit	Tennessee;Unicoi County;Flag Pond	Unicoi;Flag Pond
 ReportingUnit	Tennessee;Unicoi County;High School	Unicoi;High School
@@ -2390,7 +2390,7 @@ ReportingUnit	Tennessee;Unicoi County;Rock Creek	Unicoi;Rock Creek
 ReportingUnit	Tennessee;Unicoi County;Temple Hill	Unicoi;Temple Hill
 ReportingUnit	Tennessee;Unicoi County;Unicoi	Unicoi;Unicoi
 ReportingUnit	Tennessee;Union County	Union
-ReportingUnit	Tennessee;Union County	47173
+ReportingUnit	Tennessee;Union County	fips47173
 ReportingUnit	Tennessee;Union County;1-1 UCHS	Union;1-1 UCHS
 ReportingUnit	Tennessee;Union County;2-1 Luttrell	Union;2-1 Luttrell
 ReportingUnit	Tennessee;Union County;3-1 Cedar Grove	Union;3-1 Cedar Grove
@@ -2401,7 +2401,7 @@ ReportingUnit	Tennessee;Union County;5-2 Braden Chapel	Union;5-2 Braden Chapel
 ReportingUnit	Tennessee;Union County;6-1 Paulette	Union;6-1 Paulette
 ReportingUnit	Tennessee;Union County;7-1 Plainview	Union;7-1 Plainview
 ReportingUnit	Tennessee;Van Buren County	Van Buren
-ReportingUnit	Tennessee;Van Buren County	47175
+ReportingUnit	Tennessee;Van Buren County	fips47175
 ReportingUnit	Tennessee;Van Buren County;Cedar Grove	Van Buren;Cedar Grove
 ReportingUnit	Tennessee;Van Buren County;Cummingsville	Van Buren;Cummingsville
 ReportingUnit	Tennessee;Van Buren County;Fall Creek Falls	Van Buren;Fall Creek Falls
@@ -2410,7 +2410,7 @@ ReportingUnit	Tennessee;Van Buren County;Spencer 1	Van Buren;Spencer 1
 ReportingUnit	Tennessee;Van Buren County;Spencer 5	Van Buren;Spencer 5
 ReportingUnit	Tennessee;Van Buren County;White Hill	Van Buren;White Hill
 ReportingUnit	Tennessee;Warren County	Warren
-ReportingUnit	Tennessee;Warren County	47177
+ReportingUnit	Tennessee;Warren County	fips47177
 ReportingUnit	Tennessee;Warren County;1-1 Christ Community Church	Warren;1-1 Christ Community Church
 ReportingUnit	Tennessee;Warren County;10-1 Centertown UMC	Warren;10-1 Centertown UMC
 ReportingUnit	Tennessee;Warren County;10-2 Centertown CIC	Warren;10-2 Centertown CIC
@@ -2432,7 +2432,7 @@ ReportingUnit	Tennessee;Warren County;8-3 Bonner	Warren;8-3 Bonner
 ReportingUnit	Tennessee;Warren County;9-1 Morrison	Warren;9-1 Morrison
 ReportingUnit	Tennessee;Warren County;9-2 Viola	Warren;9-2 Viola
 ReportingUnit	Tennessee;Washington County	Washington
-ReportingUnit	Tennessee;Washington County	47179
+ReportingUnit	Tennessee;Washington County	fips47179
 ReportingUnit	Tennessee;Washington County;01 Fall Branch	Washington;01 Fall Branch
 ReportingUnit	Tennessee;Washington County;02 Harmony	Washington;02 Harmony
 ReportingUnit	Tennessee;Washington County;03 Bowmantown	Washington;03 Bowmantown
@@ -2469,7 +2469,7 @@ ReportingUnit	Tennessee;Washington County;33 South Central 7	Washington;33 South
 ReportingUnit	Tennessee;Washington County;34 South Central 6	Washington;34 South Central 6
 ReportingUnit	Tennessee;Washington County;35 Town Acres County	Washington;35 Town Acres County
 ReportingUnit	Tennessee;Wayne County	Wayne
-ReportingUnit	Tennessee;Wayne County	47181
+ReportingUnit	Tennessee;Wayne County	fips47181
 ReportingUnit	Tennessee;Wayne County;1-1 Waynesboro	Wayne;1-1 Waynesboro
 ReportingUnit	Tennessee;Wayne County;2-1 Clifton	Wayne;2-1 Clifton
 ReportingUnit	Tennessee;Wayne County;3-1 Beech Creek	Wayne;3-1 Beech Creek
@@ -2485,7 +2485,7 @@ ReportingUnit	Tennessee;Wayne County;6-2 South Gate	Wayne;6-2 South Gate
 ReportingUnit	Tennessee;Wayne County;7-1 Buffalo River	Wayne;7-1 Buffalo River
 ReportingUnit	Tennessee;Wayne County;7-2 Ovilla	Wayne;7-2 Ovilla
 ReportingUnit	Tennessee;Weakley County	Weakley
-ReportingUnit	Tennessee;Weakley County	47183
+ReportingUnit	Tennessee;Weakley County	fips47183
 ReportingUnit	Tennessee;Weakley County;1A Palmersville	Weakley;1A Palmersville
 ReportingUnit	Tennessee;Weakley County;1B Latham	Weakley;1B Latham
 ReportingUnit	Tennessee;Weakley County;2A Gleason	Weakley;2A Gleason
@@ -2497,7 +2497,7 @@ ReportingUnit	Tennessee;Weakley County;7A Martin Shepherd's	Weakley;7A Martin Sh
 ReportingUnit	Tennessee;Weakley County;8A Martin FUMC	Weakley;8A Martin FUMC
 ReportingUnit	Tennessee;Weakley County;9A Dresden	Weakley;9A Dresden
 ReportingUnit	Tennessee;White County	White
-ReportingUnit	Tennessee;White County	47185
+ReportingUnit	Tennessee;White County	fips47185
 ReportingUnit	Tennessee;White County;1-1 Sparta Civic	White;1-1 Sparta Civic
 ReportingUnit	Tennessee;White County;1-2 Sparta Civic	White;1-2 Sparta Civic
 ReportingUnit	Tennessee;White County;2-1 Ag Fair Complex	White;2-1 Ag Fair Complex
@@ -2510,7 +2510,7 @@ ReportingUnit	Tennessee;White County;6-1 Central View	White;6-1 Central View
 ReportingUnit	Tennessee;White County;6-2 Cassville	White;6-2 Cassville
 ReportingUnit	Tennessee;White County;7-1 Northfield	White;7-1 Northfield
 ReportingUnit	Tennessee;Williamson County	Williamson
-ReportingUnit	Tennessee;Williamson County	47187
+ReportingUnit	Tennessee;Williamson County	fips47187
 ReportingUnit	Tennessee;Williamson County;1-1	Williamson;1-1
 ReportingUnit	Tennessee;Williamson County;1-2	Williamson;1-2
 ReportingUnit	Tennessee;Williamson County;1-3	Williamson;1-3
@@ -2555,7 +2555,7 @@ ReportingUnit	Tennessee;Williamson County;9-3	Williamson;9-3
 ReportingUnit	Tennessee;Williamson County;9-4	Williamson;9-4
 ReportingUnit	Tennessee;Williamson County;9-5	Williamson;9-5
 ReportingUnit	Tennessee;Wilson County	Wilson
-ReportingUnit	Tennessee;Wilson County	47189
+ReportingUnit	Tennessee;Wilson County	fips47189
 ReportingUnit	Tennessee;Wilson County;1-1	Wilson;1-1
 ReportingUnit	Tennessee;Wilson County;10-1	Wilson;10-1
 ReportingUnit	Tennessee;Wilson County;11-1	Wilson;11-1

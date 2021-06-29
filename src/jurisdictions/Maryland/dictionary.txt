@@ -15,8 +15,8 @@ Candidate	Chris Palombi	Chris Palombi
 Candidate	David J. Trone	David J. Trone
 Candidate	Deborah Rouse	Deborah Rouse
 Candidate	Dennis Andrew Ball	Dennis Andrew Ball
-Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Edward Shlikas	Edward Shlikas
 Candidate	George E. McDermott	George E. McDermott
 Candidate	George Gluck	George Gluck
@@ -255,24 +255,24 @@ CandidateContest	MD Senate District 7	MD Senate District 7
 CandidateContest	MD Senate District 8	MD Senate District 8
 CandidateContest	MD Senate District 9	MD Senate District 9
 CandidateContest	MD Treasurer	MD Treasurer
-CandidateContest	US House MD District 1	Representative in Congress District 1
 CandidateContest	US House MD District 1	Representative in Congress District 01
-CandidateContest	US House MD District 2	Representative in Congress District 2
+CandidateContest	US House MD District 1	Representative in Congress District 1
 CandidateContest	US House MD District 2	Representative in Congress District 02
-CandidateContest	US House MD District 3	Representative in Congress District 3
+CandidateContest	US House MD District 2	Representative in Congress District 2
 CandidateContest	US House MD District 3	Representative in Congress District 03
-CandidateContest	US House MD District 4	Representative in Congress District 4
+CandidateContest	US House MD District 3	Representative in Congress District 3
 CandidateContest	US House MD District 4	Representative in Congress District 04
-CandidateContest	US House MD District 5	Representative in Congress District 5
+CandidateContest	US House MD District 4	Representative in Congress District 4
 CandidateContest	US House MD District 5	Representative in Congress District 05
-CandidateContest	US House MD District 6	Representative in Congress District 6
+CandidateContest	US House MD District 5	Representative in Congress District 5
 CandidateContest	US House MD District 6	Representative in Congress District 06
-CandidateContest	US House MD District 7	Representative in Congress District 7
+CandidateContest	US House MD District 6	Representative in Congress District 6
 CandidateContest	US House MD District 7	Representative in Congress District 07
-CandidateContest	US House MD District 8	Representative in Congress District 8
+CandidateContest	US House MD District 7	Representative in Congress District 7
 CandidateContest	US House MD District 8	Representative in Congress District 08
-CandidateContest	US President (MD)	President - Vice Pres District
+CandidateContest	US House MD District 8	Representative in Congress District 8
 CandidateContest	US President (MD)	PRESIDENT
+CandidateContest	US President (MD)	President - Vice Pres District
 CandidateContest	US President (MD)	US PRESIDENT
 CandidateContest	US Senate MD	US Senate MD
 CountItemType	absentee-mail	By Mail Votes
@@ -280,8 +280,8 @@ CountItemType	absentee-mail-2	By Mail 2 Votes
 CountItemType	early	Early Voting Votes
 CountItemType	election-day	Election Day Votes
 CountItemType	provisional	Prov. Votes
-CountItemType	total	Total Votes
 CountItemType	total	TOTAL
+CountItemType	total	Total Votes
 Election	2016 General	2016 General
 Election	2018 General	2018 General
 Election	2020 General	2020 General
@@ -290,8 +290,8 @@ Party	BAR	BAR
 Party	BOT	BOT
 Party	Democratic Party	DEM
 Party	Democratic Party	DEMOCRAT
-Party	Green Party	GRN
 Party	Green Party	GREEN
+Party	Green Party	GRN
 Party	Libertarian Party	LIB
 Party	Libertarian Party	LIBERTARIAN
 Party	OTH	OTH
@@ -299,10 +299,11 @@ Party	Republican Party	REP
 Party	Republican Party	REPUBLICAN
 Party	UNF	UNF
 Party	none or unknown	OTHER
-ReportingUnit	Maryland	Maryland
 ReportingUnit	Maryland	00
+ReportingUnit	Maryland	Maryland
 ReportingUnit	Maryland;Allegany County	01
-ReportingUnit	Maryland;Allegany County	24001
+ReportingUnit	Maryland;Allegany County	fips24001
+ReportingUnit	Maryland;Allegany County	fips24001
 ReportingUnit	Maryland;Allegany County;District 001 Precinct 000	01;District 001 Precinct 000
 ReportingUnit	Maryland;Allegany County;District 002 Precinct 000	01;District 002 Precinct 000
 ReportingUnit	Maryland;Allegany County;District 003 Precinct 000	01;District 003 Precinct 000
@@ -341,7 +342,8 @@ ReportingUnit	Maryland;Allegany County;District 029 Precinct 003	01;District 029
 ReportingUnit	Maryland;Allegany County;District 031 Precinct 000	01;District 031 Precinct 000
 ReportingUnit	Maryland;Allegany County;District 034 Precinct 000	01;District 034 Precinct 000
 ReportingUnit	Maryland;Anne Arundel County	02
-ReportingUnit	Maryland;Anne Arundel County	24003
+ReportingUnit	Maryland;Anne Arundel County	fips24003
+ReportingUnit	Maryland;Anne Arundel County	fips24003
 ReportingUnit	Maryland;Anne Arundel County;District 001 Precinct 001	02;District 001 Precinct 001
 ReportingUnit	Maryland;Anne Arundel County;District 001 Precinct 002	02;District 001 Precinct 002
 ReportingUnit	Maryland;Anne Arundel County;District 001 Precinct 003	02;District 001 Precinct 003
@@ -537,8 +539,248 @@ ReportingUnit	Maryland;Anne Arundel County;District 007 Precinct 024	02;District
 ReportingUnit	Maryland;Anne Arundel County;District 007 Precinct 025	02;District 007 Precinct 025
 ReportingUnit	Maryland;Anne Arundel County;District 007 Precinct 026	02;District 007 Precinct 026
 ReportingUnit	Maryland;Anne Arundel County;District 007 Precinct 027	02;District 007 Precinct 027
+ReportingUnit	Maryland;Baltimore County	04
+ReportingUnit	Maryland;Baltimore County	fips24005
+ReportingUnit	Maryland;Baltimore County	fips24005
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 001	04;District 001 Precinct 001
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 002	04;District 001 Precinct 002
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 003	04;District 001 Precinct 003
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 004	04;District 001 Precinct 004
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 005	04;District 001 Precinct 005
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 006	04;District 001 Precinct 006
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 007	04;District 001 Precinct 007
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 008	04;District 001 Precinct 008
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 009	04;District 001 Precinct 009
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 010	04;District 001 Precinct 010
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 011	04;District 001 Precinct 011
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 012	04;District 001 Precinct 012
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 013	04;District 001 Precinct 013
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 014	04;District 001 Precinct 014
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 015	04;District 001 Precinct 015
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 016	04;District 001 Precinct 016
+ReportingUnit	Maryland;Baltimore County;District 001 Precinct 017	04;District 001 Precinct 017
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 001	04;District 002 Precinct 001
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 002	04;District 002 Precinct 002
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 003	04;District 002 Precinct 003
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 004	04;District 002 Precinct 004
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 005	04;District 002 Precinct 005
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 006	04;District 002 Precinct 006
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 007	04;District 002 Precinct 007
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 008	04;District 002 Precinct 008
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 009	04;District 002 Precinct 009
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 010	04;District 002 Precinct 010
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 011	04;District 002 Precinct 011
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 012	04;District 002 Precinct 012
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 013	04;District 002 Precinct 013
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 014	04;District 002 Precinct 014
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 015	04;District 002 Precinct 015
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 016	04;District 002 Precinct 016
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 017	04;District 002 Precinct 017
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 018	04;District 002 Precinct 018
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 019	04;District 002 Precinct 019
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 020	04;District 002 Precinct 020
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 021	04;District 002 Precinct 021
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 022	04;District 002 Precinct 022
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 023	04;District 002 Precinct 023
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 024	04;District 002 Precinct 024
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 025	04;District 002 Precinct 025
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 026	04;District 002 Precinct 026
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 027	04;District 002 Precinct 027
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 028	04;District 002 Precinct 028
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 029	04;District 002 Precinct 029
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 030	04;District 002 Precinct 030
+ReportingUnit	Maryland;Baltimore County;District 002 Precinct 031	04;District 002 Precinct 031
+ReportingUnit	Maryland;Baltimore County;District 003 Precinct 001	04;District 003 Precinct 001
+ReportingUnit	Maryland;Baltimore County;District 003 Precinct 002	04;District 003 Precinct 002
+ReportingUnit	Maryland;Baltimore County;District 003 Precinct 003	04;District 003 Precinct 003
+ReportingUnit	Maryland;Baltimore County;District 003 Precinct 004	04;District 003 Precinct 004
+ReportingUnit	Maryland;Baltimore County;District 003 Precinct 005	04;District 003 Precinct 005
+ReportingUnit	Maryland;Baltimore County;District 003 Precinct 006	04;District 003 Precinct 006
+ReportingUnit	Maryland;Baltimore County;District 003 Precinct 007	04;District 003 Precinct 007
+ReportingUnit	Maryland;Baltimore County;District 003 Precinct 008	04;District 003 Precinct 008
+ReportingUnit	Maryland;Baltimore County;District 003 Precinct 009	04;District 003 Precinct 009
+ReportingUnit	Maryland;Baltimore County;District 003 Precinct 010	04;District 003 Precinct 010
+ReportingUnit	Maryland;Baltimore County;District 003 Precinct 011	04;District 003 Precinct 011
+ReportingUnit	Maryland;Baltimore County;District 003 Precinct 012	04;District 003 Precinct 012
+ReportingUnit	Maryland;Baltimore County;District 003 Precinct 013	04;District 003 Precinct 013
+ReportingUnit	Maryland;Baltimore County;District 003 Precinct 014	04;District 003 Precinct 014
+ReportingUnit	Maryland;Baltimore County;District 004 Precinct 001	04;District 004 Precinct 001
+ReportingUnit	Maryland;Baltimore County;District 004 Precinct 002	04;District 004 Precinct 002
+ReportingUnit	Maryland;Baltimore County;District 004 Precinct 003	04;District 004 Precinct 003
+ReportingUnit	Maryland;Baltimore County;District 004 Precinct 004	04;District 004 Precinct 004
+ReportingUnit	Maryland;Baltimore County;District 004 Precinct 005	04;District 004 Precinct 005
+ReportingUnit	Maryland;Baltimore County;District 004 Precinct 006	04;District 004 Precinct 006
+ReportingUnit	Maryland;Baltimore County;District 004 Precinct 007	04;District 004 Precinct 007
+ReportingUnit	Maryland;Baltimore County;District 004 Precinct 008	04;District 004 Precinct 008
+ReportingUnit	Maryland;Baltimore County;District 004 Precinct 009	04;District 004 Precinct 009
+ReportingUnit	Maryland;Baltimore County;District 004 Precinct 010	04;District 004 Precinct 010
+ReportingUnit	Maryland;Baltimore County;District 004 Precinct 011	04;District 004 Precinct 011
+ReportingUnit	Maryland;Baltimore County;District 004 Precinct 012	04;District 004 Precinct 012
+ReportingUnit	Maryland;Baltimore County;District 004 Precinct 013	04;District 004 Precinct 013
+ReportingUnit	Maryland;Baltimore County;District 004 Precinct 014	04;District 004 Precinct 014
+ReportingUnit	Maryland;Baltimore County;District 004 Precinct 015	04;District 004 Precinct 015
+ReportingUnit	Maryland;Baltimore County;District 005 Precinct 001	04;District 005 Precinct 001
+ReportingUnit	Maryland;Baltimore County;District 005 Precinct 002	04;District 005 Precinct 002
+ReportingUnit	Maryland;Baltimore County;District 006 Precinct 001	04;District 006 Precinct 001
+ReportingUnit	Maryland;Baltimore County;District 006 Precinct 002	04;District 006 Precinct 002
+ReportingUnit	Maryland;Baltimore County;District 007 Precinct 001	04;District 007 Precinct 001
+ReportingUnit	Maryland;Baltimore County;District 007 Precinct 002	04;District 007 Precinct 002
+ReportingUnit	Maryland;Baltimore County;District 007 Precinct 003	04;District 007 Precinct 003
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 001	04;District 008 Precinct 001
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 002	04;District 008 Precinct 002
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 003	04;District 008 Precinct 003
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 004	04;District 008 Precinct 004
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 005	04;District 008 Precinct 005
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 006	04;District 008 Precinct 006
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 007	04;District 008 Precinct 007
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 008	04;District 008 Precinct 008
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 009	04;District 008 Precinct 009
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 010	04;District 008 Precinct 010
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 011	04;District 008 Precinct 011
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 012	04;District 008 Precinct 012
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 013	04;District 008 Precinct 013
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 014	04;District 008 Precinct 014
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 015	04;District 008 Precinct 015
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 016	04;District 008 Precinct 016
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 017	04;District 008 Precinct 017
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 018	04;District 008 Precinct 018
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 019	04;District 008 Precinct 019
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 020	04;District 008 Precinct 020
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 021	04;District 008 Precinct 021
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 022	04;District 008 Precinct 022
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 023	04;District 008 Precinct 023
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 024	04;District 008 Precinct 024
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 025	04;District 008 Precinct 025
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 026	04;District 008 Precinct 026
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 027	04;District 008 Precinct 027
+ReportingUnit	Maryland;Baltimore County;District 008 Precinct 028	04;District 008 Precinct 028
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 001	04;District 009 Precinct 001
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 002	04;District 009 Precinct 002
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 003	04;District 009 Precinct 003
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 004	04;District 009 Precinct 004
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 005	04;District 009 Precinct 005
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 006	04;District 009 Precinct 006
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 007	04;District 009 Precinct 007
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 008	04;District 009 Precinct 008
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 009	04;District 009 Precinct 009
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 010	04;District 009 Precinct 010
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 011	04;District 009 Precinct 011
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 012	04;District 009 Precinct 012
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 013	04;District 009 Precinct 013
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 014	04;District 009 Precinct 014
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 015	04;District 009 Precinct 015
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 016	04;District 009 Precinct 016
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 017	04;District 009 Precinct 017
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 018	04;District 009 Precinct 018
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 019	04;District 009 Precinct 019
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 020	04;District 009 Precinct 020
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 021	04;District 009 Precinct 021
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 022	04;District 009 Precinct 022
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 023	04;District 009 Precinct 023
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 024	04;District 009 Precinct 024
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 025	04;District 009 Precinct 025
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 026	04;District 009 Precinct 026
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 027	04;District 009 Precinct 027
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 028	04;District 009 Precinct 028
+ReportingUnit	Maryland;Baltimore County;District 009 Precinct 029	04;District 009 Precinct 029
+ReportingUnit	Maryland;Baltimore County;District 010 Precinct 001	04;District 010 Precinct 001
+ReportingUnit	Maryland;Baltimore County;District 010 Precinct 002	04;District 010 Precinct 002
+ReportingUnit	Maryland;Baltimore County;District 010 Precinct 003	04;District 010 Precinct 003
+ReportingUnit	Maryland;Baltimore County;District 010 Precinct 004	04;District 010 Precinct 004
+ReportingUnit	Maryland;Baltimore County;District 010 Precinct 005	04;District 010 Precinct 005
+ReportingUnit	Maryland;Baltimore County;District 010 Precinct 006	04;District 010 Precinct 006
+ReportingUnit	Maryland;Baltimore County;District 010 Precinct 007	04;District 010 Precinct 007
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 001	04;District 011 Precinct 001
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 002	04;District 011 Precinct 002
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 003	04;District 011 Precinct 003
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 004	04;District 011 Precinct 004
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 005	04;District 011 Precinct 005
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 006	04;District 011 Precinct 006
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 007	04;District 011 Precinct 007
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 008	04;District 011 Precinct 008
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 009	04;District 011 Precinct 009
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 010	04;District 011 Precinct 010
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 011	04;District 011 Precinct 011
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 012	04;District 011 Precinct 012
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 013	04;District 011 Precinct 013
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 014	04;District 011 Precinct 014
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 015	04;District 011 Precinct 015
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 016	04;District 011 Precinct 016
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 017	04;District 011 Precinct 017
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 018	04;District 011 Precinct 018
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 019	04;District 011 Precinct 019
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 020	04;District 011 Precinct 020
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 021	04;District 011 Precinct 021
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 022	04;District 011 Precinct 022
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 023	04;District 011 Precinct 023
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 024	04;District 011 Precinct 024
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 026	04;District 011 Precinct 026
+ReportingUnit	Maryland;Baltimore County;District 011 Precinct 027	04;District 011 Precinct 027
+ReportingUnit	Maryland;Baltimore County;District 012 Precinct 001	04;District 012 Precinct 001
+ReportingUnit	Maryland;Baltimore County;District 012 Precinct 002	04;District 012 Precinct 002
+ReportingUnit	Maryland;Baltimore County;District 012 Precinct 003	04;District 012 Precinct 003
+ReportingUnit	Maryland;Baltimore County;District 012 Precinct 004	04;District 012 Precinct 004
+ReportingUnit	Maryland;Baltimore County;District 012 Precinct 005	04;District 012 Precinct 005
+ReportingUnit	Maryland;Baltimore County;District 012 Precinct 006	04;District 012 Precinct 006
+ReportingUnit	Maryland;Baltimore County;District 012 Precinct 007	04;District 012 Precinct 007
+ReportingUnit	Maryland;Baltimore County;District 012 Precinct 008	04;District 012 Precinct 008
+ReportingUnit	Maryland;Baltimore County;District 012 Precinct 009	04;District 012 Precinct 009
+ReportingUnit	Maryland;Baltimore County;District 012 Precinct 010	04;District 012 Precinct 010
+ReportingUnit	Maryland;Baltimore County;District 012 Precinct 011	04;District 012 Precinct 011
+ReportingUnit	Maryland;Baltimore County;District 012 Precinct 012	04;District 012 Precinct 012
+ReportingUnit	Maryland;Baltimore County;District 012 Precinct 013	04;District 012 Precinct 013
+ReportingUnit	Maryland;Baltimore County;District 013 Precinct 001	04;District 013 Precinct 001
+ReportingUnit	Maryland;Baltimore County;District 013 Precinct 002	04;District 013 Precinct 002
+ReportingUnit	Maryland;Baltimore County;District 013 Precinct 003	04;District 013 Precinct 003
+ReportingUnit	Maryland;Baltimore County;District 013 Precinct 004	04;District 013 Precinct 004
+ReportingUnit	Maryland;Baltimore County;District 013 Precinct 005	04;District 013 Precinct 005
+ReportingUnit	Maryland;Baltimore County;District 013 Precinct 006	04;District 013 Precinct 006
+ReportingUnit	Maryland;Baltimore County;District 013 Precinct 007	04;District 013 Precinct 007
+ReportingUnit	Maryland;Baltimore County;District 013 Precinct 008	04;District 013 Precinct 008
+ReportingUnit	Maryland;Baltimore County;District 013 Precinct 009	04;District 013 Precinct 009
+ReportingUnit	Maryland;Baltimore County;District 014 Precinct 001	04;District 014 Precinct 001
+ReportingUnit	Maryland;Baltimore County;District 014 Precinct 002	04;District 014 Precinct 002
+ReportingUnit	Maryland;Baltimore County;District 014 Precinct 003	04;District 014 Precinct 003
+ReportingUnit	Maryland;Baltimore County;District 014 Precinct 004	04;District 014 Precinct 004
+ReportingUnit	Maryland;Baltimore County;District 014 Precinct 005	04;District 014 Precinct 005
+ReportingUnit	Maryland;Baltimore County;District 014 Precinct 006	04;District 014 Precinct 006
+ReportingUnit	Maryland;Baltimore County;District 014 Precinct 007	04;District 014 Precinct 007
+ReportingUnit	Maryland;Baltimore County;District 014 Precinct 008	04;District 014 Precinct 008
+ReportingUnit	Maryland;Baltimore County;District 014 Precinct 009	04;District 014 Precinct 009
+ReportingUnit	Maryland;Baltimore County;District 014 Precinct 010	04;District 014 Precinct 010
+ReportingUnit	Maryland;Baltimore County;District 014 Precinct 011	04;District 014 Precinct 011
+ReportingUnit	Maryland;Baltimore County;District 014 Precinct 012	04;District 014 Precinct 012
+ReportingUnit	Maryland;Baltimore County;District 014 Precinct 013	04;District 014 Precinct 013
+ReportingUnit	Maryland;Baltimore County;District 014 Precinct 014	04;District 014 Precinct 014
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 001	04;District 015 Precinct 001
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 002	04;District 015 Precinct 002
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 003	04;District 015 Precinct 003
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 004	04;District 015 Precinct 004
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 005	04;District 015 Precinct 005
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 006	04;District 015 Precinct 006
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 007	04;District 015 Precinct 007
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 008	04;District 015 Precinct 008
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 009	04;District 015 Precinct 009
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 010	04;District 015 Precinct 010
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 011	04;District 015 Precinct 011
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 012	04;District 015 Precinct 012
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 013	04;District 015 Precinct 013
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 014	04;District 015 Precinct 014
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 015	04;District 015 Precinct 015
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 016	04;District 015 Precinct 016
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 017	04;District 015 Precinct 017
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 018	04;District 015 Precinct 018
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 019	04;District 015 Precinct 019
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 020	04;District 015 Precinct 020
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 021	04;District 015 Precinct 021
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 022	04;District 015 Precinct 022
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 023	04;District 015 Precinct 023
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 024	04;District 015 Precinct 024
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 025	04;District 015 Precinct 025
+ReportingUnit	Maryland;Baltimore County;District 015 Precinct 026	04;District 015 Precinct 026
 ReportingUnit	Maryland;Baltimore city	03
-ReportingUnit	Maryland;Baltimore city	24510
+ReportingUnit	Maryland;Baltimore city	fips24510
+ReportingUnit	Maryland;Baltimore city	fips24510
 ReportingUnit	Maryland;Baltimore city;District 001 Precinct 001	03;District 001 Precinct 001
 ReportingUnit	Maryland;Baltimore city;District 001 Precinct 002	03;District 001 Precinct 002
 ReportingUnit	Maryland;Baltimore city;District 001 Precinct 003	03;District 001 Precinct 003
@@ -838,246 +1080,9 @@ ReportingUnit	Maryland;Baltimore city;District 028 Precinct 012	03;District 028 
 ReportingUnit	Maryland;Baltimore city;District 028 Precinct 013	03;District 028 Precinct 013
 ReportingUnit	Maryland;Baltimore city;District 028 Precinct 014	03;District 028 Precinct 014
 ReportingUnit	Maryland;Baltimore city;District 028 Precinct 015	03;District 028 Precinct 015
-ReportingUnit	Maryland;Baltimore County	04
-ReportingUnit	Maryland;Baltimore County	24005
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 001	04;District 001 Precinct 001
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 002	04;District 001 Precinct 002
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 003	04;District 001 Precinct 003
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 004	04;District 001 Precinct 004
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 005	04;District 001 Precinct 005
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 006	04;District 001 Precinct 006
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 007	04;District 001 Precinct 007
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 008	04;District 001 Precinct 008
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 009	04;District 001 Precinct 009
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 010	04;District 001 Precinct 010
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 011	04;District 001 Precinct 011
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 012	04;District 001 Precinct 012
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 013	04;District 001 Precinct 013
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 014	04;District 001 Precinct 014
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 015	04;District 001 Precinct 015
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 016	04;District 001 Precinct 016
-ReportingUnit	Maryland;Baltimore County;District 001 Precinct 017	04;District 001 Precinct 017
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 001	04;District 002 Precinct 001
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 002	04;District 002 Precinct 002
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 003	04;District 002 Precinct 003
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 004	04;District 002 Precinct 004
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 005	04;District 002 Precinct 005
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 006	04;District 002 Precinct 006
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 007	04;District 002 Precinct 007
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 008	04;District 002 Precinct 008
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 009	04;District 002 Precinct 009
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 010	04;District 002 Precinct 010
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 011	04;District 002 Precinct 011
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 012	04;District 002 Precinct 012
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 013	04;District 002 Precinct 013
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 014	04;District 002 Precinct 014
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 015	04;District 002 Precinct 015
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 016	04;District 002 Precinct 016
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 017	04;District 002 Precinct 017
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 018	04;District 002 Precinct 018
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 019	04;District 002 Precinct 019
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 020	04;District 002 Precinct 020
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 021	04;District 002 Precinct 021
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 022	04;District 002 Precinct 022
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 023	04;District 002 Precinct 023
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 024	04;District 002 Precinct 024
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 025	04;District 002 Precinct 025
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 026	04;District 002 Precinct 026
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 027	04;District 002 Precinct 027
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 028	04;District 002 Precinct 028
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 029	04;District 002 Precinct 029
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 030	04;District 002 Precinct 030
-ReportingUnit	Maryland;Baltimore County;District 002 Precinct 031	04;District 002 Precinct 031
-ReportingUnit	Maryland;Baltimore County;District 003 Precinct 001	04;District 003 Precinct 001
-ReportingUnit	Maryland;Baltimore County;District 003 Precinct 002	04;District 003 Precinct 002
-ReportingUnit	Maryland;Baltimore County;District 003 Precinct 003	04;District 003 Precinct 003
-ReportingUnit	Maryland;Baltimore County;District 003 Precinct 004	04;District 003 Precinct 004
-ReportingUnit	Maryland;Baltimore County;District 003 Precinct 005	04;District 003 Precinct 005
-ReportingUnit	Maryland;Baltimore County;District 003 Precinct 006	04;District 003 Precinct 006
-ReportingUnit	Maryland;Baltimore County;District 003 Precinct 007	04;District 003 Precinct 007
-ReportingUnit	Maryland;Baltimore County;District 003 Precinct 008	04;District 003 Precinct 008
-ReportingUnit	Maryland;Baltimore County;District 003 Precinct 009	04;District 003 Precinct 009
-ReportingUnit	Maryland;Baltimore County;District 003 Precinct 010	04;District 003 Precinct 010
-ReportingUnit	Maryland;Baltimore County;District 003 Precinct 011	04;District 003 Precinct 011
-ReportingUnit	Maryland;Baltimore County;District 003 Precinct 012	04;District 003 Precinct 012
-ReportingUnit	Maryland;Baltimore County;District 003 Precinct 013	04;District 003 Precinct 013
-ReportingUnit	Maryland;Baltimore County;District 003 Precinct 014	04;District 003 Precinct 014
-ReportingUnit	Maryland;Baltimore County;District 004 Precinct 001	04;District 004 Precinct 001
-ReportingUnit	Maryland;Baltimore County;District 004 Precinct 002	04;District 004 Precinct 002
-ReportingUnit	Maryland;Baltimore County;District 004 Precinct 003	04;District 004 Precinct 003
-ReportingUnit	Maryland;Baltimore County;District 004 Precinct 004	04;District 004 Precinct 004
-ReportingUnit	Maryland;Baltimore County;District 004 Precinct 005	04;District 004 Precinct 005
-ReportingUnit	Maryland;Baltimore County;District 004 Precinct 006	04;District 004 Precinct 006
-ReportingUnit	Maryland;Baltimore County;District 004 Precinct 007	04;District 004 Precinct 007
-ReportingUnit	Maryland;Baltimore County;District 004 Precinct 008	04;District 004 Precinct 008
-ReportingUnit	Maryland;Baltimore County;District 004 Precinct 009	04;District 004 Precinct 009
-ReportingUnit	Maryland;Baltimore County;District 004 Precinct 010	04;District 004 Precinct 010
-ReportingUnit	Maryland;Baltimore County;District 004 Precinct 011	04;District 004 Precinct 011
-ReportingUnit	Maryland;Baltimore County;District 004 Precinct 012	04;District 004 Precinct 012
-ReportingUnit	Maryland;Baltimore County;District 004 Precinct 013	04;District 004 Precinct 013
-ReportingUnit	Maryland;Baltimore County;District 004 Precinct 014	04;District 004 Precinct 014
-ReportingUnit	Maryland;Baltimore County;District 004 Precinct 015	04;District 004 Precinct 015
-ReportingUnit	Maryland;Baltimore County;District 005 Precinct 001	04;District 005 Precinct 001
-ReportingUnit	Maryland;Baltimore County;District 005 Precinct 002	04;District 005 Precinct 002
-ReportingUnit	Maryland;Baltimore County;District 006 Precinct 001	04;District 006 Precinct 001
-ReportingUnit	Maryland;Baltimore County;District 006 Precinct 002	04;District 006 Precinct 002
-ReportingUnit	Maryland;Baltimore County;District 007 Precinct 001	04;District 007 Precinct 001
-ReportingUnit	Maryland;Baltimore County;District 007 Precinct 002	04;District 007 Precinct 002
-ReportingUnit	Maryland;Baltimore County;District 007 Precinct 003	04;District 007 Precinct 003
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 001	04;District 008 Precinct 001
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 002	04;District 008 Precinct 002
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 003	04;District 008 Precinct 003
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 004	04;District 008 Precinct 004
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 005	04;District 008 Precinct 005
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 006	04;District 008 Precinct 006
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 007	04;District 008 Precinct 007
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 008	04;District 008 Precinct 008
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 009	04;District 008 Precinct 009
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 010	04;District 008 Precinct 010
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 011	04;District 008 Precinct 011
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 012	04;District 008 Precinct 012
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 013	04;District 008 Precinct 013
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 014	04;District 008 Precinct 014
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 015	04;District 008 Precinct 015
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 016	04;District 008 Precinct 016
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 017	04;District 008 Precinct 017
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 018	04;District 008 Precinct 018
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 019	04;District 008 Precinct 019
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 020	04;District 008 Precinct 020
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 021	04;District 008 Precinct 021
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 022	04;District 008 Precinct 022
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 023	04;District 008 Precinct 023
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 024	04;District 008 Precinct 024
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 025	04;District 008 Precinct 025
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 026	04;District 008 Precinct 026
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 027	04;District 008 Precinct 027
-ReportingUnit	Maryland;Baltimore County;District 008 Precinct 028	04;District 008 Precinct 028
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 001	04;District 009 Precinct 001
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 002	04;District 009 Precinct 002
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 003	04;District 009 Precinct 003
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 004	04;District 009 Precinct 004
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 005	04;District 009 Precinct 005
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 006	04;District 009 Precinct 006
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 007	04;District 009 Precinct 007
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 008	04;District 009 Precinct 008
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 009	04;District 009 Precinct 009
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 010	04;District 009 Precinct 010
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 011	04;District 009 Precinct 011
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 012	04;District 009 Precinct 012
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 013	04;District 009 Precinct 013
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 014	04;District 009 Precinct 014
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 015	04;District 009 Precinct 015
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 016	04;District 009 Precinct 016
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 017	04;District 009 Precinct 017
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 018	04;District 009 Precinct 018
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 019	04;District 009 Precinct 019
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 020	04;District 009 Precinct 020
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 021	04;District 009 Precinct 021
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 022	04;District 009 Precinct 022
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 023	04;District 009 Precinct 023
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 024	04;District 009 Precinct 024
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 025	04;District 009 Precinct 025
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 026	04;District 009 Precinct 026
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 027	04;District 009 Precinct 027
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 028	04;District 009 Precinct 028
-ReportingUnit	Maryland;Baltimore County;District 009 Precinct 029	04;District 009 Precinct 029
-ReportingUnit	Maryland;Baltimore County;District 010 Precinct 001	04;District 010 Precinct 001
-ReportingUnit	Maryland;Baltimore County;District 010 Precinct 002	04;District 010 Precinct 002
-ReportingUnit	Maryland;Baltimore County;District 010 Precinct 003	04;District 010 Precinct 003
-ReportingUnit	Maryland;Baltimore County;District 010 Precinct 004	04;District 010 Precinct 004
-ReportingUnit	Maryland;Baltimore County;District 010 Precinct 005	04;District 010 Precinct 005
-ReportingUnit	Maryland;Baltimore County;District 010 Precinct 006	04;District 010 Precinct 006
-ReportingUnit	Maryland;Baltimore County;District 010 Precinct 007	04;District 010 Precinct 007
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 001	04;District 011 Precinct 001
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 002	04;District 011 Precinct 002
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 003	04;District 011 Precinct 003
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 004	04;District 011 Precinct 004
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 005	04;District 011 Precinct 005
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 006	04;District 011 Precinct 006
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 007	04;District 011 Precinct 007
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 008	04;District 011 Precinct 008
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 009	04;District 011 Precinct 009
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 010	04;District 011 Precinct 010
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 011	04;District 011 Precinct 011
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 012	04;District 011 Precinct 012
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 013	04;District 011 Precinct 013
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 014	04;District 011 Precinct 014
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 015	04;District 011 Precinct 015
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 016	04;District 011 Precinct 016
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 017	04;District 011 Precinct 017
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 018	04;District 011 Precinct 018
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 019	04;District 011 Precinct 019
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 020	04;District 011 Precinct 020
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 021	04;District 011 Precinct 021
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 022	04;District 011 Precinct 022
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 023	04;District 011 Precinct 023
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 024	04;District 011 Precinct 024
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 026	04;District 011 Precinct 026
-ReportingUnit	Maryland;Baltimore County;District 011 Precinct 027	04;District 011 Precinct 027
-ReportingUnit	Maryland;Baltimore County;District 012 Precinct 001	04;District 012 Precinct 001
-ReportingUnit	Maryland;Baltimore County;District 012 Precinct 002	04;District 012 Precinct 002
-ReportingUnit	Maryland;Baltimore County;District 012 Precinct 003	04;District 012 Precinct 003
-ReportingUnit	Maryland;Baltimore County;District 012 Precinct 004	04;District 012 Precinct 004
-ReportingUnit	Maryland;Baltimore County;District 012 Precinct 005	04;District 012 Precinct 005
-ReportingUnit	Maryland;Baltimore County;District 012 Precinct 006	04;District 012 Precinct 006
-ReportingUnit	Maryland;Baltimore County;District 012 Precinct 007	04;District 012 Precinct 007
-ReportingUnit	Maryland;Baltimore County;District 012 Precinct 008	04;District 012 Precinct 008
-ReportingUnit	Maryland;Baltimore County;District 012 Precinct 009	04;District 012 Precinct 009
-ReportingUnit	Maryland;Baltimore County;District 012 Precinct 010	04;District 012 Precinct 010
-ReportingUnit	Maryland;Baltimore County;District 012 Precinct 011	04;District 012 Precinct 011
-ReportingUnit	Maryland;Baltimore County;District 012 Precinct 012	04;District 012 Precinct 012
-ReportingUnit	Maryland;Baltimore County;District 012 Precinct 013	04;District 012 Precinct 013
-ReportingUnit	Maryland;Baltimore County;District 013 Precinct 001	04;District 013 Precinct 001
-ReportingUnit	Maryland;Baltimore County;District 013 Precinct 002	04;District 013 Precinct 002
-ReportingUnit	Maryland;Baltimore County;District 013 Precinct 003	04;District 013 Precinct 003
-ReportingUnit	Maryland;Baltimore County;District 013 Precinct 004	04;District 013 Precinct 004
-ReportingUnit	Maryland;Baltimore County;District 013 Precinct 005	04;District 013 Precinct 005
-ReportingUnit	Maryland;Baltimore County;District 013 Precinct 006	04;District 013 Precinct 006
-ReportingUnit	Maryland;Baltimore County;District 013 Precinct 007	04;District 013 Precinct 007
-ReportingUnit	Maryland;Baltimore County;District 013 Precinct 008	04;District 013 Precinct 008
-ReportingUnit	Maryland;Baltimore County;District 013 Precinct 009	04;District 013 Precinct 009
-ReportingUnit	Maryland;Baltimore County;District 014 Precinct 001	04;District 014 Precinct 001
-ReportingUnit	Maryland;Baltimore County;District 014 Precinct 002	04;District 014 Precinct 002
-ReportingUnit	Maryland;Baltimore County;District 014 Precinct 003	04;District 014 Precinct 003
-ReportingUnit	Maryland;Baltimore County;District 014 Precinct 004	04;District 014 Precinct 004
-ReportingUnit	Maryland;Baltimore County;District 014 Precinct 005	04;District 014 Precinct 005
-ReportingUnit	Maryland;Baltimore County;District 014 Precinct 006	04;District 014 Precinct 006
-ReportingUnit	Maryland;Baltimore County;District 014 Precinct 007	04;District 014 Precinct 007
-ReportingUnit	Maryland;Baltimore County;District 014 Precinct 008	04;District 014 Precinct 008
-ReportingUnit	Maryland;Baltimore County;District 014 Precinct 009	04;District 014 Precinct 009
-ReportingUnit	Maryland;Baltimore County;District 014 Precinct 010	04;District 014 Precinct 010
-ReportingUnit	Maryland;Baltimore County;District 014 Precinct 011	04;District 014 Precinct 011
-ReportingUnit	Maryland;Baltimore County;District 014 Precinct 012	04;District 014 Precinct 012
-ReportingUnit	Maryland;Baltimore County;District 014 Precinct 013	04;District 014 Precinct 013
-ReportingUnit	Maryland;Baltimore County;District 014 Precinct 014	04;District 014 Precinct 014
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 001	04;District 015 Precinct 001
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 002	04;District 015 Precinct 002
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 003	04;District 015 Precinct 003
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 004	04;District 015 Precinct 004
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 005	04;District 015 Precinct 005
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 006	04;District 015 Precinct 006
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 007	04;District 015 Precinct 007
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 008	04;District 015 Precinct 008
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 009	04;District 015 Precinct 009
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 010	04;District 015 Precinct 010
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 011	04;District 015 Precinct 011
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 012	04;District 015 Precinct 012
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 013	04;District 015 Precinct 013
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 014	04;District 015 Precinct 014
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 015	04;District 015 Precinct 015
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 016	04;District 015 Precinct 016
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 017	04;District 015 Precinct 017
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 018	04;District 015 Precinct 018
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 019	04;District 015 Precinct 019
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 020	04;District 015 Precinct 020
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 021	04;District 015 Precinct 021
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 022	04;District 015 Precinct 022
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 023	04;District 015 Precinct 023
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 024	04;District 015 Precinct 024
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 025	04;District 015 Precinct 025
-ReportingUnit	Maryland;Baltimore County;District 015 Precinct 026	04;District 015 Precinct 026
 ReportingUnit	Maryland;Calvert County	05
-ReportingUnit	Maryland;Calvert County	24009
+ReportingUnit	Maryland;Calvert County	fips24009
+ReportingUnit	Maryland;Calvert County	fips24009
 ReportingUnit	Maryland;Calvert County;District 001 Precinct 001	05;District 001 Precinct 001
 ReportingUnit	Maryland;Calvert County;District 001 Precinct 002	05;District 001 Precinct 002
 ReportingUnit	Maryland;Calvert County;District 001 Precinct 003	05;District 001 Precinct 003
@@ -1102,7 +1107,8 @@ ReportingUnit	Maryland;Calvert County;District 003 Precinct 006	05;District 003 
 ReportingUnit	Maryland;Calvert County;District 003 Precinct 007	05;District 003 Precinct 007
 ReportingUnit	Maryland;Calvert County;District 003 Precinct 008	05;District 003 Precinct 008
 ReportingUnit	Maryland;Caroline County	06
-ReportingUnit	Maryland;Caroline County	24011
+ReportingUnit	Maryland;Caroline County	fips24011
+ReportingUnit	Maryland;Caroline County	fips24011
 ReportingUnit	Maryland;Caroline County;District 001 Precinct 001	06;District 001 Precinct 001
 ReportingUnit	Maryland;Caroline County;District 002 Precinct 001	06;District 002 Precinct 001
 ReportingUnit	Maryland;Caroline County;District 003 Precinct 001	06;District 003 Precinct 001
@@ -1112,7 +1118,8 @@ ReportingUnit	Maryland;Caroline County;District 006 Precinct 001	06;District 006
 ReportingUnit	Maryland;Caroline County;District 007 Precinct 001	06;District 007 Precinct 001
 ReportingUnit	Maryland;Caroline County;District 008 Precinct 001	06;District 008 Precinct 001
 ReportingUnit	Maryland;Carroll County	07
-ReportingUnit	Maryland;Carroll County	24013
+ReportingUnit	Maryland;Carroll County	fips24013
+ReportingUnit	Maryland;Carroll County	fips24013
 ReportingUnit	Maryland;Carroll County;District 001 Precinct 001	07;District 001 Precinct 001
 ReportingUnit	Maryland;Carroll County;District 001 Precinct 002	07;District 001 Precinct 002
 ReportingUnit	Maryland;Carroll County;District 002 Precinct 001	07;District 002 Precinct 001
@@ -1150,7 +1157,8 @@ ReportingUnit	Maryland;Carroll County;District 014 Precinct 001	07;District 014 
 ReportingUnit	Maryland;Carroll County;District 014 Precinct 002	07;District 014 Precinct 002
 ReportingUnit	Maryland;Carroll County;District 014 Precinct 003	07;District 014 Precinct 003
 ReportingUnit	Maryland;Cecil County	08
-ReportingUnit	Maryland;Cecil County	24015
+ReportingUnit	Maryland;Cecil County	fips24015
+ReportingUnit	Maryland;Cecil County	fips24015
 ReportingUnit	Maryland;Cecil County;District 001 Precinct 001	08;District 001 Precinct 001
 ReportingUnit	Maryland;Cecil County;District 002 Precinct 001	08;District 002 Precinct 001
 ReportingUnit	Maryland;Cecil County;District 002 Precinct 002	08;District 002 Precinct 002
@@ -1180,7 +1188,8 @@ ReportingUnit	Maryland;Cecil County;District 008 Precinct 001	08;District 008 Pr
 ReportingUnit	Maryland;Cecil County;District 009 Precinct 001	08;District 009 Precinct 001
 ReportingUnit	Maryland;Cecil County;District 009 Precinct 002	08;District 009 Precinct 002
 ReportingUnit	Maryland;Charles County	09
-ReportingUnit	Maryland;Charles County	24017
+ReportingUnit	Maryland;Charles County	fips24017
+ReportingUnit	Maryland;Charles County	fips24017
 ReportingUnit	Maryland;Charles County;District 001 Precinct 001	09;District 001 Precinct 001
 ReportingUnit	Maryland;Charles County;District 001 Precinct 002	09;District 001 Precinct 002
 ReportingUnit	Maryland;Charles County;District 001 Precinct 003	09;District 001 Precinct 003
@@ -1225,7 +1234,8 @@ ReportingUnit	Maryland;Charles County;District 009 Precinct 001	09;District 009 
 ReportingUnit	Maryland;Charles County;District 009 Precinct 002	09;District 009 Precinct 002
 ReportingUnit	Maryland;Charles County;District 010 Precinct 001	09;District 010 Precinct 001
 ReportingUnit	Maryland;Dorchester County	10
-ReportingUnit	Maryland;Dorchester County	24019
+ReportingUnit	Maryland;Dorchester County	fips24019
+ReportingUnit	Maryland;Dorchester County	fips24019
 ReportingUnit	Maryland;Dorchester County;District 001 Precinct 001	10;District 001 Precinct 001
 ReportingUnit	Maryland;Dorchester County;District 002 Precinct 001	10;District 002 Precinct 001
 ReportingUnit	Maryland;Dorchester County;District 002 Precinct 002	10;District 002 Precinct 002
@@ -1267,7 +1277,8 @@ ReportingUnit	Maryland;Dorchester County;District 017 Precinct 001	10;District 0
 ReportingUnit	Maryland;Dorchester County;District 017 Precinct 002	10;District 017 Precinct 002
 ReportingUnit	Maryland;Dorchester County;District 018 Precinct 001	10;District 018 Precinct 001
 ReportingUnit	Maryland;Frederick County	11
-ReportingUnit	Maryland;Frederick County	24021
+ReportingUnit	Maryland;Frederick County	fips24021
+ReportingUnit	Maryland;Frederick County	fips24021
 ReportingUnit	Maryland;Frederick County;District 001 Precinct 001	11;District 001 Precinct 001
 ReportingUnit	Maryland;Frederick County;District 001 Precinct 002	11;District 001 Precinct 002
 ReportingUnit	Maryland;Frederick County;District 001 Precinct 003	11;District 001 Precinct 003
@@ -1353,7 +1364,8 @@ ReportingUnit	Maryland;Frederick County;District 025 Precinct 001	11;District 02
 ReportingUnit	Maryland;Frederick County;District 026 Precinct 001	11;District 026 Precinct 001
 ReportingUnit	Maryland;Frederick County;District 026 Precinct 002	11;District 026 Precinct 002
 ReportingUnit	Maryland;Garrett County	12
-ReportingUnit	Maryland;Garrett County	24023
+ReportingUnit	Maryland;Garrett County	fips24023
+ReportingUnit	Maryland;Garrett County	fips24023
 ReportingUnit	Maryland;Garrett County;District 001 Precinct 000	12;District 001 Precinct 000
 ReportingUnit	Maryland;Garrett County;District 002 Precinct 000	12;District 002 Precinct 000
 ReportingUnit	Maryland;Garrett County;District 003 Precinct 001	12;District 003 Precinct 001
@@ -1374,7 +1386,8 @@ ReportingUnit	Maryland;Garrett County;District 014 Precinct 002	12;District 014 
 ReportingUnit	Maryland;Garrett County;District 015 Precinct 000	12;District 015 Precinct 000
 ReportingUnit	Maryland;Garrett County;District 016 Precinct 000	12;District 016 Precinct 000
 ReportingUnit	Maryland;Harford County	13
-ReportingUnit	Maryland;Harford County	24025
+ReportingUnit	Maryland;Harford County	fips24025
+ReportingUnit	Maryland;Harford County	fips24025
 ReportingUnit	Maryland;Harford County;District 001 Precinct 001	13;District 001 Precinct 001
 ReportingUnit	Maryland;Harford County;District 001 Precinct 002	13;District 001 Precinct 002
 ReportingUnit	Maryland;Harford County;District 001 Precinct 003	13;District 001 Precinct 003
@@ -1465,7 +1478,8 @@ ReportingUnit	Maryland;Harford County;District 006 Precinct 005	13;District 006 
 ReportingUnit	Maryland;Harford County;District 006 Precinct 006	13;District 006 Precinct 006
 ReportingUnit	Maryland;Harford County;District 006 Precinct 007	13;District 006 Precinct 007
 ReportingUnit	Maryland;Howard County	14
-ReportingUnit	Maryland;Howard County	24027
+ReportingUnit	Maryland;Howard County	fips24027
+ReportingUnit	Maryland;Howard County	fips24027
 ReportingUnit	Maryland;Howard County;District 001 Precinct 001	14;District 001 Precinct 001
 ReportingUnit	Maryland;Howard County;District 001 Precinct 002	14;District 001 Precinct 002
 ReportingUnit	Maryland;Howard County;District 001 Precinct 003	14;District 001 Precinct 003
@@ -1585,7 +1599,8 @@ ReportingUnit	Maryland;Howard County;District 006 Precinct 033	14;District 006 P
 ReportingUnit	Maryland;Howard County;District 006 Precinct 034	14;District 006 Precinct 034
 ReportingUnit	Maryland;Howard County;District 006 Precinct 035	14;District 006 Precinct 035
 ReportingUnit	Maryland;Kent County	15
-ReportingUnit	Maryland;Kent County	24029
+ReportingUnit	Maryland;Kent County	fips24029
+ReportingUnit	Maryland;Kent County	fips24029
 ReportingUnit	Maryland;Kent County;District 001 Precinct 001	15;District 001 Precinct 001
 ReportingUnit	Maryland;Kent County;District 001 Precinct 002	15;District 001 Precinct 002
 ReportingUnit	Maryland;Kent County;District 002 Precinct 001	15;District 002 Precinct 001
@@ -1597,7 +1612,8 @@ ReportingUnit	Maryland;Kent County;District 005 Precinct 001	15;District 005 Pre
 ReportingUnit	Maryland;Kent County;District 006 Precinct 001	15;District 006 Precinct 001
 ReportingUnit	Maryland;Kent County;District 007 Precinct 001	15;District 007 Precinct 001
 ReportingUnit	Maryland;Montgomery County	16
-ReportingUnit	Maryland;Montgomery County	24031
+ReportingUnit	Maryland;Montgomery County	fips24031
+ReportingUnit	Maryland;Montgomery County	fips24031
 ReportingUnit	Maryland;Montgomery County;District 001 Precinct 001	16;District 001 Precinct 001
 ReportingUnit	Maryland;Montgomery County;District 001 Precinct 002	16;District 001 Precinct 002
 ReportingUnit	Maryland;Montgomery County;District 001 Precinct 003	16;District 001 Precinct 003
@@ -1857,7 +1873,8 @@ ReportingUnit	Maryland;Montgomery County;District 013 Precinct 069	16;District 0
 ReportingUnit	Maryland;Montgomery County;District 013 Precinct 070	16;District 013 Precinct 070
 ReportingUnit	Maryland;Montgomery County;District 013 Precinct 071	16;District 013 Precinct 071
 ReportingUnit	Maryland;Prince George's County	17
-ReportingUnit	Maryland;Prince George's County	24033
+ReportingUnit	Maryland;Prince George's County	fips24033
+ReportingUnit	Maryland;Prince George's County	fips24033
 ReportingUnit	Maryland;Prince George's County;District 001 Precinct 001	17;District 001 Precinct 001
 ReportingUnit	Maryland;Prince George's County;District 001 Precinct 002	17;District 001 Precinct 002
 ReportingUnit	Maryland;Prince George's County;District 001 Precinct 003	17;District 001 Precinct 003
@@ -2162,7 +2179,8 @@ ReportingUnit	Maryland;Prince George's County;District 021 Precinct 097	17;Distr
 ReportingUnit	Maryland;Prince George's County;District 021 Precinct 098	17;District 021 Precinct 098
 ReportingUnit	Maryland;Prince George's County;District 021 Precinct 099	17;District 021 Precinct 099
 ReportingUnit	Maryland;Queen Anne's County	18
-ReportingUnit	Maryland;Queen Anne's County	24035
+ReportingUnit	Maryland;Queen Anne's County	fips24035
+ReportingUnit	Maryland;Queen Anne's County	fips24035
 ReportingUnit	Maryland;Queen Anne's County;District 001 Precinct 001	18;District 001 Precinct 001
 ReportingUnit	Maryland;Queen Anne's County;District 002 Precinct 001	18;District 002 Precinct 001
 ReportingUnit	Maryland;Queen Anne's County;District 003 Precinct 002	18;District 003 Precinct 002
@@ -2175,7 +2193,8 @@ ReportingUnit	Maryland;Queen Anne's County;District 005 Precinct 002	18;District
 ReportingUnit	Maryland;Queen Anne's County;District 006 Precinct 001	18;District 006 Precinct 001
 ReportingUnit	Maryland;Queen Anne's County;District 007 Precinct 001	18;District 007 Precinct 001
 ReportingUnit	Maryland;Somerset County	20
-ReportingUnit	Maryland;Somerset County	24039
+ReportingUnit	Maryland;Somerset County	fips24039
+ReportingUnit	Maryland;Somerset County	fips24039
 ReportingUnit	Maryland;Somerset County;District 001 Precinct 001	20;District 001 Precinct 001
 ReportingUnit	Maryland;Somerset County;District 001 Precinct 002	20;District 001 Precinct 002
 ReportingUnit	Maryland;Somerset County;District 001 Precinct 003	20;District 001 Precinct 003
@@ -2200,7 +2219,8 @@ ReportingUnit	Maryland;Somerset County;District 015 Precinct 001	20;District 015
 ReportingUnit	Maryland;Somerset County;District 015 Precinct 002	20;District 015 Precinct 002
 ReportingUnit	Maryland;Somerset County;District 015 Precinct 003	20;District 015 Precinct 003
 ReportingUnit	Maryland;St. Mary's County	19
-ReportingUnit	Maryland;St. Mary's County	24037
+ReportingUnit	Maryland;St. Mary's County	fips24037
+ReportingUnit	Maryland;St. Mary's County	fips24037
 ReportingUnit	Maryland;St. Mary's County;District 001 Precinct 001	19;District 001 Precinct 001
 ReportingUnit	Maryland;St. Mary's County;District 001 Precinct 002	19;District 001 Precinct 002
 ReportingUnit	Maryland;St. Mary's County;District 002 Precinct 001	19;District 002 Precinct 001
@@ -2238,7 +2258,8 @@ ReportingUnit	Maryland;St. Mary's County;District 008 Precinct 011	19;District 0
 ReportingUnit	Maryland;St. Mary's County;District 008 Precinct 012	19;District 008 Precinct 012
 ReportingUnit	Maryland;St. Mary's County;District 009 Precinct 001	19;District 009 Precinct 001
 ReportingUnit	Maryland;Talbot County	21
-ReportingUnit	Maryland;Talbot County	24041
+ReportingUnit	Maryland;Talbot County	fips24041
+ReportingUnit	Maryland;Talbot County	fips24041
 ReportingUnit	Maryland;Talbot County;District 001 Precinct 001	21;District 001 Precinct 001
 ReportingUnit	Maryland;Talbot County;District 001 Precinct 002	21;District 001 Precinct 002
 ReportingUnit	Maryland;Talbot County;District 001 Precinct 003	21;District 001 Precinct 003
@@ -2252,7 +2273,8 @@ ReportingUnit	Maryland;Talbot County;District 004 Precinct 001	21;District 004 P
 ReportingUnit	Maryland;Talbot County;District 005 Precinct 001	21;District 005 Precinct 001
 ReportingUnit	Maryland;Talbot County;District 005 Precinct 002	21;District 005 Precinct 002
 ReportingUnit	Maryland;Washington County	22
-ReportingUnit	Maryland;Washington County	24043
+ReportingUnit	Maryland;Washington County	fips24043
+ReportingUnit	Maryland;Washington County	fips24043
 ReportingUnit	Maryland;Washington County;District 001 Precinct 000	22;District 001 Precinct 000
 ReportingUnit	Maryland;Washington County;District 002 Precinct 000	22;District 002 Precinct 000
 ReportingUnit	Maryland;Washington County;District 003 Precinct 001	22;District 003 Precinct 001
@@ -2307,7 +2329,8 @@ ReportingUnit	Maryland;Washington County;District 026 Precinct 004	22;District 0
 ReportingUnit	Maryland;Washington County;District 027 Precinct 001	22;District 027 Precinct 001
 ReportingUnit	Maryland;Washington County;District 027 Precinct 002	22;District 027 Precinct 002
 ReportingUnit	Maryland;Wicomico County	23
-ReportingUnit	Maryland;Wicomico County	24045
+ReportingUnit	Maryland;Wicomico County	fips24045
+ReportingUnit	Maryland;Wicomico County	fips24045
 ReportingUnit	Maryland;Wicomico County;District 001 Precinct 001	23;District 001 Precinct 001
 ReportingUnit	Maryland;Wicomico County;District 001 Precinct 002	23;District 001 Precinct 002
 ReportingUnit	Maryland;Wicomico County;District 001 Precinct 003	23;District 001 Precinct 003
@@ -2363,7 +2386,8 @@ ReportingUnit	Maryland;Wicomico County;District 016 Precinct 005	23;District 016
 ReportingUnit	Maryland;Wicomico County;District 016 Precinct 006	23;District 016 Precinct 006
 ReportingUnit	Maryland;Wicomico County;District 017 Precinct 001	23;District 017 Precinct 001
 ReportingUnit	Maryland;Worcester County	24
-ReportingUnit	Maryland;Worcester County	24047
+ReportingUnit	Maryland;Worcester County	fips24047
+ReportingUnit	Maryland;Worcester County	fips24047
 ReportingUnit	Maryland;Worcester County;District 001 Precinct 001	24;District 001 Precinct 001
 ReportingUnit	Maryland;Worcester County;District 001 Precinct 002	24;District 001 Precinct 002
 ReportingUnit	Maryland;Worcester County;District 002 Precinct 001	24;District 002 Precinct 001

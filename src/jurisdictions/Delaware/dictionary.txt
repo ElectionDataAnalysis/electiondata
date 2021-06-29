@@ -33,9 +33,9 @@ Candidate	Dawayne Sims	Dawayne Sims
 Candidate	Denise Bowers	Denise Bowers
 Candidate	Devon Hynson	Devon Hynson
 Candidate	Donald Farrell	Donald Farrell
+Candidate	Donald J. Trump	DONALD TRUMP
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Donald J. Trump And Michael R. Pence
-Candidate	Donald J. Trump	DONALD TRUMP
 Candidate	Donyale Hall	Donyale Hall
 Candidate	Dorothy King	Dorothy King
 Candidate	Earl Jaques	Earl Jaques
@@ -470,9 +470,9 @@ CandidateContest	US House DE District 1 (Democratic Party)	US House DE District 
 CandidateContest	US House DE District 1 (Green Party)	US House DE District 1 (Green Party)
 CandidateContest	US House DE District 1 (Libertarian Party)	US House DE District 1 (Libertarian Party)
 CandidateContest	US House DE District 1 (Republican Party)	US House DE District 1 (Republican)
+CandidateContest	US President (DE)	PRESIDENT
 CandidateContest	US President (DE)	President
 CandidateContest	US President (DE)	President and Vice President
-CandidateContest	US President (DE)	PRESIDENT
 CandidateContest	US President (DE)	US PRESIDENT
 CandidateContest	US President (DE) (Democratic Party)	President (Democratic)
 CandidateContest	US President (DE) (Green Party)	President (Green Party)
@@ -485,8 +485,8 @@ CandidateContest	US Senate DE (Libertarian Party)	U.S. Senator (Libertarian Part
 CandidateContest	US Senate DE (Republican Party)	U.S. Senator (Republican)
 CountItemType	absentee	Absentee Votes
 CountItemType	election-day	Machine Votes
-CountItemType	total	Total Votes
 CountItemType	total	TOTAL
+CountItemType	total	Total Votes
 Election	2016 General	2016 General
 Election	2016 Primary	2016 Primary
 Election	2018 General	2018 General
@@ -494,17 +494,17 @@ Election	2018 Primary	2018 Primary
 Election	2020 General	2020 General
 Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
 Election	2020 Primary	2020 Primary
+Party	Democratic Party	DEMOCRAT
 Party	Democratic Party	Democratic
 Party	Democratic Party	Democratic Party
-Party	Democratic Party	DEMOCRAT
-Party	Green Party	Green Party Of Delaware
 Party	Green Party	GREEN
+Party	Green Party	Green Party Of Delaware
 Party	Independent Party	Independent Party Of Delaware
-Party	Libertarian Party	Libertarian Party
 Party	Libertarian Party	LIBERTARIAN
+Party	Libertarian Party	Libertarian Party
+Party	Republican Party	REPUBLICAN
 Party	Republican Party	Republican
 Party	Republican Party	Republican Party
-Party	Republican Party	REPUBLICAN
 Party	none or unknown	OTHER
 ReportingUnit	Delaware	Delaware
 ReportingUnit	Delaware;DE House District 1	Delaware;DE House District 1
@@ -570,7 +570,7 @@ ReportingUnit	Delaware;DE Senate District 7	Delaware;DE Senate District 7
 ReportingUnit	Delaware;DE Senate District 8	Delaware;DE Senate District 8
 ReportingUnit	Delaware;DE Senate District 9	Delaware;DE Senate District 9
 ReportingUnit	Delaware;Kent County	Kent
-ReportingUnit	Delaware;Kent County	10001
+ReportingUnit	Delaware;Kent County	fips10001
 ReportingUnit	Delaware;Kent County;11-05	Election District 11-05
 ReportingUnit	Delaware;Kent County;11-06	Election District 11-06
 ReportingUnit	Delaware;Kent County;11-07	Election District 11-07
@@ -662,7 +662,7 @@ ReportingUnit	Delaware;Kent County;34-09	Election District 34-09
 ReportingUnit	Delaware;Kent County;34-10	Election District 34-10
 ReportingUnit	Delaware;Kent County;34-11	Election District 34-11
 ReportingUnit	Delaware;New Castle County	New Castle
-ReportingUnit	Delaware;New Castle County	10003
+ReportingUnit	Delaware;New Castle County	fips10003
 ReportingUnit	Delaware;New Castle County;01-01	Election District 01-01
 ReportingUnit	Delaware;New Castle County;01-02	Election District 01-02
 ReportingUnit	Delaware;New Castle County;01-03	Election District 01-03
@@ -936,7 +936,7 @@ ReportingUnit	Delaware;New Castle County;27-08	Election District 27-08
 ReportingUnit	Delaware;New Castle County;27-09	Election District 27-09
 ReportingUnit	Delaware;New Castle County;27-10	Election District 27-10
 ReportingUnit	Delaware;Sussex County	Sussex
-ReportingUnit	Delaware;Sussex County	10005
+ReportingUnit	Delaware;Sussex County	fips10005
 ReportingUnit	Delaware;Sussex County;14-01	Election District 14-01
 ReportingUnit	Delaware;Sussex County;14-02	Election District 14-02
 ReportingUnit	Delaware;Sussex County;14-03	Election District 14-03

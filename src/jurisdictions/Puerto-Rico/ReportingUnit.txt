@@ -1,62 +1,13 @@
 Name	ReportingUnitType
-Puerto Rico;PR House District 1	state-house
-Puerto Rico;PR House District 2	state-house
-Puerto Rico;PR House District 3	state-house
-Puerto Rico;PR House District 4	state-house
-Puerto Rico;PR House District 5	state-house
-Puerto Rico;PR House District 6	state-house
-Puerto Rico;PR House District 7	state-house
-Puerto Rico;PR House District 8	state-house
-Puerto Rico;PR House District 9	state-house
-Puerto Rico;PR House District 10	state-house
-Puerto Rico;PR House District 11	state-house
-Puerto Rico;PR House District 12	state-house
-Puerto Rico;PR House District 13	state-house
-Puerto Rico;PR House District 14	state-house
-Puerto Rico;PR House District 15	state-house
-Puerto Rico;PR House District 16	state-house
-Puerto Rico;PR House District 17	state-house
-Puerto Rico;PR House District 18	state-house
-Puerto Rico;PR House District 19	state-house
-Puerto Rico;PR House District 20	state-house
-Puerto Rico;PR House District 21	state-house
-Puerto Rico;PR House District 22	state-house
-Puerto Rico;PR House District 23	state-house
-Puerto Rico;PR House District 24	state-house
-Puerto Rico;PR House District 25	state-house
-Puerto Rico;PR House District 26	state-house
-Puerto Rico;PR House District 27	state-house
-Puerto Rico;PR House District 28	state-house
-Puerto Rico;PR House District 29	state-house
-Puerto Rico;PR House District 30	state-house
-Puerto Rico;PR House District 31	state-house
-Puerto Rico;PR House District 32	state-house
-Puerto Rico;PR House District 33	state-house
-Puerto Rico;PR House District 34	state-house
-Puerto Rico;PR House District 35	state-house
-Puerto Rico;PR House District 36	state-house
-Puerto Rico;PR House District 37	state-house
-Puerto Rico;PR House District 38	state-house
-Puerto Rico;PR House District 39	state-house
-Puerto Rico;PR House District 40	state-house
-Puerto Rico;PR Senate District 1	state-senate
-Puerto Rico;PR Senate District 2	state-senate
-Puerto Rico;PR Senate District 3	state-senate
-Puerto Rico;PR Senate District 4	state-senate
-Puerto Rico;PR Senate District 5	state-senate
-Puerto Rico;PR Senate District 6	state-senate
-Puerto Rico;PR Senate District 7	state-senate
-Puerto Rico;PR Senate District 8	state-senate
 Puerto Rico;US House PR District 1	congressional
-Puerto Rico	territory
 Puerto Rico;Adjuntas Municipality	municipality
 Puerto Rico;Aguada Municipality	municipality
 Puerto Rico;Aguadilla Municipality	municipality
 Puerto Rico;Aguas Buenas Municipality	municipality
 Puerto Rico;Aibonito Municipality	municipality
-Puerto Rico;Añasco Municipality	municipality
 Puerto Rico;Arecibo Municipality	municipality
 Puerto Rico;Arroyo Municipality	municipality
+Puerto Rico;Añasco Municipality	municipality
 Puerto Rico;Barceloneta Municipality	municipality
 Puerto Rico;Barranquitas Municipality	municipality
 Puerto Rico;Bayamón Municipality	municipality
@@ -77,11 +28,11 @@ Puerto Rico;Culebra Municipality	municipality
 Puerto Rico;Dorado Municipality	municipality
 Puerto Rico;Fajardo Municipality	municipality
 Puerto Rico;Florida Municipality	municipality
-Puerto Rico;Guánica Municipality	municipality
 Puerto Rico;Guayama Municipality	municipality
 Puerto Rico;Guayanilla Municipality	municipality
 Puerto Rico;Guaynabo Municipality	municipality
 Puerto Rico;Gurabo Municipality	municipality
+Puerto Rico;Guánica Municipality	municipality
 Puerto Rico;Hatillo Municipality	municipality
 Puerto Rico;Hormigueros Municipality	municipality
 Puerto Rico;Humacao Municipality	municipality
@@ -127,3 +78,130 @@ Puerto Rico;Vieques Municipality	municipality
 Puerto Rico;Villalba Municipality	municipality
 Puerto Rico;Yabucoa Municipality	municipality
 Puerto Rico;Yauco Municipality	municipality
+Puerto Rico;Adjuntas Municipio	municipio
+Puerto Rico;Aguada Municipio	municipio
+Puerto Rico;Aguadilla Municipio	municipio
+Puerto Rico;Aguas Buenas Municipio	municipio
+Puerto Rico;Aibonito Municipio	municipio
+Puerto Rico;Arecibo Municipio	municipio
+Puerto Rico;Arroyo Municipio	municipio
+Puerto Rico;Añasco Municipio	municipio
+Puerto Rico;Barceloneta Municipio	municipio
+Puerto Rico;Barranquitas Municipio	municipio
+Puerto Rico;Bayamón Municipio	municipio
+Puerto Rico;Cabo Rojo Municipio	municipio
+Puerto Rico;Caguas Municipio	municipio
+Puerto Rico;Camuy Municipio	municipio
+Puerto Rico;Canóvanas Municipio	municipio
+Puerto Rico;Carolina Municipio	municipio
+Puerto Rico;Cataño Municipio	municipio
+Puerto Rico;Cayey Municipio	municipio
+Puerto Rico;Ceiba Municipio	municipio
+Puerto Rico;Ciales Municipio	municipio
+Puerto Rico;Cidra Municipio	municipio
+Puerto Rico;Coamo Municipio	municipio
+Puerto Rico;Comerío Municipio	municipio
+Puerto Rico;Corozal Municipio	municipio
+Puerto Rico;Culebra Municipio	municipio
+Puerto Rico;Dorado Municipio	municipio
+Puerto Rico;Fajardo Municipio	municipio
+Puerto Rico;Florida Municipio	municipio
+Puerto Rico;Guayama Municipio	municipio
+Puerto Rico;Guayanilla Municipio	municipio
+Puerto Rico;Guaynabo Municipio	municipio
+Puerto Rico;Gurabo Municipio	municipio
+Puerto Rico;Guánica Municipio	municipio
+Puerto Rico;Hatillo Municipio	municipio
+Puerto Rico;Hormigueros Municipio	municipio
+Puerto Rico;Humacao Municipio	municipio
+Puerto Rico;Isabela Municipio	municipio
+Puerto Rico;Jayuya Municipio	municipio
+Puerto Rico;Juana Díaz Municipio	municipio
+Puerto Rico;Juncos Municipio	municipio
+Puerto Rico;Lajas Municipio	municipio
+Puerto Rico;Lares Municipio	municipio
+Puerto Rico;Las Marías Municipio	municipio
+Puerto Rico;Las Piedras Municipio	municipio
+Puerto Rico;Loíza Municipio	municipio
+Puerto Rico;Luquillo Municipio	municipio
+Puerto Rico;Manatí Municipio	municipio
+Puerto Rico;Maricao Municipio	municipio
+Puerto Rico;Maunabo Municipio	municipio
+Puerto Rico;Mayagüez Municipio	municipio
+Puerto Rico;Moca Municipio	municipio
+Puerto Rico;Morovis Municipio	municipio
+Puerto Rico;Naguabo Municipio	municipio
+Puerto Rico;Naranjito Municipio	municipio
+Puerto Rico;Orocovis Municipio	municipio
+Puerto Rico;Patillas Municipio	municipio
+Puerto Rico;Peñuelas Municipio	municipio
+Puerto Rico;Ponce Municipio	municipio
+Puerto Rico;Quebradillas Municipio	municipio
+Puerto Rico;Rincón Municipio	municipio
+Puerto Rico;Río Grande Municipio	municipio
+Puerto Rico;Sabana Grande Municipio	municipio
+Puerto Rico;Salinas Municipio	municipio
+Puerto Rico;San Germán Municipio	municipio
+Puerto Rico;San Juan Municipio	municipio
+Puerto Rico;San Lorenzo Municipio	municipio
+Puerto Rico;San Sebastián Municipio	municipio
+Puerto Rico;Santa Isabel Municipio	municipio
+Puerto Rico;Toa Alta Municipio	municipio
+Puerto Rico;Toa Baja Municipio	municipio
+Puerto Rico;Trujillo Alto Municipio	municipio
+Puerto Rico;Utuado Municipio	municipio
+Puerto Rico;Vega Alta Municipio	municipio
+Puerto Rico;Vega Baja Municipio	municipio
+Puerto Rico;Vieques Municipio	municipio
+Puerto Rico;Villalba Municipio	municipio
+Puerto Rico;Yabucoa Municipio	municipio
+Puerto Rico;Yauco Municipio	municipio
+Puerto Rico;PR House District 1	state-house
+Puerto Rico;PR House District 10	state-house
+Puerto Rico;PR House District 11	state-house
+Puerto Rico;PR House District 12	state-house
+Puerto Rico;PR House District 13	state-house
+Puerto Rico;PR House District 14	state-house
+Puerto Rico;PR House District 15	state-house
+Puerto Rico;PR House District 16	state-house
+Puerto Rico;PR House District 17	state-house
+Puerto Rico;PR House District 18	state-house
+Puerto Rico;PR House District 19	state-house
+Puerto Rico;PR House District 2	state-house
+Puerto Rico;PR House District 20	state-house
+Puerto Rico;PR House District 21	state-house
+Puerto Rico;PR House District 22	state-house
+Puerto Rico;PR House District 23	state-house
+Puerto Rico;PR House District 24	state-house
+Puerto Rico;PR House District 25	state-house
+Puerto Rico;PR House District 26	state-house
+Puerto Rico;PR House District 27	state-house
+Puerto Rico;PR House District 28	state-house
+Puerto Rico;PR House District 29	state-house
+Puerto Rico;PR House District 3	state-house
+Puerto Rico;PR House District 30	state-house
+Puerto Rico;PR House District 31	state-house
+Puerto Rico;PR House District 32	state-house
+Puerto Rico;PR House District 33	state-house
+Puerto Rico;PR House District 34	state-house
+Puerto Rico;PR House District 35	state-house
+Puerto Rico;PR House District 36	state-house
+Puerto Rico;PR House District 37	state-house
+Puerto Rico;PR House District 38	state-house
+Puerto Rico;PR House District 39	state-house
+Puerto Rico;PR House District 4	state-house
+Puerto Rico;PR House District 40	state-house
+Puerto Rico;PR House District 5	state-house
+Puerto Rico;PR House District 6	state-house
+Puerto Rico;PR House District 7	state-house
+Puerto Rico;PR House District 8	state-house
+Puerto Rico;PR House District 9	state-house
+Puerto Rico;PR Senate District 1	state-senate
+Puerto Rico;PR Senate District 2	state-senate
+Puerto Rico;PR Senate District 3	state-senate
+Puerto Rico;PR Senate District 4	state-senate
+Puerto Rico;PR Senate District 5	state-senate
+Puerto Rico;PR Senate District 6	state-senate
+Puerto Rico;PR Senate District 7	state-senate
+Puerto Rico;PR Senate District 8	state-senate
+Puerto Rico	territory

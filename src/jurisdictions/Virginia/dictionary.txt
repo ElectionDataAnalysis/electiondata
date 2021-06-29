@@ -52,8 +52,8 @@ Candidate	Arlene Holloway	Arlene Holloway
 Candidate	Arthur Clifton Bredemeyer	Arthur Clifton Bredemeyer
 Candidate	Arthur Dale Moore	Arthur Dale Moore
 Candidate	Aston Donald Mceachin	A. Donald McEachin
-Candidate	Aston Donald Mceachin	Aston Donald Mceachin
 Candidate	Aston Donald Mceachin	Aston Donald McEachin
+Candidate	Aston Donald Mceachin	Aston Donald Mceachin
 Candidate	Athene Cooper Bell	Athene Cooper Bell
 Candidate	Atiba Hakeem Muse	Atiba Hakeem Muse
 Candidate	Aubrey Walker Bogert	Aubrey Walker Bogert
@@ -296,8 +296,8 @@ Candidate	Dominic David Swayne	dominic david swayne
 Candidate	Donald Earle Cates Ii	Donald Earle Cates Ii
 Candidate	Donald Elwood Shuemaker Jr.	DONALD ELWOOD SHUEMAKER Jr.
 Candidate	Donald Gene Poteet Ii	Donald Gene Poteet Ii
-Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald Joseph Lambert	Donald Joseph Lambert
 Candidate	Donald Langston Moss Iii	Donald Langston Moss Iii
 Candidate	Donald Lee Mason	Donald Lee Mason
@@ -453,8 +453,8 @@ Candidate	Henry John Cook Jr.	HENRY JOHN COOK Jr.
 Candidate	Henry Richard Gorfein	Henry Richard Gorfein
 Candidate	Herbert Anthony Thom Jr.	HERBERT ANTHONY THOM Jr.
 Candidate	Herbert Roberts Green Jr.	HERBERT ROBERTS GREEN Jr.
-Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hollis Lyle Tharpe	Hollis Lyle Tharpe
 Candidate	Horace Cliff Page Jr.	HORACE CLIFF PAGE Jr.
 Candidate	Howard Morgan Griffith	Howard Morgan Griffith
@@ -948,8 +948,8 @@ Candidate	Phyllis Leigh Collier Byrum	Phyllis Leigh Collier Byrum
 Candidate	Pieri Evan Burton	Pieri Evan Burton
 Candidate	Pradip Dhakal	Pradip Dhakal
 Candidate	Preston Maurice Banks	Preston Maurice Banks
-Candidate	Qasim Rashid	qasim rashid
 Candidate	Qasim Rashid	Qasim Rashid
+Candidate	Qasim Rashid	qasim rashid
 Candidate	Rachel Ann Carton	Rachel Ann Carton
 Candidate	Rachel Hamlett Canada	Rachel Hamlett Canada
 Candidate	Ralph Nader	RALPH NADER
@@ -1264,83 +1264,95 @@ Candidate	Zachary William Fletchall	Zachary William Fletchall
 Candidate	Zackary Alan Stoots	Zackary Alan Stoots
 Candidate	Zainab Masooma Mohsini	Zainab Masooma Mohsini
 Candidate	Zora Austin Bruce	Zora Austin Bruce
-CandidateContest	US House VA District 1	Member House of Representatives District 01
 CandidateContest	US House VA District 1	Member House of Representatives (01)
+CandidateContest	US House VA District 1	Member House of Representatives District 01
 CandidateContest	US House VA District 1 (Democratic Party)	Member House of Representatives District 01 (Democratic)
 CandidateContest	US House VA District 1 (Green Party)	Member House of Representatives District 01 (Green)
 CandidateContest	US House VA District 1 (Independent Party)	Member House of Representatives District 01 (Independent)
 CandidateContest	US House VA District 1 (Libertarian Party)	Member House of Representatives District 01 (Libertarian)
 CandidateContest	US House VA District 1 (Republican Party)	Member House of Representatives District 01 (Republican)
-CandidateContest	US House VA District 10	Member House of Representatives District 10
 CandidateContest	US House VA District 10	Member House of Representatives (10)
+CandidateContest	US House VA District 10	Member House of Representatives District 10
 CandidateContest	US House VA District 10 (Democratic Party)	Member House of Representatives District 10 (Democratic)
 CandidateContest	US House VA District 10 (Green Party)	Member House of Representatives District 10 (Green)
 CandidateContest	US House VA District 10 (Independent Party)	Member House of Representatives District 10 (Independent)
 CandidateContest	US House VA District 10 (Libertarian Party)	Member House of Representatives District 10 (Libertarian)
 CandidateContest	US House VA District 10 (Republican Party)	Member House of Representatives District 10 (Republican)
-CandidateContest	US House VA District 11	Member House of Representatives District 11
 CandidateContest	US House VA District 11	Member House of Representatives (11)
+CandidateContest	US House VA District 11	Member House of Representatives District 11
 CandidateContest	US House VA District 11 (Democratic Party)	Member House of Representatives District 11 (Democratic)
 CandidateContest	US House VA District 11 (Green Party)	Member House of Representatives District 11 (Green)
 CandidateContest	US House VA District 11 (Independent Party)	Member House of Representatives District 11 (Independent)
 CandidateContest	US House VA District 11 (Libertarian Party)	Member House of Representatives District 11 (Libertarian)
 CandidateContest	US House VA District 11 (Republican Party)	Member House of Representatives District 11 (Republican)
-CandidateContest	US House VA District 2	Member House of Representatives District 02
 CandidateContest	US House VA District 2	Member House of Representatives (02)
+CandidateContest	US House VA District 2	Member House of Representatives District 02
 CandidateContest	US House VA District 2 (Democratic Party)	Member House of Representatives District 02 (Democratic)
 CandidateContest	US House VA District 2 (Green Party)	Member House of Representatives District 02 (Green)
 CandidateContest	US House VA District 2 (Independent Party)	Member House of Representatives District 02 (Independent)
 CandidateContest	US House VA District 2 (Libertarian Party)	Member House of Representatives District 02 (Libertarian)
 CandidateContest	US House VA District 2 (Republican Party)	Member House of Representatives District 02 (Republican)
-CandidateContest	US House VA District 3	Member House of Representatives District 03
 CandidateContest	US House VA District 3	Member House of Representatives (03)
+CandidateContest	US House VA District 3	Member House of Representatives District 03
 CandidateContest	US House VA District 3 (Democratic Party)	Member House of Representatives District 03 (Democratic)
 CandidateContest	US House VA District 3 (Green Party)	Member House of Representatives District 03 (Green)
 CandidateContest	US House VA District 3 (Independent Party)	Member House of Representatives District 03 (Independent)
 CandidateContest	US House VA District 3 (Libertarian Party)	Member House of Representatives District 03 (Libertarian)
 CandidateContest	US House VA District 3 (Republican Party)	Member House of Representatives District 03 (Republican)
-CandidateContest	US House VA District 4	Member House of Representatives District 04
 CandidateContest	US House VA District 4	Member House of Representatives (04)
+CandidateContest	US House VA District 4	Member House of Representatives District 04
 CandidateContest	US House VA District 4 (Democratic Party)	Member House of Representatives District 04 (Democratic)
 CandidateContest	US House VA District 4 (Green Party)	Member House of Representatives District 04 (Green)
 CandidateContest	US House VA District 4 (Independent Party)	Member House of Representatives District 04 (Independent)
 CandidateContest	US House VA District 4 (Libertarian Party)	Member House of Representatives District 04 (Libertarian)
 CandidateContest	US House VA District 4 (Republican Party)	Member House of Representatives District 04 (Republican)
-CandidateContest	US House VA District 5	Member House of Representatives District 05
 CandidateContest	US House VA District 5	Member House of Representatives (05)
+CandidateContest	US House VA District 5	Member House of Representatives District 05
 CandidateContest	US House VA District 5 (Democratic Party)	Member House of Representatives District 05 (Democratic)
 CandidateContest	US House VA District 5 (Green Party)	Member House of Representatives District 05 (Green)
 CandidateContest	US House VA District 5 (Independent Party)	Member House of Representatives District 05 (Independent)
 CandidateContest	US House VA District 5 (Libertarian Party)	Member House of Representatives District 05 (Libertarian)
 CandidateContest	US House VA District 5 (Republican Party)	Member House of Representatives District 05 (Republican)
-CandidateContest	US House VA District 6	Member House of Representatives District 06
 CandidateContest	US House VA District 6	Member House of Representatives (06)
+CandidateContest	US House VA District 6	Member House of Representatives District 06
 CandidateContest	US House VA District 6 (Democratic Party)	Member House of Representatives District 06 (Democratic)
 CandidateContest	US House VA District 6 (Green Party)	Member House of Representatives District 06 (Green)
 CandidateContest	US House VA District 6 (Independent Party)	Member House of Representatives District 06 (Independent)
 CandidateContest	US House VA District 6 (Libertarian Party)	Member House of Representatives District 06 (Libertarian)
 CandidateContest	US House VA District 6 (Republican Party)	Member House of Representatives District 06 (Republican)
-CandidateContest	US House VA District 7	Member House of Representatives District 07
 CandidateContest	US House VA District 7	Member House of Representatives (07)
+CandidateContest	US House VA District 7	Member House of Representatives District 07
 CandidateContest	US House VA District 7 (Democratic Party)	Member House of Representatives District 07 (Democratic)
 CandidateContest	US House VA District 7 (Green Party)	Member House of Representatives District 07 (Green)
 CandidateContest	US House VA District 7 (Independent Party)	Member House of Representatives District 07 (Independent)
 CandidateContest	US House VA District 7 (Libertarian Party)	Member House of Representatives District 07 (Libertarian)
 CandidateContest	US House VA District 7 (Republican Party)	Member House of Representatives District 07 (Republican)
-CandidateContest	US House VA District 8	Member House of Representatives District 08
 CandidateContest	US House VA District 8	Member House of Representatives (08)
+CandidateContest	US House VA District 8	Member House of Representatives District 08
 CandidateContest	US House VA District 8 (Democratic Party)	Member House of Representatives District 08 (Democratic)
 CandidateContest	US House VA District 8 (Green Party)	Member House of Representatives District 08 (Green)
 CandidateContest	US House VA District 8 (Independent Party)	Member House of Representatives District 08 (Independent)
 CandidateContest	US House VA District 8 (Libertarian Party)	Member House of Representatives District 08 (Libertarian)
 CandidateContest	US House VA District 8 (Republican Party)	Member House of Representatives District 08 (Republican)
-CandidateContest	US House VA District 9	Member House of Representatives District 09
 CandidateContest	US House VA District 9	Member House of Representatives (09)
+CandidateContest	US House VA District 9	Member House of Representatives District 09
 CandidateContest	US House VA District 9 (Democratic Party)	Member House of Representatives District 09 (Democratic)
 CandidateContest	US House VA District 9 (Green Party)	Member House of Representatives District 09 (Green)
 CandidateContest	US House VA District 9 (Independent Party)	Member House of Representatives District 09 (Independent)
 CandidateContest	US House VA District 9 (Libertarian Party)	Member House of Representatives District 09 (Libertarian)
 CandidateContest	US House VA District 9 (Republican Party)	Member House of Representatives District 09 (Republican)
+CandidateContest	US President (VA)	PRESIDENT
+CandidateContest	US President (VA)	President District 01
+CandidateContest	US President (VA)	President District 02
+CandidateContest	US President (VA)	President District 03
+CandidateContest	US President (VA)	President District 04
+CandidateContest	US President (VA)	President District 05
+CandidateContest	US President (VA)	President District 06
+CandidateContest	US President (VA)	President District 07
+CandidateContest	US President (VA)	President District 08
+CandidateContest	US President (VA)	President District 09
+CandidateContest	US President (VA)	President District 10
+CandidateContest	US President (VA)	President District 11
 CandidateContest	US President (VA)	President and Vice President
 CandidateContest	US President (VA)	President and Vice President District 01
 CandidateContest	US President (VA)	President and Vice President District 02
@@ -1353,30 +1365,7 @@ CandidateContest	US President (VA)	President and Vice President District 08
 CandidateContest	US President (VA)	President and Vice President District 09
 CandidateContest	US President (VA)	President and Vice President District 10
 CandidateContest	US President (VA)	President and Vice President District 11
-CandidateContest	US President (VA)	President District 01
-CandidateContest	US President (VA)	President District 02
-CandidateContest	US President (VA)	President District 03
-CandidateContest	US President (VA)	President District 04
-CandidateContest	US President (VA)	President District 05
-CandidateContest	US President (VA)	President District 06
-CandidateContest	US President (VA)	President District 07
-CandidateContest	US President (VA)	President District 08
-CandidateContest	US President (VA)	President District 09
-CandidateContest	US President (VA)	President District 10
-CandidateContest	US President (VA)	President District 11
-CandidateContest	US President (VA)	PRESIDENT
 CandidateContest	US President (VA)	US PRESIDENT
-CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 01 (Democratic)
-CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 02 (Democratic)
-CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 03 (Democratic)
-CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 04 (Democratic)
-CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 05 (Democratic)
-CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 06 (Democratic)
-CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 07 (Democratic)
-CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 08 (Democratic)
-CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 09 (Democratic)
-CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 10 (Democratic)
-CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 11 (Democratic)
 CandidateContest	US President (VA) (Democratic Party)	President District 01 (Democratic)
 CandidateContest	US President (VA) (Democratic Party)	President District 02 (Democratic)
 CandidateContest	US President (VA) (Democratic Party)	President District 03 (Democratic)
@@ -1388,17 +1377,17 @@ CandidateContest	US President (VA) (Democratic Party)	President District 08 (Dem
 CandidateContest	US President (VA) (Democratic Party)	President District 09 (Democratic)
 CandidateContest	US President (VA) (Democratic Party)	President District 10 (Democratic)
 CandidateContest	US President (VA) (Democratic Party)	President District 11 (Democratic)
-CandidateContest	US President (VA) (Green Party)	President and Vice President District 01 (Green)
-CandidateContest	US President (VA) (Green Party)	President and Vice President District 02 (Green)
-CandidateContest	US President (VA) (Green Party)	President and Vice President District 03 (Green)
-CandidateContest	US President (VA) (Green Party)	President and Vice President District 04 (Green)
-CandidateContest	US President (VA) (Green Party)	President and Vice President District 05 (Green)
-CandidateContest	US President (VA) (Green Party)	President and Vice President District 06 (Green)
-CandidateContest	US President (VA) (Green Party)	President and Vice President District 07 (Green)
-CandidateContest	US President (VA) (Green Party)	President and Vice President District 08 (Green)
-CandidateContest	US President (VA) (Green Party)	President and Vice President District 09 (Green)
-CandidateContest	US President (VA) (Green Party)	President and Vice President District 10 (Green)
-CandidateContest	US President (VA) (Green Party)	President and Vice President District 11 (Green)
+CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 01 (Democratic)
+CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 02 (Democratic)
+CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 03 (Democratic)
+CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 04 (Democratic)
+CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 05 (Democratic)
+CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 06 (Democratic)
+CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 07 (Democratic)
+CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 08 (Democratic)
+CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 09 (Democratic)
+CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 10 (Democratic)
+CandidateContest	US President (VA) (Democratic Party)	President and Vice President District 11 (Democratic)
 CandidateContest	US President (VA) (Green Party)	President District 01 (Green)
 CandidateContest	US President (VA) (Green Party)	President District 02 (Green)
 CandidateContest	US President (VA) (Green Party)	President District 03 (Green)
@@ -1410,17 +1399,17 @@ CandidateContest	US President (VA) (Green Party)	President District 08 (Green)
 CandidateContest	US President (VA) (Green Party)	President District 09 (Green)
 CandidateContest	US President (VA) (Green Party)	President District 10 (Green)
 CandidateContest	US President (VA) (Green Party)	President District 11 (Green)
-CandidateContest	US President (VA) (Independent Party)	President and Vice President District 01 (Independent)
-CandidateContest	US President (VA) (Independent Party)	President and Vice President District 02 (Independent)
-CandidateContest	US President (VA) (Independent Party)	President and Vice President District 03 (Independent)
-CandidateContest	US President (VA) (Independent Party)	President and Vice President District 04 (Independent)
-CandidateContest	US President (VA) (Independent Party)	President and Vice President District 05 (Independent)
-CandidateContest	US President (VA) (Independent Party)	President and Vice President District 06 (Independent)
-CandidateContest	US President (VA) (Independent Party)	President and Vice President District 07 (Independent)
-CandidateContest	US President (VA) (Independent Party)	President and Vice President District 08 (Independent)
-CandidateContest	US President (VA) (Independent Party)	President and Vice President District 09 (Independent)
-CandidateContest	US President (VA) (Independent Party)	President and Vice President District 10 (Independent)
-CandidateContest	US President (VA) (Independent Party)	President and Vice President District 11 (Independent)
+CandidateContest	US President (VA) (Green Party)	President and Vice President District 01 (Green)
+CandidateContest	US President (VA) (Green Party)	President and Vice President District 02 (Green)
+CandidateContest	US President (VA) (Green Party)	President and Vice President District 03 (Green)
+CandidateContest	US President (VA) (Green Party)	President and Vice President District 04 (Green)
+CandidateContest	US President (VA) (Green Party)	President and Vice President District 05 (Green)
+CandidateContest	US President (VA) (Green Party)	President and Vice President District 06 (Green)
+CandidateContest	US President (VA) (Green Party)	President and Vice President District 07 (Green)
+CandidateContest	US President (VA) (Green Party)	President and Vice President District 08 (Green)
+CandidateContest	US President (VA) (Green Party)	President and Vice President District 09 (Green)
+CandidateContest	US President (VA) (Green Party)	President and Vice President District 10 (Green)
+CandidateContest	US President (VA) (Green Party)	President and Vice President District 11 (Green)
 CandidateContest	US President (VA) (Independent Party)	President District 01 (Independent)
 CandidateContest	US President (VA) (Independent Party)	President District 02 (Independent)
 CandidateContest	US President (VA) (Independent Party)	President District 03 (Independent)
@@ -1432,17 +1421,17 @@ CandidateContest	US President (VA) (Independent Party)	President District 08 (In
 CandidateContest	US President (VA) (Independent Party)	President District 09 (Independent)
 CandidateContest	US President (VA) (Independent Party)	President District 10 (Independent)
 CandidateContest	US President (VA) (Independent Party)	President District 11 (Independent)
-CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 01 (Libertarian)
-CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 02 (Libertarian)
-CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 03 (Libertarian)
-CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 04 (Libertarian)
-CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 05 (Libertarian)
-CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 06 (Libertarian)
-CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 07 (Libertarian)
-CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 08 (Libertarian)
-CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 09 (Libertarian)
-CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 10 (Libertarian)
-CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 11 (Libertarian)
+CandidateContest	US President (VA) (Independent Party)	President and Vice President District 01 (Independent)
+CandidateContest	US President (VA) (Independent Party)	President and Vice President District 02 (Independent)
+CandidateContest	US President (VA) (Independent Party)	President and Vice President District 03 (Independent)
+CandidateContest	US President (VA) (Independent Party)	President and Vice President District 04 (Independent)
+CandidateContest	US President (VA) (Independent Party)	President and Vice President District 05 (Independent)
+CandidateContest	US President (VA) (Independent Party)	President and Vice President District 06 (Independent)
+CandidateContest	US President (VA) (Independent Party)	President and Vice President District 07 (Independent)
+CandidateContest	US President (VA) (Independent Party)	President and Vice President District 08 (Independent)
+CandidateContest	US President (VA) (Independent Party)	President and Vice President District 09 (Independent)
+CandidateContest	US President (VA) (Independent Party)	President and Vice President District 10 (Independent)
+CandidateContest	US President (VA) (Independent Party)	President and Vice President District 11 (Independent)
 CandidateContest	US President (VA) (Libertarian Party)	President District 01 (Libertarian)
 CandidateContest	US President (VA) (Libertarian Party)	President District 02 (Libertarian)
 CandidateContest	US President (VA) (Libertarian Party)	President District 03 (Libertarian)
@@ -1454,17 +1443,17 @@ CandidateContest	US President (VA) (Libertarian Party)	President District 08 (Li
 CandidateContest	US President (VA) (Libertarian Party)	President District 09 (Libertarian)
 CandidateContest	US President (VA) (Libertarian Party)	President District 10 (Libertarian)
 CandidateContest	US President (VA) (Libertarian Party)	President District 11 (Libertarian)
-CandidateContest	US President (VA) (Republican Party)	President and Vice President District 01 (Republican)
-CandidateContest	US President (VA) (Republican Party)	President and Vice President District 02 (Republican)
-CandidateContest	US President (VA) (Republican Party)	President and Vice President District 03 (Republican)
-CandidateContest	US President (VA) (Republican Party)	President and Vice President District 04 (Republican)
-CandidateContest	US President (VA) (Republican Party)	President and Vice President District 05 (Republican)
-CandidateContest	US President (VA) (Republican Party)	President and Vice President District 06 (Republican)
-CandidateContest	US President (VA) (Republican Party)	President and Vice President District 07 (Republican)
-CandidateContest	US President (VA) (Republican Party)	President and Vice President District 08 (Republican)
-CandidateContest	US President (VA) (Republican Party)	President and Vice President District 09 (Republican)
-CandidateContest	US President (VA) (Republican Party)	President and Vice President District 10 (Republican)
-CandidateContest	US President (VA) (Republican Party)	President and Vice President District 11 (Republican)
+CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 01 (Libertarian)
+CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 02 (Libertarian)
+CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 03 (Libertarian)
+CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 04 (Libertarian)
+CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 05 (Libertarian)
+CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 06 (Libertarian)
+CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 07 (Libertarian)
+CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 08 (Libertarian)
+CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 09 (Libertarian)
+CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 10 (Libertarian)
+CandidateContest	US President (VA) (Libertarian Party)	President and Vice President District 11 (Libertarian)
 CandidateContest	US President (VA) (Republican Party)	President District 01 (Republican)
 CandidateContest	US President (VA) (Republican Party)	President District 02 (Republican)
 CandidateContest	US President (VA) (Republican Party)	President District 03 (Republican)
@@ -1476,6 +1465,17 @@ CandidateContest	US President (VA) (Republican Party)	President District 08 (Rep
 CandidateContest	US President (VA) (Republican Party)	President District 09 (Republican)
 CandidateContest	US President (VA) (Republican Party)	President District 10 (Republican)
 CandidateContest	US President (VA) (Republican Party)	President District 11 (Republican)
+CandidateContest	US President (VA) (Republican Party)	President and Vice President District 01 (Republican)
+CandidateContest	US President (VA) (Republican Party)	President and Vice President District 02 (Republican)
+CandidateContest	US President (VA) (Republican Party)	President and Vice President District 03 (Republican)
+CandidateContest	US President (VA) (Republican Party)	President and Vice President District 04 (Republican)
+CandidateContest	US President (VA) (Republican Party)	President and Vice President District 05 (Republican)
+CandidateContest	US President (VA) (Republican Party)	President and Vice President District 06 (Republican)
+CandidateContest	US President (VA) (Republican Party)	President and Vice President District 07 (Republican)
+CandidateContest	US President (VA) (Republican Party)	President and Vice President District 08 (Republican)
+CandidateContest	US President (VA) (Republican Party)	President and Vice President District 09 (Republican)
+CandidateContest	US President (VA) (Republican Party)	President and Vice President District 10 (Republican)
+CandidateContest	US President (VA) (Republican Party)	President and Vice President District 11 (Republican)
 CandidateContest	US Senate VA	Member United States Senate
 CandidateContest	US Senate VA	Member United States Senate District 01
 CandidateContest	US Senate VA	Member United States Senate District 02
@@ -2389,23 +2389,23 @@ CandidateContest	VA Treasurer (Green Party)	Treasurer (Green)
 CandidateContest	VA Treasurer (Independent Party)	Treasurer (Independent)
 CandidateContest	VA Treasurer (Libertarian Party)	Treasurer (Libertarian)
 CandidateContest	VA Treasurer (Republican Party)	Treasurer (Republican)
+CountItemType	total	TOTAL
 CountItemType	total	TOTAL_VOTES
 CountItemType	total	Votes
 CountItemType	total	total
-CountItemType	total	TOTAL
-Party	Democratic Party	Democratic
 Party	Democratic Party	DEMOCRAT
-Party	Green Party	Green
+Party	Democratic Party	Democratic
 Party	Green Party	GREEN
+Party	Green Party	Green
 Party	Independent Party	Independent
-Party	Libertarian Party	Libertarian
 Party	Libertarian Party	LIBERTARIAN
+Party	Libertarian Party	Libertarian
 Party	No Affiliation	Write-In
-Party	Republican Party	Republican
 Party	Republican Party	REPUBLICAN
+Party	Republican Party	Republican
 Party	none or unknown	OTHER
 ReportingUnit	Virginia;Accomack County	ACCOMACK COUNTY
-ReportingUnit	Virginia;Accomack County	51001
+ReportingUnit	Virginia;Accomack County	fips51001
 ReportingUnit	Virginia;Accomack County;# Ab - Central Absentee Precinct	ACCOMACK COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Accomack County;## Provisional	ACCOMACK COUNTY;## Provisional
 ReportingUnit	Virginia;Accomack County;101 - Chincoteague	ACCOMACK COUNTY;101 - CHINCOTEAGUE
@@ -2425,7 +2425,7 @@ ReportingUnit	Virginia;Accomack County;802 - Melfa	ACCOMACK COUNTY;802 - MELFA
 ReportingUnit	Virginia;Accomack County;803 - Wachapreague	ACCOMACK COUNTY;803 - WACHAPREAGUE
 ReportingUnit	Virginia;Accomack County;901 - Painter	ACCOMACK COUNTY;901 - PAINTER
 ReportingUnit	Virginia;Albemarle County	ALBEMARLE COUNTY
-ReportingUnit	Virginia;Albemarle County	51003
+ReportingUnit	Virginia;Albemarle County	fips51003
 ReportingUnit	Virginia;Albemarle County;# Ab - Central Absentee Precinct	ALBEMARLE COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Albemarle County;## Provisional	ALBEMARLE COUNTY;## Provisional
 ReportingUnit	Virginia;Albemarle County;101 - Woodbrook	ALBEMARLE COUNTY;101 - WOODBROOK
@@ -2461,7 +2461,6 @@ ReportingUnit	Virginia;Albemarle County;603 - Earlysville	ALBEMARLE COUNTY;603 -
 ReportingUnit	Virginia;Albemarle County;604 - Brownsville	ALBEMARLE COUNTY;604 - BROWNSVILLE
 ReportingUnit	Virginia;Albemarle County;606 - Mechums River	ALBEMARLE COUNTY;606 - MECHUMS RIVER
 ReportingUnit	Virginia;Alexandria City	ALEXANDRIA CITY
-ReportingUnit	Virginia;Alexandria City	51510
 ReportingUnit	Virginia;Alexandria City;# Ab - Central Absentee Precinct	ALEXANDRIA CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Alexandria City;## Provisional	ALEXANDRIA CITY;## Provisional
 ReportingUnit	Virginia;Alexandria City;101 - Ladrey Senior Building	ALEXANDRIA CITY;101 - LADREY SENIOR BUILDING
@@ -2495,8 +2494,9 @@ ReportingUnit	Virginia;Alexandria City;306 - William Ramsay School	ALEXANDRIA CI
 ReportingUnit	Virginia;Alexandria City;307 - South Port	ALEXANDRIA CITY;307 - SOUTH PORT
 ReportingUnit	Virginia;Alexandria City;308 - Cameron Station Community Ctr	ALEXANDRIA CITY;308 - CAMERON STATION COMMUNITY CTR
 ReportingUnit	Virginia;Alexandria City;309 - Olympus Condo	ALEXANDRIA CITY;309 - OLYMPUS CONDO
+ReportingUnit	Virginia;Alexandria city	fips51510
 ReportingUnit	Virginia;Alleghany County	ALLEGHANY COUNTY
-ReportingUnit	Virginia;Alleghany County	51005
+ReportingUnit	Virginia;Alleghany County	fips51005
 ReportingUnit	Virginia;Alleghany County;# Ab - Central Absentee Precinct	ALLEGHANY COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Alleghany County;## Provisional	ALLEGHANY COUNTY;## Provisional
 ReportingUnit	Virginia;Alleghany County;101 - Arritt	ALLEGHANY COUNTY;101 - ARRITT
@@ -2512,7 +2512,7 @@ ReportingUnit	Virginia;Alleghany County;502 - Peters Switch	ALLEGHANY COUNTY;502
 ReportingUnit	Virginia;Alleghany County;601 - District 1	ALLEGHANY COUNTY;601 - DISTRICT 1
 ReportingUnit	Virginia;Alleghany County;701 - District 2	ALLEGHANY COUNTY;701 - DISTRICT 2
 ReportingUnit	Virginia;Amelia County	AMELIA COUNTY
-ReportingUnit	Virginia;Amelia County	51007
+ReportingUnit	Virginia;Amelia County	fips51007
 ReportingUnit	Virginia;Amelia County;# Ab - Central Absentee Precinct	AMELIA COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Amelia County;## Provisional	AMELIA COUNTY;## Provisional
 ReportingUnit	Virginia;Amelia County;101 - Number One	AMELIA COUNTY;101 - NUMBER ONE
@@ -2521,7 +2521,7 @@ ReportingUnit	Virginia;Amelia County;301 - Number Three	AMELIA COUNTY;301 - NUMB
 ReportingUnit	Virginia;Amelia County;401 - Number Four	AMELIA COUNTY;401 - NUMBER FOUR
 ReportingUnit	Virginia;Amelia County;501 - Number Five	AMELIA COUNTY;501 - NUMBER FIVE
 ReportingUnit	Virginia;Amherst County	AMHERST COUNTY
-ReportingUnit	Virginia;Amherst County	51009
+ReportingUnit	Virginia;Amherst County	fips51009
 ReportingUnit	Virginia;Amherst County;# Ab - Central Absentee Precinct	AMHERST COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Amherst County;## Provisional	AMHERST COUNTY;## Provisional
 ReportingUnit	Virginia;Amherst County;101 - Wright Shop	AMHERST COUNTY;101 - WRIGHT SHOP
@@ -2536,7 +2536,7 @@ ReportingUnit	Virginia;Amherst County;401 - Amelon	AMHERST COUNTY;401 - AMELON
 ReportingUnit	Virginia;Amherst County;402 - Lonco	AMHERST COUNTY;402 - LONCO
 ReportingUnit	Virginia;Amherst County;501 - Madison	AMHERST COUNTY;501 - MADISON
 ReportingUnit	Virginia;Appomattox County	APPOMATTOX COUNTY
-ReportingUnit	Virginia;Appomattox County	51011
+ReportingUnit	Virginia;Appomattox County	fips51011
 ReportingUnit	Virginia;Appomattox County;# Ab - Central Absentee Precinct	APPOMATTOX COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Appomattox County;## Provisional	APPOMATTOX COUNTY;## Provisional
 ReportingUnit	Virginia;Appomattox County;101 - Vera	APPOMATTOX COUNTY;101 - VERA
@@ -2549,7 +2549,7 @@ ReportingUnit	Virginia;Appomattox County;401 - Courthouse	APPOMATTOX COUNTY;401 
 ReportingUnit	Virginia;Appomattox County;501 - Oakville	APPOMATTOX COUNTY;501 - OAKVILLE
 ReportingUnit	Virginia;Appomattox County;502 - Agee	APPOMATTOX COUNTY;502 - AGEE
 ReportingUnit	Virginia;Arlington County	ARLINGTON COUNTY
-ReportingUnit	Virginia;Arlington County	51013
+ReportingUnit	Virginia;Arlington County	fips51013
 ReportingUnit	Virginia;Arlington County;# Ab - Central Absentee Precinct	ARLINGTON COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Arlington County;## Provisional	ARLINGTON COUNTY;## Provisional
 ReportingUnit	Virginia;Arlington County;001 - Arlington	ARLINGTON COUNTY;001 - ARLINGTON
@@ -2607,7 +2607,7 @@ ReportingUnit	Virginia;Arlington County;052 - Gunston	ARLINGTON COUNTY;052 - GUN
 ReportingUnit	Virginia;Arlington County;053 - Met Park	ARLINGTON COUNTY;053 - MET PARK
 ReportingUnit	Virginia;Arlington County;054 - Garfield Park	ARLINGTON COUNTY;054 - GARFIELD PARK
 ReportingUnit	Virginia;Augusta County	AUGUSTA COUNTY
-ReportingUnit	Virginia;Augusta County	51015
+ReportingUnit	Virginia;Augusta County	fips51015
 ReportingUnit	Virginia;Augusta County;# Ab - Central Absentee Precinct	AUGUSTA COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Augusta County;## Provisional	AUGUSTA COUNTY;## Provisional
 ReportingUnit	Virginia;Augusta County;101 - Jolivue	AUGUSTA COUNTY;101 - JOLIVUE
@@ -2636,7 +2636,7 @@ ReportingUnit	Virginia;Augusta County;801 - Dooms	AUGUSTA COUNTY;801 - DOOMS
 ReportingUnit	Virginia;Augusta County;802 - Fishersville	AUGUSTA COUNTY;802 - FISHERSVILLE
 ReportingUnit	Virginia;Augusta County;803 - Wilson	AUGUSTA COUNTY;803 - WILSON
 ReportingUnit	Virginia;Bath County	BATH COUNTY
-ReportingUnit	Virginia;Bath County	51017
+ReportingUnit	Virginia;Bath County	fips51017
 ReportingUnit	Virginia;Bath County;# Ab - Central Absentee Precinct	BATH COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Bath County;## Provisional	BATH COUNTY;## Provisional
 ReportingUnit	Virginia;Bath County;101 - Warm Springs	BATH COUNTY;101 - WARM SPRINGS
@@ -2647,7 +2647,7 @@ ReportingUnit	Virginia;Bath County;302 - Burnsville	BATH COUNTY;302 - BURNSVILLE
 ReportingUnit	Virginia;Bath County;401 - Millboro	BATH COUNTY;401 - MILLBORO
 ReportingUnit	Virginia;Bath County;501 - Healing Springs	BATH COUNTY;501 - HEALING SPRINGS
 ReportingUnit	Virginia;Bedford County	BEDFORD COUNTY
-ReportingUnit	Virginia;Bedford County	51019
+ReportingUnit	Virginia;Bedford County	fips51019
 ReportingUnit	Virginia;Bedford County;# Ab - Central Absentee Precinct	BEDFORD COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Bedford County;## Provisional	BEDFORD COUNTY;## Provisional
 ReportingUnit	Virginia;Bedford County;101 - Goodview Elem School	BEDFORD COUNTY;101 - GOODVIEW ELEM SCHOOL
@@ -2684,7 +2684,7 @@ ReportingUnit	Virginia;Bedford County;702 - Liberty High School	BEDFORD COUNTY;7
 ReportingUnit	Virginia;Bedford County;703 - Thaxton Baptist Church #2	BEDFORD COUNTY;703 - THAXTON BAPTIST CHURCH #2
 ReportingUnit	Virginia;Bedford County;704 - Bedford Central Library	BEDFORD COUNTY;704 - BEDFORD CENTRAL LIBRARY
 ReportingUnit	Virginia;Bland County	BLAND COUNTY
-ReportingUnit	Virginia;Bland County	51021
+ReportingUnit	Virginia;Bland County	fips51021
 ReportingUnit	Virginia;Bland County;# Ab - Central Absentee Precinct	BLAND COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Bland County;## Provisional	BLAND COUNTY;## Provisional
 ReportingUnit	Virginia;Bland County;101 - Bastian	BLAND COUNTY;101 - BASTIAN
@@ -2695,7 +2695,7 @@ ReportingUnit	Virginia;Bland County;301 - Hollybrook	BLAND COUNTY;301 - HOLLYBRO
 ReportingUnit	Virginia;Bland County;302 - Mechanicsburg	BLAND COUNTY;302 - MECHANICSBURG
 ReportingUnit	Virginia;Bland County;401 - Rocky Gap	BLAND COUNTY;401 - ROCKY GAP
 ReportingUnit	Virginia;Botetourt County	BOTETOURT COUNTY
-ReportingUnit	Virginia;Botetourt County	51023
+ReportingUnit	Virginia;Botetourt County	fips51023
 ReportingUnit	Virginia;Botetourt County;# Ab - Central Absentee Precinct	BOTETOURT COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Botetourt County;## Provisional	BOTETOURT COUNTY;## Provisional
 ReportingUnit	Virginia;Botetourt County;101 - Daleville	BOTETOURT COUNTY;101 - DALEVILLE
@@ -2709,15 +2709,15 @@ ReportingUnit	Virginia;Botetourt County;406 - Fincastle	BOTETOURT COUNTY;406 - F
 ReportingUnit	Virginia;Botetourt County;501 - Troutville	BOTETOURT COUNTY;501 - TROUTVILLE
 ReportingUnit	Virginia;Botetourt County;502 - Cloverdale	BOTETOURT COUNTY;502 - CLOVERDALE
 ReportingUnit	Virginia;Bristol City	BRISTOL CITY
-ReportingUnit	Virginia;Bristol City	51520
 ReportingUnit	Virginia;Bristol City;# Ab - Central Absentee Precinct	BRISTOL CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Bristol City;## Provisional	BRISTOL CITY;## Provisional
 ReportingUnit	Virginia;Bristol City;001 - First Ward	BRISTOL CITY;001 - FIRST WARD
 ReportingUnit	Virginia;Bristol City;002 - Second Ward	BRISTOL CITY;002 - SECOND WARD
 ReportingUnit	Virginia;Bristol City;003 - Third Ward	BRISTOL CITY;003 - THIRD WARD
 ReportingUnit	Virginia;Bristol City;004 - Fourth Ward	BRISTOL CITY;004 - FOURTH WARD
+ReportingUnit	Virginia;Bristol city	fips51520
 ReportingUnit	Virginia;Brunswick County	BRUNSWICK COUNTY
-ReportingUnit	Virginia;Brunswick County	51025
+ReportingUnit	Virginia;Brunswick County	fips51025
 ReportingUnit	Virginia;Brunswick County;# Ab - Central Absentee Precinct	BRUNSWICK COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Brunswick County;## Provisional	BRUNSWICK COUNTY;## Provisional
 ReportingUnit	Virginia;Brunswick County;101 - Brodnax	BRUNSWICK COUNTY;101 - BRODNAX
@@ -2734,7 +2734,7 @@ ReportingUnit	Virginia;Brunswick County;401 - Sturgeon	BRUNSWICK COUNTY;401 - ST
 ReportingUnit	Virginia;Brunswick County;402 - King'S Store	BRUNSWICK COUNTY;402 - KING'S STORE
 ReportingUnit	Virginia;Brunswick County;501 - Totaro	BRUNSWICK COUNTY;501 - TOTARO
 ReportingUnit	Virginia;Buchanan County	BUCHANAN COUNTY
-ReportingUnit	Virginia;Buchanan County	51027
+ReportingUnit	Virginia;Buchanan County	fips51027
 ReportingUnit	Virginia;Buchanan County;# Ab - Central Absentee Precinct	BUCHANAN COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Buchanan County;## Provisional	BUCHANAN COUNTY;## Provisional
 ReportingUnit	Virginia;Buchanan County;102 - Blackey	BUCHANAN COUNTY;102 - BLACKEY
@@ -2755,7 +2755,7 @@ ReportingUnit	Virginia;Buchanan County;603 - Hurricane	BUCHANAN COUNTY;603 - HUR
 ReportingUnit	Virginia;Buchanan County;701 - Whitewood	BUCHANAN COUNTY;701 - WHITEWOOD
 ReportingUnit	Virginia;Buchanan County;702 - Contrary	BUCHANAN COUNTY;702 - CONTRARY
 ReportingUnit	Virginia;Buckingham County	BUCKINGHAM COUNTY
-ReportingUnit	Virginia;Buckingham County	51029
+ReportingUnit	Virginia;Buckingham County	fips51029
 ReportingUnit	Virginia;Buckingham County;# Ab - Central Absentee Precinct	BUCKINGHAM COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Buckingham County;## Provisional	BUCKINGHAM COUNTY;## Provisional
 ReportingUnit	Virginia;Buckingham County;101 - New Canton	BUCKINGHAM COUNTY;101 - NEW CANTON
@@ -2769,12 +2769,12 @@ ReportingUnit	Virginia;Buckingham County;502 - Glenmore	BUCKINGHAM COUNTY;502 - 
 ReportingUnit	Virginia;Buckingham County;601 - Slate River	BUCKINGHAM COUNTY;601 - SLATE RIVER
 ReportingUnit	Virginia;Buckingham County;701 - Gold Hill	BUCKINGHAM COUNTY;701 - GOLD HILL
 ReportingUnit	Virginia;Buena Vista City	BUENA VISTA CITY
-ReportingUnit	Virginia;Buena Vista City	51530
 ReportingUnit	Virginia;Buena Vista City;## Provisional	BUENA VISTA CITY;## Provisional
 ReportingUnit	Virginia;Buena Vista City;001 - First Ward	BUENA VISTA CITY;001 - FIRST WARD
 ReportingUnit	Virginia;Buena Vista City;002 - Second Ward	BUENA VISTA CITY;002 - SECOND WARD
+ReportingUnit	Virginia;Buena Vista city	fips51530
 ReportingUnit	Virginia;Campbell County	CAMPBELL COUNTY
-ReportingUnit	Virginia;Campbell County	51031
+ReportingUnit	Virginia;Campbell County	fips51031
 ReportingUnit	Virginia;Campbell County;# Ab - Central Absentee Precinct	CAMPBELL COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Campbell County;## Provisional	CAMPBELL COUNTY;## Provisional
 ReportingUnit	Virginia;Campbell County;101 - Brookville	CAMPBELL COUNTY;101 - BROOKVILLE
@@ -2794,7 +2794,7 @@ ReportingUnit	Virginia;Campbell County;701 - Brookneal	CAMPBELL COUNTY;701 - BRO
 ReportingUnit	Virginia;Campbell County;702 - Gladys	CAMPBELL COUNTY;702 - GLADYS
 ReportingUnit	Virginia;Campbell County;703 - Morris Church	CAMPBELL COUNTY;703 - MORRIS CHURCH
 ReportingUnit	Virginia;Caroline County	CAROLINE COUNTY
-ReportingUnit	Virginia;Caroline County	51033
+ReportingUnit	Virginia;Caroline County	fips51033
 ReportingUnit	Virginia;Caroline County;# Ab - Central Absentee Precinct	CAROLINE COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Caroline County;## Provisional	CAROLINE COUNTY;## Provisional
 ReportingUnit	Virginia;Caroline County;101 - Bowling Green	CAROLINE COUNTY;101 - BOWLING GREEN
@@ -2810,7 +2810,7 @@ ReportingUnit	Virginia;Caroline County;502 - Milford	CAROLINE COUNTY;502 - MILFO
 ReportingUnit	Virginia;Caroline County;601 - Chilesburg	CAROLINE COUNTY;601 - CHILESBURG
 ReportingUnit	Virginia;Caroline County;602 - Lake	CAROLINE COUNTY;602 - LAKE
 ReportingUnit	Virginia;Carroll County	CARROLL COUNTY
-ReportingUnit	Virginia;Carroll County	51035
+ReportingUnit	Virginia;Carroll County	fips51035
 ReportingUnit	Virginia;Carroll County;# Ab - Central Absentee Precinct	CARROLL COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Carroll County;## Provisional	CARROLL COUNTY;## Provisional
 ReportingUnit	Virginia;Carroll County;101 - Mt Bethel	CARROLL COUNTY;101 - MT BETHEL
@@ -2833,14 +2833,14 @@ ReportingUnit	Virginia;Carroll County;502 - Gladeville	CARROLL COUNTY;502 - GLAD
 ReportingUnit	Virginia;Carroll County;503 - Woodlawn E	CARROLL COUNTY;503 - WOODLAWN E
 ReportingUnit	Virginia;Carroll County;504 - Laurel	CARROLL COUNTY;504 - LAUREL
 ReportingUnit	Virginia;Charles City County	CHARLES CITY COUNTY
-ReportingUnit	Virginia;Charles City County	51036
+ReportingUnit	Virginia;Charles City County	fips51036
 ReportingUnit	Virginia;Charles City County;# Ab - Central Absentee Precinct	CHARLES CITY COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Charles City County;## Provisional	CHARLES CITY COUNTY;## Provisional
 ReportingUnit	Virginia;Charles City County;101 - Precinct 1-1	CHARLES CITY COUNTY;101 - PRECINCT 1-1
 ReportingUnit	Virginia;Charles City County;201 - Precinct 2-1	CHARLES CITY COUNTY;201 - PRECINCT 2-1
 ReportingUnit	Virginia;Charles City County;301 - Precinct 3-1	CHARLES CITY COUNTY;301 - PRECINCT 3-1
 ReportingUnit	Virginia;Charlotte County	CHARLOTTE COUNTY
-ReportingUnit	Virginia;Charlotte County	51037
+ReportingUnit	Virginia;Charlotte County	fips51037
 ReportingUnit	Virginia;Charlotte County;# Ab - Central Absentee Precinct	CHARLOTTE COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Charlotte County;## Provisional	CHARLOTTE COUNTY;## Provisional
 ReportingUnit	Virginia;Charlotte County;101 - County Seat	CHARLOTTE COUNTY;101 - COUNTY SEAT
@@ -2851,7 +2851,6 @@ ReportingUnit	Virginia;Charlotte County;501 - Cullen/Red House	CHARLOTTE COUNTY;
 ReportingUnit	Virginia;Charlotte County;602 - Phenix	CHARLOTTE COUNTY;602 - PHENIX
 ReportingUnit	Virginia;Charlotte County;702 - Bacon/Saxe	CHARLOTTE COUNTY;702 - BACON/SAXE
 ReportingUnit	Virginia;Charlottesville City	CHARLOTTESVILLE CITY
-ReportingUnit	Virginia;Charlottesville City	51540
 ReportingUnit	Virginia;Charlottesville City;# Ab - Central Absentee Precinct	CHARLOTTESVILLE CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Charlottesville City;## Provisional	CHARLOTTESVILLE CITY;## Provisional
 ReportingUnit	Virginia;Charlottesville City;101 - Key Recreation	CHARLOTTESVILLE CITY;101 - Key Recreation
@@ -2863,8 +2862,8 @@ ReportingUnit	Virginia;Charlottesville City;302 - Johnson	CHARLOTTESVILLE CITY;3
 ReportingUnit	Virginia;Charlottesville City;303 - Buford	CHARLOTTESVILLE CITY;303 - BUFORD
 ReportingUnit	Virginia;Charlottesville City;401 - Venable	CHARLOTTESVILLE CITY;401 - VENABLE
 ReportingUnit	Virginia;Charlottesville City;402 - Alumni Hall	CHARLOTTESVILLE CITY;402 - ALUMNI HALL
+ReportingUnit	Virginia;Charlottesville city	fips51540
 ReportingUnit	Virginia;Chesapeake City	CHESAPEAKE CITY
-ReportingUnit	Virginia;Chesapeake City	51550
 ReportingUnit	Virginia;Chesapeake City;# Ab - Central Absentee Precinct	CHESAPEAKE CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Chesapeake City;## Provisional	CHESAPEAKE CITY;## Provisional
 ReportingUnit	Virginia;Chesapeake City;001 - Great Bridge	CHESAPEAKE CITY;001 - GREAT BRIDGE
@@ -2933,8 +2932,9 @@ ReportingUnit	Virginia;Chesapeake City;062 - Fentress	CHESAPEAKE CITY;062 - FENT
 ReportingUnit	Virginia;Chesapeake City;063 - Poplar Branch	CHESAPEAKE CITY;063 - POPLAR BRANCH
 ReportingUnit	Virginia;Chesapeake City;064 - Deep Creek Ii	CHESAPEAKE CITY;064 - DEEP CREEK II
 ReportingUnit	Virginia;Chesapeake City;065 - Waterway Ii	CHESAPEAKE CITY;065 - WATERWAY II
+ReportingUnit	Virginia;Chesapeake city	fips51550
 ReportingUnit	Virginia;Chesterfield County	CHESTERFIELD COUNTY
-ReportingUnit	Virginia;Chesterfield County	51041
+ReportingUnit	Virginia;Chesterfield County	fips51041
 ReportingUnit	Virginia;Chesterfield County;# Ab - Central Absentee Precinct	CHESTERFIELD COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Chesterfield County;## Provisional	CHESTERFIELD COUNTY;## Provisional
 ReportingUnit	Virginia;Chesterfield County;101 - Bellwood	CHESTERFIELD COUNTY;101 - BELLWOOD
@@ -3018,7 +3018,7 @@ ReportingUnit	Virginia;Chesterfield County;516 - Pocoshock	CHESTERFIELD COUNTY;5
 ReportingUnit	Virginia;Chesterfield County;517 - Roseland	CHESTERFIELD COUNTY;517 - ROSELAND
 ReportingUnit	Virginia;Chesterfield County;518 - Midlothian North	CHESTERFIELD COUNTY;518 - MIDLOTHIAN NORTH
 ReportingUnit	Virginia;Clarke County	CLARKE COUNTY
-ReportingUnit	Virginia;Clarke County	51043
+ReportingUnit	Virginia;Clarke County	fips51043
 ReportingUnit	Virginia;Clarke County;# Ab - Central Absentee Precinct	CLARKE COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Clarke County;## Provisional	CLARKE COUNTY;## Provisional
 ReportingUnit	Virginia;Clarke County;101 - Russell	CLARKE COUNTY;101 - RUSSELL
@@ -3029,7 +3029,6 @@ ReportingUnit	Virginia;Clarke County;401 - White Post	CLARKE COUNTY;401 - WHITE 
 ReportingUnit	Virginia;Clarke County;501 - Buckmarsh	CLARKE COUNTY;501 - BUCKMARSH
 ReportingUnit	Virginia;Clarke County;502 - Blue Ridge	CLARKE COUNTY;502 - BLUE RIDGE
 ReportingUnit	Virginia;Colonial Heights City	COLONIAL HEIGHTS CITY
-ReportingUnit	Virginia;Colonial Heights City	51570
 ReportingUnit	Virginia;Colonial Heights City;# Ab - Central Absentee Precinct	COLONIAL HEIGHTS CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Colonial Heights City;## Provisional	COLONIAL HEIGHTS CITY;## Provisional
 ReportingUnit	Virginia;Colonial Heights City;001 - First	COLONIAL HEIGHTS CITY;001 - FIRST
@@ -3037,8 +3036,8 @@ ReportingUnit	Virginia;Colonial Heights City;002 - Second	COLONIAL HEIGHTS CITY;
 ReportingUnit	Virginia;Colonial Heights City;003 - Third	COLONIAL HEIGHTS CITY;003 - THIRD
 ReportingUnit	Virginia;Colonial Heights City;004 - Fourth	COLONIAL HEIGHTS CITY;004 - FOURTH
 ReportingUnit	Virginia;Colonial Heights City;005 - Fifth	COLONIAL HEIGHTS CITY;005 - FIFTH
+ReportingUnit	Virginia;Colonial Heights city	fips51570
 ReportingUnit	Virginia;Covington City	COVINGTON CITY
-ReportingUnit	Virginia;Covington City	51580
 ReportingUnit	Virginia;Covington City;# Ab - Central Absentee Precinct	COVINGTON CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Covington City;## Provisional	COVINGTON CITY;## Provisional
 ReportingUnit	Virginia;Covington City;101 - Precinct 1-1	COVINGTON CITY;101 - PRECINCT 1-1
@@ -3046,8 +3045,9 @@ ReportingUnit	Virginia;Covington City;201 - Precinct 2-1	COVINGTON CITY;201 - PR
 ReportingUnit	Virginia;Covington City;301 - Precinct 3-1	COVINGTON CITY;301 - PRECINCT 3-1
 ReportingUnit	Virginia;Covington City;401 - Precinct 4-1	COVINGTON CITY;401 - PRECINCT 4-1
 ReportingUnit	Virginia;Covington City;501 - Precinct 5-1	COVINGTON CITY;501 - PRECINCT 5-1
+ReportingUnit	Virginia;Covington city	fips51580
 ReportingUnit	Virginia;Craig County	CRAIG COUNTY
-ReportingUnit	Virginia;Craig County	51045
+ReportingUnit	Virginia;Craig County	fips51045
 ReportingUnit	Virginia;Craig County;# Ab - Central Absentee Precinct	CRAIG COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Craig County;## Provisional	CRAIG COUNTY;## Provisional
 ReportingUnit	Virginia;Craig County;101 - Court House	CRAIG COUNTY;101 - COURT HOUSE
@@ -3059,7 +3059,7 @@ ReportingUnit	Virginia;Craig County;402 - Paint Bank	CRAIG COUNTY;402 - PAINT BA
 ReportingUnit	Virginia;Craig County;403 - Craig Springs	CRAIG COUNTY;403 - CRAIG SPRINGS
 ReportingUnit	Virginia;Craig County;501 - Craig City	CRAIG COUNTY;501 - CRAIG CITY
 ReportingUnit	Virginia;Culpeper County	CULPEPER COUNTY
-ReportingUnit	Virginia;Culpeper County	51047
+ReportingUnit	Virginia;Culpeper County	fips51047
 ReportingUnit	Virginia;Culpeper County;# Ab - Central Absentee Precinct	CULPEPER COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Culpeper County;## Provisional	CULPEPER COUNTY;## Provisional
 ReportingUnit	Virginia;Culpeper County;101 - West Fairfax	CULPEPER COUNTY;101 - WEST FAIRFAX
@@ -3078,7 +3078,7 @@ ReportingUnit	Virginia;Culpeper County;702 - Brandy Station	CULPEPER COUNTY;702 
 ReportingUnit	Virginia;Culpeper County;703 - Lignum	CULPEPER COUNTY;703 - LIGNUM
 ReportingUnit	Virginia;Culpeper County;704 - Richardsville	CULPEPER COUNTY;704 - RICHARDSVILLE
 ReportingUnit	Virginia;Cumberland County	CUMBERLAND COUNTY
-ReportingUnit	Virginia;Cumberland County	51049
+ReportingUnit	Virginia;Cumberland County	fips51049
 ReportingUnit	Virginia;Cumberland County;# Ab - Central Absentee Precinct	CUMBERLAND COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Cumberland County;## Provisional	CUMBERLAND COUNTY;## Provisional
 ReportingUnit	Virginia;Cumberland County;101 - Precinct 1	CUMBERLAND COUNTY;101 - PRECINCT 1
@@ -3087,7 +3087,6 @@ ReportingUnit	Virginia;Cumberland County;301 - Precinct 3	CUMBERLAND COUNTY;301 
 ReportingUnit	Virginia;Cumberland County;401 - Precinct 4	CUMBERLAND COUNTY;401 - PRECINCT 4
 ReportingUnit	Virginia;Cumberland County;501 - Precinct 5	CUMBERLAND COUNTY;501 - PRECINCT 5
 ReportingUnit	Virginia;Danville City	DANVILLE CITY
-ReportingUnit	Virginia;Danville City	51590
 ReportingUnit	Virginia;Danville City;# Ab - Central Absentee Precinct	DANVILLE CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Danville City;## Provisional	DANVILLE CITY;## Provisional
 ReportingUnit	Virginia;Danville City;001 - Ward One	DANVILLE CITY;001 - WARD ONE
@@ -3106,8 +3105,9 @@ ReportingUnit	Virginia;Danville City;014 - Ward Fourteen	DANVILLE CITY;014 - WAR
 ReportingUnit	Virginia;Danville City;015 - Ward Fifteen	DANVILLE CITY;015 - WARD FIFTEEN
 ReportingUnit	Virginia;Danville City;016 - Ward Sixteen	DANVILLE CITY;016 - WARD SIXTEEN
 ReportingUnit	Virginia;Danville City;017 - Ward Seventeen	DANVILLE CITY;017 - WARD SEVENTEEN
+ReportingUnit	Virginia;Danville city	fips51590
 ReportingUnit	Virginia;Dickenson County	DICKENSON COUNTY
-ReportingUnit	Virginia;Dickenson County	51051
+ReportingUnit	Virginia;Dickenson County	fips51051
 ReportingUnit	Virginia;Dickenson County;# Ab - Central Absentee Precinct	DICKENSON COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Dickenson County;## Provisional	DICKENSON COUNTY;## Provisional
 ReportingUnit	Virginia;Dickenson County;101 - South Clintwood	DICKENSON COUNTY;101 - SOUTH CLINTWOOD
@@ -3121,7 +3121,7 @@ ReportingUnit	Virginia;Dickenson County;401 - Haysi-Colley	DICKENSON COUNTY;401 
 ReportingUnit	Virginia;Dickenson County;501 - Tarpon	DICKENSON COUNTY;501 - TARPON
 ReportingUnit	Virginia;Dickenson County;502 - North Clintwood	DICKENSON COUNTY;502 - NORTH CLINTWOOD
 ReportingUnit	Virginia;Dinwiddie County	DINWIDDIE COUNTY
-ReportingUnit	Virginia;Dinwiddie County	51053
+ReportingUnit	Virginia;Dinwiddie County	fips51053
 ReportingUnit	Virginia;Dinwiddie County;# Ab - Central Absentee Precinct	DINWIDDIE COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Dinwiddie County;## Provisional	DINWIDDIE COUNTY;## Provisional
 ReportingUnit	Virginia;Dinwiddie County;101 - White Oak	DINWIDDIE COUNTY;101 - WHITE OAK
@@ -3138,7 +3138,6 @@ ReportingUnit	Virginia;Dinwiddie County;403 - Cherry Hill	DINWIDDIE COUNTY;403 -
 ReportingUnit	Virginia;Dinwiddie County;501 - Edgehill	DINWIDDIE COUNTY;501 - EDGEHILL
 ReportingUnit	Virginia;Dinwiddie County;502 - Chesdin	DINWIDDIE COUNTY;502 - CHESDIN
 ReportingUnit	Virginia;Emporia City	EMPORIA CITY
-ReportingUnit	Virginia;Emporia City	51595
 ReportingUnit	Virginia;Emporia City;# Ab - Central Absentee Precinct	EMPORIA CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Emporia City;## Provisional	EMPORIA CITY;## Provisional
 ReportingUnit	Virginia;Emporia City;101 - Precinct 1-1	EMPORIA CITY;101 - PRECINCT 1-1
@@ -3148,8 +3147,9 @@ ReportingUnit	Virginia;Emporia City;401 - Precinct 4-1	EMPORIA CITY;401 - PRECIN
 ReportingUnit	Virginia;Emporia City;501 - Precinct 5-1	EMPORIA CITY;501 - PRECINCT 5-1
 ReportingUnit	Virginia;Emporia City;601 - District 6	EMPORIA CITY;601 - DISTRICT 6
 ReportingUnit	Virginia;Emporia City;701 - District 7	EMPORIA CITY;701 - DISTRICT 7
+ReportingUnit	Virginia;Emporia city	fips51595
 ReportingUnit	Virginia;Essex County	ESSEX COUNTY
-ReportingUnit	Virginia;Essex County	51057
+ReportingUnit	Virginia;Essex County	fips51057
 ReportingUnit	Virginia;Essex County;# Ab - Central Absentee Precinct	ESSEX COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Essex County;## Provisional	ESSEX COUNTY;## Provisional
 ReportingUnit	Virginia;Essex County;101 - Greater Tappahannock	ESSEX COUNTY;101 - GREATER TAPPAHANNOCK
@@ -3157,7 +3157,6 @@ ReportingUnit	Virginia;Essex County;201 - North	ESSEX COUNTY;201 - NORTH
 ReportingUnit	Virginia;Essex County;301 - South	ESSEX COUNTY;301 - SOUTH
 ReportingUnit	Virginia;Essex County;401 - Central	ESSEX COUNTY;401 - CENTRAL
 ReportingUnit	Virginia;Fairfax City	FAIRFAX CITY
-ReportingUnit	Virginia;Fairfax City	51600
 ReportingUnit	Virginia;Fairfax City;# Ab - Central Absentee Precinct	FAIRFAX CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Fairfax City;## Provisional	FAIRFAX CITY;## Provisional
 ReportingUnit	Virginia;Fairfax City;001 - One	FAIRFAX CITY;001 - ONE
@@ -3167,7 +3166,7 @@ ReportingUnit	Virginia;Fairfax City;004 - Four	FAIRFAX CITY;004 - FOUR
 ReportingUnit	Virginia;Fairfax City;005 - Five	FAIRFAX CITY;005 - FIVE
 ReportingUnit	Virginia;Fairfax City;006 - Six	FAIRFAX CITY;006 - SIX
 ReportingUnit	Virginia;Fairfax County	FAIRFAX COUNTY
-ReportingUnit	Virginia;Fairfax County	51059
+ReportingUnit	Virginia;Fairfax County	fips51059
 ReportingUnit	Virginia;Fairfax County;# Ab - Central Absentee Precinct	FAIRFAX COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Fairfax County;## Provisional	FAIRFAX COUNTY;## Provisional
 ReportingUnit	Virginia;Fairfax County;104 - Chapel	FAIRFAX COUNTY;104 - CHAPEL
@@ -3416,15 +3415,16 @@ ReportingUnit	Virginia;Fairfax County;930 - Lees Corner	FAIRFAX COUNTY;930 - LEE
 ReportingUnit	Virginia;Fairfax County;931 - Carson	FAIRFAX COUNTY;931 - CARSON
 ReportingUnit	Virginia;Fairfax County;932 - Stone South	FAIRFAX COUNTY;932 - STONE SOUTH
 ReportingUnit	Virginia;Fairfax County;933 - Compton	FAIRFAX COUNTY;933 - COMPTON
+ReportingUnit	Virginia;Fairfax city	fips51600
 ReportingUnit	Virginia;Falls Church City	FALLS CHURCH CITY
-ReportingUnit	Virginia;Falls Church City	51610
 ReportingUnit	Virginia;Falls Church City;# Ab - Central Absentee Precinct	FALLS CHURCH CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Falls Church City;## Provisional	FALLS CHURCH CITY;## Provisional
 ReportingUnit	Virginia;Falls Church City;001 - First Ward	FALLS CHURCH CITY;001 - FIRST WARD
 ReportingUnit	Virginia;Falls Church City;002 - Second Ward	FALLS CHURCH CITY;002 - SECOND WARD
 ReportingUnit	Virginia;Falls Church City;003 - Third Ward	FALLS CHURCH CITY;003 - THIRD WARD
+ReportingUnit	Virginia;Falls Church city	fips51610
 ReportingUnit	Virginia;Fauquier County	FAUQUIER COUNTY
-ReportingUnit	Virginia;Fauquier County	51061
+ReportingUnit	Virginia;Fauquier County	fips51061
 ReportingUnit	Virginia;Fauquier County;# Ab - Central Absentee Precinct	FAUQUIER COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Fauquier County;## Provisional	FAUQUIER COUNTY;## Provisional
 ReportingUnit	Virginia;Fauquier County;101 - Kettle Run	FAUQUIER COUNTY;101 - KETTLE RUN
@@ -3448,7 +3448,7 @@ ReportingUnit	Virginia;Fauquier County;502 - New Baltimore	FAUQUIER COUNTY;502 -
 ReportingUnit	Virginia;Fauquier County;503 - Broad Run	FAUQUIER COUNTY;503 - BROAD RUN
 ReportingUnit	Virginia;Fauquier County;504 - Vint Hill	FAUQUIER COUNTY;504 - VINT HILL
 ReportingUnit	Virginia;Floyd County	FLOYD COUNTY
-ReportingUnit	Virginia;Floyd County	51063
+ReportingUnit	Virginia;Floyd County	fips51063
 ReportingUnit	Virginia;Floyd County;# Ab - Central Absentee Precinct	FLOYD COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Floyd County;## Provisional	FLOYD COUNTY;## Provisional
 ReportingUnit	Virginia;Floyd County;101 - Locust Grove	FLOYD COUNTY;101 - LOCUST GROVE
@@ -3457,7 +3457,7 @@ ReportingUnit	Virginia;Floyd County;301 - Courthouse	FLOYD COUNTY;301 - COURTHOU
 ReportingUnit	Virginia;Floyd County;401 - Burks Fork	FLOYD COUNTY;401 - BURKS FORK
 ReportingUnit	Virginia;Floyd County;501 - Indian Valley	FLOYD COUNTY;501 - INDIAN VALLEY
 ReportingUnit	Virginia;Fluvanna County	FLUVANNA COUNTY
-ReportingUnit	Virginia;Fluvanna County	51065
+ReportingUnit	Virginia;Fluvanna County	fips51065
 ReportingUnit	Virginia;Fluvanna County;# Ab - Central Absentee Precinct	FLUVANNA COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Fluvanna County;## Provisional	FLUVANNA COUNTY;## Provisional
 ReportingUnit	Virginia;Fluvanna County;101 - Palmyra	FLUVANNA COUNTY;101 - PALMYRA
@@ -3466,7 +3466,6 @@ ReportingUnit	Virginia;Fluvanna County;301 - Fork Union	FLUVANNA COUNTY;301 - FO
 ReportingUnit	Virginia;Fluvanna County;401 - Cunningham	FLUVANNA COUNTY;401 - CUNNINGHAM
 ReportingUnit	Virginia;Fluvanna County;501 - Rivanna	FLUVANNA COUNTY;501 - RIVANNA
 ReportingUnit	Virginia;Franklin City	FRANKLIN CITY
-ReportingUnit	Virginia;Franklin City	51620
 ReportingUnit	Virginia;Franklin City;# Ab - Central Absentee Precinct	FRANKLIN CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Franklin City;## Provisional	FRANKLIN CITY;## Provisional
 ReportingUnit	Virginia;Franklin City;101 - Precinct 1-1	FRANKLIN CITY;101 - PRECINCT 1-1
@@ -3476,7 +3475,7 @@ ReportingUnit	Virginia;Franklin City;401 - Precinct 4-1	FRANKLIN CITY;401 - PREC
 ReportingUnit	Virginia;Franklin City;501 - Precinct 5-1	FRANKLIN CITY;501 - PRECINCT 5-1
 ReportingUnit	Virginia;Franklin City;601 - Precinct 6-1	FRANKLIN CITY;601 - PRECINCT 6-1
 ReportingUnit	Virginia;Franklin County	FRANKLIN COUNTY
-ReportingUnit	Virginia;Franklin County	51067
+ReportingUnit	Virginia;Franklin County	fips51067
 ReportingUnit	Virginia;Franklin County;# Ab - Central Absentee Precinct	FRANKLIN COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Franklin County;## Provisional	FRANKLIN COUNTY;## Provisional
 ReportingUnit	Virginia;Franklin County;102 - Burnt Chimney	FRANKLIN COUNTY;102 - BURNT CHIMNEY
@@ -3502,8 +3501,9 @@ ReportingUnit	Virginia;Franklin County;603 - Coopers Cove	FRANKLIN COUNTY;603 - 
 ReportingUnit	Virginia;Franklin County;701 - Rocky Mount East	FRANKLIN COUNTY;701 - ROCKY MOUNT EAST
 ReportingUnit	Virginia;Franklin County;702 - Rocky Mount West	FRANKLIN COUNTY;702 - ROCKY MOUNT WEST
 ReportingUnit	Virginia;Franklin County;703 - Rocky Mount South	FRANKLIN COUNTY;703 - ROCKY MOUNT SOUTH
+ReportingUnit	Virginia;Franklin city	fips51620
 ReportingUnit	Virginia;Frederick County	FREDERICK COUNTY
-ReportingUnit	Virginia;Frederick County	51069
+ReportingUnit	Virginia;Frederick County	fips51069
 ReportingUnit	Virginia;Frederick County;# Ab - Central Absentee Precinct	FREDERICK COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Frederick County;## Provisional	FREDERICK COUNTY;## Provisional
 ReportingUnit	Virginia;Frederick County;101 - Russells	FREDERICK COUNTY;101 - RUSSELLS
@@ -3528,7 +3528,6 @@ ReportingUnit	Virginia;Frederick County;601 - Millbrook	FREDERICK COUNTY;601 - M
 ReportingUnit	Virginia;Frederick County;602 - Ash Hollow	FREDERICK COUNTY;602 - ASH HOLLOW
 ReportingUnit	Virginia;Frederick County;603 - Greenwood	FREDERICK COUNTY;603 - GREENWOOD
 ReportingUnit	Virginia;Fredericksburg City	FREDERICKSBURG CITY
-ReportingUnit	Virginia;Fredericksburg City	51630
 ReportingUnit	Virginia;Fredericksburg City;# Ab - Central Absentee Precinct	FREDERICKSBURG CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Fredericksburg City;## Provisional	FREDERICKSBURG CITY;## Provisional
 ReportingUnit	Virginia;Fredericksburg City;101 - Precinct 1 - District One	FREDERICKSBURG CITY;101 - PRECINCT 1 - DISTRICT ONE
@@ -3536,15 +3535,16 @@ ReportingUnit	Virginia;Fredericksburg City;201 - Precinct 1 - District Two	FREDE
 ReportingUnit	Virginia;Fredericksburg City;301 - Precinct 1 - District Three	FREDERICKSBURG CITY;301 - PRECINCT 1 - DISTRICT THREE
 ReportingUnit	Virginia;Fredericksburg City;401 - Precinct 1 - District Four	FREDERICKSBURG CITY;401 - PRECINCT 1 - DISTRICT FOUR
 ReportingUnit	Virginia;Fredericksburg City;402 - Precinct 2 - District Four	FREDERICKSBURG CITY;402 - PRECINCT 2 - DISTRICT FOUR
+ReportingUnit	Virginia;Fredericksburg city	fips51630
 ReportingUnit	Virginia;Galax City	GALAX CITY
-ReportingUnit	Virginia;Galax City	51640
 ReportingUnit	Virginia;Galax City;# Ab - Central Absentee Precinct	GALAX CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Galax City;## Provisional	GALAX CITY;## Provisional
 ReportingUnit	Virginia;Galax City;001 - East	GALAX CITY;001 - EAST
 ReportingUnit	Virginia;Galax City;002 - North	GALAX CITY;002 - NORTH
 ReportingUnit	Virginia;Galax City;003 - South	GALAX CITY;003 - SOUTH
+ReportingUnit	Virginia;Galax city	fips51640
 ReportingUnit	Virginia;Giles County	GILES COUNTY
-ReportingUnit	Virginia;Giles County	51071
+ReportingUnit	Virginia;Giles County	fips51071
 ReportingUnit	Virginia;Giles County;# Ab - Central Absentee Precinct	GILES COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Giles County;## Provisional	GILES COUNTY;## Provisional
 ReportingUnit	Virginia;Giles County;101 - Glen Lyn	GILES COUNTY;101 - GLEN LYN
@@ -3557,7 +3557,7 @@ ReportingUnit	Virginia;Giles County;301 - Eggleston	GILES COUNTY;301 - EGGLESTON
 ReportingUnit	Virginia;Giles County;302 - Pembroke	GILES COUNTY;302 - PEMBROKE
 ReportingUnit	Virginia;Giles County;303 - Newport	GILES COUNTY;303 - NEWPORT
 ReportingUnit	Virginia;Gloucester County	GLOUCESTER COUNTY
-ReportingUnit	Virginia;Gloucester County	51073
+ReportingUnit	Virginia;Gloucester County	fips51073
 ReportingUnit	Virginia;Gloucester County;# Ab - Central Absentee Precinct	GLOUCESTER COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Gloucester County;## Provisional	GLOUCESTER COUNTY;## Provisional
 ReportingUnit	Virginia;Gloucester County;101 - Harcum	GLOUCESTER COUNTY;101 - HARCUM
@@ -3572,7 +3572,7 @@ ReportingUnit	Virginia;Gloucester County;402 - Sarahs Creek	GLOUCESTER COUNTY;40
 ReportingUnit	Virginia;Gloucester County;501 - Achilles	GLOUCESTER COUNTY;501 - ACHILLES
 ReportingUnit	Virginia;Gloucester County;502 - Walker	GLOUCESTER COUNTY;502 - WALKER
 ReportingUnit	Virginia;Goochland County	GOOCHLAND COUNTY
-ReportingUnit	Virginia;Goochland County	51075
+ReportingUnit	Virginia;Goochland County	fips51075
 ReportingUnit	Virginia;Goochland County;# Ab - Central Absentee Precinct	GOOCHLAND COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Goochland County;## Provisional	GOOCHLAND COUNTY;## Provisional
 ReportingUnit	Virginia;Goochland County;101 - Fife	GOOCHLAND COUNTY;101 - FIFE
@@ -3586,7 +3586,7 @@ ReportingUnit	Virginia;Goochland County;402 - Centerville	GOOCHLAND COUNTY;402 -
 ReportingUnit	Virginia;Goochland County;501 - Manakin	GOOCHLAND COUNTY;501 - MANAKIN
 ReportingUnit	Virginia;Goochland County;502 - Blair Road	GOOCHLAND COUNTY;502 - BLAIR ROAD
 ReportingUnit	Virginia;Grayson County	GRAYSON COUNTY
-ReportingUnit	Virginia;Grayson County	51077
+ReportingUnit	Virginia;Grayson County	fips51077
 ReportingUnit	Virginia;Grayson County;# Ab - Central Absentee Precinct	GRAYSON COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Grayson County;## Provisional	GRAYSON COUNTY;## Provisional
 ReportingUnit	Virginia;Grayson County;101 - Bridle Creek	GRAYSON COUNTY;101 - BRIDLE CREEK
@@ -3605,7 +3605,7 @@ ReportingUnit	Virginia;Grayson County;401 - Fries	GRAYSON COUNTY;401 - FRIES
 ReportingUnit	Virginia;Grayson County;402 - Providence	GRAYSON COUNTY;402 - PROVIDENCE
 ReportingUnit	Virginia;Grayson County;403 - Oldtown	GRAYSON COUNTY;403 - OLDTOWN
 ReportingUnit	Virginia;Greene County	GREENE COUNTY
-ReportingUnit	Virginia;Greene County	51079
+ReportingUnit	Virginia;Greene County	fips51079
 ReportingUnit	Virginia;Greene County;# Ab - Central Absentee Precinct	GREENE COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Greene County;## Provisional	GREENE COUNTY;## Provisional
 ReportingUnit	Virginia;Greene County;101 - Dyke	GREENE COUNTY;101 - DYKE
@@ -3614,7 +3614,7 @@ ReportingUnit	Virginia;Greene County;201 - Ruckersville	GREENE COUNTY;201 - RUCK
 ReportingUnit	Virginia;Greene County;301 - Stanardsville	GREENE COUNTY;301 - STANARDSVILLE
 ReportingUnit	Virginia;Greene County;401 - Midway	GREENE COUNTY;401 - MIDWAY
 ReportingUnit	Virginia;Greensville County	GREENSVILLE COUNTY
-ReportingUnit	Virginia;Greensville County	51081
+ReportingUnit	Virginia;Greensville County	fips51081
 ReportingUnit	Virginia;Greensville County;## Provisional	GREENSVILLE COUNTY;## Provisional
 ReportingUnit	Virginia;Greensville County;101 - Precinct 1-A	GREENSVILLE COUNTY;101 - PRECINCT 1-A
 ReportingUnit	Virginia;Greensville County;102 - Precinct 1-B	GREENSVILLE COUNTY;102 - PRECINCT 1-B
@@ -3626,7 +3626,7 @@ ReportingUnit	Virginia;Greensville County;401 - Precinct 4-A	GREENSVILLE COUNTY;
 ReportingUnit	Virginia;Greensville County;402 - Precinct 4-B	GREENSVILLE COUNTY;402 - PRECINCT 4-B
 ReportingUnit	Virginia;Greensville County;403 - Precinct 4-C	GREENSVILLE COUNTY;403 - PRECINCT 4-C
 ReportingUnit	Virginia;Halifax County	HALIFAX COUNTY
-ReportingUnit	Virginia;Halifax County	51083
+ReportingUnit	Virginia;Halifax County	fips51083
 ReportingUnit	Virginia;Halifax County;# Ab - Central Absentee Precinct	HALIFAX COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Halifax County;## Provisional	HALIFAX COUNTY;## Provisional
 ReportingUnit	Virginia;Halifax County;101 - Childrey	HALIFAX COUNTY;101 - CHILDREY
@@ -3655,7 +3655,6 @@ ReportingUnit	Virginia;Halifax County;Ward B - 1160B	HALIFAX COUNTY;WARD B - 116
 ReportingUnit	Virginia;Halifax County;Ward C - 1160C	HALIFAX COUNTY;WARD C - 1160C
 ReportingUnit	Virginia;Halifax County;Ward D - 1160D	HALIFAX COUNTY;WARD D - 1160D
 ReportingUnit	Virginia;Hampton City	HAMPTON CITY
-ReportingUnit	Virginia;Hampton City	51650
 ReportingUnit	Virginia;Hampton City;# Ab - Central Absentee Precinct	HAMPTON CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Hampton City;## Provisional	HAMPTON CITY;## Provisional
 ReportingUnit	Virginia;Hampton City;101 - Aberdeen	HAMPTON CITY;101 - ABERDEEN
@@ -3688,8 +3687,9 @@ ReportingUnit	Virginia;Hampton City;214 - Tucker Capps	HAMPTON CITY;214 - TUCKER
 ReportingUnit	Virginia;Hampton City;215 - Tyler	HAMPTON CITY;215 - TYLER
 ReportingUnit	Virginia;Hampton City;216 - Sandy Bottom	HAMPTON CITY;216 - SANDY BOTTOM
 ReportingUnit	Virginia;Hampton City;217 - Syms	HAMPTON CITY;217 - SYMS
+ReportingUnit	Virginia;Hampton city	fips51650
 ReportingUnit	Virginia;Hanover County	HANOVER COUNTY
-ReportingUnit	Virginia;Hanover County	51085
+ReportingUnit	Virginia;Hanover County	fips51085
 ReportingUnit	Virginia;Hanover County;# Ab - Central Absentee Precinct	HANOVER COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Hanover County;## Provisional	HANOVER COUNTY;## Provisional
 ReportingUnit	Virginia;Hanover County;101 - Ashland	HANOVER COUNTY;101 - ASHLAND
@@ -3729,7 +3729,6 @@ ReportingUnit	Virginia;Hanover County;703 - Rockville	HANOVER COUNTY;703 - ROCKV
 ReportingUnit	Virginia;Hanover County;704 - Elmont	HANOVER COUNTY;704 - ELMONT
 ReportingUnit	Virginia;Hanover County;705 - South Anna	HANOVER COUNTY;705 - SOUTH ANNA
 ReportingUnit	Virginia;Harrisonburg City	HARRISONBURG CITY
-ReportingUnit	Virginia;Harrisonburg City	51660
 ReportingUnit	Virginia;Harrisonburg City;# Ab - Central Absentee Precinct	HARRISONBURG CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Harrisonburg City;## Provisional	HARRISONBURG CITY;## Provisional
 ReportingUnit	Virginia;Harrisonburg City;101 - Northeast	HARRISONBURG CITY;101 - NORTHEAST
@@ -3740,8 +3739,9 @@ ReportingUnit	Virginia;Harrisonburg City;105 - South East Central	HARRISONBURG C
 ReportingUnit	Virginia;Harrisonburg City;201 - Northwest	HARRISONBURG CITY;201 - NORTHWEST
 ReportingUnit	Virginia;Harrisonburg City;202 - Southwest	HARRISONBURG CITY;202 - SOUTHWEST
 ReportingUnit	Virginia;Harrisonburg City;203 - West	HARRISONBURG CITY;203 - WEST
+ReportingUnit	Virginia;Harrisonburg city	fips51660
 ReportingUnit	Virginia;Henrico County	HENRICO COUNTY
-ReportingUnit	Virginia;Henrico County	51087
+ReportingUnit	Virginia;Henrico County	fips51087
 ReportingUnit	Virginia;Henrico County;# Ab - Central Absentee Precinct	HENRICO COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Henrico County;## Provisional	HENRICO COUNTY;## Provisional
 ReportingUnit	Virginia;Henrico County;101 - Coalpit	HENRICO COUNTY;101 - COALPIT
@@ -3839,7 +3839,7 @@ ReportingUnit	Virginia;Henrico County;516 - Sullivans	HENRICO COUNTY;516 - SULLI
 ReportingUnit	Virginia;Henrico County;517 - Town Hall	HENRICO COUNTY;517 - TOWN HALL
 ReportingUnit	Virginia;Henrico County;518 - Whitlocks	HENRICO COUNTY;518 - WHITLOCKS
 ReportingUnit	Virginia;Henry County	HENRY COUNTY
-ReportingUnit	Virginia;Henry County	51089
+ReportingUnit	Virginia;Henry County	fips51089
 ReportingUnit	Virginia;Henry County;# Ab - Central Absentee Precinct	HENRY COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Henry County;## Provisional	HENRY COUNTY;## Provisional
 ReportingUnit	Virginia;Henry County;101 - Bassett Number Two	HENRY COUNTY;101 - BASSETT NUMBER TWO
@@ -3867,7 +3867,7 @@ ReportingUnit	Virginia;Henry County;602 - Hillcrest	HENRY COUNTY;602 - HILLCREST
 ReportingUnit	Virginia;Henry County;603 - Ridgeway #1	HENRY COUNTY;603 - RIDGEWAY #1
 ReportingUnit	Virginia;Henry County;604 - Ridgeway #2	HENRY COUNTY;604 - RIDGEWAY #2
 ReportingUnit	Virginia;Highland County	HIGHLAND COUNTY
-ReportingUnit	Virginia;Highland County	51091
+ReportingUnit	Virginia;Highland County	fips51091
 ReportingUnit	Virginia;Highland County;## Provisional	HIGHLAND COUNTY;## Provisional
 ReportingUnit	Virginia;Highland County;001 - Monterey	HIGHLAND COUNTY;001 - MONTEREY
 ReportingUnit	Virginia;Highland County;003 - Wilsons Mill	HIGHLAND COUNTY;003 - WILSONS MILL
@@ -3876,7 +3876,6 @@ ReportingUnit	Virginia;Highland County;007 - Mill Gap	HIGHLAND COUNTY;007 - MILL
 ReportingUnit	Virginia;Highland County;008 - Mcdowell	HIGHLAND COUNTY;008 - MCDOWELL
 ReportingUnit	Virginia;Highland County;010 - Headwaters	HIGHLAND COUNTY;010 - HEADWATERS
 ReportingUnit	Virginia;Hopewell City	HOPEWELL CITY
-ReportingUnit	Virginia;Hopewell City	51670
 ReportingUnit	Virginia;Hopewell City;# Ab - Central Absentee Precinct	HOPEWELL CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Hopewell City;## Provisional	HOPEWELL CITY;## Provisional
 ReportingUnit	Virginia;Hopewell City;101 - Ward One	HOPEWELL CITY;101 - WARD ONE
@@ -3886,8 +3885,8 @@ ReportingUnit	Virginia;Hopewell City;401 - Ward Four	HOPEWELL CITY;401 - WARD FO
 ReportingUnit	Virginia;Hopewell City;501 - Ward Five	HOPEWELL CITY;501 - WARD FIVE
 ReportingUnit	Virginia;Hopewell City;601 - Ward Six	HOPEWELL CITY;601 - WARD SIX
 ReportingUnit	Virginia;Hopewell City;701 - Ward Seven	HOPEWELL CITY;701 - WARD SEVEN
+ReportingUnit	Virginia;Hopewell city	fips51670
 ReportingUnit	Virginia;Isle Of Wight County	ISLE OF WIGHT COUNTY
-ReportingUnit	Virginia;Isle Of Wight County	51093
 ReportingUnit	Virginia;Isle Of Wight County;# Ab - Central Absentee Precinct	ISLE OF WIGHT COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Isle Of Wight County;## Provisional	ISLE OF WIGHT COUNTY;## Provisional
 ReportingUnit	Virginia;Isle Of Wight County;101 - Smithfield	ISLE OF WIGHT COUNTY;101 - SMITHFIELD
@@ -3904,8 +3903,9 @@ ReportingUnit	Virginia;Isle Of Wight County;502 - Camps Mill	ISLE OF WIGHT COUNT
 ReportingUnit	Virginia;Isle Of Wight County;503 - Carrsville	ISLE OF WIGHT COUNTY;503 - CARRSVILLE
 ReportingUnit	Virginia;Isle Of Wight County;504 - Zuni	ISLE OF WIGHT COUNTY;504 - ZUNI
 ReportingUnit	Virginia;Isle Of Wight County;505 - Raynor	ISLE OF WIGHT COUNTY;505 - RAYNOR
+ReportingUnit	Virginia;Isle of Wight County	fips51093
 ReportingUnit	Virginia;James City County	JAMES CITY COUNTY
-ReportingUnit	Virginia;James City County	51095
+ReportingUnit	Virginia;James City County	fips51095
 ReportingUnit	Virginia;James City County;# Ab - Central Absentee Precinct	JAMES CITY COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;James City County;## Provisional	JAMES CITY COUNTY;## Provisional
 ReportingUnit	Virginia;James City County;101 - Berkeley A	JAMES CITY COUNTY;101 - BERKELEY A
@@ -3936,7 +3936,7 @@ ReportingUnit	Virginia;King & Queen County;301 - Shacklefords	KING & QUEEN COUNT
 ReportingUnit	Virginia;King & Queen County;401 - Courthouse	KING & QUEEN COUNTY;401 - COURTHOUSE
 ReportingUnit	Virginia;King & Queen County;501 - Oldmill	KING & QUEEN COUNTY;501 - OLDMILL
 ReportingUnit	Virginia;King George County	KING GEORGE COUNTY
-ReportingUnit	Virginia;King George County	51099
+ReportingUnit	Virginia;King George County	fips51099
 ReportingUnit	Virginia;King George County;# Ab - Central Absentee Precinct	KING GEORGE COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;King George County;## Provisional	KING GEORGE COUNTY;## Provisional
 ReportingUnit	Virginia;King George County;101 - Courthouse	KING GEORGE COUNTY;101 - COURTHOUSE
@@ -3945,7 +3945,7 @@ ReportingUnit	Virginia;King George County;201 - Monroe	KING GEORGE COUNTY;201 - 
 ReportingUnit	Virginia;King George County;301 - Dahlgren	KING GEORGE COUNTY;301 - DAHLGREN
 ReportingUnit	Virginia;King George County;401 - Shiloh	KING GEORGE COUNTY;401 - SHILOH
 ReportingUnit	Virginia;King William County	KING WILLIAM COUNTY
-ReportingUnit	Virginia;King William County	51101
+ReportingUnit	Virginia;King William County	fips51101
 ReportingUnit	Virginia;King William County;# Ab - Central Absentee Precinct	KING WILLIAM COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;King William County;## Provisional	KING WILLIAM COUNTY;## Provisional
 ReportingUnit	Virginia;King William County;101 - West Point	KING WILLIAM COUNTY;101 - WEST POINT
@@ -3954,8 +3954,9 @@ ReportingUnit	Virginia;King William County;202 - Courthouse	KING WILLIAM COUNTY;
 ReportingUnit	Virginia;King William County;301 - Aylett	KING WILLIAM COUNTY;301 - AYLETT
 ReportingUnit	Virginia;King William County;401 - Manquin	KING WILLIAM COUNTY;401 - MANQUIN
 ReportingUnit	Virginia;King William County;501 - Mangohick	KING WILLIAM COUNTY;501 - MANGOHICK
+ReportingUnit	Virginia;King and Queen County	fips51097
 ReportingUnit	Virginia;Lancaster County	LANCASTER COUNTY
-ReportingUnit	Virginia;Lancaster County	51103
+ReportingUnit	Virginia;Lancaster County	fips51103
 ReportingUnit	Virginia;Lancaster County;# Ab - Central Absentee Precinct	LANCASTER COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Lancaster County;## Provisional	LANCASTER COUNTY;## Provisional
 ReportingUnit	Virginia;Lancaster County;101 - Precinct 1-1	LANCASTER COUNTY;101 - PRECINCT 1-1
@@ -3965,7 +3966,7 @@ ReportingUnit	Virginia;Lancaster County;302 - Precinct 3-2	LANCASTER COUNTY;302 
 ReportingUnit	Virginia;Lancaster County;401 - Precinct 4-1	LANCASTER COUNTY;401 - PRECINCT 4-1
 ReportingUnit	Virginia;Lancaster County;501 - Precinct 5-1	LANCASTER COUNTY;501 - PRECINCT 5-1
 ReportingUnit	Virginia;Lee County	LEE COUNTY
-ReportingUnit	Virginia;Lee County	51105
+ReportingUnit	Virginia;Lee County	fips51105
 ReportingUnit	Virginia;Lee County;# Ab - Central Absentee Precinct	LEE COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Lee County;## Provisional	LEE COUNTY;## Provisional
 ReportingUnit	Virginia;Lee County;101 - Elydale	LEE COUNTY;101 - ELYDALE
@@ -3985,12 +3986,12 @@ ReportingUnit	Virginia;Lee County;502 - Pennington	LEE COUNTY;502 - PENNINGTON
 ReportingUnit	Virginia;Lee County;503 - Robbins Chapel	LEE COUNTY;503 - ROBBINS CHAPEL
 ReportingUnit	Virginia;Lee County;504 - Keokee	LEE COUNTY;504 - KEOKEE
 ReportingUnit	Virginia;Lexington City	LEXINGTON CITY
-ReportingUnit	Virginia;Lexington City	51678
 ReportingUnit	Virginia;Lexington City;# Ab - Central Absentee Precinct	LEXINGTON CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Lexington City;## Provisional	LEXINGTON CITY;## Provisional
 ReportingUnit	Virginia;Lexington City;001 - Lexington	LEXINGTON CITY;001 - LEXINGTON
+ReportingUnit	Virginia;Lexington city	fips51678
 ReportingUnit	Virginia;Loudoun County	LOUDOUN COUNTY
-ReportingUnit	Virginia;Loudoun County	51107
+ReportingUnit	Virginia;Loudoun County	fips51107
 ReportingUnit	Virginia;Loudoun County;# Ab - Central Absentee Precinct	LOUDOUN COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Loudoun County;## Provisional	LOUDOUN COUNTY;## Provisional
 ReportingUnit	Virginia;Loudoun County;107 - Little River	LOUDOUN COUNTY;107 - LITTLE RIVER
@@ -4092,7 +4093,7 @@ ReportingUnit	Virginia;Loudoun County;819 - Heritage Church	LOUDOUN COUNTY;819 -
 ReportingUnit	Virginia;Loudoun County;820 - Belmont Station	LOUDOUN COUNTY;820 - BELMONT STATION
 ReportingUnit	Virginia;Loudoun County;822 - Riverside	LOUDOUN COUNTY;822 - RIVERSIDE
 ReportingUnit	Virginia;Louisa County	LOUISA COUNTY
-ReportingUnit	Virginia;Louisa County	51109
+ReportingUnit	Virginia;Louisa County	fips51109
 ReportingUnit	Virginia;Louisa County;# Ab - Central Absentee Precinct	LOUISA COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Louisa County;## Provisional	LOUISA COUNTY;## Provisional
 ReportingUnit	Virginia;Louisa County;101 - Zion	LOUISA COUNTY;101 - ZION
@@ -4111,7 +4112,7 @@ ReportingUnit	Virginia;Louisa County;602 - Locust Creek	LOUISA COUNTY;602 - LOCU
 ReportingUnit	Virginia;Louisa County;701 - Sheltons Mill	LOUISA COUNTY;701 - SHELTONS MILL
 ReportingUnit	Virginia;Louisa County;702 - South Anna	LOUISA COUNTY;702 - SOUTH ANNA
 ReportingUnit	Virginia;Lunenburg County	LUNENBURG COUNTY
-ReportingUnit	Virginia;Lunenburg County	51111
+ReportingUnit	Virginia;Lunenburg County	fips51111
 ReportingUnit	Virginia;Lunenburg County;# Ab - Central Absentee Precinct	LUNENBURG COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Lunenburg County;## Provisional	LUNENBURG COUNTY;## Provisional
 ReportingUnit	Virginia;Lunenburg County;101 - Plymouth	LUNENBURG COUNTY;101 - PLYMOUTH
@@ -4126,7 +4127,6 @@ ReportingUnit	Virginia;Lunenburg County;601 - Hounds Creek	LUNENBURG COUNTY;601 
 ReportingUnit	Virginia;Lunenburg County;701 - Meherrin Fire Department	LUNENBURG COUNTY;701 - MEHERRIN FIRE DEPARTMENT
 ReportingUnit	Virginia;Lunenburg County;702 - Victoria Public Library	LUNENBURG COUNTY;702 - VICTORIA PUBLIC LIBRARY
 ReportingUnit	Virginia;Lynchburg City	LYNCHBURG CITY
-ReportingUnit	Virginia;Lynchburg City	51680
 ReportingUnit	Virginia;Lynchburg City;# Ab - Central Absentee Precinct	LYNCHBURG CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Lynchburg City;## Provisional	LYNCHBURG CITY;## Provisional
 ReportingUnit	Virginia;Lynchburg City;101 - First Ward First Precinct	LYNCHBURG CITY;101 - FIRST WARD FIRST PRECINCT
@@ -4147,8 +4147,9 @@ ReportingUnit	Virginia;Lynchburg City;401 - Fourth Ward First Precinct	LYNCHBURG
 ReportingUnit	Virginia;Lynchburg City;402 - Fourth Ward Second Precinct	LYNCHBURG CITY;402 - FOURTH WARD SECOND PRECINCT
 ReportingUnit	Virginia;Lynchburg City;403 - Fourth Ward Third Precinct	LYNCHBURG CITY;403 - FOURTH WARD THIRD PRECINCT
 ReportingUnit	Virginia;Lynchburg City;404 - Fourth Ward Fourth Precinct	LYNCHBURG CITY;404 - FOURTH WARD FOURTH PRECINCT
+ReportingUnit	Virginia;Lynchburg city	fips51680
 ReportingUnit	Virginia;Madison County	MADISON COUNTY
-ReportingUnit	Virginia;Madison County	51113
+ReportingUnit	Virginia;Madison County	fips51113
 ReportingUnit	Virginia;Madison County;# Ab - Central Absentee Precinct	MADISON COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Madison County;## Provisional	MADISON COUNTY;## Provisional
 ReportingUnit	Virginia;Madison County;001 - Oak Park	MADISON COUNTY;001 - OAK PARK
@@ -4161,7 +4162,6 @@ ReportingUnit	Virginia;Madison County;007 - Brightwood	MADISON COUNTY;007 - BRIG
 ReportingUnit	Virginia;Madison County;008 - Criglersville	MADISON COUNTY;008 - CRIGLERSVILLE
 ReportingUnit	Virginia;Madison County;009 - Etlan	MADISON COUNTY;009 - ETLAN
 ReportingUnit	Virginia;Manassas City	MANASSAS CITY
-ReportingUnit	Virginia;Manassas City	51683
 ReportingUnit	Virginia;Manassas City;# Ab - Central Absentee Precinct	MANASSAS CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Manassas City;## Provisional	MANASSAS CITY;## Provisional
 ReportingUnit	Virginia;Manassas City;001 - Dean	MANASSAS CITY;001 - DEAN
@@ -4171,14 +4171,14 @@ ReportingUnit	Virginia;Manassas City;004 - Haydon	MANASSAS CITY;004 - HAYDON
 ReportingUnit	Virginia;Manassas City;005 - Baldwin	MANASSAS CITY;005 - BALDWIN
 ReportingUnit	Virginia;Manassas City;006 - Round	MANASSAS CITY;006 - ROUND
 ReportingUnit	Virginia;Manassas Park City	MANASSAS PARK CITY
-ReportingUnit	Virginia;Manassas Park City	51685
 ReportingUnit	Virginia;Manassas Park City;# Ab - Central Absentee Precinct	MANASSAS PARK CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Manassas Park City;## Provisional	MANASSAS PARK CITY;## Provisional
 ReportingUnit	Virginia;Manassas Park City;001 - Precinct One	MANASSAS PARK CITY;001 - PRECINCT ONE
 ReportingUnit	Virginia;Manassas Park City;002 - Precinct Two	MANASSAS PARK CITY;002 - PRECINCT TWO
 ReportingUnit	Virginia;Manassas Park City;003 - Precinct Three	MANASSAS PARK CITY;003 - PRECINCT THREE
+ReportingUnit	Virginia;Manassas Park city	fips51685
+ReportingUnit	Virginia;Manassas city	fips51683
 ReportingUnit	Virginia;Martinsville City	MARTINSVILLE CITY
-ReportingUnit	Virginia;Martinsville City	51690
 ReportingUnit	Virginia;Martinsville City;# Ab - Central Absentee Precinct	MARTINSVILLE CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Martinsville City;## Provisional	MARTINSVILLE CITY;## Provisional
 ReportingUnit	Virginia;Martinsville City;001 - Precinct #1	MARTINSVILLE CITY;001 - PRECINCT #1
@@ -4187,15 +4187,16 @@ ReportingUnit	Virginia;Martinsville City;003 - Precinct #3	MARTINSVILLE CITY;003
 ReportingUnit	Virginia;Martinsville City;004 - Precinct #4	MARTINSVILLE CITY;004 - PRECINCT #4
 ReportingUnit	Virginia;Martinsville City;005 - Precinct #5	MARTINSVILLE CITY;005 - PRECINCT #5
 ReportingUnit	Virginia;Martinsville City;006 - Precinct #6	MARTINSVILLE CITY;006 - PRECINCT #6
+ReportingUnit	Virginia;Martinsville city	fips51690
 ReportingUnit	Virginia;Mathews County	MATHEWS COUNTY
-ReportingUnit	Virginia;Mathews County	51115
+ReportingUnit	Virginia;Mathews County	fips51115
 ReportingUnit	Virginia;Mathews County;# Ab - Central Absentee Precinct	MATHEWS COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Mathews County;## Provisional	MATHEWS COUNTY;## Provisional
 ReportingUnit	Virginia;Mathews County;001 - Chesapeake	MATHEWS COUNTY;001 - CHESAPEAKE
 ReportingUnit	Virginia;Mathews County;002 - Westville	MATHEWS COUNTY;002 - WESTVILLE
 ReportingUnit	Virginia;Mathews County;003 - Piankatank	MATHEWS COUNTY;003 - PIANKATANK
 ReportingUnit	Virginia;Mecklenburg County	MECKLENBURG COUNTY
-ReportingUnit	Virginia;Mecklenburg County	51117
+ReportingUnit	Virginia;Mecklenburg County	fips51117
 ReportingUnit	Virginia;Mecklenburg County;# Ab - Central Absentee Precinct	MECKLENBURG COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Mecklenburg County;## Provisional	MECKLENBURG COUNTY;## Provisional
 ReportingUnit	Virginia;Mecklenburg County;101 - Wrights Store	MECKLENBURG COUNTY;101 - WRIGHTS STORE
@@ -4222,7 +4223,7 @@ ReportingUnit	Virginia;Mecklenburg County;901 - Averett	MECKLENBURG COUNTY;901 -
 ReportingUnit	Virginia;Mecklenburg County;902 - Buffalo Springs	MECKLENBURG COUNTY;902 - BUFFALO SPRINGS
 ReportingUnit	Virginia;Mecklenburg County;903 - Clarksville	MECKLENBURG COUNTY;903 - CLARKSVILLE
 ReportingUnit	Virginia;Middlesex County	MIDDLESEX COUNTY
-ReportingUnit	Virginia;Middlesex County	51119
+ReportingUnit	Virginia;Middlesex County	fips51119
 ReportingUnit	Virginia;Middlesex County;# Ab - Central Absentee Precinct	MIDDLESEX COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Middlesex County;## Provisional	MIDDLESEX COUNTY;## Provisional
 ReportingUnit	Virginia;Middlesex County;101 - Saluda	MIDDLESEX COUNTY;101 - SALUDA
@@ -4232,7 +4233,7 @@ ReportingUnit	Virginia;Middlesex County;302 - Church View	MIDDLESEX COUNTY;302 -
 ReportingUnit	Virginia;Middlesex County;401- Harmony Village	MIDDLESEX COUNTY;401- HARMONY VILLAGE
 ReportingUnit	Virginia;Middlesex County;501 - Wilton	MIDDLESEX COUNTY;501 - WILTON
 ReportingUnit	Virginia;Montgomery County	MONTGOMERY COUNTY
-ReportingUnit	Virginia;Montgomery County	51121
+ReportingUnit	Virginia;Montgomery County	fips51121
 ReportingUnit	Virginia;Montgomery County;# Ab - Central Absentee Precinct	MONTGOMERY COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Montgomery County;## Provisional	MONTGOMERY COUNTY;## Provisional
 ReportingUnit	Virginia;Montgomery County;101 - Precinct A-1	MONTGOMERY COUNTY;101 - PRECINCT A-1
@@ -4260,7 +4261,7 @@ ReportingUnit	Virginia;Montgomery County;603 - Precinct F-3	MONTGOMERY COUNTY;60
 ReportingUnit	Virginia;Montgomery County;701 - Precinct G-1	MONTGOMERY COUNTY;701 - PRECINCT G-1
 ReportingUnit	Virginia;Montgomery County;702 - Precinct G-2	MONTGOMERY COUNTY;702 - PRECINCT G-2
 ReportingUnit	Virginia;Nelson County	NELSON COUNTY
-ReportingUnit	Virginia;Nelson County	51125
+ReportingUnit	Virginia;Nelson County	fips51125
 ReportingUnit	Virginia;Nelson County;# Ab - Central Absentee Precinct	NELSON COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Nelson County;## Provisional	NELSON COUNTY;## Provisional
 ReportingUnit	Virginia;Nelson County;101 - Rockfish	NELSON COUNTY;101 - ROCKFISH
@@ -4273,7 +4274,7 @@ ReportingUnit	Virginia;Nelson County;402 - Montebello	NELSON COUNTY;402 - MONTEB
 ReportingUnit	Virginia;Nelson County;501 - Faber	NELSON COUNTY;501 - FABER
 ReportingUnit	Virginia;Nelson County;502 - Nellysford	NELSON COUNTY;502 - NELLYSFORD
 ReportingUnit	Virginia;New Kent County	NEW KENT COUNTY
-ReportingUnit	Virginia;New Kent County	51127
+ReportingUnit	Virginia;New Kent County	fips51127
 ReportingUnit	Virginia;New Kent County;# Ab - Central Absentee Precinct	NEW KENT COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;New Kent County;## Provisional	NEW KENT COUNTY;## Provisional
 ReportingUnit	Virginia;New Kent County;102 - Tunstall	NEW KENT COUNTY;102 - TUNSTALL
@@ -4287,7 +4288,6 @@ ReportingUnit	Virginia;New Kent County;403 - Mountcastle	NEW KENT COUNTY;403 - M
 ReportingUnit	Virginia;New Kent County;501 - Eltham	NEW KENT COUNTY;501 - ELTHAM
 ReportingUnit	Virginia;New Kent County;502 - Chickahominy River	NEW KENT COUNTY;502 - CHICKAHOMINY RIVER
 ReportingUnit	Virginia;Newport News City	NEWPORT NEWS CITY
-ReportingUnit	Virginia;Newport News City	51700
 ReportingUnit	Virginia;Newport News City;# Ab - Central Absentee Precinct	NEWPORT NEWS CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Newport News City;## Provisional	NEWPORT NEWS CITY;## Provisional
 ReportingUnit	Virginia;Newport News City;101 - Denbigh	NEWPORT NEWS CITY;101 - DENBIGH
@@ -4335,8 +4335,8 @@ ReportingUnit	Virginia;Newport News City;317 - Washington	NEWPORT NEWS CITY;317 
 ReportingUnit	Virginia;Newport News City;318 - Wilson	NEWPORT NEWS CITY;318 - WILSON
 ReportingUnit	Virginia;Newport News City;319 - Saunders	NEWPORT NEWS CITY;319 - SAUNDERS
 ReportingUnit	Virginia;Newport News City;320 - Watkins	NEWPORT NEWS CITY;320 - WATKINS
+ReportingUnit	Virginia;Newport News city	fips51700
 ReportingUnit	Virginia;Norfolk City	NORFOLK CITY
-ReportingUnit	Virginia;Norfolk City	51710
 ReportingUnit	Virginia;Norfolk City;# Ab - Central Absentee Precinct	NORFOLK CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Norfolk City;## Provisional	NORFOLK CITY;## Provisional
 ReportingUnit	Virginia;Norfolk City;101 - Granby	NORFOLK CITY;101 - GRANBY
@@ -4388,8 +4388,9 @@ ReportingUnit	Virginia;Norfolk City;509 - Tarrallton	NORFOLK CITY;509 - TARRALLT
 ReportingUnit	Virginia;Norfolk City;510 - Third Presbyterian	NORFOLK CITY;510 - THIRD PRESBYTERIAN
 ReportingUnit	Virginia;Norfolk City;511 - Crossroads	NORFOLK CITY;511 - CROSSROADS
 ReportingUnit	Virginia;Norfolk City;512 - Azalea Gardens	NORFOLK CITY;512 - AZALEA GARDENS
+ReportingUnit	Virginia;Norfolk city	fips51710
 ReportingUnit	Virginia;Northampton County	NORTHAMPTON COUNTY
-ReportingUnit	Virginia;Northampton County	51131
+ReportingUnit	Virginia;Northampton County	fips51131
 ReportingUnit	Virginia;Northampton County;# Ab - Central Absentee Precinct	NORTHAMPTON COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Northampton County;## Provisional	NORTHAMPTON COUNTY;## Provisional
 ReportingUnit	Virginia;Northampton County;101 - Precinct 1-1	NORTHAMPTON COUNTY;101 - PRECINCT 1-1
@@ -4398,7 +4399,7 @@ ReportingUnit	Virginia;Northampton County;301 - Precinct 3-1	NORTHAMPTON COUNTY;
 ReportingUnit	Virginia;Northampton County;401 - Precinct 4-1	NORTHAMPTON COUNTY;401 - PRECINCT 4-1
 ReportingUnit	Virginia;Northampton County;501 - Precinct 5-1	NORTHAMPTON COUNTY;501 - PRECINCT 5-1
 ReportingUnit	Virginia;Northumberland County	NORTHUMBERLAND COUNTY
-ReportingUnit	Virginia;Northumberland County	51133
+ReportingUnit	Virginia;Northumberland County	fips51133
 ReportingUnit	Virginia;Northumberland County;# Ab - Central Absentee Precinct	NORTHUMBERLAND COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Northumberland County;## Provisional	NORTHUMBERLAND COUNTY;## Provisional
 ReportingUnit	Virginia;Northumberland County;101 - 1A	NORTHUMBERLAND COUNTY;101 - 1A
@@ -4408,11 +4409,11 @@ ReportingUnit	Virginia;Northumberland County;302 - 3B	NORTHUMBERLAND COUNTY;302 
 ReportingUnit	Virginia;Northumberland County;401 - 4A	NORTHUMBERLAND COUNTY;401 - 4A
 ReportingUnit	Virginia;Northumberland County;501 - 5A	NORTHUMBERLAND COUNTY;501 - 5A
 ReportingUnit	Virginia;Norton City	NORTON CITY
-ReportingUnit	Virginia;Norton City	51720
 ReportingUnit	Virginia;Norton City;## Provisional	NORTON CITY;## Provisional
 ReportingUnit	Virginia;Norton City;001 - East Ward	NORTON CITY;001 - EAST WARD
+ReportingUnit	Virginia;Norton city	fips51720
 ReportingUnit	Virginia;Nottoway County	NOTTOWAY COUNTY
-ReportingUnit	Virginia;Nottoway County	51135
+ReportingUnit	Virginia;Nottoway County	fips51135
 ReportingUnit	Virginia;Nottoway County;# Ab - Central Absentee Precinct	NOTTOWAY COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Nottoway County;## Provisional	NOTTOWAY COUNTY;## Provisional
 ReportingUnit	Virginia;Nottoway County;101 - Precinct 1-1	NOTTOWAY COUNTY;101 - PRECINCT 1-1
@@ -4425,7 +4426,7 @@ ReportingUnit	Virginia;Nottoway County;401 - Precinct 4-1	NOTTOWAY COUNTY;401 - 
 ReportingUnit	Virginia;Nottoway County;402 - Precinct 4-2	NOTTOWAY COUNTY;402 - PRECINCT 4-2
 ReportingUnit	Virginia;Nottoway County;501 - Precinct 5-1	NOTTOWAY COUNTY;501 - PRECINCT 5-1
 ReportingUnit	Virginia;Orange County	ORANGE COUNTY
-ReportingUnit	Virginia;Orange County	51137
+ReportingUnit	Virginia;Orange County	fips51137
 ReportingUnit	Virginia;Orange County;# Ab - Central Absentee Precinct	ORANGE COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Orange County;## Provisional	ORANGE COUNTY;## Provisional
 ReportingUnit	Virginia;Orange County;101 - One West	ORANGE COUNTY;101 - ONE WEST
@@ -4439,7 +4440,7 @@ ReportingUnit	Virginia;Orange County;402 - Four East	ORANGE COUNTY;402 - FOUR EA
 ReportingUnit	Virginia;Orange County;501 - Five South	ORANGE COUNTY;501 - FIVE SOUTH
 ReportingUnit	Virginia;Orange County;502 - Five North	ORANGE COUNTY;502 - FIVE NORTH
 ReportingUnit	Virginia;Page County	PAGE COUNTY
-ReportingUnit	Virginia;Page County	51139
+ReportingUnit	Virginia;Page County	fips51139
 ReportingUnit	Virginia;Page County;# Ab - Central Absentee Precinct	PAGE COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Page County;## Provisional	PAGE COUNTY;## Provisional
 ReportingUnit	Virginia;Page County;101 - West Luray	PAGE COUNTY;101 - WEST LURAY
@@ -4448,7 +4449,7 @@ ReportingUnit	Virginia;Page County;301 - Marksville	PAGE COUNTY;301 - MARKSVILLE
 ReportingUnit	Virginia;Page County;401 - Newport	PAGE COUNTY;401 - NEWPORT
 ReportingUnit	Virginia;Page County;501 - Shenandoah	PAGE COUNTY;501 - SHENANDOAH
 ReportingUnit	Virginia;Patrick County	PATRICK COUNTY
-ReportingUnit	Virginia;Patrick County	51141
+ReportingUnit	Virginia;Patrick County	fips51141
 ReportingUnit	Virginia;Patrick County;# Ab - Central Absentee Precinct	PATRICK COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Patrick County;## Provisional	PATRICK COUNTY;## Provisional
 ReportingUnit	Virginia;Patrick County;101 - Ararat	PATRICK COUNTY;101 - ARARAT
@@ -4465,7 +4466,6 @@ ReportingUnit	Virginia;Patrick County;501 - Stuart Community	PATRICK COUNTY;501 
 ReportingUnit	Virginia;Patrick County;502 - Elamsville	PATRICK COUNTY;502 - ELAMSVILLE
 ReportingUnit	Virginia;Patrick County;503 - Woolwine	PATRICK COUNTY;503 - WOOLWINE
 ReportingUnit	Virginia;Petersburg City	PETERSBURG CITY
-ReportingUnit	Virginia;Petersburg City	51730
 ReportingUnit	Virginia;Petersburg City;# Ab - Central Absentee Precinct	PETERSBURG CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Petersburg City;## Provisional	PETERSBURG CITY;## Provisional
 ReportingUnit	Virginia;Petersburg City;101 - First Ward First Precinct	PETERSBURG CITY;101 - FIRST WARD FIRST PRECINCT
@@ -4475,8 +4475,9 @@ ReportingUnit	Virginia;Petersburg City;401 - Fourth Ward First Precinct	PETERSBU
 ReportingUnit	Virginia;Petersburg City;501 - Fifth Ward First Precinct	PETERSBURG CITY;501 - FIFTH WARD FIRST PRECINCT
 ReportingUnit	Virginia;Petersburg City;601 - Sixth Ward First Precinct	PETERSBURG CITY;601 - SIXTH WARD FIRST PRECINCT
 ReportingUnit	Virginia;Petersburg City;701 - Seventh Ward First Precinct	PETERSBURG CITY;701 - SEVENTH WARD FIRST PRECINCT
+ReportingUnit	Virginia;Petersburg city	fips51730
 ReportingUnit	Virginia;Pittsylvania County	PITTSYLVANIA COUNTY
-ReportingUnit	Virginia;Pittsylvania County	51143
+ReportingUnit	Virginia;Pittsylvania County	fips51143
 ReportingUnit	Virginia;Pittsylvania County;# Ab - Central Absentee Precinct	PITTSYLVANIA COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Pittsylvania County;## Provisional	PITTSYLVANIA COUNTY;## Provisional
 ReportingUnit	Virginia;Pittsylvania County;103 - Twin Springs	PITTSYLVANIA COUNTY;103 - TWIN SPRINGS
@@ -4509,14 +4510,13 @@ ReportingUnit	Virginia;Pittsylvania County;703 - Ferry Road	PITTSYLVANIA COUNTY;
 ReportingUnit	Virginia;Pittsylvania County;704 - Mt Hermon	PITTSYLVANIA COUNTY;704 - MT HERMON
 ReportingUnit	Virginia;Pittsylvania County;705 - Mt Cross	PITTSYLVANIA COUNTY;705 - MT CROSS
 ReportingUnit	Virginia;Poquoson City	POQUOSON CITY
-ReportingUnit	Virginia;Poquoson City	51735
 ReportingUnit	Virginia;Poquoson City;# Ab - Central Absentee Precinct	POQUOSON CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Poquoson City;## Provisional	POQUOSON CITY;## Provisional
 ReportingUnit	Virginia;Poquoson City;001 - Central	POQUOSON CITY;001 - CENTRAL
 ReportingUnit	Virginia;Poquoson City;002 - Eastern	POQUOSON CITY;002 - EASTERN
 ReportingUnit	Virginia;Poquoson City;003 - Western	POQUOSON CITY;003 - WESTERN
+ReportingUnit	Virginia;Poquoson city	fips51735
 ReportingUnit	Virginia;Portsmouth City	PORTSMOUTH CITY
-ReportingUnit	Virginia;Portsmouth City	51740
 ReportingUnit	Virginia;Portsmouth City;# Ab - Central Absentee Precinct	PORTSMOUTH CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Portsmouth City;## Provisional	PORTSMOUTH CITY;## Provisional
 ReportingUnit	Virginia;Portsmouth City;001 - Emanuel A. M. E. Church	PORTSMOUTH CITY;001 - EMANUEL A. M. E. CHURCH
@@ -4550,8 +4550,9 @@ ReportingUnit	Virginia;Portsmouth City;036 - Scottish Rite Temple	PORTSMOUTH CIT
 ReportingUnit	Virginia;Portsmouth City;037 - Churchland Middle School	PORTSMOUTH CITY;037 - CHURCHLAND MIDDLE SCHOOL
 ReportingUnit	Virginia;Portsmouth City;038 - Grove Baptist Church	PORTSMOUTH CITY;038 - GROVE BAPTIST CHURCH
 ReportingUnit	Virginia;Portsmouth City;039 - Churchland Primary And Intermediate School	PORTSMOUTH CITY;039 - CHURCHLAND PRIMARY AND INTERMEDIATE SCHOOL
+ReportingUnit	Virginia;Portsmouth city	fips51740
 ReportingUnit	Virginia;Powhatan County	POWHATAN COUNTY
-ReportingUnit	Virginia;Powhatan County	51145
+ReportingUnit	Virginia;Powhatan County	fips51145
 ReportingUnit	Virginia;Powhatan County;# Ab - Central Absentee Precinct	POWHATAN COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Powhatan County;## Provisional	POWHATAN COUNTY;## Provisional
 ReportingUnit	Virginia;Powhatan County;101 - Subletts	POWHATAN COUNTY;101 - SUBLETTS
@@ -4567,7 +4568,7 @@ ReportingUnit	Virginia;Powhatan County;501 - Smith Cross Roads	POWHATAN COUNTY;5
 ReportingUnit	Virginia;Powhatan County;502 - Pineville	POWHATAN COUNTY;502 - PINEVILLE
 ReportingUnit	Virginia;Powhatan County;503 - Tobaccoville	POWHATAN COUNTY;503 - TOBACCOVILLE
 ReportingUnit	Virginia;Prince Edward County	PRINCE EDWARD COUNTY
-ReportingUnit	Virginia;Prince Edward County	51147
+ReportingUnit	Virginia;Prince Edward County	fips51147
 ReportingUnit	Virginia;Prince Edward County;# Ab - Central Absentee Precinct	PRINCE EDWARD COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Prince Edward County;## Provisional	PRINCE EDWARD COUNTY;## Provisional
 ReportingUnit	Virginia;Prince Edward County;101 - Farmville	PRINCE EDWARD COUNTY;101 - FARMVILLE
@@ -4581,7 +4582,7 @@ ReportingUnit	Virginia;Prince Edward County;601 - Prospect	PRINCE EDWARD COUNTY;
 ReportingUnit	Virginia;Prince Edward County;701 - West End	PRINCE EDWARD COUNTY;701 - WEST END
 ReportingUnit	Virginia;Prince Edward County;801 - Center	PRINCE EDWARD COUNTY;801 - CENTER
 ReportingUnit	Virginia;Prince George County	PRINCE GEORGE COUNTY
-ReportingUnit	Virginia;Prince George County	51149
+ReportingUnit	Virginia;Prince George County	fips51149
 ReportingUnit	Virginia;Prince George County;# Ab - Central Absentee Precinct	PRINCE GEORGE COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Prince George County;## Provisional	PRINCE GEORGE COUNTY;## Provisional
 ReportingUnit	Virginia;Prince George County;101 - Richard Bland	PRINCE GEORGE COUNTY;101 - RICHARD BLAND
@@ -4595,7 +4596,7 @@ ReportingUnit	Virginia;Prince George County;203 - Brandon	PRINCE GEORGE COUNTY;2
 ReportingUnit	Virginia;Prince George County;204 - Courts Bldg	PRINCE GEORGE COUNTY;204 - COURTS BLDG
 ReportingUnit	Virginia;Prince George County;205 - Jefferson Park	PRINCE GEORGE COUNTY;205 - JEFFERSON PARK
 ReportingUnit	Virginia;Prince William County	PRINCE WILLIAM COUNTY
-ReportingUnit	Virginia;Prince William County	51153
+ReportingUnit	Virginia;Prince William County	fips51153
 ReportingUnit	Virginia;Prince William County;# Ab - Central Absentee Precinct	PRINCE WILLIAM COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Prince William County;## Provisional	PRINCE WILLIAM COUNTY;## Provisional
 ReportingUnit	Virginia;Prince William County;101 - Brentsville	PRINCE WILLIAM COUNTY;101 - BRENTSVILLE
@@ -4693,7 +4694,7 @@ ReportingUnit	Virginia;Prince William County;710 - Powells Creek	PRINCE WILLIAM 
 ReportingUnit	Virginia;Prince William County;711 - Grayson	PRINCE WILLIAM COUNTY;711 - GRAYSON
 ReportingUnit	Virginia;Prince William County;712 - Leesylvania	PRINCE WILLIAM COUNTY;712 - LEESYLVANIA
 ReportingUnit	Virginia;Pulaski County	PULASKI COUNTY
-ReportingUnit	Virginia;Pulaski County	51155
+ReportingUnit	Virginia;Pulaski County	fips51155
 ReportingUnit	Virginia;Pulaski County;# Ab - Central Absentee Precinct	PULASKI COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Pulaski County;## Provisional	PULASKI COUNTY;## Provisional
 ReportingUnit	Virginia;Pulaski County;101 - Belspring	PULASKI COUNTY;101 - BELSPRING
@@ -4709,15 +4710,15 @@ ReportingUnit	Virginia;Pulaski County;401 - Massie	PULASKI COUNTY;401 - MASSIE
 ReportingUnit	Virginia;Pulaski County;402 - Walker	PULASKI COUNTY;402 - WALKER
 ReportingUnit	Virginia;Pulaski County;501 - Robinson	PULASKI COUNTY;501 - ROBINSON
 ReportingUnit	Virginia;Radford City	RADFORD CITY
-ReportingUnit	Virginia;Radford City	51750
 ReportingUnit	Virginia;Radford City;# Ab - Central Absentee Precinct	RADFORD CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Radford City;## Provisional	RADFORD CITY;## Provisional
 ReportingUnit	Virginia;Radford City;001 - East Precinct	RADFORD CITY;001 - EAST PRECINCT
 ReportingUnit	Virginia;Radford City;002 - Central Precinct	RADFORD CITY;002 - CENTRAL PRECINCT
 ReportingUnit	Virginia;Radford City;003 - West Precinct	RADFORD CITY;003 - WEST PRECINCT
 ReportingUnit	Virginia;Radford City;004 - New River Precinct	RADFORD CITY;004 - NEW RIVER PRECINCT
+ReportingUnit	Virginia;Radford city	fips51750
 ReportingUnit	Virginia;Rappahannock County	RAPPAHANNOCK COUNTY
-ReportingUnit	Virginia;Rappahannock County	51157
+ReportingUnit	Virginia;Rappahannock County	fips51157
 ReportingUnit	Virginia;Rappahannock County;# Ab - Central Absentee Precinct	RAPPAHANNOCK COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Rappahannock County;## Provisional	RAPPAHANNOCK COUNTY;## Provisional
 ReportingUnit	Virginia;Rappahannock County;101 - Washington	RAPPAHANNOCK COUNTY;101 - WASHINGTON
@@ -4727,7 +4728,6 @@ ReportingUnit	Virginia;Rappahannock County;401 - Scrabble	RAPPAHANNOCK COUNTY;40
 ReportingUnit	Virginia;Rappahannock County;501 - Chester Gap	RAPPAHANNOCK COUNTY;501 - CHESTER GAP
 ReportingUnit	Virginia;Rappahannock County;502 - Flint Hill	RAPPAHANNOCK COUNTY;502 - FLINT HILL
 ReportingUnit	Virginia;Richmond City	RICHMOND CITY
-ReportingUnit	Virginia;Richmond City	51760
 ReportingUnit	Virginia;Richmond City;# Ab - Central Absentee Precinct	RICHMOND CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Richmond City;## Provisional	RICHMOND CITY;## Provisional
 ReportingUnit	Virginia;Richmond City;101 - One Hundred One	RICHMOND CITY;101 - ONE HUNDRED ONE
@@ -4800,7 +4800,7 @@ ReportingUnit	Virginia;Richmond City;909 - Nine Hundred Nine	RICHMOND CITY;909 -
 ReportingUnit	Virginia;Richmond City;910 - Nine Hundred Ten	RICHMOND CITY;910 - NINE HUNDRED TEN
 ReportingUnit	Virginia;Richmond City;911 - Nine Hundred Eleven	RICHMOND CITY;911 - NINE HUNDRED ELEVEN
 ReportingUnit	Virginia;Richmond County	RICHMOND COUNTY
-ReportingUnit	Virginia;Richmond County	51159
+ReportingUnit	Virginia;Richmond County	fips51159
 ReportingUnit	Virginia;Richmond County;# Ab - Central Absentee Precinct	RICHMOND COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Richmond County;## Provisional	RICHMOND COUNTY;## Provisional
 ReportingUnit	Virginia;Richmond County;101 - Precinct 1-1	RICHMOND COUNTY;101 - PRECINCT 1-1
@@ -4808,8 +4808,8 @@ ReportingUnit	Virginia;Richmond County;201 - Precinct 2-1	RICHMOND COUNTY;201 - 
 ReportingUnit	Virginia;Richmond County;301 - Precinct 3-1	RICHMOND COUNTY;301 - PRECINCT 3-1
 ReportingUnit	Virginia;Richmond County;401 - Precinct 4-1	RICHMOND COUNTY;401 - PRECINCT 4-1
 ReportingUnit	Virginia;Richmond County;501 - Precinct 5-1	RICHMOND COUNTY;501 - PRECINCT 5-1
+ReportingUnit	Virginia;Richmond city	fips51760
 ReportingUnit	Virginia;Roanoke City	ROANOKE CITY
-ReportingUnit	Virginia;Roanoke City	51770
 ReportingUnit	Virginia;Roanoke City;# Ab - Central Absentee Precinct	ROANOKE CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Roanoke City;## Provisional	ROANOKE CITY;## Provisional
 ReportingUnit	Virginia;Roanoke City;001 -Peters Creek	ROANOKE CITY;001 -Peters Creek
@@ -4834,7 +4834,7 @@ ReportingUnit	Virginia;Roanoke City;018 - Summit Hills	ROANOKE CITY;018 - Summit
 ReportingUnit	Virginia;Roanoke City;019 - Forest Park	ROANOKE CITY;019 - Forest Park
 ReportingUnit	Virginia;Roanoke City;020 - Eureka Park	ROANOKE CITY;020 - EUREKA PARK
 ReportingUnit	Virginia;Roanoke County	ROANOKE COUNTY
-ReportingUnit	Virginia;Roanoke County	51161
+ReportingUnit	Virginia;Roanoke County	fips51161
 ReportingUnit	Virginia;Roanoke County;# Ab - Central Absentee Precinct	ROANOKE COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Roanoke County;## Provisional	ROANOKE COUNTY;## Provisional
 ReportingUnit	Virginia;Roanoke County;101 - Catawba	ROANOKE COUNTY;101 - CATAWBA
@@ -4871,8 +4871,9 @@ ReportingUnit	Virginia;Roanoke County;504 - Ogden	ROANOKE COUNTY;504 - OGDEN
 ReportingUnit	Virginia;Roanoke County;505 - Clearbrook	ROANOKE COUNTY;505 - CLEARBROOK
 ReportingUnit	Virginia;Roanoke County;506 - Mount Vernon	ROANOKE COUNTY;506 - MOUNT VERNON
 ReportingUnit	Virginia;Roanoke County;507 - Hunting Hills	ROANOKE COUNTY;507 - HUNTING HILLS
+ReportingUnit	Virginia;Roanoke city	fips51770
 ReportingUnit	Virginia;Rockbridge County	ROCKBRIDGE COUNTY
-ReportingUnit	Virginia;Rockbridge County	51163
+ReportingUnit	Virginia;Rockbridge County	fips51163
 ReportingUnit	Virginia;Rockbridge County;# Ab - Central Absentee Precinct	ROCKBRIDGE COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Rockbridge County;## Provisional	ROCKBRIDGE COUNTY;## Provisional
 ReportingUnit	Virginia;Rockbridge County;101 - Airport	ROCKBRIDGE COUNTY;101 - AIRPORT
@@ -4893,7 +4894,7 @@ ReportingUnit	Virginia;Rockbridge County;502 - Meadowview	ROCKBRIDGE COUNTY;502 
 ReportingUnit	Virginia;Rockbridge County;503 - Rockbridge Baths	ROCKBRIDGE COUNTY;503 - ROCKBRIDGE BATHS
 ReportingUnit	Virginia;Rockbridge County;504 - Rockbridge	ROCKBRIDGE COUNTY;504 - ROCKBRIDGE
 ReportingUnit	Virginia;Rockingham County	ROCKINGHAM COUNTY
-ReportingUnit	Virginia;Rockingham County	51165
+ReportingUnit	Virginia;Rockingham County	fips51165
 ReportingUnit	Virginia;Rockingham County;# Ab - Central Absentee Precinct	ROCKINGHAM COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Rockingham County;## Provisional	ROCKINGHAM COUNTY;## Provisional
 ReportingUnit	Virginia;Rockingham County;101 - Broadway	ROCKINGHAM COUNTY;101 - BROADWAY
@@ -4929,7 +4930,7 @@ ReportingUnit	Virginia;Rockingham County;503 - Mcgaheysville	ROCKINGHAM COUNTY;5
 ReportingUnit	Virginia;Rockingham County;504 - South Fork	ROCKINGHAM COUNTY;504 - SOUTH FORK
 ReportingUnit	Virginia;Rockingham County;505 - Stony Run	ROCKINGHAM COUNTY;505 - STONY RUN
 ReportingUnit	Virginia;Russell County	RUSSELL COUNTY
-ReportingUnit	Virginia;Russell County	51167
+ReportingUnit	Virginia;Russell County	fips51167
 ReportingUnit	Virginia;Russell County;# Ab - Central Absentee Precinct	RUSSELL COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Russell County;## Provisional	RUSSELL COUNTY;## Provisional
 ReportingUnit	Virginia;Russell County;101 - Moccasin	RUSSELL COUNTY;101 - MOCCASIN
@@ -4948,7 +4949,6 @@ ReportingUnit	Virginia;Russell County;501 - West Lebanon	RUSSELL COUNTY;501 - WE
 ReportingUnit	Virginia;Russell County;601 - East Lebanon	RUSSELL COUNTY;601 - EAST LEBANON
 ReportingUnit	Virginia;Russell County;602 - Elk Garden	RUSSELL COUNTY;602 - ELK GARDEN
 ReportingUnit	Virginia;Salem City	SALEM CITY
-ReportingUnit	Virginia;Salem City	51775
 ReportingUnit	Virginia;Salem City;# Ab - Central Absentee Precinct	SALEM CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Salem City;## Provisional	SALEM CITY;## Provisional
 ReportingUnit	Virginia;Salem City;001 - North Salem No 2	SALEM CITY;001 - NORTH SALEM NO 2
@@ -4961,8 +4961,9 @@ ReportingUnit	Virginia;Salem City;007 - South Salem No 2	SALEM CITY;007 - SOUTH 
 ReportingUnit	Virginia;Salem City;008 - East Salem	SALEM CITY;008 - EAST SALEM
 ReportingUnit	Virginia;Salem City;009 - South Side Hills	SALEM CITY;009 - SOUTH SIDE HILLS
 ReportingUnit	Virginia;Salem City;010 - Hidden Valley	SALEM CITY;010 - HIDDEN VALLEY
+ReportingUnit	Virginia;Salem city	fips51775
 ReportingUnit	Virginia;Scott County	SCOTT COUNTY
-ReportingUnit	Virginia;Scott County	51169
+ReportingUnit	Virginia;Scott County	fips51169
 ReportingUnit	Virginia;Scott County;# Ab - Central Absentee Precinct	SCOTT COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Scott County;## Provisional	SCOTT COUNTY;## Provisional
 ReportingUnit	Virginia;Scott County;101 - Weber City	SCOTT COUNTY;101 - WEBER CITY
@@ -4983,7 +4984,7 @@ ReportingUnit	Virginia;Scott County;601 - Clinchport	SCOTT COUNTY;601 - CLINCHPO
 ReportingUnit	Virginia;Scott County;602 - Duffield-Pattonsville	SCOTT COUNTY;602 - DUFFIELD-PATTONSVILLE
 ReportingUnit	Virginia;Scott County;603 - Fairview	SCOTT COUNTY;603 - FAIRVIEW
 ReportingUnit	Virginia;Shenandoah County	SHENANDOAH COUNTY
-ReportingUnit	Virginia;Shenandoah County	51171
+ReportingUnit	Virginia;Shenandoah County	fips51171
 ReportingUnit	Virginia;Shenandoah County;# Ab - Central Absentee Precinct	SHENANDOAH COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Shenandoah County;## Provisional	SHENANDOAH COUNTY;## Provisional
 ReportingUnit	Virginia;Shenandoah County;101 - Orkney Springs	SHENANDOAH COUNTY;101 - ORKNEY SPRINGS
@@ -4999,7 +5000,7 @@ ReportingUnit	Virginia;Shenandoah County;503 - Toms Brook	SHENANDOAH COUNTY;503 
 ReportingUnit	Virginia;Shenandoah County;504 - Lebanon Church	SHENANDOAH COUNTY;504 - LEBANON CHURCH
 ReportingUnit	Virginia;Shenandoah County;601 - Strasburg	SHENANDOAH COUNTY;601 - STRASBURG
 ReportingUnit	Virginia;Smyth County	SMYTH COUNTY
-ReportingUnit	Virginia;Smyth County	51173
+ReportingUnit	Virginia;Smyth County	fips51173
 ReportingUnit	Virginia;Smyth County;# Ab - Central Absentee Precinct	SMYTH COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Smyth County;## Provisional	SMYTH COUNTY;## Provisional
 ReportingUnit	Virginia;Smyth County;101 - Saltville	SMYTH COUNTY;101 - SALTVILLE
@@ -5017,7 +5018,7 @@ ReportingUnit	Virginia;Smyth County;701 - Adwolfe	SMYTH COUNTY;701 - ADWOLFE
 ReportingUnit	Virginia;Smyth County;702 - Sugar Grove	SMYTH COUNTY;702 - SUGAR GROVE
 ReportingUnit	Virginia;Smyth County;703 - Konnarock	SMYTH COUNTY;703 - KONNAROCK
 ReportingUnit	Virginia;Southampton County	SOUTHAMPTON COUNTY
-ReportingUnit	Virginia;Southampton County	51175
+ReportingUnit	Virginia;Southampton County	fips51175
 ReportingUnit	Virginia;Southampton County;# Ab - Central Absentee Precinct	SOUTHAMPTON COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Southampton County;## Provisional	SOUTHAMPTON COUNTY;## Provisional
 ReportingUnit	Virginia;Southampton County;101 - Berlin	SOUTHAMPTON COUNTY;101 - BERLIN
@@ -5034,7 +5035,7 @@ ReportingUnit	Virginia;Southampton County;602 - Sedley	SOUTHAMPTON COUNTY;602 - 
 ReportingUnit	Virginia;Southampton County;701 - Blackwater River	SOUTHAMPTON COUNTY;701 - BLACKWATER RIVER
 ReportingUnit	Virginia;Southampton County;702 - Newsoms	SOUTHAMPTON COUNTY;702 - NEWSOMS
 ReportingUnit	Virginia;Spotsylvania County	SPOTSYLVANIA COUNTY
-ReportingUnit	Virginia;Spotsylvania County	51177
+ReportingUnit	Virginia;Spotsylvania County	fips51177
 ReportingUnit	Virginia;Spotsylvania County;# Ab - Central Absentee Precinct	SPOTSYLVANIA COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Spotsylvania County;## Provisional	SPOTSYLVANIA COUNTY;## Provisional
 ReportingUnit	Virginia;Spotsylvania County;101 - Partlow	SPOTSYLVANIA COUNTY;101 - PARTLOW
@@ -5064,7 +5065,7 @@ ReportingUnit	Virginia;Spotsylvania County;702 - Brents Mill	SPOTSYLVANIA COUNTY
 ReportingUnit	Virginia;Spotsylvania County;703 - Fairview	SPOTSYLVANIA COUNTY;703 - FAIRVIEW
 ReportingUnit	Virginia;Spotsylvania County;704 - Gayle	SPOTSYLVANIA COUNTY;704 - GAYLE
 ReportingUnit	Virginia;Stafford County	STAFFORD COUNTY
-ReportingUnit	Virginia;Stafford County	51179
+ReportingUnit	Virginia;Stafford County	fips51179
 ReportingUnit	Virginia;Stafford County;# Ab - Central Absentee Precinct	STAFFORD COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Stafford County;## Provisional	STAFFORD COUNTY;## Provisional
 ReportingUnit	Virginia;Stafford County;101 - Hartwood	STAFFORD COUNTY;101 - HARTWOOD
@@ -5095,7 +5096,6 @@ ReportingUnit	Virginia;Stafford County;701 - Woodlands	STAFFORD COUNTY;701 - WOO
 ReportingUnit	Virginia;Stafford County;702 - Whitson	STAFFORD COUNTY;702 - WHITSON
 ReportingUnit	Virginia;Stafford County;703 - Hampton	STAFFORD COUNTY;703 - HAMPTON
 ReportingUnit	Virginia;Staunton City	STAUNTON CITY
-ReportingUnit	Virginia;Staunton City	51790
 ReportingUnit	Virginia;Staunton City;# Ab - Central Absentee Precinct	STAUNTON CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Staunton City;## Provisional	STAUNTON CITY;## Provisional
 ReportingUnit	Virginia;Staunton City;101 - Ward No 1	STAUNTON CITY;101 - WARD NO 1
@@ -5103,8 +5103,8 @@ ReportingUnit	Virginia;Staunton City;201 - Ward No 2	STAUNTON CITY;201 - WARD NO
 ReportingUnit	Virginia;Staunton City;301 - Ward No 3	STAUNTON CITY;301 - WARD NO 3
 ReportingUnit	Virginia;Staunton City;401 - Ward No 4	STAUNTON CITY;401 - WARD NO 4
 ReportingUnit	Virginia;Staunton City;501 - Ward No 5	STAUNTON CITY;501 - WARD NO 5
+ReportingUnit	Virginia;Staunton city	fips51790
 ReportingUnit	Virginia;Suffolk City	SUFFOLK CITY
-ReportingUnit	Virginia;Suffolk City	51800
 ReportingUnit	Virginia;Suffolk City;# Ab - Central Absentee Precinct	SUFFOLK CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Suffolk City;## Provisional	SUFFOLK CITY;## Provisional
 ReportingUnit	Virginia;Suffolk City;101 - Belleharbour	SUFFOLK CITY;101 - BELLEHARBOUR
@@ -5134,8 +5134,9 @@ ReportingUnit	Virginia;Suffolk City;605 - Hollywood	SUFFOLK CITY;605 - HOLLYWOOD
 ReportingUnit	Virginia;Suffolk City;702 - Harbourview	SUFFOLK CITY;702 - HARBOURVIEW
 ReportingUnit	Virginia;Suffolk City;704 - Burbage Grant	SUFFOLK CITY;704 - BURBAGE GRANT
 ReportingUnit	Virginia;Suffolk City;706 - Huntersville	SUFFOLK CITY;706 - HUNTERSVILLE
+ReportingUnit	Virginia;Suffolk city	fips51800
 ReportingUnit	Virginia;Surry County	SURRY COUNTY
-ReportingUnit	Virginia;Surry County	51181
+ReportingUnit	Virginia;Surry County	fips51181
 ReportingUnit	Virginia;Surry County;## Provisional	SURRY COUNTY;## Provisional
 ReportingUnit	Virginia;Surry County;101 - Surry	SURRY COUNTY;101 - SURRY
 ReportingUnit	Virginia;Surry County;201 - Bacons Castle	SURRY COUNTY;201 - BACONS CASTLE
@@ -5145,7 +5146,7 @@ ReportingUnit	Virginia;Surry County;401 - Carsley	SURRY COUNTY;401 - CARSLEY
 ReportingUnit	Virginia;Surry County;501 - Claremont	SURRY COUNTY;501 - CLAREMONT
 ReportingUnit	Virginia;Surry County;502 - Spring Grove	SURRY COUNTY;502 - SPRING GROVE
 ReportingUnit	Virginia;Sussex County	SUSSEX COUNTY
-ReportingUnit	Virginia;Sussex County	51183
+ReportingUnit	Virginia;Sussex County	fips51183
 ReportingUnit	Virginia;Sussex County;# Ab - Central Absentee Precinct	SUSSEX COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Sussex County;## Provisional	SUSSEX COUNTY;## Provisional
 ReportingUnit	Virginia;Sussex County;101 - Waverly	SUSSEX COUNTY;101 - WAVERLY
@@ -5160,7 +5161,7 @@ ReportingUnit	Virginia;Sussex County;502 - Yale	SUSSEX COUNTY;502 - YALE
 ReportingUnit	Virginia;Sussex County;601 - Blackwater	SUSSEX COUNTY;601 - BLACKWATER
 ReportingUnit	Virginia;Sussex County;602 - Newville	SUSSEX COUNTY;602 - NEWVILLE
 ReportingUnit	Virginia;Tazewell County	TAZEWELL COUNTY
-ReportingUnit	Virginia;Tazewell County	51185
+ReportingUnit	Virginia;Tazewell County	fips51185
 ReportingUnit	Virginia;Tazewell County;# Ab - Central Absentee Precinct	TAZEWELL COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Tazewell County;## Provisional	TAZEWELL COUNTY;## Provisional
 ReportingUnit	Virginia;Tazewell County;101 - Abbs Valley	TAZEWELL COUNTY;101 - ABBS VALLEY
@@ -5191,7 +5192,6 @@ ReportingUnit	Virginia;Tazewell County;404 - Raven	TAZEWELL COUNTY;404 - RAVEN
 ReportingUnit	Virginia;Tazewell County;501 - Springville	TAZEWELL COUNTY;501 - SPRINGVILLE
 ReportingUnit	Virginia;Tazewell County;502 - Graham	TAZEWELL COUNTY;502 - GRAHAM
 ReportingUnit	Virginia;Virginia Beach City	VIRGINIA BEACH CITY
-ReportingUnit	Virginia;Virginia Beach City	51810
 ReportingUnit	Virginia;Virginia Beach City;# Ab - Central Absentee Precinct	VIRGINIA BEACH CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Virginia Beach City;## Provisional	VIRGINIA BEACH CITY;## Provisional
 ReportingUnit	Virginia;Virginia Beach City;001 - North Beach	VIRGINIA BEACH CITY;001 - NORTH BEACH
@@ -5294,8 +5294,9 @@ ReportingUnit	Virginia;Virginia Beach City;097 - Indian River	VIRGINIA BEACH CIT
 ReportingUnit	Virginia;Virginia Beach City;098 - Independence	VIRGINIA BEACH CITY;098 - INDEPENDENCE
 ReportingUnit	Virginia;Virginia Beach City;099 - Salem Woods	VIRGINIA BEACH CITY;099 - SALEM WOODS
 ReportingUnit	Virginia;Virginia Beach City;100 - Sandbridge	VIRGINIA BEACH CITY;100 - SANDBRIDGE
+ReportingUnit	Virginia;Virginia Beach city	fips51810
 ReportingUnit	Virginia;Warren County	WARREN COUNTY
-ReportingUnit	Virginia;Warren County	51187
+ReportingUnit	Virginia;Warren County	fips51187
 ReportingUnit	Virginia;Warren County;# Ab - Central Absentee Precinct	WARREN COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Warren County;## Provisional	WARREN COUNTY;## Provisional
 ReportingUnit	Virginia;Warren County;101 - Fork Town	WARREN COUNTY;101 - FORK TOWN
@@ -5310,7 +5311,7 @@ ReportingUnit	Virginia;Warren County;501 - South River	WARREN COUNTY;501 - SOUTH
 ReportingUnit	Virginia;Warren County;502 - Bentonville	WARREN COUNTY;502 - BENTONVILLE
 ReportingUnit	Virginia;Warren County;504 - Browntown	WARREN COUNTY;504 - BROWNTOWN
 ReportingUnit	Virginia;Washington County	WASHINGTON COUNTY
-ReportingUnit	Virginia;Washington County	51191
+ReportingUnit	Virginia;Washington County	fips51191
 ReportingUnit	Virginia;Washington County;# Ab - Central Absentee Precinct	WASHINGTON COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Washington County;## Provisional	WASHINGTON COUNTY;## Provisional
 ReportingUnit	Virginia;Washington County;101 - East Abingdon	WASHINGTON COUNTY;101 - EAST ABINGDON
@@ -5333,15 +5334,15 @@ ReportingUnit	Virginia;Washington County;701 - High Point	WASHINGTON COUNTY;701 
 ReportingUnit	Virginia;Washington County;702 - Wallace	WASHINGTON COUNTY;702 - WALLACE
 ReportingUnit	Virginia;Washington County;703 - John Battle	WASHINGTON COUNTY;703 - JOHN BATTLE
 ReportingUnit	Virginia;Waynesboro City	WAYNESBORO CITY
-ReportingUnit	Virginia;Waynesboro City	51820
 ReportingUnit	Virginia;Waynesboro City;# Ab - Central Absentee Precinct	WAYNESBORO CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Waynesboro City;## Provisional	WAYNESBORO CITY;## Provisional
 ReportingUnit	Virginia;Waynesboro City;001 - Ward A	WAYNESBORO CITY;001 - WARD A
 ReportingUnit	Virginia;Waynesboro City;002 - Ward B	WAYNESBORO CITY;002 - WARD B
 ReportingUnit	Virginia;Waynesboro City;003 - Ward C	WAYNESBORO CITY;003 - WARD C
 ReportingUnit	Virginia;Waynesboro City;004 - Ward D	WAYNESBORO CITY;004 - WARD D
+ReportingUnit	Virginia;Waynesboro city	fips51820
 ReportingUnit	Virginia;Westmoreland County	WESTMORELAND COUNTY
-ReportingUnit	Virginia;Westmoreland County	51193
+ReportingUnit	Virginia;Westmoreland County	fips51193
 ReportingUnit	Virginia;Westmoreland County;# Ab - Central Absentee Precinct	WESTMORELAND COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Westmoreland County;## Provisional	WESTMORELAND COUNTY;## Provisional
 ReportingUnit	Virginia;Westmoreland County;101 - Precinct 1-1	WESTMORELAND COUNTY;101 - PRECINCT 1-1
@@ -5353,13 +5354,12 @@ ReportingUnit	Virginia;Westmoreland County;302 - Precinct 3-2	WESTMORELAND COUNT
 ReportingUnit	Virginia;Westmoreland County;401 - Precinct 4-1	WESTMORELAND COUNTY;401 - PRECINCT 4-1
 ReportingUnit	Virginia;Westmoreland County;501 - Precinct 5-1	WESTMORELAND COUNTY;501 - PRECINCT 5-1
 ReportingUnit	Virginia;Williamsburg City	WILLIAMSBURG CITY
-ReportingUnit	Virginia;Williamsburg City	51830
 ReportingUnit	Virginia;Williamsburg City;# Ab - Central Absentee Precinct	WILLIAMSBURG CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Williamsburg City;## Provisional	WILLIAMSBURG CITY;## Provisional
 ReportingUnit	Virginia;Williamsburg City;001 - Stryker	WILLIAMSBURG CITY;001 - STRYKER
 ReportingUnit	Virginia;Williamsburg City;002 - Matoaka	WILLIAMSBURG CITY;002 - MATOAKA
+ReportingUnit	Virginia;Williamsburg city	fips51830
 ReportingUnit	Virginia;Winchester City	WINCHESTER CITY
-ReportingUnit	Virginia;Winchester City	51840
 ReportingUnit	Virginia;Winchester City;# Ab - Central Absentee Precinct	WINCHESTER CITY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Winchester City;## Provisional	WINCHESTER CITY;## Provisional
 ReportingUnit	Virginia;Winchester City;101 - Merrimans	WINCHESTER CITY;101 - MERRIMANS
@@ -5368,8 +5368,9 @@ ReportingUnit	Virginia;Winchester City;201 - Virginia Avenue	WINCHESTER CITY;201
 ReportingUnit	Virginia;Winchester City;301 - War Memorial	WINCHESTER CITY;301 - WAR MEMORIAL
 ReportingUnit	Virginia;Winchester City;401 - Frederick Douglass	WINCHESTER CITY;401 - FREDERICK DOUGLASS
 ReportingUnit	Virginia;Winchester City;402 - Rolling Hills	WINCHESTER CITY;402 - ROLLING HILLS
+ReportingUnit	Virginia;Winchester city	fips51840
 ReportingUnit	Virginia;Wise County	WISE COUNTY
-ReportingUnit	Virginia;Wise County	51195
+ReportingUnit	Virginia;Wise County	fips51195
 ReportingUnit	Virginia;Wise County;# Ab - Central Absentee Precinct	WISE COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Wise County;## Provisional	WISE COUNTY;## Provisional
 ReportingUnit	Virginia;Wise County;101 - Appalachia	WISE COUNTY;101 - APPALACHIA
@@ -5385,7 +5386,7 @@ ReportingUnit	Virginia;Wise County;401 - Clinch Valley	WISE COUNTY;401 - CLINCH 
 ReportingUnit	Virginia;Wise County;402 - South Coeburn	WISE COUNTY;402 - SOUTH COEBURN
 ReportingUnit	Virginia;Wise County;403 - St Paul	WISE COUNTY;403 - ST PAUL
 ReportingUnit	Virginia;Wythe County	WYTHE COUNTY
-ReportingUnit	Virginia;Wythe County	51197
+ReportingUnit	Virginia;Wythe County	fips51197
 ReportingUnit	Virginia;Wythe County;# Ab - Central Absentee Precinct	WYTHE COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Wythe County;## Provisional	WYTHE COUNTY;## Provisional
 ReportingUnit	Virginia;Wythe County;101 - Royal Oak	WYTHE COUNTY;101 - ROYAL OAK
@@ -5400,7 +5401,7 @@ ReportingUnit	Virginia;Wythe County;601 - Huddle	WYTHE COUNTY;601 - HUDDLE
 ReportingUnit	Virginia;Wythe County;602 - Zion	WYTHE COUNTY;602 - ZION
 ReportingUnit	Virginia;Wythe County;603 Evergreen	WYTHE COUNTY;603 EVERGREEN
 ReportingUnit	Virginia;York County	YORK COUNTY
-ReportingUnit	Virginia;York County	51199
+ReportingUnit	Virginia;York County	fips51199
 ReportingUnit	Virginia;York County;# Ab - Central Absentee Precinct	YORK COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;York County;## Provisional	YORK COUNTY;## Provisional
 ReportingUnit	Virginia;York County;101 - Queens Lake	YORK COUNTY;101 - QUEENS LAKE

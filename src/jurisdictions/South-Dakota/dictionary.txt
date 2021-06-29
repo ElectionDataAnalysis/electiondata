@@ -200,8 +200,8 @@ Candidate	Val Parsley	Val Parsley
 Candidate	Wayne H. Steinhauer	Wayne H. Steinhauer
 Candidate	Will D Mortenson	Will D Mortenson
 CandidateContest	SD Attorney General	Attorney General
-CandidateContest	SD House District 1	State Representative District 1
 CandidateContest	SD House District 1	State Representative District 01
+CandidateContest	SD House District 1	State Representative District 1
 CandidateContest	SD House District 10	State Representative District 10
 CandidateContest	SD House District 11	State Representative District 11
 CandidateContest	SD House District 12	State Representative District 12
@@ -212,8 +212,8 @@ CandidateContest	SD House District 16	State Representative District 16
 CandidateContest	SD House District 17	State Representative District 17
 CandidateContest	SD House District 18	State Representative District 18
 CandidateContest	SD House District 19	State Representative District 19
-CandidateContest	SD House District 2	State Representative District 2
 CandidateContest	SD House District 2	State Representative District 02
+CandidateContest	SD House District 2	State Representative District 2
 CandidateContest	SD House District 20	State Representative District 20
 CandidateContest	SD House District 21	State Representative District 21
 CandidateContest	SD House District 22	State Representative District 22
@@ -226,8 +226,8 @@ CandidateContest	SD House District 27	State Representative District 27
 CandidateContest	SD House District 28A	State Representative District 28A
 CandidateContest	SD House District 28B	State Representative District 28B
 CandidateContest	SD House District 29	State Representative District 29
-CandidateContest	SD House District 3	State Representative District 3
 CandidateContest	SD House District 3	State Representative District 03
+CandidateContest	SD House District 3	State Representative District 3
 CandidateContest	SD House District 30	State Representative District 30
 CandidateContest	SD House District 31	State Representative District 31
 CandidateContest	SD House District 32	State Representative District 32
@@ -238,8 +238,8 @@ CandidateContest	SD House District 36	State Representative District 36
 CandidateContest	SD House District 37	State Representative District 37
 CandidateContest	SD House District 38	State Representative District 38
 CandidateContest	SD House District 39	State Representative District 39
-CandidateContest	SD House District 4	State Representative District 4
 CandidateContest	SD House District 4	State Representative District 04
+CandidateContest	SD House District 4	State Representative District 4
 CandidateContest	SD House District 40	State Representative District 40
 CandidateContest	SD House District 41	State Representative District 41
 CandidateContest	SD House District 42	State Representative District 42
@@ -250,8 +250,8 @@ CandidateContest	SD House District 46	State Representative District 46
 CandidateContest	SD House District 47	State Representative District 47
 CandidateContest	SD House District 48	State Representative District 48
 CandidateContest	SD House District 49	State Representative District 49
-CandidateContest	SD House District 5	State Representative District 5
 CandidateContest	SD House District 5	State Representative District 05
+CandidateContest	SD House District 5	State Representative District 5
 CandidateContest	SD House District 50	State Representative District 50
 CandidateContest	SD House District 51	State Representative District 51
 CandidateContest	SD House District 52	State Representative District 52
@@ -262,8 +262,8 @@ CandidateContest	SD House District 56	State Representative District 56
 CandidateContest	SD House District 57	State Representative District 57
 CandidateContest	SD House District 58	State Representative District 58
 CandidateContest	SD House District 59	State Representative District 59
-CandidateContest	SD House District 6	State Representative District 6
 CandidateContest	SD House District 6	State Representative District 06
+CandidateContest	SD House District 6	State Representative District 6
 CandidateContest	SD House District 60	State Representative District 60
 CandidateContest	SD House District 61	State Representative District 61
 CandidateContest	SD House District 62	State Representative District 62
@@ -274,8 +274,8 @@ CandidateContest	SD House District 66	State Representative District 66
 CandidateContest	SD House District 67	State Representative District 67
 CandidateContest	SD House District 68	State Representative District 68
 CandidateContest	SD House District 69	State Representative District 69
-CandidateContest	SD House District 7	State Representative District 7
 CandidateContest	SD House District 7	State Representative District 07
+CandidateContest	SD House District 7	State Representative District 7
 CandidateContest	SD House District 70	State Representative District 70
 CandidateContest	SD House District 71	State Representative District 71
 CandidateContest	SD House District 72	State Representative District 72
@@ -286,8 +286,8 @@ CandidateContest	SD House District 76	State Representative District 76
 CandidateContest	SD House District 77	State Representative District 77
 CandidateContest	SD House District 78	State Representative District 78
 CandidateContest	SD House District 79	State Representative District 79
-CandidateContest	SD House District 8	State Representative District 8
 CandidateContest	SD House District 8	State Representative District 08
+CandidateContest	SD House District 8	State Representative District 8
 CandidateContest	SD House District 80	State Representative District 80
 CandidateContest	SD House District 81	State Representative District 81
 CandidateContest	SD House District 82	State Representative District 82
@@ -298,8 +298,8 @@ CandidateContest	SD House District 86	State Representative District 86
 CandidateContest	SD House District 87	State Representative District 87
 CandidateContest	SD House District 88	State Representative District 88
 CandidateContest	SD House District 89	State Representative District 89
-CandidateContest	SD House District 9	State Representative District 9
 CandidateContest	SD House District 9	State Representative District 09
+CandidateContest	SD House District 9	State Representative District 9
 CandidateContest	SD House District 90	State Representative District 90
 CandidateContest	SD House District 91	State Representative District 91
 CandidateContest	SD House District 92	State Representative District 92
@@ -307,8 +307,8 @@ CandidateContest	SD House District 93	State Representative District 93
 CandidateContest	SD House District 94	State Representative District 94
 CandidateContest	SD Public Utilities Commissioner	Public Utilities Commissioner
 CandidateContest	SD Secretary of State	Secretary of State
-CandidateContest	SD Senate District 1	State Senator District 1
 CandidateContest	SD Senate District 1	State Senator District 01
+CandidateContest	SD Senate District 1	State Senator District 1
 CandidateContest	SD Senate District 10	State Senator District 10
 CandidateContest	SD Senate District 11	State Senator District 11
 CandidateContest	SD Senate District 12	State Senator District 12
@@ -319,8 +319,8 @@ CandidateContest	SD Senate District 16	State Senator District 16
 CandidateContest	SD Senate District 17	State Senator District 17
 CandidateContest	SD Senate District 18	State Senator District 18
 CandidateContest	SD Senate District 19	State Senator District 19
-CandidateContest	SD Senate District 2	State Senator District 2
 CandidateContest	SD Senate District 2	State Senator District 02
+CandidateContest	SD Senate District 2	State Senator District 2
 CandidateContest	SD Senate District 20	State Senator District 20
 CandidateContest	SD Senate District 21	State Senator District 21
 CandidateContest	SD Senate District 22	State Senator District 22
@@ -331,8 +331,8 @@ CandidateContest	SD Senate District 26	State Senator District 26
 CandidateContest	SD Senate District 27	State Senator District 27
 CandidateContest	SD Senate District 28	State Senator District 28
 CandidateContest	SD Senate District 29	State Senator District 29
-CandidateContest	SD Senate District 3	State Senator District 3
 CandidateContest	SD Senate District 3	State Senator District 03
+CandidateContest	SD Senate District 3	State Senator District 3
 CandidateContest	SD Senate District 30	State Senator District 30
 CandidateContest	SD Senate District 31	State Senator District 31
 CandidateContest	SD Senate District 32	State Senator District 32
@@ -343,8 +343,8 @@ CandidateContest	SD Senate District 36	State Senator District 36
 CandidateContest	SD Senate District 37	State Senator District 37
 CandidateContest	SD Senate District 38	State Senator District 38
 CandidateContest	SD Senate District 39	State Senator District 39
-CandidateContest	SD Senate District 4	State Senator District 4
 CandidateContest	SD Senate District 4	State Senator District 04
+CandidateContest	SD Senate District 4	State Senator District 4
 CandidateContest	SD Senate District 40	State Senator District 40
 CandidateContest	SD Senate District 41	State Senator District 41
 CandidateContest	SD Senate District 42	State Senator District 42
@@ -353,19 +353,19 @@ CandidateContest	SD Senate District 44	State Senator District 44
 CandidateContest	SD Senate District 45	State Senator District 45
 CandidateContest	SD Senate District 46	State Senator District 46
 CandidateContest	SD Senate District 47	State Senator District 47
-CandidateContest	SD Senate District 5	State Senator District 5
 CandidateContest	SD Senate District 5	State Senator District 05
-CandidateContest	SD Senate District 6	State Senator District 6
+CandidateContest	SD Senate District 5	State Senator District 5
 CandidateContest	SD Senate District 6	State Senator District 06
-CandidateContest	SD Senate District 7	State Senator District 7
+CandidateContest	SD Senate District 6	State Senator District 6
 CandidateContest	SD Senate District 7	State Senator District 07
-CandidateContest	SD Senate District 8	State Senator District 8
+CandidateContest	SD Senate District 7	State Senator District 7
 CandidateContest	SD Senate District 8	State Senator District 08
-CandidateContest	SD Senate District 9	State Senator District 9
+CandidateContest	SD Senate District 8	State Senator District 8
 CandidateContest	SD Senate District 9	State Senator District 09
+CandidateContest	SD Senate District 9	State Senator District 9
 CandidateContest	US House SD District 1	United States Representative
-CandidateContest	US President (SD)	Presidential Electors
 CandidateContest	US President (SD)	PRESIDENT
+CandidateContest	US President (SD)	Presidential Electors
 CandidateContest	US President (SD)	US PRESIDENT
 CandidateContest	US Senate SD	United States Senator
 CountItemType	total	TOTAL
@@ -379,134 +379,134 @@ Party	Republican Party	REP
 Party	Republican Party	REPUBLICAN
 Party	none or unknown	OTHER
 ReportingUnit	South Dakota;Aurora County	Aurora
-ReportingUnit	South Dakota;Aurora County	46003
+ReportingUnit	South Dakota;Aurora County	fips46003
 ReportingUnit	South Dakota;Beadle County	Beadle
-ReportingUnit	South Dakota;Beadle County	46005
+ReportingUnit	South Dakota;Beadle County	fips46005
 ReportingUnit	South Dakota;Bennett County	Bennett
-ReportingUnit	South Dakota;Bennett County	46007
+ReportingUnit	South Dakota;Bennett County	fips46007
 ReportingUnit	South Dakota;Bon Homme County	Bon Homme
-ReportingUnit	South Dakota;Bon Homme County	46009
+ReportingUnit	South Dakota;Bon Homme County	fips46009
 ReportingUnit	South Dakota;Brookings County	Brookings (Vote Center)
-ReportingUnit	South Dakota;Brookings County	46011
+ReportingUnit	South Dakota;Brookings County	fips46011
 ReportingUnit	South Dakota;Brown County	Brown (Vote Center)
-ReportingUnit	South Dakota;Brown County	46013
+ReportingUnit	South Dakota;Brown County	fips46013
 ReportingUnit	South Dakota;Brule County	Brule
-ReportingUnit	South Dakota;Brule County	46015
+ReportingUnit	South Dakota;Brule County	fips46015
 ReportingUnit	South Dakota;Buffalo County	Buffalo
-ReportingUnit	South Dakota;Buffalo County	46017
+ReportingUnit	South Dakota;Buffalo County	fips46017
 ReportingUnit	South Dakota;Butte County	Butte
-ReportingUnit	South Dakota;Butte County	46019
+ReportingUnit	South Dakota;Butte County	fips46019
 ReportingUnit	South Dakota;Campbell County	Campbell
-ReportingUnit	South Dakota;Campbell County	46021
+ReportingUnit	South Dakota;Campbell County	fips46021
 ReportingUnit	South Dakota;Charles Mix County	Charles Mix
-ReportingUnit	South Dakota;Charles Mix County	46023
+ReportingUnit	South Dakota;Charles Mix County	fips46023
 ReportingUnit	South Dakota;Clark County	Clark
-ReportingUnit	South Dakota;Clark County	46025
+ReportingUnit	South Dakota;Clark County	fips46025
 ReportingUnit	South Dakota;Clay County	Clay
-ReportingUnit	South Dakota;Clay County	46027
+ReportingUnit	South Dakota;Clay County	fips46027
 ReportingUnit	South Dakota;Codington County	Codington
-ReportingUnit	South Dakota;Codington County	46029
+ReportingUnit	South Dakota;Codington County	fips46029
 ReportingUnit	South Dakota;Corson County	Corson
-ReportingUnit	South Dakota;Corson County	46031
+ReportingUnit	South Dakota;Corson County	fips46031
 ReportingUnit	South Dakota;Custer County	Custer
-ReportingUnit	South Dakota;Custer County	46033
+ReportingUnit	South Dakota;Custer County	fips46033
 ReportingUnit	South Dakota;Davison County	Davison
-ReportingUnit	South Dakota;Davison County	46035
+ReportingUnit	South Dakota;Davison County	fips46035
 ReportingUnit	South Dakota;Day County	Day
-ReportingUnit	South Dakota;Day County	46037
+ReportingUnit	South Dakota;Day County	fips46037
 ReportingUnit	South Dakota;Deuel County	Deuel
-ReportingUnit	South Dakota;Deuel County	46039
+ReportingUnit	South Dakota;Deuel County	fips46039
 ReportingUnit	South Dakota;Dewey County	Dewey
-ReportingUnit	South Dakota;Dewey County	46041
+ReportingUnit	South Dakota;Dewey County	fips46041
 ReportingUnit	South Dakota;Douglas County	Douglas
-ReportingUnit	South Dakota;Douglas County	46043
+ReportingUnit	South Dakota;Douglas County	fips46043
 ReportingUnit	South Dakota;Edmunds County	Edmunds
-ReportingUnit	South Dakota;Edmunds County	46045
+ReportingUnit	South Dakota;Edmunds County	fips46045
 ReportingUnit	South Dakota;Fall River County	Fall River
-ReportingUnit	South Dakota;Fall River County	46047
+ReportingUnit	South Dakota;Fall River County	fips46047
 ReportingUnit	South Dakota;Faulk County	Faulk
-ReportingUnit	South Dakota;Faulk County	46049
+ReportingUnit	South Dakota;Faulk County	fips46049
 ReportingUnit	South Dakota;Grant County	Grant
-ReportingUnit	South Dakota;Grant County	46051
+ReportingUnit	South Dakota;Grant County	fips46051
 ReportingUnit	South Dakota;Gregory County	Gregory
-ReportingUnit	South Dakota;Gregory County	46053
+ReportingUnit	South Dakota;Gregory County	fips46053
 ReportingUnit	South Dakota;Haakon County	Haakon
-ReportingUnit	South Dakota;Haakon County	46055
+ReportingUnit	South Dakota;Haakon County	fips46055
 ReportingUnit	South Dakota;Hamlin County	Hamlin
-ReportingUnit	South Dakota;Hamlin County	46057
+ReportingUnit	South Dakota;Hamlin County	fips46057
 ReportingUnit	South Dakota;Hand County	Hand
-ReportingUnit	South Dakota;Hand County	46059
+ReportingUnit	South Dakota;Hand County	fips46059
 ReportingUnit	South Dakota;Hanson County	Hanson
-ReportingUnit	South Dakota;Hanson County	46061
+ReportingUnit	South Dakota;Hanson County	fips46061
 ReportingUnit	South Dakota;Harding County	Harding
-ReportingUnit	South Dakota;Harding County	46063
+ReportingUnit	South Dakota;Harding County	fips46063
 ReportingUnit	South Dakota;Hughes County	Hughes (Vote Center)
-ReportingUnit	South Dakota;Hughes County	46065
+ReportingUnit	South Dakota;Hughes County	fips46065
 ReportingUnit	South Dakota;Hutchinson County	Hutchinson
-ReportingUnit	South Dakota;Hutchinson County	46067
+ReportingUnit	South Dakota;Hutchinson County	fips46067
 ReportingUnit	South Dakota;Hyde County	Hyde (Vote Center)
-ReportingUnit	South Dakota;Hyde County	46069
+ReportingUnit	South Dakota;Hyde County	fips46069
 ReportingUnit	South Dakota;Jackson County	Jackson
-ReportingUnit	South Dakota;Jackson County	46071
+ReportingUnit	South Dakota;Jackson County	fips46071
 ReportingUnit	South Dakota;Jerauld County	Jerauld
-ReportingUnit	South Dakota;Jerauld County	46073
+ReportingUnit	South Dakota;Jerauld County	fips46073
 ReportingUnit	South Dakota;Jones County	Jones
-ReportingUnit	South Dakota;Jones County	46075
+ReportingUnit	South Dakota;Jones County	fips46075
 ReportingUnit	South Dakota;Kingsbury County	Kingsbury
-ReportingUnit	South Dakota;Kingsbury County	46077
+ReportingUnit	South Dakota;Kingsbury County	fips46077
 ReportingUnit	South Dakota;Lake County	Lake
-ReportingUnit	South Dakota;Lake County	46079
+ReportingUnit	South Dakota;Lake County	fips46079
 ReportingUnit	South Dakota;Lawrence County	Lawrence
-ReportingUnit	South Dakota;Lawrence County	46081
+ReportingUnit	South Dakota;Lawrence County	fips46081
 ReportingUnit	South Dakota;Lincoln County	Lincoln
-ReportingUnit	South Dakota;Lincoln County	46083
+ReportingUnit	South Dakota;Lincoln County	fips46083
 ReportingUnit	South Dakota;Lyman County	Lyman
-ReportingUnit	South Dakota;Lyman County	46085
+ReportingUnit	South Dakota;Lyman County	fips46085
 ReportingUnit	South Dakota;Marshall County	Marshall
-ReportingUnit	South Dakota;Marshall County	46091
+ReportingUnit	South Dakota;Marshall County	fips46091
 ReportingUnit	South Dakota;McCook County	McCook
-ReportingUnit	South Dakota;McCook County	46087
+ReportingUnit	South Dakota;McCook County	fips46087
 ReportingUnit	South Dakota;McPherson County	McPherson
-ReportingUnit	South Dakota;McPherson County	46089
+ReportingUnit	South Dakota;McPherson County	fips46089
 ReportingUnit	South Dakota;Meade County	Meade
-ReportingUnit	South Dakota;Meade County	46093
+ReportingUnit	South Dakota;Meade County	fips46093
 ReportingUnit	South Dakota;Mellette County	Mellette
-ReportingUnit	South Dakota;Mellette County	46095
+ReportingUnit	South Dakota;Mellette County	fips46095
 ReportingUnit	South Dakota;Miner County	Miner
-ReportingUnit	South Dakota;Miner County	46097
+ReportingUnit	South Dakota;Miner County	fips46097
 ReportingUnit	South Dakota;Minnehaha County	Minnehaha
-ReportingUnit	South Dakota;Minnehaha County	46099
+ReportingUnit	South Dakota;Minnehaha County	fips46099
 ReportingUnit	South Dakota;Moody County	Moody
-ReportingUnit	South Dakota;Moody County	46101
+ReportingUnit	South Dakota;Moody County	fips46101
 ReportingUnit	South Dakota;Oglala Lakota County	Oglala Lakota
-ReportingUnit	South Dakota;Oglala Lakota County	46102
+ReportingUnit	South Dakota;Oglala Lakota County	fips46102
 ReportingUnit	South Dakota;Pennington County	Pennington
-ReportingUnit	South Dakota;Pennington County	46103
+ReportingUnit	South Dakota;Pennington County	fips46103
 ReportingUnit	South Dakota;Perkins County	Perkins
-ReportingUnit	South Dakota;Perkins County	46105
+ReportingUnit	South Dakota;Perkins County	fips46105
 ReportingUnit	South Dakota;Potter County	Potter (Vote Center)
-ReportingUnit	South Dakota;Potter County	46107
+ReportingUnit	South Dakota;Potter County	fips46107
 ReportingUnit	South Dakota;Roberts County	Roberts
-ReportingUnit	South Dakota;Roberts County	46109
+ReportingUnit	South Dakota;Roberts County	fips46109
 ReportingUnit	South Dakota;Sanborn County	Sanborn
-ReportingUnit	South Dakota;Sanborn County	46111
+ReportingUnit	South Dakota;Sanborn County	fips46111
 ReportingUnit	South Dakota;Spink County	Spink
-ReportingUnit	South Dakota;Spink County	46115
+ReportingUnit	South Dakota;Spink County	fips46115
 ReportingUnit	South Dakota;Stanley County	Stanley
-ReportingUnit	South Dakota;Stanley County	46117
+ReportingUnit	South Dakota;Stanley County	fips46117
 ReportingUnit	South Dakota;Sully County	Sully (Vote Center)
-ReportingUnit	South Dakota;Sully County	46119
+ReportingUnit	South Dakota;Sully County	fips46119
 ReportingUnit	South Dakota;Todd County	Todd
-ReportingUnit	South Dakota;Todd County	46121
+ReportingUnit	South Dakota;Todd County	fips46121
 ReportingUnit	South Dakota;Tripp County	Tripp
-ReportingUnit	South Dakota;Tripp County	46123
+ReportingUnit	South Dakota;Tripp County	fips46123
 ReportingUnit	South Dakota;Turner County	Turner
-ReportingUnit	South Dakota;Turner County	46125
+ReportingUnit	South Dakota;Turner County	fips46125
 ReportingUnit	South Dakota;Union County	Union
-ReportingUnit	South Dakota;Union County	46127
+ReportingUnit	South Dakota;Union County	fips46127
 ReportingUnit	South Dakota;Walworth County	Walworth
-ReportingUnit	South Dakota;Walworth County	46129
+ReportingUnit	South Dakota;Walworth County	fips46129
 ReportingUnit	South Dakota;Yankton County	Yankton (Vote Center)
-ReportingUnit	South Dakota;Yankton County	46135
+ReportingUnit	South Dakota;Yankton County	fips46135
 ReportingUnit	South Dakota;Ziebach County	Ziebach
-ReportingUnit	South Dakota;Ziebach County	46137
+ReportingUnit	South Dakota;Ziebach County	fips46137

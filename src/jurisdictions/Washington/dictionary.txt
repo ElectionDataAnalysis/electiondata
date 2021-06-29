@@ -61,8 +61,8 @@ Candidate	Allen Werth	Allen Werth
 Candidate	Alvin Rutledge	Alvin Rutledge
 Candidate	Aly Tibbetts	Aly Tibbetts
 Candidate	Alycia Barrow	Alycia Barrow
-Candidate	Alyson Kennedy	Alyson Kennedy / Osborne Hart
 Candidate	Alyson Kennedy	Alyson Kennedy / Malcolm M. Jarrett
+Candidate	Alyson Kennedy	Alyson Kennedy / Osborne Hart
 Candidate	Amanda Hubik	Amanda Hubik
 Candidate	Amanda McKinney	Amanda McKinney
 Candidate	Amanda Price	Amanda Price
@@ -849,9 +849,9 @@ Candidate	Donald Dover	Donald Dover
 Candidate	Donald E. Carlson	Donald E. Carlson
 Candidate	Donald E. Eaton	Donald E. Eaton
 Candidate	Donald Golden	Donald Golden
-Candidate	Donald J. Trump	Donald J. Trump / Michael R. Pence
-Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Donald J. Trump	Donald J. Trump / Michael R. Pence
 Candidate	Donald W. Engel	Donald W. Engel
 Candidate	Donna J. Deal	Donna J. Deal
 Candidate	Donna L. Sinclair	Donna L. Sinclair
@@ -1139,8 +1139,8 @@ Candidate	Henry (Hank) Rawson	Henry (Hank) Rawson
 Candidate	Henry Clay Dennison	Henry Clay Dennison
 Candidate	Henry Herbert	Henry Herbert
 Candidate	Hilary Franz	Hilary Franz
-Candidate	Hillary Clinton	Hillary Clinton / Tim Kaine
 Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton / Tim Kaine
 Candidate	Holly Brewer	Holly Brewer
 Candidate	Holly K Steiner	Holly K Steiner
 Candidate	Hope Bixby	Hope Bixby
@@ -1431,8 +1431,8 @@ Candidate	Jim Walsh	Jim Walsh
 Candidate	Jim Williams	Jim Williams
 Candidate	Jimi O'Hagan	Jimi O'Hagan
 Candidate	Jimmie Winter	Jimmie Winter
-Candidate	Jo Jorgensen	Jo Jorgensen / Jeremy 'Spike' Cohen
 Candidate	Jo Jorgensen	Jo Jorgensen / Jeremy &quot;Spike&quot; Cohen
+Candidate	Jo Jorgensen	Jo Jorgensen / Jeremy 'Spike' Cohen
 Candidate	Joan Cronk	Joan Cronk
 Candidate	Joan McBride	Joan McBride
 Candidate	Joan W Gorner	Joan W Gorner
@@ -3099,8 +3099,8 @@ Candidate	Tracey Carlos	Tracey Carlos
 Candidate	Tracey Krogstad	Tracey Krogstad
 Candidate	Tracey Slagle	Tracey Slagle
 Candidate	Traci Kelly	Traci Kelly
-Candidate	Tracy 'Justice' Wright	Tracy 'Justice' Wright
 Candidate	Tracy 'Justice' Wright	Tracy &quot;Justice&quot; Wright
+Candidate	Tracy 'Justice' Wright	Tracy 'Justice' Wright
 Candidate	Tracy Atwood	Tracy Atwood
 Candidate	Tracy Lepro	Tracy Lepro
 Candidate	Tracy Reilly Kelly	Tracy Reilly Kelly
@@ -3185,8 +3185,8 @@ Candidate	Will Neville	Will Neville
 Candidate	Will Perkel	Will Perkel
 Candidate	Will Purser	Will Purser
 Candidate	Will Rollet	Will Rollet
-Candidate	William 'Bill' Jenkin	William 'Bill' Jenkin
 Candidate	William 'Bill' Jenkin	William &quot;Bill&quot; Jenkin
+Candidate	William 'Bill' Jenkin	William 'Bill' Jenkin
 Candidate	William 'Bill' Leach	William 'Bill' Leach
 Candidate	William (Bill) Colyar	William (Bill) Colyar
 Candidate	William (Bill) Forman	William (Bill) Forman
@@ -3205,8 +3205,8 @@ Candidate	Willie Russell	Willie Russell
 Candidate	Wim Houppermans	Wim Houppermans
 Candidate	Winston Wilkes	Winston Wilkes
 Candidate	Winter Cashman	Winter Cashman
-Candidate	Write-in	Write-in
 Candidate	Write-in	Write-In
+Candidate	Write-in	Write-in
 Candidate	Wynne McCabe	Wynne McCabe
 Candidate	Yanah G. Cook	Yanah G. Cook
 Candidate	Yasmine Scego	Yasmine Scego
@@ -3230,10 +3230,10 @@ CandidateContest	US House WA District 6	Congressional District 6 U.S. Representa
 CandidateContest	US House WA District 7	Congressional District 7 U.S. Representative
 CandidateContest	US House WA District 8	Congressional District 8 U.S. Representative
 CandidateContest	US House WA District 9	Congressional District 9 U.S. Representative
-CandidateContest	US President (WA)	United States President/Vice President
-CandidateContest	US President (WA)	President/Vice President
 CandidateContest	US President (WA)	PRESIDENT
+CandidateContest	US President (WA)	President/Vice President
 CandidateContest	US President (WA)	US PRESIDENT
+CandidateContest	US President (WA)	United States President/Vice President
 CandidateContest	US President (WA) (Democratic Party)	United States President Democratic Party
 CandidateContest	US President (WA) (Republican Party)	United States President Republican Party
 CandidateContest	US Senate WA	United States U.S. Senator
@@ -3487,133 +3487,133 @@ CandidateContest	WA Senate District 7	Legislative District 7 State Senator
 CandidateContest	WA Senate District 8	Legislative District 8 State Senator
 CandidateContest	WA Senate District 9	Legislative District 9 State Senator
 CandidateContest	WA Treasurer	Washington State State Treasurer
-CountItemType	total	total
 CountItemType	total	TOTAL
+CountItemType	total	total
 Party	Constitution Party	Constitution Party Nominees
-Party	Democratic Party	Democratic Party Nominees
-Party	Democratic Party	(Prefers Democratic Party)
-Party	Democratic Party	(Prefers Independent Dem. Party)
-Party	Democratic Party	(Prefers Democrat Party)
-Party	Democratic Party	(Prefers DEM Party)
-Party	Democratic Party	(Prefers Democtratic Party)
-Party	Democratic Party	(Prefers Democractic Party)
-Party	Democratic Party	(Prefers Independent Dem Party)
-Party	Democratic Party	(Prefers Dem/Working Fmly Party)
-Party	Democratic Party	(Prefers DEMOCRATIC Party)
 Party	Democratic Party	(Democratic Party Nominees)
+Party	Democratic Party	(Prefers DEM Party)
+Party	Democratic Party	(Prefers DEMOCRATIC Party)
+Party	Democratic Party	(Prefers Dem/Working Fmly Party)
+Party	Democratic Party	(Prefers Democractic Party)
+Party	Democratic Party	(Prefers Democrat Party)
+Party	Democratic Party	(Prefers Democratic Party)
+Party	Democratic Party	(Prefers Democtratic Party)
+Party	Democratic Party	(Prefers Independent Dem Party)
+Party	Democratic Party	(Prefers Independent Dem. Party)
 Party	Democratic Party	DEMOCRAT
-Party	Green Party	Green Party Nominees
-Party	Green Party	(Prefers Green Party)
+Party	Democratic Party	Democratic Party Nominees
 Party	Green Party	(Green Party Nominees)
+Party	Green Party	(Prefers Green Party)
 Party	Green Party	GREEN
+Party	Green Party	Green Party Nominees
 Party	Independent Party	(Prefers Independent Party)
-Party	Libertarian Party	Libertarian Party Nominees
-Party	Libertarian Party	(Prefers Libertarian Party)
 Party	Libertarian Party	(Libertarian Party Nominees)
+Party	Libertarian Party	(Prefers Libertarian Party)
 Party	Libertarian Party	LIBERTARIAN
+Party	Libertarian Party	Libertarian Party Nominees
 Party	No Party Preference	(States No Party Preference)
 Party	Non Partisan Party	(Prefers Non Partisan Party)
-Party	Republican Party	(Prefers Independent Rep Party)
-Party	Republican Party	Republican Party Nominees
-Party	Republican Party	(Prefers Republican Party)
 Party	Republican Party	(Prefers G.O.P Party)
-Party	Republican Party	(Prefers Independent GOP Party)
 Party	Republican Party	(Prefers G.O.P. Party)
-Party	Republican Party	(Prefers Ind. Republican Party)
-Party	Republican Party	(Prefers Trump Republican Party)
-Party	Republican Party	(Prefers Republicans Party)
-Party	Republican Party	(Prefers Ind Republican Party)
-Party	Republican Party	(Prefers R Party)
-Party	Republican Party	(Prefers GOP/Independent Party)
 Party	Republican Party	(Prefers GOP Party)
+Party	Republican Party	(Prefers GOP/Independent Party)
+Party	Republican Party	(Prefers Ind Republican Party)
+Party	Republican Party	(Prefers Ind. Republican Party)
+Party	Republican Party	(Prefers Independent GOP Party)
+Party	Republican Party	(Prefers Independent Rep Party)
+Party	Republican Party	(Prefers R Party)
+Party	Republican Party	(Prefers Republican Party)
+Party	Republican Party	(Prefers Republicans Party)
+Party	Republican Party	(Prefers Trump Republican Party)
 Party	Republican Party	(Republican Party Nominees)
 Party	Republican Party	REPUBLICAN
+Party	Republican Party	Republican Party Nominees
 Party	Seattle People's Party	(Prefers Seattle People&#39;s Party)
 Party	Seattle People's Party	(Prefers Seattle People's Party)
-Party	Socialism & Liberation Party	Socialism & Liberation Party Nominees
 Party	Socialism & Liberation Party	(Socialism and Liberation Party Nominees)
-Party	Socialist Workers Party	Socialist Workers Party Nominees
-Party	Socialist Workers Party	(Prefers Socialist Workers Party)
+Party	Socialism & Liberation Party	Socialism & Liberation Party Nominees
 Party	Socialist Workers Party	(Prefers Socialist Party)
+Party	Socialist Workers Party	(Prefers Socialist Workers Party)
 Party	Socialist Workers Party	(Socialist Workers Party Nominees)
+Party	Socialist Workers Party	Socialist Workers Party Nominees
 Party	The Alliance Party	(Prefers The Alliance Party)
 Party	WA Progressive Party	(Prefers WA Progressive Party)
 Party	none or unknown	OTHER
 ReportingUnit	Washington;Adams County	Adams
-ReportingUnit	Washington;Adams County	53001
+ReportingUnit	Washington;Adams County	fips53001
 ReportingUnit	Washington;Asotin County	Asotin
-ReportingUnit	Washington;Asotin County	53003
+ReportingUnit	Washington;Asotin County	fips53003
 ReportingUnit	Washington;Benton County	Benton
-ReportingUnit	Washington;Benton County	53005
+ReportingUnit	Washington;Benton County	fips53005
 ReportingUnit	Washington;Chelan County	Chelan
-ReportingUnit	Washington;Chelan County	53007
+ReportingUnit	Washington;Chelan County	fips53007
 ReportingUnit	Washington;Clallam County	Clallam
-ReportingUnit	Washington;Clallam County	53009
+ReportingUnit	Washington;Clallam County	fips53009
 ReportingUnit	Washington;Clark County	Clark
-ReportingUnit	Washington;Clark County	53011
+ReportingUnit	Washington;Clark County	fips53011
 ReportingUnit	Washington;Columbia County	Columbia
-ReportingUnit	Washington;Columbia County	53013
+ReportingUnit	Washington;Columbia County	fips53013
 ReportingUnit	Washington;Cowlitz County	Cowlitz
-ReportingUnit	Washington;Cowlitz County	53015
+ReportingUnit	Washington;Cowlitz County	fips53015
 ReportingUnit	Washington;Douglas County	Douglas
-ReportingUnit	Washington;Douglas County	53017
+ReportingUnit	Washington;Douglas County	fips53017
 ReportingUnit	Washington;Ferry County	Ferry
-ReportingUnit	Washington;Ferry County	53019
+ReportingUnit	Washington;Ferry County	fips53019
 ReportingUnit	Washington;Franklin County	Franklin
-ReportingUnit	Washington;Franklin County	53021
+ReportingUnit	Washington;Franklin County	fips53021
 ReportingUnit	Washington;Garfield County	Garfield
-ReportingUnit	Washington;Garfield County	53023
+ReportingUnit	Washington;Garfield County	fips53023
 ReportingUnit	Washington;Grant County	Grant
-ReportingUnit	Washington;Grant County	53025
+ReportingUnit	Washington;Grant County	fips53025
 ReportingUnit	Washington;Grays Harbor County	Grays Harbor
-ReportingUnit	Washington;Grays Harbor County	53027
+ReportingUnit	Washington;Grays Harbor County	fips53027
 ReportingUnit	Washington;Island County	Island
-ReportingUnit	Washington;Island County	53029
+ReportingUnit	Washington;Island County	fips53029
 ReportingUnit	Washington;Jefferson County	Jefferson
-ReportingUnit	Washington;Jefferson County	53031
+ReportingUnit	Washington;Jefferson County	fips53031
 ReportingUnit	Washington;King County	King
-ReportingUnit	Washington;King County	53033
+ReportingUnit	Washington;King County	fips53033
 ReportingUnit	Washington;Kitsap County	Kitsap
-ReportingUnit	Washington;Kitsap County	53035
+ReportingUnit	Washington;Kitsap County	fips53035
 ReportingUnit	Washington;Kittitas County	Kittitas
-ReportingUnit	Washington;Kittitas County	53037
+ReportingUnit	Washington;Kittitas County	fips53037
 ReportingUnit	Washington;Klickitat County	Klickitat
-ReportingUnit	Washington;Klickitat County	53039
+ReportingUnit	Washington;Klickitat County	fips53039
 ReportingUnit	Washington;Lewis County	Lewis
-ReportingUnit	Washington;Lewis County	53041
+ReportingUnit	Washington;Lewis County	fips53041
 ReportingUnit	Washington;Lincoln County	Lincoln
-ReportingUnit	Washington;Lincoln County	53043
+ReportingUnit	Washington;Lincoln County	fips53043
 ReportingUnit	Washington;Mason County	Mason
-ReportingUnit	Washington;Mason County	53045
+ReportingUnit	Washington;Mason County	fips53045
 ReportingUnit	Washington;Okanogan County	Okanogan
-ReportingUnit	Washington;Okanogan County	53047
+ReportingUnit	Washington;Okanogan County	fips53047
 ReportingUnit	Washington;Pacific County	Pacific
-ReportingUnit	Washington;Pacific County	53049
+ReportingUnit	Washington;Pacific County	fips53049
 ReportingUnit	Washington;Pend Oreille County	Pend Oreille
-ReportingUnit	Washington;Pend Oreille County	53051
+ReportingUnit	Washington;Pend Oreille County	fips53051
 ReportingUnit	Washington;Pierce County	Pierce
-ReportingUnit	Washington;Pierce County	53053
+ReportingUnit	Washington;Pierce County	fips53053
 ReportingUnit	Washington;San Juan County	San Juan
-ReportingUnit	Washington;San Juan County	53055
+ReportingUnit	Washington;San Juan County	fips53055
 ReportingUnit	Washington;Skagit County	Skagit
-ReportingUnit	Washington;Skagit County	53057
+ReportingUnit	Washington;Skagit County	fips53057
 ReportingUnit	Washington;Skamania County	Skamania
-ReportingUnit	Washington;Skamania County	53059
+ReportingUnit	Washington;Skamania County	fips53059
 ReportingUnit	Washington;Snohomish County	Snohomish
-ReportingUnit	Washington;Snohomish County	53061
+ReportingUnit	Washington;Snohomish County	fips53061
 ReportingUnit	Washington;Spokane County	Spokane
-ReportingUnit	Washington;Spokane County	53063
+ReportingUnit	Washington;Spokane County	fips53063
 ReportingUnit	Washington;Stevens County	Stevens
-ReportingUnit	Washington;Stevens County	53065
+ReportingUnit	Washington;Stevens County	fips53065
 ReportingUnit	Washington;Thurston County	Thurston
-ReportingUnit	Washington;Thurston County	53067
+ReportingUnit	Washington;Thurston County	fips53067
 ReportingUnit	Washington;Wahkiakum County	Wahkiakum
-ReportingUnit	Washington;Wahkiakum County	53069
+ReportingUnit	Washington;Wahkiakum County	fips53069
 ReportingUnit	Washington;Walla Walla County	Walla Walla
-ReportingUnit	Washington;Walla Walla County	53071
+ReportingUnit	Washington;Walla Walla County	fips53071
 ReportingUnit	Washington;Whatcom County	Whatcom
-ReportingUnit	Washington;Whatcom County	53073
+ReportingUnit	Washington;Whatcom County	fips53073
 ReportingUnit	Washington;Whitman County	Whitman
-ReportingUnit	Washington;Whitman County	53075
+ReportingUnit	Washington;Whitman County	fips53075
 ReportingUnit	Washington;Yakima County	Yakima
-ReportingUnit	Washington;Yakima County	53077
+ReportingUnit	Washington;Yakima County	fips53077

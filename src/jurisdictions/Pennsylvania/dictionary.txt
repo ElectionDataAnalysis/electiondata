@@ -69,8 +69,8 @@ Candidate	Angel L Cruz	Cruz, Angel L
 Candidate	Angela M Valvano	Valvano, Angela M
 Candidate	Angela Renee Prattis	Prattis, Angela Renee
 Candidate	Anita A Kulik	Kulik, Anita A
-Candidate	Anita Astorino Kulik	Kulik, Anita Astorino
 Candidate	Anita Astorino Kulik	Astorino Kulik, Anita
+Candidate	Anita Astorino Kulik	Kulik, Anita Astorino
 Candidate	Anita Prizio	Prizio, Anita
 Candidate	Ann E. Coleman	Coleman, Ann E.
 Candidate	Ann L Flood	Flood, Ann L
@@ -291,8 +291,8 @@ Candidate	Daniel Philip Meuser	Meuser, Daniel Philip
 Candidate	Daniel Richardson	Richardson, Daniel
 Candidate	Daniel T Mcneill	Mcneill, Daniel T
 Candidate	Daniel Wassmer	Wassmer, Daniel
-Candidate	Danielle Friel Otten	Otten, Danielle Friel
 Candidate	Danielle Friel Otten	Friel Otten, Danielle
+Candidate	Danielle Friel Otten	Otten, Danielle Friel
 Candidate	Danilo R. Burgos	Burgos, Danilo R.
 Candidate	Danyl S Patterson	Patterson, Danyl S
 Candidate	Darcelle L Slappy	Slappy, Darcelle L
@@ -364,8 +364,8 @@ Candidate	Donald Alfred Owens	Owens, Donald Alfred
 Candidate	Donald C White	White, Donald C
 Candidate	Donald Cook	Cook, Donald
 Candidate	Donald E Hoffman Jr	Hoffman, Donald E Jr
-Candidate	Donald J. Trump	Trump, Donald J.
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Trump, Donald J.
 Candidate	Donna Bullock	Bullock, Donna
 Candidate	Donna C. Ellingsen	Ellingsen, Donna C.
 Candidate	Donna Iannone	Iannone, Donna
@@ -399,8 +399,8 @@ Candidate	Edward Flocco	Flocco, Edward
 Candidate	Edward H Eichenlaub	Eichenlaub, Edward H
 Candidate	Edward Joseph Denham	Denham, Edward Joseph
 Candidate	Edward T Iii Clifford	Clifford, Edward T Iii
-Candidate	Edward Thomas Iii Sanders	Sanders, Edward Thomas Iii
 Candidate	Edward Thomas Iii Sanders	Sanders , Edward Thomas Iii
+Candidate	Edward Thomas Iii Sanders	Sanders, Edward Thomas Iii
 Candidate	Edwin A Pashinski	Pashinski, Edwin A
 Candidate	Edwin Pashinski	Pashinski, Edwin
 Candidate	Elaheh Farmand	Farmand, Elaheh
@@ -637,8 +637,8 @@ Candidate	Jim Barr	Barr, Jim
 Candidate	Jimmy J Fagan Jr	Fagan, Jimmy J Jr
 Candidate	Jimmy L. Clendennen	Clendennen, Jimmy L.
 Candidate	Jimmy Pena	Pena, Jimmy
-Candidate	Jo Jorgensen	Jorgensen, Jo
 Candidate	Jo Jorgensen	Jorgensen Jo
+Candidate	Jo Jorgensen	Jorgensen, Jo
 Candidate	Joan M Cullen	Cullen, Joan M
 Candidate	Joan Miller	Miller, Joan
 Candidate	Joanna Bryn Smith	Smith, Joanna Bryn
@@ -723,8 +723,8 @@ Candidate	Joseph F Markosek	Markosek, Joseph F
 Candidate	Joseph F Talarico	Talarico, Joseph F
 Candidate	Joseph G. Phd Webster	Webster, Joseph G. Phd
 Candidate	Joseph Giedemann	Giedemann, Joseph
-Candidate	Joseph M Torsella	Torsella, Joseph M
 Candidate	Joseph M Torsella	Torsella , Joseph M
+Candidate	Joseph M Torsella	Torsella, Joseph M
 Candidate	Joseph P Ciresi	Ciresi, Joseph P
 Candidate	Joseph P Kerwin	Kerwin, Joseph P
 Candidate	Joseph P Soloski	Soloski, Joseph P
@@ -795,8 +795,8 @@ Candidate	Ken Washington	Washington, Ken
 Candidate	Kenneth Gehosky	Gehosky, Kenneth
 Candidate	Kenneth Mcclelland Layng	Layng, Kenneth Mcclelland
 Candidate	Kenneth V Krawchuk	Krawchuk, Kenneth V
-Candidate	Kerith Strano Taylor	Taylor, Kerith Strano
 Candidate	Kerith Strano Taylor	Strano Taylor, Kerith
+Candidate	Kerith Strano Taylor	Taylor, Kerith Strano
 Candidate	Kerry A Benninghoff	Benninghoff, Kerry A
 Candidate	Kerry Albert Benninghoff	Benninghoff, Kerry Albert
 Candidate	Kevin Branco	Branco, Kevin
@@ -876,8 +876,8 @@ Candidate	Louis T. Iv Menna	Menna, Louis T. Iv
 Candidate	Luke Edison Negron	Negron, Luke Edison
 Candidate	Luke Myers	Myers, Luke
 Candidate	Lynda J Schlegel Culver	Schlegel Culver, Lynda J
-Candidate	Madeleine Dean Cunnane	Dean Cunnane , Madeleine
 Candidate	Madeleine Dean Cunnane	Cunnane, Madeleine Dean
+Candidate	Madeleine Dean Cunnane	Dean Cunnane , Madeleine
 Candidate	Makala A. Ashmar	Ashmar, Makala A.
 Candidate	Malcolm Kenyatta	Kenyatta, Malcolm
 Candidate	Malcolm M Kenyatta	Kenyatta, Malcolm M
@@ -3643,8 +3643,8 @@ CandidateContest	US House PA District 9 (Independent Party)	Representative in Co
 CandidateContest	US House PA District 9 (Libertarian Party)	Representative in Congress 9th Congressional District (Libertarian)
 CandidateContest	US House PA District 9 (No Affiliation)	Representative in Congress 9th Congressional District (No Affiliation)
 CandidateContest	US House PA District 9 (Republican Party)	Representative in Congress 9th Congressional District (Republican)
-CandidateContest	US President (PA)	President of the United States Statewide
 CandidateContest	US President (PA)	PRESIDENT
+CandidateContest	US President (PA)	President of the United States Statewide
 CandidateContest	US President (PA)	US PRESIDENT
 CandidateContest	US President (PA) (Democratic / Republican Party)	President of the United States Statewide (Democratic / Republican)
 CandidateContest	US President (PA) (Democratic Party)	President of the United States Statewide (Democratic)
@@ -3661,168 +3661,168 @@ CandidateContest	US Senate PA (Independent Party)	United States Senator Statewid
 CandidateContest	US Senate PA (Libertarian Party)	United States Senator Statewide (Libertarian)
 CandidateContest	US Senate PA (No Affiliation)	United States Senator Statewide (No Affiliation)
 CandidateContest	US Senate PA (Republican Party)	United States Senator Statewide (Republican)
+CountItemType	absentee	Mail No Votes
 CountItemType	absentee	Mail Votes
 CountItemType	absentee	Mail Yes Votes
-CountItemType	absentee	Mail No Votes
+CountItemType	election-day	Election Day No Votes
 CountItemType	election-day	Election Day Votes
 CountItemType	election-day	ElectionDay Yes Votes
-CountItemType	election-day	Election Day No Votes
+CountItemType	provisional	Provisional No Votes
 CountItemType	provisional	Provisional Votes
 CountItemType	provisional	Provisional Yes Votes
-CountItemType	provisional	Provisional No Votes
+CountItemType	total	No Votes
+CountItemType	total	TOTAL
 CountItemType	total	Votes
 CountItemType	total	Yes Votes
-CountItemType	total	No Votes
 CountItemType	total	total
-CountItemType	total	TOTAL
 Party	Abolitionist Society	Abolitionist Society Pennsylvania
 Party	Constitution Party	Constitution Party
 Party	Democratic / Republican Party	Democratic / Republican
-Party	Democratic Party	Democratic
 Party	Democratic Party	DEMOCRAT
-Party	Green Party	Green
+Party	Democratic Party	Democratic
 Party	Green Party	GREEN
+Party	Green Party	Green
 Party	Independent Party	Independent
 Party	Kate McGraw Independent	Kate McGraw Independent
-Party	Libertarian Party	Libertarian
 Party	Libertarian Party	LIBERTARIAN
+Party	Libertarian Party	Libertarian
 Party	No Affiliation	No Affiliation
-Party	Republican Party	Republican
 Party	Republican Party	REPUBLICAN
+Party	Republican Party	Republican
 Party	United Party	United Party
 Party	none or unknown	OTHER
 Party	usaminutemen	usaminutemen
 ReportingUnit	Pennsylvania;Adams County	ADAMS
-ReportingUnit	Pennsylvania;Adams County	42001
+ReportingUnit	Pennsylvania;Adams County	fips42001
 ReportingUnit	Pennsylvania;Allegheny County	ALLEGHENY
-ReportingUnit	Pennsylvania;Allegheny County	42003
+ReportingUnit	Pennsylvania;Allegheny County	fips42003
 ReportingUnit	Pennsylvania;Armstrong County	ARMSTRONG
-ReportingUnit	Pennsylvania;Armstrong County	42005
+ReportingUnit	Pennsylvania;Armstrong County	fips42005
 ReportingUnit	Pennsylvania;Beaver County	BEAVER
-ReportingUnit	Pennsylvania;Beaver County	42007
+ReportingUnit	Pennsylvania;Beaver County	fips42007
 ReportingUnit	Pennsylvania;Bedford County	BEDFORD
-ReportingUnit	Pennsylvania;Bedford County	42009
+ReportingUnit	Pennsylvania;Bedford County	fips42009
 ReportingUnit	Pennsylvania;Berks County	BERKS
-ReportingUnit	Pennsylvania;Berks County	42011
+ReportingUnit	Pennsylvania;Berks County	fips42011
 ReportingUnit	Pennsylvania;Blair County	BLAIR
-ReportingUnit	Pennsylvania;Blair County	42013
+ReportingUnit	Pennsylvania;Blair County	fips42013
 ReportingUnit	Pennsylvania;Bradford County	BRADFORD
-ReportingUnit	Pennsylvania;Bradford County	42015
+ReportingUnit	Pennsylvania;Bradford County	fips42015
 ReportingUnit	Pennsylvania;Bucks County	BUCKS
-ReportingUnit	Pennsylvania;Bucks County	42017
+ReportingUnit	Pennsylvania;Bucks County	fips42017
 ReportingUnit	Pennsylvania;Butler County	BUTLER
-ReportingUnit	Pennsylvania;Butler County	42019
+ReportingUnit	Pennsylvania;Butler County	fips42019
 ReportingUnit	Pennsylvania;Cambria County	CAMBRIA
-ReportingUnit	Pennsylvania;Cambria County	42021
+ReportingUnit	Pennsylvania;Cambria County	fips42021
 ReportingUnit	Pennsylvania;Cameron County	CAMERON
-ReportingUnit	Pennsylvania;Cameron County	42023
+ReportingUnit	Pennsylvania;Cameron County	fips42023
 ReportingUnit	Pennsylvania;Carbon County	CARBON
-ReportingUnit	Pennsylvania;Carbon County	42025
+ReportingUnit	Pennsylvania;Carbon County	fips42025
 ReportingUnit	Pennsylvania;Centre County	CENTRE
-ReportingUnit	Pennsylvania;Centre County	42027
+ReportingUnit	Pennsylvania;Centre County	fips42027
 ReportingUnit	Pennsylvania;Chester County	CHESTER
-ReportingUnit	Pennsylvania;Chester County	42029
+ReportingUnit	Pennsylvania;Chester County	fips42029
 ReportingUnit	Pennsylvania;Clarion County	CLARION
-ReportingUnit	Pennsylvania;Clarion County	42031
+ReportingUnit	Pennsylvania;Clarion County	fips42031
 ReportingUnit	Pennsylvania;Clearfield County	CLEARFIELD
-ReportingUnit	Pennsylvania;Clearfield County	42033
+ReportingUnit	Pennsylvania;Clearfield County	fips42033
 ReportingUnit	Pennsylvania;Clinton County	CLINTON
-ReportingUnit	Pennsylvania;Clinton County	42035
+ReportingUnit	Pennsylvania;Clinton County	fips42035
 ReportingUnit	Pennsylvania;Columbia County	COLUMBIA
-ReportingUnit	Pennsylvania;Columbia County	42037
+ReportingUnit	Pennsylvania;Columbia County	fips42037
 ReportingUnit	Pennsylvania;Crawford County	CRAWFORD
-ReportingUnit	Pennsylvania;Crawford County	42039
+ReportingUnit	Pennsylvania;Crawford County	fips42039
 ReportingUnit	Pennsylvania;Cumberland County	CUMBERLAND
-ReportingUnit	Pennsylvania;Cumberland County	42041
+ReportingUnit	Pennsylvania;Cumberland County	fips42041
 ReportingUnit	Pennsylvania;Dauphin County	DAUPHIN
-ReportingUnit	Pennsylvania;Dauphin County	42043
+ReportingUnit	Pennsylvania;Dauphin County	fips42043
 ReportingUnit	Pennsylvania;Delaware County	DELAWARE
-ReportingUnit	Pennsylvania;Delaware County	42045
+ReportingUnit	Pennsylvania;Delaware County	fips42045
 ReportingUnit	Pennsylvania;Elk County	ELK
-ReportingUnit	Pennsylvania;Elk County	42047
+ReportingUnit	Pennsylvania;Elk County	fips42047
 ReportingUnit	Pennsylvania;Erie County	ERIE
-ReportingUnit	Pennsylvania;Erie County	42049
+ReportingUnit	Pennsylvania;Erie County	fips42049
 ReportingUnit	Pennsylvania;Fayette County	FAYETTE
-ReportingUnit	Pennsylvania;Fayette County	42051
+ReportingUnit	Pennsylvania;Fayette County	fips42051
 ReportingUnit	Pennsylvania;Forest County	FOREST
-ReportingUnit	Pennsylvania;Forest County	42053
+ReportingUnit	Pennsylvania;Forest County	fips42053
 ReportingUnit	Pennsylvania;Franklin County	FRANKLIN
-ReportingUnit	Pennsylvania;Franklin County	42055
+ReportingUnit	Pennsylvania;Franklin County	fips42055
 ReportingUnit	Pennsylvania;Fulton County	FULTON
-ReportingUnit	Pennsylvania;Fulton County	42057
+ReportingUnit	Pennsylvania;Fulton County	fips42057
 ReportingUnit	Pennsylvania;Greene County	GREENE
-ReportingUnit	Pennsylvania;Greene County	42059
+ReportingUnit	Pennsylvania;Greene County	fips42059
 ReportingUnit	Pennsylvania;Huntingdon County	HUNTINGDON
-ReportingUnit	Pennsylvania;Huntingdon County	42061
+ReportingUnit	Pennsylvania;Huntingdon County	fips42061
 ReportingUnit	Pennsylvania;Indiana County	INDIANA
-ReportingUnit	Pennsylvania;Indiana County	42063
+ReportingUnit	Pennsylvania;Indiana County	fips42063
 ReportingUnit	Pennsylvania;Jefferson County	JEFFERSON
-ReportingUnit	Pennsylvania;Jefferson County	42065
+ReportingUnit	Pennsylvania;Jefferson County	fips42065
 ReportingUnit	Pennsylvania;Juniata County	JUNIATA
-ReportingUnit	Pennsylvania;Juniata County	42067
+ReportingUnit	Pennsylvania;Juniata County	fips42067
 ReportingUnit	Pennsylvania;Lackawanna County	LACKAWANNA
-ReportingUnit	Pennsylvania;Lackawanna County	42069
+ReportingUnit	Pennsylvania;Lackawanna County	fips42069
 ReportingUnit	Pennsylvania;Lancaster County	LANCASTER
-ReportingUnit	Pennsylvania;Lancaster County	42071
+ReportingUnit	Pennsylvania;Lancaster County	fips42071
 ReportingUnit	Pennsylvania;Lawrence County	LAWRENCE
-ReportingUnit	Pennsylvania;Lawrence County	42073
+ReportingUnit	Pennsylvania;Lawrence County	fips42073
 ReportingUnit	Pennsylvania;Lebanon County	LEBANON
-ReportingUnit	Pennsylvania;Lebanon County	42075
+ReportingUnit	Pennsylvania;Lebanon County	fips42075
 ReportingUnit	Pennsylvania;Lehigh County	LEHIGH
-ReportingUnit	Pennsylvania;Lehigh County	42077
+ReportingUnit	Pennsylvania;Lehigh County	fips42077
 ReportingUnit	Pennsylvania;Luzerne County	LUZERNE
-ReportingUnit	Pennsylvania;Luzerne County	42079
+ReportingUnit	Pennsylvania;Luzerne County	fips42079
 ReportingUnit	Pennsylvania;Lycoming County	LYCOMING
-ReportingUnit	Pennsylvania;Lycoming County	42081
+ReportingUnit	Pennsylvania;Lycoming County	fips42081
+ReportingUnit	Pennsylvania;McKean County	fips42083
 ReportingUnit	Pennsylvania;Mckean County	McKEAN
-ReportingUnit	Pennsylvania;Mckean County	42083
 ReportingUnit	Pennsylvania;Mercer County	MERCER
-ReportingUnit	Pennsylvania;Mercer County	42085
+ReportingUnit	Pennsylvania;Mercer County	fips42085
 ReportingUnit	Pennsylvania;Mifflin County	MIFFLIN
-ReportingUnit	Pennsylvania;Mifflin County	42087
+ReportingUnit	Pennsylvania;Mifflin County	fips42087
 ReportingUnit	Pennsylvania;Monroe County	MONROE
-ReportingUnit	Pennsylvania;Monroe County	42089
+ReportingUnit	Pennsylvania;Monroe County	fips42089
 ReportingUnit	Pennsylvania;Montgomery County	MONTGOMERY
-ReportingUnit	Pennsylvania;Montgomery County	42091
+ReportingUnit	Pennsylvania;Montgomery County	fips42091
 ReportingUnit	Pennsylvania;Montour County	MONTOUR
-ReportingUnit	Pennsylvania;Montour County	42093
+ReportingUnit	Pennsylvania;Montour County	fips42093
 ReportingUnit	Pennsylvania;Northampton County	NORTHAMPTON
-ReportingUnit	Pennsylvania;Northampton County	42095
+ReportingUnit	Pennsylvania;Northampton County	fips42095
 ReportingUnit	Pennsylvania;Northumberland County	NORTHUMBERLAND
-ReportingUnit	Pennsylvania;Northumberland County	42097
+ReportingUnit	Pennsylvania;Northumberland County	fips42097
 ReportingUnit	Pennsylvania;Perry County	PERRY
-ReportingUnit	Pennsylvania;Perry County	42099
+ReportingUnit	Pennsylvania;Perry County	fips42099
 ReportingUnit	Pennsylvania;Philadelphia County	PHILADELPHIA
-ReportingUnit	Pennsylvania;Philadelphia County	42101
+ReportingUnit	Pennsylvania;Philadelphia County	fips42101
 ReportingUnit	Pennsylvania;Pike County	PIKE
-ReportingUnit	Pennsylvania;Pike County	42103
+ReportingUnit	Pennsylvania;Pike County	fips42103
 ReportingUnit	Pennsylvania;Potter County	POTTER
-ReportingUnit	Pennsylvania;Potter County	42105
+ReportingUnit	Pennsylvania;Potter County	fips42105
 ReportingUnit	Pennsylvania;Schuylkill County	SCHUYLKILL
-ReportingUnit	Pennsylvania;Schuylkill County	42107
+ReportingUnit	Pennsylvania;Schuylkill County	fips42107
 ReportingUnit	Pennsylvania;Snyder County	SNYDER
-ReportingUnit	Pennsylvania;Snyder County	42109
+ReportingUnit	Pennsylvania;Snyder County	fips42109
 ReportingUnit	Pennsylvania;Somerset County	SOMERSET
-ReportingUnit	Pennsylvania;Somerset County	42111
+ReportingUnit	Pennsylvania;Somerset County	fips42111
 ReportingUnit	Pennsylvania;Sullivan County	SULLIVAN
-ReportingUnit	Pennsylvania;Sullivan County	42113
+ReportingUnit	Pennsylvania;Sullivan County	fips42113
 ReportingUnit	Pennsylvania;Susquehanna County	SUSQUEHANNA
-ReportingUnit	Pennsylvania;Susquehanna County	42115
+ReportingUnit	Pennsylvania;Susquehanna County	fips42115
 ReportingUnit	Pennsylvania;Tioga County	TIOGA
-ReportingUnit	Pennsylvania;Tioga County	42117
+ReportingUnit	Pennsylvania;Tioga County	fips42117
 ReportingUnit	Pennsylvania;Union County	UNION
-ReportingUnit	Pennsylvania;Union County	42119
+ReportingUnit	Pennsylvania;Union County	fips42119
 ReportingUnit	Pennsylvania;Venango County	VENANGO
-ReportingUnit	Pennsylvania;Venango County	42121
+ReportingUnit	Pennsylvania;Venango County	fips42121
 ReportingUnit	Pennsylvania;Warren County	WARREN
-ReportingUnit	Pennsylvania;Warren County	42123
+ReportingUnit	Pennsylvania;Warren County	fips42123
 ReportingUnit	Pennsylvania;Washington County	WASHINGTON
-ReportingUnit	Pennsylvania;Washington County	42125
+ReportingUnit	Pennsylvania;Washington County	fips42125
 ReportingUnit	Pennsylvania;Wayne County	WAYNE
-ReportingUnit	Pennsylvania;Wayne County	42127
+ReportingUnit	Pennsylvania;Wayne County	fips42127
 ReportingUnit	Pennsylvania;Westmoreland County	WESTMORELAND
-ReportingUnit	Pennsylvania;Westmoreland County	42129
+ReportingUnit	Pennsylvania;Westmoreland County	fips42129
 ReportingUnit	Pennsylvania;Wyoming County	WYOMING
-ReportingUnit	Pennsylvania;Wyoming County	42131
+ReportingUnit	Pennsylvania;Wyoming County	fips42131
 ReportingUnit	Pennsylvania;York County	YORK
-ReportingUnit	Pennsylvania;York County	42133
+ReportingUnit	Pennsylvania;York County	fips42133

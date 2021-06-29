@@ -101,8 +101,8 @@ Candidate	Derek Slap	Derek Slap
 Candidate	Devin R. Carney	Devin R. Carney
 Candidate	Devon Brown	Devon Brown
 Candidate	Don Vaniah Alexander	Don Vaniah Alexander
-Candidate	Donald J. Trump	Trump and Pence
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Trump and Pence
 Candidate	Donna Veach	Donna Veach
 Candidate	Dorinda Borer	Dorinda Borer
 Candidate	Doug Dubitsky	Doug Dubitsky
@@ -609,8 +609,8 @@ CandidateContest	US House CT District 2	Representative in Congress 02
 CandidateContest	US House CT District 3	Representative in Congress 03
 CandidateContest	US House CT District 4	Representative in Congress 04
 CandidateContest	US House CT District 5	Representative in Congress 05
-CandidateContest	US President (CT)	Presidential Electors for
 CandidateContest	US President (CT)	PRESIDENT
+CandidateContest	US President (CT)	Presidential Electors for
 CandidateContest	US President (CT)	US PRESIDENT
 CandidateContest	US Senate CT	US Senate CT
 CountItemType	absentee	Absentee
@@ -621,18 +621,18 @@ Election	2016 General	2016 General
 Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
-Party	Democratic Party	Democratic Party
 Party	Democratic Party	DEMOCRAT
+Party	Democratic Party	Democratic Party
 Party	Epic Party	Epic Party
-Party	Green Party	Green Party
 Party	Green Party	GREEN
+Party	Green Party	Green Party
 Party	Independent Party	Independent Party
-Party	Libertarian Party	Libertarian Party
 Party	Libertarian Party	LIBERTARIAN
+Party	Libertarian Party	Libertarian Party
 Party	Petitioning Candidate	Petitioning Candidate
 Party	Reclaim Party	Reclaim Party
-Party	Republican Party	Republican Party
 Party	Republican Party	REPUBLICAN
+Party	Republican Party	Republican Party
 Party	Socialist Resurgence Party	Socialist Resurgence Party
 Party	Working Families Party	Working Families Party
 Party	Write In	Write In
@@ -859,18 +859,19 @@ ReportingUnit	Connecticut;Enfield;DISTRICT 458-Henry Barnard School	Enfield;DIST
 ReportingUnit	Connecticut;Enfield;DISTRICT 459-Henry Barnard School	Enfield;DISTRICT 459-Henry Barnard School
 ReportingUnit	Connecticut;Essex	Essex
 ReportingUnit	Connecticut;Essex;DISTRICT 1-Essex Town Hall 01	Essex;DISTRICT 1-Essex Town Hall 01
-ReportingUnit	Connecticut;Fairfield	Fairfield
-ReportingUnit	Connecticut;Fairfield;DISTRICT 1-34-Dwight School	Fairfield;DISTRICT 1-34-Dwight School
-ReportingUnit	Connecticut;Fairfield;DISTRICT 10-32-Mill Hill School	Fairfield;DISTRICT 10-32-Mill Hill School
-ReportingUnit	Connecticut;Fairfield;DISTRICT 2-34-St Pius School	Fairfield;DISTRICT 2-34-St Pius School
-ReportingUnit	Connecticut;Fairfield;DISTRICT 3-32-Fairfield Woods Middle School	Fairfield;DISTRICT 3-32-Fairfield Woods Middle School
-ReportingUnit	Connecticut;Fairfield;DISTRICT 3-34-Fairfield Woods Middle School	Fairfield;DISTRICT 3-34-Fairfield Woods Middle School
-ReportingUnit	Connecticut;Fairfield;DISTRICT 4-33-Stratfield School	Fairfield;DISTRICT 4-33-Stratfield School
-ReportingUnit	Connecticut;Fairfield;DISTRICT 5-33-Fairfield Warde High School	Fairfield;DISTRICT 5-33-Fairfield Warde High School
-ReportingUnit	Connecticut;Fairfield;DISTRICT 6-33-McKinley School	Fairfield;DISTRICT 6-33-McKinley School
-ReportingUnit	Connecticut;Fairfield;DISTRICT 7-33-Holland Hill School	Fairfield;DISTRICT 7-33-Holland Hill School
-ReportingUnit	Connecticut;Fairfield;DISTRICT 8-32-Fairfield Ludlowe High School	Fairfield;DISTRICT 8-32-Fairfield Ludlowe High School
-ReportingUnit	Connecticut;Fairfield;DISTRICT 9-32-Sherman School	Fairfield;DISTRICT 9-32-Sherman School
+ReportingUnit	Connecticut;Fairfield County	Fairfield
+ReportingUnit	Connecticut;Fairfield County	fips09001
+ReportingUnit	Connecticut;Fairfield County;DISTRICT 1-34-Dwight School	Fairfield;DISTRICT 1-34-Dwight School
+ReportingUnit	Connecticut;Fairfield County;DISTRICT 10-32-Mill Hill School	Fairfield;DISTRICT 10-32-Mill Hill School
+ReportingUnit	Connecticut;Fairfield County;DISTRICT 2-34-St Pius School	Fairfield;DISTRICT 2-34-St Pius School
+ReportingUnit	Connecticut;Fairfield County;DISTRICT 3-32-Fairfield Woods Middle School	Fairfield;DISTRICT 3-32-Fairfield Woods Middle School
+ReportingUnit	Connecticut;Fairfield County;DISTRICT 3-34-Fairfield Woods Middle School	Fairfield;DISTRICT 3-34-Fairfield Woods Middle School
+ReportingUnit	Connecticut;Fairfield County;DISTRICT 4-33-Stratfield School	Fairfield;DISTRICT 4-33-Stratfield School
+ReportingUnit	Connecticut;Fairfield County;DISTRICT 5-33-Fairfield Warde High School	Fairfield;DISTRICT 5-33-Fairfield Warde High School
+ReportingUnit	Connecticut;Fairfield County;DISTRICT 6-33-McKinley School	Fairfield;DISTRICT 6-33-McKinley School
+ReportingUnit	Connecticut;Fairfield County;DISTRICT 7-33-Holland Hill School	Fairfield;DISTRICT 7-33-Holland Hill School
+ReportingUnit	Connecticut;Fairfield County;DISTRICT 8-32-Fairfield Ludlowe High School	Fairfield;DISTRICT 8-32-Fairfield Ludlowe High School
+ReportingUnit	Connecticut;Fairfield County;DISTRICT 9-32-Sherman School	Fairfield;DISTRICT 9-32-Sherman School
 ReportingUnit	Connecticut;Farmington	Farmington
 ReportingUnit	Connecticut;Farmington;DISTRICT 1-1-Irving Robbins School - District 1 Precinct 1	Farmington;DISTRICT 1-1-Irving Robbins School - District 1 Precinct 1
 ReportingUnit	Connecticut;Farmington;DISTRICT 1-2-Irving Robbins School - District 1 Precinct 2	Farmington;DISTRICT 1-2-Irving Robbins School - District 1 Precinct 2
@@ -952,31 +953,32 @@ ReportingUnit	Connecticut;Hamden;DISTRICT 8-Bear Path School	Hamden;DISTRICT 8-B
 ReportingUnit	Connecticut;Hamden;DISTRICT 9-West Woods School	Hamden;DISTRICT 9-West Woods School
 ReportingUnit	Connecticut;Hampton	Hampton
 ReportingUnit	Connecticut;Hampton;DISTRICT 1-Hampton TH Lower Level Meeting Room	Hampton;DISTRICT 1-Hampton TH Lower Level Meeting Room
-ReportingUnit	Connecticut;Hartford	Hartford
-ReportingUnit	Connecticut;Hartford;DISTRICT 1-Liberty Christian	Hartford;DISTRICT 1-Liberty Christian
-ReportingUnit	Connecticut;Hartford;DISTRICT 10-House of Restoration Church -Gym	Hartford;DISTRICT 10-House of Restoration Church -Gym
-ReportingUnit	Connecticut;Hartford;DISTRICT 11-United Way of The Capital Area	Hartford;DISTRICT 11-United Way of The Capital Area
-ReportingUnit	Connecticut;Hartford;DISTRICT 12-Burns School	Hartford;DISTRICT 12-Burns School
-ReportingUnit	Connecticut;Hartford;DISTRICT 13-Parkville Community School	Hartford;DISTRICT 13-Parkville Community School
-ReportingUnit	Connecticut;Hartford;DISTRICT 14-Envirnomental Sciences Magnet-Mary Hooker School	Hartford;DISTRICT 14-Envirnomental Sciences Magnet-Mary Hooker School
-ReportingUnit	Connecticut;Hartford;DISTRICT 15-Batchelder School - Gym	Hartford;DISTRICT 15-Batchelder School - Gym
-ReportingUnit	Connecticut;Hartford;DISTRICT 16-Kennelly School - Gym	Hartford;DISTRICT 16-Kennelly School - Gym
-ReportingUnit	Connecticut;Hartford;DISTRICT 17-South End Senior Wellness Center	Hartford;DISTRICT 17-South End Senior Wellness Center
-ReportingUnit	Connecticut;Hartford;DISTRICT 18-Metzner Center	Hartford;DISTRICT 18-Metzner Center
-ReportingUnit	Connecticut;Hartford;DISTRICT 19-Bulkeley High School	Hartford;DISTRICT 19-Bulkeley High School
-ReportingUnit	Connecticut;Hartford;DISTRICT 2-Liberty Christian	Hartford;DISTRICT 2-Liberty Christian
-ReportingUnit	Connecticut;Hartford;DISTRICT 20-The Learning Corridor - Gym	Hartford;DISTRICT 20-The Learning Corridor - Gym
-ReportingUnit	Connecticut;Hartford;DISTRICT 21-Dutch Point Community Room	Hartford;DISTRICT 21-Dutch Point Community Room
-ReportingUnit	Connecticut;Hartford;DISTRICT 22-Hartford Public Library	Hartford;DISTRICT 22-Hartford Public Library
-ReportingUnit	Connecticut;Hartford;DISTRICT 23-Mary Shepard Place Community Room	Hartford;DISTRICT 23-Mary Shepard Place Community Room
-ReportingUnit	Connecticut;Hartford;DISTRICT 24-Parker Memorial Community Center	Hartford;DISTRICT 24-Parker Memorial Community Center
-ReportingUnit	Connecticut;Hartford;DISTRICT 3-Grace Lutheran	Hartford;DISTRICT 3-Grace Lutheran
-ReportingUnit	Connecticut;Hartford;DISTRICT 4-Hartford Seminary	Hartford;DISTRICT 4-Hartford Seminary
-ReportingUnit	Connecticut;Hartford;DISTRICT 5-United Methodist Church	Hartford;DISTRICT 5-United Methodist Church
-ReportingUnit	Connecticut;Hartford;DISTRICT 6-North End Senior Center	Hartford;DISTRICT 6-North End Senior Center
-ReportingUnit	Connecticut;Hartford;DISTRICT 7-Rawson School - Gym	Hartford;DISTRICT 7-Rawson School - Gym
-ReportingUnit	Connecticut;Hartford;DISTRICT 8-Annie Fisher School - Gym	Hartford;DISTRICT 8-Annie Fisher School - Gym
-ReportingUnit	Connecticut;Hartford;DISTRICT 9-YWCA	Hartford;DISTRICT 9-YWCA
+ReportingUnit	Connecticut;Hartford County	Hartford
+ReportingUnit	Connecticut;Hartford County	fips09003
+ReportingUnit	Connecticut;Hartford County;DISTRICT 1-Liberty Christian	Hartford;DISTRICT 1-Liberty Christian
+ReportingUnit	Connecticut;Hartford County;DISTRICT 10-House of Restoration Church -Gym	Hartford;DISTRICT 10-House of Restoration Church -Gym
+ReportingUnit	Connecticut;Hartford County;DISTRICT 11-United Way of The Capital Area	Hartford;DISTRICT 11-United Way of The Capital Area
+ReportingUnit	Connecticut;Hartford County;DISTRICT 12-Burns School	Hartford;DISTRICT 12-Burns School
+ReportingUnit	Connecticut;Hartford County;DISTRICT 13-Parkville Community School	Hartford;DISTRICT 13-Parkville Community School
+ReportingUnit	Connecticut;Hartford County;DISTRICT 14-Envirnomental Sciences Magnet-Mary Hooker School	Hartford;DISTRICT 14-Envirnomental Sciences Magnet-Mary Hooker School
+ReportingUnit	Connecticut;Hartford County;DISTRICT 15-Batchelder School - Gym	Hartford;DISTRICT 15-Batchelder School - Gym
+ReportingUnit	Connecticut;Hartford County;DISTRICT 16-Kennelly School - Gym	Hartford;DISTRICT 16-Kennelly School - Gym
+ReportingUnit	Connecticut;Hartford County;DISTRICT 17-South End Senior Wellness Center	Hartford;DISTRICT 17-South End Senior Wellness Center
+ReportingUnit	Connecticut;Hartford County;DISTRICT 18-Metzner Center	Hartford;DISTRICT 18-Metzner Center
+ReportingUnit	Connecticut;Hartford County;DISTRICT 19-Bulkeley High School	Hartford;DISTRICT 19-Bulkeley High School
+ReportingUnit	Connecticut;Hartford County;DISTRICT 2-Liberty Christian	Hartford;DISTRICT 2-Liberty Christian
+ReportingUnit	Connecticut;Hartford County;DISTRICT 20-The Learning Corridor - Gym	Hartford;DISTRICT 20-The Learning Corridor - Gym
+ReportingUnit	Connecticut;Hartford County;DISTRICT 21-Dutch Point Community Room	Hartford;DISTRICT 21-Dutch Point Community Room
+ReportingUnit	Connecticut;Hartford County;DISTRICT 22-Hartford Public Library	Hartford;DISTRICT 22-Hartford Public Library
+ReportingUnit	Connecticut;Hartford County;DISTRICT 23-Mary Shepard Place Community Room	Hartford;DISTRICT 23-Mary Shepard Place Community Room
+ReportingUnit	Connecticut;Hartford County;DISTRICT 24-Parker Memorial Community Center	Hartford;DISTRICT 24-Parker Memorial Community Center
+ReportingUnit	Connecticut;Hartford County;DISTRICT 3-Grace Lutheran	Hartford;DISTRICT 3-Grace Lutheran
+ReportingUnit	Connecticut;Hartford County;DISTRICT 4-Hartford Seminary	Hartford;DISTRICT 4-Hartford Seminary
+ReportingUnit	Connecticut;Hartford County;DISTRICT 5-United Methodist Church	Hartford;DISTRICT 5-United Methodist Church
+ReportingUnit	Connecticut;Hartford County;DISTRICT 6-North End Senior Center	Hartford;DISTRICT 6-North End Senior Center
+ReportingUnit	Connecticut;Hartford County;DISTRICT 7-Rawson School - Gym	Hartford;DISTRICT 7-Rawson School - Gym
+ReportingUnit	Connecticut;Hartford County;DISTRICT 8-Annie Fisher School - Gym	Hartford;DISTRICT 8-Annie Fisher School - Gym
+ReportingUnit	Connecticut;Hartford County;DISTRICT 9-YWCA	Hartford;DISTRICT 9-YWCA
 ReportingUnit	Connecticut;Hartland	Hartland
 ReportingUnit	Connecticut;Hartland;DISTRICT 1-Hartland School	Hartland;DISTRICT 1-Hartland School
 ReportingUnit	Connecticut;Harwinton	Harwinton
@@ -1002,11 +1004,12 @@ ReportingUnit	Connecticut;Ledyard;DISTRICT 3-Juliet Long School	Ledyard;DISTRICT
 ReportingUnit	Connecticut;Lisbon	Lisbon
 ReportingUnit	Connecticut;Lisbon;DISTRICT 1-Lisbon Town Hall	Lisbon;DISTRICT 1-Lisbon Town Hall
 ReportingUnit	Connecticut;Lisbon;DISTRICT 2-Lisbon Senior Center	Lisbon;DISTRICT 2-Lisbon Senior Center
-ReportingUnit	Connecticut;Litchfield	Litchfield
-ReportingUnit	Connecticut;Litchfield;DISTRICT 1-Litchfield Fire House	Litchfield;DISTRICT 1-Litchfield Fire House
-ReportingUnit	Connecticut;Litchfield;DISTRICT 2-Northfield Fire House 2	Litchfield;DISTRICT 2-Northfield Fire House 2
-ReportingUnit	Connecticut;Litchfield;DISTRICT 3-Bantam Borough Hall	Litchfield;DISTRICT 3-Bantam Borough Hall
-ReportingUnit	Connecticut;Litchfield;DISTRICT 4-Northfield Fire House	Litchfield;DISTRICT 4-Northfield Fire House
+ReportingUnit	Connecticut;Litchfield County	Litchfield
+ReportingUnit	Connecticut;Litchfield County	fips09005
+ReportingUnit	Connecticut;Litchfield County;DISTRICT 1-Litchfield Fire House	Litchfield;DISTRICT 1-Litchfield Fire House
+ReportingUnit	Connecticut;Litchfield County;DISTRICT 2-Northfield Fire House 2	Litchfield;DISTRICT 2-Northfield Fire House 2
+ReportingUnit	Connecticut;Litchfield County;DISTRICT 3-Bantam Borough Hall	Litchfield;DISTRICT 3-Bantam Borough Hall
+ReportingUnit	Connecticut;Litchfield County;DISTRICT 4-Northfield Fire House	Litchfield;DISTRICT 4-Northfield Fire House
 ReportingUnit	Connecticut;Lyme	Lyme
 ReportingUnit	Connecticut;Lyme;DISTRICT 1-Lyme Town Hall	Lyme;DISTRICT 1-Lyme Town Hall
 ReportingUnit	Connecticut;Madison	Madison
@@ -1048,6 +1051,7 @@ ReportingUnit	Connecticut;Middlebury;DISTRICT 1-Shepardson Community Center 01	M
 ReportingUnit	Connecticut;Middlebury;DISTRICT 2-Shepardson Community Center 002	Middlebury;DISTRICT 2-Shepardson Community Center 002
 ReportingUnit	Connecticut;Middlefield	Middlefield
 ReportingUnit	Connecticut;Middlefield;DISTRICT 100-Memorial School	Middlefield;DISTRICT 100-Memorial School
+ReportingUnit	Connecticut;Middlesex County	fips09007
 ReportingUnit	Connecticut;Middletown	Middletown
 ReportingUnit	Connecticut;Middletown;DISTRICT 1-Macdonough School - District 1	Middletown;DISTRICT 1-Macdonough School - District 1
 ReportingUnit	Connecticut;Middletown;DISTRICT 10-South District Firehouse - District 10	Middletown;DISTRICT 10-South District Firehouse - District 10
@@ -1125,51 +1129,53 @@ ReportingUnit	Connecticut;New Fairfield;DISTRICT 2-Company A Firehouse	New Fairf
 ReportingUnit	Connecticut;New Hartford	New Hartford
 ReportingUnit	Connecticut;New Hartford;DISTRICT 1-New Hartford Elementary	New Hartford;DISTRICT 1-New Hartford Elementary
 ReportingUnit	Connecticut;New Hartford;DISTRICT 2-Ann Antolini School	New Hartford;DISTRICT 2-Ann Antolini School
-ReportingUnit	Connecticut;New Haven	New Haven
-ReportingUnit	Connecticut;New Haven;DISTRICT 1-2-Main Library	New Haven;DISTRICT 1-2-Main Library
-ReportingUnit	Connecticut;New Haven;DISTRICT 10-Wilbur Cross High School - Federal	New Haven;DISTRICT 10-Wilbur Cross High School - Federal
-ReportingUnit	Connecticut;New Haven;DISTRICT 11-1-Bella Vista 11-01	New Haven;DISTRICT 11-1-Bella Vista 11-01
-ReportingUnit	Connecticut;New Haven;DISTRICT 11-2-Bishop Woods School	New Haven;DISTRICT 11-2-Bishop Woods School
-ReportingUnit	Connecticut;New Haven;DISTRICT 11-3-Eastview Terrace	New Haven;DISTRICT 11-3-Eastview Terrace
-ReportingUnit	Connecticut;New Haven;DISTRICT 12-1-Ross Woodward	New Haven;DISTRICT 12-1-Ross/woodward
-ReportingUnit	Connecticut;New Haven;DISTRICT 12-2-Ross Woodward	New Haven;DISTRICT 12-2-Ross/woodward
-ReportingUnit	Connecticut;New Haven;DISTRICT 13-Benjamin Jepson Magnet School	New Haven;DISTRICT 13-Benjamin Jepson Magnet School
-ReportingUnit	Connecticut;New Haven;DISTRICT 14-1-Atwater Senior Center 01	New Haven;DISTRICT 14-1-Atwater Senior Center 01
-ReportingUnit	Connecticut;New Haven;DISTRICT 15-1-Community Room	New Haven;DISTRICT 15-1-Community Room
-ReportingUnit	Connecticut;New Haven;DISTRICT 16-John S. Martinez School	New Haven;DISTRICT 16-John S. Martinez School
-ReportingUnit	Connecticut;New Haven;DISTRICT 17-Firehouse Woodward	New Haven;DISTRICT 17-Firehouse Woodward
-ReportingUnit	Connecticut;New Haven;DISTRICT 18-Nathan Hale School	New Haven;DISTRICT 18-Nathan Hale School
-ReportingUnit	Connecticut;New Haven;DISTRICT 19-1-Celentano Museum Academy	New Haven;DISTRICT 19-1-Celentano Museum Academy
-ReportingUnit	Connecticut;New Haven;DISTRICT 19-2-Celentano Museum Academy	New Haven;DISTRICT 19-2-Celentano Museum Academy
-ReportingUnit	Connecticut;New Haven;DISTRICT 2-2-Troup Academy	New Haven;DISTRICT 2-2-Troup Academy
-ReportingUnit	Connecticut;New Haven;DISTRICT 20-2-Lincoln-Bassett School	New Haven;DISTRICT 20-2-Lincoln-Bassett School
-ReportingUnit	Connecticut;New Haven;DISTRICT 21-1-King-Robinson School	New Haven;DISTRICT 21-1-King-Robinson School
-ReportingUnit	Connecticut;New Haven;DISTRICT 22-1-Wexler Grant School	New Haven;DISTRICT 22-1-Wexler Grant School
-ReportingUnit	Connecticut;New Haven;DISTRICT 22-2-Wexler Grant School	New Haven;DISTRICT 22-2-Wexler Grant School
-ReportingUnit	Connecticut;New Haven;DISTRICT 23-Barnard School	New Haven;DISTRICT 23-Barnard School
-ReportingUnit	Connecticut;New Haven;DISTRICT 24-Firehouse Ellsworth	New Haven;DISTRICT 24-Firehouse Ellsworth
-ReportingUnit	Connecticut;New Haven;DISTRICT 25-Edgewood School	New Haven;DISTRICT 25-Edgewood School
-ReportingUnit	Connecticut;New Haven;DISTRICT 26-Davis Street School	New Haven;DISTRICT 26-Davis Street School
-ReportingUnit	Connecticut;New Haven;DISTRICT 27-1-Mauro Sheridan School	New Haven;DISTRICT 27-1-Mauro Sheridan School
-ReportingUnit	Connecticut;New Haven;DISTRICT 28-Hillhouse High School	New Haven;DISTRICT 28-Hillhouse High School
-ReportingUnit	Connecticut;New Haven;DISTRICT 29-Beecher School	New Haven;DISTRICT 29-Beecher School
-ReportingUnit	Connecticut;New Haven;DISTRICT 3-1-Career High School	New Haven;DISTRICT 3-1-Career High School
-ReportingUnit	Connecticut;New Haven;DISTRICT 3-2-Career High School02	New Haven;DISTRICT 3-2-Career High School02
-ReportingUnit	Connecticut;New Haven;DISTRICT 30-1-Brennan Rogers	New Haven;DISTRICT 30-1-Brennan Rogers
-ReportingUnit	Connecticut;New Haven;DISTRICT 30-2-Old West Hills	New Haven;DISTRICT 30-2-Old West Hills
-ReportingUnit	Connecticut;New Haven;DISTRICT 4-1-Truman School	New Haven;DISTRICT 4-1-Truman School
-ReportingUnit	Connecticut;New Haven;DISTRICT 4-2-Truman School 02	New Haven;DISTRICT 4-2-Truman School 02
-ReportingUnit	Connecticut;New Haven;DISTRICT 5-Betsy Ross School	New Haven;DISTRICT 5-Betsy Ross School
-ReportingUnit	Connecticut;New Haven;DISTRICT 6-2-New Horizons School 02	New Haven;DISTRICT 6-2-New Horizons School 02
-ReportingUnit	Connecticut;New Haven;DISTRICT 6-3-New Horizons School 03	New Haven;DISTRICT 6-3-New Horizons School 03
-ReportingUnit	Connecticut;New Haven;DISTRICT 7-2-Hall Of Records 02	New Haven;DISTRICT 7-2-Hall Of Records 02
-ReportingUnit	Connecticut;New Haven;DISTRICT 8-1-Conte-West Schools 8-01	New Haven;DISTRICT 8-1-Conte-West Schools 8-01
-ReportingUnit	Connecticut;New Haven;DISTRICT 8-2-Conte-West Hills School 02	New Haven;DISTRICT 8-2-Conte-West Hills School 02
-ReportingUnit	Connecticut;New Haven;DISTRICT 9-2-Wilbur Cross High School - Ward 9	New Haven;DISTRICT 9-2-Wilbur Cross High School - Ward 9
-ReportingUnit	Connecticut;New London	New London
-ReportingUnit	Connecticut;New London;DISTRICT 1-New London STM High School	New London;DISTRICT 1-New London STM High School
-ReportingUnit	Connecticut;New London;DISTRICT 2-Harbor School	New London;DISTRICT 2-Harbor School
-ReportingUnit	Connecticut;New London;DISTRICT 3-Nathan Hale School	New London;DISTRICT 3-Nathan Hale School
+ReportingUnit	Connecticut;New Haven County	New Haven
+ReportingUnit	Connecticut;New Haven County	fips09009
+ReportingUnit	Connecticut;New Haven County;DISTRICT 1-2-Main Library	New Haven;DISTRICT 1-2-Main Library
+ReportingUnit	Connecticut;New Haven County;DISTRICT 10-Wilbur Cross High School - Federal	New Haven;DISTRICT 10-Wilbur Cross High School - Federal
+ReportingUnit	Connecticut;New Haven County;DISTRICT 11-1-Bella Vista 11-01	New Haven;DISTRICT 11-1-Bella Vista 11-01
+ReportingUnit	Connecticut;New Haven County;DISTRICT 11-2-Bishop Woods School	New Haven;DISTRICT 11-2-Bishop Woods School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 11-3-Eastview Terrace	New Haven;DISTRICT 11-3-Eastview Terrace
+ReportingUnit	Connecticut;New Haven County;DISTRICT 12-1-Ross Woodward	New Haven;DISTRICT 12-1-Ross/woodward
+ReportingUnit	Connecticut;New Haven County;DISTRICT 12-2-Ross Woodward	New Haven;DISTRICT 12-2-Ross/woodward
+ReportingUnit	Connecticut;New Haven County;DISTRICT 13-Benjamin Jepson Magnet School	New Haven;DISTRICT 13-Benjamin Jepson Magnet School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 14-1-Atwater Senior Center 01	New Haven;DISTRICT 14-1-Atwater Senior Center 01
+ReportingUnit	Connecticut;New Haven County;DISTRICT 15-1-Community Room	New Haven;DISTRICT 15-1-Community Room
+ReportingUnit	Connecticut;New Haven County;DISTRICT 16-John S. Martinez School	New Haven;DISTRICT 16-John S. Martinez School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 17-Firehouse Woodward	New Haven;DISTRICT 17-Firehouse Woodward
+ReportingUnit	Connecticut;New Haven County;DISTRICT 18-Nathan Hale School	New Haven;DISTRICT 18-Nathan Hale School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 19-1-Celentano Museum Academy	New Haven;DISTRICT 19-1-Celentano Museum Academy
+ReportingUnit	Connecticut;New Haven County;DISTRICT 19-2-Celentano Museum Academy	New Haven;DISTRICT 19-2-Celentano Museum Academy
+ReportingUnit	Connecticut;New Haven County;DISTRICT 2-2-Troup Academy	New Haven;DISTRICT 2-2-Troup Academy
+ReportingUnit	Connecticut;New Haven County;DISTRICT 20-2-Lincoln-Bassett School	New Haven;DISTRICT 20-2-Lincoln-Bassett School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 21-1-King-Robinson School	New Haven;DISTRICT 21-1-King-Robinson School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 22-1-Wexler Grant School	New Haven;DISTRICT 22-1-Wexler Grant School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 22-2-Wexler Grant School	New Haven;DISTRICT 22-2-Wexler Grant School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 23-Barnard School	New Haven;DISTRICT 23-Barnard School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 24-Firehouse Ellsworth	New Haven;DISTRICT 24-Firehouse Ellsworth
+ReportingUnit	Connecticut;New Haven County;DISTRICT 25-Edgewood School	New Haven;DISTRICT 25-Edgewood School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 26-Davis Street School	New Haven;DISTRICT 26-Davis Street School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 27-1-Mauro Sheridan School	New Haven;DISTRICT 27-1-Mauro Sheridan School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 28-Hillhouse High School	New Haven;DISTRICT 28-Hillhouse High School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 29-Beecher School	New Haven;DISTRICT 29-Beecher School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 3-1-Career High School	New Haven;DISTRICT 3-1-Career High School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 3-2-Career High School02	New Haven;DISTRICT 3-2-Career High School02
+ReportingUnit	Connecticut;New Haven County;DISTRICT 30-1-Brennan Rogers	New Haven;DISTRICT 30-1-Brennan Rogers
+ReportingUnit	Connecticut;New Haven County;DISTRICT 30-2-Old West Hills	New Haven;DISTRICT 30-2-Old West Hills
+ReportingUnit	Connecticut;New Haven County;DISTRICT 4-1-Truman School	New Haven;DISTRICT 4-1-Truman School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 4-2-Truman School 02	New Haven;DISTRICT 4-2-Truman School 02
+ReportingUnit	Connecticut;New Haven County;DISTRICT 5-Betsy Ross School	New Haven;DISTRICT 5-Betsy Ross School
+ReportingUnit	Connecticut;New Haven County;DISTRICT 6-2-New Horizons School 02	New Haven;DISTRICT 6-2-New Horizons School 02
+ReportingUnit	Connecticut;New Haven County;DISTRICT 6-3-New Horizons School 03	New Haven;DISTRICT 6-3-New Horizons School 03
+ReportingUnit	Connecticut;New Haven County;DISTRICT 7-2-Hall Of Records 02	New Haven;DISTRICT 7-2-Hall Of Records 02
+ReportingUnit	Connecticut;New Haven County;DISTRICT 8-1-Conte-West Schools 8-01	New Haven;DISTRICT 8-1-Conte-West Schools 8-01
+ReportingUnit	Connecticut;New Haven County;DISTRICT 8-2-Conte-West Hills School 02	New Haven;DISTRICT 8-2-Conte-West Hills School 02
+ReportingUnit	Connecticut;New Haven County;DISTRICT 9-2-Wilbur Cross High School - Ward 9	New Haven;DISTRICT 9-2-Wilbur Cross High School - Ward 9
+ReportingUnit	Connecticut;New London County	New London
+ReportingUnit	Connecticut;New London County	fips09011
+ReportingUnit	Connecticut;New London County;DISTRICT 1-New London STM High School	New London;DISTRICT 1-New London STM High School
+ReportingUnit	Connecticut;New London County;DISTRICT 2-Harbor School	New London;DISTRICT 2-Harbor School
+ReportingUnit	Connecticut;New London County;DISTRICT 3-Nathan Hale School	New London;DISTRICT 3-Nathan Hale School
 ReportingUnit	Connecticut;New Milford	New Milford
 ReportingUnit	Connecticut;New Milford;DISTRICT 1-Northville School	New Milford;DISTRICT 1-Northville School
 ReportingUnit	Connecticut;New Milford;DISTRICT 2-Catherine E Lillis Building	New Milford;DISTRICT 2-Catherine E Lillis Building
@@ -1396,10 +1402,11 @@ ReportingUnit	Connecticut;Thompson;DISTRICT 1-Thompson Hill Fire Station	Thompso
 ReportingUnit	Connecticut;Thompson;DISTRICT 2-Community Room Town Hall	Thompson;DISTRICT 2-Community Room Town Hall
 ReportingUnit	Connecticut;Thompson;DISTRICT 3-Quinebaug Volunteer Fire Department	Thompson;DISTRICT 3-Quinebaug Volunteer Fire Department
 ReportingUnit	Connecticut;Thompson;DISTRICT 4-East Thompson Fire Station	Thompson;DISTRICT 4-East Thompson Fire Station
-ReportingUnit	Connecticut;Tolland	Tolland
-ReportingUnit	Connecticut;Tolland;DISTRICT 1-The Gym At Tolland Recreation Center 1	Tolland;DISTRICT 1-The Gym At Tolland Recreation Center 1
-ReportingUnit	Connecticut;Tolland;DISTRICT 2-Tolland Senior Center	Tolland;DISTRICT 2-Tolland Senior Center
-ReportingUnit	Connecticut;Tolland;DISTRICT 3-The Gym At Tolland Recreation Center 3	Tolland;DISTRICT 3-The Gym At Tolland Recreation Center 3
+ReportingUnit	Connecticut;Tolland County	Tolland
+ReportingUnit	Connecticut;Tolland County	fips09013
+ReportingUnit	Connecticut;Tolland County;DISTRICT 1-The Gym At Tolland Recreation Center 1	Tolland;DISTRICT 1-The Gym At Tolland Recreation Center 1
+ReportingUnit	Connecticut;Tolland County;DISTRICT 2-Tolland Senior Center	Tolland;DISTRICT 2-Tolland Senior Center
+ReportingUnit	Connecticut;Tolland County;DISTRICT 3-The Gym At Tolland Recreation Center 3	Tolland;DISTRICT 3-The Gym At Tolland Recreation Center 3
 ReportingUnit	Connecticut;Torrington	Torrington
 ReportingUnit	Connecticut;Torrington;DISTRICT 1-Torrington Middle School	Torrington;DISTRICT 1-Torrington Middle School
 ReportingUnit	Connecticut;Torrington;DISTRICT 2-Coe Park 1	Torrington;DISTRICT 2-Coe Park 1
@@ -1520,12 +1527,13 @@ ReportingUnit	Connecticut;Wilton;DISTRICT 2-Cider Mill School - District 2	Wilto
 ReportingUnit	Connecticut;Wilton;DISTRICT 3-Middlebrook School - District 3	Wilton;DISTRICT 3-Middlebrook School - District 3
 ReportingUnit	Connecticut;Winchester	Winchester
 ReportingUnit	Connecticut;Winchester;DISTRICT 1-Pearson School	Winchester;DISTRICT 1-Pearson School
-ReportingUnit	Connecticut;Windham	Windham
-ReportingUnit	Connecticut;Windham;DISTRICT 4-Bpo Elks 1311	Windham;DISTRICT 4-Bpo Elks 1311
-ReportingUnit	Connecticut;Windham;DISTRICT 5-Vfw	Windham;DISTRICT 5-Vfw
-ReportingUnit	Connecticut;Windham;DISTRICT 6-Bpo Elks 1311	Windham;DISTRICT 6-Bpo Elks 1311
-ReportingUnit	Connecticut;Windham;DISTRICT 7-Windham Center Fire Dept	Windham;DISTRICT 7-Windham Center Fire Dept
-ReportingUnit	Connecticut;Windham;DISTRICT 8-Elks	Windham;DISTRICT 8-Elks
+ReportingUnit	Connecticut;Windham County	Windham
+ReportingUnit	Connecticut;Windham County	fips09015
+ReportingUnit	Connecticut;Windham County;DISTRICT 4-Bpo Elks 1311	Windham;DISTRICT 4-Bpo Elks 1311
+ReportingUnit	Connecticut;Windham County;DISTRICT 5-Vfw	Windham;DISTRICT 5-Vfw
+ReportingUnit	Connecticut;Windham County;DISTRICT 6-Bpo Elks 1311	Windham;DISTRICT 6-Bpo Elks 1311
+ReportingUnit	Connecticut;Windham County;DISTRICT 7-Windham Center Fire Dept	Windham;DISTRICT 7-Windham Center Fire Dept
+ReportingUnit	Connecticut;Windham County;DISTRICT 8-Elks	Windham;DISTRICT 8-Elks
 ReportingUnit	Connecticut;Windsor	Windsor
 ReportingUnit	Connecticut;Windsor Locks	Windsor Locks
 ReportingUnit	Connecticut;Windsor Locks;DISTRICT 1-Mario Gatti Town Hall	Windsor Locks;DISTRICT 1-Mario Gatti Town Hall

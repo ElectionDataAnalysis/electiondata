@@ -14,8 +14,8 @@ Candidate	Daniel Rhead Cottam	Daniel Rhead Cottam Barry Evan Short
 Candidate	Darren Parry	Darren Parry
 Candidate	Devin D. Thorpe	Devin D. Thorpe
 Candidate	Don Blankenship	Don Blankenship William Mohr
-Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
 Candidate	George W. Bush	GEORGE W. BUSH
 Candidate	Gloria La Riva	Gloria La Riva
 Candidate	Greg Duerden	Greg Duerden Wayne Hill
@@ -44,8 +44,8 @@ CandidateContest	US House UT District 1	US Congressional District 1
 CandidateContest	US House UT District 2	U.S. House 2
 CandidateContest	US House UT District 3	U.S. House 3
 CandidateContest	US House UT District 4	U.S. House 4
-CandidateContest	US President (UT)	U.S. President
 CandidateContest	US President (UT)	PRESIDENT
+CandidateContest	US President (UT)	U.S. President
 CandidateContest	US President (UT)	US PRESIDENT
 CandidateContest	US Senate UT	US Senate UT
 CandidateContest	UT Attorney General	Attorney General
@@ -165,8 +165,8 @@ Election	2020 Primary	2020 Primary
 Party	Constitution Party	CON
 Party	Democratic Party	DEM
 Party	Democratic Party	DEMOCRAT
-Party	Green Party	GRN
 Party	Green Party	GREEN
+Party	Green Party	GRN
 Party	Independent American Party	IAP
 Party	Libertarian Party	LIB
 Party	Libertarian Party	LIBERTARIAN
@@ -176,51 +176,51 @@ Party	Unaffiliated	UNA
 Party	United Utah Party	UUP
 Party	none or unknown	OTHER
 ReportingUnit	Utah;Beaver County	Beaver
-ReportingUnit	Utah;Beaver County	49001
+ReportingUnit	Utah;Beaver County	fips49001
 ReportingUnit	Utah;Box Elder County	Box Elder
-ReportingUnit	Utah;Box Elder County	49003
+ReportingUnit	Utah;Box Elder County	fips49003
 ReportingUnit	Utah;Cache County	Cache
-ReportingUnit	Utah;Cache County	49005
+ReportingUnit	Utah;Cache County	fips49005
 ReportingUnit	Utah;Carbon County	Carbon
-ReportingUnit	Utah;Carbon County	49007
+ReportingUnit	Utah;Carbon County	fips49007
 ReportingUnit	Utah;Daggett County	Daggett
-ReportingUnit	Utah;Daggett County	49009
+ReportingUnit	Utah;Daggett County	fips49009
 ReportingUnit	Utah;Davis County	Davis
-ReportingUnit	Utah;Davis County	49011
+ReportingUnit	Utah;Davis County	fips49011
 ReportingUnit	Utah;Duchesne County	Duchesne
-ReportingUnit	Utah;Duchesne County	49013
+ReportingUnit	Utah;Duchesne County	fips49013
 ReportingUnit	Utah;Emery County	Emery
-ReportingUnit	Utah;Emery County	49015
+ReportingUnit	Utah;Emery County	fips49015
 ReportingUnit	Utah;Garfield County	Garfield
-ReportingUnit	Utah;Garfield County	49017
+ReportingUnit	Utah;Garfield County	fips49017
 ReportingUnit	Utah;Grand County	Grand
-ReportingUnit	Utah;Grand County	49019
+ReportingUnit	Utah;Grand County	fips49019
 ReportingUnit	Utah;Iron County	Iron
-ReportingUnit	Utah;Iron County	49021
+ReportingUnit	Utah;Iron County	fips49021
 ReportingUnit	Utah;Juab County	Juab
-ReportingUnit	Utah;Juab County	49023
+ReportingUnit	Utah;Juab County	fips49023
 ReportingUnit	Utah;Kane County	Kane
-ReportingUnit	Utah;Kane County	49025
+ReportingUnit	Utah;Kane County	fips49025
 ReportingUnit	Utah;Millard County	Millard
-ReportingUnit	Utah;Millard County	49027
+ReportingUnit	Utah;Millard County	fips49027
 ReportingUnit	Utah;Morgan County	Morgan
-ReportingUnit	Utah;Morgan County	49029
+ReportingUnit	Utah;Morgan County	fips49029
 ReportingUnit	Utah;Piute County	Piute
-ReportingUnit	Utah;Piute County	49031
+ReportingUnit	Utah;Piute County	fips49031
 ReportingUnit	Utah;Rich County	Rich
-ReportingUnit	Utah;Rich County	49033
+ReportingUnit	Utah;Rich County	fips49033
 ReportingUnit	Utah;Salt Lake County	Salt Lake
-ReportingUnit	Utah;Salt Lake County	49035
+ReportingUnit	Utah;Salt Lake County	fips49035
 ReportingUnit	Utah;San Juan County	San Juan
-ReportingUnit	Utah;San Juan County	49037
+ReportingUnit	Utah;San Juan County	fips49037
 ReportingUnit	Utah;Sanpete County	Sanpete
-ReportingUnit	Utah;Sanpete County	49039
+ReportingUnit	Utah;Sanpete County	fips49039
 ReportingUnit	Utah;Sevier County	Sevier
-ReportingUnit	Utah;Sevier County	49041
+ReportingUnit	Utah;Sevier County	fips49041
 ReportingUnit	Utah;Summit County	Summit
-ReportingUnit	Utah;Summit County	49043
+ReportingUnit	Utah;Summit County	fips49043
 ReportingUnit	Utah;Tooele County	Tooele
-ReportingUnit	Utah;Tooele County	49045
+ReportingUnit	Utah;Tooele County	fips49045
 ReportingUnit	Utah;US House UT District 1	Utah;US House UT District 1
 ReportingUnit	Utah;US House UT District 2	Utah;US House UT District 2
 ReportingUnit	Utah;US House UT District 3	Utah;US House UT District 3
@@ -330,14 +330,14 @@ ReportingUnit	Utah;UT Senate District 7	Utah;UT Senate District 7
 ReportingUnit	Utah;UT Senate District 8	Utah;UT Senate District 8
 ReportingUnit	Utah;UT Senate District 9	Utah;UT Senate District 9
 ReportingUnit	Utah;Uintah County	Uintah
-ReportingUnit	Utah;Uintah County	49047
+ReportingUnit	Utah;Uintah County	fips49047
 ReportingUnit	Utah;Utah County	Utah
-ReportingUnit	Utah;Utah County	49049
+ReportingUnit	Utah;Utah County	fips49049
 ReportingUnit	Utah;Wasatch County	Wasatch
-ReportingUnit	Utah;Wasatch County	49051
+ReportingUnit	Utah;Wasatch County	fips49051
 ReportingUnit	Utah;Washington County	Washington
-ReportingUnit	Utah;Washington County	49053
+ReportingUnit	Utah;Washington County	fips49053
 ReportingUnit	Utah;Wayne County	Wayne
-ReportingUnit	Utah;Wayne County	49055
+ReportingUnit	Utah;Wayne County	fips49055
 ReportingUnit	Utah;Weber County	Weber
-ReportingUnit	Utah;Weber County	49057
+ReportingUnit	Utah;Weber County	fips49057

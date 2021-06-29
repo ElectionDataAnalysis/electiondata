@@ -1,192 +1,4 @@
 Name	ReportingUnitType
-Maryland;MD House District 1	state-house
-Maryland;MD House District 2	state-house
-Maryland;MD House District 3	state-house
-Maryland;MD House District 4	state-house
-Maryland;MD House District 5	state-house
-Maryland;MD House District 6	state-house
-Maryland;MD House District 7	state-house
-Maryland;MD House District 8	state-house
-Maryland;MD House District 9	state-house
-Maryland;MD House District 10	state-house
-Maryland;MD House District 11	state-house
-Maryland;MD House District 12	state-house
-Maryland;MD House District 13	state-house
-Maryland;MD House District 14	state-house
-Maryland;MD House District 15	state-house
-Maryland;MD House District 16	state-house
-Maryland;MD House District 17	state-house
-Maryland;MD House District 18	state-house
-Maryland;MD House District 19	state-house
-Maryland;MD House District 20	state-house
-Maryland;MD House District 21	state-house
-Maryland;MD House District 22	state-house
-Maryland;MD House District 23	state-house
-Maryland;MD House District 24	state-house
-Maryland;MD House District 25	state-house
-Maryland;MD House District 26	state-house
-Maryland;MD House District 27	state-house
-Maryland;MD House District 28	state-house
-Maryland;MD House District 29	state-house
-Maryland;MD House District 30	state-house
-Maryland;MD House District 31	state-house
-Maryland;MD House District 32	state-house
-Maryland;MD House District 33	state-house
-Maryland;MD House District 34	state-house
-Maryland;MD House District 35	state-house
-Maryland;MD House District 36	state-house
-Maryland;MD House District 37	state-house
-Maryland;MD House District 38	state-house
-Maryland;MD House District 39	state-house
-Maryland;MD House District 40	state-house
-Maryland;MD House District 41	state-house
-Maryland;MD House District 42	state-house
-Maryland;MD House District 43	state-house
-Maryland;MD House District 44	state-house
-Maryland;MD House District 45	state-house
-Maryland;MD House District 46	state-house
-Maryland;MD House District 47	state-house
-Maryland;MD House District 48	state-house
-Maryland;MD House District 49	state-house
-Maryland;MD House District 50	state-house
-Maryland;MD House District 51	state-house
-Maryland;MD House District 52	state-house
-Maryland;MD House District 53	state-house
-Maryland;MD House District 54	state-house
-Maryland;MD House District 55	state-house
-Maryland;MD House District 56	state-house
-Maryland;MD House District 57	state-house
-Maryland;MD House District 58	state-house
-Maryland;MD House District 59	state-house
-Maryland;MD House District 60	state-house
-Maryland;MD House District 61	state-house
-Maryland;MD House District 62	state-house
-Maryland;MD House District 63	state-house
-Maryland;MD House District 64	state-house
-Maryland;MD House District 65	state-house
-Maryland;MD House District 66	state-house
-Maryland;MD House District 67	state-house
-Maryland;MD House District 68	state-house
-Maryland;MD House District 69	state-house
-Maryland;MD House District 70	state-house
-Maryland;MD House District 71	state-house
-Maryland;MD House District 72	state-house
-Maryland;MD House District 73	state-house
-Maryland;MD House District 74	state-house
-Maryland;MD House District 75	state-house
-Maryland;MD House District 76	state-house
-Maryland;MD House District 77	state-house
-Maryland;MD House District 78	state-house
-Maryland;MD House District 79	state-house
-Maryland;MD House District 80	state-house
-Maryland;MD House District 81	state-house
-Maryland;MD House District 82	state-house
-Maryland;MD House District 83	state-house
-Maryland;MD House District 84	state-house
-Maryland;MD House District 85	state-house
-Maryland;MD House District 86	state-house
-Maryland;MD House District 87	state-house
-Maryland;MD House District 88	state-house
-Maryland;MD House District 89	state-house
-Maryland;MD House District 90	state-house
-Maryland;MD House District 91	state-house
-Maryland;MD House District 92	state-house
-Maryland;MD House District 93	state-house
-Maryland;MD House District 94	state-house
-Maryland;MD House District 95	state-house
-Maryland;MD House District 96	state-house
-Maryland;MD House District 97	state-house
-Maryland;MD House District 98	state-house
-Maryland;MD House District 99	state-house
-Maryland;MD House District 100	state-house
-Maryland;MD House District 101	state-house
-Maryland;MD House District 102	state-house
-Maryland;MD House District 103	state-house
-Maryland;MD House District 104	state-house
-Maryland;MD House District 105	state-house
-Maryland;MD House District 106	state-house
-Maryland;MD House District 107	state-house
-Maryland;MD House District 108	state-house
-Maryland;MD House District 109	state-house
-Maryland;MD House District 110	state-house
-Maryland;MD House District 111	state-house
-Maryland;MD House District 112	state-house
-Maryland;MD House District 113	state-house
-Maryland;MD House District 114	state-house
-Maryland;MD House District 115	state-house
-Maryland;MD House District 116	state-house
-Maryland;MD House District 117	state-house
-Maryland;MD House District 118	state-house
-Maryland;MD House District 119	state-house
-Maryland;MD House District 120	state-house
-Maryland;MD House District 121	state-house
-Maryland;MD House District 122	state-house
-Maryland;MD House District 123	state-house
-Maryland;MD House District 124	state-house
-Maryland;MD House District 125	state-house
-Maryland;MD House District 126	state-house
-Maryland;MD House District 127	state-house
-Maryland;MD House District 128	state-house
-Maryland;MD House District 129	state-house
-Maryland;MD House District 130	state-house
-Maryland;MD House District 131	state-house
-Maryland;MD House District 132	state-house
-Maryland;MD House District 133	state-house
-Maryland;MD House District 134	state-house
-Maryland;MD House District 135	state-house
-Maryland;MD House District 136	state-house
-Maryland;MD House District 137	state-house
-Maryland;MD House District 138	state-house
-Maryland;MD House District 139	state-house
-Maryland;MD House District 140	state-house
-Maryland;MD House District 141	state-house
-Maryland;MD Senate District 1	state-senate
-Maryland;MD Senate District 2	state-senate
-Maryland;MD Senate District 3	state-senate
-Maryland;MD Senate District 4	state-senate
-Maryland;MD Senate District 5	state-senate
-Maryland;MD Senate District 6	state-senate
-Maryland;MD Senate District 7	state-senate
-Maryland;MD Senate District 8	state-senate
-Maryland;MD Senate District 9	state-senate
-Maryland;MD Senate District 10	state-senate
-Maryland;MD Senate District 11	state-senate
-Maryland;MD Senate District 12	state-senate
-Maryland;MD Senate District 13	state-senate
-Maryland;MD Senate District 14	state-senate
-Maryland;MD Senate District 15	state-senate
-Maryland;MD Senate District 16	state-senate
-Maryland;MD Senate District 17	state-senate
-Maryland;MD Senate District 18	state-senate
-Maryland;MD Senate District 19	state-senate
-Maryland;MD Senate District 20	state-senate
-Maryland;MD Senate District 21	state-senate
-Maryland;MD Senate District 22	state-senate
-Maryland;MD Senate District 23	state-senate
-Maryland;MD Senate District 24	state-senate
-Maryland;MD Senate District 25	state-senate
-Maryland;MD Senate District 26	state-senate
-Maryland;MD Senate District 27	state-senate
-Maryland;MD Senate District 28	state-senate
-Maryland;MD Senate District 29	state-senate
-Maryland;MD Senate District 30	state-senate
-Maryland;MD Senate District 31	state-senate
-Maryland;MD Senate District 32	state-senate
-Maryland;MD Senate District 33	state-senate
-Maryland;MD Senate District 34	state-senate
-Maryland;MD Senate District 35	state-senate
-Maryland;MD Senate District 36	state-senate
-Maryland;MD Senate District 37	state-senate
-Maryland;MD Senate District 38	state-senate
-Maryland;MD Senate District 39	state-senate
-Maryland;MD Senate District 40	state-senate
-Maryland;MD Senate District 41	state-senate
-Maryland;MD Senate District 42	state-senate
-Maryland;MD Senate District 43	state-senate
-Maryland;MD Senate District 44	state-senate
-Maryland;MD Senate District 45	state-senate
-Maryland;MD Senate District 46	state-senate
-Maryland;MD Senate District 47	state-senate
 Maryland;US House MD District 1	congressional
 Maryland;US House MD District 2	congressional
 Maryland;US House MD District 3	congressional
@@ -195,11 +7,10 @@ Maryland;US House MD District 5	congressional
 Maryland;US House MD District 6	congressional
 Maryland;US House MD District 7	congressional
 Maryland;US House MD District 8	congressional
-Maryland	state
 Maryland;Allegany County	county
 Maryland;Anne Arundel County	county
-Maryland;Baltimore city	county
 Maryland;Baltimore County	county
+Maryland;Baltimore city	county
 Maryland;Calvert County	county
 Maryland;Caroline County	county
 Maryland;Carroll County	county
@@ -214,8 +25,8 @@ Maryland;Kent County	county
 Maryland;Montgomery County	county
 Maryland;Prince George's County	county
 Maryland;Queen Anne's County	county
-Maryland;St. Mary's County	county
 Maryland;Somerset County	county
+Maryland;St. Mary's County	county
 Maryland;Talbot County	county
 Maryland;Washington County	county
 Maryland;Wicomico County	county
@@ -2057,6 +1868,29 @@ Maryland;Queen Anne's County;District 005 Precinct 001	precinct
 Maryland;Queen Anne's County;District 005 Precinct 002	precinct
 Maryland;Queen Anne's County;District 006 Precinct 001	precinct
 Maryland;Queen Anne's County;District 007 Precinct 001	precinct
+Maryland;Somerset County;District 001 Precinct 001	precinct
+Maryland;Somerset County;District 001 Precinct 002	precinct
+Maryland;Somerset County;District 001 Precinct 003	precinct
+Maryland;Somerset County;District 002 Precinct 001	precinct
+Maryland;Somerset County;District 003 Precinct 001	precinct
+Maryland;Somerset County;District 004 Precinct 001	precinct
+Maryland;Somerset County;District 005 Precinct 001	precinct
+Maryland;Somerset County;District 006 Precinct 001	precinct
+Maryland;Somerset County;District 007 Precinct 001	precinct
+Maryland;Somerset County;District 008 Precinct 001	precinct
+Maryland;Somerset County;District 008 Precinct 002	precinct
+Maryland;Somerset County;District 009 Precinct 001	precinct
+Maryland;Somerset County;District 010 Precinct 001	precinct
+Maryland;Somerset County;District 010 Precinct 002	precinct
+Maryland;Somerset County;District 011 Precinct 001	precinct
+Maryland;Somerset County;District 012 Precinct 001	precinct
+Maryland;Somerset County;District 013 Precinct 001	precinct
+Maryland;Somerset County;District 013 Precinct 002	precinct
+Maryland;Somerset County;District 013 Precinct 003	precinct
+Maryland;Somerset County;District 014 Precinct 001	precinct
+Maryland;Somerset County;District 015 Precinct 001	precinct
+Maryland;Somerset County;District 015 Precinct 002	precinct
+Maryland;Somerset County;District 015 Precinct 003	precinct
 Maryland;St. Mary's County;District 001 Precinct 001	precinct
 Maryland;St. Mary's County;District 001 Precinct 002	precinct
 Maryland;St. Mary's County;District 002 Precinct 001	precinct
@@ -2093,29 +1927,6 @@ Maryland;St. Mary's County;District 008 Precinct 010	precinct
 Maryland;St. Mary's County;District 008 Precinct 011	precinct
 Maryland;St. Mary's County;District 008 Precinct 012	precinct
 Maryland;St. Mary's County;District 009 Precinct 001	precinct
-Maryland;Somerset County;District 001 Precinct 001	precinct
-Maryland;Somerset County;District 001 Precinct 002	precinct
-Maryland;Somerset County;District 001 Precinct 003	precinct
-Maryland;Somerset County;District 002 Precinct 001	precinct
-Maryland;Somerset County;District 003 Precinct 001	precinct
-Maryland;Somerset County;District 004 Precinct 001	precinct
-Maryland;Somerset County;District 005 Precinct 001	precinct
-Maryland;Somerset County;District 006 Precinct 001	precinct
-Maryland;Somerset County;District 007 Precinct 001	precinct
-Maryland;Somerset County;District 008 Precinct 001	precinct
-Maryland;Somerset County;District 008 Precinct 002	precinct
-Maryland;Somerset County;District 009 Precinct 001	precinct
-Maryland;Somerset County;District 010 Precinct 001	precinct
-Maryland;Somerset County;District 010 Precinct 002	precinct
-Maryland;Somerset County;District 011 Precinct 001	precinct
-Maryland;Somerset County;District 012 Precinct 001	precinct
-Maryland;Somerset County;District 013 Precinct 001	precinct
-Maryland;Somerset County;District 013 Precinct 002	precinct
-Maryland;Somerset County;District 013 Precinct 003	precinct
-Maryland;Somerset County;District 014 Precinct 001	precinct
-Maryland;Somerset County;District 015 Precinct 001	precinct
-Maryland;Somerset County;District 015 Precinct 002	precinct
-Maryland;Somerset County;District 015 Precinct 003	precinct
 Maryland;Talbot County;District 001 Precinct 001	precinct
 Maryland;Talbot County;District 001 Precinct 002	precinct
 Maryland;Talbot County;District 001 Precinct 003	precinct
@@ -2255,3 +2066,192 @@ Maryland;Worcester County;District 006 Precinct 001	precinct
 Maryland;Worcester County;District 006 Precinct 002	precinct
 Maryland;Worcester County;District 006 Precinct 003	precinct
 Maryland;Worcester County;District 007 Precinct 001	precinct
+Maryland	state
+Maryland;MD House District 1	state-house
+Maryland;MD House District 10	state-house
+Maryland;MD House District 100	state-house
+Maryland;MD House District 101	state-house
+Maryland;MD House District 102	state-house
+Maryland;MD House District 103	state-house
+Maryland;MD House District 104	state-house
+Maryland;MD House District 105	state-house
+Maryland;MD House District 106	state-house
+Maryland;MD House District 107	state-house
+Maryland;MD House District 108	state-house
+Maryland;MD House District 109	state-house
+Maryland;MD House District 11	state-house
+Maryland;MD House District 110	state-house
+Maryland;MD House District 111	state-house
+Maryland;MD House District 112	state-house
+Maryland;MD House District 113	state-house
+Maryland;MD House District 114	state-house
+Maryland;MD House District 115	state-house
+Maryland;MD House District 116	state-house
+Maryland;MD House District 117	state-house
+Maryland;MD House District 118	state-house
+Maryland;MD House District 119	state-house
+Maryland;MD House District 12	state-house
+Maryland;MD House District 120	state-house
+Maryland;MD House District 121	state-house
+Maryland;MD House District 122	state-house
+Maryland;MD House District 123	state-house
+Maryland;MD House District 124	state-house
+Maryland;MD House District 125	state-house
+Maryland;MD House District 126	state-house
+Maryland;MD House District 127	state-house
+Maryland;MD House District 128	state-house
+Maryland;MD House District 129	state-house
+Maryland;MD House District 13	state-house
+Maryland;MD House District 130	state-house
+Maryland;MD House District 131	state-house
+Maryland;MD House District 132	state-house
+Maryland;MD House District 133	state-house
+Maryland;MD House District 134	state-house
+Maryland;MD House District 135	state-house
+Maryland;MD House District 136	state-house
+Maryland;MD House District 137	state-house
+Maryland;MD House District 138	state-house
+Maryland;MD House District 139	state-house
+Maryland;MD House District 14	state-house
+Maryland;MD House District 140	state-house
+Maryland;MD House District 141	state-house
+Maryland;MD House District 15	state-house
+Maryland;MD House District 16	state-house
+Maryland;MD House District 17	state-house
+Maryland;MD House District 18	state-house
+Maryland;MD House District 19	state-house
+Maryland;MD House District 2	state-house
+Maryland;MD House District 20	state-house
+Maryland;MD House District 21	state-house
+Maryland;MD House District 22	state-house
+Maryland;MD House District 23	state-house
+Maryland;MD House District 24	state-house
+Maryland;MD House District 25	state-house
+Maryland;MD House District 26	state-house
+Maryland;MD House District 27	state-house
+Maryland;MD House District 28	state-house
+Maryland;MD House District 29	state-house
+Maryland;MD House District 3	state-house
+Maryland;MD House District 30	state-house
+Maryland;MD House District 31	state-house
+Maryland;MD House District 32	state-house
+Maryland;MD House District 33	state-house
+Maryland;MD House District 34	state-house
+Maryland;MD House District 35	state-house
+Maryland;MD House District 36	state-house
+Maryland;MD House District 37	state-house
+Maryland;MD House District 38	state-house
+Maryland;MD House District 39	state-house
+Maryland;MD House District 4	state-house
+Maryland;MD House District 40	state-house
+Maryland;MD House District 41	state-house
+Maryland;MD House District 42	state-house
+Maryland;MD House District 43	state-house
+Maryland;MD House District 44	state-house
+Maryland;MD House District 45	state-house
+Maryland;MD House District 46	state-house
+Maryland;MD House District 47	state-house
+Maryland;MD House District 48	state-house
+Maryland;MD House District 49	state-house
+Maryland;MD House District 5	state-house
+Maryland;MD House District 50	state-house
+Maryland;MD House District 51	state-house
+Maryland;MD House District 52	state-house
+Maryland;MD House District 53	state-house
+Maryland;MD House District 54	state-house
+Maryland;MD House District 55	state-house
+Maryland;MD House District 56	state-house
+Maryland;MD House District 57	state-house
+Maryland;MD House District 58	state-house
+Maryland;MD House District 59	state-house
+Maryland;MD House District 6	state-house
+Maryland;MD House District 60	state-house
+Maryland;MD House District 61	state-house
+Maryland;MD House District 62	state-house
+Maryland;MD House District 63	state-house
+Maryland;MD House District 64	state-house
+Maryland;MD House District 65	state-house
+Maryland;MD House District 66	state-house
+Maryland;MD House District 67	state-house
+Maryland;MD House District 68	state-house
+Maryland;MD House District 69	state-house
+Maryland;MD House District 7	state-house
+Maryland;MD House District 70	state-house
+Maryland;MD House District 71	state-house
+Maryland;MD House District 72	state-house
+Maryland;MD House District 73	state-house
+Maryland;MD House District 74	state-house
+Maryland;MD House District 75	state-house
+Maryland;MD House District 76	state-house
+Maryland;MD House District 77	state-house
+Maryland;MD House District 78	state-house
+Maryland;MD House District 79	state-house
+Maryland;MD House District 8	state-house
+Maryland;MD House District 80	state-house
+Maryland;MD House District 81	state-house
+Maryland;MD House District 82	state-house
+Maryland;MD House District 83	state-house
+Maryland;MD House District 84	state-house
+Maryland;MD House District 85	state-house
+Maryland;MD House District 86	state-house
+Maryland;MD House District 87	state-house
+Maryland;MD House District 88	state-house
+Maryland;MD House District 89	state-house
+Maryland;MD House District 9	state-house
+Maryland;MD House District 90	state-house
+Maryland;MD House District 91	state-house
+Maryland;MD House District 92	state-house
+Maryland;MD House District 93	state-house
+Maryland;MD House District 94	state-house
+Maryland;MD House District 95	state-house
+Maryland;MD House District 96	state-house
+Maryland;MD House District 97	state-house
+Maryland;MD House District 98	state-house
+Maryland;MD House District 99	state-house
+Maryland;MD Senate District 1	state-senate
+Maryland;MD Senate District 10	state-senate
+Maryland;MD Senate District 11	state-senate
+Maryland;MD Senate District 12	state-senate
+Maryland;MD Senate District 13	state-senate
+Maryland;MD Senate District 14	state-senate
+Maryland;MD Senate District 15	state-senate
+Maryland;MD Senate District 16	state-senate
+Maryland;MD Senate District 17	state-senate
+Maryland;MD Senate District 18	state-senate
+Maryland;MD Senate District 19	state-senate
+Maryland;MD Senate District 2	state-senate
+Maryland;MD Senate District 20	state-senate
+Maryland;MD Senate District 21	state-senate
+Maryland;MD Senate District 22	state-senate
+Maryland;MD Senate District 23	state-senate
+Maryland;MD Senate District 24	state-senate
+Maryland;MD Senate District 25	state-senate
+Maryland;MD Senate District 26	state-senate
+Maryland;MD Senate District 27	state-senate
+Maryland;MD Senate District 28	state-senate
+Maryland;MD Senate District 29	state-senate
+Maryland;MD Senate District 3	state-senate
+Maryland;MD Senate District 30	state-senate
+Maryland;MD Senate District 31	state-senate
+Maryland;MD Senate District 32	state-senate
+Maryland;MD Senate District 33	state-senate
+Maryland;MD Senate District 34	state-senate
+Maryland;MD Senate District 35	state-senate
+Maryland;MD Senate District 36	state-senate
+Maryland;MD Senate District 37	state-senate
+Maryland;MD Senate District 38	state-senate
+Maryland;MD Senate District 39	state-senate
+Maryland;MD Senate District 4	state-senate
+Maryland;MD Senate District 40	state-senate
+Maryland;MD Senate District 41	state-senate
+Maryland;MD Senate District 42	state-senate
+Maryland;MD Senate District 43	state-senate
+Maryland;MD Senate District 44	state-senate
+Maryland;MD Senate District 45	state-senate
+Maryland;MD Senate District 46	state-senate
+Maryland;MD Senate District 47	state-senate
+Maryland;MD Senate District 5	state-senate
+Maryland;MD Senate District 6	state-senate
+Maryland;MD Senate District 7	state-senate
+Maryland;MD Senate District 8	state-senate
+Maryland;MD Senate District 9	state-senate

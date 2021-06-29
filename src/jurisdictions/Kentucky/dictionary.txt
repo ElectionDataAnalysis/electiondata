@@ -297,8 +297,8 @@ Candidate	Denise Harper ANGEL	Denise Harper ANGEL
 Candidate	Derek LEWIS	Derek LEWIS
 Candidate	Derrick W. GRAHAM	Derrick W. GRAHAM
 Candidate	Donald J. Trump	DONALD J TRUMP / MICHAEL R PENCE
-Candidate	Donald J. Trump	Donald J. TRUMP / Michael R. PENCE
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. TRUMP / Michael R. PENCE
 Candidate	Donald J. Trump.	TRUMP, DONALD J.
 Candidate	Dustin BURLEY	Dustin BURLEY
 Candidate	EACHUS, TODD A.	EACHUS, TODD A.
@@ -1329,8 +1329,8 @@ CandidateContest	US House KY District 3	US Representative, 3rd Congressional Dis
 CandidateContest	US House KY District 4	US Representative, 4th Congressional District
 CandidateContest	US House KY District 5	US Representative, 5th Congressional District
 CandidateContest	US House KY District 6	US Representative, 6th Congressional District
-CandidateContest	US President (KY)	President and Vice President of the United States
 CandidateContest	US President (KY)	PRESIDENT
+CandidateContest	US President (KY)	President and Vice President of the United States
 CandidateContest	US President (KY)	US PRESIDENT
 CandidateContest	US Senate KY	US Senator
 CountItemType	election-day	Election Day
@@ -1340,148 +1340,148 @@ Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Party	Constitution Party	CONSTITUTION
-Party	Democratic Party	Democratic Party
-Party	Democratic Party	Democratic
-Party	Democratic Party	DEMOCRAT
 Party	Democratic Party	DEM
+Party	Democratic Party	DEMOCRAT
+Party	Democratic Party	Democratic
+Party	Democratic Party	Democratic Party
 Party	Democratic and Working Families Parties (cross-listed)	DEMOCRAT, WORKING FAMILIES
 Party	Democratic, Independent and Working Families Parties (cross-listed)	DEMOCRAT, INDEPENDENT, WORKING FAMILIES
-Party	Green Party	Green Party
 Party	Green Party	GREEN
+Party	Green Party	Green Party
 Party	Independent Party	IND
 Party	Independent, Progressive and Pacific Green Parties (cross-listed)	INDEPENDENT, PROGRESSIVE, PACIFIC GREEN
-Party	Libertarian Party	Libertarian Party
-Party	Libertarian Party	LIBERTARIAN
 Party	Libertarian Party	LIB
+Party	Libertarian Party	LIBERTARIAN
+Party	Libertarian Party	Libertarian Party
 Party	Nonpartisan	NONPARTISAN
 Party	Nonpartisan	NONPARTISAN INCUMBENT
 Party	Pacific Green Party	PACIFIC GREEN
 Party	Pacific Green and Progressive Parties (cross-listed)	PACIFIC GREEN, PROGRESSIVE
 Party	Populist Party	POP
 Party	Progressive Party	PROGRESSIVE
-Party	Republican Party	Republican Party
-Party	Republican Party	Republican
-Party	Republican Party	REPUBLICAN
 Party	Republican Party	REP
+Party	Republican Party	REPUBLICAN
+Party	Republican Party	Republican
+Party	Republican Party	Republican Party
 Party	Republican and Independent Parties (cross-listed)	REPUBLICAN, INDEPENDENT
 Party	none or unknown	OTHER
 ReportingUnit	Kentucky	Kentucky
 ReportingUnit	Kentucky;Adair County	Adair
-ReportingUnit	Kentucky;Adair County	21001
+ReportingUnit	Kentucky;Adair County	fips21001
 ReportingUnit	Kentucky;Allen County	Allen
-ReportingUnit	Kentucky;Allen County	21003
+ReportingUnit	Kentucky;Allen County	fips21003
 ReportingUnit	Kentucky;Anderson County	Anderson
-ReportingUnit	Kentucky;Anderson County	21005
+ReportingUnit	Kentucky;Anderson County	fips21005
 ReportingUnit	Kentucky;Ballard County	Ballard
-ReportingUnit	Kentucky;Ballard County	21007
+ReportingUnit	Kentucky;Ballard County	fips21007
 ReportingUnit	Kentucky;Barren County	Barren
-ReportingUnit	Kentucky;Barren County	21009
+ReportingUnit	Kentucky;Barren County	fips21009
 ReportingUnit	Kentucky;Bath County	Bath
-ReportingUnit	Kentucky;Bath County	21011
+ReportingUnit	Kentucky;Bath County	fips21011
 ReportingUnit	Kentucky;Bell County	Bell
-ReportingUnit	Kentucky;Bell County	21013
+ReportingUnit	Kentucky;Bell County	fips21013
 ReportingUnit	Kentucky;Boone County	Boone
-ReportingUnit	Kentucky;Boone County	21015
+ReportingUnit	Kentucky;Boone County	fips21015
 ReportingUnit	Kentucky;Bourbon County	Bourbon
-ReportingUnit	Kentucky;Bourbon County	21017
+ReportingUnit	Kentucky;Bourbon County	fips21017
 ReportingUnit	Kentucky;Boyd County	Boyd
-ReportingUnit	Kentucky;Boyd County	21019
+ReportingUnit	Kentucky;Boyd County	fips21019
 ReportingUnit	Kentucky;Boyle County	Boyle
-ReportingUnit	Kentucky;Boyle County	21021
+ReportingUnit	Kentucky;Boyle County	fips21021
 ReportingUnit	Kentucky;Bracken County	Bracken
-ReportingUnit	Kentucky;Bracken County	21023
+ReportingUnit	Kentucky;Bracken County	fips21023
 ReportingUnit	Kentucky;Breathitt County	Breathitt
-ReportingUnit	Kentucky;Breathitt County	21025
+ReportingUnit	Kentucky;Breathitt County	fips21025
 ReportingUnit	Kentucky;Breckinridge County	Breckinridge
-ReportingUnit	Kentucky;Breckinridge County	21027
+ReportingUnit	Kentucky;Breckinridge County	fips21027
 ReportingUnit	Kentucky;Bullitt County	Bullitt
-ReportingUnit	Kentucky;Bullitt County	21029
+ReportingUnit	Kentucky;Bullitt County	fips21029
 ReportingUnit	Kentucky;Butler County	Butler
-ReportingUnit	Kentucky;Butler County	21031
+ReportingUnit	Kentucky;Butler County	fips21031
 ReportingUnit	Kentucky;Caldwell County	Caldwell
-ReportingUnit	Kentucky;Caldwell County	21033
+ReportingUnit	Kentucky;Caldwell County	fips21033
 ReportingUnit	Kentucky;Calloway County	Calloway
-ReportingUnit	Kentucky;Calloway County	21035
+ReportingUnit	Kentucky;Calloway County	fips21035
 ReportingUnit	Kentucky;Campbell County	Campbell
-ReportingUnit	Kentucky;Campbell County	21037
+ReportingUnit	Kentucky;Campbell County	fips21037
 ReportingUnit	Kentucky;Carlisle County	Carlisle
-ReportingUnit	Kentucky;Carlisle County	21039
+ReportingUnit	Kentucky;Carlisle County	fips21039
 ReportingUnit	Kentucky;Carroll County	Carroll
-ReportingUnit	Kentucky;Carroll County	21041
+ReportingUnit	Kentucky;Carroll County	fips21041
 ReportingUnit	Kentucky;Carter County	Carter
-ReportingUnit	Kentucky;Carter County	21043
+ReportingUnit	Kentucky;Carter County	fips21043
 ReportingUnit	Kentucky;Casey County	Casey
-ReportingUnit	Kentucky;Casey County	21045
+ReportingUnit	Kentucky;Casey County	fips21045
 ReportingUnit	Kentucky;Christian County	Christian
-ReportingUnit	Kentucky;Christian County	21047
+ReportingUnit	Kentucky;Christian County	fips21047
 ReportingUnit	Kentucky;Clark County	Clark
-ReportingUnit	Kentucky;Clark County	21049
+ReportingUnit	Kentucky;Clark County	fips21049
 ReportingUnit	Kentucky;Clay County	Clay
-ReportingUnit	Kentucky;Clay County	21051
+ReportingUnit	Kentucky;Clay County	fips21051
 ReportingUnit	Kentucky;Clinton County	Clinton
-ReportingUnit	Kentucky;Clinton County	21053
+ReportingUnit	Kentucky;Clinton County	fips21053
 ReportingUnit	Kentucky;Crittenden County	Crittenden
-ReportingUnit	Kentucky;Crittenden County	21055
+ReportingUnit	Kentucky;Crittenden County	fips21055
 ReportingUnit	Kentucky;Cumberland County	Cumberland
-ReportingUnit	Kentucky;Cumberland County	21057
+ReportingUnit	Kentucky;Cumberland County	fips21057
 ReportingUnit	Kentucky;Daviess County	Daviess
-ReportingUnit	Kentucky;Daviess County	21059
+ReportingUnit	Kentucky;Daviess County	fips21059
 ReportingUnit	Kentucky;Edmonson County	Edmonson
-ReportingUnit	Kentucky;Edmonson County	21061
+ReportingUnit	Kentucky;Edmonson County	fips21061
 ReportingUnit	Kentucky;Elliott County	Elliott
-ReportingUnit	Kentucky;Elliott County	21063
+ReportingUnit	Kentucky;Elliott County	fips21063
 ReportingUnit	Kentucky;Estill County	Estill
-ReportingUnit	Kentucky;Estill County	21065
+ReportingUnit	Kentucky;Estill County	fips21065
 ReportingUnit	Kentucky;Fayette County	Fayette
-ReportingUnit	Kentucky;Fayette County	21067
+ReportingUnit	Kentucky;Fayette County	fips21067
 ReportingUnit	Kentucky;Fleming County	Fleming
-ReportingUnit	Kentucky;Fleming County	21069
+ReportingUnit	Kentucky;Fleming County	fips21069
 ReportingUnit	Kentucky;Floyd County	Floyd
-ReportingUnit	Kentucky;Floyd County	21071
+ReportingUnit	Kentucky;Floyd County	fips21071
 ReportingUnit	Kentucky;Franklin County	Franklin
-ReportingUnit	Kentucky;Franklin County	21073
+ReportingUnit	Kentucky;Franklin County	fips21073
 ReportingUnit	Kentucky;Fulton County	Fulton
-ReportingUnit	Kentucky;Fulton County	21075
+ReportingUnit	Kentucky;Fulton County	fips21075
 ReportingUnit	Kentucky;Gallatin County	Gallatin
-ReportingUnit	Kentucky;Gallatin County	21077
+ReportingUnit	Kentucky;Gallatin County	fips21077
 ReportingUnit	Kentucky;Garrard County	Garrard
-ReportingUnit	Kentucky;Garrard County	21079
+ReportingUnit	Kentucky;Garrard County	fips21079
 ReportingUnit	Kentucky;Grant County	Grant
-ReportingUnit	Kentucky;Grant County	21081
+ReportingUnit	Kentucky;Grant County	fips21081
 ReportingUnit	Kentucky;Graves County	Graves
-ReportingUnit	Kentucky;Graves County	21083
+ReportingUnit	Kentucky;Graves County	fips21083
 ReportingUnit	Kentucky;Grayson County	Grayson
-ReportingUnit	Kentucky;Grayson County	21085
+ReportingUnit	Kentucky;Grayson County	fips21085
 ReportingUnit	Kentucky;Green County	Green
-ReportingUnit	Kentucky;Green County	21087
+ReportingUnit	Kentucky;Green County	fips21087
 ReportingUnit	Kentucky;Greenup County	Greenup
-ReportingUnit	Kentucky;Greenup County	21089
+ReportingUnit	Kentucky;Greenup County	fips21089
 ReportingUnit	Kentucky;Hancock County	Hancock
-ReportingUnit	Kentucky;Hancock County	21091
+ReportingUnit	Kentucky;Hancock County	fips21091
 ReportingUnit	Kentucky;Hardin County	Hardin
-ReportingUnit	Kentucky;Hardin County	21093
+ReportingUnit	Kentucky;Hardin County	fips21093
 ReportingUnit	Kentucky;Harlan County	Harlan
-ReportingUnit	Kentucky;Harlan County	21095
+ReportingUnit	Kentucky;Harlan County	fips21095
 ReportingUnit	Kentucky;Harrison County	Harrison
-ReportingUnit	Kentucky;Harrison County	21097
+ReportingUnit	Kentucky;Harrison County	fips21097
 ReportingUnit	Kentucky;Hart County	Hart
-ReportingUnit	Kentucky;Hart County	21099
+ReportingUnit	Kentucky;Hart County	fips21099
 ReportingUnit	Kentucky;Henderson County	Henderson
-ReportingUnit	Kentucky;Henderson County	21101
+ReportingUnit	Kentucky;Henderson County	fips21101
 ReportingUnit	Kentucky;Henry County	Henry
-ReportingUnit	Kentucky;Henry County	21103
+ReportingUnit	Kentucky;Henry County	fips21103
 ReportingUnit	Kentucky;Hickman County	Hickman
-ReportingUnit	Kentucky;Hickman County	21105
+ReportingUnit	Kentucky;Hickman County	fips21105
 ReportingUnit	Kentucky;Hopkins County	Hopkins
-ReportingUnit	Kentucky;Hopkins County	21107
+ReportingUnit	Kentucky;Hopkins County	fips21107
 ReportingUnit	Kentucky;Jackson County	Jackson
-ReportingUnit	Kentucky;Jackson County	21109
+ReportingUnit	Kentucky;Jackson County	fips21109
 ReportingUnit	Kentucky;Jefferson County	Jefferson
-ReportingUnit	Kentucky;Jefferson County	21111
+ReportingUnit	Kentucky;Jefferson County	fips21111
 ReportingUnit	Kentucky;Jessamine County	Jessamine
-ReportingUnit	Kentucky;Jessamine County	21113
+ReportingUnit	Kentucky;Jessamine County	fips21113
 ReportingUnit	Kentucky;Johnson County	Johnson
-ReportingUnit	Kentucky;Johnson County	21115
+ReportingUnit	Kentucky;Johnson County	fips21115
 ReportingUnit	Kentucky;KY House District 1	Kentucky;KY House District 1
 ReportingUnit	Kentucky;KY House District 10	Kentucky;KY House District 10
 ReportingUnit	Kentucky;KY House District 100	Kentucky;KY House District 100
@@ -1621,113 +1621,113 @@ ReportingUnit	Kentucky;KY Senate District 7	Kentucky;KY Senate District 7
 ReportingUnit	Kentucky;KY Senate District 8	Kentucky;KY Senate District 8
 ReportingUnit	Kentucky;KY Senate District 9	Kentucky;KY Senate District 9
 ReportingUnit	Kentucky;Kenton County	Kenton
-ReportingUnit	Kentucky;Kenton County	21117
+ReportingUnit	Kentucky;Kenton County	fips21117
 ReportingUnit	Kentucky;Knott County	Knott
-ReportingUnit	Kentucky;Knott County	21119
+ReportingUnit	Kentucky;Knott County	fips21119
 ReportingUnit	Kentucky;Knox County	Knox
-ReportingUnit	Kentucky;Knox County	21121
+ReportingUnit	Kentucky;Knox County	fips21121
 ReportingUnit	Kentucky;Larue County	Larue
-ReportingUnit	Kentucky;Larue County	21123
+ReportingUnit	Kentucky;Larue County	fips21123
 ReportingUnit	Kentucky;Laurel County	Laurel
-ReportingUnit	Kentucky;Laurel County	21125
+ReportingUnit	Kentucky;Laurel County	fips21125
 ReportingUnit	Kentucky;Lawrence County	Lawrence
-ReportingUnit	Kentucky;Lawrence County	21127
+ReportingUnit	Kentucky;Lawrence County	fips21127
 ReportingUnit	Kentucky;Lee County	Lee
-ReportingUnit	Kentucky;Lee County	21129
+ReportingUnit	Kentucky;Lee County	fips21129
 ReportingUnit	Kentucky;Leslie County	Leslie
-ReportingUnit	Kentucky;Leslie County	21131
+ReportingUnit	Kentucky;Leslie County	fips21131
 ReportingUnit	Kentucky;Letcher County	Letcher
-ReportingUnit	Kentucky;Letcher County	21133
+ReportingUnit	Kentucky;Letcher County	fips21133
 ReportingUnit	Kentucky;Lewis County	Lewis
-ReportingUnit	Kentucky;Lewis County	21135
+ReportingUnit	Kentucky;Lewis County	fips21135
 ReportingUnit	Kentucky;Lincoln County	Lincoln
-ReportingUnit	Kentucky;Lincoln County	21137
+ReportingUnit	Kentucky;Lincoln County	fips21137
 ReportingUnit	Kentucky;Livingston County	Livingston
-ReportingUnit	Kentucky;Livingston County	21139
+ReportingUnit	Kentucky;Livingston County	fips21139
 ReportingUnit	Kentucky;Logan County	Logan
-ReportingUnit	Kentucky;Logan County	21141
+ReportingUnit	Kentucky;Logan County	fips21141
 ReportingUnit	Kentucky;Lyon County	Lyon
-ReportingUnit	Kentucky;Lyon County	21143
+ReportingUnit	Kentucky;Lyon County	fips21143
 ReportingUnit	Kentucky;Madison County	Madison
-ReportingUnit	Kentucky;Madison County	21151
+ReportingUnit	Kentucky;Madison County	fips21151
 ReportingUnit	Kentucky;Magoffin County	Magoffin
-ReportingUnit	Kentucky;Magoffin County	21153
+ReportingUnit	Kentucky;Magoffin County	fips21153
 ReportingUnit	Kentucky;Marion County	Marion
-ReportingUnit	Kentucky;Marion County	21155
+ReportingUnit	Kentucky;Marion County	fips21155
 ReportingUnit	Kentucky;Marshall County	Marshall
-ReportingUnit	Kentucky;Marshall County	21157
+ReportingUnit	Kentucky;Marshall County	fips21157
 ReportingUnit	Kentucky;Martin County	Martin
-ReportingUnit	Kentucky;Martin County	21159
+ReportingUnit	Kentucky;Martin County	fips21159
 ReportingUnit	Kentucky;Mason County	Mason
-ReportingUnit	Kentucky;Mason County	21161
+ReportingUnit	Kentucky;Mason County	fips21161
 ReportingUnit	Kentucky;McCracken County	McCracken
-ReportingUnit	Kentucky;McCracken County	21145
+ReportingUnit	Kentucky;McCracken County	fips21145
 ReportingUnit	Kentucky;McCreary County	McCreary
-ReportingUnit	Kentucky;McCreary County	21147
+ReportingUnit	Kentucky;McCreary County	fips21147
 ReportingUnit	Kentucky;McLean County	McLean
-ReportingUnit	Kentucky;McLean County	21149
+ReportingUnit	Kentucky;McLean County	fips21149
 ReportingUnit	Kentucky;Meade County	Meade
-ReportingUnit	Kentucky;Meade County	21163
+ReportingUnit	Kentucky;Meade County	fips21163
 ReportingUnit	Kentucky;Menifee County	Menifee
-ReportingUnit	Kentucky;Menifee County	21165
+ReportingUnit	Kentucky;Menifee County	fips21165
 ReportingUnit	Kentucky;Mercer County	Mercer
-ReportingUnit	Kentucky;Mercer County	21167
+ReportingUnit	Kentucky;Mercer County	fips21167
 ReportingUnit	Kentucky;Metcalfe County	Metcalfe
-ReportingUnit	Kentucky;Metcalfe County	21169
+ReportingUnit	Kentucky;Metcalfe County	fips21169
 ReportingUnit	Kentucky;Monroe County	Monroe
-ReportingUnit	Kentucky;Monroe County	21171
+ReportingUnit	Kentucky;Monroe County	fips21171
 ReportingUnit	Kentucky;Montgomery County	Montgomery
-ReportingUnit	Kentucky;Montgomery County	21173
+ReportingUnit	Kentucky;Montgomery County	fips21173
 ReportingUnit	Kentucky;Morgan County	Morgan
-ReportingUnit	Kentucky;Morgan County	21175
+ReportingUnit	Kentucky;Morgan County	fips21175
 ReportingUnit	Kentucky;Muhlenberg County	Muhlenberg
-ReportingUnit	Kentucky;Muhlenberg County	21177
+ReportingUnit	Kentucky;Muhlenberg County	fips21177
 ReportingUnit	Kentucky;Nelson County	Nelson
-ReportingUnit	Kentucky;Nelson County	21179
+ReportingUnit	Kentucky;Nelson County	fips21179
 ReportingUnit	Kentucky;Nicholas County	Nicholas
-ReportingUnit	Kentucky;Nicholas County	21181
+ReportingUnit	Kentucky;Nicholas County	fips21181
 ReportingUnit	Kentucky;Ohio County	Ohio
-ReportingUnit	Kentucky;Ohio County	21183
+ReportingUnit	Kentucky;Ohio County	fips21183
 ReportingUnit	Kentucky;Oldham County	Oldham
-ReportingUnit	Kentucky;Oldham County	21185
+ReportingUnit	Kentucky;Oldham County	fips21185
 ReportingUnit	Kentucky;Owen County	Owen
-ReportingUnit	Kentucky;Owen County	21187
+ReportingUnit	Kentucky;Owen County	fips21187
 ReportingUnit	Kentucky;Owsley County	Owsley
-ReportingUnit	Kentucky;Owsley County	21189
+ReportingUnit	Kentucky;Owsley County	fips21189
 ReportingUnit	Kentucky;Pendleton County	Pendleton
-ReportingUnit	Kentucky;Pendleton County	21191
+ReportingUnit	Kentucky;Pendleton County	fips21191
 ReportingUnit	Kentucky;Perry County	Perry
-ReportingUnit	Kentucky;Perry County	21193
+ReportingUnit	Kentucky;Perry County	fips21193
 ReportingUnit	Kentucky;Pike County	Pike
-ReportingUnit	Kentucky;Pike County	21195
+ReportingUnit	Kentucky;Pike County	fips21195
 ReportingUnit	Kentucky;Powell County	Powell
-ReportingUnit	Kentucky;Powell County	21197
+ReportingUnit	Kentucky;Powell County	fips21197
 ReportingUnit	Kentucky;Pulaski County	Pulaski
-ReportingUnit	Kentucky;Pulaski County	21199
+ReportingUnit	Kentucky;Pulaski County	fips21199
 ReportingUnit	Kentucky;Robertson County	Robertson
-ReportingUnit	Kentucky;Robertson County	21201
+ReportingUnit	Kentucky;Robertson County	fips21201
 ReportingUnit	Kentucky;Rockcastle County	Rockcastle
-ReportingUnit	Kentucky;Rockcastle County	21203
+ReportingUnit	Kentucky;Rockcastle County	fips21203
 ReportingUnit	Kentucky;Rowan County	Rowan
-ReportingUnit	Kentucky;Rowan County	21205
+ReportingUnit	Kentucky;Rowan County	fips21205
 ReportingUnit	Kentucky;Russell County	Russell
-ReportingUnit	Kentucky;Russell County	21207
+ReportingUnit	Kentucky;Russell County	fips21207
 ReportingUnit	Kentucky;Scott County	Scott
-ReportingUnit	Kentucky;Scott County	21209
+ReportingUnit	Kentucky;Scott County	fips21209
 ReportingUnit	Kentucky;Shelby County	Shelby
-ReportingUnit	Kentucky;Shelby County	21211
+ReportingUnit	Kentucky;Shelby County	fips21211
 ReportingUnit	Kentucky;Simpson County	Simpson
-ReportingUnit	Kentucky;Simpson County	21213
+ReportingUnit	Kentucky;Simpson County	fips21213
 ReportingUnit	Kentucky;Spencer County	Spencer
-ReportingUnit	Kentucky;Spencer County	21215
+ReportingUnit	Kentucky;Spencer County	fips21215
 ReportingUnit	Kentucky;Taylor County	Taylor
-ReportingUnit	Kentucky;Taylor County	21217
+ReportingUnit	Kentucky;Taylor County	fips21217
 ReportingUnit	Kentucky;Todd County	Todd
-ReportingUnit	Kentucky;Todd County	21219
+ReportingUnit	Kentucky;Todd County	fips21219
 ReportingUnit	Kentucky;Trigg County	Trigg
-ReportingUnit	Kentucky;Trigg County	21221
+ReportingUnit	Kentucky;Trigg County	fips21221
 ReportingUnit	Kentucky;Trimble County	Trimble
-ReportingUnit	Kentucky;Trimble County	21223
+ReportingUnit	Kentucky;Trimble County	fips21223
 ReportingUnit	Kentucky;US House KY District 1	Kentucky;US House KY District 1
 ReportingUnit	Kentucky;US House KY District 2	Kentucky;US House KY District 2
 ReportingUnit	Kentucky;US House KY District 3	Kentucky;US House KY District 3
@@ -1735,18 +1735,18 @@ ReportingUnit	Kentucky;US House KY District 4	Kentucky;US House KY District 4
 ReportingUnit	Kentucky;US House KY District 5	Kentucky;US House KY District 5
 ReportingUnit	Kentucky;US House KY District 6	Kentucky;US House KY District 6
 ReportingUnit	Kentucky;Union County	Union
-ReportingUnit	Kentucky;Union County	21225
+ReportingUnit	Kentucky;Union County	fips21225
 ReportingUnit	Kentucky;Warren County	Warren
-ReportingUnit	Kentucky;Warren County	21227
+ReportingUnit	Kentucky;Warren County	fips21227
 ReportingUnit	Kentucky;Washington County	Washington
-ReportingUnit	Kentucky;Washington County	21229
+ReportingUnit	Kentucky;Washington County	fips21229
 ReportingUnit	Kentucky;Wayne County	Wayne
-ReportingUnit	Kentucky;Wayne County	21231
+ReportingUnit	Kentucky;Wayne County	fips21231
 ReportingUnit	Kentucky;Webster County	Webster
-ReportingUnit	Kentucky;Webster County	21233
+ReportingUnit	Kentucky;Webster County	fips21233
 ReportingUnit	Kentucky;Whitley County	Whitley
-ReportingUnit	Kentucky;Whitley County	21235
+ReportingUnit	Kentucky;Whitley County	fips21235
 ReportingUnit	Kentucky;Wolfe County	Wolfe
-ReportingUnit	Kentucky;Wolfe County	21237
+ReportingUnit	Kentucky;Wolfe County	fips21237
 ReportingUnit	Kentucky;Woodford County	Woodford
-ReportingUnit	Kentucky;Woodford County	21239
+ReportingUnit	Kentucky;Woodford County	fips21239

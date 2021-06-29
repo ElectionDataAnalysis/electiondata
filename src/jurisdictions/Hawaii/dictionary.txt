@@ -28,8 +28,8 @@ Candidate	DECOITE, Lynn P.	DECOITE, Lynn P.
 Candidate	DELA CRUZ, Donovan	DELA CRUZ, Donovan
 Candidate	DES, Ana Mo	DES, Ana Mo
 Candidate	Don Blankenship	Blankenship / Mohr
-Candidate	Donald J. Trump	Trump / Pence
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Trump / Pence
 Candidate	ELI, Stacelynn Kehaulani	ELI, Stacelynn Kehaulani
 Candidate	FEVELLA, Kurt	FEVELLA, Kurt
 Candidate	FORD, Lori	FORD, Lori
@@ -198,8 +198,8 @@ CandidateContest	HI Senate District 9	State Senator, Dist 9
 CandidateContest	HI Treasurer	HI Treasurer
 CandidateContest	US House HI District 1	U.S. Representative, Dist I
 CandidateContest	US House HI District 2	U.S. Representative, Dist II
-CandidateContest	US President (HI)	President and Vice President
 CandidateContest	US President (HI)	PRESIDENT
+CandidateContest	US President (HI)	President and Vice President
 CandidateContest	US President (HI)	US PRESIDENT
 CandidateContest	US Senate HI	US Senate HI
 CountItemType	absentee	Absentee_votes
@@ -225,50 +225,51 @@ Party	Republican Party	REPUBLICAN
 Party	S	S
 Party	none or unknown	OTHER
 ReportingUnit	Hawaii	Hawaii
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-01	01-01
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-02	01-02
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-03	01-03
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-04	01-04
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-05	01-05
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-06	01-06
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-07	01-07
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-08	01-08
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-09	01-09
-ReportingUnit	Hawaii;Hawai'i County;Precinct 02-01	02-01
-ReportingUnit	Hawaii;Hawai'i County;Precinct 02-02	02-02
-ReportingUnit	Hawaii;Hawai'i County;Precinct 02-03	02-03
-ReportingUnit	Hawaii;Hawai'i County;Precinct 02-04	02-04
-ReportingUnit	Hawaii;Hawai'i County;Precinct 02-05	02-05
-ReportingUnit	Hawaii;Hawai'i County;Precinct 03-01	03-01
-ReportingUnit	Hawaii;Hawai'i County;Precinct 03-02	03-02
-ReportingUnit	Hawaii;Hawai'i County;Precinct 03-03	03-03
-ReportingUnit	Hawaii;Hawai'i County;Precinct 03-04	03-04
-ReportingUnit	Hawaii;Hawai'i County;Precinct 03-05	03-05
-ReportingUnit	Hawaii;Hawai'i County;Precinct 03-06	03-06
-ReportingUnit	Hawaii;Hawai'i County;Precinct 03-07	03-07
-ReportingUnit	Hawaii;Hawai'i County;Precinct 04-01	04-01
-ReportingUnit	Hawaii;Hawai'i County;Precinct 04-02	04-02
-ReportingUnit	Hawaii;Hawai'i County;Precinct 04-03	04-03
-ReportingUnit	Hawaii;Hawai'i County;Precinct 04-04	04-04
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-01	05-01
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-02	05-02
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-03	05-03
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-04	05-04
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-05	05-05
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-06	05-06
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-07	05-07
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-08	05-08
-ReportingUnit	Hawaii;Hawai'i County;Precinct 06-01	06-01
-ReportingUnit	Hawaii;Hawai'i County;Precinct 06-02	06-02
-ReportingUnit	Hawaii;Hawai'i County;Precinct 06-03	06-03
-ReportingUnit	Hawaii;Hawai'i County;Precinct 06-04	06-04
-ReportingUnit	Hawaii;Hawai'i County;Precinct 06-05	06-05
-ReportingUnit	Hawaii;Hawai'i County;Precinct 07-01	07-01
-ReportingUnit	Hawaii;Hawai'i County;Precinct 07-02	07-02
-ReportingUnit	Hawaii;Hawai'i County;Precinct 07-03	07-03
-ReportingUnit	Hawaii;Hawai'i County;Precinct 07-04	07-04
-ReportingUnit	Hawaii;Hawai'i County;Precinct 07-05	07-05
-ReportingUnit	Hawaii;Honolulu County	15003
+ReportingUnit	Hawaii;Hawaii County	fips15001
+ReportingUnit	Hawaii;Hawaii County;Precinct 01-01	01-01
+ReportingUnit	Hawaii;Hawaii County;Precinct 01-02	01-02
+ReportingUnit	Hawaii;Hawaii County;Precinct 01-03	01-03
+ReportingUnit	Hawaii;Hawaii County;Precinct 01-04	01-04
+ReportingUnit	Hawaii;Hawaii County;Precinct 01-05	01-05
+ReportingUnit	Hawaii;Hawaii County;Precinct 01-06	01-06
+ReportingUnit	Hawaii;Hawaii County;Precinct 01-07	01-07
+ReportingUnit	Hawaii;Hawaii County;Precinct 01-08	01-08
+ReportingUnit	Hawaii;Hawaii County;Precinct 01-09	01-09
+ReportingUnit	Hawaii;Hawaii County;Precinct 02-01	02-01
+ReportingUnit	Hawaii;Hawaii County;Precinct 02-02	02-02
+ReportingUnit	Hawaii;Hawaii County;Precinct 02-03	02-03
+ReportingUnit	Hawaii;Hawaii County;Precinct 02-04	02-04
+ReportingUnit	Hawaii;Hawaii County;Precinct 02-05	02-05
+ReportingUnit	Hawaii;Hawaii County;Precinct 03-01	03-01
+ReportingUnit	Hawaii;Hawaii County;Precinct 03-02	03-02
+ReportingUnit	Hawaii;Hawaii County;Precinct 03-03	03-03
+ReportingUnit	Hawaii;Hawaii County;Precinct 03-04	03-04
+ReportingUnit	Hawaii;Hawaii County;Precinct 03-05	03-05
+ReportingUnit	Hawaii;Hawaii County;Precinct 03-06	03-06
+ReportingUnit	Hawaii;Hawaii County;Precinct 03-07	03-07
+ReportingUnit	Hawaii;Hawaii County;Precinct 04-01	04-01
+ReportingUnit	Hawaii;Hawaii County;Precinct 04-02	04-02
+ReportingUnit	Hawaii;Hawaii County;Precinct 04-03	04-03
+ReportingUnit	Hawaii;Hawaii County;Precinct 04-04	04-04
+ReportingUnit	Hawaii;Hawaii County;Precinct 05-01	05-01
+ReportingUnit	Hawaii;Hawaii County;Precinct 05-02	05-02
+ReportingUnit	Hawaii;Hawaii County;Precinct 05-03	05-03
+ReportingUnit	Hawaii;Hawaii County;Precinct 05-04	05-04
+ReportingUnit	Hawaii;Hawaii County;Precinct 05-05	05-05
+ReportingUnit	Hawaii;Hawaii County;Precinct 05-06	05-06
+ReportingUnit	Hawaii;Hawaii County;Precinct 05-07	05-07
+ReportingUnit	Hawaii;Hawaii County;Precinct 05-08	05-08
+ReportingUnit	Hawaii;Hawaii County;Precinct 06-01	06-01
+ReportingUnit	Hawaii;Hawaii County;Precinct 06-02	06-02
+ReportingUnit	Hawaii;Hawaii County;Precinct 06-03	06-03
+ReportingUnit	Hawaii;Hawaii County;Precinct 06-04	06-04
+ReportingUnit	Hawaii;Hawaii County;Precinct 06-05	06-05
+ReportingUnit	Hawaii;Hawaii County;Precinct 07-01	07-01
+ReportingUnit	Hawaii;Hawaii County;Precinct 07-02	07-02
+ReportingUnit	Hawaii;Hawaii County;Precinct 07-03	07-03
+ReportingUnit	Hawaii;Hawaii County;Precinct 07-04	07-04
+ReportingUnit	Hawaii;Hawaii County;Precinct 07-05	07-05
+ReportingUnit	Hawaii;Honolulu County	fips15003
 ReportingUnit	Hawaii;Honolulu County;Precinct 17-01	17-01
 ReportingUnit	Hawaii;Honolulu County;Precinct 17-02	17-02
 ReportingUnit	Hawaii;Honolulu County;Precinct 17-03	17-03
@@ -425,24 +426,25 @@ ReportingUnit	Hawaii;Honolulu County;Precinct 51-03	51-03
 ReportingUnit	Hawaii;Honolulu County;Precinct 51-04	51-04
 ReportingUnit	Hawaii;Honolulu County;Precinct 51-05	51-05
 ReportingUnit	Hawaii;Honolulu County;Precinct 51-06	51-06
-ReportingUnit	Hawaii;Kalawao County	15005
-ReportingUnit	Hawaii;Kaua'i County;Precinct 14-01	14-01
-ReportingUnit	Hawaii;Kaua'i County;Precinct 14-02	14-02
-ReportingUnit	Hawaii;Kaua'i County;Precinct 14-03	14-03
-ReportingUnit	Hawaii;Kaua'i County;Precinct 14-04	14-04
-ReportingUnit	Hawaii;Kaua'i County;Precinct 14-05	14-05
-ReportingUnit	Hawaii;Kaua'i County;Precinct 15-01	15-01
-ReportingUnit	Hawaii;Kaua'i County;Precinct 15-02	15-02
-ReportingUnit	Hawaii;Kaua'i County;Precinct 15-03	15-03
-ReportingUnit	Hawaii;Kaua'i County;Precinct 15-04	15-04
-ReportingUnit	Hawaii;Kaua'i County;Precinct 15-05	15-05
-ReportingUnit	Hawaii;Kaua'i County;Precinct 16-01	16-01
-ReportingUnit	Hawaii;Kaua'i County;Precinct 16-02	16-02
-ReportingUnit	Hawaii;Kaua'i County;Precinct 16-03	16-03
-ReportingUnit	Hawaii;Kaua'i County;Precinct 16-04	16-04
-ReportingUnit	Hawaii;Kaua'i County;Precinct 16-05	16-05
-ReportingUnit	Hawaii;Kaua'i County;Precinct 16-06	16-06
-ReportingUnit	Hawaii;Maui County	15009
+ReportingUnit	Hawaii;Kalawao County	fips15005
+ReportingUnit	Hawaii;Kauai County	fips15007
+ReportingUnit	Hawaii;Kauai County;Precinct 14-01	14-01
+ReportingUnit	Hawaii;Kauai County;Precinct 14-02	14-02
+ReportingUnit	Hawaii;Kauai County;Precinct 14-03	14-03
+ReportingUnit	Hawaii;Kauai County;Precinct 14-04	14-04
+ReportingUnit	Hawaii;Kauai County;Precinct 14-05	14-05
+ReportingUnit	Hawaii;Kauai County;Precinct 15-01	15-01
+ReportingUnit	Hawaii;Kauai County;Precinct 15-02	15-02
+ReportingUnit	Hawaii;Kauai County;Precinct 15-03	15-03
+ReportingUnit	Hawaii;Kauai County;Precinct 15-04	15-04
+ReportingUnit	Hawaii;Kauai County;Precinct 15-05	15-05
+ReportingUnit	Hawaii;Kauai County;Precinct 16-01	16-01
+ReportingUnit	Hawaii;Kauai County;Precinct 16-02	16-02
+ReportingUnit	Hawaii;Kauai County;Precinct 16-03	16-03
+ReportingUnit	Hawaii;Kauai County;Precinct 16-04	16-04
+ReportingUnit	Hawaii;Kauai County;Precinct 16-05	16-05
+ReportingUnit	Hawaii;Kauai County;Precinct 16-06	16-06
+ReportingUnit	Hawaii;Maui County	fips15009
 ReportingUnit	Hawaii;Maui County;Precinct 08-01	08-01
 ReportingUnit	Hawaii;Maui County;Precinct 08-02	08-02
 ReportingUnit	Hawaii;Maui County;Precinct 08-03	08-03

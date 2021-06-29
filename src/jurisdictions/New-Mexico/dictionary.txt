@@ -703,72 +703,73 @@ CandidateContest	NM Treasurer	NM Treasurer
 CandidateContest	US House NM District 1	United States Representative 1
 CandidateContest	US House NM District 2	United States Representative 2
 CandidateContest	US House NM District 3	United States Representative 3
-CandidateContest	US President (NM)	President and Vice President of the United States
 CandidateContest	US President (NM)	PRESIDENT
+CandidateContest	US President (NM)	President and Vice President of the United States
 CandidateContest	US President (NM)	US PRESIDENT
 CandidateContest	US Senate NM	United States Senator
 CountItemType	absentee	Absentee
 CountItemType	early	Early
 CountItemType	election-day	ElectionDay
-CountItemType	total	Total
 CountItemType	total	TOTAL
+CountItemType	total	Total
 Election	2016 General	2016 General
 Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Party	CON	CON
-Party	Democratic Party	Democratic Party
 Party	Democratic Party	DEM
 Party	Democratic Party	DEMOCRAT
-Party	Green Party	Green Party
-Party	Green Party	GRN
+Party	Democratic Party	Democratic Party
 Party	Green Party	GREEN
-Party	Libertarian Party	Libertarian Party
+Party	Green Party	GRN
+Party	Green Party	Green Party
 Party	Libertarian Party	LIB
 Party	Libertarian Party	LIBERTARIAN
+Party	Libertarian Party	Libertarian Party
 Party	PSL	PSL
-Party	Republican Party	Republican Party
 Party	Republican Party	REP
 Party	Republican Party	REPUBLICAN
+Party	Republican Party	Republican Party
 Party	none or unknown	OTHER
 ReportingUnit	New Mexico	New Mexico
 ReportingUnit	New Mexico;Bernalillo County	Bernalillo
-ReportingUnit	New Mexico;Bernalillo County	35001
+ReportingUnit	New Mexico;Bernalillo County	fips35001
 ReportingUnit	New Mexico;Catron County	Catron
-ReportingUnit	New Mexico;Catron County	35003
+ReportingUnit	New Mexico;Catron County	fips35003
 ReportingUnit	New Mexico;Chaves County	Chaves
-ReportingUnit	New Mexico;Chaves County	35005
+ReportingUnit	New Mexico;Chaves County	fips35005
 ReportingUnit	New Mexico;Cibola County	Cibola
-ReportingUnit	New Mexico;Cibola County	35006
+ReportingUnit	New Mexico;Cibola County	fips35006
 ReportingUnit	New Mexico;Colfax County	Colfax
-ReportingUnit	New Mexico;Colfax County	35007
+ReportingUnit	New Mexico;Colfax County	fips35007
 ReportingUnit	New Mexico;Curry County	Curry
-ReportingUnit	New Mexico;Curry County	35009
+ReportingUnit	New Mexico;Curry County	fips35009
 ReportingUnit	New Mexico;De Baca County	De Baca
-ReportingUnit	New Mexico;De Baca County	35011
+ReportingUnit	New Mexico;De Baca County	fips35011
 ReportingUnit	New Mexico;Dona Ana County	Dona Ana
+ReportingUnit	New Mexico;Doña Ana County	fips35013
 ReportingUnit	New Mexico;Eddy County	Eddy
-ReportingUnit	New Mexico;Eddy County	35015
+ReportingUnit	New Mexico;Eddy County	fips35015
 ReportingUnit	New Mexico;Grant County	Grant
-ReportingUnit	New Mexico;Grant County	35017
+ReportingUnit	New Mexico;Grant County	fips35017
 ReportingUnit	New Mexico;Guadalupe County	Guadalupe
-ReportingUnit	New Mexico;Guadalupe County	35019
+ReportingUnit	New Mexico;Guadalupe County	fips35019
 ReportingUnit	New Mexico;Harding County	Harding
-ReportingUnit	New Mexico;Harding County	35021
+ReportingUnit	New Mexico;Harding County	fips35021
 ReportingUnit	New Mexico;Hidalgo County	Hidalgo
-ReportingUnit	New Mexico;Hidalgo County	35023
+ReportingUnit	New Mexico;Hidalgo County	fips35023
 ReportingUnit	New Mexico;Lea County	Lea
-ReportingUnit	New Mexico;Lea County	35025
+ReportingUnit	New Mexico;Lea County	fips35025
 ReportingUnit	New Mexico;Lincoln County	Lincoln
-ReportingUnit	New Mexico;Lincoln County	35027
+ReportingUnit	New Mexico;Lincoln County	fips35027
 ReportingUnit	New Mexico;Los Alamos County	Los Alamos
-ReportingUnit	New Mexico;Los Alamos County	35028
+ReportingUnit	New Mexico;Los Alamos County	fips35028
 ReportingUnit	New Mexico;Luna County	Luna
-ReportingUnit	New Mexico;Luna County	35029
+ReportingUnit	New Mexico;Luna County	fips35029
 ReportingUnit	New Mexico;McKinley County	McKinley
-ReportingUnit	New Mexico;McKinley County	35031
+ReportingUnit	New Mexico;McKinley County	fips35031
 ReportingUnit	New Mexico;Mora County	Mora
-ReportingUnit	New Mexico;Mora County	35033
+ReportingUnit	New Mexico;Mora County	fips35033
 ReportingUnit	New Mexico;NM House District 1	New Mexico;NM House District 1
 ReportingUnit	New Mexico;NM House District 10	New Mexico;NM House District 10
 ReportingUnit	New Mexico;NM House District 11	New Mexico;NM House District 11
@@ -882,33 +883,33 @@ ReportingUnit	New Mexico;NM Senate District 7	New Mexico;NM Senate District 7
 ReportingUnit	New Mexico;NM Senate District 8	New Mexico;NM Senate District 8
 ReportingUnit	New Mexico;NM Senate District 9	New Mexico;NM Senate District 9
 ReportingUnit	New Mexico;Otero County	Otero
-ReportingUnit	New Mexico;Otero County	35035
+ReportingUnit	New Mexico;Otero County	fips35035
 ReportingUnit	New Mexico;Quay County	Quay
-ReportingUnit	New Mexico;Quay County	35037
+ReportingUnit	New Mexico;Quay County	fips35037
 ReportingUnit	New Mexico;Rio Arriba County	Rio Arriba
-ReportingUnit	New Mexico;Rio Arriba County	35039
+ReportingUnit	New Mexico;Rio Arriba County	fips35039
 ReportingUnit	New Mexico;Roosevelt County	Roosevelt
-ReportingUnit	New Mexico;Roosevelt County	35041
+ReportingUnit	New Mexico;Roosevelt County	fips35041
 ReportingUnit	New Mexico;San Juan County	San Juan
-ReportingUnit	New Mexico;San Juan County	35045
+ReportingUnit	New Mexico;San Juan County	fips35045
 ReportingUnit	New Mexico;San Miguel County	San Miguel
-ReportingUnit	New Mexico;San Miguel County	35047
+ReportingUnit	New Mexico;San Miguel County	fips35047
 ReportingUnit	New Mexico;Sandoval County	Sandoval
-ReportingUnit	New Mexico;Sandoval County	35043
+ReportingUnit	New Mexico;Sandoval County	fips35043
 ReportingUnit	New Mexico;Santa Fe County	Santa Fe
-ReportingUnit	New Mexico;Santa Fe County	35049
+ReportingUnit	New Mexico;Santa Fe County	fips35049
 ReportingUnit	New Mexico;Sierra County	Sierra
-ReportingUnit	New Mexico;Sierra County	35051
+ReportingUnit	New Mexico;Sierra County	fips35051
 ReportingUnit	New Mexico;Socorro County	Socorro
-ReportingUnit	New Mexico;Socorro County	35053
+ReportingUnit	New Mexico;Socorro County	fips35053
 ReportingUnit	New Mexico;Taos County	Taos
-ReportingUnit	New Mexico;Taos County	35055
+ReportingUnit	New Mexico;Taos County	fips35055
 ReportingUnit	New Mexico;Torrance County	Torrance
-ReportingUnit	New Mexico;Torrance County	35057
+ReportingUnit	New Mexico;Torrance County	fips35057
 ReportingUnit	New Mexico;US House NM District 1	New Mexico;US House NM District 1
 ReportingUnit	New Mexico;US House NM District 2	New Mexico;US House NM District 2
 ReportingUnit	New Mexico;US House NM District 3	New Mexico;US House NM District 3
 ReportingUnit	New Mexico;Union County	Union
-ReportingUnit	New Mexico;Union County	35059
+ReportingUnit	New Mexico;Union County	fips35059
 ReportingUnit	New Mexico;Valencia County	Valencia
-ReportingUnit	New Mexico;Valencia County	35061
+ReportingUnit	New Mexico;Valencia County	fips35061

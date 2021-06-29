@@ -4,8 +4,8 @@ Candidate	Barack Obama	BARACK OBAMA
 Candidate	Brock Pierce	Brock Pierce
 Candidate	C. Aaron Swisher	C. Aaron Swisher
 Candidate	Don Blankenship	Don Blankenship
-Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump
 Candidate	George W. Bush	GEORGE W. BUSH
 Candidate	Hillary Clinton	HILLARY CLINTON
 Candidate	Idaho Sierra Law	Idaho Sierra Law
@@ -140,21 +140,21 @@ CandidateContest	ID Treasurer	ID Treasurer
 CandidateContest	US House ID District 1	UNITED STATES REPRESENTATIVE DISTRICT 1
 CandidateContest	US House ID District 2	UNITED STATES REPRESENTATIVE DISTRICT 2
 CandidateContest	US House ID District 2	Unnamed: 19_level_0 Unnamed: 19_level_1 Unnamed: 19_level_2
-CandidateContest	US President (ID)	UNITED STATES PRESIDENT
-CandidateContest	US President (ID)	Unnamed: 7_level_0 UNITED STATES PRESIDENT
-CandidateContest	US President (ID)	Unnamed: 6_level_0 UNITED STATES PRESIDENT
-CandidateContest	US President (ID)	Unnamed: 5_level_0 UNITED STATES PRESIDENT
-CandidateContest	US President (ID)	Unnamed: 4_level_0 UNITED STATES PRESIDENT
-CandidateContest	US President (ID)	Unnamed: 3_level_0 UNITED STATES PRESIDENT
-CandidateContest	US President (ID)	Unnamed: 2_level_0 UNITED STATES PRESIDENT
-CandidateContest	US President (ID)	Unnamed: 1_level_0 UNITED STATES PRESIDENT
 CandidateContest	US President (ID)	PRESIDENT
+CandidateContest	US President (ID)	UNITED STATES PRESIDENT
 CandidateContest	US President (ID)	US PRESIDENT
+CandidateContest	US President (ID)	Unnamed: 1_level_0 UNITED STATES PRESIDENT
+CandidateContest	US President (ID)	Unnamed: 2_level_0 UNITED STATES PRESIDENT
+CandidateContest	US President (ID)	Unnamed: 3_level_0 UNITED STATES PRESIDENT
+CandidateContest	US President (ID)	Unnamed: 4_level_0 UNITED STATES PRESIDENT
+CandidateContest	US President (ID)	Unnamed: 5_level_0 UNITED STATES PRESIDENT
+CandidateContest	US President (ID)	Unnamed: 6_level_0 UNITED STATES PRESIDENT
+CandidateContest	US President (ID)	Unnamed: 7_level_0 UNITED STATES PRESIDENT
 CandidateContest	US Senate ID	UNITED STATES SENATOR
-CandidateContest	US Senate ID	Unnamed: 9_level_0 UNITED STATES SENATOR
-CandidateContest	US Senate ID	Unnamed: 8_level_0 UNITED STATES SENATOR
-CandidateContest	US Senate ID	Unnamed: 11_level_0 UNITED STATES SENATOR
 CandidateContest	US Senate ID	Unnamed: 10_level_0 UNITED STATES SENATOR
+CandidateContest	US Senate ID	Unnamed: 11_level_0 UNITED STATES SENATOR
+CandidateContest	US Senate ID	Unnamed: 8_level_0 UNITED STATES SENATOR
+CandidateContest	US Senate ID	Unnamed: 9_level_0 UNITED STATES SENATOR
 CountItemType	total	TOTAL
 Election	2016 General	2016 General
 Election	2018 General	2018 General
@@ -163,8 +163,8 @@ Election	2020 Primary	2020 Primary
 Party	CON	CON
 Party	Democratic Party	DEM
 Party	Democratic Party	DEMOCRAT
-Party	Green Party	Green Party
 Party	Green Party	GREEN
+Party	Green Party	Green Party
 Party	IND	IND
 Party	Libertarian Party	LIB
 Party	Libertarian Party	LIBERTARIAN
@@ -173,90 +173,90 @@ Party	Republican Party	REPUBLICAN
 Party	W/I	W/I
 Party	none or unknown	OTHER
 ReportingUnit	Idaho;Ada County	Ada
-ReportingUnit	Idaho;Ada County	16001
+ReportingUnit	Idaho;Ada County	fips16001
 ReportingUnit	Idaho;Adams County	Adams
-ReportingUnit	Idaho;Adams County	16003
+ReportingUnit	Idaho;Adams County	fips16003
 ReportingUnit	Idaho;Bannock County	Bannock
-ReportingUnit	Idaho;Bannock County	16005
+ReportingUnit	Idaho;Bannock County	fips16005
 ReportingUnit	Idaho;Bear Lake County	Bear Lake
-ReportingUnit	Idaho;Bear Lake County	16007
+ReportingUnit	Idaho;Bear Lake County	fips16007
 ReportingUnit	Idaho;Benewah County	Benewah
-ReportingUnit	Idaho;Benewah County	16009
+ReportingUnit	Idaho;Benewah County	fips16009
 ReportingUnit	Idaho;Bingham County	Bingham
-ReportingUnit	Idaho;Bingham County	16011
+ReportingUnit	Idaho;Bingham County	fips16011
 ReportingUnit	Idaho;Blaine County	Blaine
-ReportingUnit	Idaho;Blaine County	16013
+ReportingUnit	Idaho;Blaine County	fips16013
 ReportingUnit	Idaho;Boise County	Boise
-ReportingUnit	Idaho;Boise County	16015
+ReportingUnit	Idaho;Boise County	fips16015
 ReportingUnit	Idaho;Bonner County	Bonner
-ReportingUnit	Idaho;Bonner County	16017
+ReportingUnit	Idaho;Bonner County	fips16017
 ReportingUnit	Idaho;Bonneville County	Bonneville
-ReportingUnit	Idaho;Bonneville County	16019
+ReportingUnit	Idaho;Bonneville County	fips16019
 ReportingUnit	Idaho;Boundary County	Boundary
-ReportingUnit	Idaho;Boundary County	16021
+ReportingUnit	Idaho;Boundary County	fips16021
 ReportingUnit	Idaho;Butte County	Butte
-ReportingUnit	Idaho;Butte County	16023
+ReportingUnit	Idaho;Butte County	fips16023
 ReportingUnit	Idaho;Camas County	Camas
-ReportingUnit	Idaho;Camas County	16025
+ReportingUnit	Idaho;Camas County	fips16025
 ReportingUnit	Idaho;Canyon County	Canyon
-ReportingUnit	Idaho;Canyon County	16027
+ReportingUnit	Idaho;Canyon County	fips16027
 ReportingUnit	Idaho;Caribou County	Caribou
-ReportingUnit	Idaho;Caribou County	16029
+ReportingUnit	Idaho;Caribou County	fips16029
 ReportingUnit	Idaho;Cassia County	Cassia
-ReportingUnit	Idaho;Cassia County	16031
+ReportingUnit	Idaho;Cassia County	fips16031
 ReportingUnit	Idaho;Clark County	Clark
-ReportingUnit	Idaho;Clark County	16033
+ReportingUnit	Idaho;Clark County	fips16033
 ReportingUnit	Idaho;Clearwater County	Clearwater
-ReportingUnit	Idaho;Clearwater County	16035
+ReportingUnit	Idaho;Clearwater County	fips16035
 ReportingUnit	Idaho;Custer County	Custer
-ReportingUnit	Idaho;Custer County	16037
+ReportingUnit	Idaho;Custer County	fips16037
 ReportingUnit	Idaho;Elmore County	Elmore
-ReportingUnit	Idaho;Elmore County	16039
+ReportingUnit	Idaho;Elmore County	fips16039
 ReportingUnit	Idaho;Franklin County	Franklin
-ReportingUnit	Idaho;Franklin County	16041
+ReportingUnit	Idaho;Franklin County	fips16041
 ReportingUnit	Idaho;Fremont County	Fremont
-ReportingUnit	Idaho;Fremont County	16043
+ReportingUnit	Idaho;Fremont County	fips16043
 ReportingUnit	Idaho;Gem County	Gem
-ReportingUnit	Idaho;Gem County	16045
+ReportingUnit	Idaho;Gem County	fips16045
 ReportingUnit	Idaho;Gooding County	Gooding
-ReportingUnit	Idaho;Gooding County	16047
+ReportingUnit	Idaho;Gooding County	fips16047
 ReportingUnit	Idaho;Idaho County	Idaho
-ReportingUnit	Idaho;Idaho County	16049
+ReportingUnit	Idaho;Idaho County	fips16049
 ReportingUnit	Idaho;Jefferson County	Jefferson
-ReportingUnit	Idaho;Jefferson County	16051
+ReportingUnit	Idaho;Jefferson County	fips16051
 ReportingUnit	Idaho;Jerome County	Jerome
-ReportingUnit	Idaho;Jerome County	16053
+ReportingUnit	Idaho;Jerome County	fips16053
 ReportingUnit	Idaho;Kootenai County	Kootenai
-ReportingUnit	Idaho;Kootenai County	16055
+ReportingUnit	Idaho;Kootenai County	fips16055
 ReportingUnit	Idaho;Latah County	Latah
-ReportingUnit	Idaho;Latah County	16057
+ReportingUnit	Idaho;Latah County	fips16057
 ReportingUnit	Idaho;Lemhi County	Lemhi
-ReportingUnit	Idaho;Lemhi County	16059
+ReportingUnit	Idaho;Lemhi County	fips16059
 ReportingUnit	Idaho;Lewis County	Lewis
-ReportingUnit	Idaho;Lewis County	16061
+ReportingUnit	Idaho;Lewis County	fips16061
 ReportingUnit	Idaho;Lincoln County	Lincoln
-ReportingUnit	Idaho;Lincoln County	16063
+ReportingUnit	Idaho;Lincoln County	fips16063
 ReportingUnit	Idaho;Madison County	Madison
-ReportingUnit	Idaho;Madison County	16065
+ReportingUnit	Idaho;Madison County	fips16065
 ReportingUnit	Idaho;Minidoka County	Minidoka
-ReportingUnit	Idaho;Minidoka County	16067
+ReportingUnit	Idaho;Minidoka County	fips16067
 ReportingUnit	Idaho;Nez Perce County	Nez Perce
-ReportingUnit	Idaho;Nez Perce County	16069
+ReportingUnit	Idaho;Nez Perce County	fips16069
 ReportingUnit	Idaho;Oneida County	Oneida
-ReportingUnit	Idaho;Oneida County	16071
+ReportingUnit	Idaho;Oneida County	fips16071
 ReportingUnit	Idaho;Owyhee County	Owyhee
-ReportingUnit	Idaho;Owyhee County	16073
+ReportingUnit	Idaho;Owyhee County	fips16073
 ReportingUnit	Idaho;Payette County	Payette
-ReportingUnit	Idaho;Payette County	16075
+ReportingUnit	Idaho;Payette County	fips16075
 ReportingUnit	Idaho;Power County	Power
-ReportingUnit	Idaho;Power County	16077
+ReportingUnit	Idaho;Power County	fips16077
 ReportingUnit	Idaho;Shoshone County	Shoshone
-ReportingUnit	Idaho;Shoshone County	16079
+ReportingUnit	Idaho;Shoshone County	fips16079
 ReportingUnit	Idaho;Teton County	Teton
-ReportingUnit	Idaho;Teton County	16081
+ReportingUnit	Idaho;Teton County	fips16081
 ReportingUnit	Idaho;Twin Falls County	Twin Falls
-ReportingUnit	Idaho;Twin Falls County	16083
+ReportingUnit	Idaho;Twin Falls County	fips16083
 ReportingUnit	Idaho;Valley County	Valley
-ReportingUnit	Idaho;Valley County	16085
+ReportingUnit	Idaho;Valley County	fips16085
 ReportingUnit	Idaho;Washington County	Washington
-ReportingUnit	Idaho;Washington County	16087
+ReportingUnit	Idaho;Washington County	fips16087

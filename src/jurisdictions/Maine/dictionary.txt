@@ -10,14 +10,14 @@ Candidate	Bernard Sanders	Bernard Sanders
 Candidate	Bernard Sanders	Sanders, Bernard
 Candidate	Bre Kidman	Bre Kidman
 Candidate	Bre Kidman	Kidman, Bre
-Candidate	Cory A. Booker	Cory A. Booker
 Candidate	Cory A. Booker	Booker, Cory A.
+Candidate	Cory A. Booker	Cory A. Booker
 Candidate	Crafts, Dale John	Crafts, Dale John
 Candidate	Deval Patrick	Deval Patrick
 Candidate	Deval Patrick	Patrick, Deval
+Candidate	Donald J. Trump	DONALD TRUMP
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Trump, Donald J.
-Candidate	Donald J. Trump	DONALD TRUMP
 Candidate	Elizabeth A. Sweet	Elizabeth A. Sweet
 Candidate	Elizabeth A. Sweet	Sweet, Elizabeth A.
 Candidate	Elizabeth A. Warren	Elizabeth A. Warren
@@ -30,29 +30,29 @@ Candidate	Jo Jorgensen	Jorgensen, Jo
 Candidate	John Kerry	JOHN KERRY
 Candidate	John McCain	JOHN MCCAIN
 Candidate	Joseph R. Biden	Biden, Joseph R.
-Candidate	Joseph R. Biden	Joseph R. Biden, Jr.
 Candidate	Joseph R. Biden	Biden, Joseph R., Jr.
+Candidate	Joseph R. Biden	Joseph R. Biden, Jr.
 Candidate	Linn, Max Patrick	Linn, Max Patrick
 Candidate	Marianne Williamson	Marianne Williamson
 Candidate	Marianne Williamson	Williamson, Marianne
-Candidate	Michael R. Bloomberg	Michael R. Bloomberg
 Candidate	Michael R. Bloomberg	Bloomberg, Michael R.
+Candidate	Michael R. Bloomberg	Michael R. Bloomberg
 Candidate	Mitt Romney	MITT ROMNEY
 Candidate	Other	OTHER
 Candidate	Others	Others
-Candidate	Peter Buttigieg	Peter Buttigieg
 Candidate	Peter Buttigieg	Buttigieg, Peter
+Candidate	Peter Buttigieg	Peter Buttigieg
 Candidate	Pingree, Chellie M.	Pingree, Chellie M.
 Candidate	Ralph Nader	RALPH NADER
 Candidate	Roque De La Fuente	De La Fuente, Roque
-Candidate	Sara I. Gideon	Sara I. Gideon
 Candidate	Sara I. Gideon	Gideon, Sara I.
+Candidate	Sara I. Gideon	Sara I. Gideon
 Candidate	Savage, Lisa	Savage, Lisa
 Candidate	Susan Margaret Collins	Collins, Susan Margaret
-Candidate	Thomas F. Steyer	Thomas F. Steyer
 Candidate	Thomas F. Steyer	Steyer, Thomas F.
-Candidate	Tulsi Gabbard	Tulsi Gabbard
+Candidate	Thomas F. Steyer	Thomas F. Steyer
 Candidate	Tulsi Gabbard	Gabbard, Tulsi
+Candidate	Tulsi Gabbard	Tulsi Gabbard
 CandidateContest	ME Attorney General	ME Attorney General
 CandidateContest	ME Governor	ME Governor
 CandidateContest	ME House District 1	ME House District 1
@@ -246,16 +246,16 @@ CandidateContest	ME Senate District 9	ME Senate District 9
 CandidateContest	ME Treasurer	ME Treasurer
 CandidateContest	US House ME District 1	US Congress District 1
 CandidateContest	US House ME District 2	US Congress District 2
-CandidateContest	US President (ME)	US President (ME)
 CandidateContest	US President (ME)	PRESIDENT
 CandidateContest	US President (ME)	US PRESIDENT
+CandidateContest	US President (ME)	US President (ME)
 CandidateContest	US Senate ME	US Senate ME
 CountItemType	not-uocava	all-but-uocava
 CountItemType	not-uocava	not-uocava
-CountItemType	total	total
 CountItemType	total	TOTAL
-CountItemType	uocava	uocava
+CountItemType	total	total
 CountItemType	uocava	UOCAVA
+CountItemType	uocava	uocava
 Election	2016 General	2016 General
 Election	2016 Primary	2016 Primary
 Election	2018 General	2018 General
@@ -263,21 +263,21 @@ Election	2018 Primary	2018 Primary
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Party	Alliance Party	Alliance Party
-Party	Democratic Party	Democratic
 Party	Democratic Party	DEMOCRAT
+Party	Democratic Party	Democratic
 Party	Green Independent Party	Green Independent
-Party	Green Party	Green Party
 Party	Green Party	GREEN
+Party	Green Party	Green Party
 Party	Independent Party	Independent
-Party	Libertarian Party	Libertarian
 Party	Libertarian Party	LIBERTARIAN
-Party	Republican Party	Republican
+Party	Libertarian Party	Libertarian
 Party	Republican Party	REPUBLICAN
+Party	Republican Party	Republican
 Party	none or unknown	OTHER
 ReportingUnit	Maine	Maine
 ReportingUnit	Maine	STATE UOCAVA
 ReportingUnit	Maine;Androscoggin County	AND
-ReportingUnit	Maine;Androscoggin County	23001
+ReportingUnit	Maine;Androscoggin County	fips23001
 ReportingUnit	Maine;Androscoggin County;Auburn	AND;Auburn
 ReportingUnit	Maine;Androscoggin County;Durham	AND;Durham
 ReportingUnit	Maine;Androscoggin County;Greene	AND;Greene
@@ -293,7 +293,7 @@ ReportingUnit	Maine;Androscoggin County;Sabattus	AND;Sabattus
 ReportingUnit	Maine;Androscoggin County;Turner	AND;Turner
 ReportingUnit	Maine;Androscoggin County;Wales	AND;Wales
 ReportingUnit	Maine;Aroostook County	ARO
-ReportingUnit	Maine;Aroostook County	23003
+ReportingUnit	Maine;Aroostook County	fips23003
 ReportingUnit	Maine;Aroostook County;Allagash	ARO;Allagash
 ReportingUnit	Maine;Aroostook County;Amity	ARO;Amity
 ReportingUnit	Maine;Aroostook County;Ashland/T8 R11 Twp	ARO;Ashland/T8 R11 Twp
@@ -367,7 +367,7 @@ ReportingUnit	Maine;Aroostook County;Weston	ARO;Weston
 ReportingUnit	Maine;Aroostook County;Winterville Plt.	ARO;Winterville Plt.
 ReportingUnit	Maine;Aroostook County;Woodland	ARO;Woodland
 ReportingUnit	Maine;Cumberland County	CUM
-ReportingUnit	Maine;Cumberland County	23005
+ReportingUnit	Maine;Cumberland County	fips23005
 ReportingUnit	Maine;Cumberland County;Baldwin	CUM;Baldwin
 ReportingUnit	Maine;Cumberland County;Bridgton	CUM;Bridgton
 ReportingUnit	Maine;Cumberland County;Brunswick	CUM;Brunswick
@@ -397,7 +397,7 @@ ReportingUnit	Maine;Cumberland County;Westbrook	CUM;Westbrook
 ReportingUnit	Maine;Cumberland County;Windham	CUM;Windham
 ReportingUnit	Maine;Cumberland County;Yarmouth	CUM;Yarmouth
 ReportingUnit	Maine;Franklin County	FRA
-ReportingUnit	Maine;Franklin County	23007
+ReportingUnit	Maine;Franklin County	fips23007
 ReportingUnit	Maine;Franklin County;Avon	FRA;Avon
 ReportingUnit	Maine;Franklin County;Carrabassett Valley/Wyman Twp	FRA;Carrabassett Valley/Wyman Twp
 ReportingUnit	Maine;Franklin County;Carthage	FRA;Carthage
@@ -422,7 +422,7 @@ ReportingUnit	Maine;Franklin County;Weld	FRA;Weld
 ReportingUnit	Maine;Franklin County;Wilton/Washington Twp	FRA;Wilton/Washington Twp
 ReportingUnit	Maine;Franklin County;Wyman Twp	FRA;Wyman Twp
 ReportingUnit	Maine;Hancock County	HAN
-ReportingUnit	Maine;Hancock County	23009
+ReportingUnit	Maine;Hancock County	fips23009
 ReportingUnit	Maine;Hancock County;Amherst	HAN;Amherst
 ReportingUnit	Maine;Hancock County;Aurora	HAN;Aurora
 ReportingUnit	Maine;Hancock County;Bar Harbor	HAN;Bar Harbor
@@ -463,7 +463,7 @@ ReportingUnit	Maine;Hancock County;Verona Island	HAN;Verona Island
 ReportingUnit	Maine;Hancock County;Waltham	HAN;Waltham
 ReportingUnit	Maine;Hancock County;Winter Harbor	HAN;Winter Harbor
 ReportingUnit	Maine;Kennebec County	KEN
-ReportingUnit	Maine;Kennebec County	23011
+ReportingUnit	Maine;Kennebec County	fips23011
 ReportingUnit	Maine;Kennebec County;Albion	KEN;Albion
 ReportingUnit	Maine;Kennebec County;Augusta	KEN;Augusta
 ReportingUnit	Maine;Kennebec County;Belgrade	KEN;Belgrade
@@ -494,7 +494,7 @@ ReportingUnit	Maine;Kennebec County;Windsor	KEN;Windsor
 ReportingUnit	Maine;Kennebec County;Winslow	KEN;Winslow
 ReportingUnit	Maine;Kennebec County;Winthrop	KEN;Winthrop
 ReportingUnit	Maine;Knox County	KNO
-ReportingUnit	Maine;Knox County	23013
+ReportingUnit	Maine;Knox County	fips23013
 ReportingUnit	Maine;Knox County;Appleton	KNO;Appleton
 ReportingUnit	Maine;Knox County;Camden	KNO;Camden
 ReportingUnit	Maine;Knox County;Cushing	KNO;Cushing
@@ -514,7 +514,7 @@ ReportingUnit	Maine;Knox County;Vinalhaven	KNO;Vinalhaven
 ReportingUnit	Maine;Knox County;Warren	KNO;Warren
 ReportingUnit	Maine;Knox County;Washington	KNO;Washington
 ReportingUnit	Maine;Lincoln County	LIN
-ReportingUnit	Maine;Lincoln County	23015
+ReportingUnit	Maine;Lincoln County	fips23015
 ReportingUnit	Maine;Lincoln County;Alna	LIN;Alna
 ReportingUnit	Maine;Lincoln County;Boothbay	LIN;Boothbay
 ReportingUnit	Maine;Lincoln County;Boothbay Harbor	LIN;Boothbay Harbor
@@ -721,7 +721,7 @@ ReportingUnit	Maine;ME Senate District 7	Maine;ME Senate District 7
 ReportingUnit	Maine;ME Senate District 8	Maine;ME Senate District 8
 ReportingUnit	Maine;ME Senate District 9	Maine;ME Senate District 9
 ReportingUnit	Maine;Oxford County	OXF
-ReportingUnit	Maine;Oxford County	23017
+ReportingUnit	Maine;Oxford County	fips23017
 ReportingUnit	Maine;Oxford County;Albany Twp	OXF;Albany Twp
 ReportingUnit	Maine;Oxford County;Andover	OXF;Andover
 ReportingUnit	Maine;Oxford County;Bethel/Mason Twp	OXF;Bethel/Mason Twp
@@ -760,7 +760,7 @@ ReportingUnit	Maine;Oxford County;Waterford	OXF;Waterford
 ReportingUnit	Maine;Oxford County;West Paris	OXF;West Paris
 ReportingUnit	Maine;Oxford County;Woodstock/Milton Twp	OXF;Woodstock/Milton Twp
 ReportingUnit	Maine;Penobscot County	PEN
-ReportingUnit	Maine;Penobscot County	23019
+ReportingUnit	Maine;Penobscot County	fips23019
 ReportingUnit	Maine;Penobscot County;Alton	PEN;Alton
 ReportingUnit	Maine;Penobscot County;Argyle Twp	PEN;Argyle Twp
 ReportingUnit	Maine;Penobscot County;Bangor	PEN;Bangor
@@ -830,7 +830,7 @@ ReportingUnit	Maine;Penobscot County;Webster Plt	PEN;Webster Plt
 ReportingUnit	Maine;Penobscot County;Winn	PEN;Winn
 ReportingUnit	Maine;Penobscot County;Woodville	PEN;Woodville
 ReportingUnit	Maine;Piscataquis County	PIS
-ReportingUnit	Maine;Piscataquis County	23021
+ReportingUnit	Maine;Piscataquis County	fips23021
 ReportingUnit	Maine;Piscataquis County;Abbot	PIS;Abbot
 ReportingUnit	Maine;Piscataquis County;Atkinson Township	PIS;Atkinson Township
 ReportingUnit	Maine;Piscataquis County;Beaver Cove	PIS;Beaver Cove
@@ -852,7 +852,7 @@ ReportingUnit	Maine;Piscataquis County;Shirley	PIS;Shirley
 ReportingUnit	Maine;Piscataquis County;Wellington	PIS;Wellington
 ReportingUnit	Maine;Piscataquis County;Willimantic	PIS;Willimantic
 ReportingUnit	Maine;Sagadahoc County	SAG
-ReportingUnit	Maine;Sagadahoc County	23023
+ReportingUnit	Maine;Sagadahoc County	fips23023
 ReportingUnit	Maine;Sagadahoc County;Arrowsic	SAG;Arrowsic
 ReportingUnit	Maine;Sagadahoc County;Bath	SAG;Bath
 ReportingUnit	Maine;Sagadahoc County;Bowdoin	SAG;Bowdoin
@@ -864,7 +864,7 @@ ReportingUnit	Maine;Sagadahoc County;Topsham	SAG;Topsham
 ReportingUnit	Maine;Sagadahoc County;West Bath	SAG;West Bath
 ReportingUnit	Maine;Sagadahoc County;Woolwich	SAG;Woolwich
 ReportingUnit	Maine;Somerset County	SOM
-ReportingUnit	Maine;Somerset County	23025
+ReportingUnit	Maine;Somerset County	fips23025
 ReportingUnit	Maine;Somerset County;Anson	SOM;Anson
 ReportingUnit	Maine;Somerset County;Athens	SOM;Athens
 ReportingUnit	Maine;Somerset County;Bingham	SOM;Bingham
@@ -904,7 +904,7 @@ ReportingUnit	Maine;Somerset County;West Forks Plt	SOM;West Forks Plt
 ReportingUnit	Maine;US House ME District 1	CG 1
 ReportingUnit	Maine;US House ME District 2	CG 2
 ReportingUnit	Maine;Waldo County	WAL
-ReportingUnit	Maine;Waldo County	23027
+ReportingUnit	Maine;Waldo County	fips23027
 ReportingUnit	Maine;Waldo County;Belfast	WAL;Belfast
 ReportingUnit	Maine;Waldo County;Belmont	WAL;Belmont
 ReportingUnit	Maine;Waldo County;Brooks	WAL;Brooks
@@ -932,7 +932,7 @@ ReportingUnit	Maine;Waldo County;Unity	WAL;Unity
 ReportingUnit	Maine;Waldo County;Waldo	WAL;Waldo
 ReportingUnit	Maine;Waldo County;Winterport	WAL;Winterport
 ReportingUnit	Maine;Washington County	WAS
-ReportingUnit	Maine;Washington County	23029
+ReportingUnit	Maine;Washington County	fips23029
 ReportingUnit	Maine;Washington County;Addison	WAS;Addison
 ReportingUnit	Maine;Washington County;Alexander	WAS;Alexander
 ReportingUnit	Maine;Washington County;Baileyville	WAS;Baileyville
@@ -983,7 +983,7 @@ ReportingUnit	Maine;Washington County;Wesley	WAS;Wesley
 ReportingUnit	Maine;Washington County;Whiting	WAS;Whiting
 ReportingUnit	Maine;Washington County;Whitneyville	WAS;Whitneyville
 ReportingUnit	Maine;York County	YOR
-ReportingUnit	Maine;York County	23031
+ReportingUnit	Maine;York County	fips23031
 ReportingUnit	Maine;York County;Acton	YOR;Acton
 ReportingUnit	Maine;York County;Alfred	YOR;Alfred
 ReportingUnit	Maine;York County;Arundel	YOR;Arundel

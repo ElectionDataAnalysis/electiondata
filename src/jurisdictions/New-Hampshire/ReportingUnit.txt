@@ -1,431 +1,6 @@
 Name	ReportingUnitType
-New Hampshire;NH House District 1	state-house
-New Hampshire;NH House District 2	state-house
-New Hampshire;NH House District 3	state-house
-New Hampshire;NH House District 4	state-house
-New Hampshire;NH House District 5	state-house
-New Hampshire;NH House District 6	state-house
-New Hampshire;NH House District 7	state-house
-New Hampshire;NH House District 8	state-house
-New Hampshire;NH House District 9	state-house
-New Hampshire;NH House District 10	state-house
-New Hampshire;NH House District 11	state-house
-New Hampshire;NH House District 12	state-house
-New Hampshire;NH House District 13	state-house
-New Hampshire;NH House District 14	state-house
-New Hampshire;NH House District 15	state-house
-New Hampshire;NH House District 16	state-house
-New Hampshire;NH House District 17	state-house
-New Hampshire;NH House District 18	state-house
-New Hampshire;NH House District 19	state-house
-New Hampshire;NH House District 20	state-house
-New Hampshire;NH House District 21	state-house
-New Hampshire;NH House District 22	state-house
-New Hampshire;NH House District 23	state-house
-New Hampshire;NH House District 24	state-house
-New Hampshire;NH House District 25	state-house
-New Hampshire;NH House District 26	state-house
-New Hampshire;NH House District 27	state-house
-New Hampshire;NH House District 28	state-house
-New Hampshire;NH House District 29	state-house
-New Hampshire;NH House District 30	state-house
-New Hampshire;NH House District 31	state-house
-New Hampshire;NH House District 32	state-house
-New Hampshire;NH House District 33	state-house
-New Hampshire;NH House District 34	state-house
-New Hampshire;NH House District 35	state-house
-New Hampshire;NH House District 36	state-house
-New Hampshire;NH House District 37	state-house
-New Hampshire;NH House District 38	state-house
-New Hampshire;NH House District 39	state-house
-New Hampshire;NH House District 40	state-house
-New Hampshire;NH House District 41	state-house
-New Hampshire;NH House District 42	state-house
-New Hampshire;NH House District 43	state-house
-New Hampshire;NH House District 44	state-house
-New Hampshire;NH House District 45	state-house
-New Hampshire;NH House District 46	state-house
-New Hampshire;NH House District 47	state-house
-New Hampshire;NH House District 48	state-house
-New Hampshire;NH House District 49	state-house
-New Hampshire;NH House District 50	state-house
-New Hampshire;NH House District 51	state-house
-New Hampshire;NH House District 52	state-house
-New Hampshire;NH House District 53	state-house
-New Hampshire;NH House District 54	state-house
-New Hampshire;NH House District 55	state-house
-New Hampshire;NH House District 56	state-house
-New Hampshire;NH House District 57	state-house
-New Hampshire;NH House District 58	state-house
-New Hampshire;NH House District 59	state-house
-New Hampshire;NH House District 60	state-house
-New Hampshire;NH House District 61	state-house
-New Hampshire;NH House District 62	state-house
-New Hampshire;NH House District 63	state-house
-New Hampshire;NH House District 64	state-house
-New Hampshire;NH House District 65	state-house
-New Hampshire;NH House District 66	state-house
-New Hampshire;NH House District 67	state-house
-New Hampshire;NH House District 68	state-house
-New Hampshire;NH House District 69	state-house
-New Hampshire;NH House District 70	state-house
-New Hampshire;NH House District 71	state-house
-New Hampshire;NH House District 72	state-house
-New Hampshire;NH House District 73	state-house
-New Hampshire;NH House District 74	state-house
-New Hampshire;NH House District 75	state-house
-New Hampshire;NH House District 76	state-house
-New Hampshire;NH House District 77	state-house
-New Hampshire;NH House District 78	state-house
-New Hampshire;NH House District 79	state-house
-New Hampshire;NH House District 80	state-house
-New Hampshire;NH House District 81	state-house
-New Hampshire;NH House District 82	state-house
-New Hampshire;NH House District 83	state-house
-New Hampshire;NH House District 84	state-house
-New Hampshire;NH House District 85	state-house
-New Hampshire;NH House District 86	state-house
-New Hampshire;NH House District 87	state-house
-New Hampshire;NH House District 88	state-house
-New Hampshire;NH House District 89	state-house
-New Hampshire;NH House District 90	state-house
-New Hampshire;NH House District 91	state-house
-New Hampshire;NH House District 92	state-house
-New Hampshire;NH House District 93	state-house
-New Hampshire;NH House District 94	state-house
-New Hampshire;NH House District 95	state-house
-New Hampshire;NH House District 96	state-house
-New Hampshire;NH House District 97	state-house
-New Hampshire;NH House District 98	state-house
-New Hampshire;NH House District 99	state-house
-New Hampshire;NH House District 100	state-house
-New Hampshire;NH House District 101	state-house
-New Hampshire;NH House District 102	state-house
-New Hampshire;NH House District 103	state-house
-New Hampshire;NH House District 104	state-house
-New Hampshire;NH House District 105	state-house
-New Hampshire;NH House District 106	state-house
-New Hampshire;NH House District 107	state-house
-New Hampshire;NH House District 108	state-house
-New Hampshire;NH House District 109	state-house
-New Hampshire;NH House District 110	state-house
-New Hampshire;NH House District 111	state-house
-New Hampshire;NH House District 112	state-house
-New Hampshire;NH House District 113	state-house
-New Hampshire;NH House District 114	state-house
-New Hampshire;NH House District 115	state-house
-New Hampshire;NH House District 116	state-house
-New Hampshire;NH House District 117	state-house
-New Hampshire;NH House District 118	state-house
-New Hampshire;NH House District 119	state-house
-New Hampshire;NH House District 120	state-house
-New Hampshire;NH House District 121	state-house
-New Hampshire;NH House District 122	state-house
-New Hampshire;NH House District 123	state-house
-New Hampshire;NH House District 124	state-house
-New Hampshire;NH House District 125	state-house
-New Hampshire;NH House District 126	state-house
-New Hampshire;NH House District 127	state-house
-New Hampshire;NH House District 128	state-house
-New Hampshire;NH House District 129	state-house
-New Hampshire;NH House District 130	state-house
-New Hampshire;NH House District 131	state-house
-New Hampshire;NH House District 132	state-house
-New Hampshire;NH House District 133	state-house
-New Hampshire;NH House District 134	state-house
-New Hampshire;NH House District 135	state-house
-New Hampshire;NH House District 136	state-house
-New Hampshire;NH House District 137	state-house
-New Hampshire;NH House District 138	state-house
-New Hampshire;NH House District 139	state-house
-New Hampshire;NH House District 140	state-house
-New Hampshire;NH House District 141	state-house
-New Hampshire;NH House District 142	state-house
-New Hampshire;NH House District 143	state-house
-New Hampshire;NH House District 144	state-house
-New Hampshire;NH House District 145	state-house
-New Hampshire;NH House District 146	state-house
-New Hampshire;NH House District 147	state-house
-New Hampshire;NH House District 148	state-house
-New Hampshire;NH House District 149	state-house
-New Hampshire;NH House District 150	state-house
-New Hampshire;NH House District 151	state-house
-New Hampshire;NH House District 152	state-house
-New Hampshire;NH House District 153	state-house
-New Hampshire;NH House District 154	state-house
-New Hampshire;NH House District 155	state-house
-New Hampshire;NH House District 156	state-house
-New Hampshire;NH House District 157	state-house
-New Hampshire;NH House District 158	state-house
-New Hampshire;NH House District 159	state-house
-New Hampshire;NH House District 160	state-house
-New Hampshire;NH House District 161	state-house
-New Hampshire;NH House District 162	state-house
-New Hampshire;NH House District 163	state-house
-New Hampshire;NH House District 164	state-house
-New Hampshire;NH House District 165	state-house
-New Hampshire;NH House District 166	state-house
-New Hampshire;NH House District 167	state-house
-New Hampshire;NH House District 168	state-house
-New Hampshire;NH House District 169	state-house
-New Hampshire;NH House District 170	state-house
-New Hampshire;NH House District 171	state-house
-New Hampshire;NH House District 172	state-house
-New Hampshire;NH House District 173	state-house
-New Hampshire;NH House District 174	state-house
-New Hampshire;NH House District 175	state-house
-New Hampshire;NH House District 176	state-house
-New Hampshire;NH House District 177	state-house
-New Hampshire;NH House District 178	state-house
-New Hampshire;NH House District 179	state-house
-New Hampshire;NH House District 180	state-house
-New Hampshire;NH House District 181	state-house
-New Hampshire;NH House District 182	state-house
-New Hampshire;NH House District 183	state-house
-New Hampshire;NH House District 184	state-house
-New Hampshire;NH House District 185	state-house
-New Hampshire;NH House District 186	state-house
-New Hampshire;NH House District 187	state-house
-New Hampshire;NH House District 188	state-house
-New Hampshire;NH House District 189	state-house
-New Hampshire;NH House District 190	state-house
-New Hampshire;NH House District 191	state-house
-New Hampshire;NH House District 192	state-house
-New Hampshire;NH House District 193	state-house
-New Hampshire;NH House District 194	state-house
-New Hampshire;NH House District 195	state-house
-New Hampshire;NH House District 196	state-house
-New Hampshire;NH House District 197	state-house
-New Hampshire;NH House District 198	state-house
-New Hampshire;NH House District 199	state-house
-New Hampshire;NH House District 200	state-house
-New Hampshire;NH House District 201	state-house
-New Hampshire;NH House District 202	state-house
-New Hampshire;NH House District 203	state-house
-New Hampshire;NH House District 204	state-house
-New Hampshire;NH House District 205	state-house
-New Hampshire;NH House District 206	state-house
-New Hampshire;NH House District 207	state-house
-New Hampshire;NH House District 208	state-house
-New Hampshire;NH House District 209	state-house
-New Hampshire;NH House District 210	state-house
-New Hampshire;NH House District 211	state-house
-New Hampshire;NH House District 212	state-house
-New Hampshire;NH House District 213	state-house
-New Hampshire;NH House District 214	state-house
-New Hampshire;NH House District 215	state-house
-New Hampshire;NH House District 216	state-house
-New Hampshire;NH House District 217	state-house
-New Hampshire;NH House District 218	state-house
-New Hampshire;NH House District 219	state-house
-New Hampshire;NH House District 220	state-house
-New Hampshire;NH House District 221	state-house
-New Hampshire;NH House District 222	state-house
-New Hampshire;NH House District 223	state-house
-New Hampshire;NH House District 224	state-house
-New Hampshire;NH House District 225	state-house
-New Hampshire;NH House District 226	state-house
-New Hampshire;NH House District 227	state-house
-New Hampshire;NH House District 228	state-house
-New Hampshire;NH House District 229	state-house
-New Hampshire;NH House District 230	state-house
-New Hampshire;NH House District 231	state-house
-New Hampshire;NH House District 232	state-house
-New Hampshire;NH House District 233	state-house
-New Hampshire;NH House District 234	state-house
-New Hampshire;NH House District 235	state-house
-New Hampshire;NH House District 236	state-house
-New Hampshire;NH House District 237	state-house
-New Hampshire;NH House District 238	state-house
-New Hampshire;NH House District 239	state-house
-New Hampshire;NH House District 240	state-house
-New Hampshire;NH House District 241	state-house
-New Hampshire;NH House District 242	state-house
-New Hampshire;NH House District 243	state-house
-New Hampshire;NH House District 244	state-house
-New Hampshire;NH House District 245	state-house
-New Hampshire;NH House District 246	state-house
-New Hampshire;NH House District 247	state-house
-New Hampshire;NH House District 248	state-house
-New Hampshire;NH House District 249	state-house
-New Hampshire;NH House District 250	state-house
-New Hampshire;NH House District 251	state-house
-New Hampshire;NH House District 252	state-house
-New Hampshire;NH House District 253	state-house
-New Hampshire;NH House District 254	state-house
-New Hampshire;NH House District 255	state-house
-New Hampshire;NH House District 256	state-house
-New Hampshire;NH House District 257	state-house
-New Hampshire;NH House District 258	state-house
-New Hampshire;NH House District 259	state-house
-New Hampshire;NH House District 260	state-house
-New Hampshire;NH House District 261	state-house
-New Hampshire;NH House District 262	state-house
-New Hampshire;NH House District 263	state-house
-New Hampshire;NH House District 264	state-house
-New Hampshire;NH House District 265	state-house
-New Hampshire;NH House District 266	state-house
-New Hampshire;NH House District 267	state-house
-New Hampshire;NH House District 268	state-house
-New Hampshire;NH House District 269	state-house
-New Hampshire;NH House District 270	state-house
-New Hampshire;NH House District 271	state-house
-New Hampshire;NH House District 272	state-house
-New Hampshire;NH House District 273	state-house
-New Hampshire;NH House District 274	state-house
-New Hampshire;NH House District 275	state-house
-New Hampshire;NH House District 276	state-house
-New Hampshire;NH House District 277	state-house
-New Hampshire;NH House District 278	state-house
-New Hampshire;NH House District 279	state-house
-New Hampshire;NH House District 280	state-house
-New Hampshire;NH House District 281	state-house
-New Hampshire;NH House District 282	state-house
-New Hampshire;NH House District 283	state-house
-New Hampshire;NH House District 284	state-house
-New Hampshire;NH House District 285	state-house
-New Hampshire;NH House District 286	state-house
-New Hampshire;NH House District 287	state-house
-New Hampshire;NH House District 288	state-house
-New Hampshire;NH House District 289	state-house
-New Hampshire;NH House District 290	state-house
-New Hampshire;NH House District 291	state-house
-New Hampshire;NH House District 292	state-house
-New Hampshire;NH House District 293	state-house
-New Hampshire;NH House District 294	state-house
-New Hampshire;NH House District 295	state-house
-New Hampshire;NH House District 296	state-house
-New Hampshire;NH House District 297	state-house
-New Hampshire;NH House District 298	state-house
-New Hampshire;NH House District 299	state-house
-New Hampshire;NH House District 300	state-house
-New Hampshire;NH House District 301	state-house
-New Hampshire;NH House District 302	state-house
-New Hampshire;NH House District 303	state-house
-New Hampshire;NH House District 304	state-house
-New Hampshire;NH House District 305	state-house
-New Hampshire;NH House District 306	state-house
-New Hampshire;NH House District 307	state-house
-New Hampshire;NH House District 308	state-house
-New Hampshire;NH House District 309	state-house
-New Hampshire;NH House District 310	state-house
-New Hampshire;NH House District 311	state-house
-New Hampshire;NH House District 312	state-house
-New Hampshire;NH House District 313	state-house
-New Hampshire;NH House District 314	state-house
-New Hampshire;NH House District 315	state-house
-New Hampshire;NH House District 316	state-house
-New Hampshire;NH House District 317	state-house
-New Hampshire;NH House District 318	state-house
-New Hampshire;NH House District 319	state-house
-New Hampshire;NH House District 320	state-house
-New Hampshire;NH House District 321	state-house
-New Hampshire;NH House District 322	state-house
-New Hampshire;NH House District 323	state-house
-New Hampshire;NH House District 324	state-house
-New Hampshire;NH House District 325	state-house
-New Hampshire;NH House District 326	state-house
-New Hampshire;NH House District 327	state-house
-New Hampshire;NH House District 328	state-house
-New Hampshire;NH House District 329	state-house
-New Hampshire;NH House District 330	state-house
-New Hampshire;NH House District 331	state-house
-New Hampshire;NH House District 332	state-house
-New Hampshire;NH House District 333	state-house
-New Hampshire;NH House District 334	state-house
-New Hampshire;NH House District 335	state-house
-New Hampshire;NH House District 336	state-house
-New Hampshire;NH House District 337	state-house
-New Hampshire;NH House District 338	state-house
-New Hampshire;NH House District 339	state-house
-New Hampshire;NH House District 340	state-house
-New Hampshire;NH House District 341	state-house
-New Hampshire;NH House District 342	state-house
-New Hampshire;NH House District 343	state-house
-New Hampshire;NH House District 344	state-house
-New Hampshire;NH House District 345	state-house
-New Hampshire;NH House District 346	state-house
-New Hampshire;NH House District 347	state-house
-New Hampshire;NH House District 348	state-house
-New Hampshire;NH House District 349	state-house
-New Hampshire;NH House District 350	state-house
-New Hampshire;NH House District 351	state-house
-New Hampshire;NH House District 352	state-house
-New Hampshire;NH House District 353	state-house
-New Hampshire;NH House District 354	state-house
-New Hampshire;NH House District 355	state-house
-New Hampshire;NH House District 356	state-house
-New Hampshire;NH House District 357	state-house
-New Hampshire;NH House District 358	state-house
-New Hampshire;NH House District 359	state-house
-New Hampshire;NH House District 360	state-house
-New Hampshire;NH House District 361	state-house
-New Hampshire;NH House District 362	state-house
-New Hampshire;NH House District 363	state-house
-New Hampshire;NH House District 364	state-house
-New Hampshire;NH House District 365	state-house
-New Hampshire;NH House District 366	state-house
-New Hampshire;NH House District 367	state-house
-New Hampshire;NH House District 368	state-house
-New Hampshire;NH House District 369	state-house
-New Hampshire;NH House District 370	state-house
-New Hampshire;NH House District 371	state-house
-New Hampshire;NH House District 372	state-house
-New Hampshire;NH House District 373	state-house
-New Hampshire;NH House District 374	state-house
-New Hampshire;NH House District 375	state-house
-New Hampshire;NH House District 376	state-house
-New Hampshire;NH House District 377	state-house
-New Hampshire;NH House District 378	state-house
-New Hampshire;NH House District 379	state-house
-New Hampshire;NH House District 380	state-house
-New Hampshire;NH House District 381	state-house
-New Hampshire;NH House District 382	state-house
-New Hampshire;NH House District 383	state-house
-New Hampshire;NH House District 384	state-house
-New Hampshire;NH House District 385	state-house
-New Hampshire;NH House District 386	state-house
-New Hampshire;NH House District 387	state-house
-New Hampshire;NH House District 388	state-house
-New Hampshire;NH House District 389	state-house
-New Hampshire;NH House District 390	state-house
-New Hampshire;NH House District 391	state-house
-New Hampshire;NH House District 392	state-house
-New Hampshire;NH House District 393	state-house
-New Hampshire;NH House District 394	state-house
-New Hampshire;NH House District 395	state-house
-New Hampshire;NH House District 396	state-house
-New Hampshire;NH House District 397	state-house
-New Hampshire;NH House District 398	state-house
-New Hampshire;NH House District 399	state-house
-New Hampshire;NH House District 400	state-house
-New Hampshire;NH Senate District 1	state-senate
-New Hampshire;NH Senate District 2	state-senate
-New Hampshire;NH Senate District 3	state-senate
-New Hampshire;NH Senate District 4	state-senate
-New Hampshire;NH Senate District 5	state-senate
-New Hampshire;NH Senate District 6	state-senate
-New Hampshire;NH Senate District 7	state-senate
-New Hampshire;NH Senate District 8	state-senate
-New Hampshire;NH Senate District 9	state-senate
-New Hampshire;NH Senate District 10	state-senate
-New Hampshire;NH Senate District 11	state-senate
-New Hampshire;NH Senate District 12	state-senate
-New Hampshire;NH Senate District 13	state-senate
-New Hampshire;NH Senate District 14	state-senate
-New Hampshire;NH Senate District 15	state-senate
-New Hampshire;NH Senate District 16	state-senate
-New Hampshire;NH Senate District 17	state-senate
-New Hampshire;NH Senate District 18	state-senate
-New Hampshire;NH Senate District 19	state-senate
-New Hampshire;NH Senate District 20	state-senate
-New Hampshire;NH Senate District 21	state-senate
-New Hampshire;NH Senate District 22	state-senate
-New Hampshire;NH Senate District 23	state-senate
-New Hampshire;NH Senate District 24	state-senate
 New Hampshire;US House NH District 1	congressional
 New Hampshire;US House NH District 2	congressional
-New Hampshire	state
 New Hampshire;Belknap County	county
 New Hampshire;Carroll County	county
 New Hampshire;Cheshire County	county
@@ -438,282 +13,668 @@ New Hampshire;Merrimack County	county
 New Hampshire;Rockingham County	county
 New Hampshire;Strafford County	county
 New Hampshire;Sullivan County	county
-New Hampshire;Sullivan County;Acworth	town
-New Hampshire;Carroll County;Albany	town
-New Hampshire;Grafton County;Alexandria	town
-New Hampshire;Merrimack County;Allenstown	town
-New Hampshire;Cheshire County;Alstead	town
+New Hampshire	state
+New Hampshire;NH House District 1	state-house
+New Hampshire;NH House District 10	state-house
+New Hampshire;NH House District 100	state-house
+New Hampshire;NH House District 101	state-house
+New Hampshire;NH House District 102	state-house
+New Hampshire;NH House District 103	state-house
+New Hampshire;NH House District 104	state-house
+New Hampshire;NH House District 105	state-house
+New Hampshire;NH House District 106	state-house
+New Hampshire;NH House District 107	state-house
+New Hampshire;NH House District 108	state-house
+New Hampshire;NH House District 109	state-house
+New Hampshire;NH House District 11	state-house
+New Hampshire;NH House District 110	state-house
+New Hampshire;NH House District 111	state-house
+New Hampshire;NH House District 112	state-house
+New Hampshire;NH House District 113	state-house
+New Hampshire;NH House District 114	state-house
+New Hampshire;NH House District 115	state-house
+New Hampshire;NH House District 116	state-house
+New Hampshire;NH House District 117	state-house
+New Hampshire;NH House District 118	state-house
+New Hampshire;NH House District 119	state-house
+New Hampshire;NH House District 12	state-house
+New Hampshire;NH House District 120	state-house
+New Hampshire;NH House District 121	state-house
+New Hampshire;NH House District 122	state-house
+New Hampshire;NH House District 123	state-house
+New Hampshire;NH House District 124	state-house
+New Hampshire;NH House District 125	state-house
+New Hampshire;NH House District 126	state-house
+New Hampshire;NH House District 127	state-house
+New Hampshire;NH House District 128	state-house
+New Hampshire;NH House District 129	state-house
+New Hampshire;NH House District 13	state-house
+New Hampshire;NH House District 130	state-house
+New Hampshire;NH House District 131	state-house
+New Hampshire;NH House District 132	state-house
+New Hampshire;NH House District 133	state-house
+New Hampshire;NH House District 134	state-house
+New Hampshire;NH House District 135	state-house
+New Hampshire;NH House District 136	state-house
+New Hampshire;NH House District 137	state-house
+New Hampshire;NH House District 138	state-house
+New Hampshire;NH House District 139	state-house
+New Hampshire;NH House District 14	state-house
+New Hampshire;NH House District 140	state-house
+New Hampshire;NH House District 141	state-house
+New Hampshire;NH House District 142	state-house
+New Hampshire;NH House District 143	state-house
+New Hampshire;NH House District 144	state-house
+New Hampshire;NH House District 145	state-house
+New Hampshire;NH House District 146	state-house
+New Hampshire;NH House District 147	state-house
+New Hampshire;NH House District 148	state-house
+New Hampshire;NH House District 149	state-house
+New Hampshire;NH House District 15	state-house
+New Hampshire;NH House District 150	state-house
+New Hampshire;NH House District 151	state-house
+New Hampshire;NH House District 152	state-house
+New Hampshire;NH House District 153	state-house
+New Hampshire;NH House District 154	state-house
+New Hampshire;NH House District 155	state-house
+New Hampshire;NH House District 156	state-house
+New Hampshire;NH House District 157	state-house
+New Hampshire;NH House District 158	state-house
+New Hampshire;NH House District 159	state-house
+New Hampshire;NH House District 16	state-house
+New Hampshire;NH House District 160	state-house
+New Hampshire;NH House District 161	state-house
+New Hampshire;NH House District 162	state-house
+New Hampshire;NH House District 163	state-house
+New Hampshire;NH House District 164	state-house
+New Hampshire;NH House District 165	state-house
+New Hampshire;NH House District 166	state-house
+New Hampshire;NH House District 167	state-house
+New Hampshire;NH House District 168	state-house
+New Hampshire;NH House District 169	state-house
+New Hampshire;NH House District 17	state-house
+New Hampshire;NH House District 170	state-house
+New Hampshire;NH House District 171	state-house
+New Hampshire;NH House District 172	state-house
+New Hampshire;NH House District 173	state-house
+New Hampshire;NH House District 174	state-house
+New Hampshire;NH House District 175	state-house
+New Hampshire;NH House District 176	state-house
+New Hampshire;NH House District 177	state-house
+New Hampshire;NH House District 178	state-house
+New Hampshire;NH House District 179	state-house
+New Hampshire;NH House District 18	state-house
+New Hampshire;NH House District 180	state-house
+New Hampshire;NH House District 181	state-house
+New Hampshire;NH House District 182	state-house
+New Hampshire;NH House District 183	state-house
+New Hampshire;NH House District 184	state-house
+New Hampshire;NH House District 185	state-house
+New Hampshire;NH House District 186	state-house
+New Hampshire;NH House District 187	state-house
+New Hampshire;NH House District 188	state-house
+New Hampshire;NH House District 189	state-house
+New Hampshire;NH House District 19	state-house
+New Hampshire;NH House District 190	state-house
+New Hampshire;NH House District 191	state-house
+New Hampshire;NH House District 192	state-house
+New Hampshire;NH House District 193	state-house
+New Hampshire;NH House District 194	state-house
+New Hampshire;NH House District 195	state-house
+New Hampshire;NH House District 196	state-house
+New Hampshire;NH House District 197	state-house
+New Hampshire;NH House District 198	state-house
+New Hampshire;NH House District 199	state-house
+New Hampshire;NH House District 2	state-house
+New Hampshire;NH House District 20	state-house
+New Hampshire;NH House District 200	state-house
+New Hampshire;NH House District 201	state-house
+New Hampshire;NH House District 202	state-house
+New Hampshire;NH House District 203	state-house
+New Hampshire;NH House District 204	state-house
+New Hampshire;NH House District 205	state-house
+New Hampshire;NH House District 206	state-house
+New Hampshire;NH House District 207	state-house
+New Hampshire;NH House District 208	state-house
+New Hampshire;NH House District 209	state-house
+New Hampshire;NH House District 21	state-house
+New Hampshire;NH House District 210	state-house
+New Hampshire;NH House District 211	state-house
+New Hampshire;NH House District 212	state-house
+New Hampshire;NH House District 213	state-house
+New Hampshire;NH House District 214	state-house
+New Hampshire;NH House District 215	state-house
+New Hampshire;NH House District 216	state-house
+New Hampshire;NH House District 217	state-house
+New Hampshire;NH House District 218	state-house
+New Hampshire;NH House District 219	state-house
+New Hampshire;NH House District 22	state-house
+New Hampshire;NH House District 220	state-house
+New Hampshire;NH House District 221	state-house
+New Hampshire;NH House District 222	state-house
+New Hampshire;NH House District 223	state-house
+New Hampshire;NH House District 224	state-house
+New Hampshire;NH House District 225	state-house
+New Hampshire;NH House District 226	state-house
+New Hampshire;NH House District 227	state-house
+New Hampshire;NH House District 228	state-house
+New Hampshire;NH House District 229	state-house
+New Hampshire;NH House District 23	state-house
+New Hampshire;NH House District 230	state-house
+New Hampshire;NH House District 231	state-house
+New Hampshire;NH House District 232	state-house
+New Hampshire;NH House District 233	state-house
+New Hampshire;NH House District 234	state-house
+New Hampshire;NH House District 235	state-house
+New Hampshire;NH House District 236	state-house
+New Hampshire;NH House District 237	state-house
+New Hampshire;NH House District 238	state-house
+New Hampshire;NH House District 239	state-house
+New Hampshire;NH House District 24	state-house
+New Hampshire;NH House District 240	state-house
+New Hampshire;NH House District 241	state-house
+New Hampshire;NH House District 242	state-house
+New Hampshire;NH House District 243	state-house
+New Hampshire;NH House District 244	state-house
+New Hampshire;NH House District 245	state-house
+New Hampshire;NH House District 246	state-house
+New Hampshire;NH House District 247	state-house
+New Hampshire;NH House District 248	state-house
+New Hampshire;NH House District 249	state-house
+New Hampshire;NH House District 25	state-house
+New Hampshire;NH House District 250	state-house
+New Hampshire;NH House District 251	state-house
+New Hampshire;NH House District 252	state-house
+New Hampshire;NH House District 253	state-house
+New Hampshire;NH House District 254	state-house
+New Hampshire;NH House District 255	state-house
+New Hampshire;NH House District 256	state-house
+New Hampshire;NH House District 257	state-house
+New Hampshire;NH House District 258	state-house
+New Hampshire;NH House District 259	state-house
+New Hampshire;NH House District 26	state-house
+New Hampshire;NH House District 260	state-house
+New Hampshire;NH House District 261	state-house
+New Hampshire;NH House District 262	state-house
+New Hampshire;NH House District 263	state-house
+New Hampshire;NH House District 264	state-house
+New Hampshire;NH House District 265	state-house
+New Hampshire;NH House District 266	state-house
+New Hampshire;NH House District 267	state-house
+New Hampshire;NH House District 268	state-house
+New Hampshire;NH House District 269	state-house
+New Hampshire;NH House District 27	state-house
+New Hampshire;NH House District 270	state-house
+New Hampshire;NH House District 271	state-house
+New Hampshire;NH House District 272	state-house
+New Hampshire;NH House District 273	state-house
+New Hampshire;NH House District 274	state-house
+New Hampshire;NH House District 275	state-house
+New Hampshire;NH House District 276	state-house
+New Hampshire;NH House District 277	state-house
+New Hampshire;NH House District 278	state-house
+New Hampshire;NH House District 279	state-house
+New Hampshire;NH House District 28	state-house
+New Hampshire;NH House District 280	state-house
+New Hampshire;NH House District 281	state-house
+New Hampshire;NH House District 282	state-house
+New Hampshire;NH House District 283	state-house
+New Hampshire;NH House District 284	state-house
+New Hampshire;NH House District 285	state-house
+New Hampshire;NH House District 286	state-house
+New Hampshire;NH House District 287	state-house
+New Hampshire;NH House District 288	state-house
+New Hampshire;NH House District 289	state-house
+New Hampshire;NH House District 29	state-house
+New Hampshire;NH House District 290	state-house
+New Hampshire;NH House District 291	state-house
+New Hampshire;NH House District 292	state-house
+New Hampshire;NH House District 293	state-house
+New Hampshire;NH House District 294	state-house
+New Hampshire;NH House District 295	state-house
+New Hampshire;NH House District 296	state-house
+New Hampshire;NH House District 297	state-house
+New Hampshire;NH House District 298	state-house
+New Hampshire;NH House District 299	state-house
+New Hampshire;NH House District 3	state-house
+New Hampshire;NH House District 30	state-house
+New Hampshire;NH House District 300	state-house
+New Hampshire;NH House District 301	state-house
+New Hampshire;NH House District 302	state-house
+New Hampshire;NH House District 303	state-house
+New Hampshire;NH House District 304	state-house
+New Hampshire;NH House District 305	state-house
+New Hampshire;NH House District 306	state-house
+New Hampshire;NH House District 307	state-house
+New Hampshire;NH House District 308	state-house
+New Hampshire;NH House District 309	state-house
+New Hampshire;NH House District 31	state-house
+New Hampshire;NH House District 310	state-house
+New Hampshire;NH House District 311	state-house
+New Hampshire;NH House District 312	state-house
+New Hampshire;NH House District 313	state-house
+New Hampshire;NH House District 314	state-house
+New Hampshire;NH House District 315	state-house
+New Hampshire;NH House District 316	state-house
+New Hampshire;NH House District 317	state-house
+New Hampshire;NH House District 318	state-house
+New Hampshire;NH House District 319	state-house
+New Hampshire;NH House District 32	state-house
+New Hampshire;NH House District 320	state-house
+New Hampshire;NH House District 321	state-house
+New Hampshire;NH House District 322	state-house
+New Hampshire;NH House District 323	state-house
+New Hampshire;NH House District 324	state-house
+New Hampshire;NH House District 325	state-house
+New Hampshire;NH House District 326	state-house
+New Hampshire;NH House District 327	state-house
+New Hampshire;NH House District 328	state-house
+New Hampshire;NH House District 329	state-house
+New Hampshire;NH House District 33	state-house
+New Hampshire;NH House District 330	state-house
+New Hampshire;NH House District 331	state-house
+New Hampshire;NH House District 332	state-house
+New Hampshire;NH House District 333	state-house
+New Hampshire;NH House District 334	state-house
+New Hampshire;NH House District 335	state-house
+New Hampshire;NH House District 336	state-house
+New Hampshire;NH House District 337	state-house
+New Hampshire;NH House District 338	state-house
+New Hampshire;NH House District 339	state-house
+New Hampshire;NH House District 34	state-house
+New Hampshire;NH House District 340	state-house
+New Hampshire;NH House District 341	state-house
+New Hampshire;NH House District 342	state-house
+New Hampshire;NH House District 343	state-house
+New Hampshire;NH House District 344	state-house
+New Hampshire;NH House District 345	state-house
+New Hampshire;NH House District 346	state-house
+New Hampshire;NH House District 347	state-house
+New Hampshire;NH House District 348	state-house
+New Hampshire;NH House District 349	state-house
+New Hampshire;NH House District 35	state-house
+New Hampshire;NH House District 350	state-house
+New Hampshire;NH House District 351	state-house
+New Hampshire;NH House District 352	state-house
+New Hampshire;NH House District 353	state-house
+New Hampshire;NH House District 354	state-house
+New Hampshire;NH House District 355	state-house
+New Hampshire;NH House District 356	state-house
+New Hampshire;NH House District 357	state-house
+New Hampshire;NH House District 358	state-house
+New Hampshire;NH House District 359	state-house
+New Hampshire;NH House District 36	state-house
+New Hampshire;NH House District 360	state-house
+New Hampshire;NH House District 361	state-house
+New Hampshire;NH House District 362	state-house
+New Hampshire;NH House District 363	state-house
+New Hampshire;NH House District 364	state-house
+New Hampshire;NH House District 365	state-house
+New Hampshire;NH House District 366	state-house
+New Hampshire;NH House District 367	state-house
+New Hampshire;NH House District 368	state-house
+New Hampshire;NH House District 369	state-house
+New Hampshire;NH House District 37	state-house
+New Hampshire;NH House District 370	state-house
+New Hampshire;NH House District 371	state-house
+New Hampshire;NH House District 372	state-house
+New Hampshire;NH House District 373	state-house
+New Hampshire;NH House District 374	state-house
+New Hampshire;NH House District 375	state-house
+New Hampshire;NH House District 376	state-house
+New Hampshire;NH House District 377	state-house
+New Hampshire;NH House District 378	state-house
+New Hampshire;NH House District 379	state-house
+New Hampshire;NH House District 38	state-house
+New Hampshire;NH House District 380	state-house
+New Hampshire;NH House District 381	state-house
+New Hampshire;NH House District 382	state-house
+New Hampshire;NH House District 383	state-house
+New Hampshire;NH House District 384	state-house
+New Hampshire;NH House District 385	state-house
+New Hampshire;NH House District 386	state-house
+New Hampshire;NH House District 387	state-house
+New Hampshire;NH House District 388	state-house
+New Hampshire;NH House District 389	state-house
+New Hampshire;NH House District 39	state-house
+New Hampshire;NH House District 390	state-house
+New Hampshire;NH House District 391	state-house
+New Hampshire;NH House District 392	state-house
+New Hampshire;NH House District 393	state-house
+New Hampshire;NH House District 394	state-house
+New Hampshire;NH House District 395	state-house
+New Hampshire;NH House District 396	state-house
+New Hampshire;NH House District 397	state-house
+New Hampshire;NH House District 398	state-house
+New Hampshire;NH House District 399	state-house
+New Hampshire;NH House District 4	state-house
+New Hampshire;NH House District 40	state-house
+New Hampshire;NH House District 400	state-house
+New Hampshire;NH House District 41	state-house
+New Hampshire;NH House District 42	state-house
+New Hampshire;NH House District 43	state-house
+New Hampshire;NH House District 44	state-house
+New Hampshire;NH House District 45	state-house
+New Hampshire;NH House District 46	state-house
+New Hampshire;NH House District 47	state-house
+New Hampshire;NH House District 48	state-house
+New Hampshire;NH House District 49	state-house
+New Hampshire;NH House District 5	state-house
+New Hampshire;NH House District 50	state-house
+New Hampshire;NH House District 51	state-house
+New Hampshire;NH House District 52	state-house
+New Hampshire;NH House District 53	state-house
+New Hampshire;NH House District 54	state-house
+New Hampshire;NH House District 55	state-house
+New Hampshire;NH House District 56	state-house
+New Hampshire;NH House District 57	state-house
+New Hampshire;NH House District 58	state-house
+New Hampshire;NH House District 59	state-house
+New Hampshire;NH House District 6	state-house
+New Hampshire;NH House District 60	state-house
+New Hampshire;NH House District 61	state-house
+New Hampshire;NH House District 62	state-house
+New Hampshire;NH House District 63	state-house
+New Hampshire;NH House District 64	state-house
+New Hampshire;NH House District 65	state-house
+New Hampshire;NH House District 66	state-house
+New Hampshire;NH House District 67	state-house
+New Hampshire;NH House District 68	state-house
+New Hampshire;NH House District 69	state-house
+New Hampshire;NH House District 7	state-house
+New Hampshire;NH House District 70	state-house
+New Hampshire;NH House District 71	state-house
+New Hampshire;NH House District 72	state-house
+New Hampshire;NH House District 73	state-house
+New Hampshire;NH House District 74	state-house
+New Hampshire;NH House District 75	state-house
+New Hampshire;NH House District 76	state-house
+New Hampshire;NH House District 77	state-house
+New Hampshire;NH House District 78	state-house
+New Hampshire;NH House District 79	state-house
+New Hampshire;NH House District 8	state-house
+New Hampshire;NH House District 80	state-house
+New Hampshire;NH House District 81	state-house
+New Hampshire;NH House District 82	state-house
+New Hampshire;NH House District 83	state-house
+New Hampshire;NH House District 84	state-house
+New Hampshire;NH House District 85	state-house
+New Hampshire;NH House District 86	state-house
+New Hampshire;NH House District 87	state-house
+New Hampshire;NH House District 88	state-house
+New Hampshire;NH House District 89	state-house
+New Hampshire;NH House District 9	state-house
+New Hampshire;NH House District 90	state-house
+New Hampshire;NH House District 91	state-house
+New Hampshire;NH House District 92	state-house
+New Hampshire;NH House District 93	state-house
+New Hampshire;NH House District 94	state-house
+New Hampshire;NH House District 95	state-house
+New Hampshire;NH House District 96	state-house
+New Hampshire;NH House District 97	state-house
+New Hampshire;NH House District 98	state-house
+New Hampshire;NH House District 99	state-house
+New Hampshire;NH Senate District 1	state-senate
+New Hampshire;NH Senate District 10	state-senate
+New Hampshire;NH Senate District 11	state-senate
+New Hampshire;NH Senate District 12	state-senate
+New Hampshire;NH Senate District 13	state-senate
+New Hampshire;NH Senate District 14	state-senate
+New Hampshire;NH Senate District 15	state-senate
+New Hampshire;NH Senate District 16	state-senate
+New Hampshire;NH Senate District 17	state-senate
+New Hampshire;NH Senate District 18	state-senate
+New Hampshire;NH Senate District 19	state-senate
+New Hampshire;NH Senate District 2	state-senate
+New Hampshire;NH Senate District 20	state-senate
+New Hampshire;NH Senate District 21	state-senate
+New Hampshire;NH Senate District 22	state-senate
+New Hampshire;NH Senate District 23	state-senate
+New Hampshire;NH Senate District 24	state-senate
+New Hampshire;NH Senate District 3	state-senate
+New Hampshire;NH Senate District 4	state-senate
+New Hampshire;NH Senate District 5	state-senate
+New Hampshire;NH Senate District 6	state-senate
+New Hampshire;NH Senate District 7	state-senate
+New Hampshire;NH Senate District 8	state-senate
+New Hampshire;NH Senate District 9	state-senate
 New Hampshire;Belknap County;Alton	town
-New Hampshire;Hillsborough County;Amherst	town
-New Hampshire;Merrimack County;Andover	town
-New Hampshire;Hillsborough County;Antrim	town
-New Hampshire;Grafton County;Ashland	town
-New Hampshire;Rockingham County;Atkinson	town
-New Hampshire;Rockingham County;Auburn	town
 New Hampshire;Belknap County;Barnstead	town
-New Hampshire;Strafford County;Barrington	town
-New Hampshire;Carroll County;Bartlett	town
-New Hampshire;Grafton County;Bath	town
-New Hampshire;Hillsborough County;Bedford	town
 New Hampshire;Belknap County;Belmont	town
-New Hampshire;Hillsborough County;Bennington	town
-New Hampshire;Grafton County;Benton	town
-New Hampshire;Coos County;Berlin	town
-New Hampshire;Grafton County;Bethlehem	town
-New Hampshire;Merrimack County;Boscawen	town
-New Hampshire;Merrimack County;Bow	town
-New Hampshire;Merrimack County;Bradford	town
-New Hampshire;Rockingham County;Brentwood	town
-New Hampshire;Grafton County;Bridgewater	town
-New Hampshire;Grafton County;Bristol	town
-New Hampshire;Carroll County;Brookfield	town
-New Hampshire;Hillsborough County;Brookline	town
-New Hampshire;Grafton County;Campton	town
-New Hampshire;Grafton County;Canaan	town
-New Hampshire;Rockingham County;Candia	town
-New Hampshire;Merrimack County;Canterbury	town
-New Hampshire;Coos County;Carroll	town
 New Hampshire;Belknap County;Center Harbor	town
-New Hampshire;Sullivan County;Charlestown	town
+New Hampshire;Belknap County;Gilford	town
+New Hampshire;Belknap County;Gilmanton	town
+New Hampshire;Belknap County;Laconia	town
+New Hampshire;Belknap County;Meredith	town
+New Hampshire;Belknap County;New Hampton	town
+New Hampshire;Belknap County;Sanbornton	town
+New Hampshire;Belknap County;Tilton	town
+New Hampshire;Carroll County;Albany	town
+New Hampshire;Carroll County;Bartlett	town
+New Hampshire;Carroll County;Brookfield	town
 New Hampshire;Carroll County;Chatham	town
-New Hampshire;Rockingham County;Chester	town
+New Hampshire;Carroll County;Conway	town
+New Hampshire;Carroll County;Eaton	town
+New Hampshire;Carroll County;Effingham	town
+New Hampshire;Carroll County;Freedom	town
+New Hampshire;Carroll County;Hart's Location	town
+New Hampshire;Carroll County;Jackson	town
+New Hampshire;Carroll County;Madison	town
+New Hampshire;Carroll County;Moultonborough	town
+New Hampshire;Carroll County;Ossipee	town
+New Hampshire;Carroll County;Sandwich	town
+New Hampshire;Carroll County;Tamworth	town
+New Hampshire;Carroll County;Tuftonboro	town
+New Hampshire;Carroll County;Wakefield	town
+New Hampshire;Carroll County;Wolfeboro	town
+New Hampshire;Cheshire County;Alstead	town
 New Hampshire;Cheshire County;Chesterfield	town
-New Hampshire;Merrimack County;Chichester	town
-New Hampshire;Sullivan County;Claremont	town
+New Hampshire;Cheshire County;Dublin	town
+New Hampshire;Cheshire County;Fitzwilliam	town
+New Hampshire;Cheshire County;Gilsum	town
+New Hampshire;Cheshire County;Harrisville	town
+New Hampshire;Cheshire County;Hinsdale	town
+New Hampshire;Cheshire County;Jaffrey	town
+New Hampshire;Cheshire County;Keene	town
+New Hampshire;Cheshire County;Marlborough	town
+New Hampshire;Cheshire County;Marlow	town
+New Hampshire;Cheshire County;Nelson	town
+New Hampshire;Cheshire County;Richmond	town
+New Hampshire;Cheshire County;Rindge	town
+New Hampshire;Cheshire County;Roxbury	town
+New Hampshire;Cheshire County;Stoddard	town
+New Hampshire;Cheshire County;Sullivan	town
+New Hampshire;Cheshire County;Surry	town
+New Hampshire;Cheshire County;Swanzey	town
+New Hampshire;Cheshire County;Troy	town
+New Hampshire;Cheshire County;Walpole	town
+New Hampshire;Cheshire County;Westmoreland	town
+New Hampshire;Cheshire County;Winchester	town
+New Hampshire;Coos County;Berlin	town
+New Hampshire;Coos County;Carroll	town
 New Hampshire;Coos County;Clarksville	town
 New Hampshire;Coos County;Colebrook	town
 New Hampshire;Coos County;Columbia	town
-New Hampshire;Merrimack County;Concord	town
-New Hampshire;Carroll County;Conway	town
-New Hampshire;Sullivan County;Cornish	town
-New Hampshire;Sullivan County;Croydon	town
 New Hampshire;Coos County;Dalton	town
-New Hampshire;Merrimack County;Danbury	town
-New Hampshire;Rockingham County;Danville	town
-New Hampshire;Rockingham County;Deerfield	town
-New Hampshire;Hillsborough County;Deering	town
-New Hampshire;Rockingham County;Derry	town
 New Hampshire;Coos County;Dixville	town
-New Hampshire;Grafton County;Dorchester	town
-New Hampshire;Strafford County;Dover	town
-New Hampshire;Cheshire County;Dublin	town
 New Hampshire;Coos County;Dummer	town
-New Hampshire;Merrimack County;Dunbarton	town
-New Hampshire;Strafford County;Durham	town
-New Hampshire;Rockingham County;East Kingston	town
+New Hampshire;Coos County;Errol	town
+New Hampshire;Coos County;Gorham	town
+New Hampshire;Coos County;Jefferson	town
+New Hampshire;Coos County;Lancaster	town
+New Hampshire;Coos County;Milan	town
+New Hampshire;Coos County;Millsfield	town
+New Hampshire;Coos County;Northumberland	town
+New Hampshire;Coos County;Pittsburg	town
+New Hampshire;Coos County;Randolph	town
+New Hampshire;Coos County;Shelburne	town
+New Hampshire;Coos County;Stark	town
+New Hampshire;Coos County;Stewartstown	town
+New Hampshire;Coos County;Stratford	town
+New Hampshire;Coos County;Whitefield	town
+New Hampshire;Grafton County;Alexandria	town
+New Hampshire;Grafton County;Ashland	town
+New Hampshire;Grafton County;Bath	town
+New Hampshire;Grafton County;Benton	town
+New Hampshire;Grafton County;Bethlehem	town
+New Hampshire;Grafton County;Bridgewater	town
+New Hampshire;Grafton County;Bristol	town
+New Hampshire;Grafton County;Campton	town
+New Hampshire;Grafton County;Canaan	town
+New Hampshire;Grafton County;Dorchester	town
 New Hampshire;Grafton County;Easton	town
-New Hampshire;Carroll County;Eaton	town
-New Hampshire;Carroll County;Effingham	town
 New Hampshire;Grafton County;Ellsworth	town
 New Hampshire;Grafton County;Enfield	town
-New Hampshire;Rockingham County;Epping	town
-New Hampshire;Merrimack County;Epsom	town
-New Hampshire;Coos County;Errol	town
-New Hampshire;Rockingham County;Exeter	town
-New Hampshire;Strafford County;Farmington	town
-New Hampshire;Cheshire County;Fitzwilliam	town
-New Hampshire;Hillsborough County;Francestown	town
 New Hampshire;Grafton County;Franconia	town
-New Hampshire;Merrimack County;Franklin	town
-New Hampshire;Carroll County;Freedom	town
-New Hampshire;Rockingham County;Fremont	town
-New Hampshire;Belknap County;Gilford	town
-New Hampshire;Belknap County;Gilmanton	town
-New Hampshire;Cheshire County;Gilsum	town
-New Hampshire;Hillsborough County;Goffstown	town
-New Hampshire;Coos County;Gorham	town
-New Hampshire;Sullivan County;Goshen	town
 New Hampshire;Grafton County;Grafton	town
-New Hampshire;Sullivan County;Grantham	town
-New Hampshire;Hillsborough County;Greenfield	town
-New Hampshire;Rockingham County;Greenland	town
-New Hampshire;Hillsborough County;Greenville	town
 New Hampshire;Grafton County;Groton	town
+New Hampshire;Grafton County;Hanover	town
+New Hampshire;Grafton County;Haverhill	town
+New Hampshire;Grafton County;Hebron	town
+New Hampshire;Grafton County;Holderness	town
+New Hampshire;Grafton County;Landaff	town
+New Hampshire;Grafton County;Lebanon	town
+New Hampshire;Grafton County;Lincoln	town
+New Hampshire;Grafton County;Lisbon	town
+New Hampshire;Grafton County;Littleton	town
+New Hampshire;Grafton County;Lyman	town
+New Hampshire;Grafton County;Lyme	town
+New Hampshire;Grafton County;Monroe	town
+New Hampshire;Grafton County;Orange	town
+New Hampshire;Grafton County;Orford	town
+New Hampshire;Grafton County;Piermont	town
+New Hampshire;Grafton County;Plymouth	town
+New Hampshire;Grafton County;Rumney	town
+New Hampshire;Grafton County;Sugar Hill	town
+New Hampshire;Grafton County;Thornton	town
+New Hampshire;Grafton County;Warren	town
+New Hampshire;Grafton County;Waterville Valley	town
+New Hampshire;Grafton County;Wentworth	town
+New Hampshire;Grafton County;Woodstock	town
+New Hampshire;Hillsborough County;Amherst	town
+New Hampshire;Hillsborough County;Antrim	town
+New Hampshire;Hillsborough County;Bedford	town
+New Hampshire;Hillsborough County;Bennington	town
+New Hampshire;Hillsborough County;Brookline	town
+New Hampshire;Hillsborough County;Deering	town
+New Hampshire;Hillsborough County;Francestown	town
+New Hampshire;Hillsborough County;Goffstown	town
+New Hampshire;Hillsborough County;Greenfield	town
+New Hampshire;Hillsborough County;Greenville	town
+New Hampshire;Hillsborough County;Hancock	town
+New Hampshire;Hillsborough County;Hillsborough	town
+New Hampshire;Hillsborough County;Hollis	town
+New Hampshire;Hillsborough County;Hudson	town
+New Hampshire;Hillsborough County;Litchfield	town
+New Hampshire;Hillsborough County;Lyndeborough	town
+New Hampshire;Hillsborough County;Manchester	town
+New Hampshire;Hillsborough County;Mason	town
+New Hampshire;Hillsborough County;Merrimack	town
+New Hampshire;Hillsborough County;Milford	town
+New Hampshire;Hillsborough County;Mont Vernon	town
+New Hampshire;Hillsborough County;Nashua	town
+New Hampshire;Hillsborough County;New Boston	town
+New Hampshire;Hillsborough County;New Ipswich	town
+New Hampshire;Hillsborough County;Pelham	town
+New Hampshire;Hillsborough County;Peterborough	town
+New Hampshire;Hillsborough County;Sharon	town
+New Hampshire;Hillsborough County;Temple	town
+New Hampshire;Hillsborough County;Weare	town
+New Hampshire;Hillsborough County;Wilton	town
+New Hampshire;Hillsborough County;Windsor	town
+New Hampshire;Merrimack County;Allenstown	town
+New Hampshire;Merrimack County;Andover	town
+New Hampshire;Merrimack County;Boscawen	town
+New Hampshire;Merrimack County;Bow	town
+New Hampshire;Merrimack County;Bradford	town
+New Hampshire;Merrimack County;Canterbury	town
+New Hampshire;Merrimack County;Chichester	town
+New Hampshire;Merrimack County;Concord	town
+New Hampshire;Merrimack County;Danbury	town
+New Hampshire;Merrimack County;Dunbarton	town
+New Hampshire;Merrimack County;Epsom	town
+New Hampshire;Merrimack County;Franklin	town
+New Hampshire;Merrimack County;Henniker	town
+New Hampshire;Merrimack County;Hill	town
+New Hampshire;Merrimack County;Hooksett	town
+New Hampshire;Merrimack County;Hopkinton	town
+New Hampshire;Merrimack County;Loudon	town
+New Hampshire;Merrimack County;New London	town
+New Hampshire;Merrimack County;Newbury	town
+New Hampshire;Merrimack County;Northfield	town
+New Hampshire;Merrimack County;Pembroke	town
+New Hampshire;Merrimack County;Pittsfield	town
+New Hampshire;Merrimack County;Salisbury	town
+New Hampshire;Merrimack County;Sutton	town
+New Hampshire;Merrimack County;Warner	town
+New Hampshire;Merrimack County;Webster	town
+New Hampshire;Merrimack County;Wilmot	town
+New Hampshire;Rockingham County;Atkinson	town
+New Hampshire;Rockingham County;Auburn	town
+New Hampshire;Rockingham County;Brentwood	town
+New Hampshire;Rockingham County;Candia	town
+New Hampshire;Rockingham County;Chester	town
+New Hampshire;Rockingham County;Danville	town
+New Hampshire;Rockingham County;Deerfield	town
+New Hampshire;Rockingham County;Derry	town
+New Hampshire;Rockingham County;East Kingston	town
+New Hampshire;Rockingham County;Epping	town
+New Hampshire;Rockingham County;Exeter	town
+New Hampshire;Rockingham County;Fremont	town
+New Hampshire;Rockingham County;Greenland	town
 New Hampshire;Rockingham County;Hampstead	town
 New Hampshire;Rockingham County;Hampton	town
 New Hampshire;Rockingham County;Hampton Falls	town
-New Hampshire;Hillsborough County;Hancock	town
-New Hampshire;Grafton County;Hanover	town
-New Hampshire;Cheshire County;Harrisville	town
-New Hampshire;Carroll County;Hart's Location	town
-New Hampshire;Grafton County;Haverhill	town
-New Hampshire;Grafton County;Hebron	town
-New Hampshire;Merrimack County;Henniker	town
-New Hampshire;Merrimack County;Hill	town
-New Hampshire;Hillsborough County;Hillsborough	town
-New Hampshire;Cheshire County;Hinsdale	town
-New Hampshire;Grafton County;Holderness	town
-New Hampshire;Hillsborough County;Hollis	town
-New Hampshire;Merrimack County;Hooksett	town
-New Hampshire;Merrimack County;Hopkinton	town
-New Hampshire;Hillsborough County;Hudson	town
-New Hampshire;Carroll County;Jackson	town
-New Hampshire;Cheshire County;Jaffrey	town
-New Hampshire;Coos County;Jefferson	town
-New Hampshire;Cheshire County;Keene	town
 New Hampshire;Rockingham County;Kensington	town
 New Hampshire;Rockingham County;Kingston	town
-New Hampshire;Belknap County;Laconia	town
-New Hampshire;Coos County;Lancaster	town
-New Hampshire;Grafton County;Landaff	town
-New Hampshire;Sullivan County;Langdon	town
-New Hampshire;Grafton County;Lebanon	town
-New Hampshire;Strafford County;Lee	town
-New Hampshire;Sullivan County;Lempster	town
-New Hampshire;Grafton County;Lincoln	town
-New Hampshire;Grafton County;Lisbon	town
-New Hampshire;Hillsborough County;Litchfield	town
-New Hampshire;Grafton County;Littleton	town
 New Hampshire;Rockingham County;Londonderry	town
-New Hampshire;Merrimack County;Loudon	town
-New Hampshire;Grafton County;Lyman	town
-New Hampshire;Grafton County;Lyme	town
-New Hampshire;Hillsborough County;Lyndeborough	town
-New Hampshire;Strafford County;Madbury	town
-New Hampshire;Carroll County;Madison	town
-New Hampshire;Hillsborough County;Manchester	town
-New Hampshire;Cheshire County;Marlborough	town
-New Hampshire;Cheshire County;Marlow	town
-New Hampshire;Hillsborough County;Mason	town
-New Hampshire;Belknap County;Meredith	town
-New Hampshire;Hillsborough County;Merrimack	town
-New Hampshire;Strafford County;Middleton	town
-New Hampshire;Coos County;Milan	town
-New Hampshire;Coos County;Millsfield	town
-New Hampshire;Hillsborough County;Milford	town
-New Hampshire;Strafford County;Milton	town
-New Hampshire;Grafton County;Monroe	town
-New Hampshire;Hillsborough County;Mont Vernon	town
-New Hampshire;Carroll County;Moultonborough	town
-New Hampshire;Hillsborough County;Nashua	town
-New Hampshire;Cheshire County;Nelson	town
-New Hampshire;Hillsborough County;New Boston	town
 New Hampshire;Rockingham County;New Castle	town
-New Hampshire;Strafford County;New Durham	town
-New Hampshire;Belknap County;New Hampton	town
-New Hampshire;Hillsborough County;New Ipswich	town
-New Hampshire;Merrimack County;New London	town
-New Hampshire;Merrimack County;Newbury	town
 New Hampshire;Rockingham County;Newfields	town
 New Hampshire;Rockingham County;Newington	town
 New Hampshire;Rockingham County;Newmarket	town
-New Hampshire;Sullivan County;Newport	town
 New Hampshire;Rockingham County;Newton	town
 New Hampshire;Rockingham County;North Hampton	town
-New Hampshire;Merrimack County;Northfield	town
-New Hampshire;Coos County;Northumberland	town
 New Hampshire;Rockingham County;Northwood	town
 New Hampshire;Rockingham County;Nottingham	town
-New Hampshire;Grafton County;Orange	town
-New Hampshire;Grafton County;Orford	town
-New Hampshire;Carroll County;Ossipee	town
-New Hampshire;Hillsborough County;Pelham	town
-New Hampshire;Merrimack County;Pembroke	town
-New Hampshire;Hillsborough County;Peterborough	town
-New Hampshire;Grafton County;Piermont	town
-New Hampshire;Coos County;Pittsburg	town
-New Hampshire;Merrimack County;Pittsfield	town
-New Hampshire;Sullivan County;Plainfield	town
 New Hampshire;Rockingham County;Plaistow	town
-New Hampshire;Grafton County;Plymouth	town
 New Hampshire;Rockingham County;Portsmouth	town
-New Hampshire;Coos County;Randolph	town
 New Hampshire;Rockingham County;Raymond	town
-New Hampshire;Cheshire County;Richmond	town
-New Hampshire;Cheshire County;Rindge	town
-New Hampshire;Strafford County;Rochester	town
-New Hampshire;Strafford County;Rollinsford	town
-New Hampshire;Cheshire County;Roxbury	town
-New Hampshire;Grafton County;Rumney	town
 New Hampshire;Rockingham County;Rye	town
 New Hampshire;Rockingham County;Salem	town
-New Hampshire;Merrimack County;Salisbury	town
-New Hampshire;Belknap County;Sanbornton	town
 New Hampshire;Rockingham County;Sandown	town
-New Hampshire;Carroll County;Sandwich	town
 New Hampshire;Rockingham County;Seabrook	town
-New Hampshire;Hillsborough County;Sharon	town
-New Hampshire;Coos County;Shelburne	town
-New Hampshire;Strafford County;Somersworth	town
 New Hampshire;Rockingham County;South Hampton	town
-New Hampshire;Sullivan County;Springfield	town
-New Hampshire;Coos County;Stark	town
-New Hampshire;Coos County;Stewartstown	town
-New Hampshire;Cheshire County;Stoddard	town
-New Hampshire;Strafford County;Strafford	town
-New Hampshire;Coos County;Stratford	town
 New Hampshire;Rockingham County;Stratham	town
-New Hampshire;Grafton County;Sugar Hill	town
-New Hampshire;Cheshire County;Sullivan	town
-New Hampshire;Sullivan County;Sunapee	town
-New Hampshire;Cheshire County;Surry	town
-New Hampshire;Merrimack County;Sutton	town
-New Hampshire;Cheshire County;Swanzey	town
-New Hampshire;Carroll County;Tamworth	town
-New Hampshire;Hillsborough County;Temple	town
-New Hampshire;Grafton County;Thornton	town
-New Hampshire;Belknap County;Tilton	town
-New Hampshire;Cheshire County;Troy	town
-New Hampshire;Carroll County;Tuftonboro	town
-New Hampshire;Sullivan County;Unity	town
-New Hampshire;Carroll County;Wakefield	town
-New Hampshire;Cheshire County;Walpole	town
-New Hampshire;Merrimack County;Warner	town
-New Hampshire;Grafton County;Warren	town
-New Hampshire;Sullivan County;Washington	town
-New Hampshire;Grafton County;Waterville Valley	town
-New Hampshire;Hillsborough County;Weare	town
-New Hampshire;Merrimack County;Webster	town
-New Hampshire;Grafton County;Wentworth	town
-New Hampshire;Cheshire County;Westmoreland	town
-New Hampshire;Coos County;Whitefield	town
-New Hampshire;Merrimack County;Wilmot	town
-New Hampshire;Hillsborough County;Wilton	town
-New Hampshire;Cheshire County;Winchester	town
 New Hampshire;Rockingham County;Windham	town
-New Hampshire;Hillsborough County;Windsor	town
-New Hampshire;Carroll County;Wolfeboro	town
-New Hampshire;Grafton County;Woodstock	town
-New Hampshire;Strafford County;Somersworth;Ward 5	ward
-New Hampshire;Strafford County;Somersworth;Ward 4	ward
-New Hampshire;Strafford County;Somersworth;Ward 3	ward
-New Hampshire;Strafford County;Somersworth;Ward 2	ward
-New Hampshire;Strafford County;Somersworth;Ward 1	ward
-New Hampshire;Strafford County;Rochester;Ward 6	ward
-New Hampshire;Strafford County;Rochester;Ward 5	ward
-New Hampshire;Strafford County;Rochester;Ward 4	ward
-New Hampshire;Strafford County;Rochester;Ward 3	ward
-New Hampshire;Strafford County;Rochester;Ward 2	ward
-New Hampshire;Strafford County;Rochester;Ward 1	ward
-New Hampshire;Rockingham County;Portsmouth;Ward 5	ward
-New Hampshire;Rockingham County;Portsmouth;Ward 4	ward
-New Hampshire;Rockingham County;Portsmouth;Ward 3	ward
-New Hampshire;Rockingham County;Portsmouth;Ward 2	ward
-New Hampshire;Rockingham County;Portsmouth;Ward 1	ward
-New Hampshire;Hillsborough County;Manchester;Ward 9	ward
-New Hampshire;Hillsborough County;Manchester;Ward 8	ward
-New Hampshire;Hillsborough County;Manchester;Ward 7	ward
-New Hampshire;Hillsborough County;Manchester;Ward 6	ward
-New Hampshire;Hillsborough County;Manchester;Ward 5	ward
-New Hampshire;Hillsborough County;Manchester;Ward 4	ward
-New Hampshire;Hillsborough County;Manchester;Ward 3	ward
-New Hampshire;Hillsborough County;Manchester;Ward 2	ward
-New Hampshire;Hillsborough County;Manchester;Ward 12	ward
-New Hampshire;Hillsborough County;Manchester;Ward 11	ward
-New Hampshire;Hillsborough County;Manchester;Ward 10	ward
-New Hampshire;Hillsborough County;Manchester;Ward 1	ward
-New Hampshire;Belknap County;Laconia;Ward 6	ward
-New Hampshire;Belknap County;Laconia;Ward 5	ward
-New Hampshire;Belknap County;Laconia;Ward 4	ward
-New Hampshire;Belknap County;Laconia;Ward 3	ward
-New Hampshire;Belknap County;Laconia;Ward 2	ward
-New Hampshire;Belknap County;Laconia;Ward 1	ward
-New Hampshire;Strafford County;Dover;Ward 6	ward
-New Hampshire;Strafford County;Dover;Ward 5	ward
-New Hampshire;Strafford County;Dover;Ward 4	ward
-New Hampshire;Strafford County;Dover;Ward 3	ward
-New Hampshire;Strafford County;Dover;Ward 2	ward
-New Hampshire;Strafford County;Dover;Ward 1	ward
+New Hampshire;Strafford County;Barrington	town
+New Hampshire;Strafford County;Dover	town
+New Hampshire;Strafford County;Durham	town
+New Hampshire;Strafford County;Farmington	town
+New Hampshire;Strafford County;Lee	town
+New Hampshire;Strafford County;Madbury	town
+New Hampshire;Strafford County;Middleton	town
+New Hampshire;Strafford County;Milton	town
+New Hampshire;Strafford County;New Durham	town
+New Hampshire;Strafford County;Rochester	town
+New Hampshire;Strafford County;Rollinsford	town
+New Hampshire;Strafford County;Somersworth	town
+New Hampshire;Strafford County;Strafford	town
+New Hampshire;Sullivan County;Acworth	town
+New Hampshire;Sullivan County;Charlestown	town
+New Hampshire;Sullivan County;Claremont	town
+New Hampshire;Sullivan County;Cornish	town
+New Hampshire;Sullivan County;Croydon	town
+New Hampshire;Sullivan County;Goshen	town
+New Hampshire;Sullivan County;Grantham	town
+New Hampshire;Sullivan County;Langdon	town
+New Hampshire;Sullivan County;Lempster	town
+New Hampshire;Sullivan County;Newport	town
+New Hampshire;Sullivan County;Plainfield	town
+New Hampshire;Sullivan County;Springfield	town
+New Hampshire;Sullivan County;Sunapee	town
+New Hampshire;Sullivan County;Unity	town
+New Hampshire;Sullivan County;Washington	town
+New Hampshire;Carroll County;Hale's Location	unincorporated-place
 New Hampshire;Coos County;At. & Gil Ac. Grant	unincorporated-place
 New Hampshire;Coos County;Bean's Grant	unincorporated-place
 New Hampshire;Coos County;Bean's Purchase	unincorporated-place
@@ -723,54 +684,91 @@ New Hampshire;Coos County;Crawford's Purchase	unincorporated-place
 New Hampshire;Coos County;Cutt's Grant	unincorporated-place
 New Hampshire;Coos County;Dix's Grant	unincorporated-place
 New Hampshire;Coos County;Erving's Location	unincorporated-place
+New Hampshire;Coos County;Grant	unincorporated-place
 New Hampshire;Coos County;Green's Grant	unincorporated-place
 New Hampshire;Coos County;Hadley's Purchase	unincorporated-place
-New Hampshire;Carroll County;Hale's Location	unincorporated-place
 New Hampshire;Coos County;Kilkenny	unincorporated-place
-New Hampshire;Grafton County;Livermore	unincorporated-place
 New Hampshire;Coos County;Low & Burbank's Grant	unincorporated-place
-New Hampshire;Coos County;Grant	unincorporated-place
 New Hampshire;Coos County;Martin's Location	unincorporated-place
+New Hampshire;Coos County;Mes's Purchase	unincorporated-place
 New Hampshire;Coos County;Odell	unincorporated-place
 New Hampshire;Coos County;Pinkham's Grant	unincorporated-place
 New Hampshire;Coos County;Sargent's Purchase	unincorporated-place
 New Hampshire;Coos County;Second College Grant	unincorporated-place
 New Hampshire;Coos County;Success	unincorporated-place
 New Hampshire;Coos County;Thompson & Mes's Purchase	unincorporated-place
-New Hampshire;Coos County;Mes's Purchase	unincorporated-place
 New Hampshire;Coos County;Wentworth's Location	unincorporated-place
-New Hampshire;Hillsborough County;Nashua	city
-New Hampshire;Hillsborough County;Nashua;Ward 9	ward
-New Hampshire;Hillsborough County;Nashua;Ward 8	ward
-New Hampshire;Hillsborough County;Nashua;Ward 7	ward
-New Hampshire;Hillsborough County;Nashua;Ward 6	ward
-New Hampshire;Hillsborough County;Nashua;Ward 5	ward
-New Hampshire;Hillsborough County;Nashua;Ward 4	ward
-New Hampshire;Hillsborough County;Nashua;Ward 3	ward
-New Hampshire;Hillsborough County;Nashua;Ward 2	ward
-New Hampshire;Hillsborough County;Nashua;Ward 1	ward
-New Hampshire;Grafton County;Lebanon;Ward 3	ward
-New Hampshire;Grafton County;Lebanon;Ward 2	ward
-New Hampshire;Grafton County;Lebanon;Ward 1	ward
-New Hampshire;Cheshire County;Keene	city
-New Hampshire;Cheshire County;Keene;Ward 5	ward
-New Hampshire;Cheshire County;Keene;Ward 4	ward
-New Hampshire;Cheshire County;Keene;Ward 3*	ward
-New Hampshire;Cheshire County;Keene;Ward 2	ward
+New Hampshire;Grafton County;Livermore	unincorporated-place
+New Hampshire;Belknap County;Laconia;Ward 1	ward
+New Hampshire;Belknap County;Laconia;Ward 2	ward
+New Hampshire;Belknap County;Laconia;Ward 3	ward
+New Hampshire;Belknap County;Laconia;Ward 4	ward
+New Hampshire;Belknap County;Laconia;Ward 5	ward
+New Hampshire;Belknap County;Laconia;Ward 6	ward
 New Hampshire;Cheshire County;Keene;Ward 1	ward
-New Hampshire;Merrimack County;Franklin;Ward 3	ward
-New Hampshire;Merrimack County;Franklin;Ward 2	ward
-New Hampshire;Merrimack County;Franklin;Ward 1	ward
-New Hampshire;Merrimack County;Concord;Ward 9	ward
-New Hampshire;Merrimack County;Concord;Ward 8	ward
-New Hampshire;Merrimack County;Concord;Ward 7	ward
-New Hampshire;Merrimack County;Concord;Ward 6	ward
-New Hampshire;Merrimack County;Concord;Ward 5	ward
-New Hampshire;Merrimack County;Concord;Ward 4	ward
-New Hampshire;Merrimack County;Concord;Ward 3	ward
-New Hampshire;Merrimack County;Concord;Ward 2	ward
-New Hampshire;Merrimack County;Concord;Ward 10	ward
+New Hampshire;Cheshire County;Keene;Ward 2	ward
+New Hampshire;Cheshire County;Keene;Ward 3*	ward
+New Hampshire;Cheshire County;Keene;Ward 4	ward
+New Hampshire;Cheshire County;Keene;Ward 5	ward
+New Hampshire;Grafton County;Lebanon;Ward 1	ward
+New Hampshire;Grafton County;Lebanon;Ward 2	ward
+New Hampshire;Grafton County;Lebanon;Ward 3	ward
+New Hampshire;Hillsborough County;Manchester;Ward 1	ward
+New Hampshire;Hillsborough County;Manchester;Ward 10	ward
+New Hampshire;Hillsborough County;Manchester;Ward 11	ward
+New Hampshire;Hillsborough County;Manchester;Ward 12	ward
+New Hampshire;Hillsborough County;Manchester;Ward 2	ward
+New Hampshire;Hillsborough County;Manchester;Ward 3	ward
+New Hampshire;Hillsborough County;Manchester;Ward 4	ward
+New Hampshire;Hillsborough County;Manchester;Ward 5	ward
+New Hampshire;Hillsborough County;Manchester;Ward 6	ward
+New Hampshire;Hillsborough County;Manchester;Ward 7	ward
+New Hampshire;Hillsborough County;Manchester;Ward 8	ward
+New Hampshire;Hillsborough County;Manchester;Ward 9	ward
+New Hampshire;Hillsborough County;Nashua;Ward 1	ward
+New Hampshire;Hillsborough County;Nashua;Ward 2	ward
+New Hampshire;Hillsborough County;Nashua;Ward 3	ward
+New Hampshire;Hillsborough County;Nashua;Ward 4	ward
+New Hampshire;Hillsborough County;Nashua;Ward 5	ward
+New Hampshire;Hillsborough County;Nashua;Ward 6	ward
+New Hampshire;Hillsborough County;Nashua;Ward 7	ward
+New Hampshire;Hillsborough County;Nashua;Ward 8	ward
+New Hampshire;Hillsborough County;Nashua;Ward 9	ward
 New Hampshire;Merrimack County;Concord;Ward 1	ward
-New Hampshire;Sullivan County;Claremont;Ward 3	ward
-New Hampshire;Sullivan County;Claremont;Ward 2	ward
+New Hampshire;Merrimack County;Concord;Ward 10	ward
+New Hampshire;Merrimack County;Concord;Ward 2	ward
+New Hampshire;Merrimack County;Concord;Ward 3	ward
+New Hampshire;Merrimack County;Concord;Ward 4	ward
+New Hampshire;Merrimack County;Concord;Ward 5	ward
+New Hampshire;Merrimack County;Concord;Ward 6	ward
+New Hampshire;Merrimack County;Concord;Ward 7	ward
+New Hampshire;Merrimack County;Concord;Ward 8	ward
+New Hampshire;Merrimack County;Concord;Ward 9	ward
+New Hampshire;Merrimack County;Franklin;Ward 1	ward
+New Hampshire;Merrimack County;Franklin;Ward 2	ward
+New Hampshire;Merrimack County;Franklin;Ward 3	ward
+New Hampshire;Rockingham County;Portsmouth;Ward 1	ward
+New Hampshire;Rockingham County;Portsmouth;Ward 2	ward
+New Hampshire;Rockingham County;Portsmouth;Ward 3	ward
+New Hampshire;Rockingham County;Portsmouth;Ward 4	ward
+New Hampshire;Rockingham County;Portsmouth;Ward 5	ward
+New Hampshire;Strafford County;Dover;Ward 1	ward
+New Hampshire;Strafford County;Dover;Ward 2	ward
+New Hampshire;Strafford County;Dover;Ward 3	ward
+New Hampshire;Strafford County;Dover;Ward 4	ward
+New Hampshire;Strafford County;Dover;Ward 5	ward
+New Hampshire;Strafford County;Dover;Ward 6	ward
+New Hampshire;Strafford County;Rochester;Ward 1	ward
+New Hampshire;Strafford County;Rochester;Ward 2	ward
+New Hampshire;Strafford County;Rochester;Ward 3	ward
+New Hampshire;Strafford County;Rochester;Ward 4	ward
+New Hampshire;Strafford County;Rochester;Ward 5	ward
+New Hampshire;Strafford County;Rochester;Ward 6	ward
+New Hampshire;Strafford County;Somersworth;Ward 1	ward
+New Hampshire;Strafford County;Somersworth;Ward 2	ward
+New Hampshire;Strafford County;Somersworth;Ward 3	ward
+New Hampshire;Strafford County;Somersworth;Ward 4	ward
+New Hampshire;Strafford County;Somersworth;Ward 5	ward
 New Hampshire;Sullivan County;Claremont;Ward 1	ward
+New Hampshire;Sullivan County;Claremont;Ward 2	ward
+New Hampshire;Sullivan County;Claremont;Ward 3	ward

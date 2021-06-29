@@ -94,10 +94,10 @@ Candidate	Andrew S. Chesney	Andrew S. Chesney
 Candidate	Andrew Spiro	Andrew Spiro
 Candidate	Andrew Yang	Andrew Yang
 Candidate	Andrã¢ÂÂ J. Washington	Andrã¢ÂÂ J. Washington
-Candidate	André Thapedi	Andrã Thapedi
-Candidate	André Thapedi	André Thapedi
 Candidate	André Thapedi	ANDRâ THAPEDI
 Candidate	André Thapedi	AndrãÂ Thapedi
+Candidate	André Thapedi	Andrã Thapedi
+Candidate	André Thapedi	André Thapedi
 Candidate	Andy Kirchoff	Andy Kirchoff
 Candidate	Andy Manar	Andy Manar
 Candidate	Andy Skoog	Andy Skoog
@@ -602,8 +602,8 @@ Candidate	Donald C. Hudson	Donald C. Hudson - No
 Candidate	Donald C. Hudson	Donald C. Hudson - Yes
 Candidate	Donald Ishmael	Donald Ishmael
 Candidate	Donald J Trump	Donald J Trump
-Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald R Walter	Donald R Walter
 Candidate	Donald R. Brewer	Donald R. Brewer
 Candidate	Donald R. Schaaf, Jr.	Donald R. Schaaf, Jr.
@@ -1250,8 +1250,8 @@ Candidate	Krystal Garcia Centeno	Krystal Garcia Centeno
 Candidate	Kurt (Santa) Fowler	Kurt (Santa) Fowler
 Candidate	Kurt Fowler	Kurt Fowler
 Candidate	Kwame Raoul	Kwame Raoul
-Candidate	Kyle Anne Napp	Kyle Anne Napp - Yes
 Candidate	Kyle Anne Napp	Kyle Anne Napp - No
+Candidate	Kyle Anne Napp	Kyle Anne Napp - Yes
 Candidate	Kyle Carlson	Kyle Carlson
 Candidate	Kyle Killacky	Kyle Killacky
 Candidate	Kyle R. Hastings	Kyle R. Hastings
@@ -1321,8 +1321,8 @@ Candidate	Linda Perez	Linda Perez
 Candidate	Linda York	Linda York
 Candidate	Lindsay Huge	Lindsay Huge
 Candidate	Lindsay Parkhurst	Lindsay Parkhurst
-Candidate	Linzey D. Jones	Linzey D. Jones - Yes
 Candidate	Linzey D. Jones	Linzey D. Jones - No
+Candidate	Linzey D. Jones	Linzey D. Jones - Yes
 Candidate	Lionel Jean-Baptiste	Lionel Jean-Baptiste - No
 Candidate	Lionel Jean-Baptiste	Lionel Jean-Baptiste - Yes
 Candidate	Lisa Ann Marino	Lisa Ann Marino - No
@@ -1430,9 +1430,9 @@ Candidate	Mark J. Harper	Mark J. Harper
 Candidate	Mark L. Levitt	Mark L. Levitt - No
 Candidate	Mark L. Levitt	Mark L. Levitt - Yes
 Candidate	Mark L. Walker	Mark L. Walker
+Candidate	Mark M. Boie	Mark M. Boie
 Candidate	Mark M. Boie	Mark M. Boie - No
 Candidate	Mark M. Boie	Mark M. Boie - Yes
-Candidate	Mark M. Boie	Mark M. Boie
 Candidate	Mark Pietrowski Jr.	Mark Pietrowski Jr.
 Candidate	Mark Robert Maddock	Mark Robert Maddock
 Candidate	Mark Shaw	Mark Shaw
@@ -1492,8 +1492,8 @@ Candidate	Matt Sullivan	Matt Sullivan - No
 Candidate	Matt Sullivan	Matt Sullivan - Yes
 Candidate	Matt Sutton	Matt Sutton
 Candidate	Matt Welser	Matt Welser
-Candidate	Matthew E. Coghlan	Matthew E. Coghlan - Yes
 Candidate	Matthew E. Coghlan	Matthew E. Coghlan - No
+Candidate	Matthew E. Coghlan	Matthew E. Coghlan - Yes
 Candidate	Matthew J. Hartrich	Matthew J. Hartrich
 Candidate	Matthew J. Hunt	Matthew J. Hunt
 Candidate	Matthew Link	Matthew Link
@@ -1966,9 +1966,9 @@ Candidate	Shannon Stoker	Shannon Stoker
 Candidate	Sharon Diekman	Sharon Diekman
 Candidate	Sharon Marie Sullivan	Sharon Marie Sullivan - No
 Candidate	Sharon Marie Sullivan	Sharon Marie Sullivan - Yes
+Candidate	Sharon O. Johnson	Sharon O. Johnson
 Candidate	Sharon O. Johnson	Sharon O. Johnson - No
 Candidate	Sharon O. Johnson	Sharon O. Johnson - Yes
-Candidate	Sharon O. Johnson	Sharon O. Johnson
 Candidate	Shawn Howard	Shawn Howard
 Candidate	Sheila Chalmers-Currin	Sheila Chalmers-Currin
 Candidate	Sheila Rawat	Sheila Rawat
@@ -2246,12 +2246,12 @@ CandidateContest	IL Attorney General (Republican Party)	ATTORNEY GENERAL (REPUBL
 CandidateContest	IL Comptroller	COMPTROLLER
 CandidateContest	IL Comptroller (Democratic Party)	COMPTROLLER (DEMOCRATIC)
 CandidateContest	IL Comptroller (Republican Party)	COMPTROLLER (REPUBLICAN)
-CandidateContest	IL Governor	GOVERNOR AND LIEUTENANT GOVERNOR
 CandidateContest	IL Governor	GOVERNOR
-CandidateContest	IL Governor (Democratic Party)	GOVERNOR AND LIEUTENANT GOVERNOR (DEMOCRATIC)
+CandidateContest	IL Governor	GOVERNOR AND LIEUTENANT GOVERNOR
 CandidateContest	IL Governor (Democratic Party)	GOVERNOR (DEMOCRATIC)
-CandidateContest	IL Governor (Republican Party)	GOVERNOR AND LIEUTENANT GOVERNOR (REPUBLICAN)
+CandidateContest	IL Governor (Democratic Party)	GOVERNOR AND LIEUTENANT GOVERNOR (DEMOCRATIC)
 CandidateContest	IL Governor (Republican Party)	GOVERNOR (REPUBLICAN)
+CandidateContest	IL Governor (Republican Party)	GOVERNOR AND LIEUTENANT GOVERNOR (REPUBLICAN)
 CandidateContest	IL House District 1	1ST REPRESENTATIVE
 CandidateContest	IL House District 1 (Democratic Party)	1ST REPRESENTATIVE (DEMOCRATIC)
 CandidateContest	IL House District 1 (Republican Party)	1ST REPRESENTATIVE (REPUBLICAN)
@@ -2843,18 +2843,18 @@ CandidateContest	US House IL District 8 (Republican Party)	8TH CONGRESS (REPUBLI
 CandidateContest	US House IL District 9	9TH CONGRESS
 CandidateContest	US House IL District 9 (Democratic Party)	9TH CONGRESS (DEMOCRATIC)
 CandidateContest	US House IL District 9 (Republican Party)	9TH CONGRESS (REPUBLICAN)
-CandidateContest	US President (IL)	PRESIDENT AND VICE PRESIDENT
 CandidateContest	US President (IL)	PRESIDENT
+CandidateContest	US President (IL)	PRESIDENT AND VICE PRESIDENT
 CandidateContest	US President (IL)	US PRESIDENT
-CandidateContest	US President (IL) (Democratic Party)	PRESIDENT AND VICE PRESIDENT (DEMOCRATIC)
 CandidateContest	US President (IL) (Democratic Party)	PRESIDENT (DEMOCRATIC)
-CandidateContest	US President (IL) (Republican Party)	PRESIDENT AND VICE PRESIDENT (REPUBLICAN)
+CandidateContest	US President (IL) (Democratic Party)	PRESIDENT AND VICE PRESIDENT (DEMOCRATIC)
 CandidateContest	US President (IL) (Republican Party)	PRESIDENT (REPUBLICAN)
+CandidateContest	US President (IL) (Republican Party)	PRESIDENT AND VICE PRESIDENT (REPUBLICAN)
 CandidateContest	US Senate IL	UNITED STATES SENATOR
 CandidateContest	US Senate IL (Democratic Party)	UNITED STATES SENATOR (DEMOCRATIC)
 CandidateContest	US Senate IL (Republican Party)	UNITED STATES SENATOR (REPUBLICAN)
-CountItemType	total	total
 CountItemType	total	TOTAL
+CountItemType	total	total
 Election	2016 General	GE 2016
 Election	2018 General	GE 2018
 Election	2020 Primary	G9 2020
@@ -2862,8 +2862,8 @@ Party	American solidarity Party	AMERICAN SOLIDARITY PARTY
 Party	Conservative Party	CONSERVATIVE
 Party	Constitution Party	CONSTITUTION
 Party	Democracy in america Party	DEMOCRACY IN AMERICA
-Party	Democratic Party	DEMOCRATIC
 Party	Democratic Party	DEMOCRAT
+Party	Democratic Party	DEMOCRATIC
 Party	Downstate United Party	DOWNSTATE UNITED
 Party	Green Party	GREEN
 Party	Independent Party	INDEPENDENT
@@ -2875,78 +2875,79 @@ Party	none or unknown	OTHER
 Party	party for socialism and liberation	PARTY FOR SOCIALISM AND LIBERATION
 ReportingUnit	Illinois	Illinois
 ReportingUnit	Illinois;Adams County	ADAMS
-ReportingUnit	Illinois;Adams County	17001
+ReportingUnit	Illinois;Adams County	fips17001
 ReportingUnit	Illinois;Alexander County	ALEXANDER
-ReportingUnit	Illinois;Alexander County	17003
+ReportingUnit	Illinois;Alexander County	fips17003
 ReportingUnit	Illinois;Bond County	BOND
-ReportingUnit	Illinois;Bond County	17005
+ReportingUnit	Illinois;Bond County	fips17005
 ReportingUnit	Illinois;Boone County	BOONE
-ReportingUnit	Illinois;Boone County	17007
+ReportingUnit	Illinois;Boone County	fips17007
 ReportingUnit	Illinois;Brown County	BROWN
-ReportingUnit	Illinois;Brown County	17009
+ReportingUnit	Illinois;Brown County	fips17009
 ReportingUnit	Illinois;Bureau County	BUREAU
-ReportingUnit	Illinois;Bureau County	17011
+ReportingUnit	Illinois;Bureau County	fips17011
 ReportingUnit	Illinois;Calhoun County	CALHOUN
-ReportingUnit	Illinois;Calhoun County	17013
+ReportingUnit	Illinois;Calhoun County	fips17013
 ReportingUnit	Illinois;Carroll County	CARROLL
-ReportingUnit	Illinois;Carroll County	17015
+ReportingUnit	Illinois;Carroll County	fips17015
 ReportingUnit	Illinois;Cass County	CASS
-ReportingUnit	Illinois;Cass County	17017
+ReportingUnit	Illinois;Cass County	fips17017
 ReportingUnit	Illinois;Champaign County	CHAMPAIGN
-ReportingUnit	Illinois;Champaign County	17019
+ReportingUnit	Illinois;Champaign County	fips17019
 ReportingUnit	Illinois;Christian County	CHRISTIAN
-ReportingUnit	Illinois;Christian County	17021
+ReportingUnit	Illinois;Christian County	fips17021
 ReportingUnit	Illinois;Clark County	CLARK
-ReportingUnit	Illinois;Clark County	17023
+ReportingUnit	Illinois;Clark County	fips17023
 ReportingUnit	Illinois;Clay County	CLAY
-ReportingUnit	Illinois;Clay County	17025
+ReportingUnit	Illinois;Clay County	fips17025
 ReportingUnit	Illinois;Clinton County	CLINTON
-ReportingUnit	Illinois;Clinton County	17027
+ReportingUnit	Illinois;Clinton County	fips17027
 ReportingUnit	Illinois;Coles County	COLES
-ReportingUnit	Illinois;Coles County	17029
+ReportingUnit	Illinois;Coles County	fips17029
 ReportingUnit	Illinois;Cook County	COOK
-ReportingUnit	Illinois;Cook County	17031
+ReportingUnit	Illinois;Cook County	fips17031
 ReportingUnit	Illinois;Crawford County	CRAWFORD
-ReportingUnit	Illinois;Crawford County	17033
+ReportingUnit	Illinois;Crawford County	fips17033
 ReportingUnit	Illinois;Cumberland County	CUMBERLAND
-ReportingUnit	Illinois;Cumberland County	17035
+ReportingUnit	Illinois;Cumberland County	fips17035
+ReportingUnit	Illinois;De Witt County	fips17039
+ReportingUnit	Illinois;DeKalb County	fips17037
 ReportingUnit	Illinois;Dekalb County	DeKALB
-ReportingUnit	Illinois;Dekalb County	17037
 ReportingUnit	Illinois;Dewitt County	DeWITT
 ReportingUnit	Illinois;Douglas County	DOUGLAS
-ReportingUnit	Illinois;Douglas County	17041
+ReportingUnit	Illinois;Douglas County	fips17041
+ReportingUnit	Illinois;DuPage County	fips17043
 ReportingUnit	Illinois;Dupage County	DuPAGE
-ReportingUnit	Illinois;Dupage County	17043
 ReportingUnit	Illinois;Edgar County	EDGAR
-ReportingUnit	Illinois;Edgar County	17045
+ReportingUnit	Illinois;Edgar County	fips17045
 ReportingUnit	Illinois;Edwards County	EDWARDS
-ReportingUnit	Illinois;Edwards County	17047
+ReportingUnit	Illinois;Edwards County	fips17047
 ReportingUnit	Illinois;Effingham County	EFFINGHAM
-ReportingUnit	Illinois;Effingham County	17049
+ReportingUnit	Illinois;Effingham County	fips17049
 ReportingUnit	Illinois;Fayette County	FAYETTE
-ReportingUnit	Illinois;Fayette County	17051
+ReportingUnit	Illinois;Fayette County	fips17051
 ReportingUnit	Illinois;Ford County	FORD
-ReportingUnit	Illinois;Ford County	17053
+ReportingUnit	Illinois;Ford County	fips17053
 ReportingUnit	Illinois;Franklin County	FRANKLIN
-ReportingUnit	Illinois;Franklin County	17055
+ReportingUnit	Illinois;Franklin County	fips17055
 ReportingUnit	Illinois;Fulton County	FULTON
-ReportingUnit	Illinois;Fulton County	17057
+ReportingUnit	Illinois;Fulton County	fips17057
 ReportingUnit	Illinois;Gallatin County	GALLATIN
-ReportingUnit	Illinois;Gallatin County	17059
+ReportingUnit	Illinois;Gallatin County	fips17059
 ReportingUnit	Illinois;Greene County	GREENE
-ReportingUnit	Illinois;Greene County	17061
+ReportingUnit	Illinois;Greene County	fips17061
 ReportingUnit	Illinois;Grundy County	GRUNDY
-ReportingUnit	Illinois;Grundy County	17063
+ReportingUnit	Illinois;Grundy County	fips17063
 ReportingUnit	Illinois;Hamilton County	HAMILTON
-ReportingUnit	Illinois;Hamilton County	17065
+ReportingUnit	Illinois;Hamilton County	fips17065
 ReportingUnit	Illinois;Hancock County	HANCOCK
-ReportingUnit	Illinois;Hancock County	17067
+ReportingUnit	Illinois;Hancock County	fips17067
 ReportingUnit	Illinois;Hardin County	HARDIN
-ReportingUnit	Illinois;Hardin County	17069
+ReportingUnit	Illinois;Hardin County	fips17069
 ReportingUnit	Illinois;Henderson County	HENDERSON
-ReportingUnit	Illinois;Henderson County	17071
+ReportingUnit	Illinois;Henderson County	fips17071
 ReportingUnit	Illinois;Henry County	HENRY
-ReportingUnit	Illinois;Henry County	17073
+ReportingUnit	Illinois;Henry County	fips17073
 ReportingUnit	Illinois;IL House District 1	Illinois;IL House District 1
 ReportingUnit	Illinois;IL House District 10	Illinois;IL House District 10
 ReportingUnit	Illinois;IL House District 100	Illinois;IL House District 100
@@ -3125,110 +3126,111 @@ ReportingUnit	Illinois;IL Senate District 7	Illinois;IL Senate District 7
 ReportingUnit	Illinois;IL Senate District 8	Illinois;IL Senate District 8
 ReportingUnit	Illinois;IL Senate District 9	Illinois;IL Senate District 9
 ReportingUnit	Illinois;Iroquois County	IROQUOIS
-ReportingUnit	Illinois;Iroquois County	17075
+ReportingUnit	Illinois;Iroquois County	fips17075
 ReportingUnit	Illinois;Jackson County	JACKSON
-ReportingUnit	Illinois;Jackson County	17077
+ReportingUnit	Illinois;Jackson County	fips17077
 ReportingUnit	Illinois;Jasper County	JASPER
-ReportingUnit	Illinois;Jasper County	17079
+ReportingUnit	Illinois;Jasper County	fips17079
 ReportingUnit	Illinois;Jefferson County	JEFFERSON
-ReportingUnit	Illinois;Jefferson County	17081
+ReportingUnit	Illinois;Jefferson County	fips17081
 ReportingUnit	Illinois;Jersey County	JERSEY
-ReportingUnit	Illinois;Jersey County	17083
+ReportingUnit	Illinois;Jersey County	fips17083
+ReportingUnit	Illinois;Jo Daviess County	fips17085
 ReportingUnit	Illinois;Jodaviess County	JoDAVIESS
 ReportingUnit	Illinois;Johnson County	JOHNSON
-ReportingUnit	Illinois;Johnson County	17087
+ReportingUnit	Illinois;Johnson County	fips17087
 ReportingUnit	Illinois;Kane County	KANE
-ReportingUnit	Illinois;Kane County	17089
+ReportingUnit	Illinois;Kane County	fips17089
 ReportingUnit	Illinois;Kankakee County	KANKAKEE
-ReportingUnit	Illinois;Kankakee County	17091
+ReportingUnit	Illinois;Kankakee County	fips17091
 ReportingUnit	Illinois;Kendall County	KENDALL
-ReportingUnit	Illinois;Kendall County	17093
+ReportingUnit	Illinois;Kendall County	fips17093
 ReportingUnit	Illinois;Knox County	KNOX
-ReportingUnit	Illinois;Knox County	17095
+ReportingUnit	Illinois;Knox County	fips17095
+ReportingUnit	Illinois;LaSalle County	fips17099
 ReportingUnit	Illinois;Lake County	LAKE
-ReportingUnit	Illinois;Lake County	17097
+ReportingUnit	Illinois;Lake County	fips17097
 ReportingUnit	Illinois;Lasalle County	LaSALLE
-ReportingUnit	Illinois;Lasalle County	17099
 ReportingUnit	Illinois;Lawrence County	LAWRENCE
-ReportingUnit	Illinois;Lawrence County	17101
+ReportingUnit	Illinois;Lawrence County	fips17101
 ReportingUnit	Illinois;Lee County	LEE
-ReportingUnit	Illinois;Lee County	17103
+ReportingUnit	Illinois;Lee County	fips17103
 ReportingUnit	Illinois;Livingston County	LIVINGSTON
-ReportingUnit	Illinois;Livingston County	17105
+ReportingUnit	Illinois;Livingston County	fips17105
 ReportingUnit	Illinois;Logan County	LOGAN
-ReportingUnit	Illinois;Logan County	17107
+ReportingUnit	Illinois;Logan County	fips17107
 ReportingUnit	Illinois;Macon County	MACON
-ReportingUnit	Illinois;Macon County	17115
+ReportingUnit	Illinois;Macon County	fips17115
 ReportingUnit	Illinois;Macoupin County	MACOUPIN
-ReportingUnit	Illinois;Macoupin County	17117
+ReportingUnit	Illinois;Macoupin County	fips17117
 ReportingUnit	Illinois;Madison County	MADISON
-ReportingUnit	Illinois;Madison County	17119
+ReportingUnit	Illinois;Madison County	fips17119
 ReportingUnit	Illinois;Marion County	MARION
-ReportingUnit	Illinois;Marion County	17121
+ReportingUnit	Illinois;Marion County	fips17121
 ReportingUnit	Illinois;Marshall County	MARSHALL
-ReportingUnit	Illinois;Marshall County	17123
+ReportingUnit	Illinois;Marshall County	fips17123
 ReportingUnit	Illinois;Mason County	MASON
-ReportingUnit	Illinois;Mason County	17125
+ReportingUnit	Illinois;Mason County	fips17125
 ReportingUnit	Illinois;Massac County	MASSAC
-ReportingUnit	Illinois;Massac County	17127
+ReportingUnit	Illinois;Massac County	fips17127
+ReportingUnit	Illinois;McDonough County	fips17109
+ReportingUnit	Illinois;McHenry County	fips17111
+ReportingUnit	Illinois;McLean County	fips17113
 ReportingUnit	Illinois;Mcdonough County	McDONOUGH
-ReportingUnit	Illinois;Mcdonough County	17109
 ReportingUnit	Illinois;Mchenry County	McHENRY
-ReportingUnit	Illinois;Mchenry County	17111
 ReportingUnit	Illinois;Mclean County	McLEAN
-ReportingUnit	Illinois;Mclean County	17113
 ReportingUnit	Illinois;Menard County	MENARD
-ReportingUnit	Illinois;Menard County	17129
+ReportingUnit	Illinois;Menard County	fips17129
 ReportingUnit	Illinois;Mercer County	MERCER
-ReportingUnit	Illinois;Mercer County	17131
+ReportingUnit	Illinois;Mercer County	fips17131
 ReportingUnit	Illinois;Monroe County	MONROE
-ReportingUnit	Illinois;Monroe County	17133
+ReportingUnit	Illinois;Monroe County	fips17133
 ReportingUnit	Illinois;Montgomery County	MONTGOMERY
-ReportingUnit	Illinois;Montgomery County	17135
+ReportingUnit	Illinois;Montgomery County	fips17135
 ReportingUnit	Illinois;Morgan County	MORGAN
-ReportingUnit	Illinois;Morgan County	17137
+ReportingUnit	Illinois;Morgan County	fips17137
 ReportingUnit	Illinois;Moultrie County	MOULTRIE
-ReportingUnit	Illinois;Moultrie County	17139
+ReportingUnit	Illinois;Moultrie County	fips17139
 ReportingUnit	Illinois;Ogle County	OGLE
-ReportingUnit	Illinois;Ogle County	17141
+ReportingUnit	Illinois;Ogle County	fips17141
 ReportingUnit	Illinois;Peoria County	PEORIA
-ReportingUnit	Illinois;Peoria County	17143
+ReportingUnit	Illinois;Peoria County	fips17143
 ReportingUnit	Illinois;Perry County	PERRY
-ReportingUnit	Illinois;Perry County	17145
+ReportingUnit	Illinois;Perry County	fips17145
 ReportingUnit	Illinois;Piatt County	PIATT
-ReportingUnit	Illinois;Piatt County	17147
+ReportingUnit	Illinois;Piatt County	fips17147
 ReportingUnit	Illinois;Pike County	PIKE
-ReportingUnit	Illinois;Pike County	17149
+ReportingUnit	Illinois;Pike County	fips17149
 ReportingUnit	Illinois;Pope County	POPE
-ReportingUnit	Illinois;Pope County	17151
+ReportingUnit	Illinois;Pope County	fips17151
 ReportingUnit	Illinois;Pulaski County	PULASKI
-ReportingUnit	Illinois;Pulaski County	17153
+ReportingUnit	Illinois;Pulaski County	fips17153
 ReportingUnit	Illinois;Putnam County	PUTNAM
-ReportingUnit	Illinois;Putnam County	17155
+ReportingUnit	Illinois;Putnam County	fips17155
 ReportingUnit	Illinois;Randolph County	RANDOLPH
-ReportingUnit	Illinois;Randolph County	17157
+ReportingUnit	Illinois;Randolph County	fips17157
 ReportingUnit	Illinois;Richland County	RICHLAND
-ReportingUnit	Illinois;Richland County	17159
+ReportingUnit	Illinois;Richland County	fips17159
 ReportingUnit	Illinois;Rock Island County	ROCK ISLAND
-ReportingUnit	Illinois;Rock Island County	17161
+ReportingUnit	Illinois;Rock Island County	fips17161
 ReportingUnit	Illinois;Saline County	SALINE
-ReportingUnit	Illinois;Saline County	17165
+ReportingUnit	Illinois;Saline County	fips17165
 ReportingUnit	Illinois;Sangamon County	SANGAMON
-ReportingUnit	Illinois;Sangamon County	17167
+ReportingUnit	Illinois;Sangamon County	fips17167
 ReportingUnit	Illinois;Schuyler County	SCHUYLER
-ReportingUnit	Illinois;Schuyler County	17169
+ReportingUnit	Illinois;Schuyler County	fips17169
 ReportingUnit	Illinois;Scott County	SCOTT
-ReportingUnit	Illinois;Scott County	17171
+ReportingUnit	Illinois;Scott County	fips17171
 ReportingUnit	Illinois;Shelby County	SHELBY
-ReportingUnit	Illinois;Shelby County	17173
+ReportingUnit	Illinois;Shelby County	fips17173
 ReportingUnit	Illinois;St. Clair County	ST. CLAIR
-ReportingUnit	Illinois;St. Clair County	17163
+ReportingUnit	Illinois;St. Clair County	fips17163
 ReportingUnit	Illinois;Stark County	STARK
-ReportingUnit	Illinois;Stark County	17175
+ReportingUnit	Illinois;Stark County	fips17175
 ReportingUnit	Illinois;Stephenson County	STEPHENSON
-ReportingUnit	Illinois;Stephenson County	17177
+ReportingUnit	Illinois;Stephenson County	fips17177
 ReportingUnit	Illinois;Tazewell County	TAZEWELL
-ReportingUnit	Illinois;Tazewell County	17179
+ReportingUnit	Illinois;Tazewell County	fips17179
 ReportingUnit	Illinois;US House IL District 1	Illinois;US House IL District 1
 ReportingUnit	Illinois;US House IL District 10	Illinois;US House IL District 10
 ReportingUnit	Illinois;US House IL District 11	Illinois;US House IL District 11
@@ -3248,26 +3250,26 @@ ReportingUnit	Illinois;US House IL District 7	Illinois;US House IL District 7
 ReportingUnit	Illinois;US House IL District 8	Illinois;US House IL District 8
 ReportingUnit	Illinois;US House IL District 9	Illinois;US House IL District 9
 ReportingUnit	Illinois;Union County	UNION
-ReportingUnit	Illinois;Union County	17181
+ReportingUnit	Illinois;Union County	fips17181
 ReportingUnit	Illinois;Vermilion County	VERMILION
-ReportingUnit	Illinois;Vermilion County	17183
+ReportingUnit	Illinois;Vermilion County	fips17183
 ReportingUnit	Illinois;Wabash County	WABASH
-ReportingUnit	Illinois;Wabash County	17185
+ReportingUnit	Illinois;Wabash County	fips17185
 ReportingUnit	Illinois;Warren County	WARREN
-ReportingUnit	Illinois;Warren County	17187
+ReportingUnit	Illinois;Warren County	fips17187
 ReportingUnit	Illinois;Washington County	WASHINGTON
-ReportingUnit	Illinois;Washington County	17189
+ReportingUnit	Illinois;Washington County	fips17189
 ReportingUnit	Illinois;Wayne County	WAYNE
-ReportingUnit	Illinois;Wayne County	17191
+ReportingUnit	Illinois;Wayne County	fips17191
 ReportingUnit	Illinois;White County	WHITE
-ReportingUnit	Illinois;White County	17193
+ReportingUnit	Illinois;White County	fips17193
 ReportingUnit	Illinois;Whiteside County	WHITESIDE
-ReportingUnit	Illinois;Whiteside County	17195
+ReportingUnit	Illinois;Whiteside County	fips17195
 ReportingUnit	Illinois;Will County	WILL
-ReportingUnit	Illinois;Will County	17197
+ReportingUnit	Illinois;Will County	fips17197
 ReportingUnit	Illinois;Williamson County	WILLIAMSON
-ReportingUnit	Illinois;Williamson County	17199
+ReportingUnit	Illinois;Williamson County	fips17199
 ReportingUnit	Illinois;Winnebago County	WINNEBAGO
-ReportingUnit	Illinois;Winnebago County	17201
+ReportingUnit	Illinois;Winnebago County	fips17201
 ReportingUnit	Illinois;Woodford County	WOODFORD
-ReportingUnit	Illinois;Woodford County	17203
+ReportingUnit	Illinois;Woodford County	fips17203

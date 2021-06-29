@@ -983,124 +983,124 @@ CandidateContest	ND Senate District 7	State Senator District 7
 CandidateContest	ND Senate District 8	State Senator District 8
 CandidateContest	ND Senate District 9	State Senator District 9
 CandidateContest	US House ND District 1	Representative in Congress
-CandidateContest	US President (ND)	President & Vice-President of the United States
 CandidateContest	US President (ND)	PRESIDENT
+CandidateContest	US President (ND)	President & Vice-President of the United States
 CandidateContest	US President (ND)	US PRESIDENT
 CandidateContest	US Senate ND	United States Senator
-CountItemType	total	total
 CountItemType	total	TOTAL
-Party	Democratic Party	Democratic-NPL
+CountItemType	total	total
 Party	Democratic Party	DEMOCRAT
+Party	Democratic Party	Democratic-NPL
 Party	Green Party	GREEN
 Party	Independent Party	independent nomination
-Party	Libertarian Party	Libertarian
 Party	Libertarian Party	LIBERTARIAN
-Party	Republican Party	Republican
+Party	Libertarian Party	Libertarian
 Party	Republican Party	REPUBLICAN
+Party	Republican Party	Republican
 Party	none or unknown	OTHER
 ReportingUnit	North Dakota;Adams County	Adams
-ReportingUnit	North Dakota;Adams County	38001
+ReportingUnit	North Dakota;Adams County	fips38001
 ReportingUnit	North Dakota;Barnes County	Barnes
-ReportingUnit	North Dakota;Barnes County	38003
+ReportingUnit	North Dakota;Barnes County	fips38003
 ReportingUnit	North Dakota;Benson County	Benson
-ReportingUnit	North Dakota;Benson County	38005
+ReportingUnit	North Dakota;Benson County	fips38005
 ReportingUnit	North Dakota;Billings County	Billings
-ReportingUnit	North Dakota;Billings County	38007
+ReportingUnit	North Dakota;Billings County	fips38007
 ReportingUnit	North Dakota;Bottineau County	Bottineau
-ReportingUnit	North Dakota;Bottineau County	38009
+ReportingUnit	North Dakota;Bottineau County	fips38009
 ReportingUnit	North Dakota;Bowman County	Bowman
-ReportingUnit	North Dakota;Bowman County	38011
+ReportingUnit	North Dakota;Bowman County	fips38011
 ReportingUnit	North Dakota;Burke County	Burke
-ReportingUnit	North Dakota;Burke County	38013
+ReportingUnit	North Dakota;Burke County	fips38013
 ReportingUnit	North Dakota;Burleigh County	Burleigh
-ReportingUnit	North Dakota;Burleigh County	38015
+ReportingUnit	North Dakota;Burleigh County	fips38015
 ReportingUnit	North Dakota;Cass County	Cass
-ReportingUnit	North Dakota;Cass County	38017
+ReportingUnit	North Dakota;Cass County	fips38017
 ReportingUnit	North Dakota;Cavalier County	Cavalier
-ReportingUnit	North Dakota;Cavalier County	38019
+ReportingUnit	North Dakota;Cavalier County	fips38019
 ReportingUnit	North Dakota;Dickey County	Dickey
-ReportingUnit	North Dakota;Dickey County	38021
+ReportingUnit	North Dakota;Dickey County	fips38021
 ReportingUnit	North Dakota;Divide County	Divide
-ReportingUnit	North Dakota;Divide County	38023
+ReportingUnit	North Dakota;Divide County	fips38023
 ReportingUnit	North Dakota;Dunn County	Dunn
-ReportingUnit	North Dakota;Dunn County	38025
+ReportingUnit	North Dakota;Dunn County	fips38025
 ReportingUnit	North Dakota;Eddy County	Eddy
-ReportingUnit	North Dakota;Eddy County	38027
+ReportingUnit	North Dakota;Eddy County	fips38027
 ReportingUnit	North Dakota;Emmons County	Emmons
-ReportingUnit	North Dakota;Emmons County	38029
+ReportingUnit	North Dakota;Emmons County	fips38029
 ReportingUnit	North Dakota;Foster County	Foster
-ReportingUnit	North Dakota;Foster County	38031
+ReportingUnit	North Dakota;Foster County	fips38031
 ReportingUnit	North Dakota;Golden Valley County	Golden Valley
-ReportingUnit	North Dakota;Golden Valley County	38033
+ReportingUnit	North Dakota;Golden Valley County	fips38033
 ReportingUnit	North Dakota;Grand Forks County	Grand Forks
-ReportingUnit	North Dakota;Grand Forks County	38035
+ReportingUnit	North Dakota;Grand Forks County	fips38035
 ReportingUnit	North Dakota;Grant County	Grant
-ReportingUnit	North Dakota;Grant County	38037
+ReportingUnit	North Dakota;Grant County	fips38037
 ReportingUnit	North Dakota;Griggs County	Griggs
-ReportingUnit	North Dakota;Griggs County	38039
+ReportingUnit	North Dakota;Griggs County	fips38039
 ReportingUnit	North Dakota;Hettinger County	Hettinger
-ReportingUnit	North Dakota;Hettinger County	38041
+ReportingUnit	North Dakota;Hettinger County	fips38041
 ReportingUnit	North Dakota;Kidder County	Kidder
-ReportingUnit	North Dakota;Kidder County	38043
+ReportingUnit	North Dakota;Kidder County	fips38043
 ReportingUnit	North Dakota;LaMoure County	LaMoure
-ReportingUnit	North Dakota;LaMoure County	38045
+ReportingUnit	North Dakota;LaMoure County	fips38045
 ReportingUnit	North Dakota;Logan County	Logan
-ReportingUnit	North Dakota;Logan County	38047
+ReportingUnit	North Dakota;Logan County	fips38047
 ReportingUnit	North Dakota;McHenry County	McHenry
-ReportingUnit	North Dakota;McHenry County	38049
+ReportingUnit	North Dakota;McHenry County	fips38049
 ReportingUnit	North Dakota;McIntosh County	McIntosh
-ReportingUnit	North Dakota;McIntosh County	38051
+ReportingUnit	North Dakota;McIntosh County	fips38051
 ReportingUnit	North Dakota;McKenzie County	McKenzie
-ReportingUnit	North Dakota;McKenzie County	38053
+ReportingUnit	North Dakota;McKenzie County	fips38053
 ReportingUnit	North Dakota;McLean County	McLean
-ReportingUnit	North Dakota;McLean County	38055
+ReportingUnit	North Dakota;McLean County	fips38055
 ReportingUnit	North Dakota;Mercer County	Mercer
-ReportingUnit	North Dakota;Mercer County	38057
+ReportingUnit	North Dakota;Mercer County	fips38057
 ReportingUnit	North Dakota;Morton County	Morton
-ReportingUnit	North Dakota;Morton County	38059
+ReportingUnit	North Dakota;Morton County	fips38059
 ReportingUnit	North Dakota;Mountrail County	Mountrail
-ReportingUnit	North Dakota;Mountrail County	38061
+ReportingUnit	North Dakota;Mountrail County	fips38061
 ReportingUnit	North Dakota;Nelson County	Nelson
-ReportingUnit	North Dakota;Nelson County	38063
+ReportingUnit	North Dakota;Nelson County	fips38063
 ReportingUnit	North Dakota;Oliver County	Oliver
-ReportingUnit	North Dakota;Oliver County	38065
+ReportingUnit	North Dakota;Oliver County	fips38065
 ReportingUnit	North Dakota;Pembina County	Pembina
-ReportingUnit	North Dakota;Pembina County	38067
+ReportingUnit	North Dakota;Pembina County	fips38067
 ReportingUnit	North Dakota;Pierce County	Pierce
-ReportingUnit	North Dakota;Pierce County	38069
+ReportingUnit	North Dakota;Pierce County	fips38069
 ReportingUnit	North Dakota;Ramsey County	Ramsey
-ReportingUnit	North Dakota;Ramsey County	38071
+ReportingUnit	North Dakota;Ramsey County	fips38071
 ReportingUnit	North Dakota;Ransom County	Ransom
-ReportingUnit	North Dakota;Ransom County	38073
+ReportingUnit	North Dakota;Ransom County	fips38073
 ReportingUnit	North Dakota;Renville County	Renville
-ReportingUnit	North Dakota;Renville County	38075
+ReportingUnit	North Dakota;Renville County	fips38075
 ReportingUnit	North Dakota;Richland County	Richland
-ReportingUnit	North Dakota;Richland County	38077
+ReportingUnit	North Dakota;Richland County	fips38077
 ReportingUnit	North Dakota;Rolette County	Rolette
-ReportingUnit	North Dakota;Rolette County	38079
+ReportingUnit	North Dakota;Rolette County	fips38079
 ReportingUnit	North Dakota;Sargent County	Sargent
-ReportingUnit	North Dakota;Sargent County	38081
+ReportingUnit	North Dakota;Sargent County	fips38081
 ReportingUnit	North Dakota;Sheridan County	Sheridan
-ReportingUnit	North Dakota;Sheridan County	38083
+ReportingUnit	North Dakota;Sheridan County	fips38083
 ReportingUnit	North Dakota;Sioux County	Sioux
-ReportingUnit	North Dakota;Sioux County	38085
+ReportingUnit	North Dakota;Sioux County	fips38085
 ReportingUnit	North Dakota;Slope County	Slope
-ReportingUnit	North Dakota;Slope County	38087
+ReportingUnit	North Dakota;Slope County	fips38087
 ReportingUnit	North Dakota;Stark County	Stark
-ReportingUnit	North Dakota;Stark County	38089
+ReportingUnit	North Dakota;Stark County	fips38089
 ReportingUnit	North Dakota;Steele County	Steele
-ReportingUnit	North Dakota;Steele County	38091
+ReportingUnit	North Dakota;Steele County	fips38091
 ReportingUnit	North Dakota;Stutsman County	Stutsman
-ReportingUnit	North Dakota;Stutsman County	38093
+ReportingUnit	North Dakota;Stutsman County	fips38093
 ReportingUnit	North Dakota;Towner County	Towner
-ReportingUnit	North Dakota;Towner County	38095
+ReportingUnit	North Dakota;Towner County	fips38095
 ReportingUnit	North Dakota;Traill County	Traill
-ReportingUnit	North Dakota;Traill County	38097
+ReportingUnit	North Dakota;Traill County	fips38097
 ReportingUnit	North Dakota;Walsh County	Walsh
-ReportingUnit	North Dakota;Walsh County	38099
+ReportingUnit	North Dakota;Walsh County	fips38099
 ReportingUnit	North Dakota;Ward County	Ward
-ReportingUnit	North Dakota;Ward County	38101
+ReportingUnit	North Dakota;Ward County	fips38101
 ReportingUnit	North Dakota;Wells County	Wells
-ReportingUnit	North Dakota;Wells County	38103
+ReportingUnit	North Dakota;Wells County	fips38103
 ReportingUnit	North Dakota;Williams County	Williams
-ReportingUnit	North Dakota;Williams County	38105
+ReportingUnit	North Dakota;Williams County	fips38105

@@ -1,5 +1,12 @@
 Name	ReportingUnitType
-Wisconsin	state
+Wisconsin;US House WI District 1	congressional
+Wisconsin;US House WI District 2	congressional
+Wisconsin;US House WI District 3	congressional
+Wisconsin;US House WI District 4	congressional
+Wisconsin;US House WI District 5	congressional
+Wisconsin;US House WI District 6	congressional
+Wisconsin;US House WI District 7	congressional
+Wisconsin;US House WI District 8	congressional
 Wisconsin;Adams County	county
 Wisconsin;Ashland County	county
 Wisconsin;Barron County	county
@@ -62,16 +69,17 @@ Wisconsin;Sheboygan County	county
 Wisconsin;St. Croix County	county
 Wisconsin;Taylor County	county
 Wisconsin;Trempealeau County	county
-Wisconsin;US House WI District 1	congressional
-Wisconsin;US House WI District 2	congressional
-Wisconsin;US House WI District 3	congressional
-Wisconsin;US House WI District 4	congressional
-Wisconsin;US House WI District 5	congressional
-Wisconsin;US House WI District 6	congressional
-Wisconsin;US House WI District 7	congressional
-Wisconsin;US House WI District 8	congressional
 Wisconsin;Vernon County	county
 Wisconsin;Vilas County	county
+Wisconsin;Walworth County	county
+Wisconsin;Washburn County	county
+Wisconsin;Washington County	county
+Wisconsin;Waukesha County	county
+Wisconsin;Waupaca County	county
+Wisconsin;Waushara County	county
+Wisconsin;Winnebago County	county
+Wisconsin;Wood County	county
+Wisconsin	state
 Wisconsin;WI House District 1	state-house
 Wisconsin;WI House District 10	state-house
 Wisconsin;WI House District 11	state-house
@@ -204,11 +212,3 @@ Wisconsin;WI Senate District 6	state-senate
 Wisconsin;WI Senate District 7	state-senate
 Wisconsin;WI Senate District 8	state-senate
 Wisconsin;WI Senate District 9	state-senate
-Wisconsin;Walworth County	county
-Wisconsin;Washburn County	county
-Wisconsin;Washington County	county
-Wisconsin;Waukesha County	county
-Wisconsin;Waupaca County	county
-Wisconsin;Waushara County	county
-Wisconsin;Winnebago County	county
-Wisconsin;Wood County	county

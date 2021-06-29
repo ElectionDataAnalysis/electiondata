@@ -1,226 +1,5 @@
 Name	ReportingUnitType
-New York;NY Senate District 1	state-senate
-New York;NY Senate District 2	state-senate
-New York;NY Senate District 3	state-senate
-New York;NY Senate District 4	state-senate
-New York;NY Senate District 5	state-senate
-New York;NY Senate District 6	state-senate
-New York;NY Senate District 7	state-senate
-New York;NY Senate District 8	state-senate
-New York;NY Senate District 9	state-senate
-New York;NY Senate District 10	state-senate
-New York;NY Senate District 11	state-senate
-New York;NY Senate District 12	state-senate
-New York;NY Senate District 13	state-senate
-New York;NY Senate District 14	state-senate
-New York;NY Senate District 15	state-senate
-New York;NY Senate District 16	state-senate
-New York;NY Senate District 17	state-senate
-New York;NY Senate District 18	state-senate
-New York;NY Senate District 19	state-senate
-New York;NY Senate District 20	state-senate
-New York;NY Senate District 21	state-senate
-New York;NY Senate District 22	state-senate
-New York;NY Senate District 23	state-senate
-New York;NY Senate District 24	state-senate
-New York;NY Senate District 25	state-senate
-New York;NY Senate District 26	state-senate
-New York;NY Senate District 27	state-senate
-New York;NY Senate District 28	state-senate
-New York;NY Senate District 29	state-senate
-New York;NY Senate District 30	state-senate
-New York;NY Senate District 31	state-senate
-New York;NY Senate District 32	state-senate
-New York;NY Senate District 33	state-senate
-New York;NY Senate District 34	state-senate
-New York;NY Senate District 35	state-senate
-New York;NY Senate District 36	state-senate
-New York;NY Senate District 37	state-senate
-New York;NY Senate District 38	state-senate
-New York;NY Senate District 39	state-senate
-New York;NY Senate District 40	state-senate
-New York;NY Senate District 41	state-senate
-New York;NY Senate District 42	state-senate
-New York;NY Senate District 43	state-senate
-New York;NY Senate District 44	state-senate
-New York;NY Senate District 45	state-senate
-New York;NY Senate District 46	state-senate
-New York;NY Senate District 47	state-senate
-New York;NY Senate District 48	state-senate
-New York;NY Senate District 49	state-senate
-New York;NY Senate District 50	state-senate
-New York;NY Senate District 51	state-senate
-New York;NY Senate District 52	state-senate
-New York;NY Senate District 53	state-senate
-New York;NY Senate District 54	state-senate
-New York;NY Senate District 55	state-senate
-New York;NY Senate District 56	state-senate
-New York;NY Senate District 57	state-senate
-New York;NY Senate District 58	state-senate
-New York;NY Senate District 59	state-senate
-New York;NY Senate District 60	state-senate
-New York;NY Senate District 61	state-senate
-New York;NY Senate District 62	state-senate
-New York;NY Senate District 63	state-senate
-New York;NY House District 1	state-house
-New York;NY House District 2	state-house
-New York;NY House District 3	state-house
-New York;NY House District 4	state-house
-New York;NY House District 5	state-house
-New York;NY House District 6	state-house
-New York;NY House District 7	state-house
-New York;NY House District 8	state-house
-New York;NY House District 9	state-house
-New York;NY House District 10	state-house
-New York;NY House District 11	state-house
-New York;NY House District 12	state-house
-New York;NY House District 13	state-house
-New York;NY House District 14	state-house
-New York;NY House District 15	state-house
-New York;NY House District 16	state-house
-New York;NY House District 17	state-house
-New York;NY House District 18	state-house
-New York;NY House District 19	state-house
-New York;NY House District 20	state-house
-New York;NY House District 21	state-house
-New York;NY House District 22	state-house
-New York;NY House District 23	state-house
-New York;NY House District 24	state-house
-New York;NY House District 25	state-house
-New York;NY House District 26	state-house
-New York;NY House District 27	state-house
-New York;NY House District 28	state-house
-New York;NY House District 29	state-house
-New York;NY House District 30	state-house
-New York;NY House District 31	state-house
-New York;NY House District 32	state-house
-New York;NY House District 33	state-house
-New York;NY House District 34	state-house
-New York;NY House District 35	state-house
-New York;NY House District 36	state-house
-New York;NY House District 37	state-house
-New York;NY House District 38	state-house
-New York;NY House District 39	state-house
-New York;NY House District 40	state-house
-New York;NY House District 41	state-house
-New York;NY House District 42	state-house
-New York;NY House District 43	state-house
-New York;NY House District 44	state-house
-New York;NY House District 45	state-house
-New York;NY House District 46	state-house
-New York;NY House District 47	state-house
-New York;NY House District 48	state-house
-New York;NY House District 49	state-house
-New York;NY House District 50	state-house
-New York;NY House District 51	state-house
-New York;NY House District 52	state-house
-New York;NY House District 53	state-house
-New York;NY House District 54	state-house
-New York;NY House District 55	state-house
-New York;NY House District 56	state-house
-New York;NY House District 57	state-house
-New York;NY House District 58	state-house
-New York;NY House District 59	state-house
-New York;NY House District 60	state-house
-New York;NY House District 61	state-house
-New York;NY House District 62	state-house
-New York;NY House District 63	state-house
-New York;NY House District 64	state-house
-New York;NY House District 65	state-house
-New York;NY House District 66	state-house
-New York;NY House District 67	state-house
-New York;NY House District 68	state-house
-New York;NY House District 69	state-house
-New York;NY House District 70	state-house
-New York;NY House District 71	state-house
-New York;NY House District 72	state-house
-New York;NY House District 73	state-house
-New York;NY House District 74	state-house
-New York;NY House District 75	state-house
-New York;NY House District 76	state-house
-New York;NY House District 77	state-house
-New York;NY House District 78	state-house
-New York;NY House District 79	state-house
-New York;NY House District 80	state-house
-New York;NY House District 81	state-house
-New York;NY House District 82	state-house
-New York;NY House District 83	state-house
-New York;NY House District 84	state-house
-New York;NY House District 85	state-house
-New York;NY House District 86	state-house
-New York;NY House District 87	state-house
-New York;NY House District 88	state-house
-New York;NY House District 89	state-house
-New York;NY House District 90	state-house
-New York;NY House District 91	state-house
-New York;NY House District 92	state-house
-New York;NY House District 93	state-house
-New York;NY House District 94	state-house
-New York;NY House District 95	state-house
-New York;NY House District 96	state-house
-New York;NY House District 97	state-house
-New York;NY House District 98	state-house
-New York;NY House District 99	state-house
-New York;NY House District 100	state-house
-New York;NY House District 101	state-house
-New York;NY House District 102	state-house
-New York;NY House District 103	state-house
-New York;NY House District 104	state-house
-New York;NY House District 105	state-house
-New York;NY House District 106	state-house
-New York;NY House District 107	state-house
-New York;NY House District 108	state-house
-New York;NY House District 109	state-house
-New York;NY House District 110	state-house
-New York;NY House District 111	state-house
-New York;NY House District 112	state-house
-New York;NY House District 113	state-house
-New York;NY House District 114	state-house
-New York;NY House District 115	state-house
-New York;NY House District 116	state-house
-New York;NY House District 117	state-house
-New York;NY House District 118	state-house
-New York;NY House District 119	state-house
-New York;NY House District 120	state-house
-New York;NY House District 121	state-house
-New York;NY House District 122	state-house
-New York;NY House District 123	state-house
-New York;NY House District 124	state-house
-New York;NY House District 125	state-house
-New York;NY House District 126	state-house
-New York;NY House District 127	state-house
-New York;NY House District 128	state-house
-New York;NY House District 129	state-house
-New York;NY House District 130	state-house
-New York;NY House District 131	state-house
-New York;NY House District 132	state-house
-New York;NY House District 133	state-house
-New York;NY House District 134	state-house
-New York;NY House District 135	state-house
-New York;NY House District 136	state-house
-New York;NY House District 137	state-house
-New York;NY House District 138	state-house
-New York;NY House District 139	state-house
-New York;NY House District 140	state-house
-New York;NY House District 141	state-house
-New York;NY House District 142	state-house
-New York;NY House District 143	state-house
-New York;NY House District 144	state-house
-New York;NY House District 145	state-house
-New York;NY House District 146	state-house
-New York;NY House District 147	state-house
-New York;NY House District 148	state-house
-New York;NY House District 149	state-house
-New York;NY House District 150	state-house
 New York;US House NY District 1	congressional
-New York;US House NY District 2	congressional
-New York;US House NY District 3	congressional
-New York;US House NY District 4	congressional
-New York;US House NY District 5	congressional
-New York;US House NY District 6	congressional
-New York;US House NY District 7	congressional
-New York;US House NY District 8	congressional
-New York;US House NY District 9	congressional
 New York;US House NY District 10	congressional
 New York;US House NY District 11	congressional
 New York;US House NY District 12	congressional
@@ -231,6 +10,7 @@ New York;US House NY District 16	congressional
 New York;US House NY District 17	congressional
 New York;US House NY District 18	congressional
 New York;US House NY District 19	congressional
+New York;US House NY District 2	congressional
 New York;US House NY District 20	congressional
 New York;US House NY District 21	congressional
 New York;US House NY District 22	congressional
@@ -239,9 +19,16 @@ New York;US House NY District 24	congressional
 New York;US House NY District 25	congressional
 New York;US House NY District 26	congressional
 New York;US House NY District 27	congressional
-New York	state
+New York;US House NY District 3	congressional
+New York;US House NY District 4	congressional
+New York;US House NY District 5	congressional
+New York;US House NY District 6	congressional
+New York;US House NY District 7	congressional
+New York;US House NY District 8	congressional
+New York;US House NY District 9	congressional
 New York;Albany County	county
 New York;Allegany County	county
+New York;Bronx County	county
 New York;Broome County	county
 New York;Cattaraugus County	county
 New York;Cayuga County	county
@@ -262,12 +49,14 @@ New York;Greene County	county
 New York;Hamilton County	county
 New York;Herkimer County	county
 New York;Jefferson County	county
+New York;Kings County	county
 New York;Lewis County	county
 New York;Livingston County	county
 New York;Madison County	county
 New York;Monroe County	county
 New York;Montgomery County	county
 New York;Nassau County	county
+New York;New York County	county
 New York;Niagara County	county
 New York;Oneida County	county
 New York;Onondaga County	county
@@ -277,14 +66,16 @@ New York;Orleans County	county
 New York;Oswego County	county
 New York;Otsego County	county
 New York;Putnam County	county
+New York;Queens County	county
 New York;Rensselaer County	county
+New York;Richmond County	county
 New York;Rockland County	county
-New York;St. Lawrence County	county
 New York;Saratoga County	county
 New York;Schenectady County	county
 New York;Schoharie County	county
 New York;Schuyler County	county
 New York;Seneca County	county
+New York;St. Lawrence County	county
 New York;Steuben County	county
 New York;Suffolk County	county
 New York;Sullivan County	county
@@ -297,47 +88,159 @@ New York;Wayne County	county
 New York;Westchester County	county
 New York;Wyoming County	county
 New York;Yates County	county
-New York;Bronx County	county
-New York;Kings County	county
-New York;New York County	county
-New York;Queens County	county
-New York;Richmond County	county
-New York;NY Senate District 64	state-senate
-New York;NY Senate District 65	state-senate
-New York;NY Senate District 66	state-senate
-New York;NY Senate District 67	state-senate
-New York;NY Senate District 68	state-senate
-New York;NY Senate District 69	state-senate
-New York;NY Senate District 70	state-senate
-New York;NY Senate District 71	state-senate
-New York;NY Senate District 72	state-senate
-New York;NY Senate District 73	state-senate
-New York;NY Senate District 74	state-senate
-New York;NY Senate District 75	state-senate
-New York;NY Senate District 76	state-senate
-New York;NY Senate District 77	state-senate
-New York;NY Senate District 78	state-senate
-New York;NY Senate District 79	state-senate
-New York;NY Senate District 80	state-senate
-New York;NY Senate District 81	state-senate
-New York;NY Senate District 82	state-senate
-New York;NY Senate District 83	state-senate
-New York;NY Senate District 84	state-senate
-New York;NY Senate District 85	state-senate
-New York;NY Senate District 86	state-senate
-New York;NY Senate District 87	state-senate
-New York;NY Senate District 88	state-senate
-New York;NY Senate District 89	state-senate
-New York;NY Senate District 90	state-senate
-New York;NY Senate District 91	state-senate
-New York;NY Senate District 92	state-senate
-New York;NY Senate District 93	state-senate
-New York;NY Senate District 94	state-senate
-New York;NY Senate District 95	state-senate
-New York;NY Senate District 96	state-senate
-New York;NY Senate District 97	state-senate
-New York;NY Senate District 98	state-senate
-New York;NY Senate District 99	state-senate
+New York	state
+New York;NY House District 1	state-house
+New York;NY House District 10	state-house
+New York;NY House District 100	state-house
+New York;NY House District 101	state-house
+New York;NY House District 102	state-house
+New York;NY House District 103	state-house
+New York;NY House District 104	state-house
+New York;NY House District 105	state-house
+New York;NY House District 106	state-house
+New York;NY House District 107	state-house
+New York;NY House District 108	state-house
+New York;NY House District 109	state-house
+New York;NY House District 11	state-house
+New York;NY House District 110	state-house
+New York;NY House District 111	state-house
+New York;NY House District 112	state-house
+New York;NY House District 113	state-house
+New York;NY House District 114	state-house
+New York;NY House District 115	state-house
+New York;NY House District 116	state-house
+New York;NY House District 117	state-house
+New York;NY House District 118	state-house
+New York;NY House District 119	state-house
+New York;NY House District 12	state-house
+New York;NY House District 120	state-house
+New York;NY House District 121	state-house
+New York;NY House District 122	state-house
+New York;NY House District 123	state-house
+New York;NY House District 124	state-house
+New York;NY House District 125	state-house
+New York;NY House District 126	state-house
+New York;NY House District 127	state-house
+New York;NY House District 128	state-house
+New York;NY House District 129	state-house
+New York;NY House District 13	state-house
+New York;NY House District 130	state-house
+New York;NY House District 131	state-house
+New York;NY House District 132	state-house
+New York;NY House District 133	state-house
+New York;NY House District 134	state-house
+New York;NY House District 135	state-house
+New York;NY House District 136	state-house
+New York;NY House District 137	state-house
+New York;NY House District 138	state-house
+New York;NY House District 139	state-house
+New York;NY House District 14	state-house
+New York;NY House District 140	state-house
+New York;NY House District 141	state-house
+New York;NY House District 142	state-house
+New York;NY House District 143	state-house
+New York;NY House District 144	state-house
+New York;NY House District 145	state-house
+New York;NY House District 146	state-house
+New York;NY House District 147	state-house
+New York;NY House District 148	state-house
+New York;NY House District 149	state-house
+New York;NY House District 15	state-house
+New York;NY House District 150	state-house
+New York;NY House District 16	state-house
+New York;NY House District 17	state-house
+New York;NY House District 18	state-house
+New York;NY House District 19	state-house
+New York;NY House District 2	state-house
+New York;NY House District 20	state-house
+New York;NY House District 21	state-house
+New York;NY House District 22	state-house
+New York;NY House District 23	state-house
+New York;NY House District 24	state-house
+New York;NY House District 25	state-house
+New York;NY House District 26	state-house
+New York;NY House District 27	state-house
+New York;NY House District 28	state-house
+New York;NY House District 29	state-house
+New York;NY House District 3	state-house
+New York;NY House District 30	state-house
+New York;NY House District 31	state-house
+New York;NY House District 32	state-house
+New York;NY House District 33	state-house
+New York;NY House District 34	state-house
+New York;NY House District 35	state-house
+New York;NY House District 36	state-house
+New York;NY House District 37	state-house
+New York;NY House District 38	state-house
+New York;NY House District 39	state-house
+New York;NY House District 4	state-house
+New York;NY House District 40	state-house
+New York;NY House District 41	state-house
+New York;NY House District 42	state-house
+New York;NY House District 43	state-house
+New York;NY House District 44	state-house
+New York;NY House District 45	state-house
+New York;NY House District 46	state-house
+New York;NY House District 47	state-house
+New York;NY House District 48	state-house
+New York;NY House District 49	state-house
+New York;NY House District 5	state-house
+New York;NY House District 50	state-house
+New York;NY House District 51	state-house
+New York;NY House District 52	state-house
+New York;NY House District 53	state-house
+New York;NY House District 54	state-house
+New York;NY House District 55	state-house
+New York;NY House District 56	state-house
+New York;NY House District 57	state-house
+New York;NY House District 58	state-house
+New York;NY House District 59	state-house
+New York;NY House District 6	state-house
+New York;NY House District 60	state-house
+New York;NY House District 61	state-house
+New York;NY House District 62	state-house
+New York;NY House District 63	state-house
+New York;NY House District 64	state-house
+New York;NY House District 65	state-house
+New York;NY House District 66	state-house
+New York;NY House District 67	state-house
+New York;NY House District 68	state-house
+New York;NY House District 69	state-house
+New York;NY House District 7	state-house
+New York;NY House District 70	state-house
+New York;NY House District 71	state-house
+New York;NY House District 72	state-house
+New York;NY House District 73	state-house
+New York;NY House District 74	state-house
+New York;NY House District 75	state-house
+New York;NY House District 76	state-house
+New York;NY House District 77	state-house
+New York;NY House District 78	state-house
+New York;NY House District 79	state-house
+New York;NY House District 8	state-house
+New York;NY House District 80	state-house
+New York;NY House District 81	state-house
+New York;NY House District 82	state-house
+New York;NY House District 83	state-house
+New York;NY House District 84	state-house
+New York;NY House District 85	state-house
+New York;NY House District 86	state-house
+New York;NY House District 87	state-house
+New York;NY House District 88	state-house
+New York;NY House District 89	state-house
+New York;NY House District 9	state-house
+New York;NY House District 90	state-house
+New York;NY House District 91	state-house
+New York;NY House District 92	state-house
+New York;NY House District 93	state-house
+New York;NY House District 94	state-house
+New York;NY House District 95	state-house
+New York;NY House District 96	state-house
+New York;NY House District 97	state-house
+New York;NY House District 98	state-house
+New York;NY House District 99	state-house
+New York;NY Senate District 1	state-senate
+New York;NY Senate District 10	state-senate
 New York;NY Senate District 100	state-senate
 New York;NY Senate District 101	state-senate
 New York;NY Senate District 102	state-senate
@@ -348,6 +251,7 @@ New York;NY Senate District 106	state-senate
 New York;NY Senate District 107	state-senate
 New York;NY Senate District 108	state-senate
 New York;NY Senate District 109	state-senate
+New York;NY Senate District 11	state-senate
 New York;NY Senate District 110	state-senate
 New York;NY Senate District 111	state-senate
 New York;NY Senate District 112	state-senate
@@ -358,6 +262,7 @@ New York;NY Senate District 116	state-senate
 New York;NY Senate District 117	state-senate
 New York;NY Senate District 118	state-senate
 New York;NY Senate District 119	state-senate
+New York;NY Senate District 12	state-senate
 New York;NY Senate District 120	state-senate
 New York;NY Senate District 121	state-senate
 New York;NY Senate District 122	state-senate
@@ -368,6 +273,7 @@ New York;NY Senate District 126	state-senate
 New York;NY Senate District 127	state-senate
 New York;NY Senate District 128	state-senate
 New York;NY Senate District 129	state-senate
+New York;NY Senate District 13	state-senate
 New York;NY Senate District 130	state-senate
 New York;NY Senate District 131	state-senate
 New York;NY Senate District 132	state-senate
@@ -378,6 +284,7 @@ New York;NY Senate District 136	state-senate
 New York;NY Senate District 137	state-senate
 New York;NY Senate District 138	state-senate
 New York;NY Senate District 139	state-senate
+New York;NY Senate District 14	state-senate
 New York;NY Senate District 140	state-senate
 New York;NY Senate District 141	state-senate
 New York;NY Senate District 142	state-senate
@@ -388,4 +295,97 @@ New York;NY Senate District 146	state-senate
 New York;NY Senate District 147	state-senate
 New York;NY Senate District 148	state-senate
 New York;NY Senate District 149	state-senate
+New York;NY Senate District 15	state-senate
 New York;NY Senate District 150	state-senate
+New York;NY Senate District 16	state-senate
+New York;NY Senate District 17	state-senate
+New York;NY Senate District 18	state-senate
+New York;NY Senate District 19	state-senate
+New York;NY Senate District 2	state-senate
+New York;NY Senate District 20	state-senate
+New York;NY Senate District 21	state-senate
+New York;NY Senate District 22	state-senate
+New York;NY Senate District 23	state-senate
+New York;NY Senate District 24	state-senate
+New York;NY Senate District 25	state-senate
+New York;NY Senate District 26	state-senate
+New York;NY Senate District 27	state-senate
+New York;NY Senate District 28	state-senate
+New York;NY Senate District 29	state-senate
+New York;NY Senate District 3	state-senate
+New York;NY Senate District 30	state-senate
+New York;NY Senate District 31	state-senate
+New York;NY Senate District 32	state-senate
+New York;NY Senate District 33	state-senate
+New York;NY Senate District 34	state-senate
+New York;NY Senate District 35	state-senate
+New York;NY Senate District 36	state-senate
+New York;NY Senate District 37	state-senate
+New York;NY Senate District 38	state-senate
+New York;NY Senate District 39	state-senate
+New York;NY Senate District 4	state-senate
+New York;NY Senate District 40	state-senate
+New York;NY Senate District 41	state-senate
+New York;NY Senate District 42	state-senate
+New York;NY Senate District 43	state-senate
+New York;NY Senate District 44	state-senate
+New York;NY Senate District 45	state-senate
+New York;NY Senate District 46	state-senate
+New York;NY Senate District 47	state-senate
+New York;NY Senate District 48	state-senate
+New York;NY Senate District 49	state-senate
+New York;NY Senate District 5	state-senate
+New York;NY Senate District 50	state-senate
+New York;NY Senate District 51	state-senate
+New York;NY Senate District 52	state-senate
+New York;NY Senate District 53	state-senate
+New York;NY Senate District 54	state-senate
+New York;NY Senate District 55	state-senate
+New York;NY Senate District 56	state-senate
+New York;NY Senate District 57	state-senate
+New York;NY Senate District 58	state-senate
+New York;NY Senate District 59	state-senate
+New York;NY Senate District 6	state-senate
+New York;NY Senate District 60	state-senate
+New York;NY Senate District 61	state-senate
+New York;NY Senate District 62	state-senate
+New York;NY Senate District 63	state-senate
+New York;NY Senate District 64	state-senate
+New York;NY Senate District 65	state-senate
+New York;NY Senate District 66	state-senate
+New York;NY Senate District 67	state-senate
+New York;NY Senate District 68	state-senate
+New York;NY Senate District 69	state-senate
+New York;NY Senate District 7	state-senate
+New York;NY Senate District 70	state-senate
+New York;NY Senate District 71	state-senate
+New York;NY Senate District 72	state-senate
+New York;NY Senate District 73	state-senate
+New York;NY Senate District 74	state-senate
+New York;NY Senate District 75	state-senate
+New York;NY Senate District 76	state-senate
+New York;NY Senate District 77	state-senate
+New York;NY Senate District 78	state-senate
+New York;NY Senate District 79	state-senate
+New York;NY Senate District 8	state-senate
+New York;NY Senate District 80	state-senate
+New York;NY Senate District 81	state-senate
+New York;NY Senate District 82	state-senate
+New York;NY Senate District 83	state-senate
+New York;NY Senate District 84	state-senate
+New York;NY Senate District 85	state-senate
+New York;NY Senate District 86	state-senate
+New York;NY Senate District 87	state-senate
+New York;NY Senate District 88	state-senate
+New York;NY Senate District 89	state-senate
+New York;NY Senate District 9	state-senate
+New York;NY Senate District 90	state-senate
+New York;NY Senate District 91	state-senate
+New York;NY Senate District 92	state-senate
+New York;NY Senate District 93	state-senate
+New York;NY Senate District 94	state-senate
+New York;NY Senate District 95	state-senate
+New York;NY Senate District 96	state-senate
+New York;NY Senate District 97	state-senate
+New York;NY Senate District 98	state-senate
+New York;NY Senate District 99	state-senate

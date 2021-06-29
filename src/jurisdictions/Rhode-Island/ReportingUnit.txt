@@ -1,122 +1,6 @@
 Name	ReportingUnitType
-Rhode Island;RI House District 1	state-house
-Rhode Island;RI House District 2	state-house
-Rhode Island;RI House District 3	state-house
-Rhode Island;RI House District 4	state-house
-Rhode Island;RI House District 5	state-house
-Rhode Island;RI House District 6	state-house
-Rhode Island;RI House District 7	state-house
-Rhode Island;RI House District 8	state-house
-Rhode Island;RI House District 9	state-house
-Rhode Island;RI House District 10	state-house
-Rhode Island;RI House District 11	state-house
-Rhode Island;RI House District 12	state-house
-Rhode Island;RI House District 13	state-house
-Rhode Island;RI House District 14	state-house
-Rhode Island;RI House District 15	state-house
-Rhode Island;RI House District 16	state-house
-Rhode Island;RI House District 17	state-house
-Rhode Island;RI House District 18	state-house
-Rhode Island;RI House District 19	state-house
-Rhode Island;RI House District 20	state-house
-Rhode Island;RI House District 21	state-house
-Rhode Island;RI House District 22	state-house
-Rhode Island;RI House District 23	state-house
-Rhode Island;RI House District 24	state-house
-Rhode Island;RI House District 25	state-house
-Rhode Island;RI House District 26	state-house
-Rhode Island;RI House District 27	state-house
-Rhode Island;RI House District 28	state-house
-Rhode Island;RI House District 29	state-house
-Rhode Island;RI House District 30	state-house
-Rhode Island;RI House District 31	state-house
-Rhode Island;RI House District 32	state-house
-Rhode Island;RI House District 33	state-house
-Rhode Island;RI House District 34	state-house
-Rhode Island;RI House District 35	state-house
-Rhode Island;RI House District 36	state-house
-Rhode Island;RI House District 37	state-house
-Rhode Island;RI House District 38	state-house
-Rhode Island;RI House District 39	state-house
-Rhode Island;RI House District 40	state-house
-Rhode Island;RI House District 41	state-house
-Rhode Island;RI House District 42	state-house
-Rhode Island;RI House District 43	state-house
-Rhode Island;RI House District 44	state-house
-Rhode Island;RI House District 45	state-house
-Rhode Island;RI House District 46	state-house
-Rhode Island;RI House District 47	state-house
-Rhode Island;RI House District 48	state-house
-Rhode Island;RI House District 49	state-house
-Rhode Island;RI House District 50	state-house
-Rhode Island;RI House District 51	state-house
-Rhode Island;RI House District 52	state-house
-Rhode Island;RI House District 53	state-house
-Rhode Island;RI House District 54	state-house
-Rhode Island;RI House District 55	state-house
-Rhode Island;RI House District 56	state-house
-Rhode Island;RI House District 57	state-house
-Rhode Island;RI House District 58	state-house
-Rhode Island;RI House District 59	state-house
-Rhode Island;RI House District 60	state-house
-Rhode Island;RI House District 61	state-house
-Rhode Island;RI House District 62	state-house
-Rhode Island;RI House District 63	state-house
-Rhode Island;RI House District 64	state-house
-Rhode Island;RI House District 65	state-house
-Rhode Island;RI House District 66	state-house
-Rhode Island;RI House District 67	state-house
-Rhode Island;RI House District 68	state-house
-Rhode Island;RI House District 69	state-house
-Rhode Island;RI House District 70	state-house
-Rhode Island;RI House District 71	state-house
-Rhode Island;RI House District 72	state-house
-Rhode Island;RI House District 73	state-house
-Rhode Island;RI House District 74	state-house
-Rhode Island;RI House District 75	state-house
-Rhode Island;RI Senate District 1	state-senate
-Rhode Island;RI Senate District 2	state-senate
-Rhode Island;RI Senate District 3	state-senate
-Rhode Island;RI Senate District 4	state-senate
-Rhode Island;RI Senate District 5	state-senate
-Rhode Island;RI Senate District 6	state-senate
-Rhode Island;RI Senate District 7	state-senate
-Rhode Island;RI Senate District 8	state-senate
-Rhode Island;RI Senate District 9	state-senate
-Rhode Island;RI Senate District 10	state-senate
-Rhode Island;RI Senate District 11	state-senate
-Rhode Island;RI Senate District 12	state-senate
-Rhode Island;RI Senate District 13	state-senate
-Rhode Island;RI Senate District 14	state-senate
-Rhode Island;RI Senate District 15	state-senate
-Rhode Island;RI Senate District 16	state-senate
-Rhode Island;RI Senate District 17	state-senate
-Rhode Island;RI Senate District 18	state-senate
-Rhode Island;RI Senate District 19	state-senate
-Rhode Island;RI Senate District 20	state-senate
-Rhode Island;RI Senate District 21	state-senate
-Rhode Island;RI Senate District 22	state-senate
-Rhode Island;RI Senate District 23	state-senate
-Rhode Island;RI Senate District 24	state-senate
-Rhode Island;RI Senate District 25	state-senate
-Rhode Island;RI Senate District 26	state-senate
-Rhode Island;RI Senate District 27	state-senate
-Rhode Island;RI Senate District 28	state-senate
-Rhode Island;RI Senate District 29	state-senate
-Rhode Island;RI Senate District 30	state-senate
-Rhode Island;RI Senate District 31	state-senate
-Rhode Island;RI Senate District 32	state-senate
-Rhode Island;RI Senate District 33	state-senate
-Rhode Island;RI Senate District 34	state-senate
-Rhode Island;RI Senate District 35	state-senate
-Rhode Island;RI Senate District 36	state-senate
-Rhode Island;RI Senate District 37	state-senate
-Rhode Island;RI Senate District 38	state-senate
-Rhode Island;US House RI District 1	congressional
-Rhode Island;US House RI District 2	congressional
-Rhode Island	state
 Rhode Island;Barrington	city-or-town
-Rhode Island;Bristol	city-or-town
+Rhode Island;Bristol County	city-or-town
 Rhode Island;Burrillville	city-or-town
 Rhode Island;Central Falls	city-or-town
 Rhode Island;Charlestown	city-or-town
@@ -138,13 +22,13 @@ Rhode Island;Little Compton	city-or-town
 Rhode Island;Middletown	city-or-town
 Rhode Island;Narragansett	city-or-town
 Rhode Island;New Shoreham	city-or-town
-Rhode Island;Newport	city-or-town
+Rhode Island;Newport County	city-or-town
 Rhode Island;North Kingstown	city-or-town
 Rhode Island;North Providence	city-or-town
 Rhode Island;North Smithfield	city-or-town
 Rhode Island;Pawtucket	city-or-town
 Rhode Island;Portsmouth	city-or-town
-Rhode Island;Providence	city-or-town
+Rhode Island;Providence County	city-or-town
 Rhode Island;Providence Limi	city-or-town
 Rhode Island;Richmond	city-or-town
 Rhode Island;Scituate	city-or-town
@@ -157,20 +41,24 @@ Rhode Island;West Greenwich	city-or-town
 Rhode Island;West Warwick	city-or-town
 Rhode Island;Westerly	city-or-town
 Rhode Island;Woonsocket	city-or-town
+Rhode Island;US House RI District 1	congressional
+Rhode Island;US House RI District 2	congressional
+Rhode Island;Kent County	county
+Rhode Island;Washington County	county
 Rhode Island;Barrington;Precinct 0101	precinct
 Rhode Island;Barrington;Precinct 0102	precinct
 Rhode Island;Barrington;Precinct 0103	precinct
 Rhode Island;Barrington;Precinct 0104	precinct
 Rhode Island;Barrington;Precinct 0105	precinct
-Rhode Island;Bristol;Precinct 0201	precinct
-Rhode Island;Bristol;Precinct 0202	precinct
-Rhode Island;Bristol;Precinct 0203	precinct
-Rhode Island;Bristol;Precinct 0204	precinct
-Rhode Island;Bristol;Precinct 0205	precinct
-Rhode Island;Bristol;Precinct 0206	precinct
-Rhode Island;Bristol;Precinct 0207	precinct
-Rhode Island;Bristol;Precinct 0208	precinct
-Rhode Island;Bristol;Precinct 0209	precinct
+Rhode Island;Bristol County;Precinct 0201	precinct
+Rhode Island;Bristol County;Precinct 0202	precinct
+Rhode Island;Bristol County;Precinct 0203	precinct
+Rhode Island;Bristol County;Precinct 0204	precinct
+Rhode Island;Bristol County;Precinct 0205	precinct
+Rhode Island;Bristol County;Precinct 0206	precinct
+Rhode Island;Bristol County;Precinct 0207	precinct
+Rhode Island;Bristol County;Precinct 0208	precinct
+Rhode Island;Bristol County;Precinct 0209	precinct
 Rhode Island;Burrillville;Precinct 0301	precinct
 Rhode Island;Burrillville;Precinct 0302	precinct
 Rhode Island;Burrillville;Precinct 0303	precinct
@@ -323,15 +211,15 @@ Rhode Island;Narragansett;Precinct 2003	precinct
 Rhode Island;Narragansett;Precinct 2004	precinct
 Rhode Island;Narragansett;Precinct 2005	precinct
 Rhode Island;New Shoreham;Precinct 2201	precinct
-Rhode Island;Newport;Precinct 2101	precinct
-Rhode Island;Newport;Precinct 2102	precinct
-Rhode Island;Newport;Precinct 2103	precinct
-Rhode Island;Newport;Precinct 2104	precinct
-Rhode Island;Newport;Precinct 2105	precinct
-Rhode Island;Newport;Precinct 2106	precinct
-Rhode Island;Newport;Precinct 2107	precinct
-Rhode Island;Newport;Precinct 2108	precinct
-Rhode Island;Newport;Precinct 2109	precinct
+Rhode Island;Newport County;Precinct 2101	precinct
+Rhode Island;Newport County;Precinct 2102	precinct
+Rhode Island;Newport County;Precinct 2103	precinct
+Rhode Island;Newport County;Precinct 2104	precinct
+Rhode Island;Newport County;Precinct 2105	precinct
+Rhode Island;Newport County;Precinct 2106	precinct
+Rhode Island;Newport County;Precinct 2107	precinct
+Rhode Island;Newport County;Precinct 2108	precinct
+Rhode Island;Newport County;Precinct 2109	precinct
 Rhode Island;North Kingstown;Precinct 2301	precinct
 Rhode Island;North Kingstown;Precinct 2302	precinct
 Rhode Island;North Kingstown;Precinct 2303	precinct
@@ -401,86 +289,86 @@ Rhode Island;Portsmouth;Precinct 2705	precinct
 Rhode Island;Portsmouth;Precinct 2706	precinct
 Rhode Island;Portsmouth;Precinct 2707	precinct
 Rhode Island;Portsmouth;Precinct 2708	precinct
-Rhode Island;Providence;Precinct 2801	precinct
-Rhode Island;Providence;Precinct 2802	precinct
-Rhode Island;Providence;Precinct 2803	precinct
-Rhode Island;Providence;Precinct 2804	precinct
-Rhode Island;Providence;Precinct 2805	precinct
-Rhode Island;Providence;Precinct 2806	precinct
-Rhode Island;Providence;Precinct 2807	precinct
-Rhode Island;Providence;Precinct 2808	precinct
-Rhode Island;Providence;Precinct 2809	precinct
-Rhode Island;Providence;Precinct 2810	precinct
-Rhode Island;Providence;Precinct 2811	precinct
-Rhode Island;Providence;Precinct 2812	precinct
-Rhode Island;Providence;Precinct 2813	precinct
-Rhode Island;Providence;Precinct 2814	precinct
-Rhode Island;Providence;Precinct 2815	precinct
-Rhode Island;Providence;Precinct 2816	precinct
-Rhode Island;Providence;Precinct 2817	precinct
-Rhode Island;Providence;Precinct 2818	precinct
-Rhode Island;Providence;Precinct 2819	precinct
-Rhode Island;Providence;Precinct 2820	precinct
-Rhode Island;Providence;Precinct 2821	precinct
-Rhode Island;Providence;Precinct 2822	precinct
-Rhode Island;Providence;Precinct 2823	precinct
-Rhode Island;Providence;Precinct 2824	precinct
-Rhode Island;Providence;Precinct 2825	precinct
-Rhode Island;Providence;Precinct 2826	precinct
-Rhode Island;Providence;Precinct 2827	precinct
-Rhode Island;Providence;Precinct 2828	precinct
-Rhode Island;Providence;Precinct 2829	precinct
-Rhode Island;Providence;Precinct 2830	precinct
-Rhode Island;Providence;Precinct 2831	precinct
-Rhode Island;Providence;Precinct 2832	precinct
-Rhode Island;Providence;Precinct 2833	precinct
-Rhode Island;Providence;Precinct 2834	precinct
-Rhode Island;Providence;Precinct 2835	precinct
-Rhode Island;Providence;Precinct 2836	precinct
-Rhode Island;Providence;Precinct 2837	precinct
-Rhode Island;Providence;Precinct 2838	precinct
-Rhode Island;Providence;Precinct 2839	precinct
-Rhode Island;Providence;Precinct 2840	precinct
-Rhode Island;Providence;Precinct 2841	precinct
-Rhode Island;Providence;Precinct 2842	precinct
-Rhode Island;Providence;Precinct 2843	precinct
-Rhode Island;Providence;Precinct 2844	precinct
-Rhode Island;Providence;Precinct 2845	precinct
-Rhode Island;Providence;Precinct 2846	precinct
-Rhode Island;Providence;Precinct 2847	precinct
-Rhode Island;Providence;Precinct 2848	precinct
-Rhode Island;Providence;Precinct 2849	precinct
-Rhode Island;Providence;Precinct 2850	precinct
-Rhode Island;Providence;Precinct 2851	precinct
-Rhode Island;Providence;Precinct 2852	precinct
-Rhode Island;Providence;Precinct 2853	precinct
-Rhode Island;Providence;Precinct 2854	precinct
-Rhode Island;Providence;Precinct 2855	precinct
-Rhode Island;Providence;Precinct 2856	precinct
-Rhode Island;Providence;Precinct 2857	precinct
-Rhode Island;Providence;Precinct 2858	precinct
-Rhode Island;Providence;Precinct 2859	precinct
-Rhode Island;Providence;Precinct 2860	precinct
-Rhode Island;Providence;Precinct 2861	precinct
-Rhode Island;Providence;Precinct 2862	precinct
-Rhode Island;Providence;Precinct 2863	precinct
-Rhode Island;Providence;Precinct 2864	precinct
-Rhode Island;Providence;Precinct 2865	precinct
-Rhode Island;Providence;Precinct 2866	precinct
-Rhode Island;Providence;Precinct 2867	precinct
-Rhode Island;Providence;Precinct 2868	precinct
-Rhode Island;Providence;Precinct 2869	precinct
-Rhode Island;Providence;Precinct 2870	precinct
-Rhode Island;Providence;Precinct 2871	precinct
-Rhode Island;Providence;Precinct 2872	precinct
-Rhode Island;Providence;Precinct 2873	precinct
-Rhode Island;Providence;Precinct 2874	precinct
-Rhode Island;Providence;Precinct 2875	precinct
-Rhode Island;Providence;Precinct 2876	precinct
-Rhode Island;Providence;Precinct 2877	precinct
-Rhode Island;Providence;Precinct 2878	precinct
-Rhode Island;Providence;Precinct 2879	precinct
-Rhode Island;Providence;Precinct 2880	precinct
+Rhode Island;Providence County;Precinct 2801	precinct
+Rhode Island;Providence County;Precinct 2802	precinct
+Rhode Island;Providence County;Precinct 2803	precinct
+Rhode Island;Providence County;Precinct 2804	precinct
+Rhode Island;Providence County;Precinct 2805	precinct
+Rhode Island;Providence County;Precinct 2806	precinct
+Rhode Island;Providence County;Precinct 2807	precinct
+Rhode Island;Providence County;Precinct 2808	precinct
+Rhode Island;Providence County;Precinct 2809	precinct
+Rhode Island;Providence County;Precinct 2810	precinct
+Rhode Island;Providence County;Precinct 2811	precinct
+Rhode Island;Providence County;Precinct 2812	precinct
+Rhode Island;Providence County;Precinct 2813	precinct
+Rhode Island;Providence County;Precinct 2814	precinct
+Rhode Island;Providence County;Precinct 2815	precinct
+Rhode Island;Providence County;Precinct 2816	precinct
+Rhode Island;Providence County;Precinct 2817	precinct
+Rhode Island;Providence County;Precinct 2818	precinct
+Rhode Island;Providence County;Precinct 2819	precinct
+Rhode Island;Providence County;Precinct 2820	precinct
+Rhode Island;Providence County;Precinct 2821	precinct
+Rhode Island;Providence County;Precinct 2822	precinct
+Rhode Island;Providence County;Precinct 2823	precinct
+Rhode Island;Providence County;Precinct 2824	precinct
+Rhode Island;Providence County;Precinct 2825	precinct
+Rhode Island;Providence County;Precinct 2826	precinct
+Rhode Island;Providence County;Precinct 2827	precinct
+Rhode Island;Providence County;Precinct 2828	precinct
+Rhode Island;Providence County;Precinct 2829	precinct
+Rhode Island;Providence County;Precinct 2830	precinct
+Rhode Island;Providence County;Precinct 2831	precinct
+Rhode Island;Providence County;Precinct 2832	precinct
+Rhode Island;Providence County;Precinct 2833	precinct
+Rhode Island;Providence County;Precinct 2834	precinct
+Rhode Island;Providence County;Precinct 2835	precinct
+Rhode Island;Providence County;Precinct 2836	precinct
+Rhode Island;Providence County;Precinct 2837	precinct
+Rhode Island;Providence County;Precinct 2838	precinct
+Rhode Island;Providence County;Precinct 2839	precinct
+Rhode Island;Providence County;Precinct 2840	precinct
+Rhode Island;Providence County;Precinct 2841	precinct
+Rhode Island;Providence County;Precinct 2842	precinct
+Rhode Island;Providence County;Precinct 2843	precinct
+Rhode Island;Providence County;Precinct 2844	precinct
+Rhode Island;Providence County;Precinct 2845	precinct
+Rhode Island;Providence County;Precinct 2846	precinct
+Rhode Island;Providence County;Precinct 2847	precinct
+Rhode Island;Providence County;Precinct 2848	precinct
+Rhode Island;Providence County;Precinct 2849	precinct
+Rhode Island;Providence County;Precinct 2850	precinct
+Rhode Island;Providence County;Precinct 2851	precinct
+Rhode Island;Providence County;Precinct 2852	precinct
+Rhode Island;Providence County;Precinct 2853	precinct
+Rhode Island;Providence County;Precinct 2854	precinct
+Rhode Island;Providence County;Precinct 2855	precinct
+Rhode Island;Providence County;Precinct 2856	precinct
+Rhode Island;Providence County;Precinct 2857	precinct
+Rhode Island;Providence County;Precinct 2858	precinct
+Rhode Island;Providence County;Precinct 2859	precinct
+Rhode Island;Providence County;Precinct 2860	precinct
+Rhode Island;Providence County;Precinct 2861	precinct
+Rhode Island;Providence County;Precinct 2862	precinct
+Rhode Island;Providence County;Precinct 2863	precinct
+Rhode Island;Providence County;Precinct 2864	precinct
+Rhode Island;Providence County;Precinct 2865	precinct
+Rhode Island;Providence County;Precinct 2866	precinct
+Rhode Island;Providence County;Precinct 2867	precinct
+Rhode Island;Providence County;Precinct 2868	precinct
+Rhode Island;Providence County;Precinct 2869	precinct
+Rhode Island;Providence County;Precinct 2870	precinct
+Rhode Island;Providence County;Precinct 2871	precinct
+Rhode Island;Providence County;Precinct 2872	precinct
+Rhode Island;Providence County;Precinct 2873	precinct
+Rhode Island;Providence County;Precinct 2874	precinct
+Rhode Island;Providence County;Precinct 2875	precinct
+Rhode Island;Providence County;Precinct 2876	precinct
+Rhode Island;Providence County;Precinct 2877	precinct
+Rhode Island;Providence County;Precinct 2878	precinct
+Rhode Island;Providence County;Precinct 2879	precinct
+Rhode Island;Providence County;Precinct 2880	precinct
 Rhode Island;Richmond;Precinct 2901	precinct
 Rhode Island;Richmond;Precinct 2902	precinct
 Rhode Island;Scituate;Precinct 3001	precinct
@@ -578,3 +466,117 @@ Rhode Island;Woonsocket;Precinct 3909	precinct
 Rhode Island;Woonsocket;Precinct 3910	precinct
 Rhode Island;Woonsocket;Precinct 3911	precinct
 Rhode Island;Woonsocket;Precinct 3912	precinct
+Rhode Island	state
+Rhode Island;RI House District 1	state-house
+Rhode Island;RI House District 10	state-house
+Rhode Island;RI House District 11	state-house
+Rhode Island;RI House District 12	state-house
+Rhode Island;RI House District 13	state-house
+Rhode Island;RI House District 14	state-house
+Rhode Island;RI House District 15	state-house
+Rhode Island;RI House District 16	state-house
+Rhode Island;RI House District 17	state-house
+Rhode Island;RI House District 18	state-house
+Rhode Island;RI House District 19	state-house
+Rhode Island;RI House District 2	state-house
+Rhode Island;RI House District 20	state-house
+Rhode Island;RI House District 21	state-house
+Rhode Island;RI House District 22	state-house
+Rhode Island;RI House District 23	state-house
+Rhode Island;RI House District 24	state-house
+Rhode Island;RI House District 25	state-house
+Rhode Island;RI House District 26	state-house
+Rhode Island;RI House District 27	state-house
+Rhode Island;RI House District 28	state-house
+Rhode Island;RI House District 29	state-house
+Rhode Island;RI House District 3	state-house
+Rhode Island;RI House District 30	state-house
+Rhode Island;RI House District 31	state-house
+Rhode Island;RI House District 32	state-house
+Rhode Island;RI House District 33	state-house
+Rhode Island;RI House District 34	state-house
+Rhode Island;RI House District 35	state-house
+Rhode Island;RI House District 36	state-house
+Rhode Island;RI House District 37	state-house
+Rhode Island;RI House District 38	state-house
+Rhode Island;RI House District 39	state-house
+Rhode Island;RI House District 4	state-house
+Rhode Island;RI House District 40	state-house
+Rhode Island;RI House District 41	state-house
+Rhode Island;RI House District 42	state-house
+Rhode Island;RI House District 43	state-house
+Rhode Island;RI House District 44	state-house
+Rhode Island;RI House District 45	state-house
+Rhode Island;RI House District 46	state-house
+Rhode Island;RI House District 47	state-house
+Rhode Island;RI House District 48	state-house
+Rhode Island;RI House District 49	state-house
+Rhode Island;RI House District 5	state-house
+Rhode Island;RI House District 50	state-house
+Rhode Island;RI House District 51	state-house
+Rhode Island;RI House District 52	state-house
+Rhode Island;RI House District 53	state-house
+Rhode Island;RI House District 54	state-house
+Rhode Island;RI House District 55	state-house
+Rhode Island;RI House District 56	state-house
+Rhode Island;RI House District 57	state-house
+Rhode Island;RI House District 58	state-house
+Rhode Island;RI House District 59	state-house
+Rhode Island;RI House District 6	state-house
+Rhode Island;RI House District 60	state-house
+Rhode Island;RI House District 61	state-house
+Rhode Island;RI House District 62	state-house
+Rhode Island;RI House District 63	state-house
+Rhode Island;RI House District 64	state-house
+Rhode Island;RI House District 65	state-house
+Rhode Island;RI House District 66	state-house
+Rhode Island;RI House District 67	state-house
+Rhode Island;RI House District 68	state-house
+Rhode Island;RI House District 69	state-house
+Rhode Island;RI House District 7	state-house
+Rhode Island;RI House District 70	state-house
+Rhode Island;RI House District 71	state-house
+Rhode Island;RI House District 72	state-house
+Rhode Island;RI House District 73	state-house
+Rhode Island;RI House District 74	state-house
+Rhode Island;RI House District 75	state-house
+Rhode Island;RI House District 8	state-house
+Rhode Island;RI House District 9	state-house
+Rhode Island;RI Senate District 1	state-senate
+Rhode Island;RI Senate District 10	state-senate
+Rhode Island;RI Senate District 11	state-senate
+Rhode Island;RI Senate District 12	state-senate
+Rhode Island;RI Senate District 13	state-senate
+Rhode Island;RI Senate District 14	state-senate
+Rhode Island;RI Senate District 15	state-senate
+Rhode Island;RI Senate District 16	state-senate
+Rhode Island;RI Senate District 17	state-senate
+Rhode Island;RI Senate District 18	state-senate
+Rhode Island;RI Senate District 19	state-senate
+Rhode Island;RI Senate District 2	state-senate
+Rhode Island;RI Senate District 20	state-senate
+Rhode Island;RI Senate District 21	state-senate
+Rhode Island;RI Senate District 22	state-senate
+Rhode Island;RI Senate District 23	state-senate
+Rhode Island;RI Senate District 24	state-senate
+Rhode Island;RI Senate District 25	state-senate
+Rhode Island;RI Senate District 26	state-senate
+Rhode Island;RI Senate District 27	state-senate
+Rhode Island;RI Senate District 28	state-senate
+Rhode Island;RI Senate District 29	state-senate
+Rhode Island;RI Senate District 3	state-senate
+Rhode Island;RI Senate District 30	state-senate
+Rhode Island;RI Senate District 31	state-senate
+Rhode Island;RI Senate District 32	state-senate
+Rhode Island;RI Senate District 33	state-senate
+Rhode Island;RI Senate District 34	state-senate
+Rhode Island;RI Senate District 35	state-senate
+Rhode Island;RI Senate District 36	state-senate
+Rhode Island;RI Senate District 37	state-senate
+Rhode Island;RI Senate District 38	state-senate
+Rhode Island;RI Senate District 4	state-senate
+Rhode Island;RI Senate District 5	state-senate
+Rhode Island;RI Senate District 6	state-senate
+Rhode Island;RI Senate District 7	state-senate
+Rhode Island;RI Senate District 8	state-senate
+Rhode Island;RI Senate District 9	state-senate

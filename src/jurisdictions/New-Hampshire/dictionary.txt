@@ -412,8 +412,8 @@ Candidate	Conrad Odom	Conrad Odom
 Candidate	Corey Wikstrom	Corey Wikstrom
 Candidate	Corinna Balderramos Robinson	Corinna Balderramos Robinson
 Candidate	Corky Messner	Corky Messner
-Candidate	Cory Booker	Cory Booker
 Candidate	Cory Booker	Booker
+Candidate	Cory Booker	Cory Booker
 Candidate	Councilman Bobby Long	Councilman Bobby Long
 Candidate	Councilman RJ Hawk	Councilman RJ Hawk
 Candidate	Court of Appeals Judge Mark Klappenbach	Court of Appeals Judge Mark Klappenbach
@@ -583,10 +583,10 @@ Candidate	District Judge Brian Mueller	District Judge Brian Mueller
 Candidate	District Judge Chris Carnahan	District Judge Chris Carnahan
 Candidate	Don Bolduc	Don Bolduc
 Candidate	Don Sollom	Don Sollom
+Candidate	Donald J. Trump	DONALD TRUMP
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Trump
 Candidate	Donald J. Trump	Trump and Pence
-Candidate	Donald J. Trump	DONALD TRUMP
 Candidate	Donald Raleigh	Donald Raleigh
 Candidate	Donelly Boeder	Donelly Boeder
 Candidate	Donna Barcomb	Donna Barcomb
@@ -959,8 +959,8 @@ Candidate	Jaye White	Jaye White
 Candidate	Jayesun Israel Sherman	Jayesun Israel Sherman
 Candidate	Jean-Pierre Bado	Jean-Pierre Bado
 Candidate	Jeanne Shaheen	Jeanne Shaheen
-Candidate	Jeff Crow	Jeff Crow
 Candidate	Jeff Crow	Crow
+Candidate	Jeff Crow	Jeff Crow
 Candidate	Jeff Docken	Jeff Docken
 Candidate	Jeff Hayden	Jeff Hayden
 Candidate	Jeff Hinkle	Jeff Hinkle
@@ -992,8 +992,8 @@ Candidate	Jim Lucachick	Jim Lucachick
 Candidate	Jim Purfeerst	Jim Purfeerst
 Candidate	Jim Reynolds	Jim Reynolds
 Candidate	Jim Reynolds	Reynolds
-Candidate	Jo Jorgensen	Jorgensen and Cohen lib
 Candidate	Jo Jorgensen	Jorgensen and Cohen
+Candidate	Jo Jorgensen	Jorgensen and Cohen lib
 Candidate	Joan Anthony	Joan Anthony
 Candidate	Joe (Joseph) Adamek	Joe (Joseph) Adamek
 Candidate	Joe Dallas Millado	Joe Dallas Millado
@@ -1011,8 +1011,8 @@ Candidate	John Burkel	John Burkel
 Candidate	John F. Durrett	John F. Durrett
 Candidate	John H. Rutherford	John H. Rutherford
 Candidate	John J. Moren	John J. Moren
-Candidate	John K. Delaney	John K. Delaney
 Candidate	John K. Delaney	Delaney
+Candidate	John K. Delaney	John K. Delaney
 Candidate	John Kerry	JOHN KERRY
 Candidate	John L. Berman	John L. Berman
 Candidate	John L. Smith	John L. Smith
@@ -1034,9 +1034,9 @@ Candidate	Jonathan Q. Warren	Jonathan Q. Warren
 Candidate	Jordan Potter	Jordan Potter
 Candidate	Jorge Becker	Jorge Becker
 Candidate	Jose Castillo	Jose Castillo
-Candidate	Joseph R. Biden	Joseph R. Biden
 Candidate	Joseph R. Biden	Biden
 Candidate	Joseph R. Biden	Biden and Harris
+Candidate	Joseph R. Biden	Joseph R. Biden
 Candidate	Josh Newton	Josh Newton
 Candidate	Joshua David Rydell	Joshua David Rydell
 Candidate	Josiah Hill	Josiah Hill
@@ -1067,8 +1067,8 @@ Candidate	Judith Schwartzbacker	Judith Schwartzbacker
 Candidate	Judson Sapp	Judson Sapp
 Candidate	Judy Bowers	Judy Bowers
 Candidate	Julia Coleman	Julia Coleman
-Candidate	Julian Castro	Julian Castro
 Candidate	Julian Castro	Castro
+Candidate	Julian Castro	Julian Castro
 Candidate	Julie Bolduc	Julie Bolduc
 Candidate	Julie Bredeson	Julie Bredeson
 Candidate	Julie Dupré	Julie Dupré
@@ -1138,8 +1138,8 @@ Candidate	KRUEGER-BRANEKY, LEANNE T	KRUEGER-BRANEKY, LEANNE T
 Candidate	KULIK, ANITA A	KULIK, ANITA A
 Candidate	KUNKEL, STEPHEN FAGER	KUNKEL, STEPHEN FAGER
 Candidate	KYNE, CAROLINE	KYNE, CAROLINE
-Candidate	Kamala Harris	Kamala Harris
 Candidate	Kamala Harris	Harris
+Candidate	Kamala Harris	Kamala Harris
 Candidate	Kandice Bell	Kandice Bell
 Candidate	Karin Housley	Karin Housley
 Candidate	Karyn Maynard	Karyn Maynard
@@ -1149,8 +1149,8 @@ Candidate	Kathi Ellis	Kathi Ellis
 Candidate	Kathie Hess	Kathie Hess
 Candidate	Katie Malchow	Katie Malchow
 Candidate	Kaylee Tuck	Kaylee Tuck
-Candidate	Keidra Burrell	Keidra Burrell
 Candidate	Keidra Burrell	Burrell
+Candidate	Keidra Burrell	Keidra Burrell
 Candidate	Keisha Bell	Keisha Bell
 Candidate	Keith Allen	Keith Allen
 Candidate	Keith Brooks	Keith Brooks
@@ -1454,8 +1454,8 @@ Candidate	Melisa Lopez Franzen	Melisa Lopez Franzen
 Candidate	Meredith Chaiken-Weiss	Meredith Chaiken-Weiss
 Candidate	Meredith Switzer	Meredith Switzer
 Candidate	Merrill	Merrill
-Candidate	Michael Bennet	Michael Bennet
 Candidate	Michael Bennet	Bennet
+Candidate	Michael Bennet	Michael Bennet
 Candidate	Michael D. Weinstein	Michael D. Weinstein
 Candidate	Michael Gean Pierce	Michael Gean Pierce
 Candidate	Michael J Starry	Michael J Starry
@@ -1466,8 +1466,8 @@ Candidate	Michael Owen	Michael Owen
 Candidate	Michael Peacock	Michael Peacock
 Candidate	Michael Potter	Michael Potter
 Candidate	Michael R. 'Mike' Henkel	Michael R. 'Mike' Henkel
-Candidate	Michael R. Bloomberg	Michael R. Bloomberg
 Candidate	Michael R. Bloomberg	Bloomberg
+Candidate	Michael R. Bloomberg	Michael R. Bloomberg
 Candidate	Michael Sukalski	Michael Sukalski
 Candidate	Michael Vilardi	Michael Vilardi
 Candidate	Michael Weyer	Michael Weyer
@@ -1490,8 +1490,8 @@ Candidate	Mitt Romney	MITT ROMNEY
 Candidate	Monique Worrell	Monique Worrell
 Candidate	Morey Wright	Morey Wright
 Candidate	Moroz	Moroz
-Candidate	Mosie Boyd	Mosie Boyd
 Candidate	Mosie Boyd	Boyd
+Candidate	Mosie Boyd	Mosie Boyd
 Candidate	Murphy	Murphy
 Candidate	Myron Bursheim	Myron Bursheim
 Candidate	NEAFCY, THOMAS J JR	NEAFCY, THOMAS J JR
@@ -1630,8 +1630,8 @@ Candidate	Peggy (Margaret) Egan	Peggy (Margaret) Egan
 Candidate	Peggy Bennett	Peggy Bennett
 Candidate	Penny Arcos	Penny Arcos
 Candidate	Perry E. Thurston	Perry E. Thurston
-Candidate	Pete Buttigieg	Pete Buttigieg
 Candidate	Pete Buttigieg	Buttigieg
+Candidate	Pete Buttigieg	Pete Buttigieg
 Candidate	Pete Stauber	Pete Stauber
 Candidate	Pete Williams	Pete Williams
 Candidate	Peter Koch	Peter Koch
@@ -1779,8 +1779,8 @@ Candidate	Roger Wagoner	Roger Wagoner
 Candidate	Roger Walvatne	Roger Walvatne
 Candidate	Ron Thiessen	Ron Thiessen
 Candidate	Ronald Otto	Ronald Otto
-Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
 Candidate	Roque 'Rocky' De La Fuente	Fuente
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
 Candidate	Rosa Maria 'Rosy' Palomino	Rosa Maria 'Rosy' Palomino
 Candidate	Ross Spano	Ross Spano
 Candidate	Rosy Anette Aponte	Rosy Anette Aponte
@@ -1950,10 +1950,10 @@ Candidate	Scott Willhite	Scott Willhite
 Candidate	Scott Yeiter	Scott Yeiter
 Candidate	Scott Yelle	Scott Yelle
 Candidate	Seema Maddali	Seema Maddali
-Candidate	Senator Alan Clark	Senator Alan Clark
 Candidate	Senator Alan Clark	Clark
-Candidate	Senator Stephanie Flowers	Senator Stephanie Flowers
+Candidate	Senator Alan Clark	Senator Alan Clark
 Candidate	Senator Stephanie Flowers	Flowers
+Candidate	Senator Stephanie Flowers	Senator Stephanie Flowers
 Candidate	Sergio E. Ortiz	Sergio E. Ortiz
 Candidate	Shane Ethridge	Shane Ethridge
 Candidate	Shane Mekeland	Shane Mekeland
@@ -1980,15 +1980,15 @@ Candidate	Stacey Hawkins	Stacey Hawkins
 Candidate	State Representative Denise Ennett	State Representative Denise Ennett
 Candidate	State Representative Jana Della Rosa	State Representative Jana Della Rosa
 Candidate	State Representative Sarah Capp	State Representative Sarah Capp
-Candidate	State Senator John Cooper	State Senator John Cooper
 Candidate	State Senator John Cooper	Cooper
+Candidate	State Senator John Cooper	State Senator John Cooper
 Candidate	Stephanie L. Dukes	Stephanie L. Dukes
 Candidate	Stephen A. Emery	Stephen A. Emery
 Candidate	Stephen Shirron	Stephen Shirron
 Candidate	Stevan Novakovic	Stevan Novakovic
 Candidate	Steve (Smorgie) Enestvedt	Steve (Smorgie) Enestvedt
-Candidate	Steve Bullock	Steve Bullock
 Candidate	Steve Bullock	Bullock
+Candidate	Steve Bullock	Steve Bullock
 Candidate	Steve Carlson	Steve Carlson
 Candidate	Steve Hauswedell	Steve Hauswedell
 Candidate	Steve Henderson	Steve Henderson
@@ -2086,8 +2086,8 @@ Candidate	Tom Fabricio	Tom Fabricio
 Candidate	Tom Lynch	Tom Lynch
 Candidate	Tom Nixon	Tom Nixon
 Candidate	Tom Owens	Tom Owens
-Candidate	Tom Steyer	Tom Steyer
 Candidate	Tom Steyer	Steyer
+Candidate	Tom Steyer	Tom Steyer
 Candidate	Tom Wells	Tom Wells
 Candidate	Tom Young	Tom Young
 Candidate	Tommy Potter	Tommy Potter
@@ -2097,8 +2097,8 @@ Candidate	Tony Tsonis	Tony Tsonis
 Candidate	Tony Webber	Tony Webber
 Candidate	Torgesen	Torgesen
 Candidate	Tracie Davis	Tracie Davis
-Candidate	Tulsi Gabbard	Tulsi Gabbard
 Candidate	Tulsi Gabbard	Gabbard
+Candidate	Tulsi Gabbard	Tulsi Gabbard
 Candidate	ULLMAN, WENDY	ULLMAN, WENDY
 Candidate	URAM, THOMAS JOSEPH	URAM, THOMAS JOSEPH
 Candidate	Ulysses Buck Harvard	Ulysses Buck Harvard
@@ -4373,9 +4373,9 @@ CandidateContest	US House NH District 2 (Democratic Party)	US House NH District 
 CandidateContest	US House NH District 2 (Green Party)	US House NH District 2 (g)
 CandidateContest	US House NH District 2 (Libertarian Party)	US House NH District 2 (l)
 CandidateContest	US House NH District 2 (Republican Party)	US House NH District 2 (r)
-CandidateContest	US President (NH)	US President (NH)
 CandidateContest	US President (NH)	PRESIDENT
 CandidateContest	US President (NH)	US PRESIDENT
+CandidateContest	US President (NH)	US President (NH)
 CandidateContest	US President (NH) (Democratic Party)	US President (NH) (d)
 CandidateContest	US President (NH) (Green Party)	US President (NH) (g)
 CandidateContest	US President (NH) (Libertarian Party)	US President (NH) (l)
@@ -4390,21 +4390,21 @@ Election	2016 General	2016 General
 Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
-Party	Democratic Party	d
 Party	Democratic Party	DEMOCRAT
-Party	Green Party	g
+Party	Democratic Party	d
 Party	Green Party	GREEN
-Party	Libertarian Party	l
+Party	Green Party	g
 Party	Libertarian Party	Jorgensen and Cohen lib
-Party	Libertarian Party	lib
 Party	Libertarian Party	LIBERTARIAN
-Party	Republican Party	r
+Party	Libertarian Party	l
+Party	Libertarian Party	lib
 Party	Republican Party	REPUBLICAN
+Party	Republican Party	r
 Party	none or unknown	OTHER
 ReportingUnit	New Hampshire	New Hampshire
 ReportingUnit	New Hampshire;Belknap County	Belknap
 ReportingUnit	New Hampshire;Belknap County	Belknap*
-ReportingUnit	New Hampshire;Belknap County	33001
+ReportingUnit	New Hampshire;Belknap County	fips33001
 ReportingUnit	New Hampshire;Belknap County;Alton	Alton
 ReportingUnit	New Hampshire;Belknap County;Barnstead	Barnstead
 ReportingUnit	New Hampshire;Belknap County;Belmont	Belmont
@@ -4424,7 +4424,7 @@ ReportingUnit	New Hampshire;Belknap County;Sanbornton	Sanbornton
 ReportingUnit	New Hampshire;Belknap County;Tilton	Tilton
 ReportingUnit	New Hampshire;Carroll County	Carroll
 ReportingUnit	New Hampshire;Carroll County	Carroll*
-ReportingUnit	New Hampshire;Carroll County	33003
+ReportingUnit	New Hampshire;Carroll County	fips33003
 ReportingUnit	New Hampshire;Carroll County;Albany	Albany
 ReportingUnit	New Hampshire;Carroll County;Bartlett	Bartlett
 ReportingUnit	New Hampshire;Carroll County;Brookfield	Brookfield
@@ -4446,7 +4446,7 @@ ReportingUnit	New Hampshire;Carroll County;Wakefield	Wakefield
 ReportingUnit	New Hampshire;Carroll County;Wolfeboro	Wolfeboro
 ReportingUnit	New Hampshire;Cheshire County	Cheshire
 ReportingUnit	New Hampshire;Cheshire County	Cheshire*
-ReportingUnit	New Hampshire;Cheshire County	33005
+ReportingUnit	New Hampshire;Cheshire County	fips33005
 ReportingUnit	New Hampshire;Cheshire County;Alstead	Alstead
 ReportingUnit	New Hampshire;Cheshire County;Chesterfield	Chesterfield
 ReportingUnit	New Hampshire;Cheshire County;Dublin	Dublin
@@ -4456,6 +4456,11 @@ ReportingUnit	New Hampshire;Cheshire County;Harrisville	Harrisville
 ReportingUnit	New Hampshire;Cheshire County;Hinsdale	Hinsdale
 ReportingUnit	New Hampshire;Cheshire County;Jaffrey	Jaffrey
 ReportingUnit	New Hampshire;Cheshire County;Keene	Keene
+ReportingUnit	New Hampshire;Cheshire County;Keene;Ward 1	Keene - Ward 1
+ReportingUnit	New Hampshire;Cheshire County;Keene;Ward 2	Keene - Ward 2
+ReportingUnit	New Hampshire;Cheshire County;Keene;Ward 3*	Keene - Ward 3*
+ReportingUnit	New Hampshire;Cheshire County;Keene;Ward 4	Keene - Ward 4
+ReportingUnit	New Hampshire;Cheshire County;Keene;Ward 5	Keene - Ward 5
 ReportingUnit	New Hampshire;Cheshire County;Marlborough	Marlborough
 ReportingUnit	New Hampshire;Cheshire County;Marlow	Marlow
 ReportingUnit	New Hampshire;Cheshire County;Nelson	Nelson
@@ -4472,7 +4477,7 @@ ReportingUnit	New Hampshire;Cheshire County;Westmoreland	Westmoreland
 ReportingUnit	New Hampshire;Cheshire County;Winchester	Winchester
 ReportingUnit	New Hampshire;Coos County	Coos
 ReportingUnit	New Hampshire;Coos County	Coos*
-ReportingUnit	New Hampshire;Coos County	33007
+ReportingUnit	New Hampshire;Coos County	fips33007
 ReportingUnit	New Hampshire;Coos County; Grant	Grant
 ReportingUnit	New Hampshire;Coos County; Mes's Purchase	Mes's Purchase
 ReportingUnit	New Hampshire;Coos County;At. & Gil Ac. Grant	At. & Gil Ac. Grant
@@ -4517,18 +4522,13 @@ ReportingUnit	New Hampshire;Coos County;Stark	Stark
 ReportingUnit	New Hampshire;Coos County;Stewartstown	Stewartstown
 ReportingUnit	New Hampshire;Coos County;Stratford	Stratford
 ReportingUnit	New Hampshire;Coos County;Success	Success
-ReportingUnit	New Hampshire;Coos County;Thompson & Mes's Purchase	Thompson & Mes's Purchase
 ReportingUnit	New Hampshire;Coos County;Thompson & Mes's Purchase	Thomp. and Mes's Pur.
+ReportingUnit	New Hampshire;Coos County;Thompson & Mes's Purchase	Thompson & Mes's Purchase
 ReportingUnit	New Hampshire;Coos County;Wentworth's Location	Wentworth's Location
 ReportingUnit	New Hampshire;Coos County;Whitefield	Whitefield
-ReportingUnit	New Hampshire;Cheshire County;Keene;Ward 1	Keene - Ward 1
-ReportingUnit	New Hampshire;Cheshire County;Keene;Ward 2	Keene - Ward 2
-ReportingUnit	New Hampshire;Cheshire County;Keene;Ward 3*	Keene - Ward 3*
-ReportingUnit	New Hampshire;Cheshire County;Keene;Ward 4	Keene - Ward 4
-ReportingUnit	New Hampshire;Cheshire County;Keene;Ward 5	Keene - Ward 5
 ReportingUnit	New Hampshire;Grafton County	Grafton
 ReportingUnit	New Hampshire;Grafton County	Grafton*
-ReportingUnit	New Hampshire;Grafton County	33009
+ReportingUnit	New Hampshire;Grafton County	fips33009
 ReportingUnit	New Hampshire;Grafton County;Alexandria	Alexandria
 ReportingUnit	New Hampshire;Grafton County;Ashland	Ashland
 ReportingUnit	New Hampshire;Grafton County;Bath	Bath
@@ -4574,7 +4574,7 @@ ReportingUnit	New Hampshire;Grafton County;Wentworth	Wentworth
 ReportingUnit	New Hampshire;Grafton County;Woodstock	Woodstock
 ReportingUnit	New Hampshire;Hillsborough County	Hillsborough
 ReportingUnit	New Hampshire;Hillsborough County	Hillsborough*
-ReportingUnit	New Hampshire;Hillsborough County	33011
+ReportingUnit	New Hampshire;Hillsborough County	fips33011
 ReportingUnit	New Hampshire;Hillsborough County;Amherst	Amherst
 ReportingUnit	New Hampshire;Hillsborough County;Antrim	Antrim
 ReportingUnit	New Hampshire;Hillsborough County;Bedford	Bedford
@@ -4609,15 +4609,6 @@ ReportingUnit	New Hampshire;Hillsborough County;Merrimack	Merrimack (town)
 ReportingUnit	New Hampshire;Hillsborough County;Milford	Milford
 ReportingUnit	New Hampshire;Hillsborough County;Mont Vernon	Mont Vernon
 ReportingUnit	New Hampshire;Hillsborough County;Nashua	Nashua
-ReportingUnit	New Hampshire;Hillsborough County;New Boston	New Boston
-ReportingUnit	New Hampshire;Hillsborough County;New Ipswich	New Ipswich
-ReportingUnit	New Hampshire;Hillsborough County;Pelham	Pelham
-ReportingUnit	New Hampshire;Hillsborough County;Peterborough	Peterborough
-ReportingUnit	New Hampshire;Hillsborough County;Sharon	Sharon
-ReportingUnit	New Hampshire;Hillsborough County;Temple	Temple
-ReportingUnit	New Hampshire;Hillsborough County;Weare	Weare
-ReportingUnit	New Hampshire;Hillsborough County;Wilton	Wilton
-ReportingUnit	New Hampshire;Hillsborough County;Windsor	Windsor
 ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 1	Nashua - Ward 1
 ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 2	Nashua - Ward 2
 ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 3	Nashua - Ward 3
@@ -4627,9 +4618,18 @@ ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 6	Nashua - Ward 6
 ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 7	Nashua - Ward 7
 ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 8	Nashua - Ward 8
 ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 9	Nashua - Ward 9
+ReportingUnit	New Hampshire;Hillsborough County;New Boston	New Boston
+ReportingUnit	New Hampshire;Hillsborough County;New Ipswich	New Ipswich
+ReportingUnit	New Hampshire;Hillsborough County;Pelham	Pelham
+ReportingUnit	New Hampshire;Hillsborough County;Peterborough	Peterborough
+ReportingUnit	New Hampshire;Hillsborough County;Sharon	Sharon
+ReportingUnit	New Hampshire;Hillsborough County;Temple	Temple
+ReportingUnit	New Hampshire;Hillsborough County;Weare	Weare
+ReportingUnit	New Hampshire;Hillsborough County;Wilton	Wilton
+ReportingUnit	New Hampshire;Hillsborough County;Windsor	Windsor
 ReportingUnit	New Hampshire;Merrimack County	Merrimack
 ReportingUnit	New Hampshire;Merrimack County	Merrimack*
-ReportingUnit	New Hampshire;Merrimack County	33013
+ReportingUnit	New Hampshire;Merrimack County	fips33013
 ReportingUnit	New Hampshire;Merrimack County;Allenstown	Allenstown
 ReportingUnit	New Hampshire;Merrimack County;Andover	Andover
 ReportingUnit	New Hampshire;Merrimack County;Boscawen	Boscawen
@@ -4672,7 +4672,7 @@ ReportingUnit	New Hampshire;Merrimack County;Webster	Webster
 ReportingUnit	New Hampshire;Merrimack County;Wilmot	Wilmot
 ReportingUnit	New Hampshire;Rockingham County	Rockingham
 ReportingUnit	New Hampshire;Rockingham County	Rockingham*
-ReportingUnit	New Hampshire;Rockingham County	33015
+ReportingUnit	New Hampshire;Rockingham County	fips33015
 ReportingUnit	New Hampshire;Rockingham County;Atkinson	Atkinson
 ReportingUnit	New Hampshire;Rockingham County;Auburn	Auburn
 ReportingUnit	New Hampshire;Rockingham County;Brentwood	Brentwood
@@ -4717,7 +4717,7 @@ ReportingUnit	New Hampshire;Rockingham County;Stratham	Stratham
 ReportingUnit	New Hampshire;Rockingham County;Windham	Windham
 ReportingUnit	New Hampshire;Strafford County	Strafford
 ReportingUnit	New Hampshire;Strafford County	Strafford*
-ReportingUnit	New Hampshire;Strafford County	33017
+ReportingUnit	New Hampshire;Strafford County	fips33017
 ReportingUnit	New Hampshire;Strafford County;Barrington	Barrington
 ReportingUnit	New Hampshire;Strafford County;Dover	Dover
 ReportingUnit	New Hampshire;Strafford County;Dover;Ward 1	Dover - Ward 1
@@ -4750,7 +4750,7 @@ ReportingUnit	New Hampshire;Strafford County;Somersworth;Ward 5	Somersworth - Wa
 ReportingUnit	New Hampshire;Strafford County;Strafford	Strafford (town)
 ReportingUnit	New Hampshire;Sullivan County	Sullivan
 ReportingUnit	New Hampshire;Sullivan County	Sullivan*
-ReportingUnit	New Hampshire;Sullivan County	33019
+ReportingUnit	New Hampshire;Sullivan County	fips33019
 ReportingUnit	New Hampshire;Sullivan County;Acworth	Acworth
 ReportingUnit	New Hampshire;Sullivan County;Charlestown	Charlestown
 ReportingUnit	New Hampshire;Sullivan County;Claremont	Claremont

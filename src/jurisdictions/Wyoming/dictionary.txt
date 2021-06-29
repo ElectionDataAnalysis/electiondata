@@ -36,8 +36,8 @@ Candidate	Daniel Furphy	Daniel Furphy
 Candidate	Danny Eyre	Danny Eyre
 Candidate	Dave Kinskey	Dave Kinskey
 Candidate	Donald Burkhart	Donald Burkhart
-Candidate	Donald J. Trump	Donald J. Trump and Michael R. Pence
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump and Michael R. Pence
 Candidate	Ed Cooper	Ed Cooper
 Candidate	Ember Oakley	Ember Oakley
 Candidate	Eric Barlow	Eric Barlow
@@ -127,9 +127,9 @@ Candidate	Valaira Whiteman	Valaira Whiteman
 Candidate	Wendy Degroot	Wendy Degroot
 Candidate	Write-Ins	Write-Ins
 CandidateContest	US House WY District 1	United States Representative
-CandidateContest	US President (WY)	United States President
 CandidateContest	US President (WY)	PRESIDENT
 CandidateContest	US President (WY)	US PRESIDENT
+CandidateContest	US President (WY)	United States President
 CandidateContest	US Senate WY	United States Senator
 CandidateContest	WY Attorney General	WY Attorney General
 CandidateContest	WY Governor	WY Governor
@@ -234,8 +234,8 @@ Election	2020 Primary	2020 Primary
 Party	Constitution Party	CONST
 Party	Democratic Party	D
 Party	Democratic Party	DEMOCRAT
-Party	Green Party	Green Party
 Party	Green Party	GREEN
+Party	Green Party	Green Party
 Party	Independent	I
 Party	Libertarian Party	L
 Party	Libertarian Party	LIBERTARIAN
@@ -244,48 +244,48 @@ Party	Republican Party	REPUBLICAN
 Party	none or unknown	OTHER
 ReportingUnit	Wyoming	Wyoming
 ReportingUnit	Wyoming;Albany County	Albany
-ReportingUnit	Wyoming;Albany County	56001
+ReportingUnit	Wyoming;Albany County	fips56001
 ReportingUnit	Wyoming;Big Horn County	Big Horn
-ReportingUnit	Wyoming;Big Horn County	56003
+ReportingUnit	Wyoming;Big Horn County	fips56003
 ReportingUnit	Wyoming;Campbell County	Campbell
-ReportingUnit	Wyoming;Campbell County	56005
+ReportingUnit	Wyoming;Campbell County	fips56005
 ReportingUnit	Wyoming;Carbon County	Carbon
-ReportingUnit	Wyoming;Carbon County	56007
+ReportingUnit	Wyoming;Carbon County	fips56007
 ReportingUnit	Wyoming;Converse County	Converse
-ReportingUnit	Wyoming;Converse County	56009
+ReportingUnit	Wyoming;Converse County	fips56009
 ReportingUnit	Wyoming;Crook County	Crook
-ReportingUnit	Wyoming;Crook County	56011
+ReportingUnit	Wyoming;Crook County	fips56011
 ReportingUnit	Wyoming;Fremont County	Fremont
-ReportingUnit	Wyoming;Fremont County	56013
+ReportingUnit	Wyoming;Fremont County	fips56013
 ReportingUnit	Wyoming;Goshen County	Goshen
-ReportingUnit	Wyoming;Goshen County	56015
+ReportingUnit	Wyoming;Goshen County	fips56015
 ReportingUnit	Wyoming;Hot Springs County	Hot Springs
-ReportingUnit	Wyoming;Hot Springs County	56017
+ReportingUnit	Wyoming;Hot Springs County	fips56017
 ReportingUnit	Wyoming;Johnson County	Johnson
-ReportingUnit	Wyoming;Johnson County	56019
+ReportingUnit	Wyoming;Johnson County	fips56019
 ReportingUnit	Wyoming;Laramie County	Laramie
-ReportingUnit	Wyoming;Laramie County	56021
+ReportingUnit	Wyoming;Laramie County	fips56021
 ReportingUnit	Wyoming;Lincoln County	Lincoln
-ReportingUnit	Wyoming;Lincoln County	56023
+ReportingUnit	Wyoming;Lincoln County	fips56023
 ReportingUnit	Wyoming;Natrona County	Natrona
-ReportingUnit	Wyoming;Natrona County	56025
+ReportingUnit	Wyoming;Natrona County	fips56025
 ReportingUnit	Wyoming;Niobrara County	Niobrara
-ReportingUnit	Wyoming;Niobrara County	56027
+ReportingUnit	Wyoming;Niobrara County	fips56027
 ReportingUnit	Wyoming;Park County	Park
-ReportingUnit	Wyoming;Park County	56029
+ReportingUnit	Wyoming;Park County	fips56029
 ReportingUnit	Wyoming;Platte County	Platte
-ReportingUnit	Wyoming;Platte County	56031
+ReportingUnit	Wyoming;Platte County	fips56031
 ReportingUnit	Wyoming;Sheridan County	Sheridan
-ReportingUnit	Wyoming;Sheridan County	56033
+ReportingUnit	Wyoming;Sheridan County	fips56033
 ReportingUnit	Wyoming;Sublette County	Sublette
-ReportingUnit	Wyoming;Sublette County	56035
+ReportingUnit	Wyoming;Sublette County	fips56035
 ReportingUnit	Wyoming;Sweetwater County	Sweetwater
-ReportingUnit	Wyoming;Sweetwater County	56037
+ReportingUnit	Wyoming;Sweetwater County	fips56037
 ReportingUnit	Wyoming;Teton County	Teton
-ReportingUnit	Wyoming;Teton County	56039
+ReportingUnit	Wyoming;Teton County	fips56039
 ReportingUnit	Wyoming;Uinta County	Uinta
-ReportingUnit	Wyoming;Uinta County	56041
+ReportingUnit	Wyoming;Uinta County	fips56041
 ReportingUnit	Wyoming;Washakie County	Washakie
-ReportingUnit	Wyoming;Washakie County	56043
+ReportingUnit	Wyoming;Washakie County	fips56043
 ReportingUnit	Wyoming;Weston County	Weston
-ReportingUnit	Wyoming;Weston County	56045
+ReportingUnit	Wyoming;Weston County	fips56045

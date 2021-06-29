@@ -67,8 +67,8 @@ Candidate	Dewayne Pemberton	Dewayne Pemberton
 Candidate	Dianna Cope	Dianna Cope
 Candidate	Dick Lowe	Dick Lowe
 Candidate	Don Bradley	Don Bradley
-Candidate	Donald J. Trump	Donald J. Trump | Michael R. Pence
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump | Michael R. Pence
 Candidate	Doug Sonenberg	Doug Sonenberg
 Candidate	Dyllon Fite	Dyllon Fite
 Candidate	Elijah Redden	Elijah Redden
@@ -440,8 +440,8 @@ CandidateContest	US Senate OK	FOR UNITED STATES SENATOR
 CountItemType	absentee-mail	cand_absmail_votes
 CountItemType	early	cand_early_votes
 CountItemType	election-day	cand_elecday_votes
-CountItemType	total	cand_tot_votes
 CountItemType	total	TOTAL
+CountItemType	total	cand_tot_votes
 Election	2016 General	2016 General
 Election	2018 General	2018 General
 Election	2020 General	2020 General
@@ -457,110 +457,111 @@ Party	Republican Party	REPUBLICAN
 Party	none or unknown	OTHER
 ReportingUnit	Oklahoma	Oklahoma
 ReportingUnit	Oklahoma;Adair County	ADAIR
-ReportingUnit	Oklahoma;Adair County	40001
+ReportingUnit	Oklahoma;Adair County	fips40001
 ReportingUnit	Oklahoma;Alfalfa County	ALFALFA
-ReportingUnit	Oklahoma;Alfalfa County	40003
+ReportingUnit	Oklahoma;Alfalfa County	fips40003
 ReportingUnit	Oklahoma;Atoka County	ATOKA
-ReportingUnit	Oklahoma;Atoka County	40005
+ReportingUnit	Oklahoma;Atoka County	fips40005
 ReportingUnit	Oklahoma;Beaver County	BEAVER
-ReportingUnit	Oklahoma;Beaver County	40007
+ReportingUnit	Oklahoma;Beaver County	fips40007
 ReportingUnit	Oklahoma;Beckham County	BECKHAM
-ReportingUnit	Oklahoma;Beckham County	40009
+ReportingUnit	Oklahoma;Beckham County	fips40009
 ReportingUnit	Oklahoma;Blaine County	BLAINE
-ReportingUnit	Oklahoma;Blaine County	40011
+ReportingUnit	Oklahoma;Blaine County	fips40011
 ReportingUnit	Oklahoma;Bryan County	BRYAN
-ReportingUnit	Oklahoma;Bryan County	40013
+ReportingUnit	Oklahoma;Bryan County	fips40013
 ReportingUnit	Oklahoma;Caddo County	CADDO
-ReportingUnit	Oklahoma;Caddo County	40015
+ReportingUnit	Oklahoma;Caddo County	fips40015
 ReportingUnit	Oklahoma;Canadian County	CANADIAN
-ReportingUnit	Oklahoma;Canadian County	40017
+ReportingUnit	Oklahoma;Canadian County	fips40017
 ReportingUnit	Oklahoma;Carter County	CARTER
-ReportingUnit	Oklahoma;Carter County	40019
+ReportingUnit	Oklahoma;Carter County	fips40019
 ReportingUnit	Oklahoma;Cherokee County	CHEROKEE
-ReportingUnit	Oklahoma;Cherokee County	40021
+ReportingUnit	Oklahoma;Cherokee County	fips40021
 ReportingUnit	Oklahoma;Choctaw County	CHOCTAW
-ReportingUnit	Oklahoma;Choctaw County	40023
+ReportingUnit	Oklahoma;Choctaw County	fips40023
 ReportingUnit	Oklahoma;Cimarron County	CIMARRON
-ReportingUnit	Oklahoma;Cimarron County	40025
+ReportingUnit	Oklahoma;Cimarron County	fips40025
 ReportingUnit	Oklahoma;Cleveland County	CLEVELAND
-ReportingUnit	Oklahoma;Cleveland County	40027
+ReportingUnit	Oklahoma;Cleveland County	fips40027
 ReportingUnit	Oklahoma;Coal County	COAL
-ReportingUnit	Oklahoma;Coal County	40029
+ReportingUnit	Oklahoma;Coal County	fips40029
 ReportingUnit	Oklahoma;Comanche County	COMANCHE
-ReportingUnit	Oklahoma;Comanche County	40031
+ReportingUnit	Oklahoma;Comanche County	fips40031
 ReportingUnit	Oklahoma;Cotton County	COTTON
-ReportingUnit	Oklahoma;Cotton County	40033
+ReportingUnit	Oklahoma;Cotton County	fips40033
 ReportingUnit	Oklahoma;Craig County	CRAIG
-ReportingUnit	Oklahoma;Craig County	40035
+ReportingUnit	Oklahoma;Craig County	fips40035
 ReportingUnit	Oklahoma;Creek County	CREEK
-ReportingUnit	Oklahoma;Creek County	40037
+ReportingUnit	Oklahoma;Creek County	fips40037
 ReportingUnit	Oklahoma;Custer County	CUSTER
-ReportingUnit	Oklahoma;Custer County	40039
+ReportingUnit	Oklahoma;Custer County	fips40039
 ReportingUnit	Oklahoma;Delaware County	DELAWARE
-ReportingUnit	Oklahoma;Delaware County	40041
+ReportingUnit	Oklahoma;Delaware County	fips40041
 ReportingUnit	Oklahoma;Dewey County	DEWEY
-ReportingUnit	Oklahoma;Dewey County	40043
+ReportingUnit	Oklahoma;Dewey County	fips40043
 ReportingUnit	Oklahoma;Ellis County	ELLIS
-ReportingUnit	Oklahoma;Ellis County	40045
+ReportingUnit	Oklahoma;Ellis County	fips40045
 ReportingUnit	Oklahoma;Garfield County	GARFIELD
-ReportingUnit	Oklahoma;Garfield County	40047
+ReportingUnit	Oklahoma;Garfield County	fips40047
 ReportingUnit	Oklahoma;Garvin County	GARVIN
-ReportingUnit	Oklahoma;Garvin County	40049
+ReportingUnit	Oklahoma;Garvin County	fips40049
 ReportingUnit	Oklahoma;Grady County	GRADY
-ReportingUnit	Oklahoma;Grady County	40051
+ReportingUnit	Oklahoma;Grady County	fips40051
 ReportingUnit	Oklahoma;Grant County	GRANT
-ReportingUnit	Oklahoma;Grant County	40053
+ReportingUnit	Oklahoma;Grant County	fips40053
 ReportingUnit	Oklahoma;Greer County	GREER
-ReportingUnit	Oklahoma;Greer County	40055
+ReportingUnit	Oklahoma;Greer County	fips40055
 ReportingUnit	Oklahoma;Harmon County	HARMON
-ReportingUnit	Oklahoma;Harmon County	40057
+ReportingUnit	Oklahoma;Harmon County	fips40057
 ReportingUnit	Oklahoma;Harper County	HARPER
-ReportingUnit	Oklahoma;Harper County	40059
+ReportingUnit	Oklahoma;Harper County	fips40059
 ReportingUnit	Oklahoma;Haskell County	HASKELL
-ReportingUnit	Oklahoma;Haskell County	40061
+ReportingUnit	Oklahoma;Haskell County	fips40061
 ReportingUnit	Oklahoma;Hughes County	HUGHES
-ReportingUnit	Oklahoma;Hughes County	40063
+ReportingUnit	Oklahoma;Hughes County	fips40063
 ReportingUnit	Oklahoma;Jackson County	JACKSON
-ReportingUnit	Oklahoma;Jackson County	40065
+ReportingUnit	Oklahoma;Jackson County	fips40065
 ReportingUnit	Oklahoma;Jefferson County	JEFFERSON
-ReportingUnit	Oklahoma;Jefferson County	40067
+ReportingUnit	Oklahoma;Jefferson County	fips40067
 ReportingUnit	Oklahoma;Johnston County	JOHNSTON
-ReportingUnit	Oklahoma;Johnston County	40069
+ReportingUnit	Oklahoma;Johnston County	fips40069
 ReportingUnit	Oklahoma;Kay County	KAY
-ReportingUnit	Oklahoma;Kay County	40071
+ReportingUnit	Oklahoma;Kay County	fips40071
 ReportingUnit	Oklahoma;Kingfisher County	KINGFISHER
-ReportingUnit	Oklahoma;Kingfisher County	40073
+ReportingUnit	Oklahoma;Kingfisher County	fips40073
 ReportingUnit	Oklahoma;Kiowa County	KIOWA
-ReportingUnit	Oklahoma;Kiowa County	40075
+ReportingUnit	Oklahoma;Kiowa County	fips40075
 ReportingUnit	Oklahoma;Latimer County	LATIMER
-ReportingUnit	Oklahoma;Latimer County	40077
+ReportingUnit	Oklahoma;Latimer County	fips40077
+ReportingUnit	Oklahoma;Le Flore County	fips40079
 ReportingUnit	Oklahoma;Leflore County	LEFLORE
 ReportingUnit	Oklahoma;Lincoln County	LINCOLN
-ReportingUnit	Oklahoma;Lincoln County	40081
+ReportingUnit	Oklahoma;Lincoln County	fips40081
 ReportingUnit	Oklahoma;Logan County	LOGAN
-ReportingUnit	Oklahoma;Logan County	40083
+ReportingUnit	Oklahoma;Logan County	fips40083
 ReportingUnit	Oklahoma;Love County	LOVE
-ReportingUnit	Oklahoma;Love County	40085
+ReportingUnit	Oklahoma;Love County	fips40085
 ReportingUnit	Oklahoma;Major County	MAJOR
-ReportingUnit	Oklahoma;Major County	40093
+ReportingUnit	Oklahoma;Major County	fips40093
 ReportingUnit	Oklahoma;Marshall County	MARSHALL
-ReportingUnit	Oklahoma;Marshall County	40095
+ReportingUnit	Oklahoma;Marshall County	fips40095
 ReportingUnit	Oklahoma;Mayes County	MAYES
-ReportingUnit	Oklahoma;Mayes County	40097
+ReportingUnit	Oklahoma;Mayes County	fips40097
+ReportingUnit	Oklahoma;McClain County	fips40087
+ReportingUnit	Oklahoma;McCurtain County	fips40089
+ReportingUnit	Oklahoma;McIntosh County	fips40091
 ReportingUnit	Oklahoma;Mcclain County	MCCLAIN
-ReportingUnit	Oklahoma;Mcclain County	40087
 ReportingUnit	Oklahoma;Mccurtain County	MCCURTAIN
-ReportingUnit	Oklahoma;Mccurtain County	40089
 ReportingUnit	Oklahoma;Mcintosh County	MCINTOSH
-ReportingUnit	Oklahoma;Mcintosh County	40091
 ReportingUnit	Oklahoma;Murray County	MURRAY
-ReportingUnit	Oklahoma;Murray County	40099
+ReportingUnit	Oklahoma;Murray County	fips40099
 ReportingUnit	Oklahoma;Muskogee County	MUSKOGEE
-ReportingUnit	Oklahoma;Muskogee County	40101
+ReportingUnit	Oklahoma;Muskogee County	fips40101
 ReportingUnit	Oklahoma;Noble County	NOBLE
-ReportingUnit	Oklahoma;Noble County	40103
+ReportingUnit	Oklahoma;Noble County	fips40103
 ReportingUnit	Oklahoma;Nowata County	NOWATA
-ReportingUnit	Oklahoma;Nowata County	40105
+ReportingUnit	Oklahoma;Nowata County	fips40105
 ReportingUnit	Oklahoma;OK House District 1	Oklahoma;OK House District 1
 ReportingUnit	Oklahoma;OK House District 10	Oklahoma;OK House District 10
 ReportingUnit	Oklahoma;OK House District 11	Oklahoma;OK House District 11
@@ -711,55 +712,55 @@ ReportingUnit	Oklahoma;OK Senate District 97	Oklahoma;OK Senate District 97
 ReportingUnit	Oklahoma;OK Senate District 98	Oklahoma;OK Senate District 98
 ReportingUnit	Oklahoma;OK Senate District 99	Oklahoma;OK Senate District 99
 ReportingUnit	Oklahoma;Okfuskee County	OKFUSKEE
-ReportingUnit	Oklahoma;Okfuskee County	40107
+ReportingUnit	Oklahoma;Okfuskee County	fips40107
 ReportingUnit	Oklahoma;Oklahoma County	OKLAHOMA
-ReportingUnit	Oklahoma;Oklahoma County	40109
+ReportingUnit	Oklahoma;Oklahoma County	fips40109
 ReportingUnit	Oklahoma;Okmulgee County	OKMULGEE
-ReportingUnit	Oklahoma;Okmulgee County	40111
+ReportingUnit	Oklahoma;Okmulgee County	fips40111
 ReportingUnit	Oklahoma;Osage County	OSAGE
-ReportingUnit	Oklahoma;Osage County	40113
+ReportingUnit	Oklahoma;Osage County	fips40113
 ReportingUnit	Oklahoma;Ottawa County	OTTAWA
-ReportingUnit	Oklahoma;Ottawa County	40115
+ReportingUnit	Oklahoma;Ottawa County	fips40115
 ReportingUnit	Oklahoma;Pawnee County	PAWNEE
-ReportingUnit	Oklahoma;Pawnee County	40117
+ReportingUnit	Oklahoma;Pawnee County	fips40117
 ReportingUnit	Oklahoma;Payne County	PAYNE
-ReportingUnit	Oklahoma;Payne County	40119
+ReportingUnit	Oklahoma;Payne County	fips40119
 ReportingUnit	Oklahoma;Pittsburg County	PITTSBURG
-ReportingUnit	Oklahoma;Pittsburg County	40121
+ReportingUnit	Oklahoma;Pittsburg County	fips40121
 ReportingUnit	Oklahoma;Pontotoc County	PONTOTOC
-ReportingUnit	Oklahoma;Pontotoc County	40123
+ReportingUnit	Oklahoma;Pontotoc County	fips40123
 ReportingUnit	Oklahoma;Pottawatomie County	POTTAWATOMIE
-ReportingUnit	Oklahoma;Pottawatomie County	40125
+ReportingUnit	Oklahoma;Pottawatomie County	fips40125
 ReportingUnit	Oklahoma;Pushmataha County	PUSHMATAHA
-ReportingUnit	Oklahoma;Pushmataha County	40127
+ReportingUnit	Oklahoma;Pushmataha County	fips40127
 ReportingUnit	Oklahoma;Roger Mills County	ROGER MILLS
-ReportingUnit	Oklahoma;Roger Mills County	40129
+ReportingUnit	Oklahoma;Roger Mills County	fips40129
 ReportingUnit	Oklahoma;Rogers County	ROGERS
-ReportingUnit	Oklahoma;Rogers County	40131
+ReportingUnit	Oklahoma;Rogers County	fips40131
 ReportingUnit	Oklahoma;Seminole County	SEMINOLE
-ReportingUnit	Oklahoma;Seminole County	40133
+ReportingUnit	Oklahoma;Seminole County	fips40133
 ReportingUnit	Oklahoma;Sequoyah County	SEQUOYAH
-ReportingUnit	Oklahoma;Sequoyah County	40135
+ReportingUnit	Oklahoma;Sequoyah County	fips40135
 ReportingUnit	Oklahoma;Stephens County	STEPHENS
-ReportingUnit	Oklahoma;Stephens County	40137
+ReportingUnit	Oklahoma;Stephens County	fips40137
 ReportingUnit	Oklahoma;Texas County	TEXAS
-ReportingUnit	Oklahoma;Texas County	40139
+ReportingUnit	Oklahoma;Texas County	fips40139
 ReportingUnit	Oklahoma;Tillman County	TILLMAN
-ReportingUnit	Oklahoma;Tillman County	40141
+ReportingUnit	Oklahoma;Tillman County	fips40141
 ReportingUnit	Oklahoma;Tulsa County	TULSA
-ReportingUnit	Oklahoma;Tulsa County	40143
+ReportingUnit	Oklahoma;Tulsa County	fips40143
 ReportingUnit	Oklahoma;US House OK District 1	Oklahoma;US House OK District 1
 ReportingUnit	Oklahoma;US House OK District 2	Oklahoma;US House OK District 2
 ReportingUnit	Oklahoma;US House OK District 3	Oklahoma;US House OK District 3
 ReportingUnit	Oklahoma;US House OK District 4	Oklahoma;US House OK District 4
 ReportingUnit	Oklahoma;US House OK District 5	Oklahoma;US House OK District 5
 ReportingUnit	Oklahoma;Wagoner County	WAGONER
-ReportingUnit	Oklahoma;Wagoner County	40145
+ReportingUnit	Oklahoma;Wagoner County	fips40145
 ReportingUnit	Oklahoma;Washington County	WASHINGTON
-ReportingUnit	Oklahoma;Washington County	40147
+ReportingUnit	Oklahoma;Washington County	fips40147
 ReportingUnit	Oklahoma;Washita County	WASHITA
-ReportingUnit	Oklahoma;Washita County	40149
+ReportingUnit	Oklahoma;Washita County	fips40149
 ReportingUnit	Oklahoma;Woods County	WOODS
-ReportingUnit	Oklahoma;Woods County	40151
+ReportingUnit	Oklahoma;Woods County	fips40151
 ReportingUnit	Oklahoma;Woodward County	WOODWARD
-ReportingUnit	Oklahoma;Woodward County	40153
+ReportingUnit	Oklahoma;Woodward County	fips40153

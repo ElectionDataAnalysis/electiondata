@@ -27,8 +27,8 @@ Candidate	Alan W Rowe	Alan W Rowe
 Candidate	Albert Calderon	Albert Calderon
 Candidate	Alberto Enriquez	Alberto Enriquez
 Candidate	Alek Skarlatos	Alek Skarlatos
-Candidate	Alex C Diblasi	Alex C Diblasi
 Candidate	Alex C Diblasi	Alex C DiBlasi
+Candidate	Alex C Diblasi	Alex C Diblasi
 Candidate	Alex Johnson Ii	Alex Johnson Ii
 Candidate	Alex Juarez	Alex Juarez
 Candidate	Alex Levi Usselman	Alex Levi Usselman
@@ -65,8 +65,8 @@ Candidate	Andrea (Annie) Gilland	Andrea (Annie) Gilland
 Candidate	Andrea L Blum	Andrea L Blum
 Candidate	Andrea L Mann	Andrea L Mann
 Candidate	Andrea Lerner Thompson	Andrea Lerner Thompson
-Candidate	Andrea Salinas	Andrea Salinas
 Candidate	Andrea Salinas	Andrea **Salinas
+Candidate	Andrea Salinas	Andrea Salinas
 Candidate	Andrea Zielinski	Andrea Zielinski
 Candidate	Andrew Beebe	Andrew Beebe
 Candidate	Andrew Card	Andrew Card
@@ -85,8 +85,8 @@ Candidate	Ann Crumrine	Ann Crumrine
 Candidate	Ann Stott	Ann Stott
 Candidate	Anna K Jesse	Anna K Jesse
 Candidate	Anna Kasachev	Anna Kasachev
-Candidate	Anna Williams	Anna Williams
 Candidate	Anna Williams	Anna **Williams
+Candidate	Anna Williams	Anna Williams
 Candidate	Anne Marie Skinner	Anne Marie Skinner
 Candidate	Annessa Hartman	Annessa Hartman
 Candidate	Annette Frank	Annette Frank
@@ -99,8 +99,8 @@ Candidate	Anthony K Morelos	Anthony K Morelos
 Candidate	Anthony Martin	Anthony Martin
 Candidate	Arlene Burns	Arlene Burns
 Candidate	Arlene C Burns	Arlene C Burns
-Candidate	Art Robinson	Art Robinson
 Candidate	Art Robinson	Art **Robinson
+Candidate	Art Robinson	Art Robinson
 Candidate	Arthur Babitz	Arthur Babitz
 Candidate	Arvid E Andersen	Arvid E Andersen
 Candidate	Ashley A Hicks	Ashley A Hicks
@@ -118,8 +118,8 @@ Candidate	Barb Hilty	Barb Hilty
 Candidate	Barbara Boyer	Barbara Boyer
 Candidate	Barbara Fontaine	Barbara Fontaine
 Candidate	Barbara Niedermeyer	Barbara Niedermeyer
-Candidate	Barbara Smith Warner	Barbara Smith Warner
 Candidate	Barbara Smith Warner	Barbara **Smith Warner
+Candidate	Barbara Smith Warner	Barbara Smith Warner
 Candidate	Barney Lindsay	Barney Lindsay
 Candidate	Barry Wilson	Barry Wilson
 Candidate	Bart Carpenter	Bart Carpenter
@@ -147,14 +147,14 @@ Candidate	Bill Burnett	Bill Burnett
 Candidate	Bill Currier	Bill Currier
 Candidate	Bill Dimarco	Bill Dimarco
 Candidate	Bill Eagle	Bill Eagle
-Candidate	Bill Hansell	Bill Hansell
 Candidate	Bill Hansell	Bill **Hansell
+Candidate	Bill Hansell	Bill Hansell
 Candidate	Bill L Dillard Jr	Bill L Dillard Jr
 Candidate	Bill Meyer	Bill Meyer
 Candidate	Bill Minter	Bill Minter
 Candidate	Bill Osburn	Bill Osburn
-Candidate	Bill Post	Bill Post
 Candidate	Bill Post	Bill **Post
+Candidate	Bill Post	Bill Post
 Candidate	Bill Rigney	Bill Rigney
 Candidate	Bill Schaefer	Bill Schaefer
 Candidate	Bill Tuttle	Bill Tuttle
@@ -165,19 +165,19 @@ Candidate	Bob Shortman	Bob Shortman
 Candidate	Bob Wiggins	Bob Wiggins
 Candidate	Bobbi A Childers	Bobbi A Childers
 Candidate	Bobby Dale Walker	Bobby Dale Walker
-Candidate	Bobby Levy	Bobby Levy
 Candidate	Bobby Levy	Bobby **Levy
+Candidate	Bobby Levy	Bobby Levy
 Candidate	Bonne Whitley	Bonne Whitley
 Candidate	Bonnie A Lam	Bonnie A Lam
-Candidate	Boomer Wright	Boomer Wright
 Candidate	Boomer Wright	Boomer **Wright
+Candidate	Boomer Wright	Boomer Wright
 Candidate	Brad Alcorn	Brad Alcorn
 Candidate	Brad L Smith	Brad L Smith
 Candidate	Brad Lohrey	Brad Lohrey
 Candidate	Brad Moreland	Brad Moreland
 Candidate	Brad Oxenford	Brad Oxenford
-Candidate	Brad Witt	Brad Witt
 Candidate	Brad Witt	Brad **Witt
+Candidate	Brad Witt	Brad Witt
 Candidate	Bradley J Humbert	Bradley J Humbert
 Candidate	Brandee A Dudzic	Brandee A Dudzic
 Candidate	Brandie D Mcnamee	Brandie D Mcnamee
@@ -197,16 +197,16 @@ Candidate	Brian Asher	Brian Asher
 Candidate	Brian Buckner	Brian Buckner
 Candidate	Brian C Loy	Brian C Loy
 Candidate	Brian Campbell	Brian Campbell
-Candidate	Brian Clem	Brian Clem
 Candidate	Brian Clem	Brian **Clem
+Candidate	Brian Clem	Brian Clem
 Candidate	Brian D Hodson	Brian D Hodson
 Candidate	Brian Dalton	Brian Dalton
 Candidate	Brian De La Grange	Brian De La Grange
 Candidate	Brian E Parker	Brian E Parker
 Candidate	Brian E Wolfe	Brian E Wolfe
 Candidate	Brian G Stout	Brian G Stout
-Candidate	Brian J Boquist	Brian J Boquist
 Candidate	Brian J Boquist	Brian J **Boquist
+Candidate	Brian J Boquist	Brian J Boquist
 Candidate	Brian M Vick	Brian M Vick
 Candidate	Brian Nakamura	Brian Nakamura
 Candidate	Brian Pound	Brian Pound
@@ -253,8 +253,8 @@ Candidate	Cathi R Vandamme	Cathi R Vandamme
 Candidate	Cathy Clark	Cathy Clark
 Candidate	Cathy M Zacharias	Cathy M Zacharias
 Candidate	Cecelia Koontz	Cecelia Koontz
-Candidate	Cedric Hayden	Cedric Hayden
 Candidate	Cedric Hayden	Cedric **Hayden
+Candidate	Cedric Hayden	Cedric Hayden
 Candidate	Chad Mccomas	Chad Mccomas
 Candidate	Chad Miller	Chad Miller
 Candidate	Chad Ray	Chad Ray
@@ -279,8 +279,8 @@ Candidate	Chris B Labhart	Chris B Labhart
 Candidate	Chris Barhyte	Chris Barhyte
 Candidate	Chris Cave	Chris Cave
 Candidate	Chris Chenoweth	Chris Chenoweth
-Candidate	Chris Gorsek	Chris Gorsek
 Candidate	Chris Gorsek	Chris **Gorsek
+Candidate	Chris Gorsek	Chris Gorsek
 Candidate	Chris Henry	Chris Henry
 Candidate	Chris Kaber	Chris Kaber
 Candidate	Chris Luz	Chris Luz
@@ -291,8 +291,8 @@ Candidate	Chris Smith	Chris Smith
 Candidate	Christen Sacco	Christen Sacco
 Candidate	Christian Niece	Christian Niece
 Candidate	Christina (Chrissy) Davis	Christina (Chrissy) Davis
-Candidate	Christine Drazan	Christine Drazan
 Candidate	Christine Drazan	Christine **Drazan
+Candidate	Christine Drazan	Christine Drazan
 Candidate	Christopher Bangs	Christopher Bangs
 Candidate	Christopher C Christensen	Christopher C Christensen
 Candidate	Christopher Hall	Christopher Hall
@@ -323,8 +323,8 @@ Candidate	Connie Venegas	Connie Venegas
 Candidate	Corey Sweeney	Corey Sweeney
 Candidate	Corrine Dutto	Corrine Dutto
 Candidate	Cortney Nash	Cortney Nash
-Candidate	Courtney Neron	Courtney Neron
 Candidate	Courtney Neron	Courtney **Neron
+Candidate	Courtney Neron	Courtney Neron
 Candidate	Craig Johnson	Craig Johnson
 Candidate	Crystal Robles	Crystal Robles
 Candidate	Curt Abbott	Curt Abbott
@@ -336,12 +336,12 @@ Candidate	Cyndy Hillier	Cyndy Hillier
 Candidate	Cynthia Jacobi	Cynthia Jacobi
 Candidate	D Scott Henderson	D Scott Henderson
 Candidate	D Scott Rutter	D Scott Rutter
-Candidate	Dacia Grayber	Dacia Grayber
 Candidate	Dacia Grayber	Dacia **Grayber
+Candidate	Dacia Grayber	Dacia Grayber
 Candidate	Dale A Dawson	Dale A Dawson
 Candidate	Dale Fishback	Dale Fishback
-Candidate	Dallas Heard	Dallas Heard
 Candidate	Dallas Heard	Dallas **Heard
+Candidate	Dallas Heard	Dallas Heard
 Candidate	Damon Rose	Damon Rose
 Candidate	Dan Deyoung	Dan Deyoung
 Candidate	Dan Dorran	Dan Dorran
@@ -350,14 +350,14 @@ Candidate	Dan Jesse	Dan Jesse
 Candidate	Dan Loomis	Dan Loomis
 Candidate	Dan Mclind	Dan Mclind
 Candidate	Dan Morrow	Dan Morrow
-Candidate	Dan Rayfield	Dan Rayfield
 Candidate	Dan Rayfield	Dan **Rayfield
+Candidate	Dan Rayfield	Dan Rayfield
 Candidate	Dan Richardson	Dan Richardson
 Candidate	Dan Warnock	Dan Warnock
 Candidate	Dani Correa	Dani Correa
 Candidate	Daniel Fraser	Daniel Fraser
-Candidate	Daniel G Bonham	Daniel G Bonham
 Candidate	Daniel G Bonham	Daniel G **Bonham
+Candidate	Daniel G Bonham	Daniel G Bonham
 Candidate	Daniel Hoffay	Daniel Hoffay
 Candidate	Daniel J Daggett	Daniel J Daggett
 Candidate	Daniel L Wagoner	Daniel L Wagoner
@@ -375,8 +375,8 @@ Candidate	Daren C Strong	Daren C Strong
 Candidate	Daren Dufloth	Daren Dufloth
 Candidate	Darin E Silbernagel	Darin E Silbernagel
 Candidate	Darin Olson	Darin Olson
-Candidate	Dario Hunter	Dario Hunter / Dawn Neptune Adams
 Candidate	Dario Hunter	Dario Hunter
+Candidate	Dario Hunter	Dario Hunter / Dawn Neptune Adams
 Candidate	Darwin Johnson Jr	Darwin Johnson Jr
 Candidate	Dave Bell	Dave Bell
 Candidate	Dave Cunningham	Dave Cunningham
@@ -391,15 +391,15 @@ Candidate	David (Shorty) L Schwehr	David (Shorty) L Schwehr
 Candidate	David Arrasmith	David Arrasmith
 Candidate	David Benson	David Benson
 Candidate	David Bergmann	David Bergmann
-Candidate	David Brock Smith	David Brock Smith
 Candidate	David Brock Smith	David Brock **Smith
+Candidate	David Brock Smith	David Brock Smith
 Candidate	David C Willis	David C Willis
 Candidate	David Comfort	David Comfort
 Candidate	David Emami	David Emami
 Candidate	David G Durfey	David G Durfey
 Candidate	David Golobay	David Golobay
-Candidate	David Gomberg	David Gomberg
 Candidate	David Gomberg	David **Gomberg
+Candidate	David Gomberg	David Gomberg
 Candidate	David Hines	David Hines
 Candidate	David Hoffer	David Hoffer
 Candidate	David J Smith	David J Smith
@@ -434,8 +434,8 @@ Candidate	Dean Defrees	Dean Defrees
 Candidate	Dean H Sawyer	Dean H Sawyer
 Candidate	Dean P Moberg	Dean P Moberg
 Candidate	Deanna Christiansen	Deanna Christiansen
-Candidate	Deb Patterson	Deb Patterson
 Candidate	Deb Patterson	Deb **Patterson
+Candidate	Deb Patterson	Deb Patterson
 Candidate	Debbie Boothe-Schmidt	Debbie Boothe-Schmidt
 Candidate	Debbie D Cabrales	Debbie D Cabrales
 Candidate	Debbie Virden	Debbie Virden
@@ -447,8 +447,8 @@ Candidate	Denise Bacon	Denise Bacon
 Candidate	Denise Ball	Denise Ball
 Candidate	Denise Wheeler	Denise Wheeler
 Candidate	Dennis Anthony	Dennis Anthony
-Candidate	Dennis Linthicum	Dennis Linthicum
 Candidate	Dennis Linthicum	Dennis **Linthicum
+Candidate	Dennis Linthicum	Dennis Linthicum
 Candidate	Dennis Sickles	Dennis Sickles
 Candidate	Denny Doyle	Denny Doyle
 Candidate	Denyc Boles	Denyc Boles
@@ -465,11 +465,11 @@ Candidate	Diana Cooper	Diana Cooper
 Candidate	Diana Hinton	Diana Hinton
 Candidate	Diana Larson	Diana Larson
 Candidate	Diane Hyde	Diane Hyde
-Candidate	Dick Anderson	Dick Anderson
 Candidate	Dick Anderson	Dick **Anderson
+Candidate	Dick Anderson	Dick Anderson
 Candidate	Dick Courter	Dick Courter
-Candidate	Diego Hernandez	Diego Hernandez
 Candidate	Diego Hernandez	Diego **Hernandez
+Candidate	Diego Hernandez	Diego Hernandez
 Candidate	Dietmar Goebel	Dietmar Goebel
 Candidate	Dina Dinucci	Dina Dinucci
 Candidate	Don Crouch	Don Crouch
@@ -485,8 +485,8 @@ Candidate	Don Tyrrell	Don Tyrrell
 Candidate	Donald B Crawford	Donald B Crawford
 Candidate	Donald D Giannetti	Donald D Giannetti
 Candidate	Donald Grant	Donald Grant
-Candidate	Donald J Trump	Donald J Trump / Michael R Pence
 Candidate	Donald J Trump	Donald J Trump
+Candidate	Donald J Trump	Donald J Trump / Michael R Pence
 Candidate	Donald J. Trump	DONALD TRUMP
 Candidate	Donald Jamieson	Donald Jamieson
 Candidate	Donald Nuss	Donald Nuss
@@ -510,8 +510,8 @@ Candidate	Douglas Harral	Douglas Harral
 Candidate	Douglas Jones	Douglas Jones
 Candidate	Dowen Jones	Dowen Jones
 Candidate	Drew Farmer	Drew Farmer
-Candidate	Duane A Stark	Duane A Stark
 Candidate	Duane A Stark	Duane A **Stark
+Candidate	Duane A Stark	Duane A Stark
 Candidate	Duane Neiffer	Duane Neiffer
 Candidate	Duane R Thul	Duane R Thul
 Candidate	Dusty Ferschweiler	Dusty Ferschweiler
@@ -521,8 +521,8 @@ Candidate	Dylan Juran	Dylan Juran
 Candidate	Dylan L Carlson	Dylan L Carlson
 Candidate	Dylan Richards	Dylan Richards
 Candidate	E Martin Kerns	E Martin Kerns
-Candidate	E Werner Reschke	E Werner Reschke
 Candidate	E Werner Reschke	E Werner **Reschke
+Candidate	E Werner Reschke	E Werner Reschke
 Candidate	Earl Blumenauer	Earl Blumenauer
 Candidate	Echo Snyder	Echo Snyder
 Candidate	Ed Fitch	Ed Fitch
@@ -569,8 +569,8 @@ Candidate	Fran Recht	Fran Recht
 Candidate	Frank E Hupp	Frank E Hupp
 Candidate	Frank O'Donnell	Frank O'Donnell
 Candidate	Frank Sherkow	Frank Sherkow
-Candidate	Fred Frank Girod	Fred Frank Girod
 Candidate	Fred Frank Girod	Fred Frank **Girod
+Candidate	Fred Frank Girod	Fred Frank Girod
 Candidate	G Whitey Forsman	G Whitey Forsman
 Candidate	Gabe Shepherd	Gabe Shepherd
 Candidate	Gail Harris	Gail Harris
@@ -583,8 +583,8 @@ Candidate	Gary Bedortha	Gary Bedortha
 Candidate	Gary Burns	Gary Burns
 Candidate	Gary Dye	Gary Dye
 Candidate	Gary Lee Hulse	Gary Lee Hulse
-Candidate	Gary Leif	Gary Leif
 Candidate	Gary Leif	Gary **Leif
+Candidate	Gary Leif	Gary Leif
 Candidate	Gary P Ross	Gary P Ross
 Candidate	Gary R Carl	Gary R Carl
 Candidate	Gary R Robeson	Gary R Robeson
@@ -606,8 +606,8 @@ Candidate	Geri Procetto	Geri Procetto
 Candidate	Gerritt Rosenthal	Gerritt Rosenthal
 Candidate	Gina Duquenne	Gina Duquenne
 Candidate	Gina Roletto	Gina Roletto
-Candidate	Ginny Burdick	Ginny Burdick
 Candidate	Ginny Burdick	Ginny **Burdick
+Candidate	Ginny Burdick	Ginny Burdick
 Candidate	Ginny Carlson	Ginny Carlson
 Candidate	Gladys Rivera	Gladys Rivera
 Candidate	Glen G Diehl	Glen G Diehl
@@ -628,8 +628,8 @@ Candidate	Greg L Holland	Greg L Holland
 Candidate	Greg Lucas	Greg Lucas
 Candidate	Greg Munn	Greg Munn
 Candidate	Greg Scott	Greg Scott
-Candidate	Greg Smith	Greg Smith
 Candidate	Greg Smith	Greg **Smith
+Candidate	Greg Smith	Greg Smith
 Candidate	Greg Woods	Greg Woods
 Candidate	Gregory Goularte	Gregory Goularte
 Candidate	Gregory Tidey	Gregory Tidey
@@ -658,8 +658,8 @@ Candidate	Hilary Malcomson	Hilary Malcomson
 Candidate	Hillary Clinton	HILLARY CLINTON
 Candidate	Hollyjo Beers	Hollyjo Beers
 Candidate	Howard Allen	Howard Allen
-Candidate	Howie Hawkins	Howie Hawkins / Angela Walker
 Candidate	Howie Hawkins	Howie Hawkins
+Candidate	Howie Hawkins	Howie Hawkins / Angela Walker
 Candidate	Hugh Palcic	Hugh Palcic
 Candidate	Hurshell L Walls	Hurshell L Walls
 Candidate	Hyatt Lytle	Hyatt Lytle
@@ -673,8 +673,8 @@ Candidate	Ivan E Gutierrez	Ivan E Gutierrez
 Candidate	Jack L ESP	Jack L ESP
 Candidate	Jack L Esp	Jack L Esp
 Candidate	Jack Waddell	Jack Waddell
-Candidate	Jack Zika	Jack Zika
 Candidate	Jack Zika	Jack **Zika
+Candidate	Jack Zika	Jack Zika
 Candidate	Jack Zimmerman	Jack Zimmerman
 Candidate	Jackie Carey	Jackie Carey
 Candidate	Jackie Kauffman	Jackie Kauffman
@@ -706,18 +706,18 @@ Candidate	James R Buckles	James R Buckles
 Candidate	James Rose	James Rose
 Candidate	James Tooke	James Tooke
 Candidate	James Williams	James Williams
-Candidate	Jami Cate	Jami Cate
 Candidate	Jami Cate	Jami **Cate
+Candidate	Jami Cate	Jami Cate
 Candidate	Jamie Morrison	Jamie Morrison
 Candidate	Jan Lee	Jan Lee
 Candidate	Jan Lowry	Jan Lowry
 Candidate	Jan Napack	Jan Napack
 Candidate	Jane Hartline	Jane Hartline
 Candidate	Jane J Hays	Jane J Hays
-Candidate	Janeen Sollman	Janeen Sollman
 Candidate	Janeen Sollman	Janeen **Sollman
-Candidate	Janelle S Bynum	Janelle S Bynum
+Candidate	Janeen Sollman	Janeen Sollman
 Candidate	Janelle S Bynum	Janelle S **Bynum
+Candidate	Janelle S Bynum	Janelle S Bynum
 Candidate	Janet Wilson	Janet Wilson
 Candidate	Jasmine Zimmer-Stucky	Jasmine Zimmer-Stucky
 Candidate	Jason Bolen	Jason Bolen
@@ -730,8 +730,8 @@ Candidate	Jason Freilinger	Jason Freilinger
 Candidate	Jason Garrett Gibson	Jason Garrett Gibson
 Candidate	Jason Haynes	Jason Haynes
 Candidate	Jason Hughes	Jason Hughes
-Candidate	Jason Kropf	Jason Kropf
 Candidate	Jason Kropf	Jason **Kropf
+Candidate	Jason Kropf	Jason Kropf
 Candidate	Jason M L Berglund Sr	Jason M L Berglund Sr
 Candidate	Jason Padden	Jason Padden
 Candidate	Jason Richards	Jason Richards
@@ -752,8 +752,8 @@ Candidate	Jeff Gowing	Jeff Gowing
 Candidate	Jeff Gudman	Jeff Gudman
 Candidate	Jeff Helfrich	Jeff Helfrich
 Candidate	Jeff Merkley	Jeff Merkley
-Candidate	Jeff Reardon	Jeff Reardon
 Candidate	Jeff Reardon	Jeff **Reardon
+Candidate	Jeff Reardon	Jeff Reardon
 Candidate	Jeff Reinan	Jeff Reinan
 Candidate	Jeff Rola	Jeff Rola
 Candidate	Jeff Thomas	Jeff Thomas
@@ -831,8 +831,8 @@ Candidate	Jim White	Jim White
 Candidate	Jimmy Thompson	Jimmy Thompson
 Candidate	Jo A Barker	Jo A Barker
 Candidate	Jo Beaudreau	Jo Beaudreau
-Candidate	Jo Jorgensen	Jo Jorgensen / Jeremy (Spike) Cohen
 Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	Jo Jorgensen	Jo Jorgensen / Jeremy (Spike) Cohen
 Candidate	Jo Rae Perkins	Jo Rae Perkins
 Candidate	Joan Bird	Joan Bird
 Candidate	Joan E Demarest	Joan E Demarest
@@ -882,8 +882,8 @@ Candidate	John Kinsky	John Kinsky
 Candidate	John Lamotte	John Lamotte
 Candidate	John Lawrence	John Lawrence
 Candidate	John Leamy	John Leamy
-Candidate	John Lively	John Lively
 Candidate	John Lively	John **Lively
+Candidate	John Lively	John Lively
 Candidate	John McCain	JOHN MCCAIN
 Candidate	John Mcardle	John Mcardle
 Candidate	John Mcclelland	John Mcclelland
@@ -911,8 +911,8 @@ Candidate	Jose Garcia	Jose Garcia
 Candidate	Jose Gonzalez	Jose Gonzalez
 Candidate	Joseph J Walter	Joseph J Walter
 Candidate	Joseph Queruel	Joseph Queruel
-Candidate	Joseph R Biden	Joseph R Biden / Kamala D Harris
 Candidate	Joseph R Biden	Joseph R Biden
+Candidate	Joseph R Biden	Joseph R Biden / Kamala D Harris
 Candidate	Josh Brown	Josh Brown
 Candidate	Josh Howard	Josh Howard
 Candidate	Josh Smith	Josh Smith
@@ -937,8 +937,8 @@ Candidate	Julie Akins	Julie Akins
 Candidate	Julie Ann Gunderson	Julie Ann Gunderson
 Candidate	Julie Bettles	Julie Bettles
 Candidate	Julie Ellison	Julie Ellison
-Candidate	Julie Fahey	Julie Fahey
 Candidate	Julie Fahey	Julie **Fahey
+Candidate	Julie Fahey	Julie Fahey
 Candidate	Julie Fitzgerald	Julie Fitzgerald
 Candidate	Julie Nighswonger	Julie Nighswonger
 Candidate	Justin Cary	Justin Cary
@@ -954,20 +954,20 @@ Candidate	Karen Leach	Karen Leach
 Candidate	Karen Shrader	Karen Shrader
 Candidate	Karen Zabala	Karen Zabala
 Candidate	Kari Johnsen	Kari Johnsen
-Candidate	Karin Power	Karin Power
 Candidate	Karin Power	Karin **Power
+Candidate	Karin Power	Karin Power
 Candidate	Karl Popoff	Karl Popoff
 Candidate	Karun Virtue	Karun Virtue
 Candidate	Karyssa Dow	Karyssa Dow
 Candidate	Kat Stone	Kat Stone
-Candidate	Kate Lieber	Kate Lieber
 Candidate	Kate Lieber	Kate **Lieber
+Candidate	Kate Lieber	Kate Lieber
 Candidate	Kate Mcbride	Kate Mcbride
 Candidate	Kate Mohr	Kate Mohr
 Candidate	Katherine Larkin	Katherine Larkin
 Candidate	Katherine Rhee	Katherine Rhee
-Candidate	Kathleen Taylor	Kathleen Taylor
 Candidate	Kathleen Taylor	Kathleen **Taylor
+Candidate	Kathleen Taylor	Kathleen Taylor
 Candidate	Kathleen Walker	Kathleen Walker
 Candidate	Kathryn M Rhoades	Kathryn M Rhoades
 Candidate	Kathy Kleczek	Kathy Kleczek
@@ -1006,8 +1006,8 @@ Candidate	Ken Bailey	Ken Bailey
 Candidate	Ken Bain	Ken Bain
 Candidate	Ken Bentz	Ken Bentz
 Candidate	Ken Degrange	Ken Degrange
-Candidate	Ken Helm	Ken Helm
 Candidate	Ken Helm	Ken **Helm
+Candidate	Ken Helm	Ken Helm
 Candidate	Ken Humberston	Ken Humberston
 Candidate	Ken Moore	Ken Moore
 Candidate	Ken Pryor	Ken Pryor
@@ -1030,8 +1030,8 @@ Candidate	Kevin Jones	Kevin Jones
 Candidate	Kevin Petross	Kevin Petross
 Candidate	Kevin Prociw	Kevin Prociw
 Candidate	Kevin Skipper	Kevin Skipper
-Candidate	Khanh Pham	Khanh Pham
 Candidate	Khanh Pham	Khanh **Pham
+Candidate	Khanh Pham	Khanh Pham
 Candidate	Kieran Sikdar	Kieran Sikdar
 Candidate	Kim Bria	Kim Bria
 Candidate	Kim Fitzgerald	Kim Fitzgerald
@@ -1039,8 +1039,8 @@ Candidate	Kim Nye	Kim Nye
 Candidate	Kim Schmith	Kim Schmith
 Candidate	Kim Thatcher	Kim Thatcher
 Candidate	Kim W Rollins	Kim W Rollins
-Candidate	Kim Wallan	Kim Wallan
 Candidate	Kim Wallan	Kim **Wallan
+Candidate	Kim Wallan	Kim Wallan
 Candidate	Kim Young	Kim Young
 Candidate	Kimberly Culbertson	Kimberly Culbertson
 Candidate	Kimberly Peterson	Kimberly Peterson
@@ -1101,12 +1101,12 @@ Candidate	Leslie Vaaler	Leslie Vaaler
 Candidate	Leslie Walborn	Leslie Walborn
 Candidate	Leslie Wetherell	Leslie Wetherell
 Candidate	Levi Clow	Levi Clow
-Candidate	Lew Frederick	Lew Frederick
 Candidate	Lew Frederick	Lew **Frederick
+Candidate	Lew Frederick	Lew Frederick
 Candidate	Lewis S Key	Lewis S Key
 Candidate	Liane Welch	Liane Welch
-Candidate	Lily Morgan	Lily Morgan
 Candidate	Lily Morgan	Lily **Morgan
+Candidate	Lily Morgan	Lily Morgan
 Candidate	Linda K Malone	Linda K Malone
 Candidate	Linda Mccollum	Linda Mccollum
 Candidate	Linda Spencer	Linda Spencer
@@ -1119,8 +1119,8 @@ Candidate	Lisa Gourley	Lisa Gourley
 Candidate	Lisa Mccall	Lisa Mccall
 Candidate	Lisa Mccracken	Lisa Mccracken
 Candidate	Lisa Morley	Lisa Morley
-Candidate	Lisa Reynolds	Lisa Reynolds
 Candidate	Lisa Reynolds	Lisa **Reynolds
+Candidate	Lisa Reynolds	Lisa Reynolds
 Candidate	Lisa Scheirman	Lisa Scheirman
 Candidate	Lisa Weigum	Lisa Weigum
 Candidate	Liz Vanleeuwen	Liz Vanleeuwen
@@ -1142,8 +1142,8 @@ Candidate	Lyle Bluhm	Lyle Bluhm
 Candidate	Lyle H Johnson	Lyle H Johnson
 Candidate	Lyle R Mordhorst	Lyle R Mordhorst
 Candidate	Lynn Ewing	Lynn Ewing
-Candidate	Lynn P Findley	Lynn P Findley
 Candidate	Lynn P Findley	Lynn P **Findley
+Candidate	Lynn P Findley	Lynn P Findley
 Candidate	Lynne Dewald	Lynne Dewald
 Candidate	Lynnette Shaw	Lynnette Shaw
 Candidate	Maggie Bagon	Maggie Bagon
@@ -1169,13 +1169,13 @@ Candidate	Mark Garton	Mark Garton
 Candidate	Mark J Baldwin	Mark J Baldwin
 Candidate	Mark M Mccracken	Mark M Mccracken
 Candidate	Mark Marcantonio	Mark Marcantonio
-Candidate	Mark Owens	Mark Owens
 Candidate	Mark Owens	Mark **Owens
+Candidate	Mark Owens	Mark Owens
 Candidate	Mark Pratt	Mark Pratt
 Candidate	Mark R Gundersen	Mark R Gundersen
 Candidate	Mark Shull	Mark Shull
-Candidate	Mark W Meek	Mark W Meek
 Candidate	Mark W Meek	Mark W **Meek
+Candidate	Mark W Meek	Mark W Meek
 Candidate	Mark Zanmiller	Mark Zanmiller
 Candidate	Marla Skroch	Marla Skroch
 Candidate	Marlina Avila Serratos	Marlina Avila Serratos
@@ -1183,8 +1183,8 @@ Candidate	Marsha Demaris	Marsha Demaris
 Candidate	Martha A Sherwood	Martha A Sherwood
 Candidate	Marty Baldwin	Marty Baldwin
 Candidate	Marty Waldo	Marty Waldo
-Candidate	Marty Wilde	Marty Wilde
 Candidate	Marty Wilde	Marty **Wilde
+Candidate	Marty Wilde	Marty Wilde
 Candidate	Mary Ann Guess	Mary Ann Guess
 Candidate	Mary Ann Miesner	Mary Ann Miesner
 Candidate	Mary Baumgardner	Mary Baumgardner
@@ -1213,8 +1213,8 @@ Candidate	Matthew Thomas	Matthew Thomas
 Candidate	Maureen Wright	Maureen Wright
 Candidate	Max E Glenn	Max E Glenn
 Candidate	Max Sherman	Max Sherman
-Candidate	Maxine E Dexter	Maxine E Dexter
 Candidate	Maxine E Dexter	Maxine E **Dexter
+Candidate	Maxine E Dexter	Maxine E Dexter
 Candidate	Meadow Martell	Meadow Martell
 Candidate	Megan Greisen	Megan Greisen
 Candidate	Megan Perkins	Megan Perkins
@@ -1239,8 +1239,8 @@ Candidate	Michael Armstrong	Michael Armstrong
 Candidate	Michael Clary	Michael Clary
 Candidate	Michael Cross	Michael Cross
 Candidate	Michael De Blasi	Michael De Blasi
-Candidate	Michael Dembrow	Michael Dembrow
 Candidate	Michael Dembrow	Michael **Dembrow
+Candidate	Michael Dembrow	Michael Dembrow
 Candidate	Michael E Lundsten	Michael E Lundsten
 Candidate	Michael G Dowd	Michael G Dowd
 Candidate	Michael Glowa	Michael Glowa
@@ -1280,8 +1280,8 @@ Candidate	Mike C Mcclain	Mike C Mcclain
 Candidate	Mike Caughey	Mike Caughey
 Candidate	Mike J Cearns	Mike J Cearns
 Candidate	Mike Mcbride	Mike Mcbride
-Candidate	Mike Nearman	Mike Nearman
 Candidate	Mike Nearman	Mike **Nearman
+Candidate	Mike Nearman	Mike Nearman
 Candidate	Mike Rainey	Mike Rainey
 Candidate	Mike Schaufler	Mike Schaufler
 Candidate	Mike Scott	Mike Scott
@@ -1307,8 +1307,8 @@ Candidate	Nancy Evans	Nancy Evans
 Candidate	Nancy L Diaz	Nancy L Diaz
 Candidate	Nancy L Nelson	Nancy L Nelson
 Candidate	Nancy Mccarthy	Nancy Mccarthy
-Candidate	Nancy Nathanson	Nancy Nathanson
 Candidate	Nancy Nathanson	Nancy **Nathanson
+Candidate	Nancy Nathanson	Nancy Nathanson
 Candidate	Nancy R Peterson	Nancy R Peterson
 Candidate	Nancy V Wyse	Nancy V Wyse
 Candidate	Nathalie Paravicini	Nathalie Paravicini
@@ -1333,8 +1333,8 @@ Candidate	Norm 'Bud' Shattuck Jr	Norm 'Bud' Shattuck Jr
 Candidate	Normajean Osborn	Normajean Osborn
 Candidate	Other	OTHER
 Candidate	Paige Hook	Paige Hook
-Candidate	Pam Marsh	Pam Marsh
 Candidate	Pam Marsh	Pam **Marsh
+Candidate	Pam Marsh	Pam Marsh
 Candidate	Pam Vanarsdale	Pam Vanarsdale
 Candidate	Pamela Foreman	Pamela Foreman
 Candidate	Pamela R Smerski	Pamela R Smerski
@@ -1365,11 +1365,11 @@ Candidate	Paul Brakeman	Paul Brakeman
 Candidate	Paul Daniels	Paul Daniels
 Candidate	Paul Dasso	Paul Dasso
 Candidate	Paul E Keefer	Paul E Keefer
-Candidate	Paul Evans	Paul Evans
 Candidate	Paul Evans	Paul **Evans
+Candidate	Paul Evans	Paul Evans
 Candidate	Paul Kittelson	Paul Kittelson
-Candidate	Paul R Holvey	Paul R Holvey
 Candidate	Paul R Holvey	Paul R **Holvey
+Candidate	Paul R Holvey	Paul R Holvey
 Candidate	Paul Recanzone	Paul Recanzone
 Candidate	Paul Strobel	Paul Strobel
 Candidate	Paul Trahan	Paul Trahan
@@ -1386,8 +1386,8 @@ Candidate	Penelope (Penny) Cheek	Penelope (Penny) Cheek
 Candidate	Pete Siragusa	Pete Siragusa
 Candidate	Pete Wall	Pete Wall
 Candidate	Peter Case	Peter Case
-Candidate	Peter Defazio	Peter Defazio
 Candidate	Peter Defazio	Peter DeFazio
+Candidate	Peter Defazio	Peter Defazio
 Candidate	Peter Edison	Peter Edison
 Candidate	Peter Hall	Peter Hall
 Candidate	Peter Mc Hugh	Peter Mc Hugh
@@ -1399,8 +1399,8 @@ Candidate	Phil St Clair	Phil St Clair
 Candidate	Phil Studenberg	Phil Studenberg
 Candidate	Pryor Garnett	Pryor Garnett
 Candidate	R E Gene Wright	R E Gene Wright
-Candidate	Rachel Prusak	Rachel Prusak
 Candidate	Rachel Prusak	Rachel **Prusak
+Candidate	Rachel Prusak	Rachel Prusak
 Candidate	Rachel Verdick	Rachel Verdick
 Candidate	Rachelle Simmons	Rachelle Simmons
 Candidate	Rafael Ivan Hernandez	Rafael Ivan Hernandez
@@ -1418,8 +1418,8 @@ Candidate	Randy Kugler	Randy Kugler
 Candidate	Randy Lauer	Randy Lauer
 Candidate	Randy Sparacino	Randy Sparacino
 Candidate	Randy Stark	Randy Stark
-Candidate	Raquel Moore-Green	Raquel Moore-Green
 Candidate	Raquel Moore-Green	Raquel **Moore-Green
+Candidate	Raquel Moore-Green	Raquel Moore-Green
 Candidate	Ray Kopczynski	Ray Kopczynski
 Candidate	Ray Smith	Ray Smith
 Candidate	Ray Turner	Ray Turner
@@ -1449,16 +1449,16 @@ Candidate	Rick Freeman	Rick Freeman
 Candidate	Rick Henslee	Rick Henslee
 Candidate	Rick Hobart	Rick Hobart
 Candidate	Rick Jackson	Rick Jackson
-Candidate	Rick Lewis	Rick Lewis
 Candidate	Rick Lewis	Rick **Lewis
+Candidate	Rick Lewis	Rick Lewis
 Candidate	Rick Olmsted	Rick Olmsted
 Candidate	Rick Scholl	Rick Scholl
 Candidate	Rick Schreffler	Rick Schreffler
 Candidate	Rick Till	Rick Till
 Candidate	Rick Van Beveren	Rick Van Beveren
 Candidate	Rick Vicek	Rick Vicek
-Candidate	Ricki Ruiz	Ricki Ruiz
 Candidate	Ricki Ruiz	Ricki **Ruiz
+Candidate	Ricki Ruiz	Ricki Ruiz
 Candidate	Riley Hoagland	Riley Hoagland
 Candidate	Rima Ghandour	Rima Ghandour
 Candidate	Rita Baller	Rita Baller
@@ -1466,8 +1466,8 @@ Candidate	Rita Schenkelberg	Rita Schenkelberg
 Candidate	Roak D Teneyck	Roak D Teneyck
 Candidate	Rob Hernandez	Rob Hernandez
 Candidate	Rob Miles	Rob Miles
-Candidate	Rob Nosse	Rob Nosse
 Candidate	Rob Nosse	Rob **Nosse
+Candidate	Rob Nosse	Rob Nosse
 Candidate	Rob Pell	Rob Pell
 Candidate	Rob Raschio	Rob Raschio
 Candidate	Rob Reynolds	Rob Reynolds
@@ -1516,8 +1516,8 @@ Candidate	Ron Hillers	Ron Hillers
 Candidate	Ron Jacobs	Ron Jacobs
 Candidate	Ron Kutch	Ron Kutch
 Candidate	Ron Mcdermid	Ron Mcdermid
-Candidate	Ron Noble	Ron Noble
 Candidate	Ron Noble	Ron **Noble
+Candidate	Ron Noble	Ron Noble
 Candidate	Ron Smith	Ron Smith
 Candidate	Ron Timen	Ron Timen
 Candidate	Ron Wright	Ron Wright
@@ -1610,13 +1610,13 @@ Candidate	Shawn Sorensen	Shawn Sorensen
 Candidate	Shawna Thompson	Shawna Thompson
 Candidate	Sheila Ray Cox	Sheila Ray Cox
 Candidate	Shelley Otte	Shelley Otte
-Candidate	Shelly Boshart Davis	Shelly Boshart Davis
 Candidate	Shelly Boshart Davis	Shelly Boshart **Davis
+Candidate	Shelly Boshart Davis	Shelly Boshart Davis
 Candidate	Shelly Clark	Shelly Clark
 Candidate	Shemia Fagan	Shemia Fagan
 Candidate	Sheri Moothart	Sheri Moothart
-Candidate	Sheri Schouten	Sheri Schouten
 Candidate	Sheri Schouten	Sheri **Schouten
+Candidate	Sheri Schouten	Sheri Schouten
 Candidate	Sherrie Sprenger	Sherrie Sprenger
 Candidate	Sherry Haeger	Sherry Haeger
 Candidate	Sheryl S Glenn	Sheryl S Glenn
@@ -1681,8 +1681,8 @@ Candidate	Susie Foster	Susie Foster
 Candidate	Susie Lahsene	Susie Lahsene
 Candidate	Suzanne (Suzie) Hood	Suzanne (Suzie) Hood
 Candidate	Suzanne Bonamici	Suzanne Bonamici
-Candidate	Suzanne Weber	Suzanne Weber
 Candidate	Suzanne Weber	Suzanne **Weber
+Candidate	Suzanne Weber	Suzanne Weber
 Candidate	T Scott Harden	T Scott Harden
 Candidate	Tamie Kaufman	Tamie Kaufman
 Candidate	Tammie Williams	Tammie Williams
@@ -1690,15 +1690,15 @@ Candidate	Tammy Duvall	Tammy Duvall
 Candidate	Taneea Browning	Taneea Browning
 Candidate	Tanner Robertson	Tanner Robertson
 Candidate	Tassi (Mills) O'Neil	Tassi (Mills) O'Neil
-Candidate	Tawna Sanchez	Tawna Sanchez
 Candidate	Tawna Sanchez	Tawna **Sanchez
+Candidate	Tawna Sanchez	Tawna Sanchez
 Candidate	Tawnya Kreft	Tawnya Kreft
 Candidate	Taylor A Rickey	Taylor A Rickey
 Candidate	Taylor Giles	Taylor Giles
 Candidate	Ted Warila	Ted Warila
 Candidate	Ted Wheeler	Ted Wheeler
-Candidate	Teresa Alonso Leon	Teresa Alonso Leon
 Candidate	Teresa Alonso Leon	Teresa **Alonso Leon
+Candidate	Teresa Alonso Leon	Teresa Alonso Leon
 Candidate	Teresa Nielson	Teresa Nielson
 Candidate	Teresa Sajonia	Teresa Sajonia
 Candidate	Teri Arnall	Teri Arnall
@@ -1740,8 +1740,8 @@ Candidate	Tim Erich	Tim Erich
 Candidate	Tim Evertt	Tim Evertt
 Candidate	Tim Hall	Tim Hall
 Candidate	Tim Kirsch	Tim Kirsch
-Candidate	Tim Knopp	Tim Knopp
 Candidate	Tim Knopp	Tim **Knopp
+Candidate	Tim Knopp	Tim Knopp
 Candidate	Tim Luke	Tim Luke
 Candidate	Tim Newton	Tim Newton
 Candidate	Tim Pogwizd	Tim Pogwizd
@@ -1754,8 +1754,8 @@ Candidate	Timothy L Dehne	Timothy L Dehne
 Candidate	Timothy Rippe	Timothy Rippe
 Candidate	Timothy W Aldal	Timothy W Aldal
 Candidate	Tina Casey Jones	Tina Casey Jones
-Candidate	Tina Kotek	Tina Kotek
 Candidate	Tina Kotek	Tina **Kotek
+Candidate	Tina Kotek	Tina Kotek
 Candidate	Tj Bailey	Tj Bailey
 Candidate	Tobias Read	Tobias Read
 Candidate	Todd Fuller	Todd Fuller
@@ -1801,8 +1801,8 @@ Candidate	Verl D Pressnall	Verl D Pressnall
 Candidate	Vickey Romph	Vickey Romph
 Candidate	Vicki Olson	Vicki Olson
 Candidate	Vicki R Townsend	Vicki R Townsend
-Candidate	Vikki Breese-Iverson	Vikki Breese-Iverson
 Candidate	Vikki Breese-Iverson	Vikki **Breese-Iverson
+Candidate	Vikki Breese-Iverson	Vikki Breese-Iverson
 Candidate	Vina Carpenter	Vina Carpenter
 Candidate	Vince Jones-Dixon	Vince Jones-Dixon
 Candidate	Vincent Defazio	Vincent Defazio
@@ -1838,200 +1838,200 @@ Candidate	William Martin	William Martin
 Candidate	William Parke	William Parke
 Candidate	William Sigman	William Sigman
 Candidate	William V Carlson Sr	William V Carlson Sr
-Candidate	Wlnsvey E Campos	Wlnsvey E Campos
 Candidate	Wlnsvey E Campos	Wlnsvey E **Campos
+Candidate	Wlnsvey E Campos	Wlnsvey E Campos
 Candidate	Write-in	Write-in
 Candidate	Xan Augerot	Xan Augerot
 Candidate	Yes	Yes
 Candidate	Yvette Potter (City Ticket)	Yvette Potter (City Ticket)
 Candidate	Zach Beck	Zach Beck
-Candidate	Zach Hudson	Zach Hudson
 Candidate	Zach Hudson	Zach **Hudson
+Candidate	Zach Hudson	Zach Hudson
 Candidate	Zach Leigh	Zach Leigh
 Candidate	Zachary Brehm	Zachary Brehm
 Candidate	Zandra Umholtz	Zandra Umholtz
 CandidateContest	OR Attorney General	ATTORNEY GENERAL
-CandidateContest	OR House District 1	STATE REPRESENTATIVE, 1ST DISTRICT
 CandidateContest	OR House District 1	OR House 1st District
-CandidateContest	OR House District 10	STATE REPRESENTATIVE, 10TH DISTRICT
+CandidateContest	OR House District 1	STATE REPRESENTATIVE, 1ST DISTRICT
 CandidateContest	OR House District 10	OR House 10th District
-CandidateContest	OR House District 11	STATE REPRESENTATIVE, 11TH DISTRICT
+CandidateContest	OR House District 10	STATE REPRESENTATIVE, 10TH DISTRICT
 CandidateContest	OR House District 11	OR House 11th District
-CandidateContest	OR House District 12	STATE REPRESENTATIVE, 12TH DISTRICT
+CandidateContest	OR House District 11	STATE REPRESENTATIVE, 11TH DISTRICT
 CandidateContest	OR House District 12	OR House 12th District
-CandidateContest	OR House District 13	STATE REPRESENTATIVE, 13TH DISTRICT
+CandidateContest	OR House District 12	STATE REPRESENTATIVE, 12TH DISTRICT
 CandidateContest	OR House District 13	OR House 13th District
-CandidateContest	OR House District 14	STATE REPRESENTATIVE, 14TH DISTRICT
+CandidateContest	OR House District 13	STATE REPRESENTATIVE, 13TH DISTRICT
 CandidateContest	OR House District 14	OR House 14th District
-CandidateContest	OR House District 15	STATE REPRESENTATIVE, 15TH DISTRICT
+CandidateContest	OR House District 14	STATE REPRESENTATIVE, 14TH DISTRICT
 CandidateContest	OR House District 15	OR House 15th District
-CandidateContest	OR House District 16	STATE REPRESENTATIVE, 16TH DISTRICT
+CandidateContest	OR House District 15	STATE REPRESENTATIVE, 15TH DISTRICT
 CandidateContest	OR House District 16	OR House 16th District
-CandidateContest	OR House District 17	STATE REPRESENTATIVE, 17TH DISTRICT
+CandidateContest	OR House District 16	STATE REPRESENTATIVE, 16TH DISTRICT
 CandidateContest	OR House District 17	OR House 17th District
-CandidateContest	OR House District 18	STATE REPRESENTATIVE, 18TH DISTRICT
+CandidateContest	OR House District 17	STATE REPRESENTATIVE, 17TH DISTRICT
 CandidateContest	OR House District 18	OR House 18th District
-CandidateContest	OR House District 19	STATE REPRESENTATIVE, 19TH DISTRICT
+CandidateContest	OR House District 18	STATE REPRESENTATIVE, 18TH DISTRICT
 CandidateContest	OR House District 19	OR House 19th District
-CandidateContest	OR House District 2	STATE REPRESENTATIVE, 2ND DISTRICT
+CandidateContest	OR House District 19	STATE REPRESENTATIVE, 19TH DISTRICT
 CandidateContest	OR House District 2	OR House 2nd District
-CandidateContest	OR House District 20	STATE REPRESENTATIVE, 20TH DISTRICT
+CandidateContest	OR House District 2	STATE REPRESENTATIVE, 2ND DISTRICT
 CandidateContest	OR House District 20	OR House 20th District
-CandidateContest	OR House District 21	STATE REPRESENTATIVE, 21ST DISTRICT
+CandidateContest	OR House District 20	STATE REPRESENTATIVE, 20TH DISTRICT
 CandidateContest	OR House District 21	OR House 21st District
-CandidateContest	OR House District 22	STATE REPRESENTATIVE, 22ND DISTRICT
+CandidateContest	OR House District 21	STATE REPRESENTATIVE, 21ST DISTRICT
 CandidateContest	OR House District 22	OR House 22nd District
-CandidateContest	OR House District 23	STATE REPRESENTATIVE, 23RD DISTRICT
+CandidateContest	OR House District 22	STATE REPRESENTATIVE, 22ND DISTRICT
 CandidateContest	OR House District 23	OR House 23rd District
-CandidateContest	OR House District 24	STATE REPRESENTATIVE, 24TH DISTRICT
+CandidateContest	OR House District 23	STATE REPRESENTATIVE, 23RD DISTRICT
 CandidateContest	OR House District 24	OR House 24th District
-CandidateContest	OR House District 25	STATE REPRESENTATIVE, 25TH DISTRICT
+CandidateContest	OR House District 24	STATE REPRESENTATIVE, 24TH DISTRICT
 CandidateContest	OR House District 25	OR House 25th District
-CandidateContest	OR House District 26	STATE REPRESENTATIVE, 26TH DISTRICT
+CandidateContest	OR House District 25	STATE REPRESENTATIVE, 25TH DISTRICT
 CandidateContest	OR House District 26	OR House 26th District
-CandidateContest	OR House District 27	STATE REPRESENTATIVE, 27TH DISTRICT
+CandidateContest	OR House District 26	STATE REPRESENTATIVE, 26TH DISTRICT
 CandidateContest	OR House District 27	OR House 27th District
-CandidateContest	OR House District 28	STATE REPRESENTATIVE, 28TH DISTRICT
+CandidateContest	OR House District 27	STATE REPRESENTATIVE, 27TH DISTRICT
 CandidateContest	OR House District 28	OR House 28th District
-CandidateContest	OR House District 29	STATE REPRESENTATIVE, 29TH DISTRICT
+CandidateContest	OR House District 28	STATE REPRESENTATIVE, 28TH DISTRICT
 CandidateContest	OR House District 29	OR House 29th District
-CandidateContest	OR House District 3	STATE REPRESENTATIVE, 3RD DISTRICT
+CandidateContest	OR House District 29	STATE REPRESENTATIVE, 29TH DISTRICT
 CandidateContest	OR House District 3	OR House 3rd District
-CandidateContest	OR House District 30	STATE REPRESENTATIVE, 30TH DISTRICT
+CandidateContest	OR House District 3	STATE REPRESENTATIVE, 3RD DISTRICT
 CandidateContest	OR House District 30	OR House 30th District
-CandidateContest	OR House District 31	STATE REPRESENTATIVE, 31ST DISTRICT
+CandidateContest	OR House District 30	STATE REPRESENTATIVE, 30TH DISTRICT
 CandidateContest	OR House District 31	OR House 31st District
-CandidateContest	OR House District 32	STATE REPRESENTATIVE, 32ND DISTRICT
+CandidateContest	OR House District 31	STATE REPRESENTATIVE, 31ST DISTRICT
 CandidateContest	OR House District 32	OR House 32nd District
-CandidateContest	OR House District 33	STATE REPRESENTATIVE, 33RD DISTRICT
+CandidateContest	OR House District 32	STATE REPRESENTATIVE, 32ND DISTRICT
 CandidateContest	OR House District 33	OR House 33rd District
-CandidateContest	OR House District 34	STATE REPRESENTATIVE, 34TH DISTRICT
+CandidateContest	OR House District 33	STATE REPRESENTATIVE, 33RD DISTRICT
 CandidateContest	OR House District 34	OR House 34th District
-CandidateContest	OR House District 35	STATE REPRESENTATIVE, 35TH DISTRICT
+CandidateContest	OR House District 34	STATE REPRESENTATIVE, 34TH DISTRICT
 CandidateContest	OR House District 35	OR House 35th District
-CandidateContest	OR House District 36	STATE REPRESENTATIVE, 36TH DISTRICT
+CandidateContest	OR House District 35	STATE REPRESENTATIVE, 35TH DISTRICT
 CandidateContest	OR House District 36	OR House 36th District
-CandidateContest	OR House District 37	STATE REPRESENTATIVE, 37TH DISTRICT
+CandidateContest	OR House District 36	STATE REPRESENTATIVE, 36TH DISTRICT
 CandidateContest	OR House District 37	OR House 37th District
-CandidateContest	OR House District 38	STATE REPRESENTATIVE, 38TH DISTRICT
+CandidateContest	OR House District 37	STATE REPRESENTATIVE, 37TH DISTRICT
 CandidateContest	OR House District 38	OR House 38th District
-CandidateContest	OR House District 39	STATE REPRESENTATIVE, 39TH DISTRICT
+CandidateContest	OR House District 38	STATE REPRESENTATIVE, 38TH DISTRICT
 CandidateContest	OR House District 39	OR House 39th District
-CandidateContest	OR House District 4	STATE REPRESENTATIVE, 4TH DISTRICT
+CandidateContest	OR House District 39	STATE REPRESENTATIVE, 39TH DISTRICT
 CandidateContest	OR House District 4	OR House 4th District
-CandidateContest	OR House District 40	STATE REPRESENTATIVE, 40TH DISTRICT
+CandidateContest	OR House District 4	STATE REPRESENTATIVE, 4TH DISTRICT
 CandidateContest	OR House District 40	OR House 40th District
-CandidateContest	OR House District 41	STATE REPRESENTATIVE, 41ST DISTRICT
+CandidateContest	OR House District 40	STATE REPRESENTATIVE, 40TH DISTRICT
 CandidateContest	OR House District 41	OR House 41st District
-CandidateContest	OR House District 42	STATE REPRESENTATIVE, 42ND DISTRICT
+CandidateContest	OR House District 41	STATE REPRESENTATIVE, 41ST DISTRICT
 CandidateContest	OR House District 42	OR House 42nd District
-CandidateContest	OR House District 43	STATE REPRESENTATIVE, 43RD DISTRICT
+CandidateContest	OR House District 42	STATE REPRESENTATIVE, 42ND DISTRICT
 CandidateContest	OR House District 43	OR House 43rd District
-CandidateContest	OR House District 44	STATE REPRESENTATIVE, 44TH DISTRICT
+CandidateContest	OR House District 43	STATE REPRESENTATIVE, 43RD DISTRICT
 CandidateContest	OR House District 44	OR House 44th District
-CandidateContest	OR House District 45	STATE REPRESENTATIVE, 45TH DISTRICT
+CandidateContest	OR House District 44	STATE REPRESENTATIVE, 44TH DISTRICT
 CandidateContest	OR House District 45	OR House 45th District
-CandidateContest	OR House District 46	STATE REPRESENTATIVE, 46TH DISTRICT
+CandidateContest	OR House District 45	STATE REPRESENTATIVE, 45TH DISTRICT
 CandidateContest	OR House District 46	OR House 46th District
-CandidateContest	OR House District 47	STATE REPRESENTATIVE, 47TH DISTRICT
+CandidateContest	OR House District 46	STATE REPRESENTATIVE, 46TH DISTRICT
 CandidateContest	OR House District 47	OR House 47th District
-CandidateContest	OR House District 48	STATE REPRESENTATIVE, 48TH DISTRICT
+CandidateContest	OR House District 47	STATE REPRESENTATIVE, 47TH DISTRICT
 CandidateContest	OR House District 48	OR House 48th District
-CandidateContest	OR House District 49	STATE REPRESENTATIVE, 49TH DISTRICT
+CandidateContest	OR House District 48	STATE REPRESENTATIVE, 48TH DISTRICT
 CandidateContest	OR House District 49	OR House 49th District
-CandidateContest	OR House District 5	STATE REPRESENTATIVE, 5TH DISTRICT
+CandidateContest	OR House District 49	STATE REPRESENTATIVE, 49TH DISTRICT
 CandidateContest	OR House District 5	OR House 5th District
-CandidateContest	OR House District 50	STATE REPRESENTATIVE, 50TH DISTRICT
+CandidateContest	OR House District 5	STATE REPRESENTATIVE, 5TH DISTRICT
 CandidateContest	OR House District 50	OR House 50th District
-CandidateContest	OR House District 51	STATE REPRESENTATIVE, 51ST DISTRICT
+CandidateContest	OR House District 50	STATE REPRESENTATIVE, 50TH DISTRICT
 CandidateContest	OR House District 51	OR House 51st District
-CandidateContest	OR House District 52	STATE REPRESENTATIVE, 52ND DISTRICT
+CandidateContest	OR House District 51	STATE REPRESENTATIVE, 51ST DISTRICT
 CandidateContest	OR House District 52	OR House 52nd District
-CandidateContest	OR House District 53	STATE REPRESENTATIVE, 53RD DISTRICT
+CandidateContest	OR House District 52	STATE REPRESENTATIVE, 52ND DISTRICT
 CandidateContest	OR House District 53	OR House 53rd District
-CandidateContest	OR House District 54	STATE REPRESENTATIVE, 54TH DISTRICT
+CandidateContest	OR House District 53	STATE REPRESENTATIVE, 53RD DISTRICT
 CandidateContest	OR House District 54	OR House 54th District
-CandidateContest	OR House District 55	STATE REPRESENTATIVE, 55TH DISTRICT
+CandidateContest	OR House District 54	STATE REPRESENTATIVE, 54TH DISTRICT
 CandidateContest	OR House District 55	OR House 55th District
-CandidateContest	OR House District 56	STATE REPRESENTATIVE, 56TH DISTRICT
+CandidateContest	OR House District 55	STATE REPRESENTATIVE, 55TH DISTRICT
 CandidateContest	OR House District 56	OR House 56th District
-CandidateContest	OR House District 57	STATE REPRESENTATIVE, 57TH DISTRICT
+CandidateContest	OR House District 56	STATE REPRESENTATIVE, 56TH DISTRICT
 CandidateContest	OR House District 57	OR House 57th District
-CandidateContest	OR House District 58	STATE REPRESENTATIVE, 58TH DISTRICT
+CandidateContest	OR House District 57	STATE REPRESENTATIVE, 57TH DISTRICT
 CandidateContest	OR House District 58	OR House 58th District
-CandidateContest	OR House District 59	STATE REPRESENTATIVE, 59TH DISTRICT
+CandidateContest	OR House District 58	STATE REPRESENTATIVE, 58TH DISTRICT
 CandidateContest	OR House District 59	OR House 59th District
-CandidateContest	OR House District 6	STATE REPRESENTATIVE, 6TH DISTRICT
+CandidateContest	OR House District 59	STATE REPRESENTATIVE, 59TH DISTRICT
 CandidateContest	OR House District 6	OR House 6th District
-CandidateContest	OR House District 60	STATE REPRESENTATIVE, 60TH DISTRICT
+CandidateContest	OR House District 6	STATE REPRESENTATIVE, 6TH DISTRICT
 CandidateContest	OR House District 60	OR House 60th District
-CandidateContest	OR House District 7	STATE REPRESENTATIVE, 7TH DISTRICT
+CandidateContest	OR House District 60	STATE REPRESENTATIVE, 60TH DISTRICT
 CandidateContest	OR House District 7	OR House 7th District
-CandidateContest	OR House District 8	STATE REPRESENTATIVE, 8TH DISTRICT
+CandidateContest	OR House District 7	STATE REPRESENTATIVE, 7TH DISTRICT
 CandidateContest	OR House District 8	OR House 8th District
-CandidateContest	OR House District 9	STATE REPRESENTATIVE, 9TH DISTRICT
+CandidateContest	OR House District 8	STATE REPRESENTATIVE, 8TH DISTRICT
 CandidateContest	OR House District 9	OR House 9th District
+CandidateContest	OR House District 9	STATE REPRESENTATIVE, 9TH DISTRICT
 CandidateContest	OR Secretary of State	SECRETARY OF STATE
-CandidateContest	OR Senate District 1	STATE SENATOR, 1ST DISTRICT
 CandidateContest	OR Senate District 1	OR Senate 1st District
-CandidateContest	OR Senate District 10	STATE SENATOR, 10TH DISTRICT
+CandidateContest	OR Senate District 1	STATE SENATOR, 1ST DISTRICT
 CandidateContest	OR Senate District 10	OR Senate 10th District
-CandidateContest	OR Senate District 11	STATE SENATOR, 11TH DISTRICT
+CandidateContest	OR Senate District 10	STATE SENATOR, 10TH DISTRICT
 CandidateContest	OR Senate District 11	OR Senate 11th District
-CandidateContest	OR Senate District 12	STATE SENATOR, 12TH DISTRICT
+CandidateContest	OR Senate District 11	STATE SENATOR, 11TH DISTRICT
 CandidateContest	OR Senate District 12	OR Senate 12th District
-CandidateContest	OR Senate District 13	STATE SENATOR, 13TH DISTRICT
+CandidateContest	OR Senate District 12	STATE SENATOR, 12TH DISTRICT
 CandidateContest	OR Senate District 13	OR Senate 13th District
-CandidateContest	OR Senate District 14	STATE SENATOR, 14TH DISTRICT
+CandidateContest	OR Senate District 13	STATE SENATOR, 13TH DISTRICT
 CandidateContest	OR Senate District 14	OR Senate 14th District
-CandidateContest	OR Senate District 15	STATE SENATOR, 15TH DISTRICT
+CandidateContest	OR Senate District 14	STATE SENATOR, 14TH DISTRICT
 CandidateContest	OR Senate District 15	OR Senate 15th District
-CandidateContest	OR Senate District 16	STATE SENATOR, 16TH DISTRICT
+CandidateContest	OR Senate District 15	STATE SENATOR, 15TH DISTRICT
 CandidateContest	OR Senate District 16	OR Senate 16th District
-CandidateContest	OR Senate District 17	STATE SENATOR, 17TH DISTRICT
+CandidateContest	OR Senate District 16	STATE SENATOR, 16TH DISTRICT
 CandidateContest	OR Senate District 17	OR Senate 17th District
-CandidateContest	OR Senate District 18	STATE SENATOR, 18TH DISTRICT
+CandidateContest	OR Senate District 17	STATE SENATOR, 17TH DISTRICT
 CandidateContest	OR Senate District 18	OR Senate 18th District
-CandidateContest	OR Senate District 19	STATE SENATOR, 19TH DISTRICT
+CandidateContest	OR Senate District 18	STATE SENATOR, 18TH DISTRICT
 CandidateContest	OR Senate District 19	OR Senate 19th District
-CandidateContest	OR Senate District 2	STATE SENATOR, 2ND DISTRICT
+CandidateContest	OR Senate District 19	STATE SENATOR, 19TH DISTRICT
 CandidateContest	OR Senate District 2	OR Senate 2nd District
-CandidateContest	OR Senate District 20	STATE SENATOR, 20TH DISTRICT
+CandidateContest	OR Senate District 2	STATE SENATOR, 2ND DISTRICT
 CandidateContest	OR Senate District 20	OR Senate 20th District
-CandidateContest	OR Senate District 21	STATE SENATOR, 21TH DISTRICT
+CandidateContest	OR Senate District 20	STATE SENATOR, 20TH DISTRICT
 CandidateContest	OR Senate District 21	OR Senate 21st District
-CandidateContest	OR Senate District 22	STATE SENATOR, 22TH DISTRICT
+CandidateContest	OR Senate District 21	STATE SENATOR, 21TH DISTRICT
 CandidateContest	OR Senate District 22	OR Senate 22nd District
-CandidateContest	OR Senate District 23	STATE SENATOR, 23TH DISTRICT
+CandidateContest	OR Senate District 22	STATE SENATOR, 22TH DISTRICT
 CandidateContest	OR Senate District 23	OR Senate 23rd District
-CandidateContest	OR Senate District 24	STATE SENATOR, 24TH DISTRICT
+CandidateContest	OR Senate District 23	STATE SENATOR, 23TH DISTRICT
 CandidateContest	OR Senate District 24	OR Senate 24th District
-CandidateContest	OR Senate District 25	STATE SENATOR, 25TH DISTRICT
+CandidateContest	OR Senate District 24	STATE SENATOR, 24TH DISTRICT
 CandidateContest	OR Senate District 25	OR Senate 25th District
-CandidateContest	OR Senate District 26	STATE SENATOR, 26TH DISTRICT
+CandidateContest	OR Senate District 25	STATE SENATOR, 25TH DISTRICT
 CandidateContest	OR Senate District 26	OR Senate 26th District
-CandidateContest	OR Senate District 27	STATE SENATOR, 27TH DISTRICT
+CandidateContest	OR Senate District 26	STATE SENATOR, 26TH DISTRICT
 CandidateContest	OR Senate District 27	OR Senate 27th District
-CandidateContest	OR Senate District 28	STATE SENATOR, 28TH DISTRICT
+CandidateContest	OR Senate District 27	STATE SENATOR, 27TH DISTRICT
 CandidateContest	OR Senate District 28	OR Senate 28th District
-CandidateContest	OR Senate District 29	STATE SENATOR, 29TH DISTRICT
+CandidateContest	OR Senate District 28	STATE SENATOR, 28TH DISTRICT
 CandidateContest	OR Senate District 29	OR Senate 29th District
-CandidateContest	OR Senate District 3	STATE SENATOR, 3RD DISTRICT
+CandidateContest	OR Senate District 29	STATE SENATOR, 29TH DISTRICT
 CandidateContest	OR Senate District 3	OR Senate 3rd District
-CandidateContest	OR Senate District 30	STATE SENATOR, 30TH DISTRICT
+CandidateContest	OR Senate District 3	STATE SENATOR, 3RD DISTRICT
 CandidateContest	OR Senate District 30	OR Senate 30th District
-CandidateContest	OR Senate District 4	STATE SENATOR, 4TH DISTRICT
+CandidateContest	OR Senate District 30	STATE SENATOR, 30TH DISTRICT
 CandidateContest	OR Senate District 4	OR Senate 4th District
-CandidateContest	OR Senate District 5	STATE SENATOR, 5TH DISTRICT
+CandidateContest	OR Senate District 4	STATE SENATOR, 4TH DISTRICT
 CandidateContest	OR Senate District 5	OR Senate 5th District
-CandidateContest	OR Senate District 6	STATE SENATOR, 6TH DISTRICT
+CandidateContest	OR Senate District 5	STATE SENATOR, 5TH DISTRICT
 CandidateContest	OR Senate District 6	OR Senate 6th District
-CandidateContest	OR Senate District 7	STATE SENATOR, 7TH DISTRICT
+CandidateContest	OR Senate District 6	STATE SENATOR, 6TH DISTRICT
 CandidateContest	OR Senate District 7	OR Senate 7th District
-CandidateContest	OR Senate District 8	STATE SENATOR, 8TH DISTRICT
+CandidateContest	OR Senate District 7	STATE SENATOR, 7TH DISTRICT
 CandidateContest	OR Senate District 8	OR Senate 8th District
-CandidateContest	OR Senate District 9	STATE SENATOR, 9TH DISTRICT
+CandidateContest	OR Senate District 8	STATE SENATOR, 8TH DISTRICT
 CandidateContest	OR Senate District 9	OR Senate 9th District
+CandidateContest	OR Senate District 9	STATE SENATOR, 9TH DISTRICT
 CandidateContest	OR Treasurer	STATE TREASURER
 CandidateContest	US House OR District 1	US REPRESENTATIVE, 1ST DISTRICT
 CandidateContest	US House OR District 1	US Representative District 1
@@ -2043,10 +2043,10 @@ CandidateContest	US House OR District 4	US REPRESENTATIVE, 4TH DISTRICT
 CandidateContest	US House OR District 4	US Representative District 4
 CandidateContest	US House OR District 5	US REPRESENTATIVE, 5TH DISTRICT
 CandidateContest	US House OR District 5	US Representative District 5
-CandidateContest	US President (OR)	PRESIDENT AND VICE PRESIDENT
-CandidateContest	US President (OR)	US President
 CandidateContest	US President (OR)	PRESIDENT
+CandidateContest	US President (OR)	PRESIDENT AND VICE PRESIDENT
 CandidateContest	US President (OR)	US PRESIDENT
+CandidateContest	US President (OR)	US President
 CandidateContest	US Senate OR	US SENATOR
 CandidateContest	US Senate OR	US Senator
 CountItemType	total	TOTAL
@@ -2055,8 +2055,8 @@ Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Party	Constitution Party	CONSTITUTION
-Party	Democratic Party	DEMOCRAT
 Party	Democratic Party	(D)
+Party	Democratic Party	DEMOCRAT
 Party	Democratic Party	DEMOCRAT, INDEPENDENT, WORKING FAMILIES
 Party	Democratic Party	DEMOCRAT, WORKING FAMILIES
 Party	Democratic and Independent Parties (cross-listed)	DEMOCRAT, INDEPENDENT
@@ -2065,19 +2065,19 @@ Party	Democratic and Republican Parties (cross-listed)	REPUBLICAN, DEMOCRAT
 Party	Democratic, Progressive and Working Families Parties (cross-listed)	DEMOCRAT, PROGRESSIVE, WORKING FAMILIES
 Party	Democratic, Working Families and Republican Parties (cross-listed)	DEMOCRAT, WORKING FAMILIES, REPUBLICAN
 Party	Green Party	GREEN
-Party	Independent Party	INDEPENDENT, PROGRESSIVE, PACIFIC GREEN
 Party	Independent Party	INDEPENDENT PARTY
-Party	Libertarian Party	LIBERTARIAN
+Party	Independent Party	INDEPENDENT, PROGRESSIVE, PACIFIC GREEN
 Party	Libertarian Party	(L)
-Party	None Party	NONPARTISAN INCUMBENT
+Party	Libertarian Party	LIBERTARIAN
 Party	None Party	NONPARTISAN
-Party	Pacific Green Party	PACIFIC GREEN
+Party	None Party	NONPARTISAN INCUMBENT
 Party	Pacific Green Party	(PG)
-Party	Progressive Party	PROGRESSIVE
+Party	Pacific Green Party	PACIFIC GREEN
 Party	Progressive Party	(P)
 Party	Progressive Party	PACIFIC GREEN, PROGRESSIVE
-Party	Republican Party	REPUBLICAN
+Party	Progressive Party	PROGRESSIVE
 Party	Republican Party	(R)
+Party	Republican Party	REPUBLICAN
 Party	Republican Party	REPUBLICAN, INDEPENDENT
 Party	Republican Party	REPUBLICAN, LIBERTARIAN
 Party	Republican and Constitution Parties (cross-listed)	REPUBLICAN, CONSTITUTION
@@ -2087,57 +2087,57 @@ Party	Working Families Party	WORKING FAMILIES
 Party	none or unknown	OTHER
 ReportingUnit	Oregon	Oregon
 ReportingUnit	Oregon;Baker County	Baker
-ReportingUnit	Oregon;Baker County	41001
+ReportingUnit	Oregon;Baker County	fips41001
 ReportingUnit	Oregon;Benton County	Benton
-ReportingUnit	Oregon;Benton County	41003
+ReportingUnit	Oregon;Benton County	fips41003
 ReportingUnit	Oregon;Clackamas County	Clackamas
-ReportingUnit	Oregon;Clackamas County	41005
+ReportingUnit	Oregon;Clackamas County	fips41005
 ReportingUnit	Oregon;Clatsop County	Clatsop
-ReportingUnit	Oregon;Clatsop County	41007
+ReportingUnit	Oregon;Clatsop County	fips41007
 ReportingUnit	Oregon;Columbia County	Columbia
-ReportingUnit	Oregon;Columbia County	41009
+ReportingUnit	Oregon;Columbia County	fips41009
 ReportingUnit	Oregon;Coos County	Coos
-ReportingUnit	Oregon;Coos County	41011
+ReportingUnit	Oregon;Coos County	fips41011
 ReportingUnit	Oregon;Crook County	Crook
-ReportingUnit	Oregon;Crook County	41013
+ReportingUnit	Oregon;Crook County	fips41013
 ReportingUnit	Oregon;Curry County	Curry
-ReportingUnit	Oregon;Curry County	41015
+ReportingUnit	Oregon;Curry County	fips41015
 ReportingUnit	Oregon;Deschutes County	Deschutes
-ReportingUnit	Oregon;Deschutes County	41017
+ReportingUnit	Oregon;Deschutes County	fips41017
 ReportingUnit	Oregon;Douglas County	Douglas
-ReportingUnit	Oregon;Douglas County	41019
+ReportingUnit	Oregon;Douglas County	fips41019
 ReportingUnit	Oregon;Gilliam County	Gilliam
-ReportingUnit	Oregon;Gilliam County	41021
+ReportingUnit	Oregon;Gilliam County	fips41021
 ReportingUnit	Oregon;Grant County	Grant
-ReportingUnit	Oregon;Grant County	41023
+ReportingUnit	Oregon;Grant County	fips41023
 ReportingUnit	Oregon;Harney County	Harney
-ReportingUnit	Oregon;Harney County	41025
+ReportingUnit	Oregon;Harney County	fips41025
 ReportingUnit	Oregon;Hood River County	Hood River
-ReportingUnit	Oregon;Hood River County	41027
+ReportingUnit	Oregon;Hood River County	fips41027
 ReportingUnit	Oregon;Jackson County	Jackson
-ReportingUnit	Oregon;Jackson County	41029
+ReportingUnit	Oregon;Jackson County	fips41029
 ReportingUnit	Oregon;Jefferson County	Jefferson
-ReportingUnit	Oregon;Jefferson County	41031
+ReportingUnit	Oregon;Jefferson County	fips41031
 ReportingUnit	Oregon;Josephine County	Josephine
-ReportingUnit	Oregon;Josephine County	41033
+ReportingUnit	Oregon;Josephine County	fips41033
 ReportingUnit	Oregon;Klamath County	Klamath
-ReportingUnit	Oregon;Klamath County	41035
+ReportingUnit	Oregon;Klamath County	fips41035
 ReportingUnit	Oregon;Lake County	Lake
-ReportingUnit	Oregon;Lake County	41037
+ReportingUnit	Oregon;Lake County	fips41037
 ReportingUnit	Oregon;Lane County	Lane
-ReportingUnit	Oregon;Lane County	41039
+ReportingUnit	Oregon;Lane County	fips41039
 ReportingUnit	Oregon;Lincoln County	Lincoln
-ReportingUnit	Oregon;Lincoln County	41041
+ReportingUnit	Oregon;Lincoln County	fips41041
 ReportingUnit	Oregon;Linn County	Linn
-ReportingUnit	Oregon;Linn County	41043
+ReportingUnit	Oregon;Linn County	fips41043
 ReportingUnit	Oregon;Malheur County	Malheur
-ReportingUnit	Oregon;Malheur County	41045
+ReportingUnit	Oregon;Malheur County	fips41045
 ReportingUnit	Oregon;Marion County	Marion
-ReportingUnit	Oregon;Marion County	41047
+ReportingUnit	Oregon;Marion County	fips41047
 ReportingUnit	Oregon;Morrow County	Morrow
-ReportingUnit	Oregon;Morrow County	41049
+ReportingUnit	Oregon;Morrow County	fips41049
 ReportingUnit	Oregon;Multnomah County	Multnomah
-ReportingUnit	Oregon;Multnomah County	41051
+ReportingUnit	Oregon;Multnomah County	fips41051
 ReportingUnit	Oregon;OR House District 1	Oregon;OR House District 1
 ReportingUnit	Oregon;OR House District 10	Oregon;OR House District 10
 ReportingUnit	Oregon;OR House District 11	Oregon;OR House District 11
@@ -2229,27 +2229,27 @@ ReportingUnit	Oregon;OR Senate District 7	Oregon;OR Senate District 7
 ReportingUnit	Oregon;OR Senate District 8	Oregon;OR Senate District 8
 ReportingUnit	Oregon;OR Senate District 9	Oregon;OR Senate District 9
 ReportingUnit	Oregon;Polk County	Polk
-ReportingUnit	Oregon;Polk County	41053
+ReportingUnit	Oregon;Polk County	fips41053
 ReportingUnit	Oregon;Sherman County	Sherman
-ReportingUnit	Oregon;Sherman County	41055
+ReportingUnit	Oregon;Sherman County	fips41055
 ReportingUnit	Oregon;Tillamook County	Tillamook
-ReportingUnit	Oregon;Tillamook County	41057
+ReportingUnit	Oregon;Tillamook County	fips41057
 ReportingUnit	Oregon;US House OR District 1	Oregon;US House OR District 1
 ReportingUnit	Oregon;US House OR District 2	Oregon;US House OR District 2
 ReportingUnit	Oregon;US House OR District 3	Oregon;US House OR District 3
 ReportingUnit	Oregon;US House OR District 4	Oregon;US House OR District 4
 ReportingUnit	Oregon;US House OR District 5	Oregon;US House OR District 5
 ReportingUnit	Oregon;Umatilla County	Umatilla
-ReportingUnit	Oregon;Umatilla County	41059
+ReportingUnit	Oregon;Umatilla County	fips41059
 ReportingUnit	Oregon;Union County	Union
-ReportingUnit	Oregon;Union County	41061
+ReportingUnit	Oregon;Union County	fips41061
 ReportingUnit	Oregon;Wallowa County	Wallowa
-ReportingUnit	Oregon;Wallowa County	41063
+ReportingUnit	Oregon;Wallowa County	fips41063
 ReportingUnit	Oregon;Wasco County	Wasco
-ReportingUnit	Oregon;Wasco County	41065
+ReportingUnit	Oregon;Wasco County	fips41065
 ReportingUnit	Oregon;Washington County	Washington
-ReportingUnit	Oregon;Washington County	41067
+ReportingUnit	Oregon;Washington County	fips41067
 ReportingUnit	Oregon;Wheeler County	Wheeler
-ReportingUnit	Oregon;Wheeler County	41069
+ReportingUnit	Oregon;Wheeler County	fips41069
 ReportingUnit	Oregon;Yamhill County	Yamhill
-ReportingUnit	Oregon;Yamhill County	41071
+ReportingUnit	Oregon;Yamhill County	fips41071

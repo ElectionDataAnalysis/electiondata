@@ -314,8 +314,8 @@ Candidate	Gary Swing	Gary Swing
 Candidate	George W. Bush	GEORGE W. BUSH
 Candidate	Gloria Lariva	Gloria Lariva
 Candidate	H	H
-Candidate	H. BROOKE PAIGE	H. BROOKE PAIGE and THOMAS JAMES WITMAN
 Candidate	H. BROOKE PAIGE	H. BROOKE PAIGE
+Candidate	H. BROOKE PAIGE	H. BROOKE PAIGE and THOMAS JAMES WITMAN
 Candidate	HAL COLSTON	HAL COLSTON
 Candidate	HARVEY T	HARVEY T
 Candidate	HARVEY T. SMITH	HARVEY T. SMITH
@@ -934,9 +934,9 @@ Candidate	ZADA GILMORE(Write-In)	ZADA GILMORE(Write-In)
 Candidate	ZOILE APOLO HAMLIN(Write-In)	ZOILE APOLO HAMLIN(Write-In)
 Candidate	Zachary Scalf	Zachary Scalf
 CandidateContest	US House VT District 1	US House VT District 1
-CandidateContest	US President (VT)	US President (VT)
 CandidateContest	US President (VT)	PRESIDENT
 CandidateContest	US President (VT)	US PRESIDENT
+CandidateContest	US President (VT)	US President (VT)
 CandidateContest	US Senate VT	US Senate VT
 CandidateContest	VT Attorney General	VT Attorney General
 CandidateContest	VT Auditor of Accounts	VT Auditor of Accounts
@@ -1159,16 +1159,16 @@ Party	Communist Party	COMMUNIST
 Party	Communist Party	Communist Party
 Party	Constitution Party	CONSTITUTION
 Party	Constitution Party	Constitution Party
-Party	Democratic Party	DEMOCRATIC
 Party	Democratic Party	DEM
 Party	Democratic Party	DEMOCRAT
+Party	Democratic Party	DEMOCRATIC
 Party	Democratic Party	Democratic Party
 Party	Democratic-Progressive Party	DEM/PROG
-Party	Democratic-Progressive Party	PROG/DEM
 Party	Democratic-Progressive Party	Democratic/Progressive Party
+Party	Democratic-Progressive Party	PROG/DEM
 Party	Democratic-Republican Party	DEM/REP
-Party	Democratic-Republican Party	REP/DEM
 Party	Democratic-Republican Party	Democratic/Republican Party
+Party	Democratic-Republican Party	REP/DEM
 Party	Green Party	GREEN
 Party	Green Party	Green Party
 Party	Grumpy Old Patriots Party	GRUMPY OLD PATRIOTS
@@ -1178,13 +1178,13 @@ Party	Libertarian Party	LIBERTARIAN
 Party	Libertarian Party	Libertarian Party
 Party	Liberty Union Party	LIBERTY UNION
 Party	Liberty Union Party	Liberty Union Party
-Party	Progressive Party	PROGRESSIVE
 Party	Progressive Party	PROG
+Party	Progressive Party	PROGRESSIVE
 Party	Progressive Party	Progressive Party
 Party	Prohibition Party	PROHIBITION
 Party	Prohibition Party	Prohibition Party
-Party	Republican Party	REPUBLICAN
 Party	Republican Party	REP
+Party	Republican Party	REPUBLICAN
 Party	Republican Party	Republican Party
 Party	Socialist Workers Party	SOCIALIST WORKERS
 Party	Socialist Workers Party	Socialist Workers Party
@@ -1195,9 +1195,10 @@ Party	Unaffiliated Party	Unaffiliated Party
 Party	Vets for Vets Party	VETS FOR VETS
 Party	none or unknown	OTHER
 ReportingUnit	Vermont	Vermont
-ReportingUnit	Vermont;Addison	ADDISON
-ReportingUnit	Vermont;Addison	Vermont;Addison
-ReportingUnit	Vermont;Addison;ADD-3	ADDISON;ADD-3
+ReportingUnit	Vermont;Addison County	ADDISON
+ReportingUnit	Vermont;Addison County	Vermont;Addison
+ReportingUnit	Vermont;Addison County	fips50001
+ReportingUnit	Vermont;Addison County;ADD-3	ADDISON;ADD-3
 ReportingUnit	Vermont;Albany	ALBANY
 ReportingUnit	Vermont;Albany	Vermont;Albany
 ReportingUnit	Vermont;Albany;ORL-CAL	ALBANY;ORL-CAL
@@ -1237,10 +1238,11 @@ ReportingUnit	Vermont;Barton;ORL-CAL	BARTON;ORL-CAL
 ReportingUnit	Vermont;Belvidere	BELVIDERE
 ReportingUnit	Vermont;Belvidere	Vermont;Belvidere
 ReportingUnit	Vermont;Belvidere;LAM-2	BELVIDERE;LAM-2
-ReportingUnit	Vermont;Bennington	BENNINGTON
-ReportingUnit	Vermont;Bennington	Vermont;Bennington
-ReportingUnit	Vermont;Bennington;BEN-2-1	BENNINGTON;BEN-2-1
-ReportingUnit	Vermont;Bennington;BEN-2-2	BENNINGTON;BEN-2-2
+ReportingUnit	Vermont;Bennington County	BENNINGTON
+ReportingUnit	Vermont;Bennington County	Vermont;Bennington
+ReportingUnit	Vermont;Bennington County	fips50003
+ReportingUnit	Vermont;Bennington County;BEN-2-1	BENNINGTON;BEN-2-1
+ReportingUnit	Vermont;Bennington County;BEN-2-2	BENNINGTON;BEN-2-2
 ReportingUnit	Vermont;Benson	BENSON
 ReportingUnit	Vermont;Benson	Vermont;Benson
 ReportingUnit	Vermont;Benson;ADD-RUT	BENSON;ADD-RUT
@@ -1315,6 +1317,7 @@ ReportingUnit	Vermont;Cabot;CAL-WAS	CABOT;CAL-WAS
 ReportingUnit	Vermont;Calais	CALAIS
 ReportingUnit	Vermont;Calais	Vermont;Calais
 ReportingUnit	Vermont;Calais;WAS-6	CALAIS;WAS-6
+ReportingUnit	Vermont;Caledonia County	fips50005
 ReportingUnit	Vermont;Cambridge	CAMBRIDGE
 ReportingUnit	Vermont;Cambridge	Vermont;Cambridge
 ReportingUnit	Vermont;Cambridge;LAM-3	CAMBRIDGE;LAM-3
@@ -1339,9 +1342,10 @@ ReportingUnit	Vermont;Chelsea;ORA-1	CHELSEA;ORA-1
 ReportingUnit	Vermont;Chester	CHESTER
 ReportingUnit	Vermont;Chester	Vermont;Chester
 ReportingUnit	Vermont;Chester;WDR-3-1	CHESTER;WDR-3-1
-ReportingUnit	Vermont;Chittenden	CHITTENDEN
-ReportingUnit	Vermont;Chittenden	Vermont;Chittenden
-ReportingUnit	Vermont;Chittenden;RUT-WDR-1	CHITTENDEN;RUT-WDR-1
+ReportingUnit	Vermont;Chittenden County	CHITTENDEN
+ReportingUnit	Vermont;Chittenden County	Vermont;Chittenden
+ReportingUnit	Vermont;Chittenden County	fips50007
+ReportingUnit	Vermont;Chittenden County;RUT-WDR-1	CHITTENDEN;RUT-WDR-1
 ReportingUnit	Vermont;Clarendon	CLARENDON
 ReportingUnit	Vermont;Clarendon	Vermont;Clarendon
 ReportingUnit	Vermont;Clarendon;RUT-2	CLARENDON;RUT-2
@@ -1400,11 +1404,12 @@ ReportingUnit	Vermont;Elmore;LAM-WAS	ELMORE;LAM-WAS
 ReportingUnit	Vermont;Enosburgh	ENOSBURGH
 ReportingUnit	Vermont;Enosburgh	Vermont;Enosburgh
 ReportingUnit	Vermont;Enosburgh;FRA-7	ENOSBURGH;FRA-7
-ReportingUnit	Vermont;Essex	ESSEX
-ReportingUnit	Vermont;Essex	Vermont;Essex
-ReportingUnit	Vermont;Essex;CHI-8-1	ESSEX;CHI-8-1
-ReportingUnit	Vermont;Essex;CHI-8-2	ESSEX;CHI-8-2
-ReportingUnit	Vermont;Essex;CHI-8-3	ESSEX;CHI-8-3
+ReportingUnit	Vermont;Essex County	ESSEX
+ReportingUnit	Vermont;Essex County	Vermont;Essex
+ReportingUnit	Vermont;Essex County	fips50009
+ReportingUnit	Vermont;Essex County;CHI-8-1	ESSEX;CHI-8-1
+ReportingUnit	Vermont;Essex County;CHI-8-2	ESSEX;CHI-8-2
+ReportingUnit	Vermont;Essex County;CHI-8-3	ESSEX;CHI-8-3
 ReportingUnit	Vermont;Fair Haven	FAIR HAVEN
 ReportingUnit	Vermont;Fair Haven	Vermont;Fair Haven
 ReportingUnit	Vermont;Fair Haven;RUT-3	FAIR HAVEN;RUT-3
@@ -1426,9 +1431,10 @@ ReportingUnit	Vermont;Ferrisburgh;ADD-3	FERRISBURGH;ADD-3
 ReportingUnit	Vermont;Fletcher	FLETCHER
 ReportingUnit	Vermont;Fletcher	Vermont;Fletcher
 ReportingUnit	Vermont;Fletcher;FRA-6	FLETCHER;FRA-6
-ReportingUnit	Vermont;Franklin	FRANKLIN
-ReportingUnit	Vermont;Franklin	Vermont;Franklin
-ReportingUnit	Vermont;Franklin;FRA-5	FRANKLIN;FRA-5
+ReportingUnit	Vermont;Franklin County	FRANKLIN
+ReportingUnit	Vermont;Franklin County	Vermont;Franklin
+ReportingUnit	Vermont;Franklin County	fips50011
+ReportingUnit	Vermont;Franklin County;FRA-5	FRANKLIN;FRA-5
 ReportingUnit	Vermont;Georgia	GEORGIA
 ReportingUnit	Vermont;Georgia	Vermont;Georgia
 ReportingUnit	Vermont;Georgia;FRA-1	GEORGIA;FRA-1
@@ -1444,9 +1450,10 @@ ReportingUnit	Vermont;Grafton;WDH-3	GRAFTON;WDH-3
 ReportingUnit	Vermont;Granby	GRANBY
 ReportingUnit	Vermont;Granby	Vermont;Granby
 ReportingUnit	Vermont;Granby;ESX-CAL	GRANBY;ESX-CAL
-ReportingUnit	Vermont;Grand Isle	GRAND ISLE
-ReportingUnit	Vermont;Grand Isle	Vermont;Grand Isle
-ReportingUnit	Vermont;Grand Isle;GI-CHI	GRAND ISLE;GI-CHI
+ReportingUnit	Vermont;Grand Isle County	GRAND ISLE
+ReportingUnit	Vermont;Grand Isle County	Vermont;Grand Isle
+ReportingUnit	Vermont;Grand Isle County	fips50013
+ReportingUnit	Vermont;Grand Isle County;GI-CHI	GRAND ISLE;GI-CHI
 ReportingUnit	Vermont;Granville	GRANVILLE
 ReportingUnit	Vermont;Granville	Vermont;Granville
 ReportingUnit	Vermont;Granville;ORA-WAS-ADD	GRANVILLE;ORA-WAS-ADD
@@ -1524,6 +1531,7 @@ ReportingUnit	Vermont;Killington;RUT-WDR-1	KILLINGTON;RUT-WDR-1
 ReportingUnit	Vermont;Kirby	KIRBY
 ReportingUnit	Vermont;Kirby	Vermont;Kirby
 ReportingUnit	Vermont;Kirby;ESX-CAL	KIRBY;ESX-CAL
+ReportingUnit	Vermont;Lamoille County	fips50015
 ReportingUnit	Vermont;Landgrove	LANDGROVE
 ReportingUnit	Vermont;Landgrove	Vermont;Landgrove
 ReportingUnit	Vermont;Landgrove;BEN-RUT	LANDGROVE;BEN-RUT
@@ -1633,9 +1641,11 @@ ReportingUnit	Vermont;Norton;ESX-CAL-ORL	NORTON;ESX-CAL-ORL
 ReportingUnit	Vermont;Norwich	NORWICH
 ReportingUnit	Vermont;Norwich	Vermont;Norwich
 ReportingUnit	Vermont;Norwich;WDR-ORA-2	NORWICH;WDR-ORA-2
-ReportingUnit	Vermont;Orange	ORANGE
-ReportingUnit	Vermont;Orange	Vermont;Orange
-ReportingUnit	Vermont;Orange;ORA-1	ORANGE;ORA-1
+ReportingUnit	Vermont;Orange County	ORANGE
+ReportingUnit	Vermont;Orange County	Vermont;Orange
+ReportingUnit	Vermont;Orange County	fips50017
+ReportingUnit	Vermont;Orange County;ORA-1	ORANGE;ORA-1
+ReportingUnit	Vermont;Orleans County	fips50019
 ReportingUnit	Vermont;Orwell	ORWELL
 ReportingUnit	Vermont;Orwell	Vermont;Orwell
 ReportingUnit	Vermont;Orwell;ADD-RUT	ORWELL;ADD-RUT
@@ -1717,6 +1727,7 @@ ReportingUnit	Vermont;Rutland City;RUT-5-1	RUTLAND CITY;RUT-5-1
 ReportingUnit	Vermont;Rutland City;RUT-5-2	RUTLAND CITY;RUT-5-2
 ReportingUnit	Vermont;Rutland City;RUT-5-3	RUTLAND CITY;RUT-5-3
 ReportingUnit	Vermont;Rutland City;RUT-5-4	RUTLAND CITY;RUT-5-4
+ReportingUnit	Vermont;Rutland County	fips50021
 ReportingUnit	Vermont;Rutland Town	RUTLAND TOWN
 ReportingUnit	Vermont;Rutland Town	Vermont;Rutland Town
 ReportingUnit	Vermont;Rutland Town;RUT-4	RUTLAND TOWN;RUT-4
@@ -2038,116 +2049,119 @@ ReportingUnit	Vermont;Vershire;ORA-1	VERSHIRE;ORA-1
 ReportingUnit	Vermont;Victory	VICTORY
 ReportingUnit	Vermont;Victory	Vermont;Victory
 ReportingUnit	Vermont;Victory;ESX-CAL	VICTORY;ESX-CAL
-ReportingUnit	Vermont;Waitsfield	WAITSFIELD
 ReportingUnit	Vermont;Waitsfield	Vermont;Waitsfield
+ReportingUnit	Vermont;Waitsfield	WAITSFIELD
 ReportingUnit	Vermont;Waitsfield;WAS-7	WAITSFIELD;WAS-7
-ReportingUnit	Vermont;Walden	WALDEN
 ReportingUnit	Vermont;Walden	Vermont;Walden
+ReportingUnit	Vermont;Walden	WALDEN
 ReportingUnit	Vermont;Walden;CAL-2	WALDEN;CAL-2
-ReportingUnit	Vermont;Wallingford	WALLINGFORD
 ReportingUnit	Vermont;Wallingford	Vermont;Wallingford
+ReportingUnit	Vermont;Wallingford	WALLINGFORD
 ReportingUnit	Vermont;Wallingford;RUT-2	WALLINGFORD;RUT-2
-ReportingUnit	Vermont;Waltham	WALTHAM
 ReportingUnit	Vermont;Waltham	Vermont;Waltham
+ReportingUnit	Vermont;Waltham	WALTHAM
 ReportingUnit	Vermont;Waltham;ADD-3	WALTHAM;ADD-3
-ReportingUnit	Vermont;Wardsboro	WARDSBORO
 ReportingUnit	Vermont;Wardsboro	Vermont;Wardsboro
+ReportingUnit	Vermont;Wardsboro	WARDSBORO
 ReportingUnit	Vermont;Wardsboro;WDH-BEN	WARDSBORO;WDH-BEN
-ReportingUnit	Vermont;Warren	WARREN
 ReportingUnit	Vermont;Warren	Vermont;Warren
+ReportingUnit	Vermont;Warren	WARREN
 ReportingUnit	Vermont;Warren;WAS-7	WARREN;WAS-7
-ReportingUnit	Vermont;Washington	WASHINGTON
-ReportingUnit	Vermont;Washington	Vermont;Washington
-ReportingUnit	Vermont;Washington;ORA-1	WASHINGTON;ORA-1
-ReportingUnit	Vermont;Waterbury	WATERBURY
+ReportingUnit	Vermont;Washington County	Vermont;Washington
+ReportingUnit	Vermont;Washington County	WASHINGTON
+ReportingUnit	Vermont;Washington County	fips50023
+ReportingUnit	Vermont;Washington County;ORA-1	WASHINGTON;ORA-1
 ReportingUnit	Vermont;Waterbury	Vermont;Waterbury
+ReportingUnit	Vermont;Waterbury	WATERBURY
 ReportingUnit	Vermont;Waterbury;WAS-CHI	WATERBURY;WAS-CHI
-ReportingUnit	Vermont;Waterford	WATERFORD
 ReportingUnit	Vermont;Waterford	Vermont;Waterford
+ReportingUnit	Vermont;Waterford	WATERFORD
 ReportingUnit	Vermont;Waterford;CAL-1	WATERFORD;CAL-1
-ReportingUnit	Vermont;Waterville	WATERVILLE
 ReportingUnit	Vermont;Waterville	Vermont;Waterville
+ReportingUnit	Vermont;Waterville	WATERVILLE
 ReportingUnit	Vermont;Waterville;LAM-3	WATERVILLE;LAM-3
-ReportingUnit	Vermont;Weathersfield	WEATHERSFIELD
 ReportingUnit	Vermont;Weathersfield	Vermont;Weathersfield
+ReportingUnit	Vermont;Weathersfield	WEATHERSFIELD
 ReportingUnit	Vermont;Weathersfield;WDR-2	WEATHERSFIELD;WDR-2
-ReportingUnit	Vermont;Wells	WELLS
 ReportingUnit	Vermont;Wells	Vermont;Wells
+ReportingUnit	Vermont;Wells	WELLS
 ReportingUnit	Vermont;Wells;RUT-BEN	WELLS;RUT-BEN
-ReportingUnit	Vermont;West Fairlee	WEST FAIRLEE
 ReportingUnit	Vermont;West Fairlee	Vermont;West Fairlee
+ReportingUnit	Vermont;West Fairlee	WEST FAIRLEE
 ReportingUnit	Vermont;West Fairlee;ORA-2	WEST FAIRLEE;ORA-2
-ReportingUnit	Vermont;West Haven	WEST HAVEN
 ReportingUnit	Vermont;West Haven	Vermont;West Haven
+ReportingUnit	Vermont;West Haven	WEST HAVEN
 ReportingUnit	Vermont;West Haven;RUT-3	WEST HAVEN;RUT-3
-ReportingUnit	Vermont;West Rutland	WEST RUTLAND
 ReportingUnit	Vermont;West Rutland	Vermont;West Rutland
+ReportingUnit	Vermont;West Rutland	WEST RUTLAND
 ReportingUnit	Vermont;West Rutland;RUT-2	WEST RUTLAND;RUT-2
-ReportingUnit	Vermont;West Windsor	WEST WINDSOR
 ReportingUnit	Vermont;West Windsor	Vermont;West Windsor
+ReportingUnit	Vermont;West Windsor	WEST WINDSOR
 ReportingUnit	Vermont;West Windsor;WDR-1	WEST WINDSOR;WDR-1
-ReportingUnit	Vermont;Westfield	WESTFIELD
 ReportingUnit	Vermont;Westfield	Vermont;Westfield
+ReportingUnit	Vermont;Westfield	WESTFIELD
 ReportingUnit	Vermont;Westfield;ORL-LAM	WESTFIELD;ORL-LAM
-ReportingUnit	Vermont;Westford	WESTFORD
 ReportingUnit	Vermont;Westford	Vermont;Westford
+ReportingUnit	Vermont;Westford	WESTFORD
 ReportingUnit	Vermont;Westford;CHI-8-3	WESTFORD;CHI-8-3
-ReportingUnit	Vermont;Westminster	WESTMINSTER
 ReportingUnit	Vermont;Westminster	Vermont;Westminster
+ReportingUnit	Vermont;Westminster	WESTMINSTER
 ReportingUnit	Vermont;Westminster;WDH-3	WESTMINSTER;WDH-3
 ReportingUnit	Vermont;Westminster;WDH-4	WESTMINSTER;WDH-4
-ReportingUnit	Vermont;Westmore	WESTMORE
 ReportingUnit	Vermont;Westmore	Vermont;Westmore
+ReportingUnit	Vermont;Westmore	WESTMORE
 ReportingUnit	Vermont;Westmore;ESX-CAL-ORL	WESTMORE;ESX-CAL-ORL
-ReportingUnit	Vermont;Weston	WESTON
 ReportingUnit	Vermont;Weston	Vermont;Weston
+ReportingUnit	Vermont;Weston	WESTON
 ReportingUnit	Vermont;Weston;WDH-BEN-WDR	WESTON;WDH-BEN-WDR
-ReportingUnit	Vermont;Weybridge	WEYBRIDGE
 ReportingUnit	Vermont;Weybridge	Vermont;Weybridge
+ReportingUnit	Vermont;Weybridge	WEYBRIDGE
 ReportingUnit	Vermont;Weybridge;ADD-5	WEYBRIDGE;ADD-5
-ReportingUnit	Vermont;Wheelock	WHEELOCK
 ReportingUnit	Vermont;Wheelock	Vermont;Wheelock
+ReportingUnit	Vermont;Wheelock	WHEELOCK
 ReportingUnit	Vermont;Wheelock;ORL-CAL	WHEELOCK;ORL-CAL
-ReportingUnit	Vermont;Whiting	WHITING
 ReportingUnit	Vermont;Whiting	Vermont;Whiting
+ReportingUnit	Vermont;Whiting	WHITING
 ReportingUnit	Vermont;Whiting;ADD-RUT	WHITING;ADD-RUT
-ReportingUnit	Vermont;Whitingham	WHITINGHAM
 ReportingUnit	Vermont;Whitingham	Vermont;Whitingham
+ReportingUnit	Vermont;Whitingham	WHITINGHAM
 ReportingUnit	Vermont;Whitingham;WDH-6	WHITINGHAM;WDH-6
 ReportingUnit	Vermont;Whitingham;WDH-BEN	WHITINGHAM;WDH-BEN
-ReportingUnit	Vermont;Williamstown	WILLIAMSTOWN
 ReportingUnit	Vermont;Williamstown	Vermont;Williamstown
+ReportingUnit	Vermont;Williamstown	WILLIAMSTOWN
 ReportingUnit	Vermont;Williamstown;ORA-1	WILLIAMSTOWN;ORA-1
-ReportingUnit	Vermont;Williston	WILLISTON
 ReportingUnit	Vermont;Williston	Vermont;Williston
+ReportingUnit	Vermont;Williston	WILLISTON
 ReportingUnit	Vermont;Williston;CHI-2	WILLISTON;CHI-2
-ReportingUnit	Vermont;Wilmington	WILMINGTON
 ReportingUnit	Vermont;Wilmington	Vermont;Wilmington
+ReportingUnit	Vermont;Wilmington	WILMINGTON
 ReportingUnit	Vermont;Wilmington;WDH-6	WILMINGTON;WDH-6
-ReportingUnit	Vermont;Windham	WINDHAM
-ReportingUnit	Vermont;Windham	Vermont;Windham
-ReportingUnit	Vermont;Windham;WDH-3	WINDHAM;WDH-3
-ReportingUnit	Vermont;Windsor	WINDSOR
-ReportingUnit	Vermont;Windsor	Vermont;Windsor
-ReportingUnit	Vermont;Windsor;WDR-1	WINDSOR;WDR-1
-ReportingUnit	Vermont;Winhall	WINHALL
+ReportingUnit	Vermont;Windham County	Vermont;Windham
+ReportingUnit	Vermont;Windham County	WINDHAM
+ReportingUnit	Vermont;Windham County	fips50025
+ReportingUnit	Vermont;Windham County;WDH-3	WINDHAM;WDH-3
+ReportingUnit	Vermont;Windsor County	Vermont;Windsor
+ReportingUnit	Vermont;Windsor County	WINDSOR
+ReportingUnit	Vermont;Windsor County	fips50027
+ReportingUnit	Vermont;Windsor County;WDR-1	WINDSOR;WDR-1
 ReportingUnit	Vermont;Winhall	Vermont;Winhall
+ReportingUnit	Vermont;Winhall	WINHALL
 ReportingUnit	Vermont;Winhall;WDH-BEN-WDR	WINHALL;WDH-BEN-WDR
-ReportingUnit	Vermont;Winooski	WINOOSKI
 ReportingUnit	Vermont;Winooski	Vermont;Winooski
+ReportingUnit	Vermont;Winooski	WINOOSKI
 ReportingUnit	Vermont;Winooski;CHI-6-7	WINOOSKI;CHI-6-7
-ReportingUnit	Vermont;Wolcott	WOLCOTT
 ReportingUnit	Vermont;Wolcott	Vermont;Wolcott
+ReportingUnit	Vermont;Wolcott	WOLCOTT
 ReportingUnit	Vermont;Wolcott;LAM-2	WOLCOTT;LAM-2
-ReportingUnit	Vermont;Woodbury	WOODBURY
 ReportingUnit	Vermont;Woodbury	Vermont;Woodbury
+ReportingUnit	Vermont;Woodbury	WOODBURY
 ReportingUnit	Vermont;Woodbury;LAM-WAS	WOODBURY;LAM-WAS
-ReportingUnit	Vermont;Woodford	WOODFORD
 ReportingUnit	Vermont;Woodford	Vermont;Woodford
+ReportingUnit	Vermont;Woodford	WOODFORD
 ReportingUnit	Vermont;Woodford;BEN-1	WOODFORD;BEN-1
-ReportingUnit	Vermont;Woodstock	WOODSTOCK
 ReportingUnit	Vermont;Woodstock	Vermont;Woodstock
+ReportingUnit	Vermont;Woodstock	WOODSTOCK
 ReportingUnit	Vermont;Woodstock;WDR-5	WOODSTOCK;WDR-5
-ReportingUnit	Vermont;Worcester	WORCESTER
 ReportingUnit	Vermont;Worcester	Vermont;Worcester
+ReportingUnit	Vermont;Worcester	WORCESTER
 ReportingUnit	Vermont;Worcester;LAM-WAS	WORCESTER;LAM-WAS

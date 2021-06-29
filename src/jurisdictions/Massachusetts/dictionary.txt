@@ -7,8 +7,8 @@ Candidate	Barack Obama	BARACK OBAMA
 Candidate	Bill Keating	Bill Keating
 Candidate	Caroline Colarusso	Caroline Colarusso
 Candidate	Claudette N. Joseph	Claudette N. Joseph
-Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Edward J. Markey	Edward J. Markey
 Candidate	George W. Bush	GEORGE W. BUSH
 Candidate	Helen Brady	Helen Brady
@@ -253,28 +253,28 @@ CandidateContest	US House MA District 6	US House MA District 6
 CandidateContest	US House MA District 7	US House MA District 7
 CandidateContest	US House MA District 8	US House MA District 8
 CandidateContest	US House MA District 9	US House MA District 9
-CandidateContest	US President (MA)	US President (MA)
 CandidateContest	US President (MA)	PRESIDENT
 CandidateContest	US President (MA)	US PRESIDENT
+CandidateContest	US President (MA)	US President (MA)
 CandidateContest	US Senate MA	US Senate MA
 CountItemType	total	TOTAL
 Election	2016 General	2016 General
 Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
-Party	Democratic Party	Democratic
 Party	Democratic Party	DEMOCRAT
-Party	Green Party	Green
+Party	Democratic Party	Democratic
 Party	Green Party	GREEN
+Party	Green Party	Green
 Party	Green-Rainbow Party	Green-Rainbow
-Party	Libertarian Party	Libertarian
 Party	Libertarian Party	LIBERTARIAN
-Party	Republican Party	Republican
+Party	Libertarian Party	Libertarian
 Party	Republican Party	REPUBLICAN
+Party	Republican Party	Republican
 Party	Unenrolled	Unenrolled
 Party	none or unknown	OTHER
 ReportingUnit	Massachusetts	Massachusetts
-ReportingUnit	Massachusetts;Barnstable County	25001
+ReportingUnit	Massachusetts;Barnstable County	fips25001
 ReportingUnit	Massachusetts;Barnstable County;Barnstable	Barnstable
 ReportingUnit	Massachusetts;Barnstable County;Bourne	Bourne
 ReportingUnit	Massachusetts;Barnstable County;Brewster	Brewster
@@ -290,7 +290,7 @@ ReportingUnit	Massachusetts;Barnstable County;Sandwich	Sandwich
 ReportingUnit	Massachusetts;Barnstable County;Truro	Truro
 ReportingUnit	Massachusetts;Barnstable County;Wellfleet	Wellfleet
 ReportingUnit	Massachusetts;Barnstable County;Yarmouth	Yarmouth
-ReportingUnit	Massachusetts;Berkshire County	25003
+ReportingUnit	Massachusetts;Berkshire County	fips25003
 ReportingUnit	Massachusetts;Berkshire County;Adams	Adams
 ReportingUnit	Massachusetts;Berkshire County;Alford	Alford
 ReportingUnit	Massachusetts;Berkshire County;Becket	Becket
@@ -323,7 +323,7 @@ ReportingUnit	Massachusetts;Berkshire County;Washington	Washington
 ReportingUnit	Massachusetts;Berkshire County;West Stockbridge	W. Stockbridge
 ReportingUnit	Massachusetts;Berkshire County;Williamstown	Williamstown
 ReportingUnit	Massachusetts;Berkshire County;Windsor	Windsor
-ReportingUnit	Massachusetts;Bristol County	25005
+ReportingUnit	Massachusetts;Bristol County	fips25005
 ReportingUnit	Massachusetts;Bristol County;Acushnet	Acushnet
 ReportingUnit	Massachusetts;Bristol County;Attleboro	Attleboro
 ReportingUnit	Massachusetts;Bristol County;Berkley	Berkley
@@ -344,7 +344,7 @@ ReportingUnit	Massachusetts;Bristol County;Somerset	Somerset
 ReportingUnit	Massachusetts;Bristol County;Swansea	Swansea
 ReportingUnit	Massachusetts;Bristol County;Taunton	Taunton
 ReportingUnit	Massachusetts;Bristol County;Westport	Westport
-ReportingUnit	Massachusetts;Dukes County	25007
+ReportingUnit	Massachusetts;Dukes County	fips25007
 ReportingUnit	Massachusetts;Dukes County;Aquinnah	Aquinnah
 ReportingUnit	Massachusetts;Dukes County;Chilmark	Chilmark
 ReportingUnit	Massachusetts;Dukes County;Edgartown	Edgartown
@@ -352,7 +352,7 @@ ReportingUnit	Massachusetts;Dukes County;Gosnold	Gosnold
 ReportingUnit	Massachusetts;Dukes County;Oak Bluffs	Oak Bluffs
 ReportingUnit	Massachusetts;Dukes County;Tisbury	Tisbury
 ReportingUnit	Massachusetts;Dukes County;West Tisbury	W. Tisbury
-ReportingUnit	Massachusetts;Essex County	25009
+ReportingUnit	Massachusetts;Essex County	fips25009
 ReportingUnit	Massachusetts;Essex County;Amesbury	Amesbury
 ReportingUnit	Massachusetts;Essex County;Andover	Andover
 ReportingUnit	Massachusetts;Essex County;Beverly	Beverly
@@ -387,7 +387,7 @@ ReportingUnit	Massachusetts;Essex County;Swampscott	Swampscott
 ReportingUnit	Massachusetts;Essex County;Topsfield	Topsfield
 ReportingUnit	Massachusetts;Essex County;Wenham	Wenham
 ReportingUnit	Massachusetts;Essex County;West Newbury	W. Newbury
-ReportingUnit	Massachusetts;Franklin County	25011
+ReportingUnit	Massachusetts;Franklin County	fips25011
 ReportingUnit	Massachusetts;Franklin County;Ashfield	Ashfield
 ReportingUnit	Massachusetts;Franklin County;Bernardston	Bernardston
 ReportingUnit	Massachusetts;Franklin County;Buckland	Buckland
@@ -414,7 +414,7 @@ ReportingUnit	Massachusetts;Franklin County;Sunderland	Sunderland
 ReportingUnit	Massachusetts;Franklin County;Warwick	Warwick
 ReportingUnit	Massachusetts;Franklin County;Wendell	Wendell
 ReportingUnit	Massachusetts;Franklin County;Whately	Whately
-ReportingUnit	Massachusetts;Hampden County	25013
+ReportingUnit	Massachusetts;Hampden County	fips25013
 ReportingUnit	Massachusetts;Hampden County;Agawam	Agawam
 ReportingUnit	Massachusetts;Hampden County;Blandford	Blandford
 ReportingUnit	Massachusetts;Hampden County;Brimfield	Brimfield
@@ -438,7 +438,7 @@ ReportingUnit	Massachusetts;Hampden County;Wales	Wales
 ReportingUnit	Massachusetts;Hampden County;West Springfield	W. Springfield
 ReportingUnit	Massachusetts;Hampden County;Westfield	Westfield
 ReportingUnit	Massachusetts;Hampden County;Wilbraham	Wilbraham
-ReportingUnit	Massachusetts;Hampshire County	25015
+ReportingUnit	Massachusetts;Hampshire County	fips25015
 ReportingUnit	Massachusetts;Hampshire County;Amherst	Amherst
 ReportingUnit	Massachusetts;Hampshire County;Belchertown	Belchertown
 ReportingUnit	Massachusetts;Hampshire County;Chesterfield	Chesterfield
@@ -659,7 +659,7 @@ ReportingUnit	Massachusetts;MA Senate District 6	Massachusetts;MA Senate Distric
 ReportingUnit	Massachusetts;MA Senate District 7	Massachusetts;MA Senate District 7
 ReportingUnit	Massachusetts;MA Senate District 8	Massachusetts;MA Senate District 8
 ReportingUnit	Massachusetts;MA Senate District 9	Massachusetts;MA Senate District 9
-ReportingUnit	Massachusetts;Middlesex County	25017
+ReportingUnit	Massachusetts;Middlesex County	fips25017
 ReportingUnit	Massachusetts;Middlesex County;Acton	Acton
 ReportingUnit	Massachusetts;Middlesex County;Arlington	Arlington
 ReportingUnit	Massachusetts;Middlesex County;Ashby	Ashby
@@ -714,9 +714,9 @@ ReportingUnit	Massachusetts;Middlesex County;Weston	Weston
 ReportingUnit	Massachusetts;Middlesex County;Wilmington	Wilmington
 ReportingUnit	Massachusetts;Middlesex County;Winchester	Winchester
 ReportingUnit	Massachusetts;Middlesex County;Woburn	Woburn
-ReportingUnit	Massachusetts;Nantucket County	25019
+ReportingUnit	Massachusetts;Nantucket County	fips25019
 ReportingUnit	Massachusetts;Nantucket County;Nantucket	Nantucket
-ReportingUnit	Massachusetts;Norfolk County	25021
+ReportingUnit	Massachusetts;Norfolk County	fips25021
 ReportingUnit	Massachusetts;Norfolk County;Avon	Avon
 ReportingUnit	Massachusetts;Norfolk County;Bellingham	Bellingham
 ReportingUnit	Massachusetts;Norfolk County;Braintree	Braintree
@@ -745,7 +745,7 @@ ReportingUnit	Massachusetts;Norfolk County;Wellesley	Wellesley
 ReportingUnit	Massachusetts;Norfolk County;Westwood	Westwood
 ReportingUnit	Massachusetts;Norfolk County;Weymouth	Weymouth
 ReportingUnit	Massachusetts;Norfolk County;Wrentham	Wrentham
-ReportingUnit	Massachusetts;Plymouth County	25023
+ReportingUnit	Massachusetts;Plymouth County	fips25023
 ReportingUnit	Massachusetts;Plymouth County;Abington	Abington
 ReportingUnit	Massachusetts;Plymouth County;Bridgewater	Bridgewater
 ReportingUnit	Massachusetts;Plymouth County;Brockton	Brockton
@@ -773,7 +773,7 @@ ReportingUnit	Massachusetts;Plymouth County;Scituate	Scituate
 ReportingUnit	Massachusetts;Plymouth County;Wareham	Wareham
 ReportingUnit	Massachusetts;Plymouth County;West Bridgewater	W. Bridgewater
 ReportingUnit	Massachusetts;Plymouth County;Whitman	Whitman
-ReportingUnit	Massachusetts;Suffolk County	25025
+ReportingUnit	Massachusetts;Suffolk County	fips25025
 ReportingUnit	Massachusetts;Suffolk County;Boston	Boston
 ReportingUnit	Massachusetts;Suffolk County;Chelsea	Chelsea
 ReportingUnit	Massachusetts;Suffolk County;Revere	Revere
@@ -787,7 +787,7 @@ ReportingUnit	Massachusetts;US House MA District 6	Massachusetts;US House MA Dis
 ReportingUnit	Massachusetts;US House MA District 7	Massachusetts;US House MA District 7
 ReportingUnit	Massachusetts;US House MA District 8	Massachusetts;US House MA District 8
 ReportingUnit	Massachusetts;US House MA District 9	Massachusetts;US House MA District 9
-ReportingUnit	Massachusetts;Worcester County	25027
+ReportingUnit	Massachusetts;Worcester County	fips25027
 ReportingUnit	Massachusetts;Worcester County;Ashburnham	Ashburnham
 ReportingUnit	Massachusetts;Worcester County;Athol	Athol
 ReportingUnit	Massachusetts;Worcester County;Auburn	Auburn

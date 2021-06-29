@@ -8,8 +8,8 @@ Candidate	Brian Flowers	Brian Flowers
 Candidate	Brock Pierce	Presidential Electors for Brock Pierce for President and Karla Ballard for Vice President
 Candidate	Cindy Hyde-Smith	Cindy Hyde-Smith
 Candidate	Don Blankenship	Presidential Electors for Don Blankenship for President and William Mohr for Vice President
-Candidate	Donald J. Trump	Presidential Electors for Donald J. Trump for President and Michael R. Pence for Vice President
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Presidential Electors for Donald J. Trump for President and Michael R. Pence for Vice President
 Candidate	Dorothy Dot Benford	Dorothy Dot Benford
 Candidate	George W. Bush	GEORGE W. BUSH
 Candidate	Hillary Clinton	HILLARY CLINTON
@@ -211,9 +211,9 @@ CandidateContest	US House MS District 1	US House Of Rep 01-1st Congressional Dis
 CandidateContest	US House MS District 2	US House Of Rep 02-2nd Congressional District
 CandidateContest	US House MS District 3	US House Of Rep 03-3rd Congressional District
 CandidateContest	US House MS District 4	US House Of Rep 04-4th Congressional District
-CandidateContest	US President (MS)	United States-President
 CandidateContest	US President (MS)	PRESIDENT
 CandidateContest	US President (MS)	US PRESIDENT
+CandidateContest	US President (MS)	United States-President
 CandidateContest	US Senate MS	United States-Senate
 CountItemType	total	TOTAL
 Election	2016 General	2016 General
@@ -222,104 +222,105 @@ Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Party	American Constitution Party	American Constitution
 Party	American Solidarity Party	American Solidarity
-Party	Democratic Party	Democrat
 Party	Democratic Party	DEMOCRAT
-Party	Green Party	Green
+Party	Democratic Party	Democrat
 Party	Green Party	GREEN
+Party	Green Party	Green
 Party	Independent Party	Independent
-Party	Libertarian Party	Libertarian
 Party	Libertarian Party	LIBERTARIAN
-Party	Republican Party	Republican
+Party	Libertarian Party	Libertarian
 Party	Republican Party	REPUBLICAN
+Party	Republican Party	Republican
 Party	none or unknown	OTHER
 ReportingUnit	Mississippi	Mississippi
 ReportingUnit	Mississippi;Adams County	Adams
-ReportingUnit	Mississippi;Adams County	28001
+ReportingUnit	Mississippi;Adams County	fips28001
 ReportingUnit	Mississippi;Alcorn County	Alcorn
-ReportingUnit	Mississippi;Alcorn County	28003
+ReportingUnit	Mississippi;Alcorn County	fips28003
 ReportingUnit	Mississippi;Amite County	Amite
-ReportingUnit	Mississippi;Amite County	28005
+ReportingUnit	Mississippi;Amite County	fips28005
 ReportingUnit	Mississippi;Attala County	Attala
-ReportingUnit	Mississippi;Attala County	28007
+ReportingUnit	Mississippi;Attala County	fips28007
 ReportingUnit	Mississippi;Benton County	Benton
-ReportingUnit	Mississippi;Benton County	28009
+ReportingUnit	Mississippi;Benton County	fips28009
 ReportingUnit	Mississippi;Bolivar County	Bolivar
-ReportingUnit	Mississippi;Bolivar County	28011
+ReportingUnit	Mississippi;Bolivar County	fips28011
 ReportingUnit	Mississippi;Calhoun County	Calhoun
-ReportingUnit	Mississippi;Calhoun County	28013
+ReportingUnit	Mississippi;Calhoun County	fips28013
 ReportingUnit	Mississippi;Carroll County	Carroll
-ReportingUnit	Mississippi;Carroll County	28015
+ReportingUnit	Mississippi;Carroll County	fips28015
 ReportingUnit	Mississippi;Chickasaw County	Chickasaw
-ReportingUnit	Mississippi;Chickasaw County	28017
+ReportingUnit	Mississippi;Chickasaw County	fips28017
 ReportingUnit	Mississippi;Choctaw County	Choctaw
-ReportingUnit	Mississippi;Choctaw County	28019
+ReportingUnit	Mississippi;Choctaw County	fips28019
 ReportingUnit	Mississippi;Claiborne County	Claiborne
-ReportingUnit	Mississippi;Claiborne County	28021
+ReportingUnit	Mississippi;Claiborne County	fips28021
 ReportingUnit	Mississippi;Clarke County	Clarke
-ReportingUnit	Mississippi;Clarke County	28023
+ReportingUnit	Mississippi;Clarke County	fips28023
 ReportingUnit	Mississippi;Clay County	Clay
-ReportingUnit	Mississippi;Clay County	28025
+ReportingUnit	Mississippi;Clay County	fips28025
 ReportingUnit	Mississippi;Coahoma County	Coahoma
-ReportingUnit	Mississippi;Coahoma County	28027
+ReportingUnit	Mississippi;Coahoma County	fips28027
 ReportingUnit	Mississippi;Copiah County	Copiah
-ReportingUnit	Mississippi;Copiah County	28029
+ReportingUnit	Mississippi;Copiah County	fips28029
 ReportingUnit	Mississippi;Covington County	Covington
-ReportingUnit	Mississippi;Covington County	28031
+ReportingUnit	Mississippi;Covington County	fips28031
 ReportingUnit	Mississippi;DeSoto County	DeSoto
-ReportingUnit	Mississippi;DeSoto County	28033
+ReportingUnit	Mississippi;DeSoto County	fips28033
 ReportingUnit	Mississippi;Forrest County	Forrest
-ReportingUnit	Mississippi;Forrest County	28035
+ReportingUnit	Mississippi;Forrest County	fips28035
 ReportingUnit	Mississippi;Franklin County	Franklin
-ReportingUnit	Mississippi;Franklin County	28037
+ReportingUnit	Mississippi;Franklin County	fips28037
 ReportingUnit	Mississippi;George County	George
-ReportingUnit	Mississippi;George County	28039
+ReportingUnit	Mississippi;George County	fips28039
 ReportingUnit	Mississippi;Greene County	Greene
-ReportingUnit	Mississippi;Greene County	28041
+ReportingUnit	Mississippi;Greene County	fips28041
 ReportingUnit	Mississippi;Grenada County	Grenada
-ReportingUnit	Mississippi;Grenada County	28043
+ReportingUnit	Mississippi;Grenada County	fips28043
 ReportingUnit	Mississippi;Hancock County	Hancock
-ReportingUnit	Mississippi;Hancock County	28045
+ReportingUnit	Mississippi;Hancock County	fips28045
 ReportingUnit	Mississippi;Harrison County	Harrison
-ReportingUnit	Mississippi;Harrison County	28047
+ReportingUnit	Mississippi;Harrison County	fips28047
 ReportingUnit	Mississippi;Hinds County	Hinds
-ReportingUnit	Mississippi;Hinds County	28049
+ReportingUnit	Mississippi;Hinds County	fips28049
 ReportingUnit	Mississippi;Holmes County	Holmes
-ReportingUnit	Mississippi;Holmes County	28051
+ReportingUnit	Mississippi;Holmes County	fips28051
 ReportingUnit	Mississippi;Humphreys County	Humphreys
-ReportingUnit	Mississippi;Humphreys County	28053
+ReportingUnit	Mississippi;Humphreys County	fips28053
 ReportingUnit	Mississippi;Issaquena County	Issaquena
-ReportingUnit	Mississippi;Issaquena County	28055
+ReportingUnit	Mississippi;Issaquena County	fips28055
 ReportingUnit	Mississippi;Itawamba County	Itawamba
-ReportingUnit	Mississippi;Itawamba County	28057
+ReportingUnit	Mississippi;Itawamba County	fips28057
 ReportingUnit	Mississippi;Jackson County	Jackson
-ReportingUnit	Mississippi;Jackson County	28059
+ReportingUnit	Mississippi;Jackson County	fips28059
 ReportingUnit	Mississippi;Jasper County	Jasper
-ReportingUnit	Mississippi;Jasper County	28061
+ReportingUnit	Mississippi;Jasper County	fips28061
 ReportingUnit	Mississippi;Jeff Davis County	Jeff Davis
 ReportingUnit	Mississippi;Jefferson County	Jefferson
-ReportingUnit	Mississippi;Jefferson County	28063
+ReportingUnit	Mississippi;Jefferson County	fips28063
+ReportingUnit	Mississippi;Jefferson Davis County	fips28065
 ReportingUnit	Mississippi;Jones County	Jones
-ReportingUnit	Mississippi;Jones County	28067
+ReportingUnit	Mississippi;Jones County	fips28067
 ReportingUnit	Mississippi;Kemper County	Kemper
-ReportingUnit	Mississippi;Kemper County	28069
+ReportingUnit	Mississippi;Kemper County	fips28069
 ReportingUnit	Mississippi;Lafayette County	Lafayette
-ReportingUnit	Mississippi;Lafayette County	28071
+ReportingUnit	Mississippi;Lafayette County	fips28071
 ReportingUnit	Mississippi;Lamar County	Lamar
-ReportingUnit	Mississippi;Lamar County	28073
+ReportingUnit	Mississippi;Lamar County	fips28073
 ReportingUnit	Mississippi;Lauderdale County	Lauderdale
-ReportingUnit	Mississippi;Lauderdale County	28075
+ReportingUnit	Mississippi;Lauderdale County	fips28075
 ReportingUnit	Mississippi;Lawrence County	Lawrence
-ReportingUnit	Mississippi;Lawrence County	28077
+ReportingUnit	Mississippi;Lawrence County	fips28077
 ReportingUnit	Mississippi;Leake County	Leake
-ReportingUnit	Mississippi;Leake County	28079
+ReportingUnit	Mississippi;Leake County	fips28079
 ReportingUnit	Mississippi;Lee County	Lee
-ReportingUnit	Mississippi;Lee County	28081
+ReportingUnit	Mississippi;Lee County	fips28081
 ReportingUnit	Mississippi;Leflore County	Leflore
-ReportingUnit	Mississippi;Leflore County	28083
+ReportingUnit	Mississippi;Leflore County	fips28083
 ReportingUnit	Mississippi;Lincoln County	Lincoln
-ReportingUnit	Mississippi;Lincoln County	28085
+ReportingUnit	Mississippi;Lincoln County	fips28085
 ReportingUnit	Mississippi;Lowndes County	Lowndes
-ReportingUnit	Mississippi;Lowndes County	28087
+ReportingUnit	Mississippi;Lowndes County	fips28087
 ReportingUnit	Mississippi;MS House District 1	Mississippi;MS House District 1
 ReportingUnit	Mississippi;MS House District 10	Mississippi;MS House District 10
 ReportingUnit	Mississippi;MS House District 100	Mississippi;MS House District 100
@@ -495,82 +496,82 @@ ReportingUnit	Mississippi;MS Senate District 7	Mississippi;MS Senate District 7
 ReportingUnit	Mississippi;MS Senate District 8	Mississippi;MS Senate District 8
 ReportingUnit	Mississippi;MS Senate District 9	Mississippi;MS Senate District 9
 ReportingUnit	Mississippi;Madison County	Madison
-ReportingUnit	Mississippi;Madison County	28089
+ReportingUnit	Mississippi;Madison County	fips28089
 ReportingUnit	Mississippi;Marion County	Marion
-ReportingUnit	Mississippi;Marion County	28091
+ReportingUnit	Mississippi;Marion County	fips28091
 ReportingUnit	Mississippi;Marshall County	Marshall
-ReportingUnit	Mississippi;Marshall County	28093
+ReportingUnit	Mississippi;Marshall County	fips28093
 ReportingUnit	Mississippi;Monroe County	Monroe
-ReportingUnit	Mississippi;Monroe County	28095
+ReportingUnit	Mississippi;Monroe County	fips28095
 ReportingUnit	Mississippi;Montgomery County	Montgomery
-ReportingUnit	Mississippi;Montgomery County	28097
+ReportingUnit	Mississippi;Montgomery County	fips28097
 ReportingUnit	Mississippi;Neshoba County	Neshoba
-ReportingUnit	Mississippi;Neshoba County	28099
+ReportingUnit	Mississippi;Neshoba County	fips28099
 ReportingUnit	Mississippi;Newton County	Newton
-ReportingUnit	Mississippi;Newton County	28101
+ReportingUnit	Mississippi;Newton County	fips28101
 ReportingUnit	Mississippi;Noxubee County	Noxubee
-ReportingUnit	Mississippi;Noxubee County	28103
+ReportingUnit	Mississippi;Noxubee County	fips28103
 ReportingUnit	Mississippi;Oktibbeha County	Oktibbeha
-ReportingUnit	Mississippi;Oktibbeha County	28105
+ReportingUnit	Mississippi;Oktibbeha County	fips28105
 ReportingUnit	Mississippi;Panola County	Panola
-ReportingUnit	Mississippi;Panola County	28107
+ReportingUnit	Mississippi;Panola County	fips28107
 ReportingUnit	Mississippi;Pearl River County	Pearl River
-ReportingUnit	Mississippi;Pearl River County	28109
+ReportingUnit	Mississippi;Pearl River County	fips28109
 ReportingUnit	Mississippi;Perry County	Perry
-ReportingUnit	Mississippi;Perry County	28111
+ReportingUnit	Mississippi;Perry County	fips28111
 ReportingUnit	Mississippi;Pike County	Pike
-ReportingUnit	Mississippi;Pike County	28113
+ReportingUnit	Mississippi;Pike County	fips28113
 ReportingUnit	Mississippi;Pontotoc County	Pontotoc
-ReportingUnit	Mississippi;Pontotoc County	28115
+ReportingUnit	Mississippi;Pontotoc County	fips28115
 ReportingUnit	Mississippi;Prentiss County	Prentiss
-ReportingUnit	Mississippi;Prentiss County	28117
+ReportingUnit	Mississippi;Prentiss County	fips28117
 ReportingUnit	Mississippi;Quitman County	Quitman
-ReportingUnit	Mississippi;Quitman County	28119
+ReportingUnit	Mississippi;Quitman County	fips28119
 ReportingUnit	Mississippi;Rankin County	Rankin
-ReportingUnit	Mississippi;Rankin County	28121
+ReportingUnit	Mississippi;Rankin County	fips28121
 ReportingUnit	Mississippi;Scott County	Scott
-ReportingUnit	Mississippi;Scott County	28123
+ReportingUnit	Mississippi;Scott County	fips28123
 ReportingUnit	Mississippi;Sharkey County	Sharkey
-ReportingUnit	Mississippi;Sharkey County	28125
+ReportingUnit	Mississippi;Sharkey County	fips28125
 ReportingUnit	Mississippi;Simpson County	Simpson
-ReportingUnit	Mississippi;Simpson County	28127
+ReportingUnit	Mississippi;Simpson County	fips28127
 ReportingUnit	Mississippi;Smith County	Smith
-ReportingUnit	Mississippi;Smith County	28129
+ReportingUnit	Mississippi;Smith County	fips28129
 ReportingUnit	Mississippi;Stone County	Stone
-ReportingUnit	Mississippi;Stone County	28131
+ReportingUnit	Mississippi;Stone County	fips28131
 ReportingUnit	Mississippi;Sunflower County	Sunflower
-ReportingUnit	Mississippi;Sunflower County	28133
+ReportingUnit	Mississippi;Sunflower County	fips28133
 ReportingUnit	Mississippi;Tallahatchie County	Tallahatchie
-ReportingUnit	Mississippi;Tallahatchie County	28135
+ReportingUnit	Mississippi;Tallahatchie County	fips28135
 ReportingUnit	Mississippi;Tate County	Tate
-ReportingUnit	Mississippi;Tate County	28137
+ReportingUnit	Mississippi;Tate County	fips28137
 ReportingUnit	Mississippi;Tippah County	Tippah
-ReportingUnit	Mississippi;Tippah County	28139
+ReportingUnit	Mississippi;Tippah County	fips28139
 ReportingUnit	Mississippi;Tishomingo County	Tishomingo
-ReportingUnit	Mississippi;Tishomingo County	28141
+ReportingUnit	Mississippi;Tishomingo County	fips28141
 ReportingUnit	Mississippi;Tunica County	Tunica
-ReportingUnit	Mississippi;Tunica County	28143
+ReportingUnit	Mississippi;Tunica County	fips28143
 ReportingUnit	Mississippi;US House MS District 1	Mississippi;US House MS District 1
 ReportingUnit	Mississippi;US House MS District 2	Mississippi;US House MS District 2
 ReportingUnit	Mississippi;US House MS District 3	Mississippi;US House MS District 3
 ReportingUnit	Mississippi;US House MS District 4	Mississippi;US House MS District 4
 ReportingUnit	Mississippi;Union County	Union
-ReportingUnit	Mississippi;Union County	28145
+ReportingUnit	Mississippi;Union County	fips28145
 ReportingUnit	Mississippi;Walthall County	Walthall
-ReportingUnit	Mississippi;Walthall County	28147
+ReportingUnit	Mississippi;Walthall County	fips28147
 ReportingUnit	Mississippi;Warren County	Warren
-ReportingUnit	Mississippi;Warren County	28149
+ReportingUnit	Mississippi;Warren County	fips28149
 ReportingUnit	Mississippi;Washington County	Washington
-ReportingUnit	Mississippi;Washington County	28151
+ReportingUnit	Mississippi;Washington County	fips28151
 ReportingUnit	Mississippi;Wayne County	Wayne
-ReportingUnit	Mississippi;Wayne County	28153
+ReportingUnit	Mississippi;Wayne County	fips28153
 ReportingUnit	Mississippi;Webster County	Webster
-ReportingUnit	Mississippi;Webster County	28155
+ReportingUnit	Mississippi;Webster County	fips28155
 ReportingUnit	Mississippi;Wilkinson County	Wilkinson
-ReportingUnit	Mississippi;Wilkinson County	28157
+ReportingUnit	Mississippi;Wilkinson County	fips28157
 ReportingUnit	Mississippi;Winston County	Winston
-ReportingUnit	Mississippi;Winston County	28159
+ReportingUnit	Mississippi;Winston County	fips28159
 ReportingUnit	Mississippi;Yalobusha County	Yalobusha
-ReportingUnit	Mississippi;Yalobusha County	28161
+ReportingUnit	Mississippi;Yalobusha County	fips28161
 ReportingUnit	Mississippi;Yazoo County	Yazoo
-ReportingUnit	Mississippi;Yazoo County	28163
+ReportingUnit	Mississippi;Yazoo County	fips28163
