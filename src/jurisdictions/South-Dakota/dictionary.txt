@@ -480,6 +480,7 @@ ReportingUnit	South Dakota;Moody County	Moody
 ReportingUnit	South Dakota;Moody County	fips46101
 ReportingUnit	South Dakota;Oglala Lakota County	Oglala Lakota
 ReportingUnit	South Dakota;Oglala Lakota County	fips46102
+ReportingUnit	South Dakota;Oglala Lakota County	fips46113
 ReportingUnit	South Dakota;Pennington County	Pennington
 ReportingUnit	South Dakota;Pennington County	fips46103
 ReportingUnit	South Dakota;Perkins County	Perkins

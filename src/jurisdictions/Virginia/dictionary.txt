@@ -2648,6 +2648,7 @@ ReportingUnit	Virginia;Bath County;401 - Millboro	BATH COUNTY;401 - MILLBORO
 ReportingUnit	Virginia;Bath County;501 - Healing Springs	BATH COUNTY;501 - HEALING SPRINGS
 ReportingUnit	Virginia;Bedford County	BEDFORD COUNTY
 ReportingUnit	Virginia;Bedford County	fips51019
+ReportingUnit	Virginia;Bedford County	fips51515
 ReportingUnit	Virginia;Bedford County;# Ab - Central Absentee Precinct	BEDFORD COUNTY;# AB - Central Absentee Precinct
 ReportingUnit	Virginia;Bedford County;## Provisional	BEDFORD COUNTY;## Provisional
 ReportingUnit	Virginia;Bedford County;101 - Goodview Elem School	BEDFORD COUNTY;101 - GOODVIEW ELEM SCHOOL

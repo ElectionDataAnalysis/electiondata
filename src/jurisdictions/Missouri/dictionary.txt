@@ -801,6 +801,7 @@ ReportingUnit	Missouri;Jefferson County	fips29099
 ReportingUnit	Missouri;Johnson County	Johnson
 ReportingUnit	Missouri;Johnson County	fips29101
 ReportingUnit	Missouri;Kansas City County	Kansas City
+ReportingUnit	Missouri;Kansas City County	fips36000
 ReportingUnit	Missouri;Knox County	Knox
 ReportingUnit	Missouri;Knox County	fips29103
 ReportingUnit	Missouri;Laclede County	Laclede
