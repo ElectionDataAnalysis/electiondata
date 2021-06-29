@@ -311,115 +311,115 @@ Party	Proyecto Dignidad	(PD)
 Party	Proyecto Dignidad	PD
 Party	Republican Party	Republican Party
 ReportingUnit	Puerto Rico	Puerto-Rico
-ReportingUnit	Puerto Rico;Adjuntas Municipality	Adjuntas
+ReportingUnit	Puerto Rico;Adjuntas Municipio	Adjuntas
 ReportingUnit	Puerto Rico;Adjuntas Municipio	fips72001
-ReportingUnit	Puerto Rico;Aguada Municipality	Aguada
+ReportingUnit	Puerto Rico;Aguada Municipio	Aguada
 ReportingUnit	Puerto Rico;Aguada Municipio	fips72003
-ReportingUnit	Puerto Rico;Aguadilla Municipality	Aguadilla
+ReportingUnit	Puerto Rico;Aguadilla Municipio	Aguadilla
 ReportingUnit	Puerto Rico;Aguadilla Municipio	fips72005
-ReportingUnit	Puerto Rico;Aguas Buenas Municipality	Aguas Buenas
+ReportingUnit	Puerto Rico;Aguas Buenas Municipio	Aguas Buenas
 ReportingUnit	Puerto Rico;Aguas Buenas Municipio	fips72007
-ReportingUnit	Puerto Rico;Aibonito Municipality	Aibonito
+ReportingUnit	Puerto Rico;Aibonito Municipio	Aibonito
 ReportingUnit	Puerto Rico;Aibonito Municipio	fips72009
-ReportingUnit	Puerto Rico;Arecibo Municipality	Arecibo
+ReportingUnit	Puerto Rico;Arecibo Municipio	Arecibo
 ReportingUnit	Puerto Rico;Arecibo Municipio	fips72013
-ReportingUnit	Puerto Rico;Arroyo Municipality	Arroyo
+ReportingUnit	Puerto Rico;Arroyo Municipio	Arroyo
 ReportingUnit	Puerto Rico;Arroyo Municipio	fips72015
-ReportingUnit	Puerto Rico;Añasco Municipality	Añasco
+ReportingUnit	Puerto Rico;Añasco Municipio	Añasco
 ReportingUnit	Puerto Rico;Añasco Municipio	fips72011
-ReportingUnit	Puerto Rico;Barceloneta Municipality	Barceloneta
+ReportingUnit	Puerto Rico;Barceloneta Municipio	Barceloneta
 ReportingUnit	Puerto Rico;Barceloneta Municipio	fips72017
-ReportingUnit	Puerto Rico;Barranquitas Municipality	Barranquitas
+ReportingUnit	Puerto Rico;Barranquitas Municipio	Barranquitas
 ReportingUnit	Puerto Rico;Barranquitas Municipio	fips72019
-ReportingUnit	Puerto Rico;Bayamón Municipality	Bayamón
+ReportingUnit	Puerto Rico;Bayamón Municipio	Bayamón
 ReportingUnit	Puerto Rico;Bayamón Municipio	fips72021
-ReportingUnit	Puerto Rico;Cabo Rojo Municipality	Cabo Rojo
+ReportingUnit	Puerto Rico;Cabo Rojo Municipio	Cabo Rojo
 ReportingUnit	Puerto Rico;Cabo Rojo Municipio	fips72023
-ReportingUnit	Puerto Rico;Caguas Municipality	Caguas
+ReportingUnit	Puerto Rico;Caguas Municipio	Caguas
 ReportingUnit	Puerto Rico;Caguas Municipio	fips72025
-ReportingUnit	Puerto Rico;Camuy Municipality	Camuy
+ReportingUnit	Puerto Rico;Camuy Municipio	Camuy
 ReportingUnit	Puerto Rico;Camuy Municipio	fips72027
-ReportingUnit	Puerto Rico;Canóvanas Municipality	Canóvanas
+ReportingUnit	Puerto Rico;Canóvanas Municipio	Canóvanas
 ReportingUnit	Puerto Rico;Canóvanas Municipio	fips72029
-ReportingUnit	Puerto Rico;Carolina Municipality	Carolina
+ReportingUnit	Puerto Rico;Carolina Municipio	Carolina
 ReportingUnit	Puerto Rico;Carolina Municipio	fips72031
-ReportingUnit	Puerto Rico;Cataño Municipality	Cataño
+ReportingUnit	Puerto Rico;Cataño Municipio	Cataño
 ReportingUnit	Puerto Rico;Cataño Municipio	fips72033
-ReportingUnit	Puerto Rico;Cayey Municipality	Cayey
+ReportingUnit	Puerto Rico;Cayey Municipio	Cayey
 ReportingUnit	Puerto Rico;Cayey Municipio	fips72035
-ReportingUnit	Puerto Rico;Ceiba Municipality	Ceiba
+ReportingUnit	Puerto Rico;Ceiba Municipio	Ceiba
 ReportingUnit	Puerto Rico;Ceiba Municipio	fips72037
-ReportingUnit	Puerto Rico;Ciales Municipality	Ciales
+ReportingUnit	Puerto Rico;Ciales Municipio	Ciales
 ReportingUnit	Puerto Rico;Ciales Municipio	fips72039
-ReportingUnit	Puerto Rico;Cidra Municipality	Cidra
+ReportingUnit	Puerto Rico;Cidra Municipio	Cidra
 ReportingUnit	Puerto Rico;Cidra Municipio	fips72041
-ReportingUnit	Puerto Rico;Coamo Municipality	Coamo
+ReportingUnit	Puerto Rico;Coamo Municipio	Coamo
 ReportingUnit	Puerto Rico;Coamo Municipio	fips72043
-ReportingUnit	Puerto Rico;Comerío Municipality	Comerío
+ReportingUnit	Puerto Rico;Comerío Municipio	Comerío
 ReportingUnit	Puerto Rico;Comerío Municipio	fips72045
-ReportingUnit	Puerto Rico;Corozal Municipality	Corozal
+ReportingUnit	Puerto Rico;Corozal Municipio	Corozal
 ReportingUnit	Puerto Rico;Corozal Municipio	fips72047
-ReportingUnit	Puerto Rico;Culebra Municipality	Culebra
+ReportingUnit	Puerto Rico;Culebra Municipio	Culebra
 ReportingUnit	Puerto Rico;Culebra Municipio	fips72049
-ReportingUnit	Puerto Rico;Dorado Municipality	Dorado
+ReportingUnit	Puerto Rico;Dorado Municipio	Dorado
 ReportingUnit	Puerto Rico;Dorado Municipio	fips72051
-ReportingUnit	Puerto Rico;Fajardo Municipality	Fajardo
+ReportingUnit	Puerto Rico;Fajardo Municipio	Fajardo
 ReportingUnit	Puerto Rico;Fajardo Municipio	fips72053
-ReportingUnit	Puerto Rico;Florida Municipality	Florida
+ReportingUnit	Puerto Rico;Florida Municipio	Florida
 ReportingUnit	Puerto Rico;Florida Municipio	fips72054
-ReportingUnit	Puerto Rico;Guayama Municipality	Guayama
+ReportingUnit	Puerto Rico;Guayama Municipio	Guayama
 ReportingUnit	Puerto Rico;Guayama Municipio	fips72057
-ReportingUnit	Puerto Rico;Guayanilla Municipality	Guayanilla
+ReportingUnit	Puerto Rico;Guayanilla Municipio	Guayanilla
 ReportingUnit	Puerto Rico;Guayanilla Municipio	fips72059
-ReportingUnit	Puerto Rico;Guaynabo Municipality	Guaynabo
+ReportingUnit	Puerto Rico;Guaynabo Municipio	Guaynabo
 ReportingUnit	Puerto Rico;Guaynabo Municipio	fips72061
-ReportingUnit	Puerto Rico;Gurabo Municipality	Gurabo
+ReportingUnit	Puerto Rico;Gurabo Municipio	Gurabo
 ReportingUnit	Puerto Rico;Gurabo Municipio	fips72063
-ReportingUnit	Puerto Rico;Guánica Municipality	Guánica
+ReportingUnit	Puerto Rico;Guánica Municipio	Guánica
 ReportingUnit	Puerto Rico;Guánica Municipio	fips72055
-ReportingUnit	Puerto Rico;Hatillo Municipality	Hatillo
+ReportingUnit	Puerto Rico;Hatillo Municipio	Hatillo
 ReportingUnit	Puerto Rico;Hatillo Municipio	fips72065
-ReportingUnit	Puerto Rico;Hormigueros Municipality	Hormigueros
+ReportingUnit	Puerto Rico;Hormigueros Municipio	Hormigueros
 ReportingUnit	Puerto Rico;Hormigueros Municipio	fips72067
-ReportingUnit	Puerto Rico;Humacao Municipality	Humacao
+ReportingUnit	Puerto Rico;Humacao Municipio	Humacao
 ReportingUnit	Puerto Rico;Humacao Municipio	fips72069
-ReportingUnit	Puerto Rico;Isabela Municipality	Isabela
+ReportingUnit	Puerto Rico;Isabela Municipio	Isabela
 ReportingUnit	Puerto Rico;Isabela Municipio	fips72071
-ReportingUnit	Puerto Rico;Jayuya Municipality	Jayuya
+ReportingUnit	Puerto Rico;Jayuya Municipio	Jayuya
 ReportingUnit	Puerto Rico;Jayuya Municipio	fips72073
-ReportingUnit	Puerto Rico;Juana Díaz Municipality	Juana Díaz
+ReportingUnit	Puerto Rico;Juana Díaz Municipio	Juana Díaz
 ReportingUnit	Puerto Rico;Juana Díaz Municipio	fips72075
-ReportingUnit	Puerto Rico;Juncos Municipality	Juncos
+ReportingUnit	Puerto Rico;Juncos Municipio	Juncos
 ReportingUnit	Puerto Rico;Juncos Municipio	fips72077
-ReportingUnit	Puerto Rico;Lajas Municipality	Lajas
+ReportingUnit	Puerto Rico;Lajas Municipio	Lajas
 ReportingUnit	Puerto Rico;Lajas Municipio	fips72079
-ReportingUnit	Puerto Rico;Lares Municipality	Lares
+ReportingUnit	Puerto Rico;Lares Municipio	Lares
 ReportingUnit	Puerto Rico;Lares Municipio	fips72081
-ReportingUnit	Puerto Rico;Las Marías Municipality	Las Marías
+ReportingUnit	Puerto Rico;Las Marías Municipio	Las Marías
 ReportingUnit	Puerto Rico;Las Marías Municipio	fips72083
-ReportingUnit	Puerto Rico;Las Piedras Municipality	Las Piedras
+ReportingUnit	Puerto Rico;Las Piedras Municipio	Las Piedras
 ReportingUnit	Puerto Rico;Las Piedras Municipio	fips72085
-ReportingUnit	Puerto Rico;Loíza Municipality	Loíza
+ReportingUnit	Puerto Rico;Loíza Municipio	Loíza
 ReportingUnit	Puerto Rico;Loíza Municipio	fips72087
-ReportingUnit	Puerto Rico;Luquillo Municipality	Luquillo
+ReportingUnit	Puerto Rico;Luquillo Municipio	Luquillo
 ReportingUnit	Puerto Rico;Luquillo Municipio	fips72089
-ReportingUnit	Puerto Rico;Manatí Municipality	Manatí
+ReportingUnit	Puerto Rico;Manatí Municipio	Manatí
 ReportingUnit	Puerto Rico;Manatí Municipio	fips72091
-ReportingUnit	Puerto Rico;Maricao Municipality	Maricao
+ReportingUnit	Puerto Rico;Maricao Municipio	Maricao
 ReportingUnit	Puerto Rico;Maricao Municipio	fips72093
-ReportingUnit	Puerto Rico;Maunabo Municipality	Maunabo
+ReportingUnit	Puerto Rico;Maunabo Municipio	Maunabo
 ReportingUnit	Puerto Rico;Maunabo Municipio	fips72095
-ReportingUnit	Puerto Rico;Mayagüez Municipality	Mayagüez
+ReportingUnit	Puerto Rico;Mayagüez Municipio	Mayagüez
 ReportingUnit	Puerto Rico;Mayagüez Municipio	fips72097
-ReportingUnit	Puerto Rico;Moca Municipality	Moca
+ReportingUnit	Puerto Rico;Moca Municipio	Moca
 ReportingUnit	Puerto Rico;Moca Municipio	fips72099
-ReportingUnit	Puerto Rico;Morovis Municipality	Morovis
+ReportingUnit	Puerto Rico;Morovis Municipio	Morovis
 ReportingUnit	Puerto Rico;Morovis Municipio	fips72101
-ReportingUnit	Puerto Rico;Naguabo Municipality	Naguabo
+ReportingUnit	Puerto Rico;Naguabo Municipio	Naguabo
 ReportingUnit	Puerto Rico;Naguabo Municipio	fips72103
-ReportingUnit	Puerto Rico;Naranjito Municipality	Naranjito
+ReportingUnit	Puerto Rico;Naranjito Municipio	Naranjito
 ReportingUnit	Puerto Rico;Naranjito Municipio	fips72105
-ReportingUnit	Puerto Rico;Orocovis Municipality	Orocovis
+ReportingUnit	Puerto Rico;Orocovis Municipio	Orocovis
 ReportingUnit	Puerto Rico;Orocovis Municipio	fips72107
 ReportingUnit	Puerto Rico;PR House District 1	Puerto-Rico;PR House District 1
 ReportingUnit	Puerto Rico;PR House District 10	Puerto-Rico;PR House District 10
@@ -477,50 +477,50 @@ ReportingUnit	Puerto Rico;PR Senate District 7	PR Senate District 7
 ReportingUnit	Puerto Rico;PR Senate District 7	Puerto-Rico;PR Senate District 7
 ReportingUnit	Puerto Rico;PR Senate District 8	PR Senate District 8
 ReportingUnit	Puerto Rico;PR Senate District 8	Puerto-Rico;PR Senate District 8
-ReportingUnit	Puerto Rico;Patillas Municipality	Patillas
+ReportingUnit	Puerto Rico;Patillas Municipio	Patillas
 ReportingUnit	Puerto Rico;Patillas Municipio	fips72109
-ReportingUnit	Puerto Rico;Peñuelas Municipality	Peñuelas
+ReportingUnit	Puerto Rico;Peñuelas Municipio	Peñuelas
 ReportingUnit	Puerto Rico;Peñuelas Municipio	fips72111
-ReportingUnit	Puerto Rico;Ponce Municipality	Ponce
+ReportingUnit	Puerto Rico;Ponce Municipio	Ponce
 ReportingUnit	Puerto Rico;Ponce Municipio	fips72113
-ReportingUnit	Puerto Rico;Quebradillas Municipality	Quebradillas
+ReportingUnit	Puerto Rico;Quebradillas Municipio	Quebradillas
 ReportingUnit	Puerto Rico;Quebradillas Municipio	fips72115
-ReportingUnit	Puerto Rico;Rincón Municipality	Rincón
+ReportingUnit	Puerto Rico;Rincón Municipio	Rincón
 ReportingUnit	Puerto Rico;Rincón Municipio	fips72117
-ReportingUnit	Puerto Rico;Río Grande Municipality	Río Grande
+ReportingUnit	Puerto Rico;Río Grande Municipio	Río Grande
 ReportingUnit	Puerto Rico;Río Grande Municipio	fips72119
-ReportingUnit	Puerto Rico;Sabana Grande Municipality	Sabana Grande
+ReportingUnit	Puerto Rico;Sabana Grande Municipio	Sabana Grande
 ReportingUnit	Puerto Rico;Sabana Grande Municipio	fips72121
-ReportingUnit	Puerto Rico;Salinas Municipality	Salinas
+ReportingUnit	Puerto Rico;Salinas Municipio	Salinas
 ReportingUnit	Puerto Rico;Salinas Municipio	fips72123
-ReportingUnit	Puerto Rico;San Germán Municipality	San Germán
+ReportingUnit	Puerto Rico;San Germán Municipio	San Germán
 ReportingUnit	Puerto Rico;San Germán Municipio	fips72125
-ReportingUnit	Puerto Rico;San Juan Municipality	San Juan
+ReportingUnit	Puerto Rico;San Juan Municipio	San Juan
 ReportingUnit	Puerto Rico;San Juan Municipio	fips72127
-ReportingUnit	Puerto Rico;San Lorenzo Municipality	San Lorenzo
+ReportingUnit	Puerto Rico;San Lorenzo Municipio	San Lorenzo
 ReportingUnit	Puerto Rico;San Lorenzo Municipio	fips72129
-ReportingUnit	Puerto Rico;San Sebastián Municipality	San Sebastián
+ReportingUnit	Puerto Rico;San Sebastián Municipio	San Sebastián
 ReportingUnit	Puerto Rico;San Sebastián Municipio	fips72131
-ReportingUnit	Puerto Rico;Santa Isabel Municipality	Santa Isabel
+ReportingUnit	Puerto Rico;Santa Isabel Municipio	Santa Isabel
 ReportingUnit	Puerto Rico;Santa Isabel Municipio	fips72133
-ReportingUnit	Puerto Rico;Toa Alta Municipality	Toa Alta
+ReportingUnit	Puerto Rico;Toa Alta Municipio	Toa Alta
 ReportingUnit	Puerto Rico;Toa Alta Municipio	fips72135
-ReportingUnit	Puerto Rico;Toa Baja Municipality	Toa Baja
+ReportingUnit	Puerto Rico;Toa Baja Municipio	Toa Baja
 ReportingUnit	Puerto Rico;Toa Baja Municipio	fips72137
-ReportingUnit	Puerto Rico;Trujillo Alto Municipality	Trujillo Alto
+ReportingUnit	Puerto Rico;Trujillo Alto Municipio	Trujillo Alto
 ReportingUnit	Puerto Rico;Trujillo Alto Municipio	fips72139
 ReportingUnit	Puerto Rico;US House PR District 1	Puerto-Rico;US House PR District 1
-ReportingUnit	Puerto Rico;Utuado Municipality	Utuado
+ReportingUnit	Puerto Rico;Utuado Municipio	Utuado
 ReportingUnit	Puerto Rico;Utuado Municipio	fips72141
-ReportingUnit	Puerto Rico;Vega Alta Municipality	Vega Alta
+ReportingUnit	Puerto Rico;Vega Alta Municipio	Vega Alta
 ReportingUnit	Puerto Rico;Vega Alta Municipio	fips72143
-ReportingUnit	Puerto Rico;Vega Baja Municipality	Vega Baja
+ReportingUnit	Puerto Rico;Vega Baja Municipio	Vega Baja
 ReportingUnit	Puerto Rico;Vega Baja Municipio	fips72145
-ReportingUnit	Puerto Rico;Vieques Municipality	Vieques
+ReportingUnit	Puerto Rico;Vieques Municipio	Vieques
 ReportingUnit	Puerto Rico;Vieques Municipio	fips72147
-ReportingUnit	Puerto Rico;Villalba Municipality	Villalba
+ReportingUnit	Puerto Rico;Villalba Municipio	Villalba
 ReportingUnit	Puerto Rico;Villalba Municipio	fips72149
-ReportingUnit	Puerto Rico;Yabucoa Municipality	Yabucoa
+ReportingUnit	Puerto Rico;Yabucoa Municipio	Yabucoa
 ReportingUnit	Puerto Rico;Yabucoa Municipio	fips72151
-ReportingUnit	Puerto Rico;Yauco Municipality	Yauco
+ReportingUnit	Puerto Rico;Yauco Municipio	Yauco
 ReportingUnit	Puerto Rico;Yauco Municipio	fips72153

@@ -1,161 +1,83 @@
 Name	ReportingUnitType
 Puerto Rico;US House PR District 1	congressional
-Puerto Rico;Adjuntas Municipality	municipality
-Puerto Rico;Aguada Municipality	municipality
-Puerto Rico;Aguadilla Municipality	municipality
-Puerto Rico;Aguas Buenas Municipality	municipality
-Puerto Rico;Aibonito Municipality	municipality
-Puerto Rico;Arecibo Municipality	municipality
-Puerto Rico;Arroyo Municipality	municipality
-Puerto Rico;Añasco Municipality	municipality
-Puerto Rico;Barceloneta Municipality	municipality
-Puerto Rico;Barranquitas Municipality	municipality
-Puerto Rico;Bayamón Municipality	municipality
-Puerto Rico;Cabo Rojo Municipality	municipality
-Puerto Rico;Caguas Municipality	municipality
-Puerto Rico;Camuy Municipality	municipality
-Puerto Rico;Canóvanas Municipality	municipality
-Puerto Rico;Carolina Municipality	municipality
-Puerto Rico;Cataño Municipality	municipality
-Puerto Rico;Cayey Municipality	municipality
-Puerto Rico;Ceiba Municipality	municipality
-Puerto Rico;Ciales Municipality	municipality
-Puerto Rico;Cidra Municipality	municipality
-Puerto Rico;Coamo Municipality	municipality
-Puerto Rico;Comerío Municipality	municipality
-Puerto Rico;Corozal Municipality	municipality
-Puerto Rico;Culebra Municipality	municipality
-Puerto Rico;Dorado Municipality	municipality
-Puerto Rico;Fajardo Municipality	municipality
-Puerto Rico;Florida Municipality	municipality
-Puerto Rico;Guayama Municipality	municipality
-Puerto Rico;Guayanilla Municipality	municipality
-Puerto Rico;Guaynabo Municipality	municipality
-Puerto Rico;Gurabo Municipality	municipality
-Puerto Rico;Guánica Municipality	municipality
-Puerto Rico;Hatillo Municipality	municipality
-Puerto Rico;Hormigueros Municipality	municipality
-Puerto Rico;Humacao Municipality	municipality
-Puerto Rico;Isabela Municipality	municipality
-Puerto Rico;Jayuya Municipality	municipality
-Puerto Rico;Juana Díaz Municipality	municipality
-Puerto Rico;Juncos Municipality	municipality
-Puerto Rico;Lajas Municipality	municipality
-Puerto Rico;Lares Municipality	municipality
-Puerto Rico;Las Marías Municipality	municipality
-Puerto Rico;Las Piedras Municipality	municipality
-Puerto Rico;Loíza Municipality	municipality
-Puerto Rico;Luquillo Municipality	municipality
-Puerto Rico;Manatí Municipality	municipality
-Puerto Rico;Maricao Municipality	municipality
-Puerto Rico;Maunabo Municipality	municipality
-Puerto Rico;Mayagüez Municipality	municipality
-Puerto Rico;Moca Municipality	municipality
-Puerto Rico;Morovis Municipality	municipality
-Puerto Rico;Naguabo Municipality	municipality
-Puerto Rico;Naranjito Municipality	municipality
-Puerto Rico;Orocovis Municipality	municipality
-Puerto Rico;Patillas Municipality	municipality
-Puerto Rico;Peñuelas Municipality	municipality
-Puerto Rico;Ponce Municipality	municipality
-Puerto Rico;Quebradillas Municipality	municipality
-Puerto Rico;Rincón Municipality	municipality
-Puerto Rico;Río Grande Municipality	municipality
-Puerto Rico;Sabana Grande Municipality	municipality
-Puerto Rico;Salinas Municipality	municipality
-Puerto Rico;San Germán Municipality	municipality
-Puerto Rico;San Juan Municipality	municipality
-Puerto Rico;San Lorenzo Municipality	municipality
-Puerto Rico;San Sebastián Municipality	municipality
-Puerto Rico;Santa Isabel Municipality	municipality
-Puerto Rico;Toa Alta Municipality	municipality
-Puerto Rico;Toa Baja Municipality	municipality
-Puerto Rico;Trujillo Alto Municipality	municipality
-Puerto Rico;Utuado Municipality	municipality
-Puerto Rico;Vega Alta Municipality	municipality
-Puerto Rico;Vega Baja Municipality	municipality
-Puerto Rico;Vieques Municipality	municipality
-Puerto Rico;Villalba Municipality	municipality
-Puerto Rico;Yabucoa Municipality	municipality
-Puerto Rico;Yauco Municipality	municipality
-Puerto Rico;Adjuntas Municipio	municipio
-Puerto Rico;Aguada Municipio	municipio
-Puerto Rico;Aguadilla Municipio	municipio
-Puerto Rico;Aguas Buenas Municipio	municipio
-Puerto Rico;Aibonito Municipio	municipio
-Puerto Rico;Arecibo Municipio	municipio
-Puerto Rico;Arroyo Municipio	municipio
-Puerto Rico;Añasco Municipio	municipio
-Puerto Rico;Barceloneta Municipio	municipio
-Puerto Rico;Barranquitas Municipio	municipio
-Puerto Rico;Bayamón Municipio	municipio
-Puerto Rico;Cabo Rojo Municipio	municipio
-Puerto Rico;Caguas Municipio	municipio
-Puerto Rico;Camuy Municipio	municipio
-Puerto Rico;Canóvanas Municipio	municipio
-Puerto Rico;Carolina Municipio	municipio
-Puerto Rico;Cataño Municipio	municipio
-Puerto Rico;Cayey Municipio	municipio
-Puerto Rico;Ceiba Municipio	municipio
-Puerto Rico;Ciales Municipio	municipio
-Puerto Rico;Cidra Municipio	municipio
-Puerto Rico;Coamo Municipio	municipio
-Puerto Rico;Comerío Municipio	municipio
-Puerto Rico;Corozal Municipio	municipio
-Puerto Rico;Culebra Municipio	municipio
-Puerto Rico;Dorado Municipio	municipio
-Puerto Rico;Fajardo Municipio	municipio
-Puerto Rico;Florida Municipio	municipio
-Puerto Rico;Guayama Municipio	municipio
-Puerto Rico;Guayanilla Municipio	municipio
-Puerto Rico;Guaynabo Municipio	municipio
-Puerto Rico;Gurabo Municipio	municipio
-Puerto Rico;Guánica Municipio	municipio
-Puerto Rico;Hatillo Municipio	municipio
-Puerto Rico;Hormigueros Municipio	municipio
-Puerto Rico;Humacao Municipio	municipio
-Puerto Rico;Isabela Municipio	municipio
-Puerto Rico;Jayuya Municipio	municipio
-Puerto Rico;Juana Díaz Municipio	municipio
-Puerto Rico;Juncos Municipio	municipio
-Puerto Rico;Lajas Municipio	municipio
-Puerto Rico;Lares Municipio	municipio
-Puerto Rico;Las Marías Municipio	municipio
-Puerto Rico;Las Piedras Municipio	municipio
-Puerto Rico;Loíza Municipio	municipio
-Puerto Rico;Luquillo Municipio	municipio
-Puerto Rico;Manatí Municipio	municipio
-Puerto Rico;Maricao Municipio	municipio
-Puerto Rico;Maunabo Municipio	municipio
-Puerto Rico;Mayagüez Municipio	municipio
-Puerto Rico;Moca Municipio	municipio
-Puerto Rico;Morovis Municipio	municipio
-Puerto Rico;Naguabo Municipio	municipio
-Puerto Rico;Naranjito Municipio	municipio
-Puerto Rico;Orocovis Municipio	municipio
-Puerto Rico;Patillas Municipio	municipio
-Puerto Rico;Peñuelas Municipio	municipio
-Puerto Rico;Ponce Municipio	municipio
-Puerto Rico;Quebradillas Municipio	municipio
-Puerto Rico;Rincón Municipio	municipio
-Puerto Rico;Río Grande Municipio	municipio
-Puerto Rico;Sabana Grande Municipio	municipio
-Puerto Rico;Salinas Municipio	municipio
-Puerto Rico;San Germán Municipio	municipio
-Puerto Rico;San Juan Municipio	municipio
-Puerto Rico;San Lorenzo Municipio	municipio
-Puerto Rico;San Sebastián Municipio	municipio
-Puerto Rico;Santa Isabel Municipio	municipio
-Puerto Rico;Toa Alta Municipio	municipio
-Puerto Rico;Toa Baja Municipio	municipio
-Puerto Rico;Trujillo Alto Municipio	municipio
-Puerto Rico;Utuado Municipio	municipio
-Puerto Rico;Vega Alta Municipio	municipio
-Puerto Rico;Vega Baja Municipio	municipio
-Puerto Rico;Vieques Municipio	municipio
-Puerto Rico;Villalba Municipio	municipio
-Puerto Rico;Yabucoa Municipio	municipio
-Puerto Rico;Yauco Municipio	municipio
+Puerto Rico;Adjuntas Municipio	municipality
+Puerto Rico;Aguada Municipio	municipality
+Puerto Rico;Aguadilla Municipio	municipality
+Puerto Rico;Aguas Buenas Municipio	municipality
+Puerto Rico;Aibonito Municipio	municipality
+Puerto Rico;Arecibo Municipio	municipality
+Puerto Rico;Arroyo Municipio	municipality
+Puerto Rico;Añasco Municipio	municipality
+Puerto Rico;Barceloneta Municipio	municipality
+Puerto Rico;Barranquitas Municipio	municipality
+Puerto Rico;Bayamón Municipio	municipality
+Puerto Rico;Cabo Rojo Municipio	municipality
+Puerto Rico;Caguas Municipio	municipality
+Puerto Rico;Camuy Municipio	municipality
+Puerto Rico;Canóvanas Municipio	municipality
+Puerto Rico;Carolina Municipio	municipality
+Puerto Rico;Cataño Municipio	municipality
+Puerto Rico;Cayey Municipio	municipality
+Puerto Rico;Ceiba Municipio	municipality
+Puerto Rico;Ciales Municipio	municipality
+Puerto Rico;Cidra Municipio	municipality
+Puerto Rico;Coamo Municipio	municipality
+Puerto Rico;Comerío Municipio	municipality
+Puerto Rico;Corozal Municipio	municipality
+Puerto Rico;Culebra Municipio	municipality
+Puerto Rico;Dorado Municipio	municipality
+Puerto Rico;Fajardo Municipio	municipality
+Puerto Rico;Florida Municipio	municipality
+Puerto Rico;Guayama Municipio	municipality
+Puerto Rico;Guayanilla Municipio	municipality
+Puerto Rico;Guaynabo Municipio	municipality
+Puerto Rico;Gurabo Municipio	municipality
+Puerto Rico;Guánica Municipio	municipality
+Puerto Rico;Hatillo Municipio	municipality
+Puerto Rico;Hormigueros Municipio	municipality
+Puerto Rico;Humacao Municipio	municipality
+Puerto Rico;Isabela Municipio	municipality
+Puerto Rico;Jayuya Municipio	municipality
+Puerto Rico;Juana Díaz Municipio	municipality
+Puerto Rico;Juncos Municipio	municipality
+Puerto Rico;Lajas Municipio	municipality
+Puerto Rico;Lares Municipio	municipality
+Puerto Rico;Las Marías Municipio	municipality
+Puerto Rico;Las Piedras Municipio	municipality
+Puerto Rico;Loíza Municipio	municipality
+Puerto Rico;Luquillo Municipio	municipality
+Puerto Rico;Manatí Municipio	municipality
+Puerto Rico;Maricao Municipio	municipality
+Puerto Rico;Maunabo Municipio	municipality
+Puerto Rico;Mayagüez Municipio	municipality
+Puerto Rico;Moca Municipio	municipality
+Puerto Rico;Morovis Municipio	municipality
+Puerto Rico;Naguabo Municipio	municipality
+Puerto Rico;Naranjito Municipio	municipality
+Puerto Rico;Orocovis Municipio	municipality
+Puerto Rico;Patillas Municipio	municipality
+Puerto Rico;Peñuelas Municipio	municipality
+Puerto Rico;Ponce Municipio	municipality
+Puerto Rico;Quebradillas Municipio	municipality
+Puerto Rico;Rincón Municipio	municipality
+Puerto Rico;Río Grande Municipio	municipality
+Puerto Rico;Sabana Grande Municipio	municipality
+Puerto Rico;Salinas Municipio	municipality
+Puerto Rico;San Germán Municipio	municipality
+Puerto Rico;San Juan Municipio	municipality
+Puerto Rico;San Lorenzo Municipio	municipality
+Puerto Rico;San Sebastián Municipio	municipality
+Puerto Rico;Santa Isabel Municipio	municipality
+Puerto Rico;Toa Alta Municipio	municipality
+Puerto Rico;Toa Baja Municipio	municipality
+Puerto Rico;Trujillo Alto Municipio	municipality
+Puerto Rico;Utuado Municipio	municipality
+Puerto Rico;Vega Alta Municipio	municipality
+Puerto Rico;Vega Baja Municipio	municipality
+Puerto Rico;Vieques Municipio	municipality
+Puerto Rico;Villalba Municipio	municipality
+Puerto Rico;Yabucoa Municipio	municipality
+Puerto Rico;Yauco Municipio	municipality
 Puerto Rico;PR House District 1	state-house
 Puerto Rico;PR House District 10	state-house
 Puerto Rico;PR House District 11	state-house
