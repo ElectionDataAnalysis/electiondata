@@ -325,6 +325,19 @@ def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
             f"Every ReportingUnit should start with the jurisdiction name. These do not:\n{bad_str}",
         )
 
+    # check that there are no duplicate Names
+    ru_freq = ru.groupby(["Name"]).count()
+    duped = ru_freq[ru_freq["ReportingUnitType"] > 1]
+    if not duped.empty:
+        dupe_str = "\n".join(list(duped.index.unique()))
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            Path(juris_path).name,
+            f"\nReportingUnit Names must be unique. These are listed on more than one row:\n{dupe_str}"
+        )
+
+
     return err
 
 

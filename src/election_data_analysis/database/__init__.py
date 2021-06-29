@@ -558,7 +558,7 @@ def insert_to_cdf_db(
         # append ids (if matched) and nulls (if not matched)
 
         matched_with_old = append_id_to_dframe(
-            engine, working, "ReportingUnit", {"Name": "Name"}
+            engine, working, "ReportingUnit", {"Name": "Name"}, null_ids_to_zero=False
         )
 
     # name temp table by username and timestamp to avoid conflict
@@ -702,12 +702,13 @@ def insert_to_cdf_db(
             temp_table=sql.Identifier(temp_table)
         )
         cursor.execute(q_remove)
-    except Exception as exc:
+    except psycopg2.errors.InFailedSqlTransaction as exc:
         err = ui.add_new_error(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unexpected exception removing temp table during insert/update of {element}: {exc}",
+            f"During insert/update of {element}, previous query caused transaction to fail:\n"
+            f"{cursor.mogrify(q_insert)}",
         )
         return err
 
@@ -741,9 +742,11 @@ def append_id_to_dframe(
     df: pd.DataFrame,
     element: str,
     col_map: Optional[dict] = None,
+    null_ids_to_zero: bool = True,
 ) -> pd.DataFrame:
     """Using <col_map> to map columns of <df> onto defining columns of <table>, returns
-    a copy of <df> with appended column <table>_Id. Unmatched items returned with null value for <table>_Id"""
+    a copy of <df> with appended column <table>_Id. Unmatched items returned with
+    null value for <table>_Id"""
     if col_map is None:
         col_map = {element: get_name_field(element)}
 
@@ -789,7 +792,8 @@ def append_id_to_dframe(
     connection.commit()
     connection.close()
     df_appended = df.join(w[["Id"]]).rename(columns={"Id": f"{element}_Id"})
-    df_appended, err_df = m.clean_ids(df_appended, [f"{element}_Id"])
+    if null_ids_to_zero:
+        df_appended, _ = m.clean_ids(df_appended, [f"{element}_Id"])
     return df_appended
 
 

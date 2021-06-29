@@ -515,7 +515,8 @@ def enum_col_to_id_othertext(
 ) -> (pd.DataFrame, List[str]):
     """Returns a copy of dataframe <df>, replacing a plaintext <type_col> column (e.g., 'CountItemType') with
     the corresponding two id and othertext columns (e.g., 'CountItemType_Id' and 'OtherCountItemType
-    using the enumeration given in <enum_df>. Optionally drops the original column <type_col>"""
+    using the enumeration given in <enum_df>. Optionally drops the original column <type_col>.
+    Also returns a list of all non-standard types found"""
     if df.empty:
         # add two columns
         df[f"{type_col}_Id"] = df[f"Other{type_col}"] = df.iloc[:, 0]

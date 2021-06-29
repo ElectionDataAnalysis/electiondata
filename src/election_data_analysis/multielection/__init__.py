@@ -47,6 +47,14 @@ mit_elections = {"2000": "2000 General",
                 "2016": "2016 General",
 }  # 2020 is there but we won't load it.
 
+mit_election_types = {
+    "2000": "general",
+    "2004": "general",
+    "2008": "general",
+                "2012": "general",
+                "2016": "general",
+}
+
 mit_cit = {"TOTAL": "total"}
 
 
@@ -130,16 +138,18 @@ abbr = {
 }
 
 
-
-def add_elections(juris_sys_name: str,repo_content_root: str, e_df: pd.DataFrame) -> Optional[Dict[str, Any]]:
+def add_elections_to_db(session) -> Optional[Dict[str, Any]]:
     err = None
-    juris_path = os.path.join(repo_content_root, "jurisdictions",juris_sys_name)
     try:
-        old_df = juris.get_element(juris_path, "Election")
-
-        juris.write_element(juris_path, "Election",pd.concat([old_df,e_df]))
+        et = pd.read_sql_table("ElectionType", session.bind, index_col=None)
+        e_df, _ = munge.enum_col_to_id_othertext(
+            pd.DataFrame(
+                [[mit_elections[y],mit_election_types[y]] for y in mit_elections.keys()],
+                columns=["Name", "ElectionType"],
+            ), "ElectionType", et)
+        err = db.insert_to_cdf_db(session.bind, e_df, "Election","database", session.bind.url.database)
     except Exception as exc:
-        err = ui.add_new_error(err, "jurisdiction",juris_sys_name,f"Error adding elections: {exc}")
+        err = ui.add_new_error(err, "database",session.bind.url.database,f"Error adding elections: {exc}")
     return err
 
 

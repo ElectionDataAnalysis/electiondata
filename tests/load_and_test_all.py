@@ -79,6 +79,7 @@ def close_and_erase(dl: eda.DataLoader) -> Optional[dict]:
 def get_testing_data(
     url: Optional[str] = None,
     results_dir: Optional[str] = "TestingData",
+
 ):
     # if there is no target directory
     if not os.path.isdir(results_dir):

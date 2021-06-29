@@ -941,9 +941,6 @@ class DataLoader:
         election_df = pd.DataFrame(
             [[f"{e} General","general"] for e in multi.mit_elections],columns=["Name","ElectionType"]
         )
-        update_err = ui.consolidate_errors(
-            [update_err,multi.add_elections(juris_system,self.d["repository_content_root"],election_df)]
-        )
 
         # add candidates to Candidate.txt
         candidate_col = "Candidate_raw"
@@ -985,7 +982,7 @@ class DataLoader:
         return update_err
 
     def load_multielection(
-            self, multi_file: str, overwrite_existing: bool = False, update_jurisdictions: bool = False,
+            self, multi_file: str, overwrite_existing: bool = False, load_jurisdictions: bool = True,
     ) -> (Dict[str, List[str]], Optional[dict]):
         """load multi-election data from <multi_file> 
         (as of 6/2021, this works just for the MIT presidential file)
@@ -993,9 +990,20 @@ class DataLoader:
         otherwise do *not* overwrite"""
         err = None
         success: Dict[str,List[str]] = dict()
+
+        # add elections to db
+        multi.add_elections_to_db(self.session)
         # read data
         try:
-            df = pd.read_csv(multi_file,sep="\t",dtype=str)
+            df = pd.read_csv(multi_file,sep="\t",dtype=str, index_col=None)
+            if df.empty:
+                err = ui.add_new_error(
+                    err,
+                    "file",
+                    multi_file,
+                    f"No data read",
+                )
+                return list(), err
         except FileNotFoundError:
             err = ui.add_new_error(
                 err,
@@ -1023,17 +1031,28 @@ class DataLoader:
             success[juris_true_name]: List[str] = list()
             print(f"Starting {juris_true_name}")
             juris_system_name = juris.system_name_from_true_name(juris_true_name)
+
+            if load_jurisdictions:
+                # update juris in db
+                juris.load_or_update_juris_to_db(
+                    self.session,self.d["repository_content_root"],juris_true_name,juris_system_name
+                )
+
             jurisdiction_id = db.name_to_id(self.session,"ReportingUnit",juris_true_name)
+            if not jurisdiction_id:
+                err = ui.add_new_error(
+                    err,
+                    "jurisdiction",
+                    juris_system_name,
+                    f"No ReportingUnit in database matches the jurisdiction itself."
+                )
+                continue
             j_df = df[(df["Jurisdiction"] == j)]
             # proceed only if data exists for this jurisdiction
             if j_df.empty:
                 continue
 
-            if update_jurisdictions:
-                # update juris in db
-                new_err = self.update_juris_from_multifile(j_df,juris_true_name, juris_system_name)
-                if new_err:
-                    err = ui.consolidate_errors([err, new_err])
+
             ## load results to db
             for election in j_df["Election"].unique():
                 election_true_name = multi.mit_elections[election]
