@@ -7399,42 +7399,42 @@ ReportingUnit	Michigan;Emmet County;SPRINGVALE TOWNSHIP;Ward 0;Precinct 1 Label	
 ReportingUnit	Michigan;Emmet County;WAWATAM TOWNSHIP;Ward 0;Precinct 1 Label	EMMET;WAWATAM TOWNSHIP;Ward 0;Precinct 1 Label
 ReportingUnit	Michigan;Emmet County;WEST TRAVERSE TOWNSHIP;Ward 0;Precinct 1 Label	EMMET;WEST TRAVERSE TOWNSHIP;Ward 0;Precinct 1 Label
 ReportingUnit	Michigan;Emmet County;{Statistical Adjustments};Ward 0;Precinct 9999 Label	EMMET;{Statistical Adjustments};Ward 0;Precinct 9999 Label
-ReportingUnit	Michigan;Gd. Traverse County;ACME TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;ACME TOWNSHIP;Ward 0;Precinct 1 Label
-ReportingUnit	Michigan;Gd. Traverse County;ACME TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;ACME TOWNSHIP;Ward 0;Precinct 2 Label
-ReportingUnit	Michigan;Gd. Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;BLAIR TOWNSHIP;Ward 0;Precinct 1 Label
-ReportingUnit	Michigan;Gd. Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;BLAIR TOWNSHIP;Ward 0;Precinct 2 Label
-ReportingUnit	Michigan;Gd. Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 3 Label	GD. TRAVERSE;BLAIR TOWNSHIP;Ward 0;Precinct 3 Label
-ReportingUnit	Michigan;Gd. Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 4 Label	GD. TRAVERSE;BLAIR TOWNSHIP;Ward 0;Precinct 4 Label
-ReportingUnit	Michigan;Gd. Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;EAST BAY TOWNSHIP;Ward 0;Precinct 1 Label
-ReportingUnit	Michigan;Gd. Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;EAST BAY TOWNSHIP;Ward 0;Precinct 2 Label
-ReportingUnit	Michigan;Gd. Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 3 Label	GD. TRAVERSE;EAST BAY TOWNSHIP;Ward 0;Precinct 3 Label
-ReportingUnit	Michigan;Gd. Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 4 Label	GD. TRAVERSE;EAST BAY TOWNSHIP;Ward 0;Precinct 4 Label
-ReportingUnit	Michigan;Gd. Traverse County;FIFE LAKE TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;FIFE LAKE TOWNSHIP;Ward 0;Precinct 1 Label
-ReportingUnit	Michigan;Gd. Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;GARFIELD TOWNSHIP;Ward 0;Precinct 1 Label
-ReportingUnit	Michigan;Gd. Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;GARFIELD TOWNSHIP;Ward 0;Precinct 2 Label
-ReportingUnit	Michigan;Gd. Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 3 Label	GD. TRAVERSE;GARFIELD TOWNSHIP;Ward 0;Precinct 3 Label
-ReportingUnit	Michigan;Gd. Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 4 Label	GD. TRAVERSE;GARFIELD TOWNSHIP;Ward 0;Precinct 4 Label
-ReportingUnit	Michigan;Gd. Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 5 Label	GD. TRAVERSE;GARFIELD TOWNSHIP;Ward 0;Precinct 5 Label
-ReportingUnit	Michigan;Gd. Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 6 Label	GD. TRAVERSE;GARFIELD TOWNSHIP;Ward 0;Precinct 6 Label
-ReportingUnit	Michigan;Gd. Traverse County;GRANT TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;GRANT TOWNSHIP;Ward 0;Precinct 1 Label
-ReportingUnit	Michigan;Gd. Traverse County;GREEN LAKE TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;GREEN LAKE TOWNSHIP;Ward 0;Precinct 1 Label
-ReportingUnit	Michigan;Gd. Traverse County;GREEN LAKE TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;GREEN LAKE TOWNSHIP;Ward 0;Precinct 2 Label
-ReportingUnit	Michigan;Gd. Traverse County;LONG LAKE TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;LONG LAKE TOWNSHIP;Ward 0;Precinct 1 Label
-ReportingUnit	Michigan;Gd. Traverse County;LONG LAKE TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;LONG LAKE TOWNSHIP;Ward 0;Precinct 2 Label
-ReportingUnit	Michigan;Gd. Traverse County;LONG LAKE TOWNSHIP;Ward 0;Precinct 3 Label	GD. TRAVERSE;LONG LAKE TOWNSHIP;Ward 0;Precinct 3 Label
-ReportingUnit	Michigan;Gd. Traverse County;MAYFIELD TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;MAYFIELD TOWNSHIP;Ward 0;Precinct 1 Label
-ReportingUnit	Michigan;Gd. Traverse County;PARADISE TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;PARADISE TOWNSHIP;Ward 0;Precinct 1 Label
-ReportingUnit	Michigan;Gd. Traverse County;PARADISE TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;PARADISE TOWNSHIP;Ward 0;Precinct 2 Label
-ReportingUnit	Michigan;Gd. Traverse County;PENINSULA TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;PENINSULA TOWNSHIP;Ward 0;Precinct 1 Label
-ReportingUnit	Michigan;Gd. Traverse County;PENINSULA TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;PENINSULA TOWNSHIP;Ward 0;Precinct 2 Label
-ReportingUnit	Michigan;Gd. Traverse County;TRAVERSE CITY;Ward 0;Precinct 1 Label	GD. TRAVERSE;TRAVERSE CITY;Ward 0;Precinct 1 Label
-ReportingUnit	Michigan;Gd. Traverse County;TRAVERSE CITY;Ward 0;Precinct 10 Label	GD. TRAVERSE;TRAVERSE CITY;Ward 0;Precinct 10 Label
-ReportingUnit	Michigan;Gd. Traverse County;TRAVERSE CITY;Ward 0;Precinct 3 Label	GD. TRAVERSE;TRAVERSE CITY;Ward 0;Precinct 3 Label
-ReportingUnit	Michigan;Gd. Traverse County;TRAVERSE CITY;Ward 0;Precinct 7 Label	GD. TRAVERSE;TRAVERSE CITY;Ward 0;Precinct 7 Label
-ReportingUnit	Michigan;Gd. Traverse County;TRAVERSE CITY;Ward 0;Precinct 8 Label	GD. TRAVERSE;TRAVERSE CITY;Ward 0;Precinct 8 Label
-ReportingUnit	Michigan;Gd. Traverse County;TRAVERSE CITY;Ward 0;Precinct 9 Label	GD. TRAVERSE;TRAVERSE CITY;Ward 0;Precinct 9 Label
-ReportingUnit	Michigan;Gd. Traverse County;UNION TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;UNION TOWNSHIP;Ward 0;Precinct 1 Label
-ReportingUnit	Michigan;Gd. Traverse County;WHITEWATER TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;WHITEWATER TOWNSHIP;Ward 0;Precinct 1 Label
+ReportingUnit	Michigan;Grand Traverse County;ACME TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;ACME TOWNSHIP;Ward 0;Precinct 1 Label
+ReportingUnit	Michigan;Grand Traverse County;ACME TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;ACME TOWNSHIP;Ward 0;Precinct 2 Label
+ReportingUnit	Michigan;Grand Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;BLAIR TOWNSHIP;Ward 0;Precinct 1 Label
+ReportingUnit	Michigan;Grand Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;BLAIR TOWNSHIP;Ward 0;Precinct 2 Label
+ReportingUnit	Michigan;Grand Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 3 Label	GD. TRAVERSE;BLAIR TOWNSHIP;Ward 0;Precinct 3 Label
+ReportingUnit	Michigan;Grand Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 4 Label	GD. TRAVERSE;BLAIR TOWNSHIP;Ward 0;Precinct 4 Label
+ReportingUnit	Michigan;Grand Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;EAST BAY TOWNSHIP;Ward 0;Precinct 1 Label
+ReportingUnit	Michigan;Grand Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;EAST BAY TOWNSHIP;Ward 0;Precinct 2 Label
+ReportingUnit	Michigan;Grand Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 3 Label	GD. TRAVERSE;EAST BAY TOWNSHIP;Ward 0;Precinct 3 Label
+ReportingUnit	Michigan;Grand Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 4 Label	GD. TRAVERSE;EAST BAY TOWNSHIP;Ward 0;Precinct 4 Label
+ReportingUnit	Michigan;Grand Traverse County;FIFE LAKE TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;FIFE LAKE TOWNSHIP;Ward 0;Precinct 1 Label
+ReportingUnit	Michigan;Grand Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;GARFIELD TOWNSHIP;Ward 0;Precinct 1 Label
+ReportingUnit	Michigan;Grand Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;GARFIELD TOWNSHIP;Ward 0;Precinct 2 Label
+ReportingUnit	Michigan;Grand Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 3 Label	GD. TRAVERSE;GARFIELD TOWNSHIP;Ward 0;Precinct 3 Label
+ReportingUnit	Michigan;Grand Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 4 Label	GD. TRAVERSE;GARFIELD TOWNSHIP;Ward 0;Precinct 4 Label
+ReportingUnit	Michigan;Grand Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 5 Label	GD. TRAVERSE;GARFIELD TOWNSHIP;Ward 0;Precinct 5 Label
+ReportingUnit	Michigan;Grand Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 6 Label	GD. TRAVERSE;GARFIELD TOWNSHIP;Ward 0;Precinct 6 Label
+ReportingUnit	Michigan;Grand Traverse County;GRANT TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;GRANT TOWNSHIP;Ward 0;Precinct 1 Label
+ReportingUnit	Michigan;Grand Traverse County;GREEN LAKE TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;GREEN LAKE TOWNSHIP;Ward 0;Precinct 1 Label
+ReportingUnit	Michigan;Grand Traverse County;GREEN LAKE TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;GREEN LAKE TOWNSHIP;Ward 0;Precinct 2 Label
+ReportingUnit	Michigan;Grand Traverse County;LONG LAKE TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;LONG LAKE TOWNSHIP;Ward 0;Precinct 1 Label
+ReportingUnit	Michigan;Grand Traverse County;LONG LAKE TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;LONG LAKE TOWNSHIP;Ward 0;Precinct 2 Label
+ReportingUnit	Michigan;Grand Traverse County;LONG LAKE TOWNSHIP;Ward 0;Precinct 3 Label	GD. TRAVERSE;LONG LAKE TOWNSHIP;Ward 0;Precinct 3 Label
+ReportingUnit	Michigan;Grand Traverse County;MAYFIELD TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;MAYFIELD TOWNSHIP;Ward 0;Precinct 1 Label
+ReportingUnit	Michigan;Grand Traverse County;PARADISE TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;PARADISE TOWNSHIP;Ward 0;Precinct 1 Label
+ReportingUnit	Michigan;Grand Traverse County;PARADISE TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;PARADISE TOWNSHIP;Ward 0;Precinct 2 Label
+ReportingUnit	Michigan;Grand Traverse County;PENINSULA TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;PENINSULA TOWNSHIP;Ward 0;Precinct 1 Label
+ReportingUnit	Michigan;Grand Traverse County;PENINSULA TOWNSHIP;Ward 0;Precinct 2 Label	GD. TRAVERSE;PENINSULA TOWNSHIP;Ward 0;Precinct 2 Label
+ReportingUnit	Michigan;Grand Traverse County;TRAVERSE CITY;Ward 0;Precinct 1 Label	GD. TRAVERSE;TRAVERSE CITY;Ward 0;Precinct 1 Label
+ReportingUnit	Michigan;Grand Traverse County;TRAVERSE CITY;Ward 0;Precinct 10 Label	GD. TRAVERSE;TRAVERSE CITY;Ward 0;Precinct 10 Label
+ReportingUnit	Michigan;Grand Traverse County;TRAVERSE CITY;Ward 0;Precinct 3 Label	GD. TRAVERSE;TRAVERSE CITY;Ward 0;Precinct 3 Label
+ReportingUnit	Michigan;Grand Traverse County;TRAVERSE CITY;Ward 0;Precinct 7 Label	GD. TRAVERSE;TRAVERSE CITY;Ward 0;Precinct 7 Label
+ReportingUnit	Michigan;Grand Traverse County;TRAVERSE CITY;Ward 0;Precinct 8 Label	GD. TRAVERSE;TRAVERSE CITY;Ward 0;Precinct 8 Label
+ReportingUnit	Michigan;Grand Traverse County;TRAVERSE CITY;Ward 0;Precinct 9 Label	GD. TRAVERSE;TRAVERSE CITY;Ward 0;Precinct 9 Label
+ReportingUnit	Michigan;Grand Traverse County;UNION TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;UNION TOWNSHIP;Ward 0;Precinct 1 Label
+ReportingUnit	Michigan;Grand Traverse County;WHITEWATER TOWNSHIP;Ward 0;Precinct 1 Label	GD. TRAVERSE;WHITEWATER TOWNSHIP;Ward 0;Precinct 1 Label
 ReportingUnit	Michigan;Genesee County	GENESEE
 ReportingUnit	Michigan;Genesee County	fips26049
 ReportingUnit	Michigan;Genesee County;ARGENTINE TOWNSHIP;Ward 0;Precinct 1 Label	GENESEE;ARGENTINE TOWNSHIP;Ward 0;Precinct 1 Label

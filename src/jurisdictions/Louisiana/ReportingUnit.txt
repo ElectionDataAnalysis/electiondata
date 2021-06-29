@@ -1986,30 +1986,30 @@ Louisiana;Lafourche Parish;Ward 7;Precinct 4	precinct
 Louisiana;Lafourche Parish;Ward 8;Precinct 1	precinct
 Louisiana;Lafourche Parish;Ward 9;Precinct 1	precinct
 Louisiana;Lafourche Parish;Ward 9;Precinct 2	precinct
-Louisiana;Lasalle Parish;Ward 10;Precinct 1	precinct
-Louisiana;Lasalle Parish;Ward 1;Precinct 1	precinct
-Louisiana;Lasalle Parish;Ward 1;Precinct 2	precinct
-Louisiana;Lasalle Parish;Ward 1;Precinct 3	precinct
-Louisiana;Lasalle Parish;Ward 2;Precinct 1	precinct
-Louisiana;Lasalle Parish;Ward 3;Precinct 1	precinct
-Louisiana;Lasalle Parish;Ward 3;Precinct 2	precinct
-Louisiana;Lasalle Parish;Ward 4;Precinct 2	precinct
-Louisiana;Lasalle Parish;Ward 4;Precinct 3	precinct
-Louisiana;Lasalle Parish;Ward 5;Precinct 1	precinct
-Louisiana;Lasalle Parish;Ward 6;Precinct 1	precinct
-Louisiana;Lasalle Parish;Ward 6;Precinct 2	precinct
-Louisiana;Lasalle Parish;Ward 7;Precinct 1	precinct
-Louisiana;Lasalle Parish;Ward 7;Precinct 2	precinct
-Louisiana;Lasalle Parish;Ward 8;Precinct 2	precinct
-Louisiana;Lasalle Parish;Ward 8;Precinct 3	precinct
-Louisiana;Lasalle Parish;Ward 8;Precinct 5	precinct
-Louisiana;Lasalle Parish;Ward 8;Precinct 6	precinct
-Louisiana;Lasalle Parish;Ward 8;Precinct 7	precinct
-Louisiana;Lasalle Parish;Ward 9;Precinct 1	precinct
-Louisiana;Lasalle Parish;Ward 9;Precinct 2	precinct
-Louisiana;Lasalle Parish;Ward 9;Precinct 3	precinct
-Louisiana;Lasalle Parish;Ward 9;Precinct 4	precinct
-Louisiana;Lasalle Parish;Ward 9;Precinct 5	precinct
+Louisiana;LaSalle Parish;Ward 10;Precinct 1	precinct
+Louisiana;LaSalle Parish;Ward 1;Precinct 1	precinct
+Louisiana;LaSalle Parish;Ward 1;Precinct 2	precinct
+Louisiana;LaSalle Parish;Ward 1;Precinct 3	precinct
+Louisiana;LaSalle Parish;Ward 2;Precinct 1	precinct
+Louisiana;LaSalle Parish;Ward 3;Precinct 1	precinct
+Louisiana;LaSalle Parish;Ward 3;Precinct 2	precinct
+Louisiana;LaSalle Parish;Ward 4;Precinct 2	precinct
+Louisiana;LaSalle Parish;Ward 4;Precinct 3	precinct
+Louisiana;LaSalle Parish;Ward 5;Precinct 1	precinct
+Louisiana;LaSalle Parish;Ward 6;Precinct 1	precinct
+Louisiana;LaSalle Parish;Ward 6;Precinct 2	precinct
+Louisiana;LaSalle Parish;Ward 7;Precinct 1	precinct
+Louisiana;LaSalle Parish;Ward 7;Precinct 2	precinct
+Louisiana;LaSalle Parish;Ward 8;Precinct 2	precinct
+Louisiana;LaSalle Parish;Ward 8;Precinct 3	precinct
+Louisiana;LaSalle Parish;Ward 8;Precinct 5	precinct
+Louisiana;LaSalle Parish;Ward 8;Precinct 6	precinct
+Louisiana;LaSalle Parish;Ward 8;Precinct 7	precinct
+Louisiana;LaSalle Parish;Ward 9;Precinct 1	precinct
+Louisiana;LaSalle Parish;Ward 9;Precinct 2	precinct
+Louisiana;LaSalle Parish;Ward 9;Precinct 3	precinct
+Louisiana;LaSalle Parish;Ward 9;Precinct 4	precinct
+Louisiana;LaSalle Parish;Ward 9;Precinct 5	precinct
 Louisiana;Lincoln Parish;Ward 10;Precinct 1	precinct
 Louisiana;Lincoln Parish;Ward 10;Precinct 2	precinct
 Louisiana;Lincoln Parish;Ward 10;Precinct 3	precinct
@@ -3057,45 +3057,45 @@ Louisiana;St. James Parish;Ward 0;Precinct 6	precinct
 Louisiana;St. James Parish;Ward 0;Precinct 7	precinct
 Louisiana;St. James Parish;Ward 0;Precinct 8	precinct
 Louisiana;St. James Parish;Ward 0;Precinct 9	precinct
-Louisiana;St. John The Baptist Parish;Ward 1;Precinct 1	precinct
-Louisiana;St. John The Baptist Parish;Ward 1;Precinct 2	precinct
-Louisiana;St. John The Baptist Parish;Ward 1;Precinct 3	precinct
-Louisiana;St. John The Baptist Parish;Ward 1;Precinct 4	precinct
-Louisiana;St. John The Baptist Parish;Ward 1;Precinct 5	precinct
-Louisiana;St. John The Baptist Parish;Ward 1;Precinct 6	precinct
-Louisiana;St. John The Baptist Parish;Ward 1;Precinct 7	precinct
-Louisiana;St. John The Baptist Parish;Ward 1;Precinct 8	precinct
-Louisiana;St. John The Baptist Parish;Ward 1;Precinct 9	precinct
-Louisiana;St. John The Baptist Parish;Ward 2;Precinct 1	precinct
-Louisiana;St. John The Baptist Parish;Ward 2;Precinct 2	precinct
-Louisiana;St. John The Baptist Parish;Ward 2;Precinct 3	precinct
-Louisiana;St. John The Baptist Parish;Ward 2;Precinct 4	precinct
-Louisiana;St. John The Baptist Parish;Ward 2;Precinct 5	precinct
-Louisiana;St. John The Baptist Parish;Ward 3;Precinct 1	precinct
-Louisiana;St. John The Baptist Parish;Ward 3;Precinct 2	precinct
-Louisiana;St. John The Baptist Parish;Ward 3;Precinct 4	precinct
-Louisiana;St. John The Baptist Parish;Ward 4;Precinct 1	precinct
-Louisiana;St. John The Baptist Parish;Ward 4;Precinct 10	precinct
-Louisiana;St. John The Baptist Parish;Ward 4;Precinct 11	precinct
-Louisiana;St. John The Baptist Parish;Ward 4;Precinct 12	precinct
-Louisiana;St. John The Baptist Parish;Ward 4;Precinct 13	precinct
-Louisiana;St. John The Baptist Parish;Ward 4;Precinct 14	precinct
-Louisiana;St. John The Baptist Parish;Ward 4;Precinct 2	precinct
-Louisiana;St. John The Baptist Parish;Ward 4;Precinct 3	precinct
-Louisiana;St. John The Baptist Parish;Ward 4;Precinct 8	precinct
-Louisiana;St. John The Baptist Parish;Ward 5;Precinct 1	precinct
-Louisiana;St. John The Baptist Parish;Ward 5;Precinct 3	precinct
-Louisiana;St. John The Baptist Parish;Ward 5;Precinct 4	precinct
-Louisiana;St. John The Baptist Parish;Ward 5;Precinct 7	precinct
-Louisiana;St. John The Baptist Parish;Ward 5;Precinct 8	precinct
-Louisiana;St. John The Baptist Parish;Ward 6;Precinct 1	precinct
-Louisiana;St. John The Baptist Parish;Ward 6;Precinct 3	precinct
-Louisiana;St. John The Baptist Parish;Ward 6;Precinct 4	precinct
-Louisiana;St. John The Baptist Parish;Ward 6;Precinct 5	precinct
-Louisiana;St. John The Baptist Parish;Ward 7;Precinct 2	precinct
-Louisiana;St. John The Baptist Parish;Ward 7;Precinct 3	precinct
-Louisiana;St. John The Baptist Parish;Ward 7;Precinct 5	precinct
-Louisiana;St. John The Baptist Parish;Ward 7;Precinct 7	precinct
+Louisiana;St. John the Baptist Parish;Ward 1;Precinct 1	precinct
+Louisiana;St. John the Baptist Parish;Ward 1;Precinct 2	precinct
+Louisiana;St. John the Baptist Parish;Ward 1;Precinct 3	precinct
+Louisiana;St. John the Baptist Parish;Ward 1;Precinct 4	precinct
+Louisiana;St. John the Baptist Parish;Ward 1;Precinct 5	precinct
+Louisiana;St. John the Baptist Parish;Ward 1;Precinct 6	precinct
+Louisiana;St. John the Baptist Parish;Ward 1;Precinct 7	precinct
+Louisiana;St. John the Baptist Parish;Ward 1;Precinct 8	precinct
+Louisiana;St. John the Baptist Parish;Ward 1;Precinct 9	precinct
+Louisiana;St. John the Baptist Parish;Ward 2;Precinct 1	precinct
+Louisiana;St. John the Baptist Parish;Ward 2;Precinct 2	precinct
+Louisiana;St. John the Baptist Parish;Ward 2;Precinct 3	precinct
+Louisiana;St. John the Baptist Parish;Ward 2;Precinct 4	precinct
+Louisiana;St. John the Baptist Parish;Ward 2;Precinct 5	precinct
+Louisiana;St. John the Baptist Parish;Ward 3;Precinct 1	precinct
+Louisiana;St. John the Baptist Parish;Ward 3;Precinct 2	precinct
+Louisiana;St. John the Baptist Parish;Ward 3;Precinct 4	precinct
+Louisiana;St. John the Baptist Parish;Ward 4;Precinct 1	precinct
+Louisiana;St. John the Baptist Parish;Ward 4;Precinct 10	precinct
+Louisiana;St. John the Baptist Parish;Ward 4;Precinct 11	precinct
+Louisiana;St. John the Baptist Parish;Ward 4;Precinct 12	precinct
+Louisiana;St. John the Baptist Parish;Ward 4;Precinct 13	precinct
+Louisiana;St. John the Baptist Parish;Ward 4;Precinct 14	precinct
+Louisiana;St. John the Baptist Parish;Ward 4;Precinct 2	precinct
+Louisiana;St. John the Baptist Parish;Ward 4;Precinct 3	precinct
+Louisiana;St. John the Baptist Parish;Ward 4;Precinct 8	precinct
+Louisiana;St. John the Baptist Parish;Ward 5;Precinct 1	precinct
+Louisiana;St. John the Baptist Parish;Ward 5;Precinct 3	precinct
+Louisiana;St. John the Baptist Parish;Ward 5;Precinct 4	precinct
+Louisiana;St. John the Baptist Parish;Ward 5;Precinct 7	precinct
+Louisiana;St. John the Baptist Parish;Ward 5;Precinct 8	precinct
+Louisiana;St. John the Baptist Parish;Ward 6;Precinct 1	precinct
+Louisiana;St. John the Baptist Parish;Ward 6;Precinct 3	precinct
+Louisiana;St. John the Baptist Parish;Ward 6;Precinct 4	precinct
+Louisiana;St. John the Baptist Parish;Ward 6;Precinct 5	precinct
+Louisiana;St. John the Baptist Parish;Ward 7;Precinct 2	precinct
+Louisiana;St. John the Baptist Parish;Ward 7;Precinct 3	precinct
+Louisiana;St. John the Baptist Parish;Ward 7;Precinct 5	precinct
+Louisiana;St. John the Baptist Parish;Ward 7;Precinct 7	precinct
 Louisiana;St. Landry Parish;Ward 1;Precinct 02A	precinct
 Louisiana;St. Landry Parish;Ward 1;Precinct 03A	precinct
 Louisiana;St. Landry Parish;Ward 1;Precinct 04A	precinct

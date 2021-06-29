@@ -1035,42 +1035,42 @@ Michigan;Emmet County;SPRINGVALE TOWNSHIP;Ward 0;Precinct 1 Label	precinct
 Michigan;Emmet County;WAWATAM TOWNSHIP;Ward 0;Precinct 1 Label	precinct
 Michigan;Emmet County;WEST TRAVERSE TOWNSHIP;Ward 0;Precinct 1 Label	precinct
 Michigan;Emmet County;Ward 0;Precinct 9999 Label	precinct
-Michigan;Gd. Traverse County;ACME TOWNSHIP;Ward 0;Precinct 1 Label	precinct
-Michigan;Gd. Traverse County;ACME TOWNSHIP;Ward 0;Precinct 2 Label	precinct
-Michigan;Gd. Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 1 Label	precinct
-Michigan;Gd. Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 2 Label	precinct
-Michigan;Gd. Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 3 Label	precinct
-Michigan;Gd. Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 4 Label	precinct
-Michigan;Gd. Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 1 Label	precinct
-Michigan;Gd. Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 2 Label	precinct
-Michigan;Gd. Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 3 Label	precinct
-Michigan;Gd. Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 4 Label	precinct
-Michigan;Gd. Traverse County;FIFE LAKE TOWNSHIP;Ward 0;Precinct 1 Label	precinct
-Michigan;Gd. Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 1 Label	precinct
-Michigan;Gd. Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 2 Label	precinct
-Michigan;Gd. Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 3 Label	precinct
-Michigan;Gd. Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 4 Label	precinct
-Michigan;Gd. Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 5 Label	precinct
-Michigan;Gd. Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 6 Label	precinct
-Michigan;Gd. Traverse County;GRANT TOWNSHIP;Ward 0;Precinct 1 Label	precinct
-Michigan;Gd. Traverse County;GREEN LAKE TOWNSHIP;Ward 0;Precinct 1 Label	precinct
-Michigan;Gd. Traverse County;GREEN LAKE TOWNSHIP;Ward 0;Precinct 2 Label	precinct
-Michigan;Gd. Traverse County;LONG LAKE TOWNSHIP;Ward 0;Precinct 1 Label	precinct
-Michigan;Gd. Traverse County;LONG LAKE TOWNSHIP;Ward 0;Precinct 2 Label	precinct
-Michigan;Gd. Traverse County;LONG LAKE TOWNSHIP;Ward 0;Precinct 3 Label	precinct
-Michigan;Gd. Traverse County;MAYFIELD TOWNSHIP;Ward 0;Precinct 1 Label	precinct
-Michigan;Gd. Traverse County;PARADISE TOWNSHIP;Ward 0;Precinct 1 Label	precinct
-Michigan;Gd. Traverse County;PARADISE TOWNSHIP;Ward 0;Precinct 2 Label	precinct
-Michigan;Gd. Traverse County;PENINSULA TOWNSHIP;Ward 0;Precinct 1 Label	precinct
-Michigan;Gd. Traverse County;PENINSULA TOWNSHIP;Ward 0;Precinct 2 Label	precinct
-Michigan;Gd. Traverse County;TRAVERSE CITY;Ward 0;Precinct 1 Label	precinct
-Michigan;Gd. Traverse County;TRAVERSE CITY;Ward 0;Precinct 10 Label	precinct
-Michigan;Gd. Traverse County;TRAVERSE CITY;Ward 0;Precinct 3 Label	precinct
-Michigan;Gd. Traverse County;TRAVERSE CITY;Ward 0;Precinct 7 Label	precinct
-Michigan;Gd. Traverse County;TRAVERSE CITY;Ward 0;Precinct 8 Label	precinct
-Michigan;Gd. Traverse County;TRAVERSE CITY;Ward 0;Precinct 9 Label	precinct
-Michigan;Gd. Traverse County;UNION TOWNSHIP;Ward 0;Precinct 1 Label	precinct
-Michigan;Gd. Traverse County;WHITEWATER TOWNSHIP;Ward 0;Precinct 1 Label	precinct
+Michigan;Grand Traverse County;ACME TOWNSHIP;Ward 0;Precinct 1 Label	precinct
+Michigan;Grand Traverse County;ACME TOWNSHIP;Ward 0;Precinct 2 Label	precinct
+Michigan;Grand Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 1 Label	precinct
+Michigan;Grand Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 2 Label	precinct
+Michigan;Grand Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 3 Label	precinct
+Michigan;Grand Traverse County;BLAIR TOWNSHIP;Ward 0;Precinct 4 Label	precinct
+Michigan;Grand Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 1 Label	precinct
+Michigan;Grand Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 2 Label	precinct
+Michigan;Grand Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 3 Label	precinct
+Michigan;Grand Traverse County;EAST BAY TOWNSHIP;Ward 0;Precinct 4 Label	precinct
+Michigan;Grand Traverse County;FIFE LAKE TOWNSHIP;Ward 0;Precinct 1 Label	precinct
+Michigan;Grand Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 1 Label	precinct
+Michigan;Grand Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 2 Label	precinct
+Michigan;Grand Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 3 Label	precinct
+Michigan;Grand Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 4 Label	precinct
+Michigan;Grand Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 5 Label	precinct
+Michigan;Grand Traverse County;GARFIELD TOWNSHIP;Ward 0;Precinct 6 Label	precinct
+Michigan;Grand Traverse County;GRANT TOWNSHIP;Ward 0;Precinct 1 Label	precinct
+Michigan;Grand Traverse County;GREEN LAKE TOWNSHIP;Ward 0;Precinct 1 Label	precinct
+Michigan;Grand Traverse County;GREEN LAKE TOWNSHIP;Ward 0;Precinct 2 Label	precinct
+Michigan;Grand Traverse County;LONG LAKE TOWNSHIP;Ward 0;Precinct 1 Label	precinct
+Michigan;Grand Traverse County;LONG LAKE TOWNSHIP;Ward 0;Precinct 2 Label	precinct
+Michigan;Grand Traverse County;LONG LAKE TOWNSHIP;Ward 0;Precinct 3 Label	precinct
+Michigan;Grand Traverse County;MAYFIELD TOWNSHIP;Ward 0;Precinct 1 Label	precinct
+Michigan;Grand Traverse County;PARADISE TOWNSHIP;Ward 0;Precinct 1 Label	precinct
+Michigan;Grand Traverse County;PARADISE TOWNSHIP;Ward 0;Precinct 2 Label	precinct
+Michigan;Grand Traverse County;PENINSULA TOWNSHIP;Ward 0;Precinct 1 Label	precinct
+Michigan;Grand Traverse County;PENINSULA TOWNSHIP;Ward 0;Precinct 2 Label	precinct
+Michigan;Grand Traverse County;TRAVERSE CITY;Ward 0;Precinct 1 Label	precinct
+Michigan;Grand Traverse County;TRAVERSE CITY;Ward 0;Precinct 10 Label	precinct
+Michigan;Grand Traverse County;TRAVERSE CITY;Ward 0;Precinct 3 Label	precinct
+Michigan;Grand Traverse County;TRAVERSE CITY;Ward 0;Precinct 7 Label	precinct
+Michigan;Grand Traverse County;TRAVERSE CITY;Ward 0;Precinct 8 Label	precinct
+Michigan;Grand Traverse County;TRAVERSE CITY;Ward 0;Precinct 9 Label	precinct
+Michigan;Grand Traverse County;UNION TOWNSHIP;Ward 0;Precinct 1 Label	precinct
+Michigan;Grand Traverse County;WHITEWATER TOWNSHIP;Ward 0;Precinct 1 Label	precinct
 Michigan;Genesee County;ARGENTINE TOWNSHIP;Ward 0;Precinct 1 Label	precinct
 Michigan;Genesee County;ARGENTINE TOWNSHIP;Ward 0;Precinct 2 Label	precinct
 Michigan;Genesee County;ARGENTINE TOWNSHIP;Ward 0;Precinct 3 Label	precinct
@@ -7429,20 +7429,20 @@ Michigan;Emmet County;SPRINGVALE TOWNSHIP;Ward 0	ward
 Michigan;Emmet County;WAWATAM TOWNSHIP;Ward 0	ward
 Michigan;Emmet County;WEST TRAVERSE TOWNSHIP;Ward 0	ward
 Michigan;Emmet County;Ward 0	ward
-Michigan;Gd. Traverse County;ACME TOWNSHIP;Ward 0	ward
-Michigan;Gd. Traverse County;BLAIR TOWNSHIP;Ward 0	ward
-Michigan;Gd. Traverse County;EAST BAY TOWNSHIP;Ward 0	ward
-Michigan;Gd. Traverse County;FIFE LAKE TOWNSHIP;Ward 0	ward
-Michigan;Gd. Traverse County;GARFIELD TOWNSHIP;Ward 0	ward
-Michigan;Gd. Traverse County;GRANT TOWNSHIP;Ward 0	ward
-Michigan;Gd. Traverse County;GREEN LAKE TOWNSHIP;Ward 0	ward
-Michigan;Gd. Traverse County;LONG LAKE TOWNSHIP;Ward 0	ward
-Michigan;Gd. Traverse County;MAYFIELD TOWNSHIP;Ward 0	ward
-Michigan;Gd. Traverse County;PARADISE TOWNSHIP;Ward 0	ward
-Michigan;Gd. Traverse County;PENINSULA TOWNSHIP;Ward 0	ward
-Michigan;Gd. Traverse County;TRAVERSE CITY;Ward 0	ward
-Michigan;Gd. Traverse County;UNION TOWNSHIP;Ward 0	ward
-Michigan;Gd. Traverse County;WHITEWATER TOWNSHIP;Ward 0	ward
+Michigan;Grand Traverse County;ACME TOWNSHIP;Ward 0	ward
+Michigan;Grand Traverse County;BLAIR TOWNSHIP;Ward 0	ward
+Michigan;Grand Traverse County;EAST BAY TOWNSHIP;Ward 0	ward
+Michigan;Grand Traverse County;FIFE LAKE TOWNSHIP;Ward 0	ward
+Michigan;Grand Traverse County;GARFIELD TOWNSHIP;Ward 0	ward
+Michigan;Grand Traverse County;GRANT TOWNSHIP;Ward 0	ward
+Michigan;Grand Traverse County;GREEN LAKE TOWNSHIP;Ward 0	ward
+Michigan;Grand Traverse County;LONG LAKE TOWNSHIP;Ward 0	ward
+Michigan;Grand Traverse County;MAYFIELD TOWNSHIP;Ward 0	ward
+Michigan;Grand Traverse County;PARADISE TOWNSHIP;Ward 0	ward
+Michigan;Grand Traverse County;PENINSULA TOWNSHIP;Ward 0	ward
+Michigan;Grand Traverse County;TRAVERSE CITY;Ward 0	ward
+Michigan;Grand Traverse County;UNION TOWNSHIP;Ward 0	ward
+Michigan;Grand Traverse County;WHITEWATER TOWNSHIP;Ward 0	ward
 Michigan;Genesee County;ARGENTINE TOWNSHIP;Ward 0	ward
 Michigan;Genesee County;ATLAS TOWNSHIP;Ward 0	ward
 Michigan;Genesee County;BURTON CITY;Ward 0	ward

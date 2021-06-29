@@ -4132,54 +4132,54 @@ ReportingUnit	Louisiana;Lafourche Parish;Ward 9;Precinct 1	Lafourche;09;01
 ReportingUnit	Louisiana;Lafourche Parish;Ward 9;Precinct 1	Lafourche;9;1
 ReportingUnit	Louisiana;Lafourche Parish;Ward 9;Precinct 2	Lafourche;09;02
 ReportingUnit	Louisiana;Lafourche Parish;Ward 9;Precinct 2	Lafourche;9;2
-ReportingUnit	Louisiana;Lasalle Parish;Ward 10;Precinct 1	Lasalle;10;01
-ReportingUnit	Louisiana;Lasalle Parish;Ward 10;Precinct 1	Lasalle;10;1
-ReportingUnit	Louisiana;Lasalle Parish;Ward 1;Precinct 1	Lasalle;01;01
-ReportingUnit	Louisiana;Lasalle Parish;Ward 1;Precinct 1	Lasalle;1;1
-ReportingUnit	Louisiana;Lasalle Parish;Ward 1;Precinct 2	Lasalle;01;02
-ReportingUnit	Louisiana;Lasalle Parish;Ward 1;Precinct 2	Lasalle;1;2
-ReportingUnit	Louisiana;Lasalle Parish;Ward 1;Precinct 3	Lasalle;01;03
-ReportingUnit	Louisiana;Lasalle Parish;Ward 1;Precinct 3	Lasalle;1;3
-ReportingUnit	Louisiana;Lasalle Parish;Ward 2;Precinct 1	Lasalle;02;01
-ReportingUnit	Louisiana;Lasalle Parish;Ward 2;Precinct 1	Lasalle;2;1
-ReportingUnit	Louisiana;Lasalle Parish;Ward 3;Precinct 1	Lasalle;03;01
-ReportingUnit	Louisiana;Lasalle Parish;Ward 3;Precinct 1	Lasalle;3;1
-ReportingUnit	Louisiana;Lasalle Parish;Ward 3;Precinct 2	Lasalle;03;02
-ReportingUnit	Louisiana;Lasalle Parish;Ward 3;Precinct 2	Lasalle;3;2
-ReportingUnit	Louisiana;Lasalle Parish;Ward 4;Precinct 2	Lasalle;04;02
-ReportingUnit	Louisiana;Lasalle Parish;Ward 4;Precinct 2	Lasalle;4;2
-ReportingUnit	Louisiana;Lasalle Parish;Ward 4;Precinct 3	Lasalle;04;03
-ReportingUnit	Louisiana;Lasalle Parish;Ward 4;Precinct 3	Lasalle;4;3
-ReportingUnit	Louisiana;Lasalle Parish;Ward 5;Precinct 1	Lasalle;05;01
-ReportingUnit	Louisiana;Lasalle Parish;Ward 5;Precinct 1	Lasalle;5;1
-ReportingUnit	Louisiana;Lasalle Parish;Ward 6;Precinct 1	Lasalle;06;01
-ReportingUnit	Louisiana;Lasalle Parish;Ward 6;Precinct 1	Lasalle;6;1
-ReportingUnit	Louisiana;Lasalle Parish;Ward 6;Precinct 2	Lasalle;06;02
-ReportingUnit	Louisiana;Lasalle Parish;Ward 6;Precinct 2	Lasalle;6;2
-ReportingUnit	Louisiana;Lasalle Parish;Ward 7;Precinct 1	Lasalle;07;01
-ReportingUnit	Louisiana;Lasalle Parish;Ward 7;Precinct 1	Lasalle;7;1
-ReportingUnit	Louisiana;Lasalle Parish;Ward 7;Precinct 2	Lasalle;07;02
-ReportingUnit	Louisiana;Lasalle Parish;Ward 7;Precinct 2	Lasalle;7;2
-ReportingUnit	Louisiana;Lasalle Parish;Ward 8;Precinct 2	Lasalle;08;02
-ReportingUnit	Louisiana;Lasalle Parish;Ward 8;Precinct 2	Lasalle;8;2
-ReportingUnit	Louisiana;Lasalle Parish;Ward 8;Precinct 3	Lasalle;08;03
-ReportingUnit	Louisiana;Lasalle Parish;Ward 8;Precinct 3	Lasalle;8;3
-ReportingUnit	Louisiana;Lasalle Parish;Ward 8;Precinct 5	Lasalle;08;05
-ReportingUnit	Louisiana;Lasalle Parish;Ward 8;Precinct 5	Lasalle;8;5
-ReportingUnit	Louisiana;Lasalle Parish;Ward 8;Precinct 6	Lasalle;08;06
-ReportingUnit	Louisiana;Lasalle Parish;Ward 8;Precinct 6	Lasalle;8;6
-ReportingUnit	Louisiana;Lasalle Parish;Ward 8;Precinct 7	Lasalle;08;07
-ReportingUnit	Louisiana;Lasalle Parish;Ward 8;Precinct 7	Lasalle;8;7
-ReportingUnit	Louisiana;Lasalle Parish;Ward 9;Precinct 1	Lasalle;09;01
-ReportingUnit	Louisiana;Lasalle Parish;Ward 9;Precinct 1	Lasalle;9;1
-ReportingUnit	Louisiana;Lasalle Parish;Ward 9;Precinct 2	Lasalle;09;02
-ReportingUnit	Louisiana;Lasalle Parish;Ward 9;Precinct 2	Lasalle;9;2
-ReportingUnit	Louisiana;Lasalle Parish;Ward 9;Precinct 3	Lasalle;09;03
-ReportingUnit	Louisiana;Lasalle Parish;Ward 9;Precinct 3	Lasalle;9;3
-ReportingUnit	Louisiana;Lasalle Parish;Ward 9;Precinct 4	Lasalle;09;04
-ReportingUnit	Louisiana;Lasalle Parish;Ward 9;Precinct 4	Lasalle;9;4
-ReportingUnit	Louisiana;Lasalle Parish;Ward 9;Precinct 5	Lasalle;09;05
-ReportingUnit	Louisiana;Lasalle Parish;Ward 9;Precinct 5	Lasalle;9;5
+ReportingUnit	Louisiana;LaSalle Parish;Ward 10;Precinct 1	Lasalle;10;01
+ReportingUnit	Louisiana;LaSalle Parish;Ward 10;Precinct 1	Lasalle;10;1
+ReportingUnit	Louisiana;LaSalle Parish;Ward 1;Precinct 1	Lasalle;01;01
+ReportingUnit	Louisiana;LaSalle Parish;Ward 1;Precinct 1	Lasalle;1;1
+ReportingUnit	Louisiana;LaSalle Parish;Ward 1;Precinct 2	Lasalle;01;02
+ReportingUnit	Louisiana;LaSalle Parish;Ward 1;Precinct 2	Lasalle;1;2
+ReportingUnit	Louisiana;LaSalle Parish;Ward 1;Precinct 3	Lasalle;01;03
+ReportingUnit	Louisiana;LaSalle Parish;Ward 1;Precinct 3	Lasalle;1;3
+ReportingUnit	Louisiana;LaSalle Parish;Ward 2;Precinct 1	Lasalle;02;01
+ReportingUnit	Louisiana;LaSalle Parish;Ward 2;Precinct 1	Lasalle;2;1
+ReportingUnit	Louisiana;LaSalle Parish;Ward 3;Precinct 1	Lasalle;03;01
+ReportingUnit	Louisiana;LaSalle Parish;Ward 3;Precinct 1	Lasalle;3;1
+ReportingUnit	Louisiana;LaSalle Parish;Ward 3;Precinct 2	Lasalle;03;02
+ReportingUnit	Louisiana;LaSalle Parish;Ward 3;Precinct 2	Lasalle;3;2
+ReportingUnit	Louisiana;LaSalle Parish;Ward 4;Precinct 2	Lasalle;04;02
+ReportingUnit	Louisiana;LaSalle Parish;Ward 4;Precinct 2	Lasalle;4;2
+ReportingUnit	Louisiana;LaSalle Parish;Ward 4;Precinct 3	Lasalle;04;03
+ReportingUnit	Louisiana;LaSalle Parish;Ward 4;Precinct 3	Lasalle;4;3
+ReportingUnit	Louisiana;LaSalle Parish;Ward 5;Precinct 1	Lasalle;05;01
+ReportingUnit	Louisiana;LaSalle Parish;Ward 5;Precinct 1	Lasalle;5;1
+ReportingUnit	Louisiana;LaSalle Parish;Ward 6;Precinct 1	Lasalle;06;01
+ReportingUnit	Louisiana;LaSalle Parish;Ward 6;Precinct 1	Lasalle;6;1
+ReportingUnit	Louisiana;LaSalle Parish;Ward 6;Precinct 2	Lasalle;06;02
+ReportingUnit	Louisiana;LaSalle Parish;Ward 6;Precinct 2	Lasalle;6;2
+ReportingUnit	Louisiana;LaSalle Parish;Ward 7;Precinct 1	Lasalle;07;01
+ReportingUnit	Louisiana;LaSalle Parish;Ward 7;Precinct 1	Lasalle;7;1
+ReportingUnit	Louisiana;LaSalle Parish;Ward 7;Precinct 2	Lasalle;07;02
+ReportingUnit	Louisiana;LaSalle Parish;Ward 7;Precinct 2	Lasalle;7;2
+ReportingUnit	Louisiana;LaSalle Parish;Ward 8;Precinct 2	Lasalle;08;02
+ReportingUnit	Louisiana;LaSalle Parish;Ward 8;Precinct 2	Lasalle;8;2
+ReportingUnit	Louisiana;LaSalle Parish;Ward 8;Precinct 3	Lasalle;08;03
+ReportingUnit	Louisiana;LaSalle Parish;Ward 8;Precinct 3	Lasalle;8;3
+ReportingUnit	Louisiana;LaSalle Parish;Ward 8;Precinct 5	Lasalle;08;05
+ReportingUnit	Louisiana;LaSalle Parish;Ward 8;Precinct 5	Lasalle;8;5
+ReportingUnit	Louisiana;LaSalle Parish;Ward 8;Precinct 6	Lasalle;08;06
+ReportingUnit	Louisiana;LaSalle Parish;Ward 8;Precinct 6	Lasalle;8;6
+ReportingUnit	Louisiana;LaSalle Parish;Ward 8;Precinct 7	Lasalle;08;07
+ReportingUnit	Louisiana;LaSalle Parish;Ward 8;Precinct 7	Lasalle;8;7
+ReportingUnit	Louisiana;LaSalle Parish;Ward 9;Precinct 1	Lasalle;09;01
+ReportingUnit	Louisiana;LaSalle Parish;Ward 9;Precinct 1	Lasalle;9;1
+ReportingUnit	Louisiana;LaSalle Parish;Ward 9;Precinct 2	Lasalle;09;02
+ReportingUnit	Louisiana;LaSalle Parish;Ward 9;Precinct 2	Lasalle;9;2
+ReportingUnit	Louisiana;LaSalle Parish;Ward 9;Precinct 3	Lasalle;09;03
+ReportingUnit	Louisiana;LaSalle Parish;Ward 9;Precinct 3	Lasalle;9;3
+ReportingUnit	Louisiana;LaSalle Parish;Ward 9;Precinct 4	Lasalle;09;04
+ReportingUnit	Louisiana;LaSalle Parish;Ward 9;Precinct 4	Lasalle;9;4
+ReportingUnit	Louisiana;LaSalle Parish;Ward 9;Precinct 5	Lasalle;09;05
+ReportingUnit	Louisiana;LaSalle Parish;Ward 9;Precinct 5	Lasalle;9;5
 ReportingUnit	Louisiana;Lincoln Parish	Lincoln
 ReportingUnit	Louisiana;Lincoln Parish	fips22061
 ReportingUnit	Louisiana;Lincoln Parish;Ward 10;Precinct 1	Lincoln;10;01
@@ -6220,84 +6220,84 @@ ReportingUnit	Louisiana;St. James Parish;Ward 0;Precinct 8	St. James;00;08
 ReportingUnit	Louisiana;St. James Parish;Ward 0;Precinct 8	St. James;0;8
 ReportingUnit	Louisiana;St. James Parish;Ward 0;Precinct 9	St. James;00;09
 ReportingUnit	Louisiana;St. James Parish;Ward 0;Precinct 9	St. James;0;9
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 1	St. John The Baptist;01;01
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 1	St. John The Baptist;1;1
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 2	St. John The Baptist;01;02
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 2	St. John The Baptist;1;2
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 3	St. John The Baptist;01;03
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 3	St. John The Baptist;1;3
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 4	St. John The Baptist;01;04
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 4	St. John The Baptist;1;4
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 5	St. John The Baptist;01;05
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 5	St. John The Baptist;1;5
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 6	St. John The Baptist;01;06
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 6	St. John The Baptist;1;6
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 7	St. John The Baptist;01;07
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 7	St. John The Baptist;1;7
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 8	St. John The Baptist;01;08
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 8	St. John The Baptist;1;8
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 9	St. John The Baptist;01;09
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 1;Precinct 9	St. John The Baptist;1;9
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 2;Precinct 1	St. John The Baptist;02;01
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 2;Precinct 1	St. John The Baptist;2;1
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 2;Precinct 2	St. John The Baptist;02;02
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 2;Precinct 2	St. John The Baptist;2;2
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 2;Precinct 3	St. John The Baptist;02;03
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 2;Precinct 3	St. John The Baptist;2;3
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 2;Precinct 4	St. John The Baptist;02;04
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 2;Precinct 4	St. John The Baptist;2;4
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 2;Precinct 5	St. John The Baptist;02;05
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 2;Precinct 5	St. John The Baptist;2;5
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 3;Precinct 1	St. John The Baptist;03;01
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 3;Precinct 1	St. John The Baptist;3;1
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 3;Precinct 2	St. John The Baptist;03;02
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 3;Precinct 2	St. John The Baptist;3;2
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 3;Precinct 4	St. John The Baptist;03;04
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 3;Precinct 4	St. John The Baptist;3;4
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 1	St. John The Baptist;04;01
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 1	St. John The Baptist;4;1
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 10	St. John The Baptist;04;10
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 10	St. John The Baptist;4;10
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 11	St. John The Baptist;04;11
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 11	St. John The Baptist;4;11
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 12	St. John The Baptist;04;12
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 12	St. John The Baptist;4;12
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 13	St. John The Baptist;04;13
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 13	St. John The Baptist;4;13
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 14	St. John The Baptist;04;14
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 14	St. John The Baptist;4;14
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 2	St. John The Baptist;04;02
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 2	St. John The Baptist;4;2
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 3	St. John The Baptist;04;03
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 3	St. John The Baptist;4;3
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 8	St. John The Baptist;04;08
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 4;Precinct 8	St. John The Baptist;4;8
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 5;Precinct 1	St. John The Baptist;05;01
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 5;Precinct 1	St. John The Baptist;5;1
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 5;Precinct 3	St. John The Baptist;05;03
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 5;Precinct 3	St. John The Baptist;5;3
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 5;Precinct 4	St. John The Baptist;05;04
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 5;Precinct 4	St. John The Baptist;5;4
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 5;Precinct 7	St. John The Baptist;05;07
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 5;Precinct 7	St. John The Baptist;5;7
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 5;Precinct 8	St. John The Baptist;05;08
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 5;Precinct 8	St. John The Baptist;5;8
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 6;Precinct 1	St. John The Baptist;06;01
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 6;Precinct 1	St. John The Baptist;6;1
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 6;Precinct 3	St. John The Baptist;06;03
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 6;Precinct 3	St. John The Baptist;6;3
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 6;Precinct 4	St. John The Baptist;06;04
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 6;Precinct 4	St. John The Baptist;6;4
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 6;Precinct 5	St. John The Baptist;06;05
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 6;Precinct 5	St. John The Baptist;6;5
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 7;Precinct 2	St. John The Baptist;07;02
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 7;Precinct 2	St. John The Baptist;7;2
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 7;Precinct 3	St. John The Baptist;07;03
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 7;Precinct 3	St. John The Baptist;7;3
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 7;Precinct 5	St. John The Baptist;07;05
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 7;Precinct 5	St. John The Baptist;7;5
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 7;Precinct 7	St. John The Baptist;07;07
-ReportingUnit	Louisiana;St. John The Baptist Parish;Ward 7;Precinct 7	St. John The Baptist;7;7
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 1	St. John The Baptist;01;01
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 1	St. John The Baptist;1;1
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 2	St. John The Baptist;01;02
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 2	St. John The Baptist;1;2
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 3	St. John The Baptist;01;03
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 3	St. John The Baptist;1;3
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 4	St. John The Baptist;01;04
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 4	St. John The Baptist;1;4
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 5	St. John The Baptist;01;05
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 5	St. John The Baptist;1;5
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 6	St. John The Baptist;01;06
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 6	St. John The Baptist;1;6
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 7	St. John The Baptist;01;07
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 7	St. John The Baptist;1;7
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 8	St. John The Baptist;01;08
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 8	St. John The Baptist;1;8
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 9	St. John The Baptist;01;09
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 1;Precinct 9	St. John The Baptist;1;9
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 2;Precinct 1	St. John The Baptist;02;01
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 2;Precinct 1	St. John The Baptist;2;1
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 2;Precinct 2	St. John The Baptist;02;02
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 2;Precinct 2	St. John The Baptist;2;2
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 2;Precinct 3	St. John The Baptist;02;03
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 2;Precinct 3	St. John The Baptist;2;3
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 2;Precinct 4	St. John The Baptist;02;04
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 2;Precinct 4	St. John The Baptist;2;4
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 2;Precinct 5	St. John The Baptist;02;05
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 2;Precinct 5	St. John The Baptist;2;5
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 3;Precinct 1	St. John The Baptist;03;01
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 3;Precinct 1	St. John The Baptist;3;1
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 3;Precinct 2	St. John The Baptist;03;02
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 3;Precinct 2	St. John The Baptist;3;2
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 3;Precinct 4	St. John The Baptist;03;04
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 3;Precinct 4	St. John The Baptist;3;4
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 1	St. John The Baptist;04;01
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 1	St. John The Baptist;4;1
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 10	St. John The Baptist;04;10
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 10	St. John The Baptist;4;10
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 11	St. John The Baptist;04;11
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 11	St. John The Baptist;4;11
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 12	St. John The Baptist;04;12
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 12	St. John The Baptist;4;12
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 13	St. John The Baptist;04;13
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 13	St. John The Baptist;4;13
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 14	St. John The Baptist;04;14
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 14	St. John The Baptist;4;14
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 2	St. John The Baptist;04;02
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 2	St. John The Baptist;4;2
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 3	St. John The Baptist;04;03
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 3	St. John The Baptist;4;3
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 8	St. John The Baptist;04;08
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 4;Precinct 8	St. John The Baptist;4;8
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 5;Precinct 1	St. John The Baptist;05;01
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 5;Precinct 1	St. John The Baptist;5;1
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 5;Precinct 3	St. John The Baptist;05;03
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 5;Precinct 3	St. John The Baptist;5;3
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 5;Precinct 4	St. John The Baptist;05;04
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 5;Precinct 4	St. John The Baptist;5;4
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 5;Precinct 7	St. John The Baptist;05;07
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 5;Precinct 7	St. John The Baptist;5;7
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 5;Precinct 8	St. John The Baptist;05;08
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 5;Precinct 8	St. John The Baptist;5;8
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 6;Precinct 1	St. John The Baptist;06;01
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 6;Precinct 1	St. John The Baptist;6;1
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 6;Precinct 3	St. John The Baptist;06;03
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 6;Precinct 3	St. John The Baptist;6;3
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 6;Precinct 4	St. John The Baptist;06;04
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 6;Precinct 4	St. John The Baptist;6;4
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 6;Precinct 5	St. John The Baptist;06;05
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 6;Precinct 5	St. John The Baptist;6;5
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 7;Precinct 2	St. John The Baptist;07;02
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 7;Precinct 2	St. John The Baptist;7;2
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 7;Precinct 3	St. John The Baptist;07;03
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 7;Precinct 3	St. John The Baptist;7;3
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 7;Precinct 5	St. John The Baptist;07;05
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 7;Precinct 5	St. John The Baptist;7;5
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 7;Precinct 7	St. John The Baptist;07;07
+ReportingUnit	Louisiana;St. John the Baptist Parish;Ward 7;Precinct 7	St. John The Baptist;7;7
 ReportingUnit	Louisiana;St. John the Baptist Parish	St. John The Baptist
 ReportingUnit	Louisiana;St. John the Baptist Parish	fips22095
 ReportingUnit	Louisiana;St. Landry Parish	St. Landry

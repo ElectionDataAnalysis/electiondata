@@ -1426,9 +1426,6 @@ ReportingUnit	Alaska;AK Senate District 6	Alaska;AK Senate District 6
 ReportingUnit	Alaska;AK Senate District 7	Alaska;AK Senate District 7
 ReportingUnit	Alaska;AK Senate District 8	Alaska;AK Senate District 8
 ReportingUnit	Alaska;AK Senate District 9	Alaska;AK Senate District 9
-ReportingUnit	Alaska;Aleutians East Borough	fips02013
-ReportingUnit	Alaska;Aleutians West Census Area	fips02016
-ReportingUnit	Alaska;Anchorage Municipality	fips02020
 ReportingUnit	Alaska;Bethel Census Area	fips02050
 ReportingUnit	Alaska;Bristol Bay Borough	fips02060
 ReportingUnit	Alaska;Chugach Census Area	fips02063
