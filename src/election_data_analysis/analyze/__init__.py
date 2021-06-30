@@ -496,6 +496,7 @@ def create_bar(
     if contest and not contest.startswith("All "):
         unsummed = unsummed[unsummed["Contest"] == contest]
 
+    multiple_ballot_types = len(unsummed["CountItemType"].unique()) > 1
     groupby_cols = [
         "ParentReportingUnit_Id",
         "ReportingUnitOtherType",
@@ -514,7 +515,6 @@ def create_bar(
         "Party",
     ]
     unsummed = unsummed.groupby(groupby_cols).sum().reset_index()
-    multiple_ballot_types = len(unsummed["CountItemType"].unique()) > 1
 
     # Now process data - this is the heart of the scoring/ranking algorithm
     try:

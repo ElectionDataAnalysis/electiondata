@@ -1285,7 +1285,7 @@ def get_filtered_input_options(
                     "type": contest_type,
                 }
             ]
-        )
+        ).sort_values(by="parent")
         # define input options for each particular contest
         contest_df = db.get_relevant_contests(session, filters, repository_content_root)
         contest_df = contest_df[contest_df["type"].isin(filters)]
