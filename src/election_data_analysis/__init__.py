@@ -2071,13 +2071,13 @@ class Analyzer:
         Candidate total or Contest absentee-mail. Cleans this and returns
         something usable for the system to identify what the user is asking for."""
         if input_str.startswith("Candidate"):
-            return "candidates", input_str.replace("Candidate", "", regex=True).strip()
+            return "candidates", input_str.replace("Candidate", "").strip()
         elif input_str.startswith("Contest"):
-            return "contests", input_str.replace("Contest", "", regex=True).strip()
+            return "contests", input_str.replace("Contest", "").strip()
         elif input_str.startswith("Party"):
-            return "parties", input_str.replace("Party", "", regex=True).strip()
+            return "parties", input_str.replace("Party", "").strip()
         elif input_str.startswith("Population"):
-            return "Population", input_str.replace("Population", "", regex=True).strip()
+            return "Population", input_str.replace("Population", "").strip()
 
     def export_outlier_data(
         self,
