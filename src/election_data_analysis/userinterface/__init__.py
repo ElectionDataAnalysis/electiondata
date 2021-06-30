@@ -1388,7 +1388,7 @@ def get_filtered_input_options(
             ["PartyName", "unit_type"],
             ["parent", "type"],
         )
-        df["name"] = df["parent"].str.replace(" Party", "") + " " + df["type"]
+        df["name"] = df["parent"].str.replace(" Party", "", regex=True) + " " + df["type"]
         df = df[df_cols].sort_values(["parent", "type"])
     # Otherwise search for candidate
     else:
@@ -1443,7 +1443,7 @@ def clean_candidate_names(df):
     )
 
     # create the abbreviated contest name
-    df["contest"] = df["parent"].str.replace(r"\(.*\)", "")
+    df["contest"] = df["parent"].str.replace(r"\(.*\)", "", regex=True)
     df["jurisdiction"] = df["contest"].map(lambda x: x[0:2])
     mask_us_pres = df["contest"].str.contains("president", case=False)
     mask_us_sen = (df["jurisdiction"] == "US") & (
