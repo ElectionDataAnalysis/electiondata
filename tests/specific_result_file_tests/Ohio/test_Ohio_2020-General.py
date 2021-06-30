@@ -17,19 +17,19 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = "Ohio"
 abbr = "OH"
-total_pres_votes = 5762920  # total of all votes for US President
-cd = 372747  # US House congressional district
-total_cd_votes = -1  # total votes in that US House contest in the chosen cd
+total_pres_votes = 5922202  # total of all votes for US President
+cd = 3  # US House congressional district
+total_cd_votes = 321092  # total votes in that US House contest in the chosen cd
 shd = 2  # state house district
-total_shd_votes = 56269  # total votes in that State House contest
-ssd = 15  # state senate district
-total_ssd_votes = -1  # total votes in that State Senate contest
-single_vote_type = "early"  # pick any one with corresponding data in your file, but use internal db name
-pres_votes_vote_type = -1  # total votes for US President of that vote type
+total_shd_votes = 57542  # total votes in that State House contest
+ssd = 16  # state senate district
+total_ssd_votes = 211990  # total votes in that State Senate contest
+single_vote_type = "total"  # pick any one with corresponding data in your file, but use internal db name
+pres_votes_vote_type =  5762920 # total votes for US President of that vote type
 county_or_other = "county"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = "North Carolina;Bertie County"  # pick any one from your file, but use internal db name
-pres_votes_county = -1  # total votes for US President in that county
+single_county = "Ohio;Auglaize County"  # pick any one from your file, but use internal db name
+pres_votes_county = 25777  # total votes for US President in that county
 
 
 def test_data_exists(dbname):

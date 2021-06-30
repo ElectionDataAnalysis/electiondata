@@ -12,9 +12,9 @@ import election_data_analysis as e
 # # # therefore the test numbers do not include uocava.
 election = "2020 General"
 jurisdiction = "Maine"
-jurisdiction_type="state"
+jurisdiction_type = "state"
 abbr = "ME"
-total_pres_votes = 819461   # total of all votes for President
+total_pres_votes = 819461  # total of all votes for President
 cd = 1  # congressional district
 total_cd_votes = 436027  # total votes in the chosen cd
 shd = 2  # state house district  ***NOT AVAILABLE***

@@ -17,7 +17,7 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = "Kentucky"
 abbr = "KY"
-total_pres_votes = 2134996  # total of all votes for US President
+total_pres_votes = 1326646 + 772474 + 26234 + 6483 + 3599 + 716 + 408 + 98 + 43 + 29 + 20 + 9 + 7 + 1 +1  # total of all votes for US President
 cd = 3  # US House congressional district
 total_cd_votes = 367999  # total votes in that US House contest in the chosen cd
 shd = 1  # state house district
@@ -31,9 +31,9 @@ pres_votes_vote_type = -1  # total votes for US President of that vote type
 county_or_other = "county"
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
 single_county = (
-    "Kentucky;McCracken County"  # pick any one from your file, but use internal db name
+    "Kentucky;Adair County"  # pick any one from your file, but use internal db name
 )
-pres_votes_county = 33521  # total votes for US President in that county
+pres_votes_county = 7276 + 1392 + 60 + 25 + 10 + 5  # total votes for US President in that county
 
 
 def test_data_exists(dbname):

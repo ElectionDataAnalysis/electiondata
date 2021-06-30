@@ -88,6 +88,7 @@ def test_state_house_totals(dbname):
     )
 """
 
+
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
 

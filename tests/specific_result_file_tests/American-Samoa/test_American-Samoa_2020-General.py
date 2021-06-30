@@ -33,7 +33,7 @@ def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
 
 
-'''
+"""
 def test_presidential(dbname):
     assert (
         e.contest_total(
@@ -44,7 +44,7 @@ def test_presidential(dbname):
         )
         == total_pres_votes
     )
-'''
+"""
 
 
 def test_governor_totals(dbname):
@@ -73,7 +73,7 @@ def test_congressional_totals(dbname):
     )
 
 
-'''
+"""
 def test_state_senate_totals(dbname):
     assert (
         e.contest_total(
@@ -84,7 +84,7 @@ def test_state_senate_totals(dbname):
         )
         == total_ssd_votes
     )
-'''
+"""
 
 
 def test_state_house_totals(dbname):
@@ -105,8 +105,7 @@ def test_standard_vote_types(dbname):
 
 
 def test_vote_type_counts_consistent(dbname):
-    assert e.check_totals_match_vote_types(
-        election, jurisdiction, dbname=dbname)
+    assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
 
 
 def test_count_type_subtotal(dbname):
@@ -139,7 +138,6 @@ def test_county_subtotal(dbname):
 
 def test_all_candidates_known(dbname):
     assert (
-        e.get_contest_with_unknown_candidates(
-            election, jurisdiction, dbname=dbname)
+        e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
         == []
     )

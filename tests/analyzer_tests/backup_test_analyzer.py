@@ -17,7 +17,7 @@ def data(runtime):
         "ga20g": data_exists("2020 General", "Georgia", p_path=runtime),
         "nc18g": data_exists("2018 General", "North Carolina", p_path=runtime),
         "ak16g": data_exists("2016 General", "Alaska", p_path=runtime),
-        "ga18census": external_data_exists("2018 General","Georgia",p_path=runtime),
+        "ga18census": external_data_exists("2018 General", "Georgia", p_path=runtime),
     }
 
 

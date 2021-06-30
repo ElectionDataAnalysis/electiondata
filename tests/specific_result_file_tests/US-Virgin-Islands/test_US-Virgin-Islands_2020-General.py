@@ -19,22 +19,25 @@ jurisdiction = "US Virgin Islands"
 abbr = "VI"
 total_pres_votes = -1  # total of all votes for US President
 # cd = 3  # US House congressional district
-total_cd_votes = 13620 + 1782 + 85  # total votes in that US House contest in the chosen cd
+total_cd_votes = (
+    13620 + 1782 + 85
+)  # total votes in that US House contest in the chosen cd
 shd = 1  # state house district
 total_shd_votes = -1  # total votes in that State House contest
 ssd = "St. Croix"  # state senate district
 total_ssd_votes = 44189  # total votes in that State Senate contest
 single_vote_type = "early"  # pick any one with corresponding data in your file, but use internal db name
-delegate_votes_vote_type = 3400 + 3669 #  votes for delegate of that vote type
-#pres_votes_vote_type = -1  # votes for US President of that vote type
+delegate_votes_vote_type = 3400 + 3669  #  votes for delegate of that vote type
+# pres_votes_vote_type = -1  # votes for US President of that vote type
 county_or_other = "district"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-#single_county = "US Virgin Islands;St. Thomas and St. John"  # pick any one from your file, but use internal db name
-#pres_votes_county = -1  # total votes for US President in that county
+# single_county = "US Virgin Islands;St. Thomas and St. John"  # pick any one from your file, but use internal db name
+# pres_votes_county = -1  # total votes for US President in that county
 
 
 def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
+
 
 """
 def test_presidential(dbname):
@@ -78,6 +81,7 @@ def test_state_senate_totals(dbname):
         == total_ssd_votes
     )
 
+
 """
 def test_state_house_totals(dbname):
     assert (
@@ -91,6 +95,7 @@ def test_state_house_totals(dbname):
         == total_shd_votes
     )
 """
+
 
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)

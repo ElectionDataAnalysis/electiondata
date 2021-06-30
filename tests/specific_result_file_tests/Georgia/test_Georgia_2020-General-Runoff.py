@@ -67,14 +67,12 @@ def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
 
 
-
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
 
 
 def test_vote_type_counts_consistent(dbname):
     assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
-
 
 
 def test_all_candidates_known(dbname):

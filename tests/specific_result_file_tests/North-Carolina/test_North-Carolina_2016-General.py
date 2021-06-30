@@ -20,17 +20,23 @@ jurisdiction = "North Carolina"
 abbr = "NC"
 total_pres_votes = 4741564  # total of all votes for US President
 cd = 3  # US House congressional district
-total_cd_votes = 217531 + 106170  # total votes in that US House contest in the chosen cd
+total_cd_votes = (
+    217531 + 106170
+)  # total votes in that US House contest in the chosen cd
 shd = 4  # state house district
 total_shd_votes = 409541  # total votes in that State House contest
 ssd = 15  # state senate district
 total_ssd_votes = 58999 + 53905 + 5001  # total votes in that State Senate contest
 single_vote_type = "early"  # pick any one with corresponding data in your file, but use internal db name
-pres_votes_vote_type = 98147 + 91980 + 6330 + 2668 + 650  # total votes for US President of that vote type
+pres_votes_vote_type = (
+    98147 + 91980 + 6330 + 2668 + 650
+)  # total votes for US President of that vote type
 county_or_other = "county"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
 single_county = "North Carolina;Bertie County"  # pick any one from your file, but use internal db name
-pres_votes_county =  5778 + 3456 + 70 + 40 + 3 # total votes for US President in that county
+pres_votes_county = (
+    5778 + 3456 + 70 + 40 + 3
+)  # total votes for US President in that county
 
 """
 Walter B. Jones	REP	217,531	67.20%
@@ -48,6 +54,8 @@ Gary Johnson	130,126	2.74%	59,212	63,575	6,330	1,009
 Write-In (Miscellaneous)	47,386	1.00%	20,520	23,914	2,668	284
 Jill Stein	12,105	0.26%	5,451	5,936	650	68
 """
+
+
 def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
 

@@ -64,7 +64,6 @@ Candidate	Christine Goupil	Christine Goupil
 Candidate	Christine Palm	Christine Palm
 Candidate	Christine Rosati Randall	Christine Rosati Randall
 Candidate	Christopher Beyus	Christopher Beyus
-Candidate	Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'	Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'
 Candidate	Christopher E. Bowen	Christopher E. Bowen
 Candidate	Christopher Rosario	Christopher Rosario
 Candidate	Christopher Ziogas	Christopher Ziogas
@@ -115,7 +114,6 @@ Candidate	Eleni Kavros DeGraw	Eleni Kavros DeGraw
 Candidate	Ellen G. Wink	Ellen G. Wink
 Candidate	Ellie Kousidis	Ellie Kousidis
 Candidate	Emile Buzaid	Emile Buzaid
-Candidate	Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'	Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'
 Candidate	Emmett D. Riley	Emmett D. Riley
 Candidate	Eric C. Berthel	Eric C. Berthel
 Candidate	Eric Michael Mastroianni, Sr.	Eric Michael Mastroianni, Sr.
@@ -345,7 +343,6 @@ Candidate	Rick L. Hayes	Rick L. Hayes
 Candidate	Rick Lopes	Rick Lopes
 Candidate	Rob Sampson	Rob Sampson
 Candidate	Robert Bell	Robert Bell
-Candidate	Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'	Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'
 Candidate	Robert E. Halstead	Robert E. Halstead
 Candidate	Robert Siegrist	Robert Siegrist
 Candidate	Robert T. Keeley, Jr.	Robert T. Keeley, Jr.
@@ -376,7 +373,6 @@ Candidate	Steve Meskers	Steve Meskers
 Candidate	Steve Weir	Steve Weir
 Candidate	Steven S. Choi	Steven S. Choi
 Candidate	Steven Stafstrom	Steven Stafstrom
-Candidate	Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'	Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'
 Candidate	Sujata Gadkar-Wilcox	Sujata Gadkar-Wilcox
 Candidate	Susan Chapman	Susan Chapman
 Candidate	Susan Johnson	Susan Johnson

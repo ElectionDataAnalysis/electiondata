@@ -585,7 +585,7 @@ Candidate	KRUEGER, LEANNE	KRUEGER, LEANNE
 Candidate	KULIK, ANITA A	KULIK, ANITA A
 Candidate	KYLE MARKLEY	KYLE MARKLEY
 Candidate	KYNE, CAROLINE	KYNE, CAROLINE
-Candidate	Kanye WEST / Michelle TIDBALL	Kanye WEST / Michelle TIDBALL
+Candidate	Kanye WEST	Kanye WEST / Michelle TIDBALL
 Candidate	Kathy HINKLE	Kathy HINKLE
 Candidate	Kelly FLOOD	Kelly FLOOD
 Candidate	Ken CARROLL	Ken CARROLL
