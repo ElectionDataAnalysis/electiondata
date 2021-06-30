@@ -1,234 +1,2144 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-CandidateContest	OR House District 1	STATE REPRESENTATIVE, 1ST DISTRICT
-CandidateContest	OR House District 2	STATE REPRESENTATIVE, 2ND DISTRICT
-CandidateContest	OR House District 3	STATE REPRESENTATIVE, 3RD DISTRICT
-CandidateContest	OR House District 4	STATE REPRESENTATIVE, 4TH DISTRICT
-CandidateContest	OR House District 5	STATE REPRESENTATIVE, 5TH DISTRICT
-CandidateContest	OR House District 6	STATE REPRESENTATIVE, 6TH DISTRICT
-CandidateContest	OR House District 7	STATE REPRESENTATIVE, 7TH DISTRICT
-CandidateContest	OR House District 8	STATE REPRESENTATIVE, 8TH DISTRICT
-CandidateContest	OR House District 9	STATE REPRESENTATIVE, 9TH DISTRICT
-CandidateContest	OR House District 10	STATE REPRESENTATIVE, 10TH DISTRICT
-CandidateContest	OR House District 11	STATE REPRESENTATIVE, 11TH DISTRICT
-CandidateContest	OR House District 12	STATE REPRESENTATIVE, 12TH DISTRICT
-CandidateContest	OR House District 13	STATE REPRESENTATIVE, 13TH DISTRICT
-CandidateContest	OR House District 14	STATE REPRESENTATIVE, 14TH DISTRICT
-CandidateContest	OR House District 15	STATE REPRESENTATIVE, 15TH DISTRICT
-CandidateContest	OR House District 16	STATE REPRESENTATIVE, 16TH DISTRICT
-CandidateContest	OR House District 17	STATE REPRESENTATIVE, 17TH DISTRICT
-CandidateContest	OR House District 18	STATE REPRESENTATIVE, 18TH DISTRICT
-CandidateContest	OR House District 19	STATE REPRESENTATIVE, 19TH DISTRICT
-CandidateContest	OR House District 20	STATE REPRESENTATIVE, 20TH DISTRICT
-CandidateContest	OR House District 21	STATE REPRESENTATIVE, 21ST DISTRICT
-CandidateContest	OR House District 22	STATE REPRESENTATIVE, 22ND DISTRICT
-CandidateContest	OR House District 23	STATE REPRESENTATIVE, 23RD DISTRICT
-CandidateContest	OR House District 24	STATE REPRESENTATIVE, 24TH DISTRICT
-CandidateContest	OR House District 25	STATE REPRESENTATIVE, 25TH DISTRICT
-CandidateContest	OR House District 26	STATE REPRESENTATIVE, 26TH DISTRICT
-CandidateContest	OR House District 27	STATE REPRESENTATIVE, 27TH DISTRICT
-CandidateContest	OR House District 28	STATE REPRESENTATIVE, 28TH DISTRICT
-CandidateContest	OR House District 29	STATE REPRESENTATIVE, 29TH DISTRICT
-CandidateContest	OR House District 30	STATE REPRESENTATIVE, 30TH DISTRICT
-CandidateContest	OR House District 31	STATE REPRESENTATIVE, 31ST DISTRICT
-CandidateContest	OR House District 32	STATE REPRESENTATIVE, 32ND DISTRICT
-CandidateContest	OR House District 33	STATE REPRESENTATIVE, 33RD DISTRICT
-CandidateContest	OR House District 34	STATE REPRESENTATIVE, 34TH DISTRICT
-CandidateContest	OR House District 35	STATE REPRESENTATIVE, 35TH DISTRICT
-CandidateContest	OR House District 36	STATE REPRESENTATIVE, 36TH DISTRICT
-CandidateContest	OR House District 37	STATE REPRESENTATIVE, 37TH DISTRICT
-CandidateContest	OR House District 38	STATE REPRESENTATIVE, 38TH DISTRICT
-CandidateContest	OR House District 39	STATE REPRESENTATIVE, 39TH DISTRICT
-CandidateContest	OR House District 40	STATE REPRESENTATIVE, 40TH DISTRICT
-CandidateContest	OR House District 41	STATE REPRESENTATIVE, 41ST DISTRICT
-CandidateContest	OR House District 42	STATE REPRESENTATIVE, 42ND DISTRICT
-CandidateContest	OR House District 43	STATE REPRESENTATIVE, 43RD DISTRICT
-CandidateContest	OR House District 44	STATE REPRESENTATIVE, 44TH DISTRICT
-CandidateContest	OR House District 45	STATE REPRESENTATIVE, 45TH DISTRICT
-CandidateContest	OR House District 46	STATE REPRESENTATIVE, 46TH DISTRICT
-CandidateContest	OR House District 47	STATE REPRESENTATIVE, 47TH DISTRICT
-CandidateContest	OR House District 48	STATE REPRESENTATIVE, 48TH DISTRICT
-CandidateContest	OR House District 49	STATE REPRESENTATIVE, 49TH DISTRICT
-CandidateContest	OR House District 50	STATE REPRESENTATIVE, 50TH DISTRICT
-CandidateContest	OR House District 51	STATE REPRESENTATIVE, 51ST DISTRICT
-CandidateContest	OR House District 52	STATE REPRESENTATIVE, 52ND DISTRICT
-CandidateContest	OR House District 53	STATE REPRESENTATIVE, 53RD DISTRICT
-CandidateContest	OR House District 54	STATE REPRESENTATIVE, 54TH DISTRICT
-CandidateContest	OR House District 55	STATE REPRESENTATIVE, 55TH DISTRICT
-CandidateContest	OR House District 56	STATE REPRESENTATIVE, 56TH DISTRICT
-CandidateContest	OR House District 57	STATE REPRESENTATIVE, 57TH DISTRICT
-CandidateContest	OR House District 58	STATE REPRESENTATIVE, 58TH DISTRICT
-CandidateContest	OR House District 59	STATE REPRESENTATIVE, 59TH DISTRICT
-CandidateContest	OR House District 60	STATE REPRESENTATIVE, 60TH DISTRICT
-CandidateContest	OR House District 1	OR House 1st District
-CandidateContest	OR House District 2	OR House 2nd District
-CandidateContest	OR House District 3	OR House 3rd District
-CandidateContest	OR House District 4	OR House 4th District
-CandidateContest	OR House District 5	OR House 5th District
-CandidateContest	OR House District 6	OR House 6th District
-CandidateContest	OR House District 7	OR House 7th District
-CandidateContest	OR House District 8	OR House 8th District
-CandidateContest	OR House District 9	OR House 9th District
-CandidateContest	OR House District 10	OR House 10th District
-CandidateContest	OR House District 11	OR House 11th District
-CandidateContest	OR House District 12	OR House 12th District
-CandidateContest	OR House District 13	OR House 13th District
-CandidateContest	OR House District 14	OR House 14th District
-CandidateContest	OR House District 15	OR House 15th District
-CandidateContest	OR House District 16	OR House 16th District
-CandidateContest	OR House District 17	OR House 17th District
-CandidateContest	OR House District 18	OR House 18th District
-CandidateContest	OR House District 19	OR House 19th District
-CandidateContest	OR House District 20	OR House 20th District
-CandidateContest	OR House District 21	OR House 21st District
-CandidateContest	OR House District 22	OR House 22nd District
-CandidateContest	OR House District 23	OR House 23rd District
-CandidateContest	OR House District 24	OR House 24th District
-CandidateContest	OR House District 25	OR House 25th District
-CandidateContest	OR House District 26	OR House 26th District
-CandidateContest	OR House District 27	OR House 27th District
-CandidateContest	OR House District 28	OR House 28th District
-CandidateContest	OR House District 29	OR House 29th District
-CandidateContest	OR House District 30	OR House 30th District
-CandidateContest	OR House District 31	OR House 31st District
-CandidateContest	OR House District 32	OR House 32nd District
-CandidateContest	OR House District 33	OR House 33rd District
-CandidateContest	OR House District 34	OR House 34th District
-CandidateContest	OR House District 35	OR House 35th District
-CandidateContest	OR House District 36	OR House 36th District
-CandidateContest	OR House District 37	OR House 37th District
-CandidateContest	OR House District 38	OR House 38th District
-CandidateContest	OR House District 39	OR House 39th District
-CandidateContest	OR House District 40	OR House 40th District
-CandidateContest	OR House District 41	OR House 41st District
-CandidateContest	OR House District 42	OR House 42nd District
-CandidateContest	OR House District 43	OR House 43rd District
-CandidateContest	OR House District 44	OR House 44th District
-CandidateContest	OR House District 45	OR House 45th District
-CandidateContest	OR House District 46	OR House 46th District
-CandidateContest	OR House District 47	OR House 47th District
-CandidateContest	OR House District 48	OR House 48th District
-CandidateContest	OR House District 49	OR House 49th District
-CandidateContest	OR House District 50	OR House 50th District
-CandidateContest	OR House District 51	OR House 51st District
-CandidateContest	OR House District 52	OR House 52nd District
-CandidateContest	OR House District 53	OR House 53rd District
-CandidateContest	OR House District 54	OR House 54th District
-CandidateContest	OR House District 55	OR House 55th District
-CandidateContest	OR House District 56	OR House 56th District
-CandidateContest	OR House District 57	OR House 57th District
-CandidateContest	OR House District 58	OR House 58th District
-CandidateContest	OR House District 59	OR House 59th District
-CandidateContest	OR House District 60	OR House 60th District
-CandidateContest	OR Senate District 1	STATE SENATOR, 1ST DISTRICT
-CandidateContest	OR Senate District 2	STATE SENATOR, 2ND DISTRICT
-CandidateContest	OR Senate District 3	STATE SENATOR, 3RD DISTRICT
-CandidateContest	OR Senate District 4	STATE SENATOR, 4TH DISTRICT
-CandidateContest	OR Senate District 5	STATE SENATOR, 5TH DISTRICT
-CandidateContest	OR Senate District 6	STATE SENATOR, 6TH DISTRICT
-CandidateContest	OR Senate District 7	STATE SENATOR, 7TH DISTRICT
-CandidateContest	OR Senate District 8	STATE SENATOR, 8TH DISTRICT
-CandidateContest	OR Senate District 9	STATE SENATOR, 9TH DISTRICT
-CandidateContest	OR Senate District 10	STATE SENATOR, 10TH DISTRICT
-CandidateContest	OR Senate District 11	STATE SENATOR, 11TH DISTRICT
-CandidateContest	OR Senate District 12	STATE SENATOR, 12TH DISTRICT
-CandidateContest	OR Senate District 13	STATE SENATOR, 13TH DISTRICT
-CandidateContest	OR Senate District 14	STATE SENATOR, 14TH DISTRICT
-CandidateContest	OR Senate District 15	STATE SENATOR, 15TH DISTRICT
-CandidateContest	OR Senate District 16	STATE SENATOR, 16TH DISTRICT
-CandidateContest	OR Senate District 17	STATE SENATOR, 17TH DISTRICT
-CandidateContest	OR Senate District 18	STATE SENATOR, 18TH DISTRICT
-CandidateContest	OR Senate District 19	STATE SENATOR, 19TH DISTRICT
-CandidateContest	OR Senate District 20	STATE SENATOR, 20TH DISTRICT
-CandidateContest	OR Senate District 21	STATE SENATOR, 21TH DISTRICT
-CandidateContest	OR Senate District 22	STATE SENATOR, 22TH DISTRICT
-CandidateContest	OR Senate District 23	STATE SENATOR, 23TH DISTRICT
-CandidateContest	OR Senate District 24	STATE SENATOR, 24TH DISTRICT
-CandidateContest	OR Senate District 25	STATE SENATOR, 25TH DISTRICT
-CandidateContest	OR Senate District 26	STATE SENATOR, 26TH DISTRICT
-CandidateContest	OR Senate District 27	STATE SENATOR, 27TH DISTRICT
-CandidateContest	OR Senate District 28	STATE SENATOR, 28TH DISTRICT
-CandidateContest	OR Senate District 29	STATE SENATOR, 29TH DISTRICT
-CandidateContest	OR Senate District 30	STATE SENATOR, 30TH DISTRICT
-CandidateContest	OR Senate District 1	OR Senate 1st District
-CandidateContest	OR Senate District 2	OR Senate 2nd District
-CandidateContest	OR Senate District 3	OR Senate 3rd District
-CandidateContest	OR Senate District 4	OR Senate 4th District
-CandidateContest	OR Senate District 5	OR Senate 5th District
-CandidateContest	OR Senate District 6	OR Senate 6th District
-CandidateContest	OR Senate District 7	OR Senate 7th District
-CandidateContest	OR Senate District 8	OR Senate 8th District
-CandidateContest	OR Senate District 9	OR Senate 9th District
-CandidateContest	OR Senate District 10	OR Senate 10th District
-CandidateContest	OR Senate District 11	OR Senate 11th District
-CandidateContest	OR Senate District 12	OR Senate 12th District
-CandidateContest	OR Senate District 13	OR Senate 13th District
-CandidateContest	OR Senate District 14	OR Senate 14th District
-CandidateContest	OR Senate District 15	OR Senate 15th District
-CandidateContest	OR Senate District 16	OR Senate 16th District
-CandidateContest	OR Senate District 17	OR Senate 17th District
-CandidateContest	OR Senate District 18	OR Senate 18th District
-CandidateContest	OR Senate District 19	OR Senate 19th District
-CandidateContest	OR Senate District 20	OR Senate 20th District
-CandidateContest	OR Senate District 21	OR Senate 21st District
-CandidateContest	OR Senate District 22	OR Senate 22nd District
-CandidateContest	OR Senate District 23	OR Senate 23rd District
-CandidateContest	OR Senate District 24	OR Senate 24th District
-CandidateContest	OR Senate District 25	OR Senate 25th District
-CandidateContest	OR Senate District 26	OR Senate 26th District
-CandidateContest	OR Senate District 27	OR Senate 27th District
-CandidateContest	OR Senate District 28	OR Senate 28th District
-CandidateContest	OR Senate District 29	OR Senate 29th District
-CandidateContest	OR Senate District 30	OR Senate 30th District
-CandidateContest	US House OR District 1	US REPRESENTATIVE, 1ST DISTRICT
-CandidateContest	US House OR District 2	US REPRESENTATIVE, 2ND DISTRICT
-CandidateContest	US House OR District 3	US REPRESENTATIVE, 3RD DISTRICT
-CandidateContest	US House OR District 4	US REPRESENTATIVE, 4TH DISTRICT
-CandidateContest	US House OR District 5	US REPRESENTATIVE, 5TH DISTRICT
-CandidateContest	US House OR District 1	US Representative District 1
-CandidateContest	US House OR District 2	US Representative District 2
-CandidateContest	US House OR District 3	US Representative District 3
-CandidateContest	US House OR District 4	US Representative District 4
-CandidateContest	US House OR District 5	US Representative District 5
-CandidateContest	US President (OR)	PRESIDENT AND VICE PRESIDENT
-CandidateContest	US Senate OR	US SENATOR
-CandidateContest	US President (OR)	US President
-CandidateContest	US Senate OR	US Senator
+Candidate	A Randall Seely	A Randall Seely
+Candidate	Aaron Baer	Aaron Baer
+Candidate	Aaron Barber	Aaron Barber
+Candidate	Aaron L Huddart	Aaron L Huddart
+Candidate	Aaron Rapf	Aaron Rapf
+Candidate	Acasia Berry	Acasia Berry
+Candidate	Adam D Garvin	Adam D Garvin
+Candidate	Adam J Beskow	Adam J Beskow
+Candidate	Adam Jefferson	Adam Jefferson
+Candidate	Adam Khosroabadi	Adam Khosroabadi
+Candidate	Adam Mcguffie	Adam Mcguffie
+Candidate	Adam R Craven	Adam R Craven
+Candidate	Adam Wood	Adam Wood
+Candidate	Adela Villers	Adela Villers
+Candidate	Aden S Johnston	Aden S Johnston
+Candidate	Adina K Olivares	Adina K Olivares
+Candidate	Adolph (Val) Valfre	Adolph (Val) Valfre
+Candidate	Adrian L Brown	Adrian L Brown
+Candidate	Al Gore	AL GORE
+Candidate	Al Muelhoefer	Al Muelhoefer
+Candidate	Alan D Freeman	Alan D Freeman
+Candidate	Alan Humphrey	Alan Humphrey
+Candidate	Alan J Hanley	Alan J Hanley
+Candidate	Alan Klages	Alan Klages
+Candidate	Alan W Rowe	Alan W Rowe
+Candidate	Albert Calderon	Albert Calderon
+Candidate	Alberto Enriquez	Alberto Enriquez
+Candidate	Alek Skarlatos	Alek Skarlatos
+Candidate	Alex C Diblasi	Alex C DiBlasi
+Candidate	Alex C Diblasi	Alex C Diblasi
+Candidate	Alex Johnson Ii	Alex Johnson Ii
+Candidate	Alex Juarez	Alex Juarez
+Candidate	Alex Levi Usselman	Alex Levi Usselman
+Candidate	Alex Mc Haddad	Alex Mc Haddad
+Candidate	Alex Polikoff	Alex Polikoff
+Candidate	Alex Spenser	Alex Spenser
+Candidate	Alex Tardif	Alex Tardif
+Candidate	Alex Thurber	Alex Thurber
+Candidate	Alexander Flores	Alexander Flores
+Candidate	Ali Swanson	Ali Swanson
+Candidate	Alisha Powell	Alisha Powell
+Candidate	Alison Caswell	Alison Caswell
+Candidate	Allan H Kusler	Allan H Kusler
+Candidate	Allan L Duffy	Allan L Duffy
+Candidate	Allen Berry	Allen Berry
+Candidate	Allen Shearer	Allen Shearer
+Candidate	Allison Tivnon	Allison Tivnon
+Candidate	Alvin C Thompson	Alvin C Thompson
+Candidate	Alycia Edgeworth Kersey	Alycia Edgeworth Kersey
+Candidate	Alycia N Sykora	Alycia N Sykora
+Candidate	Amanda Benjamin	Amanda Benjamin
+Candidate	Amanda L Dant	Amanda L Dant
+Candidate	Amanda Mccracken	Amanda Mccracken
+Candidate	Amanda Thorpe	Amanda Thorpe
+Candidate	Amelia Salvador	Amelia Salvador
+Candidate	Amit Kapoor	Amit Kapoor
+Candidate	Amity York	Amity York
+Candidate	Amy Houghtaling	Amy Houghtaling
+Candidate	Amy Knudsen	Amy Knudsen
+Candidate	Amy Ryan Courser	Amy Ryan Courser
+Candidate	Ana Byers	Ana Byers
+Candidate	Ana Sarish	Ana Sarish
+Candidate	Andrea (Annie) Gilland	Andrea (Annie) Gilland
+Candidate	Andrea L Blum	Andrea L Blum
+Candidate	Andrea L Mann	Andrea L Mann
+Candidate	Andrea Lerner Thompson	Andrea Lerner Thompson
+Candidate	Andrea Salinas	Andrea **Salinas
+Candidate	Andrea Salinas	Andrea Salinas
+Candidate	Andrea Zielinski	Andrea Zielinski
+Candidate	Andrew Beebe	Andrew Beebe
+Candidate	Andrew Card	Andrew Card
+Candidate	Andrew Halliday	Andrew Halliday
+Candidate	Andrew Labonte	Andrew Labonte
+Candidate	Andrew Mallory	Andrew Mallory
+Candidate	Andrew Struthers	Andrew Struthers
+Candidate	Andy Anderson	Andy Anderson
+Candidate	Andy Bacigalupo	Andy Bacigalupo
+Candidate	Angel Falconer	Angel Falconer
+Candidate	Angela Brandenburg	Angela Brandenburg
+Candidate	Angeles Godinez-Valencia	Angeles Godinez-Valencia
+Candidate	Angelita N Sanchez	Angelita N Sanchez
+Candidate	Angie Long	Angie Long
+Candidate	Ann Crumrine	Ann Crumrine
+Candidate	Ann Stott	Ann Stott
+Candidate	Anna K Jesse	Anna K Jesse
+Candidate	Anna Kasachev	Anna Kasachev
+Candidate	Anna Williams	Anna **Williams
+Candidate	Anna Williams	Anna Williams
+Candidate	Anne Marie Skinner	Anne Marie Skinner
+Candidate	Annessa Hartman	Annessa Hartman
+Candidate	Annette Frank	Annette Frank
+Candidate	Annie Croucher	Annie Croucher
+Candidate	Anon (Bubba) Walters	Anon (Bubba) Walters
+Candidate	Anthony (Pat) Coy	Anthony (Pat) Coy
+Candidate	Anthony Bond	Anthony Bond
+Candidate	Anthony Broadman	Anthony Broadman
+Candidate	Anthony K Morelos	Anthony K Morelos
+Candidate	Anthony Martin	Anthony Martin
+Candidate	Arlene Burns	Arlene Burns
+Candidate	Arlene C Burns	Arlene C Burns
+Candidate	Art Robinson	Art **Robinson
+Candidate	Art Robinson	Art Robinson
+Candidate	Arthur Babitz	Arthur Babitz
+Candidate	Arvid E Andersen	Arvid E Andersen
+Candidate	Ashley A Hicks	Ashley A Hicks
+Candidate	Ashley Carson Cottingham	Ashley Carson Cottingham
+Candidate	Ashley R Sullivan	Ashley R Sullivan
+Candidate	Ashley Wheeler	Ashley Wheeler
+Candidate	Ashton Simpson	Ashton Simpson
+Candidate	Audy R Spliethof	Audy R Spliethof
+Candidate	August Paul Johnson	August Paul Johnson
+Candidate	Austin Throop	Austin Throop
+Candidate	Autumn J Watson	Autumn J Watson
+Candidate	Baltazar (Jr) Gonzalez	Baltazar (Jr) Gonzalez
+Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barb Hilty	Barb Hilty
+Candidate	Barbara Boyer	Barbara Boyer
+Candidate	Barbara Fontaine	Barbara Fontaine
+Candidate	Barbara Niedermeyer	Barbara Niedermeyer
+Candidate	Barbara Smith Warner	Barbara **Smith Warner
+Candidate	Barbara Smith Warner	Barbara Smith Warner
+Candidate	Barney Lindsay	Barney Lindsay
+Candidate	Barry Wilson	Barry Wilson
+Candidate	Bart Carpenter	Bart Carpenter
+Candidate	Beatriz Botello	Beatriz Botello
+Candidate	Becky Campbell	Becky Campbell
+Candidate	Belinda Buswell (Miller)	Belinda Buswell (Miller)
+Candidate	Ben Edtl	Ben Edtl
+Candidate	Ben F Drake	Ben F Drake
+Candidate	Ben Mcdonald	Ben Mcdonald
+Candidate	Ben West	Ben West
+Candidate	Benito Puente Jr	Benito Puente Jr
+Candidate	Berkeley F Davis	Berkeley F Davis
+Candidate	Bernadette Hansen	Bernadette Hansen
+Candidate	Bert Perisho	Bert Perisho
+Candidate	Beshara S Shahin	Beshara S Shahin
+Candidate	Beth Barker-Hidalgo	Beth Barker-Hidalgo
+Candidate	Beth E Spell	Beth E Spell
+Candidate	Beth Mccurdy	Beth Mccurdy
+Candidate	Betty J Milliman	Betty J Milliman
+Candidate	Betty Tyree	Betty Tyree
+Candidate	Beverly Ficek	Beverly Ficek
+Candidate	Bill Adams	Bill Adams
+Candidate	Bill Burgess	Bill Burgess
+Candidate	Bill Burnett	Bill Burnett
+Candidate	Bill Currier	Bill Currier
+Candidate	Bill Dimarco	Bill Dimarco
+Candidate	Bill Eagle	Bill Eagle
+Candidate	Bill Hansell	Bill **Hansell
+Candidate	Bill Hansell	Bill Hansell
+Candidate	Bill L Dillard Jr	Bill L Dillard Jr
+Candidate	Bill Meyer	Bill Meyer
+Candidate	Bill Minter	Bill Minter
+Candidate	Bill Osburn	Bill Osburn
+Candidate	Bill Post	Bill **Post
+Candidate	Bill Post	Bill Post
+Candidate	Bill Rigney	Bill Rigney
+Candidate	Bill Schaefer	Bill Schaefer
+Candidate	Bill Tuttle	Bill Tuttle
+Candidate	Bob Brajcich	Bob Brajcich
+Candidate	Bob Burr	Bob Burr
+Candidate	Bob Niemeyer	Bob Niemeyer
+Candidate	Bob Shortman	Bob Shortman
+Candidate	Bob Wiggins	Bob Wiggins
+Candidate	Bobbi A Childers	Bobbi A Childers
+Candidate	Bobby Dale Walker	Bobby Dale Walker
+Candidate	Bobby Levy	Bobby **Levy
+Candidate	Bobby Levy	Bobby Levy
+Candidate	Bonne Whitley	Bonne Whitley
+Candidate	Bonnie A Lam	Bonnie A Lam
+Candidate	Boomer Wright	Boomer **Wright
+Candidate	Boomer Wright	Boomer Wright
+Candidate	Brad Alcorn	Brad Alcorn
+Candidate	Brad L Smith	Brad L Smith
+Candidate	Brad Lohrey	Brad Lohrey
+Candidate	Brad Moreland	Brad Moreland
+Candidate	Brad Oxenford	Brad Oxenford
+Candidate	Brad Witt	Brad **Witt
+Candidate	Brad Witt	Brad Witt
+Candidate	Bradley J Humbert	Bradley J Humbert
+Candidate	Brandee A Dudzic	Brandee A Dudzic
+Candidate	Brandie D Mcnamee	Brandie D Mcnamee
+Candidate	Brandon M Thompson	Brandon M Thompson
+Candidate	Brandon Ogilvie	Brandon Ogilvie
+Candidate	Brandon S Miller	Brandon S Miller
+Candidate	Brandon S Thueson	Brandon S Thueson
+Candidate	Brandon W Joslin	Brandon W Joslin
+Candidate	Brandon Williams	Brandon Williams
+Candidate	Brenda Profitt	Brenda Profitt
+Candidate	Brenda Ruble	Brenda Ruble
+Candidate	Brenda Sanchez	Brenda Sanchez
+Candidate	Brenda Snow Potter	Brenda Snow Potter
+Candidate	Brendan J Kane	Brendan J Kane
+Candidate	Brett N Katlong	Brett N Katlong
+Candidate	Brian Asher	Brian Asher
+Candidate	Brian Buckner	Brian Buckner
+Candidate	Brian C Loy	Brian C Loy
+Candidate	Brian Campbell	Brian Campbell
+Candidate	Brian Clem	Brian **Clem
+Candidate	Brian Clem	Brian Clem
+Candidate	Brian D Hodson	Brian D Hodson
+Candidate	Brian Dalton	Brian Dalton
+Candidate	Brian De La Grange	Brian De La Grange
+Candidate	Brian E Parker	Brian E Parker
+Candidate	Brian E Wolfe	Brian E Wolfe
+Candidate	Brian G Stout	Brian G Stout
+Candidate	Brian J Boquist	Brian J **Boquist
+Candidate	Brian J Boquist	Brian J Boquist
+Candidate	Brian M Vick	Brian M Vick
+Candidate	Brian Nakamura	Brian Nakamura
+Candidate	Brian Pound	Brian Pound
+Candidate	Brian Prawitz	Brian Prawitz
+Candidate	Brian Rake	Brian Rake
+Candidate	Brian Reynolds	Brian Reynolds
+Candidate	Brian Towey	Brian Towey
+Candidate	Brian Van Bergen	Brian Van Bergen
+Candidate	Brianna Harris	Brianna Harris
+Candidate	Brittany Ruiz	Brittany Ruiz
+Candidate	Brook Boden	Brook Boden
+Candidate	Brook Williams	Brook Williams
+Candidate	Bruce Mc Nair	Bruce Mc Nair
+Candidate	Bruce P Holsey	Bruce P Holsey
+Candidate	Bruce W Jolma	Bruce W Jolma
+Candidate	Butch Miller	Butch Miller
+Candidate	Byron Shinkle	Byron Shinkle
+Candidate	Byron Shock	Byron Shock
+Candidate	Cal Mukumoto	Cal Mukumoto
+Candidate	Caleb Hamnes	Caleb Hamnes
+Candidate	Calla Felicity	Calla Felicity
+Candidate	Camden King	Camden King
+Candidate	Cameron Langley	Cameron Langley
+Candidate	Cameron Martinez	Cameron Martinez
+Candidate	Cami Rae Walter	Cami Rae Walter
+Candidate	Candy Olson Reagan	Candy Olson Reagan
+Candidate	Carey Rhoads	Carey Rhoads
+Candidate	Carina M Miller	Carina M Miller
+Candidate	Carl Elliott	Carl Elliott
+Candidate	Carla Gerber	Carla Gerber
+Candidate	Carmon Carlos	Carmon Carlos
+Candidate	Carol F Westfall	Carol F Westfall
+Candidate	Carol Korn-Shioshi	Carol Korn-Shioshi
+Candidate	Carol Macinnes	Carol Macinnes
+Candidate	Carol Mckiel	Carol Mckiel
+Candidate	Carolyn Nguyen	Carolyn Nguyen
+Candidate	Cary Johnson	Cary Johnson
+Candidate	Casey Garrett	Casey Garrett
+Candidate	Casey J Walker	Casey J Walker
+Candidate	Casey Ocupe	Casey Ocupe
+Candidate	Casey Storey	Casey Storey
+Candidate	Catherine Biscoe	Catherine Biscoe
+Candidate	Cathi R Vandamme	Cathi R Vandamme
+Candidate	Cathy Clark	Cathy Clark
+Candidate	Cathy M Zacharias	Cathy M Zacharias
+Candidate	Cecelia Koontz	Cecelia Koontz
+Candidate	Cedric Hayden	Cedric **Hayden
+Candidate	Cedric Hayden	Cedric Hayden
+Candidate	Chad Mccomas	Chad Mccomas
+Candidate	Chad Miller	Chad Miller
+Candidate	Chad Ray	Chad Ray
+Candidate	Chad Woods	Chad Woods
+Candidate	Chalice Mp Savage	Chalice Mp Savage
+Candidate	Chandler Schaak	Chandler Schaak
+Candidate	Charity Hughes	Charity Hughes
+Candidate	Charles Baer	Charles Baer
+Candidate	Charles F Lee	Charles F Lee
+Candidate	Charles F Maughan	Charles F Maughan
+Candidate	Charles Kimball	Charles Kimball
+Candidate	Charles Rostocil	Charles Rostocil
+Candidate	Charlie H Waterman	Charlie H Waterman
+Candidate	Charlyn Ellis	Charlyn Ellis
+Candidate	Chas Jones	Chas Jones
+Candidate	Chaylon Shuffield	Chaylon Shuffield
+Candidate	Cheri Helt	Cheri Helt
+Candidate	Cheryl Davy	Cheryl Davy
+Candidate	Chip Bradley	Chip Bradley
+Candidate	Chloe Eudaly	Chloe Eudaly
+Candidate	Chris B Labhart	Chris B Labhart
+Candidate	Chris Barhyte	Chris Barhyte
+Candidate	Chris Cave	Chris Cave
+Candidate	Chris Chenoweth	Chris Chenoweth
+Candidate	Chris Gorsek	Chris **Gorsek
+Candidate	Chris Gorsek	Chris Gorsek
+Candidate	Chris Henry	Chris Henry
+Candidate	Chris Kaber	Chris Kaber
+Candidate	Chris Luz	Chris Luz
+Candidate	Chris Macquarrie	Chris Macquarrie
+Candidate	Chris Molin	Chris Molin
+Candidate	Chris Piper	Chris Piper
+Candidate	Chris Smith	Chris Smith
+Candidate	Christen Sacco	Christen Sacco
+Candidate	Christian Niece	Christian Niece
+Candidate	Christina (Chrissy) Davis	Christina (Chrissy) Davis
+Candidate	Christine Drazan	Christine **Drazan
+Candidate	Christine Drazan	Christine Drazan
+Candidate	Christopher Bangs	Christopher Bangs
+Candidate	Christopher C Christensen	Christopher C Christensen
+Candidate	Christopher Hall	Christopher Hall
+Candidate	Christopher L Garrett	Christopher L Garrett
+Candidate	Christopher Schweighardt	Christopher Schweighardt
+Candidate	Christopher Wade	Christopher Wade
+Candidate	Chuck Arrera	Chuck Arrera
+Candidate	Chuck Bennett	Chuck Bennett
+Candidate	Chuck Van Meter	Chuck Van Meter
+Candidate	Cindy Beck	Cindy Beck
+Candidate	Cindy Burlingame	Cindy Burlingame
+Candidate	Cindy Gant	Cindy Gant
+Candidate	Claire Hall	Claire Hall
+Candidate	Claire Syrett	Claire Syrett
+Candidate	Clay Bearnson	Clay Bearnson
+Candidate	Cliff Bentz	Cliff Bentz
+Candidate	Clifford B Evelyn Sr	Clifford B Evelyn Sr
+Candidate	Clifford C Glover	Clifford C Glover
+Candidate	Clifford Frank Thayer	Clifford Frank Thayer
+Candidate	Clifton G Harrold	Clifton G Harrold
+Candidate	Clint Barber	Clint Barber
+Candidate	Clint Moore	Clint Moore
+Candidate	Clint Scherf	Clint Scherf
+Candidate	Cody Bowen	Cody Bowen
+Candidate	Cody Serdar	Cody Serdar
+Candidate	Cody Skoff	Cody Skoff
+Candidate	Connie Venegas	Connie Venegas
+Candidate	Corey Sweeney	Corey Sweeney
+Candidate	Corrine Dutto	Corrine Dutto
+Candidate	Cortney Nash	Cortney Nash
+Candidate	Courtney Neron	Courtney **Neron
+Candidate	Courtney Neron	Courtney Neron
+Candidate	Craig Johnson	Craig Johnson
+Candidate	Crystal Robles	Crystal Robles
+Candidate	Curt Abbott	Curt Abbott
+Candidate	Curt Ankerberg	Curt Ankerberg
+Candidate	Curtis A Ricker	Curtis A Ricker
+Candidate	Curtis Landers	Curtis Landers
+Candidate	Curtis Thompson	Curtis Thompson
+Candidate	Cyndy Hillier	Cyndy Hillier
+Candidate	Cynthia Jacobi	Cynthia Jacobi
+Candidate	D Scott Henderson	D Scott Henderson
+Candidate	D Scott Rutter	D Scott Rutter
+Candidate	Dacia Grayber	Dacia **Grayber
+Candidate	Dacia Grayber	Dacia Grayber
+Candidate	Dale A Dawson	Dale A Dawson
+Candidate	Dale Fishback	Dale Fishback
+Candidate	Dallas Heard	Dallas **Heard
+Candidate	Dallas Heard	Dallas Heard
+Candidate	Damon Rose	Damon Rose
+Candidate	Dan Deyoung	Dan Deyoung
+Candidate	Dan Dorran	Dan Dorran
+Candidate	Dan Jenkins	Dan Jenkins
+Candidate	Dan Jesse	Dan Jesse
+Candidate	Dan Loomis	Dan Loomis
+Candidate	Dan Mclind	Dan Mclind
+Candidate	Dan Morrow	Dan Morrow
+Candidate	Dan Rayfield	Dan **Rayfield
+Candidate	Dan Rayfield	Dan Rayfield
+Candidate	Dan Richardson	Dan Richardson
+Candidate	Dan Warnock	Dan Warnock
+Candidate	Dani Correa	Dani Correa
+Candidate	Daniel Fraser	Daniel Fraser
+Candidate	Daniel G Bonham	Daniel G **Bonham
+Candidate	Daniel G Bonham	Daniel G Bonham
+Candidate	Daniel Hoffay	Daniel Hoffay
+Candidate	Daniel J Daggett	Daniel J Daggett
+Candidate	Daniel L Wagoner	Daniel L Wagoner
+Candidate	Daniel Paul Burke	Daniel Paul Burke
+Candidate	Daniel R Martin	Daniel R Martin
+Candidate	Daniel Ray Shepherd	Daniel Ray Shepherd
+Candidate	Daniel Richer	Daniel Richer
+Candidate	Daniel Sheets	Daniel Sheets
+Candidate	Danielle Bethell	Danielle Bethell
+Candidate	Danielle Gonzalez	Danielle Gonzalez
+Candidate	Danny Jaffer	Danny Jaffer
+Candidate	Darcy Long-Curtiss	Darcy Long-Curtiss
+Candidate	Darcy Newton-Irving	Darcy Newton-Irving
+Candidate	Daren C Strong	Daren C Strong
+Candidate	Daren Dufloth	Daren Dufloth
+Candidate	Darin E Silbernagel	Darin E Silbernagel
+Candidate	Darin Olson	Darin Olson
+Candidate	Dario Hunter	Dario Hunter
+Candidate	Dario Hunter	Dario Hunter / Dawn Neptune Adams
+Candidate	Darwin Johnson Jr	Darwin Johnson Jr
+Candidate	Dave Bell	Dave Bell
+Candidate	Dave Cunningham	Dave Cunningham
+Candidate	Dave Dotterrer	Dave Dotterrer
+Candidate	Dave Dyk	Dave Dyk
+Candidate	Dave Harms	Dave Harms
+Candidate	Dave Hayden	Dave Hayden
+Candidate	Dave Seals	Dave Seals
+Candidate	Dave Trask	Dave Trask
+Candidate	David (Jerry) Hahn	David (Jerry) Hahn
+Candidate	David (Shorty) L Schwehr	David (Shorty) L Schwehr
+Candidate	David Arrasmith	David Arrasmith
+Candidate	David Benson	David Benson
+Candidate	David Bergmann	David Bergmann
+Candidate	David Brock Smith	David Brock **Smith
+Candidate	David Brock Smith	David Brock Smith
+Candidate	David C Willis	David C Willis
+Candidate	David Comfort	David Comfort
+Candidate	David Emami	David Emami
+Candidate	David G Durfey	David G Durfey
+Candidate	David Golobay	David Golobay
+Candidate	David Gomberg	David **Gomberg
+Candidate	David Gomberg	David Gomberg
+Candidate	David Hines	David Hines
+Candidate	David Hoffer	David Hoffer
+Candidate	David J Smith	David J Smith
+Candidate	David Jones	David Jones
+Candidate	David K Glabe	David K Glabe
+Candidate	David Kellogg	David Kellogg
+Candidate	David Kingsberry	David Kingsberry
+Candidate	David L Freytag	David L Freytag
+Candidate	David Lisle	David Lisle
+Candidate	David Lowman	David Lowman
+Candidate	David M Low	David M Low
+Candidate	David Mccall	David Mccall
+Candidate	David Moyal	David Moyal
+Candidate	David Pastizzo	David Pastizzo
+Candidate	David Patrick Mccarthy	David Patrick Mccarthy
+Candidate	David Posalski	David Posalski
+Candidate	David Ramcharan	David Ramcharan
+Candidate	David Reed	David Reed
+Candidate	David Richardson	David Richardson
+Candidate	David Ripma	David Ripma
+Candidate	David Russ	David Russ
+Candidate	David S Holland	David S Holland
+Candidate	David Sylvia	David Sylvia
+Candidate	David Vancleave	David Vancleave
+Candidate	David Watkins	David Watkins
+Candidate	David Wegener	David Wegener
+Candidate	Dawn E Plotts	Dawn E Plotts
+Candidate	Dawn Hedrick-Roden	Dawn Hedrick-Roden
+Candidate	Dawn Keller	Dawn Keller
+Candidate	Dawn Kinyon	Dawn Kinyon
+Candidate	Dean Defrees	Dean Defrees
+Candidate	Dean H Sawyer	Dean H Sawyer
+Candidate	Dean P Moberg	Dean P Moberg
+Candidate	Deanna Christiansen	Deanna Christiansen
+Candidate	Deb Patterson	Deb **Patterson
+Candidate	Deb Patterson	Deb Patterson
+Candidate	Debbie Boothe-Schmidt	Debbie Boothe-Schmidt
+Candidate	Debbie D Cabrales	Debbie D Cabrales
+Candidate	Debbie Virden	Debbie Virden
+Candidate	Decembre L Karels	Decembre L Karels
+Candidate	Deedee Murphy	Deedee Murphy
+Candidate	Delena Oden	Delena Oden
+Candidate	Deloris Dennis	Deloris Dennis
+Candidate	Denise Bacon	Denise Bacon
+Candidate	Denise Ball	Denise Ball
+Candidate	Denise Wheeler	Denise Wheeler
+Candidate	Dennis Anthony	Dennis Anthony
+Candidate	Dennis Linthicum	Dennis **Linthicum
+Candidate	Dennis Linthicum	Dennis Linthicum
+Candidate	Dennis Sickles	Dennis Sickles
+Candidate	Denny Doyle	Denny Doyle
+Candidate	Denyc Boles	Denyc Boles
+Candidate	Denyse Mcgriff	Denyse Mcgriff
+Candidate	Derek Clevenger	Derek Clevenger
+Candidate	Derek Volkart	Derek Volkart
+Candidate	Derrin (Dag) Robinson	Derrin (Dag) Robinson
+Candidate	Deryl Leggett	Deryl Leggett
+Candidate	Desi Nicodemus	Desi Nicodemus
+Candidate	Devin Portwood	Devin Portwood
+Candidate	Devon J Mitchell	Devon J Mitchell
+Candidate	Diana Bartch	Diana Bartch
+Candidate	Diana Cooper	Diana Cooper
+Candidate	Diana Hinton	Diana Hinton
+Candidate	Diana Larson	Diana Larson
+Candidate	Diane Hyde	Diane Hyde
+Candidate	Dick Anderson	Dick **Anderson
+Candidate	Dick Anderson	Dick Anderson
+Candidate	Dick Courter	Dick Courter
+Candidate	Diego Hernandez	Diego **Hernandez
+Candidate	Diego Hernandez	Diego Hernandez
+Candidate	Dietmar Goebel	Dietmar Goebel
+Candidate	Dina Dinucci	Dina Dinucci
+Candidate	Don Crouch	Don Crouch
+Candidate	Don Hamann	Don Hamann
+Candidate	Don Harring	Don Harring
+Candidate	Don Libby	Don Libby
+Candidate	Don M Hokanson	Don M Hokanson
+Candidate	Don Nelson	Don Nelson
+Candidate	Don Porter	Don Porter
+Candidate	Don R Fleck	Don R Fleck
+Candidate	Don Richter	Don Richter
+Candidate	Don Tyrrell	Don Tyrrell
+Candidate	Donald B Crawford	Donald B Crawford
+Candidate	Donald D Giannetti	Donald D Giannetti
+Candidate	Donald Grant	Donald Grant
+Candidate	Donald J Trump	Donald J Trump
+Candidate	Donald J Trump	Donald J Trump / Michael R Pence
+Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald Jamieson	Donald Jamieson
+Candidate	Donald Nuss	Donald Nuss
+Candidate	Donald Treanor	Donald Treanor
+Candidate	Doni Bruland	Doni Bruland
+Candidate	Donna Bowen	Donna Bowen
+Candidate	Donna F Marshall	Donna F Marshall
+Candidate	Donna J Gustafson	Donna J Gustafson
+Candidate	Donna Walker	Donna Walker
+Candidate	Doreen Vantyne	Doreen Vantyne
+Candidate	Doris Gonzalez Gomez	Doris Gonzalez Gomez
+Candidate	Doug Ecclestone	Doug Ecclestone
+Candidate	Doug Edmonds	Doug Edmonds
+Candidate	Doug Honeycutt	Doug Honeycutt
+Candidate	Doug Olson	Doug Olson
+Candidate	Doug Potter	Doug Potter
+Candidate	Doug Primmer	Doug Primmer
+Candidate	Doug Watts	Doug Watts
+Candidate	Douglas Dewar	Douglas Dewar
+Candidate	Douglas Harral	Douglas Harral
+Candidate	Douglas Jones	Douglas Jones
+Candidate	Dowen Jones	Dowen Jones
+Candidate	Drew Farmer	Drew Farmer
+Candidate	Duane A Stark	Duane A **Stark
+Candidate	Duane A Stark	Duane A Stark
+Candidate	Duane Neiffer	Duane Neiffer
+Candidate	Duane R Thul	Duane R Thul
+Candidate	Dusty Ferschweiler	Dusty Ferschweiler
+Candidate	Dusty Tippet	Dusty Tippet
+Candidate	Dwight (Dj) Faszer	Dwight (Dj) Faszer
+Candidate	Dylan Juran	Dylan Juran
+Candidate	Dylan L Carlson	Dylan L Carlson
+Candidate	Dylan Richards	Dylan Richards
+Candidate	E Martin Kerns	E Martin Kerns
+Candidate	E Werner Reschke	E Werner **Reschke
+Candidate	E Werner Reschke	E Werner Reschke
+Candidate	Earl Blumenauer	Earl Blumenauer
+Candidate	Echo Snyder	Echo Snyder
+Candidate	Ed Fitch	Ed Fitch
+Candidate	Ed Junkins	Ed Junkins
+Candidate	Ed Schreiber	Ed Schreiber
+Candidate	Eddie Melendrez	Eddie Melendrez
+Candidate	Eddy Morales	Eddy Morales
+Candidate	Edward Johnstone	Edward Johnstone
+Candidate	Edward Marihart	Edward Marihart
+Candidate	Edward Stanton	Edward Stanton
+Candidate	Eileen Kiely	Eileen Kiely
+Candidate	Eileen Wainwright	Eileen Wainwright
+Candidate	Eldon Jossi	Eldon Jossi
+Candidate	Elena Uhing	Elena Uhing
+Candidate	Elijah Preston	Elijah Preston
+Candidate	Elise Yarnell Hollamon	Elise Yarnell Hollamon
+Candidate	Eliza Kashinsky	Eliza Kashinsky
+Candidate	Eliza Mason	Eliza Mason
+Candidate	Elizabeth Fisher	Elizabeth Fisher
+Candidate	Elizabeth Neketin	Elizabeth Neketin
+Candidate	Ellen Rosenblum	Ellen Rosenblum
+Candidate	Elliot C Sky	Elliot C Sky
+Candidate	Elvi Cuellar Sutton	Elvi Cuellar Sutton
+Candidate	Emerson Levy	Emerson Levy
+Candidate	Emily Semple	Emily Semple
+Candidate	Emma Burke	Emma Burke
+Candidate	Emma Derock	Emma Derock
+Candidate	Eric A Morris	Eric A Morris
+Candidate	Eric Gleason	Eric Gleason
+Candidate	Eric Page	Eric Page
+Candidate	Eric Stark	Eric Stark
+Candidate	Eric Swenson	Eric Swenson
+Candidate	Erin Edelen Kutter (City Ticket)	Erin Edelen Kutter (City Ticket)
+Candidate	Ethan E Erickson	Ethan E Erickson
+Candidate	Eva L I Arce	Eva L I Arce
+Candidate	F John Ercole	F John Ercole
+Candidate	Faith Dauvin	Faith Dauvin
+Candidate	Faith N Leith	Faith N Leith
+Candidate	Faith Powell	Faith Powell
+Candidate	Faye M Yoshihara	Faye M Yoshihara
+Candidate	Floyd Billings	Floyd Billings
+Candidate	Floyd E Holcom	Floyd E Holcom
+Candidate	Fran Recht	Fran Recht
+Candidate	Frank E Hupp	Frank E Hupp
+Candidate	Frank O'Donnell	Frank O'Donnell
+Candidate	Frank Sherkow	Frank Sherkow
+Candidate	Fred Frank Girod	Fred Frank **Girod
+Candidate	Fred Frank Girod	Fred Frank Girod
+Candidate	G Whitey Forsman	G Whitey Forsman
+Candidate	Gabe Shepherd	Gabe Shepherd
+Candidate	Gail Harris	Gail Harris
+Candidate	Gail Merritt	Gail Merritt
+Candidate	Garratt M Tayler	Garratt M Tayler
+Candidate	Garrett Noffsinger	Garrett Noffsinger
+Candidate	Gary (Chadd) Weaver	Gary (Chadd) Weaver
+Candidate	Gary B Jones	Gary B Jones
+Candidate	Gary Bedortha	Gary Bedortha
+Candidate	Gary Burns	Gary Burns
+Candidate	Gary Dye	Gary Dye
+Candidate	Gary Lee Hulse	Gary Lee Hulse
+Candidate	Gary Leif	Gary **Leif
+Candidate	Gary Leif	Gary Leif
+Candidate	Gary P Ross	Gary P Ross
+Candidate	Gary R Carl	Gary R Carl
+Candidate	Gary R Robeson	Gary R Robeson
+Candidate	Gary Sullivan	Gary Sullivan
+Candidate	Gary Walker	Gary Walker
+Candidate	Geoff Whalley	Geoff Whalley
+Candidate	Geoffrey Grace	Geoffrey Grace
+Candidate	Geoffrey Smith	Geoffrey Smith
+Candidate	George Elsner	George Elsner
+Candidate	George Endicott	George Endicott
+Candidate	George S Yeager	George S Yeager
+Candidate	George Sowder	George Sowder
+Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George Young	George Young
+Candidate	Gerald 'Jay' Farmen	Gerald 'Jay' Farmen
+Candidate	Gerald Poe	Gerald Poe
+Candidate	Gerardo Padilla	Gerardo Padilla
+Candidate	Geri Procetto	Geri Procetto
+Candidate	Gerritt Rosenthal	Gerritt Rosenthal
+Candidate	Gina Duquenne	Gina Duquenne
+Candidate	Gina Roletto	Gina Roletto
+Candidate	Ginny Burdick	Ginny **Burdick
+Candidate	Ginny Burdick	Ginny Burdick
+Candidate	Ginny Carlson	Ginny Carlson
+Candidate	Gladys Rivera	Gladys Rivera
+Candidate	Glen G Diehl	Glen G Diehl
+Candidate	Glenn E Palmer	Glenn E Palmer
+Candidate	Glenn White	Glenn White
+Candidate	Gordon A Mccraw	Gordon A Mccraw
+Candidate	Gordon Cook	Gordon Cook
+Candidate	Gordon Taylor	Gordon Taylor
+Candidate	Graham Alderson	Graham Alderson
+Candidate	Grant Eisele	Grant Eisele
+Candidate	Grant Erickson	Grant Erickson
+Candidate	Grant Williams	Grant Williams
+Candidate	Greg Alexander	Greg Alexander
+Candidate	Greg Dunn	Greg Dunn
+Candidate	Greg Ervin	Greg Ervin
+Candidate	Greg Johnson	Greg Johnson
+Candidate	Greg L Holland	Greg L Holland
+Candidate	Greg Lucas	Greg Lucas
+Candidate	Greg Munn	Greg Munn
+Candidate	Greg Scott	Greg Scott
+Candidate	Greg Smith	Greg **Smith
+Candidate	Greg Smith	Greg Smith
+Candidate	Greg Woods	Greg Woods
+Candidate	Gregory Goularte	Gregory Goularte
+Candidate	Gregory Tidey	Gregory Tidey
+Candidate	Gretchen E Buehner	Gretchen E Buehner
+Candidate	Gretchen Schlie	Gretchen Schlie
+Candidate	Gretchen Stadler	Gretchen Stadler
+Candidate	Guilherme Brandao	Guilherme Brandao
+Candidate	Hank Hohenstein	Hank Hohenstein
+Candidate	Hank Williams	Hank Williams
+Candidate	Hanna Ellis Strain	Hanna Ellis Strain
+Candidate	Hans Feige	Hans Feige
+Candidate	Hans Tonjes	Hans Tonjes
+Candidate	Harmony K Mulkey	Harmony K Mulkey
+Candidate	Harry E Hewitt	Harry E Hewitt
+Candidate	Heather Kelez	Heather Kelez
+Candidate	Heather L Smith	Heather L Smith
+Candidate	Heather N Rookstool	Heather N Rookstool
+Candidate	Heather Sells	Heather Sells
+Candidate	Heide Lambert	Heide Lambert
+Candidate	Heidi Lueb	Heidi Lueb
+Candidate	Heidi Parker	Heidi Parker
+Candidate	Heidi Stacks	Heidi Stacks
+Candidate	Henry Storch	Henry Storch
+Candidate	Herman Baertschiger Sr	Herman Baertschiger Sr
+Candidate	Hilary Malcomson	Hilary Malcomson
+Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hollyjo Beers	Hollyjo Beers
+Candidate	Howard Allen	Howard Allen
+Candidate	Howie Hawkins	Howie Hawkins
+Candidate	Howie Hawkins	Howie Hawkins / Angela Walker
+Candidate	Hugh Palcic	Hugh Palcic
+Candidate	Hurshell L Walls	Hurshell L Walls
+Candidate	Hyatt Lytle	Hyatt Lytle
+Candidate	Ibrahim A Taher	Ibrahim A Taher
+Candidate	Ilah Bennett	Ilah Bennett
+Candidate	Imran Haider	Imran Haider
+Candidate	Isaac Alvin Williams	Isaac Alvin Williams
+Candidate	Isis M Ilias	Isis M Ilias
+Candidate	Ivan Delsol	Ivan Delsol
+Candidate	Ivan E Gutierrez	Ivan E Gutierrez
+Candidate	Jack L ESP	Jack L ESP
+Candidate	Jack L Esp	Jack L Esp
+Candidate	Jack Waddell	Jack Waddell
+Candidate	Jack Zika	Jack **Zika
+Candidate	Jack Zika	Jack Zika
+Candidate	Jack Zimmerman	Jack Zimmerman
+Candidate	Jackie Carey	Jackie Carey
+Candidate	Jackie Kauffman	Jackie Kauffman
+Candidate	Jacob Hales	Jacob Hales
+Candidate	Jacqueline M Leung	Jacqueline M Leung
+Candidate	Jacqueline S Kamins	Jacqueline S Kamins
+Candidate	Jairo Rios-Campos	Jairo Rios-Campos
+Candidate	Jake Carter	Jake Carter
+Candidate	Jake Pieper	Jake Pieper
+Candidate	Jake Schwab	Jake Schwab
+Candidate	Jake Young	Jake Young
+Candidate	James (Jim) Carlson	James (Jim) Carlson
+Candidate	James (Jim) Rafferty	James (Jim) Rafferty
+Candidate	James A Ball	James A Ball
+Candidate	James Alley	James Alley
+Candidate	James C Thomas	James C Thomas
+Candidate	James Clauson	James Clauson
+Candidate	James Daley	James Daley
+Candidate	James Drebin	James Drebin
+Candidate	James Edwards	James Edwards
+Candidate	James Garland	James Garland
+Candidate	James Goble	James Goble
+Candidate	James Gurley	James Gurley
+Candidate	James H Brown	James H Brown
+Candidate	James Hieb	James Hieb
+Candidate	James Johnson	James Johnson
+Candidate	James M Audritsh Ii	James M Audritsh Ii
+Candidate	James R Buckles	James R Buckles
+Candidate	James Rose	James Rose
+Candidate	James Tooke	James Tooke
+Candidate	James Williams	James Williams
+Candidate	Jami Cate	Jami **Cate
+Candidate	Jami Cate	Jami Cate
+Candidate	Jamie Morrison	Jamie Morrison
+Candidate	Jan Lee	Jan Lee
+Candidate	Jan Lowry	Jan Lowry
+Candidate	Jan Napack	Jan Napack
+Candidate	Jane Hartline	Jane Hartline
+Candidate	Jane J Hays	Jane J Hays
+Candidate	Janeen Sollman	Janeen **Sollman
+Candidate	Janeen Sollman	Janeen Sollman
+Candidate	Janelle S Bynum	Janelle S **Bynum
+Candidate	Janelle S Bynum	Janelle S Bynum
+Candidate	Janet Wilson	Janet Wilson
+Candidate	Jasmine Zimmer-Stucky	Jasmine Zimmer-Stucky
+Candidate	Jason Bolen	Jason Bolen
+Candidate	Jason Branske	Jason Branske
+Candidate	Jason C Busch	Jason C Busch
+Candidate	Jason C Gill	Jason C Gill
+Candidate	Jason Clark	Jason Clark
+Candidate	Jason D Hayward	Jason D Hayward
+Candidate	Jason Freilinger	Jason Freilinger
+Candidate	Jason Garrett Gibson	Jason Garrett Gibson
+Candidate	Jason Haynes	Jason Haynes
+Candidate	Jason Hughes	Jason Hughes
+Candidate	Jason Kropf	Jason **Kropf
+Candidate	Jason Kropf	Jason Kropf
+Candidate	Jason M L Berglund Sr	Jason M L Berglund Sr
+Candidate	Jason Padden	Jason Padden
+Candidate	Jason Richards	Jason Richards
+Candidate	Jason Ridgeway	Jason Ridgeway
+Candidate	Jason Spriet	Jason Spriet
+Candidate	Jay Westrum	Jay Westrum
+Candidate	Jaylene Papineau	Jaylene Papineau
+Candidate	Jayme Morris	Jayme Morris
+Candidate	Jeanette Shaw	Jeanette Shaw
+Candidate	Jeannet Santiago	Jeannet Santiago
+Candidate	Jeannette Adlong	Jeannette Adlong
+Candidate	Jeannie Adams	Jeannie Adams
+Candidate	Jeannie Hampton	Jeannie Hampton
+Candidate	Jeannie M Mustola	Jeannie M Mustola
+Candidate	Jeff Akin	Jeff Akin
+Candidate	Jeff Crook	Jeff Crook
+Candidate	Jeff Gowing	Jeff Gowing
+Candidate	Jeff Gudman	Jeff Gudman
+Candidate	Jeff Helfrich	Jeff Helfrich
+Candidate	Jeff Merkley	Jeff Merkley
+Candidate	Jeff Reardon	Jeff **Reardon
+Candidate	Jeff Reardon	Jeff Reardon
+Candidate	Jeff Reinan	Jeff Reinan
+Candidate	Jeff Rola	Jeff Rola
+Candidate	Jeff Thomas	Jeff Thomas
+Candidate	Jeff Thompson	Jeff Thompson
+Candidate	Jeff Williams	Jeff Williams
+Candidate	Jeffery C Bufton	Jeffery C Bufton
+Candidate	Jeffery E Hensley	Jeffery E Hensley
+Candidate	Jeffrey Dalin	Jeffrey Dalin
+Candidate	Jeffrey Hindley	Jeffrey Hindley
+Candidate	Jeffrey J Becker	Jeffrey J Becker
+Candidate	Jeffrey Knox	Jeffrey Knox
+Candidate	Jeffrey L Sykes	Jeffrey L Sykes
+Candidate	Jeffrey Olson	Jeffrey Olson
+Candidate	Jeffrey W Vanier	Jeffrey W Vanier
+Candidate	Jeffrey Yanke	Jeffrey Yanke
+Candidate	Jen Hoke	Jen Hoke
+Candidate	Jen Keady	Jen Keady
+Candidate	Jenefer S Grant	Jenefer S Grant
+Candidate	Jennifer A Zammetti	Jennifer A Zammetti
+Candidate	Jennifer Brownlee	Jennifer Brownlee
+Candidate	Jennifer Drill	Jennifer Drill
+Candidate	Jennifer Holcomb	Jennifer Holcomb
+Candidate	Jennifer Lake	Jennifer Lake
+Candidate	Jennifer Leighton	Jennifer Leighton
+Candidate	Jennifer Letz	Jennifer Letz
+Candidate	Jenny Koll	Jenny Koll
+Candidate	Jenny Shaw	Jenny Shaw
+Candidate	Jered Schwabauer	Jered Schwabauer
+Candidate	Jeremy Gordon	Jeremy Gordon
+Candidate	Jeremy Kirby	Jeremy Kirby
+Candidate	Jeremy R Knapp	Jeremy R Knapp
+Candidate	Jeremy Rametes	Jeremy Rametes
+Candidate	Jeri Hutchinson	Jeri Hutchinson
+Candidate	Jerome Grant	Jerome Grant
+Candidate	Jerry Allen	Jerry Allen
+Candidate	Jerry Cole	Jerry Cole
+Candidate	Jerry L Paul	Jerry L Paul
+Candidate	Jerry Lachenbruch	Jerry Lachenbruch
+Candidate	Jerry M Samaniego	Jerry M Samaniego
+Candidate	Jerry Marr	Jerry Marr
+Candidate	Jerry Morgan	Jerry Morgan
+Candidate	Jerry Spegman	Jerry Spegman
+Candidate	Jerry Townsend	Jerry Townsend
+Candidate	Jerry W Hinton	Jerry W Hinton
+Candidate	Jerry Ward	Jerry Ward
+Candidate	Jerry Woodfin	Jerry Woodfin
+Candidate	Jess Miller	Jess Miller
+Candidate	Jesse Bonifer	Jesse Bonifer
+Candidate	Jesse Dugas	Jesse Dugas
+Candidate	Jessi Brenneman	Jessi Brenneman
+Candidate	Jessica Andrade	Jessica Andrade
+Candidate	Jessica Chilton	Jessica Chilton
+Candidate	Jessica Engelke	Jessica Engelke
+Candidate	Jessica Holben	Jessica Holben
+Candidate	Jessica Kensinger	Jessica Kensinger
+Candidate	Jill Hamm	Jill Hamm
+Candidate	Jill Prewitt	Jill Prewitt
+Candidate	Jim Akers	Jim Akers
+Candidate	Jim Carpenter	Jim Carpenter
+Candidate	Jim Crowther	Jim Crowther
+Candidate	Jim Doherty	Jim Doherty
+Candidate	Jim E Standard	Jim E Standard
+Candidate	Jim Hamsher	Jim Hamsher
+Candidate	Jim Hassing	Jim Hassing
+Candidate	Jim Hinsvark	Jim Hinsvark
+Candidate	Jim Huddleston	Jim Huddleston
+Candidate	Jim Kindle	Jim Kindle
+Candidate	Jim Kingsbury	Jim Kingsbury
+Candidate	Jim Kingsley	Jim Kingsley
+Candidate	Jim Lewis	Jim Lewis
+Candidate	Jim Robertson	Jim Robertson
+Candidate	Jim Trett	Jim Trett
+Candidate	Jim Welsh	Jim Welsh
+Candidate	Jim White	Jim White
+Candidate	Jimmy Thompson	Jimmy Thompson
+Candidate	Jo A Barker	Jo A Barker
+Candidate	Jo Beaudreau	Jo Beaudreau
+Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	Jo Jorgensen	Jo Jorgensen / Jeremy (Spike) Cohen
+Candidate	Jo Rae Perkins	Jo Rae Perkins
+Candidate	Joan Bird	Joan Bird
+Candidate	Joan E Demarest	Joan E Demarest
+Candidate	Joan M Harding	Joan M Harding
+Candidate	Joann Linville	Joann Linville
+Candidate	Joanna Dixon	Joanna Dixon
+Candidate	Joanna Harbour	Joanna Harbour
+Candidate	Joanna Lamb	Joanna Lamb
+Candidate	Jody Newland	Jody Newland
+Candidate	Joe Benetti	Joe Benetti
+Candidate	Joe Buck	Joe Buck
+Candidate	Joe Demers	Joe Demers
+Candidate	Joe F Liedtky	Joe F Liedtky
+Candidate	Joe Groussman	Joe Groussman
+Candidate	Joe Henry	Joe Henry
+Candidate	Joe Hitselberger	Joe Hitselberger
+Candidate	Joe Kast	Joe Kast
+Candidate	Joe Medina	Joe Medina
+Candidate	Joe Rossi	Joe Rossi
+Candidate	Joel Dierkes	Joel Dierkes
+Candidate	Joel Fish	Joel Fish
+Candidate	Joel Iboa	Joel Iboa
+Candidate	Joel Litkie	Joel Litkie
+Candidate	Joel R Peterson	Joel R Peterson
+Candidate	Joel Rohner	Joel Rohner
+Candidate	Joey Ferguson	Joey Ferguson
+Candidate	Joey Mcglinchy	Joey Mcglinchy
+Candidate	Johanis Tadeo	Johanis Tadeo
+Candidate	John (Jock) Dalton	John (Jock) Dalton
+Candidate	John A Bowles	John A Bowles
+Candidate	John A Harrison	John A Harrison
+Candidate	John A Myers	John A Myers
+Candidate	John Amery	John Amery
+Candidate	John Anderson	John Anderson
+Candidate	John Barofsky	John Barofsky
+Candidate	John Bozarth	John Bozarth
+Candidate	John Budiao	John Budiao
+Candidate	John Cooper	John Cooper
+Candidate	John D Kirby	John D Kirby
+Candidate	John E Sarna	John E Sarna
+Candidate	John Fox	John Fox
+Candidate	John Gambee	John Gambee
+Candidate	John Grant Iv	John Grant Iv
+Candidate	John Herzog	John Herzog
+Candidate	John Kerry	JOHN KERRY
+Candidate	John Kinsky	John Kinsky
+Candidate	John Lamotte	John Lamotte
+Candidate	John Lawrence	John Lawrence
+Candidate	John Leamy	John Leamy
+Candidate	John Lively	John **Lively
+Candidate	John Lively	John Lively
+Candidate	John McCain	JOHN MCCAIN
+Candidate	John Mcardle	John Mcardle
+Candidate	John Mcclelland	John Mcclelland
+Candidate	John Mccormick	John Mccormick
+Candidate	John Oberst	John Oberst
+Candidate	John P Farmer	John P Farmer
+Candidate	John Silvertooth-Stewart	John Silvertooth-Stewart
+Candidate	John Sullivan	John Sullivan
+Candidate	John Thompson	John Thompson
+Candidate	John W Gautney	John W Gautney
+Candidate	John W Hanlin	John W Hanlin
+Candidate	John Ward	John Ward
+Candidate	John Willer	John Willer
+Candidate	Johnny Waggoner Sr	Johnny Waggoner Sr
+Candidate	Jon Stinnett	Jon Stinnett
+Candidate	Jon Stoll	Jon Stoll
+Candidate	Jonathan P Vinyard	Jonathan P Vinyard
+Candidate	Jonathan R Hanger	Jonathan R Hanger
+Candidate	Jonathan Tallman	Jonathan Tallman
+Candidate	Jonathon Boyer	Jonathon Boyer
+Candidate	Jordan Maley	Jordan Maley
+Candidate	Jordan Tibbals	Jordan Tibbals
+Candidate	Jordan Wolfe	Jordan Wolfe
+Candidate	Jose Garcia	Jose Garcia
+Candidate	Jose Gonzalez	Jose Gonzalez
+Candidate	Joseph J Walter	Joseph J Walter
+Candidate	Joseph Queruel	Joseph Queruel
+Candidate	Joseph R Biden	Joseph R Biden
+Candidate	Joseph R Biden	Joseph R Biden / Kamala D Harris
+Candidate	Josh Brown	Josh Brown
+Candidate	Josh Howard	Josh Howard
+Candidate	Josh Smith	Josh Smith
+Candidate	Josh Solomon	Josh Solomon
+Candidate	Josh Tompkins	Josh Tompkins
+Candidate	Joshua C Guest	Joshua C Guest
+Candidate	Joshua Clark	Joshua Clark
+Candidate	Joshua Conklin	Joshua Conklin
+Candidate	Joshua Guth	Joshua Guth
+Candidate	Josiah Dean	Josiah Dean
+Candidate	Josie Dayton	Josie Dayton
+Candidate	Joyce King	Joyce King
+Candidate	Judi Bennett	Judi Bennett
+Candidate	Judy Casper	Judy Casper
+Candidate	Judy Coleman	Judy Coleman
+Candidate	Judy Matheny	Judy Matheny
+Candidate	Judy Riggs	Judy Riggs
+Candidate	Jules Walters	Jules Walters
+Candidate	Juli A Kennedy	Juli A Kennedy
+Candidate	Julian Bell	Julian Bell
+Candidate	Julie Akins	Julie Akins
+Candidate	Julie Ann Gunderson	Julie Ann Gunderson
+Candidate	Julie Bettles	Julie Bettles
+Candidate	Julie Ellison	Julie Ellison
+Candidate	Julie Fahey	Julie **Fahey
+Candidate	Julie Fahey	Julie Fahey
+Candidate	Julie Fitzgerald	Julie Fitzgerald
+Candidate	Julie Nighswonger	Julie Nighswonger
+Candidate	Justin Cary	Justin Cary
+Candidate	Justin Cobb	Justin Cobb
+Candidate	Justin Hwang	Justin Hwang
+Candidate	Justin Livingston	Justin Livingston
+Candidate	Justin Wright	Justin Wright
+Candidate	Kale Haberman	Kale Haberman
+Candidate	Kalin Parsons	Kalin Parsons
+Candidate	Kamala Shugar	Kamala Shugar
+Candidate	Karen Eckhart	Karen Eckhart
+Candidate	Karen Leach	Karen Leach
+Candidate	Karen Shrader	Karen Shrader
+Candidate	Karen Zabala	Karen Zabala
+Candidate	Kari Johnsen	Kari Johnsen
+Candidate	Karin Power	Karin **Power
+Candidate	Karin Power	Karin Power
+Candidate	Karl Popoff	Karl Popoff
+Candidate	Karun Virtue	Karun Virtue
+Candidate	Karyssa Dow	Karyssa Dow
+Candidate	Kat Stone	Kat Stone
+Candidate	Kate Lieber	Kate **Lieber
+Candidate	Kate Lieber	Kate Lieber
+Candidate	Kate Mcbride	Kate Mcbride
+Candidate	Kate Mohr	Kate Mohr
+Candidate	Katherine Larkin	Katherine Larkin
+Candidate	Katherine Rhee	Katherine Rhee
+Candidate	Kathleen Taylor	Kathleen **Taylor
+Candidate	Kathleen Taylor	Kathleen Taylor
+Candidate	Kathleen Walker	Kathleen Walker
+Candidate	Kathryn M Rhoades	Kathryn M Rhoades
+Candidate	Kathy Kleczek	Kathy Kleczek
+Candidate	Kathy M Short	Kathy M Short
+Candidate	Kathy Martin-Willis	Kathy Martin-Willis
+Candidate	Kathy Nuckles	Kathy Nuckles
+Candidate	Kathy Sell	Kathy Sell
+Candidate	Kathy Zimmerman	Kathy Zimmerman
+Candidate	Katie Boshart Glaser	Katie Boshart Glaser
+Candidate	Katie Findling	Katie Findling
+Candidate	Katrina Claridge	Katrina Claridge
+Candidate	Katy Eymann	Katy Eymann
+Candidate	Katy Norton	Katy Norton
+Candidate	Kay Brooks	Kay Brooks
+Candidate	Kayla Paulsen	Kayla Paulsen
+Candidate	Keith A Kudrna	Keith A Kudrna
+Candidate	Keith A Weiss	Keith A Weiss
+Candidate	Keith Barnhart	Keith Barnhart
+Candidate	Keith Cantrell	Keith Cantrell
+Candidate	Keith Jehnke	Keith Jehnke
+Candidate	Keith Kolkow	Keith Kolkow
+Candidate	Keith L Baldwin	Keith L Baldwin
+Candidate	Keith Mays	Keith Mays
+Candidate	Keith Swigart	Keith Swigart
+Candidate	Keli D Von Pinnon	Keli D Von Pinnon
+Candidate	Kelie Mcwilliams	Kelie Mcwilliams
+Candidate	Kelli Stevens	Kelli Stevens
+Candidate	Kellie Menke	Kellie Menke
+Candidate	Kelly Clowers	Kelly Clowers
+Candidate	Kelly D Lemarr	Kelly D Lemarr
+Candidate	Kelly Flanagan	Kelly Flanagan
+Candidate	Kelly Grassman	Kelly Grassman
+Candidate	Kelly Marcotulli	Kelly Marcotulli
+Candidate	Kelly Sloop	Kelly Sloop
+Candidate	Ken Bailey	Ken Bailey
+Candidate	Ken Bain	Ken Bain
+Candidate	Ken Bentz	Ken Bentz
+Candidate	Ken Degrange	Ken Degrange
+Candidate	Ken Helm	Ken **Helm
+Candidate	Ken Helm	Ken Helm
+Candidate	Ken Humberston	Ken Humberston
+Candidate	Ken Moore	Ken Moore
+Candidate	Ken Pryor	Ken Pryor
+Candidate	Ken Wells	Ken Wells
+Candidate	Kenneth Ferguson	Kenneth Ferguson
+Candidate	Kenneth Ireland	Kenneth Ireland
+Candidate	Kenneth L Woods Jr	Kenneth L Woods Jr
+Candidate	Kenneth Michael Roberts	Kenneth Michael Roberts
+Candidate	Kenneth W Matlack	Kenneth W Matlack
+Candidate	Kenny Delano	Kenny Delano
+Candidate	Kenny Sernach	Kenny Sernach
+Candidate	Kent Rochester	Kent Rochester
+Candidate	Kerry Mcquisten	Kerry Mcquisten
+Candidate	Kevin Carroll	Kevin Carroll
+Candidate	Kevin Christian Wright	Kevin Christian Wright
+Candidate	Kevin Faulk	Kevin Faulk
+Candidate	Kevin H Stine	Kevin H Stine
+Candidate	Kevin Hampton	Kevin Hampton
+Candidate	Kevin Jones	Kevin Jones
+Candidate	Kevin Petross	Kevin Petross
+Candidate	Kevin Prociw	Kevin Prociw
+Candidate	Kevin Skipper	Kevin Skipper
+Candidate	Khanh Pham	Khanh **Pham
+Candidate	Khanh Pham	Khanh Pham
+Candidate	Kieran Sikdar	Kieran Sikdar
+Candidate	Kim Bria	Kim Bria
+Candidate	Kim Fitzgerald	Kim Fitzgerald
+Candidate	Kim Nye	Kim Nye
+Candidate	Kim Schmith	Kim Schmith
+Candidate	Kim Thatcher	Kim Thatcher
+Candidate	Kim W Rollins	Kim W Rollins
+Candidate	Kim Wallan	Kim **Wallan
+Candidate	Kim Wallan	Kim Wallan
+Candidate	Kim Young	Kim Young
+Candidate	Kimberly Culbertson	Kimberly Culbertson
+Candidate	Kimberly Peterson	Kimberly Peterson
+Candidate	Kirsten Collins	Kirsten Collins
+Candidate	Kirsten Rohla	Kirsten Rohla
+Candidate	Kitty Mackin	Kitty Mackin
+Candidate	Kori Rodley	Kori Rodley
+Candidate	Kreston J Koziuk	Kreston J Koziuk
+Candidate	Kris Bledsoe	Kris Bledsoe
+Candidate	Krissy L Funk	Krissy L Funk
+Candidate	Krissy Walker	Krissy Walker
+Candidate	Krista L Peterson	Krista L Peterson
+Candidate	Kristi Brown	Kristi Brown
+Candidate	Kristin Akervall	Kristin Akervall
+Candidate	Kristine Alf Rippee	Kristine Alf Rippee
+Candidate	Kristine Hayes	Kristine Hayes
+Candidate	Kurt Schrader	Kurt Schrader
+Candidate	Kyle B Palmer	Kyle B Palmer
+Candidate	Kyle Brouse	Kyle Brouse
+Candidate	Kyle Juran	Kyle Juran
+Candidate	Kyle Markley	Kyle Markley
+Candidate	L Shane Nelson	L Shane Nelson
+Candidate	L Terry Herrington	L Terry Herrington
+Candidate	Lacey Beaty	Lacey Beaty
+Candidate	Lane Magill	Lane Magill
+Candidate	Lanee Danforth	Lanee Danforth
+Candidate	Larry Hudnall	Larry Hudnall
+Candidate	Larry Purdy	Larry Purdy
+Candidate	Larry Rich	Larry Rich
+Candidate	Larry Sweet	Larry Sweet
+Candidate	Larry Whitaker	Larry Whitaker
+Candidate	Larry Zweifel	Larry Zweifel
+Candidate	Lars D H Hedbor	Lars D H Hedbor
+Candidate	Lars Granstrom	Lars Granstrom
+Candidate	Laura Doran	Laura Doran
+Candidate	Laura Masterson	Laura Masterson
+Candidate	Laura Reid	Laura Reid
+Candidate	Laura Tils	Laura Tils
+Candidate	Lauren Ostrander	Lauren Ostrander
+Candidate	Laurie J K Chaplen	Laurie J K Chaplen
+Candidate	Laurie Trieger	Laurie Trieger
+Candidate	Lawrence E Johnson	Lawrence E Johnson
+Candidate	Lee Ann Conro	Lee Ann Conro
+Candidate	Lee Gilgan	Lee Gilgan
+Candidate	Lee Skinner	Lee Skinner
+Candidate	Leighton Keller	Leighton Keller
+Candidate	Lena Richardson	Lena Richardson
+Candidate	Lenny Huiras	Lenny Huiras
+Candidate	Leo Krick	Leo Krick
+Candidate	Leon Baker	Leon Baker
+Candidate	Leonard L Flint	Leonard L Flint
+Candidate	Leota Childress	Leota Childress
+Candidate	Les Perkins	Les Perkins
+Candidate	Leslie Eldridge	Leslie Eldridge
+Candidate	Leslie Hwa	Leslie Hwa
+Candidate	Leslie J Gifford	Leslie J Gifford
+Candidate	Leslie Vaaler	Leslie Vaaler
+Candidate	Leslie Walborn	Leslie Walborn
+Candidate	Leslie Wetherell	Leslie Wetherell
+Candidate	Levi Clow	Levi Clow
+Candidate	Lew Frederick	Lew **Frederick
+Candidate	Lew Frederick	Lew Frederick
+Candidate	Lewis S Key	Lewis S Key
+Candidate	Liane Welch	Liane Welch
+Candidate	Lily Morgan	Lily **Morgan
+Candidate	Lily Morgan	Lily Morgan
+Candidate	Linda K Malone	Linda K Malone
+Candidate	Linda Mccollum	Linda Mccollum
+Candidate	Linda Spencer	Linda Spencer
+Candidate	Linda Watkins	Linda Watkins
+Candidate	Lindsy Bedingfield	Lindsy Bedingfield
+Candidate	Lisa D Lindner	Lisa D Lindner
+Candidate	Lisa Ellsworth	Lisa Ellsworth
+Candidate	Lisa Gambee	Lisa Gambee
+Candidate	Lisa Gourley	Lisa Gourley
+Candidate	Lisa Mccall	Lisa Mccall
+Candidate	Lisa Mccracken	Lisa Mccracken
+Candidate	Lisa Morley	Lisa Morley
+Candidate	Lisa Reynolds	Lisa **Reynolds
+Candidate	Lisa Reynolds	Lisa Reynolds
+Candidate	Lisa Scheirman	Lisa Scheirman
+Candidate	Lisa Weigum	Lisa Weigum
+Candidate	Liz Vanleeuwen	Liz Vanleeuwen
+Candidate	Lloyd R Valentine Jr	Lloyd R Valentine Jr
+Candidate	Lloyd Trent	Lloyd Trent
+Candidate	Loel E Trulove Jr	Loel E Trulove Jr
+Candidate	Logan Mccrae	Logan Mccrae
+Candidate	Loren Hogue	Loren Hogue
+Candidate	Loren Oden	Loren Oden
+Candidate	Lori Kerr	Lori Kerr
+Candidate	Lori L Mcallen	Lori L Mcallen
+Candidate	Lorna Poetter	Lorna Poetter
+Candidate	Louie F Mckenzie	Louie F Mckenzie
+Candidate	Louise Barton	Louise Barton
+Candidate	Lucille Martin	Lucille Martin
+Candidate	Lucinda Dinovo	Lucinda Dinovo
+Candidate	Lucy Vinis	Lucy Vinis
+Candidate	Lyle Bluhm	Lyle Bluhm
+Candidate	Lyle H Johnson	Lyle H Johnson
+Candidate	Lyle R Mordhorst	Lyle R Mordhorst
+Candidate	Lynn Ewing	Lynn Ewing
+Candidate	Lynn P Findley	Lynn P **Findley
+Candidate	Lynn P Findley	Lynn P Findley
+Candidate	Lynne Dewald	Lynne Dewald
+Candidate	Lynnette Shaw	Lynnette Shaw
+Candidate	Maggie Bagon	Maggie Bagon
+Candidate	Maile Samek	Maile Samek
+Candidate	Marc T Woodard	Marc T Woodard
+Candidate	Marci Hedin (City Ticket)	Marci Hedin (City Ticket)
+Candidate	Marcia Buckley	Marcia Buckley
+Candidate	Marcy Sowa	Marcy Sowa
+Candidate	Margaret C Magruder	Margaret C Magruder
+Candidate	Margaret P Mccrea	Margaret P Mccrea
+Candidate	Margaret Spence	Margaret Spence
+Candidate	Margo Logan	Margo Logan
+Candidate	Maria E Duron	Maria E Duron
+Candidate	Maria Z Fisher	Maria Z Fisher
+Candidate	Marietta Walker	Marietta Walker
+Candidate	Marilyn Smith	Marilyn Smith
+Candidate	Mark A Horst	Mark A Horst
+Candidate	Mark A Molina	Mark A Molina
+Candidate	Mark Daily	Mark Daily
+Candidate	Mark E Patton	Mark E Patton
+Candidate	Mark Fagin	Mark Fagin
+Candidate	Mark Garton	Mark Garton
+Candidate	Mark J Baldwin	Mark J Baldwin
+Candidate	Mark M Mccracken	Mark M Mccracken
+Candidate	Mark Marcantonio	Mark Marcantonio
+Candidate	Mark Owens	Mark **Owens
+Candidate	Mark Owens	Mark Owens
+Candidate	Mark Pratt	Mark Pratt
+Candidate	Mark R Gundersen	Mark R Gundersen
+Candidate	Mark Shull	Mark Shull
+Candidate	Mark W Meek	Mark W **Meek
+Candidate	Mark W Meek	Mark W Meek
+Candidate	Mark Zanmiller	Mark Zanmiller
+Candidate	Marla Skroch	Marla Skroch
+Candidate	Marlina Avila Serratos	Marlina Avila Serratos
+Candidate	Marsha Demaris	Marsha Demaris
+Candidate	Martha A Sherwood	Martha A Sherwood
+Candidate	Marty Baldwin	Marty Baldwin
+Candidate	Marty Waldo	Marty Waldo
+Candidate	Marty Wilde	Marty **Wilde
+Candidate	Marty Wilde	Marty Wilde
+Candidate	Mary Ann Guess	Mary Ann Guess
+Candidate	Mary Ann Miesner	Mary Ann Miesner
+Candidate	Mary Baumgardner	Mary Baumgardner
+Candidate	Mary C Schamehorn	Mary C Schamehorn
+Candidate	Mary Cade	Mary Cade
+Candidate	Mary E Kauffman	Mary E Kauffman
+Candidate	Mary M West	Mary M West
+Candidate	Mary Middleton	Mary Middleton
+Candidate	Mary Nolan	Mary Nolan
+Candidate	Maryl Kunkel	Maryl Kunkel
+Candidate	Massene Mboup	Massene Mboup
+Candidate	Mathew Birchard	Mathew Birchard
+Candidate	Matilda Novak	Matilda Novak
+Candidate	Matt Burnett	Matt Burnett
+Candidate	Matt Lehman	Matt Lehman
+Candidate	Matt Mcrae	Matt Mcrae
+Candidate	Matt Phillips	Matt Phillips
+Candidate	Matt Rowe	Matt Rowe
+Candidate	Matt Shirtcliff	Matt Shirtcliff
+Candidate	Matt Soots	Matt Soots
+Candidate	Matthew G Irby	Matthew G Irby
+Candidate	Matthew James Rix	Matthew James Rix
+Candidate	Matthew K Keating	Matthew K Keating
+Candidate	Matthew T English	Matthew T English
+Candidate	Matthew Thomas	Matthew Thomas
+Candidate	Maureen Wright	Maureen Wright
+Candidate	Max E Glenn	Max E Glenn
+Candidate	Max Sherman	Max Sherman
+Candidate	Maxine E Dexter	Maxine E **Dexter
+Candidate	Maxine E Dexter	Maxine E Dexter
+Candidate	Meadow Martell	Meadow Martell
+Candidate	Megan Greisen	Megan Greisen
+Candidate	Megan Perkins	Megan Perkins
+Candidate	Megan Saunders	Megan Saunders
+Candidate	Megan Simms	Megan Simms
+Candidate	Meinrad Kuettel	Meinrad Kuettel
+Candidate	Mel Rieff	Mel Rieff
+Candidate	Melanie Kebler	Melanie Kebler
+Candidate	Melia Biedscheid	Melia Biedscheid
+Candidate	Melissa Bjarnson	Melissa Bjarnson
+Candidate	Melissa Fireside	Melissa Fireside
+Candidate	Melissa Rondeau	Melissa Rondeau
+Candidate	Melissa T Cribbins	Melissa T Cribbins
+Candidate	Melody Cornelius	Melody Cornelius
+Candidate	Melvin Stonebrink	Melvin Stonebrink
+Candidate	Mercedes W Rhoden-Feely	Mercedes W Rhoden-Feely
+Candidate	Merle Gillespie	Merle Gillespie
+Candidate	Merle Keys	Merle Keys
+Candidate	Michael (Mike) A Wagner	Michael (Mike) A Wagner
+Candidate	Michael A Kusinska	Michael A Kusinska
+Candidate	Michael Armstrong	Michael Armstrong
+Candidate	Michael Clary	Michael Clary
+Candidate	Michael Cross	Michael Cross
+Candidate	Michael De Blasi	Michael De Blasi
+Candidate	Michael Dembrow	Michael **Dembrow
+Candidate	Michael Dembrow	Michael Dembrow
+Candidate	Michael E Lundsten	Michael E Lundsten
+Candidate	Michael G Dowd	Michael G Dowd
+Candidate	Michael Glowa	Michael Glowa
+Candidate	Michael Gregory	Michael Gregory
+Candidate	Michael Hicks	Michael Hicks
+Candidate	Michael Horttor	Michael Horttor
+Candidate	Michael J Oates	Michael J Oates
+Candidate	Michael Kehoe	Michael Kehoe
+Candidate	Michael Kreger	Michael Kreger
+Candidate	Michael L Barnett	Michael L Barnett
+Candidate	Michael Lendahl	Michael Lendahl
+Candidate	Michael M Humphreys	Michael M Humphreys
+Candidate	Michael Madden	Michael Madden
+Candidate	Michael Myers	Michael Myers
+Candidate	Michael Newgard	Michael Newgard
+Candidate	Michael P Marsh	Michael P Marsh
+Candidate	Michael R Hughes	Michael R Hughes
+Candidate	Michael R Von Pinnon	Michael R Von Pinnon
+Candidate	Michael S Hogan	Michael S Hogan
+Candidate	Michael S Small	Michael S Small
+Candidate	Michael Stanek	Michael Stanek
+Candidate	Michael T Clarke	Michael T Clarke
+Candidate	Michael Taylor	Michael Taylor
+Candidate	Michael W Maffei	Michael W Maffei
+Candidate	Michael W Parsons	Michael W Parsons
+Candidate	Micheal Egbert	Micheal Egbert
+Candidate	Michele Roland-Schwartz	Michele Roland-Schwartz
+Candidate	Michele Tesdal	Michele Tesdal
+Candidate	Michelle Coker	Michelle Coker
+Candidate	Michelle K Hawkins	Michelle K Hawkins
+Candidate	Michelle L Ochoa	Michelle L Ochoa
+Candidate	Micky Wagner	Micky Wagner
+Candidate	Mika Blain	Mika Blain
+Candidate	Mike (Mac) Mclaughlin	Mike (Mac) Mclaughlin
+Candidate	Mike Beilstein	Mike Beilstein
+Candidate	Mike C Mcclain	Mike C Mcclain
+Candidate	Mike Caughey	Mike Caughey
+Candidate	Mike J Cearns	Mike J Cearns
+Candidate	Mike Mcbride	Mike Mcbride
+Candidate	Mike Nearman	Mike **Nearman
+Candidate	Mike Nearman	Mike Nearman
+Candidate	Mike Rainey	Mike Rainey
+Candidate	Mike Schaufler	Mike Schaufler
+Candidate	Mike Scott	Mike Scott
+Candidate	Mike Seppa	Mike Seppa
+Candidate	Mike Smith	Mike Smith
+Candidate	Mike Weatherby	Mike Weatherby
+Candidate	Mike West	Mike West
+Candidate	Mike Wisdom	Mike Wisdom
+Candidate	Mike Witzel	Mike Witzel
+Candidate	Mike Wood	Mike Wood
+Candidate	Mildred A O'Callaghan	Mildred A O'Callaghan
+Candidate	Mindy Garlington	Mindy Garlington
+Candidate	Mingus Mapps	Mingus Mapps
+Candidate	Miriam Berman	Miriam Berman
+Candidate	Miriam G Cummins	Miriam G Cummins
+Candidate	Misc.	Misc.
+Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Nadia S Hasan	Nadia S Hasan
+Candidate	Nafisa Fai	Nafisa Fai
+Candidate	Nancy Adams	Nancy Adams
+Candidate	Nancy Bell	Nancy Bell
+Candidate	Nancy Evans	Nancy Evans
+Candidate	Nancy L Diaz	Nancy L Diaz
+Candidate	Nancy L Nelson	Nancy L Nelson
+Candidate	Nancy Mccarthy	Nancy Mccarthy
+Candidate	Nancy Nathanson	Nancy **Nathanson
+Candidate	Nancy Nathanson	Nancy Nathanson
+Candidate	Nancy R Peterson	Nancy R Peterson
+Candidate	Nancy V Wyse	Nancy V Wyse
+Candidate	Nathalie Paravicini	Nathalie Paravicini
+Candidate	Nathan R Beeman	Nathan R Beeman
+Candidate	Nathan Ratliff	Nathan Ratliff
+Candidate	Nathiel (Nate) Conrad	Nathiel (Nate) Conrad
+Candidate	Neil Pattee	Neil Pattee
+Candidate	Nic Bowman	Nic Bowman
+Candidate	Nicholas Morace	Nicholas Morace
+Candidate	Nicholas Ritch	Nicholas Ritch
+Candidate	Nick David	Nick David
+Candidate	Nick Switzer	Nick Switzer
+Candidate	Nick Von Borstel	Nick Von Borstel
+Candidate	Nicky Webb Smith	Nicky Webb Smith
+Candidate	Nicole Howard	Nicole Howard
+Candidate	Nikki Butcher-Duell	Nikki Butcher-Duell
+Candidate	Nikki Morgan	Nikki Morgan
+Candidate	No	No
+Candidate	No Candidate Filed	No Candidate Filed
+Candidate	Nolan E Bylenga	Nolan E Bylenga
+Candidate	Norm 'Bud' Shattuck Jr	Norm 'Bud' Shattuck Jr
+Candidate	Normajean Osborn	Normajean Osborn
+Candidate	Other	OTHER
+Candidate	Paige Hook	Paige Hook
+Candidate	Pam Marsh	Pam **Marsh
+Candidate	Pam Marsh	Pam Marsh
+Candidate	Pam Vanarsdale	Pam Vanarsdale
+Candidate	Pamela Foreman	Pamela Foreman
+Candidate	Pamela R Smerski	Pamela R Smerski
+Candidate	Pat Cox	Pat Cox
+Candidate	Pat Farr	Pat Farr
+Candidate	Pat Goll	Pat Goll
+Candidate	Pat Shannon	Pat Shannon
+Candidate	Pat Voigt	Pat Voigt
+Candidate	Patrice Sipos	Patrice Sipos
+Candidate	Patricia A Addis	Patricia A Addis
+Candidate	Patricia Esplin	Patricia Esplin
+Candidate	Patricia Martin	Patricia Martin
+Candidate	Patricia Smith	Patricia Smith
+Candidate	Patrick (Pat) Wolcott	Patrick (Pat) Wolcott
+Candidate	Patrick Birkle	Patrick Birkle
+Candidate	Patrick Castles	Patrick Castles
+Candidate	Patrick L Lattin	Patrick L Lattin
+Candidate	Patrick Lewandowski	Patrick Lewandowski
+Candidate	Patrick Marnell	Patrick Marnell
+Candidate	Patrick Rahm	Patrick Rahm
+Candidate	Patrick Salandro	Patrick Salandro
+Candidate	Patty Johnson	Patty Johnson
+Candidate	Patty Wyler	Patty Wyler
+Candidate	Paul Aziz	Paul Aziz
+Candidate	Paul B Beagle	Paul B Beagle
+Candidate	Paul Boehne	Paul Boehne
+Candidate	Paul Brakeman	Paul Brakeman
+Candidate	Paul Daniels	Paul Daniels
+Candidate	Paul Dasso	Paul Dasso
+Candidate	Paul E Keefer	Paul E Keefer
+Candidate	Paul Evans	Paul **Evans
+Candidate	Paul Evans	Paul Evans
+Candidate	Paul Kittelson	Paul Kittelson
+Candidate	Paul R Holvey	Paul R **Holvey
+Candidate	Paul R Holvey	Paul R Holvey
+Candidate	Paul Recanzone	Paul Recanzone
+Candidate	Paul Strobel	Paul Strobel
+Candidate	Paul Trahan	Paul Trahan
+Candidate	Paul W Shaffer	Paul W Shaffer
+Candidate	Paul Wilcox	Paul Wilcox
+Candidate	Paula Hyatt	Paula Hyatt
+Candidate	Paulette Alexandria	Paulette Alexandria
+Candidate	Paulette Ashline	Paulette Ashline
+Candidate	Paulina Cockrum	Paulina Cockrum
+Candidate	Peggy Stevens	Peggy Stevens
+Candidate	Peggy Sue Tucker	Peggy Sue Tucker
+Candidate	Peggy Yoder	Peggy Yoder
+Candidate	Penelope (Penny) Cheek	Penelope (Penny) Cheek
+Candidate	Pete Siragusa	Pete Siragusa
+Candidate	Pete Wall	Pete Wall
+Candidate	Peter Case	Peter Case
+Candidate	Peter Defazio	Peter DeFazio
+Candidate	Peter Defazio	Peter Defazio
+Candidate	Peter Edison	Peter Edison
+Candidate	Peter Hall	Peter Hall
+Candidate	Peter Mc Hugh	Peter Mc Hugh
+Candidate	Peter Williamson	Peter Williamson
+Candidate	Phil Chang	Phil Chang
+Candidate	Phil Chick	Phil Chick
+Candidate	Phil Henderson	Phil Henderson
+Candidate	Phil St Clair	Phil St Clair
+Candidate	Phil Studenberg	Phil Studenberg
+Candidate	Pryor Garnett	Pryor Garnett
+Candidate	R E Gene Wright	R E Gene Wright
+Candidate	Rachel Prusak	Rachel **Prusak
+Candidate	Rachel Prusak	Rachel Prusak
+Candidate	Rachel Verdick	Rachel Verdick
+Candidate	Rachelle Simmons	Rachelle Simmons
+Candidate	Rafael Ivan Hernandez	Rafael Ivan Hernandez
+Candidate	Ralph Browning	Ralph Browning
+Candidate	Ralph E Parrish Jr	Ralph E Parrish Jr
+Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Paull	Ralph Paull
+Candidate	Ralph Perkins	Ralph Perkins
+Candidate	Ramiro Navarro Jr	Ramiro Navarro Jr
+Candidate	Randy Foshee	Randy Foshee
+Candidate	Randy Frank	Randy Frank
+Candidate	Randy Groves	Randy Groves
+Candidate	Randy Klemm	Randy Klemm
+Candidate	Randy Kugler	Randy Kugler
+Candidate	Randy Lauer	Randy Lauer
+Candidate	Randy Sparacino	Randy Sparacino
+Candidate	Randy Stark	Randy Stark
+Candidate	Raquel Moore-Green	Raquel **Moore-Green
+Candidate	Raquel Moore-Green	Raquel Moore-Green
+Candidate	Ray Kopczynski	Ray Kopczynski
+Candidate	Ray Smith	Ray Smith
+Candidate	Ray Turner	Ray Turner
+Candidate	Raymond Doherty	Raymond Doherty
+Candidate	Raymond Law	Raymond Law
+Candidate	Raymond Love	Raymond Love
+Candidate	Rebecca Grizzle	Rebecca Grizzle
+Candidate	Rebecca Salinas-Oliveros	Rebecca Salinas-Oliveros
+Candidate	Rebecca Schroeder	Rebecca Schroeder
+Candidate	Ree Ella Von Borstel	Ree Ella Von Borstel
+Candidate	Regina M Picke	Regina M Picke
+Candidate	Reita Fackerell	Reita Fackerell
+Candidate	Rella Johnson	Rella Johnson
+Candidate	Renee E Brouse	Renee E Brouse
+Candidate	Renee' Kolen	Renee' Kolen
+Candidate	Rhett Nelsen	Rhett Nelsen
+Candidate	Rich Cunningham	Rich Cunningham
+Candidate	Rich Mays	Rich Mays
+Candidate	Richard D Huff	Richard D Huff
+Candidate	Richard Ladeby	Richard Ladeby
+Candidate	Richard Sakelik	Richard Sakelik
+Candidate	Richard Sheldon	Richard Sheldon
+Candidate	Richard Thew	Richard Thew
+Candidate	Richmond (Dick) Carleton	Richmond (Dick) Carleton
+Candidate	Rick Booth	Rick Booth
+Candidate	Rick Freeman	Rick Freeman
+Candidate	Rick Henslee	Rick Henslee
+Candidate	Rick Hobart	Rick Hobart
+Candidate	Rick Jackson	Rick Jackson
+Candidate	Rick Lewis	Rick **Lewis
+Candidate	Rick Lewis	Rick Lewis
+Candidate	Rick Olmsted	Rick Olmsted
+Candidate	Rick Scholl	Rick Scholl
+Candidate	Rick Schreffler	Rick Schreffler
+Candidate	Rick Till	Rick Till
+Candidate	Rick Van Beveren	Rick Van Beveren
+Candidate	Rick Vicek	Rick Vicek
+Candidate	Ricki Ruiz	Ricki **Ruiz
+Candidate	Ricki Ruiz	Ricki Ruiz
+Candidate	Riley Hoagland	Riley Hoagland
+Candidate	Rima Ghandour	Rima Ghandour
+Candidate	Rita Baller	Rita Baller
+Candidate	Rita Schenkelberg	Rita Schenkelberg
+Candidate	Roak D Teneyck	Roak D Teneyck
+Candidate	Rob Hernandez	Rob Hernandez
+Candidate	Rob Miles	Rob Miles
+Candidate	Rob Nosse	Rob **Nosse
+Candidate	Rob Nosse	Rob Nosse
+Candidate	Rob Pell	Rob Pell
+Candidate	Rob Raschio	Rob Raschio
+Candidate	Rob Reynolds	Rob Reynolds
+Candidate	Rob Taylor	Rob Taylor
+Candidate	Robb Ladd	Robb Ladd
+Candidate	Robbin Reynolds	Robbin Reynolds
+Candidate	Robert (Bob) Main	Robert (Bob) Main
+Candidate	Robert (Bobby) Duncan	Robert (Bobby) Duncan
+Candidate	Robert (Butch) Kindel	Robert (Butch) Kindel
+Candidate	Robert Boese	Robert Boese
+Candidate	Robert C Beers	Robert C Beers
+Candidate	Robert C Scherer	Robert C Scherer
+Candidate	Robert Cowie	Robert Cowie
+Candidate	Robert Forsythe	Robert Forsythe
+Candidate	Robert Kohn	Robert Kohn
+Candidate	Robert Mccarthy	Robert Mccarthy
+Candidate	Robert Morris	Robert Morris
+Candidate	Robert Orr	Robert Orr
+Candidate	Robert Stott	Robert Stott
+Candidate	Robert Trotter	Robert Trotter
+Candidate	Robert Werch	Robert Werch
+Candidate	Roberto G Escobedo	Roberto G Escobedo
+Candidate	Robin A Church	Robin A Church
+Candidate	Robin Boyan	Robin Boyan
+Candidate	Robin Champagne	Robin Champagne
+Candidate	Robin R Wisner Sr	Robin R Wisner Sr
+Candidate	Robin Vora	Robin Vora
+Candidate	Rod Cross	Rod Cross
+Candidate	Rod Runyon	Rod Runyon
+Candidate	Rod S Hardin	Rod S Hardin
+Candidate	Rod Scott	Rod Scott
+Candidate	Rod Taylor	Rod Taylor
+Candidate	Rodney Dunham	Rodney Dunham
+Candidate	Rodney G Mccollam	Rodney G Mccollam
+Candidate	Rodney Jason Beebe	Rodney Jason Beebe
+Candidate	Roger Howe	Roger Howe
+Candidate	Roger Nyquist	Roger Nyquist
+Candidate	Roland Ruhe	Roland Ruhe
+Candidate	Roman Smolcic	Roman Smolcic
+Candidate	Ron Boozell (Rondo)	Ron Boozell (Rondo)
+Candidate	Ron Davis	Ron Davis
+Candidate	Ron Dickson	Ron Dickson
+Candidate	Ron Edmondson	Ron Edmondson
+Candidate	Ron Evans	Ron Evans
+Candidate	Ron Hillers	Ron Hillers
+Candidate	Ron Jacobs	Ron Jacobs
+Candidate	Ron Kutch	Ron Kutch
+Candidate	Ron Mcdermid	Ron Mcdermid
+Candidate	Ron Noble	Ron **Noble
+Candidate	Ron Noble	Ron Noble
+Candidate	Ron Smith	Ron Smith
+Candidate	Ron Timen	Ron Timen
+Candidate	Ron Wright	Ron Wright
+Candidate	Ronald G Carmickle	Ronald G Carmickle
+Candidate	Ronald H Osmundson	Ronald H Osmundson
+Candidate	Ronald L Williams	Ronald L Williams
+Candidate	Ronald R Still Jr	Ronald R Still Jr
+Candidate	Rory Bialostosky	Rory Bialostosky
+Candidate	Rory Hammond	Rory Hammond
+Candidate	Ross Day	Ross Day
+Candidate	Roxie A Acuff	Roxie A Acuff
+Candidate	Roxie Cuellar	Roxie Cuellar
+Candidate	Roy Lindsay	Roy Lindsay
+Candidate	Russ Comer	Russ Comer
+Candidate	Russ Sheldon	Russ Sheldon
+Candidate	Russell Thomas Scott	Russell Thomas Scott
+Candidate	Ruth Causey	Ruth Causey
+Candidate	Ruth E Linoz	Ruth E Linoz
+Candidate	Ruth E Robinson	Ruth E Robinson
+Candidate	Ruth Jenks	Ruth Jenks
+Candidate	Ryan Bambrick	Ryan Bambrick
+Candidate	Ryan Bartholomew	Ryan Bartholomew
+Candidate	Ryan Gardner	Ryan Gardner
+Candidate	Ryan Perry	Ryan Perry
+Candidate	Rycke Brown	Rycke Brown
+Candidate	Sabrina Bailey Cave	Sabrina Bailey Cave
+Candidate	Sahara Hyder	Sahara Hyder
+Candidate	Sally Thompson	Sally Thompson
+Candidate	Sally Wantz	Sally Wantz
+Candidate	Sam Baker	Sam Baker
+Candidate	Sam Flaherty	Sam Flaherty
+Candidate	Sam Sweeney	Sam Sweeney
+Candidate	Samantha (Sam) Dragt	Samantha (Sam) Dragt
+Candidate	Samantha Verschuren	Samantha Verschuren
+Candidate	Samuel W Lee Iii	Samuel W Lee Iii
+Candidate	Sandra A Abercrombie	Sandra A Abercrombie
+Candidate	Sandra Nelson	Sandra Nelson
+Candidate	Sandra Wenzel	Sandra Wenzel
+Candidate	Sandy Glantz	Sandy Glantz
+Candidate	Sandy Mcarthur	Sandy Mcarthur
+Candidate	Sandy Roumagoux	Sandy Roumagoux
+Candidate	Sandy Toms	Sandy Toms
+Candidate	Sara Bristol	Sara Bristol
+Candidate	Sarah E Mcglaughlin	Sarah E Mcglaughlin
+Candidate	Sarah Hicks	Sarah Hicks
+Candidate	Sarah Iannarone	Sarah Iannarone
+Candidate	Sarah Jobe	Sarah Jobe
+Candidate	Sarah Spansail	Sarah Spansail
+Candidate	Sarah Spoon	Sarah Spoon
+Candidate	Scott A Hill	Scott A Hill
+Candidate	Scott Blessing	Scott Blessing
+Candidate	Scott Bruslind	Scott Bruslind
+Candidate	Scott Burge	Scott Burge
+Candidate	Scott Carl	Scott Carl
+Candidate	Scott D Clawson	Scott D Clawson
+Candidate	Scott D Selbe	Scott D Selbe
+Candidate	Scott Duffner	Scott Duffner
+Candidate	Scott E Stierle	Scott E Stierle
+Candidate	Scott Franklin	Scott Franklin
+Candidate	Scott Holliday	Scott Holliday
+Candidate	Scott Keyser	Scott Keyser
+Candidate	Scott Lee	Scott Lee
+Candidate	Scott M Samsel	Scott M Samsel
+Candidate	Scott Mccrae	Scott Mccrae
+Candidate	Scott Mcphee	Scott Mcphee
+Candidate	Scott Schaier	Scott Schaier
+Candidate	Scott T Galvin	Scott T Galvin
+Candidate	Scott Walker	Scott Walker
+Candidate	Sean Bishop	Sean Bishop
+Candidate	Sean Dasso	Sean Dasso
+Candidate	Sean Drinkwine	Sean Drinkwine
+Candidate	Sean Garland	Sean Garland
+Candidate	Sean K Scorvo	Sean K Scorvo
+Candidate	Sean Knowles	Sean Knowles
+Candidate	Sean N Vibbert	Sean N Vibbert
+Candidate	Selma Pierce	Selma Pierce
+Candidate	Seth Andrew Vincent	Seth Andrew Vincent
+Candidate	Seth Rogers	Seth Rogers
+Candidate	Shane Alderson	Shane Alderson
+Candidate	Shannon Hoehna	Shannon Hoehna
+Candidate	Shannon N Hill	Shannon N Hill
+Candidate	Shannon Theall	Shannon Theall
+Candidate	Shannon Wedding	Shannon Wedding
+Candidate	Shari Tarvin	Shari Tarvin
+Candidate	Sharon Konopa	Sharon Konopa
+Candidate	Sharra Shaffer	Sharra Shaffer
+Candidate	Shauleen Higgins	Shauleen Higgins
+Candidate	Shaun Moran	Shaun Moran
+Candidate	Shawn Sorensen	Shawn Sorensen
+Candidate	Shawna Thompson	Shawna Thompson
+Candidate	Sheila Ray Cox	Sheila Ray Cox
+Candidate	Shelley Otte	Shelley Otte
+Candidate	Shelly Boshart Davis	Shelly Boshart **Davis
+Candidate	Shelly Boshart Davis	Shelly Boshart Davis
+Candidate	Shelly Clark	Shelly Clark
+Candidate	Shemia Fagan	Shemia Fagan
+Candidate	Sheri Moothart	Sheri Moothart
+Candidate	Sheri Schouten	Sheri **Schouten
+Candidate	Sheri Schouten	Sheri Schouten
+Candidate	Sherrie Sprenger	Sherrie Sprenger
+Candidate	Sherry Haeger	Sherry Haeger
+Candidate	Sheryl S Glenn	Sheryl S Glenn
+Candidate	Shy Summer Montoya	Shy Summer Montoya
+Candidate	Sidney Washburne	Sidney Washburne
+Candidate	Simon Kinney	Simon Kinney
+Candidate	Skip Inscore	Skip Inscore
+Candidate	Skyler Martin	Skyler Martin
+Candidate	Smart Ocholi	Smart Ocholi
+Candidate	Solea Kabakov	Solea Kabakov
+Candidate	Sonya Carlson	Sonya Carlson
+Candidate	Spencer Shelton	Spencer Shelton
+Candidate	Stacey L Atwell-Keister	Stacey L Atwell-Keister
+Candidate	Stacie Geaney	Stacie Geaney
+Candidate	Stacy Jacobsen	Stacy Jacobsen
+Candidate	Stan P Pulliam	Stan P Pulliam
+Candidate	Steffan Alexander	Steffan Alexander
+Candidate	Stella Armstrong	Stella Armstrong
+Candidate	Stephanie Jones	Stephanie Jones
+Candidate	Stephanie Kilmer	Stephanie Kilmer
+Candidate	Stephen Bartlow	Stephen Bartlow
+Candidate	Stephen D Alder	Stephen D Alder
+Candidate	Stephen D Petersen	Stephen D Petersen
+Candidate	Stephen Uffelman	Stephen Uffelman
+Candidate	Steve Callaway	Steve Callaway
+Candidate	Steve Casaleggio	Steve Casaleggio
+Candidate	Steve Clements	Steve Clements
+Candidate	Steve Fischer	Steve Fischer
+Candidate	Steve Horning	Steve Horning
+Candidate	Steve Johnson	Steve Johnson
+Candidate	Steve Kendall	Steve Kendall
+Candidate	Steve Marker	Steve Marker
+Candidate	Steve Mccall	Steve Mccall
+Candidate	Steve Milligan	Steve Milligan
+Candidate	Steve Owen	Steve Owen
+Candidate	Steve R Okazaki	Steve R Okazaki
+Candidate	Steve Scheer	Steve Scheer
+Candidate	Steven M Deller	Steven M Deller
+Candidate	Steven Podvent	Steven Podvent
+Candidate	Steven R Baley	Steven R Baley
+Candidate	Steven St Matthew Mcsweeny	Steven St Matthew Mcsweeny
+Candidate	Steven Tripp	Steven Tripp
+Candidate	Steven Vangrunsven	Steven Vangrunsven
+Candidate	Steven Wyatt	Steven Wyatt
+Candidate	Stu Strom	Stu Strom
+Candidate	Sue Gold	Sue Gold
+Candidate	Sue Jensen	Sue Jensen
+Candidate	Sue Piazza	Sue Piazza
+Candidate	Sujey Hernandez-Lopez	Sujey Hernandez-Lopez
+Candidate	Susan (Sue) Wilson	Susan (Sue) Wilson
+Candidate	Susan C Hawkins	Susan C Hawkins
+Candidate	Susan G Cobb	Susan G Cobb
+Candidate	Susan J Harris	Susan J Harris
+Candidate	Susan Johnson	Susan Johnson
+Candidate	Susan McLain	Susan **McLain
+Candidate	Susan Mclain	Susan Mclain
+Candidate	Susan Trachsel	Susan Trachsel
+Candidate	Susan Wagner	Susan Wagner
+Candidate	Susan Whelan	Susan Whelan
+Candidate	Susanna Noordhoff	Susanna Noordhoff
+Candidate	Susie Foster	Susie Foster
+Candidate	Susie Lahsene	Susie Lahsene
+Candidate	Suzanne (Suzie) Hood	Suzanne (Suzie) Hood
+Candidate	Suzanne Bonamici	Suzanne Bonamici
+Candidate	Suzanne Weber	Suzanne **Weber
+Candidate	Suzanne Weber	Suzanne Weber
+Candidate	T Scott Harden	T Scott Harden
+Candidate	Tamie Kaufman	Tamie Kaufman
+Candidate	Tammie Williams	Tammie Williams
+Candidate	Tammy Duvall	Tammy Duvall
+Candidate	Taneea Browning	Taneea Browning
+Candidate	Tanner Robertson	Tanner Robertson
+Candidate	Tassi (Mills) O'Neil	Tassi (Mills) O'Neil
+Candidate	Tawna Sanchez	Tawna **Sanchez
+Candidate	Tawna Sanchez	Tawna Sanchez
+Candidate	Tawnya Kreft	Tawnya Kreft
+Candidate	Taylor A Rickey	Taylor A Rickey
+Candidate	Taylor Giles	Taylor Giles
+Candidate	Ted Warila	Ted Warila
+Candidate	Ted Wheeler	Ted Wheeler
+Candidate	Teresa Alonso Leon	Teresa **Alonso Leon
+Candidate	Teresa Alonso Leon	Teresa Alonso Leon
+Candidate	Teresa Nielson	Teresa Nielson
+Candidate	Teresa Sajonia	Teresa Sajonia
+Candidate	Teri Arnall	Teri Arnall
+Candidate	Teri Lenahan	Teri Lenahan
+Candidate	Terri Hunt	Terri Hunt
+Candidate	Terrie Martin	Terrie Martin
+Candidate	Terry Baker	Terry Baker
+Candidate	Terry C Hanscam	Terry C Hanscam
+Candidate	Terry Crawford	Terry Crawford
+Candidate	Terry L Rowan	Terry L Rowan
+Candidate	Tessah L Danel	Tessah L Danel
+Candidate	Theo White	Theo White
+Candidate	Theodore Rodrick Frahm	Theodore Rodrick Frahm
+Candidate	Theresa Crawford	Theresa Crawford
+Candidate	Theresa M Kohlhoff	Theresa M Kohlhoff
+Candidate	Thomas A Hilton	Thomas A Hilton
+Candidate	Thomas A Trujillo	Thomas A Trujillo
+Candidate	Thomas Brownson	Thomas Brownson
+Candidate	Thomas D Aschenbrener	Thomas D Aschenbrener
+Candidate	Thomas E Caufield	Thomas E Caufield
+Candidate	Thomas E Straughan	Thomas E Straughan
+Candidate	Thomas Flaherty	Thomas Flaherty
+Candidate	Thomas Griffin	Thomas Griffin
+Candidate	Thomas Hasvold	Thomas Hasvold
+Candidate	Thomas M Dyer	Thomas M Dyer
+Candidate	Thomas Mcintosh	Thomas Mcintosh
+Candidate	Thomas Mersereau	Thomas Mersereau
+Candidate	Thomas Miller	Thomas Miller
+Candidate	Thomas Stanley	Thomas Stanley
+Candidate	Thomas Sullivan	Thomas Sullivan
+Candidate	Tiffany Prince	Tiffany Prince
+Candidate	Tiffnie Schmadeka	Tiffnie Schmadeka
+Candidate	Tilda O Flores	Tilda O Flores
+Candidate	Tim A Kerns	Tim A Kerns
+Candidate	Tim Askey (Independent Ticket)	Tim Askey (Independent Ticket)
+Candidate	Tim D'Alessandro	Tim D'Alessandro
+Candidate	Tim E Nelson	Tim E Nelson
+Candidate	Tim Erich	Tim Erich
+Candidate	Tim Evertt	Tim Evertt
+Candidate	Tim Hall	Tim Hall
+Candidate	Tim Kirsch	Tim Kirsch
+Candidate	Tim Knopp	Tim **Knopp
+Candidate	Tim Knopp	Tim Knopp
+Candidate	Tim Luke	Tim Luke
+Candidate	Tim Newton	Tim Newton
+Candidate	Tim Pogwizd	Tim Pogwizd
+Candidate	Tim Shank	Tim Shank
+Candidate	Tim Stratis	Tim Stratis
+Candidate	Tim Weaver	Tim Weaver
+Candidate	Timm Slater	Timm Slater
+Candidate	Timothy Cox	Timothy Cox
+Candidate	Timothy L Dehne	Timothy L Dehne
+Candidate	Timothy Rippe	Timothy Rippe
+Candidate	Timothy W Aldal	Timothy W Aldal
+Candidate	Tina Casey Jones	Tina Casey Jones
+Candidate	Tina Kotek	Tina **Kotek
+Candidate	Tina Kotek	Tina Kotek
+Candidate	Tj Bailey	Tj Bailey
+Candidate	Tobias Read	Tobias Read
+Candidate	Todd Fuller	Todd Fuller
+Candidate	Todd Mckinley	Todd Mckinley
+Candidate	Todd Mcknight	Todd Mcknight
+Candidate	Todd Michels	Todd Michels
+Candidate	Tom Anderson	Tom Anderson
+Candidate	Tom Beene	Tom Beene
+Candidate	Tom Cordier	Tom Cordier
+Candidate	Tom Fatland	Tom Fatland
+Candidate	Tom Horning	Tom Horning
+Candidate	Tom Imhoff	Tom Imhoff
+Candidate	Tom Lewis	Tom Lewis
+Candidate	Tom Mallen	Tom Mallen
+Candidate	Tom Martine	Tom Martine
+Candidate	Tom Mccann	Tom Mccann
+Candidate	Tom Meier	Tom Meier
+Candidate	Tom Meyer	Tom Meyer
+Candidate	Tom Troutman	Tom Troutman
+Candidate	Tom Vialpando	Tom Vialpando
+Candidate	Tommy J Mentzer	Tommy J Mentzer
+Candidate	Tony Alexander	Tony Alexander
+Candidate	Tony Astorga	Tony Astorga
+Candidate	Tonya Graham	Tonya Graham
+Candidate	Traci Hensley	Traci Hensley
+Candidate	Tracy Lehman	Tracy Lehman
+Candidate	Tracy Luttrell	Tracy Luttrell
+Candidate	Travis Ash	Travis Ash
+Candidate	Travis Stovall	Travis Stovall
+Candidate	Trevor Phillips	Trevor Phillips
+Candidate	Trini Marquez	Trini Marquez
+Candidate	Tyler Crook	Tyler Crook
+Candidate	Tyler Miller	Tyler Miller
+Candidate	Tyler Thomas	Tyler Thomas
+Candidate	Tynan Pierce	Tynan Pierce
+Candidate	Valerie Howell	Valerie Howell
+Candidate	Valerie Lovelace	Valerie Lovelace
+Candidate	Valerie Pratt	Valerie Pratt
+Candidate	Valerie Unger	Valerie Unger
+Candidate	Vanessa Nordyke	Vanessa Nordyke
+Candidate	Vanessa Ogier	Vanessa Ogier
+Candidate	Verl D Pressnall	Verl D Pressnall
+Candidate	Vickey Romph	Vickey Romph
+Candidate	Vicki Olson	Vicki Olson
+Candidate	Vicki R Townsend	Vicki R Townsend
+Candidate	Vikki Breese-Iverson	Vikki **Breese-Iverson
+Candidate	Vikki Breese-Iverson	Vikki Breese-Iverson
+Candidate	Vina Carpenter	Vina Carpenter
+Candidate	Vince Jones-Dixon	Vince Jones-Dixon
+Candidate	Vincent Defazio	Vincent Defazio
+Candidate	Vincent Whitehead	Vincent Whitehead
+Candidate	Virginia Stapleton	Virginia Stapleton
+Candidate	W John Moore	W John Moore
+Candidate	Wade Boxberger	Wade Boxberger
+Candidate	Wade Witherspoon	Wade Witherspoon
+Candidate	Walt Harrison	Walt Harrison
+Candidate	Walter D Brewster	Walter D Brewster
+Candidate	Wanda L Blanton	Wanda L Blanton
+Candidate	Warren (Ted) Grissom	Warren (Ted) Grissom
+Candidate	Wayne Dykstra	Wayne Dykstra
+Candidate	Wayne Fording	Wayne Fording
+Candidate	Wayne Jacobson	Wayne Jacobson
+Candidate	Wayne Lindquist	Wayne Lindquist
+Candidate	Wayne Stuart	Wayne Stuart
+Candidate	Wendy Rohner	Wendy Rohner
+Candidate	Wendy Shoptaw	Wendy Shoptaw
+Candidate	Wendy Veliz	Wendy Veliz
+Candidate	Wendy Young Lawton	Wendy Young Lawton
+Candidate	Wesley (Alan) Carnahan	Wesley (Alan) Carnahan
+Candidate	Weston Miller	Weston Miller
+Candidate	Wilbur (Bill) Beard	Wilbur (Bill) Beard
+Candidate	Will J Lemmon	Will J Lemmon
+Candidate	Will Worman	Will Worman
+Candidate	William (Bill) Duckett	William (Bill) Duckett
+Candidate	William (Bill) Hagerty	William (Bill) Hagerty
+Candidate	William E Hammel	William E Hammel
+Candidate	William H Johnson Jr	William H Johnson Jr
+Candidate	William Kuhn	William Kuhn
+Candidate	William Martin	William Martin
+Candidate	William Parke	William Parke
+Candidate	William Sigman	William Sigman
+Candidate	William V Carlson Sr	William V Carlson Sr
+Candidate	Wlnsvey E Campos	Wlnsvey E **Campos
+Candidate	Wlnsvey E Campos	Wlnsvey E Campos
+Candidate	Write-in	Write-in
+Candidate	Xan Augerot	Xan Augerot
+Candidate	Yes	Yes
+Candidate	Yvette Potter (City Ticket)	Yvette Potter (City Ticket)
+Candidate	Zach Beck	Zach Beck
+Candidate	Zach Hudson	Zach **Hudson
+Candidate	Zach Hudson	Zach Hudson
+Candidate	Zach Leigh	Zach Leigh
+Candidate	Zachary Brehm	Zachary Brehm
+Candidate	Zandra Umholtz	Zandra Umholtz
 CandidateContest	OR Attorney General	ATTORNEY GENERAL
-CandidateContest	OR Treasurer	STATE TREASURER
+CandidateContest	OR House District 1	OR House 1st District
+CandidateContest	OR House District 1	STATE REPRESENTATIVE, 1ST DISTRICT
+CandidateContest	OR House District 10	OR House 10th District
+CandidateContest	OR House District 10	STATE REPRESENTATIVE, 10TH DISTRICT
+CandidateContest	OR House District 11	OR House 11th District
+CandidateContest	OR House District 11	STATE REPRESENTATIVE, 11TH DISTRICT
+CandidateContest	OR House District 12	OR House 12th District
+CandidateContest	OR House District 12	STATE REPRESENTATIVE, 12TH DISTRICT
+CandidateContest	OR House District 13	OR House 13th District
+CandidateContest	OR House District 13	STATE REPRESENTATIVE, 13TH DISTRICT
+CandidateContest	OR House District 14	OR House 14th District
+CandidateContest	OR House District 14	STATE REPRESENTATIVE, 14TH DISTRICT
+CandidateContest	OR House District 15	OR House 15th District
+CandidateContest	OR House District 15	STATE REPRESENTATIVE, 15TH DISTRICT
+CandidateContest	OR House District 16	OR House 16th District
+CandidateContest	OR House District 16	STATE REPRESENTATIVE, 16TH DISTRICT
+CandidateContest	OR House District 17	OR House 17th District
+CandidateContest	OR House District 17	STATE REPRESENTATIVE, 17TH DISTRICT
+CandidateContest	OR House District 18	OR House 18th District
+CandidateContest	OR House District 18	STATE REPRESENTATIVE, 18TH DISTRICT
+CandidateContest	OR House District 19	OR House 19th District
+CandidateContest	OR House District 19	STATE REPRESENTATIVE, 19TH DISTRICT
+CandidateContest	OR House District 2	OR House 2nd District
+CandidateContest	OR House District 2	STATE REPRESENTATIVE, 2ND DISTRICT
+CandidateContest	OR House District 20	OR House 20th District
+CandidateContest	OR House District 20	STATE REPRESENTATIVE, 20TH DISTRICT
+CandidateContest	OR House District 21	OR House 21st District
+CandidateContest	OR House District 21	STATE REPRESENTATIVE, 21ST DISTRICT
+CandidateContest	OR House District 22	OR House 22nd District
+CandidateContest	OR House District 22	STATE REPRESENTATIVE, 22ND DISTRICT
+CandidateContest	OR House District 23	OR House 23rd District
+CandidateContest	OR House District 23	STATE REPRESENTATIVE, 23RD DISTRICT
+CandidateContest	OR House District 24	OR House 24th District
+CandidateContest	OR House District 24	STATE REPRESENTATIVE, 24TH DISTRICT
+CandidateContest	OR House District 25	OR House 25th District
+CandidateContest	OR House District 25	STATE REPRESENTATIVE, 25TH DISTRICT
+CandidateContest	OR House District 26	OR House 26th District
+CandidateContest	OR House District 26	STATE REPRESENTATIVE, 26TH DISTRICT
+CandidateContest	OR House District 27	OR House 27th District
+CandidateContest	OR House District 27	STATE REPRESENTATIVE, 27TH DISTRICT
+CandidateContest	OR House District 28	OR House 28th District
+CandidateContest	OR House District 28	STATE REPRESENTATIVE, 28TH DISTRICT
+CandidateContest	OR House District 29	OR House 29th District
+CandidateContest	OR House District 29	STATE REPRESENTATIVE, 29TH DISTRICT
+CandidateContest	OR House District 3	OR House 3rd District
+CandidateContest	OR House District 3	STATE REPRESENTATIVE, 3RD DISTRICT
+CandidateContest	OR House District 30	OR House 30th District
+CandidateContest	OR House District 30	STATE REPRESENTATIVE, 30TH DISTRICT
+CandidateContest	OR House District 31	OR House 31st District
+CandidateContest	OR House District 31	STATE REPRESENTATIVE, 31ST DISTRICT
+CandidateContest	OR House District 32	OR House 32nd District
+CandidateContest	OR House District 32	STATE REPRESENTATIVE, 32ND DISTRICT
+CandidateContest	OR House District 33	OR House 33rd District
+CandidateContest	OR House District 33	STATE REPRESENTATIVE, 33RD DISTRICT
+CandidateContest	OR House District 34	OR House 34th District
+CandidateContest	OR House District 34	STATE REPRESENTATIVE, 34TH DISTRICT
+CandidateContest	OR House District 35	OR House 35th District
+CandidateContest	OR House District 35	STATE REPRESENTATIVE, 35TH DISTRICT
+CandidateContest	OR House District 36	OR House 36th District
+CandidateContest	OR House District 36	STATE REPRESENTATIVE, 36TH DISTRICT
+CandidateContest	OR House District 37	OR House 37th District
+CandidateContest	OR House District 37	STATE REPRESENTATIVE, 37TH DISTRICT
+CandidateContest	OR House District 38	OR House 38th District
+CandidateContest	OR House District 38	STATE REPRESENTATIVE, 38TH DISTRICT
+CandidateContest	OR House District 39	OR House 39th District
+CandidateContest	OR House District 39	STATE REPRESENTATIVE, 39TH DISTRICT
+CandidateContest	OR House District 4	OR House 4th District
+CandidateContest	OR House District 4	STATE REPRESENTATIVE, 4TH DISTRICT
+CandidateContest	OR House District 40	OR House 40th District
+CandidateContest	OR House District 40	STATE REPRESENTATIVE, 40TH DISTRICT
+CandidateContest	OR House District 41	OR House 41st District
+CandidateContest	OR House District 41	STATE REPRESENTATIVE, 41ST DISTRICT
+CandidateContest	OR House District 42	OR House 42nd District
+CandidateContest	OR House District 42	STATE REPRESENTATIVE, 42ND DISTRICT
+CandidateContest	OR House District 43	OR House 43rd District
+CandidateContest	OR House District 43	STATE REPRESENTATIVE, 43RD DISTRICT
+CandidateContest	OR House District 44	OR House 44th District
+CandidateContest	OR House District 44	STATE REPRESENTATIVE, 44TH DISTRICT
+CandidateContest	OR House District 45	OR House 45th District
+CandidateContest	OR House District 45	STATE REPRESENTATIVE, 45TH DISTRICT
+CandidateContest	OR House District 46	OR House 46th District
+CandidateContest	OR House District 46	STATE REPRESENTATIVE, 46TH DISTRICT
+CandidateContest	OR House District 47	OR House 47th District
+CandidateContest	OR House District 47	STATE REPRESENTATIVE, 47TH DISTRICT
+CandidateContest	OR House District 48	OR House 48th District
+CandidateContest	OR House District 48	STATE REPRESENTATIVE, 48TH DISTRICT
+CandidateContest	OR House District 49	OR House 49th District
+CandidateContest	OR House District 49	STATE REPRESENTATIVE, 49TH DISTRICT
+CandidateContest	OR House District 5	OR House 5th District
+CandidateContest	OR House District 5	STATE REPRESENTATIVE, 5TH DISTRICT
+CandidateContest	OR House District 50	OR House 50th District
+CandidateContest	OR House District 50	STATE REPRESENTATIVE, 50TH DISTRICT
+CandidateContest	OR House District 51	OR House 51st District
+CandidateContest	OR House District 51	STATE REPRESENTATIVE, 51ST DISTRICT
+CandidateContest	OR House District 52	OR House 52nd District
+CandidateContest	OR House District 52	STATE REPRESENTATIVE, 52ND DISTRICT
+CandidateContest	OR House District 53	OR House 53rd District
+CandidateContest	OR House District 53	STATE REPRESENTATIVE, 53RD DISTRICT
+CandidateContest	OR House District 54	OR House 54th District
+CandidateContest	OR House District 54	STATE REPRESENTATIVE, 54TH DISTRICT
+CandidateContest	OR House District 55	OR House 55th District
+CandidateContest	OR House District 55	STATE REPRESENTATIVE, 55TH DISTRICT
+CandidateContest	OR House District 56	OR House 56th District
+CandidateContest	OR House District 56	STATE REPRESENTATIVE, 56TH DISTRICT
+CandidateContest	OR House District 57	OR House 57th District
+CandidateContest	OR House District 57	STATE REPRESENTATIVE, 57TH DISTRICT
+CandidateContest	OR House District 58	OR House 58th District
+CandidateContest	OR House District 58	STATE REPRESENTATIVE, 58TH DISTRICT
+CandidateContest	OR House District 59	OR House 59th District
+CandidateContest	OR House District 59	STATE REPRESENTATIVE, 59TH DISTRICT
+CandidateContest	OR House District 6	OR House 6th District
+CandidateContest	OR House District 6	STATE REPRESENTATIVE, 6TH DISTRICT
+CandidateContest	OR House District 60	OR House 60th District
+CandidateContest	OR House District 60	STATE REPRESENTATIVE, 60TH DISTRICT
+CandidateContest	OR House District 7	OR House 7th District
+CandidateContest	OR House District 7	STATE REPRESENTATIVE, 7TH DISTRICT
+CandidateContest	OR House District 8	OR House 8th District
+CandidateContest	OR House District 8	STATE REPRESENTATIVE, 8TH DISTRICT
+CandidateContest	OR House District 9	OR House 9th District
+CandidateContest	OR House District 9	STATE REPRESENTATIVE, 9TH DISTRICT
 CandidateContest	OR Secretary of State	SECRETARY OF STATE
+CandidateContest	OR Senate District 1	OR Senate 1st District
+CandidateContest	OR Senate District 1	STATE SENATOR, 1ST DISTRICT
+CandidateContest	OR Senate District 10	OR Senate 10th District
+CandidateContest	OR Senate District 10	STATE SENATOR, 10TH DISTRICT
+CandidateContest	OR Senate District 11	OR Senate 11th District
+CandidateContest	OR Senate District 11	STATE SENATOR, 11TH DISTRICT
+CandidateContest	OR Senate District 12	OR Senate 12th District
+CandidateContest	OR Senate District 12	STATE SENATOR, 12TH DISTRICT
+CandidateContest	OR Senate District 13	OR Senate 13th District
+CandidateContest	OR Senate District 13	STATE SENATOR, 13TH DISTRICT
+CandidateContest	OR Senate District 14	OR Senate 14th District
+CandidateContest	OR Senate District 14	STATE SENATOR, 14TH DISTRICT
+CandidateContest	OR Senate District 15	OR Senate 15th District
+CandidateContest	OR Senate District 15	STATE SENATOR, 15TH DISTRICT
+CandidateContest	OR Senate District 16	OR Senate 16th District
+CandidateContest	OR Senate District 16	STATE SENATOR, 16TH DISTRICT
+CandidateContest	OR Senate District 17	OR Senate 17th District
+CandidateContest	OR Senate District 17	STATE SENATOR, 17TH DISTRICT
+CandidateContest	OR Senate District 18	OR Senate 18th District
+CandidateContest	OR Senate District 18	STATE SENATOR, 18TH DISTRICT
+CandidateContest	OR Senate District 19	OR Senate 19th District
+CandidateContest	OR Senate District 19	STATE SENATOR, 19TH DISTRICT
+CandidateContest	OR Senate District 2	OR Senate 2nd District
+CandidateContest	OR Senate District 2	STATE SENATOR, 2ND DISTRICT
+CandidateContest	OR Senate District 20	OR Senate 20th District
+CandidateContest	OR Senate District 20	STATE SENATOR, 20TH DISTRICT
+CandidateContest	OR Senate District 21	OR Senate 21st District
+CandidateContest	OR Senate District 21	STATE SENATOR, 21TH DISTRICT
+CandidateContest	OR Senate District 22	OR Senate 22nd District
+CandidateContest	OR Senate District 22	STATE SENATOR, 22TH DISTRICT
+CandidateContest	OR Senate District 23	OR Senate 23rd District
+CandidateContest	OR Senate District 23	STATE SENATOR, 23TH DISTRICT
+CandidateContest	OR Senate District 24	OR Senate 24th District
+CandidateContest	OR Senate District 24	STATE SENATOR, 24TH DISTRICT
+CandidateContest	OR Senate District 25	OR Senate 25th District
+CandidateContest	OR Senate District 25	STATE SENATOR, 25TH DISTRICT
+CandidateContest	OR Senate District 26	OR Senate 26th District
+CandidateContest	OR Senate District 26	STATE SENATOR, 26TH DISTRICT
+CandidateContest	OR Senate District 27	OR Senate 27th District
+CandidateContest	OR Senate District 27	STATE SENATOR, 27TH DISTRICT
+CandidateContest	OR Senate District 28	OR Senate 28th District
+CandidateContest	OR Senate District 28	STATE SENATOR, 28TH DISTRICT
+CandidateContest	OR Senate District 29	OR Senate 29th District
+CandidateContest	OR Senate District 29	STATE SENATOR, 29TH DISTRICT
+CandidateContest	OR Senate District 3	OR Senate 3rd District
+CandidateContest	OR Senate District 3	STATE SENATOR, 3RD DISTRICT
+CandidateContest	OR Senate District 30	OR Senate 30th District
+CandidateContest	OR Senate District 30	STATE SENATOR, 30TH DISTRICT
+CandidateContest	OR Senate District 4	OR Senate 4th District
+CandidateContest	OR Senate District 4	STATE SENATOR, 4TH DISTRICT
+CandidateContest	OR Senate District 5	OR Senate 5th District
+CandidateContest	OR Senate District 5	STATE SENATOR, 5TH DISTRICT
+CandidateContest	OR Senate District 6	OR Senate 6th District
+CandidateContest	OR Senate District 6	STATE SENATOR, 6TH DISTRICT
+CandidateContest	OR Senate District 7	OR Senate 7th District
+CandidateContest	OR Senate District 7	STATE SENATOR, 7TH DISTRICT
+CandidateContest	OR Senate District 8	OR Senate 8th District
+CandidateContest	OR Senate District 8	STATE SENATOR, 8TH DISTRICT
+CandidateContest	OR Senate District 9	OR Senate 9th District
+CandidateContest	OR Senate District 9	STATE SENATOR, 9TH DISTRICT
+CandidateContest	OR Treasurer	STATE TREASURER
+CandidateContest	US House OR District 1	US REPRESENTATIVE, 1ST DISTRICT
+CandidateContest	US House OR District 1	US Representative District 1
+CandidateContest	US House OR District 2	US REPRESENTATIVE, 2ND DISTRICT
+CandidateContest	US House OR District 2	US Representative District 2
+CandidateContest	US House OR District 3	US REPRESENTATIVE, 3RD DISTRICT
+CandidateContest	US House OR District 3	US Representative District 3
+CandidateContest	US House OR District 4	US REPRESENTATIVE, 4TH DISTRICT
+CandidateContest	US House OR District 4	US Representative District 4
+CandidateContest	US House OR District 5	US REPRESENTATIVE, 5TH DISTRICT
+CandidateContest	US House OR District 5	US Representative District 5
+CandidateContest	US President (OR)	PRESIDENT
+CandidateContest	US President (OR)	PRESIDENT AND VICE PRESIDENT
+CandidateContest	US President (OR)	US PRESIDENT
+CandidateContest	US President (OR)	US President
+CandidateContest	US Senate OR	US SENATOR
+CandidateContest	US Senate OR	US Senator
+CountItemType	total	TOTAL
+Election	2016 General	2016 General
+Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
-Election	2018 General	2018 General
-Election	2016 General	2016 General
-Party	Democratic Party	DEMOCRAT
-Party	Democratic Party	(D)
-Party	Libertarian Party	LIBERTARIAN
-Party	Libertarian Party	(L)
-Party	Pacific Green Party	PACIFIC GREEN
-Party	Pacific Green Party	(PG)
-Party	Progressive Party	PROGRESSIVE
-Party	Progressive Party	(P)
-Party	Republican Party	REPUBLICAN
-Party	Republican Party	(R)
-Party	Democratic Party	DEMOCRAT, INDEPENDENT, WORKING FAMILIES
-Party	Progressive Party	PACIFIC GREEN, PROGRESSIVE
-Party	Democratic Party	DEMOCRAT, WORKING FAMILIES
-Party	Republican Party	REPUBLICAN, INDEPENDENT
 Party	Constitution Party	CONSTITUTION
+Party	Democratic Party	(D)
+Party	Democratic Party	DEMOCRAT
+Party	Democratic Party	DEMOCRAT, INDEPENDENT, WORKING FAMILIES
+Party	Democratic Party	DEMOCRAT, WORKING FAMILIES
+Party	Democratic and Independent Parties (cross-listed)	DEMOCRAT, INDEPENDENT
+Party	Democratic and Pacific Green Parties (cross-listed)	DEMOCRAT, PACIFIC GREEN
+Party	Democratic and Republican Parties (cross-listed)	REPUBLICAN, DEMOCRAT
+Party	Democratic, Progressive and Working Families Parties (cross-listed)	DEMOCRAT, PROGRESSIVE, WORKING FAMILIES
+Party	Democratic, Working Families and Republican Parties (cross-listed)	DEMOCRAT, WORKING FAMILIES, REPUBLICAN
+Party	Green Party	GREEN
+Party	Independent Party	INDEPENDENT PARTY
 Party	Independent Party	INDEPENDENT, PROGRESSIVE, PACIFIC GREEN
-Party	Republican Party	REPUBLICAN, LIBERTARIAN
-Party	None Party	NONPARTISAN INCUMBENT
+Party	Libertarian Party	(L)
+Party	Libertarian Party	LIBERTARIAN
 Party	None Party	NONPARTISAN
+Party	None Party	NONPARTISAN INCUMBENT
+Party	Pacific Green Party	(PG)
+Party	Pacific Green Party	PACIFIC GREEN
+Party	Progressive Party	(P)
+Party	Progressive Party	PACIFIC GREEN, PROGRESSIVE
+Party	Progressive Party	PROGRESSIVE
+Party	Republican Party	(R)
+Party	Republican Party	REPUBLICAN
+Party	Republican Party	REPUBLICAN, INDEPENDENT
+Party	Republican Party	REPUBLICAN, LIBERTARIAN
+Party	Republican and Constitution Parties (cross-listed)	REPUBLICAN, CONSTITUTION
+Party	Republican, Independent and Libertarian Parties (cross-listed)	REPUBLICAN, INDEPENDENT, LIBERTARIAN
 Party	Working Families Party	(WF)
+Party	Working Families Party	WORKING FAMILIES
+Party	none or unknown	OTHER
+ReportingUnit	Oregon	Oregon
+ReportingUnit	Oregon;Baker County	Baker
+ReportingUnit	Oregon;Baker County	fips41001
+ReportingUnit	Oregon;Benton County	Benton
+ReportingUnit	Oregon;Benton County	fips41003
+ReportingUnit	Oregon;Clackamas County	Clackamas
+ReportingUnit	Oregon;Clackamas County	fips41005
+ReportingUnit	Oregon;Clatsop County	Clatsop
+ReportingUnit	Oregon;Clatsop County	fips41007
+ReportingUnit	Oregon;Columbia County	Columbia
+ReportingUnit	Oregon;Columbia County	fips41009
+ReportingUnit	Oregon;Coos County	Coos
+ReportingUnit	Oregon;Coos County	fips41011
+ReportingUnit	Oregon;Crook County	Crook
+ReportingUnit	Oregon;Crook County	fips41013
+ReportingUnit	Oregon;Curry County	Curry
+ReportingUnit	Oregon;Curry County	fips41015
+ReportingUnit	Oregon;Deschutes County	Deschutes
+ReportingUnit	Oregon;Deschutes County	fips41017
+ReportingUnit	Oregon;Douglas County	Douglas
+ReportingUnit	Oregon;Douglas County	fips41019
+ReportingUnit	Oregon;Gilliam County	Gilliam
+ReportingUnit	Oregon;Gilliam County	fips41021
+ReportingUnit	Oregon;Grant County	Grant
+ReportingUnit	Oregon;Grant County	fips41023
+ReportingUnit	Oregon;Harney County	Harney
+ReportingUnit	Oregon;Harney County	fips41025
+ReportingUnit	Oregon;Hood River County	Hood River
+ReportingUnit	Oregon;Hood River County	fips41027
+ReportingUnit	Oregon;Jackson County	Jackson
+ReportingUnit	Oregon;Jackson County	fips41029
+ReportingUnit	Oregon;Jefferson County	Jefferson
+ReportingUnit	Oregon;Jefferson County	fips41031
+ReportingUnit	Oregon;Josephine County	Josephine
+ReportingUnit	Oregon;Josephine County	fips41033
+ReportingUnit	Oregon;Klamath County	Klamath
+ReportingUnit	Oregon;Klamath County	fips41035
+ReportingUnit	Oregon;Lake County	Lake
+ReportingUnit	Oregon;Lake County	fips41037
+ReportingUnit	Oregon;Lane County	Lane
+ReportingUnit	Oregon;Lane County	fips41039
+ReportingUnit	Oregon;Lincoln County	Lincoln
+ReportingUnit	Oregon;Lincoln County	fips41041
+ReportingUnit	Oregon;Linn County	Linn
+ReportingUnit	Oregon;Linn County	fips41043
+ReportingUnit	Oregon;Malheur County	Malheur
+ReportingUnit	Oregon;Malheur County	fips41045
+ReportingUnit	Oregon;Marion County	Marion
+ReportingUnit	Oregon;Marion County	fips41047
+ReportingUnit	Oregon;Morrow County	Morrow
+ReportingUnit	Oregon;Morrow County	fips41049
+ReportingUnit	Oregon;Multnomah County	Multnomah
+ReportingUnit	Oregon;Multnomah County	fips41051
 ReportingUnit	Oregon;OR House District 1	Oregon;OR House District 1
-ReportingUnit	Oregon;OR House District 2	Oregon;OR House District 2
-ReportingUnit	Oregon;OR House District 3	Oregon;OR House District 3
-ReportingUnit	Oregon;OR House District 4	Oregon;OR House District 4
-ReportingUnit	Oregon;OR House District 5	Oregon;OR House District 5
-ReportingUnit	Oregon;OR House District 6	Oregon;OR House District 6
-ReportingUnit	Oregon;OR House District 7	Oregon;OR House District 7
-ReportingUnit	Oregon;OR House District 8	Oregon;OR House District 8
-ReportingUnit	Oregon;OR House District 9	Oregon;OR House District 9
 ReportingUnit	Oregon;OR House District 10	Oregon;OR House District 10
 ReportingUnit	Oregon;OR House District 11	Oregon;OR House District 11
 ReportingUnit	Oregon;OR House District 12	Oregon;OR House District 12
@@ -239,6 +2149,7 @@ ReportingUnit	Oregon;OR House District 16	Oregon;OR House District 16
 ReportingUnit	Oregon;OR House District 17	Oregon;OR House District 17
 ReportingUnit	Oregon;OR House District 18	Oregon;OR House District 18
 ReportingUnit	Oregon;OR House District 19	Oregon;OR House District 19
+ReportingUnit	Oregon;OR House District 2	Oregon;OR House District 2
 ReportingUnit	Oregon;OR House District 20	Oregon;OR House District 20
 ReportingUnit	Oregon;OR House District 21	Oregon;OR House District 21
 ReportingUnit	Oregon;OR House District 22	Oregon;OR House District 22
@@ -249,6 +2160,7 @@ ReportingUnit	Oregon;OR House District 26	Oregon;OR House District 26
 ReportingUnit	Oregon;OR House District 27	Oregon;OR House District 27
 ReportingUnit	Oregon;OR House District 28	Oregon;OR House District 28
 ReportingUnit	Oregon;OR House District 29	Oregon;OR House District 29
+ReportingUnit	Oregon;OR House District 3	Oregon;OR House District 3
 ReportingUnit	Oregon;OR House District 30	Oregon;OR House District 30
 ReportingUnit	Oregon;OR House District 31	Oregon;OR House District 31
 ReportingUnit	Oregon;OR House District 32	Oregon;OR House District 32
@@ -259,6 +2171,7 @@ ReportingUnit	Oregon;OR House District 36	Oregon;OR House District 36
 ReportingUnit	Oregon;OR House District 37	Oregon;OR House District 37
 ReportingUnit	Oregon;OR House District 38	Oregon;OR House District 38
 ReportingUnit	Oregon;OR House District 39	Oregon;OR House District 39
+ReportingUnit	Oregon;OR House District 4	Oregon;OR House District 4
 ReportingUnit	Oregon;OR House District 40	Oregon;OR House District 40
 ReportingUnit	Oregon;OR House District 41	Oregon;OR House District 41
 ReportingUnit	Oregon;OR House District 42	Oregon;OR House District 42
@@ -269,6 +2182,7 @@ ReportingUnit	Oregon;OR House District 46	Oregon;OR House District 46
 ReportingUnit	Oregon;OR House District 47	Oregon;OR House District 47
 ReportingUnit	Oregon;OR House District 48	Oregon;OR House District 48
 ReportingUnit	Oregon;OR House District 49	Oregon;OR House District 49
+ReportingUnit	Oregon;OR House District 5	Oregon;OR House District 5
 ReportingUnit	Oregon;OR House District 50	Oregon;OR House District 50
 ReportingUnit	Oregon;OR House District 51	Oregon;OR House District 51
 ReportingUnit	Oregon;OR House District 52	Oregon;OR House District 52
@@ -279,16 +2193,12 @@ ReportingUnit	Oregon;OR House District 56	Oregon;OR House District 56
 ReportingUnit	Oregon;OR House District 57	Oregon;OR House District 57
 ReportingUnit	Oregon;OR House District 58	Oregon;OR House District 58
 ReportingUnit	Oregon;OR House District 59	Oregon;OR House District 59
+ReportingUnit	Oregon;OR House District 6	Oregon;OR House District 6
 ReportingUnit	Oregon;OR House District 60	Oregon;OR House District 60
+ReportingUnit	Oregon;OR House District 7	Oregon;OR House District 7
+ReportingUnit	Oregon;OR House District 8	Oregon;OR House District 8
+ReportingUnit	Oregon;OR House District 9	Oregon;OR House District 9
 ReportingUnit	Oregon;OR Senate District 1	Oregon;OR Senate District 1
-ReportingUnit	Oregon;OR Senate District 2	Oregon;OR Senate District 2
-ReportingUnit	Oregon;OR Senate District 3	Oregon;OR Senate District 3
-ReportingUnit	Oregon;OR Senate District 4	Oregon;OR Senate District 4
-ReportingUnit	Oregon;OR Senate District 5	Oregon;OR Senate District 5
-ReportingUnit	Oregon;OR Senate District 6	Oregon;OR Senate District 6
-ReportingUnit	Oregon;OR Senate District 7	Oregon;OR Senate District 7
-ReportingUnit	Oregon;OR Senate District 8	Oregon;OR Senate District 8
-ReportingUnit	Oregon;OR Senate District 9	Oregon;OR Senate District 9
 ReportingUnit	Oregon;OR Senate District 10	Oregon;OR Senate District 10
 ReportingUnit	Oregon;OR Senate District 11	Oregon;OR Senate District 11
 ReportingUnit	Oregon;OR Senate District 12	Oregon;OR Senate District 12
@@ -299,6 +2209,7 @@ ReportingUnit	Oregon;OR Senate District 16	Oregon;OR Senate District 16
 ReportingUnit	Oregon;OR Senate District 17	Oregon;OR Senate District 17
 ReportingUnit	Oregon;OR Senate District 18	Oregon;OR Senate District 18
 ReportingUnit	Oregon;OR Senate District 19	Oregon;OR Senate District 19
+ReportingUnit	Oregon;OR Senate District 2	Oregon;OR Senate District 2
 ReportingUnit	Oregon;OR Senate District 20	Oregon;OR Senate District 20
 ReportingUnit	Oregon;OR Senate District 21	Oregon;OR Senate District 21
 ReportingUnit	Oregon;OR Senate District 22	Oregon;OR Senate District 22
@@ -309,1896 +2220,36 @@ ReportingUnit	Oregon;OR Senate District 26	Oregon;OR Senate District 26
 ReportingUnit	Oregon;OR Senate District 27	Oregon;OR Senate District 27
 ReportingUnit	Oregon;OR Senate District 28	Oregon;OR Senate District 28
 ReportingUnit	Oregon;OR Senate District 29	Oregon;OR Senate District 29
+ReportingUnit	Oregon;OR Senate District 3	Oregon;OR Senate District 3
 ReportingUnit	Oregon;OR Senate District 30	Oregon;OR Senate District 30
+ReportingUnit	Oregon;OR Senate District 4	Oregon;OR Senate District 4
+ReportingUnit	Oregon;OR Senate District 5	Oregon;OR Senate District 5
+ReportingUnit	Oregon;OR Senate District 6	Oregon;OR Senate District 6
+ReportingUnit	Oregon;OR Senate District 7	Oregon;OR Senate District 7
+ReportingUnit	Oregon;OR Senate District 8	Oregon;OR Senate District 8
+ReportingUnit	Oregon;OR Senate District 9	Oregon;OR Senate District 9
+ReportingUnit	Oregon;Polk County	Polk
+ReportingUnit	Oregon;Polk County	fips41053
+ReportingUnit	Oregon;Sherman County	Sherman
+ReportingUnit	Oregon;Sherman County	fips41055
+ReportingUnit	Oregon;Tillamook County	Tillamook
+ReportingUnit	Oregon;Tillamook County	fips41057
 ReportingUnit	Oregon;US House OR District 1	Oregon;US House OR District 1
 ReportingUnit	Oregon;US House OR District 2	Oregon;US House OR District 2
 ReportingUnit	Oregon;US House OR District 3	Oregon;US House OR District 3
 ReportingUnit	Oregon;US House OR District 4	Oregon;US House OR District 4
 ReportingUnit	Oregon;US House OR District 5	Oregon;US House OR District 5
-ReportingUnit	Oregon;Baker County	Baker
-ReportingUnit	Oregon;Benton County	Benton
-ReportingUnit	Oregon;Clackamas County	Clackamas
-ReportingUnit	Oregon;Clatsop County	Clatsop
-ReportingUnit	Oregon;Columbia County	Columbia
-ReportingUnit	Oregon;Coos County	Coos
-ReportingUnit	Oregon;Crook County	Crook
-ReportingUnit	Oregon;Curry County	Curry
-ReportingUnit	Oregon;Deschutes County	Deschutes
-ReportingUnit	Oregon;Douglas County	Douglas
-ReportingUnit	Oregon;Gilliam County	Gilliam
-ReportingUnit	Oregon;Grant County	Grant
-ReportingUnit	Oregon;Harney County	Harney
-ReportingUnit	Oregon;Hood River County	Hood River
-ReportingUnit	Oregon;Jackson County	Jackson
-ReportingUnit	Oregon;Jefferson County	Jefferson
-ReportingUnit	Oregon;Josephine County	Josephine
-ReportingUnit	Oregon;Klamath County	Klamath
-ReportingUnit	Oregon;Lake County	Lake
-ReportingUnit	Oregon;Lane County	Lane
-ReportingUnit	Oregon;Lincoln County	Lincoln
-ReportingUnit	Oregon;Linn County	Linn
-ReportingUnit	Oregon;Malheur County	Malheur
-ReportingUnit	Oregon;Marion County	Marion
-ReportingUnit	Oregon;Morrow County	Morrow
-ReportingUnit	Oregon;Multnomah County	Multnomah
-ReportingUnit	Oregon;Polk County	Polk
-ReportingUnit	Oregon;Sherman County	Sherman
-ReportingUnit	Oregon;Tillamook County	Tillamook
 ReportingUnit	Oregon;Umatilla County	Umatilla
+ReportingUnit	Oregon;Umatilla County	fips41059
 ReportingUnit	Oregon;Union County	Union
+ReportingUnit	Oregon;Union County	fips41061
 ReportingUnit	Oregon;Wallowa County	Wallowa
+ReportingUnit	Oregon;Wallowa County	fips41063
 ReportingUnit	Oregon;Wasco County	Wasco
+ReportingUnit	Oregon;Wasco County	fips41065
 ReportingUnit	Oregon;Washington County	Washington
+ReportingUnit	Oregon;Washington County	fips41067
 ReportingUnit	Oregon;Wheeler County	Wheeler
+ReportingUnit	Oregon;Wheeler County	fips41069
 ReportingUnit	Oregon;Yamhill County	Yamhill
-ReportingUnit	Oregon	Oregon
-Candidate	Joseph R Biden	Joseph R Biden / Kamala D Harris
-Candidate	Jo Jorgensen	Jo Jorgensen / Jeremy (Spike) Cohen
-Candidate	Jo Jorgensen	Jo Jorgensen
-Candidate	Howie Hawkins	Howie Hawkins / Angela Walker
-Candidate	Howie Hawkins	Howie Hawkins
-Candidate	Dario Hunter	Dario Hunter / Dawn Neptune Adams
-Candidate	Dario Hunter	Dario Hunter
-Candidate	Donald J Trump	Donald J Trump / Michael R Pence
-Candidate	Donald J Trump	Donald J Trump
-Candidate	Jeff Merkley	Jeff Merkley
-Candidate	Gary Dye	Gary Dye
-Candidate	Ibrahim A Taher	Ibrahim A Taher
-Candidate	Jo Rae Perkins	Jo Rae Perkins
-Candidate	Alex Spenser	Alex Spenser
-Candidate	Robert Werch	Robert Werch
-Candidate	Cliff Bentz	Cliff Bentz
-Candidate	Shemia Fagan	Shemia Fagan
-Candidate	Kyle Markley	Kyle Markley
-Candidate	Nathalie Paravicini	Nathalie Paravicini
-Candidate	Kim Thatcher	Kim Thatcher
-Candidate	Michael P Marsh	Michael P Marsh
-Candidate	Tobias Read	Tobias Read
-Candidate	Chris Henry	Chris Henry
-Candidate	Jeff Gudman	Jeff Gudman
-Candidate	Ellen Rosenblum	Ellen Rosenblum
-Candidate	Lars D H Hedbor	Lars D H Hedbor
-Candidate	Michael Cross	Michael Cross
-Candidate	Carina M Miller	Carina M Miller
-Candidate	Lynn P Findley	Lynn P Findley
-Candidate	Beth E Spell	Beth E Spell
-Candidate	Mark Owens	Mark Owens
-Candidate	Matt Shirtcliff	Matt Shirtcliff
-Candidate	Travis Ash	Travis Ash
-Candidate	Betty J Milliman	Betty J Milliman
-Candidate	Kerry Mcquisten	Kerry Mcquisten
-Candidate	Johnny Waggoner Sr	Johnny Waggoner Sr
-Candidate	James C Thomas	James C Thomas
-Candidate	Arvid E Andersen	Arvid E Andersen
-Candidate	Shane Alderson	Shane Alderson
-Candidate	Doni Bruland	Doni Bruland
-Candidate	Damon Rose	Damon Rose
-Candidate	Annie Croucher	Annie Croucher
-Candidate	Joanna Dixon	Joanna Dixon
-Candidate	Jason Spriet	Jason Spriet
-Candidate	Gretchen Stadler	Gretchen Stadler
-Candidate	Heather Sells	Heather Sells
-Candidate	Brian Pound	Brian Pound
-Candidate	James H Brown	James H Brown
-Candidate	Dennis Anthony	Dennis Anthony
-Candidate	Ken Bain	Ken Bain
-Candidate	Peter Hall	Peter Hall
-Candidate	No Candidate Filed	No Candidate Filed
-Candidate	Alan J Hanley	Alan J Hanley
-Candidate	Thomas A Trujillo	Thomas A Trujillo
-Candidate	Tony Alexander	Tony Alexander
-Candidate	Wade Boxberger	Wade Boxberger
-Candidate	Kevin Jones	Kevin Jones
-Candidate	Patrick L Lattin	Patrick L Lattin
-Candidate	Faith Powell	Faith Powell
-Candidate	Nancy L Nelson	Nancy L Nelson
-Candidate	Deloris Dennis	Deloris Dennis
-Candidate	Jennifer Lake	Jennifer Lake
-Candidate	Greg Lucas	Greg Lucas
-Candidate	Marsha Demaris	Marsha Demaris
-Candidate	Christopher L Garrett	Christopher L Garrett
-Candidate	Jacqueline S Kamins	Jacqueline S Kamins
-Candidate	Rick Jackson	Rick Jackson
-Candidate	Ronald R Still Jr	Ronald R Still Jr
-Candidate	Deryl Leggett	Deryl Leggett
-Candidate	Tracy Lehman	Tracy Lehman
-Candidate	Joel Rohner	Joel Rohner
-Candidate	Dean Defrees	Dean Defrees
-Candidate	Tim A Kerns	Tim A Kerns
-Candidate	Skyler Martin	Skyler Martin
-Candidate	Peter Defazio	Peter Defazio
-Candidate	Peter Defazio	Peter DeFazio
-Candidate	Daniel Hoffay	Daniel Hoffay
-Candidate	Alek Skarlatos	Alek Skarlatos
-Candidate	Kurt Schrader	Kurt Schrader
-Candidate	Matthew James Rix	Matthew James Rix
-Candidate	Amy Ryan Courser	Amy Ryan Courser
-Candidate	Bernadette Hansen	Bernadette Hansen
-Candidate	Brian J Boquist	Brian J Boquist
-Candidate	Miriam G Cummins	Miriam G Cummins
-Candidate	Shelly Boshart Davis	Shelly Boshart Davis
-Candidate	Dan Rayfield	Dan Rayfield
-Candidate	Jason Hughes	Jason Hughes
-Candidate	Xan Augerot	Xan Augerot
-Candidate	Mike Beilstein	Mike Beilstein
-Candidate	Tom Cordier	Tom Cordier
-Candidate	Nancy V Wyse	Nancy V Wyse
-Candidate	Cody Serdar	Cody Serdar
-Candidate	John E Sarna	John E Sarna
-Candidate	Joan E Demarest	Joan E Demarest
-Candidate	Bill Currier	Bill Currier
-Candidate	Sean K Scorvo	Sean K Scorvo
-Candidate	Scott D Clawson	Scott D Clawson
-Candidate	Alex Polikoff	Alex Polikoff
-Candidate	Mike Nearman	Mike Nearman
-Candidate	Alan W Rowe	Alan W Rowe
-Candidate	Sharon Konopa	Sharon Konopa
-Candidate	Alex Johnson Ii	Alex Johnson Ii
-Candidate	Keith Kolkow	Keith Kolkow
-Candidate	Matilda Novak	Matilda Novak
-Candidate	Sean Knowles	Sean Knowles
-Candidate	Jan Napack	Jan Napack
-Candidate	Charles F Maughan	Charles F Maughan
-Candidate	Hyatt Lytle	Hyatt Lytle
-Candidate	Gabe Shepherd	Gabe Shepherd
-Candidate	Charlyn Ellis	Charlyn Ellis
-Candidate	Laurie J K Chaplen	Laurie J K Chaplen
-Candidate	Paul W Shaffer	Paul W Shaffer
-Candidate	Nic Bowman	Nic Bowman
-Candidate	Ed Junkins	Ed Junkins
-Candidate	Andrew Struthers	Andrew Struthers
-Candidate	Daniel Sheets	Daniel Sheets
-Candidate	Floyd Billings	Floyd Billings
-Candidate	Lisa D Lindner	Lisa D Lindner
-Candidate	Katherine Larkin	Katherine Larkin
-Candidate	Nicholas Ritch	Nicholas Ritch
-Candidate	Clifford Frank Thayer	Clifford Frank Thayer
-Candidate	Doug Edmonds	Doug Edmonds
-Candidate	Chas Jones	Chas Jones
-Candidate	David M Low	David M Low
-Candidate	Ruth Causey	Ruth Causey
-Candidate	Matt Lehman	Matt Lehman
-Candidate	Teresa Nielson	Teresa Nielson
-Candidate	Jason Richards	Jason Richards
-Candidate	Jessica Andrade	Jessica Andrade
-Candidate	Peggy Yoder	Peggy Yoder
-Candidate	Joey Mcglinchy	Joey Mcglinchy
-Candidate	Matthew Thomas	Matthew Thomas
-Candidate	Thomas Sullivan	Thomas Sullivan
-Candidate	Catherine Biscoe	Catherine Biscoe
-Candidate	Lawrence E Johnson	Lawrence E Johnson
-Candidate	Henry Storch	Henry Storch
-Candidate	Faye M Yoshihara	Faye M Yoshihara
-Candidate	Jerry L Paul	Jerry L Paul
-Candidate	Robert Morris	Robert Morris
-Candidate	Eliza Mason	Eliza Mason
-Candidate	Suzanne Bonamici	Suzanne Bonamici
-Candidate	Christopher C Christensen	Christopher C Christensen
-Candidate	Earl Blumenauer	Earl Blumenauer
-Candidate	Josh Solomon	Josh Solomon
-Candidate	Alex C Diblasi	Alex C Diblasi
-Candidate	Alex C Diblasi	Alex C DiBlasi
-Candidate	Joanna Harbour	Joanna Harbour
-Candidate	Write-in	Write-in
-Candidate	Brenda Snow Potter	Brenda Snow Potter
-Candidate	Mike Smith	Mike Smith
-Candidate	Terri Hunt	Terri Hunt
-Candidate	Cindy Burlingame	Cindy Burlingame
-Candidate	Marietta Walker	Marietta Walker
-Candidate	Carol Macinnes	Carol Macinnes
-Candidate	Kenneth Ferguson	Kenneth Ferguson
-Candidate	Steven Tripp	Steven Tripp
-Candidate	Robin Champagne	Robin Champagne
-Candidate	Mark Marcantonio	Mark Marcantonio
-Candidate	Valerie Howell	Valerie Howell
-Candidate	Arlene C Burns	Arlene C Burns
-Candidate	Daniel G Bonham	Daniel G Bonham
-Candidate	Kale Haberman	Kale Haberman
-Candidate	Wayne Lindquist	Wayne Lindquist
-Candidate	Yes	Yes
-Candidate	No	No
-Candidate	Mildred A O'Callaghan	Mildred A O'Callaghan
-Candidate	Bill Hansell	Bill Hansell
-Candidate	Roland Ruhe	Roland Ruhe
-Candidate	Greg Smith	Greg Smith
-Candidate	Lisa Gambee	Lisa Gambee
-Candidate	Lane Magill	Lane Magill
-Candidate	Elijah Preston	Elijah Preston
-Candidate	John Silvertooth-Stewart	John Silvertooth-Stewart
-Candidate	Peggy Sue Tucker	Peggy Sue Tucker
-Candidate	Jeannie Adams	Jeannie Adams
-Candidate	Merle Keys	Merle Keys
-Candidate	Josiah Dean	Josiah Dean
-Candidate	Steven Podvent	Steven Podvent
-Candidate	William Parke	William Parke
-Candidate	Lynn Ewing	Lynn Ewing
-Candidate	Rob Miles	Rob Miles
-Candidate	Tom Troutman	Tom Troutman
-Candidate	Arlene Burns	Arlene Burns
-Candidate	Acasia Berry	Acasia Berry
-Candidate	Ron Wright	Ron Wright
-Candidate	Donald Treanor	Donald Treanor
-Candidate	Michael S Small	Michael S Small
-Candidate	Joseph J Walter	Joseph J Walter
-Candidate	Louie F Mckenzie	Louie F Mckenzie
-Candidate	Lyle H Johnson	Lyle H Johnson
-Candidate	David Lisle	David Lisle
-Candidate	Patty Johnson	Patty Johnson
-Candidate	Rich Mays	Rich Mays
-Candidate	Jason Garrett Gibson	Jason Garrett Gibson
-Candidate	Solea Kabakov	Solea Kabakov
-Candidate	John Willer	John Willer
-Candidate	Darcy Long-Curtiss	Darcy Long-Curtiss
-Candidate	F John Ercole	F John Ercole
-Candidate	Dan Richardson	Dan Richardson
-Candidate	John Grant Iv	John Grant Iv
-Candidate	Rod Runyon	Rod Runyon
-Candidate	Tiffany Prince	Tiffany Prince
-Candidate	Ken Bailey	Ken Bailey
-Candidate	Shawn Sorensen	Shawn Sorensen
-Candidate	William E Hammel	William E Hammel
-Candidate	Marla Skroch	Marla Skroch
-Candidate	Ralph Browning	Ralph Browning
-Candidate	Wendy Shoptaw	Wendy Shoptaw
-Candidate	Roger Howe	Roger Howe
-Candidate	Greg Johnson	Greg Johnson
-Candidate	Wayne Jacobson	Wayne Jacobson
-Candidate	John Amery	John Amery
-Candidate	Bobbi A Childers	Bobbi A Childers
-Candidate	Jim Doherty	Jim Doherty
-Candidate	Joel R Peterson	Joel R Peterson
-Candidate	Glen G Diehl	Glen G Diehl
-Candidate	Theresa Crawford	Theresa Crawford
-Candidate	Kenneth W Matlack	Kenneth W Matlack
-Candidate	Mark Pratt	Mark Pratt
-Candidate	Jaylene Papineau	Jaylene Papineau
-Candidate	Sabrina Bailey Cave	Sabrina Bailey Cave
-Candidate	David Jones	David Jones
-Candidate	Katy Norton	Katy Norton
-Candidate	Jennifer Leighton	Jennifer Leighton
-Candidate	Chandler Schaak	Chandler Schaak
-Candidate	Brenda Profitt	Brenda Profitt
-Candidate	Isaac Alvin Williams	Isaac Alvin Williams
-Candidate	Paul B Beagle	Paul B Beagle
-Candidate	Sandy Toms	Sandy Toms
-Candidate	Jonathan Tallman	Jonathan Tallman
-Candidate	Paul E Keefer	Paul E Keefer
-Candidate	Joanna Lamb	Joanna Lamb
-Candidate	John A Bowles	John A Bowles
-Candidate	Corey Sweeney	Corey Sweeney
-Candidate	Jim Kindle	Jim Kindle
-Candidate	Chris Cave	Chris Cave
-Candidate	Mark E Patton	Mark E Patton
-Candidate	Rod Taylor	Rod Taylor
-Candidate	Daren C Strong	Daren C Strong
-Candidate	Marlina Avila Serratos	Marlina Avila Serratos
-Candidate	Wesley (Alan) Carnahan	Wesley (Alan) Carnahan
-Candidate	Juli A Kennedy	Juli A Kennedy
-Candidate	Wilbur (Bill) Beard	Wilbur (Bill) Beard
-Candidate	Will J Lemmon	Will J Lemmon
-Candidate	Curtis Thompson	Curtis Thompson
-Candidate	Duane Neiffer	Duane Neiffer
-Candidate	Barney Lindsay	Barney Lindsay
-Candidate	Melissa T Cribbins	Melissa T Cribbins
-Candidate	Shauleen Higgins	Shauleen Higgins
-Candidate	Dick Anderson	Dick Anderson
-Candidate	David Gomberg	David Gomberg
-Candidate	Max Sherman	Max Sherman
-Candidate	Tassi (Mills) O'Neil	Tassi (Mills) O'Neil
-Candidate	Josh Brown	Josh Brown
-Candidate	Gordon A Mccraw	Gordon A Mccraw
-Candidate	Garrett Noffsinger	Garrett Noffsinger
-Candidate	Brian Reynolds	Brian Reynolds
-Candidate	Liane Welch	Liane Welch
-Candidate	Tom Imhoff	Tom Imhoff
-Candidate	Melissa Rondeau	Melissa Rondeau
-Candidate	Debbie Boothe-Schmidt	Debbie Boothe-Schmidt
-Candidate	Suzanne Weber	Suzanne Weber
-Candidate	David Mccall	David Mccall
-Candidate	Katie Findling	Katie Findling
-Candidate	Judy Riggs	Judy Riggs
-Candidate	Paul Daniels	Paul Daniels
-Candidate	Norm 'Bud' Shattuck Jr	Norm 'Bud' Shattuck Jr
-Candidate	G Whitey Forsman	G Whitey Forsman
-Candidate	Tim Hall	Tim Hall
-Candidate	Hans Tonjes	Hans Tonjes
-Candidate	Thomas D Aschenbrener	Thomas D Aschenbrener
-Candidate	Randy Kugler	Randy Kugler
-Candidate	Jerry Spegman	Jerry Spegman
-Candidate	Scott T Galvin	Scott T Galvin
-Candidate	Mike Scott	Mike Scott
-Candidate	Stacy Jacobsen	Stacy Jacobsen
-Candidate	Jim Welsh	Jim Welsh
-Candidate	Phil Chick	Phil Chick
-Candidate	Bill L Dillard Jr	Bill L Dillard Jr
-Candidate	Nathan R Beeman	Nathan R Beeman
-Candidate	Keith Cantrell	Keith Cantrell
-Candidate	Tom Martine	Tom Martine
-Candidate	Kristine Hayes	Kristine Hayes
-Candidate	Geoffrey Grace	Geoffrey Grace
-Candidate	Zandra Umholtz	Zandra Umholtz
-Candidate	Penelope (Penny) Cheek	Penelope (Penny) Cheek
-Candidate	Susan (Sue) Wilson	Susan (Sue) Wilson
-Candidate	Gordon Taylor	Gordon Taylor
-Candidate	Dave Bell	Dave Bell
-Candidate	Michael Glowa	Michael Glowa
-Candidate	John Lawrence	John Lawrence
-Candidate	Doug Honeycutt	Doug Honeycutt
-Candidate	Heidi Stacks	Heidi Stacks
-Candidate	Larry Zweifel	Larry Zweifel
-Candidate	Dave Seals	Dave Seals
-Candidate	Greg Woods	Greg Woods
-Candidate	William (Bill) Hagerty	William (Bill) Hagerty
-Candidate	Jordan Wolfe	Jordan Wolfe
-Candidate	Randy Foshee	Randy Foshee
-Candidate	Harry E Hewitt	Harry E Hewitt
-Candidate	Cheryl Davy	Cheryl Davy
-Candidate	Maile Samek	Maile Samek
-Candidate	Doug Olson	Doug Olson
-Party	Democratic and Independent Parties (cross-listed)	DEMOCRAT, INDEPENDENT
-Party	Republican, Independent and Libertarian Parties (cross-listed)	REPUBLICAN, INDEPENDENT, LIBERTARIAN
-Candidate	Hugh Palcic	Hugh Palcic
-Candidate	Dennis Linthicum	Dennis Linthicum
-Candidate	Faith N Leith	Faith N Leith
-Candidate	E Werner Reschke	E Werner Reschke
-Candidate	Stacie Geaney	Stacie Geaney
-Candidate	Barbara Fontaine	Barbara Fontaine
-Candidate	Vikki Breese-Iverson	Vikki Breese-Iverson
-Candidate	Ann Crumrine	Ann Crumrine
-Candidate	Krissy L Funk	Krissy L Funk
-Candidate	Ralph Paull	Ralph Paull
-Candidate	Ruth E Robinson	Ruth E Robinson
-Candidate	Ray Turner	Ray Turner
-Candidate	Darwin Johnson Jr	Darwin Johnson Jr
-Candidate	Sandra Wenzel	Sandra Wenzel
-Candidate	Shannon Theall	Shannon Theall
-Candidate	Gerald 'Jay' Farmen	Gerald 'Jay' Farmen
-Candidate	Leon Baker	Leon Baker
-Candidate	Scott Duffner	Scott Duffner
-Candidate	Chaylon Shuffield	Chaylon Shuffield
-Candidate	Keith Barnhart	Keith Barnhart
-Candidate	Joan Bird	Joan Bird
-Candidate	Kristi Brown	Kristi Brown
-Candidate	Brad Lohrey	Brad Lohrey
-Candidate	Ron Mcdermid	Ron Mcdermid
-Candidate	Deanna Christiansen	Deanna Christiansen
-Candidate	Neil Pattee	Neil Pattee
-Candidate	Ree Ella Von Borstel	Ree Ella Von Borstel
-Candidate	Meinrad Kuettel	Meinrad Kuettel
-Candidate	Bonne Whitley	Bonne Whitley
-Candidate	Bert Perisho	Bert Perisho
-Candidate	James Alley	James Alley
-Candidate	Andy Anderson	Andy Anderson
-Candidate	Dowen Jones	Dowen Jones
-Candidate	Sue Jensen	Sue Jensen
-Candidate	Scott Holliday	Scott Holliday
-Candidate	Beth Mccurdy	Beth Mccurdy
-Candidate	Eileen Wainwright	Eileen Wainwright
-Candidate	Ken Degrange	Ken Degrange
-Candidate	Bill Minter	Bill Minter
-Candidate	David Bergmann	David Bergmann
-Candidate	Micheal Egbert	Micheal Egbert
-Candidate	Steven Wyatt	Steven Wyatt
-Candidate	Nick Von Borstel	Nick Von Borstel
-Candidate	Clint Moore	Clint Moore
-Candidate	Paul R Holvey	Paul R Holvey
-Candidate	Martha A Sherwood	Martha A Sherwood
-Candidate	Timothy W Aldal	Timothy W Aldal
-Candidate	Jerry M Samaniego	Jerry M Samaniego
-Candidate	Cedric Hayden	Cedric Hayden
-Candidate	Marty Wilde	Marty Wilde
-Candidate	Katie Boshart Glaser	Katie Boshart Glaser
-Candidate	Cal Mukumoto	Cal Mukumoto
-Candidate	Boomer Wright	Boomer Wright
-Candidate	John Lively	John Lively
-Candidate	Ruth E Linoz	Ruth E Linoz
-Candidate	Nancy Nathanson	Nancy Nathanson
-Candidate	David J Smith	David J Smith
-Candidate	Julie Fahey	Julie Fahey
-Candidate	Rich Cunningham	Rich Cunningham
-Candidate	Amit Kapoor	Amit Kapoor
-Candidate	Kamala Shugar	Kamala Shugar
-Candidate	Clifton G Harrold	Clifton G Harrold
-Candidate	Joel Iboa	Joel Iboa
-Candidate	Laurie Trieger	Laurie Trieger
-Candidate	Pat Farr	Pat Farr
-Candidate	Ray Smith	Ray Smith
-Candidate	John Fox	John Fox
-Candidate	Nancy Bell	Nancy Bell
-Candidate	Ivan Delsol	Ivan Delsol
-Candidate	Jeff Gowing	Jeff Gowing
-Candidate	Jon Stinnett	Jon Stinnett
-Candidate	Greg Ervin	Greg Ervin
-Candidate	Chalice Mp Savage	Chalice Mp Savage
-Candidate	Kenneth Michael Roberts	Kenneth Michael Roberts
-Candidate	Amy Knudsen	Amy Knudsen
-Candidate	Kevin Prociw	Kevin Prociw
-Candidate	Shelly Clark	Shelly Clark
-Candidate	Jeri Hutchinson	Jeri Hutchinson
-Candidate	Joe Medina	Joe Medina
-Candidate	Normajean Osborn	Normajean Osborn
-Candidate	Robert Forsythe	Robert Forsythe
-Candidate	Rory Hammond	Rory Hammond
-Candidate	Tom Mallen	Tom Mallen
-Candidate	Robert Orr	Robert Orr
-Candidate	Lucy Vinis	Lucy Vinis
-Candidate	Eliza Kashinsky	Eliza Kashinsky
-Candidate	Emily Semple	Emily Semple
-Candidate	Matthew K Keating	Matthew K Keating
-Candidate	Claire Syrett	Claire Syrett
-Candidate	Randy Groves	Randy Groves
-Candidate	Jo Beaudreau	Jo Beaudreau
-Candidate	Joe Henry	Joe Henry
-Candidate	Sally Wantz	Sally Wantz
-Candidate	Maggie Bagon	Maggie Bagon
-Candidate	Bill Meyer	Bill Meyer
-Candidate	Beverly Ficek	Beverly Ficek
-Candidate	Karen Leach	Karen Leach
-Candidate	Joshua Guth	Joshua Guth
-Candidate	Darin Olson	Darin Olson
-Candidate	Sidney Washburne	Sidney Washburne
-Candidate	Ken Wells	Ken Wells
-Candidate	John Gambee	John Gambee
-Candidate	Bill Dimarco	Bill Dimarco
-Candidate	Robert Stott	Robert Stott
-Candidate	John A Myers	John A Myers
-Candidate	Samantha (Sam) Dragt	Samantha (Sam) Dragt
-Candidate	Tim Stratis	Tim Stratis
-Candidate	Gail Harris	Gail Harris
-Candidate	Donald Grant	Donald Grant
-Candidate	Larry Sweet	Larry Sweet
-Candidate	Michelle Coker	Michelle Coker
-Candidate	Dawn Kinyon	Dawn Kinyon
-Candidate	John Mcclelland	John Mcclelland
-Candidate	Loren Hogue	Loren Hogue
-Candidate	Melissa Bjarnson	Melissa Bjarnson
-Candidate	Gary R Carl	Gary R Carl
-Candidate	Audy R Spliethof	Audy R Spliethof
-Candidate	Kori Rodley	Kori Rodley
-Candidate	Johanis Tadeo	Johanis Tadeo
-Candidate	Keith A Weiss	Keith A Weiss
-Candidate	Anthony (Pat) Coy	Anthony (Pat) Coy
-Candidate	Maureen Wright	Maureen Wright
-Candidate	Melody Cornelius	Melody Cornelius
-Candidate	Randy Stark	Randy Stark
-Candidate	Edward Johnstone	Edward Johnstone
-Candidate	Matt Mcrae	Matt Mcrae
-Candidate	John Barofsky	John Barofsky
-Candidate	Sonya Carlson	Sonya Carlson
-Candidate	David C Willis	David C Willis
-Candidate	Robert C Scherer	Robert C Scherer
-Candidate	Mark A Molina	Mark A Molina
-Candidate	Liz Vanleeuwen	Liz Vanleeuwen
-Candidate	Kreston J Koziuk	Kreston J Koziuk
-Candidate	Steve Kendall	Steve Kendall
-Candidate	Kevin Carroll	Kevin Carroll
-Candidate	Richard D Huff	Richard D Huff
-Candidate	Chuck Arrera	Chuck Arrera
-Candidate	Ralph Perkins	Ralph Perkins
-Candidate	Curt Abbott	Curt Abbott
-Candidate	Dale A Dawson	Dale A Dawson
-Candidate	Judy Matheny	Judy Matheny
-Candidate	Ron Davis	Ron Davis
-Candidate	Brian E Parker	Brian E Parker
-Candidate	Charles Kimball	Charles Kimball
-Candidate	Wendy Rohner	Wendy Rohner
-Candidate	Mary E Kauffman	Mary E Kauffman
-Candidate	Kim Schmith	Kim Schmith
-Candidate	Wayne Fording	Wayne Fording
-Candidate	Brandie D Mcnamee	Brandie D Mcnamee
-Candidate	Richard Ladeby	Richard Ladeby
-Candidate	Gary Walker	Gary Walker
-Candidate	Austin Throop	Austin Throop
-Candidate	Mathew Birchard	Mathew Birchard
-Candidate	Jennifer Holcomb	Jennifer Holcomb
-Candidate	Patty Wyler	Patty Wyler
-Candidate	Carl Elliott	Carl Elliott
-Candidate	Kelly Clowers	Kelly Clowers
-Candidate	Lloyd Trent	Lloyd Trent
-Candidate	Jake Schwab	Jake Schwab
-Candidate	Nancy L Diaz	Nancy L Diaz
-Candidate	Bart Carpenter	Bart Carpenter
-Candidate	Gretchen Schlie	Gretchen Schlie
-Candidate	Steve Mccall	Steve Mccall
-Candidate	Scott M Samsel	Scott M Samsel
-Candidate	Sean N Vibbert	Sean N Vibbert
-Candidate	John W Gautney	John W Gautney
-Candidate	Rodney Jason Beebe	Rodney Jason Beebe
-Candidate	Raymond Law	Raymond Law
-Candidate	Gail Merritt	Gail Merritt
-Candidate	Stephen Uffelman	Stephen Uffelman
-Candidate	Gary Bedortha	Gary Bedortha
-Candidate	William Sigman	William Sigman
-Candidate	Jenefer S Grant	Jenefer S Grant
-Candidate	Michael T Clarke	Michael T Clarke
-Candidate	Margaret C Magruder	Margaret C Magruder
-Candidate	Brandee A Dudzic	Brandee A Dudzic
-Candidate	Alex Tardif	Alex Tardif
-Candidate	Casey Garrett	Casey Garrett
-Candidate	Mary Ann Guess	Mary Ann Guess
-Candidate	Bruce W Jolma	Bruce W Jolma
-Candidate	Gary B Jones	Gary B Jones
-Candidate	Bruce P Holsey	Bruce P Holsey
-Candidate	Bob Brajcich	Bob Brajcich
-Candidate	Lyle Bluhm	Lyle Bluhm
-Candidate	Katrina Claridge	Katrina Claridge
-Candidate	Frank E Hupp	Frank E Hupp
-Candidate	Jeff Reinan	Jeff Reinan
-Candidate	Brad Witt	Brad Witt
-Candidate	Brian G Stout	Brian G Stout
-Candidate	Vickey Romph	Vickey Romph
-Candidate	Michael R Von Pinnon	Michael R Von Pinnon
-Candidate	Larry Hudnall	Larry Hudnall
-Candidate	Howard Allen	Howard Allen
-Candidate	Paulette Ashline	Paulette Ashline
-Candidate	Keli D Von Pinnon	Keli D Von Pinnon
-Candidate	Michael Kreger	Michael Kreger
-Candidate	Jerry Cole	Jerry Cole
-Candidate	Megan Greisen	Megan Greisen
-Candidate	Peter Mc Hugh	Peter Mc Hugh
-Candidate	Jeannet Santiago	Jeannet Santiago
-Candidate	Peter Williamson	Peter Williamson
-Candidate	Marty Baldwin	Marty Baldwin
-Candidate	Tyler Miller	Tyler Miller
-Candidate	Scott Burge	Scott Burge
-Candidate	Patrick Birkle	Patrick Birkle
-Candidate	Mark R Gundersen	Mark R Gundersen
-Candidate	Ginny Carlson	Ginny Carlson
-Candidate	Jessica Chilton	Jessica Chilton
-Candidate	Rick Scholl	Rick Scholl
-Candidate	Susan Wagner	Susan Wagner
-Candidate	Bruce Mc Nair	Bruce Mc Nair
-Candidate	Lorna Poetter	Lorna Poetter
-Candidate	Grant Williams	Grant Williams
-Candidate	Rick Hobart	Rick Hobart
-Candidate	Bill Eagle	Bill Eagle
-Candidate	Jason C Busch	Jason C Busch
-Candidate	David L Freytag	David L Freytag
-Candidate	Bob Wiggins	Bob Wiggins
-Candidate	Merle Gillespie	Merle Gillespie
-Candidate	Jeannie M Mustola	Jeannie M Mustola
-Candidate	Stephen D Petersen	Stephen D Petersen
-Candidate	Garratt M Tayler	Garratt M Tayler
-Candidate	Jake Carter	Jake Carter
-Candidate	Caleb Hamnes	Caleb Hamnes
-Candidate	Hans Feige	Hans Feige
-Candidate	Mike Witzel	Mike Witzel
-Candidate	Vincent Defazio	Vincent Defazio
-Candidate	Weston Miller	Weston Miller
-Candidate	Kimberly Peterson	Kimberly Peterson
-Candidate	Jane Hartline	Jane Hartline
-Candidate	George Sowder	George Sowder
-Candidate	Marcia Buckley	Marcia Buckley
-Candidate	Amanda Benjamin	Amanda Benjamin
-Candidate	Lanee Danforth	Lanee Danforth
-Candidate	Claire Hall	Claire Hall
-Candidate	Joe Hitselberger	Joe Hitselberger
-Candidate	Curtis Landers	Curtis Landers
-Candidate	Jerome Grant	Jerome Grant
-Candidate	Kathy M Short	Kathy M Short
-Candidate	Autumn J Watson	Autumn J Watson
-Candidate	Lindsy Bedingfield	Lindsy Bedingfield
-Candidate	Joyce King	Joyce King
-Candidate	Fran Recht	Fran Recht
-Candidate	Roman Smolcic	Roman Smolcic
-Candidate	Diana Hinton	Diana Hinton
-Candidate	Riley Hoagland	Riley Hoagland
-Candidate	Carolyn Nguyen	Carolyn Nguyen
-Candidate	Anne Marie Skinner	Anne Marie Skinner
-Candidate	Judy Casper	Judy Casper
-Candidate	Sandy Roumagoux	Sandy Roumagoux
-Candidate	Dean H Sawyer	Dean H Sawyer
-Candidate	Dietmar Goebel	Dietmar Goebel
-Candidate	Beatriz Botello	Beatriz Botello
-Candidate	Cynthia Jacobi	Cynthia Jacobi
-Candidate	Ryan Perry	Ryan Perry
-Candidate	Will Worman	Will Worman
-Candidate	Tim Shank	Tim Shank
-Candidate	Susan Trachsel	Susan Trachsel
-Candidate	Rod Cross	Rod Cross
-Candidate	Jackie Kauffman	Jackie Kauffman
-Candidate	Josh Smith	Josh Smith
-Candidate	Stu Strom	Stu Strom
-Candidate	Todd Michels	Todd Michels
-Candidate	Karun Virtue	Karun Virtue
-Candidate	Greg L Holland	Greg L Holland
-Candidate	Greg Dunn	Greg Dunn
-Candidate	Rick Booth	Rick Booth
-Candidate	Heide Lambert	Heide Lambert
-Candidate	Jayme Morris	Jayme Morris
-Candidate	Jerry Townsend	Jerry Townsend
-Candidate	Leslie Vaaler	Leslie Vaaler
-Candidate	W John Moore	W John Moore
-Candidate	Max E Glenn	Max E Glenn
-Candidate	James Tooke	James Tooke
-Candidate	Dawn Keller	Dawn Keller
-Candidate	Greg Scott	Greg Scott
-Candidate	Ann Stott	Ann Stott
-Candidate	Roxie Cuellar	Roxie Cuellar
-Candidate	Andy Bacigalupo	Andy Bacigalupo
-Candidate	Frank Sherkow	Frank Sherkow
-Candidate	Nolan E Bylenga	Nolan E Bylenga
-Candidate	Bobby Levy	Bobby Levy
-Candidate	Hollyjo Beers	Hollyjo Beers
-Candidate	Dan Dorran	Dan Dorran
-Candidate	Terry L Rowan	Terry L Rowan
-Candidate	John Thompson	John Thompson
-Candidate	Graham Alderson	Graham Alderson
-Candidate	Rebecca Schroeder	Rebecca Schroeder
-Candidate	Sally Thompson	Sally Thompson
-Candidate	R E Gene Wright	R E Gene Wright
-Candidate	Jesse Bonifer	Jesse Bonifer
-Candidate	Douglas Harral	Douglas Harral
-Candidate	Chad Ray	Chad Ray
-Candidate	Jeannie Hampton	Jeannie Hampton
-Candidate	Richard Thew	Richard Thew
-Candidate	Jessica Holben	Jessica Holben
-Candidate	Tammie Williams	Tammie Williams
-Candidate	Doug Primmer	Doug Primmer
-Candidate	Rod S Hardin	Rod S Hardin
-Candidate	David Patrick Mccarthy	David Patrick Mccarthy
-Candidate	Nancy R Peterson	Nancy R Peterson
-Candidate	Maria E Duron	Maria E Duron
-Candidate	Lewis S Key	Lewis S Key
-Candidate	Verl D Pressnall	Verl D Pressnall
-Candidate	Bradley J Humbert	Bradley J Humbert
-Candidate	Jose Garcia	Jose Garcia
-Candidate	Raymond Doherty	Raymond Doherty
-Candidate	Jackie Carey	Jackie Carey
-Candidate	Tom Mccann	Tom Mccann
-Candidate	Ralph E Parrish Jr	Ralph E Parrish Jr
-Candidate	Don Tyrrell	Don Tyrrell
-Candidate	Susan Whelan	Susan Whelan
-Candidate	Clint Barber	Clint Barber
-Candidate	Tommy J Mentzer	Tommy J Mentzer
-Candidate	David G Durfey	David G Durfey
-Candidate	Daren Dufloth	Daren Dufloth
-Candidate	Devon J Mitchell	Devon J Mitchell
-Candidate	Ashley Wheeler	Ashley Wheeler
-Candidate	Isis M Ilias	Isis M Ilias
-Candidate	Roak D Teneyck	Roak D Teneyck
-Candidate	Ivan E Gutierrez	Ivan E Gutierrez
-Candidate	Duane R Thul	Duane R Thul
-Candidate	Dan Mclind	Dan Mclind
-Candidate	Michael G Dowd	Michael G Dowd
-Candidate	Shannon Hoehna	Shannon Hoehna
-Candidate	James Williams	James Williams
-Candidate	Thomas E Straughan	Thomas E Straughan
-Candidate	Berkeley F Davis	Berkeley F Davis
-Candidate	Jacob Hales	Jacob Hales
-Candidate	Andrea L Mann	Andrea L Mann
-Candidate	Eileen Kiely	Eileen Kiely
-Candidate	Tim Knopp	Tim Knopp
-Candidate	Emerson Levy	Emerson Levy
-Candidate	Jack Zika	Jack Zika
-Candidate	Jason Kropf	Jason Kropf
-Candidate	Cheri Helt	Cheri Helt
-Candidate	Alycia N Sykora	Alycia N Sykora
-Candidate	Phil Chang	Phil Chang
-Candidate	Phil Henderson	Phil Henderson
-Candidate	L Shane Nelson	L Shane Nelson
-Candidate	Scott Schaier	Scott Schaier
-Candidate	Greg Munn	Greg Munn
-Candidate	Justin Livingston	Justin Livingston
-Candidate	Melanie Kebler	Melanie Kebler
-Candidate	Anthony Broadman	Anthony Broadman
-Candidate	August Paul Johnson	August Paul Johnson
-Candidate	Chris Piper	Chris Piper
-Candidate	Megan Perkins	Megan Perkins
-Candidate	Ron Boozell (Rondo)	Ron Boozell (Rondo)
-Candidate	Rita Schenkelberg	Rita Schenkelberg
-Candidate	Anon (Bubba) Walters	Anon (Bubba) Walters
-Candidate	Michael R Hughes	Michael R Hughes
-Candidate	Cathi R Vandamme	Cathi R Vandamme
-Candidate	Alisha Powell	Alisha Powell
-Candidate	D Scott Henderson	D Scott Henderson
-Candidate	Daniel Richer	Daniel Richer
-Candidate	Camden King	Camden King
-Candidate	Albert Calderon	Albert Calderon
-Candidate	Don Crouch	Don Crouch
-Candidate	Clifford B Evelyn Sr	Clifford B Evelyn Sr
-Candidate	Ed Fitch	Ed Fitch
-Candidate	Michael A Kusinska	Michael A Kusinska
-Candidate	Ronald H Osmundson	Ronald H Osmundson
-Candidate	David Wegener	David Wegener
-Candidate	Shannon Wedding	Shannon Wedding
-Candidate	George Endicott	George Endicott
-Candidate	Charles Baer	Charles Baer
-Candidate	Tanner Robertson	Tanner Robertson
-Candidate	Andrea L Blum	Andrea L Blum
-Candidate	Susan G Cobb	Susan G Cobb
-Candidate	Gary P Ross	Gary P Ross
-Candidate	Jennifer Letz	Jennifer Letz
-Candidate	Elizabeth Fisher	Elizabeth Fisher
-Candidate	Robin Vora	Robin Vora
-Candidate	William Kuhn	William Kuhn
-Candidate	Jeff Rola	Jeff Rola
-Candidate	Kate Lieber	Kate Lieber
-Candidate	Harmony K Mulkey	Harmony K Mulkey
-Candidate	Ginny Burdick	Ginny Burdick
-Candidate	Lynnette Shaw	Lynnette Shaw
-Candidate	Ron Noble	Ron Noble
-Candidate	Courtney Neron	Courtney Neron
-Candidate	Tim E Nelson	Tim E Nelson
-Candidate	Peggy Stevens	Peggy Stevens
-Candidate	Wlnsvey E Campos	Wlnsvey E Campos
-Candidate	Daniel R Martin	Daniel R Martin
-Candidate	Sheri Schouten	Sheri Schouten
-Candidate	Sandra Nelson	Sandra Nelson
-Candidate	Susan Mclain	Susan Mclain
-Candidate	Dale Fishback	Dale Fishback
-Candidate	Janeen Sollman	Janeen Sollman
-Candidate	Ramiro Navarro Jr	Ramiro Navarro Jr
-Candidate	Bill Post	Bill Post
-Candidate	Maxine E Dexter	Maxine E Dexter
-Candidate	Dick Courter	Dick Courter
-Candidate	Ken Helm	Ken Helm
-Candidate	Dacia Grayber	Dacia Grayber
-Candidate	Bob Niemeyer	Bob Niemeyer
-Candidate	Rachel Prusak	Rachel Prusak
-Candidate	Kelly Sloop	Kelly Sloop
-Candidate	Kelly D Lemarr	Kelly D Lemarr
-Candidate	Brandon M Thompson	Brandon M Thompson
-Candidate	Jeffrey Hindley	Jeffrey Hindley
-Candidate	Nafisa Fai	Nafisa Fai
-Candidate	Stephanie Jones	Stephanie Jones
-Candidate	Jonathon Boyer	Jonathon Boyer
-Candidate	Jeff Thompson	Jeff Thompson
-Candidate	Peter Edison	Peter Edison
-Candidate	Mike Rainey	Mike Rainey
-Candidate	Denny Doyle	Denny Doyle
-Candidate	Lacey Beaty	Lacey Beaty
-Candidate	Mark Fagin	Mark Fagin
-Candidate	Allison Tivnon	Allison Tivnon
-Candidate	Nadia S Hasan	Nadia S Hasan
-Candidate	Douglas Jones	Douglas Jones
-Candidate	Patrick (Pat) Wolcott	Patrick (Pat) Wolcott
-Candidate	Jeffrey Dalin	Jeffrey Dalin
-Candidate	Angeles Godinez-Valencia	Angeles Godinez-Valencia
-Candidate	Doris Gonzalez Gomez	Doris Gonzalez Gomez
-Candidate	Sujey Hernandez-Lopez	Sujey Hernandez-Lopez
-Candidate	Chuck Van Meter	Chuck Van Meter
-Candidate	Leslie J Gifford	Leslie J Gifford
-Candidate	Keith Jehnke	Keith Jehnke
-Candidate	Elena Uhing	Elena Uhing
-Candidate	Timothy Rippe	Timothy Rippe
-Candidate	Adolph (Val) Valfre	Adolph (Val) Valfre
-Candidate	Donald D Giannetti	Donald D Giannetti
-Candidate	Donna J Gustafson	Donna J Gustafson
-Candidate	Don Richter	Don Richter
-Candidate	David Benson	David Benson
-Candidate	William Martin	William Martin
-Candidate	Steve Callaway	Steve Callaway
-Candidate	Rick Van Beveren	Rick Van Beveren
-Candidate	Anthony Martin	Anthony Martin
-Candidate	Kimberly Culbertson	Kimberly Culbertson
-Candidate	Thomas Flaherty	Thomas Flaherty
-Candidate	Alexander Flores	Alexander Flores
-Candidate	John Kinsky	John Kinsky
-Candidate	Katherine Rhee	Katherine Rhee
-Candidate	Gina Roletto	Gina Roletto
-Candidate	Gretchen E Buehner	Gretchen E Buehner
-Candidate	Smart Ocholi	Smart Ocholi
-Candidate	Shawna Thompson	Shawna Thompson
-Candidate	Kate Mohr	Kate Mohr
-Candidate	Joe Buck	Joe Buck
-Candidate	Theresa M Kohlhoff	Theresa M Kohlhoff
-Candidate	John Lamotte	John Lamotte
-Candidate	Emma Burke	Emma Burke
-Candidate	Melissa Fireside	Melissa Fireside
-Candidate	Massene Mboup	Massene Mboup
-Candidate	Aaron Rapf	Aaron Rapf
-Candidate	Rachel Verdick	Rachel Verdick
-Candidate	Teri Lenahan	Teri Lenahan
-Candidate	Robert (Butch) Kindel	Robert (Butch) Kindel
-Candidate	Cameron Martinez	Cameron Martinez
-Candidate	Russ Sheldon	Russ Sheldon
-Candidate	Sarah Iannarone	Sarah Iannarone
-Candidate	Ted Wheeler	Ted Wheeler
-Candidate	Mingus Mapps	Mingus Mapps
-Candidate	Chloe Eudaly	Chloe Eudaly
-Candidate	Bill Tuttle	Bill Tuttle
-Candidate	Brenda Ruble	Brenda Ruble
-Candidate	Susie Lahsene	Susie Lahsene
-Candidate	Chris Barhyte	Chris Barhyte
-Candidate	Kim Young	Kim Young
-Candidate	Sean Garland	Sean Garland
-Candidate	Renee E Brouse	Renee E Brouse
-Candidate	Taylor Giles	Taylor Giles
-Candidate	Josie Dayton	Josie Dayton
-Candidate	Keith Mays	Keith Mays
-Candidate	Ben Edtl	Ben Edtl
-Candidate	Ethan E Erickson	Ethan E Erickson
-Candidate	David (Jerry) Hahn	David (Jerry) Hahn
-Candidate	Heidi Lueb	Heidi Lueb
-Candidate	Jeanette Shaw	Jeanette Shaw
-Candidate	Marc T Woodard	Marc T Woodard
-Candidate	Kevin Christian Wright	Kevin Christian Wright
-Candidate	Christen Sacco	Christen Sacco
-Candidate	Cyndy Hillier	Cyndy Hillier
-Candidate	Alex Thurber	Alex Thurber
-Candidate	Valerie Pratt	Valerie Pratt
-Candidate	Julie Fitzgerald	Julie Fitzgerald
-Candidate	Ben West	Ben West
-Candidate	Kristin Akervall	Kristin Akervall
-Candidate	John Budiao	John Budiao
-Candidate	Imran Haider	Imran Haider
-Candidate	Joann Linville	Joann Linville
-Candidate	Steven Vangrunsven	Steven Vangrunsven
-Candidate	Kieran Sikdar	Kieran Sikdar
-Candidate	Dean P Moberg	Dean P Moberg
-Candidate	Casey Storey	Casey Storey
-Candidate	Jerry Ward	Jerry Ward
-Candidate	Eldon Jossi	Eldon Jossi
-Candidate	Anna K Jesse	Anna K Jesse
-Candidate	Tom Anderson	Tom Anderson
-Candidate	Gerritt Rosenthal	Gerritt Rosenthal
-Candidate	Mary Nolan	Mary Nolan
-Candidate	Chris Smith	Chris Smith
-Party	Democratic, Working Families and Republican Parties (cross-listed)	DEMOCRAT, WORKING FAMILIES, REPUBLICAN
-Candidate	Jim Hinsvark	Jim Hinsvark
-Candidate	Patrick Marnell	Patrick Marnell
-Candidate	Fred Frank Girod	Fred Frank Girod
-Candidate	Paige Hook	Paige Hook
-Candidate	Timothy L Dehne	Timothy L Dehne
-Candidate	Jami Cate	Jami Cate
-Candidate	Roger Nyquist	Roger Nyquist
-Candidate	Scott Bruslind	Scott Bruslind
-Candidate	Gary Sullivan	Gary Sullivan
-Candidate	Christopher Wade	Christopher Wade
-Candidate	Sherrie Sprenger	Sherrie Sprenger
-Candidate	Brendan J Kane	Brendan J Kane
-Candidate	Michelle K Hawkins	Michelle K Hawkins
-Candidate	Ray Kopczynski	Ray Kopczynski
-Candidate	Amanda L Dant	Amanda L Dant
-Candidate	Marilyn Smith	Marilyn Smith
-Candidate	Jessi Brenneman	Jessi Brenneman
-Candidate	Adam R Craven	Adam R Craven
-Candidate	Michael M Humphreys	Michael M Humphreys
-Candidate	Carla Gerber	Carla Gerber
-Candidate	Jerry Lachenbruch	Jerry Lachenbruch
-Candidate	Rella Johnson	Rella Johnson
-Candidate	Lee Skinner	Lee Skinner
-Candidate	Robert (Bobby) Duncan	Robert (Bobby) Duncan
-Candidate	Robert Boese	Robert Boese
-Candidate	Mike Caughey	Mike Caughey
-Candidate	Randy Klemm	Randy Klemm
-Candidate	Paul Aziz	Paul Aziz
-Candidate	Wayne Dykstra	Wayne Dykstra
-Candidate	Zach Beck	Zach Beck
-Candidate	Rebecca Grizzle	Rebecca Grizzle
-Candidate	Jason Bolen	Jason Bolen
-Candidate	Lloyd R Valentine Jr	Lloyd R Valentine Jr
-Candidate	Michael (Mike) A Wagner	Michael (Mike) A Wagner
-Candidate	Diane Hyde	Diane Hyde
-Candidate	Scott Mcphee	Scott Mcphee
-Candidate	Dave Harms	Dave Harms
-Candidate	John Sullivan	John Sullivan
-Candidate	Gary (Chadd) Weaver	Gary (Chadd) Weaver
-Candidate	Tom Meyer	Tom Meyer
-Candidate	Joey Ferguson	Joey Ferguson
-Candidate	Karen Eckhart	Karen Eckhart
-Candidate	Lori L Mcallen	Lori L Mcallen
-Candidate	Adina K Olivares	Adina K Olivares
-Candidate	Jeffery E Hensley	Jeffery E Hensley
-Candidate	Anthony K Morelos	Anthony K Morelos
-Candidate	James Goble	James Goble
-Candidate	Lisa Gourley	Lisa Gourley
-Candidate	Cortney Nash	Cortney Nash
-Candidate	Dave Trask	Dave Trask
-Candidate	Angelita N Sanchez	Angelita N Sanchez
-Candidate	Theo White	Theo White
-Candidate	Dylan Richards	Dylan Richards
-Candidate	George S Yeager	George S Yeager
-Candidate	David Lowman	David Lowman
-Candidate	Loel E Trulove Jr	Loel E Trulove Jr
-Candidate	David Kingsberry	David Kingsberry
-Candidate	Carol Korn-Shioshi	Carol Korn-Shioshi
-Candidate	Justin Cary	Justin Cary
-Candidate	Kevin Faulk	Kevin Faulk
-Candidate	Allen Shearer	Allen Shearer
-Candidate	Adam J Beskow	Adam J Beskow
-Candidate	Susie Foster	Susie Foster
-Candidate	Jerry Marr	Jerry Marr
-Candidate	Ronald G Carmickle	Ronald G Carmickle
-Candidate	Tim Kirsch	Tim Kirsch
-Candidate	John Mccormick	John Mccormick
-Candidate	Ron Evans	Ron Evans
-Candidate	Lisa Mccall	Lisa Mccall
-Candidate	Patrick Rahm	Patrick Rahm
-Candidate	Brett N Katlong	Brett N Katlong
-Candidate	Dawn E Plotts	Dawn E Plotts
-Party	Democratic and Pacific Green Parties (cross-listed)	DEMOCRAT, PACIFIC GREEN
-Party	Democratic and Republican Parties (cross-listed)	REPUBLICAN, DEMOCRAT
-Party	Independent Party	INDEPENDENT PARTY
-Candidate	Joel Fish	Joel Fish
-Candidate	Brandon S Miller	Brandon S Miller
-Candidate	Jeffrey Yanke	Jeffrey Yanke
-Candidate	Rob Taylor	Rob Taylor
-Candidate	Rick Freeman	Rick Freeman
-Candidate	Ashley R Sullivan	Ashley R Sullivan
-Candidate	Kirsten Rohla	Kirsten Rohla
-Candidate	Matt Soots	Matt Soots
-Candidate	Stephen Bartlow	Stephen Bartlow
-Candidate	Belinda Buswell (Miller)	Belinda Buswell (Miller)
-Candidate	Teresa Sajonia	Teresa Sajonia
-Candidate	Spencer Shelton	Spencer Shelton
-Candidate	Dusty Tippet	Dusty Tippet
-Candidate	Christian Niece	Christian Niece
-Candidate	Scott Mccrae	Scott Mccrae
-Candidate	Gary Lee Hulse	Gary Lee Hulse
-Candidate	Dan Warnock	Dan Warnock
-Candidate	Melvin Stonebrink	Melvin Stonebrink
-Candidate	Alan Klages	Alan Klages
-Candidate	Robin A Church	Robin A Church
-Candidate	Cody Bowen	Cody Bowen
-Candidate	Donna F Marshall	Donna F Marshall
-Candidate	John Bozarth	John Bozarth
-Candidate	David Moyal	David Moyal
-Candidate	Nicole Howard	Nicole Howard
-Candidate	Denise Wheeler	Denise Wheeler
-Candidate	Corrine Dutto	Corrine Dutto
-Candidate	David K Glabe	David K Glabe
-Candidate	Mary Ann Miesner	Mary Ann Miesner
-Candidate	Kristine Alf Rippee	Kristine Alf Rippee
-Candidate	Alex Mc Haddad	Alex Mc Haddad
-Candidate	Steve Clements	Steve Clements
-Candidate	Cindy Beck	Cindy Beck
-Candidate	Russell Thomas Scott	Russell Thomas Scott
-Candidate	Kevin Hampton	Kevin Hampton
-Candidate	David Comfort	David Comfort
-Candidate	Margaret Spence	Margaret Spence
-Candidate	Susan C Hawkins	Susan C Hawkins
-Candidate	Timothy Cox	Timothy Cox
-Candidate	John P Farmer	John P Farmer
-Candidate	Leonard L Flint	Leonard L Flint
-Candidate	Vicki R Townsend	Vicki R Townsend
-Candidate	David (Shorty) L Schwehr	David (Shorty) L Schwehr
-Candidate	Patricia Martin	Patricia Martin
-Candidate	Justin Wright	Justin Wright
-Candidate	Logan Mccrae	Logan Mccrae
-Candidate	Mike Wisdom	Mike Wisdom
-Candidate	Jered Schwabauer	Jered Schwabauer
-Candidate	Simon Kinney	Simon Kinney
-Candidate	Sharra Shaffer	Sharra Shaffer
-Candidate	Nathiel (Nate) Conrad	Nathiel (Nate) Conrad
-Candidate	Sherry Haeger	Sherry Haeger
-Candidate	Mary M West	Mary M West
-Candidate	David Reed	David Reed
-Candidate	Allan L Duffy	Allan L Duffy
-Candidate	Rick Vicek	Rick Vicek
-Candidate	Jason M L Berglund Sr	Jason M L Berglund Sr
-Candidate	Joan M Harding	Joan M Harding
-Candidate	Daniel J Daggett	Daniel J Daggett
-Candidate	Robert Trotter	Robert Trotter
-Candidate	Curtis A Ricker	Curtis A Ricker
-Candidate	Paul Boehne	Paul Boehne
-Candidate	Doug Watts	Doug Watts
-Candidate	Kat Stone	Kat Stone
-Candidate	Dallas Heard	Dallas Heard
-Candidate	Calla Felicity	Calla Felicity
-Candidate	David Brock Smith	David Brock Smith
-Candidate	Charles F Lee	Charles F Lee
-Candidate	Gary Leif	Gary Leif
-Candidate	Dan Loomis	Dan Loomis
-Candidate	John W Hanlin	John W Hanlin
-Candidate	Samuel W Lee Iii	Samuel W Lee Iii
-Candidate	Jake Young	Jake Young
-Candidate	Judy Coleman	Judy Coleman
-Candidate	Louise Barton	Louise Barton
-Candidate	Alan D Freeman	Alan D Freeman
-Candidate	Justin Cobb	Justin Cobb
-Candidate	Jo A Barker	Jo A Barker
-Candidate	Daniel Ray Shepherd	Daniel Ray Shepherd
-Candidate	Daniel Paul Burke	Daniel Paul Burke
-Candidate	Lucille Martin	Lucille Martin
-Candidate	Jim E Standard	Jim E Standard
-Candidate	Tammy Duvall	Tammy Duvall
-Candidate	Warren (Ted) Grissom	Warren (Ted) Grissom
-Candidate	Allan H Kusler	Allan H Kusler
-Candidate	Diana Larson	Diana Larson
-Candidate	Susan J Harris	Susan J Harris
-Candidate	Bill Burnett	Bill Burnett
-Candidate	L Terry Herrington	L Terry Herrington
-Candidate	Thomas Hasvold	Thomas Hasvold
-Candidate	Kent Rochester	Kent Rochester
-Candidate	Thomas Mcintosh	Thomas Mcintosh
-Candidate	Linda Mccollum	Linda Mccollum
-Candidate	Jeffrey W Vanier	Jeffrey W Vanier
-Candidate	Deedee Murphy	Deedee Murphy
-Candidate	Joe F Liedtky	Joe F Liedtky
-Candidate	William (Bill) Duckett	William (Bill) Duckett
-Candidate	Ken Moore	Ken Moore
-Candidate	Decembre L Karels	Decembre L Karels
-Candidate	Sarah Hicks	Sarah Hicks
-Candidate	Patricia A Addis	Patricia A Addis
-Candidate	Larry Rich	Larry Rich
-Candidate	Patrick Lewandowski	Patrick Lewandowski
-Candidate	Sheri Moothart	Sheri Moothart
-Candidate	Sheila Ray Cox	Sheila Ray Cox
-Candidate	Andrea Zielinski	Andrea Zielinski
-Candidate	Brian Prawitz	Brian Prawitz
-Candidate	Ashley A Hicks	Ashley A Hicks
-Candidate	Patrice Sipos	Patrice Sipos
-Candidate	Todd Mcknight	Todd Mcknight
-Candidate	Joe Groussman	Joe Groussman
-Candidate	Larry Whitaker	Larry Whitaker
-Candidate	Seth Andrew Vincent	Seth Andrew Vincent
-Candidate	D Scott Rutter	D Scott Rutter
-Candidate	Lenny Huiras	Lenny Huiras
-Candidate	Dave Cunningham	Dave Cunningham
-Candidate	Stacey L Atwell-Keister	Stacey L Atwell-Keister
-Candidate	Kelli Stevens	Kelli Stevens
-Candidate	Daniel L Wagoner	Daniel L Wagoner
-Candidate	Clifford C Glover	Clifford C Glover
-Candidate	Jerry Allen	Jerry Allen
-Candidate	Thomas Griffin	Thomas Griffin
-Candidate	Art Robinson	Art Robinson
-Candidate	Jerry Morgan	Jerry Morgan
-Candidate	Lily Morgan	Lily Morgan
-Candidate	Mary Middleton	Mary Middleton
-Candidate	Duane A Stark	Duane A Stark
-Candidate	Brandon S Thueson	Brandon S Thueson
-Candidate	Amanda Thorpe	Amanda Thorpe
-Candidate	Sarah E Mcglaughlin	Sarah E Mcglaughlin
-Candidate	Jason D Hayward	Jason D Hayward
-Candidate	Dan Deyoung	Dan Deyoung
-Candidate	Ron Smith	Ron Smith
-Candidate	Eva L I Arce	Eva L I Arce
-Candidate	James (Jim) Rafferty	James (Jim) Rafferty
-Candidate	Meadow Martell	Meadow Martell
-Candidate	Christopher Hall	Christopher Hall
-Candidate	Tina Casey Jones	Tina Casey Jones
-Candidate	Jason C Gill	Jason C Gill
-Candidate	Jesse Dugas	Jesse Dugas
-Candidate	Joel Dierkes	Joel Dierkes
-Candidate	Roy Lindsay	Roy Lindsay
-Candidate	Jill Hamm	Jill Hamm
-Candidate	Aaron Barber	Aaron Barber
-Candidate	Sara Bristol	Sara Bristol
-Candidate	Clint Scherf	Clint Scherf
-Candidate	Rob Pell	Rob Pell
-Candidate	Brian De La Grange	Brian De La Grange
-Candidate	Valerie Lovelace	Valerie Lovelace
-Candidate	Dwight (Dj) Faszer	Dwight (Dj) Faszer
-Candidate	Cami Rae Walter	Cami Rae Walter
-Candidate	Vanessa Ogier	Vanessa Ogier
-Candidate	Rycke Brown	Rycke Brown
-Candidate	James Gurley	James Gurley
-Candidate	Rhett Nelsen	Rhett Nelsen
-Candidate	Marcy Sowa	Marcy Sowa
-Candidate	Herman Baertschiger Sr	Herman Baertschiger Sr
-Candidate	Robbin Reynolds	Robbin Reynolds
-Party	Republican and Constitution Parties (cross-listed)	REPUBLICAN, CONSTITUTION
-Candidate	Jim Carpenter	Jim Carpenter
-Candidate	Rob Raschio	Rob Raschio
-Candidate	Derrin (Dag) Robinson	Derrin (Dag) Robinson
-Candidate	Dan Jenkins	Dan Jenkins
-Candidate	Karen Zabala	Karen Zabala
-Candidate	Jerry Woodfin	Jerry Woodfin
-Candidate	Jen Keady	Jen Keady
-Candidate	Kim W Rollins	Kim W Rollins
-Candidate	Alan Humphrey	Alan Humphrey
-Candidate	Jen Hoke	Jen Hoke
-Candidate	Pamela R Smerski	Pamela R Smerski
-Candidate	Jeffrey L Sykes	Jeffrey L Sykes
-Candidate	Hanna Ellis Strain	Hanna Ellis Strain
-Candidate	Heather L Smith	Heather L Smith
-Candidate	Nikki Morgan	Nikki Morgan
-Candidate	Robert C Beers	Robert C Beers
-Candidate	Ronald L Williams	Ronald L Williams
-Candidate	Amity York	Amity York
-Candidate	Scott Franklin	Scott Franklin
-Candidate	Ken Bentz	Ken Bentz
-Candidate	Robert (Bob) Main	Robert (Bob) Main
-Candidate	Katy Eymann	Katy Eymann
-Candidate	Megan Simms	Megan Simms
-Candidate	Steve Scheer	Steve Scheer
-Candidate	Mary C Schamehorn	Mary C Schamehorn
-Candidate	Nancy Evans	Nancy Evans
-Candidate	Patrick Salandro	Patrick Salandro
-Candidate	Robin Boyan	Robin Boyan
-Candidate	Geoffrey Smith	Geoffrey Smith
-Candidate	Geri Procetto	Geri Procetto
-Candidate	Brian M Vick	Brian M Vick
-Candidate	Joe Benetti	Joe Benetti
-Candidate	Steven St Matthew Mcsweeny	Steven St Matthew Mcsweeny
-Candidate	Mark Daily	Mark Daily
-Candidate	Lucinda Dinovo	Lucinda Dinovo
-Candidate	Stephanie Kilmer	Stephanie Kilmer
-Candidate	Drew Farmer	Drew Farmer
-Candidate	Cody Skoff	Cody Skoff
-Candidate	Cameron Langley	Cameron Langley
-Candidate	Jim Kingsley	Jim Kingsley
-Candidate	Matt Rowe	Matt Rowe
-Candidate	Sam Flaherty	Sam Flaherty
-Candidate	Julie Nighswonger	Julie Nighswonger
-Candidate	Paul Recanzone	Paul Recanzone
-Candidate	John Cooper	John Cooper
-Candidate	Jay Westrum	Jay Westrum
-Candidate	Michael Lendahl	Michael Lendahl
-Candidate	James Edwards	James Edwards
-Candidate	Thomas Miller	Thomas Miller
-Candidate	Donald Nuss	Donald Nuss
-Candidate	Kenneth Ireland	Kenneth Ireland
-Candidate	Michael Armstrong	Michael Armstrong
-Candidate	Mike West	Mike West
-Candidate	Bill Schaefer	Bill Schaefer
-Candidate	Mike Wood	Mike Wood
-Candidate	Michael S Hogan	Michael S Hogan
-Candidate	Jessica Engelke	Jessica Engelke
-Candidate	James Rose	James Rose
-Candidate	Timm Slater	Timm Slater
-Candidate	Levi Clow	Levi Clow
-Candidate	Eric Gleason	Eric Gleason
-Candidate	Pat Goll	Pat Goll
-Candidate	Ron Kutch	Ron Kutch
-Candidate	Jonathan P Vinyard	Jonathan P Vinyard
-Candidate	Susanna Noordhoff	Susanna Noordhoff
-Candidate	Michael W Maffei	Michael W Maffei
-Candidate	Robert Kohn	Robert Kohn
-Candidate	James Clauson	James Clauson
-Candidate	Wanda L Blanton	Wanda L Blanton
-Candidate	Ben F Drake	Ben F Drake
-Candidate	Adela Villers	Adela Villers
-Candidate	Cindy Gant	Cindy Gant
-Candidate	Charlie H Waterman	Charlie H Waterman
-Candidate	Michael Clary	Michael Clary
-Candidate	Kathleen Taylor	Kathleen Taylor
-Candidate	Lew Frederick	Lew Frederick
-Candidate	Michael Dembrow	Michael Dembrow
-Candidate	Chris Gorsek	Chris Gorsek
-Candidate	Justin Hwang	Justin Hwang
-Candidate	Lisa Reynolds	Lisa Reynolds
-Candidate	James A Ball	James A Ball
-Candidate	Andrea Salinas	Andrea Salinas
-Candidate	Patrick Castles	Patrick Castles
-Candidate	Karin Power	Karin Power
-Candidate	Michael Newgard	Michael Newgard
-Candidate	Rob Nosse	Rob Nosse
-Candidate	Tawna Sanchez	Tawna Sanchez
-Candidate	Tina Kotek	Tina Kotek
-Candidate	Margo Logan	Margo Logan
-Candidate	Barbara Smith Warner	Barbara Smith Warner
-Candidate	Khanh Pham	Khanh Pham
-Candidate	Diego Hernandez	Diego Hernandez
-Candidate	Ryan Gardner	Ryan Gardner
-Candidate	Ashton Simpson	Ashton Simpson
-Candidate	Jeff Reardon	Jeff Reardon
-Candidate	Edward Marihart	Edward Marihart
-Candidate	Zach Hudson	Zach Hudson
-Candidate	Ricki Ruiz	Ricki Ruiz
-Candidate	Amelia Salvador	Amelia Salvador
-Candidate	Janelle S Bynum	Janelle S Bynum
-Candidate	Donald B Crawford	Donald B Crawford
-Candidate	Jane J Hays	Jane J Hays
-Candidate	Anna Williams	Anna Williams
-Candidate	Stephen D Alder	Stephen D Alder
-Candidate	Jeff Helfrich	Jeff Helfrich
-Candidate	Adrian L Brown	Adrian L Brown
-Candidate	Rima Ghandour	Rima Ghandour
-Candidate	Steffan Alexander	Steffan Alexander
-Candidate	Wendy Young Lawton	Wendy Young Lawton
-Candidate	Mike Weatherby	Mike Weatherby
-Candidate	Steve Marker	Steve Marker
-Candidate	Keith A Kudrna	Keith A Kudrna
-Candidate	Steve Owen	Steve Owen
-Candidate	Sean Bishop	Sean Bishop
-Candidate	Joe Demers	Joe Demers
-Candidate	Eddy Morales	Eddy Morales
-Candidate	Travis Stovall	Travis Stovall
-Candidate	Nick Switzer	Nick Switzer
-Candidate	Jerry W Hinton	Jerry W Hinton
-Candidate	Dina Dinucci	Dina Dinucci
-Candidate	Matt Burnett	Matt Burnett
-Candidate	Brianna Harris	Brianna Harris
-Candidate	Vince Jones-Dixon	Vince Jones-Dixon
-Candidate	Raymond Love	Raymond Love
-Candidate	Beshara S Shahin	Beshara S Shahin
-Candidate	Stella Armstrong	Stella Armstrong
-Candidate	Dave Dyk	Dave Dyk
-Candidate	Sue Piazza	Sue Piazza
-Candidate	Thomas Stanley	Thomas Stanley
-Candidate	Jim Akers	Jim Akers
-Candidate	Miriam Berman	Miriam Berman
-Candidate	Ron Dickson	Ron Dickson
-Candidate	Jeff Williams	Jeff Williams
-Candidate	Robin R Wisner Sr	Robin R Wisner Sr
-Candidate	Angel Falconer	Angel Falconer
-Candidate	Kalin Parsons	Kalin Parsons
-Candidate	Adam Khosroabadi	Adam Khosroabadi
-Candidate	Desi Nicodemus	Desi Nicodemus
-Candidate	Rob Reynolds	Rob Reynolds
-Candidate	Jon Stoll	Jon Stoll
-Candidate	David Ripma	David Ripma
-Candidate	Randy Lauer	Randy Lauer
-Candidate	Tim Erich	Tim Erich
-Candidate	Laura Tils	Laura Tils
-Candidate	Alison Caswell	Alison Caswell
-Candidate	Glenn White	Glenn White
-Candidate	Paul Wilcox	Paul Wilcox
-Candidate	John Leamy	John Leamy
-Candidate	Sandy Glantz	Sandy Glantz
-Candidate	Patricia Smith	Patricia Smith
-Candidate	Jairo Rios-Campos	Jairo Rios-Campos
-Candidate	T Scott Harden	T Scott Harden
-Candidate	Brian C Loy	Brian C Loy
-Candidate	Joseph Queruel	Joseph Queruel
-Candidate	Rick Till	Rick Till
-Candidate	Devin Portwood	Devin Portwood
-Candidate	James (Jim) Carlson	James (Jim) Carlson
-Candidate	Jasmine Zimmer-Stucky	Jasmine Zimmer-Stucky
-Candidate	Lars Granstrom	Lars Granstrom
-Candidate	Joe Rossi	Joe Rossi
-Candidate	Laura Masterson	Laura Masterson
-Candidate	Grant Eisele	Grant Eisele
-Candidate	David Richardson	David Richardson
-Candidate	Mel Rieff	Mel Rieff
-Candidate	Thomas E Caufield	Thomas E Caufield
-Candidate	Tom Lewis	Tom Lewis
-Candidate	Kathy Zimmerman	Kathy Zimmerman
-Candidate	Steve R Okazaki	Steve R Okazaki
-Party	Working Families Party	WORKING FAMILIES
-Candidate	Brian Van Bergen	Brian Van Bergen
-Candidate	Paulette Alexandria	Paulette Alexandria
-Candidate	Kris Bledsoe	Kris Bledsoe
-Candidate	Joshua Clark	Joshua Clark
-Candidate	Sandy Mcarthur	Sandy Mcarthur
-Candidate	Brian Rake	Brian Rake
-Candidate	Linda Watkins	Linda Watkins
-Candidate	Scott Carl	Scott Carl
-Candidate	Carey Rhoads	Carey Rhoads
-Candidate	Guilherme Brandao	Guilherme Brandao
-Candidate	Kevin Skipper	Kevin Skipper
-Candidate	Grant Erickson	Grant Erickson
-Candidate	Trini Marquez	Trini Marquez
-Candidate	Kitty Mackin	Kitty Mackin
-Candidate	Annette Frank	Annette Frank
-Candidate	David Russ	David Russ
-Candidate	Jeannette Adlong	Jeannette Adlong
-Candidate	Tim Weaver	Tim Weaver
-Candidate	Wade Witherspoon	Wade Witherspoon
-Candidate	Kayla Paulsen	Kayla Paulsen
-Candidate	James Drebin	James Drebin
-Candidate	Lee Gilgan	Lee Gilgan
-Candidate	Gregory Goularte	Gregory Goularte
-Candidate	Hilary Malcomson	Hilary Malcomson
-Candidate	Jeffrey Olson	Jeffrey Olson
-Candidate	Jeremy Rametes	Jeremy Rametes
-Candidate	Doreen Vantyne	Doreen Vantyne
-Candidate	Tracy Luttrell	Tracy Luttrell
-Candidate	Scott A Hill	Scott A Hill
-Candidate	Heidi Parker	Heidi Parker
-Candidate	Lisa Mccracken	Lisa Mccracken
-Candidate	Chris Chenoweth	Chris Chenoweth
-Candidate	Kellie Menke	Kellie Menke
-Candidate	Brittany Ruiz	Brittany Ruiz
-Candidate	Adam D Garvin	Adam D Garvin
-Candidate	Tynan Pierce	Tynan Pierce
-Candidate	Elise Yarnell Hollamon	Elise Yarnell Hollamon
-Candidate	Denise Bacon	Denise Bacon
-Candidate	Adam Mcguffie	Adam Mcguffie
-Candidate	Nicholas Morace	Nicholas Morace
-Candidate	Maryl Kunkel	Maryl Kunkel
-Candidate	Shy Summer Montoya	Shy Summer Montoya
-Candidate	Mike Mcbride	Mike Mcbride
-Candidate	Roxie A Acuff	Roxie A Acuff
-Candidate	Aaron Baer	Aaron Baer
-Candidate	Christina (Chrissy) Davis	Christina (Chrissy) Davis
-Candidate	Walter D Brewster	Walter D Brewster
-Candidate	James R Buckles	James R Buckles
-Candidate	Faith Dauvin	Faith Dauvin
-Candidate	Bob Burr	Bob Burr
-Candidate	George Young	George Young
-Candidate	Rita Baller	Rita Baller
-Candidate	Craig Johnson	Craig Johnson
-Candidate	James Daley	James Daley
-Candidate	Tyler Crook	Tyler Crook
-Candidate	Barry Wilson	Barry Wilson
-Candidate	Yvette Potter (City Ticket)	Yvette Potter (City Ticket)
-Candidate	Tim Askey (Independent Ticket)	Tim Askey (Independent Ticket)
-Candidate	Marci Hedin (City Ticket)	Marci Hedin (City Ticket)
-Candidate	Erin Edelen Kutter (City Ticket)	Erin Edelen Kutter (City Ticket)
-Candidate	Barbara Boyer	Barbara Boyer
-Candidate	Leo Krick	Leo Krick
-Candidate	Gordon Cook	Gordon Cook
-Candidate	Sam Sweeney	Sam Sweeney
-Candidate	Deb Patterson	Deb Patterson
-Candidate	Taylor A Rickey	Taylor A Rickey
-Candidate	Denyc Boles	Denyc Boles
-Candidate	Jamie Morrison	Jamie Morrison
-Candidate	Rick Lewis	Rick Lewis
-Candidate	Jacqueline M Leung	Jacqueline M Leung
-Candidate	Raquel Moore-Green	Raquel Moore-Green
-Candidate	Paul Evans	Paul Evans
-Candidate	Selma Pierce	Selma Pierce
-Candidate	Brian Clem	Brian Clem
-Candidate	Jack L Esp	Jack L Esp
-Candidate	Teresa Alonso Leon	Teresa Alonso Leon
-Candidate	Anna Kasachev	Anna Kasachev
-Candidate	Tessah L Danel	Tessah L Danel
-Candidate	Kenny Sernach	Kenny Sernach
-Candidate	Christine Drazan	Christine Drazan
-Candidate	Ashley Carson Cottingham	Ashley Carson Cottingham
-Candidate	William H Johnson Jr	William H Johnson Jr
-Candidate	Danielle Bethell	Danielle Bethell
-Candidate	Bill Burgess	Bill Burgess
-Candidate	Danielle Gonzalez	Danielle Gonzalez
-Candidate	Joe Kast	Joe Kast
-Candidate	Derek Clevenger	Derek Clevenger
-Candidate	Larry Purdy	Larry Purdy
-Candidate	Doug Ecclestone	Doug Ecclestone
-Candidate	Scott Lee	Scott Lee
-Candidate	Ryan Bambrick	Ryan Bambrick
-Candidate	Brian Asher	Brian Asher
-Candidate	Mercedes W Rhoden-Feely	Mercedes W Rhoden-Feely
-Candidate	Wendy Veliz	Wendy Veliz
-Candidate	Jim Trett	Jim Trett
-Candidate	Julie Ann Gunderson	Julie Ann Gunderson
-Candidate	Paul Kittelson	Paul Kittelson
-Candidate	Tim Luke	Tim Luke
-Candidate	Michele Tesdal	Michele Tesdal
-Candidate	Eric Page	Eric Page
-Candidate	Rick Olmsted	Rick Olmsted
-Candidate	Brad Oxenford	Brad Oxenford
-Candidate	Sheryl S Glenn	Sheryl S Glenn
-Candidate	Amanda Mccracken	Amanda Mccracken
-Candidate	Lauren Ostrander	Lauren Ostrander
-Candidate	Rod Scott	Rod Scott
-Candidate	Andrea (Annie) Gilland	Andrea (Annie) Gilland
-Candidate	Tilda O Flores	Tilda O Flores
-Candidate	Robb Ladd	Robb Ladd
-Candidate	Diana Bartch	Diana Bartch
-Candidate	Michael Gregory	Michael Gregory
-Candidate	Micky Wagner	Micky Wagner
-Candidate	Baltazar (Jr) Gonzalez	Baltazar (Jr) Gonzalez
-Candidate	Pamela Foreman	Pamela Foreman
-Candidate	Charles Rostocil	Charles Rostocil
-Candidate	James M Audritsh Ii	James M Audritsh Ii
-Candidate	Christopher Schweighardt	Christopher Schweighardt
-Candidate	Scott E Stierle	Scott E Stierle
-Candidate	Tyler Thomas	Tyler Thomas
-Candidate	Michael Myers	Michael Myers
-Candidate	David Watkins	David Watkins
-Candidate	David Kellogg	David Kellogg
-Candidate	Cathy Clark	Cathy Clark
-Candidate	Laura Reid	Laura Reid
-Candidate	Michael De Blasi	Michael De Blasi
-Candidate	Ross Day	Ross Day
-Candidate	Dylan Juran	Dylan Juran
-Candidate	Kyle Juran	Kyle Juran
-Candidate	Michele Roland-Schwartz	Michele Roland-Schwartz
-Candidate	Kelly Grassman	Kelly Grassman
-Candidate	Don R Fleck	Don R Fleck
-Candidate	Pete Wall	Pete Wall
-Candidate	David Sylvia	David Sylvia
-Candidate	Michael Kehoe	Michael Kehoe
-Candidate	Shelley Otte	Shelley Otte
-Candidate	David Hoffer	David Hoffer
-Candidate	Tony Astorga	Tony Astorga
-Candidate	Chuck Bennett	Chuck Bennett
-Candidate	Virginia Stapleton	Virginia Stapleton
-Candidate	Trevor Phillips	Trevor Phillips
-Candidate	Jose Gonzalez	Jose Gonzalez
-Candidate	Vanessa Nordyke	Vanessa Nordyke
-Candidate	Paul Brakeman	Paul Brakeman
-Candidate	Chris Macquarrie	Chris Macquarrie
-Candidate	Brandon W Joslin	Brandon W Joslin
-Candidate	Dusty Ferschweiler	Dusty Ferschweiler
-Candidate	Kyle B Palmer	Kyle B Palmer
-Candidate	Jason Freilinger	Jason Freilinger
-Candidate	Elvi Cuellar Sutton	Elvi Cuellar Sutton
-Candidate	Karyssa Dow	Karyssa Dow
-Candidate	Aaron L Huddart	Aaron L Huddart
-Candidate	Jess Miller	Jess Miller
-Candidate	Marty Waldo	Marty Waldo
-Candidate	Ben Mcdonald	Ben Mcdonald
-Candidate	Chris Molin	Chris Molin
-Candidate	Jim Kingsbury	Jim Kingsbury
-Candidate	Michael Taylor	Michael Taylor
-Candidate	Jim Crowther	Jim Crowther
-Candidate	Steve Horning	Steve Horning
-Candidate	Laura Doran	Laura Doran
-Candidate	Kyle Brouse	Kyle Brouse
-Candidate	Jason Haynes	Jason Haynes
-Candidate	Mark M Mccracken	Mark M Mccracken
-Candidate	Mike Schaufler	Mike Schaufler
-Candidate	Eric A Morris	Eric A Morris
-Candidate	Eric Swenson	Eric Swenson
-Candidate	Debbie D Cabrales	Debbie D Cabrales
-Candidate	Lisa Ellsworth	Lisa Ellsworth
-Candidate	Ali Swanson	Ali Swanson
-Candidate	Benito Puente Jr	Benito Puente Jr
-Candidate	Scott Walker	Scott Walker
-Candidate	Brenda Sanchez	Brenda Sanchez
-Party	Democratic, Progressive and Working Families Parties (cross-listed)	DEMOCRAT, PROGRESSIVE, WORKING FAMILIES
-Candidate	Matthew T English	Matthew T English
-Candidate	Michael J Oates	Michael J Oates
-Candidate	Arthur Babitz	Arthur Babitz
-Candidate	Les Perkins	Les Perkins
-Candidate	Samantha Verschuren	Samantha Verschuren
-Candidate	Bobby Dale Walker	Bobby Dale Walker
-Candidate	Butch Miller	Butch Miller
-Candidate	Kate Mcbride	Kate Mcbride
-Candidate	Dani Correa	Dani Correa
-Candidate	Megan Saunders	Megan Saunders
-Candidate	Gladys Rivera	Gladys Rivera
-Candidate	Don Harring	Don Harring
-Candidate	Susan Johnson	Susan Johnson
-Candidate	Brian Towey	Brian Towey
-Candidate	Mark Zanmiller	Mark Zanmiller
-Candidate	Andrew Halliday	Andrew Halliday
-Candidate	Pete Siragusa	Pete Siragusa
-Candidate	Brian Nakamura	Brian Nakamura
-Candidate	Alycia Edgeworth Kersey	Alycia Edgeworth Kersey
-Candidate	Bonnie A Lam	Bonnie A Lam
-Candidate	Nathan Ratliff	Nathan Ratliff
-Candidate	Joshua C Guest	Joshua C Guest
-Candidate	Chris Kaber	Chris Kaber
-Candidate	Betty Tyree	Betty Tyree
-Candidate	Michael Madden	Michael Madden
-Candidate	Jonathan R Hanger	Jonathan R Hanger
-Candidate	Don Nelson	Don Nelson
-Candidate	Julie Bettles	Julie Bettles
-Candidate	Robert Cowie	Robert Cowie
-Candidate	Jill Prewitt	Jill Prewitt
-Candidate	Michelle L Ochoa	Michelle L Ochoa
-Candidate	Carol F Westfall	Carol F Westfall
-Candidate	Bill Adams	Bill Adams
-Candidate	James Garland	James Garland
-Candidate	Phil Studenberg	Phil Studenberg
-Candidate	Dylan L Carlson	Dylan L Carlson
-Candidate	Donna Walker	Donna Walker
-Candidate	Mika Blain	Mika Blain
-Candidate	Connie Venegas	Connie Venegas
-Candidate	Rafael Ivan Hernandez	Rafael Ivan Hernandez
-Candidate	Ryan Bartholomew	Ryan Bartholomew
-Candidate	Walt Harrison	Walt Harrison
-Candidate	William V Carlson Sr	William V Carlson Sr
-Candidate	Richmond (Dick) Carleton	Richmond (Dick) Carleton
-Candidate	Regina M Picke	Regina M Picke
-Candidate	Rodney G Mccollam	Rodney G Mccollam
-Candidate	Steven R Baley	Steven R Baley
-Candidate	Gary R Robeson	Gary R Robeson
-Candidate	E Martin Kerns	E Martin Kerns
-Candidate	Pam Marsh	Pam Marsh
-Candidate	Sandra A Abercrombie	Sandra A Abercrombie
-Candidate	Alberto Enriquez	Alberto Enriquez
-Candidate	Alex Levi Usselman	Alex Levi Usselman
-Candidate	Kim Wallan	Kim Wallan
-Candidate	Terrie Martin	Terrie Martin
-Candidate	Edward Stanton	Edward Stanton
-Candidate	Dave Dotterrer	Dave Dotterrer
-Candidate	David Arrasmith	David Arrasmith
-Candidate	Julie Akins	Julie Akins
-Candidate	Tonya Graham	Tonya Graham
-Candidate	Andrew Card	Andrew Card
-Candidate	Paula Hyatt	Paula Hyatt
-Candidate	Julian Bell	Julian Bell
-Candidate	Kelly Marcotulli	Kelly Marcotulli
-Candidate	Shaun Moran	Shaun Moran
-Candidate	Gerardo Padilla	Gerardo Padilla
-Candidate	Gina Duquenne	Gina Duquenne
-Candidate	Jessica Kensinger	Jessica Kensinger
-Candidate	Leslie Eldridge	Leslie Eldridge
-Candidate	Nick David	Nick David
-Candidate	Jim Lewis	Jim Lewis
-Candidate	Hank Williams	Hank Williams
-Candidate	Taneea Browning	Taneea Browning
-Candidate	Michael W Parsons	Michael W Parsons
-Candidate	Rob Hernandez	Rob Hernandez
-Candidate	Ruth Jenks	Ruth Jenks
-Candidate	Kathy Sell	Kathy Sell
-Candidate	Michael Stanek	Michael Stanek
-Candidate	Janet Wilson	Janet Wilson
-Candidate	Melia Biedscheid	Melia Biedscheid
-Candidate	Bill Rigney	Bill Rigney
-Candidate	Jennifer A Zammetti	Jennifer A Zammetti
-Candidate	Donna Bowen	Donna Bowen
-Candidate	Steve Casaleggio	Steve Casaleggio
-Candidate	Mike C Mcclain	Mike C Mcclain
-Candidate	Scott D Selbe	Scott D Selbe
-Candidate	Andrea Lerner Thompson	Andrea Lerner Thompson
-Candidate	Clay Bearnson	Clay Bearnson
-Candidate	Jim Huddleston	Jim Huddleston
-Candidate	Randy Sparacino	Randy Sparacino
-Candidate	Kevin H Stine	Kevin H Stine
-Candidate	Curt Ankerberg	Curt Ankerberg
-Candidate	Rick Schreffler	Rick Schreffler
-Candidate	Sarah Spansail	Sarah Spansail
-Candidate	Jeff Thomas	Jeff Thomas
-Candidate	Tim D'Alessandro	Tim D'Alessandro
-Candidate	Kay Brooks	Kay Brooks
-Candidate	Don Libby	Don Libby
-Candidate	Chad Mccomas	Chad Mccomas
-Candidate	Chad Miller	Chad Miller
-Candidate	Eric Stark	Eric Stark
-Candidate	Chris Luz	Chris Luz
-Candidate	Terry Baker	Terry Baker
-Candidate	Krista L Peterson	Krista L Peterson
-Candidate	Al Muelhoefer	Al Muelhoefer
-Candidate	Brian Buckner	Brian Buckner
-Candidate	Karen Shrader	Karen Shrader
-Candidate	Wayne Stuart	Wayne Stuart
-Candidate	Barb Hilty	Barb Hilty
-Candidate	Pam Vanarsdale	Pam Vanarsdale
-Candidate	Lena Richardson	Lena Richardson
-Candidate	Shari Tarvin	Shari Tarvin
-Candidate	Kathy Nuckles	Kathy Nuckles
-Candidate	Hank Hohenstein	Hank Hohenstein
-Candidate	Tim Evertt	Tim Evertt
-Candidate	David Pastizzo	David Pastizzo
-Candidate	Ana Byers	Ana Byers
-Candidate	John A Harrison	John A Harrison
-Candidate	Derek Volkart	Derek Volkart
-Candidate	Jason Clark	Jason Clark
-Candidate	Ron Timen	Ron Timen
-Candidate	Linda Spencer	Linda Spencer
-Candidate	Delena Oden	Delena Oden
-Candidate	Alvin C Thompson	Alvin C Thompson
-Candidate	Loren Oden	Loren Oden
-Candidate	Barbara Niedermeyer	Barbara Niedermeyer
-Candidate	Nicky Webb Smith	Nicky Webb Smith
-Candidate	Don Hamann	Don Hamann
-Candidate	Ron Hillers	Ron Hillers
-Candidate	Mark W Meek	Mark W Meek
-Candidate	Josh Howard	Josh Howard
-Candidate	Ken Humberston	Ken Humberston
-Candidate	Mark Shull	Mark Shull
-Candidate	Angela Brandenburg	Angela Brandenburg
-Candidate	Michael E Lundsten	Michael E Lundsten
-Candidate	Hurshell L Walls	Hurshell L Walls
-Candidate	Michael L Barnett	Michael L Barnett
-Candidate	Brian D Hodson	Brian D Hodson
-Candidate	Traci Hensley	Traci Hensley
-Candidate	Sarah Spoon	Sarah Spoon
-Candidate	Christopher Bangs	Christopher Bangs
-Candidate	James Hieb	James Hieb
-Candidate	Jason Padden	Jason Padden
-Candidate	Jordan Tibbals	Jordan Tibbals
-Candidate	Sean Drinkwine	Sean Drinkwine
-Candidate	Charity Hughes	Charity Hughes
-Candidate	Joel Litkie	Joel Litkie
-Candidate	Paul Strobel	Paul Strobel
-Candidate	Greg Alexander	Greg Alexander
-Candidate	Steve Johnson	Steve Johnson
-Candidate	Andrew Labonte	Andrew Labonte
-Candidate	Scott Blessing	Scott Blessing
-Candidate	Annessa Hartman	Annessa Hartman
-Candidate	Mark A Horst	Mark A Horst
-Candidate	Bill Osburn	Bill Osburn
-Candidate	Thomas Mersereau	Thomas Mersereau
-Candidate	Mindy Garlington	Mindy Garlington
-Candidate	Geoff Whalley	Geoff Whalley
-Candidate	David Golobay	David Golobay
-Candidate	Jennifer Brownlee	Jennifer Brownlee
-Candidate	David Emami	David Emami
-Candidate	Ana Sarish	Ana Sarish
-Candidate	Angie Long	Angie Long
-Candidate	Margaret P Mccrea	Margaret P Mccrea
-Candidate	Vincent Whitehead	Vincent Whitehead
-Candidate	Jimmy Thompson	Jimmy Thompson
-Candidate	Leota Childress	Leota Childress
-Candidate	Scott Keyser	Scott Keyser
-Candidate	Keith Swigart	Keith Swigart
-Candidate	Carmon Carlos	Carmon Carlos
-Candidate	Steven M Deller	Steven M Deller
-Candidate	Jody Newland	Jody Newland
-Candidate	Crystal Robles	Crystal Robles
-Candidate	Josh Tompkins	Josh Tompkins
-Candidate	Dave Hayden	Dave Hayden
-Candidate	Denyse Mcgriff	Denyse Mcgriff
-Candidate	Frank O'Donnell	Frank O'Donnell
-Candidate	Jeff Akin	Jeff Akin
-Candidate	Stan P Pulliam	Stan P Pulliam
-Candidate	Michael Horttor	Michael Horttor
-Candidate	Richard Sheldon	Richard Sheldon
-Candidate	Jan Lee	Jan Lee
-Candidate	Nikki Butcher-Duell	Nikki Butcher-Duell
-Candidate	Kathleen Walker	Kathleen Walker
-Candidate	Vina Carpenter	Vina Carpenter
-Candidate	Don M Hokanson	Don M Hokanson
-Candidate	Linda K Malone	Linda K Malone
-Candidate	Andrew Mallory	Andrew Mallory
-Candidate	Jules Walters	Jules Walters
-Candidate	Richard Sakelik	Richard Sakelik
-Candidate	Robert Mccarthy	Robert Mccarthy
-Candidate	Alex Juarez	Alex Juarez
-Candidate	Mary Baumgardner	Mary Baumgardner
-Candidate	Rory Bialostosky	Rory Bialostosky
-Candidate	Vicki Olson	Vicki Olson
-Candidate	Jenny Koll	Jenny Koll
-Candidate	Kim Bria	Kim Bria
-Candidate	Ken Pryor	Ken Pryor
-Candidate	Kari Johnsen	Kari Johnsen
-Candidate	Leslie Hwa	Leslie Hwa
-Candidate	Tom Meier	Tom Meier
-Candidate	James Johnson	James Johnson
-Candidate	Jeffrey J Becker	Jeffrey J Becker
-Candidate	Byron Shock	Byron Shock
-Candidate	Ron Jacobs	Ron Jacobs
-Candidate	Casey J Walker	Casey J Walker
-Candidate	Brian E Wolfe	Brian E Wolfe
-Candidate	Echo Snyder	Echo Snyder
-Candidate	Keith L Baldwin	Keith L Baldwin
-Candidate	Teri Arnall	Teri Arnall
-Candidate	George Elsner	George Elsner
-Candidate	Lee Ann Conro	Lee Ann Conro
-Candidate	Ron Edmondson	Ron Edmondson
-Candidate	Patricia Esplin	Patricia Esplin
-Candidate	Douglas Dewar	Douglas Dewar
-Candidate	Roberto G Escobedo	Roberto G Escobedo
-Candidate	Krissy Walker	Krissy Walker
-Candidate	Sam Baker	Sam Baker
-Candidate	Maria Z Fisher	Maria Z Fisher
-Candidate	John D Kirby	John D Kirby
-Candidate	Eddie Melendrez	Eddie Melendrez
-Candidate	Kevin Petross	Kevin Petross
-Candidate	Todd Fuller	Todd Fuller
-Candidate	Leighton Keller	Leighton Keller
-Candidate	Cathy M Zacharias	Cathy M Zacharias
-Candidate	Tom Vialpando	Tom Vialpando
-Candidate	Mike (Mac) Mclaughlin	Mike (Mac) Mclaughlin
-Candidate	Tim Newton	Tim Newton
-Candidate	Theodore Rodrick Frahm	Theodore Rodrick Frahm
-Candidate	Aden S Johnston	Aden S Johnston
-Candidate	Todd Mckinley	Todd Mckinley
-Candidate	Glenn E Palmer	Glenn E Palmer
-Candidate	Julie Ellison	Julie Ellison
-Candidate	Russ Comer	Russ Comer
-Candidate	Lisa Weigum	Lisa Weigum
-Candidate	Rachelle Simmons	Rachelle Simmons
-Candidate	Steve Fischer	Steve Fischer
-Candidate	Ilah Bennett	Ilah Bennett
-Candidate	Tiffnie Schmadeka	Tiffnie Schmadeka
-Candidate	Skip Inscore	Skip Inscore
-Candidate	David S Holland	David S Holland
-Candidate	Elliot C Sky	Elliot C Sky
-Candidate	Heather N Rookstool	Heather N Rookstool
-Candidate	Chris B Labhart	Chris B Labhart
-Candidate	Don Porter	Don Porter
-Candidate	Peter Case	Peter Case
-Candidate	Dan Morrow	Dan Morrow
-Candidate	David Hines	David Hines
-Candidate	Sahara Hyder	Sahara Hyder
-Candidate	Mary Cade	Mary Cade
-Candidate	Mike J Cearns	Mike J Cearns
-Candidate	Lori Kerr	Lori Kerr
-Candidate	Kelly Flanagan	Kelly Flanagan
-Candidate	Jan Lowry	Jan Lowry
-Candidate	Judi Bennett	Judi Bennett
-Candidate	Kenny Delano	Kenny Delano
-Candidate	Brook Williams	Brook Williams
-Candidate	Jenny Shaw	Jenny Shaw
-Candidate	Candy Olson Reagan	Candy Olson Reagan
-Candidate	Jim Hamsher	Jim Hamsher
-Candidate	Brad L Smith	Brad L Smith
-Candidate	Suzanne (Suzie) Hood	Suzanne (Suzie) Hood
-Candidate	Phil St Clair	Phil St Clair
-Candidate	Rick Henslee	Rick Henslee
-Candidate	Pat Voigt	Pat Voigt
-Candidate	Brian Campbell	Brian Campbell
-Candidate	Leslie Wetherell	Leslie Wetherell
-Candidate	Pat Shannon	Pat Shannon
-Candidate	Leslie Walborn	Leslie Walborn
-Candidate	Matthew G Irby	Matthew G Irby
-Candidate	A Randall Seely	A Randall Seely
-Candidate	Denise Ball	Denise Ball
-Candidate	Jeffery C Bufton	Jeffery C Bufton
-Candidate	Tom Fatland	Tom Fatland
-Candidate	Donald Jamieson	Donald Jamieson
-Candidate	Jeremy Kirby	Jeremy Kirby
-Candidate	Jim Hassing	Jim Hassing
-Candidate	Andrew Beebe	Andrew Beebe
-Candidate	Shannon N Hill	Shannon N Hill
-Candidate	Jordan Maley	Jordan Maley
-Candidate	Doug Potter	Doug Potter
-Candidate	John Anderson	John Anderson
-Candidate	Matt Phillips	Matt Phillips
-Candidate	Randy Frank	Randy Frank
-Candidate	Thomas Brownson	Thomas Brownson
-Candidate	Floyd E Holcom	Floyd E Holcom
-Candidate	Thomas A Hilton	Thomas A Hilton
-Candidate	Joshua Conklin	Joshua Conklin
-Candidate	Brook Boden	Brook Boden
-Candidate	Heather Kelez	Heather Kelez
-Candidate	Lisa Morley	Lisa Morley
-Candidate	Nancy Mccarthy	Nancy Mccarthy
-Candidate	Brandon Ogilvie	Brandon Ogilvie
-Candidate	Reita Fackerell	Reita Fackerell
-Candidate	Bob Shortman	Bob Shortman
-Candidate	Dan Jesse	Dan Jesse
-Candidate	Jack Zimmerman	Jack Zimmerman
-Candidate	Paulina Cockrum	Paulina Cockrum
-Candidate	Tom Horning	Tom Horning
-Candidate	David Posalski	David Posalski
-Candidate	Adam Wood	Adam Wood
-Candidate	Kathy Kleczek	Kathy Kleczek
-Candidate	Brandon Williams	Brandon Williams
-Candidate	Gerald Poe	Gerald Poe
-Candidate	Allen Berry	Allen Berry
-Candidate	Mark J Baldwin	Mark J Baldwin
-Candidate	Thomas M Dyer	Thomas M Dyer
-Candidate	Mike Seppa	Mike Seppa
-Candidate	Ted Warila	Ted Warila
-Candidate	Cary Johnson	Cary Johnson
-Candidate	Lyle R Mordhorst	Lyle R Mordhorst
-Candidate	Danny Jaffer	Danny Jaffer
-Candidate	Valerie Unger	Valerie Unger
-Candidate	Mark Garton	Mark Garton
-Candidate	Steve Milligan	Steve Milligan
-Candidate	Brian Dalton	Brian Dalton
-Candidate	Nancy Adams	Nancy Adams
-Candidate	Jim Robertson	Jim Robertson
-Candidate	Paul Trahan	Paul Trahan
-Candidate	Kirsten Collins	Kirsten Collins
-Candidate	Rodney Dunham	Rodney Dunham
-Candidate	Kim Fitzgerald	Kim Fitzgerald
-Candidate	Kenneth L Woods Jr	Kenneth L Woods Jr
-Candidate	Zach Leigh	Zach Leigh
-Candidate	Tawnya Kreft	Tawnya Kreft
-Candidate	Brad Moreland	Brad Moreland
-Candidate	Casey Ocupe	Casey Ocupe
-Candidate	Terry Crawford	Terry Crawford
-Candidate	Debbie Virden	Debbie Virden
-Candidate	Zachary Brehm	Zachary Brehm
-Candidate	Darcy Newton-Irving	Darcy Newton-Irving
-Candidate	Kathryn M Rhoades	Kathryn M Rhoades
-Candidate	Jeremy Gordon	Jeremy Gordon
-Candidate	Jennifer Drill	Jennifer Drill
-Candidate	Dennis Sickles	Dennis Sickles
-Candidate	Tj Bailey	Tj Bailey
-Candidate	Paul Dasso	Paul Dasso
-Candidate	Sean Dasso	Sean Dasso
-Candidate	Amy Houghtaling	Amy Houghtaling
-Candidate	John Mcardle	John Mcardle
-Candidate	Jack Waddell	Jack Waddell
-Candidate	Dawn Hedrick-Roden	Dawn Hedrick-Roden
-Candidate	Michael Hicks	Michael Hicks
-Candidate	Sarah Jobe	Sarah Jobe
-Candidate	Kelie Mcwilliams	Kelie Mcwilliams
-Candidate	Kathy Martin-Willis	Kathy Martin-Willis
-Candidate	David Ramcharan	David Ramcharan
-Candidate	Cecelia Koontz	Cecelia Koontz
-Candidate	Lisa Scheirman	Lisa Scheirman
-Candidate	Jason Branske	Jason Branske
-Candidate	Adam Jefferson	Adam Jefferson
-Candidate	Carol Mckiel	Carol Mckiel
-Candidate	John Oberst	John Oberst
-Candidate	Jason Ridgeway	Jason Ridgeway
-Candidate	Seth Rogers	Seth Rogers
-Candidate	Rebecca Salinas-Oliveros	Rebecca Salinas-Oliveros
-Candidate	Byron Shinkle	Byron Shinkle
-Candidate	Darin E Silbernagel	Darin E Silbernagel
-Candidate	Pryor Garnett	Pryor Garnett
-Candidate	John (Jock) Dalton	John (Jock) Dalton
-Candidate	Chad Woods	Chad Woods
-Candidate	Sue Gold	Sue Gold
-Candidate	John Herzog	John Herzog
-Candidate	Renee' Kolen	Renee' Kolen
-Candidate	Emma Derock	Emma Derock
-Candidate	John Ward	John Ward
-Candidate	Terry C Hanscam	Terry C Hanscam
-Candidate	Elizabeth Neketin	Elizabeth Neketin
-Candidate	Jeffrey Knox	Jeffrey Knox
-Candidate	Lynne Dewald	Lynne Dewald
-Candidate	Jeremy R Knapp	Jeremy R Knapp
-Candidate	Jake Pieper	Jake Pieper
-Candidate	Brad Alcorn	Brad Alcorn
-Candidate	Anthony Bond	Anthony Bond
-Candidate	Diana Cooper	Diana Cooper
-Candidate	Ed Schreiber	Ed Schreiber
-Candidate	Karl Popoff	Karl Popoff
-Candidate	Tamie Kaufman	Tamie Kaufman
-Candidate	Chip Bradley	Chip Bradley
-Candidate	Beth Barker-Hidalgo	Beth Barker-Hidalgo
-Candidate	Becky Campbell	Becky Campbell
-Candidate	Jeff Crook	Jeff Crook
-Candidate	Pat Cox	Pat Cox
-Candidate	Gary Burns	Gary Burns
-Candidate	Tim Pogwizd	Tim Pogwizd
-Candidate	Gregory Tidey	Gregory Tidey
-Candidate	Kim Nye	Kim Nye
-Candidate	David Vancleave	David Vancleave
-Candidate	Tom Beene	Tom Beene
-Candidate	Jim White	Jim White
-Candidate	Daniel Fraser	Daniel Fraser
-Candidate	Joseph R Biden	Joseph R Biden
-Candidate	Zach Hudson	Zach **Hudson
-Candidate	Wlnsvey E Campos	Wlnsvey E **Campos
-Candidate	Vikki Breese-Iverson	Vikki **Breese-Iverson
-Candidate	Tina Kotek	Tina **Kotek
-Candidate	Teresa Alonso Leon	Teresa **Alonso Leon
-Candidate	Tawna Sanchez	Tawna **Sanchez
-Candidate	Suzanne Weber	Suzanne **Weber
-Candidate	Susan McLain	Susan **McLain
-Candidate	Sheri Schouten	Sheri **Schouten
-Candidate	Shelly Boshart Davis	Shelly Boshart **Davis
-Candidate	Ron Noble	Ron **Noble
-Candidate	Rob Nosse	Rob **Nosse
-Candidate	Ricki Ruiz	Ricki **Ruiz
-Candidate	Rick Lewis	Rick **Lewis
-Candidate	Raquel Moore-Green	Raquel **Moore-Green
-Candidate	Rachel Prusak	Rachel **Prusak
-Candidate	Paul R Holvey	Paul R **Holvey
-Candidate	Paul Evans	Paul **Evans
-Candidate	Pam Marsh	Pam **Marsh
-Candidate	Nancy Nathanson	Nancy **Nathanson
-Candidate	Misc.	Misc.
-Candidate	Mike Nearman	Mike **Nearman
-Candidate	Maxine E Dexter	Maxine E **Dexter
-Candidate	Marty Wilde	Marty **Wilde
-Candidate	Mark W Meek	Mark W **Meek
-Candidate	Mark Owens	Mark **Owens
-Candidate	Lisa Reynolds	Lisa **Reynolds
-Candidate	Lily Morgan	Lily **Morgan
-Candidate	Kim Wallan	Kim **Wallan
-Candidate	Khanh Pham	Khanh **Pham
-Candidate	Ken Helm	Ken **Helm
-Candidate	Karin Power	Karin **Power
-Candidate	Julie Fahey	Julie **Fahey
-Candidate	John Lively	John **Lively
-Candidate	Jeff Reardon	Jeff **Reardon
-Candidate	Jason Kropf	Jason **Kropf
-Candidate	Janelle S Bynum	Janelle S **Bynum
-Candidate	Janeen Sollman	Janeen **Sollman
-Candidate	Jami Cate	Jami **Cate
-Candidate	Jack L ESP	Jack L ESP
-Candidate	Jack Zika	Jack **Zika
-Candidate	Greg Smith	Greg **Smith
-Candidate	Gary Leif	Gary **Leif
-Candidate	E Werner Reschke	E Werner **Reschke
-Candidate	Duane A Stark	Duane A **Stark
-Candidate	Diego Hernandez	Diego **Hernandez
-Candidate	David Brock Smith	David Brock **Smith
-Candidate	David Gomberg	David **Gomberg
-Candidate	Daniel G Bonham	Daniel G **Bonham
-Candidate	Dan Rayfield	Dan **Rayfield
-Candidate	Dacia Grayber	Dacia **Grayber
-Candidate	Courtney Neron	Courtney **Neron
-Candidate	Christine Drazan	Christine **Drazan
-Candidate	Cedric Hayden	Cedric **Hayden
-Candidate	Brian Clem	Brian **Clem
-Candidate	Brad Witt	Brad **Witt
-Candidate	Boomer Wright	Boomer **Wright
-Candidate	Bobby Levy	Bobby **Levy
-Candidate	Bill Post	Bill **Post
-Candidate	Barbara Smith Warner	Barbara **Smith Warner
-Candidate	Anna Williams	Anna **Williams
-Candidate	Andrea Salinas	Andrea **Salinas
-Candidate	Tim Knopp	Tim **Knopp
-Candidate	Michael Dembrow	Michael **Dembrow
-Candidate	Lynn P Findley	Lynn P **Findley
-Candidate	Lew Frederick	Lew **Frederick
-Candidate	Kathleen Taylor	Kathleen **Taylor
-Candidate	Kate Lieber	Kate **Lieber
-Candidate	Ginny Burdick	Ginny **Burdick
-Candidate	Fred Frank Girod	Fred Frank **Girod
-Candidate	Dick Anderson	Dick **Anderson
-Candidate	Dennis Linthicum	Dennis **Linthicum
-Candidate	Deb Patterson	Deb **Patterson
-Candidate	Dallas Heard	Dallas **Heard
-Candidate	Chris Gorsek	Chris **Gorsek
-Candidate	Brian J Boquist	Brian J **Boquist
-Candidate	Bill Hansell	Bill **Hansell
-Candidate	Art Robinson	Art **Robinson
+ReportingUnit	Oregon;Yamhill County	fips41071

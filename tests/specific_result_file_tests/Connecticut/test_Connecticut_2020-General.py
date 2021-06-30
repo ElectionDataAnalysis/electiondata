@@ -17,7 +17,7 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = "Connecticut"
 abbr = "CT"
-total_pres_votes = 1824280  # total of all votes for US President
+total_pres_votes = 1080831 + 714717 + 20230 + 7538 + 219 + 11 + 13 + 12 + 2 + 22 + 1 + 6 + 255  # total of all votes for US President
 cd = 1  # US House congressional district
 total_cd_votes = 349237  # total votes in that US House contest in the chosen cd
 shd = 1  # state house district
@@ -31,7 +31,7 @@ county_or_other = "town"  # Change this only if results are subdivided by someth
 single_county = (
     "Connecticut;Andover"  # pick any one from your file, but use internal db name
 )
-pres_votes_county = 2091  # total votes for US President in that county
+pres_votes_county = 1058 + 998 + 27 + 8  # total votes for US President in that county
 
 
 def test_data_exists(dbname):

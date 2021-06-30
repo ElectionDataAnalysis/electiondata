@@ -17,9 +17,9 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = "Northern Mariana Islands"
 abbr = "MP"
-juris_type = 'territory'
+juris_type = "territory"
 total_delegate_votes = -1  # total of all votes for US President
-  # US Delegate
+# US Delegate
 total_cd_votes = 11449  # total votes in that US House contest in the chosen cd
 shd = 2  # state house district
 total_shd_votes = 1961  # total votes in that State House contest
@@ -49,6 +49,7 @@ def test_data_exists(dbname):
         == total_pres_votes
     )
 """
+
 
 def test_congressional_totals(dbname):
     assert (
@@ -106,7 +107,7 @@ def test_all_candidates_known(dbname):
 
 def test_count_type_subtotal(dbname):
     assert (
-            e.contest_total(
+        e.contest_total(
             election,
             jurisdiction,
             f"US House {abbr} Delegate",
@@ -114,13 +115,13 @@ def test_count_type_subtotal(dbname):
             sub_unit_type=juris_type,
             vote_type=single_vote_type,
         )
-            == delegate_votes_vote_type
+        == delegate_votes_vote_type
     )
 
 
 def test_county_subtotal(dbname):
     assert (
-            e.contest_total(
+        e.contest_total(
             election,
             jurisdiction,
             f"US House MP Delegate",
@@ -128,5 +129,5 @@ def test_county_subtotal(dbname):
             county=single_county,
             sub_unit_type=county_or_other,
         )
-            == delegate_votes_county
+        == delegate_votes_county
     )

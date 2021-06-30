@@ -144,7 +144,7 @@ Erik Brooks
 Erin Tracy
 Evan Goyke
 Evan McMullin
-"F. James Sensenbrenner, Jr."
+F. James Sensenbrenner, Jr.
 Francesca Hong
 Frank T. Buress
 Gabriel A. Gomez
@@ -254,7 +254,7 @@ Kelly Lynn Tenpas (write-in)
 Ken Driessen
 Ken Holdorf
 Ken Skowronski
-"Ken Van Dyke, Sr."
+Ken Van Dyke, Sr.
 Ken Yorgan
 Kerry Trask
 Kevin A. Bauer
@@ -513,7 +513,7 @@ Thomas J. Bilski
 Theresa E. Wetzsteon
 Tania M. Bonnett
 Susan L. Opper
-"Stephen W. Ratzlaff, Jr."
+Stephen W. Ratzlaff, Jr.
 Reese Wood (write-in)
 Nathan F. Haberman
 Monica J. Hall
@@ -532,10 +532,10 @@ Mark Fruehauf
 Mark D. Bensen
 Marc Adam Ciske
 Lukas L. Steiner
-"Louis John Molepske, Jr."
+Louis John Molepske, Jr.
 Lisa A. Riniker
 Linda Boucher (write-in)
-"Leroy Brown, II"
+Leroy Brown, II
 Laura L. Waite
 Kurt F. Klomberg
 Kristi S. Tlusty
@@ -591,3 +591,13 @@ Alex Seifert
 Adam Y. Gerol
 Aaron M. Damrau
 Aaron B. Marcoux
+Al Gore
+Barack Obama
+George W. Bush
+John Kerry
+John Mccain
+Mitt Romney
+Other
+Ralph Nader
+John MCCain
+John McCain

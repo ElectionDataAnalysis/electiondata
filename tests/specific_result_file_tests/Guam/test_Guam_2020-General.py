@@ -48,6 +48,7 @@ def test_presidential(dbname):
         == total_pres_votes
     )
 
+
 # No congressional contest in this election
 """def test_congressional_totals(dbname):
     assert (
@@ -62,6 +63,7 @@ def test_presidential(dbname):
     )
 """
 
+
 def test_state_senate_totals(dbname):
     assert (
         e.contest_total(
@@ -73,6 +75,7 @@ def test_state_senate_totals(dbname):
         )
         == total_ssd_votes
     )
+
 
 # Guam legislature is unicameral
 """def test_state_house_totals(dbname):
@@ -87,6 +90,7 @@ def test_state_senate_totals(dbname):
         == total_shd_votes
     )
 """
+
 
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
@@ -117,6 +121,7 @@ def test_all_candidates_known(dbname):
         == pres_votes_vote_type
     )
 """
+
 
 def test_county_subtotal(dbname):
     assert (

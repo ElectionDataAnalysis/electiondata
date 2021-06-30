@@ -100,6 +100,7 @@ def get_testing_data(
 def run2(
     load_data: bool = True,
     dbname: Optional[str] = None,
+    param_file: Optional[str] = None,
     test_dir: Optional[str] = None,
     election_jurisdiction_list: Optional[list] = None,
     rollup: bool = False,
@@ -109,7 +110,9 @@ def run2(
     err = None
     if not test_dir:
         # set the test_dir to the results-testing subdirectory of the directory containing this file
-        test_dir = os.path.join(Path(__file__).parent.absolute(), "specific_result_file_tests")
+        test_dir = os.path.join(
+            Path(__file__).parent.absolute(), "specific_result_file_tests"
+        )
 
     # name the db
     if dbname is None:
@@ -126,7 +129,7 @@ def run2(
     if load_data:
         try:
             # Load the data
-            dl = eda.DataLoader()
+            dl = eda.DataLoader(dbname=dbname, param_file=param_file)
             if not dl:
                 err = ui.add_new_error(
                     err,
@@ -179,7 +182,10 @@ def run2(
     loaded_ej_list = [k.split(";") for k in success.keys()]
     report_dir = os.path.join(dl.d["reports_and_plots_dir"], f"tests_{ts}")
     failures = ui.run_tests(
-        test_dir, dbname, election_jurisdiction_list=loaded_ej_list, report_dir=report_dir
+        test_dir,
+        dbname,
+        election_jurisdiction_list=loaded_ej_list,
+        report_dir=report_dir,
     )
     if test_dir:
         for k in failures.keys():
@@ -212,7 +218,7 @@ if __name__ == "__main__":
         params, new_err = ui.get_parameters(
             required_keys=["reports_and_plots_dir"],
             param_file="run_time.ini",
-            header="election_data_analysis"
+            header="election_data_analysis",
         )
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         if not new_err:
@@ -221,5 +227,7 @@ if __name__ == "__main__":
             )
             ui.report(error, report_dir)
         else:
-            print(f"No reports_and_plots_dir specified in run_time.ini. Errors:\n{error}")
+            print(
+                f"No reports_and_plots_dir specified in run_time.ini. Errors:\n{error}"
+            )
     exit()

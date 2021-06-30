@@ -1,69 +1,846 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-ReportingUnit	North Dakota;Adams County	Adams
-ReportingUnit	North Dakota;Barnes County	Barnes
-ReportingUnit	North Dakota;Benson County	Benson
-ReportingUnit	North Dakota;Billings County	Billings
-ReportingUnit	North Dakota;Bottineau County	Bottineau
-ReportingUnit	North Dakota;Bowman County	Bowman
-ReportingUnit	North Dakota;Burke County	Burke
-ReportingUnit	North Dakota;Burleigh County	Burleigh
-ReportingUnit	North Dakota;Cass County	Cass
-ReportingUnit	North Dakota;Cavalier County	Cavalier
-ReportingUnit	North Dakota;Dickey County	Dickey
-ReportingUnit	North Dakota;Divide County	Divide
-ReportingUnit	North Dakota;Dunn County	Dunn
-ReportingUnit	North Dakota;Eddy County	Eddy
-ReportingUnit	North Dakota;Emmons County	Emmons
-ReportingUnit	North Dakota;Foster County	Foster
-ReportingUnit	North Dakota;Golden Valley County	Golden Valley
-ReportingUnit	North Dakota;Grand Forks County	Grand Forks
-ReportingUnit	North Dakota;Grant County	Grant
-ReportingUnit	North Dakota;Griggs County	Griggs
-ReportingUnit	North Dakota;Hettinger County	Hettinger
-ReportingUnit	North Dakota;Kidder County	Kidder
-ReportingUnit	North Dakota;LaMoure County	LaMoure
-ReportingUnit	North Dakota;Logan County	Logan
-ReportingUnit	North Dakota;McHenry County	McHenry
-ReportingUnit	North Dakota;McIntosh County	McIntosh
-ReportingUnit	North Dakota;McKenzie County	McKenzie
-ReportingUnit	North Dakota;McLean County	McLean
-ReportingUnit	North Dakota;Mercer County	Mercer
-ReportingUnit	North Dakota;Morton County	Morton
-ReportingUnit	North Dakota;Mountrail County	Mountrail
-ReportingUnit	North Dakota;Nelson County	Nelson
-ReportingUnit	North Dakota;Oliver County	Oliver
-ReportingUnit	North Dakota;Pembina County	Pembina
-ReportingUnit	North Dakota;Pierce County	Pierce
-ReportingUnit	North Dakota;Ramsey County	Ramsey
-ReportingUnit	North Dakota;Ransom County	Ransom
-ReportingUnit	North Dakota;Renville County	Renville
-ReportingUnit	North Dakota;Richland County	Richland
-ReportingUnit	North Dakota;Rolette County	Rolette
-ReportingUnit	North Dakota;Sargent County	Sargent
-ReportingUnit	North Dakota;Sheridan County	Sheridan
-ReportingUnit	North Dakota;Sioux County	Sioux
-ReportingUnit	North Dakota;Slope County	Slope
-ReportingUnit	North Dakota;Stark County	Stark
-ReportingUnit	North Dakota;Steele County	Steele
-ReportingUnit	North Dakota;Stutsman County	Stutsman
-ReportingUnit	North Dakota;Towner County	Towner
-ReportingUnit	North Dakota;Traill County	Traill
-ReportingUnit	North Dakota;Walsh County	Walsh
-ReportingUnit	North Dakota;Ward County	Ward
-ReportingUnit	North Dakota;Wells County	Wells
-ReportingUnit	North Dakota;Williams County	Williams
-Party	Democratic Party	Democratic-NPL
-Party	Republican Party	Republican
-Party	Libertarian Party	Libertarian
+Candidate	Aaron Roseland	Aaron Roseland
+Candidate	Aaron W Roseland	Aaron W Roseland
+Candidate	Adam Fortwengler	Adam Fortwengler
+Candidate	Adam Leiphon	Adam Leiphon
+Candidate	Adam Michal	Adam Michal
+Candidate	Al Carlson	Al Carlson
+Candidate	Al Gore	AL GORE
+Candidate	Alan Ian Mattice	Alan Ian Mattice
+Candidate	Alan J Peterson	Alan J Peterson
+Candidate	Alan M Walter	Alan M Walter
+Candidate	Alex Ertelt	Alex Ertelt
+Candidate	Alisa Mitskog	Alisa Mitskog
+Candidate	Alison Toepke	Alison Toepke
+Candidate	Allen Michael Koppy	Allen Michael Koppy
+Candidate	Alton Zenker	Alton Zenker
+Candidate	Alvin A Jaeger	Alvin A Jaeger
+Candidate	Amber Joy Fiesel	Amber Joy Fiesel
+Candidate	Amelia Doll	Amelia Doll
+Candidate	Andrew Bartholomaus	Andrew Bartholomaus
+Candidate	Andrew J Schultz	Andrew J Schultz
+Candidate	Andrew Marschall	Andrew Marschall
+Candidate	Andrew Weiss	Andrew Weiss
+Candidate	Andrew Zachmeier	Andrew Zachmeier
+Candidate	Andy Maragos	Andy Maragos
+Candidate	Andy Schneider	Andy Schneider
+Candidate	Angela Carlson	Angela Carlson
+Candidate	Angela Urlacher	Angela Urlacher
+Candidate	Anita Ibach	Anita Ibach
+Candidate	Anita McLaughlin	Anita McLaughlin
+Candidate	Ann Monson	Ann Monson
+Candidate	Anthony Swain Benson	Anthony Swain Benson
+Candidate	April Nogosek	April Nogosek
+Candidate	Arnold W Langehaug	Arnold W Langehaug
+Candidate	Arnold W. Langehaug	Arnold W. Langehaug
+Candidate	Ashley Berg	Ashley Berg
+Candidate	Ashley L. Lies	Ashley L. Lies
+Candidate	Ashley Tribune	Ashley Tribune
+Candidate	Austen Schauer	Austen Schauer
+Candidate	Austin Lafrenz	Austin Lafrenz
+Candidate	BJ Maxson	BJ Maxson
+Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barbara J Steinke	Barbara J Steinke
+Candidate	Barbara Jean Hettich	Barbara Jean Hettich
+Candidate	Barbara Vondell	Barbara Vondell
+Candidate	Barry Ramberg	Barry Ramberg
+Candidate	Barry Vannatta	Barry Vannatta
+Candidate	Beau Anderson	Beau Anderson
+Candidate	Becky Nelson	Becky Nelson
+Candidate	Ben Hershey	Ben Hershey
+Candidate	Ben Koppelman	Ben Koppelman
+Candidate	Ben M Hanson	Ben M Hanson
+Candidate	Ben Olson	Ben Olson
+Candidate	Ben W Hanson	Ben W Hanson
+Candidate	Benson County Farmers Press	Benson County Farmers Press
+Candidate	Bernadette Matejcek	Bernadette Matejcek
+Candidate	Bernie Parkhurst	Bernie Parkhurst
+Candidate	Bernie Satrom	Bernie Satrom
+Candidate	Bert Anderson	Bert Anderson
+Candidate	Bert Hauge	Bert Hauge
+Candidate	Beth A Knutson	Beth A Knutson
+Candidate	Beth M Didier	Beth M Didier
+Candidate	Beth M Innis	Beth M Innis
+Candidate	Beulah Beacon	Beulah Beacon
+Candidate	Bill Berlin	Bill Berlin
+Candidate	Bill Carlblom	Bill Carlblom
+Candidate	Bill Cox	Bill Cox
+Candidate	Bill Devlin	Bill Devlin
+Candidate	Bill Mertens	Bill Mertens
+Candidate	Bill Tveit	Bill Tveit
+Candidate	Billings County Pioneer	Billings County Pioneer
+Candidate	Birch Burdick	Birch Burdick
+Candidate	Blanche A Schumacher	Blanche A Schumacher
+Candidate	Bob Barnard	Bob Barnard
+Candidate	Bob Martinson	Bob Martinson
+Candidate	Bob Paulson	Bob Paulson
+Candidate	Bob Rost	Bob Rost
+Candidate	Bob Schwartz	Bob Schwartz
+Candidate	Bobbi Milbrath	Bobbi Milbrath
+Candidate	Bonnie (Howard) Erickson	Bonnie (Howard) Erickson
+Candidate	Bottineau Courant	Bottineau Courant
+Candidate	Bowman County Pioneer	Bowman County Pioneer
+Candidate	Brad Bekkedahl	Brad Bekkedahl
+Candidate	Brad Cruff	Brad Cruff
+Candidate	Brad Solberg	Brad Solberg
+Candidate	Bradley Edin	Bradley Edin
+Candidate	Brandi Jude	Brandi Jude
+Candidate	Brandon Medenwald	Brandon Medenwald
+Candidate	Brandy L Pyle	Brandy L Pyle
+Candidate	Brenda Fischer	Brenda Fischer
+Candidate	Brenda L. Cook	Brenda L. Cook
+Candidate	Brian Johnson	Brian Johnson
+Candidate	Brian K Kroshus	Brian K Kroshus
+Candidate	Brian Tuite	Brian Tuite
+Candidate	Bridget Ertelt	Bridget Ertelt
+Candidate	Brom Lutz	Brom Lutz
+Candidate	Bruce A Romanick	Bruce A Romanick
+Candidate	Bruce Klein	Bruce Klein
+Candidate	Burke County Tribune	Burke County Tribune
+Candidate	Carl Young	Carl Young
+Candidate	Carla Arthaud	Carla Arthaud
+Candidate	Carla Swanson	Carla Swanson
+Candidate	Carol Fey	Carol Fey
+Candidate	Carrie K. Krause	Carrie K. Krause
+Candidate	Carrie Leopold	Carrie Leopold
+Candidate	Carson Press	Carson Press
+Candidate	Casey Buchmann	Casey Buchmann
+Candidate	Cass County Reporter	Cass County Reporter
+Candidate	Cassey A. Breyer	Cassey A. Breyer
+Candidate	Cassie Lee LeCompte	Cassie Lee LeCompte
+Candidate	Cathy Swenson	Cathy Swenson
+Candidate	Cavalier County Republican	Cavalier County Republican
+Candidate	Center Republican	Center Republican
+Candidate	Chad Kaiser	Chad Kaiser
+Candidate	Charles Tuttle	Charles Tuttle
+Candidate	Charlie Adams	Charlie Adams
+Candidate	Charlie Hart	Charlie Hart
+Candidate	Charlie Stock	Charlie Stock
+Candidate	Chet Pollert	Chet Pollert
+Candidate	Chris Estes	Chris Estes
+Candidate	Christina Running	Christina Running
+Candidate	Christine Johnson	Christine Johnson
+Candidate	Christopher Harmon	Christopher Harmon
+Candidate	Christopher Kluth	Christopher Kluth
+Candidate	Christopher Votava	Christopher Votava
+Candidate	Chuck Damschen	Chuck Damschen
+Candidate	Cindy Beck	Cindy Beck
+Candidate	Cindy Kaml	Cindy Kaml
+Candidate	Cindy Worrel	Cindy Worrel
+Candidate	Claire Cory	Claire Cory
+Candidate	Clarence Counts	Clarence Counts
+Candidate	Clayton Fegley	Clayton Fegley
+Candidate	Cliff Hanretty	Cliff Hanretty
+Candidate	Cole Christensen	Cole Christensen
+Candidate	Cole Conley	Cole Conley
+Candidate	Colleen Germann	Colleen Germann
+Candidate	Connie Eslinger	Connie Eslinger
+Candidate	Corey Bristol	Corey Bristol
+Candidate	Corey Lee	Corey Lee
+Candidate	Corey Mock	Corey Mock
+Candidate	Cory Hanson	Cory Hanson
+Candidate	Craig Headland	Craig Headland
+Candidate	Craig J Poitra	Craig J Poitra
+Candidate	Craig Neys	Craig Neys
+Candidate	Craig Pelton	Craig Pelton
+Candidate	Crysta Parkinson	Crysta Parkinson
+Candidate	Curt Kreun	Curt Kreun
+Candidate	Cynthia Stremick	Cynthia Stremick
+Candidate	Daily News	Daily News
+Candidate	Dale Patten	Dale Patten
+Candidate	Dale Pedersen	Dale Pedersen
+Candidate	Dan Ruby	Dan Ruby
+Candidate	Daniel Borgen	Daniel Borgen
+Candidate	Daniel Gulya	Daniel Gulya
+Candidate	Daniel Marquardt	Daniel Marquardt
+Candidate	Daniel S El-Dweek	Daniel S El-Dweek
+Candidate	Daniel S Moch	Daniel S Moch
+Candidate	Daniel Uran	Daniel Uran
+Candidate	Danielle Bjorlie	Danielle Bjorlie
+Candidate	Danielle Petersen	Danielle Petersen
+Candidate	Danielle Pinnick	Danielle Pinnick
+Candidate	Dann Greenwood	Dann Greenwood
+Candidate	Darbie Berger	Darbie Berger
+Candidate	Darlene Carpenter	Darlene Carpenter
+Candidate	Darren Benneweis	Darren Benneweis
+Candidate	Daryl Dukart	Daryl Dukart
+Candidate	Dave Anderson	Dave Anderson
+Candidate	Dave Gehrtz	Dave Gehrtz
+Candidate	Dave Nehring	Dave Nehring
+Candidate	Dave Oehlke	Dave Oehlke
+Candidate	Dave Pankow	Dave Pankow
+Candidate	Dave Shipman	Dave Shipman
+Candidate	David A Clemens	David A Clemens
+Candidate	David Andahl	David Andahl
+Candidate	David B. Johnson	David B. Johnson
+Candidate	David Clark Thompson	David Clark Thompson
+Candidate	David Grimes Haugen	David Grimes Haugen
+Candidate	David Hilliard	David Hilliard
+Candidate	David Hogue	David Hogue
+Candidate	David L Jacobson	David L Jacobson
+Candidate	David Lagein	David Lagein
+Candidate	David M Crane	David M Crane
+Candidate	David Migler	David Migler
+Candidate	David Monson	David Monson
+Candidate	David O Medalen	David O Medalen
+Candidate	David Richter	David Richter
+Candidate	David S Rust	David S Rust
+Candidate	David Schultz	David Schultz
+Candidate	David Volk	David Volk
+Candidate	Dawn R Rhone	Dawn R Rhone
+Candidate	Dawne Marquart	Dawne Marquart
+Candidate	Dean Danzeisen	Dean Danzeisen
+Candidate	Dean Simek	Dean Simek
+Candidate	Debbie Kroshus	Debbie Kroshus
+Candidate	Deborah Anderson	Deborah Anderson
+Candidate	Deborah Markegard	Deborah Markegard
+Candidate	Dennis Agnew	Dennis Agnew
+Candidate	Dennis Johnson	Dennis Johnson
+Candidate	Dennis Ova	Dennis Ova
+Candidate	Dennis T. Dockter	Dennis T. Dockter
+Candidate	Dennis V Skorheim	Dennis V Skorheim
+Candidate	Denton Zubke	Denton Zubke
+Candidate	Devils Lake Journal	Devils Lake Journal
+Candidate	Devin Deile	Devin Deile
+Candidate	Diane K Knauf	Diane K Knauf
+Candidate	Diane Larson	Diane Larson
+Candidate	Dianne Hertel	Dianne Hertel
+Candidate	Dianne Hyndman	Dianne Hyndman
+Candidate	Dick Dever	Dick Dever
+Candidate	Dickey County Leader	Dickey County Leader
+Candidate	Don Vigesaa	Don Vigesaa
+Candidate	Donald Fougner	Donald Fougner
+Candidate	Donald Hager	Donald Hager
+Candidate	Donald J Trump	Trump and Pence
+Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald Longmuir	Donald Longmuir
+Candidate	Donald Schaible	Donald Schaible
+Candidate	Donna Scott	Donna Scott
+Candidate	Dori Sparby	Dori Sparby
+Candidate	Doris M. Griffin	Doris M. Griffin
+Candidate	Doug Berg	Doug Berg
+Candidate	Doug Goehring	Doug Goehring
+Candidate	Doug Larsen	Doug Larsen
+Candidate	Douglas Krebsbach	Douglas Krebsbach
+Candidate	Douglas L. Marsden	Douglas L. Marsden
+Candidate	Duane Breitling	Duane Breitling
+Candidate	Duane L Marmon	Duane L Marmon
+Candidate	Dunn County Herald	Dunn County Herald
+Candidate	Dwight Kiefert	Dwight Kiefert
+Candidate	Ed Brown	Ed Brown
+Candidate	Edgeley Mail	Edgeley Mail
+Candidate	Eldon R Moors Sr	Eldon R Moors Sr
+Candidate	Eldred Knutson	Eldred Knutson
+Candidate	Elizabeth Kapp	Elizabeth Kapp
+Candidate	Elizabeth Simpfenderfer	Elizabeth Simpfenderfer
+Candidate	Elsie Blair Magnus	Elsie Blair Magnus
+Candidate	Elsie Magnus	Elsie Magnus
+Candidate	Emily M Wigen	Emily M Wigen
+Candidate	Emily OBrien	Emily OBrien
+Candidate	Emmons County Record	Emmons County Record
+Candidate	Enderlin Independent	Enderlin Independent
+Candidate	Eric Hetland	Eric Hetland
+Candidate	Erica Johnsrud	Erica Johnsrud
+Candidate	Erin Magrum	Erin Magrum
+Candidate	Erin Oban	Erin Oban
+Candidate	Erin Peck	Erin Peck
+Candidate	Ernie Barta	Ernie Barta
+Candidate	Ervin Ternes	Ervin Ternes
+Candidate	Eugene Molbert	Eugene Molbert
+Candidate	F. Kenneth Olafson	F. Kenneth Olafson
+Candidate	Fallon Kelly	Fallon Kelly
+Candidate	Fern Pokorny	Fern Pokorny
+Candidate	Foster County Independent	Foster County Independent
+Candidate	Francis Lawler	Francis Lawler
+Candidate	Frank Eberle	Frank Eberle
+Candidate	Frank H Bitterman	Frank H Bitterman
+Candidate	Franklin Anton Landeis	Franklin Anton Landeis
+Candidate	Fritz Fremgen	Fritz Fremgen
+Candidate	Gabrielle Goter	Gabrielle Goter
+Candidate	Gail A Veland	Gail A Veland
+Candidate	Galen J. Mack	Galen J. Mack
+Candidate	Gary Elfman	Gary Elfman
+Candidate	Gary Emineth	Gary Emineth
+Candidate	Gary Kreidt	Gary Kreidt
+Candidate	Gary Kuhn	Gary Kuhn
+Candidate	Gary Paur	Gary Paur
+Candidate	Gary R Sanders	Gary R Sanders
+Candidate	Gary Schwartzenberger	Gary Schwartzenberger
+Candidate	Gayle Jastrzebski	Gayle Jastrzebski
+Candidate	Gene Skoglund	Gene Skoglund
+Candidate	Geneva Kaiser	Geneva Kaiser
+Candidate	George Barnes	George Barnes
+Candidate	George Keiser	George Keiser
+Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	Gerald Brady	Gerald Brady
+Candidate	Gerald Medrud	Gerald Medrud
+Candidate	Gerry Kraft	Gerry Kraft
+Candidate	Gina Ketterling	Gina Ketterling
+Candidate	Glenda Haugen	Glenda Haugen
+Candidate	Glenn Bosch	Glenn Bosch
+Candidate	Grand Forks Herald	Grand Forks Herald
+Candidate	Grant County News	Grant County News
+Candidate	Greg Fetsch	Greg Fetsch
+Candidate	Greg Westlind	Greg Westlind
+Candidate	Gregory Goodman	Gregory Goodman
+Candidate	Gretchen Dobervich	Gretchen Dobervich
+Candidate	Griggs County Courier	Griggs County Courier
+Candidate	Haley Wamstad	Haley Wamstad
+Candidate	Hamida Dakane	Hamida Dakane
+Candidate	Harry Bergstad	Harry Bergstad
+Candidate	Hazen Star	Hazen Star
+Candidate	Heather Hanna	Heather Hanna
+Candidate	Hedwig Walker	Hedwig Walker
+Candidate	Heidi Heitkamp	Heidi Heitkamp
+Candidate	Heidi J Anderson	Heidi J Anderson
+Candidate	Helen Lehmann	Helen Lehmann
+Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillsboro Banner	Hillsboro Banner
+Candidate	Howard C Anderson Jr	Howard C Anderson Jr
+Candidate	Howdy Lawlar	Howdy Lawlar
+Candidate	Hugh Ralston	Hugh Ralston
+Candidate	Hunter L Andes	Hunter L Andes
+Candidate	Isaac Zimmerman	Isaac Zimmerman
+Candidate	Jackie Buckley	Jackie Buckley
+Candidate	Jacqueline Hoffarth	Jacqueline Hoffarth
+Candidate	James Boehm	James Boehm
+Candidate	James D Gion	James D Gion
+Candidate	James P Wang	James P Wang
+Candidate	James T. Shockman	James T. Shockman
+Candidate	Jan Werre	Jan Werre
+Candidate	Janne Myrdal	Janne Myrdal
+Candidate	Jared Hagert	Jared Hagert
+Candidate	Jarret Michael Vanberkom	Jarret Michael Vanberkom
+Candidate	Jason Dockter	Jason Dockter
+Candidate	Jason Heitkamp	Jason Heitkamp
+Candidate	Jason Knatterud	Jason Knatterud
+Candidate	Jay Elkin	Jay Elkin
+Candidate	Jay Fisher	Jay Fisher
+Candidate	Jayme Tenneson	Jayme Tenneson
+Candidate	Jayne 'Lewandowski' Pfau	Jayne 'Lewandowski' Pfau
+Candidate	Jean Brandt	Jean Brandt
+Candidate	Jean Schoenhard	Jean Schoenhard
+Candidate	Jeanine Sue Jensen	Jeanine Sue Jensen
+Candidate	Jeff Bowman	Jeff Bowman
+Candidate	Jeff Glynn	Jeff Glynn
+Candidate	Jeff Hoverson	Jeff Hoverson
+Candidate	Jeff Pfau	Jeff Pfau
+Candidate	Jeffery J Magrum	Jeffery J Magrum
+Candidate	Jeffrey Powell	Jeffrey Powell
+Candidate	Jenna Vanhorne	Jenna Vanhorne
+Candidate	Jeremy Raymond Grohs	Jeremy Raymond Grohs
+Candidate	Jerene A. Bender	Jerene A. Bender
+Candidate	Jeri Schmidt	Jeri Schmidt
+Candidate	Jerry 'J.R.' Kerzmann	Jerry 'J.R.' Kerzmann
+Candidate	Jerry Klein	Jerry Klein
+Candidate	Jerry M Waswick	Jerry M Waswick
+Candidate	Jesse Jahner	Jesse Jahner
+Candidate	Jesse James Krieger	Jesse James Krieger
+Candidate	Jessica Dillon Hawkes	Jessica Dillon Hawkes
+Candidate	Jessica J. Binder	Jessica J. Binder
+Candidate	Jessica Niemitalo	Jessica Niemitalo
+Candidate	Jessica Unruh	Jessica Unruh
+Candidate	Jill Trenda	Jill Trenda
+Candidate	Jim Dotzenrod	Jim Dotzenrod
+Candidate	Jim Kasper	Jim Kasper
+Candidate	Jim Peluso	Jim Peluso
+Candidate	Jim Roers	Jim Roers
+Candidate	Jim Schmidt	Jim Schmidt
+Candidate	Jo Jorgensen	Jorgensen and Cohen
+Candidate	JoNell Bakke	JoNell Bakke
+Candidate	Joan Heckaman	Joan Heckaman
+Candidate	Joan M Hollekim	Joan M Hollekim
+Candidate	Joann Marsh Brew	Joann Marsh Brew
+Candidate	Jodi Meisch	Jodi Meisch
+Candidate	Jody Kristiansen	Jody Kristiansen
+Candidate	Jody Pfaff	Jody Pfaff
+Candidate	Joe Elsberry	Joe Elsberry
+Candidate	Joel Hamar	Joel Hamar
+Candidate	Joel Stevenson	Joel Stevenson
+Candidate	John A Thelen	John A Thelen
+Candidate	John C Irby	John C Irby
+Candidate	John Fjeldahl	John Fjeldahl
+Candidate	John Grabinger	John Grabinger
+Candidate	John Hokana	John Hokana
+Candidate	John J Kessel	John J Kessel
+Candidate	John Kerry	JOHN KERRY
+Candidate	John M Hokana	John M Hokana
+Candidate	John Martin Pederson	John Martin Pederson
+Candidate	John McCain	JOHN MCCAIN
+Candidate	John Narloch	John Narloch
+Candidate	John Peyerl	John Peyerl
+Candidate	John Pietsch	John Pietsch
+Candidate	John R. Foss	John R. Foss
+Candidate	John Rolfsrud	John Rolfsrud
+Candidate	John W Grinsteiner	John W Grinsteiner
+Candidate	John Wakefield	John Wakefield
+Candidate	Jolene Hoffert	Jolene Hoffert
+Candidate	Jon Kitzman	Jon Kitzman
+Candidate	Jon Nelson	Jon Nelson
+Candidate	Jordan Fisher	Jordan Fisher
+Candidate	Jordan Kannianen	Jordan Kannianen
+Candidate	Joseph Hanson	Joseph Hanson
+Candidate	Joseph Nesdahl	Joseph Nesdahl
+Candidate	Joseph R Biden	Biden and Harris
+Candidate	Josh Boschee	Josh Boschee
+Candidate	Josh Siegler	Josh Siegler
+Candidate	Joshua A Boschee	Joshua A Boschee
+Candidate	Joshua Buchmann	Joshua Buchmann
+Candidate	Joshua Frey	Joshua Frey
+Candidate	Joshua Johnson	Joshua Johnson
+Candidate	Joyce R. Larson	Joyce R. Larson
+Candidate	Judith Hintz	Judith Hintz
+Candidate	Judy Estenson	Judy Estenson
+Candidate	Judy Lee	Judy Lee
+Candidate	Julie Fischer	Julie Fischer
+Candidate	Julie Krosbakken	Julie Krosbakken
+Candidate	Julie Lawyer	Julie Lawyer
+Candidate	Justin Johnson	Justin Johnson
+Candidate	Kalyn June Dewitt	Kalyn June Dewitt
+Candidate	Kandace Page-Desjarlais	Kandace Page-Desjarlais
+Candidate	Kandy Christopherson	Kandy Christopherson
+Candidate	Kara Brinster	Kara Brinster
+Candidate	Karen Karls	Karen Karls
+Candidate	Karen Kay Krebsbach	Karen Kay Krebsbach
+Candidate	Karen Rohr	Karen Rohr
+Candidate	Kari Agotness	Kari Agotness
+Candidate	Kari Breker	Kari Breker
+Candidate	Kari Dekker	Kari Dekker
+Candidate	Kari Hatzenbuhler	Kari Hatzenbuhler
+Candidate	Karla Rose Hanson	Karla Rose Hanson
+Candidate	Kate Halvorson	Kate Halvorson
+Candidate	Katherine Roth	Katherine Roth
+Candidate	Kathleen Jones	Kathleen Jones
+Candidate	Kathleen K. Murray	Kathleen K. Murray
+Candidate	Kathleen Mindt	Kathleen Mindt
+Candidate	Kathrin Volochenko	Kathrin Volochenko
+Candidate	Kathy Anderson	Kathy Anderson
+Candidate	Kathy Hogan	Kathy Hogan
+Candidate	Kathy Jorgenson	Kathy Jorgenson
+Candidate	Kathy Skarda	Kathy Skarda
+Candidate	Kathy Skroch	Kathy Skroch
+Candidate	Katie Nadeau	Katie Nadeau
+Candidate	Katie Paulson	Katie Paulson
+Candidate	Kay Haag	Kay Haag
+Candidate	Kay Newell Braget	Kay Newell Braget
+Candidate	Keith Fernsler	Keith Fernsler
+Candidate	Keith Kempenich	Keith Kempenich
+Candidate	Keith Olson	Keith Olson
+Candidate	Kelley Cole	Kelley Cole
+Candidate	Kelly Armstrong	Kelly Armstrong
+Candidate	Kelly Klosterman	Kelly Klosterman
+Candidate	Kelly Leben	Kelly Leben
+Candidate	Kelly Vincent	Kelly Vincent
+Candidate	Ken Nesvig	Ken Nesvig
+Candidate	Ken Zander	Ken Zander
+Candidate	Kenneth Louis Snider	Kenneth Louis Snider
+Candidate	Kenneth Steiner	Kenneth Steiner
+Candidate	Kevin Cramer	Kevin Cramer
+Candidate	Kevin J Glatt	Kevin J Glatt
+Candidate	Kevin Pagel	Kevin Pagel
+Candidate	Kim Koppelman	Kim Koppelman
+Candidate	Kimberly Radermacher	Kimberly Radermacher
+Candidate	Kirsten M Sjue	Kirsten M Sjue
+Candidate	Krisanna Holkup Peterson	Krisanna Holkup Peterson
+Candidate	Krista Faller	Krista Faller
+Candidate	Kristie Jacobson	Kristie Jacobson
+Candidate	Kristin Roers	Kristin Roers
+Candidate	Kyle Davison	Kyle Davison
+Candidate	Kyle Kirchmeier	Kyle Kirchmeier
+Candidate	Kyle Kvamme	Kyle Kvamme
+Candidate	Kyle Thorson	Kyle Thorson
+Candidate	Kylie Oversen	Kylie Oversen
+Candidate	LaJuana Hayen	LaJuana Hayen
+Candidate	LaMoure Chronicle	LaMoure Chronicle
+Candidate	Ladd Erickson	Ladd Erickson
+Candidate	Laetitia Hellerud	Laetitia Hellerud
+Candidate	Lakota American	Lakota American
+Candidate	Lana K. Johnson	Lana K. Johnson
+Candidate	Landis Larson	Landis Larson
+Candidate	Lanette Blumhardt	Lanette Blumhardt
+Candidate	Larry Bellew	Larry Bellew
+Candidate	Larry E Luick	Larry E Luick
+Candidate	Larry F Haman	Larry F Haman
+Candidate	Larry J Robinson	Larry J Robinson
+Candidate	Larry Leshovsky	Larry Leshovsky
+Candidate	Laura Engle	Laura Engle
+Candidate	Laura Huber	Laura Huber
+Candidate	Lauren Donovan	Lauren Donovan
+Candidate	Lauren Throntveit	Lauren Throntveit
+Candidate	Laurie Good	Laurie Good
+Candidate	Laurie Spitzer	Laurie Spitzer
+Candidate	LaurieBeth Hager	LaurieBeth Hager
+Candidate	Lawrence Burianek	Lawrence Burianek
+Candidate	Lawrence R (Larry) Klemin	Lawrence R (Larry) Klemin
+Candidate	LeAnn Pollman	LeAnn Pollman
+Candidate	LeRoy Rude	LeRoy Rude
+Candidate	Leader News	Leader News
+Candidate	Lee Husfloen	Lee Husfloen
+Candidate	Lenore (Thorsgaard) Motl	Lenore (Thorsgaard) Motl
+Candidate	Leo Vetter	Leo Vetter
+Candidate	Leon Klocke	Leon Klocke
+Candidate	Leonard Weichel	Leonard Weichel
+Candidate	Leslie Amb	Leslie Amb
+Candidate	Lilie Ann Schoenack	Lilie Ann Schoenack
+Candidate	Linda Babb	Linda Babb
+Candidate	Linda Fairbrother	Linda Fairbrother
+Candidate	Linda Meyer	Linda Meyer
+Candidate	Linda Ott Tangen	Linda Ott Tangen
+Candidate	Linda Schlittenhard	Linda Schlittenhard
+Candidate	Linda Weiss	Linda Weiss
+Candidate	Lindsay Walsh	Lindsay Walsh
+Candidate	Lisa A Guenther	Lisa A Guenther
+Candidate	Lisa Diseth	Lisa Diseth
+Candidate	Lisa Fair McEvers	Lisa Fair McEvers
+Candidate	Lisa Finley-DeVille	Lisa Finley-DeVille
+Candidate	Lisa Gellner	Lisa Gellner
+Candidate	Lisa Herbel	Lisa Herbel
+Candidate	Lisa Meier	Lisa Meier
+Candidate	Lloyd Haagenson	Lloyd Haagenson
+Candidate	Lolita (Lita) Hartl Romanick	Lolita (Lita) Hartl Romanick
+Candidate	Lonnie Laffen	Lonnie Laffen
+Candidate	Loren Alfson	Loren Alfson
+Candidate	Lori Carlson	Lori Carlson
+Candidate	Lori Hollenbeck	Lori Hollenbeck
+Candidate	Lori Miron	Lori Miron
+Candidate	Lorrie Buzalsky	Lorrie Buzalsky
+Candidate	Lowell Haagenson	Lowell Haagenson
+Candidate	Lukas A Maughan	Lukas A Maughan
+Candidate	Luke Simons	Luke Simons
+Candidate	Lyle R Bopp	Lyle R Bopp
+Candidate	Lynelle Lyman Hoppe	Lynelle Lyman Hoppe
+Candidate	Lynette Marie Nelson	Lynette Marie Nelson
+Candidate	Lynn Brackel	Lynn Brackel
+Candidate	Lynn Mutschelknaus	Lynn Mutschelknaus
+Candidate	Lynnette Fox	Lynnette Fox
+Candidate	Mac Schneider	Mac Schneider
+Candidate	Madison Rodgers	Madison Rodgers
+Candidate	Marcia D Lamb	Marcia D Lamb
+Candidate	Marcus Haaland	Marcus Haaland
+Candidate	Marcy Svenningsen	Marcy Svenningsen
+Candidate	Mark Armstrong	Mark Armstrong
+Candidate	Mark Colton Hettich Jr	Mark Colton Hettich Jr
+Candidate	Mark J. Cook	Mark J. Cook
+Candidate	Mark McPherson	Mark McPherson
+Candidate	Mark Nelson	Mark Nelson
+Candidate	Mark S Owens	Mark S Owens
+Candidate	Mark Sanford	Mark Sanford
+Candidate	Mark Urness	Mark Urness
+Candidate	Mark Weber	Mark Weber
+Candidate	Marlene Eblen	Marlene Eblen
+Candidate	Marlyce A Wilder	Marlyce A Wilder
+Candidate	Marlys Ohlhauser	Marlys Ohlhauser
+Candidate	Marvin E Nelson	Marvin E Nelson
+Candidate	Marvin L. Schwehr	Marvin L. Schwehr
+Candidate	Mary Adams	Mary Adams
+Candidate	Mary E. DePuydt	Mary E. DePuydt
+Candidate	Mary Johnson	Mary Johnson
+Candidate	Mary Kay Schuh	Mary Kay Schuh
+Candidate	Mary Schlosser	Mary Schlosser
+Candidate	Mary Schneider	Mary Schneider
+Candidate	Mary Trahan	Mary Trahan
+Candidate	Matt Eidson	Matt Eidson
+Candidate	Matthew Johansen	Matthew Johansen
+Candidate	Matthew Joseph Kihle	Matthew Joseph Kihle
+Candidate	Matthew Ruby	Matthew Ruby
+Candidate	Maynard Loibl	Maynard Loibl
+Candidate	McClusky Gazette	McClusky Gazette
+Candidate	McKenzie County Farmer	McKenzie County Farmer
+Candidate	McLean County Independent	McLean County Independent
+Candidate	Megan Kummer	Megan Kummer
+Candidate	Melissa A Vachal	Melissa A Vachal
+Candidate	Melissa Anderson	Melissa Anderson
+Candidate	Melissa Gjellstad	Melissa Gjellstad
+Candidate	Melissa Johnson	Melissa Johnson
+Candidate	Merrill Piepkorn	Merrill Piepkorn
+Candidate	Michael Carter	Michael Carter
+Candidate	Michael Coachman	Michael Coachman
+Candidate	Michael E Kasian	Michael E Kasian
+Candidate	Michael Howe	Michael Howe
+Candidate	Michael Joseph Erdman	Michael Joseph Erdman
+Candidate	Michael McIntee	Michael McIntee
+Candidate	Michael N. Steffan	Michael N. Steffan
+Candidate	Michael Teske	Michael Teske
+Candidate	Michelle Strinden	Michelle Strinden
+Candidate	Mickie Mcnulty-Eide	Mickie Mcnulty-Eide
+Candidate	Mike Beltz	Mike Beltz
+Candidate	Mike Brandenburg	Mike Brandenburg
+Candidate	Mike Brossart	Mike Brossart
+Candidate	Mike Dwyer	Mike Dwyer
+Candidate	Mike H Sonsalla	Mike H Sonsalla
+Candidate	Mike Kjera	Mike Kjera
+Candidate	Mike Lefor	Mike Lefor
+Candidate	Mike Nathe	Mike Nathe
+Candidate	Mike Schatz	Mike Schatz
+Candidate	Mike Wobbema	Mike Wobbema
+Candidate	Minot Daily News	Minot Daily News
+Candidate	Mitch Ostlie	Mitch Ostlie
+Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Monte Gaukler	Monte Gaukler
+Candidate	Morris Holen Jr	Morris Holen Jr
+Candidate	Mountrail County Promoter, Inc	Mountrail County Promoter, Inc
+Candidate	Mouse River Journal	Mouse River Journal
+Candidate	Nancy Marquart	Nancy Marquart
+Candidate	Nancy Seefeldt	Nancy Seefeldt
+Candidate	Nancy Yon	Nancy Yon
+Candidate	Naomi T Muscha	Naomi T Muscha
+Candidate	Napoleon Homestead	Napoleon Homestead
+Candidate	Natalie Bugbee	Natalie Bugbee
+Candidate	Nathan Berseth	Nathan Berseth
+Candidate	Nathan Gustafson	Nathan Gustafson
+Candidate	Nathan L. Miller	Nathan L. Miller
+Candidate	Nathan Toman	Nathan Toman
+Candidate	Neal Rud	Neal Rud
+Candidate	Neal Schnieder	Neal Schnieder
+Candidate	Neil Meidinger	Neil Meidinger
+Candidate	Neil Olerud	Neil Olerud
+Candidate	Nellie Degen	Nellie Degen
+Candidate	New Rockford Transcript	New Rockford Transcript
+Candidate	New Town News	New Town News
+Candidate	Nichol Rutherford	Nichol Rutherford
+Candidate	Nick Moser	Nick Moser
+Candidate	Nicole Gentzkow	Nicole Gentzkow
+Candidate	Nicole Poolman	Nicole Poolman
+Candidate	Nikki Davidson	Nikki Davidson
+Candidate	Nikolaus Groenewold	Nikolaus Groenewold
+Candidate	Nolan Canright	Nolan Canright
+Candidate	Norm Hansen	Norm Hansen
+Candidate	Oley Larsen	Oley Larsen
+Candidate	Other	OTHER
+Candidate	Pam Maloney	Pam Maloney
+Candidate	Pam Musland	Pam Musland
+Candidate	Pamela Anderson	Pamela Anderson
+Candidate	Pat Heinert	Pat Heinert
+Candidate	Patrick Hatlestad	Patrick Hatlestad
+Candidate	Patrick J Rummel	Patrick J Rummel
+Candidate	Patti Ogurchak	Patti Ogurchak
+Candidate	Patty Hilbert	Patty Hilbert
+Candidate	Patty Williams	Patty Williams
+Candidate	Paul J Thomas	Paul J Thomas
+Candidate	Paul Lies	Paul Lies
+Candidate	Paul Murphy	Paul Murphy
+Candidate	Paul R Hanson	Paul R Hanson
+Candidate	Paul R Wilkins	Paul R Wilkins
+Candidate	Paula Thomas	Paula Thomas
+Candidate	Paulette Bowersox	Paulette Bowersox
+Candidate	Perry Miller	Perry Miller
+Candidate	Phyllis E Johnson	Phyllis E Johnson
+Candidate	Pierce County Tribune	Pierce County Tribune
+Candidate	Quinn Joseph Garrick	Quinn Joseph Garrick
+Candidate	R Travis Brazelton	R Travis Brazelton
+Candidate	Rachel Keohane	Rachel Keohane
+Candidate	Rachel Thomason	Rachel Thomason
+Candidate	Rachele Hall	Rachele Hall
+Candidate	Ralph Nader	RALPH NADER
+Candidate	Ramone Gumke	Ramone Gumke
+Candidate	Rand A H Olson	Rand A H Olson
+Candidate	Randi Suckut	Randi Suckut
+Candidate	Randy A Burckhard	Randy A Burckhard
+Candidate	Randy A Schobinger	Randy A Schobinger
+Candidate	Randy Christmann	Randy Christmann
+Candidate	Randy Colton Il	Randy Colton Il
+Candidate	Randy D Lemm	Randy D Lemm
+Candidate	Randy G Boehning	Randy G Boehning
+Candidate	Randy McClaflin	Randy McClaflin
+Candidate	Ransom County Gazette	Ransom County Gazette
+Candidate	Ray Holmberg	Ray Holmberg
+Candidate	Rebecca Ferderer	Rebecca Ferderer
+Candidate	Rebecca Flanders	Rebecca Flanders
+Candidate	Rebecca Forness	Rebecca Forness
+Candidate	Rebecca Phillips	Rebecca Phillips
+Candidate	Rhoda Pfeifer	Rhoda Pfeifer
+Candidate	Rhonda R Ehlis	Rhonda R Ehlis
+Candidate	Rich Wardner	Rich Wardner
+Candidate	Richard Anderson	Richard Anderson
+Candidate	Richard Cameron	Richard Cameron
+Candidate	Richard L Hagar	Richard L Hagar
+Candidate	Richard Lawerence Owings	Richard Lawerence Owings
+Candidate	Richard Lynne	Richard Lynne
+Candidate	Richard Marcellais	Richard Marcellais
+Candidate	Richard Ruch	Richard Ruch
+Candidate	Richard S Becker	Richard S Becker
+Candidate	Rick Anderson	Rick Anderson
+Candidate	Rick Becker	Rick Becker
+Candidate	Rick Bryant	Rick Bryant
+Candidate	Rick Steen	Rick Steen
+Candidate	Robert (Bob) Flath	Robert (Bob) Flath
+Candidate	Robert E Kibler	Robert E Kibler
+Candidate	Robert Fernandes	Robert Fernandes
+Candidate	Robert Fors	Robert Fors
+Candidate	Robert Kennedy	Robert Kennedy
+Candidate	Robert Roed	Robert Roed
+Candidate	Robert S Erbele	Robert S Erbele
+Candidate	Robert V Bolinske Sr	Robert V Bolinske Sr
+Candidate	Robin Weisz	Robin Weisz
+Candidate	Roger Fenstad	Roger Fenstad
+Candidate	Roger Hutchinson	Roger Hutchinson
+Candidate	Ron Guggisberg	Ron Guggisberg
+Candidate	Ron McCloud	Ron McCloud
+Candidate	Ron Stadum	Ron Stadum
+Candidate	Ronald Jurgens	Ronald Jurgens
+Candidate	Ronald Sorvaag	Ronald Sorvaag
+Candidate	Rory M Teigen	Rory M Teigen
+Candidate	Rowland Ehlert	Rowland Ehlert
+Candidate	Rozanna Larson	Rozanna Larson
+Candidate	Russ Hoff	Russ Hoff
+Candidate	Russell Cain	Russell Cain
+Candidate	Russell Walcker	Russell Walcker
+Candidate	Ruth Buffalo	Ruth Buffalo
+Candidate	Ryan James Thompson	Ryan James Thompson
+Candidate	Ryan Rauschenberger	Ryan Rauschenberger
+Candidate	Sabina McGarrahan Gasper	Sabina McGarrahan Gasper
+Candidate	Samantha Larson	Samantha Larson
+Candidate	Sandra Felchle	Sandra Felchle
+Candidate	Sandra Tivis	Sandra Tivis
+Candidate	Sara Meier	Sara Meier
+Candidate	Sarah M Bruce	Sarah M Bruce
+Candidate	Sarah Warner	Sarah Warner
+Candidate	Scott Louser	Scott Louser
+Candidate	Scott Meyer	Scott Meyer
+Candidate	Scott Steele	Scott Steele
+Candidate	Scott Stewart	Scott Stewart
+Candidate	Scott Wagner	Scott Wagner
+Candidate	Sebastian Ertelt	Sebastian Ertelt
+Candidate	Seymour Jordan	Seymour Jordan
+Candidate	Shana L. Brost	Shana L. Brost
+Candidate	Shannon Dieterle	Shannon Dieterle
+Candidate	Shannon Hager	Shannon Hager
+Candidate	Shannon R Krueger	Shannon R Krueger
+Candidate	Shannon Roers Jones	Shannon Roers Jones
+Candidate	Shauna Schneider	Shauna Schneider
+Candidate	Shawn Gabriel Brien	Shawn Gabriel Brien
+Candidate	Shawn Olauson	Shawn Olauson
+Candidate	Shawn Vedaa	Shawn Vedaa
+Candidate	Sheila Ann Burns	Sheila Ann Burns
+Candidate	Shelly Schwab	Shelly Schwab
+Candidate	Shena Wold	Shena Wold
+Candidate	Shirley A. Murray	Shirley A. Murray
+Candidate	Sid Berg	Sid Berg
+Candidate	Sierra Heitkamp	Sierra Heitkamp
+Candidate	Stacy J Louser	Stacy J Louser
+Candidate	Stanley Dick	Stanley Dick
+Candidate	Steele County Press	Steele County Press
+Candidate	Stephanie A Pappa	Stephanie A Pappa
+Candidate	Stephenie Davis	Stephenie Davis
+Candidate	Steve Hunt	Steve Hunt
+Candidate	Steve Krebs	Steve Krebs
+Candidate	Steve Lee	Steve Lee
+Candidate	Steve Schwab	Steve Schwab
+Candidate	Steve Vetter	Steve Vetter
+Candidate	Steven Delzer	Steven Delzer
+Candidate	Steven Eisenbeisz	Steven Eisenbeisz
+Candidate	Steven J Cichos	Steven J Cichos
+Candidate	Steven J. Rohrer	Steven J. Rohrer
+Candidate	Steven James Peterson	Steven James Peterson
+Candidate	Steven Nelson	Steven Nelson
+Candidate	Steven Watson	Steven Watson
+Candidate	Sue Maresh Lloyd	Sue Maresh Lloyd
+Candidate	Suzanne Anderson	Suzanne Anderson
+Candidate	Sylvia Gion	Sylvia Gion
+Candidate	Tamra Sperry	Tamra Sperry
+Candidate	Tara Mosley	Tara Mosley
+Candidate	Ted Johnson	Ted Johnson
+Candidate	Terrance Meidinger	Terrance Meidinger
+Candidate	Terrence Cornel Comeau	Terrence Cornel Comeau
+Candidate	Terri Hedman	Terri Hedman
+Candidate	Terry Burton Jones	Terry Burton Jones
+Candidate	Terry M Wanzek	Terry M Wanzek
+Candidate	Terry Novak	Terry Novak
+Candidate	Terry Oestreich	Terry Oestreich
+Candidate	The Adams County Record	The Adams County Record
+Candidate	The Bismarck Tribune	The Bismarck Tribune
+Candidate	The Bowman County Pioneer	The Bowman County Pioneer
+Candidate	The Cavalier Chronicle	The Cavalier Chronicle
+Candidate	The Dickinson Press	The Dickinson Press
+Candidate	The Forum of Fargo-Moorhead	The Forum of Fargo-Moorhead
+Candidate	The Golden Valley News	The Golden Valley News
+Candidate	The Herald	The Herald
+Candidate	The Herald Press	The Herald Press
+Candidate	The Jamestown Sun	The Jamestown Sun
+Candidate	The Journal	The Journal
+Candidate	The Kenmare News	The Kenmare News
+Candidate	The Litchville Bulletin	The Litchville Bulletin
+Candidate	The Morton County & Mandan News	The Morton County & Mandan News
+Candidate	The Renville County Farmer	The Renville County Farmer
+Candidate	The Sargent County Teller	The Sargent County Teller
+Candidate	The Walsh County Record	The Walsh County Record
+Candidate	The Williston Herald	The Williston Herald
+Candidate	Thomas Beadle	Thomas Beadle
+Candidate	Thomas Eblen	Thomas Eblen
+Candidate	Thomas Ricker	Thomas Ricker
+Candidate	Thomasina Mandan	Thomasina Mandan
+Candidate	Tim Christianson	Tim Christianson
+Candidate	Tim Flakoll	Tim Flakoll
+Candidate	Tim Hoye	Tim Hoye
+Candidate	Tim Mathern	Tim Mathern
+Candidate	Tim Selle	Tim Selle
+Candidate	Tim Steffan	Tim Steffan
+Candidate	Timothy Dronen	Timothy Dronen
+Candidate	Timothy Peterson	Timothy Peterson
+Candidate	Tina Powell	Tina Powell
+Candidate	Todd McMichael	Todd McMichael
+Candidate	Todd Porter	Todd Porter
+Candidate	Tom Falck	Tom Falck
+Candidate	Tom Henning	Tom Henning
+Candidate	Tom Kading	Tom Kading
+Candidate	Tom Nikolaisen Jr	Tom Nikolaisen Jr
+Candidate	Tom Steffan	Tom Steffan
+Candidate	Tonya Lynn Duffy	Tonya Lynn Duffy
+Candidate	Towner County Record Herald	Towner County Record Herald
+Candidate	Tracey Dolezal	Tracey Dolezal
+Candidate	Tracey L Wilkie	Tracey L Wilkie
+Candidate	Tracton Lewis	Tracton Lewis
+Candidate	Tracy Boe	Tracy Boe
+Candidate	Traill County Tribune	Traill County Tribune
+Candidate	Travis A Paeper	Travis A Paeper
+Candidate	Travis Collins	Travis Collins
+Candidate	Travis S. Peterson	Travis S. Peterson
+Candidate	Travis Tesch	Travis Tesch
+Candidate	Trent Naser	Trent Naser
+Candidate	Trevor Hall	Trevor Hall
+Candidate	Trey C Skager	Trey C Skager
+Candidate	Troy Kittelson	Troy Kittelson
+Candidate	Trudy Ruland	Trudy Ruland
+Candidate	Trygve Hammer	Trygve Hammer
+Candidate	Turtle Mountain Star	Turtle Mountain Star
+Candidate	Ty Leland Skarda	Ty Leland Skarda
+Candidate	Valerie McCloud	Valerie McCloud
+Candidate	Valley City Times Record	Valley City Times Record
+Candidate	Vawnita Hovet Best	Vawnita Hovet Best
+Candidate	Velva Area Voice	Velva Area Voice
+Candidate	Verlan Kvande	Verlan Kvande
+Candidate	Vern Kongslie	Vern Kongslie
+Candidate	Vernetta Kay Iron Eyes	Vernetta Kay Iron Eyes
+Candidate	Vicki Kubat	Vicki Kubat
+Candidate	Vicki Zinck Metcalf	Vicki Zinck Metcalf
+Candidate	Vickie Murray	Vickie Murray
+Candidate	Vicky Lovell	Vicky Lovell
+Candidate	Vicky Steiner	Vicky Steiner
+Candidate	Wade G Enget	Wade G Enget
+Candidate	Wanda Sheppard	Wanda Sheppard
+Candidate	Wayne A Beckman	Wayne A Beckman
+Candidate	Wayne Aberle	Wayne Aberle
+Candidate	Wayne Entze	Wayne Entze
+Candidate	Wayne Olson	Wayne Olson
+Candidate	Wayne Stenehjem	Wayne Stenehjem
+Candidate	Wayne Trottier	Wayne Trottier
+Candidate	Wesley Straight	Wesley Straight
+Candidate	Weslie D. Gunsch	Weslie D. Gunsch
+Candidate	Will Thompson	Will Thompson
+Candidate	William D. Gion	William D. Gion
+Candidate	William H Kloubec	William H Kloubec
+Candidate	William Krivarchka	William Krivarchka
+Candidate	William Marvin Ongstad	William Marvin Ongstad
+Candidate	William Stanley Sr	William Stanley Sr
+Candidate	Wishek Star	Wishek Star
+Candidate	Zach Raknerud	Zach Raknerud
+Candidate	Zachary Blotsky	Zachary Blotsky
+Candidate	Zachary Raknerud	Zachary Raknerud
+Candidate	Zachary Schroeder	Zachary Schroeder
+Candidate	Zachary Stephen Tomczik	Zachary Stephen Tomczik
+Candidate	write-in	write-in
+CandidateContest	ND Attorney General	Attorney General
 CandidateContest	ND House District 1	State Representative District 1
-CandidateContest	ND House District 2	State Representative District 2
-CandidateContest	ND House District 3	State Representative District 3
-CandidateContest	ND House District 4	State Representative District 4
-CandidateContest	ND House District 5	State Representative District 5
-CandidateContest	ND House District 6	State Representative District 6
-CandidateContest	ND House District 7	State Representative District 7
-CandidateContest	ND House District 8	State Representative District 8
-CandidateContest	ND House District 9	State Representative District 9
 CandidateContest	ND House District 10	State Representative District 10
 CandidateContest	ND House District 11	State Representative District 11
 CandidateContest	ND House District 12	State Representative District 12
@@ -74,6 +851,7 @@ CandidateContest	ND House District 16	State Representative District 16
 CandidateContest	ND House District 17	State Representative District 17
 CandidateContest	ND House District 18	State Representative District 18
 CandidateContest	ND House District 19	State Representative District 19
+CandidateContest	ND House District 2	State Representative District 2
 CandidateContest	ND House District 20	State Representative District 20
 CandidateContest	ND House District 21	State Representative District 21
 CandidateContest	ND House District 22	State Representative District 22
@@ -84,6 +862,7 @@ CandidateContest	ND House District 26	State Representative District 26
 CandidateContest	ND House District 27	State Representative District 27
 CandidateContest	ND House District 28	State Representative District 28
 CandidateContest	ND House District 29	State Representative District 29
+CandidateContest	ND House District 3	State Representative District 3
 CandidateContest	ND House District 30	State Representative District 30
 CandidateContest	ND House District 31	State Representative District 31
 CandidateContest	ND House District 32	State Representative District 32
@@ -94,6 +873,7 @@ CandidateContest	ND House District 36	State Representative District 36
 CandidateContest	ND House District 37	State Representative District 37
 CandidateContest	ND House District 38	State Representative District 38
 CandidateContest	ND House District 39	State Representative District 39
+CandidateContest	ND House District 4	State Representative District 4
 CandidateContest	ND House District 40	State Representative District 40
 CandidateContest	ND House District 41	State Representative District 41
 CandidateContest	ND House District 42	State Representative District 42
@@ -104,6 +884,7 @@ CandidateContest	ND House District 46	State Representative District 46
 CandidateContest	ND House District 47	State Representative District 47
 CandidateContest	ND House District 48	State Representative District 48
 CandidateContest	ND House District 49	State Representative District 49
+CandidateContest	ND House District 5	State Representative District 5
 CandidateContest	ND House District 50	State Representative District 50
 CandidateContest	ND House District 51	State Representative District 51
 CandidateContest	ND House District 52	State Representative District 52
@@ -114,6 +895,7 @@ CandidateContest	ND House District 56	State Representative District 56
 CandidateContest	ND House District 57	State Representative District 57
 CandidateContest	ND House District 58	State Representative District 58
 CandidateContest	ND House District 59	State Representative District 59
+CandidateContest	ND House District 6	State Representative District 6
 CandidateContest	ND House District 60	State Representative District 60
 CandidateContest	ND House District 61	State Representative District 61
 CandidateContest	ND House District 62	State Representative District 62
@@ -124,6 +906,7 @@ CandidateContest	ND House District 66	State Representative District 66
 CandidateContest	ND House District 67	State Representative District 67
 CandidateContest	ND House District 68	State Representative District 68
 CandidateContest	ND House District 69	State Representative District 69
+CandidateContest	ND House District 7	State Representative District 7
 CandidateContest	ND House District 70	State Representative District 70
 CandidateContest	ND House District 71	State Representative District 71
 CandidateContest	ND House District 72	State Representative District 72
@@ -134,6 +917,7 @@ CandidateContest	ND House District 76	State Representative District 76
 CandidateContest	ND House District 77	State Representative District 77
 CandidateContest	ND House District 78	State Representative District 78
 CandidateContest	ND House District 79	State Representative District 79
+CandidateContest	ND House District 8	State Representative District 8
 CandidateContest	ND House District 80	State Representative District 80
 CandidateContest	ND House District 81	State Representative District 81
 CandidateContest	ND House District 82	State Representative District 82
@@ -144,20 +928,14 @@ CandidateContest	ND House District 86	State Representative District 86
 CandidateContest	ND House District 87	State Representative District 87
 CandidateContest	ND House District 88	State Representative District 88
 CandidateContest	ND House District 89	State Representative District 89
+CandidateContest	ND House District 9	State Representative District 9
 CandidateContest	ND House District 90	State Representative District 90
 CandidateContest	ND House District 91	State Representative District 91
 CandidateContest	ND House District 92	State Representative District 92
 CandidateContest	ND House District 93	State Representative District 93
 CandidateContest	ND House District 94	State Representative District 94
+CandidateContest	ND Secretary of State	Secretary of State
 CandidateContest	ND Senate District 1	State Senator District 1
-CandidateContest	ND Senate District 2	State Senator District 2
-CandidateContest	ND Senate District 3	State Senator District 3
-CandidateContest	ND Senate District 4	State Senator District 4
-CandidateContest	ND Senate District 5	State Senator District 5
-CandidateContest	ND Senate District 6	State Senator District 6
-CandidateContest	ND Senate District 7	State Senator District 7
-CandidateContest	ND Senate District 8	State Senator District 8
-CandidateContest	ND Senate District 9	State Senator District 9
 CandidateContest	ND Senate District 10	State Senator District 10
 CandidateContest	ND Senate District 11	State Senator District 11
 CandidateContest	ND Senate District 12	State Senator District 12
@@ -168,6 +946,7 @@ CandidateContest	ND Senate District 16	State Senator District 16
 CandidateContest	ND Senate District 17	State Senator District 17
 CandidateContest	ND Senate District 18	State Senator District 18
 CandidateContest	ND Senate District 19	State Senator District 19
+CandidateContest	ND Senate District 2	State Senator District 2
 CandidateContest	ND Senate District 20	State Senator District 20
 CandidateContest	ND Senate District 21	State Senator District 21
 CandidateContest	ND Senate District 22	State Senator District 22
@@ -178,6 +957,7 @@ CandidateContest	ND Senate District 26	State Senator District 26
 CandidateContest	ND Senate District 27	State Senator District 27
 CandidateContest	ND Senate District 28	State Senator District 28
 CandidateContest	ND Senate District 29	State Senator District 29
+CandidateContest	ND Senate District 3	State Senator District 3
 CandidateContest	ND Senate District 30	State Senator District 30
 CandidateContest	ND Senate District 31	State Senator District 31
 CandidateContest	ND Senate District 32	State Senator District 32
@@ -188,6 +968,7 @@ CandidateContest	ND Senate District 36	State Senator District 36
 CandidateContest	ND Senate District 37	State Senator District 37
 CandidateContest	ND Senate District 38	State Senator District 38
 CandidateContest	ND Senate District 39	State Senator District 39
+CandidateContest	ND Senate District 4	State Senator District 4
 CandidateContest	ND Senate District 40	State Senator District 40
 CandidateContest	ND Senate District 41	State Senator District 41
 CandidateContest	ND Senate District 42	State Senator District 42
@@ -196,840 +977,130 @@ CandidateContest	ND Senate District 44	State Senator District 44
 CandidateContest	ND Senate District 45	State Senator District 45
 CandidateContest	ND Senate District 46	State Senator District 46
 CandidateContest	ND Senate District 47	State Senator District 47
+CandidateContest	ND Senate District 5	State Senator District 5
+CandidateContest	ND Senate District 6	State Senator District 6
+CandidateContest	ND Senate District 7	State Senator District 7
+CandidateContest	ND Senate District 8	State Senator District 8
+CandidateContest	ND Senate District 9	State Senator District 9
 CandidateContest	US House ND District 1	Representative in Congress
+CandidateContest	US President (ND)	PRESIDENT
 CandidateContest	US President (ND)	President & Vice-President of the United States
+CandidateContest	US President (ND)	US PRESIDENT
 CandidateContest	US Senate ND	United States Senator
-CandidateContest	ND Attorney General	Attorney General
-CandidateContest	ND Secretary of State	Secretary of State
-Candidate	Heidi Heitkamp	Heidi Heitkamp
-Candidate	write-in	write-in
-Candidate	Kevin Cramer	Kevin Cramer
-Candidate	Mac Schneider	Mac Schneider
-Candidate	Charles Tuttle	Charles Tuttle
-Candidate	Kelly Armstrong	Kelly Armstrong
-Candidate	Melissa Johnson	Melissa Johnson
-Candidate	Brad Bekkedahl	Brad Bekkedahl
-Candidate	Joseph Nesdahl	Joseph Nesdahl
-Candidate	Andy Maragos	Andy Maragos
-Candidate	Oley Larsen	Oley Larsen
-Candidate	David Grimes Haugen	David Grimes Haugen
-Candidate	Randy A Burckhard	Randy A Burckhard
-Candidate	Nicole Poolman	Nicole Poolman
-Candidate	Richard Marcellais	Richard Marcellais
-Candidate	Tim Mathern	Tim Mathern
-Candidate	Todd McMichael	Todd McMichael
-Candidate	Carrie Leopold	Carrie Leopold
-Candidate	Judy Lee	Judy Lee
-Candidate	Barbara Vondell	Barbara Vondell
-Candidate	Dave Oehlke	Dave Oehlke
-Candidate	Phyllis E Johnson	Phyllis E Johnson
-Candidate	Ray Holmberg	Ray Holmberg
-Candidate	Nikolaus Groenewold	Nikolaus Groenewold
-Candidate	Robert Fors	Robert Fors
-Candidate	Kathy Hogan	Kathy Hogan
-Candidate	Sierra Heitkamp	Sierra Heitkamp
-Candidate	Joan Heckaman	Joan Heckaman
-Candidate	Judy Estenson	Judy Estenson
-Candidate	Perry Miller	Perry Miller
-Candidate	Larry E Luick	Larry E Luick
-Candidate	Quinn Joseph Garrick	Quinn Joseph Garrick
-Candidate	Kristin Roers	Kristin Roers
-Candidate	Katherine Roth	Katherine Roth
-Candidate	Terry M Wanzek	Terry M Wanzek
-Candidate	Rachele Hall	Rachele Hall
-Candidate	Donald Schaible	Donald Schaible
-Candidate	Jessica Unruh	Jessica Unruh
-Candidate	Erin Oban	Erin Oban
-Candidate	Gary Emineth	Gary Emineth
-Candidate	R Travis Brazelton	R Travis Brazelton
-Candidate	Rich Wardner	Rich Wardner
-Candidate	Dale Patten	Dale Patten
-Candidate	Paula Thomas	Paula Thomas
-Candidate	Kyle Davison	Kyle Davison
-Candidate	JoNell Bakke	JoNell Bakke
-Candidate	Lonnie Laffen	Lonnie Laffen
-Candidate	Danielle Pinnick	Danielle Pinnick
-Candidate	Ronald Sorvaag	Ronald Sorvaag
-Candidate	Brandi Jude	Brandi Jude
-Candidate	Mike Dwyer	Mike Dwyer
-Candidate	Lindsay Walsh	Lindsay Walsh
-Candidate	Crysta Parkinson	Crysta Parkinson
-Candidate	David Richter	David Richter
-Candidate	Patrick Hatlestad	Patrick Hatlestad
-Candidate	Bob Schwartz	Bob Schwartz
-Candidate	Shannon R Krueger	Shannon R Krueger
-Candidate	Bob Paulson	Bob Paulson
-Candidate	Jeff Hoverson	Jeff Hoverson
-Candidate	Zachary Raknerud	Zachary Raknerud
-Candidate	Scott Louser	Scott Louser
-Candidate	Jay Fisher	Jay Fisher
-Candidate	Paul R Wilkins	Paul R Wilkins
-Candidate	Rick Becker	Rick Becker
-Candidate	Jason Dockter	Jason Dockter
-Candidate	Tracy Boe	Tracy Boe
-Candidate	Marvin E Nelson	Marvin E Nelson
-Candidate	Gretchen Dobervich	Gretchen Dobervich
-Candidate	Ron Guggisberg	Ron Guggisberg
-Candidate	Bridget Ertelt	Bridget Ertelt
-Candidate	Kathy Jorgenson	Kathy Jorgenson
-Candidate	Landis Larson	Landis Larson
-Candidate	Dianne Hyndman	Dianne Hyndman
-Candidate	Kim Koppelman	Kim Koppelman
-Candidate	Austen Schauer	Austen Schauer
-Candidate	Bill Mertens	Bill Mertens
-Candidate	Dennis Johnson	Dennis Johnson
-Candidate	Greg Westlind	Greg Westlind
-Candidate	Monte Gaukler	Monte Gaukler
-Candidate	Angela Urlacher	Angela Urlacher
-Candidate	Mark S Owens	Mark S Owens
-Candidate	Mark Sanford	Mark Sanford
-Candidate	Linda Ott Tangen	Linda Ott Tangen
-Candidate	Wayne Trottier	Wayne Trottier
-Candidate	Gary Paur	Gary Paur
-Candidate	LaurieBeth Hager	LaurieBeth Hager
-Candidate	Mary Schneider	Mary Schneider
-Candidate	Madison Rodgers	Madison Rodgers
-Candidate	William H Kloubec	William H Kloubec
-Candidate	Jessica Dillon Hawkes	Jessica Dillon Hawkes
-Candidate	Cathy Swenson	Cathy Swenson
-Candidate	Bill Devlin	Bill Devlin
-Candidate	Don Vigesaa	Don Vigesaa
-Candidate	Alisa Mitskog	Alisa Mitskog
-Candidate	Bill Berlin	Bill Berlin
-Candidate	Cindy Beck	Cindy Beck
-Candidate	Rebecca Forness	Rebecca Forness
-Candidate	Ruth Buffalo	Ruth Buffalo
-Candidate	Jon Kitzman	Jon Kitzman
-Candidate	Thomas Beadle	Thomas Beadle
-Candidate	Randy G Boehning	Randy G Boehning
-Candidate	Lori Carlson	Lori Carlson
-Candidate	Mary Schlosser	Mary Schlosser
-Candidate	Chet Pollert	Chet Pollert
-Candidate	Craig Headland	Craig Headland
-Candidate	Karen Rohr	Karen Rohr
-Candidate	Jim Schmidt	Jim Schmidt
-Candidate	Bill Tveit	Bill Tveit
-Candidate	Gary Kreidt	Gary Kreidt
-Candidate	Rachel Thomason	Rachel Thomason
-Candidate	Joe Elsberry	Joe Elsberry
-Candidate	Bob Martinson	Bob Martinson
-Candidate	Karen Karls	Karen Karls
-Candidate	Keith Fernsler	Keith Fernsler
-Candidate	Fern Pokorny	Fern Pokorny
-Candidate	Vicky Steiner	Vicky Steiner
-Candidate	Mike Lefor	Mike Lefor
-Candidate	Keith Kempenich	Keith Kempenich
-Candidate	Denton Zubke	Denton Zubke
-Candidate	Brandon Medenwald	Brandon Medenwald
-Candidate	Pamela Anderson	Pamela Anderson
-Candidate	Michelle Strinden	Michelle Strinden
-Candidate	Al Carlson	Al Carlson
-Candidate	Mary Adams	Mary Adams
-Candidate	Matt Eidson	Matt Eidson
-Candidate	Ben Olson	Ben Olson
-Candidate	Richard S Becker	Richard S Becker
-Candidate	Tim Hoye	Tim Hoye
-Candidate	Lukas A Maughan	Lukas A Maughan
-Candidate	Mary Johnson	Mary Johnson
-Candidate	Tom Kading	Tom Kading
-Candidate	Sabina McGarrahan Gasper	Sabina McGarrahan Gasper
-Candidate	George Keiser	George Keiser
-Candidate	Lawrence R (Larry) Klemin	Lawrence R (Larry) Klemin
-Candidate	Josh Boschee	Josh Boschee
-Candidate	Michael Coachman	Michael Coachman
-Candidate	Alvin A Jaeger	Alvin A Jaeger
-Candidate	David Clark Thompson	David Clark Thompson
-Candidate	Wayne Stenehjem	Wayne Stenehjem
-Candidate	Jim Dotzenrod	Jim Dotzenrod
-Candidate	Doug Goehring	Doug Goehring
-Candidate	Jean Brandt	Jean Brandt
-Candidate	Randy Christmann	Randy Christmann
-Candidate	Casey Buchmann	Casey Buchmann
-Candidate	Brian K Kroshus	Brian K Kroshus
-Candidate	Kylie Oversen	Kylie Oversen
-Candidate	Ryan Rauschenberger	Ryan Rauschenberger
-Candidate	Lisa Fair McEvers	Lisa Fair McEvers
-Candidate	Robert V Bolinske Sr	Robert V Bolinske Sr
-Candidate	James D Gion	James D Gion
-Candidate	Lolita (Lita) Hartl Romanick	Lolita (Lita) Hartl Romanick
-Candidate	Bruce A Romanick	Bruce A Romanick
-Candidate	Brad Cruff	Brad Cruff
-Candidate	Richard L Hagar	Richard L Hagar
-Candidate	Dann Greenwood	Dann Greenwood
-Candidate	Stacy J Louser	Stacy J Louser
-Candidate	Daniel Borgen	Daniel Borgen
-Candidate	John C Irby	John C Irby
-Candidate	Donald Hager	Donald Hager
-Candidate	Anthony Swain Benson	Anthony Swain Benson
-Candidate	John A Thelen	John A Thelen
-Candidate	Rhonda R Ehlis	Rhonda R Ehlis
-Candidate	Daniel S El-Dweek	Daniel S El-Dweek
-Candidate	Kirsten M Sjue	Kirsten M Sjue
-Candidate	John W Grinsteiner	John W Grinsteiner
-Candidate	Blanche A Schumacher	Blanche A Schumacher
-Candidate	Jeff Bowman	Jeff Bowman
-Candidate	Kevin Pagel	Kevin Pagel
-Candidate	Eugene Molbert	Eugene Molbert
-Candidate	Gregory Goodman	Gregory Goodman
-Candidate	Ed Brown	Ed Brown
-Candidate	Adam Leiphon	Adam Leiphon
-Candidate	Jackie Buckley	Jackie Buckley
-Candidate	Andrew Zachmeier	Andrew Zachmeier
-Candidate	James Boehm	James Boehm
-Candidate	Russell Cain	Russell Cain
-Candidate	Eldon R Moors Sr	Eldon R Moors Sr
-Candidate	Clarence Counts	Clarence Counts
-Candidate	Craig J Poitra	Craig J Poitra
-Candidate	Neil Meidinger	Neil Meidinger
-Candidate	Devin Deile	Devin Deile
-Candidate	Neal Schnieder	Neal Schnieder
-Candidate	Lynn Brackel	Lynn Brackel
-Candidate	Kenneth Steiner	Kenneth Steiner
-Candidate	Nathan L. Miller	Nathan L. Miller
-Candidate	Joshua Buchmann	Joshua Buchmann
-Candidate	Dennis Agnew	Dennis Agnew
-Candidate	Steve Schwab	Steve Schwab
-Candidate	Kathleen Jones	Kathleen Jones
-Candidate	Leo Vetter	Leo Vetter
-Candidate	Jim Peluso	Jim Peluso
-Candidate	Mark Armstrong	Mark Armstrong
-Candidate	Donna Scott	Donna Scott
-Candidate	Daryl Dukart	Daryl Dukart
-Candidate	Craig Pelton	Craig Pelton
-Candidate	Joann Marsh Brew	Joann Marsh Brew
-Candidate	Tom Steffan	Tom Steffan
-Candidate	Tim Steffan	Tim Steffan
-Candidate	Nathan Berseth	Nathan Berseth
-Candidate	Rowland Ehlert	Rowland Ehlert
-Candidate	Sid Berg	Sid Berg
-Candidate	David L Jacobson	David L Jacobson
-Candidate	Timothy Peterson	Timothy Peterson
-Candidate	Lyle R Bopp	Lyle R Bopp
-Candidate	Rick Bryant	Rick Bryant
-Candidate	Jerry M Waswick	Jerry M Waswick
-Candidate	Richard Ruch	Richard Ruch
-Candidate	Weslie D. Gunsch	Weslie D. Gunsch
-Candidate	Wayne Entze	Wayne Entze
-Candidate	Marvin L. Schwehr	Marvin L. Schwehr
-Candidate	Frank H Bitterman	Frank H Bitterman
-Candidate	Elizabeth Simpfenderfer	Elizabeth Simpfenderfer
-Candidate	Lauren Donovan	Lauren Donovan
-Candidate	Tracton Lewis	Tracton Lewis
-Candidate	Dennis V Skorheim	Dennis V Skorheim
-Candidate	Ernie Barta	Ernie Barta
-Candidate	Lawrence Burianek	Lawrence Burianek
-Candidate	Terry Novak	Terry Novak
-Candidate	John Narloch	John Narloch
-Candidate	F. Kenneth Olafson	F. Kenneth Olafson
-Candidate	Elsie Magnus	Elsie Magnus
-Candidate	Austin Lafrenz	Austin Lafrenz
-Candidate	Shauna Schneider	Shauna Schneider
-Candidate	Nick Moser	Nick Moser
-Candidate	Stanley Dick	Stanley Dick
-Candidate	Randi Suckut	Randi Suckut
-Candidate	Leon Klocke	Leon Klocke
-Candidate	Dennis T. Dockter	Dennis T. Dockter
-Candidate	Douglas Krebsbach	Douglas Krebsbach
-Candidate	Rick Steen	Rick Steen
-Candidate	Duane Breitling	Duane Breitling
-Candidate	Joel Hamar	Joel Hamar
-Candidate	Dean Simek	Dean Simek
-Candidate	John Hokana	John Hokana
-Candidate	Michael E Kasian	Michael E Kasian
-Candidate	John J Kessel	John J Kessel
-Candidate	Michael Teske	Michael Teske
-Candidate	Mike H Sonsalla	Mike H Sonsalla
-Candidate	Ken Zander	Ken Zander
-Candidate	Russ Hoff	Russ Hoff
-Candidate	Carla Arthaud	Carla Arthaud
-Candidate	Nancy Marquart	Nancy Marquart
-Candidate	Donald Fougner	Donald Fougner
-Candidate	Maynard Loibl	Maynard Loibl
-Candidate	Joan M Hollekim	Joan M Hollekim
-Candidate	Rand A H Olson	Rand A H Olson
-Candidate	Trudy Ruland	Trudy Ruland
-Candidate	Daniel Uran	Daniel Uran
-Candidate	Doug Berg	Doug Berg
-Candidate	David Lagein	David Lagein
-Candidate	Steve Lee	Steve Lee
-Candidate	William D. Gion	William D. Gion
-Candidate	Angela Carlson	Angela Carlson
-Candidate	Lee Husfloen	Lee Husfloen
-Candidate	Steven Eisenbeisz	Steven Eisenbeisz
-Candidate	Shannon Dieterle	Shannon Dieterle
-Candidate	Lowell Haagenson	Lowell Haagenson
-Candidate	Ron Stadum	Ron Stadum
-Candidate	Doris M. Griffin	Doris M. Griffin
-Candidate	Jason Knatterud	Jason Knatterud
-Candidate	Michael N. Steffan	Michael N. Steffan
-Candidate	Gary Elfman	Gary Elfman
-Candidate	Tim Selle	Tim Selle
-Candidate	Gerald Brady	Gerald Brady
-Candidate	Bert Hauge	Bert Hauge
-Candidate	Wayne Olson	Wayne Olson
-Candidate	Sandra Felchle	Sandra Felchle
-Candidate	Lori Hollenbeck	Lori Hollenbeck
-Candidate	William Stanley Sr	William Stanley Sr
-Candidate	Richard Cameron	Richard Cameron
-Candidate	Francis Lawler	Francis Lawler
-Candidate	Erin Magrum	Erin Magrum
-Candidate	Leonard Weichel	Leonard Weichel
-Candidate	Gerry Kraft	Gerry Kraft
-Candidate	Mark Urness	Mark Urness
-Candidate	Dale Pedersen	Dale Pedersen
-Candidate	Loren Alfson	Loren Alfson
-Candidate	John Wakefield	John Wakefield
-Candidate	Shawn Olauson	Shawn Olauson
-Candidate	Bill Carlblom	Bill Carlblom
-Candidate	Eldred Knutson	Eldred Knutson
-Candidate	Vicky Lovell	Vicky Lovell
-Candidate	Marcy Svenningsen	Marcy Svenningsen
-Candidate	Thomas Eblen	Thomas Eblen
-Candidate	Ken Nesvig	Ken Nesvig
-Candidate	Ben Hershey	Ben Hershey
-Candidate	Leslie Amb	Leslie Amb
-Candidate	Brom Lutz	Brom Lutz
-Candidate	Beau Anderson	Beau Anderson
-Candidate	Cory Hanson	Cory Hanson
-Candidate	Wayne Aberle	Wayne Aberle
-Candidate	Barry Ramberg	Barry Ramberg
-Candidate	Linda Meyer	Linda Meyer
-Candidate	Richard Lawerence Owings	Richard Lawerence Owings
-Candidate	Matthew Joseph Kihle	Matthew Joseph Kihle
-Candidate	Terrence Cornel Comeau	Terrence Cornel Comeau
-Candidate	Mark Colton Hettich Jr	Mark Colton Hettich Jr
-Candidate	Kenneth Louis Snider	Kenneth Louis Snider
-Candidate	David Volk	David Volk
-Candidate	Bruce Klein	Bruce Klein
-Candidate	Robert (Bob) Flath	Robert (Bob) Flath
-Candidate	Arnold W. Langehaug	Arnold W. Langehaug
-Candidate	Hedwig Walker	Hedwig Walker
-Candidate	Hugh Ralston	Hugh Ralston
-Candidate	Nichol Rutherford	Nichol Rutherford
-Candidate	Troy Kittelson	Troy Kittelson
-Candidate	Harry Bergstad	Harry Bergstad
-Candidate	David O Medalen	David O Medalen
-Candidate	Larry F Haman	Larry F Haman
-Candidate	Vern Kongslie	Vern Kongslie
-Candidate	Brian Tuite	Brian Tuite
-Candidate	Ted Johnson	Ted Johnson
-Candidate	Russell Walcker	Russell Walcker
-Candidate	Mike Brossart	Mike Brossart
-Candidate	Kate Halvorson	Kate Halvorson
-Candidate	Ashley Berg	Ashley Berg
-Candidate	David Migler	David Migler
-Candidate	LeRoy Rude	LeRoy Rude
-Candidate	Douglas L. Marsden	Douglas L. Marsden
-Candidate	Daniel Marquardt	Daniel Marquardt
-Candidate	Charlie Adams	Charlie Adams
-Candidate	Ervin Ternes	Ervin Ternes
-Candidate	Alton Zenker	Alton Zenker
-Candidate	Jarret Michael Vanberkom	Jarret Michael Vanberkom
-Candidate	Neal Rud	Neal Rud
-Candidate	Jeff Pfau	Jeff Pfau
-Candidate	Dave Gehrtz	Dave Gehrtz
-Candidate	Michael Carter	Michael Carter
-Candidate	John Fjeldahl	John Fjeldahl
-Candidate	John Pietsch	John Pietsch
-Candidate	Dave Pankow	Dave Pankow
-Candidate	Norm Hansen	Norm Hansen
-Candidate	Heather Hanna	Heather Hanna
-Candidate	Neil Olerud	Neil Olerud
-Candidate	Thomas Ricker	Thomas Ricker
-Candidate	Kathy Skarda	Kathy Skarda
-Candidate	Vawnita Hovet Best	Vawnita Hovet Best
-Candidate	Howdy Lawlar	Howdy Lawlar
-Candidate	John Rolfsrud	John Rolfsrud
-Candidate	Shannon Hager	Shannon Hager
-Candidate	Daniel S Moch	Daniel S Moch
-Candidate	David Schultz	David Schultz
-Candidate	Timothy Dronen	Timothy Dronen
-Candidate	Nellie Degen	Nellie Degen
-Candidate	Dennis Ova	Dennis Ova
-Candidate	Mark McPherson	Mark McPherson
-Candidate	Ramone Gumke	Ramone Gumke
-Candidate	Steven J Cichos	Steven J Cichos
-Candidate	Craig Neys	Craig Neys
-Candidate	Bob Rost	Bob Rost
-Candidate	Tom Falck	Tom Falck
-Candidate	Jeffrey Powell	Jeffrey Powell
-Candidate	Diane K Knauf	Diane K Knauf
-Candidate	Kyle Kvamme	Kyle Kvamme
-Candidate	Julie Krosbakken	Julie Krosbakken
-Candidate	Darlene Carpenter	Darlene Carpenter
-Candidate	Brad Solberg	Brad Solberg
-Candidate	Wanda Sheppard	Wanda Sheppard
-Candidate	Beth A Knutson	Beth A Knutson
-Candidate	Lisa Herbel	Lisa Herbel
-Candidate	Patty Williams	Patty Williams
-Candidate	Emily M Wigen	Emily M Wigen
-Candidate	Tamra Sperry	Tamra Sperry
-Candidate	Beth M Innis	Beth M Innis
-Candidate	Mary Trahan	Mary Trahan
-Candidate	Stephanie A Pappa	Stephanie A Pappa
-Candidate	Glenda Haugen	Glenda Haugen
-Candidate	Kandy Christopherson	Kandy Christopherson
-Candidate	Brenda Fischer	Brenda Fischer
-Candidate	Shana L. Brost	Shana L. Brost
-Candidate	Pam Maloney	Pam Maloney
-Candidate	Nicole Gentzkow	Nicole Gentzkow
-Candidate	Barbara Jean Hettich	Barbara Jean Hettich
-Candidate	Cassie Lee LeCompte	Cassie Lee LeCompte
-Candidate	Jeanine Sue Jensen	Jeanine Sue Jensen
-Candidate	Lorrie Buzalsky	Lorrie Buzalsky
-Candidate	Dawn R Rhone	Dawn R Rhone
-Candidate	LeAnn Pollman	LeAnn Pollman
-Candidate	Gina Ketterling	Gina Ketterling
-Candidate	Valerie McCloud	Valerie McCloud
-Candidate	Jean Schoenhard	Jean Schoenhard
-Candidate	Sandra Tivis	Sandra Tivis
-Candidate	Samantha Larson	Samantha Larson
-Candidate	Beth M Didier	Beth M Didier
-Candidate	Laura Engle	Laura Engle
-Candidate	Shirley A. Murray	Shirley A. Murray
-Candidate	Judith Hintz	Judith Hintz
-Candidate	Lisa Gellner	Lisa Gellner
-Candidate	Lynn Mutschelknaus	Lynn Mutschelknaus
-Candidate	Sara Meier	Sara Meier
-Candidate	Bonnie (Howard) Erickson	Bonnie (Howard) Erickson
-Candidate	Marlys Ohlhauser	Marlys Ohlhauser
-Candidate	Erica Johnsrud	Erica Johnsrud
-Candidate	Tracey Dolezal	Tracey Dolezal
-Candidate	Linda Schlittenhard	Linda Schlittenhard
-Candidate	Jeri Schmidt	Jeri Schmidt
-Candidate	Kay Haag	Kay Haag
-Candidate	Krista Faller	Krista Faller
-Candidate	Gayle Jastrzebski	Gayle Jastrzebski
-Candidate	Marcia D Lamb	Marcia D Lamb
-Candidate	Kevin J Glatt	Kevin J Glatt
-Candidate	Kathleen K. Murray	Kathleen K. Murray
-Candidate	Joshua Frey	Joshua Frey
-Candidate	Birch Burdick	Birch Burdick
-Candidate	Seymour Jordan	Seymour Jordan
-Candidate	Rozanna Larson	Rozanna Larson
-Candidate	Andrew J Schultz	Andrew J Schultz
-Candidate	Paul Murphy	Paul Murphy
-Candidate	Kara Brinster	Kara Brinster
-Candidate	Jeff Glynn	Jeff Glynn
-Candidate	Michael McIntee	Michael McIntee
-Candidate	Scott Stewart	Scott Stewart
-Candidate	Cassey A. Breyer	Cassey A. Breyer
-Candidate	Galen J. Mack	Galen J. Mack
-Candidate	Travis S. Peterson	Travis S. Peterson
-Candidate	Ashley L. Lies	Ashley L. Lies
-Candidate	Julie Lawyer	Julie Lawyer
-Candidate	Brian Johnson	Brian Johnson
-Candidate	Haley Wamstad	Haley Wamstad
-Candidate	Nancy Yon	Nancy Yon
-Candidate	Kari Agotness	Kari Agotness
-Candidate	Charlie Stock	Charlie Stock
-Candidate	Jayne 'Lewandowski' Pfau	Jayne 'Lewandowski' Pfau
-Candidate	Jessica J. Binder	Jessica J. Binder
-Candidate	Kelley Cole	Kelley Cole
-Candidate	Wade G Enget	Wade G Enget
-Candidate	Aaron Roseland	Aaron Roseland
-Candidate	Marlyce A Wilder	Marlyce A Wilder
-Candidate	Christopher Votava	Christopher Votava
-Candidate	Fritz Fremgen	Fritz Fremgen
-Candidate	James T. Shockman	James T. Shockman
-Candidate	Kimberly Radermacher	Kimberly Radermacher
-Candidate	Amber Joy Fiesel	Amber Joy Fiesel
-Candidate	Tom Henning	Tom Henning
-Candidate	Fallon Kelly	Fallon Kelly
-Candidate	Jayme Tenneson	Jayme Tenneson
-Candidate	Isaac Zimmerman	Isaac Zimmerman
-Candidate	Allen Michael Koppy	Allen Michael Koppy
-Candidate	Gabrielle Goter	Gabrielle Goter
-Candidate	Aaron W Roseland	Aaron W Roseland
-Candidate	Ryan James Thompson	Ryan James Thompson
-Candidate	Mary E. DePuydt	Mary E. DePuydt
-Candidate	Rebecca Flanders	Rebecca Flanders
-Candidate	James P Wang	James P Wang
-Candidate	Ladd Erickson	Ladd Erickson
-Candidate	Daniel Gulya	Daniel Gulya
-Candidate	Stephenie Davis	Stephenie Davis
-Candidate	Eric Hetland	Eric Hetland
-Candidate	Ty Leland Skarda	Ty Leland Skarda
-Candidate	Andrew Weiss	Andrew Weiss
-Candidate	Megan Kummer	Megan Kummer
-Candidate	Joseph Hanson	Joseph Hanson
-Candidate	Tonya Lynn Duffy	Tonya Lynn Duffy
-Candidate	Lilie Ann Schoenack	Lilie Ann Schoenack
-Candidate	David M Crane	David M Crane
-Candidate	Tom Nikolaisen Jr	Tom Nikolaisen Jr
-Candidate	Carrie K. Krause	Carrie K. Krause
-Candidate	Jody Pfaff	Jody Pfaff
-Candidate	Shelly Schwab	Shelly Schwab
-Candidate	Dori Sparby	Dori Sparby
-Candidate	Katie Paulson	Katie Paulson
-Candidate	Barbara J Steinke	Barbara J Steinke
-Candidate	Rhoda Pfeifer	Rhoda Pfeifer
-Candidate	Mickie Mcnulty-Eide	Mickie Mcnulty-Eide
-Candidate	Kathleen Mindt	Kathleen Mindt
-Candidate	Sarah M Bruce	Sarah M Bruce
-Candidate	Jerene A. Bender	Jerene A. Bender
-Candidate	Danielle Petersen	Danielle Petersen
-Candidate	Nancy Seefeldt	Nancy Seefeldt
-Candidate	Laurie Good	Laurie Good
-Candidate	Katie Nadeau	Katie Nadeau
-Candidate	Marlene Eblen	Marlene Eblen
-Candidate	Brenda L. Cook	Brenda L. Cook
-Candidate	Jesse James Krieger	Jesse James Krieger
-Candidate	Dawne Marquart	Dawne Marquart
-Candidate	Melissa A Vachal	Melissa A Vachal
-Candidate	Deborah Markegard	Deborah Markegard
-Candidate	Debbie Kroshus	Debbie Kroshus
-Candidate	Erin Peck	Erin Peck
-Candidate	Helen Lehmann	Helen Lehmann
-Candidate	Christina Running	Christina Running
-Candidate	Lynelle Lyman Hoppe	Lynelle Lyman Hoppe
-Candidate	Deborah Anderson	Deborah Anderson
-Candidate	Lenore (Thorsgaard) Motl	Lenore (Thorsgaard) Motl
-Candidate	Bobbi Milbrath	Bobbi Milbrath
-Candidate	Heidi J Anderson	Heidi J Anderson
-Candidate	Lori Miron	Lori Miron
-Candidate	Vicki Kubat	Vicki Kubat
-Candidate	Patty Hilbert	Patty Hilbert
-Candidate	Christine Johnson	Christine Johnson
-Candidate	Rachel Keohane	Rachel Keohane
-Candidate	Lynette Marie Nelson	Lynette Marie Nelson
-Candidate	Becky Nelson	Becky Nelson
-Candidate	Kristie Jacobson	Kristie Jacobson
-Candidate	Carol Fey	Carol Fey
-Candidate	Kay Newell Braget	Kay Newell Braget
-Candidate	Julie Fischer	Julie Fischer
-Candidate	Lisa A Guenther	Lisa A Guenther
-Candidate	Sylvia Gion	Sylvia Gion
-Candidate	Jan Werre	Jan Werre
-Candidate	Kelly Vincent	Kelly Vincent
-Candidate	Anita Ibach	Anita Ibach
-Candidate	Jolene Hoffert	Jolene Hoffert
-Candidate	Joyce R. Larson	Joyce R. Larson
-Candidate	Vicki Zinck Metcalf	Vicki Zinck Metcalf
-Candidate	Anita McLaughlin	Anita McLaughlin
-Candidate	Vickie Murray	Vickie Murray
-Candidate	Laura Huber	Laura Huber
-Candidate	Lynnette Fox	Lynnette Fox
-Candidate	Lanette Blumhardt	Lanette Blumhardt
-Candidate	Kandace Page-Desjarlais	Kandace Page-Desjarlais
-Candidate	Colleen Germann	Colleen Germann
-Candidate	Kari Hatzenbuhler	Kari Hatzenbuhler
-Candidate	Bernadette Matejcek	Bernadette Matejcek
-Candidate	Mary Kay Schuh	Mary Kay Schuh
-Candidate	Suzanne Anderson	Suzanne Anderson
-Candidate	Sheila Ann Burns	Sheila Ann Burns
-Candidate	Cindy Worrel	Cindy Worrel
-Candidate	Gene Skoglund	Gene Skoglund
-Candidate	Connie Eslinger	Connie Eslinger
-Candidate	Shena Wold	Shena Wold
-Candidate	Jessica Niemitalo	Jessica Niemitalo
-Candidate	Jill Trenda	Jill Trenda
-Candidate	April Nogosek	April Nogosek
-Candidate	Jody Kristiansen	Jody Kristiansen
-Candidate	Darbie Berger	Darbie Berger
-Candidate	Carla Swanson	Carla Swanson
-Candidate	Lisa Diseth	Lisa Diseth
-Candidate	Kathy Anderson	Kathy Anderson
-Candidate	Kari Dekker	Kari Dekker
-Candidate	Ann Monson	Ann Monson
-Candidate	Gail A Veland	Gail A Veland
-Candidate	Cynthia Stremick	Cynthia Stremick
-Candidate	Dianne Hertel	Dianne Hertel
-Candidate	Linda Fairbrother	Linda Fairbrother
-Candidate	Patti Ogurchak	Patti Ogurchak
-Candidate	Alison Toepke	Alison Toepke
-Candidate	LaJuana Hayen	LaJuana Hayen
-Candidate	Vernetta Kay Iron Eyes	Vernetta Kay Iron Eyes
-Candidate	Travis Tesch	Travis Tesch
-Candidate	Christopher Kluth	Christopher Kluth
-Candidate	Randy Colton Il	Randy Colton Il
-Candidate	Robert Kennedy	Robert Kennedy
-Candidate	Frank Eberle	Frank Eberle
-Candidate	Jordan Fisher	Jordan Fisher
-Candidate	Sue Maresh Lloyd	Sue Maresh Lloyd
-Candidate	Randy McClaflin	Randy McClaflin
-Candidate	Marcus Haaland	Marcus Haaland
-Candidate	Wesley Straight	Wesley Straight
-Candidate	Gary R Sanders	Gary R Sanders
-Candidate	Larry Leshovsky	Larry Leshovsky
-Candidate	Gary Schwartzenberger	Gary Schwartzenberger
-Candidate	Matthew Johansen	Matthew Johansen
-Candidate	Darren Benneweis	Darren Benneweis
-Candidate	Jerry 'J.R.' Kerzmann	Jerry 'J.R.' Kerzmann
-Candidate	Barry Vannatta	Barry Vannatta
-Candidate	Sarah Warner	Sarah Warner
-Candidate	Gary Kuhn	Gary Kuhn
-Candidate	Ron McCloud	Ron McCloud
-Candidate	Trent Naser	Trent Naser
-Candidate	David Hilliard	David Hilliard
-Candidate	John R. Foss	John R. Foss
-Candidate	Steven J. Rohrer	Steven J. Rohrer
-Candidate	Alex Ertelt	Alex Ertelt
-Candidate	Terrance Meidinger	Terrance Meidinger
-Candidate	Laurie Spitzer	Laurie Spitzer
-Candidate	Steven Delzer	Steven Delzer
-Candidate	Gerald Medrud	Gerald Medrud
-Candidate	Nathan Gustafson	Nathan Gustafson
-Candidate	Rory M Teigen	Rory M Teigen
-Candidate	Kyle Kirchmeier	Kyle Kirchmeier
-Candidate	Dave Shipman	Dave Shipman
-Candidate	Roger Hutchinson	Roger Hutchinson
-Candidate	Bill Cox	Bill Cox
-Candidate	Danielle Bjorlie	Danielle Bjorlie
-Candidate	Keith Olson	Keith Olson
-Candidate	Corey Lee	Corey Lee
-Candidate	Terry Oestreich	Terry Oestreich
-Candidate	Jeremy Raymond Grohs	Jeremy Raymond Grohs
-Candidate	Shawn Gabriel Brien	Shawn Gabriel Brien
-Candidate	Alan Ian Mattice	Alan Ian Mattice
-Candidate	Robert Fernandes	Robert Fernandes
-Candidate	Franklin Anton Landeis	Franklin Anton Landeis
-Candidate	Scott Steele	Scott Steele
-Candidate	Chad Kaiser	Chad Kaiser
-Candidate	Elizabeth Kapp	Elizabeth Kapp
-Candidate	Lloyd Haagenson	Lloyd Haagenson
-Candidate	Verlan Kvande	Verlan Kvande
-Candidate	Travis Collins	Travis Collins
-Candidate	Andrew Bartholomaus	Andrew Bartholomaus
-Candidate	Duane L Marmon	Duane L Marmon
-Candidate	Corey Bristol	Corey Bristol
-Candidate	Ronald Jurgens	Ronald Jurgens
-Candidate	Christopher Harmon	Christopher Harmon
-Candidate	Dean Danzeisen	Dean Danzeisen
-Candidate	Travis A Paeper	Travis A Paeper
-Candidate	Steve Hunt	Steve Hunt
-Candidate	Steven Nelson	Steven Nelson
-Candidate	Patrick J Rummel	Patrick J Rummel
-Candidate	Andy Schneider	Andy Schneider
-Candidate	BJ Maxson	BJ Maxson
-Candidate	Kelly Leben	Kelly Leben
-Candidate	Nolan Canright	Nolan Canright
-Candidate	Paul Lies	Paul Lies
-Candidate	Wayne A Beckman	Wayne A Beckman
-Candidate	Josh Siegler	Josh Siegler
-Candidate	Greg Fetsch	Greg Fetsch
-Candidate	Steven Watson	Steven Watson
-Candidate	Chris Estes	Chris Estes
-Candidate	Justin Johnson	Justin Johnson
-Candidate	Bob Barnard	Bob Barnard
-Candidate	Robert Roed	Robert Roed
-Candidate	Zachary Schroeder	Zachary Schroeder
-Candidate	Lauren Throntveit	Lauren Throntveit
-Candidate	Jesse Jahner	Jesse Jahner
-Candidate	Mike Kjera	Mike Kjera
-Candidate	Trey C Skager	Trey C Skager
-Candidate	Tina Powell	Tina Powell
-Candidate	Paulette Bowersox	Paulette Bowersox
-Candidate	Lana K. Johnson	Lana K. Johnson
-Candidate	Michael Joseph Erdman	Michael Joseph Erdman
-Candidate	Joel Stevenson	Joel Stevenson
-Candidate	Trevor Hall	Trevor Hall
-Candidate	William Marvin Ongstad	William Marvin Ongstad
-Candidate	John Peyerl	John Peyerl
-Candidate	Geneva Kaiser	Geneva Kaiser
-Candidate	Cliff Hanretty	Cliff Hanretty
-Candidate	Rick Anderson	Rick Anderson
-Candidate	Alan M Walter	Alan M Walter
-Candidate	Mark J. Cook	Mark J. Cook
-Candidate	Kelly Klosterman	Kelly Klosterman
-Candidate	Roger Fenstad	Roger Fenstad
-Candidate	Dave Anderson	Dave Anderson
-Candidate	William Krivarchka	William Krivarchka
-Candidate	David B. Johnson	David B. Johnson
-Candidate	McLean County Independent	McLean County Independent
-Candidate	Leader News	Leader News
-Candidate	Minot Daily News	Minot Daily News
-Candidate	The Kenmare News	The Kenmare News
-Candidate	Pierce County Tribune	Pierce County Tribune
-Candidate	Steele County Press	Steele County Press
-Candidate	New Rockford Transcript	New Rockford Transcript
-Candidate	Bottineau Courant	Bottineau Courant
-Candidate	Dickey County Leader	Dickey County Leader
-Candidate	Foster County Independent	Foster County Independent
-Candidate	The Journal	The Journal
-Candidate	Cass County Reporter	Cass County Reporter
-Candidate	The Forum of Fargo-Moorhead	The Forum of Fargo-Moorhead
-Candidate	Velva Area Voice	Velva Area Voice
-Candidate	Mouse River Journal	Mouse River Journal
-Candidate	Billings County Pioneer	Billings County Pioneer
-Candidate	Grand Forks Herald	Grand Forks Herald
-Candidate	The Bismarck Tribune	The Bismarck Tribune
-Candidate	The Adams County Record	The Adams County Record
-Candidate	New Town News	New Town News
-Candidate	Mountrail County Promoter, Inc	Mountrail County Promoter, Inc
-Candidate	The Golden Valley News	The Golden Valley News
-Candidate	The Jamestown Sun	The Jamestown Sun
-Candidate	The Williston Herald	The Williston Herald
-Candidate	The Sargent County Teller	The Sargent County Teller
-Candidate	Traill County Tribune	Traill County Tribune
-Candidate	Hillsboro Banner	Hillsboro Banner
-Candidate	Devils Lake Journal	Devils Lake Journal
-Candidate	The Dickinson Press	The Dickinson Press
-Candidate	The Walsh County Record	The Walsh County Record
-Candidate	Edgeley Mail	Edgeley Mail
-Candidate	LaMoure Chronicle	LaMoure Chronicle
-Candidate	Carson Press	Carson Press
-Candidate	Burke County Tribune	Burke County Tribune
-Candidate	The Herald Press	The Herald Press
-Candidate	The Cavalier Chronicle	The Cavalier Chronicle
-Candidate	Turtle Mountain Star	Turtle Mountain Star
-Candidate	Wishek Star	Wishek Star
-Candidate	Ashley Tribune	Ashley Tribune
-Candidate	Cavalier County Republican	Cavalier County Republican
-Candidate	McClusky Gazette	McClusky Gazette
-Candidate	Grant County News	Grant County News
-Candidate	Benson County Farmers Press	Benson County Farmers Press
-Candidate	The Renville County Farmer	The Renville County Farmer
-Candidate	McKenzie County Farmer	McKenzie County Farmer
-Candidate	Enderlin Independent	Enderlin Independent
-Candidate	Ransom County Gazette	Ransom County Gazette
-Candidate	Griggs County Courier	Griggs County Courier
-Candidate	The Litchville Bulletin	The Litchville Bulletin
-Candidate	Valley City Times Record	Valley City Times Record
-Candidate	Emmons County Record	Emmons County Record
-Candidate	Napoleon Homestead	Napoleon Homestead
-Candidate	Daily News	Daily News
-Candidate	Towner County Record Herald	Towner County Record Herald
-Candidate	The Herald	The Herald
-Candidate	Bowman County Pioneer	Bowman County Pioneer
-Candidate	The Bowman County Pioneer	The Bowman County Pioneer
-Candidate	Beulah Beacon	Beulah Beacon
-Candidate	Hazen Star	Hazen Star
-Candidate	Lakota American	Lakota American
-Candidate	Center Republican	Center Republican
-Candidate	Dunn County Herald	Dunn County Herald
-Candidate	The Morton County & Mandan News	The Morton County & Mandan News
-Candidate	Natalie Bugbee	Natalie Bugbee
-Candidate	Tim Christianson	Tim Christianson
-Candidate	Nikki Davidson	Nikki Davidson
-Candidate	Tara Mosley	Tara Mosley
-Candidate	Joseph R Biden	Biden and Harris
-Candidate	Donald J Trump	Trump and Pence
-Candidate	Jo Jorgensen	Jorgensen and Cohen
+CountItemType	total	TOTAL
 CountItemType	total	total
-Candidate	Howard C Anderson Jr	Howard C Anderson Jr
-Candidate	Zach Raknerud	Zach Raknerud
-Candidate	Will Thompson	Will Thompson
-Candidate	Trygve Hammer	Trygve Hammer
-Candidate	Thomasina Mandan	Thomasina Mandan
-Candidate	Sebastian Ertelt	Sebastian Ertelt
-Candidate	Richard Anderson	Richard Anderson
-Candidate	Rebecca Phillips	Rebecca Phillips
-Candidate	Rebecca Ferderer	Rebecca Ferderer
-Candidate	Randy D Lemm	Randy D Lemm
-Candidate	Randy A Schobinger	Randy A Schobinger
-Candidate	Nathan Toman	Nathan Toman
-Candidate	Kathrin Volochenko	Kathrin Volochenko
-Candidate	Karla Rose Hanson	Karla Rose Hanson
-Candidate	Joshua Johnson	Joshua Johnson
-Candidate	Joshua A Boschee	Joshua A Boschee
-Candidate	Jim Kasper	Jim Kasper
-Candidate	Jason Heitkamp	Jason Heitkamp
-Candidate	Jared Hagert	Jared Hagert
-Candidate	Jacqueline Hoffarth	Jacqueline Hoffarth
-Candidate	George Barnes	George Barnes
-Candidate	Donald Longmuir	Donald Longmuir
-Candidate	Dave Nehring	Dave Nehring
-Candidate	Carl Young	Carl Young
-Candidate	Adam Fortwengler	Adam Fortwengler
-Candidate	Steven James Peterson	Steven James Peterson
-Candidate	Shawn Vedaa	Shawn Vedaa
-Candidate	Morris Holen Jr	Morris Holen Jr
-Candidate	Lisa Finley-DeVille	Lisa Finley-DeVille
-Candidate	Jordan Kannianen	Jordan Kannianen
-Candidate	David S Rust	David S Rust
-Candidate	Zachary Stephen Tomczik	Zachary Stephen Tomczik
-Candidate	Zachary Blotsky	Zachary Blotsky
-Candidate	Tracey L Wilkie	Tracey L Wilkie
-Candidate	Todd Porter	Todd Porter
-Candidate	Tim Flakoll	Tim Flakoll
-Candidate	Terry Burton Jones	Terry Burton Jones
-Candidate	Terri Hedman	Terri Hedman
-Candidate	Steve Vetter	Steve Vetter
-Candidate	Steve Krebs	Steve Krebs
-Candidate	Shannon Roers Jones	Shannon Roers Jones
-Candidate	Scott Wagner	Scott Wagner
-Candidate	Scott Meyer	Scott Meyer
-Candidate	Robin Weisz	Robin Weisz
-Candidate	Robert S Erbele	Robert S Erbele
-Candidate	Robert E Kibler	Robert E Kibler
-Candidate	Richard Lynne	Richard Lynne
-Candidate	Paul R Hanson	Paul R Hanson
-Candidate	Paul J Thomas	Paul J Thomas
-Candidate	Pat Heinert	Pat Heinert
-Candidate	Pam Musland	Pam Musland
-Candidate	Naomi T Muscha	Naomi T Muscha
-Candidate	Mitch Ostlie	Mitch Ostlie
-Candidate	Mike Wobbema	Mike Wobbema
-Candidate	Mike Schatz	Mike Schatz
-Candidate	Mike Nathe	Mike Nathe
-Candidate	Mike Brandenburg	Mike Brandenburg
-Candidate	Mike Beltz	Mike Beltz
-Candidate	Michael Howe	Michael Howe
-Candidate	Merrill Piepkorn	Merrill Piepkorn
-Candidate	Melissa Gjellstad	Melissa Gjellstad
-Candidate	Melissa Anderson	Melissa Anderson
-Candidate	Matthew Ruby	Matthew Ruby
-Candidate	Mark Weber	Mark Weber
-Candidate	Mark Nelson	Mark Nelson
-Candidate	Luke Simons	Luke Simons
-Candidate	Lisa Meier	Lisa Meier
-Candidate	Linda Weiss	Linda Weiss
-Candidate	Linda Babb	Linda Babb
-Candidate	Larry J Robinson	Larry J Robinson
-Candidate	Larry Bellew	Larry Bellew
-Candidate	Laetitia Hellerud	Laetitia Hellerud
-Candidate	Kyle Thorson	Kyle Thorson
-Candidate	Krisanna Holkup Peterson	Krisanna Holkup Peterson
-Candidate	Kathy Skroch	Kathy Skroch
-Candidate	Kari Breker	Kari Breker
-Candidate	Karen Kay Krebsbach	Karen Kay Krebsbach
-Candidate	Kalyn June Dewitt	Kalyn June Dewitt
-Candidate	Jon Nelson	Jon Nelson
-Candidate	John Martin Pederson	John Martin Pederson
-Candidate	John M Hokana	John M Hokana
-Candidate	John Grabinger	John Grabinger
-Candidate	Jodi Meisch	Jodi Meisch
-Candidate	Jim Roers	Jim Roers
-Candidate	Jerry Klein	Jerry Klein
-Candidate	Jenna Vanhorne	Jenna Vanhorne
-Candidate	Jeffery J Magrum	Jeffery J Magrum
-Candidate	Jay Elkin	Jay Elkin
-Candidate	Janne Myrdal	Janne Myrdal
-Candidate	Hunter L Andes	Hunter L Andes
-Candidate	Hamida Dakane	Hamida Dakane
-Candidate	Glenn Bosch	Glenn Bosch
-Candidate	Emily OBrien	Emily OBrien
-Candidate	Elsie Blair Magnus	Elsie Blair Magnus
-Candidate	Dwight Kiefert	Dwight Kiefert
-Candidate	Doug Larsen	Doug Larsen
-Candidate	Dick Dever	Dick Dever
-Candidate	Diane Larson	Diane Larson
-Candidate	David Monson	David Monson
-Candidate	David Hogue	David Hogue
-Candidate	David Andahl	David Andahl
-Candidate	David A Clemens	David A Clemens
-Candidate	Dan Ruby	Dan Ruby
-Candidate	Curt Kreun	Curt Kreun
-Candidate	Corey Mock	Corey Mock
-Candidate	Cole Conley	Cole Conley
-Candidate	Cole Christensen	Cole Christensen
-Candidate	Clayton Fegley	Clayton Fegley
-Candidate	Claire Cory	Claire Cory
-Candidate	Cindy Kaml	Cindy Kaml
-Candidate	Chuck Damschen	Chuck Damschen
-Candidate	Charlie Hart	Charlie Hart
-Candidate	Brandy L Pyle	Brandy L Pyle
-Candidate	Bradley Edin	Bradley Edin
-Candidate	Bert Anderson	Bert Anderson
-Candidate	Bernie Satrom	Bernie Satrom
-Candidate	Bernie Parkhurst	Bernie Parkhurst
-Candidate	Ben W Hanson	Ben W Hanson
-Candidate	Ben M Hanson	Ben M Hanson
-Candidate	Ben Koppelman	Ben Koppelman
-Candidate	Arnold W Langehaug	Arnold W Langehaug
-Candidate	Andrew Marschall	Andrew Marschall
-Candidate	Amelia Doll	Amelia Doll
-Candidate	Alan J Peterson	Alan J Peterson
-Candidate	Adam Michal	Adam Michal
+Party	Democratic Party	DEMOCRAT
+Party	Democratic Party	Democratic-NPL
+Party	Green Party	GREEN
 Party	Independent Party	independent nomination
+Party	Libertarian Party	LIBERTARIAN
+Party	Libertarian Party	Libertarian
+Party	Republican Party	REPUBLICAN
+Party	Republican Party	Republican
+Party	none or unknown	OTHER
+ReportingUnit	North Dakota;Adams County	Adams
+ReportingUnit	North Dakota;Adams County	fips38001
+ReportingUnit	North Dakota;Barnes County	Barnes
+ReportingUnit	North Dakota;Barnes County	fips38003
+ReportingUnit	North Dakota;Benson County	Benson
+ReportingUnit	North Dakota;Benson County	fips38005
+ReportingUnit	North Dakota;Billings County	Billings
+ReportingUnit	North Dakota;Billings County	fips38007
+ReportingUnit	North Dakota;Bottineau County	Bottineau
+ReportingUnit	North Dakota;Bottineau County	fips38009
+ReportingUnit	North Dakota;Bowman County	Bowman
+ReportingUnit	North Dakota;Bowman County	fips38011
+ReportingUnit	North Dakota;Burke County	Burke
+ReportingUnit	North Dakota;Burke County	fips38013
+ReportingUnit	North Dakota;Burleigh County	Burleigh
+ReportingUnit	North Dakota;Burleigh County	fips38015
+ReportingUnit	North Dakota;Cass County	Cass
+ReportingUnit	North Dakota;Cass County	fips38017
+ReportingUnit	North Dakota;Cavalier County	Cavalier
+ReportingUnit	North Dakota;Cavalier County	fips38019
+ReportingUnit	North Dakota;Dickey County	Dickey
+ReportingUnit	North Dakota;Dickey County	fips38021
+ReportingUnit	North Dakota;Divide County	Divide
+ReportingUnit	North Dakota;Divide County	fips38023
+ReportingUnit	North Dakota;Dunn County	Dunn
+ReportingUnit	North Dakota;Dunn County	fips38025
+ReportingUnit	North Dakota;Eddy County	Eddy
+ReportingUnit	North Dakota;Eddy County	fips38027
+ReportingUnit	North Dakota;Emmons County	Emmons
+ReportingUnit	North Dakota;Emmons County	fips38029
+ReportingUnit	North Dakota;Foster County	Foster
+ReportingUnit	North Dakota;Foster County	fips38031
+ReportingUnit	North Dakota;Golden Valley County	Golden Valley
+ReportingUnit	North Dakota;Golden Valley County	fips38033
+ReportingUnit	North Dakota;Grand Forks County	Grand Forks
+ReportingUnit	North Dakota;Grand Forks County	fips38035
+ReportingUnit	North Dakota;Grant County	Grant
+ReportingUnit	North Dakota;Grant County	fips38037
+ReportingUnit	North Dakota;Griggs County	Griggs
+ReportingUnit	North Dakota;Griggs County	fips38039
+ReportingUnit	North Dakota;Hettinger County	Hettinger
+ReportingUnit	North Dakota;Hettinger County	fips38041
+ReportingUnit	North Dakota;Kidder County	Kidder
+ReportingUnit	North Dakota;Kidder County	fips38043
+ReportingUnit	North Dakota;LaMoure County	LaMoure
+ReportingUnit	North Dakota;LaMoure County	fips38045
+ReportingUnit	North Dakota;Logan County	Logan
+ReportingUnit	North Dakota;Logan County	fips38047
+ReportingUnit	North Dakota;McHenry County	McHenry
+ReportingUnit	North Dakota;McHenry County	fips38049
+ReportingUnit	North Dakota;McIntosh County	McIntosh
+ReportingUnit	North Dakota;McIntosh County	fips38051
+ReportingUnit	North Dakota;McKenzie County	McKenzie
+ReportingUnit	North Dakota;McKenzie County	fips38053
+ReportingUnit	North Dakota;McLean County	McLean
+ReportingUnit	North Dakota;McLean County	fips38055
+ReportingUnit	North Dakota;Mercer County	Mercer
+ReportingUnit	North Dakota;Mercer County	fips38057
+ReportingUnit	North Dakota;Morton County	Morton
+ReportingUnit	North Dakota;Morton County	fips38059
+ReportingUnit	North Dakota;Mountrail County	Mountrail
+ReportingUnit	North Dakota;Mountrail County	fips38061
+ReportingUnit	North Dakota;Nelson County	Nelson
+ReportingUnit	North Dakota;Nelson County	fips38063
+ReportingUnit	North Dakota;Oliver County	Oliver
+ReportingUnit	North Dakota;Oliver County	fips38065
+ReportingUnit	North Dakota;Pembina County	Pembina
+ReportingUnit	North Dakota;Pembina County	fips38067
+ReportingUnit	North Dakota;Pierce County	Pierce
+ReportingUnit	North Dakota;Pierce County	fips38069
+ReportingUnit	North Dakota;Ramsey County	Ramsey
+ReportingUnit	North Dakota;Ramsey County	fips38071
+ReportingUnit	North Dakota;Ransom County	Ransom
+ReportingUnit	North Dakota;Ransom County	fips38073
+ReportingUnit	North Dakota;Renville County	Renville
+ReportingUnit	North Dakota;Renville County	fips38075
+ReportingUnit	North Dakota;Richland County	Richland
+ReportingUnit	North Dakota;Richland County	fips38077
+ReportingUnit	North Dakota;Rolette County	Rolette
+ReportingUnit	North Dakota;Rolette County	fips38079
+ReportingUnit	North Dakota;Sargent County	Sargent
+ReportingUnit	North Dakota;Sargent County	fips38081
+ReportingUnit	North Dakota;Sheridan County	Sheridan
+ReportingUnit	North Dakota;Sheridan County	fips38083
+ReportingUnit	North Dakota;Sioux County	Sioux
+ReportingUnit	North Dakota;Sioux County	fips38085
+ReportingUnit	North Dakota;Slope County	Slope
+ReportingUnit	North Dakota;Slope County	fips38087
+ReportingUnit	North Dakota;Stark County	Stark
+ReportingUnit	North Dakota;Stark County	fips38089
+ReportingUnit	North Dakota;Steele County	Steele
+ReportingUnit	North Dakota;Steele County	fips38091
+ReportingUnit	North Dakota;Stutsman County	Stutsman
+ReportingUnit	North Dakota;Stutsman County	fips38093
+ReportingUnit	North Dakota;Towner County	Towner
+ReportingUnit	North Dakota;Towner County	fips38095
+ReportingUnit	North Dakota;Traill County	Traill
+ReportingUnit	North Dakota;Traill County	fips38097
+ReportingUnit	North Dakota;Walsh County	Walsh
+ReportingUnit	North Dakota;Walsh County	fips38099
+ReportingUnit	North Dakota;Ward County	Ward
+ReportingUnit	North Dakota;Ward County	fips38101
+ReportingUnit	North Dakota;Wells County	Wells
+ReportingUnit	North Dakota;Wells County	fips38103
+ReportingUnit	North Dakota;Williams County	Williams
+ReportingUnit	North Dakota;Williams County	fips38105

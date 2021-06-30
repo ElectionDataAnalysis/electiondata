@@ -33,8 +33,8 @@ Party	Democratic Party	Democratic Party
 Party	Republican Party	Republican Party
 Party	Green Party	Green Party
 Party	Libertarian Party	Libertarian Party
-Party	Independent	IND
-Party	Nonpartisan	NP
+Party	Independent Party	IND
+Party	Nonpartisan Party	NP
 Party	Democratic Party	DEM
 Party	Republican Party	REP
 ReportingUnit	American Samoa;AS House District 1	American Samoa;AS House District 1

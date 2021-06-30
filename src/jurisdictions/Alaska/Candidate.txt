@@ -396,3 +396,14 @@ Write-in 30
 Write-in 20
 Muñoz, Cathy
 Roque 'Rocky' De La Fuente
+Al Gore
+Barack Obama
+George W. Bush
+Hillary Clinton
+John Kerry
+John Mccain
+Mitt Romney
+Other
+Ralph Nader
+John MCCain
+John McCain

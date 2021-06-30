@@ -1,4 +1,14 @@
 Name	ReportingUnitType
+Washington;US House WA District 1	congressional
+Washington;US House WA District 10	congressional
+Washington;US House WA District 2	congressional
+Washington;US House WA District 3	congressional
+Washington;US House WA District 4	congressional
+Washington;US House WA District 5	congressional
+Washington;US House WA District 6	congressional
+Washington;US House WA District 7	congressional
+Washington;US House WA District 8	congressional
+Washington;US House WA District 9	congressional
 Washington;Adams County	county
 Washington;Asotin County	county
 Washington;Benton County	county
@@ -38,15 +48,8 @@ Washington;Walla Walla County	county
 Washington;Whatcom County	county
 Washington;Whitman County	county
 Washington;Yakima County	county
+Washington	state
 Washington;WA Legislative District 1	state-senate
-Washington;WA Legislative District 2	state-senate
-Washington;WA Legislative District 3	state-senate
-Washington;WA Legislative District 4	state-senate
-Washington;WA Legislative District 5	state-senate
-Washington;WA Legislative District 6	state-senate
-Washington;WA Legislative District 7	state-senate
-Washington;WA Legislative District 8	state-senate
-Washington;WA Legislative District 9	state-senate
 Washington;WA Legislative District 10	state-senate
 Washington;WA Legislative District 11	state-senate
 Washington;WA Legislative District 12	state-senate
@@ -57,6 +60,7 @@ Washington;WA Legislative District 16	state-senate
 Washington;WA Legislative District 17	state-senate
 Washington;WA Legislative District 18	state-senate
 Washington;WA Legislative District 19	state-senate
+Washington;WA Legislative District 2	state-senate
 Washington;WA Legislative District 20	state-senate
 Washington;WA Legislative District 21	state-senate
 Washington;WA Legislative District 22	state-senate
@@ -67,6 +71,7 @@ Washington;WA Legislative District 26	state-senate
 Washington;WA Legislative District 27	state-senate
 Washington;WA Legislative District 28	state-senate
 Washington;WA Legislative District 29	state-senate
+Washington;WA Legislative District 3	state-senate
 Washington;WA Legislative District 30	state-senate
 Washington;WA Legislative District 31	state-senate
 Washington;WA Legislative District 32	state-senate
@@ -77,6 +82,7 @@ Washington;WA Legislative District 36	state-senate
 Washington;WA Legislative District 37	state-senate
 Washington;WA Legislative District 38	state-senate
 Washington;WA Legislative District 39	state-senate
+Washington;WA Legislative District 4	state-senate
 Washington;WA Legislative District 40	state-senate
 Washington;WA Legislative District 41	state-senate
 Washington;WA Legislative District 42	state-senate
@@ -87,14 +93,8 @@ Washington;WA Legislative District 46	state-senate
 Washington;WA Legislative District 47	state-senate
 Washington;WA Legislative District 48	state-senate
 Washington;WA Legislative District 49	state-senate
-Washington;US House WA District 1	congressional
-Washington;US House WA District 2	congressional
-Washington;US House WA District 3	congressional
-Washington;US House WA District 4	congressional
-Washington;US House WA District 5	congressional
-Washington;US House WA District 6	congressional
-Washington;US House WA District 7	congressional
-Washington;US House WA District 8	congressional
-Washington;US House WA District 9	congressional
-Washington;US House WA District 10	congressional
-Washington	state
+Washington;WA Legislative District 5	state-senate
+Washington;WA Legislative District 6	state-senate
+Washington;WA Legislative District 7	state-senate
+Washington;WA Legislative District 8	state-senate
+Washington;WA Legislative District 9	state-senate

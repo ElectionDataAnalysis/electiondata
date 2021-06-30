@@ -1,193 +1,6 @@
 Name	ReportingUnitType
-Maine;ME House District 1	state-house
-Maine;ME House District 2	state-house
-Maine;ME House District 3	state-house
-Maine;ME House District 4	state-house
-Maine;ME House District 5	state-house
-Maine;ME House District 6	state-house
-Maine;ME House District 7	state-house
-Maine;ME House District 8	state-house
-Maine;ME House District 9	state-house
-Maine;ME House District 10	state-house
-Maine;ME House District 11	state-house
-Maine;ME House District 12	state-house
-Maine;ME House District 13	state-house
-Maine;ME House District 14	state-house
-Maine;ME House District 15	state-house
-Maine;ME House District 16	state-house
-Maine;ME House District 17	state-house
-Maine;ME House District 18	state-house
-Maine;ME House District 19	state-house
-Maine;ME House District 20	state-house
-Maine;ME House District 21	state-house
-Maine;ME House District 22	state-house
-Maine;ME House District 23	state-house
-Maine;ME House District 24	state-house
-Maine;ME House District 25	state-house
-Maine;ME House District 26	state-house
-Maine;ME House District 27	state-house
-Maine;ME House District 28	state-house
-Maine;ME House District 29	state-house
-Maine;ME House District 30	state-house
-Maine;ME House District 31	state-house
-Maine;ME House District 32	state-house
-Maine;ME House District 33	state-house
-Maine;ME House District 34	state-house
-Maine;ME House District 35	state-house
-Maine;ME House District 36	state-house
-Maine;ME House District 37	state-house
-Maine;ME House District 38	state-house
-Maine;ME House District 39	state-house
-Maine;ME House District 40	state-house
-Maine;ME House District 41	state-house
-Maine;ME House District 42	state-house
-Maine;ME House District 43	state-house
-Maine;ME House District 44	state-house
-Maine;ME House District 45	state-house
-Maine;ME House District 46	state-house
-Maine;ME House District 47	state-house
-Maine;ME House District 48	state-house
-Maine;ME House District 49	state-house
-Maine;ME House District 50	state-house
-Maine;ME House District 51	state-house
-Maine;ME House District 52	state-house
-Maine;ME House District 53	state-house
-Maine;ME House District 54	state-house
-Maine;ME House District 55	state-house
-Maine;ME House District 56	state-house
-Maine;ME House District 57	state-house
-Maine;ME House District 58	state-house
-Maine;ME House District 59	state-house
-Maine;ME House District 60	state-house
-Maine;ME House District 61	state-house
-Maine;ME House District 62	state-house
-Maine;ME House District 63	state-house
-Maine;ME House District 64	state-house
-Maine;ME House District 65	state-house
-Maine;ME House District 66	state-house
-Maine;ME House District 67	state-house
-Maine;ME House District 68	state-house
-Maine;ME House District 69	state-house
-Maine;ME House District 70	state-house
-Maine;ME House District 71	state-house
-Maine;ME House District 72	state-house
-Maine;ME House District 73	state-house
-Maine;ME House District 74	state-house
-Maine;ME House District 75	state-house
-Maine;ME House District 76	state-house
-Maine;ME House District 77	state-house
-Maine;ME House District 78	state-house
-Maine;ME House District 79	state-house
-Maine;ME House District 80	state-house
-Maine;ME House District 81	state-house
-Maine;ME House District 82	state-house
-Maine;ME House District 83	state-house
-Maine;ME House District 84	state-house
-Maine;ME House District 85	state-house
-Maine;ME House District 86	state-house
-Maine;ME House District 87	state-house
-Maine;ME House District 88	state-house
-Maine;ME House District 89	state-house
-Maine;ME House District 90	state-house
-Maine;ME House District 91	state-house
-Maine;ME House District 92	state-house
-Maine;ME House District 93	state-house
-Maine;ME House District 94	state-house
-Maine;ME House District 95	state-house
-Maine;ME House District 96	state-house
-Maine;ME House District 97	state-house
-Maine;ME House District 98	state-house
-Maine;ME House District 99	state-house
-Maine;ME House District 100	state-house
-Maine;ME House District 101	state-house
-Maine;ME House District 102	state-house
-Maine;ME House District 103	state-house
-Maine;ME House District 104	state-house
-Maine;ME House District 105	state-house
-Maine;ME House District 106	state-house
-Maine;ME House District 107	state-house
-Maine;ME House District 108	state-house
-Maine;ME House District 109	state-house
-Maine;ME House District 110	state-house
-Maine;ME House District 111	state-house
-Maine;ME House District 112	state-house
-Maine;ME House District 113	state-house
-Maine;ME House District 114	state-house
-Maine;ME House District 115	state-house
-Maine;ME House District 116	state-house
-Maine;ME House District 117	state-house
-Maine;ME House District 118	state-house
-Maine;ME House District 119	state-house
-Maine;ME House District 120	state-house
-Maine;ME House District 121	state-house
-Maine;ME House District 122	state-house
-Maine;ME House District 123	state-house
-Maine;ME House District 124	state-house
-Maine;ME House District 125	state-house
-Maine;ME House District 126	state-house
-Maine;ME House District 127	state-house
-Maine;ME House District 128	state-house
-Maine;ME House District 129	state-house
-Maine;ME House District 130	state-house
-Maine;ME House District 131	state-house
-Maine;ME House District 132	state-house
-Maine;ME House District 133	state-house
-Maine;ME House District 134	state-house
-Maine;ME House District 135	state-house
-Maine;ME House District 136	state-house
-Maine;ME House District 137	state-house
-Maine;ME House District 138	state-house
-Maine;ME House District 139	state-house
-Maine;ME House District 140	state-house
-Maine;ME House District 141	state-house
-Maine;ME House District 142	state-house
-Maine;ME House District 143	state-house
-Maine;ME House District 144	state-house
-Maine;ME House District 145	state-house
-Maine;ME House District 146	state-house
-Maine;ME House District 147	state-house
-Maine;ME House District 148	state-house
-Maine;ME House District 149	state-house
-Maine;ME House District 150	state-house
-Maine;ME House District 151	state-house
-Maine;ME Senate District 1	state-senate
-Maine;ME Senate District 2	state-senate
-Maine;ME Senate District 3	state-senate
-Maine;ME Senate District 4	state-senate
-Maine;ME Senate District 5	state-senate
-Maine;ME Senate District 6	state-senate
-Maine;ME Senate District 7	state-senate
-Maine;ME Senate District 8	state-senate
-Maine;ME Senate District 9	state-senate
-Maine;ME Senate District 10	state-senate
-Maine;ME Senate District 11	state-senate
-Maine;ME Senate District 12	state-senate
-Maine;ME Senate District 13	state-senate
-Maine;ME Senate District 14	state-senate
-Maine;ME Senate District 15	state-senate
-Maine;ME Senate District 16	state-senate
-Maine;ME Senate District 17	state-senate
-Maine;ME Senate District 18	state-senate
-Maine;ME Senate District 19	state-senate
-Maine;ME Senate District 20	state-senate
-Maine;ME Senate District 21	state-senate
-Maine;ME Senate District 22	state-senate
-Maine;ME Senate District 23	state-senate
-Maine;ME Senate District 24	state-senate
-Maine;ME Senate District 25	state-senate
-Maine;ME Senate District 26	state-senate
-Maine;ME Senate District 27	state-senate
-Maine;ME Senate District 28	state-senate
-Maine;ME Senate District 29	state-senate
-Maine;ME Senate District 30	state-senate
-Maine;ME Senate District 31	state-senate
-Maine;ME Senate District 32	state-senate
-Maine;ME Senate District 33	state-senate
-Maine;ME Senate District 34	state-senate
-Maine;ME Senate District 35	state-senate
 Maine;US House ME District 1	congressional
 Maine;US House ME District 2	congressional
-Maine	state
 Maine;Androscoggin County	county
 Maine;Aroostook County	county
 Maine;Cumberland County	county
@@ -204,123 +17,6 @@ Maine;Somerset County	county
 Maine;Waldo County	county
 Maine;Washington County	county
 Maine;York County	county
-Maine;Cumberland County;Baldwin	municipality
-Maine;Cumberland County;Bridgton	municipality
-Maine;Cumberland County;Brunswick	municipality
-Maine;Cumberland County;Cape Elizabeth	municipality
-Maine;Cumberland County;Casco	municipality
-Maine;Cumberland County;Chebeague Island	municipality
-Maine;Cumberland County;Cumberland	municipality
-Maine;Cumberland County;Falmouth	municipality
-Maine;Cumberland County;Freeport	municipality
-Maine;Cumberland County;Frye Island	municipality
-Maine;Cumberland County;Gorham	municipality
-Maine;Cumberland County;Gray	municipality
-Maine;Cumberland County;Harpswell	municipality
-Maine;Cumberland County;Harrison	municipality
-Maine;Cumberland County;Long Island	municipality
-Maine;Cumberland County;Naples	municipality
-Maine;Cumberland County;New Gloucester	municipality
-Maine;Cumberland County;North Yarmouth	municipality
-Maine;Cumberland County;Portland	municipality
-Maine;Cumberland County;Pownal	municipality
-Maine;Cumberland County;Raymond	municipality
-Maine;Cumberland County;Scarborough	municipality
-Maine;Cumberland County;Sebago	municipality
-Maine;Cumberland County;South Portland	municipality
-Maine;Cumberland County;Standish	municipality
-Maine;Cumberland County;Westbrook	municipality
-Maine;Cumberland County;Windham	municipality
-Maine;Cumberland County;Yarmouth	municipality
-Maine;Kennebec County;Augusta	municipality
-Maine;Kennebec County;Chelsea	municipality
-Maine;Kennebec County;China	municipality
-Maine;Kennebec County;Farmingdale	municipality
-Maine;Kennebec County;Hallowell	municipality
-Maine;Kennebec County;Manchester	municipality
-Maine;Kennebec County;Pittston	municipality
-Maine;Kennebec County;Readfield	municipality
-Maine;Kennebec County;Vassalboro	municipality
-Maine;Kennebec County;Waterville	municipality
-Maine;Kennebec County;Windsor	municipality
-Maine;Kennebec County;Winslow	municipality
-Maine;Kennebec County;Winthrop	municipality
-Maine;Knox County;Appleton	municipality
-Maine;Knox County;Camden	municipality
-Maine;Knox County;Cushing	municipality
-Maine;Knox County;Friendship	municipality
-Maine;Knox County;Hope	municipality
-Maine;Knox County;Isle Au Haut	municipality
-Maine;Knox County;Matinicus Isle Plt	municipality
-Maine;Knox County;North Haven	municipality
-Maine;Knox County;Owls Head	municipality
-Maine;Knox County;Rockland	municipality
-Maine;Knox County;Rockport	municipality
-Maine;Knox County;Saint George	municipality
-Maine;Knox County;South Thomaston	municipality
-Maine;Knox County;Thomaston	municipality
-Maine;Knox County;Union	municipality
-Maine;Knox County;Vinalhaven	municipality
-Maine;Knox County;Warren	municipality
-Maine;Knox County;Washington	municipality
-Maine;Lincoln County;Alna	municipality
-Maine;Lincoln County;Boothbay	municipality
-Maine;Lincoln County;Boothbay Harbor	municipality
-Maine;Lincoln County;Bremen	municipality
-Maine;Lincoln County;Bristol	municipality
-Maine;Lincoln County;Damariscotta	municipality
-Maine;Lincoln County;Dresden	municipality
-Maine;Lincoln County;Edgecomb	municipality
-Maine;Lincoln County;Jefferson	municipality
-Maine;Lincoln County;Monhegan Island Plt	municipality
-Maine;Lincoln County;Newcastle	municipality
-Maine;Lincoln County;Nobleboro	municipality
-Maine;Lincoln County;Somerville	municipality
-Maine;Lincoln County;South Bristol	municipality
-Maine;Lincoln County;Southport	municipality
-Maine;Lincoln County;Waldoboro	municipality
-Maine;Lincoln County;Westport Island	municipality
-Maine;Lincoln County;Whitefield	municipality
-Maine;Lincoln County;Wiscasset	municipality
-Maine;Sagadahoc County;Arrowsic	municipality
-Maine;Sagadahoc County;Bath	municipality
-Maine;Sagadahoc County;Bowdoin	municipality
-Maine;Sagadahoc County;Bowdoinham	municipality
-Maine;Sagadahoc County;Georgetown	municipality
-Maine;Sagadahoc County;Phippsburg	municipality
-Maine;Sagadahoc County;Richmond	municipality
-Maine;Sagadahoc County;Topsham	municipality
-Maine;Sagadahoc County;West Bath	municipality
-Maine;Sagadahoc County;Woolwich	municipality
-Maine;York County;Acton	municipality
-Maine;York County;Alfred	municipality
-Maine;York County;Arundel	municipality
-Maine;York County;Berwick	municipality
-Maine;York County;Biddeford	municipality
-Maine;York County;Buxton	municipality
-Maine;York County;Cornish	municipality
-Maine;York County;Dayton	municipality
-Maine;York County;Eliot	municipality
-Maine;York County;Hollis	municipality
-Maine;York County;Kennebunk	municipality
-Maine;York County;Kennebunkport	municipality
-Maine;York County;Kittery	municipality
-Maine;York County;Lebanon	municipality
-Maine;York County;Limerick	municipality
-Maine;York County;Limington	municipality
-Maine;York County;Lyman	municipality
-Maine;York County;Newfield	municipality
-Maine;York County;North Berwick	municipality
-Maine;York County;Ogunquit	municipality
-Maine;York County;Old Orchard Beach	municipality
-Maine;York County;Parsonsfield	municipality
-Maine;York County;Saco	municipality
-Maine;York County;Sanford	municipality
-Maine;York County;Shapleigh	municipality
-Maine;York County;South Berwick	municipality
-Maine;York County;Waterboro	municipality
-Maine;York County;Wells	municipality
-Maine;York County;York	municipality
 Maine;Androscoggin County;Auburn	municipality
 Maine;Androscoggin County;Durham	municipality
 Maine;Androscoggin County;Greene	municipality
@@ -407,6 +103,34 @@ Maine;Aroostook County;Westmanland	municipality
 Maine;Aroostook County;Weston	municipality
 Maine;Aroostook County;Winterville Plt.	municipality
 Maine;Aroostook County;Woodland	municipality
+Maine;Cumberland County;Baldwin	municipality
+Maine;Cumberland County;Bridgton	municipality
+Maine;Cumberland County;Brunswick	municipality
+Maine;Cumberland County;Cape Elizabeth	municipality
+Maine;Cumberland County;Casco	municipality
+Maine;Cumberland County;Chebeague Island	municipality
+Maine;Cumberland County;Cumberland	municipality
+Maine;Cumberland County;Falmouth	municipality
+Maine;Cumberland County;Freeport	municipality
+Maine;Cumberland County;Frye Island	municipality
+Maine;Cumberland County;Gorham	municipality
+Maine;Cumberland County;Gray	municipality
+Maine;Cumberland County;Harpswell	municipality
+Maine;Cumberland County;Harrison	municipality
+Maine;Cumberland County;Long Island	municipality
+Maine;Cumberland County;Naples	municipality
+Maine;Cumberland County;New Gloucester	municipality
+Maine;Cumberland County;North Yarmouth	municipality
+Maine;Cumberland County;Portland	municipality
+Maine;Cumberland County;Pownal	municipality
+Maine;Cumberland County;Raymond	municipality
+Maine;Cumberland County;Scarborough	municipality
+Maine;Cumberland County;Sebago	municipality
+Maine;Cumberland County;South Portland	municipality
+Maine;Cumberland County;Standish	municipality
+Maine;Cumberland County;Westbrook	municipality
+Maine;Cumberland County;Windham	municipality
+Maine;Cumberland County;Yarmouth	municipality
 Maine;Franklin County;Avon	municipality
 Maine;Franklin County;Carrabassett Valley/Wyman Twp	municipality
 Maine;Franklin County;Carthage	municipality
@@ -422,8 +146,8 @@ Maine;Franklin County;New Sharon	municipality
 Maine;Franklin County;New Vineyard	municipality
 Maine;Franklin County;Perkins Twp	municipality
 Maine;Franklin County;Phillips	municipality
-Maine;Franklin County;Rangeley/Adamstown Twp	municipality
 Maine;Franklin County;Rangeley Plt	municipality
+Maine;Franklin County;Rangeley/Adamstown Twp	municipality
 Maine;Franklin County;Sandy River Plt	municipality
 Maine;Franklin County;Strong/Freeman Twp	municipality
 Maine;Franklin County;Temple	municipality
@@ -470,21 +194,71 @@ Maine;Hancock County;Verona Island	municipality
 Maine;Hancock County;Waltham	municipality
 Maine;Hancock County;Winter Harbor	municipality
 Maine;Kennebec County;Albion	municipality
+Maine;Kennebec County;Augusta	municipality
 Maine;Kennebec County;Belgrade	municipality
 Maine;Kennebec County;Benton	municipality
+Maine;Kennebec County;Chelsea	municipality
+Maine;Kennebec County;China	municipality
 Maine;Kennebec County;Clinton	municipality
+Maine;Kennebec County;Farmingdale	municipality
 Maine;Kennebec County;Fayette	municipality
 Maine;Kennebec County;Gardiner	municipality
+Maine;Kennebec County;Hallowell	municipality
 Maine;Kennebec County;Litchfield	municipality
+Maine;Kennebec County;Manchester	municipality
 Maine;Kennebec County;Monmouth	municipality
 Maine;Kennebec County;Mount Vernon	municipality
 Maine;Kennebec County;Oakland	municipality
+Maine;Kennebec County;Pittston	municipality
 Maine;Kennebec County;Randolph	municipality
+Maine;Kennebec County;Readfield	municipality
 Maine;Kennebec County;Rome	municipality
 Maine;Kennebec County;Sidney	municipality
+Maine;Kennebec County;Vassalboro	municipality
 Maine;Kennebec County;Vienna	municipality
+Maine;Kennebec County;Waterville	municipality
 Maine;Kennebec County;Wayne	municipality
 Maine;Kennebec County;West Gardiner	municipality
+Maine;Kennebec County;Windsor	municipality
+Maine;Kennebec County;Winslow	municipality
+Maine;Kennebec County;Winthrop	municipality
+Maine;Knox County;Appleton	municipality
+Maine;Knox County;Camden	municipality
+Maine;Knox County;Cushing	municipality
+Maine;Knox County;Friendship	municipality
+Maine;Knox County;Hope	municipality
+Maine;Knox County;Isle Au Haut	municipality
+Maine;Knox County;Matinicus Isle Plt	municipality
+Maine;Knox County;North Haven	municipality
+Maine;Knox County;Owls Head	municipality
+Maine;Knox County;Rockland	municipality
+Maine;Knox County;Rockport	municipality
+Maine;Knox County;Saint George	municipality
+Maine;Knox County;South Thomaston	municipality
+Maine;Knox County;Thomaston	municipality
+Maine;Knox County;Union	municipality
+Maine;Knox County;Vinalhaven	municipality
+Maine;Knox County;Warren	municipality
+Maine;Knox County;Washington	municipality
+Maine;Lincoln County;Alna	municipality
+Maine;Lincoln County;Boothbay	municipality
+Maine;Lincoln County;Boothbay Harbor	municipality
+Maine;Lincoln County;Bremen	municipality
+Maine;Lincoln County;Bristol	municipality
+Maine;Lincoln County;Damariscotta	municipality
+Maine;Lincoln County;Dresden	municipality
+Maine;Lincoln County;Edgecomb	municipality
+Maine;Lincoln County;Jefferson	municipality
+Maine;Lincoln County;Monhegan Island Plt	municipality
+Maine;Lincoln County;Newcastle	municipality
+Maine;Lincoln County;Nobleboro	municipality
+Maine;Lincoln County;Somerville	municipality
+Maine;Lincoln County;South Bristol	municipality
+Maine;Lincoln County;Southport	municipality
+Maine;Lincoln County;Waldoboro	municipality
+Maine;Lincoln County;Westport Island	municipality
+Maine;Lincoln County;Whitefield	municipality
+Maine;Lincoln County;Wiscasset	municipality
 Maine;Oxford County;Albany Twp	municipality
 Maine;Oxford County;Andover	municipality
 Maine;Oxford County;Bethel/Mason Twp	municipality
@@ -591,6 +365,7 @@ Maine;Penobscot County;Webster Plt	municipality
 Maine;Penobscot County;Winn	municipality
 Maine;Penobscot County;Woodville	municipality
 Maine;Piscataquis County;Abbot	municipality
+Maine;Piscataquis County;Atkinson Township	municipality
 Maine;Piscataquis County;Beaver Cove	municipality
 Maine;Piscataquis County;Bowerbank	municipality
 Maine;Piscataquis County;Brownville/Twps	municipality
@@ -601,6 +376,7 @@ Maine;Piscataquis County;Lake View Plt	municipality
 Maine;Piscataquis County;Medford	municipality
 Maine;Piscataquis County;Millinocket Piscataquis Twps	municipality
 Maine;Piscataquis County;Milo/Orneville Twp	municipality
+Maine;Piscataquis County;Milo/Ornveille Twp	municipality
 Maine;Piscataquis County;Monson/Elliotsville Twp	municipality
 Maine;Piscataquis County;Parkman	municipality
 Maine;Piscataquis County;Sangerville	municipality
@@ -608,6 +384,16 @@ Maine;Piscataquis County;Sebec	municipality
 Maine;Piscataquis County;Shirley	municipality
 Maine;Piscataquis County;Wellington	municipality
 Maine;Piscataquis County;Willimantic	municipality
+Maine;Sagadahoc County;Arrowsic	municipality
+Maine;Sagadahoc County;Bath	municipality
+Maine;Sagadahoc County;Bowdoin	municipality
+Maine;Sagadahoc County;Bowdoinham	municipality
+Maine;Sagadahoc County;Georgetown	municipality
+Maine;Sagadahoc County;Phippsburg	municipality
+Maine;Sagadahoc County;Richmond	municipality
+Maine;Sagadahoc County;Topsham	municipality
+Maine;Sagadahoc County;West Bath	municipality
+Maine;Sagadahoc County;Woolwich	municipality
 Maine;Somerset County;Anson	municipality
 Maine;Somerset County;Athens	municipality
 Maine;Somerset County;Bingham	municipality
@@ -719,5 +505,219 @@ Maine;Washington County;Waite	municipality
 Maine;Washington County;Wesley	municipality
 Maine;Washington County;Whiting	municipality
 Maine;Washington County;Whitneyville	municipality
-Maine;Piscataquis County;Atkinson Township	municipality
-Maine;Piscataquis County;Milo/Ornveille Twp	municipality
+Maine;York County;Acton	municipality
+Maine;York County;Alfred	municipality
+Maine;York County;Arundel	municipality
+Maine;York County;Berwick	municipality
+Maine;York County;Biddeford	municipality
+Maine;York County;Buxton	municipality
+Maine;York County;Cornish	municipality
+Maine;York County;Dayton	municipality
+Maine;York County;Eliot	municipality
+Maine;York County;Hollis	municipality
+Maine;York County;Kennebunk	municipality
+Maine;York County;Kennebunkport	municipality
+Maine;York County;Kittery	municipality
+Maine;York County;Lebanon	municipality
+Maine;York County;Limerick	municipality
+Maine;York County;Limington	municipality
+Maine;York County;Lyman	municipality
+Maine;York County;Newfield	municipality
+Maine;York County;North Berwick	municipality
+Maine;York County;Ogunquit	municipality
+Maine;York County;Old Orchard Beach	municipality
+Maine;York County;Parsonsfield	municipality
+Maine;York County;Saco	municipality
+Maine;York County;Sanford	municipality
+Maine;York County;Shapleigh	municipality
+Maine;York County;South Berwick	municipality
+Maine;York County;Waterboro	municipality
+Maine;York County;Wells	municipality
+Maine;York County;York	municipality
+Maine	state
+Maine;ME House District 1	state-house
+Maine;ME House District 10	state-house
+Maine;ME House District 100	state-house
+Maine;ME House District 101	state-house
+Maine;ME House District 102	state-house
+Maine;ME House District 103	state-house
+Maine;ME House District 104	state-house
+Maine;ME House District 105	state-house
+Maine;ME House District 106	state-house
+Maine;ME House District 107	state-house
+Maine;ME House District 108	state-house
+Maine;ME House District 109	state-house
+Maine;ME House District 11	state-house
+Maine;ME House District 110	state-house
+Maine;ME House District 111	state-house
+Maine;ME House District 112	state-house
+Maine;ME House District 113	state-house
+Maine;ME House District 114	state-house
+Maine;ME House District 115	state-house
+Maine;ME House District 116	state-house
+Maine;ME House District 117	state-house
+Maine;ME House District 118	state-house
+Maine;ME House District 119	state-house
+Maine;ME House District 12	state-house
+Maine;ME House District 120	state-house
+Maine;ME House District 121	state-house
+Maine;ME House District 122	state-house
+Maine;ME House District 123	state-house
+Maine;ME House District 124	state-house
+Maine;ME House District 125	state-house
+Maine;ME House District 126	state-house
+Maine;ME House District 127	state-house
+Maine;ME House District 128	state-house
+Maine;ME House District 129	state-house
+Maine;ME House District 13	state-house
+Maine;ME House District 130	state-house
+Maine;ME House District 131	state-house
+Maine;ME House District 132	state-house
+Maine;ME House District 133	state-house
+Maine;ME House District 134	state-house
+Maine;ME House District 135	state-house
+Maine;ME House District 136	state-house
+Maine;ME House District 137	state-house
+Maine;ME House District 138	state-house
+Maine;ME House District 139	state-house
+Maine;ME House District 14	state-house
+Maine;ME House District 140	state-house
+Maine;ME House District 141	state-house
+Maine;ME House District 142	state-house
+Maine;ME House District 143	state-house
+Maine;ME House District 144	state-house
+Maine;ME House District 145	state-house
+Maine;ME House District 146	state-house
+Maine;ME House District 147	state-house
+Maine;ME House District 148	state-house
+Maine;ME House District 149	state-house
+Maine;ME House District 15	state-house
+Maine;ME House District 150	state-house
+Maine;ME House District 151	state-house
+Maine;ME House District 16	state-house
+Maine;ME House District 17	state-house
+Maine;ME House District 18	state-house
+Maine;ME House District 19	state-house
+Maine;ME House District 2	state-house
+Maine;ME House District 20	state-house
+Maine;ME House District 21	state-house
+Maine;ME House District 22	state-house
+Maine;ME House District 23	state-house
+Maine;ME House District 24	state-house
+Maine;ME House District 25	state-house
+Maine;ME House District 26	state-house
+Maine;ME House District 27	state-house
+Maine;ME House District 28	state-house
+Maine;ME House District 29	state-house
+Maine;ME House District 3	state-house
+Maine;ME House District 30	state-house
+Maine;ME House District 31	state-house
+Maine;ME House District 32	state-house
+Maine;ME House District 33	state-house
+Maine;ME House District 34	state-house
+Maine;ME House District 35	state-house
+Maine;ME House District 36	state-house
+Maine;ME House District 37	state-house
+Maine;ME House District 38	state-house
+Maine;ME House District 39	state-house
+Maine;ME House District 4	state-house
+Maine;ME House District 40	state-house
+Maine;ME House District 41	state-house
+Maine;ME House District 42	state-house
+Maine;ME House District 43	state-house
+Maine;ME House District 44	state-house
+Maine;ME House District 45	state-house
+Maine;ME House District 46	state-house
+Maine;ME House District 47	state-house
+Maine;ME House District 48	state-house
+Maine;ME House District 49	state-house
+Maine;ME House District 5	state-house
+Maine;ME House District 50	state-house
+Maine;ME House District 51	state-house
+Maine;ME House District 52	state-house
+Maine;ME House District 53	state-house
+Maine;ME House District 54	state-house
+Maine;ME House District 55	state-house
+Maine;ME House District 56	state-house
+Maine;ME House District 57	state-house
+Maine;ME House District 58	state-house
+Maine;ME House District 59	state-house
+Maine;ME House District 6	state-house
+Maine;ME House District 60	state-house
+Maine;ME House District 61	state-house
+Maine;ME House District 62	state-house
+Maine;ME House District 63	state-house
+Maine;ME House District 64	state-house
+Maine;ME House District 65	state-house
+Maine;ME House District 66	state-house
+Maine;ME House District 67	state-house
+Maine;ME House District 68	state-house
+Maine;ME House District 69	state-house
+Maine;ME House District 7	state-house
+Maine;ME House District 70	state-house
+Maine;ME House District 71	state-house
+Maine;ME House District 72	state-house
+Maine;ME House District 73	state-house
+Maine;ME House District 74	state-house
+Maine;ME House District 75	state-house
+Maine;ME House District 76	state-house
+Maine;ME House District 77	state-house
+Maine;ME House District 78	state-house
+Maine;ME House District 79	state-house
+Maine;ME House District 8	state-house
+Maine;ME House District 80	state-house
+Maine;ME House District 81	state-house
+Maine;ME House District 82	state-house
+Maine;ME House District 83	state-house
+Maine;ME House District 84	state-house
+Maine;ME House District 85	state-house
+Maine;ME House District 86	state-house
+Maine;ME House District 87	state-house
+Maine;ME House District 88	state-house
+Maine;ME House District 89	state-house
+Maine;ME House District 9	state-house
+Maine;ME House District 90	state-house
+Maine;ME House District 91	state-house
+Maine;ME House District 92	state-house
+Maine;ME House District 93	state-house
+Maine;ME House District 94	state-house
+Maine;ME House District 95	state-house
+Maine;ME House District 96	state-house
+Maine;ME House District 97	state-house
+Maine;ME House District 98	state-house
+Maine;ME House District 99	state-house
+Maine;ME Senate District 1	state-senate
+Maine;ME Senate District 10	state-senate
+Maine;ME Senate District 11	state-senate
+Maine;ME Senate District 12	state-senate
+Maine;ME Senate District 13	state-senate
+Maine;ME Senate District 14	state-senate
+Maine;ME Senate District 15	state-senate
+Maine;ME Senate District 16	state-senate
+Maine;ME Senate District 17	state-senate
+Maine;ME Senate District 18	state-senate
+Maine;ME Senate District 19	state-senate
+Maine;ME Senate District 2	state-senate
+Maine;ME Senate District 20	state-senate
+Maine;ME Senate District 21	state-senate
+Maine;ME Senate District 22	state-senate
+Maine;ME Senate District 23	state-senate
+Maine;ME Senate District 24	state-senate
+Maine;ME Senate District 25	state-senate
+Maine;ME Senate District 26	state-senate
+Maine;ME Senate District 27	state-senate
+Maine;ME Senate District 28	state-senate
+Maine;ME Senate District 29	state-senate
+Maine;ME Senate District 3	state-senate
+Maine;ME Senate District 30	state-senate
+Maine;ME Senate District 31	state-senate
+Maine;ME Senate District 32	state-senate
+Maine;ME Senate District 33	state-senate
+Maine;ME Senate District 34	state-senate
+Maine;ME Senate District 35	state-senate
+Maine;ME Senate District 4	state-senate
+Maine;ME Senate District 5	state-senate
+Maine;ME Senate District 6	state-senate
+Maine;ME Senate District 7	state-senate
+Maine;ME Senate District 8	state-senate
+Maine;ME Senate District 9	state-senate

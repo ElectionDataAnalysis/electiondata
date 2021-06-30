@@ -5,3 +5,7 @@ Name	ElectionType
 2018 Primary	primary
 2016 General	general
 2016 Primary	primary
+2000 General	general
+2004 General	general
+2008 General	general
+2012 General	general

@@ -191,7 +191,6 @@ Ernest J. Gigaroa
 Everett Chase
 Feenstera
 Fred Hubbell
-Fred Hubbell
 Fred Perryman
 Fred Year
 Gabriel Thomson
@@ -231,7 +230,6 @@ Jacob Bossman
 Jacqueline Riekena
 Jake Chapman
 Jake Highfill
-Jake Porter
 Jake Porter
 Jake Ronald Thompson
 James Eliason
@@ -326,7 +324,6 @@ Kevin K. Warth
 Kevin Kinney
 Kevin Koester
 Kevin Wynn
-Kim Reynolds
 Kim Reynolds
 Kimberly Graham
 Kimberly K. Davis
@@ -614,3 +611,14 @@ Jo Jorgensen
 Howie Hawkins
 Don Blankenship
 Brock Pierce
+Al Gore
+Barack Obama
+George W. Bush
+Hillary Clinton
+John Kerry
+John Mccain
+Mitt Romney
+Other
+Ralph Nader
+John MCCain
+John McCain

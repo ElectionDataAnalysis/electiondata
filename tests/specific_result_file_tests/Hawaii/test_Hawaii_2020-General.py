@@ -33,7 +33,7 @@ pres_votes_vote_type = 28610  # total votes for US President of that vote type
 county_or_other = "county"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
 single_county = (
-    "Hawaii;Hawai'i County"  # pick any one from your file, but use internal db name
+    "Hawaii;Hawaii County"  # pick any one from your file, but use internal db name
 )
 pres_votes_county = (
     58731 + 26897 + 1027 + 805 + 220 + 134

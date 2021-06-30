@@ -1,369 +1,10 @@
 Name	ReportingUnitType
-Connecticut;CT Senate District 1	state-senate
-Connecticut;CT Senate District 2	state-senate
-Connecticut;CT Senate District 3	state-senate
-Connecticut;CT Senate District 4	state-senate
-Connecticut;CT Senate District 5	state-senate
-Connecticut;CT Senate District 6	state-senate
-Connecticut;CT Senate District 7	state-senate
-Connecticut;CT Senate District 8	state-senate
-Connecticut;CT Senate District 9	state-senate
-Connecticut;CT Senate District 10	state-senate
-Connecticut;CT Senate District 11	state-senate
-Connecticut;CT Senate District 12	state-senate
-Connecticut;CT Senate District 13	state-senate
-Connecticut;CT Senate District 14	state-senate
-Connecticut;CT Senate District 15	state-senate
-Connecticut;CT Senate District 16	state-senate
-Connecticut;CT Senate District 17	state-senate
-Connecticut;CT Senate District 18	state-senate
-Connecticut;CT Senate District 19	state-senate
-Connecticut;CT Senate District 20	state-senate
-Connecticut;CT Senate District 21	state-senate
-Connecticut;CT Senate District 22	state-senate
-Connecticut;CT Senate District 23	state-senate
-Connecticut;CT Senate District 24	state-senate
-Connecticut;CT Senate District 25	state-senate
-Connecticut;CT Senate District 26	state-senate
-Connecticut;CT Senate District 27	state-senate
-Connecticut;CT Senate District 28	state-senate
-Connecticut;CT Senate District 29	state-senate
-Connecticut;CT Senate District 30	state-senate
-Connecticut;CT Senate District 31	state-senate
-Connecticut;CT Senate District 32	state-senate
-Connecticut;CT Senate District 33	state-senate
-Connecticut;CT Senate District 34	state-senate
-Connecticut;CT Senate District 35	state-senate
-Connecticut;CT Senate District 36	state-senate
-Connecticut;CT House District 1	state-house
-Connecticut;CT House District 2	state-house
-Connecticut;CT House District 3	state-house
-Connecticut;CT House District 4	state-house
-Connecticut;CT House District 5	state-house
-Connecticut;CT House District 6	state-house
-Connecticut;CT House District 7	state-house
-Connecticut;CT House District 8	state-house
-Connecticut;CT House District 9	state-house
-Connecticut;CT House District 10	state-house
-Connecticut;CT House District 11	state-house
-Connecticut;CT House District 12	state-house
-Connecticut;CT House District 13	state-house
-Connecticut;CT House District 14	state-house
-Connecticut;CT House District 15	state-house
-Connecticut;CT House District 16	state-house
-Connecticut;CT House District 17	state-house
-Connecticut;CT House District 18	state-house
-Connecticut;CT House District 19	state-house
-Connecticut;CT House District 20	state-house
-Connecticut;CT House District 21	state-house
-Connecticut;CT House District 22	state-house
-Connecticut;CT House District 23	state-house
-Connecticut;CT House District 24	state-house
-Connecticut;CT House District 25	state-house
-Connecticut;CT House District 26	state-house
-Connecticut;CT House District 27	state-house
-Connecticut;CT House District 28	state-house
-Connecticut;CT House District 29	state-house
-Connecticut;CT House District 30	state-house
-Connecticut;CT House District 31	state-house
-Connecticut;CT House District 32	state-house
-Connecticut;CT House District 33	state-house
-Connecticut;CT House District 34	state-house
-Connecticut;CT House District 35	state-house
-Connecticut;CT House District 36	state-house
-Connecticut;CT House District 37	state-house
-Connecticut;CT House District 38	state-house
-Connecticut;CT House District 39	state-house
-Connecticut;CT House District 40	state-house
-Connecticut;CT House District 41	state-house
-Connecticut;CT House District 42	state-house
-Connecticut;CT House District 43	state-house
-Connecticut;CT House District 44	state-house
-Connecticut;CT House District 45	state-house
-Connecticut;CT House District 46	state-house
-Connecticut;CT House District 47	state-house
-Connecticut;CT House District 48	state-house
-Connecticut;CT House District 49	state-house
-Connecticut;CT House District 50	state-house
-Connecticut;CT House District 51	state-house
-Connecticut;CT House District 52	state-house
-Connecticut;CT House District 53	state-house
-Connecticut;CT House District 54	state-house
-Connecticut;CT House District 55	state-house
-Connecticut;CT House District 56	state-house
-Connecticut;CT House District 57	state-house
-Connecticut;CT House District 58	state-house
-Connecticut;CT House District 59	state-house
-Connecticut;CT House District 60	state-house
-Connecticut;CT House District 61	state-house
-Connecticut;CT House District 62	state-house
-Connecticut;CT House District 63	state-house
-Connecticut;CT House District 64	state-house
-Connecticut;CT House District 65	state-house
-Connecticut;CT House District 66	state-house
-Connecticut;CT House District 67	state-house
-Connecticut;CT House District 68	state-house
-Connecticut;CT House District 69	state-house
-Connecticut;CT House District 70	state-house
-Connecticut;CT House District 71	state-house
-Connecticut;CT House District 72	state-house
-Connecticut;CT House District 73	state-house
-Connecticut;CT House District 74	state-house
-Connecticut;CT House District 75	state-house
-Connecticut;CT House District 76	state-house
-Connecticut;CT House District 77	state-house
-Connecticut;CT House District 78	state-house
-Connecticut;CT House District 79	state-house
-Connecticut;CT House District 80	state-house
-Connecticut;CT House District 81	state-house
-Connecticut;CT House District 82	state-house
-Connecticut;CT House District 83	state-house
-Connecticut;CT House District 84	state-house
-Connecticut;CT House District 85	state-house
-Connecticut;CT House District 86	state-house
-Connecticut;CT House District 87	state-house
-Connecticut;CT House District 88	state-house
-Connecticut;CT House District 89	state-house
-Connecticut;CT House District 90	state-house
-Connecticut;CT House District 91	state-house
-Connecticut;CT House District 92	state-house
-Connecticut;CT House District 93	state-house
-Connecticut;CT House District 94	state-house
-Connecticut;CT House District 95	state-house
-Connecticut;CT House District 96	state-house
-Connecticut;CT House District 97	state-house
-Connecticut;CT House District 98	state-house
-Connecticut;CT House District 99	state-house
-Connecticut;CT House District 100	state-house
-Connecticut;CT House District 101	state-house
-Connecticut;CT House District 102	state-house
-Connecticut;CT House District 103	state-house
-Connecticut;CT House District 104	state-house
-Connecticut;CT House District 105	state-house
-Connecticut;CT House District 106	state-house
-Connecticut;CT House District 107	state-house
-Connecticut;CT House District 108	state-house
-Connecticut;CT House District 109	state-house
-Connecticut;CT House District 110	state-house
-Connecticut;CT House District 111	state-house
-Connecticut;CT House District 112	state-house
-Connecticut;CT House District 113	state-house
-Connecticut;CT House District 114	state-house
-Connecticut;CT House District 115	state-house
-Connecticut;CT House District 116	state-house
-Connecticut;CT House District 117	state-house
-Connecticut;CT House District 118	state-house
-Connecticut;CT House District 119	state-house
-Connecticut;CT House District 120	state-house
-Connecticut;CT House District 121	state-house
-Connecticut;CT House District 122	state-house
-Connecticut;CT House District 123	state-house
-Connecticut;CT House District 124	state-house
-Connecticut;CT House District 125	state-house
-Connecticut;CT House District 126	state-house
-Connecticut;CT House District 127	state-house
-Connecticut;CT House District 128	state-house
-Connecticut;CT House District 129	state-house
-Connecticut;CT House District 130	state-house
-Connecticut;CT House District 131	state-house
-Connecticut;CT House District 132	state-house
-Connecticut;CT House District 133	state-house
-Connecticut;CT House District 134	state-house
-Connecticut;CT House District 135	state-house
-Connecticut;CT House District 136	state-house
-Connecticut;CT House District 137	state-house
-Connecticut;CT House District 138	state-house
-Connecticut;CT House District 139	state-house
-Connecticut;CT House District 140	state-house
-Connecticut;CT House District 141	state-house
-Connecticut;CT House District 142	state-house
-Connecticut;CT House District 143	state-house
-Connecticut;CT House District 144	state-house
-Connecticut;CT House District 145	state-house
-Connecticut;CT House District 146	state-house
-Connecticut;CT House District 147	state-house
-Connecticut;CT House District 148	state-house
-Connecticut;CT House District 149	state-house
-Connecticut;CT House District 150	state-house
-Connecticut;CT House District 151	state-house
 Connecticut;US House CT District 1	congressional
 Connecticut;US House CT District 2	congressional
 Connecticut;US House CT District 3	congressional
 Connecticut;US House CT District 4	congressional
 Connecticut;US House CT District 5	congressional
-Connecticut	state
-Connecticut;Andover	town
-Connecticut;Ansonia	town
-Connecticut;Ashford	town
-Connecticut;Avon	town
-Connecticut;Barkhamsted	town
-Connecticut;Beacon Falls	town
-Connecticut;Berlin	town
-Connecticut;Bethany	town
-Connecticut;Bethel	town
-Connecticut;Bethlehem	town
-Connecticut;Bloomfield	town
-Connecticut;Bolton	town
-Connecticut;Bozrah	town
-Connecticut;Branford	town
-Connecticut;Bridgeport	town
-Connecticut;Bridgewater	town
-Connecticut;Bristol	town
-Connecticut;Brookfield	town
-Connecticut;Brooklyn	town
-Connecticut;Burlington	town
-Connecticut;Canaan	town
-Connecticut;Canterbury	town
-Connecticut;Canton	town
-Connecticut;Chaplin	town
-Connecticut;Cheshire	town
-Connecticut;Chester	town
-Connecticut;Clinton	town
-Connecticut;Colchester	town
-Connecticut;Colebrook	town
-Connecticut;Columbia	town
-Connecticut;Cornwall	town
-Connecticut;Coventry	town
-Connecticut;Cromwell	town
-Connecticut;Danbury	town
-Connecticut;Darien	town
-Connecticut;Deep River	town
-Connecticut;Derby	town
-Connecticut;Durham	town
-Connecticut;East Granby	town
-Connecticut;East Haddam	town
-Connecticut;East Hampton	town
-Connecticut;East Hartford	town
-Connecticut;East Haven	town
-Connecticut;East Lyme	town
-Connecticut;East Windsor	town
-Connecticut;Eastford	town
-Connecticut;Easton	town
-Connecticut;ElectionDescription	town
-Connecticut;Ellington	town
-Connecticut;Enfield	town
-Connecticut;Essex	town
-Connecticut;Fairfield	town
-Connecticut;Farmington	town
-Connecticut;Franklin	town
-Connecticut;Glastonbury	town
-Connecticut;Goshen	town
-Connecticut;Granby	town
-Connecticut;Greenwich	town
-Connecticut;Griswold	town
-Connecticut;Groton	town
-Connecticut;Guilford	town
-Connecticut;Haddam	town
-Connecticut;Hamden	town
-Connecticut;Hampton	town
-Connecticut;Hartford	town
-Connecticut;Hartland	town
-Connecticut;Harwinton	town
-Connecticut;Hebron	town
-Connecticut;Kent	town
-Connecticut;Killingly	town
-Connecticut;Killingworth	town
-Connecticut;Lebanon	town
-Connecticut;Ledyard	town
-Connecticut;Lisbon	town
-Connecticut;Litchfield	town
-Connecticut;Lyme	town
-Connecticut;Madison	town
-Connecticut;Manchester	town
-Connecticut;Mansfield	town
-Connecticut;Marlborough	town
-Connecticut;Meriden	town
-Connecticut;Middlebury	town
-Connecticut;Middlefield	town
-Connecticut;Middletown	town
-Connecticut;Milford	town
-Connecticut;Monroe	town
-Connecticut;Montville	town
-Connecticut;Morris	town
-Connecticut;Naugatuck	town
-Connecticut;New Britain	town
-Connecticut;New Canaan	town
-Connecticut;New Fairfield	town
-Connecticut;New Hartford	town
-Connecticut;New Haven	town
-Connecticut;New London	town
-Connecticut;New Milford	town
-Connecticut;Newington	town
-Connecticut;Newtown	town
-Connecticut;Norfolk	town
-Connecticut;North Branford	town
-Connecticut;North Canaan	town
-Connecticut;North Haven	town
-Connecticut;North Stonington	town
-Connecticut;Norwalk	town
-Connecticut;Norwich	town
-Connecticut;Old Lyme	town
-Connecticut;Old Saybrook	town
-Connecticut;Orange	town
-Connecticut;Oxford	town
-Connecticut;Plainfield	town
-Connecticut;Plainville	town
-Connecticut;Plymouth	town
-Connecticut;Polling_Place_Name	town
-Connecticut;Pomfret	town
-Connecticut;Portland	town
-Connecticut;Preston	town
-Connecticut;Prospect	town
-Connecticut;Putnam	town
-Connecticut;Redding	town
-Connecticut;Ridgefield	town
-Connecticut;Rocky Hill	town
-Connecticut;Roxbury	town
-Connecticut;Salem	town
-Connecticut;Salisbury	town
-Connecticut;Scotland	town
-Connecticut;Seymour	town
-Connecticut;Sharon	town
-Connecticut;Shelton	town
-Connecticut;Sherman	town
-Connecticut;Simsbury	town
-Connecticut;Somers	town
-Connecticut;South Windsor	town
-Connecticut;Southbury	town
-Connecticut;Southington	town
-Connecticut;Sprague	town
-Connecticut;Stafford	town
-Connecticut;Stamford	town
-Connecticut;State Election	town
-Connecticut;Sterling	town
-Connecticut;Stonington	town
-Connecticut;Stratford	town
-Connecticut;Suffield	town
-Connecticut;Thomaston	town
-Connecticut;Thompson	town
-Connecticut;Tolland	town
-Connecticut;Torrington	town
-Connecticut;Trumbull	town
-Connecticut;Union	town
-Connecticut;Vernon	town
-Connecticut;Voluntown	town
-Connecticut;Wallingford	town
-Connecticut;Warren	town
-Connecticut;Washington	town
-Connecticut;Waterbury	town
-Connecticut;Waterford	town
-Connecticut;Watertown	town
-Connecticut;West Hartford	town
-Connecticut;West Haven	town
-Connecticut;Westbrook	town
-Connecticut;Weston	town
-Connecticut;Westport	town
-Connecticut;Wethersfield	town
-Connecticut;Willington	town
-Connecticut;Wilton	town
-Connecticut;Winchester	town
-Connecticut;Windham	town
-Connecticut;Windsor	town
-Connecticut;Windsor Locks	town
-Connecticut;Wolcott	town
-Connecticut;Woodbridge	town
-Connecticut;Woodbury	town
-Connecticut;Woodstock	town
+Connecticut;Middlesex County	county
 Connecticut;Andover;DISTRICT 1-Andover Elementary School Gymnasium	precinct
 Connecticut;Ansonia;DISTRICT 1-Ward 1 Ansonia Armory	precinct
 Connecticut;Ansonia;DISTRICT 2-1-Ward 2 Ansonia Armory	precinct
@@ -465,24 +106,24 @@ Connecticut;Cornwall;DISTRICT 1-Cornwall Consolidated School	precinct
 Connecticut;Coventry;DISTRICT 1-GH Robertson School	precinct
 Connecticut;Coventry;DISTRICT 2-Coventry High School	precinct
 Connecticut;Cromwell;DISTRICT 1-1-Cromwell High School	precinct
-Connecticut;Danbury;DISTRICT 1-9-Danbury High School Gym	precinct
 Connecticut;Danbury;DISTRICT 1-10-Danbury High School Gym	precinct
 Connecticut;Danbury;DISTRICT 1-38-Danbury High School Gym	precinct
+Connecticut;Danbury;DISTRICT 1-9-Danbury High School Gym	precinct
+Connecticut;Danbury;DISTRICT 2-38-Pembroke School Gym	precinct
 Connecticut;Danbury;DISTRICT 2-8-Pembroke School Gym	precinct
 Connecticut;Danbury;DISTRICT 2-9-Pembroke School Gym	precinct
-Connecticut;Danbury;DISTRICT 2-38-Pembroke School Gym	precinct
 Connecticut;Danbury;DISTRICT 3-7-Stadley Rough School	precinct
 Connecticut;Danbury;DISTRICT 3-9-Stadley Rough School	precinct
-Connecticut;Danbury;DISTRICT 4-9-Shelter Rock School Gym	precinct
 Connecticut;Danbury;DISTRICT 4-10-Shelter Rock School Gym	precinct
+Connecticut;Danbury;DISTRICT 4-9-Shelter Rock School Gym	precinct
+Connecticut;Danbury;DISTRICT 5-10-War Memorial Gym	precinct
 Connecticut;Danbury;DISTRICT 5-2-War Memorial Gym	precinct
 Connecticut;Danbury;DISTRICT 5-9-War Memorial Gym	precinct
-Connecticut;Danbury;DISTRICT 5-10-War Memorial Gym	precinct
-Connecticut;Danbury;DISTRICT 6-2-Park Avenue School Gym	precinct
 Connecticut;Danbury;DISTRICT 6-10-Park Avenue School Gym	precinct
+Connecticut;Danbury;DISTRICT 6-2-Park Avenue School Gym	precinct
 Connecticut;Danbury;DISTRICT 6-38-Park Avenue School Gym	precinct
-Connecticut;Danbury;DISTRICT 7-2-Westside Middle School Academy	precinct
 Connecticut;Danbury;DISTRICT 7-10-Westside Middle School Academy	precinct
+Connecticut;Danbury;DISTRICT 7-2-Westside Middle School Academy	precinct
 Connecticut;Danbury;DISTRICT 7-38-Westside Middle School Academy	precinct
 Connecticut;Darien;DISTRICT 1-District 1 - 35 Leroy Avenue Municipal Building	precinct
 Connecticut;Darien;DISTRICT 2-District 2 - Darien Town Hall	precinct
@@ -492,13 +133,12 @@ Connecticut;Darien;DISTRICT 4-District 4-1 Hindley School Gymnasium Entrance	pre
 Connecticut;Darien;DISTRICT 5-District 5 - Darien Town Hall	precinct
 Connecticut;Darien;DISTRICT 6-District 6 - 35 Leroy Avenue Municipal Building	precinct
 Connecticut;Deep River;DISTRICT 1-Deep River Elementary School	precinct
+Connecticut;Derby;DISTRICT 14-Bradley Elementary School	precinct
 Connecticut;Derby;DISTRICT 4-Irving Elementary School	precinct
 Connecticut;Derby;DISTRICT 5-Irving School-105	precinct
-Connecticut;Derby;DISTRICT 14-Bradley Elementary School	precinct
 Connecticut;Durham;DISTRICT 2-Korn School 1	precinct
 Connecticut;Durham;DISTRICT 3-Korn School 2	precinct
 Connecticut;Durham;DISTRICT 4-Korn School 3	precinct
-Connecticut;Eastford;DISTRICT 1-Eastford Elementary School	precinct
 Connecticut;East Granby;DISTRICT 1-East Granby Community Center-1	precinct
 Connecticut;East Haddam;DISTRICT 1-Town Office Building	precinct
 Connecticut;East Hampton;DISTRICT 1-East Hampton High School	precinct
@@ -509,21 +149,22 @@ Connecticut;East Hartford;DISTRICT 4-Silver Lane School	precinct
 Connecticut;East Hartford;DISTRICT 5-Hockanum School	precinct
 Connecticut;East Hartford;DISTRICT 6-Goodwin School	precinct
 Connecticut;East Hartford;DISTRICT 7-Saint Christopher Church Hall	precinct
-Connecticut;East Haven;DISTRICT 1-Tuttle School 1	precinct
 Connecticut;East Haven;DISTRICT 1-3-East Farm Village 1-S	precinct
+Connecticut;East Haven;DISTRICT 1-Tuttle School 1	precinct
 Connecticut;East Haven;DISTRICT 2-Momauguin School 2	precinct
-Connecticut;East Haven;DISTRICT 3-Deer Run School 3	precinct
 Connecticut;East Haven;DISTRICT 3-3-Deer Run School 3-S	precinct
+Connecticut;East Haven;DISTRICT 3-Deer Run School 3	precinct
 Connecticut;East Haven;DISTRICT 4-Overbrook School 4	precinct
-Connecticut;East Haven;DISTRICT 5-Hays School 5	precinct
 Connecticut;East Haven;DISTRICT 5-3-Woodview 5-S	precinct
+Connecticut;East Haven;DISTRICT 5-Hays School 5	precinct
 Connecticut;East Lyme;DISTRICT 1-East Lyme High School	precinct
 Connecticut;East Lyme;DISTRICT 2-Niantic Center School	precinct
 Connecticut;East Lyme;DISTRICT 3-East Lyme Community Center	precinct
-Connecticut;Easton;DISTRICT 1-Samuel Staples School	precinct
-Connecticut;East Windsor;DISTRICT 1-Town Hall Annex	precinct
 Connecticut;East Windsor;DISTRICT 1-2-Town Hall Annex	precinct
+Connecticut;East Windsor;DISTRICT 1-Town Hall Annex	precinct
 Connecticut;East Windsor;DISTRICT 2-Town Hall	precinct
+Connecticut;Eastford;DISTRICT 1-Eastford Elementary School	precinct
+Connecticut;Easton;DISTRICT 1-Samuel Staples School	precinct
 Connecticut;Ellington;DISTRICT 1-Ellington High School	precinct
 Connecticut;Ellington;DISTRICT 2-Crystal Lake School	precinct
 Connecticut;Enfield;DISTRICT 158-Enfield Senior Center	precinct
@@ -534,17 +175,17 @@ Connecticut;Enfield;DISTRICT 359-Enfield Municipal Annex - Fermi	precinct
 Connecticut;Enfield;DISTRICT 458-Henry Barnard School	precinct
 Connecticut;Enfield;DISTRICT 459-Henry Barnard School	precinct
 Connecticut;Essex;DISTRICT 1-Essex Town Hall 01	precinct
-Connecticut;Fairfield;DISTRICT 1-34-Dwight School	precinct
-Connecticut;Fairfield;DISTRICT 2-34-St Pius School	precinct
-Connecticut;Fairfield;DISTRICT 3-32-Fairfield Woods Middle School	precinct
-Connecticut;Fairfield;DISTRICT 3-34-Fairfield Woods Middle School	precinct
-Connecticut;Fairfield;DISTRICT 4-33-Stratfield School	precinct
-Connecticut;Fairfield;DISTRICT 5-33-Fairfield Warde High School	precinct
-Connecticut;Fairfield;DISTRICT 6-33-McKinley School	precinct
-Connecticut;Fairfield;DISTRICT 7-33-Holland Hill School	precinct
-Connecticut;Fairfield;DISTRICT 8-32-Fairfield Ludlowe High School	precinct
-Connecticut;Fairfield;DISTRICT 9-32-Sherman School	precinct
-Connecticut;Fairfield;DISTRICT 10-32-Mill Hill School	precinct
+Connecticut;Fairfield County;DISTRICT 1-34-Dwight School	precinct
+Connecticut;Fairfield County;DISTRICT 10-32-Mill Hill School	precinct
+Connecticut;Fairfield County;DISTRICT 2-34-St Pius School	precinct
+Connecticut;Fairfield County;DISTRICT 3-32-Fairfield Woods Middle School	precinct
+Connecticut;Fairfield County;DISTRICT 3-34-Fairfield Woods Middle School	precinct
+Connecticut;Fairfield County;DISTRICT 4-33-Stratfield School	precinct
+Connecticut;Fairfield County;DISTRICT 5-33-Fairfield Warde High School	precinct
+Connecticut;Fairfield County;DISTRICT 6-33-McKinley School	precinct
+Connecticut;Fairfield County;DISTRICT 7-33-Holland Hill School	precinct
+Connecticut;Fairfield County;DISTRICT 8-32-Fairfield Ludlowe High School	precinct
+Connecticut;Fairfield County;DISTRICT 9-32-Sherman School	precinct
 Connecticut;Farmington;DISTRICT 1-1-Irving Robbins School - District 1 Precinct 1	precinct
 Connecticut;Farmington;DISTRICT 1-2-Irving Robbins School - District 1 Precinct 2	precinct
 Connecticut;Farmington;DISTRICT 1-3-Irving Robbins School - District 1 Precinct 3	precinct
@@ -564,25 +205,25 @@ Connecticut;Goshen;DISTRICT 1-Goshen Center School Gymnasium	precinct
 Connecticut;Goshen;DISTRICT 2-Goshen Center School Gymnasium	precinct
 Connecticut;Granby;DISTRICT 1-Granby Memorial High School - Community Gym	precinct
 Connecticut;Granby;DISTRICT 2-Granby Memorial High School - Community Gym	precinct
-Connecticut;Greenwich;DISTRICT 1-Julian Curtiss School	precinct
 Connecticut;Greenwich;DISTRICT 1-1-Julian Curtiss School 1a	precinct
+Connecticut;Greenwich;DISTRICT 1-Julian Curtiss School	precinct
+Connecticut;Greenwich;DISTRICT 10-1-Glenville School	precinct
+Connecticut;Greenwich;DISTRICT 10-Glenville School	precinct
+Connecticut;Greenwich;DISTRICT 11-1-North Street School 11a	precinct
+Connecticut;Greenwich;DISTRICT 11-North Street School	precinct
+Connecticut;Greenwich;DISTRICT 12-North Mianus School	precinct
 Connecticut;Greenwich;DISTRICT 2-Greenwich Town Hall	precinct
 Connecticut;Greenwich;DISTRICT 3-Western Middle School	precinct
-Connecticut;Greenwich;DISTRICT 4-New Lebanon School	precinct
 Connecticut;Greenwich;DISTRICT 4-1-New Lebanon School 4a	precinct
-Connecticut;Greenwich;DISTRICT 5-Riverside School	precinct
+Connecticut;Greenwich;DISTRICT 4-New Lebanon School	precinct
 Connecticut;Greenwich;DISTRICT 5-1-Riverside School 5a	precinct
-Connecticut;Greenwich;DISTRICT 6-Old Greenwich School	precinct
+Connecticut;Greenwich;DISTRICT 5-Riverside School	precinct
 Connecticut;Greenwich;DISTRICT 6-1-Old Greenwich School 6a	precinct
-Connecticut;Greenwich;DISTRICT 7-Greenwich High School	precinct
+Connecticut;Greenwich;DISTRICT 6-Old Greenwich School	precinct
 Connecticut;Greenwich;DISTRICT 7-1-Greenwich High School 7a	precinct
+Connecticut;Greenwich;DISTRICT 7-Greenwich High School	precinct
 Connecticut;Greenwich;DISTRICT 8-Central Middle School	precinct
 Connecticut;Greenwich;DISTRICT 9-Bendheim Western Greenwich Civic Center	precinct
-Connecticut;Greenwich;DISTRICT 10-Glenville School	precinct
-Connecticut;Greenwich;DISTRICT 10-1-Glenville School	precinct
-Connecticut;Greenwich;DISTRICT 11-North Street School	precinct
-Connecticut;Greenwich;DISTRICT 11-1-North Street School 11a	precinct
-Connecticut;Greenwich;DISTRICT 12-North Mianus School	precinct
 Connecticut;Griswold;DISTRICT 1-Griswold High School - D1 - CAFE	precinct
 Connecticut;Griswold;DISTRICT 2-Griswold High School - D2- Gym	precinct
 Connecticut;Groton;DISTRICT 1-Groton Public Library	precinct
@@ -601,46 +242,46 @@ Connecticut;Haddam;DISTRICT 1-Haddam Firehouse Complex	precinct
 Connecticut;Haddam;DISTRICT 2-Central Office	precinct
 Connecticut;Haddam;DISTRICT 3-Haddam Neck Firehouse	precinct
 Connecticut;Hamden;DISTRICT 1-Miller Library	precinct
+Connecticut;Hamden;DISTRICT 10-1-Hamden Middle School	precinct
+Connecticut;Hamden;DISTRICT 10-Hamden Middle School	precinct
 Connecticut;Hamden;DISTRICT 2-Brooker T. Washington Academy	precinct
 Connecticut;Hamden;DISTRICT 3-Keefe Community Center	precinct
 Connecticut;Hamden;DISTRICT 4-Spring Glen School	precinct
-Connecticut;Hamden;DISTRICT 5-Board of Education Building	precinct
 Connecticut;Hamden;DISTRICT 5-1-Board of Education Building	precinct
+Connecticut;Hamden;DISTRICT 5-Board of Education Building	precinct
 Connecticut;Hamden;DISTRICT 6-Ridge Hill School	precinct
 Connecticut;Hamden;DISTRICT 7-Dunbar Hill School	precinct
-Connecticut;Hamden;DISTRICT 8-Bear Path School	precinct
 Connecticut;Hamden;DISTRICT 8-1-Bear Path School	precinct
+Connecticut;Hamden;DISTRICT 8-Bear Path School	precinct
 Connecticut;Hamden;DISTRICT 9-West Woods School	precinct
-Connecticut;Hamden;DISTRICT 10-Hamden Middle School	precinct
-Connecticut;Hamden;DISTRICT 10-1-Hamden Middle School	precinct
 Connecticut;Hampton;DISTRICT 1-Hampton TH Lower Level Meeting Room	precinct
-Connecticut;Hartford;DISTRICT 1-Liberty Christian	precinct
-Connecticut;Hartford;DISTRICT 2-Liberty Christian	precinct
-Connecticut;Hartford;DISTRICT 3-Grace Lutheran	precinct
-Connecticut;Hartford;DISTRICT 4-Hartford Seminary	precinct
-Connecticut;Hartford;DISTRICT 5-United Methodist Church	precinct
-Connecticut;Hartford;DISTRICT 6-North End Senior Center	precinct
-Connecticut;Hartford;DISTRICT 7-Rawson School - Gym	precinct
-Connecticut;Hartford;DISTRICT 8-Annie Fisher School - Gym	precinct
-Connecticut;Hartford;DISTRICT 9-YWCA	precinct
-Connecticut;Hartford;DISTRICT 10-House of Restoration Church -Gym	precinct
-Connecticut;Hartford;DISTRICT 11-United Way of The Capital Area	precinct
-Connecticut;Hartford;DISTRICT 12-Burns School	precinct
-Connecticut;Hartford;DISTRICT 13-Parkville Community School	precinct
-Connecticut;Hartford;DISTRICT 14-Envirnomental Sciences Magnet-Mary Hooker School	precinct
-Connecticut;Hartford;DISTRICT 15-Batchelder School - Gym	precinct
-Connecticut;Hartford;DISTRICT 16-Kennelly School - Gym	precinct
-Connecticut;Hartford;DISTRICT 17-South End Senior Wellness Center	precinct
-Connecticut;Hartford;DISTRICT 18-Metzner Center	precinct
-Connecticut;Hartford;DISTRICT 19-Bulkeley High School	precinct
-Connecticut;Hartford;DISTRICT 20-The Learning Corridor - Gym	precinct
-Connecticut;Hartford;DISTRICT 21-Dutch Point Community Room	precinct
-Connecticut;Hartford;DISTRICT 22-Hartford Public Library	precinct
-Connecticut;Hartford;DISTRICT 23-Mary Shepard Place Community Room	precinct
-Connecticut;Hartford;DISTRICT 24-Parker Memorial Community Center	precinct
+Connecticut;Hartford County;DISTRICT 1-Liberty Christian	precinct
+Connecticut;Hartford County;DISTRICT 10-House of Restoration Church -Gym	precinct
+Connecticut;Hartford County;DISTRICT 11-United Way of The Capital Area	precinct
+Connecticut;Hartford County;DISTRICT 12-Burns School	precinct
+Connecticut;Hartford County;DISTRICT 13-Parkville Community School	precinct
+Connecticut;Hartford County;DISTRICT 14-Envirnomental Sciences Magnet-Mary Hooker School	precinct
+Connecticut;Hartford County;DISTRICT 15-Batchelder School - Gym	precinct
+Connecticut;Hartford County;DISTRICT 16-Kennelly School - Gym	precinct
+Connecticut;Hartford County;DISTRICT 17-South End Senior Wellness Center	precinct
+Connecticut;Hartford County;DISTRICT 18-Metzner Center	precinct
+Connecticut;Hartford County;DISTRICT 19-Bulkeley High School	precinct
+Connecticut;Hartford County;DISTRICT 2-Liberty Christian	precinct
+Connecticut;Hartford County;DISTRICT 20-The Learning Corridor - Gym	precinct
+Connecticut;Hartford County;DISTRICT 21-Dutch Point Community Room	precinct
+Connecticut;Hartford County;DISTRICT 22-Hartford Public Library	precinct
+Connecticut;Hartford County;DISTRICT 23-Mary Shepard Place Community Room	precinct
+Connecticut;Hartford County;DISTRICT 24-Parker Memorial Community Center	precinct
+Connecticut;Hartford County;DISTRICT 3-Grace Lutheran	precinct
+Connecticut;Hartford County;DISTRICT 4-Hartford Seminary	precinct
+Connecticut;Hartford County;DISTRICT 5-United Methodist Church	precinct
+Connecticut;Hartford County;DISTRICT 6-North End Senior Center	precinct
+Connecticut;Hartford County;DISTRICT 7-Rawson School - Gym	precinct
+Connecticut;Hartford County;DISTRICT 8-Annie Fisher School - Gym	precinct
+Connecticut;Hartford County;DISTRICT 9-YWCA	precinct
 Connecticut;Hartland;DISTRICT 1-Hartland School	precinct
-Connecticut;Harwinton;DISTRICT 8-Assembly Hall	precinct
 Connecticut;Harwinton;DISTRICT 31-Assembly Hall	precinct
+Connecticut;Harwinton;DISTRICT 8-Assembly Hall	precinct
 Connecticut;Hebron;DISTRICT 1-Hebron Elementary School	precinct
 Connecticut;Kent;DISTRICT 1-Town Hall	precinct
 Connecticut;Killingly;DISTRICT 1-Board of Ed Central Office - Cafeteria	precinct
@@ -654,10 +295,10 @@ Connecticut;Ledyard;DISTRICT 2-Juliet Long School	precinct
 Connecticut;Ledyard;DISTRICT 3-Juliet Long School	precinct
 Connecticut;Lisbon;DISTRICT 1-Lisbon Town Hall	precinct
 Connecticut;Lisbon;DISTRICT 2-Lisbon Senior Center	precinct
-Connecticut;Litchfield;DISTRICT 1-Litchfield Fire House	precinct
-Connecticut;Litchfield;DISTRICT 2-Northfield Fire House 2	precinct
-Connecticut;Litchfield;DISTRICT 3-Bantam Borough Hall	precinct
-Connecticut;Litchfield;DISTRICT 4-Northfield Fire House	precinct
+Connecticut;Litchfield County;DISTRICT 1-Litchfield Fire House	precinct
+Connecticut;Litchfield County;DISTRICT 2-Northfield Fire House 2	precinct
+Connecticut;Litchfield County;DISTRICT 3-Bantam Borough Hall	precinct
+Connecticut;Litchfield County;DISTRICT 4-Northfield Fire House	precinct
 Connecticut;Lyme;DISTRICT 1-Lyme Town Hall	precinct
 Connecticut;Madison;DISTRICT 1-Walter C. Polson Middle School	precinct
 Connecticut;Madison;DISTRICT 2-District 2 (North)	precinct
@@ -676,6 +317,10 @@ Connecticut;Mansfield;DISTRICT 3-Mansfield Library Buchanan Auditorium	precinct
 Connecticut;Mansfield;DISTRICT 4-Annie E. Vinton School GYM	precinct
 Connecticut;Marlborough;DISTRICT 1-Elmer Thienes Mary Hall Elementary School	precinct
 Connecticut;Meriden;DISTRICT 1-Immanuel Lutheran Church	precinct
+Connecticut;Meriden;DISTRICT 10-St. John Lutheran Church	precinct
+Connecticut;Meriden;DISTRICT 11-Israel Putnam School	precinct
+Connecticut;Meriden;DISTRICT 12-Hanover School	precinct
+Connecticut;Meriden;DISTRICT 13-Lincoln Middle School	precinct
 Connecticut;Meriden;DISTRICT 2-Community Towers	precinct
 Connecticut;Meriden;DISTRICT 3-John Barry School	precinct
 Connecticut;Meriden;DISTRICT 4-St. Rose Community Center	precinct
@@ -684,14 +329,15 @@ Connecticut;Meriden;DISTRICT 6-Washington Middle School	precinct
 Connecticut;Meriden;DISTRICT 7-Chamberlain Highway Firehouse	precinct
 Connecticut;Meriden;DISTRICT 8-Upper Room Christian Center	precinct
 Connecticut;Meriden;DISTRICT 9-Maloney High School	precinct
-Connecticut;Meriden;DISTRICT 10-St. John Lutheran Church	precinct
-Connecticut;Meriden;DISTRICT 11-Israel Putnam School	precinct
-Connecticut;Meriden;DISTRICT 12-Hanover School	precinct
-Connecticut;Meriden;DISTRICT 13-Lincoln Middle School	precinct
 Connecticut;Middlebury;DISTRICT 1-Shepardson Community Center 01	precinct
 Connecticut;Middlebury;DISTRICT 2-Shepardson Community Center 002	precinct
 Connecticut;Middlefield;DISTRICT 100-Memorial School	precinct
 Connecticut;Middletown;DISTRICT 1-Macdonough School - District 1	precinct
+Connecticut;Middletown;DISTRICT 10-South District Firehouse - District 10	precinct
+Connecticut;Middletown;DISTRICT 11-Bielefield School - District 11	precinct
+Connecticut;Middletown;DISTRICT 12-Bielefield School - District 12	precinct
+Connecticut;Middletown;DISTRICT 13-Spencer School - District 13	precinct
+Connecticut;Middletown;DISTRICT 14-Fayerweather Beckham Hall - District 14	precinct
 Connecticut;Middletown;DISTRICT 2-Spencer School - District 2	precinct
 Connecticut;Middletown;DISTRICT 3-District 3 - Lawrence School	precinct
 Connecticut;Middletown;DISTRICT 4-Moody School - District 4	precinct
@@ -700,11 +346,6 @@ Connecticut;Middletown;DISTRICT 6-District 6 - Lawrence School	precinct
 Connecticut;Middletown;DISTRICT 7-Snow School - District 7	precinct
 Connecticut;Middletown;DISTRICT 8-Snow School - District 8	precinct
 Connecticut;Middletown;DISTRICT 9-Wesley School - District 9	precinct
-Connecticut;Middletown;DISTRICT 10-South District Firehouse - District 10	precinct
-Connecticut;Middletown;DISTRICT 11-Bielefield School - District 11	precinct
-Connecticut;Middletown;DISTRICT 12-Bielefield School - District 12	precinct
-Connecticut;Middletown;DISTRICT 13-Spencer School - District 13	precinct
-Connecticut;Middletown;DISTRICT 14-Fayerweather Beckham Hall - District 14	precinct
 Connecticut;Milford;DISTRICT 117-Joseph A Foran High School	precinct
 Connecticut;Milford;DISTRICT 118-1-John F Kennedy School	precinct
 Connecticut;Milford;DISTRICT 118-2-Meadowside School	precinct
@@ -735,22 +376,22 @@ Connecticut;Naugatuck;DISTRICT 3-1-Oak Terrace	precinct
 Connecticut;Naugatuck;DISTRICT 3-2-City Hill Middle School	precinct
 Connecticut;Naugatuck;DISTRICT 3-3-Western School - B	precinct
 Connecticut;New Britain;DISTRICT 1-Vance Village School	precinct
-Connecticut;New Britain;DISTRICT 2-VFW Post 511	precinct
-Connecticut;New Britain;DISTRICT 3-Roosevelt Middle School	precinct
-Connecticut;New Britain;DISTRICT 4-Gaffney School	precinct
-Connecticut;New Britain;DISTRICT 5-New Britain Senior Center	precinct
-Connecticut;New Britain;DISTRICT 5-1-School Apartments	precinct
-Connecticut;New Britain;DISTRICT 5-2-Graham Apartments	precinct
-Connecticut;New Britain;DISTRICT 6-St. Jean Baptiste Societe	precinct
-Connecticut;New Britain;DISTRICT 7-Generale Ameglio Society	precinct
-Connecticut;New Britain;DISTRICT 8-International Church	precinct
-Connecticut;New Britain;DISTRICT 9-Chamberlain School	precinct
 Connecticut;New Britain;DISTRICT 10-St. Francis Of Assisi Church Hall	precinct
 Connecticut;New Britain;DISTRICT 11-Holmes Elementary School	precinct
 Connecticut;New Britain;DISTRICT 12-Pulaski Middle School	precinct
 Connecticut;New Britain;DISTRICT 13-St. John Paul II School	precinct
 Connecticut;New Britain;DISTRICT 14-Diloreto School	precinct
 Connecticut;New Britain;DISTRICT 15-Slade Middle School	precinct
+Connecticut;New Britain;DISTRICT 2-VFW Post 511	precinct
+Connecticut;New Britain;DISTRICT 3-Roosevelt Middle School	precinct
+Connecticut;New Britain;DISTRICT 4-Gaffney School	precinct
+Connecticut;New Britain;DISTRICT 5-1-School Apartments	precinct
+Connecticut;New Britain;DISTRICT 5-2-Graham Apartments	precinct
+Connecticut;New Britain;DISTRICT 5-New Britain Senior Center	precinct
+Connecticut;New Britain;DISTRICT 6-St. Jean Baptiste Societe	precinct
+Connecticut;New Britain;DISTRICT 7-Generale Ameglio Society	precinct
+Connecticut;New Britain;DISTRICT 8-International Church	precinct
+Connecticut;New Britain;DISTRICT 9-Chamberlain School	precinct
 Connecticut;New Canaan;DISTRICT 1-New Canaan High School Gym	precinct
 Connecticut;New Canaan;DISTRICT 2-Saxe Middle School North	precinct
 Connecticut;New Canaan;DISTRICT 3-Saxe Middle School South	precinct
@@ -758,46 +399,56 @@ Connecticut;New Fairfield;DISTRICT 1-Meeting House Hill School	precinct
 Connecticut;New Fairfield;DISTRICT 2-Company A Firehouse	precinct
 Connecticut;New Hartford;DISTRICT 1-New Hartford Elementary	precinct
 Connecticut;New Hartford;DISTRICT 2-Ann Antolini School	precinct
-Connecticut;New Haven;DISTRICT 1-2-Main Library	precinct
-Connecticut;New Haven;DISTRICT 2-2-Troup Academy	precinct
-Connecticut;New Haven;DISTRICT 3-1-Career High School	precinct
-Connecticut;New Haven;DISTRICT 3-2-Career High School02	precinct
-Connecticut;New Haven;DISTRICT 4-1-Truman School	precinct
-Connecticut;New Haven;DISTRICT 4-2-Truman School 02	precinct
-Connecticut;New Haven;DISTRICT 5-Betsy Ross School	precinct
-Connecticut;New Haven;DISTRICT 6-2-New Horizons School 02	precinct
-Connecticut;New Haven;DISTRICT 6-3-New Horizons School 03	precinct
-Connecticut;New Haven;DISTRICT 7-2-Hall Of Records 02	precinct
-Connecticut;New Haven;DISTRICT 8-1-Conte-West Schools 8-01	precinct
-Connecticut;New Haven;DISTRICT 8-2-Conte-West Hills School 02	precinct
-Connecticut;New Haven;DISTRICT 9-2-Wilbur Cross High School - Ward 9	precinct
-Connecticut;New Haven;DISTRICT 10-Wilbur Cross High School - Federal	precinct
-Connecticut;New Haven;DISTRICT 11-1-Bella Vista 11-01	precinct
-Connecticut;New Haven;DISTRICT 11-2-Bishop Woods School	precinct
-Connecticut;New Haven;DISTRICT 11-3-Eastview Terrace	precinct
-Connecticut;New Haven;DISTRICT 12-1-Ross Woodward	precinct
-Connecticut;New Haven;DISTRICT 12-2-Ross Woodward	precinct
-Connecticut;New Haven;DISTRICT 13-Benjamin Jepson Magnet School	precinct
-Connecticut;New Haven;DISTRICT 14-1-Atwater Senior Center 01	precinct
-Connecticut;New Haven;DISTRICT 15-1-Community Room	precinct
-Connecticut;New Haven;DISTRICT 16-John S. Martinez School	precinct
-Connecticut;New Haven;DISTRICT 17-Firehouse Woodward	precinct
-Connecticut;New Haven;DISTRICT 18-Nathan Hale School	precinct
-Connecticut;New Haven;DISTRICT 19-1-Celentano Museum Academy	precinct
-Connecticut;New Haven;DISTRICT 19-2-Celentano Museum Academy	precinct
-Connecticut;New Haven;DISTRICT 20-2-Lincoln-Bassett School	precinct
-Connecticut;New Haven;DISTRICT 21-1-King-Robinson School	precinct
-Connecticut;New Haven;DISTRICT 22-1-Wexler Grant School	precinct
-Connecticut;New Haven;DISTRICT 22-2-Wexler Grant School	precinct
-Connecticut;New Haven;DISTRICT 23-Barnard School	precinct
-Connecticut;New Haven;DISTRICT 24-Firehouse Ellsworth	precinct
-Connecticut;New Haven;DISTRICT 25-Edgewood School	precinct
-Connecticut;New Haven;DISTRICT 26-Davis Street School	precinct
-Connecticut;New Haven;DISTRICT 27-1-Mauro Sheridan School	precinct
-Connecticut;New Haven;DISTRICT 28-Hillhouse High School	precinct
-Connecticut;New Haven;DISTRICT 29-Beecher School	precinct
-Connecticut;New Haven;DISTRICT 30-1-Brennan Rogers	precinct
-Connecticut;New Haven;DISTRICT 30-2-Old West Hills	precinct
+Connecticut;New Haven County;DISTRICT 1-2-Main Library	precinct
+Connecticut;New Haven County;DISTRICT 10-Wilbur Cross High School - Federal	precinct
+Connecticut;New Haven County;DISTRICT 11-1-Bella Vista 11-01	precinct
+Connecticut;New Haven County;DISTRICT 11-2-Bishop Woods School	precinct
+Connecticut;New Haven County;DISTRICT 11-3-Eastview Terrace	precinct
+Connecticut;New Haven County;DISTRICT 12-1-Ross Woodward	precinct
+Connecticut;New Haven County;DISTRICT 12-2-Ross Woodward	precinct
+Connecticut;New Haven County;DISTRICT 13-Benjamin Jepson Magnet School	precinct
+Connecticut;New Haven County;DISTRICT 14-1-Atwater Senior Center 01	precinct
+Connecticut;New Haven County;DISTRICT 15-1-Community Room	precinct
+Connecticut;New Haven County;DISTRICT 16-John S. Martinez School	precinct
+Connecticut;New Haven County;DISTRICT 17-Firehouse Woodward	precinct
+Connecticut;New Haven County;DISTRICT 18-Nathan Hale School	precinct
+Connecticut;New Haven County;DISTRICT 19-1-Celentano Museum Academy	precinct
+Connecticut;New Haven County;DISTRICT 19-2-Celentano Museum Academy	precinct
+Connecticut;New Haven County;DISTRICT 2-2-Troup Academy	precinct
+Connecticut;New Haven County;DISTRICT 20-2-Lincoln-Bassett School	precinct
+Connecticut;New Haven County;DISTRICT 21-1-King-Robinson School	precinct
+Connecticut;New Haven County;DISTRICT 22-1-Wexler Grant School	precinct
+Connecticut;New Haven County;DISTRICT 22-2-Wexler Grant School	precinct
+Connecticut;New Haven County;DISTRICT 23-Barnard School	precinct
+Connecticut;New Haven County;DISTRICT 24-Firehouse Ellsworth	precinct
+Connecticut;New Haven County;DISTRICT 25-Edgewood School	precinct
+Connecticut;New Haven County;DISTRICT 26-Davis Street School	precinct
+Connecticut;New Haven County;DISTRICT 27-1-Mauro Sheridan School	precinct
+Connecticut;New Haven County;DISTRICT 28-Hillhouse High School	precinct
+Connecticut;New Haven County;DISTRICT 29-Beecher School	precinct
+Connecticut;New Haven County;DISTRICT 3-1-Career High School	precinct
+Connecticut;New Haven County;DISTRICT 3-2-Career High School02	precinct
+Connecticut;New Haven County;DISTRICT 30-1-Brennan Rogers	precinct
+Connecticut;New Haven County;DISTRICT 30-2-Old West Hills	precinct
+Connecticut;New Haven County;DISTRICT 4-1-Truman School	precinct
+Connecticut;New Haven County;DISTRICT 4-2-Truman School 02	precinct
+Connecticut;New Haven County;DISTRICT 5-Betsy Ross School	precinct
+Connecticut;New Haven County;DISTRICT 6-2-New Horizons School 02	precinct
+Connecticut;New Haven County;DISTRICT 6-3-New Horizons School 03	precinct
+Connecticut;New Haven County;DISTRICT 7-2-Hall Of Records 02	precinct
+Connecticut;New Haven County;DISTRICT 8-1-Conte-West Schools 8-01	precinct
+Connecticut;New Haven County;DISTRICT 8-2-Conte-West Hills School 02	precinct
+Connecticut;New Haven County;DISTRICT 9-2-Wilbur Cross High School - Ward 9	precinct
+Connecticut;New London County;DISTRICT 1-New London STM High School	precinct
+Connecticut;New London County;DISTRICT 2-Harbor School	precinct
+Connecticut;New London County;DISTRICT 3-Nathan Hale School	precinct
+Connecticut;New Milford;DISTRICT 1-Northville School	precinct
+Connecticut;New Milford;DISTRICT 2-Catherine E Lillis Building	precinct
+Connecticut;New Milford;DISTRICT 3-Odd Fellows Lodge	precinct
+Connecticut;New Milford;DISTRICT 4-Gaylordsville Fire House	precinct
+Connecticut;New Milford;DISTRICT 5-Schaghticoke School	precinct
+Connecticut;New Milford;DISTRICT 6-Hill & Plain School	precinct
+Connecticut;New Milford;DISTRICT 7-Sarah Noble Intermediate School	precinct
 Connecticut;Newington;DISTRICT 1-Town Hall---District---1	precinct
 Connecticut;Newington;DISTRICT 2-Ruth L. Chaffee School---District---2	precinct
 Connecticut;Newington;DISTRICT 3-Anna Reynolds School ---District---3	precinct
@@ -806,18 +457,8 @@ Connecticut;Newington;DISTRICT 5-John Wallace Middle School---District---5	preci
 Connecticut;Newington;DISTRICT 6-John Paterson School---District---6	precinct
 Connecticut;Newington;DISTRICT 7-Martin Kellogg Middle School---District---7	precinct
 Connecticut;Newington;DISTRICT 8-John Wallace Middle School-- District--8	precinct
-Connecticut;New London;DISTRICT 1-New London STM High School	precinct
-Connecticut;New London;DISTRICT 2-Harbor School	precinct
-Connecticut;New London;DISTRICT 3-Nathan Hale School	precinct
-Connecticut;New Milford;DISTRICT 1-Northville School	precinct
-Connecticut;New Milford;DISTRICT 2-Catherine E Lillis Building	precinct
-Connecticut;New Milford;DISTRICT 3-Odd Fellows Lodge	precinct
-Connecticut;New Milford;DISTRICT 4-Gaylordsville Fire House	precinct
-Connecticut;New Milford;DISTRICT 5-Schaghticoke School	precinct
-Connecticut;New Milford;DISTRICT 6-Hill & Plain School	precinct
-Connecticut;New Milford;DISTRICT 7-Sarah Noble Intermediate School	precinct
-Connecticut;Newtown;DISTRICT 1-Middle School Gym A	precinct
 Connecticut;Newtown;DISTRICT 1-5-Middle School Gym A	precinct
+Connecticut;Newtown;DISTRICT 1-Middle School Gym A	precinct
 Connecticut;Newtown;DISTRICT 2-Reed Intermediate School	precinct
 Connecticut;Newtown;DISTRICT 3-1-Head O Meadow School Cafetorium	precinct
 Connecticut;Newtown;DISTRICT 3-2-Reed Intermediate School	precinct
@@ -828,8 +469,8 @@ Connecticut;North Branford;DISTRICT 2-Stanley T. Williams Community Center	preci
 Connecticut;North Canaan;DISTRICT 1-Town Hall - McCarthy Room	precinct
 Connecticut;North Haven;DISTRICT 1-Recreation Center	precinct
 Connecticut;North Haven;DISTRICT 2-Montowese Elementary School	precinct
-Connecticut;North Haven;DISTRICT 3-Ridge Road Elementary School	precinct
 Connecticut;North Haven;DISTRICT 3-11-Ridge Road Elementary School	precinct
+Connecticut;North Haven;DISTRICT 3-Ridge Road Elementary School	precinct
 Connecticut;North Haven;DISTRICT 4-Green Acres Elementary School	precinct
 Connecticut;North Haven;DISTRICT 5-Clintonville Elementary School	precinct
 Connecticut;North Stonington;DISTRICT 1-North Stonington Education Center	precinct
@@ -893,8 +534,8 @@ Connecticut;Seymour;DISTRICT 2-District 2 Seymour Middle School	precinct
 Connecticut;Seymour;DISTRICT 3-District 3 Chatfield-Lopresti School	precinct
 Connecticut;Sharon;DISTRICT 1-Sharon Center School	precinct
 Connecticut;Shelton;DISTRICT 1-Elizabeth Shelton School	precinct
-Connecticut;Shelton;DISTRICT 2-Shelton Intermediate School	precinct
 Connecticut;Shelton;DISTRICT 2-1-Shelton Intermediate School	precinct
+Connecticut;Shelton;DISTRICT 2-Shelton Intermediate School	precinct
 Connecticut;Shelton;DISTRICT 3-Long Hill School	precinct
 Connecticut;Shelton;DISTRICT 4-Mohegan School	precinct
 Connecticut;Sherman;DISTRICT 1-Emerg Services Facility - Firehouse- Upper Level	precinct
@@ -903,10 +544,17 @@ Connecticut;Simsbury;DISTRICT 2-Latimer Lane School	precinct
 Connecticut;Simsbury;DISTRICT 3-Tootin Hill School	precinct
 Connecticut;Simsbury;DISTRICT 4-Tariffville School	precinct
 Connecticut;Somers;DISTRICT 1-Town Hall	precinct
+Connecticut;South Windsor;DISTRICT 1-Pleasant Valley School	precinct
+Connecticut;South Windsor;DISTRICT 2-Eli Terry School	precinct
+Connecticut;South Windsor;DISTRICT 3-SWHS	precinct
+Connecticut;South Windsor;DISTRICT 4-PR Smith School	precinct
+Connecticut;South Windsor;DISTRICT 5-TE Middle School	precinct
 Connecticut;Southbury;DISTRICT 1-Center Fire House District #1	precinct
 Connecticut;Southbury;DISTRICT 2-Southbury Public Library District #2	precinct
 Connecticut;Southbury;DISTRICT 3-Southbury Community Building District #3	precinct
 Connecticut;Southington;DISTRICT 1-South End School	precinct
+Connecticut;Southington;DISTRICT 10-Oshana School	precinct
+Connecticut;Southington;DISTRICT 11-Strong School	precinct
 Connecticut;Southington;DISTRICT 2-Kennedy School	precinct
 Connecticut;Southington;DISTRICT 3-Derynoski School	precinct
 Connecticut;Southington;DISTRICT 4-Hatton School	precinct
@@ -915,26 +563,11 @@ Connecticut;Southington;DISTRICT 6-De Paolo School	precinct
 Connecticut;Southington;DISTRICT 7-Kelley School	precinct
 Connecticut;Southington;DISTRICT 8-Thalberg School	precinct
 Connecticut;Southington;DISTRICT 9-Tabernacle	precinct
-Connecticut;Southington;DISTRICT 10-Oshana School	precinct
-Connecticut;Southington;DISTRICT 11-Strong School	precinct
-Connecticut;South Windsor;DISTRICT 1-Pleasant Valley School	precinct
-Connecticut;South Windsor;DISTRICT 2-Eli Terry School	precinct
-Connecticut;South Windsor;DISTRICT 3-SWHS	precinct
-Connecticut;South Windsor;DISTRICT 4-PR Smith School	precinct
-Connecticut;South Windsor;DISTRICT 5-TE Middle School	precinct
 Connecticut;Sprague;DISTRICT 1-Sayles School	precinct
 Connecticut;Stafford;DISTRICT 1-Stafford Public Library	precinct
 Connecticut;Stafford;DISTRICT 2-Stafford Community Center	precinct
 Connecticut;Stafford;DISTRICT 3-West Stafford Fire Dept.	precinct
 Connecticut;Stamford;DISTRICT 1-Our Lady Star Of The Sea	precinct
-Connecticut;Stamford;DISTRICT 2-Domus - The Old Rogers School	precinct
-Connecticut;Stamford;DISTRICT 3-Murphy School	precinct
-Connecticut;Stamford;DISTRICT 4-Julia A Stark School	precinct
-Connecticut;Stamford;DISTRICT 5-Stamford High School -Rear	precinct
-Connecticut;Stamford;DISTRICT 6-1-Saint Bridget School	precinct
-Connecticut;Stamford;DISTRICT 7-2-First Presbyterian Church	precinct
-Connecticut;Stamford;DISTRICT 8-Stillmeadow School	precinct
-Connecticut;Stamford;DISTRICT 9-Salvation Army Community Center	precinct
 Connecticut;Stamford;DISTRICT 10-Westover School	precinct
 Connecticut;Stamford;DISTRICT 11-Cloonan Middle School -Side	precinct
 Connecticut;Stamford;DISTRICT 12-Stillmeadow School	precinct
@@ -945,10 +578,18 @@ Connecticut;Stamford;DISTRICT 16-1-Turn Of River School	precinct
 Connecticut;Stamford;DISTRICT 17-Roxbury School	precinct
 Connecticut;Stamford;DISTRICT 18-2-Turn Of River School	precinct
 Connecticut;Stamford;DISTRICT 19-Davenport Ridge School	precinct
+Connecticut;Stamford;DISTRICT 2-Domus - The Old Rogers School	precinct
 Connecticut;Stamford;DISTRICT 20-1-Northeast School	precinct
 Connecticut;Stamford;DISTRICT 21-Scofield Middle School	precinct
 Connecticut;Stamford;DISTRICT 22-2-Long Ridge Fire Dept	precinct
 Connecticut;Stamford;DISTRICT 23-South End Community Center	precinct
+Connecticut;Stamford;DISTRICT 3-Murphy School	precinct
+Connecticut;Stamford;DISTRICT 4-Julia A Stark School	precinct
+Connecticut;Stamford;DISTRICT 5-Stamford High School -Rear	precinct
+Connecticut;Stamford;DISTRICT 6-1-Saint Bridget School	precinct
+Connecticut;Stamford;DISTRICT 7-2-First Presbyterian Church	precinct
+Connecticut;Stamford;DISTRICT 8-Stillmeadow School	precinct
+Connecticut;Stamford;DISTRICT 9-Salvation Army Community Center	precinct
 Connecticut;Sterling;DISTRICT 1-Sterling Municipal Building	precinct
 Connecticut;Stonington;DISTRICT 1-Stonington Fire House	precinct
 Connecticut;Stonington;DISTRICT 2-Pawcatuck Middle School	precinct
@@ -956,6 +597,7 @@ Connecticut;Stonington;DISTRICT 3-Deans Mill School	precinct
 Connecticut;Stonington;DISTRICT 4-BF Hoxie Engine Company	precinct
 Connecticut;Stonington;DISTRICT 5-Board Of Education Administration Building	precinct
 Connecticut;Stratford;DISTRICT 10-1-Lordship Elementary School 120 21	precinct
+Connecticut;Stratford;DISTRICT 100-1-Second Hill Lane 120 21	precinct
 Connecticut;Stratford;DISTRICT 11-11-Lordship Elementary School 121 21	precinct
 Connecticut;Stratford;DISTRICT 20-1-Stratford High School 120 21	precinct
 Connecticut;Stratford;DISTRICT 20-11-Stratford High School 121-21	precinct
@@ -973,16 +615,15 @@ Connecticut;Stratford;DISTRICT 80-1-Chapel Street School 120-21	precinct
 Connecticut;Stratford;DISTRICT 80-21-Chapel Street School 122 21	precinct
 Connecticut;Stratford;DISTRICT 90-1-Bunnell High School 120 21	precinct
 Connecticut;Stratford;DISTRICT 90-21-Bunnell High Scool 122-21	precinct
-Connecticut;Stratford;DISTRICT 100-1-Second Hill Lane 120 21	precinct
 Connecticut;Suffield;DISTRICT 1-Suffield Middle School	precinct
 Connecticut;Thomaston;DISTRICT 1-Lena Morton Art Gallery	precinct
 Connecticut;Thompson;DISTRICT 1-Thompson Hill Fire Station	precinct
 Connecticut;Thompson;DISTRICT 2-Community Room Town Hall	precinct
 Connecticut;Thompson;DISTRICT 3-Quinebaug Volunteer Fire Department	precinct
 Connecticut;Thompson;DISTRICT 4-East Thompson Fire Station	precinct
-Connecticut;Tolland;DISTRICT 1-The Gym At Tolland Recreation Center 1	precinct
-Connecticut;Tolland;DISTRICT 2-Tolland Senior Center	precinct
-Connecticut;Tolland;DISTRICT 3-The Gym At Tolland Recreation Center 3	precinct
+Connecticut;Tolland County;DISTRICT 1-The Gym At Tolland Recreation Center 1	precinct
+Connecticut;Tolland County;DISTRICT 2-Tolland Senior Center	precinct
+Connecticut;Tolland County;DISTRICT 3-The Gym At Tolland Recreation Center 3	precinct
 Connecticut;Torrington;DISTRICT 1-Torrington Middle School	precinct
 Connecticut;Torrington;DISTRICT 2-Coe Park 1	precinct
 Connecticut;Torrington;DISTRICT 3-Coe Park 2	precinct
@@ -1042,8 +683,6 @@ Connecticut;Watertown;DISTRICT 1-Watertown High School	precinct
 Connecticut;Watertown;DISTRICT 2-Judson School	precinct
 Connecticut;Watertown;DISTRICT 3-Swift Middle School	precinct
 Connecticut;Watertown;DISTRICT 4-Polk School	precinct
-Connecticut;Westbrook;DISTRICT 1-Teresa Mulvey Municipal Center - 1	precinct
-Connecticut;Westbrook;DISTRICT 2-Theresa Mulvey Municipal Center - 2	precinct
 Connecticut;West Hartford;DISTRICT 1-King Philip Middle School	precinct
 Connecticut;West Hartford;DISTRICT 2-Bristow Middle School	precinct
 Connecticut;West Hartford;DISTRICT 3-West Hartford Town Hall	precinct
@@ -1054,6 +693,7 @@ Connecticut;West Hartford;DISTRICT 7-Sedgwick Middle School	precinct
 Connecticut;West Hartford;DISTRICT 8-Braeburn School	precinct
 Connecticut;West Hartford;DISTRICT 9-Hall High School	precinct
 Connecticut;West Haven;DISTRICT 1-Elks Lodge #1537	precinct
+Connecticut;West Haven;DISTRICT 10-Pagels School	precinct
 Connecticut;West Haven;DISTRICT 2-Surfside Senior Housing	precinct
 Connecticut;West Haven;DISTRICT 3-Washington School	precinct
 Connecticut;West Haven;DISTRICT 4-St Paul's Church Hall	precinct
@@ -1062,7 +702,8 @@ Connecticut;West Haven;DISTRICT 6-Forest School	precinct
 Connecticut;West Haven;DISTRICT 7-Ann V. Molloy School	precinct
 Connecticut;West Haven;DISTRICT 8-Mackrille School	precinct
 Connecticut;West Haven;DISTRICT 9-Seth Haley School	precinct
-Connecticut;West Haven;DISTRICT 10-Pagels School	precinct
+Connecticut;Westbrook;DISTRICT 1-Teresa Mulvey Municipal Center - 1	precinct
+Connecticut;Westbrook;DISTRICT 2-Theresa Mulvey Municipal Center - 2	precinct
 Connecticut;Weston;DISTRICT 1-Weston Middle School - 28	precinct
 Connecticut;Weston;DISTRICT 2-Weston Middle School - 26	precinct
 Connecticut;Westport;DISTRICT 136-1-Saugatuck Elementary School Gym	precinct
@@ -1083,11 +724,13 @@ Connecticut;Wilton;DISTRICT 1-Wilton High School - District 1	precinct
 Connecticut;Wilton;DISTRICT 2-Cider Mill School - District 2	precinct
 Connecticut;Wilton;DISTRICT 3-Middlebrook School - District 3	precinct
 Connecticut;Winchester;DISTRICT 1-Pearson School	precinct
-Connecticut;Windham;DISTRICT 4-Bpo Elks 1311	precinct
-Connecticut;Windham;DISTRICT 5-Vfw	precinct
-Connecticut;Windham;DISTRICT 6-Bpo Elks 1311	precinct
-Connecticut;Windham;DISTRICT 7-Windham Center Fire Dept	precinct
-Connecticut;Windham;DISTRICT 8-Elks	precinct
+Connecticut;Windham County;DISTRICT 4-Bpo Elks 1311	precinct
+Connecticut;Windham County;DISTRICT 5-Vfw	precinct
+Connecticut;Windham County;DISTRICT 6-Bpo Elks 1311	precinct
+Connecticut;Windham County;DISTRICT 7-Windham Center Fire Dept	precinct
+Connecticut;Windham County;DISTRICT 8-Elks	precinct
+Connecticut;Windsor Locks;DISTRICT 1-Mario Gatti Town Hall	precinct
+Connecticut;Windsor Locks;DISTRICT 2-Windsor Locks High School	precinct
 Connecticut;Windsor;DISTRICT 1-L. P. Wilson	precinct
 Connecticut;Windsor;DISTRICT 2-John F Kennedy School	precinct
 Connecticut;Windsor;DISTRICT 3-330 Windsor Avenue	precinct
@@ -1095,14 +738,371 @@ Connecticut;Windsor;DISTRICT 4-Windsor Town Hall	precinct
 Connecticut;Windsor;DISTRICT 5-Oliver Ellsworth School	precinct
 Connecticut;Windsor;DISTRICT 6-Poquonock School	precinct
 Connecticut;Windsor;DISTRICT 7-Rainbow Firehouse	precinct
-Connecticut;Windsor Locks;DISTRICT 1-Mario Gatti Town Hall	precinct
-Connecticut;Windsor Locks;DISTRICT 2-Windsor Locks High School	precinct
 Connecticut;Wolcott;DISTRICT 1-Tyrrell Middle School	precinct
 Connecticut;Wolcott;DISTRICT 2-Wolcott High School	precinct
 Connecticut;Wolcott;DISTRICT 3-Wakelee	precinct
-Connecticut;Woodbridge;DISTRICT 3-Center School 1	precinct
 Connecticut;Woodbridge;DISTRICT 14-Center School 2	precinct
+Connecticut;Woodbridge;DISTRICT 3-Center School 1	precinct
 Connecticut;Woodbury;DISTRICT 1-Senior Community Center - O&G Room	precinct
 Connecticut;Woodbury;DISTRICT 2-Senior Community Center -- Activity Room	precinct
 Connecticut;Woodstock;DISTRICT 1-Woodstock Town Hall	precinct
-
+Connecticut	state
+Connecticut;CT House District 1	state-house
+Connecticut;CT House District 10	state-house
+Connecticut;CT House District 100	state-house
+Connecticut;CT House District 101	state-house
+Connecticut;CT House District 102	state-house
+Connecticut;CT House District 103	state-house
+Connecticut;CT House District 104	state-house
+Connecticut;CT House District 105	state-house
+Connecticut;CT House District 106	state-house
+Connecticut;CT House District 107	state-house
+Connecticut;CT House District 108	state-house
+Connecticut;CT House District 109	state-house
+Connecticut;CT House District 11	state-house
+Connecticut;CT House District 110	state-house
+Connecticut;CT House District 111	state-house
+Connecticut;CT House District 112	state-house
+Connecticut;CT House District 113	state-house
+Connecticut;CT House District 114	state-house
+Connecticut;CT House District 115	state-house
+Connecticut;CT House District 116	state-house
+Connecticut;CT House District 117	state-house
+Connecticut;CT House District 118	state-house
+Connecticut;CT House District 119	state-house
+Connecticut;CT House District 12	state-house
+Connecticut;CT House District 120	state-house
+Connecticut;CT House District 121	state-house
+Connecticut;CT House District 122	state-house
+Connecticut;CT House District 123	state-house
+Connecticut;CT House District 124	state-house
+Connecticut;CT House District 125	state-house
+Connecticut;CT House District 126	state-house
+Connecticut;CT House District 127	state-house
+Connecticut;CT House District 128	state-house
+Connecticut;CT House District 129	state-house
+Connecticut;CT House District 13	state-house
+Connecticut;CT House District 130	state-house
+Connecticut;CT House District 131	state-house
+Connecticut;CT House District 132	state-house
+Connecticut;CT House District 133	state-house
+Connecticut;CT House District 134	state-house
+Connecticut;CT House District 135	state-house
+Connecticut;CT House District 136	state-house
+Connecticut;CT House District 137	state-house
+Connecticut;CT House District 138	state-house
+Connecticut;CT House District 139	state-house
+Connecticut;CT House District 14	state-house
+Connecticut;CT House District 140	state-house
+Connecticut;CT House District 141	state-house
+Connecticut;CT House District 142	state-house
+Connecticut;CT House District 143	state-house
+Connecticut;CT House District 144	state-house
+Connecticut;CT House District 145	state-house
+Connecticut;CT House District 146	state-house
+Connecticut;CT House District 147	state-house
+Connecticut;CT House District 148	state-house
+Connecticut;CT House District 149	state-house
+Connecticut;CT House District 15	state-house
+Connecticut;CT House District 150	state-house
+Connecticut;CT House District 151	state-house
+Connecticut;CT House District 16	state-house
+Connecticut;CT House District 17	state-house
+Connecticut;CT House District 18	state-house
+Connecticut;CT House District 19	state-house
+Connecticut;CT House District 2	state-house
+Connecticut;CT House District 20	state-house
+Connecticut;CT House District 21	state-house
+Connecticut;CT House District 22	state-house
+Connecticut;CT House District 23	state-house
+Connecticut;CT House District 24	state-house
+Connecticut;CT House District 25	state-house
+Connecticut;CT House District 26	state-house
+Connecticut;CT House District 27	state-house
+Connecticut;CT House District 28	state-house
+Connecticut;CT House District 29	state-house
+Connecticut;CT House District 3	state-house
+Connecticut;CT House District 30	state-house
+Connecticut;CT House District 31	state-house
+Connecticut;CT House District 32	state-house
+Connecticut;CT House District 33	state-house
+Connecticut;CT House District 34	state-house
+Connecticut;CT House District 35	state-house
+Connecticut;CT House District 36	state-house
+Connecticut;CT House District 37	state-house
+Connecticut;CT House District 38	state-house
+Connecticut;CT House District 39	state-house
+Connecticut;CT House District 4	state-house
+Connecticut;CT House District 40	state-house
+Connecticut;CT House District 41	state-house
+Connecticut;CT House District 42	state-house
+Connecticut;CT House District 43	state-house
+Connecticut;CT House District 44	state-house
+Connecticut;CT House District 45	state-house
+Connecticut;CT House District 46	state-house
+Connecticut;CT House District 47	state-house
+Connecticut;CT House District 48	state-house
+Connecticut;CT House District 49	state-house
+Connecticut;CT House District 5	state-house
+Connecticut;CT House District 50	state-house
+Connecticut;CT House District 51	state-house
+Connecticut;CT House District 52	state-house
+Connecticut;CT House District 53	state-house
+Connecticut;CT House District 54	state-house
+Connecticut;CT House District 55	state-house
+Connecticut;CT House District 56	state-house
+Connecticut;CT House District 57	state-house
+Connecticut;CT House District 58	state-house
+Connecticut;CT House District 59	state-house
+Connecticut;CT House District 6	state-house
+Connecticut;CT House District 60	state-house
+Connecticut;CT House District 61	state-house
+Connecticut;CT House District 62	state-house
+Connecticut;CT House District 63	state-house
+Connecticut;CT House District 64	state-house
+Connecticut;CT House District 65	state-house
+Connecticut;CT House District 66	state-house
+Connecticut;CT House District 67	state-house
+Connecticut;CT House District 68	state-house
+Connecticut;CT House District 69	state-house
+Connecticut;CT House District 7	state-house
+Connecticut;CT House District 70	state-house
+Connecticut;CT House District 71	state-house
+Connecticut;CT House District 72	state-house
+Connecticut;CT House District 73	state-house
+Connecticut;CT House District 74	state-house
+Connecticut;CT House District 75	state-house
+Connecticut;CT House District 76	state-house
+Connecticut;CT House District 77	state-house
+Connecticut;CT House District 78	state-house
+Connecticut;CT House District 79	state-house
+Connecticut;CT House District 8	state-house
+Connecticut;CT House District 80	state-house
+Connecticut;CT House District 81	state-house
+Connecticut;CT House District 82	state-house
+Connecticut;CT House District 83	state-house
+Connecticut;CT House District 84	state-house
+Connecticut;CT House District 85	state-house
+Connecticut;CT House District 86	state-house
+Connecticut;CT House District 87	state-house
+Connecticut;CT House District 88	state-house
+Connecticut;CT House District 89	state-house
+Connecticut;CT House District 9	state-house
+Connecticut;CT House District 90	state-house
+Connecticut;CT House District 91	state-house
+Connecticut;CT House District 92	state-house
+Connecticut;CT House District 93	state-house
+Connecticut;CT House District 94	state-house
+Connecticut;CT House District 95	state-house
+Connecticut;CT House District 96	state-house
+Connecticut;CT House District 97	state-house
+Connecticut;CT House District 98	state-house
+Connecticut;CT House District 99	state-house
+Connecticut;CT Senate District 1	state-senate
+Connecticut;CT Senate District 10	state-senate
+Connecticut;CT Senate District 11	state-senate
+Connecticut;CT Senate District 12	state-senate
+Connecticut;CT Senate District 13	state-senate
+Connecticut;CT Senate District 14	state-senate
+Connecticut;CT Senate District 15	state-senate
+Connecticut;CT Senate District 16	state-senate
+Connecticut;CT Senate District 17	state-senate
+Connecticut;CT Senate District 18	state-senate
+Connecticut;CT Senate District 19	state-senate
+Connecticut;CT Senate District 2	state-senate
+Connecticut;CT Senate District 20	state-senate
+Connecticut;CT Senate District 21	state-senate
+Connecticut;CT Senate District 22	state-senate
+Connecticut;CT Senate District 23	state-senate
+Connecticut;CT Senate District 24	state-senate
+Connecticut;CT Senate District 25	state-senate
+Connecticut;CT Senate District 26	state-senate
+Connecticut;CT Senate District 27	state-senate
+Connecticut;CT Senate District 28	state-senate
+Connecticut;CT Senate District 29	state-senate
+Connecticut;CT Senate District 3	state-senate
+Connecticut;CT Senate District 30	state-senate
+Connecticut;CT Senate District 31	state-senate
+Connecticut;CT Senate District 32	state-senate
+Connecticut;CT Senate District 33	state-senate
+Connecticut;CT Senate District 34	state-senate
+Connecticut;CT Senate District 35	state-senate
+Connecticut;CT Senate District 36	state-senate
+Connecticut;CT Senate District 4	state-senate
+Connecticut;CT Senate District 5	state-senate
+Connecticut;CT Senate District 6	state-senate
+Connecticut;CT Senate District 7	state-senate
+Connecticut;CT Senate District 8	state-senate
+Connecticut;CT Senate District 9	state-senate
+Connecticut;Andover	town
+Connecticut;Ansonia	town
+Connecticut;Ashford	town
+Connecticut;Avon	town
+Connecticut;Barkhamsted	town
+Connecticut;Beacon Falls	town
+Connecticut;Berlin	town
+Connecticut;Bethany	town
+Connecticut;Bethel	town
+Connecticut;Bethlehem	town
+Connecticut;Bloomfield	town
+Connecticut;Bolton	town
+Connecticut;Bozrah	town
+Connecticut;Branford	town
+Connecticut;Bridgeport	town
+Connecticut;Bridgewater	town
+Connecticut;Bristol	town
+Connecticut;Brookfield	town
+Connecticut;Brooklyn	town
+Connecticut;Burlington	town
+Connecticut;Canaan	town
+Connecticut;Canterbury	town
+Connecticut;Canton	town
+Connecticut;Chaplin	town
+Connecticut;Cheshire	town
+Connecticut;Chester	town
+Connecticut;Clinton	town
+Connecticut;Colchester	town
+Connecticut;Colebrook	town
+Connecticut;Columbia	town
+Connecticut;Cornwall	town
+Connecticut;Coventry	town
+Connecticut;Cromwell	town
+Connecticut;Danbury	town
+Connecticut;Darien	town
+Connecticut;Deep River	town
+Connecticut;Derby	town
+Connecticut;Durham	town
+Connecticut;East Granby	town
+Connecticut;East Haddam	town
+Connecticut;East Hampton	town
+Connecticut;East Hartford	town
+Connecticut;East Haven	town
+Connecticut;East Lyme	town
+Connecticut;East Windsor	town
+Connecticut;Eastford	town
+Connecticut;Easton	town
+Connecticut;ElectionDescription	town
+Connecticut;Ellington	town
+Connecticut;Enfield	town
+Connecticut;Essex	town
+Connecticut;Fairfield County	county
+Connecticut;Farmington	town
+Connecticut;Franklin	town
+Connecticut;Glastonbury	town
+Connecticut;Goshen	town
+Connecticut;Granby	town
+Connecticut;Greenwich	town
+Connecticut;Griswold	town
+Connecticut;Groton	town
+Connecticut;Guilford	town
+Connecticut;Haddam	town
+Connecticut;Hamden	town
+Connecticut;Hampton	town
+Connecticut;Hartford County	county
+Connecticut;Hartland	town
+Connecticut;Harwinton	town
+Connecticut;Hebron	town
+Connecticut;Kent	town
+Connecticut;Killingly	town
+Connecticut;Killingworth	town
+Connecticut;Lebanon	town
+Connecticut;Ledyard	town
+Connecticut;Lisbon	town
+Connecticut;Litchfield County	county
+Connecticut;Lyme	town
+Connecticut;Madison	town
+Connecticut;Manchester	town
+Connecticut;Mansfield	town
+Connecticut;Marlborough	town
+Connecticut;Meriden	town
+Connecticut;Middlebury	town
+Connecticut;Middlefield	town
+Connecticut;Middletown	town
+Connecticut;Milford	town
+Connecticut;Monroe	town
+Connecticut;Montville	town
+Connecticut;Morris	town
+Connecticut;Naugatuck	town
+Connecticut;New Britain	town
+Connecticut;New Canaan	town
+Connecticut;New Fairfield	town
+Connecticut;New Hartford	town
+Connecticut;New Haven County	county
+Connecticut;New London County	county
+Connecticut;New Milford	town
+Connecticut;Newington	town
+Connecticut;Newtown	town
+Connecticut;Norfolk	town
+Connecticut;North Branford	town
+Connecticut;North Canaan	town
+Connecticut;North Haven	town
+Connecticut;North Stonington	town
+Connecticut;Norwalk	town
+Connecticut;Norwich	town
+Connecticut;Old Lyme	town
+Connecticut;Old Saybrook	town
+Connecticut;Orange	town
+Connecticut;Oxford	town
+Connecticut;Plainfield	town
+Connecticut;Plainville	town
+Connecticut;Plymouth	town
+Connecticut;Polling_Place_Name	town
+Connecticut;Pomfret	town
+Connecticut;Portland	town
+Connecticut;Preston	town
+Connecticut;Prospect	town
+Connecticut;Putnam	town
+Connecticut;Redding	town
+Connecticut;Ridgefield	town
+Connecticut;Rocky Hill	town
+Connecticut;Roxbury	town
+Connecticut;Salem	town
+Connecticut;Salisbury	town
+Connecticut;Scotland	town
+Connecticut;Seymour	town
+Connecticut;Sharon	town
+Connecticut;Shelton	town
+Connecticut;Sherman	town
+Connecticut;Simsbury	town
+Connecticut;Somers	town
+Connecticut;South Windsor	town
+Connecticut;Southbury	town
+Connecticut;Southington	town
+Connecticut;Sprague	town
+Connecticut;Stafford	town
+Connecticut;Stamford	town
+Connecticut;State Election	town
+Connecticut;Sterling	town
+Connecticut;Stonington	town
+Connecticut;Stratford	town
+Connecticut;Suffield	town
+Connecticut;Thomaston	town
+Connecticut;Thompson	town
+Connecticut;Tolland County	county
+Connecticut;Torrington	town
+Connecticut;Trumbull	town
+Connecticut;Union	town
+Connecticut;Vernon	town
+Connecticut;Voluntown	town
+Connecticut;Wallingford	town
+Connecticut;Warren	town
+Connecticut;Washington	town
+Connecticut;Waterbury	town
+Connecticut;Waterford	town
+Connecticut;Watertown	town
+Connecticut;West Hartford	town
+Connecticut;West Haven	town
+Connecticut;Westbrook	town
+Connecticut;Weston	town
+Connecticut;Westport	town
+Connecticut;Wethersfield	town
+Connecticut;Willington	town
+Connecticut;Wilton	town
+Connecticut;Winchester	town
+Connecticut;Windham County	county
+Connecticut;Windsor	town
+Connecticut;Windsor Locks	town
+Connecticut;Wolcott	town
+Connecticut;Woodbridge	town
+Connecticut;Woodbury	town
+Connecticut;Woodstock	town

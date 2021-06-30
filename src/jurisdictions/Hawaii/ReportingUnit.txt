@@ -1,88 +1,54 @@
 Name	ReportingUnitType
-Hawaii;HI House District 1	state-house
-Hawaii;HI House District 2	state-house
-Hawaii;HI House District 3	state-house
-Hawaii;HI House District 4	state-house
-Hawaii;HI House District 5	state-house
-Hawaii;HI House District 6	state-house
-Hawaii;HI House District 7	state-house
-Hawaii;HI House District 8	state-house
-Hawaii;HI House District 9	state-house
-Hawaii;HI House District 10	state-house
-Hawaii;HI House District 11	state-house
-Hawaii;HI House District 12	state-house
-Hawaii;HI House District 13	state-house
-Hawaii;HI House District 14	state-house
-Hawaii;HI House District 15	state-house
-Hawaii;HI House District 16	state-house
-Hawaii;HI House District 17	state-house
-Hawaii;HI House District 18	state-house
-Hawaii;HI House District 19	state-house
-Hawaii;HI House District 20	state-house
-Hawaii;HI House District 21	state-house
-Hawaii;HI House District 22	state-house
-Hawaii;HI House District 23	state-house
-Hawaii;HI House District 24	state-house
-Hawaii;HI House District 25	state-house
-Hawaii;HI House District 26	state-house
-Hawaii;HI House District 27	state-house
-Hawaii;HI House District 28	state-house
-Hawaii;HI House District 29	state-house
-Hawaii;HI House District 30	state-house
-Hawaii;HI House District 31	state-house
-Hawaii;HI House District 32	state-house
-Hawaii;HI House District 33	state-house
-Hawaii;HI House District 34	state-house
-Hawaii;HI House District 35	state-house
-Hawaii;HI House District 36	state-house
-Hawaii;HI House District 37	state-house
-Hawaii;HI House District 38	state-house
-Hawaii;HI House District 39	state-house
-Hawaii;HI House District 40	state-house
-Hawaii;HI House District 41	state-house
-Hawaii;HI House District 42	state-house
-Hawaii;HI House District 43	state-house
-Hawaii;HI House District 44	state-house
-Hawaii;HI House District 45	state-house
-Hawaii;HI House District 46	state-house
-Hawaii;HI House District 47	state-house
-Hawaii;HI House District 48	state-house
-Hawaii;HI House District 49	state-house
-Hawaii;HI House District 50	state-house
-Hawaii;HI House District 51	state-house
-Hawaii;HI Senate District 1	state-senate
-Hawaii;HI Senate District 2	state-senate
-Hawaii;HI Senate District 3	state-senate
-Hawaii;HI Senate District 4	state-senate
-Hawaii;HI Senate District 5	state-senate
-Hawaii;HI Senate District 6	state-senate
-Hawaii;HI Senate District 7	state-senate
-Hawaii;HI Senate District 8	state-senate
-Hawaii;HI Senate District 9	state-senate
-Hawaii;HI Senate District 10	state-senate
-Hawaii;HI Senate District 11	state-senate
-Hawaii;HI Senate District 12	state-senate
-Hawaii;HI Senate District 13	state-senate
-Hawaii;HI Senate District 14	state-senate
-Hawaii;HI Senate District 15	state-senate
-Hawaii;HI Senate District 16	state-senate
-Hawaii;HI Senate District 17	state-senate
-Hawaii;HI Senate District 18	state-senate
-Hawaii;HI Senate District 19	state-senate
-Hawaii;HI Senate District 20	state-senate
-Hawaii;HI Senate District 21	state-senate
-Hawaii;HI Senate District 22	state-senate
-Hawaii;HI Senate District 23	state-senate
-Hawaii;HI Senate District 24	state-senate
-Hawaii;HI Senate District 25	state-senate
 Hawaii;US House HI District 1	congressional
 Hawaii;US House HI District 2	congressional
-Hawaii	state
+Hawaii;Hawaii County	county
 Hawaii;Honolulu County	county
-Hawaii;Hawai'i County	county
 Hawaii;Kalawao County	county
-Hawaii;Kaua'i County	county
+Hawaii;Kauai County	county
 Hawaii;Maui County	county
+Hawaii;Hawaii County;Precinct 01-01	precinct
+Hawaii;Hawaii County;Precinct 01-02	precinct
+Hawaii;Hawaii County;Precinct 01-03	precinct
+Hawaii;Hawaii County;Precinct 01-04	precinct
+Hawaii;Hawaii County;Precinct 01-05	precinct
+Hawaii;Hawaii County;Precinct 01-06	precinct
+Hawaii;Hawaii County;Precinct 01-07	precinct
+Hawaii;Hawaii County;Precinct 01-08	precinct
+Hawaii;Hawaii County;Precinct 01-09	precinct
+Hawaii;Hawaii County;Precinct 02-01	precinct
+Hawaii;Hawaii County;Precinct 02-02	precinct
+Hawaii;Hawaii County;Precinct 02-03	precinct
+Hawaii;Hawaii County;Precinct 02-04	precinct
+Hawaii;Hawaii County;Precinct 02-05	precinct
+Hawaii;Hawaii County;Precinct 03-01	precinct
+Hawaii;Hawaii County;Precinct 03-02	precinct
+Hawaii;Hawaii County;Precinct 03-03	precinct
+Hawaii;Hawaii County;Precinct 03-04	precinct
+Hawaii;Hawaii County;Precinct 03-05	precinct
+Hawaii;Hawaii County;Precinct 03-06	precinct
+Hawaii;Hawaii County;Precinct 03-07	precinct
+Hawaii;Hawaii County;Precinct 04-01	precinct
+Hawaii;Hawaii County;Precinct 04-02	precinct
+Hawaii;Hawaii County;Precinct 04-03	precinct
+Hawaii;Hawaii County;Precinct 04-04	precinct
+Hawaii;Hawaii County;Precinct 05-01	precinct
+Hawaii;Hawaii County;Precinct 05-02	precinct
+Hawaii;Hawaii County;Precinct 05-03	precinct
+Hawaii;Hawaii County;Precinct 05-04	precinct
+Hawaii;Hawaii County;Precinct 05-05	precinct
+Hawaii;Hawaii County;Precinct 05-06	precinct
+Hawaii;Hawaii County;Precinct 05-07	precinct
+Hawaii;Hawaii County;Precinct 05-08	precinct
+Hawaii;Hawaii County;Precinct 06-01	precinct
+Hawaii;Hawaii County;Precinct 06-02	precinct
+Hawaii;Hawaii County;Precinct 06-03	precinct
+Hawaii;Hawaii County;Precinct 06-04	precinct
+Hawaii;Hawaii County;Precinct 06-05	precinct
+Hawaii;Hawaii County;Precinct 07-01	precinct
+Hawaii;Hawaii County;Precinct 07-02	precinct
+Hawaii;Hawaii County;Precinct 07-03	precinct
+Hawaii;Hawaii County;Precinct 07-04	precinct
+Hawaii;Hawaii County;Precinct 07-05	precinct
 Hawaii;Honolulu County;Precinct 17-01	precinct
 Hawaii;Honolulu County;Precinct 17-02	precinct
 Hawaii;Honolulu County;Precinct 17-03	precinct
@@ -239,22 +205,22 @@ Hawaii;Honolulu County;Precinct 51-03	precinct
 Hawaii;Honolulu County;Precinct 51-04	precinct
 Hawaii;Honolulu County;Precinct 51-05	precinct
 Hawaii;Honolulu County;Precinct 51-06	precinct
-Hawaii;Kaua'i County;Precinct 14-01	precinct
-Hawaii;Kaua'i County;Precinct 14-02	precinct
-Hawaii;Kaua'i County;Precinct 14-03	precinct
-Hawaii;Kaua'i County;Precinct 14-04	precinct
-Hawaii;Kaua'i County;Precinct 14-05	precinct
-Hawaii;Kaua'i County;Precinct 15-01	precinct
-Hawaii;Kaua'i County;Precinct 15-02	precinct
-Hawaii;Kaua'i County;Precinct 15-03	precinct
-Hawaii;Kaua'i County;Precinct 15-04	precinct
-Hawaii;Kaua'i County;Precinct 15-05	precinct
-Hawaii;Kaua'i County;Precinct 16-01	precinct
-Hawaii;Kaua'i County;Precinct 16-02	precinct
-Hawaii;Kaua'i County;Precinct 16-03	precinct
-Hawaii;Kaua'i County;Precinct 16-04	precinct
-Hawaii;Kaua'i County;Precinct 16-05	precinct
-Hawaii;Kaua'i County;Precinct 16-06	precinct
+Hawaii;Kauai County;Precinct 14-01	precinct
+Hawaii;Kauai County;Precinct 14-02	precinct
+Hawaii;Kauai County;Precinct 14-03	precinct
+Hawaii;Kauai County;Precinct 14-04	precinct
+Hawaii;Kauai County;Precinct 14-05	precinct
+Hawaii;Kauai County;Precinct 15-01	precinct
+Hawaii;Kauai County;Precinct 15-02	precinct
+Hawaii;Kauai County;Precinct 15-03	precinct
+Hawaii;Kauai County;Precinct 15-04	precinct
+Hawaii;Kauai County;Precinct 15-05	precinct
+Hawaii;Kauai County;Precinct 16-01	precinct
+Hawaii;Kauai County;Precinct 16-02	precinct
+Hawaii;Kauai County;Precinct 16-03	precinct
+Hawaii;Kauai County;Precinct 16-04	precinct
+Hawaii;Kauai County;Precinct 16-05	precinct
+Hawaii;Kauai County;Precinct 16-06	precinct
 Hawaii;Maui County;Precinct 08-01	precinct
 Hawaii;Maui County;Precinct 08-02	precinct
 Hawaii;Maui County;Precinct 08-03	precinct
@@ -290,46 +256,80 @@ Hawaii;Maui County;Precinct 13-06	precinct
 Hawaii;Maui County;Precinct 13-07	precinct
 Hawaii;Maui County;Precinct 13-08	precinct
 Hawaii;Maui County;Precinct 13-09	precinct
-Hawaii;Hawai'i County;Precinct 01-01	precinct
-Hawaii;Hawai'i County;Precinct 01-02	precinct
-Hawaii;Hawai'i County;Precinct 01-03	precinct
-Hawaii;Hawai'i County;Precinct 01-04	precinct
-Hawaii;Hawai'i County;Precinct 01-05	precinct
-Hawaii;Hawai'i County;Precinct 01-06	precinct
-Hawaii;Hawai'i County;Precinct 01-07	precinct
-Hawaii;Hawai'i County;Precinct 01-08	precinct
-Hawaii;Hawai'i County;Precinct 01-09	precinct
-Hawaii;Hawai'i County;Precinct 02-01	precinct
-Hawaii;Hawai'i County;Precinct 02-02	precinct
-Hawaii;Hawai'i County;Precinct 02-03	precinct
-Hawaii;Hawai'i County;Precinct 02-04	precinct
-Hawaii;Hawai'i County;Precinct 02-05	precinct
-Hawaii;Hawai'i County;Precinct 03-01	precinct
-Hawaii;Hawai'i County;Precinct 03-02	precinct
-Hawaii;Hawai'i County;Precinct 03-03	precinct
-Hawaii;Hawai'i County;Precinct 03-04	precinct
-Hawaii;Hawai'i County;Precinct 03-05	precinct
-Hawaii;Hawai'i County;Precinct 03-06	precinct
-Hawaii;Hawai'i County;Precinct 03-07	precinct
-Hawaii;Hawai'i County;Precinct 04-01	precinct
-Hawaii;Hawai'i County;Precinct 04-02	precinct
-Hawaii;Hawai'i County;Precinct 04-03	precinct
-Hawaii;Hawai'i County;Precinct 04-04	precinct
-Hawaii;Hawai'i County;Precinct 05-01	precinct
-Hawaii;Hawai'i County;Precinct 05-02	precinct
-Hawaii;Hawai'i County;Precinct 05-03	precinct
-Hawaii;Hawai'i County;Precinct 05-04	precinct
-Hawaii;Hawai'i County;Precinct 05-05	precinct
-Hawaii;Hawai'i County;Precinct 05-06	precinct
-Hawaii;Hawai'i County;Precinct 05-07	precinct
-Hawaii;Hawai'i County;Precinct 05-08	precinct
-Hawaii;Hawai'i County;Precinct 06-01	precinct
-Hawaii;Hawai'i County;Precinct 06-02	precinct
-Hawaii;Hawai'i County;Precinct 06-03	precinct
-Hawaii;Hawai'i County;Precinct 06-04	precinct
-Hawaii;Hawai'i County;Precinct 06-05	precinct
-Hawaii;Hawai'i County;Precinct 07-01	precinct
-Hawaii;Hawai'i County;Precinct 07-02	precinct
-Hawaii;Hawai'i County;Precinct 07-03	precinct
-Hawaii;Hawai'i County;Precinct 07-04	precinct
-Hawaii;Hawai'i County;Precinct 07-05	precinct
+Hawaii	state
+Hawaii;HI House District 1	state-house
+Hawaii;HI House District 10	state-house
+Hawaii;HI House District 11	state-house
+Hawaii;HI House District 12	state-house
+Hawaii;HI House District 13	state-house
+Hawaii;HI House District 14	state-house
+Hawaii;HI House District 15	state-house
+Hawaii;HI House District 16	state-house
+Hawaii;HI House District 17	state-house
+Hawaii;HI House District 18	state-house
+Hawaii;HI House District 19	state-house
+Hawaii;HI House District 2	state-house
+Hawaii;HI House District 20	state-house
+Hawaii;HI House District 21	state-house
+Hawaii;HI House District 22	state-house
+Hawaii;HI House District 23	state-house
+Hawaii;HI House District 24	state-house
+Hawaii;HI House District 25	state-house
+Hawaii;HI House District 26	state-house
+Hawaii;HI House District 27	state-house
+Hawaii;HI House District 28	state-house
+Hawaii;HI House District 29	state-house
+Hawaii;HI House District 3	state-house
+Hawaii;HI House District 30	state-house
+Hawaii;HI House District 31	state-house
+Hawaii;HI House District 32	state-house
+Hawaii;HI House District 33	state-house
+Hawaii;HI House District 34	state-house
+Hawaii;HI House District 35	state-house
+Hawaii;HI House District 36	state-house
+Hawaii;HI House District 37	state-house
+Hawaii;HI House District 38	state-house
+Hawaii;HI House District 39	state-house
+Hawaii;HI House District 4	state-house
+Hawaii;HI House District 40	state-house
+Hawaii;HI House District 41	state-house
+Hawaii;HI House District 42	state-house
+Hawaii;HI House District 43	state-house
+Hawaii;HI House District 44	state-house
+Hawaii;HI House District 45	state-house
+Hawaii;HI House District 46	state-house
+Hawaii;HI House District 47	state-house
+Hawaii;HI House District 48	state-house
+Hawaii;HI House District 49	state-house
+Hawaii;HI House District 5	state-house
+Hawaii;HI House District 50	state-house
+Hawaii;HI House District 51	state-house
+Hawaii;HI House District 6	state-house
+Hawaii;HI House District 7	state-house
+Hawaii;HI House District 8	state-house
+Hawaii;HI House District 9	state-house
+Hawaii;HI Senate District 1	state-senate
+Hawaii;HI Senate District 10	state-senate
+Hawaii;HI Senate District 11	state-senate
+Hawaii;HI Senate District 12	state-senate
+Hawaii;HI Senate District 13	state-senate
+Hawaii;HI Senate District 14	state-senate
+Hawaii;HI Senate District 15	state-senate
+Hawaii;HI Senate District 16	state-senate
+Hawaii;HI Senate District 17	state-senate
+Hawaii;HI Senate District 18	state-senate
+Hawaii;HI Senate District 19	state-senate
+Hawaii;HI Senate District 2	state-senate
+Hawaii;HI Senate District 20	state-senate
+Hawaii;HI Senate District 21	state-senate
+Hawaii;HI Senate District 22	state-senate
+Hawaii;HI Senate District 23	state-senate
+Hawaii;HI Senate District 24	state-senate
+Hawaii;HI Senate District 25	state-senate
+Hawaii;HI Senate District 3	state-senate
+Hawaii;HI Senate District 4	state-senate
+Hawaii;HI Senate District 5	state-senate
+Hawaii;HI Senate District 6	state-senate
+Hawaii;HI Senate District 7	state-senate
+Hawaii;HI Senate District 8	state-senate
+Hawaii;HI Senate District 9	state-senate

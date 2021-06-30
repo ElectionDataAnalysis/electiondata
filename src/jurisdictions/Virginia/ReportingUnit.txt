@@ -1,145 +1,45 @@
 Name	ReportingUnitType
-Virginia;VA House District 1	state-house
-Virginia;VA House District 2	state-house
-Virginia;VA House District 3	state-house
-Virginia;VA House District 4	state-house
-Virginia;VA House District 5	state-house
-Virginia;VA House District 6	state-house
-Virginia;VA House District 7	state-house
-Virginia;VA House District 8	state-house
-Virginia;VA House District 9	state-house
-Virginia;VA House District 10	state-house
-Virginia;VA House District 11	state-house
-Virginia;VA House District 12	state-house
-Virginia;VA House District 13	state-house
-Virginia;VA House District 14	state-house
-Virginia;VA House District 15	state-house
-Virginia;VA House District 16	state-house
-Virginia;VA House District 17	state-house
-Virginia;VA House District 18	state-house
-Virginia;VA House District 19	state-house
-Virginia;VA House District 20	state-house
-Virginia;VA House District 21	state-house
-Virginia;VA House District 22	state-house
-Virginia;VA House District 23	state-house
-Virginia;VA House District 24	state-house
-Virginia;VA House District 25	state-house
-Virginia;VA House District 26	state-house
-Virginia;VA House District 27	state-house
-Virginia;VA House District 28	state-house
-Virginia;VA House District 29	state-house
-Virginia;VA House District 30	state-house
-Virginia;VA House District 31	state-house
-Virginia;VA House District 32	state-house
-Virginia;VA House District 33	state-house
-Virginia;VA House District 34	state-house
-Virginia;VA House District 35	state-house
-Virginia;VA House District 36	state-house
-Virginia;VA House District 37	state-house
-Virginia;VA House District 38	state-house
-Virginia;VA House District 39	state-house
-Virginia;VA House District 40	state-house
-Virginia;VA House District 41	state-house
-Virginia;VA House District 42	state-house
-Virginia;VA House District 43	state-house
-Virginia;VA House District 44	state-house
-Virginia;VA House District 45	state-house
-Virginia;VA House District 46	state-house
-Virginia;VA House District 47	state-house
-Virginia;VA House District 48	state-house
-Virginia;VA House District 49	state-house
-Virginia;VA House District 50	state-house
-Virginia;VA House District 51	state-house
-Virginia;VA House District 52	state-house
-Virginia;VA House District 53	state-house
-Virginia;VA House District 54	state-house
-Virginia;VA House District 55	state-house
-Virginia;VA House District 56	state-house
-Virginia;VA House District 57	state-house
-Virginia;VA House District 58	state-house
-Virginia;VA House District 59	state-house
-Virginia;VA House District 60	state-house
-Virginia;VA House District 61	state-house
-Virginia;VA House District 62	state-house
-Virginia;VA House District 63	state-house
-Virginia;VA House District 64	state-house
-Virginia;VA House District 65	state-house
-Virginia;VA House District 66	state-house
-Virginia;VA House District 67	state-house
-Virginia;VA House District 68	state-house
-Virginia;VA House District 69	state-house
-Virginia;VA House District 70	state-house
-Virginia;VA House District 71	state-house
-Virginia;VA House District 72	state-house
-Virginia;VA House District 73	state-house
-Virginia;VA House District 74	state-house
-Virginia;VA House District 75	state-house
-Virginia;VA House District 76	state-house
-Virginia;VA House District 77	state-house
-Virginia;VA House District 78	state-house
-Virginia;VA House District 79	state-house
-Virginia;VA House District 80	state-house
-Virginia;VA House District 81	state-house
-Virginia;VA House District 82	state-house
-Virginia;VA House District 83	state-house
-Virginia;VA House District 84	state-house
-Virginia;VA House District 85	state-house
-Virginia;VA House District 86	state-house
-Virginia;VA House District 87	state-house
-Virginia;VA House District 88	state-house
-Virginia;VA House District 89	state-house
-Virginia;VA House District 90	state-house
-Virginia;VA House District 91	state-house
-Virginia;VA House District 92	state-house
-Virginia;VA House District 93	state-house
-Virginia;VA House District 94	state-house
-Virginia;VA House District 95	state-house
-Virginia;VA House District 96	state-house
-Virginia;VA House District 97	state-house
-Virginia;VA House District 98	state-house
-Virginia;VA House District 99	state-house
-Virginia;VA House District 100	state-house
-Virginia;VA Senate District 1	state-senate
-Virginia;VA Senate District 2	state-senate
-Virginia;VA Senate District 3	state-senate
-Virginia;VA Senate District 4	state-senate
-Virginia;VA Senate District 5	state-senate
-Virginia;VA Senate District 6	state-senate
-Virginia;VA Senate District 7	state-senate
-Virginia;VA Senate District 8	state-senate
-Virginia;VA Senate District 9	state-senate
-Virginia;VA Senate District 10	state-senate
-Virginia;VA Senate District 11	state-senate
-Virginia;VA Senate District 12	state-senate
-Virginia;VA Senate District 13	state-senate
-Virginia;VA Senate District 14	state-senate
-Virginia;VA Senate District 15	state-senate
-Virginia;VA Senate District 16	state-senate
-Virginia;VA Senate District 17	state-senate
-Virginia;VA Senate District 18	state-senate
-Virginia;VA Senate District 19	state-senate
-Virginia;VA Senate District 20	state-senate
-Virginia;VA Senate District 21	state-senate
-Virginia;VA Senate District 22	state-senate
-Virginia;VA Senate District 23	state-senate
-Virginia;VA Senate District 24	state-senate
-Virginia;VA Senate District 25	state-senate
-Virginia;VA Senate District 26	state-senate
-Virginia;VA Senate District 27	state-senate
-Virginia;VA Senate District 28	state-senate
-Virginia;VA Senate District 29	state-senate
-Virginia;VA Senate District 30	state-senate
-Virginia;VA Senate District 31	state-senate
-Virginia;VA Senate District 32	state-senate
-Virginia;VA Senate District 33	state-senate
-Virginia;VA Senate District 34	state-senate
-Virginia;VA Senate District 35	state-senate
-Virginia;VA Senate District 36	state-senate
-Virginia;VA Senate District 37	state-senate
-Virginia;VA Senate District 38	state-senate
-Virginia;VA Senate District 39	state-senate
-Virginia;VA Senate District 40	state-senate
+Virginia;Alexandria city	city
+Virginia;Bristol city	city
+Virginia;Buena Vista city	city
+Virginia;Charlottesville city	city
+Virginia;Chesapeake city	city
+Virginia;Colonial Heights city	city
+Virginia;Covington city	city
+Virginia;Danville city	city
+Virginia;Emporia city	city
+Virginia;Fairfax city	city
+Virginia;Falls Church city	city
+Virginia;Franklin city	city
+Virginia;Fredericksburg city	city
+Virginia;Galax city	city
+Virginia;Hampton city	city
+Virginia;Harrisonburg city	city
+Virginia;Hopewell city	city
+Virginia;Lexington city	city
+Virginia;Lynchburg city	city
+Virginia;Manassas Park city	city
+Virginia;Manassas city	city
+Virginia;Martinsville city	city
+Virginia;Newport News city	city
+Virginia;Norfolk city	city
+Virginia;Norton city	city
+Virginia;Petersburg city	city
+Virginia;Poquoson city	city
+Virginia;Portsmouth city	city
+Virginia;Radford city	city
+Virginia;Richmond city	city
+Virginia;Roanoke city	city
+Virginia;Salem city	city
+Virginia;Staunton city	city
+Virginia;Suffolk city	city
+Virginia;Virginia Beach city	city
+Virginia;Waynesboro city	city
+Virginia;Williamsburg city	city
+Virginia;Winchester city	city
 Virginia;US House VA District 1	congressional
+Virginia;US House VA District 10	congressional
+Virginia;US House VA District 11	congressional
 Virginia;US House VA District 2	congressional
 Virginia;US House VA District 3	congressional
 Virginia;US House VA District 4	congressional
@@ -148,11 +48,9 @@ Virginia;US House VA District 6	congressional
 Virginia;US House VA District 7	congressional
 Virginia;US House VA District 8	congressional
 Virginia;US House VA District 9	congressional
-Virginia;US House VA District 10	congressional
-Virginia;US House VA District 11	congressional
-Virginia	state
 Virginia;Accomack County	county
 Virginia;Albemarle County	county
+Virginia;Alexandria City	county
 Virginia;Alleghany County	county
 Virginia;Amelia County	county
 Virginia;Amherst County	county
@@ -163,28 +61,41 @@ Virginia;Bath County	county
 Virginia;Bedford County	county
 Virginia;Bland County	county
 Virginia;Botetourt County	county
+Virginia;Bristol City	county
 Virginia;Brunswick County	county
 Virginia;Buchanan County	county
 Virginia;Buckingham County	county
+Virginia;Buena Vista City	county
 Virginia;Campbell County	county
 Virginia;Caroline County	county
 Virginia;Carroll County	county
 Virginia;Charles City County	county
 Virginia;Charlotte County	county
+Virginia;Charlottesville City	county
+Virginia;Chesapeake City	county
 Virginia;Chesterfield County	county
 Virginia;Clarke County	county
+Virginia;Colonial Heights City	county
+Virginia;Covington City	county
 Virginia;Craig County	county
 Virginia;Culpeper County	county
 Virginia;Cumberland County	county
+Virginia;Danville City	county
 Virginia;Dickenson County	county
 Virginia;Dinwiddie County	county
+Virginia;Emporia City	county
 Virginia;Essex County	county
+Virginia;Fairfax City	county
 Virginia;Fairfax County	county
+Virginia;Falls Church City	county
 Virginia;Fauquier County	county
 Virginia;Floyd County	county
 Virginia;Fluvanna County	county
+Virginia;Franklin City	county
 Virginia;Franklin County	county
 Virginia;Frederick County	county
+Virginia;Fredericksburg City	county
+Virginia;Galax City	county
 Virginia;Giles County	county
 Virginia;Gloucester County	county
 Virginia;Goochland County	county
@@ -192,98 +103,86 @@ Virginia;Grayson County	county
 Virginia;Greene County	county
 Virginia;Greensville County	county
 Virginia;Halifax County	county
+Virginia;Hampton City	county
 Virginia;Hanover County	county
+Virginia;Harrisonburg City	county
 Virginia;Henrico County	county
 Virginia;Henry County	county
 Virginia;Highland County	county
+Virginia;Hopewell City	county
 Virginia;Isle Of Wight County	county
+Virginia;Isle of Wight County	county
 Virginia;James City County	county
 Virginia;King & Queen County	county
 Virginia;King George County	county
 Virginia;King William County	county
+Virginia;King and Queen County	county
 Virginia;Lancaster County	county
 Virginia;Lee County	county
+Virginia;Lexington City	county
 Virginia;Loudoun County	county
 Virginia;Louisa County	county
 Virginia;Lunenburg County	county
+Virginia;Lynchburg City	county
 Virginia;Madison County	county
+Virginia;Manassas City	county
+Virginia;Manassas Park City	county
+Virginia;Martinsville City	county
 Virginia;Mathews County	county
 Virginia;Mecklenburg County	county
 Virginia;Middlesex County	county
 Virginia;Montgomery County	county
 Virginia;Nelson County	county
 Virginia;New Kent County	county
+Virginia;Newport News City	county
+Virginia;Norfolk City	county
 Virginia;Northampton County	county
 Virginia;Northumberland County	county
+Virginia;Norton City	county
 Virginia;Nottoway County	county
 Virginia;Orange County	county
 Virginia;Page County	county
 Virginia;Patrick County	county
+Virginia;Petersburg City	county
 Virginia;Pittsylvania County	county
+Virginia;Poquoson City	county
+Virginia;Portsmouth City	county
 Virginia;Powhatan County	county
 Virginia;Prince Edward County	county
 Virginia;Prince George County	county
 Virginia;Prince William County	county
 Virginia;Pulaski County	county
+Virginia;Radford City	county
 Virginia;Rappahannock County	county
+Virginia;Richmond City	county
 Virginia;Richmond County	county
+Virginia;Roanoke City	county
 Virginia;Roanoke County	county
 Virginia;Rockbridge County	county
 Virginia;Rockingham County	county
 Virginia;Russell County	county
+Virginia;Salem City	county
 Virginia;Scott County	county
 Virginia;Shenandoah County	county
 Virginia;Smyth County	county
 Virginia;Southampton County	county
 Virginia;Spotsylvania County	county
 Virginia;Stafford County	county
+Virginia;Staunton City	county
+Virginia;Suffolk City	county
 Virginia;Surry County	county
 Virginia;Sussex County	county
 Virginia;Tazewell County	county
+Virginia;Virginia Beach City	county
 Virginia;Warren County	county
 Virginia;Washington County	county
+Virginia;Waynesboro City	county
 Virginia;Westmoreland County	county
+Virginia;Williamsburg City	county
+Virginia;Winchester City	county
 Virginia;Wise County	county
 Virginia;Wythe County	county
 Virginia;York County	county
-Virginia;Alexandria City	county
-Virginia;Bristol City	county
-Virginia;Buena Vista City	county
-Virginia;Charlottesville City	county
-Virginia;Chesapeake City	county
-Virginia;Colonial Heights City	county
-Virginia;Covington City	county
-Virginia;Danville City	county
-Virginia;Emporia City	county
-Virginia;Fairfax City	county
-Virginia;Falls Church City	county
-Virginia;Franklin City	county
-Virginia;Fredericksburg City	county
-Virginia;Galax City	county
-Virginia;Hampton City	county
-Virginia;Harrisonburg City	county
-Virginia;Hopewell City	county
-Virginia;Lexington City	county
-Virginia;Lynchburg City	county
-Virginia;Manassas City	county
-Virginia;Manassas Park City	county
-Virginia;Martinsville City	county
-Virginia;Newport News City	county
-Virginia;Norfolk City	county
-Virginia;Norton City	county
-Virginia;Petersburg City	county
-Virginia;Poquoson City	county
-Virginia;Portsmouth City	county
-Virginia;Radford City	county
-Virginia;Richmond City	county
-Virginia;Roanoke City	county
-Virginia;Salem City	county
-Virginia;Staunton City	county
-Virginia;Suffolk City	county
-Virginia;Virginia Beach City	county
-Virginia;Waynesboro City	county
-Virginia;Williamsburg City	county
-Virginia;Winchester City	county
 Virginia;Accomack County;# Ab - Central Absentee Precinct	precinct
 Virginia;Accomack County;## Provisional	precinct
 Virginia;Accomack County;101 - Chincoteague	precinct
@@ -322,16 +221,53 @@ Virginia;Albemarle County;307 - Yellow Mountain	precinct
 Virginia;Albemarle County;401 - Scottsville	precinct
 Virginia;Albemarle County;402 - Monticello	precinct
 Virginia;Albemarle County;405 - Cale	precinct
+Virginia;Albemarle County;405 - Mountain View	precinct
 Virginia;Albemarle County;406 - Stone Robinson	precinct
+Virginia;Albemarle County;407 - Biscuit Run	precinct
 Virginia;Albemarle County;501 - Keswick	precinct
 Virginia;Albemarle County;502 - Stony Point	precinct
 Virginia;Albemarle County;503 - Hollymead	precinct
 Virginia;Albemarle County;504 - Free Bridge	precinct
 Virginia;Albemarle County;506 - Baker-Butler	precinct
+Virginia;Albemarle County;507 - Pantops	precinct
 Virginia;Albemarle County;601 - Crozet	precinct
 Virginia;Albemarle County;602 - Free Union	precinct
 Virginia;Albemarle County;603 - Earlysville	precinct
 Virginia;Albemarle County;604 - Brownsville	precinct
+Virginia;Albemarle County;606 - Mechums River	precinct
+Virginia;Alexandria City;# Ab - Central Absentee Precinct	precinct
+Virginia;Alexandria City;## Provisional	precinct
+Virginia;Alexandria City;101 - Ladrey Senior Building	precinct
+Virginia;Alexandria City;102 - City Hall	precinct
+Virginia;Alexandria City;103 - Lyles Crouch School	precinct
+Virginia;Alexandria City;104 - Durant Center	precinct
+Virginia;Alexandria City;105 - Lee Center	precinct
+Virginia;Alexandria City;106 - Cora Kelly	precinct
+Virginia;Alexandria City;106 - Cora Kelly Center	precinct
+Virginia;Alexandria City;107 - Mt Vernon Recreation Center	precinct
+Virginia;Alexandria City;108 - George Washington Middle Sch	precinct
+Virginia;Alexandria City;109 - Fire Department Headquarters	precinct
+Virginia;Alexandria City;110 - Charles Houston Center	precinct
+Virginia;Alexandria City;111 - Potomac Yard	precinct
+Virginia;Alexandria City;112 - Alex Renew	precinct
+Virginia;Alexandria City;201 - Maury School	precinct
+Virginia;Alexandria City;202 - George Mason School	precinct
+Virginia;Alexandria City;203 - Charles Barrett Center	precinct
+Virginia;Alexandria City;204 - Blessed Sacrament Church	precinct
+Virginia;Alexandria City;205 - Douglas Macarthur School	precinct
+Virginia;Alexandria City;206 - Chinquapin Park Recreation Ctr	precinct
+Virginia;Alexandria City;207 - Temple Beth El Synagogue	precinct
+Virginia;Alexandria City;208 - Nova Arts Center	precinct
+Virginia;Alexandria City;209 - James K Polk School	precinct
+Virginia;Alexandria City;210 - The Hermitage	precinct
+Virginia;Alexandria City;302 - Patrick Henry Rec Center	precinct
+Virginia;Alexandria City;303 - Charles E Beatley Library	precinct
+Virginia;Alexandria City;304 - Samuel Tucker School	precinct
+Virginia;Alexandria City;305 - John Adams School	precinct
+Virginia;Alexandria City;306 - William Ramsay School	precinct
+Virginia;Alexandria City;307 - South Port	precinct
+Virginia;Alexandria City;308 - Cameron Station Community Ctr	precinct
+Virginia;Alexandria City;309 - Olympus Condo	precinct
 Virginia;Alleghany County;# Ab - Central Absentee Precinct	precinct
 Virginia;Alleghany County;## Provisional	precinct
 Virginia;Alleghany County;101 - Arritt	precinct
@@ -431,6 +367,8 @@ Virginia;Arlington County;049 - Monroe	precinct
 Virginia;Arlington County;050 - Crystal Plaza	precinct
 Virginia;Arlington County;051 - Taylor	precinct
 Virginia;Arlington County;052 - Gunston	precinct
+Virginia;Arlington County;053 - Met Park	precinct
+Virginia;Arlington County;054 - Garfield Park	precinct
 Virginia;Augusta County;# Ab - Central Absentee Precinct	precinct
 Virginia;Augusta County;## Provisional	precinct
 Virginia;Augusta County;101 - Jolivue	precinct
@@ -482,7 +420,9 @@ Virginia;Bedford County;301 - New London Academy	precinct
 Virginia;Bedford County;302 - Bedford Regional Water Auth	precinct
 Virginia;Bedford County;303 - Bethesda United Methodist Church	precinct
 Virginia;Bedford County;304 - Forest Youth Athletic Assoc	precinct
+Virginia;Bedford County;304 - Riverside Church	precinct
 Virginia;Bedford County;305 - Huddleston Elem School	precinct
+Virginia;Bedford County;306 - Forest Fire Station #2	precinct
 Virginia;Bedford County;401 - Forest Elementary School	precinct
 Virginia;Bedford County;402 - Thomas Jefferson Elem School	precinct
 Virginia;Bedford County;403 - Knights Of Columbus Bldg	precinct
@@ -521,6 +461,12 @@ Virginia;Botetourt County;403 - Eagle Rock	precinct
 Virginia;Botetourt County;406 - Fincastle	precinct
 Virginia;Botetourt County;501 - Troutville	precinct
 Virginia;Botetourt County;502 - Cloverdale	precinct
+Virginia;Bristol City;# Ab - Central Absentee Precinct	precinct
+Virginia;Bristol City;## Provisional	precinct
+Virginia;Bristol City;001 - First Ward	precinct
+Virginia;Bristol City;002 - Second Ward	precinct
+Virginia;Bristol City;003 - Third Ward	precinct
+Virginia;Bristol City;004 - Fourth Ward	precinct
 Virginia;Brunswick County;# Ab - Central Absentee Precinct	precinct
 Virginia;Brunswick County;## Provisional	precinct
 Virginia;Brunswick County;101 - Brodnax	precinct
@@ -567,6 +513,9 @@ Virginia;Buckingham County;501 - Wrights	precinct
 Virginia;Buckingham County;502 - Glenmore	precinct
 Virginia;Buckingham County;601 - Slate River	precinct
 Virginia;Buckingham County;701 - Gold Hill	precinct
+Virginia;Buena Vista City;## Provisional	precinct
+Virginia;Buena Vista City;001 - First Ward	precinct
+Virginia;Buena Vista City;002 - Second Ward	precinct
 Virginia;Campbell County;# Ab - Central Absentee Precinct	precinct
 Virginia;Campbell County;## Provisional	precinct
 Virginia;Campbell County;101 - Brookville	precinct
@@ -611,6 +560,7 @@ Virginia;Carroll County;203 - Gladesboro	precinct
 Virginia;Carroll County;301 - Hillsville C	precinct
 Virginia;Carroll County;302 - Sylvatus	precinct
 Virginia;Carroll County;303 - Dugspur	precinct
+Virginia;Carroll County;401 - Oakland	precinct
 Virginia;Carroll County;402 - Woodlawn D	precinct
 Virginia;Carroll County;403 - Oakland D	precinct
 Virginia;Carroll County;405 - Oakland A	precinct
@@ -633,6 +583,85 @@ Virginia;Charlotte County;401 - Keysville	precinct
 Virginia;Charlotte County;501 - Cullen/Red House	precinct
 Virginia;Charlotte County;602 - Phenix	precinct
 Virginia;Charlotte County;702 - Bacon/Saxe	precinct
+Virginia;Charlottesville City;# Ab - Central Absentee Precinct	precinct
+Virginia;Charlottesville City;## Provisional	precinct
+Virginia;Charlottesville City;101 - Key Recreation	precinct
+Virginia;Charlottesville City;102 - Clark	precinct
+Virginia;Charlottesville City;201 - Carver	precinct
+Virginia;Charlottesville City;202 - Walker	precinct
+Virginia;Charlottesville City;301 - Benjamin Tonsler	precinct
+Virginia;Charlottesville City;302 - Johnson	precinct
+Virginia;Charlottesville City;303 - Buford	precinct
+Virginia;Charlottesville City;401 - Venable	precinct
+Virginia;Charlottesville City;402 - Alumni Hall	precinct
+Virginia;Chesapeake City;# Ab - Central Absentee Precinct	precinct
+Virginia;Chesapeake City;## Provisional	precinct
+Virginia;Chesapeake City;001 - Great Bridge	precinct
+Virginia;Chesapeake City;002 - Bethel	precinct
+Virginia;Chesapeake City;003 - Camelot	precinct
+Virginia;Chesapeake City;004 - Churchland	precinct
+Virginia;Chesapeake City;005 - Crestwood	precinct
+Virginia;Chesapeake City;006 - Deep Creek	precinct
+Virginia;Chesapeake City;007 - Greenbrier	precinct
+Virginia;Chesapeake City;008 - South Norfolk Recreation	precinct
+Virginia;Chesapeake City;009 - Bells Mill	precinct
+Virginia;Chesapeake City;010 - Oscar Smith	precinct
+Virginia;Chesapeake City;011 - Geneva Park	precinct
+Virginia;Chesapeake City;012 - Georgetown	precinct
+Virginia;Chesapeake City;013 - Gilmerton	precinct
+Virginia;Chesapeake City;014 - Grassfield	precinct
+Virginia;Chesapeake City;015 - B M Williams	precinct
+Virginia;Chesapeake City;015 - Greenbrier Middle School	precinct
+Virginia;Chesapeake City;016 - Hickory Grove	precinct
+Virginia;Chesapeake City;017 - Indian Creek	precinct
+Virginia;Chesapeake City;018 - Indian River	precinct
+Virginia;Chesapeake City;019 - Jolliff	precinct
+Virginia;Chesapeake City;020 - E W Chittum	precinct
+Virginia;Chesapeake City;021 - Fellowship	precinct
+Virginia;Chesapeake City;022 - Norfolk Highlands	precinct
+Virginia;Chesapeake City;023 - Oak Grove	precinct
+Virginia;Chesapeake City;024 - Oaklette	precinct
+Virginia;Chesapeake City;025 - St Julians	precinct
+Virginia;Chesapeake City;026 - Johnson Park	precinct
+Virginia;Chesapeake City;027 - Silverwood	precinct
+Virginia;Chesapeake City;028 - Sunray I	precinct
+Virginia;Chesapeake City;029 - Tanglewood	precinct
+Virginia;Chesapeake City;030 - South Norfolk	precinct
+Virginia;Chesapeake City;031 - Carver School	precinct
+Virginia;Chesapeake City;032 - Providence	precinct
+Virginia;Chesapeake City;033 - Westover	precinct
+Virginia;Chesapeake City;034 - Hickory Middle School	precinct
+Virginia;Chesapeake City;035 - Taylor Road	precinct
+Virginia;Chesapeake City;036 - Great Bridge Baptist Church	precinct
+Virginia;Chesapeake City;037 - Bridgetown	precinct
+Virginia;Chesapeake City;038 - Bailey Creek	precinct
+Virginia;Chesapeake City;039 - Lake Drummond	precinct
+Virginia;Chesapeake City;040 - River Birch	precinct
+Virginia;Chesapeake City;041 - John T West	precinct
+Virginia;Chesapeake City;042 - Parkways	precinct
+Virginia;Chesapeake City;043 - Pleasant Crossing	precinct
+Virginia;Chesapeake City;044 - Nansemond	precinct
+Virginia;Chesapeake City;045 - Sunray Ii	precinct
+Virginia;Chesapeake City;046 - Bells Mill Ii	precinct
+Virginia;Chesapeake City;047 - Green Sea	precinct
+Virginia;Chesapeake City;048 - Jolliff Middle School	precinct
+Virginia;Chesapeake City;049 - Waterway	precinct
+Virginia;Chesapeake City;050 - River Walk	precinct
+Virginia;Chesapeake City;051 - Coopers Way	precinct
+Virginia;Chesapeake City;052 - Shipyard Road	precinct
+Virginia;Chesapeake City;053 - Fairways	precinct
+Virginia;Chesapeake City;054 - Pughsville	precinct
+Virginia;Chesapeake City;055 - Georgetown East	precinct
+Virginia;Chesapeake City;056 - Green Tree	precinct
+Virginia;Chesapeake City;057 - Cypress	precinct
+Virginia;Chesapeake City;058 - Expressway	precinct
+Virginia;Chesapeake City;059 - Clearfield	precinct
+Virginia;Chesapeake City;060 - Parker Road	precinct
+Virginia;Chesapeake City;061 - Centerville	precinct
+Virginia;Chesapeake City;062 - Fentress	precinct
+Virginia;Chesapeake City;063 - Poplar Branch	precinct
+Virginia;Chesapeake City;064 - Deep Creek Ii	precinct
+Virginia;Chesapeake City;065 - Waterway Ii	precinct
 Virginia;Chesterfield County;# Ab - Central Absentee Precinct	precinct
 Virginia;Chesterfield County;## Provisional	precinct
 Virginia;Chesterfield County;101 - Bellwood	precinct
@@ -647,6 +676,7 @@ Virginia;Chesterfield County;109 - Elizabeth Scott	precinct
 Virginia;Chesterfield County;110 - Dutch Gap	precinct
 Virginia;Chesterfield County;111 - Iron Bridge	precinct
 Virginia;Chesterfield County;112 - Carver	precinct
+Virginia;Chesterfield County;113 - Iron Bridge North	precinct
 Virginia;Chesterfield County;201 - Gates	precinct
 Virginia;Chesterfield County;202 - Beulah	precinct
 Virginia;Chesterfield County;203 - Bird	precinct
@@ -662,6 +692,7 @@ Virginia;Chesterfield County;212 - St. Luke'S	precinct
 Virginia;Chesterfield County;213 - Southside	precinct
 Virginia;Chesterfield County;214 - Hopkins	precinct
 Virginia;Chesterfield County;215 - North Bird	precinct
+Virginia;Chesterfield County;216 - Ridgedale	precinct
 Virginia;Chesterfield County;301 - Ettrick	precinct
 Virginia;Chesterfield County;302 - Deer Run	precinct
 Virginia;Chesterfield County;303 - Matoaca	precinct
@@ -673,10 +704,12 @@ Virginia;Chesterfield County;308 - South Manchester	precinct
 Virginia;Chesterfield County;309 - Skinquarter	precinct
 Virginia;Chesterfield County;310 - Tomahawk	precinct
 Virginia;Chesterfield County;313 - Woolridge	precinct
+Virginia;Chesterfield County;314 - Longhouse	precinct
 Virginia;Chesterfield County;315 - Bailey Bridge	precinct
 Virginia;Chesterfield County;316 - Spring Run	precinct
 Virginia;Chesterfield County;317 - Birkdale	precinct
 Virginia;Chesterfield County;318 - West Beach	precinct
+Virginia;Chesterfield County;319 - Magnolia	precinct
 Virginia;Chesterfield County;401 - Harbour Pointe	precinct
 Virginia;Chesterfield County;402 - Genito	precinct
 Virginia;Chesterfield County;403 - Brandermill	precinct
@@ -688,6 +721,7 @@ Virginia;Chesterfield County;408 - Reams	precinct
 Virginia;Chesterfield County;409 - Manchester	precinct
 Virginia;Chesterfield County;410 - Wagstaff	precinct
 Virginia;Chesterfield County;411 - Swift Creek	precinct
+Virginia;Chesterfield County;412 - Clover Hill	precinct
 Virginia;Chesterfield County;413 - Shenandoah	precinct
 Virginia;Chesterfield County;414 - Crenshaw	precinct
 Virginia;Chesterfield County;415 - Evergreen	precinct
@@ -719,6 +753,21 @@ Virginia;Clarke County;302 - Pine Grove	precinct
 Virginia;Clarke County;401 - White Post	precinct
 Virginia;Clarke County;501 - Buckmarsh	precinct
 Virginia;Clarke County;502 - Blue Ridge	precinct
+Virginia;Colonial Heights City;# Ab - Central Absentee Precinct	precinct
+Virginia;Colonial Heights City;## Provisional	precinct
+Virginia;Colonial Heights City;001 - First	precinct
+Virginia;Colonial Heights City;002 - Second	precinct
+Virginia;Colonial Heights City;003 - Third	precinct
+Virginia;Colonial Heights City;004 - Fourth	precinct
+Virginia;Colonial Heights City;005 - Fifth	precinct
+Virginia;Covington City;# Ab - Central Absentee Precinct	precinct
+Virginia;Covington City;## Provisional	precinct
+Virginia;Covington City;101 - Precinct 1-1	precinct
+Virginia;Covington City;201 - Precinct 2-1	precinct
+Virginia;Covington City;301 - Precinct 3-1	precinct
+Virginia;Covington City;401 - Precinct 4-1	precinct
+Virginia;Covington City;501 - Precinct 5-1	precinct
+Virginia;Craig County;# Ab - Central Absentee Precinct	precinct
 Virginia;Craig County;## Provisional	precinct
 Virginia;Craig County;101 - Court House	precinct
 Virginia;Craig County;201 - Ammendale Precinct	precinct
@@ -752,6 +801,24 @@ Virginia;Cumberland County;201 - Precinct 2	precinct
 Virginia;Cumberland County;301 - Precinct 3	precinct
 Virginia;Cumberland County;401 - Precinct 4	precinct
 Virginia;Cumberland County;501 - Precinct 5	precinct
+Virginia;Danville City;# Ab - Central Absentee Precinct	precinct
+Virginia;Danville City;## Provisional	precinct
+Virginia;Danville City;001 - Ward One	precinct
+Virginia;Danville City;002 - Ward Two	precinct
+Virginia;Danville City;003 - Ward Three	precinct
+Virginia;Danville City;004 - Ward Four	precinct
+Virginia;Danville City;006 - Ward Six	precinct
+Virginia;Danville City;007 - Ward Seven	precinct
+Virginia;Danville City;008 - Ward Eight	precinct
+Virginia;Danville City;009 - Ward Nine	precinct
+Virginia;Danville City;010 - Ward Ten	precinct
+Virginia;Danville City;011 - Ward Eleven	precinct
+Virginia;Danville City;012 - Ward Twelve	precinct
+Virginia;Danville City;013 - Ward Thirteen	precinct
+Virginia;Danville City;014 - Ward Fourteen	precinct
+Virginia;Danville City;015 - Ward Fifteen	precinct
+Virginia;Danville City;016 - Ward Sixteen	precinct
+Virginia;Danville City;017 - Ward Seventeen	precinct
 Virginia;Dickenson County;# Ab - Central Absentee Precinct	precinct
 Virginia;Dickenson County;## Provisional	precinct
 Virginia;Dickenson County;101 - South Clintwood	precinct
@@ -779,12 +846,29 @@ Virginia;Dinwiddie County;402 - Mckenney	precinct
 Virginia;Dinwiddie County;403 - Cherry Hill	precinct
 Virginia;Dinwiddie County;501 - Edgehill	precinct
 Virginia;Dinwiddie County;502 - Chesdin	precinct
+Virginia;Emporia City;# Ab - Central Absentee Precinct	precinct
+Virginia;Emporia City;## Provisional	precinct
+Virginia;Emporia City;101 - Precinct 1-1	precinct
+Virginia;Emporia City;201 - Precinct 2-1	precinct
+Virginia;Emporia City;301 - Precinct 3-1	precinct
+Virginia;Emporia City;401 - Precinct 4-1	precinct
+Virginia;Emporia City;501 - Precinct 5-1	precinct
+Virginia;Emporia City;601 - District 6	precinct
+Virginia;Emporia City;701 - District 7	precinct
 Virginia;Essex County;# Ab - Central Absentee Precinct	precinct
 Virginia;Essex County;## Provisional	precinct
 Virginia;Essex County;101 - Greater Tappahannock	precinct
 Virginia;Essex County;201 - North	precinct
 Virginia;Essex County;301 - South	precinct
 Virginia;Essex County;401 - Central	precinct
+Virginia;Fairfax City;# Ab - Central Absentee Precinct	precinct
+Virginia;Fairfax City;## Provisional	precinct
+Virginia;Fairfax City;001 - One	precinct
+Virginia;Fairfax City;002 - Two	precinct
+Virginia;Fairfax City;003 - Three	precinct
+Virginia;Fairfax City;004 - Four	precinct
+Virginia;Fairfax City;005 - Five	precinct
+Virginia;Fairfax City;006 - Six	precinct
 Virginia;Fairfax County;# Ab - Central Absentee Precinct	precinct
 Virginia;Fairfax County;## Provisional	precinct
 Virginia;Fairfax County;104 - Chapel	precinct
@@ -947,6 +1031,7 @@ Virginia;Fairfax County;626 - Saratoga	precinct
 Virginia;Fairfax County;627 - Woodlawn	precinct
 Virginia;Fairfax County;628 - Laurel Hill	precinct
 Virginia;Fairfax County;629 - South County	precinct
+Virginia;Fairfax County;630- Army	precinct
 Virginia;Fairfax County;701 - Blake	precinct
 Virginia;Fairfax County;703 - Fort Buffalo	precinct
 Virginia;Fairfax County;704 - Freedom Hill	precinct
@@ -963,6 +1048,7 @@ Virginia;Fairfax County;717 - Woodburn	precinct
 Virginia;Fairfax County;718 - Pine Ridge	precinct
 Virginia;Fairfax County;720 - Thoreau	precinct
 Virginia;Fairfax County;721 - Merrifield	precinct
+Virginia;Fairfax County;723 - Gallows East	precinct
 Virginia;Fairfax County;726 - Magarity	precinct
 Virginia;Fairfax County;727 - Oakton	precinct
 Virginia;Fairfax County;729 - Nottoway	precinct
@@ -997,6 +1083,7 @@ Virginia;Fairfax County;845 - Fountainhead	precinct
 Virginia;Fairfax County;846 - Greenbriar East	precinct
 Virginia;Fairfax County;847 - Greenbriar West	precinct
 Virginia;Fairfax County;848 - Fair Oaks	precinct
+Virginia;Fairfax County;849 - Newgate	precinct
 Virginia;Fairfax County;849 - Newgate North	precinct
 Virginia;Fairfax County;850 - South Run	precinct
 Virginia;Fairfax County;851 - Willow Springs	precinct
@@ -1030,6 +1117,11 @@ Virginia;Fairfax County;930 - Lees Corner	precinct
 Virginia;Fairfax County;931 - Carson	precinct
 Virginia;Fairfax County;932 - Stone South	precinct
 Virginia;Fairfax County;933 - Compton	precinct
+Virginia;Falls Church City;# Ab - Central Absentee Precinct	precinct
+Virginia;Falls Church City;## Provisional	precinct
+Virginia;Falls Church City;001 - First Ward	precinct
+Virginia;Falls Church City;002 - Second Ward	precinct
+Virginia;Falls Church City;003 - Third Ward	precinct
 Virginia;Fauquier County;# Ab - Central Absentee Precinct	precinct
 Virginia;Fauquier County;## Provisional	precinct
 Virginia;Fauquier County;101 - Kettle Run	precinct
@@ -1066,6 +1158,14 @@ Virginia;Fluvanna County;201 - Columbia	precinct
 Virginia;Fluvanna County;301 - Fork Union	precinct
 Virginia;Fluvanna County;401 - Cunningham	precinct
 Virginia;Fluvanna County;501 - Rivanna	precinct
+Virginia;Franklin City;# Ab - Central Absentee Precinct	precinct
+Virginia;Franklin City;## Provisional	precinct
+Virginia;Franklin City;101 - Precinct 1-1	precinct
+Virginia;Franklin City;201 - Precinct 2-1	precinct
+Virginia;Franklin City;301 - Precinct 3-1	precinct
+Virginia;Franklin City;401 - Precinct 4-1	precinct
+Virginia;Franklin City;501 - Precinct 5-1	precinct
+Virginia;Franklin City;601 - Precinct 6-1	precinct
 Virginia;Franklin County;# Ab - Central Absentee Precinct	precinct
 Virginia;Franklin County;## Provisional	precinct
 Virginia;Franklin County;102 - Burnt Chimney	precinct
@@ -1114,6 +1214,18 @@ Virginia;Frederick County;503 - Canterburg	precinct
 Virginia;Frederick County;601 - Millbrook	precinct
 Virginia;Frederick County;602 - Ash Hollow	precinct
 Virginia;Frederick County;603 - Greenwood	precinct
+Virginia;Fredericksburg City;# Ab - Central Absentee Precinct	precinct
+Virginia;Fredericksburg City;## Provisional	precinct
+Virginia;Fredericksburg City;101 - Precinct 1 - District One	precinct
+Virginia;Fredericksburg City;201 - Precinct 1 - District Two	precinct
+Virginia;Fredericksburg City;301 - Precinct 1 - District Three	precinct
+Virginia;Fredericksburg City;401 - Precinct 1 - District Four	precinct
+Virginia;Fredericksburg City;402 - Precinct 2 - District Four	precinct
+Virginia;Galax City;# Ab - Central Absentee Precinct	precinct
+Virginia;Galax City;## Provisional	precinct
+Virginia;Galax City;001 - East	precinct
+Virginia;Galax City;002 - North	precinct
+Virginia;Galax City;003 - South	precinct
 Virginia;Giles County;# Ab - Central Absentee Precinct	precinct
 Virginia;Giles County;## Provisional	precinct
 Virginia;Giles County;101 - Glen Lyn	precinct
@@ -1207,8 +1319,42 @@ Virginia;Halifax County;702 - Midway	precinct
 Virginia;Halifax County;703 - Virgilina	precinct
 Virginia;Halifax County;801 - South Boston	precinct
 Virginia;Halifax County;802 - South Boston West	precinct
+Virginia;Halifax County;Ward A - 1160A	precinct
 Virginia;Halifax County;Ward B - 1160B	precinct
+Virginia;Halifax County;Ward C - 1160C	precinct
 Virginia;Halifax County;Ward D - 1160D	precinct
+Virginia;Hampton City;# Ab - Central Absentee Precinct	precinct
+Virginia;Hampton City;## Provisional	precinct
+Virginia;Hampton City;101 - Aberdeen	precinct
+Virginia;Hampton City;102 - Bassette	precinct
+Virginia;Hampton City;103 - City Hall	precinct
+Virginia;Hampton City;104 - Cooper	precinct
+Virginia;Hampton City;105 - East Hampton	precinct
+Virginia;Hampton City;106 - Armstrong	precinct
+Virginia;Hampton City;107 - Lindsay	precinct
+Virginia;Hampton City;108 - Thomas	precinct
+Virginia;Hampton City;109 - Phenix	precinct
+Virginia;Hampton City;110 - Phoebus	precinct
+Virginia;Hampton City;111 - Hampton Library	precinct
+Virginia;Hampton City;112 - Smith	precinct
+Virginia;Hampton City;115 - Wythe	precinct
+Virginia;Hampton City;116 - Jones	precinct
+Virginia;Hampton City;117 - Kecoughtan	precinct
+Virginia;Hampton City;118 - Mallory	precinct
+Virginia;Hampton City;201 - Booker	precinct
+Virginia;Hampton City;202 - Bryan	precinct
+Virginia;Hampton City;203 - Burbank	precinct
+Virginia;Hampton City;204 - Forrest	precinct
+Virginia;Hampton City;205 - Asbury	precinct
+Virginia;Hampton City;208 - Kraft	precinct
+Virginia;Hampton City;209 - Langley	precinct
+Virginia;Hampton City;210 - Machen	precinct
+Virginia;Hampton City;212 - Bethel	precinct
+Virginia;Hampton City;213 - Phillips	precinct
+Virginia;Hampton City;214 - Tucker Capps	precinct
+Virginia;Hampton City;215 - Tyler	precinct
+Virginia;Hampton City;216 - Sandy Bottom	precinct
+Virginia;Hampton City;217 - Syms	precinct
 Virginia;Hanover County;# Ab - Central Absentee Precinct	precinct
 Virginia;Hanover County;## Provisional	precinct
 Virginia;Hanover County;101 - Ashland	precinct
@@ -1247,6 +1393,16 @@ Virginia;Hanover County;702 - Montpelier	precinct
 Virginia;Hanover County;703 - Rockville	precinct
 Virginia;Hanover County;704 - Elmont	precinct
 Virginia;Hanover County;705 - South Anna	precinct
+Virginia;Harrisonburg City;# Ab - Central Absentee Precinct	precinct
+Virginia;Harrisonburg City;## Provisional	precinct
+Virginia;Harrisonburg City;101 - Northeast	precinct
+Virginia;Harrisonburg City;102 - East Central	precinct
+Virginia;Harrisonburg City;103 - Southeast	precinct
+Virginia;Harrisonburg City;104 - East	precinct
+Virginia;Harrisonburg City;105 - South East Central	precinct
+Virginia;Harrisonburg City;201 - Northwest	precinct
+Virginia;Harrisonburg City;202 - Southwest	precinct
+Virginia;Harrisonburg City;203 - West	precinct
 Virginia;Henrico County;# Ab - Central Absentee Precinct	precinct
 Virginia;Henrico County;## Provisional	precinct
 Virginia;Henrico County;101 - Coalpit	precinct
@@ -1305,6 +1461,7 @@ Virginia;Henrico County;312 - Springfield	precinct
 Virginia;Henrico County;313 - Stoney Run	precinct
 Virginia;Henrico County;314 - Three Chopt	precinct
 Virginia;Henrico County;315 - Tucker	precinct
+Virginia;Henrico County;316 - Colonial Trail	precinct
 Virginia;Henrico County;401 - Quioccasin	precinct
 Virginia;Henrico County;402 - Crestview	precinct
 Virginia;Henrico County;403 - Derbyshire	precinct
@@ -1375,6 +1532,15 @@ Virginia;Highland County;005 - Blue Grass	precinct
 Virginia;Highland County;007 - Mill Gap	precinct
 Virginia;Highland County;008 - Mcdowell	precinct
 Virginia;Highland County;010 - Headwaters	precinct
+Virginia;Hopewell City;# Ab - Central Absentee Precinct	precinct
+Virginia;Hopewell City;## Provisional	precinct
+Virginia;Hopewell City;101 - Ward One	precinct
+Virginia;Hopewell City;201 - Ward Two	precinct
+Virginia;Hopewell City;301 - Ward Three	precinct
+Virginia;Hopewell City;401 - Ward Four	precinct
+Virginia;Hopewell City;501 - Ward Five	precinct
+Virginia;Hopewell City;601 - Ward Six	precinct
+Virginia;Hopewell City;701 - Ward Seven	precinct
 Virginia;Isle Of Wight County;# Ab - Central Absentee Precinct	precinct
 Virginia;Isle Of Wight County;## Provisional	precinct
 Virginia;Isle Of Wight County;101 - Smithfield	precinct
@@ -1460,6 +1626,9 @@ Virginia;Lee County;501 - Saint Charles	precinct
 Virginia;Lee County;502 - Pennington	precinct
 Virginia;Lee County;503 - Robbins Chapel	precinct
 Virginia;Lee County;504 - Keokee	precinct
+Virginia;Lexington City;# Ab - Central Absentee Precinct	precinct
+Virginia;Lexington City;## Provisional	precinct
+Virginia;Lexington City;001 - Lexington	precinct
 Virginia;Loudoun County;# Ab - Central Absentee Precinct	precinct
 Virginia;Loudoun County;## Provisional	precinct
 Virginia;Loudoun County;107 - Little River	precinct
@@ -1475,6 +1644,7 @@ Virginia;Loudoun County;122 - Hutchison Farm	precinct
 Virginia;Loudoun County;123 - Cardinal Ridge	precinct
 Virginia;Loudoun County;124 - Liberty	precinct
 Virginia;Loudoun County;125 - Rock Ridge	precinct
+Virginia;Loudoun County;126-Goshen Post	precinct
 Virginia;Loudoun County;207 - River Bend	precinct
 Virginia;Loudoun County;208 - Algonkian	precinct
 Virginia;Loudoun County;209 - Potomac Falls	precinct
@@ -1501,6 +1671,10 @@ Virginia;Loudoun County;314 - Legacy	precinct
 Virginia;Loudoun County;315 - Firehouse	precinct
 Virginia;Loudoun County;316 - Creighton'S Corner	precinct
 Virginia;Loudoun County;318 - Madison'S Trust	precinct
+Virginia;Loudoun County;319 - John Champe	precinct
+Virginia;Loudoun County;320 - Stone Hill	precinct
+Virginia;Loudoun County;321 - Brambleton Middle	precinct
+Virginia;Loudoun County;322-Buffalo Trail	precinct
 Virginia;Loudoun County;401 - West Lovettsville	precinct
 Virginia;Loudoun County;402 - Waterford	precinct
 Virginia;Loudoun County;403 - Lucketts	precinct
@@ -1585,6 +1759,26 @@ Virginia;Lunenburg County;502 - Peoples Community Center	precinct
 Virginia;Lunenburg County;601 - Hounds Creek	precinct
 Virginia;Lunenburg County;701 - Meherrin Fire Department	precinct
 Virginia;Lunenburg County;702 - Victoria Public Library	precinct
+Virginia;Lynchburg City;# Ab - Central Absentee Precinct	precinct
+Virginia;Lynchburg City;## Provisional	precinct
+Virginia;Lynchburg City;101 - First Ward First Precinct	precinct
+Virginia;Lynchburg City;102 - First Ward Second Precinct	precinct
+Virginia;Lynchburg City;103 - First Ward Third Precinct	precinct
+Virginia;Lynchburg City;104 - First Ward Fourth Precinct	precinct
+Virginia;Lynchburg City;105 - First Ward Fifth Precinct	precinct
+Virginia;Lynchburg City;201 - Second Ward First Precinct	precinct
+Virginia;Lynchburg City;202 - Second Ward Second Precinct	precinct
+Virginia;Lynchburg City;203 - Second Ward Third Precinct	precinct
+Virginia;Lynchburg City;204 - Second Ward Fourth Precinct	precinct
+Virginia;Lynchburg City;301 - Third Ward First Precinct	precinct
+Virginia;Lynchburg City;302 - Third Ward Second Precinct	precinct
+Virginia;Lynchburg City;303 - Third Ward Third Precinct	precinct
+Virginia;Lynchburg City;304 - Third Ward Fourth Precinct	precinct
+Virginia;Lynchburg City;305 - Third Ward Fifth Precinct	precinct
+Virginia;Lynchburg City;401 - Fourth Ward First Precinct	precinct
+Virginia;Lynchburg City;402 - Fourth Ward Second Precinct	precinct
+Virginia;Lynchburg City;403 - Fourth Ward Third Precinct	precinct
+Virginia;Lynchburg City;404 - Fourth Ward Fourth Precinct	precinct
 Virginia;Madison County;# Ab - Central Absentee Precinct	precinct
 Virginia;Madison County;## Provisional	precinct
 Virginia;Madison County;001 - Oak Park	precinct
@@ -1596,6 +1790,27 @@ Virginia;Madison County;006 - Wolftown	precinct
 Virginia;Madison County;007 - Brightwood	precinct
 Virginia;Madison County;008 - Criglersville	precinct
 Virginia;Madison County;009 - Etlan	precinct
+Virginia;Manassas City;# Ab - Central Absentee Precinct	precinct
+Virginia;Manassas City;## Provisional	precinct
+Virginia;Manassas City;001 - Dean	precinct
+Virginia;Manassas City;002 - Weems	precinct
+Virginia;Manassas City;003 - Metz	precinct
+Virginia;Manassas City;004 - Haydon	precinct
+Virginia;Manassas City;005 - Baldwin	precinct
+Virginia;Manassas City;006 - Round	precinct
+Virginia;Manassas Park City;# Ab - Central Absentee Precinct	precinct
+Virginia;Manassas Park City;## Provisional	precinct
+Virginia;Manassas Park City;001 - Precinct One	precinct
+Virginia;Manassas Park City;002 - Precinct Two	precinct
+Virginia;Manassas Park City;003 - Precinct Three	precinct
+Virginia;Martinsville City;# Ab - Central Absentee Precinct	precinct
+Virginia;Martinsville City;## Provisional	precinct
+Virginia;Martinsville City;001 - Precinct #1	precinct
+Virginia;Martinsville City;002 - Precinct #2	precinct
+Virginia;Martinsville City;003 - Precinct #3	precinct
+Virginia;Martinsville City;004 - Precinct #4	precinct
+Virginia;Martinsville City;005 - Precinct #5	precinct
+Virginia;Martinsville City;006 - Precinct #6	precinct
 Virginia;Mathews County;# Ab - Central Absentee Precinct	precinct
 Virginia;Mathews County;## Provisional	precinct
 Virginia;Mathews County;001 - Chesapeake	precinct
@@ -1683,6 +1898,104 @@ Virginia;New Kent County;401 - Providence Forge	precinct
 Virginia;New Kent County;403 - Mountcastle	precinct
 Virginia;New Kent County;501 - Eltham	precinct
 Virginia;New Kent County;502 - Chickahominy River	precinct
+Virginia;Newport News City;# Ab - Central Absentee Precinct	precinct
+Virginia;Newport News City;## Provisional	precinct
+Virginia;Newport News City;101 - Denbigh	precinct
+Virginia;Newport News City;102 - Epes	precinct
+Virginia;Newport News City;103 - Jenkins	precinct
+Virginia;Newport News City;104 - Mcintosh	precinct
+Virginia;Newport News City;105 - Oyster Point	precinct
+Virginia;Newport News City;106 - Reservoir	precinct
+Virginia;Newport News City;107 - Richneck	precinct
+Virginia;Newport News City;108 - Lee Hall	precinct
+Virginia;Newport News City;109 - Windsor	precinct
+Virginia;Newport News City;110 - Greenwood	precinct
+Virginia;Newport News City;201 - Bland	precinct
+Virginia;Newport News City;202 - Boulevard	precinct
+Virginia;Newport News City;203 - Charles	precinct
+Virginia;Newport News City;204 - Wellesley	precinct
+Virginia;Newport News City;205 - Deep Creek	precinct
+Virginia;Newport News City;208 - Hidenwood	precinct
+Virginia;Newport News City;209 - Hilton	precinct
+Virginia;Newport News City;210 - Nelson	precinct
+Virginia;Newport News City;211 - Palmer	precinct
+Virginia;Newport News City;212 - Riverside	precinct
+Virginia;Newport News City;213 - Sanford	precinct
+Virginia;Newport News City;215 - Warwick	precinct
+Virginia;Newport News City;216 - Yates	precinct
+Virginia;Newport News City;217 - Riverview	precinct
+Virginia;Newport News City;218 - Kiln Creek	precinct
+Virginia;Newport News City;219 - Deer Park	precinct
+Virginia;Newport News City;302 - Briarfield	precinct
+Virginia;Newport News City;303 - Carver	precinct
+Virginia;Newport News City;304 - Chestnut	precinct
+Virginia;Newport News City;305 - Downtown	precinct
+Virginia;Newport News City;306 - Dunbar	precinct
+Virginia;Newport News City;307 - Huntington	precinct
+Virginia;Newport News City;308 - Jefferson	precinct
+Virginia;Newport News City;309 - Magruder	precinct
+Virginia;Newport News City;310 - Marshall	precinct
+Virginia;Newport News City;311 - Newmarket	precinct
+Virginia;Newport News City;312 - Newsome Park	precinct
+Virginia;Newport News City;313 - Reed	precinct
+Virginia;Newport News City;314 - River	precinct
+Virginia;Newport News City;315 - Sedgefield	precinct
+Virginia;Newport News City;316 - South Morrison	precinct
+Virginia;Newport News City;317 - Washington	precinct
+Virginia;Newport News City;318 - Wilson	precinct
+Virginia;Newport News City;319 - Saunders	precinct
+Virginia;Newport News City;320 - Watkins	precinct
+Virginia;Norfolk City;# Ab - Central Absentee Precinct	precinct
+Virginia;Norfolk City;## Provisional	precinct
+Virginia;Norfolk City;101 - Granby	precinct
+Virginia;Norfolk City;102 - Ocean View School	precinct
+Virginia;Norfolk City;103 - Northside	precinct
+Virginia;Norfolk City;104 - Titustown	precinct
+Virginia;Norfolk City;106 - Second Presbyterian	precinct
+Virginia;Norfolk City;201 - Larchmont School	precinct
+Virginia;Norfolk City;203 - Ghent Square	precinct
+Virginia;Norfolk City;207 - Lambert'S Point	precinct
+Virginia;Norfolk City;208 - Larchmont Library	precinct
+Virginia;Norfolk City;210 - Maury	precinct
+Virginia;Norfolk City;211 - Chrysler Museum	precinct
+Virginia;Norfolk City;212 - Park Place	precinct
+Virginia;Norfolk City;213 - Taylor Elementary School	precinct
+Virginia;Norfolk City;214 - Stuart	precinct
+Virginia;Norfolk City;215 - Suburban Park	precinct
+Virginia;Norfolk City;217 - Wesley	precinct
+Virginia;Norfolk City;218 - Willard	precinct
+Virginia;Norfolk City;301 - Ballentine	precinct
+Virginia;Norfolk City;302 - Tanners Creek	precinct
+Virginia;Norfolk City;303 - Broad Creek	precinct
+Virginia;Norfolk City;304 - Coleman Place School	precinct
+Virginia;Norfolk City;305 - Lafayette-Winona	precinct
+Virginia;Norfolk City;306 - Lindenwood	precinct
+Virginia;Norfolk City;309 - Norview	precinct
+Virginia;Norfolk City;310 - Rosemont	precinct
+Virginia;Norfolk City;311 - Sherwood	precinct
+Virginia;Norfolk City;313 - Union Chapel	precinct
+Virginia;Norfolk City;402 - Berkley	precinct
+Virginia;Norfolk City;403 - Brambleton	precinct
+Virginia;Norfolk City;404 - Campostella	precinct
+Virginia;Norfolk City;405 - Chesterfield	precinct
+Virginia;Norfolk City;406 - Barron Black	precinct
+Virginia;Norfolk City;408 - Easton	precinct
+Virginia;Norfolk City;409 - Fairlawn	precinct
+Virginia;Norfolk City;411 - Ruffner Academy	precinct
+Virginia;Norfolk City;412 - Ingleside	precinct
+Virginia;Norfolk City;413 - Poplar Halls	precinct
+Virginia;Norfolk City;414 - Young Park	precinct
+Virginia;Norfolk City;415 - Lake Taylor High School	precinct
+Virginia;Norfolk City;501 - Bayview	precinct
+Virginia;Norfolk City;503 - East Ocean View	precinct
+Virginia;Norfolk City;504 - Larrymore	precinct
+Virginia;Norfolk City;505 - Little Creek	precinct
+Virginia;Norfolk City;506 - Ocean View Center	precinct
+Virginia;Norfolk City;507 - Pretlow	precinct
+Virginia;Norfolk City;509 - Tarrallton	precinct
+Virginia;Norfolk City;510 - Third Presbyterian	precinct
+Virginia;Norfolk City;511 - Crossroads	precinct
+Virginia;Norfolk City;512 - Azalea Gardens	precinct
 Virginia;Northampton County;# Ab - Central Absentee Precinct	precinct
 Virginia;Northampton County;## Provisional	precinct
 Virginia;Northampton County;101 - Precinct 1-1	precinct
@@ -1698,6 +2011,8 @@ Virginia;Northumberland County;301 - 3A	precinct
 Virginia;Northumberland County;302 - 3B	precinct
 Virginia;Northumberland County;401 - 4A	precinct
 Virginia;Northumberland County;501 - 5A	precinct
+Virginia;Norton City;## Provisional	precinct
+Virginia;Norton City;001 - East Ward	precinct
 Virginia;Nottoway County;# Ab - Central Absentee Precinct	precinct
 Virginia;Nottoway County;## Provisional	precinct
 Virginia;Nottoway County;101 - Precinct 1-1	precinct
@@ -1743,6 +2058,15 @@ Virginia;Patrick County;402 - Stuart Fairgrounds	precinct
 Virginia;Patrick County;501 - Stuart Community	precinct
 Virginia;Patrick County;502 - Elamsville	precinct
 Virginia;Patrick County;503 - Woolwine	precinct
+Virginia;Petersburg City;# Ab - Central Absentee Precinct	precinct
+Virginia;Petersburg City;## Provisional	precinct
+Virginia;Petersburg City;101 - First Ward First Precinct	precinct
+Virginia;Petersburg City;201 - Second Ward First Precinct	precinct
+Virginia;Petersburg City;301 - Third Ward First Precinct	precinct
+Virginia;Petersburg City;401 - Fourth Ward First Precinct	precinct
+Virginia;Petersburg City;501 - Fifth Ward First Precinct	precinct
+Virginia;Petersburg City;601 - Sixth Ward First Precinct	precinct
+Virginia;Petersburg City;701 - Seventh Ward First Precinct	precinct
 Virginia;Pittsylvania County;# Ab - Central Absentee Precinct	precinct
 Virginia;Pittsylvania County;## Provisional	precinct
 Virginia;Pittsylvania County;103 - Twin Springs	precinct
@@ -1774,6 +2098,44 @@ Virginia;Pittsylvania County;702 - Bachelors Hall	precinct
 Virginia;Pittsylvania County;703 - Ferry Road	precinct
 Virginia;Pittsylvania County;704 - Mt Hermon	precinct
 Virginia;Pittsylvania County;705 - Mt Cross	precinct
+Virginia;Poquoson City;# Ab - Central Absentee Precinct	precinct
+Virginia;Poquoson City;## Provisional	precinct
+Virginia;Poquoson City;001 - Central	precinct
+Virginia;Poquoson City;002 - Eastern	precinct
+Virginia;Poquoson City;003 - Western	precinct
+Virginia;Portsmouth City;# Ab - Central Absentee Precinct	precinct
+Virginia;Portsmouth City;## Provisional	precinct
+Virginia;Portsmouth City;001 - Emanuel A. M. E. Church	precinct
+Virginia;Portsmouth City;005 - Hampton Roads Community Health Center	precinct
+Virginia;Portsmouth City;007- Park View Elementary School	precinct
+Virginia;Portsmouth City;009 - Third Baptist Church	precinct
+Virginia;Portsmouth City;010 - Port Norfolk Recreation Center	precinct
+Virginia;Portsmouth City;011 - Mt. Hermon Village	precinct
+Virginia;Portsmouth City;013 - St. Mark Missionary Baptist Church	precinct
+Virginia;Portsmouth City;014 - Brighton Elementary School	precinct
+Virginia;Portsmouth City;016 - Cradock Middle School	precinct
+Virginia;Portsmouth City;017 - Victory Life Fellowship	precinct
+Virginia;Portsmouth City;019 - Victory Elementary School	precinct
+Virginia;Portsmouth City;020 - Noble Street Baptist Church	precinct
+Virginia;Portsmouth City;021 - John F. Kennedy Community Center	precinct
+Virginia;Portsmouth City;022 - St. Mark Deliverance Center	precinct
+Virginia;Portsmouth City;023 - Westhaven Baptist Church	precinct
+Virginia;Portsmouth City;024 - The Senior Station	precinct
+Virginia;Portsmouth City;025 - John Tyler Elementary School	precinct
+Virginia;Portsmouth City;026 - William E. Waters Middle School	precinct
+Virginia;Portsmouth City;027 - Cavalier Manor Recreation Center	precinct
+Virginia;Portsmouth City;028 - Lakeview Elementary School	precinct
+Virginia;Portsmouth City;029 - Woodrow Wilson High School	precinct
+Virginia;Portsmouth City;030 - The Rescue Church	precinct
+Virginia;Portsmouth City;031 - West Park Church Of Christ	precinct
+Virginia;Portsmouth City;032 - Hodges Manor Elementary School	precinct
+Virginia;Portsmouth City;033- Pinecrest Baptist Church	precinct
+Virginia;Portsmouth City;034- Churchland Branch Library	precinct
+Virginia;Portsmouth City;035 - Churchland Elementary School	precinct
+Virginia;Portsmouth City;036 - Scottish Rite Temple	precinct
+Virginia;Portsmouth City;037 - Churchland Middle School	precinct
+Virginia;Portsmouth City;038 - Grove Baptist Church	precinct
+Virginia;Portsmouth City;039 - Churchland Primary And Intermediate School	precinct
 Virginia;Powhatan County;# Ab - Central Absentee Precinct	precinct
 Virginia;Powhatan County;## Provisional	precinct
 Virginia;Powhatan County;101 - Subletts	precinct
@@ -1822,10 +2184,12 @@ Virginia;Prince William County;105 - Limestone	precinct
 Virginia;Prince William County;106 - Westgate	precinct
 Virginia;Prince William County;107 - Marsteller	precinct
 Virginia;Prince William County;108 - Victory	precinct
+Virginia;Prince William County;109 - Chris Yung	precinct
 Virginia;Prince William County;109 - Piney Branch	precinct
 Virginia;Prince William County;110 - Buckland Mills	precinct
 Virginia;Prince William County;111 - Bristow Run	precinct
 Virginia;Prince William County;112 - Burke-Nickens	precinct
+Virginia;Prince William County;114 - Piney Branch	precinct
 Virginia;Prince William County;201 - Saunders	precinct
 Virginia;Prince William County;202 - Marshall	precinct
 Virginia;Prince William County;203 - Bennett	precinct
@@ -1855,6 +2219,7 @@ Virginia;Prince William County;311 - Swans Creek	precinct
 Virginia;Prince William County;312 - Triangle	precinct
 Virginia;Prince William County;313 - Cardinal	precinct
 Virginia;Prince William County;314 - Cabin Branch	precinct
+Virginia;Prince William County;315 - Williams	precinct
 Virginia;Prince William County;401 - Evergreen	precinct
 Virginia;Prince William County;402 - Battlefield	precinct
 Virginia;Prince William County;403 - Bull Run	precinct
@@ -1919,6 +2284,12 @@ Virginia;Pulaski County;304 - Snowville	precinct
 Virginia;Pulaski County;401 - Massie	precinct
 Virginia;Pulaski County;402 - Walker	precinct
 Virginia;Pulaski County;501 - Robinson	precinct
+Virginia;Radford City;# Ab - Central Absentee Precinct	precinct
+Virginia;Radford City;## Provisional	precinct
+Virginia;Radford City;001 - East Precinct	precinct
+Virginia;Radford City;002 - Central Precinct	precinct
+Virginia;Radford City;003 - West Precinct	precinct
+Virginia;Radford City;004 - New River Precinct	precinct
 Virginia;Rappahannock County;# Ab - Central Absentee Precinct	precinct
 Virginia;Rappahannock County;## Provisional	precinct
 Virginia;Rappahannock County;101 - Washington	precinct
@@ -1927,6 +2298,77 @@ Virginia;Rappahannock County;301 - Sperryville	precinct
 Virginia;Rappahannock County;401 - Scrabble	precinct
 Virginia;Rappahannock County;501 - Chester Gap	precinct
 Virginia;Rappahannock County;502 - Flint Hill	precinct
+Virginia;Richmond City;# Ab - Central Absentee Precinct	precinct
+Virginia;Richmond City;## Provisional	precinct
+Virginia;Richmond City;101 - One Hundred One	precinct
+Virginia;Richmond City;102 - One Hundred Two	precinct
+Virginia;Richmond City;104 - One Hundred Four	precinct
+Virginia;Richmond City;105 - One Hundred Five	precinct
+Virginia;Richmond City;106 - One Hundred Six	precinct
+Virginia;Richmond City;111 - One Hundred Eleven	precinct
+Virginia;Richmond City;112 - One Hundred Twelve	precinct
+Virginia;Richmond City;113 - One Hundred Thirteen	precinct
+Virginia;Richmond City;114 - One Hundred Fourteen	precinct
+Virginia;Richmond City;115 - One Hundred Fifteen	precinct
+Virginia;Richmond City;203 - Two Hundred Three	precinct
+Virginia;Richmond City;204 - Two Hundred Four	precinct
+Virginia;Richmond City;206 - Two Hundred Six	precinct
+Virginia;Richmond City;207 - Two Hundred Seven	precinct
+Virginia;Richmond City;208 - Two Hundred Eight	precinct
+Virginia;Richmond City;213 - Two Hundred Thirteen	precinct
+Virginia;Richmond City;214 - Two Hundred Fourteen	precinct
+Virginia;Richmond City;215 - Two Hundred Fifteen	precinct
+Virginia;Richmond City;301 - Three Hundred One	precinct
+Virginia;Richmond City;302 - Three Hundred Two	precinct
+Virginia;Richmond City;303 - Three Hundred Three	precinct
+Virginia;Richmond City;304 - Three Hundred Four	precinct
+Virginia;Richmond City;305 - Three Hundred Five	precinct
+Virginia;Richmond City;306 - Three Hundred Six	precinct
+Virginia;Richmond City;307 - Three Hundred Seven	precinct
+Virginia;Richmond City;308 - Three Hundred Eight	precinct
+Virginia;Richmond City;309 - Three Hundred Nine	precinct
+Virginia;Richmond City;310 - Three Hundred Ten	precinct
+Virginia;Richmond City;402 - Four Hundred Two	precinct
+Virginia;Richmond City;404 - Four Hundred Four	precinct
+Virginia;Richmond City;409 - Four Hundred Nine	precinct
+Virginia;Richmond City;410 - Four Hundred Ten	precinct
+Virginia;Richmond City;412 - Four Hundred Twelve	precinct
+Virginia;Richmond City;413 - Four Hundred Thirteen	precinct
+Virginia;Richmond City;414 - Four Hundred Fourteen	precinct
+Virginia;Richmond City;415 - Four Hundred Fifteen	precinct
+Virginia;Richmond City;501 - Five Hundred One	precinct
+Virginia;Richmond City;503 - Five Hundred Three	precinct
+Virginia;Richmond City;504 - Five Hundred Four	precinct
+Virginia;Richmond City;505 - Five Hundred Five	precinct
+Virginia;Richmond City;508 - Five Hundred Eight	precinct
+Virginia;Richmond City;509 - Five Hundred Nine	precinct
+Virginia;Richmond City;510 - Five Hundred Ten	precinct
+Virginia;Richmond City;602 - Six Hundred Two	precinct
+Virginia;Richmond City;603 - Six Hundred Three	precinct
+Virginia;Richmond City;604 - Six Hundred Four	precinct
+Virginia;Richmond City;606 - Six Hundred Six	precinct
+Virginia;Richmond City;607 - Six Hundred Seven	precinct
+Virginia;Richmond City;609 - Six Hundred Nine	precinct
+Virginia;Richmond City;610 - Six Hundred Ten	precinct
+Virginia;Richmond City;701 - Seven Hundred One	precinct
+Virginia;Richmond City;702 - Seven Hundred Two	precinct
+Virginia;Richmond City;703 - Seven Hundred Three	precinct
+Virginia;Richmond City;705 - Seven Hundred Five	precinct
+Virginia;Richmond City;706 - Seven Hundred Six	precinct
+Virginia;Richmond City;707 - Seven Hundred Seven	precinct
+Virginia;Richmond City;708 - Seven Hundred Eight	precinct
+Virginia;Richmond City;802 - Eight Hundred Two	precinct
+Virginia;Richmond City;806 - Eight Hundred Six	precinct
+Virginia;Richmond City;810 - Eight Hundred Ten	precinct
+Virginia;Richmond City;811 - Eight Hundred Eleven	precinct
+Virginia;Richmond City;812 - Eight Hundred Twelve	precinct
+Virginia;Richmond City;814 - Eight Hundred Fourteen	precinct
+Virginia;Richmond City;902 - Nine Hundred Two	precinct
+Virginia;Richmond City;903 - Nine Hundred Three	precinct
+Virginia;Richmond City;908 - Nine Hundred Eight	precinct
+Virginia;Richmond City;909 - Nine Hundred Nine	precinct
+Virginia;Richmond City;910 - Nine Hundred Ten	precinct
+Virginia;Richmond City;911 - Nine Hundred Eleven	precinct
 Virginia;Richmond County;# Ab - Central Absentee Precinct	precinct
 Virginia;Richmond County;## Provisional	precinct
 Virginia;Richmond County;101 - Precinct 1-1	precinct
@@ -1934,6 +2376,29 @@ Virginia;Richmond County;201 - Precinct 2-1	precinct
 Virginia;Richmond County;301 - Precinct 3-1	precinct
 Virginia;Richmond County;401 - Precinct 4-1	precinct
 Virginia;Richmond County;501 - Precinct 5-1	precinct
+Virginia;Roanoke City;# Ab - Central Absentee Precinct	precinct
+Virginia;Roanoke City;## Provisional	precinct
+Virginia;Roanoke City;001 -Peters Creek	precinct
+Virginia;Roanoke City;002 - Grandview	precinct
+Virginia;Roanoke City;003 -Preston Park	precinct
+Virginia;Roanoke City;004 - Williamson Road	precinct
+Virginia;Roanoke City;005 - East Gate	precinct
+Virginia;Roanoke City;006 - Hollins Road	precinct
+Virginia;Roanoke City;007 - Southeast	precinct
+Virginia;Roanoke City;008 - Lincoln Terrace	precinct
+Virginia;Roanoke City;009 - Highland	precinct
+Virginia;Roanoke City;010 - Old Southwest-Wasena	precinct
+Virginia;Roanoke City;011 - Raleigh Court	precinct
+Virginia;Roanoke City;012 - South Roanoke	precinct
+Virginia;Roanoke City;013 - Garden City	precinct
+Virginia;Roanoke City;014 - Crystal Spring	precinct
+Virginia;Roanoke City;015 - Grandin Court	precinct
+Virginia;Roanoke City;016 - Deyerle	precinct
+Virginia;Roanoke City;017 - Lee-Hi	precinct
+Virginia;Roanoke City;018 - Old To Be Removed Virginia Heights-Norwich	precinct
+Virginia;Roanoke City;018 - Summit Hills	precinct
+Virginia;Roanoke City;019 - Forest Park	precinct
+Virginia;Roanoke City;020 - Eureka Park	precinct
 Virginia;Roanoke County;# Ab - Central Absentee Precinct	precinct
 Virginia;Roanoke County;## Provisional	precinct
 Virginia;Roanoke County;101 - Catawba	precinct
@@ -1956,10 +2421,12 @@ Virginia;Roanoke County;303 - Windsor Hills	precinct
 Virginia;Roanoke County;304 - Oak Grove	precinct
 Virginia;Roanoke County;305 - Castle Rock	precinct
 Virginia;Roanoke County;306 - Garst Mill	precinct
+Virginia;Roanoke County;401 - South Lindenwood	precinct
 Virginia;Roanoke County;402 - Bonsack	precinct
 Virginia;Roanoke County;403 - North Vinton	precinct
 Virginia;Roanoke County;404 - South Vinton	precinct
 Virginia;Roanoke County;405 - Lindenwood	precinct
+Virginia;Roanoke County;405 - North Lindenwood	precinct
 Virginia;Roanoke County;406 - Mount Pleasant	precinct
 Virginia;Roanoke County;501 - Cotton Hill	precinct
 Virginia;Roanoke County;502 - Penn Forest	precinct
@@ -2010,10 +2477,12 @@ Virginia;Rockingham County;305 - Massanetta Springs	precinct
 Virginia;Rockingham County;306 - Cross Keys	precinct
 Virginia;Rockingham County;307 - Crossroads	precinct
 Virginia;Rockingham County;401 - Bridgewater	precinct
+Virginia;Rockingham County;401 - West Bridgewater	precinct
 Virginia;Rockingham County;402 - Montezuma	precinct
 Virginia;Rockingham County;403 - Mt Crawford	precinct
 Virginia;Rockingham County;404 - North River	precinct
 Virginia;Rockingham County;405 - Ottobine	precinct
+Virginia;Rockingham County;406 - East Bridgewater	precinct
 Virginia;Rockingham County;501 - Elkton	precinct
 Virginia;Rockingham County;502 - Swift Run	precinct
 Virginia;Rockingham County;503 - Mcgaheysville	precinct
@@ -2036,6 +2505,18 @@ Virginia;Russell County;403 - Honaker	precinct
 Virginia;Russell County;501 - West Lebanon	precinct
 Virginia;Russell County;601 - East Lebanon	precinct
 Virginia;Russell County;602 - Elk Garden	precinct
+Virginia;Salem City;# Ab - Central Absentee Precinct	precinct
+Virginia;Salem City;## Provisional	precinct
+Virginia;Salem City;001 - North Salem No 2	precinct
+Virginia;Salem City;002 - Conehurst	precinct
+Virginia;Salem City;003 - Beverly Heights	precinct
+Virginia;Salem City;004 - West Salem	precinct
+Virginia;Salem City;005 - North Salem No 1	precinct
+Virginia;Salem City;006 - South Salem No 1	precinct
+Virginia;Salem City;007 - South Salem No 2	precinct
+Virginia;Salem City;008 - East Salem	precinct
+Virginia;Salem City;009 - South Side Hills	precinct
+Virginia;Salem City;010 - Hidden Valley	precinct
 Virginia;Scott County;# Ab - Central Absentee Precinct	precinct
 Virginia;Scott County;## Provisional	precinct
 Virginia;Scott County;101 - Weber City	precinct
@@ -2157,674 +2638,6 @@ Virginia;Stafford County;604 - England Run	precinct
 Virginia;Stafford County;701 - Woodlands	precinct
 Virginia;Stafford County;702 - Whitson	precinct
 Virginia;Stafford County;703 - Hampton	precinct
-Virginia;Surry County;## Provisional	precinct
-Virginia;Surry County;101 - Surry	precinct
-Virginia;Surry County;201 - Bacons Castle	precinct
-Virginia;Surry County;301 - Dendron	precinct
-Virginia;Surry County;302 - Walls Bridge	precinct
-Virginia;Surry County;401 - Carsley	precinct
-Virginia;Surry County;501 - Claremont	precinct
-Virginia;Surry County;502 - Spring Grove	precinct
-Virginia;Sussex County;# Ab - Central Absentee Precinct	precinct
-Virginia;Sussex County;## Provisional	precinct
-Virginia;Sussex County;101 - Waverly	precinct
-Virginia;Sussex County;201 - Stony Creek	precinct
-Virginia;Sussex County;202 - Little Mill	precinct
-Virginia;Sussex County;301 - Courthouse	precinct
-Virginia;Sussex County;302 - Wakefield	precinct
-Virginia;Sussex County;401 - Mars Hill	precinct
-Virginia;Sussex County;402 - West Wakefield	precinct
-Virginia;Sussex County;501 - Henry	precinct
-Virginia;Sussex County;502 - Yale	precinct
-Virginia;Sussex County;601 - Blackwater	precinct
-Virginia;Sussex County;602 - Newville	precinct
-Virginia;Tazewell County;# Ab - Central Absentee Precinct	precinct
-Virginia;Tazewell County;## Provisional	precinct
-Virginia;Tazewell County;101 - Abbs Valley	precinct
-Virginia;Tazewell County;102 - Tip Top	precinct
-Virginia;Tazewell County;103 - Boissevain	precinct
-Virginia;Tazewell County;104 - Falls Mills	precinct
-Virginia;Tazewell County;106 - Pocahontas	precinct
-Virginia;Tazewell County;107 - Amonate	precinct
-Virginia;Tazewell County;109 - Bishop	precinct
-Virginia;Tazewell County;110 - Adria	precinct
-Virginia;Tazewell County;111 - Gap Store	precinct
-Virginia;Tazewell County;112 - Bandy	precinct
-Virginia;Tazewell County;203 - Burkes Garden	precinct
-Virginia;Tazewell County;204 - Clear Fork	precinct
-Virginia;Tazewell County;207 - Freestone	precinct
-Virginia;Tazewell County;209 - Jeffersonville	precinct
-Virginia;Tazewell County;214 - Thompson Valley	precinct
-Virginia;Tazewell County;301 - Cedar Bluff	precinct
-Virginia;Tazewell County;302 - Baptist Valley	precinct
-Virginia;Tazewell County;303 - Wardell	precinct
-Virginia;Tazewell County;305 - Pounding Mill	precinct
-Virginia;Tazewell County;401 - Richlands	precinct
-Virginia;Tazewell County;402 - Jewell Ridge	precinct
-Virginia;Tazewell County;404 - Raven	precinct
-Virginia;Tazewell County;501 - Springville	precinct
-Virginia;Tazewell County;502 - Graham	precinct
-Virginia;Warren County;# Ab - Central Absentee Precinct	precinct
-Virginia;Warren County;## Provisional	precinct
-Virginia;Warren County;101 - Fork Town	precinct
-Virginia;Warren County;102 - Otterburn	precinct
-Virginia;Warren County;201 - Happy Creek	precinct
-Virginia;Warren County;202 - Linden	precinct
-Virginia;Warren County;301 - North River	precinct
-Virginia;Warren County;302 - Riverton	precinct
-Virginia;Warren County;401 - East Shenandoah	precinct
-Virginia;Warren County;402 - Town - West Shenandoah	precinct
-Virginia;Warren County;501 - South River	precinct
-Virginia;Warren County;502 - Bentonville	precinct
-Virginia;Warren County;504 - Browntown	precinct
-Virginia;Washington County;# Ab - Central Absentee Precinct	precinct
-Virginia;Washington County;## Provisional	precinct
-Virginia;Washington County;101 - East Abingdon	precinct
-Virginia;Washington County;102 - West Abingdon	precinct
-Virginia;Washington County;201 - Clinchburg	precinct
-Virginia;Washington County;202 - Greendale	precinct
-Virginia;Washington County;203 - Hayters Gap	precinct
-Virginia;Washington County;204 Woodland Hills	precinct
-Virginia;Washington County;301 - Watauga	precinct
-Virginia;Washington County;302 - South Abingdon	precinct
-Virginia;Washington County;401 - Glade Spring	precinct
-Virginia;Washington County;402 - Meadowview	precinct
-Virginia;Washington County;501 - Rhea Valley	precinct
-Virginia;Washington County;502 - Damascus	precinct
-Virginia;Washington County;504 - Green Cove	precinct
-Virginia;Washington County;601 - Burson Place	precinct
-Virginia;Washington County;602 - Mendota	precinct
-Virginia;Washington County;603 - Valley Institute	precinct
-Virginia;Washington County;701 - High Point	precinct
-Virginia;Washington County;702 - Wallace	precinct
-Virginia;Washington County;703 - John Battle	precinct
-Virginia;Westmoreland County;# Ab - Central Absentee Precinct	precinct
-Virginia;Westmoreland County;## Provisional	precinct
-Virginia;Westmoreland County;101 - Precinct 1-1	precinct
-Virginia;Westmoreland County;102 - Precinct 1-2	precinct
-Virginia;Westmoreland County;201 - Precinct 2-1	precinct
-Virginia;Westmoreland County;202 - Precinct 2-2	precinct
-Virginia;Westmoreland County;301 - Precinct 3-1	precinct
-Virginia;Westmoreland County;302 - Precinct 3-2	precinct
-Virginia;Westmoreland County;401 - Precinct 4-1	precinct
-Virginia;Westmoreland County;501 - Precinct 5-1	precinct
-Virginia;Wise County;# Ab - Central Absentee Precinct	precinct
-Virginia;Wise County;## Provisional	precinct
-Virginia;Wise County;101 - Appalachia	precinct
-Virginia;Wise County;102 - Dorchester	precinct
-Virginia;Wise County;103 - Guest River Voting Place	precinct
-Virginia;Wise County;104 - West Pound	precinct
-Virginia;Wise County;201 - North Coeburn	precinct
-Virginia;Wise County;202 - Wise	precinct
-Virginia;Wise County;203 - East Pound	precinct
-Virginia;Wise County;301 - Big Stone Gap	precinct
-Virginia;Wise County;302 - East Stone Gap	precinct
-Virginia;Wise County;401 - Clinch Valley	precinct
-Virginia;Wise County;402 - South Coeburn	precinct
-Virginia;Wise County;403 - St Paul	precinct
-Virginia;Wythe County;# Ab - Central Absentee Precinct	precinct
-Virginia;Wythe County;## Provisional	precinct
-Virginia;Wythe County;101 - Royal Oak	precinct
-Virginia;Wythe County;102 - Rural Retreat	precinct
-Virginia;Wythe County;203 - West Wytheville	precinct
-Virginia;Wythe County;303 - East Wytheville	precinct
-Virginia;Wythe County;401 - Fort Chiswell	precinct
-Virginia;Wythe County;402 - Max Meadows	precinct
-Virginia;Wythe County;501 - Jackson Memorial	precinct
-Virginia;Wythe County;502 - Sheffey	precinct
-Virginia;Wythe County;601 - Huddle	precinct
-Virginia;Wythe County;602 - Zion	precinct
-Virginia;Wythe County;603 Evergreen	precinct
-Virginia;York County;# Ab - Central Absentee Precinct	precinct
-Virginia;York County;## Provisional	precinct
-Virginia;York County;101 - Queens Lake	precinct
-Virginia;York County;102 - Waller Mill	precinct
-Virginia;York County;103 - Magruder	precinct
-Virginia;York County;201 - Coventry	precinct
-Virginia;York County;202 - Kiln Creek	precinct
-Virginia;York County;301 - Seaford	precinct
-Virginia;York County;302 - Yorktown	precinct
-Virginia;York County;303 - Edgehill	precinct
-Virginia;York County;401 - Harwoods Mill	precinct
-Virginia;York County;402 - Dare	precinct
-Virginia;York County;403 - Grafton	precinct
-Virginia;York County;501 - Tabb	precinct
-Virginia;York County;502 - Bethel	precinct
-Virginia;Alexandria City;# Ab - Central Absentee Precinct	precinct
-Virginia;Alexandria City;## Provisional	precinct
-Virginia;Alexandria City;101 - Ladrey Senior Building	precinct
-Virginia;Alexandria City;102 - City Hall	precinct
-Virginia;Alexandria City;103 - Lyles Crouch School	precinct
-Virginia;Alexandria City;104 - Durant Center	precinct
-Virginia;Alexandria City;105 - Lee Center	precinct
-Virginia;Alexandria City;106 - Cora Kelly Center	precinct
-Virginia;Alexandria City;107 - Mt Vernon Recreation Center	precinct
-Virginia;Alexandria City;108 - George Washington Middle Sch	precinct
-Virginia;Alexandria City;109 - Fire Department Headquarters	precinct
-Virginia;Alexandria City;110 - Charles Houston Center	precinct
-Virginia;Alexandria City;201 - Maury School	precinct
-Virginia;Alexandria City;202 - George Mason School	precinct
-Virginia;Alexandria City;203 - Charles Barrett Center	precinct
-Virginia;Alexandria City;204 - Blessed Sacrament Church	precinct
-Virginia;Alexandria City;205 - Douglas Macarthur School	precinct
-Virginia;Alexandria City;206 - Chinquapin Park Recreation Ctr	precinct
-Virginia;Alexandria City;207 - Temple Beth El Synagogue	precinct
-Virginia;Alexandria City;208 - Nova Arts Center	precinct
-Virginia;Alexandria City;209 - James K Polk School	precinct
-Virginia;Alexandria City;210 - The Hermitage	precinct
-Virginia;Alexandria City;302 - Patrick Henry Rec Center	precinct
-Virginia;Alexandria City;303 - Charles E Beatley Library	precinct
-Virginia;Alexandria City;304 - Samuel Tucker School	precinct
-Virginia;Alexandria City;305 - John Adams School	precinct
-Virginia;Alexandria City;306 - William Ramsay School	precinct
-Virginia;Alexandria City;307 - South Port	precinct
-Virginia;Alexandria City;308 - Cameron Station Community Ctr	precinct
-Virginia;Bristol City;# Ab - Central Absentee Precinct	precinct
-Virginia;Bristol City;## Provisional	precinct
-Virginia;Bristol City;001 - First Ward	precinct
-Virginia;Bristol City;002 - Second Ward	precinct
-Virginia;Bristol City;003 - Third Ward	precinct
-Virginia;Bristol City;004 - Fourth Ward	precinct
-Virginia;Buena Vista City;## Provisional	precinct
-Virginia;Buena Vista City;001 - First Ward	precinct
-Virginia;Buena Vista City;002 - Second Ward	precinct
-Virginia;Charlottesville City;# Ab - Central Absentee Precinct	precinct
-Virginia;Charlottesville City;## Provisional	precinct
-Virginia;Charlottesville City;101 - Key Recreation	precinct
-Virginia;Charlottesville City;102 - Clark	precinct
-Virginia;Charlottesville City;201 - Carver	precinct
-Virginia;Charlottesville City;202 - Walker	precinct
-Virginia;Charlottesville City;301 - Benjamin Tonsler	precinct
-Virginia;Charlottesville City;302 - Johnson	precinct
-Virginia;Charlottesville City;303 - Buford	precinct
-Virginia;Charlottesville City;401 - Venable	precinct
-Virginia;Charlottesville City;402 - Alumni Hall	precinct
-Virginia;Chesapeake City;# Ab - Central Absentee Precinct	precinct
-Virginia;Chesapeake City;## Provisional	precinct
-Virginia;Chesapeake City;001 - Great Bridge	precinct
-Virginia;Chesapeake City;002 - Bethel	precinct
-Virginia;Chesapeake City;003 - Camelot	precinct
-Virginia;Chesapeake City;004 - Churchland	precinct
-Virginia;Chesapeake City;005 - Crestwood	precinct
-Virginia;Chesapeake City;006 - Deep Creek	precinct
-Virginia;Chesapeake City;007 - Greenbrier	precinct
-Virginia;Chesapeake City;008 - South Norfolk Recreation	precinct
-Virginia;Chesapeake City;009 - Bells Mill	precinct
-Virginia;Chesapeake City;010 - Oscar Smith	precinct
-Virginia;Chesapeake City;011 - Geneva Park	precinct
-Virginia;Chesapeake City;012 - Georgetown	precinct
-Virginia;Chesapeake City;013 - Gilmerton	precinct
-Virginia;Chesapeake City;014 - Grassfield	precinct
-Virginia;Chesapeake City;015 - B M Williams	precinct
-Virginia;Chesapeake City;016 - Hickory Grove	precinct
-Virginia;Chesapeake City;017 - Indian Creek	precinct
-Virginia;Chesapeake City;018 - Indian River	precinct
-Virginia;Chesapeake City;019 - Jolliff	precinct
-Virginia;Chesapeake City;020 - E W Chittum	precinct
-Virginia;Chesapeake City;021 - Fellowship	precinct
-Virginia;Chesapeake City;022 - Norfolk Highlands	precinct
-Virginia;Chesapeake City;023 - Oak Grove	precinct
-Virginia;Chesapeake City;024 - Oaklette	precinct
-Virginia;Chesapeake City;025 - St Julians	precinct
-Virginia;Chesapeake City;026 - Johnson Park	precinct
-Virginia;Chesapeake City;027 - Silverwood	precinct
-Virginia;Chesapeake City;028 - Sunray I	precinct
-Virginia;Chesapeake City;029 - Tanglewood	precinct
-Virginia;Chesapeake City;030 - South Norfolk	precinct
-Virginia;Chesapeake City;031 - Carver School	precinct
-Virginia;Chesapeake City;032 - Providence	precinct
-Virginia;Chesapeake City;033 - Westover	precinct
-Virginia;Chesapeake City;034 - Hickory Middle School	precinct
-Virginia;Chesapeake City;035 - Taylor Road	precinct
-Virginia;Chesapeake City;036 - Great Bridge Baptist Church	precinct
-Virginia;Chesapeake City;037 - Bridgetown	precinct
-Virginia;Chesapeake City;038 - Bailey Creek	precinct
-Virginia;Chesapeake City;039 - Lake Drummond	precinct
-Virginia;Chesapeake City;040 - River Birch	precinct
-Virginia;Chesapeake City;041 - John T West	precinct
-Virginia;Chesapeake City;042 - Parkways	precinct
-Virginia;Chesapeake City;043 - Pleasant Crossing	precinct
-Virginia;Chesapeake City;044 - Nansemond	precinct
-Virginia;Chesapeake City;045 - Sunray Ii	precinct
-Virginia;Chesapeake City;046 - Bells Mill Ii	precinct
-Virginia;Chesapeake City;047 - Green Sea	precinct
-Virginia;Chesapeake City;048 - Jolliff Middle School	precinct
-Virginia;Chesapeake City;049 - Waterway	precinct
-Virginia;Chesapeake City;050 - River Walk	precinct
-Virginia;Chesapeake City;051 - Coopers Way	precinct
-Virginia;Chesapeake City;052 - Shipyard Road	precinct
-Virginia;Chesapeake City;053 - Fairways	precinct
-Virginia;Chesapeake City;054 - Pughsville	precinct
-Virginia;Chesapeake City;055 - Georgetown East	precinct
-Virginia;Chesapeake City;056 - Green Tree	precinct
-Virginia;Chesapeake City;057 - Cypress	precinct
-Virginia;Chesapeake City;058 - Expressway	precinct
-Virginia;Chesapeake City;059 - Clearfield	precinct
-Virginia;Chesapeake City;060 - Parker Road	precinct
-Virginia;Chesapeake City;061 - Centerville	precinct
-Virginia;Chesapeake City;062 - Fentress	precinct
-Virginia;Chesapeake City;063 - Poplar Branch	precinct
-Virginia;Colonial Heights City;# Ab - Central Absentee Precinct	precinct
-Virginia;Colonial Heights City;## Provisional	precinct
-Virginia;Colonial Heights City;001 - First	precinct
-Virginia;Colonial Heights City;002 - Second	precinct
-Virginia;Colonial Heights City;003 - Third	precinct
-Virginia;Colonial Heights City;004 - Fourth	precinct
-Virginia;Colonial Heights City;005 - Fifth	precinct
-Virginia;Covington City;# Ab - Central Absentee Precinct	precinct
-Virginia;Covington City;## Provisional	precinct
-Virginia;Covington City;101 - Precinct 1-1	precinct
-Virginia;Covington City;201 - Precinct 2-1	precinct
-Virginia;Covington City;301 - Precinct 3-1	precinct
-Virginia;Covington City;401 - Precinct 4-1	precinct
-Virginia;Covington City;501 - Precinct 5-1	precinct
-Virginia;Danville City;# Ab - Central Absentee Precinct	precinct
-Virginia;Danville City;## Provisional	precinct
-Virginia;Danville City;001 - Ward One	precinct
-Virginia;Danville City;002 - Ward Two	precinct
-Virginia;Danville City;003 - Ward Three	precinct
-Virginia;Danville City;004 - Ward Four	precinct
-Virginia;Danville City;006 - Ward Six	precinct
-Virginia;Danville City;007 - Ward Seven	precinct
-Virginia;Danville City;008 - Ward Eight	precinct
-Virginia;Danville City;009 - Ward Nine	precinct
-Virginia;Danville City;010 - Ward Ten	precinct
-Virginia;Danville City;011 - Ward Eleven	precinct
-Virginia;Danville City;012 - Ward Twelve	precinct
-Virginia;Danville City;013 - Ward Thirteen	precinct
-Virginia;Danville City;014 - Ward Fourteen	precinct
-Virginia;Danville City;015 - Ward Fifteen	precinct
-Virginia;Danville City;016 - Ward Sixteen	precinct
-Virginia;Danville City;017 - Ward Seventeen	precinct
-Virginia;Emporia City;## Provisional	precinct
-Virginia;Emporia City;101 - Precinct 1-1	precinct
-Virginia;Emporia City;201 - Precinct 2-1	precinct
-Virginia;Emporia City;301 - Precinct 3-1	precinct
-Virginia;Emporia City;401 - Precinct 4-1	precinct
-Virginia;Emporia City;501 - Precinct 5-1	precinct
-Virginia;Emporia City;601 - District 6	precinct
-Virginia;Emporia City;701 - District 7	precinct
-Virginia;Fairfax City;# Ab - Central Absentee Precinct	precinct
-Virginia;Fairfax City;## Provisional	precinct
-Virginia;Fairfax City;001 - One	precinct
-Virginia;Fairfax City;002 - Two	precinct
-Virginia;Fairfax City;003 - Three	precinct
-Virginia;Fairfax City;004 - Four	precinct
-Virginia;Fairfax City;005 - Five	precinct
-Virginia;Fairfax City;006 - Six	precinct
-Virginia;Falls Church City;# Ab - Central Absentee Precinct	precinct
-Virginia;Falls Church City;## Provisional	precinct
-Virginia;Falls Church City;001 - First Ward	precinct
-Virginia;Falls Church City;002 - Second Ward	precinct
-Virginia;Falls Church City;003 - Third Ward	precinct
-Virginia;Franklin City;# Ab - Central Absentee Precinct	precinct
-Virginia;Franklin City;## Provisional	precinct
-Virginia;Franklin City;101 - Precinct 1-1	precinct
-Virginia;Franklin City;201 - Precinct 2-1	precinct
-Virginia;Franklin City;301 - Precinct 3-1	precinct
-Virginia;Franklin City;401 - Precinct 4-1	precinct
-Virginia;Franklin City;501 - Precinct 5-1	precinct
-Virginia;Franklin City;601 - Precinct 6-1	precinct
-Virginia;Fredericksburg City;# Ab - Central Absentee Precinct	precinct
-Virginia;Fredericksburg City;## Provisional	precinct
-Virginia;Fredericksburg City;101 - Precinct 1 - District One	precinct
-Virginia;Fredericksburg City;201 - Precinct 1 - District Two	precinct
-Virginia;Fredericksburg City;301 - Precinct 1 - District Three	precinct
-Virginia;Fredericksburg City;401 - Precinct 1 - District Four	precinct
-Virginia;Fredericksburg City;402 - Precinct 2 - District Four	precinct
-Virginia;Galax City;# Ab - Central Absentee Precinct	precinct
-Virginia;Galax City;## Provisional	precinct
-Virginia;Galax City;001 - East	precinct
-Virginia;Galax City;002 - North	precinct
-Virginia;Galax City;003 - South	precinct
-Virginia;Hampton City;# Ab - Central Absentee Precinct	precinct
-Virginia;Hampton City;## Provisional	precinct
-Virginia;Hampton City;101 - Aberdeen	precinct
-Virginia;Hampton City;102 - Bassette	precinct
-Virginia;Hampton City;103 - City Hall	precinct
-Virginia;Hampton City;104 - Cooper	precinct
-Virginia;Hampton City;105 - East Hampton	precinct
-Virginia;Hampton City;106 - Armstrong	precinct
-Virginia;Hampton City;107 - Lindsay	precinct
-Virginia;Hampton City;108 - Thomas	precinct
-Virginia;Hampton City;109 - Phenix	precinct
-Virginia;Hampton City;110 - Phoebus	precinct
-Virginia;Hampton City;111 - Hampton Library	precinct
-Virginia;Hampton City;112 - Smith	precinct
-Virginia;Hampton City;115 - Wythe	precinct
-Virginia;Hampton City;116 - Jones	precinct
-Virginia;Hampton City;117 - Kecoughtan	precinct
-Virginia;Hampton City;118 - Mallory	precinct
-Virginia;Hampton City;201 - Booker	precinct
-Virginia;Hampton City;202 - Bryan	precinct
-Virginia;Hampton City;203 - Burbank	precinct
-Virginia;Hampton City;204 - Forrest	precinct
-Virginia;Hampton City;205 - Asbury	precinct
-Virginia;Hampton City;208 - Kraft	precinct
-Virginia;Hampton City;209 - Langley	precinct
-Virginia;Hampton City;210 - Machen	precinct
-Virginia;Hampton City;212 - Bethel	precinct
-Virginia;Hampton City;213 - Phillips	precinct
-Virginia;Hampton City;214 - Tucker Capps	precinct
-Virginia;Hampton City;215 - Tyler	precinct
-Virginia;Hampton City;216 - Sandy Bottom	precinct
-Virginia;Hampton City;217 - Syms	precinct
-Virginia;Harrisonburg City;# Ab - Central Absentee Precinct	precinct
-Virginia;Harrisonburg City;## Provisional	precinct
-Virginia;Harrisonburg City;101 - Northeast	precinct
-Virginia;Harrisonburg City;102 - East Central	precinct
-Virginia;Harrisonburg City;103 - Southeast	precinct
-Virginia;Harrisonburg City;104 - East	precinct
-Virginia;Harrisonburg City;105 - South East Central	precinct
-Virginia;Harrisonburg City;201 - Northwest	precinct
-Virginia;Harrisonburg City;202 - Southwest	precinct
-Virginia;Harrisonburg City;203 - West	precinct
-Virginia;Hopewell City;# Ab - Central Absentee Precinct	precinct
-Virginia;Hopewell City;## Provisional	precinct
-Virginia;Hopewell City;101 - Ward One	precinct
-Virginia;Hopewell City;201 - Ward Two	precinct
-Virginia;Hopewell City;301 - Ward Three	precinct
-Virginia;Hopewell City;401 - Ward Four	precinct
-Virginia;Hopewell City;501 - Ward Five	precinct
-Virginia;Hopewell City;601 - Ward Six	precinct
-Virginia;Hopewell City;701 - Ward Seven	precinct
-Virginia;Lexington City;# Ab - Central Absentee Precinct	precinct
-Virginia;Lexington City;## Provisional	precinct
-Virginia;Lexington City;001 - Lexington	precinct
-Virginia;Lynchburg City;# Ab - Central Absentee Precinct	precinct
-Virginia;Lynchburg City;## Provisional	precinct
-Virginia;Lynchburg City;101 - First Ward First Precinct	precinct
-Virginia;Lynchburg City;102 - First Ward Second Precinct	precinct
-Virginia;Lynchburg City;103 - First Ward Third Precinct	precinct
-Virginia;Lynchburg City;104 - First Ward Fourth Precinct	precinct
-Virginia;Lynchburg City;105 - First Ward Fifth Precinct	precinct
-Virginia;Lynchburg City;201 - Second Ward First Precinct	precinct
-Virginia;Lynchburg City;202 - Second Ward Second Precinct	precinct
-Virginia;Lynchburg City;203 - Second Ward Third Precinct	precinct
-Virginia;Lynchburg City;204 - Second Ward Fourth Precinct	precinct
-Virginia;Lynchburg City;301 - Third Ward First Precinct	precinct
-Virginia;Lynchburg City;302 - Third Ward Second Precinct	precinct
-Virginia;Lynchburg City;303 - Third Ward Third Precinct	precinct
-Virginia;Lynchburg City;304 - Third Ward Fourth Precinct	precinct
-Virginia;Lynchburg City;305 - Third Ward Fifth Precinct	precinct
-Virginia;Lynchburg City;401 - Fourth Ward First Precinct	precinct
-Virginia;Lynchburg City;402 - Fourth Ward Second Precinct	precinct
-Virginia;Lynchburg City;403 - Fourth Ward Third Precinct	precinct
-Virginia;Lynchburg City;404 - Fourth Ward Fourth Precinct	precinct
-Virginia;Manassas City;# Ab - Central Absentee Precinct	precinct
-Virginia;Manassas City;## Provisional	precinct
-Virginia;Manassas City;001 - Dean	precinct
-Virginia;Manassas City;002 - Weems	precinct
-Virginia;Manassas City;003 - Metz	precinct
-Virginia;Manassas City;004 - Haydon	precinct
-Virginia;Manassas City;005 - Baldwin	precinct
-Virginia;Manassas Park City;# Ab - Central Absentee Precinct	precinct
-Virginia;Manassas Park City;## Provisional	precinct
-Virginia;Manassas Park City;001 - Precinct One	precinct
-Virginia;Manassas Park City;002 - Precinct Two	precinct
-Virginia;Manassas Park City;003 - Precinct Three	precinct
-Virginia;Martinsville City;# Ab - Central Absentee Precinct	precinct
-Virginia;Martinsville City;## Provisional	precinct
-Virginia;Martinsville City;001 - Precinct #1	precinct
-Virginia;Martinsville City;002 - Precinct #2	precinct
-Virginia;Martinsville City;003 - Precinct #3	precinct
-Virginia;Martinsville City;004 - Precinct #4	precinct
-Virginia;Martinsville City;005 - Precinct #5	precinct
-Virginia;Martinsville City;006 - Precinct #6	precinct
-Virginia;Newport News City;# Ab - Central Absentee Precinct	precinct
-Virginia;Newport News City;## Provisional	precinct
-Virginia;Newport News City;101 - Denbigh	precinct
-Virginia;Newport News City;102 - Epes	precinct
-Virginia;Newport News City;103 - Jenkins	precinct
-Virginia;Newport News City;104 - Mcintosh	precinct
-Virginia;Newport News City;105 - Oyster Point	precinct
-Virginia;Newport News City;106 - Reservoir	precinct
-Virginia;Newport News City;107 - Richneck	precinct
-Virginia;Newport News City;108 - Lee Hall	precinct
-Virginia;Newport News City;109 - Windsor	precinct
-Virginia;Newport News City;110 - Greenwood	precinct
-Virginia;Newport News City;201 - Bland	precinct
-Virginia;Newport News City;202 - Boulevard	precinct
-Virginia;Newport News City;203 - Charles	precinct
-Virginia;Newport News City;204 - Wellesley	precinct
-Virginia;Newport News City;205 - Deep Creek	precinct
-Virginia;Newport News City;208 - Hidenwood	precinct
-Virginia;Newport News City;209 - Hilton	precinct
-Virginia;Newport News City;210 - Nelson	precinct
-Virginia;Newport News City;211 - Palmer	precinct
-Virginia;Newport News City;212 - Riverside	precinct
-Virginia;Newport News City;213 - Sanford	precinct
-Virginia;Newport News City;215 - Warwick	precinct
-Virginia;Newport News City;216 - Yates	precinct
-Virginia;Newport News City;217 - Riverview	precinct
-Virginia;Newport News City;218 - Kiln Creek	precinct
-Virginia;Newport News City;219 - Deer Park	precinct
-Virginia;Newport News City;302 - Briarfield	precinct
-Virginia;Newport News City;303 - Carver	precinct
-Virginia;Newport News City;304 - Chestnut	precinct
-Virginia;Newport News City;305 - Downtown	precinct
-Virginia;Newport News City;306 - Dunbar	precinct
-Virginia;Newport News City;307 - Huntington	precinct
-Virginia;Newport News City;308 - Jefferson	precinct
-Virginia;Newport News City;309 - Magruder	precinct
-Virginia;Newport News City;310 - Marshall	precinct
-Virginia;Newport News City;311 - Newmarket	precinct
-Virginia;Newport News City;312 - Newsome Park	precinct
-Virginia;Newport News City;313 - Reed	precinct
-Virginia;Newport News City;314 - River	precinct
-Virginia;Newport News City;315 - Sedgefield	precinct
-Virginia;Newport News City;316 - South Morrison	precinct
-Virginia;Newport News City;317 - Washington	precinct
-Virginia;Newport News City;318 - Wilson	precinct
-Virginia;Newport News City;319 - Saunders	precinct
-Virginia;Newport News City;320 - Watkins	precinct
-Virginia;Norfolk City;# Ab - Central Absentee Precinct	precinct
-Virginia;Norfolk City;## Provisional	precinct
-Virginia;Norfolk City;101 - Granby	precinct
-Virginia;Norfolk City;102 - Ocean View School	precinct
-Virginia;Norfolk City;103 - Northside	precinct
-Virginia;Norfolk City;104 - Titustown	precinct
-Virginia;Norfolk City;106 - Second Presbyterian	precinct
-Virginia;Norfolk City;201 - Larchmont School	precinct
-Virginia;Norfolk City;203 - Ghent Square	precinct
-Virginia;Norfolk City;207 - Lambert'S Point	precinct
-Virginia;Norfolk City;208 - Larchmont Library	precinct
-Virginia;Norfolk City;210 - Maury	precinct
-Virginia;Norfolk City;211 - Chrysler Museum	precinct
-Virginia;Norfolk City;212 - Park Place	precinct
-Virginia;Norfolk City;213 - Taylor Elementary School	precinct
-Virginia;Norfolk City;214 - Stuart	precinct
-Virginia;Norfolk City;215 - Suburban Park	precinct
-Virginia;Norfolk City;217 - Wesley	precinct
-Virginia;Norfolk City;218 - Willard	precinct
-Virginia;Norfolk City;301 - Ballentine	precinct
-Virginia;Norfolk City;302 - Tanners Creek	precinct
-Virginia;Norfolk City;303 - Broad Creek	precinct
-Virginia;Norfolk City;304 - Coleman Place School	precinct
-Virginia;Norfolk City;305 - Lafayette-Winona	precinct
-Virginia;Norfolk City;306 - Lindenwood	precinct
-Virginia;Norfolk City;309 - Norview	precinct
-Virginia;Norfolk City;310 - Rosemont	precinct
-Virginia;Norfolk City;311 - Sherwood	precinct
-Virginia;Norfolk City;313 - Union Chapel	precinct
-Virginia;Norfolk City;402 - Berkley	precinct
-Virginia;Norfolk City;403 - Brambleton	precinct
-Virginia;Norfolk City;404 - Campostella	precinct
-Virginia;Norfolk City;405 - Chesterfield	precinct
-Virginia;Norfolk City;406 - Barron Black	precinct
-Virginia;Norfolk City;408 - Easton	precinct
-Virginia;Norfolk City;409 - Fairlawn	precinct
-Virginia;Norfolk City;411 - Ruffner Academy	precinct
-Virginia;Norfolk City;412 - Ingleside	precinct
-Virginia;Norfolk City;413 - Poplar Halls	precinct
-Virginia;Norfolk City;414 - Young Park	precinct
-Virginia;Norfolk City;415 - Lake Taylor High School	precinct
-Virginia;Norfolk City;501 - Bayview	precinct
-Virginia;Norfolk City;503 - East Ocean View	precinct
-Virginia;Norfolk City;504 - Larrymore	precinct
-Virginia;Norfolk City;505 - Little Creek	precinct
-Virginia;Norfolk City;506 - Ocean View Center	precinct
-Virginia;Norfolk City;507 - Pretlow	precinct
-Virginia;Norfolk City;509 - Tarrallton	precinct
-Virginia;Norfolk City;510 - Third Presbyterian	precinct
-Virginia;Norfolk City;511 - Crossroads	precinct
-Virginia;Norfolk City;512 - Azalea Gardens	precinct
-Virginia;Norton City;## Provisional	precinct
-Virginia;Norton City;001 - East Ward	precinct
-Virginia;Petersburg City;# Ab - Central Absentee Precinct	precinct
-Virginia;Petersburg City;## Provisional	precinct
-Virginia;Petersburg City;101 - First Ward First Precinct	precinct
-Virginia;Petersburg City;201 - Second Ward First Precinct	precinct
-Virginia;Petersburg City;301 - Third Ward First Precinct	precinct
-Virginia;Petersburg City;401 - Fourth Ward First Precinct	precinct
-Virginia;Petersburg City;501 - Fifth Ward First Precinct	precinct
-Virginia;Petersburg City;601 - Sixth Ward First Precinct	precinct
-Virginia;Petersburg City;701 - Seventh Ward First Precinct	precinct
-Virginia;Poquoson City;# Ab - Central Absentee Precinct	precinct
-Virginia;Poquoson City;## Provisional	precinct
-Virginia;Poquoson City;001 - Central	precinct
-Virginia;Poquoson City;002 - Eastern	precinct
-Virginia;Poquoson City;003 - Western	precinct
-Virginia;Portsmouth City;# Ab - Central Absentee Precinct	precinct
-Virginia;Portsmouth City;## Provisional	precinct
-Virginia;Portsmouth City;001 - Emanuel A. M. E. Church	precinct
-Virginia;Portsmouth City;005 - Hampton Roads Community Health Center	precinct
-Virginia;Portsmouth City;007- Park View Elementary School	precinct
-Virginia;Portsmouth City;009 - Third Baptist Church	precinct
-Virginia;Portsmouth City;010 - Port Norfolk Recreation Center	precinct
-Virginia;Portsmouth City;011 - Mt. Hermon Village	precinct
-Virginia;Portsmouth City;013 - St. Mark Missionary Baptist Church	precinct
-Virginia;Portsmouth City;014 - Brighton Elementary School	precinct
-Virginia;Portsmouth City;016 - Cradock Middle School	precinct
-Virginia;Portsmouth City;017 - Victory Life Fellowship	precinct
-Virginia;Portsmouth City;019 - Victory Elementary School	precinct
-Virginia;Portsmouth City;020 - Noble Street Baptist Church	precinct
-Virginia;Portsmouth City;021 - John F. Kennedy Community Center	precinct
-Virginia;Portsmouth City;022 - St. Mark Deliverance Center	precinct
-Virginia;Portsmouth City;023 - Westhaven Baptist Church	precinct
-Virginia;Portsmouth City;024 - The Senior Station	precinct
-Virginia;Portsmouth City;025 - John Tyler Elementary School	precinct
-Virginia;Portsmouth City;026 - William E. Waters Middle School	precinct
-Virginia;Portsmouth City;027 - Cavalier Manor Recreation Center	precinct
-Virginia;Portsmouth City;028 - Lakeview Elementary School	precinct
-Virginia;Portsmouth City;029 - Woodrow Wilson High School	precinct
-Virginia;Portsmouth City;030 - The Rescue Church	precinct
-Virginia;Portsmouth City;031 - West Park Church Of Christ	precinct
-Virginia;Portsmouth City;032 - Hodges Manor Elementary School	precinct
-Virginia;Portsmouth City;033- Pinecrest Baptist Church	precinct
-Virginia;Portsmouth City;034- Churchland Branch Library	precinct
-Virginia;Portsmouth City;035 - Churchland Elementary School	precinct
-Virginia;Portsmouth City;036 - Scottish Rite Temple	precinct
-Virginia;Portsmouth City;037 - Churchland Middle School	precinct
-Virginia;Portsmouth City;038 - Grove Baptist Church	precinct
-Virginia;Portsmouth City;039 - Churchland Primary And Intermediate School	precinct
-Virginia;Radford City;# Ab - Central Absentee Precinct	precinct
-Virginia;Radford City;## Provisional	precinct
-Virginia;Radford City;001 - East Precinct	precinct
-Virginia;Radford City;002 - Central Precinct	precinct
-Virginia;Radford City;003 - West Precinct	precinct
-Virginia;Richmond City;# Ab - Central Absentee Precinct	precinct
-Virginia;Richmond City;## Provisional	precinct
-Virginia;Richmond City;101 - One Hundred One	precinct
-Virginia;Richmond City;102 - One Hundred Two	precinct
-Virginia;Richmond City;104 - One Hundred Four	precinct
-Virginia;Richmond City;105 - One Hundred Five	precinct
-Virginia;Richmond City;106 - One Hundred Six	precinct
-Virginia;Richmond City;111 - One Hundred Eleven	precinct
-Virginia;Richmond City;112 - One Hundred Twelve	precinct
-Virginia;Richmond City;113 - One Hundred Thirteen	precinct
-Virginia;Richmond City;114 - One Hundred Fourteen	precinct
-Virginia;Richmond City;203 - Two Hundred Three	precinct
-Virginia;Richmond City;204 - Two Hundred Four	precinct
-Virginia;Richmond City;206 - Two Hundred Six	precinct
-Virginia;Richmond City;207 - Two Hundred Seven	precinct
-Virginia;Richmond City;208 - Two Hundred Eight	precinct
-Virginia;Richmond City;213 - Two Hundred Thirteen	precinct
-Virginia;Richmond City;301 - Three Hundred One	precinct
-Virginia;Richmond City;302 - Three Hundred Two	precinct
-Virginia;Richmond City;303 - Three Hundred Three	precinct
-Virginia;Richmond City;304 - Three Hundred Four	precinct
-Virginia;Richmond City;305 - Three Hundred Five	precinct
-Virginia;Richmond City;306 - Three Hundred Six	precinct
-Virginia;Richmond City;307 - Three Hundred Seven	precinct
-Virginia;Richmond City;308 - Three Hundred Eight	precinct
-Virginia;Richmond City;309 - Three Hundred Nine	precinct
-Virginia;Richmond City;310 - Three Hundred Ten	precinct
-Virginia;Richmond City;402 - Four Hundred Two	precinct
-Virginia;Richmond City;404 - Four Hundred Four	precinct
-Virginia;Richmond City;409 - Four Hundred Nine	precinct
-Virginia;Richmond City;410 - Four Hundred Ten	precinct
-Virginia;Richmond City;412 - Four Hundred Twelve	precinct
-Virginia;Richmond City;413 - Four Hundred Thirteen	precinct
-Virginia;Richmond City;414 - Four Hundred Fourteen	precinct
-Virginia;Richmond City;501 - Five Hundred One	precinct
-Virginia;Richmond City;503 - Five Hundred Three	precinct
-Virginia;Richmond City;504 - Five Hundred Four	precinct
-Virginia;Richmond City;505 - Five Hundred Five	precinct
-Virginia;Richmond City;508 - Five Hundred Eight	precinct
-Virginia;Richmond City;509 - Five Hundred Nine	precinct
-Virginia;Richmond City;510 - Five Hundred Ten	precinct
-Virginia;Richmond City;602 - Six Hundred Two	precinct
-Virginia;Richmond City;603 - Six Hundred Three	precinct
-Virginia;Richmond City;604 - Six Hundred Four	precinct
-Virginia;Richmond City;606 - Six Hundred Six	precinct
-Virginia;Richmond City;607 - Six Hundred Seven	precinct
-Virginia;Richmond City;609 - Six Hundred Nine	precinct
-Virginia;Richmond City;610 - Six Hundred Ten	precinct
-Virginia;Richmond City;701 - Seven Hundred One	precinct
-Virginia;Richmond City;702 - Seven Hundred Two	precinct
-Virginia;Richmond City;703 - Seven Hundred Three	precinct
-Virginia;Richmond City;705 - Seven Hundred Five	precinct
-Virginia;Richmond City;706 - Seven Hundred Six	precinct
-Virginia;Richmond City;707 - Seven Hundred Seven	precinct
-Virginia;Richmond City;708 - Seven Hundred Eight	precinct
-Virginia;Richmond City;802 - Eight Hundred Two	precinct
-Virginia;Richmond City;806 - Eight Hundred Six	precinct
-Virginia;Richmond City;810 - Eight Hundred Ten	precinct
-Virginia;Richmond City;811 - Eight Hundred Eleven	precinct
-Virginia;Richmond City;812 - Eight Hundred Twelve	precinct
-Virginia;Richmond City;814 - Eight Hundred Fourteen	precinct
-Virginia;Richmond City;902 - Nine Hundred Two	precinct
-Virginia;Richmond City;903 - Nine Hundred Three	precinct
-Virginia;Richmond City;908 - Nine Hundred Eight	precinct
-Virginia;Richmond City;909 - Nine Hundred Nine	precinct
-Virginia;Richmond City;910 - Nine Hundred Ten	precinct
-Virginia;Richmond City;911 - Nine Hundred Eleven	precinct
-Virginia;Roanoke City;# Ab - Central Absentee Precinct	precinct
-Virginia;Roanoke City;## Provisional	precinct
-Virginia;Roanoke City;001 -Peters Creek	precinct
-Virginia;Roanoke City;002 - Grandview	precinct
-Virginia;Roanoke City;003 -Preston Park	precinct
-Virginia;Roanoke City;004 - Williamson Road	precinct
-Virginia;Roanoke City;005 - East Gate	precinct
-Virginia;Roanoke City;006 - Hollins Road	precinct
-Virginia;Roanoke City;007 - Southeast	precinct
-Virginia;Roanoke City;008 - Lincoln Terrace	precinct
-Virginia;Roanoke City;009 - Highland	precinct
-Virginia;Roanoke City;010 - Old Southwest-Wasena	precinct
-Virginia;Roanoke City;011 - Raleigh Court	precinct
-Virginia;Roanoke City;012 - South Roanoke	precinct
-Virginia;Roanoke City;013 - Garden City	precinct
-Virginia;Roanoke City;014 - Crystal Spring	precinct
-Virginia;Roanoke City;015 - Grandin Court	precinct
-Virginia;Roanoke City;016 - Deyerle	precinct
-Virginia;Roanoke City;017 - Lee-Hi	precinct
-Virginia;Roanoke City;018 - Old To Be Removed Virginia Heights-Norwich	precinct
-Virginia;Roanoke City;018 - Summit Hills	precinct
-Virginia;Roanoke City;019 - Forest Park	precinct
-Virginia;Roanoke City;020 - Eureka Park	precinct
-Virginia;Salem City;# Ab - Central Absentee Precinct	precinct
-Virginia;Salem City;## Provisional	precinct
-Virginia;Salem City;001 - North Salem No 2	precinct
-Virginia;Salem City;002 - Conehurst	precinct
-Virginia;Salem City;003 - Beverly Heights	precinct
-Virginia;Salem City;004 - West Salem	precinct
-Virginia;Salem City;005 - North Salem No 1	precinct
-Virginia;Salem City;006 - South Salem No 1	precinct
-Virginia;Salem City;007 - South Salem No 2	precinct
-Virginia;Salem City;008 - East Salem	precinct
-Virginia;Salem City;009 - South Side Hills	precinct
-Virginia;Salem City;010 - Hidden Valley	precinct
 Virginia;Staunton City;# Ab - Central Absentee Precinct	precinct
 Virginia;Staunton City;## Provisional	precinct
 Virginia;Staunton City;101 - Ward No 1	precinct
@@ -2861,6 +2674,56 @@ Virginia;Suffolk City;605 - Hollywood	precinct
 Virginia;Suffolk City;702 - Harbourview	precinct
 Virginia;Suffolk City;704 - Burbage Grant	precinct
 Virginia;Suffolk City;706 - Huntersville	precinct
+Virginia;Surry County;## Provisional	precinct
+Virginia;Surry County;101 - Surry	precinct
+Virginia;Surry County;201 - Bacons Castle	precinct
+Virginia;Surry County;301 - Dendron	precinct
+Virginia;Surry County;302 - Walls Bridge	precinct
+Virginia;Surry County;401 - Carsley	precinct
+Virginia;Surry County;501 - Claremont	precinct
+Virginia;Surry County;502 - Spring Grove	precinct
+Virginia;Sussex County;# Ab - Central Absentee Precinct	precinct
+Virginia;Sussex County;## Provisional	precinct
+Virginia;Sussex County;101 - Waverly	precinct
+Virginia;Sussex County;201 - Stony Creek	precinct
+Virginia;Sussex County;202 - Little Mill	precinct
+Virginia;Sussex County;301 - Courthouse	precinct
+Virginia;Sussex County;302 - Wakefield	precinct
+Virginia;Sussex County;401 - Mars Hill	precinct
+Virginia;Sussex County;402 - West Wakefield	precinct
+Virginia;Sussex County;501 - Henry	precinct
+Virginia;Sussex County;502 - Yale	precinct
+Virginia;Sussex County;601 - Blackwater	precinct
+Virginia;Sussex County;602 - Newville	precinct
+Virginia;Tazewell County;# Ab - Central Absentee Precinct	precinct
+Virginia;Tazewell County;## Provisional	precinct
+Virginia;Tazewell County;101 - Abbs Valley	precinct
+Virginia;Tazewell County;101 - Indian Valley	precinct
+Virginia;Tazewell County;102 - Tip Top	precinct
+Virginia;Tazewell County;103 - Boissevain	precinct
+Virginia;Tazewell County;103 - Mundy Town	precinct
+Virginia;Tazewell County;104 - Falls Mills	precinct
+Virginia;Tazewell County;106 - Pocahontas	precinct
+Virginia;Tazewell County;107 - Amonate	precinct
+Virginia;Tazewell County;109 - Bishop	precinct
+Virginia;Tazewell County;110 - Adria	precinct
+Virginia;Tazewell County;111 - Gap Store	precinct
+Virginia;Tazewell County;112 - Bandy	precinct
+Virginia;Tazewell County;203 - Burkes Garden	precinct
+Virginia;Tazewell County;204 - Clear Fork	precinct
+Virginia;Tazewell County;207 - Freestone	precinct
+Virginia;Tazewell County;209 - Jeffersonville	precinct
+Virginia;Tazewell County;214 - Thompson Valley	precinct
+Virginia;Tazewell County;301 - Cedar Bluff	precinct
+Virginia;Tazewell County;302 - Baptist Valley	precinct
+Virginia;Tazewell County;303 - Paint Lick	precinct
+Virginia;Tazewell County;303 - Wardell	precinct
+Virginia;Tazewell County;305 - Pounding Mill	precinct
+Virginia;Tazewell County;401 - Richlands	precinct
+Virginia;Tazewell County;402 - Jewell Ridge	precinct
+Virginia;Tazewell County;404 - Raven	precinct
+Virginia;Tazewell County;501 - Springville	precinct
+Virginia;Tazewell County;502 - Graham	precinct
 Virginia;Virginia Beach City;# Ab - Central Absentee Precinct	precinct
 Virginia;Virginia Beach City;## Provisional	precinct
 Virginia;Virginia Beach City;001 - North Beach	precinct
@@ -2961,12 +2824,58 @@ Virginia;Virginia Beach City;095 - Dam Neck	precinct
 Virginia;Virginia Beach City;096 - Hilltop	precinct
 Virginia;Virginia Beach City;097 - Indian River	precinct
 Virginia;Virginia Beach City;098 - Independence	precinct
+Virginia;Virginia Beach City;099 - Salem Woods	precinct
+Virginia;Virginia Beach City;100 - Sandbridge	precinct
+Virginia;Warren County;# Ab - Central Absentee Precinct	precinct
+Virginia;Warren County;## Provisional	precinct
+Virginia;Warren County;101 - Fork Town	precinct
+Virginia;Warren County;102 - Otterburn	precinct
+Virginia;Warren County;201 - Happy Creek	precinct
+Virginia;Warren County;202 - Linden	precinct
+Virginia;Warren County;301 - North River	precinct
+Virginia;Warren County;302 - Riverton	precinct
+Virginia;Warren County;401 - East Shenandoah	precinct
+Virginia;Warren County;402 - Town - West Shenandoah	precinct
+Virginia;Warren County;501 - South River	precinct
+Virginia;Warren County;502 - Bentonville	precinct
+Virginia;Warren County;504 - Browntown	precinct
+Virginia;Washington County;# Ab - Central Absentee Precinct	precinct
+Virginia;Washington County;## Provisional	precinct
+Virginia;Washington County;101 - East Abingdon	precinct
+Virginia;Washington County;102 - West Abingdon	precinct
+Virginia;Washington County;201 - Clinchburg	precinct
+Virginia;Washington County;202 - Greendale	precinct
+Virginia;Washington County;203 - Hayters Gap	precinct
+Virginia;Washington County;204 Woodland Hills	precinct
+Virginia;Washington County;301 - Watauga	precinct
+Virginia;Washington County;302 - South Abingdon	precinct
+Virginia;Washington County;401 - Glade Spring	precinct
+Virginia;Washington County;402 - Meadowview	precinct
+Virginia;Washington County;501 - Rhea Valley	precinct
+Virginia;Washington County;502 - Damascus	precinct
+Virginia;Washington County;504 - Green Cove	precinct
+Virginia;Washington County;601 - Burson Place	precinct
+Virginia;Washington County;602 - Mendota	precinct
+Virginia;Washington County;603 - Valley Institute	precinct
+Virginia;Washington County;701 - High Point	precinct
+Virginia;Washington County;702 - Wallace	precinct
+Virginia;Washington County;703 - John Battle	precinct
 Virginia;Waynesboro City;# Ab - Central Absentee Precinct	precinct
 Virginia;Waynesboro City;## Provisional	precinct
 Virginia;Waynesboro City;001 - Ward A	precinct
 Virginia;Waynesboro City;002 - Ward B	precinct
 Virginia;Waynesboro City;003 - Ward C	precinct
 Virginia;Waynesboro City;004 - Ward D	precinct
+Virginia;Westmoreland County;# Ab - Central Absentee Precinct	precinct
+Virginia;Westmoreland County;## Provisional	precinct
+Virginia;Westmoreland County;101 - Precinct 1-1	precinct
+Virginia;Westmoreland County;102 - Precinct 1-2	precinct
+Virginia;Westmoreland County;201 - Precinct 2-1	precinct
+Virginia;Westmoreland County;202 - Precinct 2-2	precinct
+Virginia;Westmoreland County;301 - Precinct 3-1	precinct
+Virginia;Westmoreland County;302 - Precinct 3-2	precinct
+Virginia;Westmoreland County;401 - Precinct 4-1	precinct
+Virginia;Westmoreland County;501 - Precinct 5-1	precinct
 Virginia;Williamsburg City;# Ab - Central Absentee Precinct	precinct
 Virginia;Williamsburg City;## Provisional	precinct
 Virginia;Williamsburg City;001 - Stryker	precinct
@@ -2979,55 +2888,186 @@ Virginia;Winchester City;201 - Virginia Avenue	precinct
 Virginia;Winchester City;301 - War Memorial	precinct
 Virginia;Winchester City;401 - Frederick Douglass	precinct
 Virginia;Winchester City;402 - Rolling Hills	precinct
-Virginia;Albemarle County;405 - Mountain View	precinct
-Virginia;Albemarle County;407 - Biscuit Run	precinct
-Virginia;Albemarle County;507 - Pantops	precinct
-Virginia;Albemarle County;606 - Mechums River	precinct
-Virginia;Arlington County;053 - Met Park	precinct
-Virginia;Arlington County;054 - Garfield Park	precinct
-Virginia;Bedford County;304 - Riverside Church	precinct
-Virginia;Bedford County;306 - Forest Fire Station #2	precinct
-Virginia;Carroll County;401 - Oakland	precinct
-Virginia;Fairfax County;630- Army	precinct
-Virginia;Fairfax County;723 - Gallows East	precinct
-Virginia;Fairfax County;849 - Newgate	precinct
-Virginia;Halifax County;Ward A - 1160A	precinct
-Virginia;Halifax County;Ward C - 1160C	precinct
-Virginia;Loudoun County;126-Goshen Post	precinct
-Virginia;Loudoun County;319 - John Champe	precinct
-Virginia;Loudoun County;320 - Stone Hill	precinct
-Virginia;Loudoun County;321 - Brambleton Middle	precinct
-Virginia;Loudoun County;322-Buffalo Trail	precinct
-Virginia;Rockingham County;401 - West Bridgewater	precinct
-Virginia;Rockingham County;406 - East Bridgewater	precinct
-Virginia;Tazewell County;101 - Indian Valley	precinct
-Virginia;Tazewell County;103 - Mundy Town	precinct
-Virginia;Tazewell County;303 - Paint Lick	precinct
-Virginia;Alexandria City;106 - Cora Kelly	precinct
-Virginia;Alexandria City;111 - Potomac Yard	precinct
-Virginia;Emporia City;# Ab - Central Absentee Precinct	precinct
-Virginia;Manassas City;006 - Round	precinct
-Virginia;Richmond City;115 - One Hundred Fifteen	precinct
-Virginia;Richmond City;214 - Two Hundred Fourteen	precinct
-Virginia;Virginia Beach City;099 - Salem Woods	precinct
-Virginia;Virginia Beach City;100 - Sandbridge	precinct
-Virginia;Chesterfield County;113 - Iron Bridge North	precinct
-Virginia;Chesterfield County;314 - Longhouse	precinct
-Virginia;Prince William County;109 - Chris Yung	precinct
-Virginia;Prince William County;114 - Piney Branch	precinct
-Virginia;Prince William County;315 - Williams	precinct
-Virginia;Chesapeake City;064 - Deep Creek Ii	precinct
-Virginia;Chesapeake City;065 - Waterway Ii	precinct
-Virginia;Richmond City;215 - Two Hundred Fifteen	precinct
-Virginia;Richmond City;415 - Four Hundred Fifteen	precinct
-Virginia;Chesterfield County;216 - Ridgedale	precinct
-Virginia;Chesterfield County;319 - Magnolia	precinct
-Virginia;Chesterfield County;412 - Clover Hill	precinct
-Virginia;Craig County;# Ab - Central Absentee Precinct	precinct
-Virginia;Henrico County;316 - Colonial Trail	precinct
-Virginia;Roanoke County;401 - South Lindenwood	precinct
-Virginia;Roanoke County;405 - North Lindenwood	precinct
-Virginia;Alexandria City;112 - Alex Renew	precinct
-Virginia;Alexandria City;309 - Olympus Condo	precinct
-Virginia;Chesapeake City;015 - Greenbrier Middle School	precinct
-Virginia;Radford City;004 - New River Precinct	precinct
+Virginia;Wise County;# Ab - Central Absentee Precinct	precinct
+Virginia;Wise County;## Provisional	precinct
+Virginia;Wise County;101 - Appalachia	precinct
+Virginia;Wise County;102 - Dorchester	precinct
+Virginia;Wise County;103 - Guest River Voting Place	precinct
+Virginia;Wise County;104 - West Pound	precinct
+Virginia;Wise County;201 - North Coeburn	precinct
+Virginia;Wise County;202 - Wise	precinct
+Virginia;Wise County;203 - East Pound	precinct
+Virginia;Wise County;301 - Big Stone Gap	precinct
+Virginia;Wise County;302 - East Stone Gap	precinct
+Virginia;Wise County;401 - Clinch Valley	precinct
+Virginia;Wise County;402 - South Coeburn	precinct
+Virginia;Wise County;403 - St Paul	precinct
+Virginia;Wythe County;# Ab - Central Absentee Precinct	precinct
+Virginia;Wythe County;## Provisional	precinct
+Virginia;Wythe County;101 - Royal Oak	precinct
+Virginia;Wythe County;102 - Rural Retreat	precinct
+Virginia;Wythe County;203 - West Wytheville	precinct
+Virginia;Wythe County;303 - East Wytheville	precinct
+Virginia;Wythe County;401 - Fort Chiswell	precinct
+Virginia;Wythe County;402 - Max Meadows	precinct
+Virginia;Wythe County;501 - Jackson Memorial	precinct
+Virginia;Wythe County;502 - Sheffey	precinct
+Virginia;Wythe County;601 - Huddle	precinct
+Virginia;Wythe County;602 - Zion	precinct
+Virginia;Wythe County;603 Evergreen	precinct
+Virginia;York County;# Ab - Central Absentee Precinct	precinct
+Virginia;York County;## Provisional	precinct
+Virginia;York County;101 - Queens Lake	precinct
+Virginia;York County;102 - Waller Mill	precinct
+Virginia;York County;103 - Magruder	precinct
+Virginia;York County;201 - Coventry	precinct
+Virginia;York County;202 - Kiln Creek	precinct
+Virginia;York County;301 - Seaford	precinct
+Virginia;York County;302 - Yorktown	precinct
+Virginia;York County;303 - Edgehill	precinct
+Virginia;York County;401 - Harwoods Mill	precinct
+Virginia;York County;402 - Dare	precinct
+Virginia;York County;403 - Grafton	precinct
+Virginia;York County;501 - Tabb	precinct
+Virginia;York County;502 - Bethel	precinct
+Virginia	state
+Virginia;VA House District 1	state-house
+Virginia;VA House District 10	state-house
+Virginia;VA House District 100	state-house
+Virginia;VA House District 11	state-house
+Virginia;VA House District 12	state-house
+Virginia;VA House District 13	state-house
+Virginia;VA House District 14	state-house
+Virginia;VA House District 15	state-house
+Virginia;VA House District 16	state-house
+Virginia;VA House District 17	state-house
+Virginia;VA House District 18	state-house
+Virginia;VA House District 19	state-house
+Virginia;VA House District 2	state-house
+Virginia;VA House District 20	state-house
+Virginia;VA House District 21	state-house
+Virginia;VA House District 22	state-house
+Virginia;VA House District 23	state-house
+Virginia;VA House District 24	state-house
+Virginia;VA House District 25	state-house
+Virginia;VA House District 26	state-house
+Virginia;VA House District 27	state-house
+Virginia;VA House District 28	state-house
+Virginia;VA House District 29	state-house
+Virginia;VA House District 3	state-house
+Virginia;VA House District 30	state-house
+Virginia;VA House District 31	state-house
+Virginia;VA House District 32	state-house
+Virginia;VA House District 33	state-house
+Virginia;VA House District 34	state-house
+Virginia;VA House District 35	state-house
+Virginia;VA House District 36	state-house
+Virginia;VA House District 37	state-house
+Virginia;VA House District 38	state-house
+Virginia;VA House District 39	state-house
+Virginia;VA House District 4	state-house
+Virginia;VA House District 40	state-house
+Virginia;VA House District 41	state-house
+Virginia;VA House District 42	state-house
+Virginia;VA House District 43	state-house
+Virginia;VA House District 44	state-house
+Virginia;VA House District 45	state-house
+Virginia;VA House District 46	state-house
+Virginia;VA House District 47	state-house
+Virginia;VA House District 48	state-house
+Virginia;VA House District 49	state-house
+Virginia;VA House District 5	state-house
+Virginia;VA House District 50	state-house
+Virginia;VA House District 51	state-house
+Virginia;VA House District 52	state-house
+Virginia;VA House District 53	state-house
+Virginia;VA House District 54	state-house
+Virginia;VA House District 55	state-house
+Virginia;VA House District 56	state-house
+Virginia;VA House District 57	state-house
+Virginia;VA House District 58	state-house
+Virginia;VA House District 59	state-house
+Virginia;VA House District 6	state-house
+Virginia;VA House District 60	state-house
+Virginia;VA House District 61	state-house
+Virginia;VA House District 62	state-house
+Virginia;VA House District 63	state-house
+Virginia;VA House District 64	state-house
+Virginia;VA House District 65	state-house
+Virginia;VA House District 66	state-house
+Virginia;VA House District 67	state-house
+Virginia;VA House District 68	state-house
+Virginia;VA House District 69	state-house
+Virginia;VA House District 7	state-house
+Virginia;VA House District 70	state-house
+Virginia;VA House District 71	state-house
+Virginia;VA House District 72	state-house
+Virginia;VA House District 73	state-house
+Virginia;VA House District 74	state-house
+Virginia;VA House District 75	state-house
+Virginia;VA House District 76	state-house
+Virginia;VA House District 77	state-house
+Virginia;VA House District 78	state-house
+Virginia;VA House District 79	state-house
+Virginia;VA House District 8	state-house
+Virginia;VA House District 80	state-house
+Virginia;VA House District 81	state-house
+Virginia;VA House District 82	state-house
+Virginia;VA House District 83	state-house
+Virginia;VA House District 84	state-house
+Virginia;VA House District 85	state-house
+Virginia;VA House District 86	state-house
+Virginia;VA House District 87	state-house
+Virginia;VA House District 88	state-house
+Virginia;VA House District 89	state-house
+Virginia;VA House District 9	state-house
+Virginia;VA House District 90	state-house
+Virginia;VA House District 91	state-house
+Virginia;VA House District 92	state-house
+Virginia;VA House District 93	state-house
+Virginia;VA House District 94	state-house
+Virginia;VA House District 95	state-house
+Virginia;VA House District 96	state-house
+Virginia;VA House District 97	state-house
+Virginia;VA House District 98	state-house
+Virginia;VA House District 99	state-house
+Virginia;VA Senate District 1	state-senate
+Virginia;VA Senate District 10	state-senate
+Virginia;VA Senate District 11	state-senate
+Virginia;VA Senate District 12	state-senate
+Virginia;VA Senate District 13	state-senate
+Virginia;VA Senate District 14	state-senate
+Virginia;VA Senate District 15	state-senate
+Virginia;VA Senate District 16	state-senate
+Virginia;VA Senate District 17	state-senate
+Virginia;VA Senate District 18	state-senate
+Virginia;VA Senate District 19	state-senate
+Virginia;VA Senate District 2	state-senate
+Virginia;VA Senate District 20	state-senate
+Virginia;VA Senate District 21	state-senate
+Virginia;VA Senate District 22	state-senate
+Virginia;VA Senate District 23	state-senate
+Virginia;VA Senate District 24	state-senate
+Virginia;VA Senate District 25	state-senate
+Virginia;VA Senate District 26	state-senate
+Virginia;VA Senate District 27	state-senate
+Virginia;VA Senate District 28	state-senate
+Virginia;VA Senate District 29	state-senate
+Virginia;VA Senate District 3	state-senate
+Virginia;VA Senate District 30	state-senate
+Virginia;VA Senate District 31	state-senate
+Virginia;VA Senate District 32	state-senate
+Virginia;VA Senate District 33	state-senate
+Virginia;VA Senate District 34	state-senate
+Virginia;VA Senate District 35	state-senate
+Virginia;VA Senate District 36	state-senate
+Virginia;VA Senate District 37	state-senate
+Virginia;VA Senate District 38	state-senate
+Virginia;VA Senate District 39	state-senate
+Virginia;VA Senate District 4	state-senate
+Virginia;VA Senate District 40	state-senate
+Virginia;VA Senate District 5	state-senate
+Virginia;VA Senate District 6	state-senate
+Virginia;VA Senate District 7	state-senate
+Virginia;VA Senate District 8	state-senate
+Virginia;VA Senate District 9	state-senate

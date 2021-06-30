@@ -1,154 +1,4 @@
 Name	ReportingUnitType
-Indiana;IN House District 1	state-house
-Indiana;IN House District 2	state-house
-Indiana;IN House District 3	state-house
-Indiana;IN House District 4	state-house
-Indiana;IN House District 5	state-house
-Indiana;IN House District 6	state-house
-Indiana;IN House District 7	state-house
-Indiana;IN House District 8	state-house
-Indiana;IN House District 9	state-house
-Indiana;IN House District 10	state-house
-Indiana;IN House District 11	state-house
-Indiana;IN House District 12	state-house
-Indiana;IN House District 13	state-house
-Indiana;IN House District 14	state-house
-Indiana;IN House District 15	state-house
-Indiana;IN House District 16	state-house
-Indiana;IN House District 17	state-house
-Indiana;IN House District 18	state-house
-Indiana;IN House District 19	state-house
-Indiana;IN House District 20	state-house
-Indiana;IN House District 21	state-house
-Indiana;IN House District 22	state-house
-Indiana;IN House District 23	state-house
-Indiana;IN House District 24	state-house
-Indiana;IN House District 25	state-house
-Indiana;IN House District 26	state-house
-Indiana;IN House District 27	state-house
-Indiana;IN House District 28	state-house
-Indiana;IN House District 29	state-house
-Indiana;IN House District 30	state-house
-Indiana;IN House District 31	state-house
-Indiana;IN House District 32	state-house
-Indiana;IN House District 33	state-house
-Indiana;IN House District 34	state-house
-Indiana;IN House District 35	state-house
-Indiana;IN House District 36	state-house
-Indiana;IN House District 37	state-house
-Indiana;IN House District 38	state-house
-Indiana;IN House District 39	state-house
-Indiana;IN House District 40	state-house
-Indiana;IN House District 41	state-house
-Indiana;IN House District 42	state-house
-Indiana;IN House District 43	state-house
-Indiana;IN House District 44	state-house
-Indiana;IN House District 45	state-house
-Indiana;IN House District 46	state-house
-Indiana;IN House District 47	state-house
-Indiana;IN House District 48	state-house
-Indiana;IN House District 49	state-house
-Indiana;IN House District 50	state-house
-Indiana;IN House District 51	state-house
-Indiana;IN House District 52	state-house
-Indiana;IN House District 53	state-house
-Indiana;IN House District 54	state-house
-Indiana;IN House District 55	state-house
-Indiana;IN House District 56	state-house
-Indiana;IN House District 57	state-house
-Indiana;IN House District 58	state-house
-Indiana;IN House District 59	state-house
-Indiana;IN House District 60	state-house
-Indiana;IN House District 61	state-house
-Indiana;IN House District 62	state-house
-Indiana;IN House District 63	state-house
-Indiana;IN House District 64	state-house
-Indiana;IN House District 65	state-house
-Indiana;IN House District 66	state-house
-Indiana;IN House District 67	state-house
-Indiana;IN House District 68	state-house
-Indiana;IN House District 69	state-house
-Indiana;IN House District 70	state-house
-Indiana;IN House District 71	state-house
-Indiana;IN House District 72	state-house
-Indiana;IN House District 73	state-house
-Indiana;IN House District 74	state-house
-Indiana;IN House District 75	state-house
-Indiana;IN House District 76	state-house
-Indiana;IN House District 77	state-house
-Indiana;IN House District 78	state-house
-Indiana;IN House District 79	state-house
-Indiana;IN House District 80	state-house
-Indiana;IN House District 81	state-house
-Indiana;IN House District 82	state-house
-Indiana;IN House District 83	state-house
-Indiana;IN House District 84	state-house
-Indiana;IN House District 85	state-house
-Indiana;IN House District 86	state-house
-Indiana;IN House District 87	state-house
-Indiana;IN House District 88	state-house
-Indiana;IN House District 89	state-house
-Indiana;IN House District 90	state-house
-Indiana;IN House District 91	state-house
-Indiana;IN House District 92	state-house
-Indiana;IN House District 93	state-house
-Indiana;IN House District 94	state-house
-Indiana;IN House District 95	state-house
-Indiana;IN House District 96	state-house
-Indiana;IN House District 97	state-house
-Indiana;IN House District 98	state-house
-Indiana;IN House District 99	state-house
-Indiana;IN House District 100	state-house
-Indiana;IN Senate District 1	state-senate
-Indiana;IN Senate District 2	state-senate
-Indiana;IN Senate District 3	state-senate
-Indiana;IN Senate District 4	state-senate
-Indiana;IN Senate District 5	state-senate
-Indiana;IN Senate District 6	state-senate
-Indiana;IN Senate District 7	state-senate
-Indiana;IN Senate District 8	state-senate
-Indiana;IN Senate District 9	state-senate
-Indiana;IN Senate District 10	state-senate
-Indiana;IN Senate District 11	state-senate
-Indiana;IN Senate District 12	state-senate
-Indiana;IN Senate District 13	state-senate
-Indiana;IN Senate District 14	state-senate
-Indiana;IN Senate District 15	state-senate
-Indiana;IN Senate District 16	state-senate
-Indiana;IN Senate District 17	state-senate
-Indiana;IN Senate District 18	state-senate
-Indiana;IN Senate District 19	state-senate
-Indiana;IN Senate District 20	state-senate
-Indiana;IN Senate District 21	state-senate
-Indiana;IN Senate District 22	state-senate
-Indiana;IN Senate District 23	state-senate
-Indiana;IN Senate District 24	state-senate
-Indiana;IN Senate District 25	state-senate
-Indiana;IN Senate District 26	state-senate
-Indiana;IN Senate District 27	state-senate
-Indiana;IN Senate District 28	state-senate
-Indiana;IN Senate District 29	state-senate
-Indiana;IN Senate District 30	state-senate
-Indiana;IN Senate District 31	state-senate
-Indiana;IN Senate District 32	state-senate
-Indiana;IN Senate District 33	state-senate
-Indiana;IN Senate District 34	state-senate
-Indiana;IN Senate District 35	state-senate
-Indiana;IN Senate District 36	state-senate
-Indiana;IN Senate District 37	state-senate
-Indiana;IN Senate District 38	state-senate
-Indiana;IN Senate District 39	state-senate
-Indiana;IN Senate District 40	state-senate
-Indiana;IN Senate District 41	state-senate
-Indiana;IN Senate District 42	state-senate
-Indiana;IN Senate District 43	state-senate
-Indiana;IN Senate District 44	state-senate
-Indiana;IN Senate District 45	state-senate
-Indiana;IN Senate District 46	state-senate
-Indiana;IN Senate District 47	state-senate
-Indiana;IN Senate District 48	state-senate
-Indiana;IN Senate District 49	state-senate
-Indiana;IN Senate District 50	state-senate
 Indiana;US House IN District 1	congressional
 Indiana;US House IN District 2	congressional
 Indiana;US House IN District 3	congressional
@@ -158,7 +8,6 @@ Indiana;US House IN District 6	congressional
 Indiana;US House IN District 7	congressional
 Indiana;US House IN District 8	congressional
 Indiana;US House IN District 9	congressional
-Indiana	state
 Indiana;Adams County	county
 Indiana;Allen County	county
 Indiana;Bartholomew County	county
@@ -173,9 +22,9 @@ Indiana;Clay County	county
 Indiana;Clinton County	county
 Indiana;Crawford County	county
 Indiana;Daviess County	county
+Indiana;DeKalb County	county
 Indiana;Dearborn County	county
 Indiana;Decatur County	county
-Indiana;Dekalb County	county
 Indiana;Delaware County	county
 Indiana;Dubois County	county
 Indiana;Elkhart County	county
@@ -202,9 +51,9 @@ Indiana;Jennings County	county
 Indiana;Johnson County	county
 Indiana;Knox County	county
 Indiana;Kosciusko County	county
-Indiana;Lagrange County	county
+Indiana;LaGrange County	county
+Indiana;LaPorte County	county
 Indiana;Lake County	county
-Indiana;Laporte County	county
 Indiana;Lawrence County	county
 Indiana;Madison County	county
 Indiana;Marion County	county
@@ -739,8 +588,8 @@ Indiana;Cass County;Bethlehem	precinct
 Indiana;Cass County;Boone	precinct
 Indiana;Cass County;Clay City	precinct
 Indiana;Cass County;Clay I	precinct
-Indiana;Cass County;Clay Ii	precinct
 Indiana;Cass County;Clay III	precinct
+Indiana;Cass County;Clay Ii	precinct
 Indiana;Cass County;Clinton	precinct
 Indiana;Cass County;Clinton City Nv	precinct
 Indiana;Cass County;Deer Creek	precinct
@@ -887,8 +736,65 @@ Indiana;Clinton County;Precinct 36	precinct
 Indiana;Clinton County;Precinct 37	precinct
 Indiana;Clinton County;Precinct 38	precinct
 Indiana;Clinton County;Precinct 39	precinct
+Indiana;Crawford County;Boone	precinct
 Indiana;Crawford County;Crawford	precinct
+Indiana;Crawford County;Jennings 1	precinct
+Indiana;Crawford County;Jennings 2	precinct
+Indiana;Crawford County;Johnson 1	precinct
+Indiana;Crawford County;Johnson 2	precinct
+Indiana;Crawford County;Liberty 1	precinct
+Indiana;Crawford County;Liberty 2	precinct
+Indiana;Crawford County;Ohio 1	precinct
+Indiana;Crawford County;Ohio 2	precinct
+Indiana;Crawford County;Patoka 1	precinct
+Indiana;Crawford County;Patoka 2	precinct
+Indiana;Crawford County;Sterling 1	precinct
+Indiana;Crawford County;Sterling 2	precinct
+Indiana;Crawford County;Sterling 3	precinct
+Indiana;Crawford County;Union 1	precinct
+Indiana;Crawford County;Union 2	precinct
+Indiana;Crawford County;Whiskey Run 1	precinct
+Indiana;Crawford County;Whiskey Run 2	precinct
 Indiana;Daviess County;Daviess	precinct
+Indiana;DeKalb County;Butler 1	precinct
+Indiana;DeKalb County;Butler 2	precinct
+Indiana;DeKalb County;Concord	precinct
+Indiana;DeKalb County;Fairfield	precinct
+Indiana;DeKalb County;Franklin	precinct
+Indiana;DeKalb County;Grant 1	precinct
+Indiana;DeKalb County;Grant 2	precinct
+Indiana;DeKalb County;Grant 3	precinct
+Indiana;DeKalb County;Jackson North	precinct
+Indiana;DeKalb County;Jackson South	precinct
+Indiana;DeKalb County;Keyser 1	precinct
+Indiana;DeKalb County;Keyser 2	precinct
+Indiana;DeKalb County;Keyser 3	precinct
+Indiana;DeKalb County;Keyser 4	precinct
+Indiana;DeKalb County;Keyser 5	precinct
+Indiana;DeKalb County;Keyser 6	precinct
+Indiana;DeKalb County;Newville	precinct
+Indiana;DeKalb County;Richland	precinct
+Indiana;DeKalb County;Smithfield East	precinct
+Indiana;DeKalb County;Smithfield South	precinct
+Indiana;DeKalb County;Smithfield West	precinct
+Indiana;DeKalb County;Spencer	precinct
+Indiana;DeKalb County;Stafford	precinct
+Indiana;DeKalb County;Troy	precinct
+Indiana;DeKalb County;Union 01	precinct
+Indiana;DeKalb County;Union 02	precinct
+Indiana;DeKalb County;Union 03	precinct
+Indiana;DeKalb County;Union 04	precinct
+Indiana;DeKalb County;Union 05	precinct
+Indiana;DeKalb County;Union 06	precinct
+Indiana;DeKalb County;Union 07	precinct
+Indiana;DeKalb County;Union 08	precinct
+Indiana;DeKalb County;Union 09	precinct
+Indiana;DeKalb County;Union 10	precinct
+Indiana;DeKalb County;Union 11	precinct
+Indiana;DeKalb County;Wilmington 1	precinct
+Indiana;DeKalb County;Wilmington 2	precinct
+Indiana;DeKalb County;Wilmington 3	precinct
+Indiana;DeKalb County;Wilmington 4	precinct
 Indiana;Dearborn County;Dearborn	precinct
 Indiana;Decatur County;Adams	precinct
 Indiana;Decatur County;Clay	precinct
@@ -912,46 +818,85 @@ Indiana;Decatur County;Sandcreek South	precinct
 Indiana;Decatur County;St. Paul	precinct
 Indiana;Decatur County;Washington	precinct
 Indiana;Decatur County;Westport	precinct
-Indiana;Dekalb County;Butler 1	precinct
-Indiana;Dekalb County;Butler 2	precinct
-Indiana;Dekalb County;Concord	precinct
-Indiana;Dekalb County;Fairfield	precinct
-Indiana;Dekalb County;Franklin	precinct
-Indiana;Dekalb County;Grant 1	precinct
-Indiana;Dekalb County;Grant 2	precinct
-Indiana;Dekalb County;Grant 3	precinct
-Indiana;Dekalb County;Jackson North	precinct
-Indiana;Dekalb County;Jackson South	precinct
-Indiana;Dekalb County;Keyser 1	precinct
-Indiana;Dekalb County;Keyser 2	precinct
-Indiana;Dekalb County;Keyser 3	precinct
-Indiana;Dekalb County;Keyser 4	precinct
-Indiana;Dekalb County;Keyser 5	precinct
-Indiana;Dekalb County;Keyser 6	precinct
-Indiana;Dekalb County;Newville	precinct
-Indiana;Dekalb County;Richland	precinct
-Indiana;Dekalb County;Smithfield East	precinct
-Indiana;Dekalb County;Smithfield South	precinct
-Indiana;Dekalb County;Smithfield West	precinct
-Indiana;Dekalb County;Spencer	precinct
-Indiana;Dekalb County;Stafford	precinct
-Indiana;Dekalb County;Troy	precinct
-Indiana;Dekalb County;Union 01	precinct
-Indiana;Dekalb County;Union 02	precinct
-Indiana;Dekalb County;Union 03	precinct
-Indiana;Dekalb County;Union 04	precinct
-Indiana;Dekalb County;Union 05	precinct
-Indiana;Dekalb County;Union 06	precinct
-Indiana;Dekalb County;Union 07	precinct
-Indiana;Dekalb County;Union 08	precinct
-Indiana;Dekalb County;Union 09	precinct
-Indiana;Dekalb County;Union 10	precinct
-Indiana;Dekalb County;Union 11	precinct
-Indiana;Dekalb County;Wilmington 1	precinct
-Indiana;Dekalb County;Wilmington 2	precinct
-Indiana;Dekalb County;Wilmington 3	precinct
-Indiana;Dekalb County;Wilmington 4	precinct
+Indiana;Delaware County;Center 01	precinct
+Indiana;Delaware County;Center 02	precinct
+Indiana;Delaware County;Center 03	precinct
+Indiana;Delaware County;Center 04	precinct
+Indiana;Delaware County;Center 05	precinct
+Indiana;Delaware County;Center 06	precinct
+Indiana;Delaware County;Center 07	precinct
+Indiana;Delaware County;Center 08	precinct
+Indiana;Delaware County;Center 09	precinct
+Indiana;Delaware County;Center 10	precinct
+Indiana;Delaware County;Center 11	precinct
+Indiana;Delaware County;Center 12	precinct
+Indiana;Delaware County;Center 13	precinct
+Indiana;Delaware County;Center 14	precinct
+Indiana;Delaware County;Center 15	precinct
+Indiana;Delaware County;Center 18	precinct
+Indiana;Delaware County;Center 19	precinct
+Indiana;Delaware County;Center 20	precinct
+Indiana;Delaware County;Center 22	precinct
+Indiana;Delaware County;Center 23	precinct
+Indiana;Delaware County;Center 25	precinct
+Indiana;Delaware County;Center 26	precinct
+Indiana;Delaware County;Center 27	precinct
+Indiana;Delaware County;Center 28	precinct
+Indiana;Delaware County;Center 29	precinct
+Indiana;Delaware County;Center 33	precinct
+Indiana;Delaware County;Center 34	precinct
+Indiana;Delaware County;Center 35	precinct
+Indiana;Delaware County;Center 36	precinct
+Indiana;Delaware County;Center 38	precinct
+Indiana;Delaware County;Center 39	precinct
+Indiana;Delaware County;Center 40	precinct
+Indiana;Delaware County;Center 41	precinct
+Indiana;Delaware County;Center 42	precinct
+Indiana;Delaware County;Center 43	precinct
+Indiana;Delaware County;Center 44	precinct
+Indiana;Delaware County;Center 45	precinct
+Indiana;Delaware County;Center 46	precinct
+Indiana;Delaware County;Center 47	precinct
+Indiana;Delaware County;Center 48	precinct
+Indiana;Delaware County;Center 49	precinct
+Indiana;Delaware County;Center 50	precinct
 Indiana;Delaware County;Delaware	precinct
+Indiana;Delaware County;Delaware 65	precinct
+Indiana;Delaware County;Delaware 66	precinct
+Indiana;Delaware County;Hamilton 60	precinct
+Indiana;Delaware County;Hamilton 69	precinct
+Indiana;Delaware County;Hamilton 70	precinct
+Indiana;Delaware County;Hamilton 90	precinct
+Indiana;Delaware County;Hamilton 91	precinct
+Indiana;Delaware County;Hamilton 92	precinct
+Indiana;Delaware County;Hamilton 93	precinct
+Indiana;Delaware County;Harrison 56	precinct
+Indiana;Delaware County;Harrison 58	precinct
+Indiana;Delaware County;Harrison 78	precinct
+Indiana;Delaware County;Liberty 63	precinct
+Indiana;Delaware County;Liberty 64	precinct
+Indiana;Delaware County;Liberty 75	precinct
+Indiana;Delaware County;Monroe 59	precinct
+Indiana;Delaware County;Monroe 73	precinct
+Indiana;Delaware County;Mt Pleasant 53	precinct
+Indiana;Delaware County;Mt Pleasant 54	precinct
+Indiana;Delaware County;Mt Pleasant 55	precinct
+Indiana;Delaware County;Mt Pleasant 71	precinct
+Indiana;Delaware County;Mt Pleasant 74	precinct
+Indiana;Delaware County;Mt Pleasant 81	precinct
+Indiana;Delaware County;Mt Pleasant 87	precinct
+Indiana;Delaware County;Mt Pleasant 88	precinct
+Indiana;Delaware County;Mt Pleasant 95	precinct
+Indiana;Delaware County;Mt Pleasant 98	precinct
+Indiana;Delaware County;Niles 67	precinct
+Indiana;Delaware County;Niles 68	precinct
+Indiana;Delaware County;Perry 62	precinct
+Indiana;Delaware County;Salem 51	precinct
+Indiana;Delaware County;Salem 52	precinct
+Indiana;Delaware County;Salem 94	precinct
+Indiana;Delaware County;Union 61	precinct
+Indiana;Delaware County;Union 77	precinct
+Indiana;Delaware County;Washington 57	precinct
 Indiana;Dubois County;Dubois	precinct
 Indiana;Elkhart County;Baugo 01	precinct
 Indiana;Elkhart County;Baugo 02	precinct
@@ -1074,8 +1019,48 @@ Indiana;Elkhart County;York 02	precinct
 Indiana;Fayette County;Fayette	precinct
 Indiana;Floyd County;Floyd	precinct
 Indiana;Fountain County;Fountain	precinct
+Indiana;Franklin County;Batesville 1	precinct
+Indiana;Franklin County;Bath 1	precinct
+Indiana;Franklin County;Blooming Grv 1	precinct
+Indiana;Franklin County;Brookville 1	precinct
+Indiana;Franklin County;Brookville 2	precinct
+Indiana;Franklin County;Brookville 3	precinct
+Indiana;Franklin County;Brookville 4	precinct
+Indiana;Franklin County;Brookville 5	precinct
+Indiana;Franklin County;Butler 1	precinct
+Indiana;Franklin County;Fairfield 1	precinct
 Indiana;Franklin County;Franklin	precinct
+Indiana;Franklin County;Highland 1	precinct
+Indiana;Franklin County;Highland 2	precinct
+Indiana;Franklin County;Laurel 1	precinct
+Indiana;Franklin County;Metamora 1	precinct
+Indiana;Franklin County;Oldenburg 1	precinct
+Indiana;Franklin County;Posey 1	precinct
+Indiana;Franklin County;Ray 1	precinct
+Indiana;Franklin County;Ray 2	precinct
+Indiana;Franklin County;Salt Creek 1	precinct
+Indiana;Franklin County;Salt Creek 2	precinct
+Indiana;Franklin County;Springfield 1	precinct
+Indiana;Franklin County;Whitewater 1	precinct
+Indiana;Franklin County;Whitewater 2	precinct
+Indiana;Fulton County;Aubbeenaubbee 9	precinct
 Indiana;Fulton County;Fulton	precinct
+Indiana;Fulton County;Henry 1	precinct
+Indiana;Fulton County;Henry 2	precinct
+Indiana;Fulton County;Henry 3	precinct
+Indiana;Fulton County;Liberty 13	precinct
+Indiana;Fulton County;New Castle 14	precinct
+Indiana;Fulton County;Richland 15	precinct
+Indiana;Fulton County;Rochester 1	precinct
+Indiana;Fulton County;Rochester 2	precinct
+Indiana;Fulton County;Rochester 3	precinct
+Indiana;Fulton County;Rochester 4	precinct
+Indiana;Fulton County;Rochester 5	precinct
+Indiana;Fulton County;Rochester 6	precinct
+Indiana;Fulton County;Rochester 7	precinct
+Indiana;Fulton County;Rochester 8	precinct
+Indiana;Fulton County;Union 16	precinct
+Indiana;Fulton County;Wayne 17	precinct
 Indiana;Gibson County;Barton 01	precinct
 Indiana;Gibson County;Barton 02	precinct
 Indiana;Gibson County;Center 01	precinct
@@ -1111,7 +1096,70 @@ Indiana;Gibson County;Wabash 01	precinct
 Indiana;Gibson County;Washington 01	precinct
 Indiana;Gibson County;White River 01	precinct
 Indiana;Gibson County;White River 02	precinct
+Indiana;Grant County;Center 01	precinct
+Indiana;Grant County;Center 02	precinct
+Indiana;Grant County;Center 03	precinct
+Indiana;Grant County;Center 04	precinct
+Indiana;Grant County;Center 05	precinct
+Indiana;Grant County;Center 06	precinct
+Indiana;Grant County;Center 07	precinct
+Indiana;Grant County;Center 08	precinct
+Indiana;Grant County;Center 09	precinct
+Indiana;Grant County;Center 10	precinct
+Indiana;Grant County;Center 11	precinct
+Indiana;Grant County;Center 12	precinct
+Indiana;Grant County;Center 13	precinct
+Indiana;Grant County;Center 14	precinct
+Indiana;Grant County;Center 15	precinct
+Indiana;Grant County;Center 16	precinct
+Indiana;Grant County;Center 17	precinct
+Indiana;Grant County;Center 18	precinct
+Indiana;Grant County;Center 19	precinct
+Indiana;Grant County;Center 20	precinct
+Indiana;Grant County;Center 24	precinct
+Indiana;Grant County;Fairmount 1	precinct
+Indiana;Grant County;Fairmount 2	precinct
+Indiana;Grant County;Fairmount 3	precinct
+Indiana;Grant County;Fairmount 4	precinct
+Indiana;Grant County;Franklin 1	precinct
+Indiana;Grant County;Franklin 2	precinct
+Indiana;Grant County;Franklin 3	precinct
+Indiana;Grant County;Franklin 4	precinct
+Indiana;Grant County;Franklin 5	precinct
+Indiana;Grant County;Franklin 6	precinct
+Indiana;Grant County;Franklin 7	precinct
 Indiana;Grant County;Grant	precinct
+Indiana;Grant County;Green 1	precinct
+Indiana;Grant County;Jefferson 1	precinct
+Indiana;Grant County;Jefferson 2	precinct
+Indiana;Grant County;Jefferson 3	precinct
+Indiana;Grant County;Liberty 1	precinct
+Indiana;Grant County;Mill 01	precinct
+Indiana;Grant County;Mill 02	precinct
+Indiana;Grant County;Mill 03	precinct
+Indiana;Grant County;Mill 04	precinct
+Indiana;Grant County;Mill 05	precinct
+Indiana;Grant County;Mill 06	precinct
+Indiana;Grant County;Mill 07	precinct
+Indiana;Grant County;Mill 08	precinct
+Indiana;Grant County;Mill 09	precinct
+Indiana;Grant County;Mill 10	precinct
+Indiana;Grant County;Mill 11	precinct
+Indiana;Grant County;Monroe 1	precinct
+Indiana;Grant County;Pleasant 1	precinct
+Indiana;Grant County;Pleasant 2	precinct
+Indiana;Grant County;Pleasant 3	precinct
+Indiana;Grant County;Pleasant 4	precinct
+Indiana;Grant County;Pleasant 5	precinct
+Indiana;Grant County;Pleasant 6	precinct
+Indiana;Grant County;Pleasant 7	precinct
+Indiana;Grant County;Richland 1	precinct
+Indiana;Grant County;Sims 1	precinct
+Indiana;Grant County;Van Buren 1	precinct
+Indiana;Grant County;Washington 1	precinct
+Indiana;Grant County;Washington 2	precinct
+Indiana;Grant County;Washington 3	precinct
+Indiana;Grant County;Washington 4	precinct
 Indiana;Greene County;Greene	precinct
 Indiana;Hamilton County;Arbors	precinct
 Indiana;Hamilton County;Arcadia	precinct
@@ -1237,6 +1285,9 @@ Indiana;Hamilton County;Kingswood 02	precinct
 Indiana;Hamilton County;Lady Hamilton	precinct
 Indiana;Hamilton County;Lexington	precinct
 Indiana;Hamilton County;Mohawk Hills	precinct
+Indiana;Hamilton County;Morse 1 Nv	precinct
+Indiana;Hamilton County;Morse 2 Nv	precinct
+Indiana;Hamilton County;Morse 3 Nv	precinct
 Indiana;Hamilton County;Mt Carmel 01	precinct
 Indiana;Hamilton County;Mt Carmel 02	precinct
 Indiana;Hamilton County;Noblesville 01	precinct
@@ -1317,6 +1368,7 @@ Indiana;Hamilton County;Wayne 02	precinct
 Indiana;Hamilton County;Wayne 03	precinct
 Indiana;Hamilton County;Wayne 04	precinct
 Indiana;Hamilton County;Wayne 05	precinct
+Indiana;Hamilton County;Wayne 06 Nv	precinct
 Indiana;Hamilton County;Westfield 01	precinct
 Indiana;Hamilton County;Westfield 02	precinct
 Indiana;Hamilton County;Westfield 08	precinct
@@ -1584,16 +1636,25 @@ Indiana;Huntington County;Wayne Twp	precinct
 Indiana;Jackson County;Jackson	precinct
 Indiana;Jasper County;Jasper	precinct
 Indiana;Jay County;Jay	precinct
-Indiana;Jefferson County;1-Jan	precinct
-Indiana;Jefferson County;2-Jan	precinct
-Indiana;Jefferson County;1-Feb	precinct
-Indiana;Jefferson County;2-Feb	precinct
 Indiana;Jefferson County;1-Apr	precinct
-Indiana;Jefferson County;4-1a	precinct
-Indiana;Jefferson County;2-Apr	precinct
-Indiana;Jefferson County;3-Apr	precinct
+Indiana;Jefferson County;1-Feb	precinct
+Indiana;Jefferson County;1-Jan	precinct
 Indiana;Jefferson County;1-May	precinct
+Indiana;Jefferson County;2-Apr	precinct
+Indiana;Jefferson County;2-Feb	precinct
+Indiana;Jefferson County;2-Jan	precinct
 Indiana;Jefferson County;2-May	precinct
+Indiana;Jefferson County;3-Apr	precinct
+Indiana;Jefferson County;4-1a	precinct
+Indiana;Jefferson County;43831	precinct
+Indiana;Jefferson County;43832	precinct
+Indiana;Jefferson County;43862	precinct
+Indiana;Jefferson County;43863	precinct
+Indiana;Jefferson County;43922	precinct
+Indiana;Jefferson County;43923	precinct
+Indiana;Jefferson County;43924	precinct
+Indiana;Jefferson County;43952	precinct
+Indiana;Jefferson County;43953	precinct
 Indiana;Jefferson County;Graham	precinct
 Indiana;Jefferson County;Hanover 1	precinct
 Indiana;Jefferson County;Hanover 2	precinct
@@ -1878,22 +1939,23 @@ Indiana;Kosciusko County;Wayne 08	precinct
 Indiana;Kosciusko County;Wayne 09	precinct
 Indiana;Kosciusko County;Wayne 10	precinct
 Indiana;Kosciusko County;Wayne 11	precinct
-Indiana;Lagrange County;Bloomfield 1	precinct
-Indiana;Lagrange County;Bloomfield 2	precinct
-Indiana;Lagrange County;Bloomfield 3	precinct
-Indiana;Lagrange County;Bloomfield 4	precinct
-Indiana;Lagrange County;Clay	precinct
-Indiana;Lagrange County;Clearspring	precinct
-Indiana;Lagrange County;Eden	precinct
-Indiana;Lagrange County;Greenfield	precinct
-Indiana;Lagrange County;Johnson North	precinct
-Indiana;Lagrange County;Johnson South	precinct
-Indiana;Lagrange County;Lima	precinct
-Indiana;Lagrange County;Milford East	precinct
-Indiana;Lagrange County;Milford West	precinct
-Indiana;Lagrange County;Newbury	precinct
-Indiana;Lagrange County;Springfield	precinct
-Indiana;Lagrange County;Van Buren	precinct
+Indiana;LaGrange County;Bloomfield 1	precinct
+Indiana;LaGrange County;Bloomfield 2	precinct
+Indiana;LaGrange County;Bloomfield 3	precinct
+Indiana;LaGrange County;Bloomfield 4	precinct
+Indiana;LaGrange County;Clay	precinct
+Indiana;LaGrange County;Clearspring	precinct
+Indiana;LaGrange County;Eden	precinct
+Indiana;LaGrange County;Greenfield	precinct
+Indiana;LaGrange County;Johnson North	precinct
+Indiana;LaGrange County;Johnson South	precinct
+Indiana;LaGrange County;Lima	precinct
+Indiana;LaGrange County;Milford East	precinct
+Indiana;LaGrange County;Milford West	precinct
+Indiana;LaGrange County;Newbury	precinct
+Indiana;LaGrange County;Springfield	precinct
+Indiana;LaGrange County;Van Buren	precinct
+Indiana;LaPorte County;Laporte	precinct
 Indiana;Lake County;Cal 05	precinct
 Indiana;Lake County;Cal 06	precinct
 Indiana;Lake County;Cal 10	precinct
@@ -2249,7 +2311,6 @@ Indiana;Lake County;Wt 07	precinct
 Indiana;Lake County;Wt 08	precinct
 Indiana;Lake County;Wt 09	precinct
 Indiana;Lake County;Wt 10	precinct
-Indiana;Laporte County;Laporte	precinct
 Indiana;Lawrence County;Lawrence	precinct
 Indiana;Madison County;01 001	precinct
 Indiana;Madison County;01 002	precinct
@@ -3089,9 +3150,38 @@ Indiana;Monroe County;Van Buren 6	precinct
 Indiana;Monroe County;Washington	precinct
 Indiana;Montgomery County;Montgomery	precinct
 Indiana;Morgan County;Morgan	precinct
+Indiana;Newton County;Beaver 1	precinct
+Indiana;Newton County;Beaver 2	precinct
+Indiana;Newton County;Colfax	precinct
+Indiana;Newton County;Grant 1	precinct
+Indiana;Newton County;Grant 2	precinct
+Indiana;Newton County;Iroquois 1	precinct
+Indiana;Newton County;Iroquois 2	precinct
+Indiana;Newton County;Jackson	precinct
+Indiana;Newton County;Jefferson 1	precinct
+Indiana;Newton County;Jefferson 2	precinct
+Indiana;Newton County;Jefferson 3	precinct
+Indiana;Newton County;Lake 1	precinct
+Indiana;Newton County;Lake 2	precinct
+Indiana;Newton County;Lincoln 1	precinct
+Indiana;Newton County;Lincoln 2	precinct
+Indiana;Newton County;Lincoln 3	precinct
+Indiana;Newton County;Mcclellan	precinct
 Indiana;Newton County;Newton	precinct
+Indiana;Newton County;Washington	precinct
 Indiana;Noble County;Noble	precinct
+Indiana;Ohio County;Cass 7	precinct
 Indiana;Ohio County;Ohio	precinct
+Indiana;Ohio County;Pike 8	precinct
+Indiana;Ohio County;Randolph 01	precinct
+Indiana;Ohio County;Randolph 02	precinct
+Indiana;Ohio County;Randolph 03	precinct
+Indiana;Ohio County;Randolph 04	precinct
+Indiana;Ohio County;Randolph 05	precinct
+Indiana;Ohio County;Randolph 06	precinct
+Indiana;Ohio County;Randolph 10	precinct
+Indiana;Ohio County;Randolph 11	precinct
+Indiana;Ohio County;Union 9	precinct
 Indiana;Orange County;Orange	precinct
 Indiana;Owen County;Owen	precinct
 Indiana;Parke County;Parke	precinct
@@ -3323,11 +3413,74 @@ Indiana;Rush County;Union 18	precinct
 Indiana;Rush County;Walker 12	precinct
 Indiana;Rush County;Washington 17	precinct
 Indiana;Scott County;Scott	precinct
+Indiana;Shelby County;1 North	precinct
+Indiana;Shelby County;1 South	precinct
+Indiana;Shelby County;1 West	precinct
+Indiana;Shelby County;2 East	precinct
+Indiana;Shelby County;2 South	precinct
+Indiana;Shelby County;2 Southeast	precinct
+Indiana;Shelby County;2 West	precinct
+Indiana;Shelby County;3 East	precinct
+Indiana;Shelby County;3 Northeast	precinct
+Indiana;Shelby County;3 South	precinct
+Indiana;Shelby County;3 Southeast	precinct
+Indiana;Shelby County;3 West	precinct
+Indiana;Shelby County;4 East	precinct
+Indiana;Shelby County;4 North	precinct
+Indiana;Shelby County;4 Northeast	precinct
+Indiana;Shelby County;5 East	precinct
+Indiana;Shelby County;5 Northwest	precinct
+Indiana;Shelby County;5 South	precinct
+Indiana;Shelby County;Addison East	precinct
+Indiana;Shelby County;Addison West	precinct
+Indiana;Shelby County;Brandywine	precinct
+Indiana;Shelby County;Brandywine Nw	precinct
+Indiana;Shelby County;Hanover North	precinct
+Indiana;Shelby County;Hanover South	precinct
+Indiana;Shelby County;Hendricks	precinct
+Indiana;Shelby County;Jackson	precinct
+Indiana;Shelby County;Liberty East	precinct
+Indiana;Shelby County;Liberty West	precinct
+Indiana;Shelby County;Marion	precinct
+Indiana;Shelby County;Moral North	precinct
+Indiana;Shelby County;Moral Nw	precinct
+Indiana;Shelby County;Moral South	precinct
+Indiana;Shelby County;Moral Sw	precinct
+Indiana;Shelby County;Noble	precinct
 Indiana;Shelby County;Shelby	precinct
+Indiana;Shelby County;Shelby East	precinct
+Indiana;Shelby County;Shelby West	precinct
+Indiana;Shelby County;Sugar Creek	precinct
+Indiana;Shelby County;Union	precinct
+Indiana;Shelby County;Van Buren	precinct
+Indiana;Shelby County;Washington	precinct
 Indiana;Spencer County;Spencer	precinct
 Indiana;St. Joseph County;St. Joseph	precinct
 Indiana;Starke County;Starke	precinct
+Indiana;Steuben County;Clear Lake	precinct
+Indiana;Steuben County;Fremont 1	precinct
+Indiana;Steuben County;Fremont 2	precinct
+Indiana;Steuben County;Fremont 3	precinct
+Indiana;Steuben County;Jackson	precinct
+Indiana;Steuben County;Jamestown 1	precinct
+Indiana;Steuben County;Jamestown 2	precinct
+Indiana;Steuben County;Millgrove	precinct
+Indiana;Steuben County;Otsego 1	precinct
+Indiana;Steuben County;Otsego 2	precinct
+Indiana;Steuben County;Pleasant 1	precinct
+Indiana;Steuben County;Pleasant 2	precinct
+Indiana;Steuben County;Pleasant 3	precinct
+Indiana;Steuben County;Pleasant 4	precinct
+Indiana;Steuben County;Pleasant 5	precinct
+Indiana;Steuben County;Pleasant 6	precinct
+Indiana;Steuben County;Pleasant 7	precinct
+Indiana;Steuben County;Richland	precinct
+Indiana;Steuben County;Salem	precinct
+Indiana;Steuben County;Scott	precinct
 Indiana;Steuben County;Steuben	precinct
+Indiana;Steuben County;Steuben 1	precinct
+Indiana;Steuben County;Steuben 2	precinct
+Indiana;Steuben County;York	precinct
 Indiana;Sullivan County;Cass 1	precinct
 Indiana;Sullivan County;Cass 2	precinct
 Indiana;Sullivan County;Curry 1	precinct
@@ -3355,8 +3508,8 @@ Indiana;Tipton County;Tipton	precinct
 Indiana;Union County;Brownsville	precinct
 Indiana;Union County;Center	precinct
 Indiana;Union County;Center I	precinct
-Indiana;Union County;Center Ii	precinct
 Indiana;Union County;Center III	precinct
+Indiana;Union County;Center Ii	precinct
 Indiana;Union County;Harmony	precinct
 Indiana;Union County;Harrison	precinct
 Indiana;Union County;Liberty	precinct
@@ -3498,7 +3651,24 @@ Indiana;Vanderburgh County;Ward 6 Precinct 14	precinct
 Indiana;Vanderburgh County;Ward 6 Precinct 15	precinct
 Indiana;Vanderburgh County;Ward 6 Precinct 16	precinct
 Indiana;Vanderburgh County;Ward 6 Precinct 17	precinct
+Indiana;Vermillion County;Cayuga	precinct
+Indiana;Vermillion County;Clinton City 1	precinct
+Indiana;Vermillion County;Clinton City 2	precinct
+Indiana;Vermillion County;Clinton City 3	precinct
+Indiana;Vermillion County;Clinton City 4	precinct
+Indiana;Vermillion County;Clinton Twp 1	precinct
+Indiana;Vermillion County;Clinton Twp 2	precinct
+Indiana;Vermillion County;Clinton Twp 3	precinct
+Indiana;Vermillion County;Dana	precinct
+Indiana;Vermillion County;East Helt	precinct
+Indiana;Vermillion County;Eugene	precinct
+Indiana;Vermillion County;Fairview 1	precinct
+Indiana;Vermillion County;Fairview 2	precinct
+Indiana;Vermillion County;Highland	precinct
+Indiana;Vermillion County;St Bernice	precinct
 Indiana;Vermillion County;Vermillion	precinct
+Indiana;Vermillion County;Vermillion 1	precinct
+Indiana;Vermillion County;Vermillion 2	precinct
 Indiana;Vigo County;Vigo	precinct
 Indiana;Wabash County;Chester 1	precinct
 Indiana;Wabash County;Chester 2	precinct
@@ -3540,14 +3710,14 @@ Indiana;Washington County;Pierce	precinct
 Indiana;Washington County;Polk	precinct
 Indiana;Washington County;Posey	precinct
 Indiana;Washington County;Salem I	precinct
-Indiana;Washington County;Salem Ii	precinct
 Indiana;Washington County;Salem III	precinct
 Indiana;Washington County;Salem IV	precinct
+Indiana;Washington County;Salem Ii	precinct
 Indiana;Washington County;Vernon	precinct
 Indiana;Washington County;Washington I	precinct
-Indiana;Washington County;Washington Ii	precinct
 Indiana;Washington County;Washington III	precinct
 Indiana;Washington County;Washington IV	precinct
+Indiana;Washington County;Washington Ii	precinct
 Indiana;Wayne County;Abington 1	precinct
 Indiana;Wayne County;Boston 1	precinct
 Indiana;Wayne County;Center 1	precinct
@@ -3685,324 +3855,154 @@ Indiana;Whitley County;Union East	precinct
 Indiana;Whitley County;Union West	precinct
 Indiana;Whitley County;Washington North	precinct
 Indiana;Whitley County;Washington South	precinct
-Indiana;Newton County;Beaver 1	precinct
-Indiana;Newton County;Beaver 2	precinct
-Indiana;Newton County;Colfax	precinct
-Indiana;Newton County;Grant 1	precinct
-Indiana;Newton County;Grant 2	precinct
-Indiana;Newton County;Iroquois 1	precinct
-Indiana;Newton County;Iroquois 2	precinct
-Indiana;Newton County;Jackson	precinct
-Indiana;Newton County;Jefferson 1	precinct
-Indiana;Newton County;Jefferson 2	precinct
-Indiana;Newton County;Jefferson 3	precinct
-Indiana;Newton County;Lake 1	precinct
-Indiana;Newton County;Lake 2	precinct
-Indiana;Newton County;Lincoln 1	precinct
-Indiana;Newton County;Lincoln 2	precinct
-Indiana;Newton County;Lincoln 3	precinct
-Indiana;Newton County;Mcclellan	precinct
-Indiana;Newton County;Washington	precinct
-Indiana;Vermillion County;Vermillion 2	precinct
-Indiana;Vermillion County;Vermillion 1	precinct
-Indiana;Vermillion County;St Bernice	precinct
-Indiana;Vermillion County;Highland	precinct
-Indiana;Vermillion County;Fairview 2	precinct
-Indiana;Vermillion County;Fairview 1	precinct
-Indiana;Vermillion County;Eugene	precinct
-Indiana;Vermillion County;East Helt	precinct
-Indiana;Vermillion County;Dana	precinct
-Indiana;Vermillion County;Clinton Twp 3	precinct
-Indiana;Vermillion County;Clinton Twp 2	precinct
-Indiana;Vermillion County;Clinton Twp 1	precinct
-Indiana;Vermillion County;Clinton City 4	precinct
-Indiana;Vermillion County;Clinton City 3	precinct
-Indiana;Vermillion County;Clinton City 2	precinct
-Indiana;Vermillion County;Clinton City 1	precinct
-Indiana;Vermillion County;Cayuga	precinct
-Indiana;Steuben County;York	precinct
-Indiana;Steuben County;Steuben 2	precinct
-Indiana;Steuben County;Steuben 1	precinct
-Indiana;Steuben County;Scott	precinct
-Indiana;Steuben County;Salem	precinct
-Indiana;Steuben County;Richland	precinct
-Indiana;Steuben County;Pleasant 7	precinct
-Indiana;Steuben County;Pleasant 6	precinct
-Indiana;Steuben County;Pleasant 5	precinct
-Indiana;Steuben County;Pleasant 4	precinct
-Indiana;Steuben County;Pleasant 3	precinct
-Indiana;Steuben County;Pleasant 2	precinct
-Indiana;Steuben County;Pleasant 1	precinct
-Indiana;Steuben County;Otsego 2	precinct
-Indiana;Steuben County;Otsego 1	precinct
-Indiana;Steuben County;Millgrove	precinct
-Indiana;Steuben County;Jamestown 2	precinct
-Indiana;Steuben County;Jamestown 1	precinct
-Indiana;Steuben County;Jackson	precinct
-Indiana;Steuben County;Fremont 3	precinct
-Indiana;Steuben County;Fremont 2	precinct
-Indiana;Steuben County;Fremont 1	precinct
-Indiana;Steuben County;Clear Lake	precinct
-Indiana;Shelby County;Washington	precinct
-Indiana;Shelby County;Van Buren	precinct
-Indiana;Shelby County;Union	precinct
-Indiana;Shelby County;Sugar Creek	precinct
-Indiana;Shelby County;Shelby West	precinct
-Indiana;Shelby County;Shelby East	precinct
-Indiana;Shelby County;Noble	precinct
-Indiana;Shelby County;Moral Sw	precinct
-Indiana;Shelby County;Moral South	precinct
-Indiana;Shelby County;Moral Nw	precinct
-Indiana;Shelby County;Moral North	precinct
-Indiana;Shelby County;Marion	precinct
-Indiana;Shelby County;Liberty West	precinct
-Indiana;Shelby County;Liberty East	precinct
-Indiana;Shelby County;Jackson	precinct
-Indiana;Shelby County;Hendricks	precinct
-Indiana;Shelby County;Hanover South	precinct
-Indiana;Shelby County;Hanover North	precinct
-Indiana;Shelby County;Brandywine Nw	precinct
-Indiana;Shelby County;Brandywine	precinct
-Indiana;Shelby County;Addison West	precinct
-Indiana;Shelby County;Addison East	precinct
-Indiana;Shelby County;5 South	precinct
-Indiana;Shelby County;5 Northwest	precinct
-Indiana;Shelby County;5 East	precinct
-Indiana;Shelby County;4 Northeast	precinct
-Indiana;Shelby County;4 North	precinct
-Indiana;Shelby County;4 East	precinct
-Indiana;Shelby County;3 West	precinct
-Indiana;Shelby County;3 Southeast	precinct
-Indiana;Shelby County;3 South	precinct
-Indiana;Shelby County;3 Northeast	precinct
-Indiana;Shelby County;3 East	precinct
-Indiana;Shelby County;2 West	precinct
-Indiana;Shelby County;2 Southeast	precinct
-Indiana;Shelby County;2 South	precinct
-Indiana;Shelby County;2 East	precinct
-Indiana;Shelby County;1 West	precinct
-Indiana;Shelby County;1 South	precinct
-Indiana;Shelby County;1 North	precinct
-Indiana;Ohio County;Union 9	precinct
-Indiana;Ohio County;Randolph 11	precinct
-Indiana;Ohio County;Randolph 10	precinct
-Indiana;Ohio County;Randolph 06	precinct
-Indiana;Ohio County;Randolph 05	precinct
-Indiana;Ohio County;Randolph 04	precinct
-Indiana;Ohio County;Randolph 03	precinct
-Indiana;Ohio County;Randolph 02	precinct
-Indiana;Ohio County;Randolph 01	precinct
-Indiana;Ohio County;Pike 8	precinct
-Indiana;Ohio County;Cass 7	precinct
-Indiana;Jefferson County;43953	precinct
-Indiana;Jefferson County;43952	precinct
-Indiana;Jefferson County;43924	precinct
-Indiana;Jefferson County;43923	precinct
-Indiana;Jefferson County;43922	precinct
-Indiana;Jefferson County;43863	precinct
-Indiana;Jefferson County;43862	precinct
-Indiana;Jefferson County;43832	precinct
-Indiana;Jefferson County;43831	precinct
-Indiana;Hamilton County;Wayne 06 Nv	precinct
-Indiana;Hamilton County;Morse 3 Nv	precinct
-Indiana;Hamilton County;Morse 2 Nv	precinct
-Indiana;Hamilton County;Morse 1 Nv	precinct
-Indiana;Grant County;Washington 4	precinct
-Indiana;Grant County;Washington 3	precinct
-Indiana;Grant County;Washington 2	precinct
-Indiana;Grant County;Washington 1	precinct
-Indiana;Grant County;Van Buren 1	precinct
-Indiana;Grant County;Sims 1	precinct
-Indiana;Grant County;Richland 1	precinct
-Indiana;Grant County;Pleasant 7	precinct
-Indiana;Grant County;Pleasant 6	precinct
-Indiana;Grant County;Pleasant 5	precinct
-Indiana;Grant County;Pleasant 4	precinct
-Indiana;Grant County;Pleasant 3	precinct
-Indiana;Grant County;Pleasant 2	precinct
-Indiana;Grant County;Pleasant 1	precinct
-Indiana;Grant County;Monroe 1	precinct
-Indiana;Grant County;Mill 11	precinct
-Indiana;Grant County;Mill 10	precinct
-Indiana;Grant County;Mill 09	precinct
-Indiana;Grant County;Mill 08	precinct
-Indiana;Grant County;Mill 07	precinct
-Indiana;Grant County;Mill 06	precinct
-Indiana;Grant County;Mill 05	precinct
-Indiana;Grant County;Mill 04	precinct
-Indiana;Grant County;Mill 03	precinct
-Indiana;Grant County;Mill 02	precinct
-Indiana;Grant County;Mill 01	precinct
-Indiana;Grant County;Liberty 1	precinct
-Indiana;Grant County;Jefferson 3	precinct
-Indiana;Grant County;Jefferson 2	precinct
-Indiana;Grant County;Jefferson 1	precinct
-Indiana;Grant County;Green 1	precinct
-Indiana;Grant County;Franklin 7	precinct
-Indiana;Grant County;Franklin 6	precinct
-Indiana;Grant County;Franklin 5	precinct
-Indiana;Grant County;Franklin 4	precinct
-Indiana;Grant County;Franklin 3	precinct
-Indiana;Grant County;Franklin 2	precinct
-Indiana;Grant County;Franklin 1	precinct
-Indiana;Grant County;Fairmount 4	precinct
-Indiana;Grant County;Fairmount 3	precinct
-Indiana;Grant County;Fairmount 2	precinct
-Indiana;Grant County;Fairmount 1	precinct
-Indiana;Grant County;Center 24	precinct
-Indiana;Grant County;Center 20	precinct
-Indiana;Grant County;Center 19	precinct
-Indiana;Grant County;Center 18	precinct
-Indiana;Grant County;Center 17	precinct
-Indiana;Grant County;Center 16	precinct
-Indiana;Grant County;Center 15	precinct
-Indiana;Grant County;Center 14	precinct
-Indiana;Grant County;Center 13	precinct
-Indiana;Grant County;Center 12	precinct
-Indiana;Grant County;Center 11	precinct
-Indiana;Grant County;Center 10	precinct
-Indiana;Grant County;Center 09	precinct
-Indiana;Grant County;Center 08	precinct
-Indiana;Grant County;Center 07	precinct
-Indiana;Grant County;Center 06	precinct
-Indiana;Grant County;Center 05	precinct
-Indiana;Grant County;Center 04	precinct
-Indiana;Grant County;Center 03	precinct
-Indiana;Grant County;Center 02	precinct
-Indiana;Grant County;Center 01	precinct
-Indiana;Fulton County;Wayne 17	precinct
-Indiana;Fulton County;Union 16	precinct
-Indiana;Fulton County;Rochester 8	precinct
-Indiana;Fulton County;Rochester 7	precinct
-Indiana;Fulton County;Rochester 6	precinct
-Indiana;Fulton County;Rochester 5	precinct
-Indiana;Fulton County;Rochester 4	precinct
-Indiana;Fulton County;Rochester 3	precinct
-Indiana;Fulton County;Rochester 2	precinct
-Indiana;Fulton County;Rochester 1	precinct
-Indiana;Fulton County;Richland 15	precinct
-Indiana;Fulton County;New Castle 14	precinct
-Indiana;Fulton County;Liberty 13	precinct
-Indiana;Fulton County;Henry 3	precinct
-Indiana;Fulton County;Henry 2	precinct
-Indiana;Fulton County;Henry 1	precinct
-Indiana;Fulton County;Aubbeenaubbee 9	precinct
-Indiana;Franklin County;Whitewater 2	precinct
-Indiana;Franklin County;Whitewater 1	precinct
-Indiana;Franklin County;Springfield 1	precinct
-Indiana;Franklin County;Salt Creek 2	precinct
-Indiana;Franklin County;Salt Creek 1	precinct
-Indiana;Franklin County;Ray 2	precinct
-Indiana;Franklin County;Ray 1	precinct
-Indiana;Franklin County;Posey 1	precinct
-Indiana;Franklin County;Oldenburg 1	precinct
-Indiana;Franklin County;Metamora 1	precinct
-Indiana;Franklin County;Laurel 1	precinct
-Indiana;Franklin County;Highland 2	precinct
-Indiana;Franklin County;Highland 1	precinct
-Indiana;Franklin County;Fairfield 1	precinct
-Indiana;Franklin County;Butler 1	precinct
-Indiana;Franklin County;Brookville 5	precinct
-Indiana;Franklin County;Brookville 4	precinct
-Indiana;Franklin County;Brookville 3	precinct
-Indiana;Franklin County;Brookville 2	precinct
-Indiana;Franklin County;Brookville 1	precinct
-Indiana;Franklin County;Blooming Grv 1	precinct
-Indiana;Franklin County;Bath 1	precinct
-Indiana;Franklin County;Batesville 1	precinct
-Indiana;Delaware County;Washington 57	precinct
-Indiana;Delaware County;Union 77	precinct
-Indiana;Delaware County;Union 61	precinct
-Indiana;Delaware County;Salem 94	precinct
-Indiana;Delaware County;Salem 52	precinct
-Indiana;Delaware County;Salem 51	precinct
-Indiana;Delaware County;Perry 62	precinct
-Indiana;Delaware County;Niles 68	precinct
-Indiana;Delaware County;Niles 67	precinct
-Indiana;Delaware County;Mt Pleasant 98	precinct
-Indiana;Delaware County;Mt Pleasant 95	precinct
-Indiana;Delaware County;Mt Pleasant 88	precinct
-Indiana;Delaware County;Mt Pleasant 87	precinct
-Indiana;Delaware County;Mt Pleasant 81	precinct
-Indiana;Delaware County;Mt Pleasant 74	precinct
-Indiana;Delaware County;Mt Pleasant 71	precinct
-Indiana;Delaware County;Mt Pleasant 55	precinct
-Indiana;Delaware County;Mt Pleasant 54	precinct
-Indiana;Delaware County;Mt Pleasant 53	precinct
-Indiana;Delaware County;Monroe 73	precinct
-Indiana;Delaware County;Monroe 59	precinct
-Indiana;Delaware County;Liberty 75	precinct
-Indiana;Delaware County;Liberty 64	precinct
-Indiana;Delaware County;Liberty 63	precinct
-Indiana;Delaware County;Harrison 78	precinct
-Indiana;Delaware County;Harrison 58	precinct
-Indiana;Delaware County;Harrison 56	precinct
-Indiana;Delaware County;Hamilton 93	precinct
-Indiana;Delaware County;Hamilton 92	precinct
-Indiana;Delaware County;Hamilton 91	precinct
-Indiana;Delaware County;Hamilton 90	precinct
-Indiana;Delaware County;Hamilton 70	precinct
-Indiana;Delaware County;Hamilton 69	precinct
-Indiana;Delaware County;Hamilton 60	precinct
-Indiana;Delaware County;Delaware 66	precinct
-Indiana;Delaware County;Delaware 65	precinct
-Indiana;Delaware County;Center 50	precinct
-Indiana;Delaware County;Center 49	precinct
-Indiana;Delaware County;Center 48	precinct
-Indiana;Delaware County;Center 47	precinct
-Indiana;Delaware County;Center 46	precinct
-Indiana;Delaware County;Center 45	precinct
-Indiana;Delaware County;Center 44	precinct
-Indiana;Delaware County;Center 43	precinct
-Indiana;Delaware County;Center 42	precinct
-Indiana;Delaware County;Center 41	precinct
-Indiana;Delaware County;Center 40	precinct
-Indiana;Delaware County;Center 39	precinct
-Indiana;Delaware County;Center 38	precinct
-Indiana;Delaware County;Center 36	precinct
-Indiana;Delaware County;Center 35	precinct
-Indiana;Delaware County;Center 34	precinct
-Indiana;Delaware County;Center 33	precinct
-Indiana;Delaware County;Center 29	precinct
-Indiana;Delaware County;Center 28	precinct
-Indiana;Delaware County;Center 27	precinct
-Indiana;Delaware County;Center 26	precinct
-Indiana;Delaware County;Center 25	precinct
-Indiana;Delaware County;Center 23	precinct
-Indiana;Delaware County;Center 22	precinct
-Indiana;Delaware County;Center 20	precinct
-Indiana;Delaware County;Center 19	precinct
-Indiana;Delaware County;Center 18	precinct
-Indiana;Delaware County;Center 15	precinct
-Indiana;Delaware County;Center 14	precinct
-Indiana;Delaware County;Center 13	precinct
-Indiana;Delaware County;Center 12	precinct
-Indiana;Delaware County;Center 11	precinct
-Indiana;Delaware County;Center 10	precinct
-Indiana;Delaware County;Center 09	precinct
-Indiana;Delaware County;Center 08	precinct
-Indiana;Delaware County;Center 07	precinct
-Indiana;Delaware County;Center 06	precinct
-Indiana;Delaware County;Center 05	precinct
-Indiana;Delaware County;Center 04	precinct
-Indiana;Delaware County;Center 03	precinct
-Indiana;Delaware County;Center 02	precinct
-Indiana;Delaware County;Center 01	precinct
-Indiana;Crawford County;Whiskey Run 2	precinct
-Indiana;Crawford County;Whiskey Run 1	precinct
-Indiana;Crawford County;Union 2	precinct
-Indiana;Crawford County;Union 1	precinct
-Indiana;Crawford County;Sterling 3	precinct
-Indiana;Crawford County;Sterling 2	precinct
-Indiana;Crawford County;Sterling 1	precinct
-Indiana;Crawford County;Patoka 2	precinct
-Indiana;Crawford County;Patoka 1	precinct
-Indiana;Crawford County;Ohio 2	precinct
-Indiana;Crawford County;Ohio 1	precinct
-Indiana;Crawford County;Liberty 2	precinct
-Indiana;Crawford County;Liberty 1	precinct
-Indiana;Crawford County;Johnson 2	precinct
-Indiana;Crawford County;Johnson 1	precinct
-Indiana;Crawford County;Jennings 2	precinct
-Indiana;Crawford County;Jennings 1	precinct
-Indiana;Crawford County;Boone	precinct
+Indiana	state
+Indiana;IN House District 1	state-house
+Indiana;IN House District 10	state-house
+Indiana;IN House District 100	state-house
+Indiana;IN House District 11	state-house
+Indiana;IN House District 12	state-house
+Indiana;IN House District 13	state-house
+Indiana;IN House District 14	state-house
+Indiana;IN House District 15	state-house
+Indiana;IN House District 16	state-house
+Indiana;IN House District 17	state-house
+Indiana;IN House District 18	state-house
+Indiana;IN House District 19	state-house
+Indiana;IN House District 2	state-house
+Indiana;IN House District 20	state-house
+Indiana;IN House District 21	state-house
+Indiana;IN House District 22	state-house
+Indiana;IN House District 23	state-house
+Indiana;IN House District 24	state-house
+Indiana;IN House District 25	state-house
+Indiana;IN House District 26	state-house
+Indiana;IN House District 27	state-house
+Indiana;IN House District 28	state-house
+Indiana;IN House District 29	state-house
+Indiana;IN House District 3	state-house
+Indiana;IN House District 30	state-house
+Indiana;IN House District 31	state-house
+Indiana;IN House District 32	state-house
+Indiana;IN House District 33	state-house
+Indiana;IN House District 34	state-house
+Indiana;IN House District 35	state-house
+Indiana;IN House District 36	state-house
+Indiana;IN House District 37	state-house
+Indiana;IN House District 38	state-house
+Indiana;IN House District 39	state-house
+Indiana;IN House District 4	state-house
+Indiana;IN House District 40	state-house
+Indiana;IN House District 41	state-house
+Indiana;IN House District 42	state-house
+Indiana;IN House District 43	state-house
+Indiana;IN House District 44	state-house
+Indiana;IN House District 45	state-house
+Indiana;IN House District 46	state-house
+Indiana;IN House District 47	state-house
+Indiana;IN House District 48	state-house
+Indiana;IN House District 49	state-house
+Indiana;IN House District 5	state-house
+Indiana;IN House District 50	state-house
+Indiana;IN House District 51	state-house
+Indiana;IN House District 52	state-house
+Indiana;IN House District 53	state-house
+Indiana;IN House District 54	state-house
+Indiana;IN House District 55	state-house
+Indiana;IN House District 56	state-house
+Indiana;IN House District 57	state-house
+Indiana;IN House District 58	state-house
+Indiana;IN House District 59	state-house
+Indiana;IN House District 6	state-house
+Indiana;IN House District 60	state-house
+Indiana;IN House District 61	state-house
+Indiana;IN House District 62	state-house
+Indiana;IN House District 63	state-house
+Indiana;IN House District 64	state-house
+Indiana;IN House District 65	state-house
+Indiana;IN House District 66	state-house
+Indiana;IN House District 67	state-house
+Indiana;IN House District 68	state-house
+Indiana;IN House District 69	state-house
+Indiana;IN House District 7	state-house
+Indiana;IN House District 70	state-house
+Indiana;IN House District 71	state-house
+Indiana;IN House District 72	state-house
+Indiana;IN House District 73	state-house
+Indiana;IN House District 74	state-house
+Indiana;IN House District 75	state-house
+Indiana;IN House District 76	state-house
+Indiana;IN House District 77	state-house
+Indiana;IN House District 78	state-house
+Indiana;IN House District 79	state-house
+Indiana;IN House District 8	state-house
+Indiana;IN House District 80	state-house
+Indiana;IN House District 81	state-house
+Indiana;IN House District 82	state-house
+Indiana;IN House District 83	state-house
+Indiana;IN House District 84	state-house
+Indiana;IN House District 85	state-house
+Indiana;IN House District 86	state-house
+Indiana;IN House District 87	state-house
+Indiana;IN House District 88	state-house
+Indiana;IN House District 89	state-house
+Indiana;IN House District 9	state-house
+Indiana;IN House District 90	state-house
+Indiana;IN House District 91	state-house
+Indiana;IN House District 92	state-house
+Indiana;IN House District 93	state-house
+Indiana;IN House District 94	state-house
+Indiana;IN House District 95	state-house
+Indiana;IN House District 96	state-house
+Indiana;IN House District 97	state-house
+Indiana;IN House District 98	state-house
+Indiana;IN House District 99	state-house
+Indiana;IN Senate District 1	state-senate
+Indiana;IN Senate District 10	state-senate
+Indiana;IN Senate District 11	state-senate
+Indiana;IN Senate District 12	state-senate
+Indiana;IN Senate District 13	state-senate
+Indiana;IN Senate District 14	state-senate
+Indiana;IN Senate District 15	state-senate
+Indiana;IN Senate District 16	state-senate
+Indiana;IN Senate District 17	state-senate
+Indiana;IN Senate District 18	state-senate
+Indiana;IN Senate District 19	state-senate
+Indiana;IN Senate District 2	state-senate
+Indiana;IN Senate District 20	state-senate
+Indiana;IN Senate District 21	state-senate
+Indiana;IN Senate District 22	state-senate
+Indiana;IN Senate District 23	state-senate
+Indiana;IN Senate District 24	state-senate
+Indiana;IN Senate District 25	state-senate
+Indiana;IN Senate District 26	state-senate
+Indiana;IN Senate District 27	state-senate
+Indiana;IN Senate District 28	state-senate
+Indiana;IN Senate District 29	state-senate
+Indiana;IN Senate District 3	state-senate
+Indiana;IN Senate District 30	state-senate
+Indiana;IN Senate District 31	state-senate
+Indiana;IN Senate District 32	state-senate
+Indiana;IN Senate District 33	state-senate
+Indiana;IN Senate District 34	state-senate
+Indiana;IN Senate District 35	state-senate
+Indiana;IN Senate District 36	state-senate
+Indiana;IN Senate District 37	state-senate
+Indiana;IN Senate District 38	state-senate
+Indiana;IN Senate District 39	state-senate
+Indiana;IN Senate District 4	state-senate
+Indiana;IN Senate District 40	state-senate
+Indiana;IN Senate District 41	state-senate
+Indiana;IN Senate District 42	state-senate
+Indiana;IN Senate District 43	state-senate
+Indiana;IN Senate District 44	state-senate
+Indiana;IN Senate District 45	state-senate
+Indiana;IN Senate District 46	state-senate
+Indiana;IN Senate District 47	state-senate
+Indiana;IN Senate District 48	state-senate
+Indiana;IN Senate District 49	state-senate
+Indiana;IN Senate District 5	state-senate
+Indiana;IN Senate District 50	state-senate
+Indiana;IN Senate District 6	state-senate
+Indiana;IN Senate District 7	state-senate
+Indiana;IN Senate District 8	state-senate
+Indiana;IN Senate District 9	state-senate

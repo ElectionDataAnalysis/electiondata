@@ -37,7 +37,7 @@ def nist_v2_xml_export_tree(
     issuer_abbreviation: str = default_issuer_abbreviation,
     status: str = default_status,
     vendor_application_id: str = default_vendor_application_id,
-) -> ET.ElementTree:
+) -> (ET.ElementTree, Dict[str, Any]):
     """Creates a tree in the NIST common data format (V2) containing the results
     from the given election and jurisdiction. Note that all available results will
     be exported. I.e., if database has precinct-level results, the tree will
@@ -46,9 +46,19 @@ def nist_v2_xml_export_tree(
     otherwise major subdivision is read from <sub_div_type_file> if given;
     otherwise pulled from db.
     """
+    err = None
     # set up
     election_id = db.name_to_id(session, "Election", election)
     jurisdiction_id = db.name_to_id(session, "ReportingUnit", jurisdiction)
+    if not election_id or not jurisdiction_id:
+        err = ui.add_new_error(
+            err,
+            "database",
+            session.bind.url.database,
+            f"One or more of election {election} or jurisdiction {jurisdiction} not found in diatabase"
+        )
+        tree = ET.ElementTree()
+        return tree, err
 
     # include jurisdiction id in gp unit ids
     gpu_idxs = {jurisdiction_id}
@@ -246,7 +256,7 @@ def nist_v2_xml_export_tree(
         ]
 
     tree = ET.ElementTree(root)
-    return tree
+    return tree, err
 
 
 # constants

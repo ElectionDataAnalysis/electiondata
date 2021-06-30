@@ -1,13 +1,198 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	Al Gore	AL GORE
+Candidate	Alana DiMario	Alana DiMario
+Candidate	Alex D. Marszalkowski	Alex D. Marszalkowski
+Candidate	Allen R. Waters	Allen R. Waters
+Candidate	Amy E. Veri	Amy E. Veri
+Candidate	Ana B. Quezada	Ana B. Quezada
+Candidate	Anastasia P. Williams	Anastasia P. Williams
+Candidate	Ann L. Costa	Ann L. Costa
+Candidate	Anthony Fagundes, Sr.	Anthony Fagundes, Sr.
+Candidate	Antonio Giarrusso	Antonio Giarrusso
+Candidate	Arthur Handy	Arthur Handy
+Candidate	Arthur J. Corvese	Arthur J. Corvese
+Candidate	Aryeh Yisrael Rosenfield	Aryeh Yisrael Rosenfield
+Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barbara Ann Fenton-Fung	Barbara Ann Fenton-Fung
+Candidate	Bernard A. Hawkins	Bernard A. Hawkins
+Candidate	Blake A. Filippi	Blake A. Filippi
+Candidate	Brandon C. Potter	Brandon C. Potter
+Candidate	Brian C. Newberry	Brian C. Newberry
+Candidate	Brian Carroll	Brian Carroll
+Candidate	Brian J. Rea	Brian J. Rea
+Candidate	Brian Patrick Kennedy	Brian Patrick Kennedy
+Candidate	Brianna E. Henries	Brianna E. Henries
+Candidate	Bridget G. Valverde	Bridget G. Valverde
+Candidate	Camille F. Vella-Wilkinson	Camille F. Vella-Wilkinson
+Candidate	Carlos Eduardo Tobon	Carlos Eduardo Tobon
+Candidate	Carol Hagan McEntee	Carol Hagan McEntee
+Candidate	Charlene Lima	Charlene Lima
+Candidate	Charles P. Callanan	Charles P. Callanan
+Candidate	Christopher J. Hogan	Christopher J. Hogan
+Candidate	Christopher M. Borden	Christopher M. Borden
+Candidate	Christopher R. Blazejewski	Christopher R. Blazejewski
+Candidate	Cynthia Armour Coyne	Cynthia Armour Coyne
+Candidate	Cynthia M. Mendes	Cynthia M. Mendes
+Candidate	Daniel P. Baglini	Daniel P. Baglini
+Candidate	David A. Bennett	David A. Bennett
+Candidate	David A. Tacey	David A. Tacey
+Candidate	David J. Place	David J. Place
+Candidate	David Morales	David Morales
+Candidate	David N. Cicilline	David N. Cicilline
+Candidate	Dawn M. Euer	Dawn M. Euer
+Candidate	Deborah A. Fellela	Deborah A. Fellela
+Candidate	Deborah L. Ruggiero	Deborah L. Ruggiero
+Candidate	Dennis L. Algiere	Dennis L. Algiere
+Candidate	Dominick J. Ruggerio	Dominick J. Ruggerio
+Candidate	Donald J. Kohlman, II	Donald J. Kohlman, II
+Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Doreen M. Costa	Doreen M. Costa
+Candidate	Edith H. Ajello	Edith H. Ajello
+Candidate	Edward T. Cardillo, Jr.	Edward T. Cardillo, Jr.
+Candidate	Elaine J. Morgan	Elaine J. Morgan
+Candidate	Emmanuel C. Nyema	Emmanuel C. Nyema
+Candidate	Evan P. Shanley	Evan P. Shanley
+Candidate	Frank A. Ciccone	Frank A. Ciccone
+Candidate	Frank Lombardo, III	Frank Lombardo, III
+Candidate	Frank S. Lombardi	Frank S. Lombardi
+Candidate	Frank T. Ricci	Frank T. Ricci
+Candidate	Frederick Wysocki	Frederick Wysocki
+Candidate	Gayle L. Goldin	Gayle L. Goldin
+Candidate	George A. Nardone	George A. Nardone
+Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	Gerald Carbone	Gerald Carbone
+Candidate	Gloria La Riva	Gloria La Riva
+Candidate	Gordon E. Rogers	Gordon E. Rogers
+Candidate	Grace Diaz	Grace Diaz
+Candidate	Gregg Amore	Gregg Amore
+Candidate	Gregory J. Costantino	Gregory J. Costantino
+Candidate	Hanna M. Gallo	Hanna M. Gallo
+Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Jacquelyn M. Baginski	Jacquelyn M. Baginski
+Candidate	James Arthur Seveney	James Arthur Seveney
+Candidate	James B. Jackson	James B. Jackson
+Candidate	James N. McLaughlin	James N. McLaughlin
+Candidate	James R. Langevin	James R. Langevin
+Candidate	Jason Knight	Jason Knight
+Candidate	Jean E. Trafford	Jean E. Trafford
+Candidate	Jean Philippe Barros	Jean Philippe Barros
+Candidate	Jeanine Calkin	Jeanine Calkin
+Candidate	Jeffery L. Kozlin	Jeffery L. Kozlin
+Candidate	Jeffrey Edward Lemire	Jeffrey Edward Lemire
+Candidate	Jennifer C. Douglas	Jennifer C. Douglas
+Candidate	Jessica de la Cruz	Jessica de la Cruz
+Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	John Douglas Barr, II	John Douglas Barr, II
+Candidate	John F. Reed	John F. Reed
+Candidate	John G. Edwards	John G. Edwards
+Candidate	John J. Cullen	John J. Cullen
+Candidate	John J. Lombardi	John J. Lombardi
+Candidate	John Kerry	JOHN KERRY
+Candidate	John McCain	JOHN MCCAIN
+Candidate	John P. Burke	John P. Burke
+Candidate	John W. Lyle, Jr.	John W. Lyle, Jr.
+Candidate	Jonathan J. Keith	Jonathan J. Keith
+Candidate	Jonathon Acosta	Jonathon Acosta
+Candidate	Jorge Porras	Jorge Porras
+Candidate	Jose F. Batista	Jose F. Batista
+Candidate	Joseph J. Solomon, Jr.	Joseph J. Solomon, Jr.
+Candidate	Joseph McNamara	Joseph McNamara
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	Joshua J. Giraldo	Joshua J. Giraldo
+Candidate	Joshua Miller	Joshua Miller
+Candidate	Julie A. Casimiro	Julie A. Casimiro
+Candidate	June S. Speakman	June S. Speakman
+Candidate	Justin K. Price	Justin K. Price
+Candidate	Justine A. Caldwell	Justine A. Caldwell
+Candidate	K. Joseph Shekarchi	K. Joseph Shekarchi
+Candidate	Karen Alzate	Karen Alzate
+Candidate	Katherine S. Kazarian	Katherine S. Kazarian
+Candidate	Kathleen A. Fogarty	Kathleen A. Fogarty
+Candidate	Kendra Anderson	Kendra Anderson
+Candidate	Kenneth J. Mendonca	Kenneth J. Mendonca
+Candidate	Kevin C. Gilligan	Kevin C. Gilligan
+Candidate	Lauren H. Carson	Lauren H. Carson
+Candidate	Leonela Felix	Leonela Felix
+Candidate	Leonidas P. Raptakis	Leonidas P. Raptakis
+Candidate	Liana M. Cassar	Liana M. Cassar
+Candidate	Linda A. Nichols	Linda A. Nichols
+Candidate	Louis P. DiPalma	Louis P. DiPalma
+Candidate	Major Pettaway	Major Pettaway
+Candidate	Marcia P. Ranglin-Vassell	Marcia P. Ranglin-Vassell
+Candidate	Mark W. Smiley	Mark W. Smiley
+Candidate	Marvin L. Abney	Marvin L. Abney
+Candidate	Mary Ann Shallcross Smith	Mary Ann Shallcross Smith
+Candidate	Mary Duffy Messier	Mary Duffy Messier
+Candidate	Maryann Lancia	Maryann Lancia
+Candidate	Maryellen Goodwin	Maryellen Goodwin
+Candidate	Matthew M. Mannix	Matthew M. Mannix
+Candidate	Megan L. Cotter	Megan L. Cotter
+Candidate	Meghan E. Kallman	Meghan E. Kallman
+Candidate	Melissa A. Murray	Melissa A. Murray
+Candidate	Mia A. Ackerman	Mia A. Ackerman
+Candidate	Michael J. McCaffrey	Michael J. McCaffrey
+Candidate	Michael W. Chippendale	Michael W. Chippendale
+Candidate	Michelle E. McGaw	Michelle E. McGaw
+Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Nathan Joseph Melvin	Nathan Joseph Melvin
+Candidate	Nathan W. Biah	Nathan W. Biah
+Candidate	Nicholas A. Mattiello	Nicholas A. Mattiello
+Candidate	Nicola Antonio Grasso	Nicola Antonio Grasso
+Candidate	Other	OTHER
+Candidate	Pamela Carosi	Pamela Carosi
+Candidate	Pat V. Cortellessa	Pat V. Cortellessa
+Candidate	Patricia A. Serpa	Patricia A. Serpa
+Candidate	Patricia L. Morgan	Patricia L. Morgan
+Candidate	Patrick E. Maloney, Jr.	Patrick E. Maloney, Jr.
+Candidate	Patrick J. Donovan	Patrick J. Donovan
+Candidate	Paul A. Roselli	Paul A. Roselli
+Candidate	Paul M. Santucci	Paul M. Santucci
+Candidate	Ralph Nader	RALPH NADER
+Candidate	Ramon A. Perez	Ramon A. Perez
+Candidate	Raymond A. Hull	Raymond A. Hull
+Candidate	Rebecca M. Kislak	Rebecca M. Kislak
+Candidate	Richard R. Karsulavitch	Richard R. Karsulavitch
+Candidate	Robert A. Schattle	Robert A. Schattle
+Candidate	Robert B. Lancia	Robert B. Lancia
+Candidate	Robert D. Phillips	Robert D. Phillips
+Candidate	Robert E. Craven	Robert E. Craven
+Candidate	Robert J. Quattrocchi	Robert J. Quattrocchi
+Candidate	Robert O. Wheeler, III	Robert O. Wheeler, III
+Candidate	Roger A. Picard	Roger A. Picard
+Candidate	Ronald A. Loparto	Ronald A. Loparto
+Candidate	Ronald F. Iacobbo	Ronald F. Iacobbo
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
+Candidate	Rosa Marie Hill	Rosa Marie Hill
+Candidate	Ryan W. Pearson	Ryan W. Pearson
+Candidate	Samuel A. Azzinaro	Samuel A. Azzinaro
+Candidate	Samuel W. Bell	Samuel W. Bell
+Candidate	Sandra C. Cano	Sandra C. Cano
+Candidate	Scott A. Slater	Scott A. Slater
+Candidate	Scott J. Guthrie	Scott J. Guthrie
+Candidate	Scott M. Zambarano	Scott M. Zambarano
+Candidate	Sherry Roberts	Sherry Roberts
+Candidate	Stephen G. Tocco	Stephen G. Tocco
+Candidate	Stephen M. Casey	Stephen M. Casey
+Candidate	Stephen R. Archambault	Stephen R. Archambault
+Candidate	Steven J. Lima	Steven J. Lima
+Candidate	Susan R. Donovan	Susan R. Donovan
+Candidate	Teresa A. Tanzi	Teresa A. Tanzi
+Candidate	Terri-Denise Cortvriend	Terri-Denise Cortvriend
+Candidate	Thomas E. Noret	Thomas E. Noret
+Candidate	Thomas J. Paolino	Thomas J. Paolino
+Candidate	Tiara T. Mack	Tiara T. Mack
+Candidate	Timothy Shawn McLaughlin, Jr.	Timothy Shawn McLaughlin, Jr.
+Candidate	Valarie J. Lawson	Valarie J. Lawson
+Candidate	Vincent J. Bono	Vincent J. Bono
+Candidate	Virginia S. Sosnowski	Virginia S. Sosnowski
+Candidate	Walter S. Felag, Jr.	Walter S. Felag, Jr.
+Candidate	William J. Hunt, Jr.	William J. Hunt, Jr.
+Candidate	William W. O'Brien	William W. O'Brien
+Candidate	Write-In	Write-In
+CandidateContest	RI Attorney General	RI Attorney General
+CandidateContest	RI Governor	RI Governor
 CandidateContest	RI House District 1	Representative in General Assembly District 1
-CandidateContest	RI House District 2	Representative in General Assembly District 2
-CandidateContest	RI House District 3	Representative in General Assembly District 3
-CandidateContest	RI House District 4	Representative in General Assembly District 4
-CandidateContest	RI House District 5	Representative in General Assembly District 5
-CandidateContest	RI House District 6	Representative in General Assembly District 6
-CandidateContest	RI House District 7	Representative in General Assembly District 7
-CandidateContest	RI House District 8	Representative in General Assembly District 8
-CandidateContest	RI House District 9	Representative in General Assembly District 9
 CandidateContest	RI House District 10	Representative in General Assembly District 10
 CandidateContest	RI House District 11	Representative in General Assembly District 11
 CandidateContest	RI House District 12	Representative in General Assembly District 12
@@ -18,6 +203,7 @@ CandidateContest	RI House District 16	Representative in General Assembly Distric
 CandidateContest	RI House District 17	Representative in General Assembly District 17
 CandidateContest	RI House District 18	Representative in General Assembly District 18
 CandidateContest	RI House District 19	Representative in General Assembly District 19
+CandidateContest	RI House District 2	Representative in General Assembly District 2
 CandidateContest	RI House District 20	Representative in General Assembly District 20
 CandidateContest	RI House District 21	Representative in General Assembly District 21
 CandidateContest	RI House District 22	Representative in General Assembly District 22
@@ -28,6 +214,7 @@ CandidateContest	RI House District 26	Representative in General Assembly Distric
 CandidateContest	RI House District 27	Representative in General Assembly District 27
 CandidateContest	RI House District 28	Representative in General Assembly District 28
 CandidateContest	RI House District 29	Representative in General Assembly District 29
+CandidateContest	RI House District 3	Representative in General Assembly District 3
 CandidateContest	RI House District 30	Representative in General Assembly District 30
 CandidateContest	RI House District 31	Representative in General Assembly District 31
 CandidateContest	RI House District 32	Representative in General Assembly District 32
@@ -38,6 +225,7 @@ CandidateContest	RI House District 36	Representative in General Assembly Distric
 CandidateContest	RI House District 37	Representative in General Assembly District 37
 CandidateContest	RI House District 38	Representative in General Assembly District 38
 CandidateContest	RI House District 39	Representative in General Assembly District 39
+CandidateContest	RI House District 4	Representative in General Assembly District 4
 CandidateContest	RI House District 40	Representative in General Assembly District 40
 CandidateContest	RI House District 41	Representative in General Assembly District 41
 CandidateContest	RI House District 42	Representative in General Assembly District 42
@@ -48,6 +236,7 @@ CandidateContest	RI House District 46	Representative in General Assembly Distric
 CandidateContest	RI House District 47	Representative in General Assembly District 47
 CandidateContest	RI House District 48	Representative in General Assembly District 48
 CandidateContest	RI House District 49	Representative in General Assembly District 49
+CandidateContest	RI House District 5	Representative in General Assembly District 5
 CandidateContest	RI House District 50	Representative in General Assembly District 50
 CandidateContest	RI House District 51	Representative in General Assembly District 51
 CandidateContest	RI House District 52	Representative in General Assembly District 52
@@ -58,6 +247,7 @@ CandidateContest	RI House District 56	Representative in General Assembly Distric
 CandidateContest	RI House District 57	Representative in General Assembly District 57
 CandidateContest	RI House District 58	Representative in General Assembly District 58
 CandidateContest	RI House District 59	Representative in General Assembly District 59
+CandidateContest	RI House District 6	Representative in General Assembly District 6
 CandidateContest	RI House District 60	Representative in General Assembly District 60
 CandidateContest	RI House District 61	Representative in General Assembly District 61
 CandidateContest	RI House District 62	Representative in General Assembly District 62
@@ -68,21 +258,18 @@ CandidateContest	RI House District 66	Representative in General Assembly Distric
 CandidateContest	RI House District 67	Representative in General Assembly District 67
 CandidateContest	RI House District 68	Representative in General Assembly District 68
 CandidateContest	RI House District 69	Representative in General Assembly District 69
+CandidateContest	RI House District 7	Representative in General Assembly District 7
 CandidateContest	RI House District 70	Representative in General Assembly District 70
 CandidateContest	RI House District 71	Representative in General Assembly District 71
 CandidateContest	RI House District 72	Representative in General Assembly District 72
 CandidateContest	RI House District 73	Representative in General Assembly District 73
 CandidateContest	RI House District 74	Representative in General Assembly District 74
 CandidateContest	RI House District 75	Representative in General Assembly District 75
+CandidateContest	RI House District 8	Representative in General Assembly District 8
+CandidateContest	RI House District 9	Representative in General Assembly District 9
+CandidateContest	RI Lieutenant Governor	RI Lieutenant Governor
+CandidateContest	RI Secretary of State	RI Secretary of State
 CandidateContest	RI Senate District 1	Senator in General Assembly District 1
-CandidateContest	RI Senate District 2	Senator in General Assembly District 2
-CandidateContest	RI Senate District 3	Senator in General Assembly District 3
-CandidateContest	RI Senate District 4	Senator in General Assembly District 4
-CandidateContest	RI Senate District 5	Senator in General Assembly District 5
-CandidateContest	RI Senate District 6	Senator in General Assembly District 6
-CandidateContest	RI Senate District 7	Senator in General Assembly District 7
-CandidateContest	RI Senate District 8	Senator in General Assembly District 8
-CandidateContest	RI Senate District 9	Senator in General Assembly District 9
 CandidateContest	RI Senate District 10	Senator in General Assembly District 10
 CandidateContest	RI Senate District 11	Senator in General Assembly District 11
 CandidateContest	RI Senate District 12	Senator in General Assembly District 12
@@ -93,6 +280,7 @@ CandidateContest	RI Senate District 16	Senator in General Assembly District 16
 CandidateContest	RI Senate District 17	Senator in General Assembly District 17
 CandidateContest	RI Senate District 18	Senator in General Assembly District 18
 CandidateContest	RI Senate District 19	Senator in General Assembly District 19
+CandidateContest	RI Senate District 2	Senator in General Assembly District 2
 CandidateContest	RI Senate District 20	Senator in General Assembly District 20
 CandidateContest	RI Senate District 21	Senator in General Assembly District 21
 CandidateContest	RI Senate District 22	Senator in General Assembly District 22
@@ -103,6 +291,7 @@ CandidateContest	RI Senate District 26	Senator in General Assembly District 26
 CandidateContest	RI Senate District 27	Senator in General Assembly District 27
 CandidateContest	RI Senate District 28	Senator in General Assembly District 28
 CandidateContest	RI Senate District 29	Senator in General Assembly District 29
+CandidateContest	RI Senate District 3	Senator in General Assembly District 3
 CandidateContest	RI Senate District 30	Senator in General Assembly District 30
 CandidateContest	RI Senate District 31	Senator in General Assembly District 31
 CandidateContest	RI Senate District 32	Senator in General Assembly District 32
@@ -112,91 +301,79 @@ CandidateContest	RI Senate District 35	Senator in General Assembly District 35
 CandidateContest	RI Senate District 36	Senator in General Assembly District 36
 CandidateContest	RI Senate District 37	Senator in General Assembly District 37
 CandidateContest	RI Senate District 38	Senator in General Assembly District 38
+CandidateContest	RI Senate District 4	Senator in General Assembly District 4
+CandidateContest	RI Senate District 5	Senator in General Assembly District 5
+CandidateContest	RI Senate District 6	Senator in General Assembly District 6
+CandidateContest	RI Senate District 7	Senator in General Assembly District 7
+CandidateContest	RI Senate District 8	Senator in General Assembly District 8
+CandidateContest	RI Senate District 9	Senator in General Assembly District 9
+CandidateContest	RI Treasurer	RI Treasurer
 CandidateContest	US House RI District 1	Representative in Congress District 1
 CandidateContest	US House RI District 2	Representative in Congress District 2
+CandidateContest	US President (RI)	PRESIDENT
 CandidateContest	US President (RI)	Presidential Electors For:
-CandidateContest	RI Governor	RI Governor
+CandidateContest	US President (RI)	US PRESIDENT
 CandidateContest	US Senate RI	Senator in Congress
-CandidateContest	RI Attorney General	RI Attorney General
-CandidateContest	RI Lieutenant Governor	RI Lieutenant Governor
-CandidateContest	RI Treasurer	RI Treasurer
-CandidateContest	RI Secretary of State	RI Secretary of State
+CountItemType	absentee-mail	Mail
+CountItemType	election-day	Election Day
+CountItemType	provisional	Emergency
+CountItemType	total	TOTAL
+Election	2016 General	2016 General
+Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
-Election	2018 General	2018 General
-Election	2016 General	2016 General
-Party	Democratic Party	DEM
-Party	Republican Party	REP
-Party	Green Party	GRN
-Party	Libertarian Party	Lib
-Party	S&L	S&L
-Party	NON	NON
-Party	Ind	Ind
-Party	All	All
 Party	AS	AS
+Party	All	All
+Party	Democratic Party	DEM
+Party	Democratic Party	DEMOCRAT
+Party	Green Party	GREEN
+Party	Green Party	GRN
+Party	Ind	Ind
+Party	Libertarian Party	LIBERTARIAN
+Party	Libertarian Party	Lib
+Party	NON	NON
+Party	Republican Party	REP
+Party	Republican Party	REPUBLICAN
+Party	S&L	S&L
+Party	none or unknown	OTHER
+ReportingUnit	Rhode Island	Federal Precinct #1
+ReportingUnit	Rhode Island	Federal Precinct #1S
+ReportingUnit	Rhode Island	Federal Precinct #2
+ReportingUnit	Rhode Island	Federal Precinct #2S
 ReportingUnit	Rhode Island	Rhode Island
 ReportingUnit	Rhode Island;Barrington	Barrington
-ReportingUnit	Rhode Island;Bristol	Bristol
-ReportingUnit	Rhode Island;Burrillville	Burrillville
-ReportingUnit	Rhode Island;Central Falls	Central Falls
-ReportingUnit	Rhode Island;Charlestown	Charlestown
-ReportingUnit	Rhode Island;Coventry	Coventry
-ReportingUnit	Rhode Island;Cranston	Cranston
-ReportingUnit	Rhode Island;Cumberland	Cumberland
-ReportingUnit	Rhode Island;East Greenwich	East Greenwich
-ReportingUnit	Rhode Island;East Providence	East Providence
-ReportingUnit	Rhode Island;Exeter	Exeter
-ReportingUnit	Rhode Island;Federal Precin	Federal Precin
-ReportingUnit	Rhode Island;Federal Precinc	Federal Precinc
-ReportingUnit	Rhode Island;Foster	Foster
-ReportingUnit	Rhode Island;Glocester	Glocester
-ReportingUnit	Rhode Island;Hopkinton	Hopkinton
-ReportingUnit	Rhode Island;Jamestown	Jamestown
-ReportingUnit	Rhode Island;Johnston	Johnston
-ReportingUnit	Rhode Island;Lincoln	Lincoln
-ReportingUnit	Rhode Island;Little Compton	Little Compton
-ReportingUnit	Rhode Island;Middletown	Middletown
-ReportingUnit	Rhode Island;Narragansett	Narragansett
-ReportingUnit	Rhode Island;New Shoreham	New Shoreham
-ReportingUnit	Rhode Island;Newport	Newport
-ReportingUnit	Rhode Island;North Kingstown	North Kingstown
-ReportingUnit	Rhode Island;North Providence	North Providence
-ReportingUnit	Rhode Island;North Smithfield	North Smithfield
-ReportingUnit	Rhode Island;Pawtucket	Pawtucket
-ReportingUnit	Rhode Island;Portsmouth	Portsmouth
-ReportingUnit	Rhode Island;Providence	Providence
-ReportingUnit	Rhode Island;Providence Limi	Providence Limi
-ReportingUnit	Rhode Island;Richmond	Richmond
-ReportingUnit	Rhode Island;Scituate	Scituate
-ReportingUnit	Rhode Island;Smithfield	Smithfield
-ReportingUnit	Rhode Island;South Kingstown	South Kingstown
-ReportingUnit	Rhode Island;Tiverton	Tiverton
-ReportingUnit	Rhode Island;Warren	Warren
-ReportingUnit	Rhode Island;Warwick	Warwick
-ReportingUnit	Rhode Island;West Greenwich	West Greenwich
-ReportingUnit	Rhode Island;West Warwick	West Warwick
-ReportingUnit	Rhode Island;Westerly	Westerly
-ReportingUnit	Rhode Island;Woonsocket	Woonsocket
+ReportingUnit	Rhode Island;Barrington	Barrington Limited
+ReportingUnit	Rhode Island;Barrington	Barrington Presidential
 ReportingUnit	Rhode Island;Barrington;Precinct 0101	Barrington 0101
 ReportingUnit	Rhode Island;Barrington;Precinct 0102	Barrington 0102
 ReportingUnit	Rhode Island;Barrington;Precinct 0103	Barrington 0103
 ReportingUnit	Rhode Island;Barrington;Precinct 0104	Barrington 0104
 ReportingUnit	Rhode Island;Barrington;Precinct 0105	Barrington 0105
-ReportingUnit	Rhode Island;Bristol;Precinct 0201	Bristol 0201
-ReportingUnit	Rhode Island;Bristol;Precinct 0202	Bristol 0202
-ReportingUnit	Rhode Island;Bristol;Precinct 0203	Bristol 0203
-ReportingUnit	Rhode Island;Bristol;Precinct 0204	Bristol 0204
-ReportingUnit	Rhode Island;Bristol;Precinct 0205	Bristol 0205
-ReportingUnit	Rhode Island;Bristol;Precinct 0206	Bristol 0206
-ReportingUnit	Rhode Island;Bristol;Precinct 0207	Bristol 0207
-ReportingUnit	Rhode Island;Bristol;Precinct 0208	Bristol 0208
-ReportingUnit	Rhode Island;Bristol;Precinct 0209	Bristol 0209
+ReportingUnit	Rhode Island;Bristol County	Bristol
+ReportingUnit	Rhode Island;Bristol County	Bristol Limited
+ReportingUnit	Rhode Island;Bristol County	Bristol Presidential
+ReportingUnit	Rhode Island;Bristol County	fips44001
+ReportingUnit	Rhode Island;Bristol County;Precinct 0201	Bristol 0201
+ReportingUnit	Rhode Island;Bristol County;Precinct 0202	Bristol 0202
+ReportingUnit	Rhode Island;Bristol County;Precinct 0203	Bristol 0203
+ReportingUnit	Rhode Island;Bristol County;Precinct 0204	Bristol 0204
+ReportingUnit	Rhode Island;Bristol County;Precinct 0205	Bristol 0205
+ReportingUnit	Rhode Island;Bristol County;Precinct 0206	Bristol 0206
+ReportingUnit	Rhode Island;Bristol County;Precinct 0207	Bristol 0207
+ReportingUnit	Rhode Island;Bristol County;Precinct 0208	Bristol 0208
+ReportingUnit	Rhode Island;Bristol County;Precinct 0209	Bristol 0209
+ReportingUnit	Rhode Island;Burrillville	Burrillville
+ReportingUnit	Rhode Island;Burrillville	Burrillville Limited
+ReportingUnit	Rhode Island;Burrillville	Burrillville Presidential
 ReportingUnit	Rhode Island;Burrillville;Precinct 0301	Burrillville 0301
 ReportingUnit	Rhode Island;Burrillville;Precinct 0302	Burrillville 0302
 ReportingUnit	Rhode Island;Burrillville;Precinct 0303	Burrillville 0303
 ReportingUnit	Rhode Island;Burrillville;Precinct 0304	Burrillville 0304
 ReportingUnit	Rhode Island;Burrillville;Precinct 0305	Burrillville 0305
 ReportingUnit	Rhode Island;Burrillville;Precinct 0306	Burrillville 0306
+ReportingUnit	Rhode Island;Central Falls	Central Falls
+ReportingUnit	Rhode Island;Central Falls	Central Falls Limited
+ReportingUnit	Rhode Island;Central Falls	Central Falls Presidential
 ReportingUnit	Rhode Island;Central Falls;Precinct 0401	Central Falls 0401
 ReportingUnit	Rhode Island;Central Falls;Precinct 0402	Central Falls 0402
 ReportingUnit	Rhode Island;Central Falls;Precinct 0403	Central Falls 0403
@@ -205,10 +382,16 @@ ReportingUnit	Rhode Island;Central Falls;Precinct 0405	Central Falls 0405
 ReportingUnit	Rhode Island;Central Falls;Precinct 0406	Central Falls 0406
 ReportingUnit	Rhode Island;Central Falls;Precinct 0407	Central Falls 0407
 ReportingUnit	Rhode Island;Central Falls;Precinct 0408	Central Falls 0408
+ReportingUnit	Rhode Island;Charlestown	Charlestown
+ReportingUnit	Rhode Island;Charlestown	Charlestown Limited
+ReportingUnit	Rhode Island;Charlestown	Charlestown Presidential
 ReportingUnit	Rhode Island;Charlestown;Precinct 0501	Charlestown 0501
 ReportingUnit	Rhode Island;Charlestown;Precinct 0502	Charlestown 0502
 ReportingUnit	Rhode Island;Charlestown;Precinct 0503	Charlestown 0503
 ReportingUnit	Rhode Island;Charlestown;Precinct 0504	Charlestown 0504
+ReportingUnit	Rhode Island;Coventry	Coventry
+ReportingUnit	Rhode Island;Coventry	Coventry Limited
+ReportingUnit	Rhode Island;Coventry	Coventry Presidential
 ReportingUnit	Rhode Island;Coventry;Precinct 0601	Coventry 0601
 ReportingUnit	Rhode Island;Coventry;Precinct 0602	Coventry 0602
 ReportingUnit	Rhode Island;Coventry;Precinct 0603	Coventry 0603
@@ -227,6 +410,9 @@ ReportingUnit	Rhode Island;Coventry;Precinct 0615	Coventry 0615
 ReportingUnit	Rhode Island;Coventry;Precinct 0616	Coventry 0616
 ReportingUnit	Rhode Island;Coventry;Precinct 0617	Coventry 0617
 ReportingUnit	Rhode Island;Coventry;Precinct 0618	Coventry 0618
+ReportingUnit	Rhode Island;Cranston	Cranston
+ReportingUnit	Rhode Island;Cranston	Cranston Limited
+ReportingUnit	Rhode Island;Cranston	Cranston Presidential
 ReportingUnit	Rhode Island;Cranston;Precinct 0701	Cranston 0701
 ReportingUnit	Rhode Island;Cranston;Precinct 0702	Cranston 0702
 ReportingUnit	Rhode Island;Cranston;Precinct 0703	Cranston 0703
@@ -257,6 +443,9 @@ ReportingUnit	Rhode Island;Cranston;Precinct 0727	Cranston 0727
 ReportingUnit	Rhode Island;Cranston;Precinct 0728	Cranston 0728
 ReportingUnit	Rhode Island;Cranston;Precinct 0730	Cranston 0730
 ReportingUnit	Rhode Island;Cranston;Precinct 0731	Cranston 0731
+ReportingUnit	Rhode Island;Cumberland	Cumberland
+ReportingUnit	Rhode Island;Cumberland	Cumberland Limited
+ReportingUnit	Rhode Island;Cumberland	Cumberland Presidential
 ReportingUnit	Rhode Island;Cumberland;Precinct 0801	Cumberland 0801
 ReportingUnit	Rhode Island;Cumberland;Precinct 0802	Cumberland 0802
 ReportingUnit	Rhode Island;Cumberland;Precinct 0803	Cumberland 0803
@@ -270,11 +459,17 @@ ReportingUnit	Rhode Island;Cumberland;Precinct 0810	Cumberland 0810
 ReportingUnit	Rhode Island;Cumberland;Precinct 0811	Cumberland 0811
 ReportingUnit	Rhode Island;Cumberland;Precinct 0812	Cumberland 0812
 ReportingUnit	Rhode Island;Cumberland;Precinct 0813	Cumberland 0813
+ReportingUnit	Rhode Island;East Greenwich	East Greenwich
+ReportingUnit	Rhode Island;East Greenwich	East Greenwich Limited
+ReportingUnit	Rhode Island;East Greenwich	East Greenwich Presidential
 ReportingUnit	Rhode Island;East Greenwich;Precinct 0901	East Greenwich 0901
 ReportingUnit	Rhode Island;East Greenwich;Precinct 0902	East Greenwich 0902
 ReportingUnit	Rhode Island;East Greenwich;Precinct 0903	East Greenwich 0903
 ReportingUnit	Rhode Island;East Greenwich;Precinct 0904	East Greenwich 0904
 ReportingUnit	Rhode Island;East Greenwich;Precinct 0905	East Greenwich 0905
+ReportingUnit	Rhode Island;East Providence	East Providence
+ReportingUnit	Rhode Island;East Providence	East Providence Limited
+ReportingUnit	Rhode Island;East Providence	East Providence Presidential
 ReportingUnit	Rhode Island;East Providence;Precinct 1001	East Providence 1001
 ReportingUnit	Rhode Island;East Providence;Precinct 1002	East Providence 1002
 ReportingUnit	Rhode Island;East Providence;Precinct 1003	East Providence 1003
@@ -293,20 +488,40 @@ ReportingUnit	Rhode Island;East Providence;Precinct 1015	East Providence 1015
 ReportingUnit	Rhode Island;East Providence;Precinct 1016	East Providence 1016
 ReportingUnit	Rhode Island;East Providence;Precinct 1017	East Providence 1017
 ReportingUnit	Rhode Island;East Providence;Precinct 1018	East Providence 1018
+ReportingUnit	Rhode Island;Exeter	Exeter
+ReportingUnit	Rhode Island;Exeter	Exeter Limited
+ReportingUnit	Rhode Island;Exeter	Exeter Presidential
 ReportingUnit	Rhode Island;Exeter;Precinct 1101	Exeter 1101
 ReportingUnit	Rhode Island;Exeter;Precinct 1102	Exeter 1102
 ReportingUnit	Rhode Island;Exeter;Precinct 1103	Exeter 1103
+ReportingUnit	Rhode Island;Federal Precin	Federal Precin
+ReportingUnit	Rhode Island;Federal Precinc	Federal Precinc
+ReportingUnit	Rhode Island;Foster	Foster
+ReportingUnit	Rhode Island;Foster	Foster Limited
+ReportingUnit	Rhode Island;Foster	Foster Presidential
 ReportingUnit	Rhode Island;Foster;Precinct 1201	Foster 1201
 ReportingUnit	Rhode Island;Foster;Precinct 1202	Foster 1202
+ReportingUnit	Rhode Island;Glocester	Glocester
+ReportingUnit	Rhode Island;Glocester	Glocester Limited
+ReportingUnit	Rhode Island;Glocester	Glocester Presidential
 ReportingUnit	Rhode Island;Glocester;Precinct 1301	Glocester 1301
 ReportingUnit	Rhode Island;Glocester;Precinct 1302	Glocester 1302
 ReportingUnit	Rhode Island;Glocester;Precinct 1303	Glocester 1303
 ReportingUnit	Rhode Island;Glocester;Precinct 1304	Glocester 1304
+ReportingUnit	Rhode Island;Hopkinton	Hopkinton
+ReportingUnit	Rhode Island;Hopkinton	Hopkinton Limited
+ReportingUnit	Rhode Island;Hopkinton	Hopkinton Presidential
 ReportingUnit	Rhode Island;Hopkinton;Precinct 1401	Hopkinton 1401
 ReportingUnit	Rhode Island;Hopkinton;Precinct 1402	Hopkinton 1402
 ReportingUnit	Rhode Island;Hopkinton;Precinct 1403	Hopkinton 1403
+ReportingUnit	Rhode Island;Jamestown	Jamestown
+ReportingUnit	Rhode Island;Jamestown	Jamestown Limited
+ReportingUnit	Rhode Island;Jamestown	Jamestown Presidential
 ReportingUnit	Rhode Island;Jamestown;Precinct 1501	Jamestown 1501
 ReportingUnit	Rhode Island;Jamestown;Precinct 1502	Jamestown 1502
+ReportingUnit	Rhode Island;Johnston	Johnston
+ReportingUnit	Rhode Island;Johnston	Johnston Limited
+ReportingUnit	Rhode Island;Johnston	Johnston Presidential
 ReportingUnit	Rhode Island;Johnston;Precinct 1601	Johnston 1601
 ReportingUnit	Rhode Island;Johnston;Precinct 1602	Johnston 1602
 ReportingUnit	Rhode Island;Johnston;Precinct 1603	Johnston 1603
@@ -320,6 +535,10 @@ ReportingUnit	Rhode Island;Johnston;Precinct 1610	Johnston 1610
 ReportingUnit	Rhode Island;Johnston;Precinct 1611	Johnston 1611
 ReportingUnit	Rhode Island;Johnston;Precinct 1612	Johnston 1612
 ReportingUnit	Rhode Island;Johnston;Precinct 1613	Johnston 1613
+ReportingUnit	Rhode Island;Kent County	fips44003
+ReportingUnit	Rhode Island;Lincoln	Lincoln
+ReportingUnit	Rhode Island;Lincoln	Lincoln Limited
+ReportingUnit	Rhode Island;Lincoln	Lincoln Presidential
 ReportingUnit	Rhode Island;Lincoln;Precinct 1701	Lincoln 1701
 ReportingUnit	Rhode Island;Lincoln;Precinct 1702	Lincoln 1702
 ReportingUnit	Rhode Island;Lincoln;Precinct 1703	Lincoln 1703
@@ -331,27 +550,46 @@ ReportingUnit	Rhode Island;Lincoln;Precinct 1708	Lincoln 1708
 ReportingUnit	Rhode Island;Lincoln;Precinct 1709	Lincoln 1709
 ReportingUnit	Rhode Island;Lincoln;Precinct 1710	Lincoln 1710
 ReportingUnit	Rhode Island;Lincoln;Precinct 1711	Lincoln 1711
+ReportingUnit	Rhode Island;Little Compton	Little Compton
+ReportingUnit	Rhode Island;Little Compton	Little Compton Limited
+ReportingUnit	Rhode Island;Little Compton	Little Compton Presidential
 ReportingUnit	Rhode Island;Little Compton;Precinct 1801	Little Compton 1801
+ReportingUnit	Rhode Island;Middletown	Middletown
+ReportingUnit	Rhode Island;Middletown	Middletown Limited
+ReportingUnit	Rhode Island;Middletown	Middletown Presidential
 ReportingUnit	Rhode Island;Middletown;Precinct 1901	Middletown 1901
 ReportingUnit	Rhode Island;Middletown;Precinct 1902	Middletown 1902
 ReportingUnit	Rhode Island;Middletown;Precinct 1903	Middletown 1903
 ReportingUnit	Rhode Island;Middletown;Precinct 1904	Middletown 1904
 ReportingUnit	Rhode Island;Middletown;Precinct 1905	Middletown 1905
+ReportingUnit	Rhode Island;Narragansett	Narragansett
+ReportingUnit	Rhode Island;Narragansett	Narragansett Limited
+ReportingUnit	Rhode Island;Narragansett	Narragansett Presidential
 ReportingUnit	Rhode Island;Narragansett;Precinct 2001	Narragansett 2001
 ReportingUnit	Rhode Island;Narragansett;Precinct 2002	Narragansett 2002
 ReportingUnit	Rhode Island;Narragansett;Precinct 2003	Narragansett 2003
 ReportingUnit	Rhode Island;Narragansett;Precinct 2004	Narragansett 2004
 ReportingUnit	Rhode Island;Narragansett;Precinct 2005	Narragansett 2005
+ReportingUnit	Rhode Island;New Shoreham	New Shoreham
+ReportingUnit	Rhode Island;New Shoreham	New Shoreham Limited
+ReportingUnit	Rhode Island;New Shoreham	New Shoreham Presidential
 ReportingUnit	Rhode Island;New Shoreham;Precinct 2201	New Shoreham 2201
-ReportingUnit	Rhode Island;Newport;Precinct 2101	Newport 2101
-ReportingUnit	Rhode Island;Newport;Precinct 2102	Newport 2102
-ReportingUnit	Rhode Island;Newport;Precinct 2103	Newport 2103
-ReportingUnit	Rhode Island;Newport;Precinct 2104	Newport 2104
-ReportingUnit	Rhode Island;Newport;Precinct 2105	Newport 2105
-ReportingUnit	Rhode Island;Newport;Precinct 2106	Newport 2106
-ReportingUnit	Rhode Island;Newport;Precinct 2107	Newport 2107
-ReportingUnit	Rhode Island;Newport;Precinct 2108	Newport 2108
-ReportingUnit	Rhode Island;Newport;Precinct 2109	Newport 2109
+ReportingUnit	Rhode Island;Newport County	Newport
+ReportingUnit	Rhode Island;Newport County	Newport Limited
+ReportingUnit	Rhode Island;Newport County	Newport Presidential
+ReportingUnit	Rhode Island;Newport County	fips44005
+ReportingUnit	Rhode Island;Newport County;Precinct 2101	Newport 2101
+ReportingUnit	Rhode Island;Newport County;Precinct 2102	Newport 2102
+ReportingUnit	Rhode Island;Newport County;Precinct 2103	Newport 2103
+ReportingUnit	Rhode Island;Newport County;Precinct 2104	Newport 2104
+ReportingUnit	Rhode Island;Newport County;Precinct 2105	Newport 2105
+ReportingUnit	Rhode Island;Newport County;Precinct 2106	Newport 2106
+ReportingUnit	Rhode Island;Newport County;Precinct 2107	Newport 2107
+ReportingUnit	Rhode Island;Newport County;Precinct 2108	Newport 2108
+ReportingUnit	Rhode Island;Newport County;Precinct 2109	Newport 2109
+ReportingUnit	Rhode Island;North Kingstown	North Kingstown
+ReportingUnit	Rhode Island;North Kingstown	North Kingstown Limited
+ReportingUnit	Rhode Island;North Kingstown	North Kingstown Presidential
 ReportingUnit	Rhode Island;North Kingstown;Precinct 2301	North Kingstown 2301
 ReportingUnit	Rhode Island;North Kingstown;Precinct 2302	North Kingstown 2302
 ReportingUnit	Rhode Island;North Kingstown;Precinct 2303	North Kingstown 2303
@@ -361,6 +599,9 @@ ReportingUnit	Rhode Island;North Kingstown;Precinct 2306	North Kingstown 2306
 ReportingUnit	Rhode Island;North Kingstown;Precinct 2307	North Kingstown 2307
 ReportingUnit	Rhode Island;North Kingstown;Precinct 2308	North Kingstown 2308
 ReportingUnit	Rhode Island;North Kingstown;Precinct 2309	North Kingstown 2309
+ReportingUnit	Rhode Island;North Providence	North Providence
+ReportingUnit	Rhode Island;North Providence	North Providence Limited
+ReportingUnit	Rhode Island;North Providence	North Providence Presidential
 ReportingUnit	Rhode Island;North Providence;Precinct 2401	North Providence 2401
 ReportingUnit	Rhode Island;North Providence;Precinct 2402	North Providence 2402
 ReportingUnit	Rhode Island;North Providence;Precinct 2403	North Providence 2403
@@ -377,11 +618,17 @@ ReportingUnit	Rhode Island;North Providence;Precinct 2413	North Providence 2413
 ReportingUnit	Rhode Island;North Providence;Precinct 2414	North Providence 2414
 ReportingUnit	Rhode Island;North Providence;Precinct 2415	North Providence 2415
 ReportingUnit	Rhode Island;North Providence;Precinct 2416	North Providence 2416
+ReportingUnit	Rhode Island;North Smithfield	North Smithfield
+ReportingUnit	Rhode Island;North Smithfield	North Smithfield Limited
+ReportingUnit	Rhode Island;North Smithfield	North Smithfield Presidential
 ReportingUnit	Rhode Island;North Smithfield;Precinct 2501	North Smithfield 2501
 ReportingUnit	Rhode Island;North Smithfield;Precinct 2502	North Smithfield 2502
 ReportingUnit	Rhode Island;North Smithfield;Precinct 2503	North Smithfield 2503
 ReportingUnit	Rhode Island;North Smithfield;Precinct 2504	North Smithfield 2504
 ReportingUnit	Rhode Island;North Smithfield;Precinct 2505	North Smithfield 2505
+ReportingUnit	Rhode Island;Pawtucket	Pawtucket
+ReportingUnit	Rhode Island;Pawtucket	Pawtucket Limited
+ReportingUnit	Rhode Island;Pawtucket	Pawtucket Presidential
 ReportingUnit	Rhode Island;Pawtucket;Precinct 2601	Pawtucket 2601
 ReportingUnit	Rhode Island;Pawtucket;Precinct 2602	Pawtucket 2602
 ReportingUnit	Rhode Island;Pawtucket;Precinct 2603	Pawtucket 2603
@@ -413,6 +660,9 @@ ReportingUnit	Rhode Island;Pawtucket;Precinct 2628	Pawtucket 2628
 ReportingUnit	Rhode Island;Pawtucket;Precinct 2629	Pawtucket 2629
 ReportingUnit	Rhode Island;Pawtucket;Precinct 2630	Pawtucket 2630
 ReportingUnit	Rhode Island;Pawtucket;Precinct 2631	Pawtucket 2631
+ReportingUnit	Rhode Island;Portsmouth	Portsmouth
+ReportingUnit	Rhode Island;Portsmouth	Portsmouth Limited
+ReportingUnit	Rhode Island;Portsmouth	Portsmouth Presidential
 ReportingUnit	Rhode Island;Portsmouth;Precinct 2701	Portsmouth 2701
 ReportingUnit	Rhode Island;Portsmouth;Precinct 2702	Portsmouth 2702
 ReportingUnit	Rhode Island;Portsmouth;Precinct 2703	Portsmouth 2703
@@ -421,97 +671,115 @@ ReportingUnit	Rhode Island;Portsmouth;Precinct 2705	Portsmouth 2705
 ReportingUnit	Rhode Island;Portsmouth;Precinct 2706	Portsmouth 2706
 ReportingUnit	Rhode Island;Portsmouth;Precinct 2707	Portsmouth 2707
 ReportingUnit	Rhode Island;Portsmouth;Precinct 2708	Portsmouth 2708
-ReportingUnit	Rhode Island;Providence;Precinct 2801	Providence 2801
-ReportingUnit	Rhode Island;Providence;Precinct 2802	Providence 2802
-ReportingUnit	Rhode Island;Providence;Precinct 2803	Providence 2803
-ReportingUnit	Rhode Island;Providence;Precinct 2804	Providence 2804
-ReportingUnit	Rhode Island;Providence;Precinct 2805	Providence 2805
-ReportingUnit	Rhode Island;Providence;Precinct 2806	Providence 2806
-ReportingUnit	Rhode Island;Providence;Precinct 2807	Providence 2807
-ReportingUnit	Rhode Island;Providence;Precinct 2808	Providence 2808
-ReportingUnit	Rhode Island;Providence;Precinct 2809	Providence 2809
-ReportingUnit	Rhode Island;Providence;Precinct 2810	Providence 2810
-ReportingUnit	Rhode Island;Providence;Precinct 2811	Providence 2811
-ReportingUnit	Rhode Island;Providence;Precinct 2812	Providence 2812
-ReportingUnit	Rhode Island;Providence;Precinct 2813	Providence 2813
-ReportingUnit	Rhode Island;Providence;Precinct 2814	Providence 2814
-ReportingUnit	Rhode Island;Providence;Precinct 2815	Providence 2815
-ReportingUnit	Rhode Island;Providence;Precinct 2816	Providence 2816
-ReportingUnit	Rhode Island;Providence;Precinct 2817	Providence 2817
-ReportingUnit	Rhode Island;Providence;Precinct 2818	Providence 2818
-ReportingUnit	Rhode Island;Providence;Precinct 2819	Providence 2819
-ReportingUnit	Rhode Island;Providence;Precinct 2820	Providence 2820
-ReportingUnit	Rhode Island;Providence;Precinct 2821	Providence 2821
-ReportingUnit	Rhode Island;Providence;Precinct 2822	Providence 2822
-ReportingUnit	Rhode Island;Providence;Precinct 2823	Providence 2823
-ReportingUnit	Rhode Island;Providence;Precinct 2824	Providence 2824
-ReportingUnit	Rhode Island;Providence;Precinct 2825	Providence 2825
-ReportingUnit	Rhode Island;Providence;Precinct 2826	Providence 2826
-ReportingUnit	Rhode Island;Providence;Precinct 2827	Providence 2827
-ReportingUnit	Rhode Island;Providence;Precinct 2828	Providence 2828
-ReportingUnit	Rhode Island;Providence;Precinct 2829	Providence 2829
-ReportingUnit	Rhode Island;Providence;Precinct 2830	Providence 2830
-ReportingUnit	Rhode Island;Providence;Precinct 2831	Providence 2831
-ReportingUnit	Rhode Island;Providence;Precinct 2832	Providence 2832
-ReportingUnit	Rhode Island;Providence;Precinct 2833	Providence 2833
-ReportingUnit	Rhode Island;Providence;Precinct 2834	Providence 2834
-ReportingUnit	Rhode Island;Providence;Precinct 2835	Providence 2835
-ReportingUnit	Rhode Island;Providence;Precinct 2836	Providence 2836
-ReportingUnit	Rhode Island;Providence;Precinct 2837	Providence 2837
-ReportingUnit	Rhode Island;Providence;Precinct 2838	Providence 2838
-ReportingUnit	Rhode Island;Providence;Precinct 2839	Providence 2839
-ReportingUnit	Rhode Island;Providence;Precinct 2840	Providence 2840
-ReportingUnit	Rhode Island;Providence;Precinct 2841	Providence 2841
-ReportingUnit	Rhode Island;Providence;Precinct 2842	Providence 2842
-ReportingUnit	Rhode Island;Providence;Precinct 2843	Providence 2843
-ReportingUnit	Rhode Island;Providence;Precinct 2844	Providence 2844
-ReportingUnit	Rhode Island;Providence;Precinct 2845	Providence 2845
-ReportingUnit	Rhode Island;Providence;Precinct 2846	Providence 2846
-ReportingUnit	Rhode Island;Providence;Precinct 2847	Providence 2847
-ReportingUnit	Rhode Island;Providence;Precinct 2848	Providence 2848
-ReportingUnit	Rhode Island;Providence;Precinct 2849	Providence 2849
-ReportingUnit	Rhode Island;Providence;Precinct 2850	Providence 2850
-ReportingUnit	Rhode Island;Providence;Precinct 2851	Providence 2851
-ReportingUnit	Rhode Island;Providence;Precinct 2852	Providence 2852
-ReportingUnit	Rhode Island;Providence;Precinct 2853	Providence 2853
-ReportingUnit	Rhode Island;Providence;Precinct 2854	Providence 2854
-ReportingUnit	Rhode Island;Providence;Precinct 2855	Providence 2855
-ReportingUnit	Rhode Island;Providence;Precinct 2856	Providence 2856
-ReportingUnit	Rhode Island;Providence;Precinct 2857	Providence 2857
-ReportingUnit	Rhode Island;Providence;Precinct 2858	Providence 2858
-ReportingUnit	Rhode Island;Providence;Precinct 2859	Providence 2859
-ReportingUnit	Rhode Island;Providence;Precinct 2860	Providence 2860
-ReportingUnit	Rhode Island;Providence;Precinct 2861	Providence 2861
-ReportingUnit	Rhode Island;Providence;Precinct 2862	Providence 2862
-ReportingUnit	Rhode Island;Providence;Precinct 2863	Providence 2863
-ReportingUnit	Rhode Island;Providence;Precinct 2864	Providence 2864
-ReportingUnit	Rhode Island;Providence;Precinct 2865	Providence 2865
-ReportingUnit	Rhode Island;Providence;Precinct 2866	Providence 2866
-ReportingUnit	Rhode Island;Providence;Precinct 2867	Providence 2867
-ReportingUnit	Rhode Island;Providence;Precinct 2868	Providence 2868
-ReportingUnit	Rhode Island;Providence;Precinct 2869	Providence 2869
-ReportingUnit	Rhode Island;Providence;Precinct 2870	Providence 2870
-ReportingUnit	Rhode Island;Providence;Precinct 2871	Providence 2871
-ReportingUnit	Rhode Island;Providence;Precinct 2872	Providence 2872
-ReportingUnit	Rhode Island;Providence;Precinct 2873	Providence 2873
-ReportingUnit	Rhode Island;Providence;Precinct 2874	Providence 2874
-ReportingUnit	Rhode Island;Providence;Precinct 2875	Providence 2875
-ReportingUnit	Rhode Island;Providence;Precinct 2876	Providence 2876
-ReportingUnit	Rhode Island;Providence;Precinct 2877	Providence 2877
-ReportingUnit	Rhode Island;Providence;Precinct 2878	Providence 2878
-ReportingUnit	Rhode Island;Providence;Precinct 2879	Providence 2879
-ReportingUnit	Rhode Island;Providence;Precinct 2880	Providence 2880
+ReportingUnit	Rhode Island;Providence County	Providence
+ReportingUnit	Rhode Island;Providence County	Providence Limited 1
+ReportingUnit	Rhode Island;Providence County	Providence Limited 2
+ReportingUnit	Rhode Island;Providence County	Providence Presidential
+ReportingUnit	Rhode Island;Providence County	fips44007
+ReportingUnit	Rhode Island;Providence County;Precinct 2801	Providence 2801
+ReportingUnit	Rhode Island;Providence County;Precinct 2802	Providence 2802
+ReportingUnit	Rhode Island;Providence County;Precinct 2803	Providence 2803
+ReportingUnit	Rhode Island;Providence County;Precinct 2804	Providence 2804
+ReportingUnit	Rhode Island;Providence County;Precinct 2805	Providence 2805
+ReportingUnit	Rhode Island;Providence County;Precinct 2806	Providence 2806
+ReportingUnit	Rhode Island;Providence County;Precinct 2807	Providence 2807
+ReportingUnit	Rhode Island;Providence County;Precinct 2808	Providence 2808
+ReportingUnit	Rhode Island;Providence County;Precinct 2809	Providence 2809
+ReportingUnit	Rhode Island;Providence County;Precinct 2810	Providence 2810
+ReportingUnit	Rhode Island;Providence County;Precinct 2811	Providence 2811
+ReportingUnit	Rhode Island;Providence County;Precinct 2812	Providence 2812
+ReportingUnit	Rhode Island;Providence County;Precinct 2813	Providence 2813
+ReportingUnit	Rhode Island;Providence County;Precinct 2814	Providence 2814
+ReportingUnit	Rhode Island;Providence County;Precinct 2815	Providence 2815
+ReportingUnit	Rhode Island;Providence County;Precinct 2816	Providence 2816
+ReportingUnit	Rhode Island;Providence County;Precinct 2817	Providence 2817
+ReportingUnit	Rhode Island;Providence County;Precinct 2818	Providence 2818
+ReportingUnit	Rhode Island;Providence County;Precinct 2819	Providence 2819
+ReportingUnit	Rhode Island;Providence County;Precinct 2820	Providence 2820
+ReportingUnit	Rhode Island;Providence County;Precinct 2821	Providence 2821
+ReportingUnit	Rhode Island;Providence County;Precinct 2822	Providence 2822
+ReportingUnit	Rhode Island;Providence County;Precinct 2823	Providence 2823
+ReportingUnit	Rhode Island;Providence County;Precinct 2824	Providence 2824
+ReportingUnit	Rhode Island;Providence County;Precinct 2825	Providence 2825
+ReportingUnit	Rhode Island;Providence County;Precinct 2826	Providence 2826
+ReportingUnit	Rhode Island;Providence County;Precinct 2827	Providence 2827
+ReportingUnit	Rhode Island;Providence County;Precinct 2828	Providence 2828
+ReportingUnit	Rhode Island;Providence County;Precinct 2829	Providence 2829
+ReportingUnit	Rhode Island;Providence County;Precinct 2830	Providence 2830
+ReportingUnit	Rhode Island;Providence County;Precinct 2831	Providence 2831
+ReportingUnit	Rhode Island;Providence County;Precinct 2832	Providence 2832
+ReportingUnit	Rhode Island;Providence County;Precinct 2833	Providence 2833
+ReportingUnit	Rhode Island;Providence County;Precinct 2834	Providence 2834
+ReportingUnit	Rhode Island;Providence County;Precinct 2835	Providence 2835
+ReportingUnit	Rhode Island;Providence County;Precinct 2836	Providence 2836
+ReportingUnit	Rhode Island;Providence County;Precinct 2837	Providence 2837
+ReportingUnit	Rhode Island;Providence County;Precinct 2838	Providence 2838
+ReportingUnit	Rhode Island;Providence County;Precinct 2839	Providence 2839
+ReportingUnit	Rhode Island;Providence County;Precinct 2840	Providence 2840
+ReportingUnit	Rhode Island;Providence County;Precinct 2841	Providence 2841
+ReportingUnit	Rhode Island;Providence County;Precinct 2842	Providence 2842
+ReportingUnit	Rhode Island;Providence County;Precinct 2843	Providence 2843
+ReportingUnit	Rhode Island;Providence County;Precinct 2844	Providence 2844
+ReportingUnit	Rhode Island;Providence County;Precinct 2845	Providence 2845
+ReportingUnit	Rhode Island;Providence County;Precinct 2846	Providence 2846
+ReportingUnit	Rhode Island;Providence County;Precinct 2847	Providence 2847
+ReportingUnit	Rhode Island;Providence County;Precinct 2848	Providence 2848
+ReportingUnit	Rhode Island;Providence County;Precinct 2849	Providence 2849
+ReportingUnit	Rhode Island;Providence County;Precinct 2850	Providence 2850
+ReportingUnit	Rhode Island;Providence County;Precinct 2851	Providence 2851
+ReportingUnit	Rhode Island;Providence County;Precinct 2852	Providence 2852
+ReportingUnit	Rhode Island;Providence County;Precinct 2853	Providence 2853
+ReportingUnit	Rhode Island;Providence County;Precinct 2854	Providence 2854
+ReportingUnit	Rhode Island;Providence County;Precinct 2855	Providence 2855
+ReportingUnit	Rhode Island;Providence County;Precinct 2856	Providence 2856
+ReportingUnit	Rhode Island;Providence County;Precinct 2857	Providence 2857
+ReportingUnit	Rhode Island;Providence County;Precinct 2858	Providence 2858
+ReportingUnit	Rhode Island;Providence County;Precinct 2859	Providence 2859
+ReportingUnit	Rhode Island;Providence County;Precinct 2860	Providence 2860
+ReportingUnit	Rhode Island;Providence County;Precinct 2861	Providence 2861
+ReportingUnit	Rhode Island;Providence County;Precinct 2862	Providence 2862
+ReportingUnit	Rhode Island;Providence County;Precinct 2863	Providence 2863
+ReportingUnit	Rhode Island;Providence County;Precinct 2864	Providence 2864
+ReportingUnit	Rhode Island;Providence County;Precinct 2865	Providence 2865
+ReportingUnit	Rhode Island;Providence County;Precinct 2866	Providence 2866
+ReportingUnit	Rhode Island;Providence County;Precinct 2867	Providence 2867
+ReportingUnit	Rhode Island;Providence County;Precinct 2868	Providence 2868
+ReportingUnit	Rhode Island;Providence County;Precinct 2869	Providence 2869
+ReportingUnit	Rhode Island;Providence County;Precinct 2870	Providence 2870
+ReportingUnit	Rhode Island;Providence County;Precinct 2871	Providence 2871
+ReportingUnit	Rhode Island;Providence County;Precinct 2872	Providence 2872
+ReportingUnit	Rhode Island;Providence County;Precinct 2873	Providence 2873
+ReportingUnit	Rhode Island;Providence County;Precinct 2874	Providence 2874
+ReportingUnit	Rhode Island;Providence County;Precinct 2875	Providence 2875
+ReportingUnit	Rhode Island;Providence County;Precinct 2876	Providence 2876
+ReportingUnit	Rhode Island;Providence County;Precinct 2877	Providence 2877
+ReportingUnit	Rhode Island;Providence County;Precinct 2878	Providence 2878
+ReportingUnit	Rhode Island;Providence County;Precinct 2879	Providence 2879
+ReportingUnit	Rhode Island;Providence County;Precinct 2880	Providence 2880
+ReportingUnit	Rhode Island;Providence Limi	Providence Limi
+ReportingUnit	Rhode Island;Richmond	Richmond
+ReportingUnit	Rhode Island;Richmond	Richmond Limited
+ReportingUnit	Rhode Island;Richmond	Richmond Presidential
 ReportingUnit	Rhode Island;Richmond;Precinct 2901	Richmond 2901
 ReportingUnit	Rhode Island;Richmond;Precinct 2902	Richmond 2902
+ReportingUnit	Rhode Island;Scituate	Scituate
+ReportingUnit	Rhode Island;Scituate	Scituate Limited
+ReportingUnit	Rhode Island;Scituate	Scituate Presidential
 ReportingUnit	Rhode Island;Scituate;Precinct 3001	Scituate 3001
 ReportingUnit	Rhode Island;Scituate;Precinct 3002	Scituate 3002
 ReportingUnit	Rhode Island;Scituate;Precinct 3003	Scituate 3003
+ReportingUnit	Rhode Island;Smithfield	Smithfield
+ReportingUnit	Rhode Island;Smithfield	Smithfield Limited
+ReportingUnit	Rhode Island;Smithfield	Smithfield Presidential
 ReportingUnit	Rhode Island;Smithfield;Precinct 3101	Smithfield 3101
 ReportingUnit	Rhode Island;Smithfield;Precinct 3102	Smithfield 3102
 ReportingUnit	Rhode Island;Smithfield;Precinct 3103	Smithfield 3103
 ReportingUnit	Rhode Island;Smithfield;Precinct 3104	Smithfield 3104
 ReportingUnit	Rhode Island;Smithfield;Precinct 3105	Smithfield 3105
 ReportingUnit	Rhode Island;Smithfield;Precinct 3106	Smithfield 3106
+ReportingUnit	Rhode Island;South Kingstown	South Kingstown
+ReportingUnit	Rhode Island;South Kingstown	South Kingstown Limited
+ReportingUnit	Rhode Island;South Kingstown	South Kingstown Presidential
 ReportingUnit	Rhode Island;South Kingstown;Precinct 3201	South Kingstown 3201
 ReportingUnit	Rhode Island;South Kingstown;Precinct 3202	South Kingstown 3202
 ReportingUnit	Rhode Island;South Kingstown;Precinct 3203	South Kingstown 3203
@@ -522,6 +790,9 @@ ReportingUnit	Rhode Island;South Kingstown;Precinct 3207	South Kingstown 3207
 ReportingUnit	Rhode Island;South Kingstown;Precinct 3208	South Kingstown 3208
 ReportingUnit	Rhode Island;South Kingstown;Precinct 3209	South Kingstown 3209
 ReportingUnit	Rhode Island;South Kingstown;Precinct 3210	South Kingstown 3210
+ReportingUnit	Rhode Island;Tiverton	Tiverton
+ReportingUnit	Rhode Island;Tiverton	Tiverton Limited
+ReportingUnit	Rhode Island;Tiverton	Tiverton Presidential
 ReportingUnit	Rhode Island;Tiverton;Precinct 3301	Tiverton 3301
 ReportingUnit	Rhode Island;Tiverton;Precinct 3302	Tiverton 3302
 ReportingUnit	Rhode Island;Tiverton;Precinct 3303	Tiverton 3303
@@ -529,9 +800,15 @@ ReportingUnit	Rhode Island;Tiverton;Precinct 3304	Tiverton 3304
 ReportingUnit	Rhode Island;Tiverton;Precinct 3305	Tiverton 3305
 ReportingUnit	Rhode Island;Tiverton;Precinct 3306	Tiverton 3306
 ReportingUnit	Rhode Island;Tiverton;Precinct 3307	Tiverton 3307
+ReportingUnit	Rhode Island;Warren	Warren
+ReportingUnit	Rhode Island;Warren	Warren Limited
+ReportingUnit	Rhode Island;Warren	Warren Presidential
 ReportingUnit	Rhode Island;Warren;Precinct 3401	Warren 3401
 ReportingUnit	Rhode Island;Warren;Precinct 3402	Warren 3402
 ReportingUnit	Rhode Island;Warren;Precinct 3403	Warren 3403
+ReportingUnit	Rhode Island;Warwick	Warwick
+ReportingUnit	Rhode Island;Warwick	Warwick Limited
+ReportingUnit	Rhode Island;Warwick	Warwick Presidential
 ReportingUnit	Rhode Island;Warwick;Precinct 3501	Warwick 3501
 ReportingUnit	Rhode Island;Warwick;Precinct 3502	Warwick 3502
 ReportingUnit	Rhode Island;Warwick;Precinct 3503	Warwick 3503
@@ -565,10 +842,17 @@ ReportingUnit	Rhode Island;Warwick;Precinct 3530	Warwick 3530
 ReportingUnit	Rhode Island;Warwick;Precinct 3531	Warwick 3531
 ReportingUnit	Rhode Island;Warwick;Precinct 3532	Warwick 3532
 ReportingUnit	Rhode Island;Warwick;Precinct 3533	Warwick 3533
+ReportingUnit	Rhode Island;Washington County	fips44009
+ReportingUnit	Rhode Island;West Greenwich	West Greenwich
+ReportingUnit	Rhode Island;West Greenwich	West Greenwich Limited
+ReportingUnit	Rhode Island;West Greenwich	West Greenwich Presidential
 ReportingUnit	Rhode Island;West Greenwich;Precinct 3701	West Greenwich 3701
 ReportingUnit	Rhode Island;West Greenwich;Precinct 3702	West Greenwich 3702
 ReportingUnit	Rhode Island;West Greenwich;Precinct 3703	West Greenwich 3703
 ReportingUnit	Rhode Island;West Greenwich;Precinct 3704	West Greenwich 3704
+ReportingUnit	Rhode Island;West Warwick	West Warwick
+ReportingUnit	Rhode Island;West Warwick	West Warwick Limited
+ReportingUnit	Rhode Island;West Warwick	West Warwick Presidential
 ReportingUnit	Rhode Island;West Warwick;Precinct 3801	West Warwick 3801
 ReportingUnit	Rhode Island;West Warwick;Precinct 3802	West Warwick 3802
 ReportingUnit	Rhode Island;West Warwick;Precinct 3803	West Warwick 3803
@@ -579,6 +863,9 @@ ReportingUnit	Rhode Island;West Warwick;Precinct 3807	West Warwick 3807
 ReportingUnit	Rhode Island;West Warwick;Precinct 3808	West Warwick 3808
 ReportingUnit	Rhode Island;West Warwick;Precinct 3809	West Warwick 3809
 ReportingUnit	Rhode Island;West Warwick;Precinct 3810	West Warwick 3810
+ReportingUnit	Rhode Island;Westerly	Westerly
+ReportingUnit	Rhode Island;Westerly	Westerly Limited
+ReportingUnit	Rhode Island;Westerly	Westerly Presidential
 ReportingUnit	Rhode Island;Westerly;Precinct 3601	Westerly 3601
 ReportingUnit	Rhode Island;Westerly;Precinct 3602	Westerly 3602
 ReportingUnit	Rhode Island;Westerly;Precinct 3603	Westerly 3603
@@ -586,6 +873,9 @@ ReportingUnit	Rhode Island;Westerly;Precinct 3604	Westerly 3604
 ReportingUnit	Rhode Island;Westerly;Precinct 3605	Westerly 3605
 ReportingUnit	Rhode Island;Westerly;Precinct 3606	Westerly 3606
 ReportingUnit	Rhode Island;Westerly;Precinct 3607	Westerly 3607
+ReportingUnit	Rhode Island;Woonsocket	Woonsocket
+ReportingUnit	Rhode Island;Woonsocket	Woonsocket Limited
+ReportingUnit	Rhode Island;Woonsocket	Woonsocket Presidential
 ReportingUnit	Rhode Island;Woonsocket;Precinct 3901	Woonsocket 3901
 ReportingUnit	Rhode Island;Woonsocket;Precinct 3902	Woonsocket 3902
 ReportingUnit	Rhode Island;Woonsocket;Precinct 3903	Woonsocket 3903
@@ -598,270 +888,3 @@ ReportingUnit	Rhode Island;Woonsocket;Precinct 3909	Woonsocket 3909
 ReportingUnit	Rhode Island;Woonsocket;Precinct 3910	Woonsocket 3910
 ReportingUnit	Rhode Island;Woonsocket;Precinct 3911	Woonsocket 3911
 ReportingUnit	Rhode Island;Woonsocket;Precinct 3912	Woonsocket 3912
-Candidate	Write-In	Write-In
-Candidate	William W. O'Brien	William W. O'Brien
-Candidate	William J. Hunt, Jr.	William J. Hunt, Jr.
-Candidate	Walter S. Felag, Jr.	Walter S. Felag, Jr.
-Candidate	Virginia S. Sosnowski	Virginia S. Sosnowski
-Candidate	Vincent J. Bono	Vincent J. Bono
-Candidate	Valarie J. Lawson	Valarie J. Lawson
-Candidate	Timothy Shawn McLaughlin, Jr.	Timothy Shawn McLaughlin, Jr.
-Candidate	Tiara T. Mack	Tiara T. Mack
-Candidate	Thomas J. Paolino	Thomas J. Paolino
-Candidate	Thomas E. Noret	Thomas E. Noret
-Candidate	Terri-Denise Cortvriend	Terri-Denise Cortvriend
-Candidate	Teresa A. Tanzi	Teresa A. Tanzi
-Candidate	Susan R. Donovan	Susan R. Donovan
-Candidate	Steven J. Lima	Steven J. Lima
-Candidate	Stephen R. Archambault	Stephen R. Archambault
-Candidate	Stephen M. Casey	Stephen M. Casey
-Candidate	Stephen G. Tocco	Stephen G. Tocco
-Candidate	Sherry Roberts	Sherry Roberts
-Candidate	Scott M. Zambarano	Scott M. Zambarano
-Candidate	Scott J. Guthrie	Scott J. Guthrie
-Candidate	Scott A. Slater	Scott A. Slater
-Candidate	Sandra C. Cano	Sandra C. Cano
-Candidate	Samuel W. Bell	Samuel W. Bell
-Candidate	Samuel A. Azzinaro	Samuel A. Azzinaro
-Candidate	Ryan W. Pearson	Ryan W. Pearson
-Candidate	Rosa Marie Hill	Rosa Marie Hill
-Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
-Candidate	Ronald F. Iacobbo	Ronald F. Iacobbo
-Candidate	Ronald A. Loparto	Ronald A. Loparto
-Candidate	Roger A. Picard	Roger A. Picard
-Candidate	Robert O. Wheeler, III	Robert O. Wheeler, III
-Candidate	Robert J. Quattrocchi	Robert J. Quattrocchi
-Candidate	Robert E. Craven	Robert E. Craven
-Candidate	Robert D. Phillips	Robert D. Phillips
-Candidate	Robert A. Schattle	Robert A. Schattle
-Candidate	Richard R. Karsulavitch	Richard R. Karsulavitch
-Candidate	Rebecca M. Kislak	Rebecca M. Kislak
-Candidate	Raymond A. Hull	Raymond A. Hull
-Candidate	Ramon A. Perez	Ramon A. Perez
-Candidate	Paul M. Santucci	Paul M. Santucci
-Candidate	Paul A. Roselli	Paul A. Roselli
-Candidate	Patrick J. Donovan	Patrick J. Donovan
-Candidate	Patrick E. Maloney, Jr.	Patrick E. Maloney, Jr.
-Candidate	Patricia L. Morgan	Patricia L. Morgan
-Candidate	Patricia A. Serpa	Patricia A. Serpa
-Candidate	Pat V. Cortellessa	Pat V. Cortellessa
-Candidate	Pamela Carosi	Pamela Carosi
-Candidate	Nicola Antonio Grasso	Nicola Antonio Grasso
-Candidate	Nicholas A. Mattiello	Nicholas A. Mattiello
-Candidate	Nathan W. Biah	Nathan W. Biah
-Candidate	Nathan Joseph Melvin	Nathan Joseph Melvin
-Candidate	Michelle E. McGaw	Michelle E. McGaw
-Candidate	Michael W. Chippendale	Michael W. Chippendale
-Candidate	Michael J. McCaffrey	Michael J. McCaffrey
-Candidate	Mia A. Ackerman	Mia A. Ackerman
-Candidate	Melissa A. Murray	Melissa A. Murray
-Candidate	Meghan E. Kallman	Meghan E. Kallman
-Candidate	Megan L. Cotter	Megan L. Cotter
-Candidate	Matthew M. Mannix	Matthew M. Mannix
-Candidate	Maryellen Goodwin	Maryellen Goodwin
-Candidate	Maryann Lancia	Maryann Lancia
-Candidate	Mary Duffy Messier	Mary Duffy Messier
-Candidate	Mary Ann Shallcross Smith	Mary Ann Shallcross Smith
-Candidate	Marvin L. Abney	Marvin L. Abney
-Candidate	Mark W. Smiley	Mark W. Smiley
-Candidate	Marcia P. Ranglin-Vassell	Marcia P. Ranglin-Vassell
-Candidate	Major Pettaway	Major Pettaway
-Candidate	Louis P. DiPalma	Louis P. DiPalma
-Candidate	Linda A. Nichols	Linda A. Nichols
-Candidate	Liana M. Cassar	Liana M. Cassar
-Candidate	Leonidas P. Raptakis	Leonidas P. Raptakis
-Candidate	Leonela Felix	Leonela Felix
-Candidate	Lauren H. Carson	Lauren H. Carson
-Candidate	Kevin C. Gilligan	Kevin C. Gilligan
-Candidate	Kenneth J. Mendonca	Kenneth J. Mendonca
-Candidate	Kendra Anderson	Kendra Anderson
-Candidate	Kathleen A. Fogarty	Kathleen A. Fogarty
-Candidate	Katherine S. Kazarian	Katherine S. Kazarian
-Candidate	Karen Alzate	Karen Alzate
-Candidate	K. Joseph Shekarchi	K. Joseph Shekarchi
-Candidate	Justine A. Caldwell	Justine A. Caldwell
-Candidate	Justin K. Price	Justin K. Price
-Candidate	June S. Speakman	June S. Speakman
-Candidate	Julie A. Casimiro	Julie A. Casimiro
-Candidate	Joshua Miller	Joshua Miller
-Candidate	Joshua J. Giraldo	Joshua J. Giraldo
-Candidate	Joseph R. Biden	Joseph R. Biden
-Candidate	Joseph McNamara	Joseph McNamara
-Candidate	Joseph J. Solomon, Jr.	Joseph J. Solomon, Jr.
-Candidate	Jose F. Batista	Jose F. Batista
-Candidate	Jorge Porras	Jorge Porras
-Candidate	Jonathon Acosta	Jonathon Acosta
-Candidate	Jonathan J. Keith	Jonathan J. Keith
-Candidate	John W. Lyle, Jr.	John W. Lyle, Jr.
-Candidate	John P. Burke	John P. Burke
-Candidate	John J. Lombardi	John J. Lombardi
-Candidate	John J. Cullen	John J. Cullen
-Candidate	John G. Edwards	John G. Edwards
-Candidate	John F. Reed	John F. Reed
-Candidate	John Douglas Barr, II	John Douglas Barr, II
-Candidate	Jo Jorgensen	Jo Jorgensen
-Candidate	Jessica de la Cruz	Jessica de la Cruz
-Candidate	Jennifer C. Douglas	Jennifer C. Douglas
-Candidate	Jeffery L. Kozlin	Jeffery L. Kozlin
-Candidate	Jeanine Calkin	Jeanine Calkin
-Candidate	Jean Philippe Barros	Jean Philippe Barros
-Candidate	Jean E. Trafford	Jean E. Trafford
-Candidate	Jason Knight	Jason Knight
-Candidate	James N. McLaughlin	James N. McLaughlin
-Candidate	James B. Jackson	James B. Jackson
-Candidate	James Arthur Seveney	James Arthur Seveney
-Candidate	Jacquelyn M. Baginski	Jacquelyn M. Baginski
-Candidate	Hanna M. Gallo	Hanna M. Gallo
-Candidate	Gregory J. Costantino	Gregory J. Costantino
-Candidate	Gregg Amore	Gregg Amore
-Candidate	Grace Diaz	Grace Diaz
-Candidate	Gordon E. Rogers	Gordon E. Rogers
-Candidate	Gloria La Riva	Gloria La Riva
-Candidate	Gerald Carbone	Gerald Carbone
-Candidate	George A. Nardone	George A. Nardone
-Candidate	Gayle L. Goldin	Gayle L. Goldin
-Candidate	Frank T. Ricci	Frank T. Ricci
-Candidate	Frank S. Lombardi	Frank S. Lombardi
-Candidate	Frank Lombardo, III	Frank Lombardo, III
-Candidate	Frank A. Ciccone	Frank A. Ciccone
-Candidate	Evan P. Shanley	Evan P. Shanley
-Candidate	Emmanuel C. Nyema	Emmanuel C. Nyema
-Candidate	Elaine J. Morgan	Elaine J. Morgan
-Candidate	Edward T. Cardillo, Jr.	Edward T. Cardillo, Jr.
-Candidate	Edith H. Ajello	Edith H. Ajello
-Candidate	Doreen M. Costa	Doreen M. Costa
-Candidate	Donald J. Trump	Donald J. Trump
-Candidate	Donald J. Kohlman, II	Donald J. Kohlman, II
-Candidate	Dominick J. Ruggerio	Dominick J. Ruggerio
-Candidate	Dennis L. Algiere	Dennis L. Algiere
-Candidate	Deborah L. Ruggiero	Deborah L. Ruggiero
-Candidate	Deborah A. Fellela	Deborah A. Fellela
-Candidate	Dawn M. Euer	Dawn M. Euer
-Candidate	David Morales	David Morales
-Candidate	David J. Place	David J. Place
-Candidate	David A. Tacey	David A. Tacey
-Candidate	David A. Bennett	David A. Bennett
-Candidate	Daniel P. Baglini	Daniel P. Baglini
-Candidate	Cynthia M. Mendes	Cynthia M. Mendes
-Candidate	Cynthia Armour Coyne	Cynthia Armour Coyne
-Candidate	Christopher R. Blazejewski	Christopher R. Blazejewski
-Candidate	Christopher M. Borden	Christopher M. Borden
-Candidate	Christopher J. Hogan	Christopher J. Hogan
-Candidate	Charles P. Callanan	Charles P. Callanan
-Candidate	Charlene Lima	Charlene Lima
-Candidate	Carol Hagan McEntee	Carol Hagan McEntee
-Candidate	Carlos Eduardo Tobon	Carlos Eduardo Tobon
-Candidate	Camille F. Vella-Wilkinson	Camille F. Vella-Wilkinson
-Candidate	Bridget G. Valverde	Bridget G. Valverde
-Candidate	Brianna E. Henries	Brianna E. Henries
-Candidate	Brian Patrick Kennedy	Brian Patrick Kennedy
-Candidate	Brian J. Rea	Brian J. Rea
-Candidate	Brian Carroll	Brian Carroll
-Candidate	Brian C. Newberry	Brian C. Newberry
-Candidate	Brandon C. Potter	Brandon C. Potter
-Candidate	Blake A. Filippi	Blake A. Filippi
-Candidate	Bernard A. Hawkins	Bernard A. Hawkins
-Candidate	Barbara Ann Fenton-Fung	Barbara Ann Fenton-Fung
-Candidate	Aryeh Yisrael Rosenfield	Aryeh Yisrael Rosenfield
-Candidate	Arthur J. Corvese	Arthur J. Corvese
-Candidate	Arthur Handy	Arthur Handy
-Candidate	Antonio Giarrusso	Antonio Giarrusso
-Candidate	Anthony Fagundes, Sr.	Anthony Fagundes, Sr.
-Candidate	Ann L. Costa	Ann L. Costa
-Candidate	Anastasia P. Williams	Anastasia P. Williams
-Candidate	Ana B. Quezada	Ana B. Quezada
-Candidate	Amy E. Veri	Amy E. Veri
-Candidate	Allen R. Waters	Allen R. Waters
-Candidate	Alex D. Marszalkowski	Alex D. Marszalkowski
-Candidate	Alana DiMario	Alana DiMario
-CountItemType	election-day	Election Day
-CountItemType	absentee-mail	Mail
-CountItemType	provisional	Emergency
-Candidate	Robert B. Lancia	Robert B. Lancia
-Candidate	Jeffrey Edward Lemire	Jeffrey Edward Lemire
-Candidate	James R. Langevin	James R. Langevin
-Candidate	Frederick Wysocki	Frederick Wysocki
-Candidate	David N. Cicilline	David N. Cicilline
-ReportingUnit	Rhode Island;Bristol	Bristol Limited
-ReportingUnit	Rhode Island;Bristol	Bristol Presidential
-ReportingUnit	Rhode Island;Cranston	Cranston Limited
-ReportingUnit	Rhode Island;Cranston	Cranston Presidential
-ReportingUnit	Rhode Island;Cumberland	Cumberland Limited
-ReportingUnit	Rhode Island;Cumberland	Cumberland Presidential
-ReportingUnit	Rhode Island;Lincoln	Lincoln Limited
-ReportingUnit	Rhode Island;Lincoln	Lincoln Presidential
-ReportingUnit	Rhode Island;Newport	Newport Limited
-ReportingUnit	Rhode Island;Newport	Newport Presidential
-ReportingUnit	Rhode Island;Pawtucket	Pawtucket Limited
-ReportingUnit	Rhode Island;Pawtucket	Pawtucket Presidential
-ReportingUnit	Rhode Island;Portsmouth	Portsmouth Limited
-ReportingUnit	Rhode Island;Portsmouth	Portsmouth Presidential
-ReportingUnit	Rhode Island;Tiverton	Tiverton Limited
-ReportingUnit	Rhode Island;Tiverton	Tiverton Presidential
-ReportingUnit	Rhode Island;Warren	Warren Limited
-ReportingUnit	Rhode Island;Warren	Warren Presidential
-ReportingUnit	Rhode Island;Warwick	Warwick Limited
-ReportingUnit	Rhode Island;Warwick	Warwick Presidential
-ReportingUnit	Rhode Island;West Greenwich	West Greenwich Limited
-ReportingUnit	Rhode Island;West Greenwich	West Greenwich Presidential
-ReportingUnit	Rhode Island;Woonsocket	Woonsocket Limited
-ReportingUnit	Rhode Island;Woonsocket	Woonsocket Presidential
-ReportingUnit	Rhode Island;Westerly	Westerly Presidential
-ReportingUnit	Rhode Island;Westerly	Westerly Limited
-ReportingUnit	Rhode Island;West Warwick	West Warwick Presidential
-ReportingUnit	Rhode Island;West Warwick	West Warwick Limited
-ReportingUnit	Rhode Island;South Kingstown	South Kingstown Presidential
-ReportingUnit	Rhode Island;South Kingstown	South Kingstown Limited
-ReportingUnit	Rhode Island;Smithfield	Smithfield Presidential
-ReportingUnit	Rhode Island;Smithfield	Smithfield Limited
-ReportingUnit	Rhode Island;Scituate	Scituate Presidential
-ReportingUnit	Rhode Island;Scituate	Scituate Limited
-ReportingUnit	Rhode Island;Richmond	Richmond Presidential
-ReportingUnit	Rhode Island;Richmond	Richmond Limited
-ReportingUnit	Rhode Island;Providence	Providence Presidential
-ReportingUnit	Rhode Island;Providence	Providence Limited 2
-ReportingUnit	Rhode Island;Providence	Providence Limited 1
-ReportingUnit	Rhode Island;North Smithfield	North Smithfield Presidential
-ReportingUnit	Rhode Island;North Smithfield	North Smithfield Limited
-ReportingUnit	Rhode Island;North Providence	North Providence Presidential
-ReportingUnit	Rhode Island;North Providence	North Providence Limited
-ReportingUnit	Rhode Island;North Kingstown	North Kingstown Presidential
-ReportingUnit	Rhode Island;North Kingstown	North Kingstown Limited
-ReportingUnit	Rhode Island;New Shoreham	New Shoreham Presidential
-ReportingUnit	Rhode Island;New Shoreham	New Shoreham Limited
-ReportingUnit	Rhode Island;Narragansett	Narragansett Presidential
-ReportingUnit	Rhode Island;Narragansett	Narragansett Limited
-ReportingUnit	Rhode Island;Middletown	Middletown Presidential
-ReportingUnit	Rhode Island;Middletown	Middletown Limited
-ReportingUnit	Rhode Island;Little Compton	Little Compton Presidential
-ReportingUnit	Rhode Island;Little Compton	Little Compton Limited
-ReportingUnit	Rhode Island;Johnston	Johnston Presidential
-ReportingUnit	Rhode Island;Johnston	Johnston Limited
-ReportingUnit	Rhode Island;Jamestown	Jamestown Presidential
-ReportingUnit	Rhode Island;Jamestown	Jamestown Limited
-ReportingUnit	Rhode Island;Hopkinton	Hopkinton Presidential
-ReportingUnit	Rhode Island;Hopkinton	Hopkinton Limited
-ReportingUnit	Rhode Island;Glocester	Glocester Presidential
-ReportingUnit	Rhode Island;Glocester	Glocester Limited
-ReportingUnit	Rhode Island;Foster	Foster Presidential
-ReportingUnit	Rhode Island;Foster	Foster Limited
-ReportingUnit	Rhode Island	Federal Precinct #2S
-ReportingUnit	Rhode Island	Federal Precinct #2
-ReportingUnit	Rhode Island	Federal Precinct #1S
-ReportingUnit	Rhode Island	Federal Precinct #1
-ReportingUnit	Rhode Island;Exeter	Exeter Presidential
-ReportingUnit	Rhode Island;Exeter	Exeter Limited
-ReportingUnit	Rhode Island;East Providence	East Providence Presidential
-ReportingUnit	Rhode Island;East Providence	East Providence Limited
-ReportingUnit	Rhode Island;East Greenwich	East Greenwich Presidential
-ReportingUnit	Rhode Island;East Greenwich	East Greenwich Limited
-ReportingUnit	Rhode Island;Coventry	Coventry Presidential
-ReportingUnit	Rhode Island;Coventry	Coventry Limited
-ReportingUnit	Rhode Island;Charlestown	Charlestown Presidential
-ReportingUnit	Rhode Island;Charlestown	Charlestown Limited
-ReportingUnit	Rhode Island;Central Falls	Central Falls Presidential
-ReportingUnit	Rhode Island;Central Falls	Central Falls Limited
-ReportingUnit	Rhode Island;Burrillville	Burrillville Presidential
-ReportingUnit	Rhode Island;Burrillville	Burrillville Limited
-ReportingUnit	Rhode Island;Barrington	Barrington Presidential
-ReportingUnit	Rhode Island;Barrington	Barrington Limited

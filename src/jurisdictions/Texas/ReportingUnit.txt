@@ -1,194 +1,5 @@
 Name	ReportingUnitType
-Texas;TX House District 1	state-house
-Texas;TX House District 2	state-house
-Texas;TX House District 3	state-house
-Texas;TX House District 4	state-house
-Texas;TX House District 5	state-house
-Texas;TX House District 6	state-house
-Texas;TX House District 7	state-house
-Texas;TX House District 8	state-house
-Texas;TX House District 9	state-house
-Texas;TX House District 10	state-house
-Texas;TX House District 11	state-house
-Texas;TX House District 12	state-house
-Texas;TX House District 13	state-house
-Texas;TX House District 14	state-house
-Texas;TX House District 15	state-house
-Texas;TX House District 16	state-house
-Texas;TX House District 17	state-house
-Texas;TX House District 18	state-house
-Texas;TX House District 19	state-house
-Texas;TX House District 20	state-house
-Texas;TX House District 21	state-house
-Texas;TX House District 22	state-house
-Texas;TX House District 23	state-house
-Texas;TX House District 24	state-house
-Texas;TX House District 25	state-house
-Texas;TX House District 26	state-house
-Texas;TX House District 27	state-house
-Texas;TX House District 28	state-house
-Texas;TX House District 29	state-house
-Texas;TX House District 30	state-house
-Texas;TX House District 31	state-house
-Texas;TX House District 32	state-house
-Texas;TX House District 33	state-house
-Texas;TX House District 34	state-house
-Texas;TX House District 35	state-house
-Texas;TX House District 36	state-house
-Texas;TX House District 37	state-house
-Texas;TX House District 38	state-house
-Texas;TX House District 39	state-house
-Texas;TX House District 40	state-house
-Texas;TX House District 41	state-house
-Texas;TX House District 42	state-house
-Texas;TX House District 43	state-house
-Texas;TX House District 44	state-house
-Texas;TX House District 45	state-house
-Texas;TX House District 46	state-house
-Texas;TX House District 47	state-house
-Texas;TX House District 48	state-house
-Texas;TX House District 49	state-house
-Texas;TX House District 50	state-house
-Texas;TX House District 51	state-house
-Texas;TX House District 52	state-house
-Texas;TX House District 53	state-house
-Texas;TX House District 54	state-house
-Texas;TX House District 55	state-house
-Texas;TX House District 56	state-house
-Texas;TX House District 57	state-house
-Texas;TX House District 58	state-house
-Texas;TX House District 59	state-house
-Texas;TX House District 60	state-house
-Texas;TX House District 61	state-house
-Texas;TX House District 62	state-house
-Texas;TX House District 63	state-house
-Texas;TX House District 64	state-house
-Texas;TX House District 65	state-house
-Texas;TX House District 66	state-house
-Texas;TX House District 67	state-house
-Texas;TX House District 68	state-house
-Texas;TX House District 69	state-house
-Texas;TX House District 70	state-house
-Texas;TX House District 71	state-house
-Texas;TX House District 72	state-house
-Texas;TX House District 73	state-house
-Texas;TX House District 74	state-house
-Texas;TX House District 75	state-house
-Texas;TX House District 76	state-house
-Texas;TX House District 77	state-house
-Texas;TX House District 78	state-house
-Texas;TX House District 79	state-house
-Texas;TX House District 80	state-house
-Texas;TX House District 81	state-house
-Texas;TX House District 82	state-house
-Texas;TX House District 83	state-house
-Texas;TX House District 84	state-house
-Texas;TX House District 85	state-house
-Texas;TX House District 86	state-house
-Texas;TX House District 87	state-house
-Texas;TX House District 88	state-house
-Texas;TX House District 89	state-house
-Texas;TX House District 90	state-house
-Texas;TX House District 91	state-house
-Texas;TX House District 92	state-house
-Texas;TX House District 93	state-house
-Texas;TX House District 94	state-house
-Texas;TX House District 95	state-house
-Texas;TX House District 96	state-house
-Texas;TX House District 97	state-house
-Texas;TX House District 98	state-house
-Texas;TX House District 99	state-house
-Texas;TX House District 100	state-house
-Texas;TX House District 101	state-house
-Texas;TX House District 102	state-house
-Texas;TX House District 103	state-house
-Texas;TX House District 104	state-house
-Texas;TX House District 105	state-house
-Texas;TX House District 106	state-house
-Texas;TX House District 107	state-house
-Texas;TX House District 108	state-house
-Texas;TX House District 109	state-house
-Texas;TX House District 110	state-house
-Texas;TX House District 111	state-house
-Texas;TX House District 112	state-house
-Texas;TX House District 113	state-house
-Texas;TX House District 114	state-house
-Texas;TX House District 115	state-house
-Texas;TX House District 116	state-house
-Texas;TX House District 117	state-house
-Texas;TX House District 118	state-house
-Texas;TX House District 119	state-house
-Texas;TX House District 120	state-house
-Texas;TX House District 121	state-house
-Texas;TX House District 122	state-house
-Texas;TX House District 123	state-house
-Texas;TX House District 124	state-house
-Texas;TX House District 125	state-house
-Texas;TX House District 126	state-house
-Texas;TX House District 127	state-house
-Texas;TX House District 128	state-house
-Texas;TX House District 129	state-house
-Texas;TX House District 130	state-house
-Texas;TX House District 131	state-house
-Texas;TX House District 132	state-house
-Texas;TX House District 133	state-house
-Texas;TX House District 134	state-house
-Texas;TX House District 135	state-house
-Texas;TX House District 136	state-house
-Texas;TX House District 137	state-house
-Texas;TX House District 138	state-house
-Texas;TX House District 139	state-house
-Texas;TX House District 140	state-house
-Texas;TX House District 141	state-house
-Texas;TX House District 142	state-house
-Texas;TX House District 143	state-house
-Texas;TX House District 144	state-house
-Texas;TX House District 145	state-house
-Texas;TX House District 146	state-house
-Texas;TX House District 147	state-house
-Texas;TX House District 148	state-house
-Texas;TX House District 149	state-house
-Texas;TX House District 150	state-house
-Texas;TX Senate District 1	state-senate
-Texas;TX Senate District 2	state-senate
-Texas;TX Senate District 3	state-senate
-Texas;TX Senate District 4	state-senate
-Texas;TX Senate District 5	state-senate
-Texas;TX Senate District 6	state-senate
-Texas;TX Senate District 7	state-senate
-Texas;TX Senate District 8	state-senate
-Texas;TX Senate District 9	state-senate
-Texas;TX Senate District 10	state-senate
-Texas;TX Senate District 11	state-senate
-Texas;TX Senate District 12	state-senate
-Texas;TX Senate District 13	state-senate
-Texas;TX Senate District 14	state-senate
-Texas;TX Senate District 15	state-senate
-Texas;TX Senate District 16	state-senate
-Texas;TX Senate District 17	state-senate
-Texas;TX Senate District 18	state-senate
-Texas;TX Senate District 19	state-senate
-Texas;TX Senate District 20	state-senate
-Texas;TX Senate District 21	state-senate
-Texas;TX Senate District 22	state-senate
-Texas;TX Senate District 23	state-senate
-Texas;TX Senate District 24	state-senate
-Texas;TX Senate District 25	state-senate
-Texas;TX Senate District 26	state-senate
-Texas;TX Senate District 27	state-senate
-Texas;TX Senate District 28	state-senate
-Texas;TX Senate District 29	state-senate
-Texas;TX Senate District 30	state-senate
-Texas;TX Senate District 31	state-senate
 Texas;US House TX District 1	congressional
-Texas;US House TX District 2	congressional
-Texas;US House TX District 3	congressional
-Texas;US House TX District 4	congressional
-Texas;US House TX District 5	congressional
-Texas;US House TX District 6	congressional
-Texas;US House TX District 7	congressional
-Texas;US House TX District 8	congressional
-Texas;US House TX District 9	congressional
 Texas;US House TX District 10	congressional
 Texas;US House TX District 11	congressional
 Texas;US House TX District 12	congressional
@@ -199,6 +10,7 @@ Texas;US House TX District 16	congressional
 Texas;US House TX District 17	congressional
 Texas;US House TX District 18	congressional
 Texas;US House TX District 19	congressional
+Texas;US House TX District 2	congressional
 Texas;US House TX District 20	congressional
 Texas;US House TX District 21	congressional
 Texas;US House TX District 22	congressional
@@ -209,6 +21,7 @@ Texas;US House TX District 26	congressional
 Texas;US House TX District 27	congressional
 Texas;US House TX District 28	congressional
 Texas;US House TX District 29	congressional
+Texas;US House TX District 3	congressional
 Texas;US House TX District 30	congressional
 Texas;US House TX District 31	congressional
 Texas;US House TX District 32	congressional
@@ -216,7 +29,12 @@ Texas;US House TX District 33	congressional
 Texas;US House TX District 34	congressional
 Texas;US House TX District 35	congressional
 Texas;US House TX District 36	congressional
-Texas	state
+Texas;US House TX District 4	congressional
+Texas;US House TX District 5	congressional
+Texas;US House TX District 6	congressional
+Texas;US House TX District 7	congressional
+Texas;US House TX District 8	congressional
+Texas;US House TX District 9	congressional
 Texas;Anderson County	county
 Texas;Andrews County	county
 Texas;Angelina County	county
@@ -275,6 +93,7 @@ Texas;Culberson County	county
 Texas;Dallam County	county
 Texas;Dallas County	county
 Texas;Dawson County	county
+Texas;DeWitt County	county
 Texas;Deaf Smith County	county
 Texas;Delta County	county
 Texas;Denton County	county
@@ -286,8 +105,8 @@ Texas;Duval County	county
 Texas;Eastland County	county
 Texas;Ector County	county
 Texas;Edwards County	county
-Texas;Ellis County	county
 Texas;El Paso County	county
+Texas;Ellis County	county
 Texas;Erath County	county
 Texas;Falls County	county
 Texas;Fannin County	county
@@ -355,6 +174,7 @@ Texas;King County	county
 Texas;Kinney County	county
 Texas;Kleberg County	county
 Texas;Knox County	county
+Texas;La Salle County	county
 Texas;Lamar County	county
 Texas;Lamb County	county
 Texas;Lampasas County	county
@@ -376,6 +196,9 @@ Texas;Martin County	county
 Texas;Mason County	county
 Texas;Matagorda County	county
 Texas;Maverick County	county
+Texas;McCulloch County	county
+Texas;McLennan County	county
+Texas;McMullen County	county
 Texas;Mcculloch County	county
 Texas;Mclennan County	county
 Texas;Mcmullen County	county
@@ -471,3 +294,185 @@ Texas;Yoakum County	county
 Texas;Young County	county
 Texas;Zapata County	county
 Texas;Zavala County	county
+Texas	state
+Texas;TX House District 1	state-house
+Texas;TX House District 10	state-house
+Texas;TX House District 100	state-house
+Texas;TX House District 101	state-house
+Texas;TX House District 102	state-house
+Texas;TX House District 103	state-house
+Texas;TX House District 104	state-house
+Texas;TX House District 105	state-house
+Texas;TX House District 106	state-house
+Texas;TX House District 107	state-house
+Texas;TX House District 108	state-house
+Texas;TX House District 109	state-house
+Texas;TX House District 11	state-house
+Texas;TX House District 110	state-house
+Texas;TX House District 111	state-house
+Texas;TX House District 112	state-house
+Texas;TX House District 113	state-house
+Texas;TX House District 114	state-house
+Texas;TX House District 115	state-house
+Texas;TX House District 116	state-house
+Texas;TX House District 117	state-house
+Texas;TX House District 118	state-house
+Texas;TX House District 119	state-house
+Texas;TX House District 12	state-house
+Texas;TX House District 120	state-house
+Texas;TX House District 121	state-house
+Texas;TX House District 122	state-house
+Texas;TX House District 123	state-house
+Texas;TX House District 124	state-house
+Texas;TX House District 125	state-house
+Texas;TX House District 126	state-house
+Texas;TX House District 127	state-house
+Texas;TX House District 128	state-house
+Texas;TX House District 129	state-house
+Texas;TX House District 13	state-house
+Texas;TX House District 130	state-house
+Texas;TX House District 131	state-house
+Texas;TX House District 132	state-house
+Texas;TX House District 133	state-house
+Texas;TX House District 134	state-house
+Texas;TX House District 135	state-house
+Texas;TX House District 136	state-house
+Texas;TX House District 137	state-house
+Texas;TX House District 138	state-house
+Texas;TX House District 139	state-house
+Texas;TX House District 14	state-house
+Texas;TX House District 140	state-house
+Texas;TX House District 141	state-house
+Texas;TX House District 142	state-house
+Texas;TX House District 143	state-house
+Texas;TX House District 144	state-house
+Texas;TX House District 145	state-house
+Texas;TX House District 146	state-house
+Texas;TX House District 147	state-house
+Texas;TX House District 148	state-house
+Texas;TX House District 149	state-house
+Texas;TX House District 15	state-house
+Texas;TX House District 150	state-house
+Texas;TX House District 16	state-house
+Texas;TX House District 17	state-house
+Texas;TX House District 18	state-house
+Texas;TX House District 19	state-house
+Texas;TX House District 2	state-house
+Texas;TX House District 20	state-house
+Texas;TX House District 21	state-house
+Texas;TX House District 22	state-house
+Texas;TX House District 23	state-house
+Texas;TX House District 24	state-house
+Texas;TX House District 25	state-house
+Texas;TX House District 26	state-house
+Texas;TX House District 27	state-house
+Texas;TX House District 28	state-house
+Texas;TX House District 29	state-house
+Texas;TX House District 3	state-house
+Texas;TX House District 30	state-house
+Texas;TX House District 31	state-house
+Texas;TX House District 32	state-house
+Texas;TX House District 33	state-house
+Texas;TX House District 34	state-house
+Texas;TX House District 35	state-house
+Texas;TX House District 36	state-house
+Texas;TX House District 37	state-house
+Texas;TX House District 38	state-house
+Texas;TX House District 39	state-house
+Texas;TX House District 4	state-house
+Texas;TX House District 40	state-house
+Texas;TX House District 41	state-house
+Texas;TX House District 42	state-house
+Texas;TX House District 43	state-house
+Texas;TX House District 44	state-house
+Texas;TX House District 45	state-house
+Texas;TX House District 46	state-house
+Texas;TX House District 47	state-house
+Texas;TX House District 48	state-house
+Texas;TX House District 49	state-house
+Texas;TX House District 5	state-house
+Texas;TX House District 50	state-house
+Texas;TX House District 51	state-house
+Texas;TX House District 52	state-house
+Texas;TX House District 53	state-house
+Texas;TX House District 54	state-house
+Texas;TX House District 55	state-house
+Texas;TX House District 56	state-house
+Texas;TX House District 57	state-house
+Texas;TX House District 58	state-house
+Texas;TX House District 59	state-house
+Texas;TX House District 6	state-house
+Texas;TX House District 60	state-house
+Texas;TX House District 61	state-house
+Texas;TX House District 62	state-house
+Texas;TX House District 63	state-house
+Texas;TX House District 64	state-house
+Texas;TX House District 65	state-house
+Texas;TX House District 66	state-house
+Texas;TX House District 67	state-house
+Texas;TX House District 68	state-house
+Texas;TX House District 69	state-house
+Texas;TX House District 7	state-house
+Texas;TX House District 70	state-house
+Texas;TX House District 71	state-house
+Texas;TX House District 72	state-house
+Texas;TX House District 73	state-house
+Texas;TX House District 74	state-house
+Texas;TX House District 75	state-house
+Texas;TX House District 76	state-house
+Texas;TX House District 77	state-house
+Texas;TX House District 78	state-house
+Texas;TX House District 79	state-house
+Texas;TX House District 8	state-house
+Texas;TX House District 80	state-house
+Texas;TX House District 81	state-house
+Texas;TX House District 82	state-house
+Texas;TX House District 83	state-house
+Texas;TX House District 84	state-house
+Texas;TX House District 85	state-house
+Texas;TX House District 86	state-house
+Texas;TX House District 87	state-house
+Texas;TX House District 88	state-house
+Texas;TX House District 89	state-house
+Texas;TX House District 9	state-house
+Texas;TX House District 90	state-house
+Texas;TX House District 91	state-house
+Texas;TX House District 92	state-house
+Texas;TX House District 93	state-house
+Texas;TX House District 94	state-house
+Texas;TX House District 95	state-house
+Texas;TX House District 96	state-house
+Texas;TX House District 97	state-house
+Texas;TX House District 98	state-house
+Texas;TX House District 99	state-house
+Texas;TX Senate District 1	state-senate
+Texas;TX Senate District 10	state-senate
+Texas;TX Senate District 11	state-senate
+Texas;TX Senate District 12	state-senate
+Texas;TX Senate District 13	state-senate
+Texas;TX Senate District 14	state-senate
+Texas;TX Senate District 15	state-senate
+Texas;TX Senate District 16	state-senate
+Texas;TX Senate District 17	state-senate
+Texas;TX Senate District 18	state-senate
+Texas;TX Senate District 19	state-senate
+Texas;TX Senate District 2	state-senate
+Texas;TX Senate District 20	state-senate
+Texas;TX Senate District 21	state-senate
+Texas;TX Senate District 22	state-senate
+Texas;TX Senate District 23	state-senate
+Texas;TX Senate District 24	state-senate
+Texas;TX Senate District 25	state-senate
+Texas;TX Senate District 26	state-senate
+Texas;TX Senate District 27	state-senate
+Texas;TX Senate District 28	state-senate
+Texas;TX Senate District 29	state-senate
+Texas;TX Senate District 3	state-senate
+Texas;TX Senate District 30	state-senate
+Texas;TX Senate District 31	state-senate
+Texas;TX Senate District 4	state-senate
+Texas;TX Senate District 5	state-senate
+Texas;TX Senate District 6	state-senate
+Texas;TX Senate District 7	state-senate
+Texas;TX Senate District 8	state-senate
+Texas;TX Senate District 9	state-senate

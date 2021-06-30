@@ -1,383 +1,513 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-CandidateContest	DE House District 1 (Democratic Party)	State Representative District 1 (Democratic)
-CandidateContest	DE House District 2 (Democratic Party)	State Representative District 2 (Democratic)
-CandidateContest	DE House District 3 (Democratic Party)	State Representative District 3 (Democratic)
-CandidateContest	DE House District 4 (Democratic Party)	State Representative District 4 (Democratic)
-CandidateContest	DE House District 5 (Democratic Party)	State Representative District 5 (Democratic)
-CandidateContest	DE House District 6 (Democratic Party)	State Representative District 6 (Democratic)
-CandidateContest	DE House District 7 (Democratic Party)	State Representative District 7 (Democratic)
-CandidateContest	DE House District 8 (Democratic Party)	State Representative District 8 (Democratic)
-CandidateContest	DE House District 9 (Democratic Party)	State Representative District 9 (Democratic)
-CandidateContest	DE House District 10 (Democratic Party)	State Representative District 10 (Democratic)
-CandidateContest	DE House District 11 (Democratic Party)	State Representative District 11 (Democratic)
-CandidateContest	DE House District 12 (Democratic Party)	State Representative District 12 (Democratic)
-CandidateContest	DE House District 13 (Democratic Party)	State Representative District 13 (Democratic)
-CandidateContest	DE House District 14 (Democratic Party)	State Representative District 14 (Democratic)
-CandidateContest	DE House District 15 (Democratic Party)	State Representative District 15 (Democratic)
-CandidateContest	DE House District 16 (Democratic Party)	State Representative District 16 (Democratic)
-CandidateContest	DE House District 17 (Democratic Party)	State Representative District 17 (Democratic)
-CandidateContest	DE House District 18 (Democratic Party)	State Representative District 18 (Democratic)
-CandidateContest	DE House District 19 (Democratic Party)	State Representative District 19 (Democratic)
-CandidateContest	DE House District 20 (Democratic Party)	State Representative District 20 (Democratic)
-CandidateContest	DE House District 21 (Democratic Party)	State Representative District 21 (Democratic)
-CandidateContest	DE House District 22 (Democratic Party)	State Representative District 22 (Democratic)
-CandidateContest	DE House District 23 (Democratic Party)	State Representative District 23 (Democratic)
-CandidateContest	DE House District 24 (Democratic Party)	State Representative District 24 (Democratic)
-CandidateContest	DE House District 25 (Democratic Party)	State Representative District 25 (Democratic)
-CandidateContest	DE House District 26 (Democratic Party)	State Representative District 26 (Democratic)
-CandidateContest	DE House District 27 (Democratic Party)	State Representative District 27 (Democratic)
-CandidateContest	DE House District 28 (Democratic Party)	State Representative District 28 (Democratic)
-CandidateContest	DE House District 29 (Democratic Party)	State Representative District 29 (Democratic)
-CandidateContest	DE House District 30 (Democratic Party)	State Representative District 30 (Democratic)
-CandidateContest	DE House District 31 (Democratic Party)	State Representative District 31 (Democratic)
-CandidateContest	DE House District 32 (Democratic Party)	State Representative District 32 (Democratic)
-CandidateContest	DE House District 33 (Democratic Party)	State Representative District 33 (Democratic)
-CandidateContest	DE House District 34 (Democratic Party)	State Representative District 34 (Democratic)
-CandidateContest	DE House District 35 (Democratic Party)	State Representative District 35 (Democratic)
-CandidateContest	DE House District 36 (Democratic Party)	State Representative District 36 (Democratic)
-CandidateContest	DE House District 37 (Democratic Party)	State Representative District 37 (Democratic)
-CandidateContest	DE House District 38 (Democratic Party)	State Representative District 38 (Democratic)
-CandidateContest	DE House District 39 (Democratic Party)	State Representative District 39 (Democratic)
-CandidateContest	DE House District 40 (Democratic Party)	State Representative District 40 (Democratic)
-CandidateContest	DE House District 41 (Democratic Party)	State Representative District 41 (Democratic)
-CandidateContest	DE Senate District 1 (Democratic Party)	State Senator District 1 (Democratic)
-CandidateContest	DE Senate District 2 (Democratic Party)	State Senator District 2 (Democratic)
-CandidateContest	DE Senate District 3 (Democratic Party)	State Senator District 3 (Democratic)
-CandidateContest	DE Senate District 4 (Democratic Party)	State Senator District 4 (Democratic)
-CandidateContest	DE Senate District 5 (Democratic Party)	State Senator District 5 (Democratic)
-CandidateContest	DE Senate District 6 (Democratic Party)	State Senator District 6 (Democratic)
-CandidateContest	DE Senate District 7 (Democratic Party)	State Senator District 7 (Democratic)
-CandidateContest	DE Senate District 8 (Democratic Party)	State Senator District 8 (Democratic)
-CandidateContest	DE Senate District 9 (Democratic Party)	State Senator District 9 (Democratic)
-CandidateContest	DE Senate District 10 (Democratic Party)	State Senator District 10 (Democratic)
-CandidateContest	DE Senate District 11 (Democratic Party)	State Senator District 11 (Democratic)
-CandidateContest	DE Senate District 12 (Democratic Party)	State Senator District 12 (Democratic)
-CandidateContest	DE Senate District 13 (Democratic Party)	State Senator District 13 (Democratic)
-CandidateContest	DE Senate District 14 (Democratic Party)	State Senator District 14 (Democratic)
-CandidateContest	DE Senate District 15 (Democratic Party)	State Senator District 15 (Democratic)
-CandidateContest	DE Senate District 16 (Democratic Party)	State Senator District 16 (Democratic)
-CandidateContest	DE Senate District 17 (Democratic Party)	State Senator District 17 (Democratic)
-CandidateContest	DE Senate District 18 (Democratic Party)	State Senator District 18 (Democratic)
-CandidateContest	DE Senate District 19 (Democratic Party)	State Senator District 19 (Democratic)
-CandidateContest	DE Senate District 20 (Democratic Party)	State Senator District 20 (Democratic)
-CandidateContest	DE Senate District 21 (Democratic Party)	State Senator District 21 (Democratic)
-CandidateContest	US House DE District 1 (Democratic Party)	US House DE District 1 (Democratic)
-CandidateContest	US President (DE) (Democratic Party)	President (Democratic)
-CandidateContest	DE Governor (Democratic Party)	Governor (Democratic)
-CandidateContest	US Senate DE (Democratic Party)	U.S. Senator (Democratic)
+Candidate	Adewunmi 'Ade' Kuforiji	Adewunmi 'Ade' Kuforiji
+Candidate	Aja Ajavon	Aja Ajavon
+Candidate	Al Gore	AL GORE
+Candidate	Albert 'Al' Mills	Albert 'Al' Mills
+Candidate	Amy Solomon	Amy Solomon
+Candidate	Arisa White	Arisa White
+Candidate	Barack Obama	BARACK OBAMA
+Candidate	Bernie Sanders	Bernie Sanders
+Candidate	Bethany Hall-Long	Bethany Hall-Long
+Candidate	Billy Lane Jr.	Billy Lane Jr.
+Candidate	Bob Haynes	Bob Haynes
+Candidate	Bregetta A. Fields	Bregetta A. Fields
+Candidate	Bruce C. Ennis	Bruce C. Ennis
+Candidate	Bryant L. Richardson	Bryant L. Richardson
+Candidate	Catherine S. Purcell	Catherine S. Purcell
+Candidate	Charles Potter Jr.	Charles Potter Jr.
+Candidate	Chris Johnson	Chris Johnson
+Candidate	Christian Willauer	Christian Willauer
+Candidate	Christopher A. Coons	Christopher A. Coons
+Candidate	Ciro Poppiti	Ciro Poppiti
+Candidate	Coby Owens	Coby Owens
+Candidate	Colin Bonini	Colin Bonini
+Candidate	Craig Pugh	Craig Pugh
+Candidate	Cynthia C. Green	Cynthia C. Green
+Candidate	Dave Graham	Dave Graham
+Candidate	David B. Mcbride	David B. Mcbride
+Candidate	David Joseph Bosco	David Joseph Bosco
+Candidate	David L. Rogers	David L. Rogers
+Candidate	David Lamar Williams Jr.	David Lamar Williams Jr.
+Candidate	Davon 'D' Marque Hall	Davon 'D' Marque Hall
+Candidate	Dawayne Sims	Dawayne Sims
+Candidate	Denise Bowers	Denise Bowers
+Candidate	Devon Hynson	Devon Hynson
+Candidate	Donald Farrell	Donald Farrell
+Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Donald J. Trump	Donald J. Trump And Michael R. Pence
+Candidate	Donyale Hall	Donyale Hall
+Candidate	Dorothy King	Dorothy King
+Candidate	Earl Jaques	Earl Jaques
+Candidate	Elizabeth Warren	Elizabeth Warren
+Candidate	Eric A. Morrison	Eric A. Morrison
+Candidate	Eric Levin	Eric Levin
+Candidate	Evon L. Murray	Evon L. Murray
+Candidate	Gabriel Olawale Adelagunja	Gabriel Olawale Adelagunja
+Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	Gerald L. Brady	Gerald L. Brady
+Candidate	Hanifa Shabazz	Hanifa Shabazz
+Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Howie Hawkins	Howie Hawkins And Angela Nicole Walker
+Candidate	Ian 'Jahiti' Smith	Ian 'Jahiti' Smith
+Candidate	Irwin 'I.G.' Burton Iii	Irwin 'I.G.' Burton Iii
+Candidate	James 'Jim' Demartino	James 'Jim' Demartino
+Candidate	Jessica Scarane	Jessica Scarane
+Candidate	Jo Jorgensen	Jo Jorgensen And Jeremy 'Spike' Cohen
+Candidate	Joanne H. Masten	Joanne H. Masten
+Candidate	John C. Carney Jr.	John C. Carney Jr.
+Candidate	John J. Machurek	John J. Machurek
+Candidate	John J. Viola	John J. Viola
+Candidate	John Johnson Jr.	John Johnson Jr.
+Candidate	John Kerry	JOHN KERRY
+Candidate	John McCain	JOHN MCCAIN
+Candidate	Joseph Mccole	Joseph Mccole
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	Joseph R. Biden	Joseph R. Biden Jr. And Kamala D. Harris
+Candidate	Josue Ortega	Josue Ortega
+Candidate	Julia Pillsbury	Julia Pillsbury
+Candidate	Julianne E. Murray	Julianne E. Murray
+Candidate	Justen Wright	Justen Wright
+Candidate	Karen 'Butter' Flowers	Karen 'Butter' Flowers
+Candidate	Karen Hartley-Nagle	Karen Hartley-Nagle
+Candidate	Kathy S. Dematteis	Kathy S. Dematteis
+Candidate	Kayode Abegunde	Kayode Abegunde
+Candidate	Keith A. James Ii	Keith A. James Ii
+Candidate	Kevin Caneco	Kevin Caneco
+Candidate	Kyle Evans Gay	Kyle Evans Gay
+Candidate	Kyra L. Hoffner	Kyra L. Hoffner
+Candidate	Larry D. Lambert Jr.	Larry D. Lambert Jr.
+Candidate	Lauren Witzke	Lauren Witzke
+Candidate	Lee Murphy	Lee Murphy
+Candidate	Linda Gray	Linda Gray
+Candidate	Lisa Blunt Rochester	Lisa Blunt Rochester
+Candidate	Lisa Darrah	Lisa Darrah
+Candidate	Lisa Hudson Briggs	Lisa Hudson Briggs
+Candidate	Loretta Walsh	Loretta Walsh
+Candidate	Madinah Wilson-Anton	Madinah Wilson-Anton
+Candidate	Margaret 'Maggie' Jones	Margaret 'Maggie' Jones
+Candidate	Maria D. Cabrera	Maria D. Cabrera
+Candidate	Marie Pinkney	Marie Pinkney
+Candidate	Mark G. Schaeffer	Mark G. Schaeffer
+Candidate	Mark W. Turley	Mark W. Turley
+Candidate	Matthew M. Hathaway Morris	Matthew M. Hathaway Morris
+Candidate	Matthew Meyer	Matthew Meyer
+Candidate	Matthew W. Powell	Matthew W. Powell
+Candidate	Michael S. Purzycki	Michael S. Purzycki
+Candidate	Michelle Harlee	Michelle Harlee
+Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Monique Johns	Monique Johns
+Candidate	Morgan Russum	Morgan Russum
+Candidate	Nadine M. Frost	Nadine M. Frost
+Candidate	Nathan Field	Nathan Field
+Candidate	Other	OTHER
+Candidate	R.E. Scott Walker	R.E. Scott Walker
+Candidate	Ralph Nader	RALPH NADER
+Candidate	Ray Seigfried	Ray Seigfried
+Candidate	Robert D. Wilson	Robert D. Wilson
+Candidate	Robert Oliver	Robert Oliver
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
+Candidate	Rysheema Dixon	Rysheema Dixon
+Candidate	Samuel Lawrence Guy	Samuel Lawrence Guy
+Candidate	Sarah Mcbride	Sarah Mcbride
+Candidate	Sean Barney	Sean Barney
+Candidate	Sean Matthews	Sean Matthews
+Candidate	Shane Darby	Shane Darby
+Candidate	Sherae'A 'Rae' Moore	Sherae'A 'Rae' Moore
+Candidate	Terrance Lee Baker	Terrance Lee Baker
+Candidate	Terrell Williams	Terrell Williams
+Candidate	Trinidad Navarro	Trinidad Navarro
+Candidate	Trippi Congo	Trippi Congo
+Candidate	Tyrone Johnson	Tyrone Johnson
+Candidate	Vash Turner	Vash Turner
+Candidate	Velda Jones-Potter	Velda Jones-Potter
+Candidate	William Bell	William Bell
+Candidate	Yolanda Mccoy	Yolanda Mccoy
+Candidate	Yvette Santiago	Yvette Santiago
+Candidate	Zanthia Oliver	Zanthia Oliver
+CandidateContest	DE Attorney General	DE Attorney General
 CandidateContest	DE Attorney General (Democratic Party)	DE Attorney General (Democratic)
-CandidateContest	DE Lieutenant Governor (Democratic Party)	DE Lieutenant Governor (Democratic)
-CandidateContest	DE Treasurer (Democratic Party)	DE Treasurer (Democratic)
-CandidateContest	DE Secretary of State (Democratic Party)	DE Secretary of State (Democratic)
-CandidateContest	DE Insurance Commissioner (Democratic Party)	Insurance Commissioner (Democratic)
-CandidateContest	DE House District 1 (Republican Party)	State Representative District 1 (Republican)
-CandidateContest	DE House District 2 (Republican Party)	State Representative District 2 (Republican)
-CandidateContest	DE House District 3 (Republican Party)	State Representative District 3 (Republican)
-CandidateContest	DE House District 4 (Republican Party)	State Representative District 4 (Republican)
-CandidateContest	DE House District 5 (Republican Party)	State Representative District 5 (Republican)
-CandidateContest	DE House District 6 (Republican Party)	State Representative District 6 (Republican)
-CandidateContest	DE House District 7 (Republican Party)	State Representative District 7 (Republican)
-CandidateContest	DE House District 8 (Republican Party)	State Representative District 8 (Republican)
-CandidateContest	DE House District 9 (Republican Party)	State Representative District 9 (Republican)
-CandidateContest	DE House District 10 (Republican Party)	State Representative District 10 (Republican)
-CandidateContest	DE House District 11 (Republican Party)	State Representative District 11 (Republican)
-CandidateContest	DE House District 12 (Republican Party)	State Representative District 12 (Republican)
-CandidateContest	DE House District 13 (Republican Party)	State Representative District 13 (Republican)
-CandidateContest	DE House District 14 (Republican Party)	State Representative District 14 (Republican)
-CandidateContest	DE House District 15 (Republican Party)	State Representative District 15 (Republican)
-CandidateContest	DE House District 16 (Republican Party)	State Representative District 16 (Republican)
-CandidateContest	DE House District 17 (Republican Party)	State Representative District 17 (Republican)
-CandidateContest	DE House District 18 (Republican Party)	State Representative District 18 (Republican)
-CandidateContest	DE House District 19 (Republican Party)	State Representative District 19 (Republican)
-CandidateContest	DE House District 20 (Republican Party)	State Representative District 20 (Republican)
-CandidateContest	DE House District 21 (Republican Party)	State Representative District 21 (Republican)
-CandidateContest	DE House District 22 (Republican Party)	State Representative District 22 (Republican)
-CandidateContest	DE House District 23 (Republican Party)	State Representative District 23 (Republican)
-CandidateContest	DE House District 24 (Republican Party)	State Representative District 24 (Republican)
-CandidateContest	DE House District 25 (Republican Party)	State Representative District 25 (Republican)
-CandidateContest	DE House District 26 (Republican Party)	State Representative District 26 (Republican)
-CandidateContest	DE House District 27 (Republican Party)	State Representative District 27 (Republican)
-CandidateContest	DE House District 28 (Republican Party)	State Representative District 28 (Republican)
-CandidateContest	DE House District 29 (Republican Party)	State Representative District 29 (Republican)
-CandidateContest	DE House District 30 (Republican Party)	State Representative District 30 (Republican)
-CandidateContest	DE House District 31 (Republican Party)	State Representative District 31 (Republican)
-CandidateContest	DE House District 32 (Republican Party)	State Representative District 32 (Republican)
-CandidateContest	DE House District 33 (Republican Party)	State Representative District 33 (Republican)
-CandidateContest	DE House District 34 (Republican Party)	State Representative District 34 (Republican)
-CandidateContest	DE House District 35 (Republican Party)	State Representative District 35 (Republican)
-CandidateContest	DE House District 36 (Republican Party)	State Representative District 36 (Republican)
-CandidateContest	DE House District 37 (Republican Party)	State Representative District 37 (Republican)
-CandidateContest	DE House District 38 (Republican Party)	State Representative District 38 (Republican)
-CandidateContest	DE House District 39 (Republican Party)	State Representative District 39 (Republican)
-CandidateContest	DE House District 40 (Republican Party)	State Representative District 40 (Republican)
-CandidateContest	DE House District 41 (Republican Party)	State Representative District 41 (Republican)
-CandidateContest	DE Senate District 1 (Republican Party)	State Senator District 1 (Republican)
-CandidateContest	DE Senate District 2 (Republican Party)	State Senator District 2 (Republican)
-CandidateContest	DE Senate District 3 (Republican Party)	State Senator District 3 (Republican)
-CandidateContest	DE Senate District 4 (Republican Party)	State Senator District 4 (Republican)
-CandidateContest	DE Senate District 5 (Republican Party)	State Senator District 5 (Republican)
-CandidateContest	DE Senate District 6 (Republican Party)	State Senator District 6 (Republican)
-CandidateContest	DE Senate District 7 (Republican Party)	State Senator District 7 (Republican)
-CandidateContest	DE Senate District 8 (Republican Party)	State Senator District 8 (Republican)
-CandidateContest	DE Senate District 9 (Republican Party)	State Senator District 9 (Republican)
-CandidateContest	DE Senate District 10 (Republican Party)	State Senator District 10 (Republican)
-CandidateContest	DE Senate District 11 (Republican Party)	State Senator District 11 (Republican)
-CandidateContest	DE Senate District 12 (Republican Party)	State Senator District 12 (Republican)
-CandidateContest	DE Senate District 13 (Republican Party)	State Senator District 13 (Republican)
-CandidateContest	DE Senate District 14 (Republican Party)	State Senator District 14 (Republican)
-CandidateContest	DE Senate District 15 (Republican Party)	State Senator District 15 (Republican)
-CandidateContest	DE Senate District 16 (Republican Party)	State Senator District 16 (Republican)
-CandidateContest	DE Senate District 17 (Republican Party)	State Senator District 17 (Republican)
-CandidateContest	DE Senate District 18 (Republican Party)	State Senator District 18 (Republican)
-CandidateContest	DE Senate District 19 (Republican Party)	State Senator District 19 (Republican)
-CandidateContest	DE Senate District 20 (Republican Party)	State Senator District 20 (Republican)
-CandidateContest	DE Senate District 21 (Republican Party)	State Senator District 21 (Republican)
-CandidateContest	US House DE District 1 (Republican Party)	US House DE District 1 (Republican)
-CandidateContest	US President (DE) (Republican Party)	President (Republican)
-CandidateContest	DE Governor (Republican Party)	Governor (Republican)
-CandidateContest	US Senate DE (Republican Party)	U.S. Senator (Republican)
-CandidateContest	DE Attorney General (Republican Party)	DE Attorney General (Republican)
-CandidateContest	DE Lieutenant Governor (Republican Party)	DE Lieutenant Governor (Republican)
-CandidateContest	DE Treasurer (Republican Party)	DE Treasurer (Republican)
-CandidateContest	DE Secretary of State (Republican Party)	DE Secretary of State (Republican)
-CandidateContest	DE Insurance Commissioner (Republican Party)	Insurance Commissioner (Republican)
-CandidateContest	DE House District 1 (Green Party)	State Representative District 1 (Green Party)
-CandidateContest	DE House District 2 (Green Party)	State Representative District 2 (Green Party)
-CandidateContest	DE House District 3 (Green Party)	State Representative District 3 (Green Party)
-CandidateContest	DE House District 4 (Green Party)	State Representative District 4 (Green Party)
-CandidateContest	DE House District 5 (Green Party)	State Representative District 5 (Green Party)
-CandidateContest	DE House District 6 (Green Party)	State Representative District 6 (Green Party)
-CandidateContest	DE House District 7 (Green Party)	State Representative District 7 (Green Party)
-CandidateContest	DE House District 8 (Green Party)	State Representative District 8 (Green Party)
-CandidateContest	DE House District 9 (Green Party)	State Representative District 9 (Green Party)
-CandidateContest	DE House District 10 (Green Party)	State Representative District 10 (Green Party)
-CandidateContest	DE House District 11 (Green Party)	State Representative District 11 (Green Party)
-CandidateContest	DE House District 12 (Green Party)	State Representative District 12 (Green Party)
-CandidateContest	DE House District 13 (Green Party)	State Representative District 13 (Green Party)
-CandidateContest	DE House District 14 (Green Party)	State Representative District 14 (Green Party)
-CandidateContest	DE House District 15 (Green Party)	State Representative District 15 (Green Party)
-CandidateContest	DE House District 16 (Green Party)	State Representative District 16 (Green Party)
-CandidateContest	DE House District 17 (Green Party)	State Representative District 17 (Green Party)
-CandidateContest	DE House District 18 (Green Party)	State Representative District 18 (Green Party)
-CandidateContest	DE House District 19 (Green Party)	State Representative District 19 (Green Party)
-CandidateContest	DE House District 20 (Green Party)	State Representative District 20 (Green Party)
-CandidateContest	DE House District 21 (Green Party)	State Representative District 21 (Green Party)
-CandidateContest	DE House District 22 (Green Party)	State Representative District 22 (Green Party)
-CandidateContest	DE House District 23 (Green Party)	State Representative District 23 (Green Party)
-CandidateContest	DE House District 24 (Green Party)	State Representative District 24 (Green Party)
-CandidateContest	DE House District 25 (Green Party)	State Representative District 25 (Green Party)
-CandidateContest	DE House District 26 (Green Party)	State Representative District 26 (Green Party)
-CandidateContest	DE House District 27 (Green Party)	State Representative District 27 (Green Party)
-CandidateContest	DE House District 28 (Green Party)	State Representative District 28 (Green Party)
-CandidateContest	DE House District 29 (Green Party)	State Representative District 29 (Green Party)
-CandidateContest	DE House District 30 (Green Party)	State Representative District 30 (Green Party)
-CandidateContest	DE House District 31 (Green Party)	State Representative District 31 (Green Party)
-CandidateContest	DE House District 32 (Green Party)	State Representative District 32 (Green Party)
-CandidateContest	DE House District 33 (Green Party)	State Representative District 33 (Green Party)
-CandidateContest	DE House District 34 (Green Party)	State Representative District 34 (Green Party)
-CandidateContest	DE House District 35 (Green Party)	State Representative District 35 (Green Party)
-CandidateContest	DE House District 36 (Green Party)	State Representative District 36 (Green Party)
-CandidateContest	DE House District 37 (Green Party)	State Representative District 37 (Green Party)
-CandidateContest	DE House District 38 (Green Party)	State Representative District 38 (Green Party)
-CandidateContest	DE House District 39 (Green Party)	State Representative District 39 (Green Party)
-CandidateContest	DE House District 40 (Green Party)	State Representative District 40 (Green Party)
-CandidateContest	DE House District 41 (Green Party)	State Representative District 41 (Green Party)
-CandidateContest	DE Senate District 1 (Green Party)	State Senator District 1 (Green Party)
-CandidateContest	DE Senate District 2 (Green Party)	State Senator District 2 (Green Party)
-CandidateContest	DE Senate District 3 (Green Party)	State Senator District 3 (Green Party)
-CandidateContest	DE Senate District 4 (Green Party)	State Senator District 4 (Green Party)
-CandidateContest	DE Senate District 5 (Green Party)	State Senator District 5 (Green Party)
-CandidateContest	DE Senate District 6 (Green Party)	State Senator District 6 (Green Party)
-CandidateContest	DE Senate District 7 (Green Party)	State Senator District 7 (Green Party)
-CandidateContest	DE Senate District 8 (Green Party)	State Senator District 8 (Green Party)
-CandidateContest	DE Senate District 9 (Green Party)	State Senator District 9 (Green Party)
-CandidateContest	DE Senate District 10 (Green Party)	State Senator District 10 (Green Party)
-CandidateContest	DE Senate District 11 (Green Party)	State Senator District 11 (Green Party)
-CandidateContest	DE Senate District 12 (Green Party)	State Senator District 12 (Green Party)
-CandidateContest	DE Senate District 13 (Green Party)	State Senator District 13 (Green Party)
-CandidateContest	DE Senate District 14 (Green Party)	State Senator District 14 (Green Party)
-CandidateContest	DE Senate District 15 (Green Party)	State Senator District 15 (Green Party)
-CandidateContest	DE Senate District 16 (Green Party)	State Senator District 16 (Green Party)
-CandidateContest	DE Senate District 17 (Green Party)	State Senator District 17 (Green Party)
-CandidateContest	DE Senate District 18 (Green Party)	State Senator District 18 (Green Party)
-CandidateContest	DE Senate District 19 (Green Party)	State Senator District 19 (Green Party)
-CandidateContest	DE Senate District 20 (Green Party)	State Senator District 20 (Green Party)
-CandidateContest	DE Senate District 21 (Green Party)	State Senator District 21 (Green Party)
-CandidateContest	US House DE District 1 (Green Party)	US House DE District 1 (Green Party)
-CandidateContest	US President (DE) (Green Party)	President (Green Party)
-CandidateContest	DE Governor (Green Party)	Governor (Green Party)
-CandidateContest	US Senate DE (Green Party)	U.S. Senator (Green Party)
 CandidateContest	DE Attorney General (Green Party)	DE Attorney General (Green Party)
-CandidateContest	DE Lieutenant Governor (Green Party)	DE Lieutenant Governor (Green Party)
-CandidateContest	DE Treasurer (Green Party)	DE Treasurer (Green Party)
-CandidateContest	DE Secretary of State (Green Party)	DE Secretary of State (Green Party)
-CandidateContest	DE Insurance Commissioner (Green Party)	Insurance Commissioner (Green Party)
-CandidateContest	DE House District 1 (Libertarian Party)	State Representative District 1 (Libertarian Party)
-CandidateContest	DE House District 2 (Libertarian Party)	State Representative District 2 (Libertarian Party)
-CandidateContest	DE House District 3 (Libertarian Party)	State Representative District 3 (Libertarian Party)
-CandidateContest	DE House District 4 (Libertarian Party)	State Representative District 4 (Libertarian Party)
-CandidateContest	DE House District 5 (Libertarian Party)	State Representative District 5 (Libertarian Party)
-CandidateContest	DE House District 6 (Libertarian Party)	State Representative District 6 (Libertarian Party)
-CandidateContest	DE House District 7 (Libertarian Party)	State Representative District 7 (Libertarian Party)
-CandidateContest	DE House District 8 (Libertarian Party)	State Representative District 8 (Libertarian Party)
-CandidateContest	DE House District 9 (Libertarian Party)	State Representative District 9 (Libertarian Party)
-CandidateContest	DE House District 10 (Libertarian Party)	State Representative District 10 (Libertarian Party)
-CandidateContest	DE House District 11 (Libertarian Party)	State Representative District 11 (Libertarian Party)
-CandidateContest	DE House District 12 (Libertarian Party)	State Representative District 12 (Libertarian Party)
-CandidateContest	DE House District 13 (Libertarian Party)	State Representative District 13 (Libertarian Party)
-CandidateContest	DE House District 14 (Libertarian Party)	State Representative District 14 (Libertarian Party)
-CandidateContest	DE House District 15 (Libertarian Party)	State Representative District 15 (Libertarian Party)
-CandidateContest	DE House District 16 (Libertarian Party)	State Representative District 16 (Libertarian Party)
-CandidateContest	DE House District 17 (Libertarian Party)	State Representative District 17 (Libertarian Party)
-CandidateContest	DE House District 18 (Libertarian Party)	State Representative District 18 (Libertarian Party)
-CandidateContest	DE House District 19 (Libertarian Party)	State Representative District 19 (Libertarian Party)
-CandidateContest	DE House District 20 (Libertarian Party)	State Representative District 20 (Libertarian Party)
-CandidateContest	DE House District 21 (Libertarian Party)	State Representative District 21 (Libertarian Party)
-CandidateContest	DE House District 22 (Libertarian Party)	State Representative District 22 (Libertarian Party)
-CandidateContest	DE House District 23 (Libertarian Party)	State Representative District 23 (Libertarian Party)
-CandidateContest	DE House District 24 (Libertarian Party)	State Representative District 24 (Libertarian Party)
-CandidateContest	DE House District 25 (Libertarian Party)	State Representative District 25 (Libertarian Party)
-CandidateContest	DE House District 26 (Libertarian Party)	State Representative District 26 (Libertarian Party)
-CandidateContest	DE House District 27 (Libertarian Party)	State Representative District 27 (Libertarian Party)
-CandidateContest	DE House District 28 (Libertarian Party)	State Representative District 28 (Libertarian Party)
-CandidateContest	DE House District 29 (Libertarian Party)	State Representative District 29 (Libertarian Party)
-CandidateContest	DE House District 30 (Libertarian Party)	State Representative District 30 (Libertarian Party)
-CandidateContest	DE House District 31 (Libertarian Party)	State Representative District 31 (Libertarian Party)
-CandidateContest	DE House District 32 (Libertarian Party)	State Representative District 32 (Libertarian Party)
-CandidateContest	DE House District 33 (Libertarian Party)	State Representative District 33 (Libertarian Party)
-CandidateContest	DE House District 34 (Libertarian Party)	State Representative District 34 (Libertarian Party)
-CandidateContest	DE House District 35 (Libertarian Party)	State Representative District 35 (Libertarian Party)
-CandidateContest	DE House District 36 (Libertarian Party)	State Representative District 36 (Libertarian Party)
-CandidateContest	DE House District 37 (Libertarian Party)	State Representative District 37 (Libertarian Party)
-CandidateContest	DE House District 38 (Libertarian Party)	State Representative District 38 (Libertarian Party)
-CandidateContest	DE House District 39 (Libertarian Party)	State Representative District 39 (Libertarian Party)
-CandidateContest	DE House District 40 (Libertarian Party)	State Representative District 40 (Libertarian Party)
-CandidateContest	DE House District 41 (Libertarian Party)	State Representative District 41 (Libertarian Party)
-CandidateContest	DE Senate District 1 (Libertarian Party)	State Senator District 1 (Libertarian Party)
-CandidateContest	DE Senate District 2 (Libertarian Party)	State Senator District 2 (Libertarian Party)
-CandidateContest	DE Senate District 3 (Libertarian Party)	State Senator District 3 (Libertarian Party)
-CandidateContest	DE Senate District 4 (Libertarian Party)	State Senator District 4 (Libertarian Party)
-CandidateContest	DE Senate District 5 (Libertarian Party)	State Senator District 5 (Libertarian Party)
-CandidateContest	DE Senate District 6 (Libertarian Party)	State Senator District 6 (Libertarian Party)
-CandidateContest	DE Senate District 7 (Libertarian Party)	State Senator District 7 (Libertarian Party)
-CandidateContest	DE Senate District 8 (Libertarian Party)	State Senator District 8 (Libertarian Party)
-CandidateContest	DE Senate District 9 (Libertarian Party)	State Senator District 9 (Libertarian Party)
-CandidateContest	DE Senate District 10 (Libertarian Party)	State Senator District 10 (Libertarian Party)
-CandidateContest	DE Senate District 11 (Libertarian Party)	State Senator District 11 (Libertarian Party)
-CandidateContest	DE Senate District 12 (Libertarian Party)	State Senator District 12 (Libertarian Party)
-CandidateContest	DE Senate District 13 (Libertarian Party)	State Senator District 13 (Libertarian Party)
-CandidateContest	DE Senate District 14 (Libertarian Party)	State Senator District 14 (Libertarian Party)
-CandidateContest	DE Senate District 15 (Libertarian Party)	State Senator District 15 (Libertarian Party)
-CandidateContest	DE Senate District 16 (Libertarian Party)	State Senator District 16 (Libertarian Party)
-CandidateContest	DE Senate District 17 (Libertarian Party)	State Senator District 17 (Libertarian Party)
-CandidateContest	DE Senate District 18 (Libertarian Party)	State Senator District 18 (Libertarian Party)
-CandidateContest	DE Senate District 19 (Libertarian Party)	State Senator District 19 (Libertarian Party)
-CandidateContest	DE Senate District 20 (Libertarian Party)	State Senator District 20 (Libertarian Party)
-CandidateContest	DE Senate District 21 (Libertarian Party)	State Senator District 21 (Libertarian Party)
-CandidateContest	US House DE District 1 (Libertarian Party)	US House DE District 1 (Libertarian Party)
-CandidateContest	US President (DE) (Libertarian Party)	President (Libertarian Party)
-CandidateContest	DE Governor (Libertarian Party)	Governor (Libertarian Party)
-CandidateContest	US Senate DE (Libertarian Party)	U.S. Senator (Libertarian Party)
 CandidateContest	DE Attorney General (Libertarian Party)	DE Attorney General (Libertarian Party)
-CandidateContest	DE Lieutenant Governor (Libertarian Party)	DE Lieutenant Governor (Libertarian Party)
-CandidateContest	DE Treasurer (Libertarian Party)	DE Treasurer (Libertarian Party)
-CandidateContest	DE Secretary of State (Libertarian Party)	DE Secretary of State (Libertarian Party)
-CandidateContest	DE Insurance Commissioner (Libertarian Party)	Insurance Commissioner (Libertarian Party)
+CandidateContest	DE Attorney General (Republican Party)	DE Attorney General (Republican)
+CandidateContest	DE Governor	Governor
+CandidateContest	DE Governor (Democratic Party)	Governor (Democratic)
+CandidateContest	DE Governor (Green Party)	Governor (Green Party)
+CandidateContest	DE Governor (Libertarian Party)	Governor (Libertarian Party)
+CandidateContest	DE Governor (Republican Party)	Governor (Republican)
 CandidateContest	DE House District 1	State Representative District 1
-CandidateContest	DE House District 2	State Representative District 2
-CandidateContest	DE House District 3	State Representative District 3
-CandidateContest	DE House District 4	State Representative District 4
-CandidateContest	DE House District 5	State Representative District 5
-CandidateContest	DE House District 6	State Representative District 6
-CandidateContest	DE House District 7	State Representative District 7
-CandidateContest	DE House District 8	State Representative District 8
-CandidateContest	DE House District 9	State Representative District 9
+CandidateContest	DE House District 1 (Democratic Party)	State Representative District 1 (Democratic)
+CandidateContest	DE House District 1 (Green Party)	State Representative District 1 (Green Party)
+CandidateContest	DE House District 1 (Libertarian Party)	State Representative District 1 (Libertarian Party)
+CandidateContest	DE House District 1 (Republican Party)	State Representative District 1 (Republican)
 CandidateContest	DE House District 10	State Representative District 10
+CandidateContest	DE House District 10 (Democratic Party)	State Representative District 10 (Democratic)
+CandidateContest	DE House District 10 (Green Party)	State Representative District 10 (Green Party)
+CandidateContest	DE House District 10 (Libertarian Party)	State Representative District 10 (Libertarian Party)
+CandidateContest	DE House District 10 (Republican Party)	State Representative District 10 (Republican)
 CandidateContest	DE House District 11	State Representative District 11
+CandidateContest	DE House District 11 (Democratic Party)	State Representative District 11 (Democratic)
+CandidateContest	DE House District 11 (Green Party)	State Representative District 11 (Green Party)
+CandidateContest	DE House District 11 (Libertarian Party)	State Representative District 11 (Libertarian Party)
+CandidateContest	DE House District 11 (Republican Party)	State Representative District 11 (Republican)
 CandidateContest	DE House District 12	State Representative District 12
+CandidateContest	DE House District 12 (Democratic Party)	State Representative District 12 (Democratic)
+CandidateContest	DE House District 12 (Green Party)	State Representative District 12 (Green Party)
+CandidateContest	DE House District 12 (Libertarian Party)	State Representative District 12 (Libertarian Party)
+CandidateContest	DE House District 12 (Republican Party)	State Representative District 12 (Republican)
 CandidateContest	DE House District 13	State Representative District 13
+CandidateContest	DE House District 13 (Democratic Party)	State Representative District 13 (Democratic)
+CandidateContest	DE House District 13 (Green Party)	State Representative District 13 (Green Party)
+CandidateContest	DE House District 13 (Libertarian Party)	State Representative District 13 (Libertarian Party)
+CandidateContest	DE House District 13 (Republican Party)	State Representative District 13 (Republican)
 CandidateContest	DE House District 14	State Representative District 14
+CandidateContest	DE House District 14 (Democratic Party)	State Representative District 14 (Democratic)
+CandidateContest	DE House District 14 (Green Party)	State Representative District 14 (Green Party)
+CandidateContest	DE House District 14 (Libertarian Party)	State Representative District 14 (Libertarian Party)
+CandidateContest	DE House District 14 (Republican Party)	State Representative District 14 (Republican)
 CandidateContest	DE House District 15	State Representative District 15
+CandidateContest	DE House District 15 (Democratic Party)	State Representative District 15 (Democratic)
+CandidateContest	DE House District 15 (Green Party)	State Representative District 15 (Green Party)
+CandidateContest	DE House District 15 (Libertarian Party)	State Representative District 15 (Libertarian Party)
+CandidateContest	DE House District 15 (Republican Party)	State Representative District 15 (Republican)
 CandidateContest	DE House District 16	State Representative District 16
+CandidateContest	DE House District 16 (Democratic Party)	State Representative District 16 (Democratic)
+CandidateContest	DE House District 16 (Green Party)	State Representative District 16 (Green Party)
+CandidateContest	DE House District 16 (Libertarian Party)	State Representative District 16 (Libertarian Party)
+CandidateContest	DE House District 16 (Republican Party)	State Representative District 16 (Republican)
 CandidateContest	DE House District 17	State Representative District 17
+CandidateContest	DE House District 17 (Democratic Party)	State Representative District 17 (Democratic)
+CandidateContest	DE House District 17 (Green Party)	State Representative District 17 (Green Party)
+CandidateContest	DE House District 17 (Libertarian Party)	State Representative District 17 (Libertarian Party)
+CandidateContest	DE House District 17 (Republican Party)	State Representative District 17 (Republican)
 CandidateContest	DE House District 18	State Representative District 18
+CandidateContest	DE House District 18 (Democratic Party)	State Representative District 18 (Democratic)
+CandidateContest	DE House District 18 (Green Party)	State Representative District 18 (Green Party)
+CandidateContest	DE House District 18 (Libertarian Party)	State Representative District 18 (Libertarian Party)
+CandidateContest	DE House District 18 (Republican Party)	State Representative District 18 (Republican)
 CandidateContest	DE House District 19	State Representative District 19
+CandidateContest	DE House District 19 (Democratic Party)	State Representative District 19 (Democratic)
+CandidateContest	DE House District 19 (Green Party)	State Representative District 19 (Green Party)
+CandidateContest	DE House District 19 (Libertarian Party)	State Representative District 19 (Libertarian Party)
+CandidateContest	DE House District 19 (Republican Party)	State Representative District 19 (Republican)
+CandidateContest	DE House District 2	State Representative District 2
+CandidateContest	DE House District 2 (Democratic Party)	State Representative District 2 (Democratic)
+CandidateContest	DE House District 2 (Green Party)	State Representative District 2 (Green Party)
+CandidateContest	DE House District 2 (Libertarian Party)	State Representative District 2 (Libertarian Party)
+CandidateContest	DE House District 2 (Republican Party)	State Representative District 2 (Republican)
 CandidateContest	DE House District 20	State Representative District 20
+CandidateContest	DE House District 20 (Democratic Party)	State Representative District 20 (Democratic)
+CandidateContest	DE House District 20 (Green Party)	State Representative District 20 (Green Party)
+CandidateContest	DE House District 20 (Libertarian Party)	State Representative District 20 (Libertarian Party)
+CandidateContest	DE House District 20 (Republican Party)	State Representative District 20 (Republican)
 CandidateContest	DE House District 21	State Representative District 21
+CandidateContest	DE House District 21 (Democratic Party)	State Representative District 21 (Democratic)
+CandidateContest	DE House District 21 (Green Party)	State Representative District 21 (Green Party)
+CandidateContest	DE House District 21 (Libertarian Party)	State Representative District 21 (Libertarian Party)
+CandidateContest	DE House District 21 (Republican Party)	State Representative District 21 (Republican)
 CandidateContest	DE House District 22	State Representative District 22
+CandidateContest	DE House District 22 (Democratic Party)	State Representative District 22 (Democratic)
+CandidateContest	DE House District 22 (Green Party)	State Representative District 22 (Green Party)
+CandidateContest	DE House District 22 (Libertarian Party)	State Representative District 22 (Libertarian Party)
+CandidateContest	DE House District 22 (Republican Party)	State Representative District 22 (Republican)
 CandidateContest	DE House District 23	State Representative District 23
+CandidateContest	DE House District 23 (Democratic Party)	State Representative District 23 (Democratic)
+CandidateContest	DE House District 23 (Green Party)	State Representative District 23 (Green Party)
+CandidateContest	DE House District 23 (Libertarian Party)	State Representative District 23 (Libertarian Party)
+CandidateContest	DE House District 23 (Republican Party)	State Representative District 23 (Republican)
 CandidateContest	DE House District 24	State Representative District 24
+CandidateContest	DE House District 24 (Democratic Party)	State Representative District 24 (Democratic)
+CandidateContest	DE House District 24 (Green Party)	State Representative District 24 (Green Party)
+CandidateContest	DE House District 24 (Libertarian Party)	State Representative District 24 (Libertarian Party)
+CandidateContest	DE House District 24 (Republican Party)	State Representative District 24 (Republican)
 CandidateContest	DE House District 25	State Representative District 25
+CandidateContest	DE House District 25 (Democratic Party)	State Representative District 25 (Democratic)
+CandidateContest	DE House District 25 (Green Party)	State Representative District 25 (Green Party)
+CandidateContest	DE House District 25 (Libertarian Party)	State Representative District 25 (Libertarian Party)
+CandidateContest	DE House District 25 (Republican Party)	State Representative District 25 (Republican)
 CandidateContest	DE House District 26	State Representative District 26
+CandidateContest	DE House District 26 (Democratic Party)	State Representative District 26 (Democratic)
+CandidateContest	DE House District 26 (Green Party)	State Representative District 26 (Green Party)
+CandidateContest	DE House District 26 (Libertarian Party)	State Representative District 26 (Libertarian Party)
+CandidateContest	DE House District 26 (Republican Party)	State Representative District 26 (Republican)
 CandidateContest	DE House District 27	State Representative District 27
+CandidateContest	DE House District 27 (Democratic Party)	State Representative District 27 (Democratic)
+CandidateContest	DE House District 27 (Green Party)	State Representative District 27 (Green Party)
+CandidateContest	DE House District 27 (Libertarian Party)	State Representative District 27 (Libertarian Party)
+CandidateContest	DE House District 27 (Republican Party)	State Representative District 27 (Republican)
 CandidateContest	DE House District 28	State Representative District 28
+CandidateContest	DE House District 28 (Democratic Party)	State Representative District 28 (Democratic)
+CandidateContest	DE House District 28 (Green Party)	State Representative District 28 (Green Party)
+CandidateContest	DE House District 28 (Libertarian Party)	State Representative District 28 (Libertarian Party)
+CandidateContest	DE House District 28 (Republican Party)	State Representative District 28 (Republican)
 CandidateContest	DE House District 29	State Representative District 29
+CandidateContest	DE House District 29 (Democratic Party)	State Representative District 29 (Democratic)
+CandidateContest	DE House District 29 (Green Party)	State Representative District 29 (Green Party)
+CandidateContest	DE House District 29 (Libertarian Party)	State Representative District 29 (Libertarian Party)
+CandidateContest	DE House District 29 (Republican Party)	State Representative District 29 (Republican)
+CandidateContest	DE House District 3	State Representative District 3
+CandidateContest	DE House District 3 (Democratic Party)	State Representative District 3 (Democratic)
+CandidateContest	DE House District 3 (Green Party)	State Representative District 3 (Green Party)
+CandidateContest	DE House District 3 (Libertarian Party)	State Representative District 3 (Libertarian Party)
+CandidateContest	DE House District 3 (Republican Party)	State Representative District 3 (Republican)
 CandidateContest	DE House District 30	State Representative District 30
+CandidateContest	DE House District 30 (Democratic Party)	State Representative District 30 (Democratic)
+CandidateContest	DE House District 30 (Green Party)	State Representative District 30 (Green Party)
+CandidateContest	DE House District 30 (Libertarian Party)	State Representative District 30 (Libertarian Party)
+CandidateContest	DE House District 30 (Republican Party)	State Representative District 30 (Republican)
 CandidateContest	DE House District 31	State Representative District 31
+CandidateContest	DE House District 31 (Democratic Party)	State Representative District 31 (Democratic)
+CandidateContest	DE House District 31 (Green Party)	State Representative District 31 (Green Party)
+CandidateContest	DE House District 31 (Libertarian Party)	State Representative District 31 (Libertarian Party)
+CandidateContest	DE House District 31 (Republican Party)	State Representative District 31 (Republican)
 CandidateContest	DE House District 32	State Representative District 32
+CandidateContest	DE House District 32 (Democratic Party)	State Representative District 32 (Democratic)
+CandidateContest	DE House District 32 (Green Party)	State Representative District 32 (Green Party)
+CandidateContest	DE House District 32 (Libertarian Party)	State Representative District 32 (Libertarian Party)
+CandidateContest	DE House District 32 (Republican Party)	State Representative District 32 (Republican)
 CandidateContest	DE House District 33	State Representative District 33
+CandidateContest	DE House District 33 (Democratic Party)	State Representative District 33 (Democratic)
+CandidateContest	DE House District 33 (Green Party)	State Representative District 33 (Green Party)
+CandidateContest	DE House District 33 (Libertarian Party)	State Representative District 33 (Libertarian Party)
+CandidateContest	DE House District 33 (Republican Party)	State Representative District 33 (Republican)
 CandidateContest	DE House District 34	State Representative District 34
+CandidateContest	DE House District 34 (Democratic Party)	State Representative District 34 (Democratic)
+CandidateContest	DE House District 34 (Green Party)	State Representative District 34 (Green Party)
+CandidateContest	DE House District 34 (Libertarian Party)	State Representative District 34 (Libertarian Party)
+CandidateContest	DE House District 34 (Republican Party)	State Representative District 34 (Republican)
 CandidateContest	DE House District 35	State Representative District 35
+CandidateContest	DE House District 35 (Democratic Party)	State Representative District 35 (Democratic)
+CandidateContest	DE House District 35 (Green Party)	State Representative District 35 (Green Party)
+CandidateContest	DE House District 35 (Libertarian Party)	State Representative District 35 (Libertarian Party)
+CandidateContest	DE House District 35 (Republican Party)	State Representative District 35 (Republican)
 CandidateContest	DE House District 36	State Representative District 36
+CandidateContest	DE House District 36 (Democratic Party)	State Representative District 36 (Democratic)
+CandidateContest	DE House District 36 (Green Party)	State Representative District 36 (Green Party)
+CandidateContest	DE House District 36 (Libertarian Party)	State Representative District 36 (Libertarian Party)
+CandidateContest	DE House District 36 (Republican Party)	State Representative District 36 (Republican)
 CandidateContest	DE House District 37	State Representative District 37
+CandidateContest	DE House District 37 (Democratic Party)	State Representative District 37 (Democratic)
+CandidateContest	DE House District 37 (Green Party)	State Representative District 37 (Green Party)
+CandidateContest	DE House District 37 (Libertarian Party)	State Representative District 37 (Libertarian Party)
+CandidateContest	DE House District 37 (Republican Party)	State Representative District 37 (Republican)
 CandidateContest	DE House District 38	State Representative District 38
+CandidateContest	DE House District 38 (Democratic Party)	State Representative District 38 (Democratic)
+CandidateContest	DE House District 38 (Green Party)	State Representative District 38 (Green Party)
+CandidateContest	DE House District 38 (Libertarian Party)	State Representative District 38 (Libertarian Party)
+CandidateContest	DE House District 38 (Republican Party)	State Representative District 38 (Republican)
 CandidateContest	DE House District 39	State Representative District 39
+CandidateContest	DE House District 39 (Democratic Party)	State Representative District 39 (Democratic)
+CandidateContest	DE House District 39 (Green Party)	State Representative District 39 (Green Party)
+CandidateContest	DE House District 39 (Libertarian Party)	State Representative District 39 (Libertarian Party)
+CandidateContest	DE House District 39 (Republican Party)	State Representative District 39 (Republican)
+CandidateContest	DE House District 4	State Representative District 4
+CandidateContest	DE House District 4 (Democratic Party)	State Representative District 4 (Democratic)
+CandidateContest	DE House District 4 (Green Party)	State Representative District 4 (Green Party)
+CandidateContest	DE House District 4 (Libertarian Party)	State Representative District 4 (Libertarian Party)
+CandidateContest	DE House District 4 (Republican Party)	State Representative District 4 (Republican)
 CandidateContest	DE House District 40	State Representative District 40
+CandidateContest	DE House District 40 (Democratic Party)	State Representative District 40 (Democratic)
+CandidateContest	DE House District 40 (Green Party)	State Representative District 40 (Green Party)
+CandidateContest	DE House District 40 (Libertarian Party)	State Representative District 40 (Libertarian Party)
+CandidateContest	DE House District 40 (Republican Party)	State Representative District 40 (Republican)
 CandidateContest	DE House District 41	State Representative District 41
+CandidateContest	DE House District 41 (Democratic Party)	State Representative District 41 (Democratic)
+CandidateContest	DE House District 41 (Green Party)	State Representative District 41 (Green Party)
+CandidateContest	DE House District 41 (Libertarian Party)	State Representative District 41 (Libertarian Party)
+CandidateContest	DE House District 41 (Republican Party)	State Representative District 41 (Republican)
+CandidateContest	DE House District 5	State Representative District 5
+CandidateContest	DE House District 5 (Democratic Party)	State Representative District 5 (Democratic)
+CandidateContest	DE House District 5 (Green Party)	State Representative District 5 (Green Party)
+CandidateContest	DE House District 5 (Libertarian Party)	State Representative District 5 (Libertarian Party)
+CandidateContest	DE House District 5 (Republican Party)	State Representative District 5 (Republican)
+CandidateContest	DE House District 6	State Representative District 6
+CandidateContest	DE House District 6 (Democratic Party)	State Representative District 6 (Democratic)
+CandidateContest	DE House District 6 (Green Party)	State Representative District 6 (Green Party)
+CandidateContest	DE House District 6 (Libertarian Party)	State Representative District 6 (Libertarian Party)
+CandidateContest	DE House District 6 (Republican Party)	State Representative District 6 (Republican)
+CandidateContest	DE House District 7	State Representative District 7
+CandidateContest	DE House District 7 (Democratic Party)	State Representative District 7 (Democratic)
+CandidateContest	DE House District 7 (Green Party)	State Representative District 7 (Green Party)
+CandidateContest	DE House District 7 (Libertarian Party)	State Representative District 7 (Libertarian Party)
+CandidateContest	DE House District 7 (Republican Party)	State Representative District 7 (Republican)
+CandidateContest	DE House District 8	State Representative District 8
+CandidateContest	DE House District 8 (Democratic Party)	State Representative District 8 (Democratic)
+CandidateContest	DE House District 8 (Green Party)	State Representative District 8 (Green Party)
+CandidateContest	DE House District 8 (Libertarian Party)	State Representative District 8 (Libertarian Party)
+CandidateContest	DE House District 8 (Republican Party)	State Representative District 8 (Republican)
+CandidateContest	DE House District 9	State Representative District 9
+CandidateContest	DE House District 9 (Democratic Party)	State Representative District 9 (Democratic)
+CandidateContest	DE House District 9 (Green Party)	State Representative District 9 (Green Party)
+CandidateContest	DE House District 9 (Libertarian Party)	State Representative District 9 (Libertarian Party)
+CandidateContest	DE House District 9 (Republican Party)	State Representative District 9 (Republican)
+CandidateContest	DE Insurance Commissioner	Insurance Commissioner
+CandidateContest	DE Insurance Commissioner (Democratic Party)	Insurance Commissioner (Democratic)
+CandidateContest	DE Insurance Commissioner (Green Party)	Insurance Commissioner (Green Party)
+CandidateContest	DE Insurance Commissioner (Libertarian Party)	Insurance Commissioner (Libertarian Party)
+CandidateContest	DE Insurance Commissioner (Republican Party)	Insurance Commissioner (Republican)
+CandidateContest	DE Lieutenant Governor	Lieutenant Governor
+CandidateContest	DE Lieutenant Governor (Democratic Party)	DE Lieutenant Governor (Democratic)
+CandidateContest	DE Lieutenant Governor (Green Party)	DE Lieutenant Governor (Green Party)
+CandidateContest	DE Lieutenant Governor (Libertarian Party)	DE Lieutenant Governor (Libertarian Party)
+CandidateContest	DE Lieutenant Governor (Republican Party)	DE Lieutenant Governor (Republican)
+CandidateContest	DE Secretary of State	DE Secretary of State
+CandidateContest	DE Secretary of State (Democratic Party)	DE Secretary of State (Democratic)
+CandidateContest	DE Secretary of State (Green Party)	DE Secretary of State (Green Party)
+CandidateContest	DE Secretary of State (Libertarian Party)	DE Secretary of State (Libertarian Party)
+CandidateContest	DE Secretary of State (Republican Party)	DE Secretary of State (Republican)
 CandidateContest	DE Senate District 1	State Senator District 1
-CandidateContest	DE Senate District 2	State Senator District 2
-CandidateContest	DE Senate District 3	State Senator District 3
-CandidateContest	DE Senate District 4	State Senator District 4
-CandidateContest	DE Senate District 5	State Senator District 5
-CandidateContest	DE Senate District 6	State Senator District 6
-CandidateContest	DE Senate District 7	State Senator District 7
-CandidateContest	DE Senate District 8	State Senator District 8
-CandidateContest	DE Senate District 9	State Senator District 9
+CandidateContest	DE Senate District 1 (Democratic Party)	State Senator District 1 (Democratic)
+CandidateContest	DE Senate District 1 (Green Party)	State Senator District 1 (Green Party)
+CandidateContest	DE Senate District 1 (Libertarian Party)	State Senator District 1 (Libertarian Party)
+CandidateContest	DE Senate District 1 (Republican Party)	State Senator District 1 (Republican)
 CandidateContest	DE Senate District 10	State Senator District 10
+CandidateContest	DE Senate District 10 (Democratic Party)	State Senator District 10 (Democratic)
+CandidateContest	DE Senate District 10 (Green Party)	State Senator District 10 (Green Party)
+CandidateContest	DE Senate District 10 (Libertarian Party)	State Senator District 10 (Libertarian Party)
+CandidateContest	DE Senate District 10 (Republican Party)	State Senator District 10 (Republican)
 CandidateContest	DE Senate District 11	State Senator District 11
+CandidateContest	DE Senate District 11 (Democratic Party)	State Senator District 11 (Democratic)
+CandidateContest	DE Senate District 11 (Green Party)	State Senator District 11 (Green Party)
+CandidateContest	DE Senate District 11 (Libertarian Party)	State Senator District 11 (Libertarian Party)
+CandidateContest	DE Senate District 11 (Republican Party)	State Senator District 11 (Republican)
 CandidateContest	DE Senate District 12	State Senator District 12
+CandidateContest	DE Senate District 12 (Democratic Party)	State Senator District 12 (Democratic)
+CandidateContest	DE Senate District 12 (Green Party)	State Senator District 12 (Green Party)
+CandidateContest	DE Senate District 12 (Libertarian Party)	State Senator District 12 (Libertarian Party)
+CandidateContest	DE Senate District 12 (Republican Party)	State Senator District 12 (Republican)
 CandidateContest	DE Senate District 13	State Senator District 13
+CandidateContest	DE Senate District 13 (Democratic Party)	State Senator District 13 (Democratic)
+CandidateContest	DE Senate District 13 (Green Party)	State Senator District 13 (Green Party)
+CandidateContest	DE Senate District 13 (Libertarian Party)	State Senator District 13 (Libertarian Party)
+CandidateContest	DE Senate District 13 (Republican Party)	State Senator District 13 (Republican)
 CandidateContest	DE Senate District 14	State Senator District 14
+CandidateContest	DE Senate District 14 (Democratic Party)	State Senator District 14 (Democratic)
+CandidateContest	DE Senate District 14 (Green Party)	State Senator District 14 (Green Party)
+CandidateContest	DE Senate District 14 (Libertarian Party)	State Senator District 14 (Libertarian Party)
+CandidateContest	DE Senate District 14 (Republican Party)	State Senator District 14 (Republican)
 CandidateContest	DE Senate District 15	State Senator District 15
+CandidateContest	DE Senate District 15 (Democratic Party)	State Senator District 15 (Democratic)
+CandidateContest	DE Senate District 15 (Green Party)	State Senator District 15 (Green Party)
+CandidateContest	DE Senate District 15 (Libertarian Party)	State Senator District 15 (Libertarian Party)
+CandidateContest	DE Senate District 15 (Republican Party)	State Senator District 15 (Republican)
 CandidateContest	DE Senate District 16	State Senator District 16
+CandidateContest	DE Senate District 16 (Democratic Party)	State Senator District 16 (Democratic)
+CandidateContest	DE Senate District 16 (Green Party)	State Senator District 16 (Green Party)
+CandidateContest	DE Senate District 16 (Libertarian Party)	State Senator District 16 (Libertarian Party)
+CandidateContest	DE Senate District 16 (Republican Party)	State Senator District 16 (Republican)
 CandidateContest	DE Senate District 17	State Senator District 17
+CandidateContest	DE Senate District 17 (Democratic Party)	State Senator District 17 (Democratic)
+CandidateContest	DE Senate District 17 (Green Party)	State Senator District 17 (Green Party)
+CandidateContest	DE Senate District 17 (Libertarian Party)	State Senator District 17 (Libertarian Party)
+CandidateContest	DE Senate District 17 (Republican Party)	State Senator District 17 (Republican)
 CandidateContest	DE Senate District 18	State Senator District 18
+CandidateContest	DE Senate District 18 (Democratic Party)	State Senator District 18 (Democratic)
+CandidateContest	DE Senate District 18 (Green Party)	State Senator District 18 (Green Party)
+CandidateContest	DE Senate District 18 (Libertarian Party)	State Senator District 18 (Libertarian Party)
+CandidateContest	DE Senate District 18 (Republican Party)	State Senator District 18 (Republican)
 CandidateContest	DE Senate District 19	State Senator District 19
+CandidateContest	DE Senate District 19 (Democratic Party)	State Senator District 19 (Democratic)
+CandidateContest	DE Senate District 19 (Green Party)	State Senator District 19 (Green Party)
+CandidateContest	DE Senate District 19 (Libertarian Party)	State Senator District 19 (Libertarian Party)
+CandidateContest	DE Senate District 19 (Republican Party)	State Senator District 19 (Republican)
+CandidateContest	DE Senate District 2	State Senator District 2
+CandidateContest	DE Senate District 2 (Democratic Party)	State Senator District 2 (Democratic)
+CandidateContest	DE Senate District 2 (Green Party)	State Senator District 2 (Green Party)
+CandidateContest	DE Senate District 2 (Libertarian Party)	State Senator District 2 (Libertarian Party)
+CandidateContest	DE Senate District 2 (Republican Party)	State Senator District 2 (Republican)
 CandidateContest	DE Senate District 20	State Senator District 20
+CandidateContest	DE Senate District 20 (Democratic Party)	State Senator District 20 (Democratic)
+CandidateContest	DE Senate District 20 (Green Party)	State Senator District 20 (Green Party)
+CandidateContest	DE Senate District 20 (Libertarian Party)	State Senator District 20 (Libertarian Party)
+CandidateContest	DE Senate District 20 (Republican Party)	State Senator District 20 (Republican)
 CandidateContest	DE Senate District 21	State Senator District 21
+CandidateContest	DE Senate District 21 (Democratic Party)	State Senator District 21 (Democratic)
+CandidateContest	DE Senate District 21 (Green Party)	State Senator District 21 (Green Party)
+CandidateContest	DE Senate District 21 (Libertarian Party)	State Senator District 21 (Libertarian Party)
+CandidateContest	DE Senate District 21 (Republican Party)	State Senator District 21 (Republican)
+CandidateContest	DE Senate District 3	State Senator District 3
+CandidateContest	DE Senate District 3 (Democratic Party)	State Senator District 3 (Democratic)
+CandidateContest	DE Senate District 3 (Green Party)	State Senator District 3 (Green Party)
+CandidateContest	DE Senate District 3 (Libertarian Party)	State Senator District 3 (Libertarian Party)
+CandidateContest	DE Senate District 3 (Republican Party)	State Senator District 3 (Republican)
+CandidateContest	DE Senate District 4	State Senator District 4
+CandidateContest	DE Senate District 4 (Democratic Party)	State Senator District 4 (Democratic)
+CandidateContest	DE Senate District 4 (Green Party)	State Senator District 4 (Green Party)
+CandidateContest	DE Senate District 4 (Libertarian Party)	State Senator District 4 (Libertarian Party)
+CandidateContest	DE Senate District 4 (Republican Party)	State Senator District 4 (Republican)
+CandidateContest	DE Senate District 5	State Senator District 5
+CandidateContest	DE Senate District 5 (Democratic Party)	State Senator District 5 (Democratic)
+CandidateContest	DE Senate District 5 (Green Party)	State Senator District 5 (Green Party)
+CandidateContest	DE Senate District 5 (Libertarian Party)	State Senator District 5 (Libertarian Party)
+CandidateContest	DE Senate District 5 (Republican Party)	State Senator District 5 (Republican)
+CandidateContest	DE Senate District 6	State Senator District 6
+CandidateContest	DE Senate District 6 (Democratic Party)	State Senator District 6 (Democratic)
+CandidateContest	DE Senate District 6 (Green Party)	State Senator District 6 (Green Party)
+CandidateContest	DE Senate District 6 (Libertarian Party)	State Senator District 6 (Libertarian Party)
+CandidateContest	DE Senate District 6 (Republican Party)	State Senator District 6 (Republican)
+CandidateContest	DE Senate District 7	State Senator District 7
+CandidateContest	DE Senate District 7 (Democratic Party)	State Senator District 7 (Democratic)
+CandidateContest	DE Senate District 7 (Green Party)	State Senator District 7 (Green Party)
+CandidateContest	DE Senate District 7 (Libertarian Party)	State Senator District 7 (Libertarian Party)
+CandidateContest	DE Senate District 7 (Republican Party)	State Senator District 7 (Republican)
+CandidateContest	DE Senate District 8	State Senator District 8
+CandidateContest	DE Senate District 8 (Democratic Party)	State Senator District 8 (Democratic)
+CandidateContest	DE Senate District 8 (Green Party)	State Senator District 8 (Green Party)
+CandidateContest	DE Senate District 8 (Libertarian Party)	State Senator District 8 (Libertarian Party)
+CandidateContest	DE Senate District 8 (Republican Party)	State Senator District 8 (Republican)
+CandidateContest	DE Senate District 9	State Senator District 9
+CandidateContest	DE Senate District 9 (Democratic Party)	State Senator District 9 (Democratic)
+CandidateContest	DE Senate District 9 (Green Party)	State Senator District 9 (Green Party)
+CandidateContest	DE Senate District 9 (Libertarian Party)	State Senator District 9 (Libertarian Party)
+CandidateContest	DE Senate District 9 (Republican Party)	State Senator District 9 (Republican)
+CandidateContest	DE Treasurer	DE Treasurer
+CandidateContest	DE Treasurer (Democratic Party)	DE Treasurer (Democratic)
+CandidateContest	DE Treasurer (Green Party)	DE Treasurer (Green Party)
+CandidateContest	DE Treasurer (Libertarian Party)	DE Treasurer (Libertarian Party)
+CandidateContest	DE Treasurer (Republican Party)	DE Treasurer (Republican)
 CandidateContest	US House DE District 1	Representative in Congress
+CandidateContest	US House DE District 1 (Democratic Party)	US House DE District 1 (Democratic)
+CandidateContest	US House DE District 1 (Green Party)	US House DE District 1 (Green Party)
+CandidateContest	US House DE District 1 (Libertarian Party)	US House DE District 1 (Libertarian Party)
+CandidateContest	US House DE District 1 (Republican Party)	US House DE District 1 (Republican)
+CandidateContest	US President (DE)	PRESIDENT
 CandidateContest	US President (DE)	President
 CandidateContest	US President (DE)	President and Vice President
-CandidateContest	DE Governor	Governor
+CandidateContest	US President (DE)	US PRESIDENT
+CandidateContest	US President (DE) (Democratic Party)	President (Democratic)
+CandidateContest	US President (DE) (Green Party)	President (Green Party)
+CandidateContest	US President (DE) (Libertarian Party)	President (Libertarian Party)
+CandidateContest	US President (DE) (Republican Party)	President (Republican)
 CandidateContest	US Senate DE	U.S. Senator
-CandidateContest	DE Attorney General	DE Attorney General
-CandidateContest	DE Lieutenant Governor	Lieutenant Governor
-CandidateContest	DE Treasurer	DE Treasurer
-CandidateContest	DE Secretary of State	DE Secretary of State
-CandidateContest	DE Insurance Commissioner	Insurance Commissioner
-Election	2020 General	2020 General
-Election	2020 Primary	2020 Primary
-Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
-Election	2018 General	2018 General
-Election	2018 Primary	2018 Primary
+CandidateContest	US Senate DE (Democratic Party)	U.S. Senator (Democratic)
+CandidateContest	US Senate DE (Green Party)	U.S. Senator (Green Party)
+CandidateContest	US Senate DE (Libertarian Party)	U.S. Senator (Libertarian Party)
+CandidateContest	US Senate DE (Republican Party)	U.S. Senator (Republican)
+CountItemType	absentee	Absentee Votes
+CountItemType	election-day	Machine Votes
+CountItemType	total	TOTAL
+CountItemType	total	Total Votes
 Election	2016 General	2016 General
 Election	2016 Primary	2016 Primary
+Election	2018 General	2018 General
+Election	2018 Primary	2018 Primary
+Election	2020 General	2020 General
+Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
+Election	2020 Primary	2020 Primary
+Party	Democratic Party	DEMOCRAT
 Party	Democratic Party	Democratic
 Party	Democratic Party	Democratic Party
+Party	Green Party	GREEN
+Party	Green Party	Green Party Of Delaware
+Party	Independent Party	Independent Party Of Delaware
+Party	Libertarian Party	LIBERTARIAN
+Party	Libertarian Party	Libertarian Party
+Party	Republican Party	REPUBLICAN
 Party	Republican Party	Republican
 Party	Republican Party	Republican Party
-Party	Green Party	Green Party Of Delaware
-Party	Libertarian Party	Libertarian Party
-Party	Independent Party	Independent Party Of Delaware
+Party	none or unknown	OTHER
+ReportingUnit	Delaware	Delaware
 ReportingUnit	Delaware;DE House District 1	Delaware;DE House District 1
-ReportingUnit	Delaware;DE House District 2	Delaware;DE House District 2
-ReportingUnit	Delaware;DE House District 3	Delaware;DE House District 3
-ReportingUnit	Delaware;DE House District 4	Delaware;DE House District 4
-ReportingUnit	Delaware;DE House District 5	Delaware;DE House District 5
-ReportingUnit	Delaware;DE House District 6	Delaware;DE House District 6
-ReportingUnit	Delaware;DE House District 7	Delaware;DE House District 7
-ReportingUnit	Delaware;DE House District 8	Delaware;DE House District 8
-ReportingUnit	Delaware;DE House District 9	Delaware;DE House District 9
 ReportingUnit	Delaware;DE House District 10	Delaware;DE House District 10
 ReportingUnit	Delaware;DE House District 11	Delaware;DE House District 11
 ReportingUnit	Delaware;DE House District 12	Delaware;DE House District 12
@@ -388,6 +518,7 @@ ReportingUnit	Delaware;DE House District 16	Delaware;DE House District 16
 ReportingUnit	Delaware;DE House District 17	Delaware;DE House District 17
 ReportingUnit	Delaware;DE House District 18	Delaware;DE House District 18
 ReportingUnit	Delaware;DE House District 19	Delaware;DE House District 19
+ReportingUnit	Delaware;DE House District 2	Delaware;DE House District 2
 ReportingUnit	Delaware;DE House District 20	Delaware;DE House District 20
 ReportingUnit	Delaware;DE House District 21	Delaware;DE House District 21
 ReportingUnit	Delaware;DE House District 22	Delaware;DE House District 22
@@ -398,6 +529,7 @@ ReportingUnit	Delaware;DE House District 26	Delaware;DE House District 26
 ReportingUnit	Delaware;DE House District 27	Delaware;DE House District 27
 ReportingUnit	Delaware;DE House District 28	Delaware;DE House District 28
 ReportingUnit	Delaware;DE House District 29	Delaware;DE House District 29
+ReportingUnit	Delaware;DE House District 3	Delaware;DE House District 3
 ReportingUnit	Delaware;DE House District 30	Delaware;DE House District 30
 ReportingUnit	Delaware;DE House District 31	Delaware;DE House District 31
 ReportingUnit	Delaware;DE House District 32	Delaware;DE House District 32
@@ -408,17 +540,15 @@ ReportingUnit	Delaware;DE House District 36	Delaware;DE House District 36
 ReportingUnit	Delaware;DE House District 37	Delaware;DE House District 37
 ReportingUnit	Delaware;DE House District 38	Delaware;DE House District 38
 ReportingUnit	Delaware;DE House District 39	Delaware;DE House District 39
+ReportingUnit	Delaware;DE House District 4	Delaware;DE House District 4
 ReportingUnit	Delaware;DE House District 40	Delaware;DE House District 40
 ReportingUnit	Delaware;DE House District 41	Delaware;DE House District 41
+ReportingUnit	Delaware;DE House District 5	Delaware;DE House District 5
+ReportingUnit	Delaware;DE House District 6	Delaware;DE House District 6
+ReportingUnit	Delaware;DE House District 7	Delaware;DE House District 7
+ReportingUnit	Delaware;DE House District 8	Delaware;DE House District 8
+ReportingUnit	Delaware;DE House District 9	Delaware;DE House District 9
 ReportingUnit	Delaware;DE Senate District 1	Delaware;DE Senate District 1
-ReportingUnit	Delaware;DE Senate District 2	Delaware;DE Senate District 2
-ReportingUnit	Delaware;DE Senate District 3	Delaware;DE Senate District 3
-ReportingUnit	Delaware;DE Senate District 4	Delaware;DE Senate District 4
-ReportingUnit	Delaware;DE Senate District 5	Delaware;DE Senate District 5
-ReportingUnit	Delaware;DE Senate District 6	Delaware;DE Senate District 6
-ReportingUnit	Delaware;DE Senate District 7	Delaware;DE Senate District 7
-ReportingUnit	Delaware;DE Senate District 8	Delaware;DE Senate District 8
-ReportingUnit	Delaware;DE Senate District 9	Delaware;DE Senate District 9
 ReportingUnit	Delaware;DE Senate District 10	Delaware;DE Senate District 10
 ReportingUnit	Delaware;DE Senate District 11	Delaware;DE Senate District 11
 ReportingUnit	Delaware;DE Senate District 12	Delaware;DE Senate District 12
@@ -429,263 +559,200 @@ ReportingUnit	Delaware;DE Senate District 16	Delaware;DE Senate District 16
 ReportingUnit	Delaware;DE Senate District 17	Delaware;DE Senate District 17
 ReportingUnit	Delaware;DE Senate District 18	Delaware;DE Senate District 18
 ReportingUnit	Delaware;DE Senate District 19	Delaware;DE Senate District 19
+ReportingUnit	Delaware;DE Senate District 2	Delaware;DE Senate District 2
 ReportingUnit	Delaware;DE Senate District 20	Delaware;DE Senate District 20
 ReportingUnit	Delaware;DE Senate District 21	Delaware;DE Senate District 21
-ReportingUnit	Delaware	Delaware
-ReportingUnit	Delaware;New Castle County;01-01	Election District 01-01
+ReportingUnit	Delaware;DE Senate District 3	Delaware;DE Senate District 3
+ReportingUnit	Delaware;DE Senate District 4	Delaware;DE Senate District 4
+ReportingUnit	Delaware;DE Senate District 5	Delaware;DE Senate District 5
+ReportingUnit	Delaware;DE Senate District 6	Delaware;DE Senate District 6
+ReportingUnit	Delaware;DE Senate District 7	Delaware;DE Senate District 7
+ReportingUnit	Delaware;DE Senate District 8	Delaware;DE Senate District 8
+ReportingUnit	Delaware;DE Senate District 9	Delaware;DE Senate District 9
+ReportingUnit	Delaware;Kent County	Kent
+ReportingUnit	Delaware;Kent County	fips10001
 ReportingUnit	Delaware;Kent County;11-05	Election District 11-05
-ReportingUnit	Delaware;Sussex County;14-01	Election District 14-01
-ReportingUnit	Delaware;New Castle County;01-02	Election District 01-02
 ReportingUnit	Delaware;Kent County;11-06	Election District 11-06
-ReportingUnit	Delaware;Sussex County;14-02	Election District 14-02
-ReportingUnit	Delaware;New Castle County;01-03	Election District 01-03
 ReportingUnit	Delaware;Kent County;11-07	Election District 11-07
-ReportingUnit	Delaware;Sussex County;14-03	Election District 14-03
-ReportingUnit	Delaware;New Castle County;01-04	Election District 01-04
 ReportingUnit	Delaware;Kent County;11-08	Election District 11-08
-ReportingUnit	Delaware;Sussex County;14-04	Election District 14-04
-ReportingUnit	Delaware;New Castle County;01-05	Election District 01-05
 ReportingUnit	Delaware;Kent County;11-09	Election District 11-09
-ReportingUnit	Delaware;Sussex County;14-05	Election District 14-05
-ReportingUnit	Delaware;New Castle County;01-06	Election District 01-06
 ReportingUnit	Delaware;Kent County;11-10	Election District 11-10
-ReportingUnit	Delaware;Sussex County;14-06	Election District 14-06
-ReportingUnit	Delaware;New Castle County;01-07	Election District 01-07
 ReportingUnit	Delaware;Kent County;28-01	Election District 28-01
-ReportingUnit	Delaware;Sussex County;14-07	Election District 14-07
-ReportingUnit	Delaware;New Castle County;01-08	Election District 01-08
 ReportingUnit	Delaware;Kent County;28-02	Election District 28-02
-ReportingUnit	Delaware;Sussex County;20-01	Election District 20-01
-ReportingUnit	Delaware;New Castle County;01-09	Election District 01-09
 ReportingUnit	Delaware;Kent County;28-03	Election District 28-03
-ReportingUnit	Delaware;Sussex County;20-02	Election District 20-02
-ReportingUnit	Delaware;New Castle County;01-10	Election District 01-10
 ReportingUnit	Delaware;Kent County;28-04	Election District 28-04
-ReportingUnit	Delaware;Sussex County;20-03	Election District 20-03
-ReportingUnit	Delaware;New Castle County;01-11	Election District 01-11
 ReportingUnit	Delaware;Kent County;28-05	Election District 28-05
-ReportingUnit	Delaware;Sussex County;20-04	Election District 20-04
-ReportingUnit	Delaware;New Castle County;01-12	Election District 01-12
 ReportingUnit	Delaware;Kent County;28-06	Election District 28-06
-ReportingUnit	Delaware;Sussex County;20-05	Election District 20-05
-ReportingUnit	Delaware;New Castle County;01-13	Election District 01-13
 ReportingUnit	Delaware;Kent County;28-07	Election District 28-07
-ReportingUnit	Delaware;Sussex County;20-06	Election District 20-06
-ReportingUnit	Delaware;New Castle County;01-14	Election District 01-14
 ReportingUnit	Delaware;Kent County;28-08	Election District 28-08
-ReportingUnit	Delaware;Sussex County;20-07	Election District 20-07
-ReportingUnit	Delaware;New Castle County;02-01	Election District 02-01
 ReportingUnit	Delaware;Kent County;28-09	Election District 28-09
-ReportingUnit	Delaware;Sussex County;20-08	Election District 20-08
-ReportingUnit	Delaware;New Castle County;02-02	Election District 02-02
 ReportingUnit	Delaware;Kent County;28-10	Election District 28-10
-ReportingUnit	Delaware;Sussex County;20-09	Election District 20-09
-ReportingUnit	Delaware;New Castle County;02-03	Election District 02-03
 ReportingUnit	Delaware;Kent County;28-11	Election District 28-11
-ReportingUnit	Delaware;Sussex County;20-10	Election District 20-10
-ReportingUnit	Delaware;New Castle County;02-04	Election District 02-04
 ReportingUnit	Delaware;Kent County;28-12	Election District 28-12
-ReportingUnit	Delaware;Sussex County;35-01	Election District 35-01
-ReportingUnit	Delaware;New Castle County;02-05	Election District 02-05
 ReportingUnit	Delaware;Kent County;28-13	Election District 28-13
-ReportingUnit	Delaware;Sussex County;35-02	Election District 35-02
-ReportingUnit	Delaware;New Castle County;02-06	Election District 02-06
 ReportingUnit	Delaware;Kent County;28-14	Election District 28-14
-ReportingUnit	Delaware;Sussex County;35-03	Election District 35-03
-ReportingUnit	Delaware;New Castle County;02-07	Election District 02-07
 ReportingUnit	Delaware;Kent County;29-01	Election District 29-01
-ReportingUnit	Delaware;Sussex County;35-04	Election District 35-04
-ReportingUnit	Delaware;New Castle County;02-08	Election District 02-08
 ReportingUnit	Delaware;Kent County;29-02	Election District 29-02
-ReportingUnit	Delaware;Sussex County;35-05	Election District 35-05
-ReportingUnit	Delaware;New Castle County;02-09	Election District 02-09
 ReportingUnit	Delaware;Kent County;29-03	Election District 29-03
-ReportingUnit	Delaware;Sussex County;35-06	Election District 35-06
-ReportingUnit	Delaware;New Castle County;02-10	Election District 02-10
 ReportingUnit	Delaware;Kent County;29-04	Election District 29-04
-ReportingUnit	Delaware;Sussex County;35-07	Election District 35-07
-ReportingUnit	Delaware;New Castle County;02-11	Election District 02-11
 ReportingUnit	Delaware;Kent County;29-05	Election District 29-05
-ReportingUnit	Delaware;Sussex County;36-01	Election District 36-01
-ReportingUnit	Delaware;New Castle County;02-12	Election District 02-12
-ReportingUnit	Delaware;New Castle County;02-17	Election District 02-17
 ReportingUnit	Delaware;Kent County;29-06	Election District 29-06
-ReportingUnit	Delaware;Sussex County;36-02	Election District 36-02
-ReportingUnit	Delaware;New Castle County;03-01	Election District 03-01
 ReportingUnit	Delaware;Kent County;29-07	Election District 29-07
-ReportingUnit	Delaware;Sussex County;36-03	Election District 36-03
-ReportingUnit	Delaware;New Castle County;03-02	Election District 03-02
 ReportingUnit	Delaware;Kent County;29-08	Election District 29-08
-ReportingUnit	Delaware;Sussex County;36-04	Election District 36-04
-ReportingUnit	Delaware;New Castle County;03-03	Election District 03-03
 ReportingUnit	Delaware;Kent County;29-09	Election District 29-09
-ReportingUnit	Delaware;Sussex County;36-05	Election District 36-05
-ReportingUnit	Delaware;New Castle County;03-04	Election District 03-04
 ReportingUnit	Delaware;Kent County;29-10	Election District 29-10
-ReportingUnit	Delaware;Sussex County;36-06	Election District 36-06
-ReportingUnit	Delaware;New Castle County;03-05	Election District 03-05
 ReportingUnit	Delaware;Kent County;29-11	Election District 29-11
-ReportingUnit	Delaware;Sussex County;36-07	Election District 36-07
-ReportingUnit	Delaware;New Castle County;03-06	Election District 03-06
 ReportingUnit	Delaware;Kent County;29-12	Election District 29-12
-ReportingUnit	Delaware;Sussex County;36-08	Election District 36-08
-ReportingUnit	Delaware;New Castle County;03-07	Election District 03-07
 ReportingUnit	Delaware;Kent County;29-13	Election District 29-13
-ReportingUnit	Delaware;Sussex County;36-09	Election District 36-09
-ReportingUnit	Delaware;New Castle County;03-08	Election District 03-08
 ReportingUnit	Delaware;Kent County;30-01	Election District 30-01
-ReportingUnit	Delaware;Sussex County;36-10	Election District 36-10
-ReportingUnit	Delaware;New Castle County;03-09	Election District 03-09
 ReportingUnit	Delaware;Kent County;30-02	Election District 30-02
-ReportingUnit	Delaware;Sussex County;36-11	Election District 36-11
-ReportingUnit	Delaware;New Castle County;03-10	Election District 03-10
 ReportingUnit	Delaware;Kent County;30-03	Election District 30-03
-ReportingUnit	Delaware;Sussex County;37-01	Election District 37-01
-ReportingUnit	Delaware;New Castle County;04-01	Election District 04-01
 ReportingUnit	Delaware;Kent County;30-04	Election District 30-04
-ReportingUnit	Delaware;Sussex County;37-02	Election District 37-02
-ReportingUnit	Delaware;New Castle County;04-02	Election District 04-02
 ReportingUnit	Delaware;Kent County;30-05	Election District 30-05
-ReportingUnit	Delaware;Sussex County;37-03	Election District 37-03
-ReportingUnit	Delaware;New Castle County;04-03	Election District 04-03
 ReportingUnit	Delaware;Kent County;30-06	Election District 30-06
-ReportingUnit	Delaware;Sussex County;37-04	Election District 37-04
-ReportingUnit	Delaware;New Castle County;04-04	Election District 04-04
 ReportingUnit	Delaware;Kent County;30-07	Election District 30-07
-ReportingUnit	Delaware;Sussex County;37-05	Election District 37-05
-ReportingUnit	Delaware;New Castle County;04-05	Election District 04-05
 ReportingUnit	Delaware;Kent County;30-08	Election District 30-08
-ReportingUnit	Delaware;Sussex County;37-06	Election District 37-06
-ReportingUnit	Delaware;New Castle County;04-06	Election District 04-06
 ReportingUnit	Delaware;Kent County;30-09	Election District 30-09
-ReportingUnit	Delaware;Sussex County;37-07	Election District 37-07
-ReportingUnit	Delaware;New Castle County;04-07	Election District 04-07
 ReportingUnit	Delaware;Kent County;30-10	Election District 30-10
-ReportingUnit	Delaware;Sussex County;38-01	Election District 38-01
-ReportingUnit	Delaware;New Castle County;04-08	Election District 04-08
 ReportingUnit	Delaware;Kent County;30-11	Election District 30-11
-ReportingUnit	Delaware;Sussex County;38-02	Election District 38-02
-ReportingUnit	Delaware;New Castle County;04-09	Election District 04-09
 ReportingUnit	Delaware;Kent County;30-12	Election District 30-12
-ReportingUnit	Delaware;Sussex County;38-03	Election District 38-03
-ReportingUnit	Delaware;New Castle County;04-10	Election District 04-10
 ReportingUnit	Delaware;Kent County;31-01	Election District 31-01
-ReportingUnit	Delaware;Sussex County;38-04	Election District 38-04
-ReportingUnit	Delaware;New Castle County;04-11	Election District 04-11
 ReportingUnit	Delaware;Kent County;31-02	Election District 31-02
-ReportingUnit	Delaware;Sussex County;38-05	Election District 38-05
-ReportingUnit	Delaware;New Castle County;04-12	Election District 04-12
 ReportingUnit	Delaware;Kent County;31-03	Election District 31-03
-ReportingUnit	Delaware;Sussex County;38-06	Election District 38-06
-ReportingUnit	Delaware;New Castle County;04-13	Election District 04-13
 ReportingUnit	Delaware;Kent County;31-04	Election District 31-04
-ReportingUnit	Delaware;Sussex County;38-07	Election District 38-07
-ReportingUnit	Delaware;New Castle County;04-14	Election District 04-14
 ReportingUnit	Delaware;Kent County;31-05	Election District 31-05
-ReportingUnit	Delaware;Sussex County;38-08	Election District 38-08
-ReportingUnit	Delaware;New Castle County;04-15	Election District 04-15
 ReportingUnit	Delaware;Kent County;31-06	Election District 31-06
-ReportingUnit	Delaware;Sussex County;39-01	Election District 39-01
-ReportingUnit	Delaware;New Castle County;04-16	Election District 04-16
 ReportingUnit	Delaware;Kent County;31-07	Election District 31-07
-ReportingUnit	Delaware;Sussex County;39-02	Election District 39-02
-ReportingUnit	Delaware;New Castle County;05-01	Election District 05-01
 ReportingUnit	Delaware;Kent County;31-08	Election District 31-08
-ReportingUnit	Delaware;Sussex County;39-03	Election District 39-03
-ReportingUnit	Delaware;New Castle County;05-02	Election District 05-02
 ReportingUnit	Delaware;Kent County;31-09	Election District 31-09
-ReportingUnit	Delaware;Sussex County;39-04	Election District 39-04
-ReportingUnit	Delaware;New Castle County;05-03	Election District 05-03
 ReportingUnit	Delaware;Kent County;31-10	Election District 31-10
-ReportingUnit	Delaware;Sussex County;39-05	Election District 39-05
-ReportingUnit	Delaware;New Castle County;05-04	Election District 05-04
 ReportingUnit	Delaware;Kent County;31-11	Election District 31-11
 ReportingUnit	Delaware;Kent County;31-16	Election District 31-16
-ReportingUnit	Delaware;Sussex County;39-06	Election District 39-06
-ReportingUnit	Delaware;New Castle County;05-05	Election District 05-05
 ReportingUnit	Delaware;Kent County;32-01	Election District 32-01
-ReportingUnit	Delaware;Sussex County;39-07	Election District 39-07
-ReportingUnit	Delaware;New Castle County;05-06	Election District 05-06
 ReportingUnit	Delaware;Kent County;32-02	Election District 32-02
-ReportingUnit	Delaware;Sussex County;40-01	Election District 40-01
-ReportingUnit	Delaware;New Castle County;05-07	Election District 05-07
 ReportingUnit	Delaware;Kent County;32-03	Election District 32-03
-ReportingUnit	Delaware;Sussex County;40-02	Election District 40-02
-ReportingUnit	Delaware;New Castle County;05-08	Election District 05-08
 ReportingUnit	Delaware;Kent County;32-04	Election District 32-04
-ReportingUnit	Delaware;Sussex County;40-03	Election District 40-03
-ReportingUnit	Delaware;New Castle County;05-09	Election District 05-09
 ReportingUnit	Delaware;Kent County;32-05	Election District 32-05
-ReportingUnit	Delaware;Sussex County;40-04	Election District 40-04
-ReportingUnit	Delaware;New Castle County;05-10	Election District 05-10
 ReportingUnit	Delaware;Kent County;32-06	Election District 32-06
-ReportingUnit	Delaware;Sussex County;40-05	Election District 40-05
-ReportingUnit	Delaware;New Castle County;06-01	Election District 06-01
 ReportingUnit	Delaware;Kent County;32-07	Election District 32-07
-ReportingUnit	Delaware;Sussex County;40-06	Election District 40-06
-ReportingUnit	Delaware;New Castle County;06-02	Election District 06-02
 ReportingUnit	Delaware;Kent County;32-08	Election District 32-08
-ReportingUnit	Delaware;Sussex County;40-07	Election District 40-07
-ReportingUnit	Delaware;New Castle County;06-03	Election District 06-03
 ReportingUnit	Delaware;Kent County;32-09	Election District 32-09
-ReportingUnit	Delaware;Sussex County;40-08	Election District 40-08
-ReportingUnit	Delaware;New Castle County;06-04	Election District 06-04
 ReportingUnit	Delaware;Kent County;32-10	Election District 32-10
-ReportingUnit	Delaware;Sussex County;41-01	Election District 41-01
-ReportingUnit	Delaware;New Castle County;06-05	Election District 06-05
 ReportingUnit	Delaware;Kent County;32-11	Election District 32-11
-ReportingUnit	Delaware;Sussex County;41-02	Election District 41-02
-ReportingUnit	Delaware;New Castle County;06-06	Election District 06-06
 ReportingUnit	Delaware;Kent County;32-12	Election District 32-12
-ReportingUnit	Delaware;Sussex County;41-03	Election District 41-03
-ReportingUnit	Delaware;New Castle County;06-07	Election District 06-07
 ReportingUnit	Delaware;Kent County;33-01	Election District 33-01
-ReportingUnit	Delaware;Sussex County;41-04	Election District 41-04
-ReportingUnit	Delaware;New Castle County;06-08	Election District 06-08
 ReportingUnit	Delaware;Kent County;33-02	Election District 33-02
-ReportingUnit	Delaware;Sussex County;41-05	Election District 41-05
-ReportingUnit	Delaware;New Castle County;06-09	Election District 06-09
 ReportingUnit	Delaware;Kent County;33-03	Election District 33-03
-ReportingUnit	Delaware;Sussex County;41-06	Election District 41-06
-ReportingUnit	Delaware;New Castle County;06-10	Election District 06-10
 ReportingUnit	Delaware;Kent County;33-04	Election District 33-04
-ReportingUnit	Delaware;Sussex County;41-07	Election District 41-07
-ReportingUnit	Delaware;New Castle County;06-11	Election District 06-11
 ReportingUnit	Delaware;Kent County;33-05	Election District 33-05
-ReportingUnit	Delaware;Sussex County;41-08	Election District 41-08
-ReportingUnit	Delaware;New Castle County;06-12	Election District 06-12
 ReportingUnit	Delaware;Kent County;33-06	Election District 33-06
-ReportingUnit	Delaware;Sussex County;41-16	Election District 41-16
-ReportingUnit	Delaware;New Castle County;07-01	Election District 07-01
 ReportingUnit	Delaware;Kent County;33-07	Election District 33-07
-ReportingUnit	Delaware;New Castle County;07-02	Election District 07-02
 ReportingUnit	Delaware;Kent County;33-08	Election District 33-08
-ReportingUnit	Delaware;New Castle County;07-03	Election District 07-03
 ReportingUnit	Delaware;Kent County;33-09	Election District 33-09
-ReportingUnit	Delaware;New Castle County;07-04	Election District 07-04
 ReportingUnit	Delaware;Kent County;33-10	Election District 33-10
-ReportingUnit	Delaware;New Castle County;07-05	Election District 07-05
 ReportingUnit	Delaware;Kent County;34-01	Election District 34-01
-ReportingUnit	Delaware;New Castle County;07-06	Election District 07-06
 ReportingUnit	Delaware;Kent County;34-02	Election District 34-02
-ReportingUnit	Delaware;New Castle County;07-07	Election District 07-07
 ReportingUnit	Delaware;Kent County;34-03	Election District 34-03
-ReportingUnit	Delaware;New Castle County;07-08	Election District 07-08
 ReportingUnit	Delaware;Kent County;34-04	Election District 34-04
-ReportingUnit	Delaware;New Castle County;07-09	Election District 07-09
 ReportingUnit	Delaware;Kent County;34-05	Election District 34-05
-ReportingUnit	Delaware;New Castle County;07-10	Election District 07-10
 ReportingUnit	Delaware;Kent County;34-06	Election District 34-06
-ReportingUnit	Delaware;New Castle County;08-01	Election District 08-01
 ReportingUnit	Delaware;Kent County;34-07	Election District 34-07
-ReportingUnit	Delaware;New Castle County;08-02	Election District 08-02
 ReportingUnit	Delaware;Kent County;34-08	Election District 34-08
-ReportingUnit	Delaware;New Castle County;08-03	Election District 08-03
 ReportingUnit	Delaware;Kent County;34-09	Election District 34-09
-ReportingUnit	Delaware;New Castle County;08-04	Election District 08-04
 ReportingUnit	Delaware;Kent County;34-10	Election District 34-10
-ReportingUnit	Delaware;New Castle County;08-05	Election District 08-05
 ReportingUnit	Delaware;Kent County;34-11	Election District 34-11
+ReportingUnit	Delaware;New Castle County	New Castle
+ReportingUnit	Delaware;New Castle County	fips10003
+ReportingUnit	Delaware;New Castle County;01-01	Election District 01-01
+ReportingUnit	Delaware;New Castle County;01-02	Election District 01-02
+ReportingUnit	Delaware;New Castle County;01-03	Election District 01-03
+ReportingUnit	Delaware;New Castle County;01-04	Election District 01-04
+ReportingUnit	Delaware;New Castle County;01-05	Election District 01-05
+ReportingUnit	Delaware;New Castle County;01-06	Election District 01-06
+ReportingUnit	Delaware;New Castle County;01-07	Election District 01-07
+ReportingUnit	Delaware;New Castle County;01-08	Election District 01-08
+ReportingUnit	Delaware;New Castle County;01-09	Election District 01-09
+ReportingUnit	Delaware;New Castle County;01-10	Election District 01-10
+ReportingUnit	Delaware;New Castle County;01-11	Election District 01-11
+ReportingUnit	Delaware;New Castle County;01-12	Election District 01-12
+ReportingUnit	Delaware;New Castle County;01-13	Election District 01-13
+ReportingUnit	Delaware;New Castle County;01-14	Election District 01-14
+ReportingUnit	Delaware;New Castle County;02-01	Election District 02-01
+ReportingUnit	Delaware;New Castle County;02-02	Election District 02-02
+ReportingUnit	Delaware;New Castle County;02-03	Election District 02-03
+ReportingUnit	Delaware;New Castle County;02-04	Election District 02-04
+ReportingUnit	Delaware;New Castle County;02-05	Election District 02-05
+ReportingUnit	Delaware;New Castle County;02-06	Election District 02-06
+ReportingUnit	Delaware;New Castle County;02-07	Election District 02-07
+ReportingUnit	Delaware;New Castle County;02-08	Election District 02-08
+ReportingUnit	Delaware;New Castle County;02-09	Election District 02-09
+ReportingUnit	Delaware;New Castle County;02-10	Election District 02-10
+ReportingUnit	Delaware;New Castle County;02-11	Election District 02-11
+ReportingUnit	Delaware;New Castle County;02-12	Election District 02-12
+ReportingUnit	Delaware;New Castle County;02-17	Election District 02-17
+ReportingUnit	Delaware;New Castle County;03-01	Election District 03-01
+ReportingUnit	Delaware;New Castle County;03-02	Election District 03-02
+ReportingUnit	Delaware;New Castle County;03-03	Election District 03-03
+ReportingUnit	Delaware;New Castle County;03-04	Election District 03-04
+ReportingUnit	Delaware;New Castle County;03-05	Election District 03-05
+ReportingUnit	Delaware;New Castle County;03-06	Election District 03-06
+ReportingUnit	Delaware;New Castle County;03-07	Election District 03-07
+ReportingUnit	Delaware;New Castle County;03-08	Election District 03-08
+ReportingUnit	Delaware;New Castle County;03-09	Election District 03-09
+ReportingUnit	Delaware;New Castle County;03-10	Election District 03-10
+ReportingUnit	Delaware;New Castle County;04-01	Election District 04-01
+ReportingUnit	Delaware;New Castle County;04-02	Election District 04-02
+ReportingUnit	Delaware;New Castle County;04-03	Election District 04-03
+ReportingUnit	Delaware;New Castle County;04-04	Election District 04-04
+ReportingUnit	Delaware;New Castle County;04-05	Election District 04-05
+ReportingUnit	Delaware;New Castle County;04-06	Election District 04-06
+ReportingUnit	Delaware;New Castle County;04-07	Election District 04-07
+ReportingUnit	Delaware;New Castle County;04-08	Election District 04-08
+ReportingUnit	Delaware;New Castle County;04-09	Election District 04-09
+ReportingUnit	Delaware;New Castle County;04-10	Election District 04-10
+ReportingUnit	Delaware;New Castle County;04-11	Election District 04-11
+ReportingUnit	Delaware;New Castle County;04-12	Election District 04-12
+ReportingUnit	Delaware;New Castle County;04-13	Election District 04-13
+ReportingUnit	Delaware;New Castle County;04-14	Election District 04-14
+ReportingUnit	Delaware;New Castle County;04-15	Election District 04-15
+ReportingUnit	Delaware;New Castle County;04-16	Election District 04-16
+ReportingUnit	Delaware;New Castle County;05-01	Election District 05-01
+ReportingUnit	Delaware;New Castle County;05-02	Election District 05-02
+ReportingUnit	Delaware;New Castle County;05-03	Election District 05-03
+ReportingUnit	Delaware;New Castle County;05-04	Election District 05-04
+ReportingUnit	Delaware;New Castle County;05-05	Election District 05-05
+ReportingUnit	Delaware;New Castle County;05-06	Election District 05-06
+ReportingUnit	Delaware;New Castle County;05-07	Election District 05-07
+ReportingUnit	Delaware;New Castle County;05-08	Election District 05-08
+ReportingUnit	Delaware;New Castle County;05-09	Election District 05-09
+ReportingUnit	Delaware;New Castle County;05-10	Election District 05-10
+ReportingUnit	Delaware;New Castle County;06-01	Election District 06-01
+ReportingUnit	Delaware;New Castle County;06-02	Election District 06-02
+ReportingUnit	Delaware;New Castle County;06-03	Election District 06-03
+ReportingUnit	Delaware;New Castle County;06-04	Election District 06-04
+ReportingUnit	Delaware;New Castle County;06-05	Election District 06-05
+ReportingUnit	Delaware;New Castle County;06-06	Election District 06-06
+ReportingUnit	Delaware;New Castle County;06-07	Election District 06-07
+ReportingUnit	Delaware;New Castle County;06-08	Election District 06-08
+ReportingUnit	Delaware;New Castle County;06-09	Election District 06-09
+ReportingUnit	Delaware;New Castle County;06-10	Election District 06-10
+ReportingUnit	Delaware;New Castle County;06-11	Election District 06-11
+ReportingUnit	Delaware;New Castle County;06-12	Election District 06-12
+ReportingUnit	Delaware;New Castle County;07-01	Election District 07-01
+ReportingUnit	Delaware;New Castle County;07-02	Election District 07-02
+ReportingUnit	Delaware;New Castle County;07-03	Election District 07-03
+ReportingUnit	Delaware;New Castle County;07-04	Election District 07-04
+ReportingUnit	Delaware;New Castle County;07-05	Election District 07-05
+ReportingUnit	Delaware;New Castle County;07-06	Election District 07-06
+ReportingUnit	Delaware;New Castle County;07-07	Election District 07-07
+ReportingUnit	Delaware;New Castle County;07-08	Election District 07-08
+ReportingUnit	Delaware;New Castle County;07-09	Election District 07-09
+ReportingUnit	Delaware;New Castle County;07-10	Election District 07-10
+ReportingUnit	Delaware;New Castle County;08-01	Election District 08-01
+ReportingUnit	Delaware;New Castle County;08-02	Election District 08-02
+ReportingUnit	Delaware;New Castle County;08-03	Election District 08-03
+ReportingUnit	Delaware;New Castle County;08-04	Election District 08-04
+ReportingUnit	Delaware;New Castle County;08-05	Election District 08-05
 ReportingUnit	Delaware;New Castle County;08-06	Election District 08-06
 ReportingUnit	Delaware;New Castle County;08-07	Election District 08-07
 ReportingUnit	Delaware;New Castle County;08-08	Election District 08-08
@@ -868,125 +935,79 @@ ReportingUnit	Delaware;New Castle County;27-07	Election District 27-07
 ReportingUnit	Delaware;New Castle County;27-08	Election District 27-08
 ReportingUnit	Delaware;New Castle County;27-09	Election District 27-09
 ReportingUnit	Delaware;New Castle County;27-10	Election District 27-10
-CountItemType	election-day	Machine Votes
-CountItemType	absentee	Absentee Votes
-CountItemType	total	Total Votes
-Candidate	Bernie Sanders	Bernie Sanders
-Candidate	Elizabeth Warren	Elizabeth Warren
-Candidate	Joseph R. Biden	Joseph R. Biden
-Candidate	Donald J. Trump	Donald J. Trump
-Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
-Candidate	Jessica Scarane	Jessica Scarane
-Candidate	Christopher A. Coons	Christopher A. Coons
-Candidate	James 'Jim' Demartino	James 'Jim' Demartino
-Candidate	Lauren Witzke	Lauren Witzke
-Candidate	Lee Murphy	Lee Murphy
-Candidate	Matthew M. Hathaway Morris	Matthew M. Hathaway Morris
-Candidate	David Lamar Williams Jr.	David Lamar Williams Jr.
-Candidate	John C. Carney Jr.	John C. Carney Jr.
-Candidate	Bryant L. Richardson	Bryant L. Richardson
-Candidate	Colin Bonini	Colin Bonini
-Candidate	Dave Graham	Dave Graham
-Candidate	David Joseph Bosco	David Joseph Bosco
-Candidate	Julianne E. Murray	Julianne E. Murray
-Candidate	R.E. Scott Walker	R.E. Scott Walker
-Candidate	Kayode Abegunde	Kayode Abegunde
-Candidate	Trinidad Navarro	Trinidad Navarro
-Candidate	Joseph Mccole	Joseph Mccole
-Candidate	Sarah Mcbride	Sarah Mcbride
-Candidate	Denise Bowers	Denise Bowers
-Candidate	Eric Levin	Eric Levin
-Candidate	Kyle Evans Gay	Kyle Evans Gay
-Candidate	David B. Mcbride	David B. Mcbride
-Candidate	Marie Pinkney	Marie Pinkney
-Candidate	Bruce C. Ennis	Bruce C. Ennis
-Candidate	Kyra L. Hoffner	Kyra L. Hoffner
-Candidate	Terrell Williams	Terrell Williams
-Candidate	Craig Pugh	Craig Pugh
-Candidate	Terrance Lee Baker	Terrance Lee Baker
-Candidate	Amy Solomon	Amy Solomon
-Candidate	Gerald L. Brady	Gerald L. Brady
-Candidate	Larry D. Lambert Jr.	Larry D. Lambert Jr.
-Candidate	Ray Seigfried	Ray Seigfried
-Candidate	Matthew W. Powell	Matthew W. Powell
-Candidate	Sherae'A 'Rae' Moore	Sherae'A 'Rae' Moore
-Candidate	Yvette Santiago	Yvette Santiago
-Candidate	Keith A. James Ii	Keith A. James Ii
-Candidate	Sean Matthews	Sean Matthews
-Candidate	Gabriel Olawale Adelagunja	Gabriel Olawale Adelagunja
-Candidate	John J. Viola	John J. Viola
-Candidate	Madinah Wilson-Anton	Madinah Wilson-Anton
-Candidate	Earl Jaques	Earl Jaques
-Candidate	Eric A. Morrison	Eric A. Morrison
-Candidate	Adewunmi 'Ade' Kuforiji	Adewunmi 'Ade' Kuforiji
-Candidate	Bob Haynes	Bob Haynes
-Candidate	Aja Ajavon	Aja Ajavon
-Candidate	Lisa Darrah	Lisa Darrah
-Candidate	Ciro Poppiti	Ciro Poppiti
-Candidate	Karen Hartley-Nagle	Karen Hartley-Nagle
-Candidate	Monique Johns	Monique Johns
-Candidate	Matthew Meyer	Matthew Meyer
-Candidate	Margaret 'Maggie' Jones	Margaret 'Maggie' Jones
-Candidate	Kevin Caneco	Kevin Caneco
-Candidate	William Bell	William Bell
-Candidate	Justen Wright	Justen Wright
-Candidate	Michael S. Purzycki	Michael S. Purzycki
-Candidate	Velda Jones-Potter	Velda Jones-Potter
-Candidate	Hanifa Shabazz	Hanifa Shabazz
-Candidate	Trippi Congo	Trippi Congo
-Candidate	Dawayne Sims	Dawayne Sims
-Candidate	Vash Turner	Vash Turner
-Candidate	Albert 'Al' Mills	Albert 'Al' Mills
-Candidate	Coby Owens	Coby Owens
-Candidate	Karen 'Butter' Flowers	Karen 'Butter' Flowers
-Candidate	Linda Gray	Linda Gray
-Candidate	Billy Lane Jr.	Billy Lane Jr.
-Candidate	Dorothy King	Dorothy King
-Candidate	John Johnson Jr.	John Johnson Jr.
-Candidate	Shane Darby	Shane Darby
-Candidate	Davon 'D' Marque Hall	Davon 'D' Marque Hall
-Candidate	Zanthia Oliver	Zanthia Oliver
-Candidate	Donald Farrell	Donald Farrell
-Candidate	Michelle Harlee	Michelle Harlee
-Candidate	Bregetta A. Fields	Bregetta A. Fields
-Candidate	Christian Willauer	Christian Willauer
-Candidate	Evon L. Murray	Evon L. Murray
-Candidate	Ian 'Jahiti' Smith	Ian 'Jahiti' Smith
-Candidate	Josue Ortega	Josue Ortega
-Candidate	Yolanda Mccoy	Yolanda Mccoy
-Candidate	Chris Johnson	Chris Johnson
-Candidate	Devon Hynson	Devon Hynson
-Candidate	Nathan Field	Nathan Field
-Candidate	Sean Barney	Sean Barney
-Candidate	Joanne H. Masten	Joanne H. Masten
-Candidate	Morgan Russum	Morgan Russum
-Candidate	Arisa White	Arisa White
-Candidate	Charles Potter Jr.	Charles Potter Jr.
-Candidate	Loretta Walsh	Loretta Walsh
-Candidate	Maria D. Cabrera	Maria D. Cabrera
-Candidate	Robert Oliver	Robert Oliver
-Candidate	Rysheema Dixon	Rysheema Dixon
-Candidate	Samuel Lawrence Guy	Samuel Lawrence Guy
-Candidate	Tyrone Johnson	Tyrone Johnson
-Candidate	Cynthia C. Green	Cynthia C. Green
-Candidate	Lisa Hudson Briggs	Lisa Hudson Briggs
-Candidate	Robert D. Wilson	Robert D. Wilson
-Candidate	Irwin 'I.G.' Burton Iii	Irwin 'I.G.' Burton Iii
-Candidate	Mark G. Schaeffer	Mark G. Schaeffer
-Candidate	Joseph R. Biden	Joseph R. Biden Jr. And Kamala D. Harris
-Candidate	Donald J. Trump	Donald J. Trump And Michael R. Pence
-Candidate	Howie Hawkins	Howie Hawkins And Angela Nicole Walker
-Candidate	Jo Jorgensen	Jo Jorgensen And Jeremy 'Spike' Cohen
-Candidate	Mark W. Turley	Mark W. Turley
-Candidate	Nadine M. Frost	Nadine M. Frost
-Candidate	Lisa Blunt Rochester	Lisa Blunt Rochester
-Candidate	Catherine S. Purcell	Catherine S. Purcell
-Candidate	David L. Rogers	David L. Rogers
-Candidate	Kathy S. Dematteis	Kathy S. Dematteis
-Candidate	John J. Machurek	John J. Machurek
-Candidate	Bethany Hall-Long	Bethany Hall-Long
-Candidate	Donyale Hall	Donyale Hall
-Candidate	Julia Pillsbury	Julia Pillsbury
-ReportingUnit	Delaware;New Castle County	New Castle
-ReportingUnit	Delaware;Kent County	Kent
 ReportingUnit	Delaware;Sussex County	Sussex
+ReportingUnit	Delaware;Sussex County	fips10005
+ReportingUnit	Delaware;Sussex County;14-01	Election District 14-01
+ReportingUnit	Delaware;Sussex County;14-02	Election District 14-02
+ReportingUnit	Delaware;Sussex County;14-03	Election District 14-03
+ReportingUnit	Delaware;Sussex County;14-04	Election District 14-04
+ReportingUnit	Delaware;Sussex County;14-05	Election District 14-05
+ReportingUnit	Delaware;Sussex County;14-06	Election District 14-06
+ReportingUnit	Delaware;Sussex County;14-07	Election District 14-07
+ReportingUnit	Delaware;Sussex County;20-01	Election District 20-01
+ReportingUnit	Delaware;Sussex County;20-02	Election District 20-02
+ReportingUnit	Delaware;Sussex County;20-03	Election District 20-03
+ReportingUnit	Delaware;Sussex County;20-04	Election District 20-04
+ReportingUnit	Delaware;Sussex County;20-05	Election District 20-05
+ReportingUnit	Delaware;Sussex County;20-06	Election District 20-06
+ReportingUnit	Delaware;Sussex County;20-07	Election District 20-07
+ReportingUnit	Delaware;Sussex County;20-08	Election District 20-08
+ReportingUnit	Delaware;Sussex County;20-09	Election District 20-09
+ReportingUnit	Delaware;Sussex County;20-10	Election District 20-10
+ReportingUnit	Delaware;Sussex County;35-01	Election District 35-01
+ReportingUnit	Delaware;Sussex County;35-02	Election District 35-02
+ReportingUnit	Delaware;Sussex County;35-03	Election District 35-03
+ReportingUnit	Delaware;Sussex County;35-04	Election District 35-04
+ReportingUnit	Delaware;Sussex County;35-05	Election District 35-05
+ReportingUnit	Delaware;Sussex County;35-06	Election District 35-06
+ReportingUnit	Delaware;Sussex County;35-07	Election District 35-07
+ReportingUnit	Delaware;Sussex County;36-01	Election District 36-01
+ReportingUnit	Delaware;Sussex County;36-02	Election District 36-02
+ReportingUnit	Delaware;Sussex County;36-03	Election District 36-03
+ReportingUnit	Delaware;Sussex County;36-04	Election District 36-04
+ReportingUnit	Delaware;Sussex County;36-05	Election District 36-05
+ReportingUnit	Delaware;Sussex County;36-06	Election District 36-06
+ReportingUnit	Delaware;Sussex County;36-07	Election District 36-07
+ReportingUnit	Delaware;Sussex County;36-08	Election District 36-08
+ReportingUnit	Delaware;Sussex County;36-09	Election District 36-09
+ReportingUnit	Delaware;Sussex County;36-10	Election District 36-10
+ReportingUnit	Delaware;Sussex County;36-11	Election District 36-11
+ReportingUnit	Delaware;Sussex County;37-01	Election District 37-01
+ReportingUnit	Delaware;Sussex County;37-02	Election District 37-02
+ReportingUnit	Delaware;Sussex County;37-03	Election District 37-03
+ReportingUnit	Delaware;Sussex County;37-04	Election District 37-04
+ReportingUnit	Delaware;Sussex County;37-05	Election District 37-05
+ReportingUnit	Delaware;Sussex County;37-06	Election District 37-06
+ReportingUnit	Delaware;Sussex County;37-07	Election District 37-07
+ReportingUnit	Delaware;Sussex County;38-01	Election District 38-01
+ReportingUnit	Delaware;Sussex County;38-02	Election District 38-02
+ReportingUnit	Delaware;Sussex County;38-03	Election District 38-03
+ReportingUnit	Delaware;Sussex County;38-04	Election District 38-04
+ReportingUnit	Delaware;Sussex County;38-05	Election District 38-05
+ReportingUnit	Delaware;Sussex County;38-06	Election District 38-06
+ReportingUnit	Delaware;Sussex County;38-07	Election District 38-07
+ReportingUnit	Delaware;Sussex County;38-08	Election District 38-08
+ReportingUnit	Delaware;Sussex County;39-01	Election District 39-01
+ReportingUnit	Delaware;Sussex County;39-02	Election District 39-02
+ReportingUnit	Delaware;Sussex County;39-03	Election District 39-03
+ReportingUnit	Delaware;Sussex County;39-04	Election District 39-04
+ReportingUnit	Delaware;Sussex County;39-05	Election District 39-05
+ReportingUnit	Delaware;Sussex County;39-06	Election District 39-06
+ReportingUnit	Delaware;Sussex County;39-07	Election District 39-07
+ReportingUnit	Delaware;Sussex County;40-01	Election District 40-01
+ReportingUnit	Delaware;Sussex County;40-02	Election District 40-02
+ReportingUnit	Delaware;Sussex County;40-03	Election District 40-03
+ReportingUnit	Delaware;Sussex County;40-04	Election District 40-04
+ReportingUnit	Delaware;Sussex County;40-05	Election District 40-05
+ReportingUnit	Delaware;Sussex County;40-06	Election District 40-06
+ReportingUnit	Delaware;Sussex County;40-07	Election District 40-07
+ReportingUnit	Delaware;Sussex County;40-08	Election District 40-08
+ReportingUnit	Delaware;Sussex County;41-01	Election District 41-01
+ReportingUnit	Delaware;Sussex County;41-02	Election District 41-02
+ReportingUnit	Delaware;Sussex County;41-03	Election District 41-03
+ReportingUnit	Delaware;Sussex County;41-04	Election District 41-04
+ReportingUnit	Delaware;Sussex County;41-05	Election District 41-05
+ReportingUnit	Delaware;Sussex County;41-06	Election District 41-06
+ReportingUnit	Delaware;Sussex County;41-07	Election District 41-07
+ReportingUnit	Delaware;Sussex County;41-08	Election District 41-08
+ReportingUnit	Delaware;Sussex County;41-16	Election District 41-16

@@ -1,4 +1,22 @@
 Name	ReportingUnitType
+Pennsylvania;US House PA District 1	congressional
+Pennsylvania;US House PA District 10	congressional
+Pennsylvania;US House PA District 11	congressional
+Pennsylvania;US House PA District 12	congressional
+Pennsylvania;US House PA District 13	congressional
+Pennsylvania;US House PA District 14	congressional
+Pennsylvania;US House PA District 15	congressional
+Pennsylvania;US House PA District 16	congressional
+Pennsylvania;US House PA District 17	congressional
+Pennsylvania;US House PA District 18	congressional
+Pennsylvania;US House PA District 2	congressional
+Pennsylvania;US House PA District 3	congressional
+Pennsylvania;US House PA District 4	congressional
+Pennsylvania;US House PA District 5	congressional
+Pennsylvania;US House PA District 6	congressional
+Pennsylvania;US House PA District 7	congressional
+Pennsylvania;US House PA District 8	congressional
+Pennsylvania;US House PA District 9	congressional
 Pennsylvania;Adams County	county
 Pennsylvania;Allegheny County	county
 Pennsylvania;Armstrong County	county
@@ -40,6 +58,7 @@ Pennsylvania;Lebanon County	county
 Pennsylvania;Lehigh County	county
 Pennsylvania;Luzerne County	county
 Pennsylvania;Lycoming County	county
+Pennsylvania;McKean County	county
 Pennsylvania;Mckean County	county
 Pennsylvania;Mercer County	county
 Pennsylvania;Mifflin County	county
@@ -68,104 +87,7 @@ Pennsylvania;Wyoming County	county
 Pennsylvania;York County	county
 Pennsylvania	state
 Pennsylvania;PA House District 1	state-house
-Pennsylvania;PA House District 2	state-house
-Pennsylvania;PA House District 3	state-house
-Pennsylvania;PA House District 4	state-house
-Pennsylvania;PA House District 5	state-house
-Pennsylvania;PA House District 6	state-house
-Pennsylvania;PA House District 7	state-house
-Pennsylvania;PA House District 8	state-house
-Pennsylvania;PA House District 9	state-house
 Pennsylvania;PA House District 10	state-house
-Pennsylvania;PA House District 11	state-house
-Pennsylvania;PA House District 12	state-house
-Pennsylvania;PA House District 13	state-house
-Pennsylvania;PA House District 14	state-house
-Pennsylvania;PA House District 15	state-house
-Pennsylvania;PA House District 16	state-house
-Pennsylvania;PA House District 17	state-house
-Pennsylvania;PA House District 18	state-house
-Pennsylvania;PA House District 19	state-house
-Pennsylvania;PA House District 20	state-house
-Pennsylvania;PA House District 21	state-house
-Pennsylvania;PA House District 22	state-house
-Pennsylvania;PA House District 23	state-house
-Pennsylvania;PA House District 24	state-house
-Pennsylvania;PA House District 25	state-house
-Pennsylvania;PA House District 26	state-house
-Pennsylvania;PA House District 27	state-house
-Pennsylvania;PA House District 28	state-house
-Pennsylvania;PA House District 29	state-house
-Pennsylvania;PA House District 30	state-house
-Pennsylvania;PA House District 31	state-house
-Pennsylvania;PA House District 32	state-house
-Pennsylvania;PA House District 33	state-house
-Pennsylvania;PA House District 34	state-house
-Pennsylvania;PA House District 35	state-house
-Pennsylvania;PA House District 36	state-house
-Pennsylvania;PA House District 37	state-house
-Pennsylvania;PA House District 38	state-house
-Pennsylvania;PA House District 39	state-house
-Pennsylvania;PA House District 40	state-house
-Pennsylvania;PA House District 41	state-house
-Pennsylvania;PA House District 42	state-house
-Pennsylvania;PA House District 43	state-house
-Pennsylvania;PA House District 44	state-house
-Pennsylvania;PA House District 45	state-house
-Pennsylvania;PA House District 46	state-house
-Pennsylvania;PA House District 47	state-house
-Pennsylvania;PA House District 48	state-house
-Pennsylvania;PA House District 49	state-house
-Pennsylvania;PA House District 50	state-house
-Pennsylvania;PA House District 51	state-house
-Pennsylvania;PA House District 52	state-house
-Pennsylvania;PA House District 53	state-house
-Pennsylvania;PA House District 54	state-house
-Pennsylvania;PA House District 55	state-house
-Pennsylvania;PA House District 56	state-house
-Pennsylvania;PA House District 57	state-house
-Pennsylvania;PA House District 58	state-house
-Pennsylvania;PA House District 59	state-house
-Pennsylvania;PA House District 60	state-house
-Pennsylvania;PA House District 61	state-house
-Pennsylvania;PA House District 62	state-house
-Pennsylvania;PA House District 63	state-house
-Pennsylvania;PA House District 64	state-house
-Pennsylvania;PA House District 65	state-house
-Pennsylvania;PA House District 66	state-house
-Pennsylvania;PA House District 67	state-house
-Pennsylvania;PA House District 68	state-house
-Pennsylvania;PA House District 69	state-house
-Pennsylvania;PA House District 70	state-house
-Pennsylvania;PA House District 71	state-house
-Pennsylvania;PA House District 72	state-house
-Pennsylvania;PA House District 73	state-house
-Pennsylvania;PA House District 74	state-house
-Pennsylvania;PA House District 75	state-house
-Pennsylvania;PA House District 76	state-house
-Pennsylvania;PA House District 77	state-house
-Pennsylvania;PA House District 78	state-house
-Pennsylvania;PA House District 79	state-house
-Pennsylvania;PA House District 80	state-house
-Pennsylvania;PA House District 81	state-house
-Pennsylvania;PA House District 82	state-house
-Pennsylvania;PA House District 83	state-house
-Pennsylvania;PA House District 84	state-house
-Pennsylvania;PA House District 85	state-house
-Pennsylvania;PA House District 86	state-house
-Pennsylvania;PA House District 87	state-house
-Pennsylvania;PA House District 88	state-house
-Pennsylvania;PA House District 89	state-house
-Pennsylvania;PA House District 90	state-house
-Pennsylvania;PA House District 91	state-house
-Pennsylvania;PA House District 92	state-house
-Pennsylvania;PA House District 93	state-house
-Pennsylvania;PA House District 94	state-house
-Pennsylvania;PA House District 95	state-house
-Pennsylvania;PA House District 96	state-house
-Pennsylvania;PA House District 97	state-house
-Pennsylvania;PA House District 98	state-house
-Pennsylvania;PA House District 99	state-house
 Pennsylvania;PA House District 100	state-house
 Pennsylvania;PA House District 101	state-house
 Pennsylvania;PA House District 102	state-house
@@ -176,6 +98,7 @@ Pennsylvania;PA House District 106	state-house
 Pennsylvania;PA House District 107	state-house
 Pennsylvania;PA House District 108	state-house
 Pennsylvania;PA House District 109	state-house
+Pennsylvania;PA House District 11	state-house
 Pennsylvania;PA House District 110	state-house
 Pennsylvania;PA House District 111	state-house
 Pennsylvania;PA House District 112	state-house
@@ -186,6 +109,7 @@ Pennsylvania;PA House District 116	state-house
 Pennsylvania;PA House District 117	state-house
 Pennsylvania;PA House District 118	state-house
 Pennsylvania;PA House District 119	state-house
+Pennsylvania;PA House District 12	state-house
 Pennsylvania;PA House District 120	state-house
 Pennsylvania;PA House District 121	state-house
 Pennsylvania;PA House District 122	state-house
@@ -196,6 +120,7 @@ Pennsylvania;PA House District 126	state-house
 Pennsylvania;PA House District 127	state-house
 Pennsylvania;PA House District 128	state-house
 Pennsylvania;PA House District 129	state-house
+Pennsylvania;PA House District 13	state-house
 Pennsylvania;PA House District 130	state-house
 Pennsylvania;PA House District 131	state-house
 Pennsylvania;PA House District 132	state-house
@@ -206,6 +131,7 @@ Pennsylvania;PA House District 136	state-house
 Pennsylvania;PA House District 137	state-house
 Pennsylvania;PA House District 138	state-house
 Pennsylvania;PA House District 139	state-house
+Pennsylvania;PA House District 14	state-house
 Pennsylvania;PA House District 140	state-house
 Pennsylvania;PA House District 141	state-house
 Pennsylvania;PA House District 142	state-house
@@ -216,6 +142,7 @@ Pennsylvania;PA House District 146	state-house
 Pennsylvania;PA House District 147	state-house
 Pennsylvania;PA House District 148	state-house
 Pennsylvania;PA House District 149	state-house
+Pennsylvania;PA House District 15	state-house
 Pennsylvania;PA House District 150	state-house
 Pennsylvania;PA House District 151	state-house
 Pennsylvania;PA House District 152	state-house
@@ -226,6 +153,7 @@ Pennsylvania;PA House District 156	state-house
 Pennsylvania;PA House District 157	state-house
 Pennsylvania;PA House District 158	state-house
 Pennsylvania;PA House District 159	state-house
+Pennsylvania;PA House District 16	state-house
 Pennsylvania;PA House District 160	state-house
 Pennsylvania;PA House District 161	state-house
 Pennsylvania;PA House District 162	state-house
@@ -236,6 +164,7 @@ Pennsylvania;PA House District 166	state-house
 Pennsylvania;PA House District 167	state-house
 Pennsylvania;PA House District 168	state-house
 Pennsylvania;PA House District 169	state-house
+Pennsylvania;PA House District 17	state-house
 Pennsylvania;PA House District 170	state-house
 Pennsylvania;PA House District 171	state-house
 Pennsylvania;PA House District 172	state-house
@@ -246,6 +175,7 @@ Pennsylvania;PA House District 176	state-house
 Pennsylvania;PA House District 177	state-house
 Pennsylvania;PA House District 178	state-house
 Pennsylvania;PA House District 179	state-house
+Pennsylvania;PA House District 18	state-house
 Pennsylvania;PA House District 180	state-house
 Pennsylvania;PA House District 181	state-house
 Pennsylvania;PA House District 182	state-house
@@ -256,6 +186,7 @@ Pennsylvania;PA House District 186	state-house
 Pennsylvania;PA House District 187	state-house
 Pennsylvania;PA House District 188	state-house
 Pennsylvania;PA House District 189	state-house
+Pennsylvania;PA House District 19	state-house
 Pennsylvania;PA House District 190	state-house
 Pennsylvania;PA House District 191	state-house
 Pennsylvania;PA House District 192	state-house
@@ -266,19 +197,99 @@ Pennsylvania;PA House District 196	state-house
 Pennsylvania;PA House District 197	state-house
 Pennsylvania;PA House District 198	state-house
 Pennsylvania;PA House District 199	state-house
+Pennsylvania;PA House District 2	state-house
+Pennsylvania;PA House District 20	state-house
 Pennsylvania;PA House District 200	state-house
 Pennsylvania;PA House District 201	state-house
 Pennsylvania;PA House District 202	state-house
 Pennsylvania;PA House District 203	state-house
+Pennsylvania;PA House District 21	state-house
+Pennsylvania;PA House District 22	state-house
+Pennsylvania;PA House District 23	state-house
+Pennsylvania;PA House District 24	state-house
+Pennsylvania;PA House District 25	state-house
+Pennsylvania;PA House District 26	state-house
+Pennsylvania;PA House District 27	state-house
+Pennsylvania;PA House District 28	state-house
+Pennsylvania;PA House District 29	state-house
+Pennsylvania;PA House District 3	state-house
+Pennsylvania;PA House District 30	state-house
+Pennsylvania;PA House District 31	state-house
+Pennsylvania;PA House District 32	state-house
+Pennsylvania;PA House District 33	state-house
+Pennsylvania;PA House District 34	state-house
+Pennsylvania;PA House District 35	state-house
+Pennsylvania;PA House District 36	state-house
+Pennsylvania;PA House District 37	state-house
+Pennsylvania;PA House District 38	state-house
+Pennsylvania;PA House District 39	state-house
+Pennsylvania;PA House District 4	state-house
+Pennsylvania;PA House District 40	state-house
+Pennsylvania;PA House District 41	state-house
+Pennsylvania;PA House District 42	state-house
+Pennsylvania;PA House District 43	state-house
+Pennsylvania;PA House District 44	state-house
+Pennsylvania;PA House District 45	state-house
+Pennsylvania;PA House District 46	state-house
+Pennsylvania;PA House District 47	state-house
+Pennsylvania;PA House District 48	state-house
+Pennsylvania;PA House District 49	state-house
+Pennsylvania;PA House District 5	state-house
+Pennsylvania;PA House District 50	state-house
+Pennsylvania;PA House District 51	state-house
+Pennsylvania;PA House District 52	state-house
+Pennsylvania;PA House District 53	state-house
+Pennsylvania;PA House District 54	state-house
+Pennsylvania;PA House District 55	state-house
+Pennsylvania;PA House District 56	state-house
+Pennsylvania;PA House District 57	state-house
+Pennsylvania;PA House District 58	state-house
+Pennsylvania;PA House District 59	state-house
+Pennsylvania;PA House District 6	state-house
+Pennsylvania;PA House District 60	state-house
+Pennsylvania;PA House District 61	state-house
+Pennsylvania;PA House District 62	state-house
+Pennsylvania;PA House District 63	state-house
+Pennsylvania;PA House District 64	state-house
+Pennsylvania;PA House District 65	state-house
+Pennsylvania;PA House District 66	state-house
+Pennsylvania;PA House District 67	state-house
+Pennsylvania;PA House District 68	state-house
+Pennsylvania;PA House District 69	state-house
+Pennsylvania;PA House District 7	state-house
+Pennsylvania;PA House District 70	state-house
+Pennsylvania;PA House District 71	state-house
+Pennsylvania;PA House District 72	state-house
+Pennsylvania;PA House District 73	state-house
+Pennsylvania;PA House District 74	state-house
+Pennsylvania;PA House District 75	state-house
+Pennsylvania;PA House District 76	state-house
+Pennsylvania;PA House District 77	state-house
+Pennsylvania;PA House District 78	state-house
+Pennsylvania;PA House District 79	state-house
+Pennsylvania;PA House District 8	state-house
+Pennsylvania;PA House District 80	state-house
+Pennsylvania;PA House District 81	state-house
+Pennsylvania;PA House District 82	state-house
+Pennsylvania;PA House District 83	state-house
+Pennsylvania;PA House District 84	state-house
+Pennsylvania;PA House District 85	state-house
+Pennsylvania;PA House District 86	state-house
+Pennsylvania;PA House District 87	state-house
+Pennsylvania;PA House District 88	state-house
+Pennsylvania;PA House District 89	state-house
+Pennsylvania;PA House District 9	state-house
+Pennsylvania;PA House District 90	state-house
+Pennsylvania;PA House District 91	state-house
+Pennsylvania;PA House District 92	state-house
+Pennsylvania;PA House District 93	state-house
+Pennsylvania;PA House District 94	state-house
+Pennsylvania;PA House District 95	state-house
+Pennsylvania;PA House District 96	state-house
+Pennsylvania;PA House District 97	state-house
+Pennsylvania;PA House District 98	state-house
+Pennsylvania;PA House District 99	state-house
 Pennsylvania;PA Senate District 1	state-senate
-Pennsylvania;PA Senate District 2	state-senate
-Pennsylvania;PA Senate District 3	state-senate
-Pennsylvania;PA Senate District 4	state-senate
-Pennsylvania;PA Senate District 5	state-senate
-Pennsylvania;PA Senate District 6	state-senate
-Pennsylvania;PA Senate District 7	state-senate
-Pennsylvania;PA Senate District 8	state-senate
-Pennsylvania;PA Senate District 9	state-senate
 Pennsylvania;PA Senate District 10	state-senate
 Pennsylvania;PA Senate District 11	state-senate
 Pennsylvania;PA Senate District 12	state-senate
@@ -289,6 +300,7 @@ Pennsylvania;PA Senate District 16	state-senate
 Pennsylvania;PA Senate District 17	state-senate
 Pennsylvania;PA Senate District 18	state-senate
 Pennsylvania;PA Senate District 19	state-senate
+Pennsylvania;PA Senate District 2	state-senate
 Pennsylvania;PA Senate District 20	state-senate
 Pennsylvania;PA Senate District 21	state-senate
 Pennsylvania;PA Senate District 22	state-senate
@@ -299,6 +311,7 @@ Pennsylvania;PA Senate District 26	state-senate
 Pennsylvania;PA Senate District 27	state-senate
 Pennsylvania;PA Senate District 28	state-senate
 Pennsylvania;PA Senate District 29	state-senate
+Pennsylvania;PA Senate District 3	state-senate
 Pennsylvania;PA Senate District 30	state-senate
 Pennsylvania;PA Senate District 31	state-senate
 Pennsylvania;PA Senate District 32	state-senate
@@ -309,6 +322,7 @@ Pennsylvania;PA Senate District 36	state-senate
 Pennsylvania;PA Senate District 37	state-senate
 Pennsylvania;PA Senate District 38	state-senate
 Pennsylvania;PA Senate District 39	state-senate
+Pennsylvania;PA Senate District 4	state-senate
 Pennsylvania;PA Senate District 40	state-senate
 Pennsylvania;PA Senate District 41	state-senate
 Pennsylvania;PA Senate District 42	state-senate
@@ -319,22 +333,9 @@ Pennsylvania;PA Senate District 46	state-senate
 Pennsylvania;PA Senate District 47	state-senate
 Pennsylvania;PA Senate District 48	state-senate
 Pennsylvania;PA Senate District 49	state-senate
+Pennsylvania;PA Senate District 5	state-senate
 Pennsylvania;PA Senate District 50	state-senate
-Pennsylvania;US House PA District 1	congressional
-Pennsylvania;US House PA District 2	congressional
-Pennsylvania;US House PA District 3	congressional
-Pennsylvania;US House PA District 4	congressional
-Pennsylvania;US House PA District 5	congressional
-Pennsylvania;US House PA District 6	congressional
-Pennsylvania;US House PA District 7	congressional
-Pennsylvania;US House PA District 8	congressional
-Pennsylvania;US House PA District 9	congressional
-Pennsylvania;US House PA District 10	congressional
-Pennsylvania;US House PA District 11	congressional
-Pennsylvania;US House PA District 12	congressional
-Pennsylvania;US House PA District 13	congressional
-Pennsylvania;US House PA District 14	congressional
-Pennsylvania;US House PA District 15	congressional
-Pennsylvania;US House PA District 16	congressional
-Pennsylvania;US House PA District 17	congressional
-Pennsylvania;US House PA District 18	congressional
+Pennsylvania;PA Senate District 6	state-senate
+Pennsylvania;PA Senate District 7	state-senate
+Pennsylvania;PA Senate District 8	state-senate
+Pennsylvania;PA Senate District 9	state-senate

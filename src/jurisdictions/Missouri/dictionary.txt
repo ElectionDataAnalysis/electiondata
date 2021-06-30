@@ -1,339 +1,635 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	Aaliyah Bailey	Aaliyah Bailey
+Candidate	Aaron C. Mais	Aaron C. Mais
+Candidate	Aaron D. Griesheimer	Aaron D. Griesheimer
+Candidate	Aaron Hailey	Aaron Hailey
+Candidate	Adam Schnelting	Adam Schnelting
+Candidate	Adam Schwadron	Adam Schwadron
+Candidate	Adrian Plank	Adrian Plank
+Candidate	Al Gore	AL GORE
+Candidate	Alan Gray	Alan Gray
+Candidate	Alex Furman	Alex Furman
+Candidate	Alissia Canady	Alissia Canady
+Candidate	Allen Andrews	Allen Andrews
+Candidate	Andrew Bolin	Andrew Bolin
+Candidate	Andrew Koenig	Andrew Koenig
+Candidate	Andrew McDaniel	Andrew McDaniel
+Candidate	Andrew Miller	Andrew Miller
+Candidate	Angela Thomas	Angela Thomas
+Candidate	Angela Walton Mosley	Angela Walton Mosley
+Candidate	Ann L Zimpfer	Ann L Zimpfer
+Candidate	Ann Wagner	Ann Wagner
+Candidate	Anne Landers	Anne Landers
+Candidate	Annette Turnbaugh	Annette Turnbaugh
+Candidate	Anthony Rogers	Anthony Rogers
+Candidate	Antwain Winters	Antwain Winters
+Candidate	Arnie C. AC Dienoff	Arnie C. AC Dienoff
+Candidate	Art Schaaf	Art Schaaf
+Candidate	Ashley Aune	Ashley Aune
+Candidate	Ashley Bland Manlove	Ashley Bland Manlove
+Candidate	Audrey Richards	Audrey Richards
+Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barbara Anne Washington	Barbara Anne Washington
+Candidate	Barbara Phifer	Barbara Phifer
+Candidate	Ben Baker	Ben Baker
+Candidate	Bill E. Kidd	Bill E. Kidd
+Candidate	Bill Eigel	Bill Eigel
+Candidate	Bill Falkner	Bill Falkner
+Candidate	Bill Heisse	Bill Heisse
+Candidate	Bill Otto	Bill Otto
+Candidate	Bill Slantz	Bill Slantz
+Candidate	Billy Ballard	Billy Ballard
+Candidate	Billy Long	Billy Long
+Candidate	Blaine Luetkemeyer	Blaine Luetkemeyer
+Candidate	Bob Bromley	Bob Bromley
+Candidate	Bradley Pollitt	Bradley Pollitt
+Candidate	Brady Lee ODell	Brady Lee ODell
+Candidate	Brandt Vircks	Brandt Vircks
+Candidate	Brenda McKinney	Brenda McKinney
+Candidate	Brenda Shields	Brenda Shields
+Candidate	Brian Carroll Amar Patel	Brian Carroll Amar Patel
+Candidate	Brian H. Seitz	Brian H. Seitz
+Candidate	Bridget Walsh Moore	Bridget Walsh Moore
+Candidate	Bruce DeGroot	Bruce DeGroot
+Candidate	Bruce Sassmann	Bruce Sassmann
+Candidate	Caleb Rowden	Caleb Rowden
+Candidate	Cameron Pack	Cameron Pack
+Candidate	Carl Herman Freese	Carl Herman Freese
+Candidate	Chad Perkins	Chad Perkins
+Candidate	Charles Chuck Basye	Charles Chuck Basye
+Candidate	Cheri Toalson Reisch	Cheri Toalson Reisch
+Candidate	Chris Brown	Chris Brown
+Candidate	Chris Hager	Chris Hager
+Candidate	Chris Sander	Chris Sander
+Candidate	Christine Hyman	Christine Hyman
+Candidate	Cindy Berne	Cindy Berne
+Candidate	Cody Smith	Cody Smith
+Candidate	Colby Murphy	Colby Murphy
+Candidate	Connie Simmons	Connie Simmons
+Candidate	Cori Bush	Cori Bush
+Candidate	Dale Speelman	Dale Speelman
+Candidate	Dan Houx	Dan Houx
+Candidate	Dan Stacy	Dan Stacy
+Candidate	Daniel Karam	Daniel Karam
+Candidate	Danny Busick	Danny Busick
+Candidate	Darrell Atchison	Darrell Atchison
+Candidate	Darren L. Grant	Darren L. Grant
+Candidate	Dave Griffith	Dave Griffith
+Candidate	David J Gregory	David J Gregory
+Candidate	David Lenihan	David Lenihan
+Candidate	David Martin	David Martin
+Candidate	David Paul Evans	David Paul Evans
+Candidate	Dean Plocher	Dean Plocher
+Candidate	Dean VanSchoiack	Dean VanSchoiack
+Candidate	Deb Lavender	Deb Lavender
+Candidate	Dennis Davis	Dennis Davis
+Candidate	Denny Hoskins	Denny Hoskins
+Candidate	Derek Grier	Derek Grier
+Candidate	Dirk Deaton	Dirk Deaton
+Candidate	Don Blankenship William Mohr	Don Blankenship William Mohr
+Candidate	Don Rone	Don Rone
+Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump Michael R. Pence	Donald J. Trump Michael R. Pence
+Candidate	Donna M.C. Baringer	Donna M.C. Baringer
+Candidate	Donnie Owens	Donnie Owens
+Candidate	Dottie Bailey	Dottie Bailey
+Candidate	Doug Beck	Doug Beck
+Candidate	Doug Clemens	Doug Clemens
+Candidate	Doug Richey	Doug Richey
+Candidate	Ed Lewis	Ed Lewis
+Candidate	Elaine Freeman Gannon	Elaine Freeman Gannon
+Candidate	Emanuel Cleaver II	Emanuel Cleaver II
+Candidate	Emily Weber	Emily Weber
+Candidate	Emmanuel Dorn	Emmanuel Dorn
+Candidate	Eric Holmes	Eric Holmes
+Candidate	Eric Schmitt	Eric Schmitt
+Candidate	Erica Hoffman	Erica Hoffman
+Candidate	Gabriel Jones	Gabriel Jones
+Candidate	Gena L. Ross	Gena L. Ross
+Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	Gina Bufe	Gina Bufe
+Candidate	Gloria LaRiva Sunil Freeman	Gloria LaRiva Sunil Freeman
+Candidate	Greg Razer	Greg Razer
+Candidate	Greg Sharpe	Greg Sharpe
+Candidate	Gretchen Bangert	Gretchen Bangert
+Candidate	Hardy Billington	Hardy Billington
+Candidate	Helena Webb	Helena Webb
+Candidate	Herman Morse	Herman Morse
+Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Holly Rehder	Holly Rehder
+Candidate	Howie Hawkins Angela Nicole Walker	Howie Hawkins Angela Nicole Walker
+Candidate	Ian Mackey	Ian Mackey
+Candidate	Ingrid Burnett	Ingrid Burnett
+Candidate	J. Eggleston	J. Eggleston
+Candidate	Jacque Sample	Jacque Sample
+Candidate	Jade Simmons Claudeliah J. Roze	Jade Simmons Claudeliah J. Roze
+Candidate	James Coyne	James Coyne
+Candidate	James Shackelford	James Shackelford
+Candidate	James Williams	James Williams
+Candidate	Jason Bean	Jason Bean
+Candidate	Jason Smith	Jason Smith
+Candidate	Jay Mosley	Jay Mosley
+Candidate	Jean Pretto	Jean Pretto
+Candidate	Jeff Coleman	Jeff Coleman
+Candidate	Jeff Porter	Jeff Porter
+Candidate	Jeremy Gundel	Jeremy Gundel
+Candidate	Jerome Barnes	Jerome Barnes
+Candidate	Jerome Howard Bauer	Jerome Howard Bauer
+Candidate	Jerry Adzima	Jerry Adzima
+Candidate	Jessica DeVoto	Jessica DeVoto
+Candidate	Jill Schupp	Jill Schupp
+Candidate	Jim Higgins	Jim Higgins
+Candidate	Jim Murphy	Jim Murphy
+Candidate	Jo Doll	Jo Doll
+Candidate	Jo Jorgensen Jeremy Spike Cohen	Jo Jorgensen Jeremy Spike Cohen
+Candidate	Joe Adams	Joe Adams
+Candidate	John D. Boyd Jr.	John D. Boyd Jr.
+Candidate	John D. Wiemann	John D. Wiemann
+Candidate	John Joseph Rizzo	John Joseph Rizzo
+Candidate	John Kerry	JOHN KERRY
+Candidate	John Kiehne	John Kiehne
+Candidate	John McCain	JOHN MCCAIN
+Candidate	John R. Jay Ashcroft	John R. Jay Ashcroft
+Candidate	John Simmons	John Simmons
+Candidate	Jon Patterson	Jon Patterson
+Candidate	Jorge Fuller	Jorge Fuller
+Candidate	Joseph Civettini	Joseph Civettini
+Candidate	Joseph R. Biden Kamala D. Harris	Joseph R. Biden Kamala D. Harris
+Candidate	Josh Hurlbert	Josh Hurlbert
+Candidate	Joshua Dunne	Joshua Dunne
+Candidate	Joshua Shackles	Joshua Shackles
+Candidate	Judy Baker	Judy Baker
+Candidate	Justin S. Hill	Justin S. Hill
+Candidate	Karan Pujji	Karan Pujji
+Candidate	Karen Planalp	Karen Planalp
+Candidate	Kari L. Chesney	Kari L. Chesney
+Candidate	Karla Eslinger	Karla Eslinger
+Candidate	Kasey Wells Rachel Wells	Kasey Wells Rachel Wells
+Candidate	Kathy Ellis	Kathy Ellis
+Candidate	Kelley Dragoo	Kelley Dragoo
+Candidate	Kent Haden	Kent Haden
+Candidate	Keri Ingle	Keri Ingle
+Candidate	Kevin C Babcock	Kevin C Babcock
+Candidate	Kevin Craig	Kevin Craig
+Candidate	Kevin Windham Jr.	Kevin Windham Jr.
+Candidate	Kimberly-Ann Collins	Kimberly-Ann Collins
+Candidate	Kip Kendrick	Kip Kendrick
+Candidate	Kurtis Gregory	Kurtis Gregory
+Candidate	LaDonna Appelbaum	LaDonna Appelbaum
+Candidate	LaKeySha Bosley	LaKeySha Bosley
+Candidate	Lane Roberts	Lane Roberts
+Candidate	Lauren Arthur	Lauren Arthur
+Candidate	Lee Ann Pitman	Lee Ann Pitman
+Candidate	Leonard J Steinman II	Leonard J Steinman II
+Candidate	Lindsey Simmons	Lindsey Simmons
+Candidate	Lisa Rees	Lisa Rees
+Candidate	Louis Riggs	Louis Riggs
+Candidate	Luke Barber	Luke Barber
+Candidate	Maggie Nurrenbern	Maggie Nurrenbern
+Candidate	Mark A. Sharp	Mark A. Sharp
+Candidate	Mark Bliss	Mark Bliss
+Candidate	Mark Ellebracht	Mark Ellebracht
+Candidate	Marlene Terry	Marlene Terry
+Candidate	Marlon Anderson	Marlon Anderson
+Candidate	Martha Stevens	Martha Stevens
+Candidate	Martin D Baker	Martin D Baker
+Candidate	Martin Lindstedt	Martin Lindstedt
+Candidate	Martin Schulte	Martin Schulte
+Candidate	Mary Elizabeth Coleman	Mary Elizabeth Coleman
+Candidate	Megan Rezabek	Megan Rezabek
+Candidate	Michael A. O Donnell	Michael A. O Donnell
+Candidate	Michael Burton	Michael Burton
+Candidate	Michael Davis	Michael Davis
+Candidate	Michael Hebron	Michael Hebron
+Candidate	Michael L. Johnson	Michael L. Johnson
+Candidate	Mickey Younghanz	Mickey Younghanz
+Candidate	Mike Copeland	Mike Copeland
+Candidate	Mike Englert	Mike Englert
+Candidate	Mike Haffner	Mike Haffner
+Candidate	Mike Kehoe	Mike Kehoe
+Candidate	Mike Lind	Mike Lind
+Candidate	Mike Moon	Mike Moon
+Candidate	Mike Parson	Mike Parson
+Candidate	Mike Person	Mike Person
+Candidate	Mindi Smith	Mindi Smith
+Candidate	Mitch Boggs	Mitch Boggs
+Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Nancy J. Ragan	Nancy J. Ragan
+Candidate	Nathan Kline	Nathan Kline
+Candidate	Neal Barnes	Neal Barnes
+Candidate	Neil Smith	Neil Smith
+Candidate	Nicholas Nick Kasoff	Nicholas Nick Kasoff
+Candidate	Nick Schroer	Nick Schroer
+Candidate	Nicole Galloway	Nicole Galloway
+Candidate	Nola Wood	Nola Wood
+Candidate	Other	OTHER
+Candidate	Patty Lewis	Patty Lewis
+Candidate	Paul Lehmann	Paul Lehmann
+Candidate	Paul Venable	Paul Venable
+Candidate	Paula Brown	Paula Brown
+Candidate	Peggy McGaugh	Peggy McGaugh
+Candidate	Peter Merideth	Peter Merideth
+Candidate	Phil Christofanelli	Phil Christofanelli
+Candidate	Ralph Nader	RALPH NADER
+Candidate	Randy Pietzman	Randy Pietzman
+Candidate	Randy Railsback	Randy Railsback
+Candidate	Rasheen Aldridge Jr	Rasheen Aldridge Jr
+Candidate	Raychel C Proudie	Raychel C Proudie
+Candidate	Raymond Kinney	Raymond Kinney
+Candidate	Rhonda R Dolan	Rhonda R Dolan
+Candidate	Rich Finneran	Rich Finneran
+Candidate	Richard Brown	Richard Brown
+Candidate	Richard McKie	Richard McKie
+Candidate	Richard Orr	Richard Orr
+Candidate	Richard W West	Richard W West
+Candidate	Rick Brattin	Rick Brattin
+Candidate	Rick Roeber	Rick Roeber
+Candidate	Rik Combs	Rik Combs
+Candidate	Robert J. Crump	Robert J. Crump
+Candidate	Robert Sauls	Robert Sauls
+Candidate	Robin Dominick	Robin Dominick
+Candidate	Rodger L. Reedy	Rodger L. Reedy
+Candidate	Ron Hicks	Ron Hicks
+Candidate	Rory Rowland	Rory Rowland
+Candidate	Rudy Veit	Rudy Veit
+Candidate	Rusty Black	Rusty Black
+Candidate	Ryan Derks	Ryan Derks
+Candidate	Sam Graves	Sam Graves
+Candidate	Sara Walsh	Sara Walsh
+Candidate	Sarah Unsicker	Sarah Unsicker
+Candidate	Scott Cupps	Scott Cupps
+Candidate	Scott E. Cazadd	Scott E. Cazadd
+Candidate	Scott Fitzpatrick	Scott Fitzpatrick
+Candidate	Sean Pouche	Sean Pouche
+Candidate	Sean Smith	Sean Smith
+Candidate	Stephen R. Johnson	Stephen R. Johnson
+Candidate	Steve Butz	Steve Butz
+Candidate	Steve Roberts	Steve Roberts
+Candidate	Steve West	Steve West
+Candidate	Steven K. Koonse	Steven K. Koonse
+Candidate	Susan Shumway	Susan Shumway
+Candidate	Tammy Harty	Tammy Harty
+Candidate	Teresa Montseny	Teresa Montseny
+Candidate	Terrence Fiala	Terrence Fiala
+Candidate	Terry Thompson	Terry Thompson
+Candidate	Theo Ted Brown Sr	Theo Ted Brown Sr
+Candidate	Thomas Tom Clapp	Thomas Tom Clapp
+Candidate	Tiffany Poke	Tiffany Poke
+Candidate	Tim Taylor	Tim Taylor
+Candidate	Timothy Gartin	Timothy Gartin
+Candidate	Tom Hannegan	Tom Hannegan
+Candidate	Tom Schmitz	Tom Schmitz
+Candidate	Tony Lovasco	Tony Lovasco
+Candidate	Tracy Grundy	Tracy Grundy
+Candidate	Tracy McCreery	Tracy McCreery
+Candidate	Travis Fitzwater	Travis Fitzwater
+Candidate	Travis Smith	Travis Smith
+Candidate	Trish Gunby	Trish Gunby
+Candidate	Vic Abundis	Vic Abundis
+Candidate	Vicki Lorenz Englund	Vicki Lorenz Englund
+Candidate	Vicki Riley	Vicki Riley
+Candidate	Vicky Hartzler	Vicky Hartzler
+Candidate	Victoria Witt Datt	Victoria Witt Datt
+Candidate	Wade Hugh Kiefer	Wade Hugh Kiefer
+Candidate	Wes Rogers	Wes Rogers
+Candidate	Wiley Chip Price IV	Wiley Chip Price IV
+Candidate	Willard Haley	Willard Haley
+Candidate	William Bill Betteridge	William Bill Betteridge
+Candidate	William Truman Bill Wayne	William Truman Bill Wayne
+Candidate	Write-Ins	Write-Ins
+Candidate	Yinka Faleti	Yinka Faleti
+Candidate	Yolanda Young	Yolanda Young
+CandidateContest	MO Attorney General	MO Attorney General
+CandidateContest	MO Governor	MO Governor
 CandidateContest	MO House District 1	MO House District 1
-CandidateContest	MO House District 2	MO House District 2
-CandidateContest	MO House District 3	MO House District 3
-CandidateContest	MO House District 4	MO House District 4
-CandidateContest	MO House District 5	MO House District 5
-CandidateContest	MO House District 6	MO House District 6
-CandidateContest	MO House District 7	MO House District 7
-CandidateContest	MO House District 8	MO House District 8
-CandidateContest	MO House District 9	MO House District 9
-CandidateContest	MO House District 10	MO House District 10
-CandidateContest	MO House District 11	MO House District 11
-CandidateContest	MO House District 12	MO House District 12
-CandidateContest	MO House District 13	MO House District 13
-CandidateContest	MO House District 14	MO House District 14
-CandidateContest	MO House District 15	MO House District 15
-CandidateContest	MO House District 16	MO House District 16
-CandidateContest	MO House District 17	MO House District 17
-CandidateContest	MO House District 18	MO House District 18
-CandidateContest	MO House District 19	MO House District 19
-CandidateContest	MO House District 20	MO House District 20
-CandidateContest	MO House District 21	MO House District 21
-CandidateContest	MO House District 22	MO House District 22
-CandidateContest	MO House District 23	MO House District 23
-CandidateContest	MO House District 24	MO House District 24
-CandidateContest	MO House District 25	MO House District 25
-CandidateContest	MO House District 26	MO House District 26
-CandidateContest	MO House District 27	MO House District 27
-CandidateContest	MO House District 28	MO House District 28
-CandidateContest	MO House District 29	MO House District 29
-CandidateContest	MO House District 30	MO House District 30
-CandidateContest	MO House District 31	MO House District 31
-CandidateContest	MO House District 32	MO House District 32
-CandidateContest	MO House District 33	MO House District 33
-CandidateContest	MO House District 34	MO House District 34
-CandidateContest	MO House District 35	MO House District 35
-CandidateContest	MO House District 36	MO House District 36
-CandidateContest	MO House District 37	MO House District 37
-CandidateContest	MO House District 38	MO House District 38
-CandidateContest	MO House District 39	MO House District 39
-CandidateContest	MO House District 40	MO House District 40
-CandidateContest	MO House District 41	MO House District 41
-CandidateContest	MO House District 42	MO House District 42
-CandidateContest	MO House District 43	MO House District 43
-CandidateContest	MO House District 44	MO House District 44
-CandidateContest	MO House District 45	MO House District 45
-CandidateContest	MO House District 46	MO House District 46
-CandidateContest	MO House District 47	MO House District 47
-CandidateContest	MO House District 48	MO House District 48
-CandidateContest	MO House District 49	MO House District 49
-CandidateContest	MO House District 50	MO House District 50
-CandidateContest	MO House District 51	MO House District 51
-CandidateContest	MO House District 52	MO House District 52
-CandidateContest	MO House District 53	MO House District 53
-CandidateContest	MO House District 54	MO House District 54
-CandidateContest	MO House District 55	MO House District 55
-CandidateContest	MO House District 56	MO House District 56
-CandidateContest	MO House District 57	MO House District 57
-CandidateContest	MO House District 58	MO House District 58
-CandidateContest	MO House District 59	MO House District 59
-CandidateContest	MO House District 60	MO House District 60
-CandidateContest	MO House District 61	MO House District 61
-CandidateContest	MO House District 62	MO House District 62
-CandidateContest	MO House District 63	MO House District 63
-CandidateContest	MO House District 64	MO House District 64
-CandidateContest	MO House District 65	MO House District 65
-CandidateContest	MO House District 66	MO House District 66
-CandidateContest	MO House District 67	MO House District 67
-CandidateContest	MO House District 68	MO House District 68
-CandidateContest	MO House District 69	MO House District 69
-CandidateContest	MO House District 70	MO House District 70
-CandidateContest	MO House District 71	MO House District 71
-CandidateContest	MO House District 72	MO House District 72
-CandidateContest	MO House District 73	MO House District 73
-CandidateContest	MO House District 74	MO House District 74
-CandidateContest	MO House District 75	MO House District 75
-CandidateContest	MO House District 76	MO House District 76
-CandidateContest	MO House District 77	MO House District 77
-CandidateContest	MO House District 78	MO House District 78
-CandidateContest	MO House District 79	MO House District 79
-CandidateContest	MO House District 80	MO House District 80
-CandidateContest	MO House District 81	MO House District 81
-CandidateContest	MO House District 82	MO House District 82
-CandidateContest	MO House District 83	MO House District 83
-CandidateContest	MO House District 84	MO House District 84
-CandidateContest	MO House District 85	MO House District 85
-CandidateContest	MO House District 86	MO House District 86
-CandidateContest	MO House District 87	MO House District 87
-CandidateContest	MO House District 88	MO House District 88
-CandidateContest	MO House District 89	MO House District 89
-CandidateContest	MO House District 90	MO House District 90
-CandidateContest	MO House District 91	MO House District 91
-CandidateContest	MO House District 92	MO House District 92
-CandidateContest	MO House District 93	MO House District 93
-CandidateContest	MO House District 94	MO House District 94
-CandidateContest	MO House District 95	MO House District 95
-CandidateContest	MO House District 96	MO House District 96
-CandidateContest	MO House District 97	MO House District 97
-CandidateContest	MO House District 98	MO House District 98
-CandidateContest	MO House District 99	MO House District 99
-CandidateContest	MO House District 100	MO House District 100
-CandidateContest	MO House District 101	MO House District 101
-CandidateContest	MO House District 102	MO House District 102
-CandidateContest	MO House District 103	MO House District 103
-CandidateContest	MO House District 104	MO House District 104
-CandidateContest	MO House District 105	MO House District 105
-CandidateContest	MO House District 106	MO House District 106
-CandidateContest	MO House District 107	MO House District 107
-CandidateContest	MO House District 108	MO House District 108
-CandidateContest	MO House District 109	MO House District 109
-CandidateContest	MO House District 110	MO House District 110
-CandidateContest	MO House District 111	MO House District 111
-CandidateContest	MO House District 112	MO House District 112
-CandidateContest	MO House District 113	MO House District 113
-CandidateContest	MO House District 114	MO House District 114
-CandidateContest	MO House District 115	MO House District 115
-CandidateContest	MO House District 116	MO House District 116
-CandidateContest	MO House District 117	MO House District 117
-CandidateContest	MO House District 118	MO House District 118
-CandidateContest	MO House District 119	MO House District 119
-CandidateContest	MO House District 120	MO House District 120
-CandidateContest	MO House District 121	MO House District 121
-CandidateContest	MO House District 122	MO House District 122
-CandidateContest	MO House District 123	MO House District 123
-CandidateContest	MO House District 124	MO House District 124
-CandidateContest	MO House District 125	MO House District 125
-CandidateContest	MO House District 126	MO House District 126
-CandidateContest	MO House District 127	MO House District 127
-CandidateContest	MO House District 128	MO House District 128
-CandidateContest	MO House District 129	MO House District 129
-CandidateContest	MO House District 130	MO House District 130
-CandidateContest	MO House District 131	MO House District 131
-CandidateContest	MO House District 132	MO House District 132
-CandidateContest	MO House District 133	MO House District 133
-CandidateContest	MO House District 134	MO House District 134
-CandidateContest	MO House District 135	MO House District 135
-CandidateContest	MO House District 136	MO House District 136
-CandidateContest	MO House District 137	MO House District 137
-CandidateContest	MO House District 138	MO House District 138
-CandidateContest	MO House District 139	MO House District 139
-CandidateContest	MO House District 140	MO House District 140
-CandidateContest	MO House District 141	MO House District 141
-CandidateContest	MO House District 142	MO House District 142
-CandidateContest	MO House District 143	MO House District 143
-CandidateContest	MO House District 144	MO House District 144
-CandidateContest	MO House District 145	MO House District 145
-CandidateContest	MO House District 146	MO House District 146
-CandidateContest	MO House District 147	MO House District 147
-CandidateContest	MO House District 148	MO House District 148
-CandidateContest	MO House District 149	MO House District 149
-CandidateContest	MO House District 150	MO House District 150
-CandidateContest	MO House District 151	MO House District 151
-CandidateContest	MO House District 152	MO House District 152
-CandidateContest	MO House District 153	MO House District 153
-CandidateContest	MO House District 154	MO House District 154
-CandidateContest	MO House District 155	MO House District 155
-CandidateContest	MO House District 156	MO House District 156
-CandidateContest	MO House District 157	MO House District 157
-CandidateContest	MO House District 158	MO House District 158
-CandidateContest	MO House District 159	MO House District 159
-CandidateContest	MO House District 160	MO House District 160
-CandidateContest	MO House District 161	MO House District 161
-CandidateContest	MO House District 162	MO House District 162
-CandidateContest	MO House District 163	MO House District 163
 CandidateContest	MO House District 1	State Representative - District 1
-CandidateContest	MO House District 2	State Representative - District 2
-CandidateContest	MO House District 3	State Representative - District 3
-CandidateContest	MO House District 4	State Representative - District 4
-CandidateContest	MO House District 5	State Representative - District 5
-CandidateContest	MO House District 6	State Representative - District 6
-CandidateContest	MO House District 7	State Representative - District 7
-CandidateContest	MO House District 8	State Representative - District 8
-CandidateContest	MO House District 9	State Representative - District 9
+CandidateContest	MO House District 10	MO House District 10
 CandidateContest	MO House District 10	State Representative - District 10
-CandidateContest	MO House District 11	State Representative - District 11
-CandidateContest	MO House District 12	State Representative - District 12
-CandidateContest	MO House District 13	State Representative - District 13
-CandidateContest	MO House District 14	State Representative - District 14
-CandidateContest	MO House District 15	State Representative - District 15
-CandidateContest	MO House District 16	State Representative - District 16
-CandidateContest	MO House District 17	State Representative - District 17
-CandidateContest	MO House District 18	State Representative - District 18
-CandidateContest	MO House District 19	State Representative - District 19
-CandidateContest	MO House District 20	State Representative - District 20
-CandidateContest	MO House District 21	State Representative - District 21
-CandidateContest	MO House District 22	State Representative - District 22
-CandidateContest	MO House District 23	State Representative - District 23
-CandidateContest	MO House District 24	State Representative - District 24
-CandidateContest	MO House District 25	State Representative - District 25
-CandidateContest	MO House District 26	State Representative - District 26
-CandidateContest	MO House District 27	State Representative - District 27
-CandidateContest	MO House District 28	State Representative - District 28
-CandidateContest	MO House District 29	State Representative - District 29
-CandidateContest	MO House District 30	State Representative - District 30
-CandidateContest	MO House District 31	State Representative - District 31
-CandidateContest	MO House District 32	State Representative - District 32
-CandidateContest	MO House District 33	State Representative - District 33
-CandidateContest	MO House District 34	State Representative - District 34
-CandidateContest	MO House District 35	State Representative - District 35
-CandidateContest	MO House District 36	State Representative - District 36
-CandidateContest	MO House District 37	State Representative - District 37
-CandidateContest	MO House District 38	State Representative - District 38
-CandidateContest	MO House District 39	State Representative - District 39
-CandidateContest	MO House District 40	State Representative - District 40
-CandidateContest	MO House District 41	State Representative - District 41
-CandidateContest	MO House District 42	State Representative - District 42
-CandidateContest	MO House District 43	State Representative - District 43
-CandidateContest	MO House District 44	State Representative - District 44
-CandidateContest	MO House District 45	State Representative - District 45
-CandidateContest	MO House District 46	State Representative - District 46
-CandidateContest	MO House District 47	State Representative - District 47
-CandidateContest	MO House District 48	State Representative - District 48
-CandidateContest	MO House District 49	State Representative - District 49
-CandidateContest	MO House District 50	State Representative - District 50
-CandidateContest	MO House District 51	State Representative - District 51
-CandidateContest	MO House District 52	State Representative - District 52
-CandidateContest	MO House District 53	State Representative - District 53
-CandidateContest	MO House District 54	State Representative - District 54
-CandidateContest	MO House District 55	State Representative - District 55
-CandidateContest	MO House District 56	State Representative - District 56
-CandidateContest	MO House District 57	State Representative - District 57
-CandidateContest	MO House District 58	State Representative - District 58
-CandidateContest	MO House District 59	State Representative - District 59
-CandidateContest	MO House District 60	State Representative - District 60
-CandidateContest	MO House District 61	State Representative - District 61
-CandidateContest	MO House District 62	State Representative - District 62
-CandidateContest	MO House District 63	State Representative - District 63
-CandidateContest	MO House District 64	State Representative - District 64
-CandidateContest	MO House District 65	State Representative - District 65
-CandidateContest	MO House District 66	State Representative - District 66
-CandidateContest	MO House District 67	State Representative - District 67
-CandidateContest	MO House District 68	State Representative - District 68
-CandidateContest	MO House District 69	State Representative - District 69
-CandidateContest	MO House District 70	State Representative - District 70
-CandidateContest	MO House District 71	State Representative - District 71
-CandidateContest	MO House District 72	State Representative - District 72
-CandidateContest	MO House District 73	State Representative - District 73
-CandidateContest	MO House District 74	State Representative - District 74
-CandidateContest	MO House District 75	State Representative - District 75
-CandidateContest	MO House District 76	State Representative - District 76
-CandidateContest	MO House District 77	State Representative - District 77
-CandidateContest	MO House District 78	State Representative - District 78
-CandidateContest	MO House District 79	State Representative - District 79
-CandidateContest	MO House District 80	State Representative - District 80
-CandidateContest	MO House District 81	State Representative - District 81
-CandidateContest	MO House District 82	State Representative - District 82
-CandidateContest	MO House District 83	State Representative - District 83
-CandidateContest	MO House District 84	State Representative - District 84
-CandidateContest	MO House District 85	State Representative - District 85
-CandidateContest	MO House District 86	State Representative - District 86
-CandidateContest	MO House District 87	State Representative - District 87
-CandidateContest	MO House District 88	State Representative - District 88
-CandidateContest	MO House District 89	State Representative - District 89
-CandidateContest	MO House District 90	State Representative - District 90
-CandidateContest	MO House District 91	State Representative - District 91
-CandidateContest	MO House District 92	State Representative - District 92
-CandidateContest	MO House District 93	State Representative - District 93
-CandidateContest	MO House District 94	State Representative - District 94
-CandidateContest	MO House District 95	State Representative - District 95
-CandidateContest	MO House District 96	State Representative - District 96
-CandidateContest	MO House District 97	State Representative - District 97
-CandidateContest	MO House District 98	State Representative - District 98
-CandidateContest	MO House District 99	State Representative - District 99
+CandidateContest	MO House District 100	MO House District 100
 CandidateContest	MO House District 100	State Representative - District 100
+CandidateContest	MO House District 101	MO House District 101
 CandidateContest	MO House District 101	State Representative - District 101
+CandidateContest	MO House District 102	MO House District 102
 CandidateContest	MO House District 102	State Representative - District 102
+CandidateContest	MO House District 103	MO House District 103
 CandidateContest	MO House District 103	State Representative - District 103
+CandidateContest	MO House District 104	MO House District 104
 CandidateContest	MO House District 104	State Representative - District 104
+CandidateContest	MO House District 105	MO House District 105
 CandidateContest	MO House District 105	State Representative - District 105
+CandidateContest	MO House District 106	MO House District 106
 CandidateContest	MO House District 106	State Representative - District 106
+CandidateContest	MO House District 107	MO House District 107
 CandidateContest	MO House District 107	State Representative - District 107
+CandidateContest	MO House District 108	MO House District 108
 CandidateContest	MO House District 108	State Representative - District 108
+CandidateContest	MO House District 109	MO House District 109
 CandidateContest	MO House District 109	State Representative - District 109
+CandidateContest	MO House District 11	MO House District 11
+CandidateContest	MO House District 11	State Representative - District 11
+CandidateContest	MO House District 110	MO House District 110
 CandidateContest	MO House District 110	State Representative - District 110
+CandidateContest	MO House District 111	MO House District 111
 CandidateContest	MO House District 111	State Representative - District 111
+CandidateContest	MO House District 112	MO House District 112
 CandidateContest	MO House District 112	State Representative - District 112
+CandidateContest	MO House District 113	MO House District 113
 CandidateContest	MO House District 113	State Representative - District 113
+CandidateContest	MO House District 114	MO House District 114
 CandidateContest	MO House District 114	State Representative - District 114
+CandidateContest	MO House District 115	MO House District 115
 CandidateContest	MO House District 115	State Representative - District 115
+CandidateContest	MO House District 116	MO House District 116
 CandidateContest	MO House District 116	State Representative - District 116
+CandidateContest	MO House District 117	MO House District 117
 CandidateContest	MO House District 117	State Representative - District 117
+CandidateContest	MO House District 118	MO House District 118
 CandidateContest	MO House District 118	State Representative - District 118
+CandidateContest	MO House District 119	MO House District 119
 CandidateContest	MO House District 119	State Representative - District 119
+CandidateContest	MO House District 12	MO House District 12
+CandidateContest	MO House District 12	State Representative - District 12
+CandidateContest	MO House District 120	MO House District 120
 CandidateContest	MO House District 120	State Representative - District 120
+CandidateContest	MO House District 121	MO House District 121
 CandidateContest	MO House District 121	State Representative - District 121
+CandidateContest	MO House District 122	MO House District 122
 CandidateContest	MO House District 122	State Representative - District 122
+CandidateContest	MO House District 123	MO House District 123
 CandidateContest	MO House District 123	State Representative - District 123
+CandidateContest	MO House District 124	MO House District 124
 CandidateContest	MO House District 124	State Representative - District 124
+CandidateContest	MO House District 125	MO House District 125
 CandidateContest	MO House District 125	State Representative - District 125
+CandidateContest	MO House District 126	MO House District 126
 CandidateContest	MO House District 126	State Representative - District 126
+CandidateContest	MO House District 127	MO House District 127
 CandidateContest	MO House District 127	State Representative - District 127
+CandidateContest	MO House District 128	MO House District 128
 CandidateContest	MO House District 128	State Representative - District 128
+CandidateContest	MO House District 129	MO House District 129
 CandidateContest	MO House District 129	State Representative - District 129
+CandidateContest	MO House District 13	MO House District 13
+CandidateContest	MO House District 13	State Representative - District 13
+CandidateContest	MO House District 130	MO House District 130
 CandidateContest	MO House District 130	State Representative - District 130
+CandidateContest	MO House District 131	MO House District 131
 CandidateContest	MO House District 131	State Representative - District 131
+CandidateContest	MO House District 132	MO House District 132
 CandidateContest	MO House District 132	State Representative - District 132
+CandidateContest	MO House District 133	MO House District 133
 CandidateContest	MO House District 133	State Representative - District 133
+CandidateContest	MO House District 134	MO House District 134
 CandidateContest	MO House District 134	State Representative - District 134
+CandidateContest	MO House District 135	MO House District 135
 CandidateContest	MO House District 135	State Representative - District 135
+CandidateContest	MO House District 136	MO House District 136
 CandidateContest	MO House District 136	State Representative - District 136
+CandidateContest	MO House District 137	MO House District 137
 CandidateContest	MO House District 137	State Representative - District 137
+CandidateContest	MO House District 138	MO House District 138
 CandidateContest	MO House District 138	State Representative - District 138
+CandidateContest	MO House District 139	MO House District 139
 CandidateContest	MO House District 139	State Representative - District 139
+CandidateContest	MO House District 14	MO House District 14
+CandidateContest	MO House District 14	State Representative - District 14
+CandidateContest	MO House District 140	MO House District 140
 CandidateContest	MO House District 140	State Representative - District 140
+CandidateContest	MO House District 141	MO House District 141
 CandidateContest	MO House District 141	State Representative - District 141
+CandidateContest	MO House District 142	MO House District 142
 CandidateContest	MO House District 142	State Representative - District 142
+CandidateContest	MO House District 143	MO House District 143
 CandidateContest	MO House District 143	State Representative - District 143
+CandidateContest	MO House District 144	MO House District 144
 CandidateContest	MO House District 144	State Representative - District 144
+CandidateContest	MO House District 145	MO House District 145
 CandidateContest	MO House District 145	State Representative - District 145
+CandidateContest	MO House District 146	MO House District 146
 CandidateContest	MO House District 146	State Representative - District 146
+CandidateContest	MO House District 147	MO House District 147
 CandidateContest	MO House District 147	State Representative - District 147
+CandidateContest	MO House District 148	MO House District 148
 CandidateContest	MO House District 148	State Representative - District 148
+CandidateContest	MO House District 149	MO House District 149
 CandidateContest	MO House District 149	State Representative - District 149
+CandidateContest	MO House District 15	MO House District 15
+CandidateContest	MO House District 15	State Representative - District 15
+CandidateContest	MO House District 150	MO House District 150
 CandidateContest	MO House District 150	State Representative - District 150
+CandidateContest	MO House District 151	MO House District 151
 CandidateContest	MO House District 151	State Representative - District 151
+CandidateContest	MO House District 152	MO House District 152
 CandidateContest	MO House District 152	State Representative - District 152
+CandidateContest	MO House District 153	MO House District 153
 CandidateContest	MO House District 153	State Representative - District 153
+CandidateContest	MO House District 154	MO House District 154
 CandidateContest	MO House District 154	State Representative - District 154
+CandidateContest	MO House District 155	MO House District 155
 CandidateContest	MO House District 155	State Representative - District 155
+CandidateContest	MO House District 156	MO House District 156
 CandidateContest	MO House District 156	State Representative - District 156
+CandidateContest	MO House District 157	MO House District 157
 CandidateContest	MO House District 157	State Representative - District 157
+CandidateContest	MO House District 158	MO House District 158
 CandidateContest	MO House District 158	State Representative - District 158
+CandidateContest	MO House District 159	MO House District 159
 CandidateContest	MO House District 159	State Representative - District 159
+CandidateContest	MO House District 16	MO House District 16
+CandidateContest	MO House District 16	State Representative - District 16
+CandidateContest	MO House District 160	MO House District 160
 CandidateContest	MO House District 160	State Representative - District 160
+CandidateContest	MO House District 161	MO House District 161
 CandidateContest	MO House District 161	State Representative - District 161
+CandidateContest	MO House District 162	MO House District 162
 CandidateContest	MO House District 162	State Representative - District 162
+CandidateContest	MO House District 163	MO House District 163
 CandidateContest	MO House District 163	State Representative - District 163
+CandidateContest	MO House District 17	MO House District 17
+CandidateContest	MO House District 17	State Representative - District 17
+CandidateContest	MO House District 18	MO House District 18
+CandidateContest	MO House District 18	State Representative - District 18
+CandidateContest	MO House District 19	MO House District 19
+CandidateContest	MO House District 19	State Representative - District 19
+CandidateContest	MO House District 2	MO House District 2
+CandidateContest	MO House District 2	State Representative - District 2
+CandidateContest	MO House District 20	MO House District 20
+CandidateContest	MO House District 20	State Representative - District 20
+CandidateContest	MO House District 21	MO House District 21
+CandidateContest	MO House District 21	State Representative - District 21
+CandidateContest	MO House District 22	MO House District 22
+CandidateContest	MO House District 22	State Representative - District 22
+CandidateContest	MO House District 23	MO House District 23
+CandidateContest	MO House District 23	State Representative - District 23
+CandidateContest	MO House District 24	MO House District 24
+CandidateContest	MO House District 24	State Representative - District 24
+CandidateContest	MO House District 25	MO House District 25
+CandidateContest	MO House District 25	State Representative - District 25
+CandidateContest	MO House District 26	MO House District 26
+CandidateContest	MO House District 26	State Representative - District 26
+CandidateContest	MO House District 27	MO House District 27
+CandidateContest	MO House District 27	State Representative - District 27
+CandidateContest	MO House District 28	MO House District 28
+CandidateContest	MO House District 28	State Representative - District 28
+CandidateContest	MO House District 29	MO House District 29
+CandidateContest	MO House District 29	State Representative - District 29
+CandidateContest	MO House District 3	MO House District 3
+CandidateContest	MO House District 3	State Representative - District 3
+CandidateContest	MO House District 30	MO House District 30
+CandidateContest	MO House District 30	State Representative - District 30
+CandidateContest	MO House District 31	MO House District 31
+CandidateContest	MO House District 31	State Representative - District 31
+CandidateContest	MO House District 32	MO House District 32
+CandidateContest	MO House District 32	State Representative - District 32
+CandidateContest	MO House District 33	MO House District 33
+CandidateContest	MO House District 33	State Representative - District 33
+CandidateContest	MO House District 34	MO House District 34
+CandidateContest	MO House District 34	State Representative - District 34
+CandidateContest	MO House District 35	MO House District 35
+CandidateContest	MO House District 35	State Representative - District 35
+CandidateContest	MO House District 36	MO House District 36
+CandidateContest	MO House District 36	State Representative - District 36
+CandidateContest	MO House District 37	MO House District 37
+CandidateContest	MO House District 37	State Representative - District 37
+CandidateContest	MO House District 38	MO House District 38
+CandidateContest	MO House District 38	State Representative - District 38
+CandidateContest	MO House District 39	MO House District 39
+CandidateContest	MO House District 39	State Representative - District 39
+CandidateContest	MO House District 4	MO House District 4
+CandidateContest	MO House District 4	State Representative - District 4
+CandidateContest	MO House District 40	MO House District 40
+CandidateContest	MO House District 40	State Representative - District 40
+CandidateContest	MO House District 41	MO House District 41
+CandidateContest	MO House District 41	State Representative - District 41
+CandidateContest	MO House District 42	MO House District 42
+CandidateContest	MO House District 42	State Representative - District 42
+CandidateContest	MO House District 43	MO House District 43
+CandidateContest	MO House District 43	State Representative - District 43
+CandidateContest	MO House District 44	MO House District 44
+CandidateContest	MO House District 44	State Representative - District 44
+CandidateContest	MO House District 45	MO House District 45
+CandidateContest	MO House District 45	State Representative - District 45
+CandidateContest	MO House District 46	MO House District 46
+CandidateContest	MO House District 46	State Representative - District 46
+CandidateContest	MO House District 47	MO House District 47
+CandidateContest	MO House District 47	State Representative - District 47
+CandidateContest	MO House District 48	MO House District 48
+CandidateContest	MO House District 48	State Representative - District 48
+CandidateContest	MO House District 49	MO House District 49
+CandidateContest	MO House District 49	State Representative - District 49
+CandidateContest	MO House District 5	MO House District 5
+CandidateContest	MO House District 5	State Representative - District 5
+CandidateContest	MO House District 50	MO House District 50
+CandidateContest	MO House District 50	State Representative - District 50
+CandidateContest	MO House District 51	MO House District 51
+CandidateContest	MO House District 51	State Representative - District 51
+CandidateContest	MO House District 52	MO House District 52
+CandidateContest	MO House District 52	State Representative - District 52
+CandidateContest	MO House District 53	MO House District 53
+CandidateContest	MO House District 53	State Representative - District 53
+CandidateContest	MO House District 54	MO House District 54
+CandidateContest	MO House District 54	State Representative - District 54
+CandidateContest	MO House District 55	MO House District 55
+CandidateContest	MO House District 55	State Representative - District 55
+CandidateContest	MO House District 56	MO House District 56
+CandidateContest	MO House District 56	State Representative - District 56
+CandidateContest	MO House District 57	MO House District 57
+CandidateContest	MO House District 57	State Representative - District 57
+CandidateContest	MO House District 58	MO House District 58
+CandidateContest	MO House District 58	State Representative - District 58
+CandidateContest	MO House District 59	MO House District 59
+CandidateContest	MO House District 59	State Representative - District 59
+CandidateContest	MO House District 6	MO House District 6
+CandidateContest	MO House District 6	State Representative - District 6
+CandidateContest	MO House District 60	MO House District 60
+CandidateContest	MO House District 60	State Representative - District 60
+CandidateContest	MO House District 61	MO House District 61
+CandidateContest	MO House District 61	State Representative - District 61
+CandidateContest	MO House District 62	MO House District 62
+CandidateContest	MO House District 62	State Representative - District 62
+CandidateContest	MO House District 63	MO House District 63
+CandidateContest	MO House District 63	State Representative - District 63
+CandidateContest	MO House District 64	MO House District 64
+CandidateContest	MO House District 64	State Representative - District 64
+CandidateContest	MO House District 65	MO House District 65
+CandidateContest	MO House District 65	State Representative - District 65
+CandidateContest	MO House District 66	MO House District 66
+CandidateContest	MO House District 66	State Representative - District 66
+CandidateContest	MO House District 67	MO House District 67
+CandidateContest	MO House District 67	State Representative - District 67
+CandidateContest	MO House District 68	MO House District 68
+CandidateContest	MO House District 68	State Representative - District 68
+CandidateContest	MO House District 69	MO House District 69
+CandidateContest	MO House District 69	State Representative - District 69
+CandidateContest	MO House District 7	MO House District 7
+CandidateContest	MO House District 7	State Representative - District 7
+CandidateContest	MO House District 70	MO House District 70
+CandidateContest	MO House District 70	State Representative - District 70
+CandidateContest	MO House District 71	MO House District 71
+CandidateContest	MO House District 71	State Representative - District 71
+CandidateContest	MO House District 72	MO House District 72
+CandidateContest	MO House District 72	State Representative - District 72
+CandidateContest	MO House District 73	MO House District 73
+CandidateContest	MO House District 73	State Representative - District 73
+CandidateContest	MO House District 74	MO House District 74
+CandidateContest	MO House District 74	State Representative - District 74
+CandidateContest	MO House District 75	MO House District 75
+CandidateContest	MO House District 75	State Representative - District 75
+CandidateContest	MO House District 76	MO House District 76
+CandidateContest	MO House District 76	State Representative - District 76
+CandidateContest	MO House District 77	MO House District 77
+CandidateContest	MO House District 77	State Representative - District 77
+CandidateContest	MO House District 78	MO House District 78
+CandidateContest	MO House District 78	State Representative - District 78
+CandidateContest	MO House District 79	MO House District 79
+CandidateContest	MO House District 79	State Representative - District 79
+CandidateContest	MO House District 8	MO House District 8
+CandidateContest	MO House District 8	State Representative - District 8
+CandidateContest	MO House District 80	MO House District 80
+CandidateContest	MO House District 80	State Representative - District 80
+CandidateContest	MO House District 81	MO House District 81
+CandidateContest	MO House District 81	State Representative - District 81
+CandidateContest	MO House District 82	MO House District 82
+CandidateContest	MO House District 82	State Representative - District 82
+CandidateContest	MO House District 83	MO House District 83
+CandidateContest	MO House District 83	State Representative - District 83
+CandidateContest	MO House District 84	MO House District 84
+CandidateContest	MO House District 84	State Representative - District 84
+CandidateContest	MO House District 85	MO House District 85
+CandidateContest	MO House District 85	State Representative - District 85
+CandidateContest	MO House District 86	MO House District 86
+CandidateContest	MO House District 86	State Representative - District 86
+CandidateContest	MO House District 87	MO House District 87
+CandidateContest	MO House District 87	State Representative - District 87
+CandidateContest	MO House District 88	MO House District 88
+CandidateContest	MO House District 88	State Representative - District 88
+CandidateContest	MO House District 89	MO House District 89
+CandidateContest	MO House District 89	State Representative - District 89
+CandidateContest	MO House District 9	MO House District 9
+CandidateContest	MO House District 9	State Representative - District 9
+CandidateContest	MO House District 90	MO House District 90
+CandidateContest	MO House District 90	State Representative - District 90
+CandidateContest	MO House District 91	MO House District 91
+CandidateContest	MO House District 91	State Representative - District 91
+CandidateContest	MO House District 92	MO House District 92
+CandidateContest	MO House District 92	State Representative - District 92
+CandidateContest	MO House District 93	MO House District 93
+CandidateContest	MO House District 93	State Representative - District 93
+CandidateContest	MO House District 94	MO House District 94
+CandidateContest	MO House District 94	State Representative - District 94
+CandidateContest	MO House District 95	MO House District 95
+CandidateContest	MO House District 95	State Representative - District 95
+CandidateContest	MO House District 96	MO House District 96
+CandidateContest	MO House District 96	State Representative - District 96
+CandidateContest	MO House District 97	MO House District 97
+CandidateContest	MO House District 97	State Representative - District 97
+CandidateContest	MO House District 98	MO House District 98
+CandidateContest	MO House District 98	State Representative - District 98
+CandidateContest	MO House District 99	MO House District 99
+CandidateContest	MO House District 99	State Representative - District 99
+CandidateContest	MO Lieutenant Governor	MO Lieutenant Governor
+CandidateContest	MO Secretary of State	MO Secretary of State
 CandidateContest	MO Senate District 1	MO Senate District 1
-CandidateContest	MO Senate District 2	MO Senate District 2
-CandidateContest	MO Senate District 3	MO Senate District 3
-CandidateContest	MO Senate District 4	MO Senate District 4
-CandidateContest	MO Senate District 5	MO Senate District 5
-CandidateContest	MO Senate District 6	MO Senate District 6
-CandidateContest	MO Senate District 7	MO Senate District 7
-CandidateContest	MO Senate District 8	MO Senate District 8
-CandidateContest	MO Senate District 9	MO Senate District 9
 CandidateContest	MO Senate District 10	MO Senate District 10
 CandidateContest	MO Senate District 11	MO Senate District 11
 CandidateContest	MO Senate District 12	MO Senate District 12
@@ -344,6 +640,7 @@ CandidateContest	MO Senate District 16	MO Senate District 16
 CandidateContest	MO Senate District 17	MO Senate District 17
 CandidateContest	MO Senate District 18	MO Senate District 18
 CandidateContest	MO Senate District 19	MO Senate District 19
+CandidateContest	MO Senate District 2	MO Senate District 2
 CandidateContest	MO Senate District 20	MO Senate District 20
 CandidateContest	MO Senate District 21	MO Senate District 21
 CandidateContest	MO Senate District 22	MO Senate District 22
@@ -354,11 +651,19 @@ CandidateContest	MO Senate District 26	MO Senate District 26
 CandidateContest	MO Senate District 27	MO Senate District 27
 CandidateContest	MO Senate District 28	MO Senate District 28
 CandidateContest	MO Senate District 29	MO Senate District 29
+CandidateContest	MO Senate District 3	MO Senate District 3
 CandidateContest	MO Senate District 30	MO Senate District 30
 CandidateContest	MO Senate District 31	MO Senate District 31
 CandidateContest	MO Senate District 32	MO Senate District 32
 CandidateContest	MO Senate District 33	MO Senate District 33
 CandidateContest	MO Senate District 34	MO Senate District 34
+CandidateContest	MO Senate District 4	MO Senate District 4
+CandidateContest	MO Senate District 5	MO Senate District 5
+CandidateContest	MO Senate District 6	MO Senate District 6
+CandidateContest	MO Senate District 7	MO Senate District 7
+CandidateContest	MO Senate District 8	MO Senate District 8
+CandidateContest	MO Senate District 9	MO Senate District 9
+CandidateContest	MO Treasurer	MO Treasurer
 CandidateContest	US House MO District 1	US House MO District 1
 CandidateContest	US House MO District 2	US House MO District 2
 CandidateContest	US House MO District 3	US House MO District 3
@@ -367,120 +672,154 @@ CandidateContest	US House MO District 5	US House MO District 5
 CandidateContest	US House MO District 6	US House MO District 6
 CandidateContest	US House MO District 7	US House MO District 7
 CandidateContest	US House MO District 8	US House MO District 8
+CandidateContest	US President (MO)	PRESIDENT
+CandidateContest	US President (MO)	US PRESIDENT
 CandidateContest	US President (MO)	US President (MO)
-CandidateContest	MO Governor	MO Governor
 CandidateContest	US Senate MO	US Senate MO
-CandidateContest	MO Attorney General	MO Attorney General
-CandidateContest	MO Lieutenant Governor	MO Lieutenant Governor
-CandidateContest	MO Treasurer	MO Treasurer
-CandidateContest	MO Secretary of State	MO Secretary of State
+CountItemType	total	TOTAL
+Election	2016 General	2016 General
+Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
-Election	2018 General	2018 General
-Election	2016 General	2016 General
+Party	Constitution Party	CST
+Party	Democratic Party	DEM
+Party	Democratic Party	DEMOCRAT
 Party	Democratic Party	Democratic Party
-Party	Republican Party	Republican Party
+Party	Green Party	GRE
+Party	Green Party	GREEN
 Party	Green Party	Green Party
+Party	Independent	IND
+Party	Libertarian Party	LIB
+Party	Libertarian Party	LIBERTARIAN
 Party	Libertarian Party	Libertarian Party
+Party	Republican Party	REP
+Party	Republican Party	REPUBLICAN
+Party	Republican Party	Republican Party
+Party	Write-in	WI
+Party	none or unknown	OTHER
+ReportingUnit	Missouri	Missouri
+ReportingUnit	Missouri;Adair County	Adair
+ReportingUnit	Missouri;Adair County	fips29001
+ReportingUnit	Missouri;Andrew County	Andrew
+ReportingUnit	Missouri;Andrew County	fips29003
+ReportingUnit	Missouri;Atchison County	Atchison
+ReportingUnit	Missouri;Atchison County	fips29005
+ReportingUnit	Missouri;Audrain County	Audrain
+ReportingUnit	Missouri;Audrain County	fips29007
+ReportingUnit	Missouri;Barry County	Barry
+ReportingUnit	Missouri;Barry County	fips29009
+ReportingUnit	Missouri;Barton County	Barton
+ReportingUnit	Missouri;Barton County	fips29011
+ReportingUnit	Missouri;Bates County	Bates
+ReportingUnit	Missouri;Bates County	fips29013
+ReportingUnit	Missouri;Benton County	Benton
+ReportingUnit	Missouri;Benton County	fips29015
+ReportingUnit	Missouri;Bollinger County	Bollinger
+ReportingUnit	Missouri;Bollinger County	fips29017
+ReportingUnit	Missouri;Boone County	Boone
+ReportingUnit	Missouri;Boone County	fips29019
+ReportingUnit	Missouri;Buchanan County	Buchanan
+ReportingUnit	Missouri;Buchanan County	fips29021
+ReportingUnit	Missouri;Butler County	Butler
+ReportingUnit	Missouri;Butler County	fips29023
+ReportingUnit	Missouri;Caldwell County	Caldwell
+ReportingUnit	Missouri;Caldwell County	fips29025
+ReportingUnit	Missouri;Callaway County	Callaway
+ReportingUnit	Missouri;Callaway County	fips29027
+ReportingUnit	Missouri;Camden County	Camden
+ReportingUnit	Missouri;Camden County	fips29029
+ReportingUnit	Missouri;Cape Girardeau County	Cape Girardeau
+ReportingUnit	Missouri;Cape Girardeau County	fips29031
+ReportingUnit	Missouri;Carroll County	Carroll
+ReportingUnit	Missouri;Carroll County	fips29033
+ReportingUnit	Missouri;Carter County	Carter
+ReportingUnit	Missouri;Carter County	fips29035
+ReportingUnit	Missouri;Cass County	Cass
+ReportingUnit	Missouri;Cass County	fips29037
+ReportingUnit	Missouri;Cedar County	Cedar
+ReportingUnit	Missouri;Cedar County	fips29039
+ReportingUnit	Missouri;Chariton County	Chariton
+ReportingUnit	Missouri;Chariton County	fips29041
+ReportingUnit	Missouri;Christian County	Christian
+ReportingUnit	Missouri;Christian County	fips29043
+ReportingUnit	Missouri;Clark County	Clark
+ReportingUnit	Missouri;Clark County	fips29045
+ReportingUnit	Missouri;Clay County	Clay
+ReportingUnit	Missouri;Clay County	fips29047
+ReportingUnit	Missouri;Clinton County	Clinton
+ReportingUnit	Missouri;Clinton County	fips29049
+ReportingUnit	Missouri;Cole County	Cole
+ReportingUnit	Missouri;Cole County	fips29051
+ReportingUnit	Missouri;Cooper County	Cooper
+ReportingUnit	Missouri;Cooper County	fips29053
+ReportingUnit	Missouri;Crawford County	Crawford
+ReportingUnit	Missouri;Crawford County	fips29055
+ReportingUnit	Missouri;Dade County	Dade
+ReportingUnit	Missouri;Dade County	fips29057
+ReportingUnit	Missouri;Dallas County	Dallas
+ReportingUnit	Missouri;Dallas County	fips29059
+ReportingUnit	Missouri;Daviess County	Daviess
+ReportingUnit	Missouri;Daviess County	fips29061
+ReportingUnit	Missouri;De Kalb County	De Kalb
+ReportingUnit	Missouri;DeKalb County	fips29063
+ReportingUnit	Missouri;Dent County	Dent
+ReportingUnit	Missouri;Dent County	fips29065
+ReportingUnit	Missouri;Douglas County	Douglas
+ReportingUnit	Missouri;Douglas County	fips29067
+ReportingUnit	Missouri;Dunklin County	Dunklin
+ReportingUnit	Missouri;Dunklin County	fips29069
+ReportingUnit	Missouri;Franklin County	Franklin
+ReportingUnit	Missouri;Franklin County	fips29071
+ReportingUnit	Missouri;Gasconade County	Gasconade
+ReportingUnit	Missouri;Gasconade County	fips29073
+ReportingUnit	Missouri;Gentry County	Gentry
+ReportingUnit	Missouri;Gentry County	fips29075
+ReportingUnit	Missouri;Greene County	Greene
+ReportingUnit	Missouri;Greene County	fips29077
+ReportingUnit	Missouri;Grundy County	Grundy
+ReportingUnit	Missouri;Grundy County	fips29079
+ReportingUnit	Missouri;Harrison County	Harrison
+ReportingUnit	Missouri;Harrison County	fips29081
+ReportingUnit	Missouri;Henry County	Henry
+ReportingUnit	Missouri;Henry County	fips29083
+ReportingUnit	Missouri;Hickory County	Hickory
+ReportingUnit	Missouri;Hickory County	fips29085
+ReportingUnit	Missouri;Holt County	Holt
+ReportingUnit	Missouri;Holt County	fips29087
+ReportingUnit	Missouri;Howard County	Howard
+ReportingUnit	Missouri;Howard County	fips29089
+ReportingUnit	Missouri;Howell County	Howell
+ReportingUnit	Missouri;Howell County	fips29091
+ReportingUnit	Missouri;Iron County	Iron
+ReportingUnit	Missouri;Iron County	fips29093
+ReportingUnit	Missouri;Jackson County	Jackson
+ReportingUnit	Missouri;Jackson County	fips29095
+ReportingUnit	Missouri;Jasper County	Jasper
+ReportingUnit	Missouri;Jasper County	fips29097
+ReportingUnit	Missouri;Jefferson County	Jefferson
+ReportingUnit	Missouri;Jefferson County	fips29099
+ReportingUnit	Missouri;Johnson County	Johnson
+ReportingUnit	Missouri;Johnson County	fips29101
+ReportingUnit	Missouri;Kansas City County	Kansas City
+ReportingUnit	Missouri;Kansas City County	fips36000
+ReportingUnit	Missouri;Knox County	Knox
+ReportingUnit	Missouri;Knox County	fips29103
+ReportingUnit	Missouri;Laclede County	Laclede
+ReportingUnit	Missouri;Laclede County	fips29105
+ReportingUnit	Missouri;Lafayette County	Lafayette
+ReportingUnit	Missouri;Lafayette County	fips29107
+ReportingUnit	Missouri;Lawrence County	Lawrence
+ReportingUnit	Missouri;Lawrence County	fips29109
+ReportingUnit	Missouri;Lewis County	Lewis
+ReportingUnit	Missouri;Lewis County	fips29111
+ReportingUnit	Missouri;Lincoln County	Lincoln
+ReportingUnit	Missouri;Lincoln County	fips29113
+ReportingUnit	Missouri;Linn County	Linn
+ReportingUnit	Missouri;Linn County	fips29115
+ReportingUnit	Missouri;Livingston County	Livingston
+ReportingUnit	Missouri;Livingston County	fips29117
 ReportingUnit	Missouri;MO House District 1	Missouri;MO House District 1
-ReportingUnit	Missouri;MO House District 2	Missouri;MO House District 2
-ReportingUnit	Missouri;MO House District 3	Missouri;MO House District 3
-ReportingUnit	Missouri;MO House District 4	Missouri;MO House District 4
-ReportingUnit	Missouri;MO House District 5	Missouri;MO House District 5
-ReportingUnit	Missouri;MO House District 6	Missouri;MO House District 6
-ReportingUnit	Missouri;MO House District 7	Missouri;MO House District 7
-ReportingUnit	Missouri;MO House District 8	Missouri;MO House District 8
-ReportingUnit	Missouri;MO House District 9	Missouri;MO House District 9
 ReportingUnit	Missouri;MO House District 10	Missouri;MO House District 10
-ReportingUnit	Missouri;MO House District 11	Missouri;MO House District 11
-ReportingUnit	Missouri;MO House District 12	Missouri;MO House District 12
-ReportingUnit	Missouri;MO House District 13	Missouri;MO House District 13
-ReportingUnit	Missouri;MO House District 14	Missouri;MO House District 14
-ReportingUnit	Missouri;MO House District 15	Missouri;MO House District 15
-ReportingUnit	Missouri;MO House District 16	Missouri;MO House District 16
-ReportingUnit	Missouri;MO House District 17	Missouri;MO House District 17
-ReportingUnit	Missouri;MO House District 18	Missouri;MO House District 18
-ReportingUnit	Missouri;MO House District 19	Missouri;MO House District 19
-ReportingUnit	Missouri;MO House District 20	Missouri;MO House District 20
-ReportingUnit	Missouri;MO House District 21	Missouri;MO House District 21
-ReportingUnit	Missouri;MO House District 22	Missouri;MO House District 22
-ReportingUnit	Missouri;MO House District 23	Missouri;MO House District 23
-ReportingUnit	Missouri;MO House District 24	Missouri;MO House District 24
-ReportingUnit	Missouri;MO House District 25	Missouri;MO House District 25
-ReportingUnit	Missouri;MO House District 26	Missouri;MO House District 26
-ReportingUnit	Missouri;MO House District 27	Missouri;MO House District 27
-ReportingUnit	Missouri;MO House District 28	Missouri;MO House District 28
-ReportingUnit	Missouri;MO House District 29	Missouri;MO House District 29
-ReportingUnit	Missouri;MO House District 30	Missouri;MO House District 30
-ReportingUnit	Missouri;MO House District 31	Missouri;MO House District 31
-ReportingUnit	Missouri;MO House District 32	Missouri;MO House District 32
-ReportingUnit	Missouri;MO House District 33	Missouri;MO House District 33
-ReportingUnit	Missouri;MO House District 34	Missouri;MO House District 34
-ReportingUnit	Missouri;MO House District 35	Missouri;MO House District 35
-ReportingUnit	Missouri;MO House District 36	Missouri;MO House District 36
-ReportingUnit	Missouri;MO House District 37	Missouri;MO House District 37
-ReportingUnit	Missouri;MO House District 38	Missouri;MO House District 38
-ReportingUnit	Missouri;MO House District 39	Missouri;MO House District 39
-ReportingUnit	Missouri;MO House District 40	Missouri;MO House District 40
-ReportingUnit	Missouri;MO House District 41	Missouri;MO House District 41
-ReportingUnit	Missouri;MO House District 42	Missouri;MO House District 42
-ReportingUnit	Missouri;MO House District 43	Missouri;MO House District 43
-ReportingUnit	Missouri;MO House District 44	Missouri;MO House District 44
-ReportingUnit	Missouri;MO House District 45	Missouri;MO House District 45
-ReportingUnit	Missouri;MO House District 46	Missouri;MO House District 46
-ReportingUnit	Missouri;MO House District 47	Missouri;MO House District 47
-ReportingUnit	Missouri;MO House District 48	Missouri;MO House District 48
-ReportingUnit	Missouri;MO House District 49	Missouri;MO House District 49
-ReportingUnit	Missouri;MO House District 50	Missouri;MO House District 50
-ReportingUnit	Missouri;MO House District 51	Missouri;MO House District 51
-ReportingUnit	Missouri;MO House District 52	Missouri;MO House District 52
-ReportingUnit	Missouri;MO House District 53	Missouri;MO House District 53
-ReportingUnit	Missouri;MO House District 54	Missouri;MO House District 54
-ReportingUnit	Missouri;MO House District 55	Missouri;MO House District 55
-ReportingUnit	Missouri;MO House District 56	Missouri;MO House District 56
-ReportingUnit	Missouri;MO House District 57	Missouri;MO House District 57
-ReportingUnit	Missouri;MO House District 58	Missouri;MO House District 58
-ReportingUnit	Missouri;MO House District 59	Missouri;MO House District 59
-ReportingUnit	Missouri;MO House District 60	Missouri;MO House District 60
-ReportingUnit	Missouri;MO House District 61	Missouri;MO House District 61
-ReportingUnit	Missouri;MO House District 62	Missouri;MO House District 62
-ReportingUnit	Missouri;MO House District 63	Missouri;MO House District 63
-ReportingUnit	Missouri;MO House District 64	Missouri;MO House District 64
-ReportingUnit	Missouri;MO House District 65	Missouri;MO House District 65
-ReportingUnit	Missouri;MO House District 66	Missouri;MO House District 66
-ReportingUnit	Missouri;MO House District 67	Missouri;MO House District 67
-ReportingUnit	Missouri;MO House District 68	Missouri;MO House District 68
-ReportingUnit	Missouri;MO House District 69	Missouri;MO House District 69
-ReportingUnit	Missouri;MO House District 70	Missouri;MO House District 70
-ReportingUnit	Missouri;MO House District 71	Missouri;MO House District 71
-ReportingUnit	Missouri;MO House District 72	Missouri;MO House District 72
-ReportingUnit	Missouri;MO House District 73	Missouri;MO House District 73
-ReportingUnit	Missouri;MO House District 74	Missouri;MO House District 74
-ReportingUnit	Missouri;MO House District 75	Missouri;MO House District 75
-ReportingUnit	Missouri;MO House District 76	Missouri;MO House District 76
-ReportingUnit	Missouri;MO House District 77	Missouri;MO House District 77
-ReportingUnit	Missouri;MO House District 78	Missouri;MO House District 78
-ReportingUnit	Missouri;MO House District 79	Missouri;MO House District 79
-ReportingUnit	Missouri;MO House District 80	Missouri;MO House District 80
-ReportingUnit	Missouri;MO House District 81	Missouri;MO House District 81
-ReportingUnit	Missouri;MO House District 82	Missouri;MO House District 82
-ReportingUnit	Missouri;MO House District 83	Missouri;MO House District 83
-ReportingUnit	Missouri;MO House District 84	Missouri;MO House District 84
-ReportingUnit	Missouri;MO House District 85	Missouri;MO House District 85
-ReportingUnit	Missouri;MO House District 86	Missouri;MO House District 86
-ReportingUnit	Missouri;MO House District 87	Missouri;MO House District 87
-ReportingUnit	Missouri;MO House District 88	Missouri;MO House District 88
-ReportingUnit	Missouri;MO House District 89	Missouri;MO House District 89
-ReportingUnit	Missouri;MO House District 90	Missouri;MO House District 90
-ReportingUnit	Missouri;MO House District 91	Missouri;MO House District 91
-ReportingUnit	Missouri;MO House District 92	Missouri;MO House District 92
-ReportingUnit	Missouri;MO House District 93	Missouri;MO House District 93
-ReportingUnit	Missouri;MO House District 94	Missouri;MO House District 94
-ReportingUnit	Missouri;MO House District 95	Missouri;MO House District 95
-ReportingUnit	Missouri;MO House District 96	Missouri;MO House District 96
-ReportingUnit	Missouri;MO House District 97	Missouri;MO House District 97
-ReportingUnit	Missouri;MO House District 98	Missouri;MO House District 98
-ReportingUnit	Missouri;MO House District 99	Missouri;MO House District 99
 ReportingUnit	Missouri;MO House District 100	Missouri;MO House District 100
 ReportingUnit	Missouri;MO House District 101	Missouri;MO House District 101
 ReportingUnit	Missouri;MO House District 102	Missouri;MO House District 102
@@ -491,6 +830,7 @@ ReportingUnit	Missouri;MO House District 106	Missouri;MO House District 106
 ReportingUnit	Missouri;MO House District 107	Missouri;MO House District 107
 ReportingUnit	Missouri;MO House District 108	Missouri;MO House District 108
 ReportingUnit	Missouri;MO House District 109	Missouri;MO House District 109
+ReportingUnit	Missouri;MO House District 11	Missouri;MO House District 11
 ReportingUnit	Missouri;MO House District 110	Missouri;MO House District 110
 ReportingUnit	Missouri;MO House District 111	Missouri;MO House District 111
 ReportingUnit	Missouri;MO House District 112	Missouri;MO House District 112
@@ -501,6 +841,7 @@ ReportingUnit	Missouri;MO House District 116	Missouri;MO House District 116
 ReportingUnit	Missouri;MO House District 117	Missouri;MO House District 117
 ReportingUnit	Missouri;MO House District 118	Missouri;MO House District 118
 ReportingUnit	Missouri;MO House District 119	Missouri;MO House District 119
+ReportingUnit	Missouri;MO House District 12	Missouri;MO House District 12
 ReportingUnit	Missouri;MO House District 120	Missouri;MO House District 120
 ReportingUnit	Missouri;MO House District 121	Missouri;MO House District 121
 ReportingUnit	Missouri;MO House District 122	Missouri;MO House District 122
@@ -511,6 +852,7 @@ ReportingUnit	Missouri;MO House District 126	Missouri;MO House District 126
 ReportingUnit	Missouri;MO House District 127	Missouri;MO House District 127
 ReportingUnit	Missouri;MO House District 128	Missouri;MO House District 128
 ReportingUnit	Missouri;MO House District 129	Missouri;MO House District 129
+ReportingUnit	Missouri;MO House District 13	Missouri;MO House District 13
 ReportingUnit	Missouri;MO House District 130	Missouri;MO House District 130
 ReportingUnit	Missouri;MO House District 131	Missouri;MO House District 131
 ReportingUnit	Missouri;MO House District 132	Missouri;MO House District 132
@@ -521,6 +863,7 @@ ReportingUnit	Missouri;MO House District 136	Missouri;MO House District 136
 ReportingUnit	Missouri;MO House District 137	Missouri;MO House District 137
 ReportingUnit	Missouri;MO House District 138	Missouri;MO House District 138
 ReportingUnit	Missouri;MO House District 139	Missouri;MO House District 139
+ReportingUnit	Missouri;MO House District 14	Missouri;MO House District 14
 ReportingUnit	Missouri;MO House District 140	Missouri;MO House District 140
 ReportingUnit	Missouri;MO House District 141	Missouri;MO House District 141
 ReportingUnit	Missouri;MO House District 142	Missouri;MO House District 142
@@ -531,6 +874,7 @@ ReportingUnit	Missouri;MO House District 146	Missouri;MO House District 146
 ReportingUnit	Missouri;MO House District 147	Missouri;MO House District 147
 ReportingUnit	Missouri;MO House District 148	Missouri;MO House District 148
 ReportingUnit	Missouri;MO House District 149	Missouri;MO House District 149
+ReportingUnit	Missouri;MO House District 15	Missouri;MO House District 15
 ReportingUnit	Missouri;MO House District 150	Missouri;MO House District 150
 ReportingUnit	Missouri;MO House District 151	Missouri;MO House District 151
 ReportingUnit	Missouri;MO House District 152	Missouri;MO House District 152
@@ -541,19 +885,103 @@ ReportingUnit	Missouri;MO House District 156	Missouri;MO House District 156
 ReportingUnit	Missouri;MO House District 157	Missouri;MO House District 157
 ReportingUnit	Missouri;MO House District 158	Missouri;MO House District 158
 ReportingUnit	Missouri;MO House District 159	Missouri;MO House District 159
+ReportingUnit	Missouri;MO House District 16	Missouri;MO House District 16
 ReportingUnit	Missouri;MO House District 160	Missouri;MO House District 160
 ReportingUnit	Missouri;MO House District 161	Missouri;MO House District 161
 ReportingUnit	Missouri;MO House District 162	Missouri;MO House District 162
 ReportingUnit	Missouri;MO House District 163	Missouri;MO House District 163
+ReportingUnit	Missouri;MO House District 17	Missouri;MO House District 17
+ReportingUnit	Missouri;MO House District 18	Missouri;MO House District 18
+ReportingUnit	Missouri;MO House District 19	Missouri;MO House District 19
+ReportingUnit	Missouri;MO House District 2	Missouri;MO House District 2
+ReportingUnit	Missouri;MO House District 20	Missouri;MO House District 20
+ReportingUnit	Missouri;MO House District 21	Missouri;MO House District 21
+ReportingUnit	Missouri;MO House District 22	Missouri;MO House District 22
+ReportingUnit	Missouri;MO House District 23	Missouri;MO House District 23
+ReportingUnit	Missouri;MO House District 24	Missouri;MO House District 24
+ReportingUnit	Missouri;MO House District 25	Missouri;MO House District 25
+ReportingUnit	Missouri;MO House District 26	Missouri;MO House District 26
+ReportingUnit	Missouri;MO House District 27	Missouri;MO House District 27
+ReportingUnit	Missouri;MO House District 28	Missouri;MO House District 28
+ReportingUnit	Missouri;MO House District 29	Missouri;MO House District 29
+ReportingUnit	Missouri;MO House District 3	Missouri;MO House District 3
+ReportingUnit	Missouri;MO House District 30	Missouri;MO House District 30
+ReportingUnit	Missouri;MO House District 31	Missouri;MO House District 31
+ReportingUnit	Missouri;MO House District 32	Missouri;MO House District 32
+ReportingUnit	Missouri;MO House District 33	Missouri;MO House District 33
+ReportingUnit	Missouri;MO House District 34	Missouri;MO House District 34
+ReportingUnit	Missouri;MO House District 35	Missouri;MO House District 35
+ReportingUnit	Missouri;MO House District 36	Missouri;MO House District 36
+ReportingUnit	Missouri;MO House District 37	Missouri;MO House District 37
+ReportingUnit	Missouri;MO House District 38	Missouri;MO House District 38
+ReportingUnit	Missouri;MO House District 39	Missouri;MO House District 39
+ReportingUnit	Missouri;MO House District 4	Missouri;MO House District 4
+ReportingUnit	Missouri;MO House District 40	Missouri;MO House District 40
+ReportingUnit	Missouri;MO House District 41	Missouri;MO House District 41
+ReportingUnit	Missouri;MO House District 42	Missouri;MO House District 42
+ReportingUnit	Missouri;MO House District 43	Missouri;MO House District 43
+ReportingUnit	Missouri;MO House District 44	Missouri;MO House District 44
+ReportingUnit	Missouri;MO House District 45	Missouri;MO House District 45
+ReportingUnit	Missouri;MO House District 46	Missouri;MO House District 46
+ReportingUnit	Missouri;MO House District 47	Missouri;MO House District 47
+ReportingUnit	Missouri;MO House District 48	Missouri;MO House District 48
+ReportingUnit	Missouri;MO House District 49	Missouri;MO House District 49
+ReportingUnit	Missouri;MO House District 5	Missouri;MO House District 5
+ReportingUnit	Missouri;MO House District 50	Missouri;MO House District 50
+ReportingUnit	Missouri;MO House District 51	Missouri;MO House District 51
+ReportingUnit	Missouri;MO House District 52	Missouri;MO House District 52
+ReportingUnit	Missouri;MO House District 53	Missouri;MO House District 53
+ReportingUnit	Missouri;MO House District 54	Missouri;MO House District 54
+ReportingUnit	Missouri;MO House District 55	Missouri;MO House District 55
+ReportingUnit	Missouri;MO House District 56	Missouri;MO House District 56
+ReportingUnit	Missouri;MO House District 57	Missouri;MO House District 57
+ReportingUnit	Missouri;MO House District 58	Missouri;MO House District 58
+ReportingUnit	Missouri;MO House District 59	Missouri;MO House District 59
+ReportingUnit	Missouri;MO House District 6	Missouri;MO House District 6
+ReportingUnit	Missouri;MO House District 60	Missouri;MO House District 60
+ReportingUnit	Missouri;MO House District 61	Missouri;MO House District 61
+ReportingUnit	Missouri;MO House District 62	Missouri;MO House District 62
+ReportingUnit	Missouri;MO House District 63	Missouri;MO House District 63
+ReportingUnit	Missouri;MO House District 64	Missouri;MO House District 64
+ReportingUnit	Missouri;MO House District 65	Missouri;MO House District 65
+ReportingUnit	Missouri;MO House District 66	Missouri;MO House District 66
+ReportingUnit	Missouri;MO House District 67	Missouri;MO House District 67
+ReportingUnit	Missouri;MO House District 68	Missouri;MO House District 68
+ReportingUnit	Missouri;MO House District 69	Missouri;MO House District 69
+ReportingUnit	Missouri;MO House District 7	Missouri;MO House District 7
+ReportingUnit	Missouri;MO House District 70	Missouri;MO House District 70
+ReportingUnit	Missouri;MO House District 71	Missouri;MO House District 71
+ReportingUnit	Missouri;MO House District 72	Missouri;MO House District 72
+ReportingUnit	Missouri;MO House District 73	Missouri;MO House District 73
+ReportingUnit	Missouri;MO House District 74	Missouri;MO House District 74
+ReportingUnit	Missouri;MO House District 75	Missouri;MO House District 75
+ReportingUnit	Missouri;MO House District 76	Missouri;MO House District 76
+ReportingUnit	Missouri;MO House District 77	Missouri;MO House District 77
+ReportingUnit	Missouri;MO House District 78	Missouri;MO House District 78
+ReportingUnit	Missouri;MO House District 79	Missouri;MO House District 79
+ReportingUnit	Missouri;MO House District 8	Missouri;MO House District 8
+ReportingUnit	Missouri;MO House District 80	Missouri;MO House District 80
+ReportingUnit	Missouri;MO House District 81	Missouri;MO House District 81
+ReportingUnit	Missouri;MO House District 82	Missouri;MO House District 82
+ReportingUnit	Missouri;MO House District 83	Missouri;MO House District 83
+ReportingUnit	Missouri;MO House District 84	Missouri;MO House District 84
+ReportingUnit	Missouri;MO House District 85	Missouri;MO House District 85
+ReportingUnit	Missouri;MO House District 86	Missouri;MO House District 86
+ReportingUnit	Missouri;MO House District 87	Missouri;MO House District 87
+ReportingUnit	Missouri;MO House District 88	Missouri;MO House District 88
+ReportingUnit	Missouri;MO House District 89	Missouri;MO House District 89
+ReportingUnit	Missouri;MO House District 9	Missouri;MO House District 9
+ReportingUnit	Missouri;MO House District 90	Missouri;MO House District 90
+ReportingUnit	Missouri;MO House District 91	Missouri;MO House District 91
+ReportingUnit	Missouri;MO House District 92	Missouri;MO House District 92
+ReportingUnit	Missouri;MO House District 93	Missouri;MO House District 93
+ReportingUnit	Missouri;MO House District 94	Missouri;MO House District 94
+ReportingUnit	Missouri;MO House District 95	Missouri;MO House District 95
+ReportingUnit	Missouri;MO House District 96	Missouri;MO House District 96
+ReportingUnit	Missouri;MO House District 97	Missouri;MO House District 97
+ReportingUnit	Missouri;MO House District 98	Missouri;MO House District 98
+ReportingUnit	Missouri;MO House District 99	Missouri;MO House District 99
 ReportingUnit	Missouri;MO Senate District 1	Missouri;MO Senate District 1
-ReportingUnit	Missouri;MO Senate District 2	Missouri;MO Senate District 2
-ReportingUnit	Missouri;MO Senate District 3	Missouri;MO Senate District 3
-ReportingUnit	Missouri;MO Senate District 4	Missouri;MO Senate District 4
-ReportingUnit	Missouri;MO Senate District 5	Missouri;MO Senate District 5
-ReportingUnit	Missouri;MO Senate District 6	Missouri;MO Senate District 6
-ReportingUnit	Missouri;MO Senate District 7	Missouri;MO Senate District 7
-ReportingUnit	Missouri;MO Senate District 8	Missouri;MO Senate District 8
-ReportingUnit	Missouri;MO Senate District 9	Missouri;MO Senate District 9
 ReportingUnit	Missouri;MO Senate District 10	Missouri;MO Senate District 10
 ReportingUnit	Missouri;MO Senate District 11	Missouri;MO Senate District 11
 ReportingUnit	Missouri;MO Senate District 12	Missouri;MO Senate District 12
@@ -564,6 +992,7 @@ ReportingUnit	Missouri;MO Senate District 16	Missouri;MO Senate District 16
 ReportingUnit	Missouri;MO Senate District 17	Missouri;MO Senate District 17
 ReportingUnit	Missouri;MO Senate District 18	Missouri;MO Senate District 18
 ReportingUnit	Missouri;MO Senate District 19	Missouri;MO Senate District 19
+ReportingUnit	Missouri;MO Senate District 2	Missouri;MO Senate District 2
 ReportingUnit	Missouri;MO Senate District 20	Missouri;MO Senate District 20
 ReportingUnit	Missouri;MO Senate District 21	Missouri;MO Senate District 21
 ReportingUnit	Missouri;MO Senate District 22	Missouri;MO Senate District 22
@@ -574,11 +1003,116 @@ ReportingUnit	Missouri;MO Senate District 26	Missouri;MO Senate District 26
 ReportingUnit	Missouri;MO Senate District 27	Missouri;MO Senate District 27
 ReportingUnit	Missouri;MO Senate District 28	Missouri;MO Senate District 28
 ReportingUnit	Missouri;MO Senate District 29	Missouri;MO Senate District 29
+ReportingUnit	Missouri;MO Senate District 3	Missouri;MO Senate District 3
 ReportingUnit	Missouri;MO Senate District 30	Missouri;MO Senate District 30
 ReportingUnit	Missouri;MO Senate District 31	Missouri;MO Senate District 31
 ReportingUnit	Missouri;MO Senate District 32	Missouri;MO Senate District 32
 ReportingUnit	Missouri;MO Senate District 33	Missouri;MO Senate District 33
 ReportingUnit	Missouri;MO Senate District 34	Missouri;MO Senate District 34
+ReportingUnit	Missouri;MO Senate District 4	Missouri;MO Senate District 4
+ReportingUnit	Missouri;MO Senate District 5	Missouri;MO Senate District 5
+ReportingUnit	Missouri;MO Senate District 6	Missouri;MO Senate District 6
+ReportingUnit	Missouri;MO Senate District 7	Missouri;MO Senate District 7
+ReportingUnit	Missouri;MO Senate District 8	Missouri;MO Senate District 8
+ReportingUnit	Missouri;MO Senate District 9	Missouri;MO Senate District 9
+ReportingUnit	Missouri;Macon County	Macon
+ReportingUnit	Missouri;Macon County	fips29121
+ReportingUnit	Missouri;Madison County	Madison
+ReportingUnit	Missouri;Madison County	fips29123
+ReportingUnit	Missouri;Maries County	Maries
+ReportingUnit	Missouri;Maries County	fips29125
+ReportingUnit	Missouri;Marion County	Marion
+ReportingUnit	Missouri;Marion County	fips29127
+ReportingUnit	Missouri;McDonald County	McDonald
+ReportingUnit	Missouri;McDonald County	fips29119
+ReportingUnit	Missouri;Mercer County	Mercer
+ReportingUnit	Missouri;Mercer County	fips29129
+ReportingUnit	Missouri;Miller County	Miller
+ReportingUnit	Missouri;Miller County	fips29131
+ReportingUnit	Missouri;Mississippi County	Mississippi
+ReportingUnit	Missouri;Mississippi County	fips29133
+ReportingUnit	Missouri;Moniteau County	Moniteau
+ReportingUnit	Missouri;Moniteau County	fips29135
+ReportingUnit	Missouri;Monroe County	Monroe
+ReportingUnit	Missouri;Monroe County	fips29137
+ReportingUnit	Missouri;Montgomery County	Montgomery
+ReportingUnit	Missouri;Montgomery County	fips29139
+ReportingUnit	Missouri;Morgan County	Morgan
+ReportingUnit	Missouri;Morgan County	fips29141
+ReportingUnit	Missouri;New Madrid County	New Madrid
+ReportingUnit	Missouri;New Madrid County	fips29143
+ReportingUnit	Missouri;Newton County	Newton
+ReportingUnit	Missouri;Newton County	fips29145
+ReportingUnit	Missouri;Nodaway County	Nodaway
+ReportingUnit	Missouri;Nodaway County	fips29147
+ReportingUnit	Missouri;Oregon County	Oregon
+ReportingUnit	Missouri;Oregon County	fips29149
+ReportingUnit	Missouri;Osage County	Osage
+ReportingUnit	Missouri;Osage County	fips29151
+ReportingUnit	Missouri;Ozark County	Ozark
+ReportingUnit	Missouri;Ozark County	fips29153
+ReportingUnit	Missouri;Pemiscot County	Pemiscot
+ReportingUnit	Missouri;Pemiscot County	fips29155
+ReportingUnit	Missouri;Perry County	Perry
+ReportingUnit	Missouri;Perry County	fips29157
+ReportingUnit	Missouri;Pettis County	Pettis
+ReportingUnit	Missouri;Pettis County	fips29159
+ReportingUnit	Missouri;Phelps County	Phelps
+ReportingUnit	Missouri;Phelps County	fips29161
+ReportingUnit	Missouri;Pike County	Pike
+ReportingUnit	Missouri;Pike County	fips29163
+ReportingUnit	Missouri;Platte County	Platte
+ReportingUnit	Missouri;Platte County	fips29165
+ReportingUnit	Missouri;Polk County	Polk
+ReportingUnit	Missouri;Polk County	fips29167
+ReportingUnit	Missouri;Pulaski County	Pulaski
+ReportingUnit	Missouri;Pulaski County	fips29169
+ReportingUnit	Missouri;Putnam County	Putnam
+ReportingUnit	Missouri;Putnam County	fips29171
+ReportingUnit	Missouri;Ralls County	Ralls
+ReportingUnit	Missouri;Ralls County	fips29173
+ReportingUnit	Missouri;Randolph County	Randolph
+ReportingUnit	Missouri;Randolph County	fips29175
+ReportingUnit	Missouri;Ray County	Ray
+ReportingUnit	Missouri;Ray County	fips29177
+ReportingUnit	Missouri;Reynolds County	Reynolds
+ReportingUnit	Missouri;Reynolds County	fips29179
+ReportingUnit	Missouri;Ripley County	Ripley
+ReportingUnit	Missouri;Ripley County	fips29181
+ReportingUnit	Missouri;Saline County	Saline
+ReportingUnit	Missouri;Saline County	fips29195
+ReportingUnit	Missouri;Schuyler County	Schuyler
+ReportingUnit	Missouri;Schuyler County	fips29197
+ReportingUnit	Missouri;Scotland County	Scotland
+ReportingUnit	Missouri;Scotland County	fips29199
+ReportingUnit	Missouri;Scott County	Scott
+ReportingUnit	Missouri;Scott County	fips29201
+ReportingUnit	Missouri;Shannon County	Shannon
+ReportingUnit	Missouri;Shannon County	fips29203
+ReportingUnit	Missouri;Shelby County	Shelby
+ReportingUnit	Missouri;Shelby County	fips29205
+ReportingUnit	Missouri;St. Charles County	St. Charles
+ReportingUnit	Missouri;St. Charles County	fips29183
+ReportingUnit	Missouri;St. Clair County	St. Clair
+ReportingUnit	Missouri;St. Clair County	fips29185
+ReportingUnit	Missouri;St. Francois County	St. Francois
+ReportingUnit	Missouri;St. Francois County	fips29187
+ReportingUnit	Missouri;St. Louis City County	St. Louis City
+ReportingUnit	Missouri;St. Louis County	St. Louis
+ReportingUnit	Missouri;St. Louis County	fips29189
+ReportingUnit	Missouri;St. Louis city	fips29510
+ReportingUnit	Missouri;Ste. Genevieve County	Ste. Genevieve
+ReportingUnit	Missouri;Ste. Genevieve County	fips29186
+ReportingUnit	Missouri;Stoddard County	Stoddard
+ReportingUnit	Missouri;Stoddard County	fips29207
+ReportingUnit	Missouri;Stone County	Stone
+ReportingUnit	Missouri;Stone County	fips29209
+ReportingUnit	Missouri;Sullivan County	Sullivan
+ReportingUnit	Missouri;Sullivan County	fips29211
+ReportingUnit	Missouri;Taney County	Taney
+ReportingUnit	Missouri;Taney County	fips29213
+ReportingUnit	Missouri;Texas County	Texas
+ReportingUnit	Missouri;Texas County	fips29215
 ReportingUnit	Missouri;US House MO District 1	Missouri;US House MO District 1
 ReportingUnit	Missouri;US House MO District 2	Missouri;US House MO District 2
 ReportingUnit	Missouri;US House MO District 3	Missouri;US House MO District 3
@@ -587,417 +1121,17 @@ ReportingUnit	Missouri;US House MO District 5	Missouri;US House MO District 5
 ReportingUnit	Missouri;US House MO District 6	Missouri;US House MO District 6
 ReportingUnit	Missouri;US House MO District 7	Missouri;US House MO District 7
 ReportingUnit	Missouri;US House MO District 8	Missouri;US House MO District 8
-ReportingUnit	Missouri	Missouri
-Party	Green Party	GRE
-Party	Libertarian Party	LIB
-Party	Write-in	WI
-Party	Democratic Party	DEM
-Party	Republican Party	REP
-Party	Constitution Party	CST
-Party	Independent	IND
-Candidate	Write-Ins	Write-Ins
-Candidate	Nicole Galloway	Nicole Galloway
-Candidate	Megan Rezabek	Megan Rezabek
-Candidate	Paul Lehmann	Paul Lehmann
-Candidate	Bill Slantz	Bill Slantz
-Candidate	Deb Lavender	Deb Lavender
-Candidate	Alex Furman	Alex Furman
-Candidate	John R. Jay Ashcroft	John R. Jay Ashcroft
-Candidate	Martin D Baker	Martin D Baker
-Candidate	Robin Dominick	Robin Dominick
-Candidate	Steven K. Koonse	Steven K. Koonse
-Candidate	Kevin C Babcock	Kevin C Babcock
-Candidate	Billy Ballard	Billy Ballard
-Candidate	Gena L. Ross	Gena L. Ross
-Candidate	Audrey Richards	Audrey Richards
-Candidate	Mark Bliss	Mark Bliss
-Candidate	Caleb Rowden	Caleb Rowden
-Candidate	Kevin Craig	Kevin Craig
-Candidate	Kasey Wells Rachel Wells	Kasey Wells Rachel Wells
-Candidate	Joseph R. Biden Kamala D. Harris	Joseph R. Biden Kamala D. Harris
-Candidate	Jason Bean	Jason Bean
-Candidate	Alissia Canady	Alissia Canady
-Candidate	Carl Herman Freese	Carl Herman Freese
-Candidate	Jo Jorgensen Jeremy Spike Cohen	Jo Jorgensen Jeremy Spike Cohen
-Candidate	Jim Higgins	Jim Higgins
-Candidate	Jerome Howard Bauer	Jerome Howard Bauer
-Candidate	Greg Razer	Greg Razer
-Candidate	Michael Hebron	Michael Hebron
-Candidate	Cori Bush	Cori Bush
-Candidate	Elaine Freeman Gannon	Elaine Freeman Gannon
-Candidate	Dennis Davis	Dennis Davis
-Candidate	Kelley Dragoo	Kelley Dragoo
-Candidate	Denny Hoskins	Denny Hoskins
-Candidate	Jorge Fuller	Jorge Fuller
-Candidate	Gloria LaRiva Sunil Freeman	Gloria LaRiva Sunil Freeman
-Candidate	Theo Ted Brown Sr	Theo Ted Brown Sr
-Candidate	Emmanuel Dorn	Emmanuel Dorn
-Candidate	Karla Eslinger	Karla Eslinger
-Candidate	Scott Fitzpatrick	Scott Fitzpatrick
-Candidate	Angela Walton Mosley	Angela Walton Mosley
-Candidate	Mickey Younghanz	Mickey Younghanz
-Candidate	Martin Lindstedt	Martin Lindstedt
-Candidate	Rich Finneran	Rich Finneran
-Candidate	Gina Bufe	Gina Bufe
-Candidate	Martin Schulte	Martin Schulte
-Candidate	Howie Hawkins Angela Nicole Walker	Howie Hawkins Angela Nicole Walker
-Candidate	David Lenihan	David Lenihan
-Candidate	Raymond Kinney	Raymond Kinney
-Candidate	Sam Graves	Sam Graves
-Candidate	Eric Schmitt	Eric Schmitt
-Candidate	Mike Parson	Mike Parson
-Candidate	Lauren Arthur	Lauren Arthur
-Candidate	Jill Schupp	Jill Schupp
-Candidate	Mike Moon	Mike Moon
-Candidate	Nicholas Nick Kasoff	Nicholas Nick Kasoff
-Candidate	Mike Kehoe	Mike Kehoe
-Candidate	David Martin	David Martin
-Candidate	Paul Venable	Paul Venable
-Candidate	Jason Smith	Jason Smith
-Candidate	Teresa Montseny	Teresa Montseny
-Candidate	Jeff Coleman	Jeff Coleman
-Candidate	Nathan Kline	Nathan Kline
-Candidate	Tiffany Poke	Tiffany Poke
-Candidate	Ryan Derks	Ryan Derks
-Candidate	Judy Baker	Judy Baker
-Candidate	Barbara Anne Washington	Barbara Anne Washington
-Candidate	Blaine Luetkemeyer	Blaine Luetkemeyer
-Candidate	Bill Eigel	Bill Eigel
-Candidate	Kathy Ellis	Kathy Ellis
-Candidate	Don Blankenship William Mohr	Don Blankenship William Mohr
-Candidate	Donald J. Trump Michael R. Pence	Donald J. Trump Michael R. Pence
-Candidate	Emanuel Cleaver II	Emanuel Cleaver II
-Candidate	Yinka Faleti	Yinka Faleti
-Candidate	John Joseph Rizzo	John Joseph Rizzo
-Candidate	Leonard J Steinman II	Leonard J Steinman II
-Candidate	Joseph Civettini	Joseph Civettini
-Candidate	Tammy Harty	Tammy Harty
-Candidate	Jeremy Gundel	Jeremy Gundel
-Candidate	Antwain Winters	Antwain Winters
-Candidate	Donnie Owens	Donnie Owens
-Candidate	Vicky Hartzler	Vicky Hartzler
-Candidate	Richard Orr	Richard Orr
-Candidate	Arnie C. AC Dienoff	Arnie C. AC Dienoff
-Candidate	Andrew Koenig	Andrew Koenig
-Candidate	Steve Roberts	Steve Roberts
-Candidate	Billy Long	Billy Long
-Candidate	Vicki Lorenz Englund	Vicki Lorenz Englund
-Candidate	Anthony Rogers	Anthony Rogers
-Candidate	Holly Rehder	Holly Rehder
-Candidate	Lindsey Simmons	Lindsey Simmons
-Candidate	James Coyne	James Coyne
-Candidate	Tom Schmitz	Tom Schmitz
-Candidate	Thomas Tom Clapp	Thomas Tom Clapp
-Candidate	Ann Wagner	Ann Wagner
-Candidate	Jade Simmons Claudeliah J. Roze	Jade Simmons Claudeliah J. Roze
-Candidate	Rik Combs	Rik Combs
-Candidate	Doug Beck	Doug Beck
-Candidate	Brian Carroll Amar Patel	Brian Carroll Amar Patel
-Candidate	Rick Brattin	Rick Brattin
-Candidate	Yolanda Young	Yolanda Young
-Candidate	William Truman Bill Wayne	William Truman Bill Wayne
-Candidate	William Bill Betteridge	William Bill Betteridge
-Candidate	Willard Haley	Willard Haley
-Candidate	Wiley Chip Price IV	Wiley Chip Price IV
-Candidate	Wes Rogers	Wes Rogers
-Candidate	Wade Hugh Kiefer	Wade Hugh Kiefer
-Candidate	Victoria Witt Datt	Victoria Witt Datt
-Candidate	Vicki Riley	Vicki Riley
-Candidate	Vic Abundis	Vic Abundis
-Candidate	Trish Gunby	Trish Gunby
-Candidate	Travis Smith	Travis Smith
-Candidate	Travis Fitzwater	Travis Fitzwater
-Candidate	Tracy McCreery	Tracy McCreery
-Candidate	Tracy Grundy	Tracy Grundy
-Candidate	Tony Lovasco	Tony Lovasco
-Candidate	Tom Hannegan	Tom Hannegan
-Candidate	Timothy Gartin	Timothy Gartin
-Candidate	Tim Taylor	Tim Taylor
-Candidate	Terry Thompson	Terry Thompson
-Candidate	Terrence Fiala	Terrence Fiala
-Candidate	Susan Shumway	Susan Shumway
-Candidate	Steve West	Steve West
-Candidate	Steve Butz	Steve Butz
-Candidate	Stephen R. Johnson	Stephen R. Johnson
-Candidate	Sean Smith	Sean Smith
-Candidate	Sean Pouche	Sean Pouche
-Candidate	Scott E. Cazadd	Scott E. Cazadd
-Candidate	Scott Cupps	Scott Cupps
-Candidate	Sarah Unsicker	Sarah Unsicker
-Candidate	Sara Walsh	Sara Walsh
-Candidate	Rusty Black	Rusty Black
-Candidate	Rudy Veit	Rudy Veit
-Candidate	Rory Rowland	Rory Rowland
-Candidate	Ron Hicks	Ron Hicks
-Candidate	Rodger L. Reedy	Rodger L. Reedy
-Candidate	Robert Sauls	Robert Sauls
-Candidate	Robert J. Crump	Robert J. Crump
-Candidate	Rick Roeber	Rick Roeber
-Candidate	Richard W West	Richard W West
-Candidate	Richard McKie	Richard McKie
-Candidate	Richard Brown	Richard Brown
-Candidate	Rhonda R Dolan	Rhonda R Dolan
-Candidate	Raychel C Proudie	Raychel C Proudie
-Candidate	Rasheen Aldridge Jr	Rasheen Aldridge Jr
-Candidate	Randy Railsback	Randy Railsback
-Candidate	Randy Pietzman	Randy Pietzman
-Candidate	Phil Christofanelli	Phil Christofanelli
-Candidate	Peter Merideth	Peter Merideth
-Candidate	Peggy McGaugh	Peggy McGaugh
-Candidate	Paula Brown	Paula Brown
-Candidate	Patty Lewis	Patty Lewis
-Candidate	Nola Wood	Nola Wood
-Candidate	Nick Schroer	Nick Schroer
-Candidate	Neil Smith	Neil Smith
-Candidate	Neal Barnes	Neal Barnes
-Candidate	Nancy J. Ragan	Nancy J. Ragan
-Candidate	Mitch Boggs	Mitch Boggs
-Candidate	Mindi Smith	Mindi Smith
-Candidate	Mike Person	Mike Person
-Candidate	Mike Lind	Mike Lind
-Candidate	Mike Haffner	Mike Haffner
-Candidate	Mike Englert	Mike Englert
-Candidate	Mike Copeland	Mike Copeland
-Candidate	Michael L. Johnson	Michael L. Johnson
-Candidate	Michael Davis	Michael Davis
-Candidate	Michael Burton	Michael Burton
-Candidate	Michael A. O Donnell	Michael A. O Donnell
-Candidate	Mary Elizabeth Coleman	Mary Elizabeth Coleman
-Candidate	Martha Stevens	Martha Stevens
-Candidate	Marlon Anderson	Marlon Anderson
-Candidate	Marlene Terry	Marlene Terry
-Candidate	Mark Ellebracht	Mark Ellebracht
-Candidate	Mark A. Sharp	Mark A. Sharp
-Candidate	Maggie Nurrenbern	Maggie Nurrenbern
-Candidate	Luke Barber	Luke Barber
-Candidate	Louis Riggs	Louis Riggs
-Candidate	Lisa Rees	Lisa Rees
-Candidate	Lee Ann Pitman	Lee Ann Pitman
-Candidate	Lane Roberts	Lane Roberts
-Candidate	LaKeySha Bosley	LaKeySha Bosley
-Candidate	LaDonna Appelbaum	LaDonna Appelbaum
-Candidate	Kurtis Gregory	Kurtis Gregory
-Candidate	Kip Kendrick	Kip Kendrick
-Candidate	Kimberly-Ann Collins	Kimberly-Ann Collins
-Candidate	Kevin Windham Jr.	Kevin Windham Jr.
-Candidate	Keri Ingle	Keri Ingle
-Candidate	Kent Haden	Kent Haden
-Candidate	Kari L. Chesney	Kari L. Chesney
-Candidate	Karen Planalp	Karen Planalp
-Candidate	Karan Pujji	Karan Pujji
-Candidate	Justin S. Hill	Justin S. Hill
-Candidate	Joshua Shackles	Joshua Shackles
-Candidate	Joshua Dunne	Joshua Dunne
-Candidate	Josh Hurlbert	Josh Hurlbert
-Candidate	Jon Patterson	Jon Patterson
-Candidate	John Simmons	John Simmons
-Candidate	John Kiehne	John Kiehne
-Candidate	John D. Wiemann	John D. Wiemann
-Candidate	John D. Boyd Jr.	John D. Boyd Jr.
-Candidate	Joe Adams	Joe Adams
-Candidate	Jo Doll	Jo Doll
-Candidate	Jim Murphy	Jim Murphy
-Candidate	Jessica DeVoto	Jessica DeVoto
-Candidate	Jerry Adzima	Jerry Adzima
-Candidate	Jerome Barnes	Jerome Barnes
-Candidate	Jeff Porter	Jeff Porter
-Candidate	Jean Pretto	Jean Pretto
-Candidate	Jay Mosley	Jay Mosley
-Candidate	James Williams	James Williams
-Candidate	James Shackelford	James Shackelford
-Candidate	Jacque Sample	Jacque Sample
-Candidate	J. Eggleston	J. Eggleston
-Candidate	Ingrid Burnett	Ingrid Burnett
-Candidate	Ian Mackey	Ian Mackey
-Candidate	Herman Morse	Herman Morse
-Candidate	Helena Webb	Helena Webb
-Candidate	Hardy Billington	Hardy Billington
-Candidate	Gretchen Bangert	Gretchen Bangert
-Candidate	Greg Sharpe	Greg Sharpe
-Candidate	Gabriel Jones	Gabriel Jones
-Candidate	Erica Hoffman	Erica Hoffman
-Candidate	Eric Holmes	Eric Holmes
-Candidate	Emily Weber	Emily Weber
-Candidate	Ed Lewis	Ed Lewis
-Candidate	Doug Richey	Doug Richey
-Candidate	Doug Clemens	Doug Clemens
-Candidate	Dottie Bailey	Dottie Bailey
-Candidate	Donna M.C. Baringer	Donna M.C. Baringer
-Candidate	Don Rone	Don Rone
-Candidate	Dirk Deaton	Dirk Deaton
-Candidate	Derek Grier	Derek Grier
-Candidate	Dean VanSchoiack	Dean VanSchoiack
-Candidate	Dean Plocher	Dean Plocher
-Candidate	David Paul Evans	David Paul Evans
-Candidate	David J Gregory	David J Gregory
-Candidate	Dave Griffith	Dave Griffith
-Candidate	Darren L. Grant	Darren L. Grant
-Candidate	Darrell Atchison	Darrell Atchison
-Candidate	Danny Busick	Danny Busick
-Candidate	Daniel Karam	Daniel Karam
-Candidate	Dan Stacy	Dan Stacy
-Candidate	Dan Houx	Dan Houx
-Candidate	Dale Speelman	Dale Speelman
-Candidate	Connie Simmons	Connie Simmons
-Candidate	Colby Murphy	Colby Murphy
-Candidate	Cody Smith	Cody Smith
-Candidate	Cindy Berne	Cindy Berne
-Candidate	Christine Hyman	Christine Hyman
-Candidate	Chris Sander	Chris Sander
-Candidate	Chris Hager	Chris Hager
-Candidate	Chris Brown	Chris Brown
-Candidate	Cheri Toalson Reisch	Cheri Toalson Reisch
-Candidate	Charles Chuck Basye	Charles Chuck Basye
-Candidate	Chad Perkins	Chad Perkins
-Candidate	Cameron Pack	Cameron Pack
-Candidate	Bruce Sassmann	Bruce Sassmann
-Candidate	Bruce DeGroot	Bruce DeGroot
-Candidate	Bridget Walsh Moore	Bridget Walsh Moore
-Candidate	Brian H. Seitz	Brian H. Seitz
-Candidate	Brenda Shields	Brenda Shields
-Candidate	Brenda McKinney	Brenda McKinney
-Candidate	Brandt Vircks	Brandt Vircks
-Candidate	Brady Lee ODell	Brady Lee ODell
-Candidate	Bradley Pollitt	Bradley Pollitt
-Candidate	Bob Bromley	Bob Bromley
-Candidate	Bill Otto	Bill Otto
-Candidate	Bill Heisse	Bill Heisse
-Candidate	Bill Falkner	Bill Falkner
-Candidate	Bill E. Kidd	Bill E. Kidd
-Candidate	Ben Baker	Ben Baker
-Candidate	Barbara Phifer	Barbara Phifer
-Candidate	Ashley Bland Manlove	Ashley Bland Manlove
-Candidate	Ashley Aune	Ashley Aune
-Candidate	Art Schaaf	Art Schaaf
-Candidate	Annette Turnbaugh	Annette Turnbaugh
-Candidate	Anne Landers	Anne Landers
-Candidate	Ann L Zimpfer	Ann L Zimpfer
-Candidate	Angela Thomas	Angela Thomas
-Candidate	Andrew Miller	Andrew Miller
-Candidate	Andrew McDaniel	Andrew McDaniel
-Candidate	Andrew Bolin	Andrew Bolin
-Candidate	Allen Andrews	Allen Andrews
-Candidate	Alan Gray	Alan Gray
-Candidate	Adrian Plank	Adrian Plank
-Candidate	Adam Schwadron	Adam Schwadron
-Candidate	Adam Schnelting	Adam Schnelting
-Candidate	Aaron Hailey	Aaron Hailey
-Candidate	Aaron D. Griesheimer	Aaron D. Griesheimer
-Candidate	Aaron C. Mais	Aaron C. Mais
-Candidate	Aaliyah Bailey	Aaliyah Bailey
-ReportingUnit	Missouri;Adair County	Adair
-ReportingUnit	Missouri;Andrew County	Andrew
-ReportingUnit	Missouri;Atchison County	Atchison
-ReportingUnit	Missouri;Audrain County	Audrain
-ReportingUnit	Missouri;Barry County	Barry
-ReportingUnit	Missouri;Barton County	Barton
-ReportingUnit	Missouri;Bates County	Bates
-ReportingUnit	Missouri;Benton County	Benton
-ReportingUnit	Missouri;Bollinger County	Bollinger
-ReportingUnit	Missouri;Boone County	Boone
-ReportingUnit	Missouri;Buchanan County	Buchanan
-ReportingUnit	Missouri;Butler County	Butler
-ReportingUnit	Missouri;Caldwell County	Caldwell
-ReportingUnit	Missouri;Callaway County	Callaway
-ReportingUnit	Missouri;Camden County	Camden
-ReportingUnit	Missouri;Cape Girardeau County	Cape Girardeau
-ReportingUnit	Missouri;Carroll County	Carroll
-ReportingUnit	Missouri;Carter County	Carter
-ReportingUnit	Missouri;Cass County	Cass
-ReportingUnit	Missouri;Cedar County	Cedar
-ReportingUnit	Missouri;Chariton County	Chariton
-ReportingUnit	Missouri;Christian County	Christian
-ReportingUnit	Missouri;Clark County	Clark
-ReportingUnit	Missouri;Clay County	Clay
-ReportingUnit	Missouri;Clinton County	Clinton
-ReportingUnit	Missouri;Cole County	Cole
-ReportingUnit	Missouri;Cooper County	Cooper
-ReportingUnit	Missouri;Crawford County	Crawford
-ReportingUnit	Missouri;Dade County	Dade
-ReportingUnit	Missouri;Dallas County	Dallas
-ReportingUnit	Missouri;Daviess County	Daviess
-ReportingUnit	Missouri;De Kalb County	De Kalb
-ReportingUnit	Missouri;Dent County	Dent
-ReportingUnit	Missouri;Douglas County	Douglas
-ReportingUnit	Missouri;Dunklin County	Dunklin
-ReportingUnit	Missouri;Franklin County	Franklin
-ReportingUnit	Missouri;Gasconade County	Gasconade
-ReportingUnit	Missouri;Gentry County	Gentry
-ReportingUnit	Missouri;Greene County	Greene
-ReportingUnit	Missouri;Grundy County	Grundy
-ReportingUnit	Missouri;Harrison County	Harrison
-ReportingUnit	Missouri;Henry County	Henry
-ReportingUnit	Missouri;Hickory County	Hickory
-ReportingUnit	Missouri;Holt County	Holt
-ReportingUnit	Missouri;Howard County	Howard
-ReportingUnit	Missouri;Howell County	Howell
-ReportingUnit	Missouri;Iron County	Iron
-ReportingUnit	Missouri;Jackson County	Jackson
-ReportingUnit	Missouri;Jasper County	Jasper
-ReportingUnit	Missouri;Jefferson County	Jefferson
-ReportingUnit	Missouri;Johnson County	Johnson
-ReportingUnit	Missouri;Kansas City County	Kansas City
-ReportingUnit	Missouri;Knox County	Knox
-ReportingUnit	Missouri;Laclede County	Laclede
-ReportingUnit	Missouri;Lafayette County	Lafayette
-ReportingUnit	Missouri;Lawrence County	Lawrence
-ReportingUnit	Missouri;Lewis County	Lewis
-ReportingUnit	Missouri;Lincoln County	Lincoln
-ReportingUnit	Missouri;Linn County	Linn
-ReportingUnit	Missouri;Livingston County	Livingston
-ReportingUnit	Missouri;Macon County	Macon
-ReportingUnit	Missouri;Madison County	Madison
-ReportingUnit	Missouri;Maries County	Maries
-ReportingUnit	Missouri;Marion County	Marion
-ReportingUnit	Missouri;McDonald County	McDonald
-ReportingUnit	Missouri;Mercer County	Mercer
-ReportingUnit	Missouri;Miller County	Miller
-ReportingUnit	Missouri;Mississippi County	Mississippi
-ReportingUnit	Missouri;Moniteau County	Moniteau
-ReportingUnit	Missouri;Monroe County	Monroe
-ReportingUnit	Missouri;Montgomery County	Montgomery
-ReportingUnit	Missouri;Morgan County	Morgan
-ReportingUnit	Missouri;New Madrid County	New Madrid
-ReportingUnit	Missouri;Newton County	Newton
-ReportingUnit	Missouri;Nodaway County	Nodaway
-ReportingUnit	Missouri;Oregon County	Oregon
-ReportingUnit	Missouri;Osage County	Osage
-ReportingUnit	Missouri;Ozark County	Ozark
-ReportingUnit	Missouri;Pemiscot County	Pemiscot
-ReportingUnit	Missouri;Perry County	Perry
-ReportingUnit	Missouri;Pettis County	Pettis
-ReportingUnit	Missouri;Phelps County	Phelps
-ReportingUnit	Missouri;Pike County	Pike
-ReportingUnit	Missouri;Platte County	Platte
-ReportingUnit	Missouri;Polk County	Polk
-ReportingUnit	Missouri;Pulaski County	Pulaski
-ReportingUnit	Missouri;Putnam County	Putnam
-ReportingUnit	Missouri;Ralls County	Ralls
-ReportingUnit	Missouri;Randolph County	Randolph
-ReportingUnit	Missouri;Ray County	Ray
-ReportingUnit	Missouri;Reynolds County	Reynolds
-ReportingUnit	Missouri;Ripley County	Ripley
-ReportingUnit	Missouri;Saline County	Saline
-ReportingUnit	Missouri;Schuyler County	Schuyler
-ReportingUnit	Missouri;Scotland County	Scotland
-ReportingUnit	Missouri;Scott County	Scott
-ReportingUnit	Missouri;Shannon County	Shannon
-ReportingUnit	Missouri;Shelby County	Shelby
-ReportingUnit	Missouri;St. Charles County	St. Charles
-ReportingUnit	Missouri;St. Clair County	St. Clair
-ReportingUnit	Missouri;St. Francois County	St. Francois
-ReportingUnit	Missouri;St. Louis County	St. Louis
-ReportingUnit	Missouri;St. Louis City County	St. Louis City
-ReportingUnit	Missouri;Ste. Genevieve County	Ste. Genevieve
-ReportingUnit	Missouri;Stoddard County	Stoddard
-ReportingUnit	Missouri;Stone County	Stone
-ReportingUnit	Missouri;Sullivan County	Sullivan
-ReportingUnit	Missouri;Taney County	Taney
-ReportingUnit	Missouri;Texas County	Texas
 ReportingUnit	Missouri;Vernon County	Vernon
+ReportingUnit	Missouri;Vernon County	fips29217
 ReportingUnit	Missouri;Warren County	Warren
+ReportingUnit	Missouri;Warren County	fips29219
 ReportingUnit	Missouri;Washington County	Washington
+ReportingUnit	Missouri;Washington County	fips29221
 ReportingUnit	Missouri;Wayne County	Wayne
+ReportingUnit	Missouri;Wayne County	fips29223
 ReportingUnit	Missouri;Webster County	Webster
+ReportingUnit	Missouri;Webster County	fips29225
 ReportingUnit	Missouri;Worth County	Worth
+ReportingUnit	Missouri;Worth County	fips29227
 ReportingUnit	Missouri;Wright County	Wright
+ReportingUnit	Missouri;Wright County	fips29229

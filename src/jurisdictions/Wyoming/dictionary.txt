@@ -1,13 +1,139 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	Aaron Clausen	Aaron Clausen
+Candidate	Affie Ellis	Affie Ellis
+Candidate	Al Gore	AL GORE
+Candidate	Albert Sommers	Albert Sommers
+Candidate	Amy Spieker	Amy Spieker
+Candidate	Andi Clifford	Andi Clifford
+Candidate	Andy Schwartz	Andy Schwartz
+Candidate	Anthony Bouchard	Anthony Bouchard
+Candidate	Art Washut	Art Washut
+Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barry Crago	Barry Crago
+Candidate	Bethany Baldes	Bethany Baldes
+Candidate	Bill Fortner	Bill Fortner
+Candidate	Bill Henderson	Bill Henderson
+Candidate	Bill Winney	Bill Winney
+Candidate	Bob Nicholas	Bob Nicholas
+Candidate	Brian Boner	Brian Boner
+Candidate	Britney Wallesch	Britney Wallesch
+Candidate	Brock Pierce	Brock Pierce and Karla Ballard
+Candidate	Cathy Connolly	Cathy Connolly
+Candidate	Chad M. Banks	Chad M. Banks
+Candidate	Charles K. Scott	Charles K. Scott
+Candidate	Chip Neiman	Chip Neiman
+Candidate	Chuck Gray	Chuck Gray
+Candidate	Cindy Johnson Bennett	Cindy Johnson Bennett
+Candidate	Clarence Styvar	Clarence Styvar
+Candidate	Clark Stith	Clark Stith
+Candidate	Clinton D Wagon	Clinton D Wagon
+Candidate	Cynthia M. Lummis	Cynthia M. Lummis
+Candidate	Cyrus Western	Cyrus Western
+Candidate	Dan Dockstader	Dan Dockstader
+Candidate	Dan Laursen	Dan Laursen
+Candidate	Dan Zwonitzer	Dan Zwonitzer
+Candidate	Daniel Furphy	Daniel Furphy
+Candidate	Danny Eyre	Danny Eyre
+Candidate	Dave Kinskey	Dave Kinskey
+Candidate	Donald Burkhart	Donald Burkhart
+Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump and Michael R. Pence
+Candidate	Ed Cooper	Ed Cooper
+Candidate	Ember Oakley	Ember Oakley
+Candidate	Eric Barlow	Eric Barlow
+Candidate	Evan J. Simpson	Evan J. Simpson
+Candidate	Fred Baldwin	Fred Baldwin
+Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	Hans Hunt	Hans Hunt
+Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Jackie Grimes	Jackie Grimes
+Candidate	Jacquelin Wells	Jacquelin Wells
+Candidate	James Byrd	James Byrd
+Candidate	Jamie Flitner	Jamie Flitner
+Candidate	Jane Ifland	Jane Ifland
+Candidate	Jared Olsen	Jared Olsen
+Candidate	Jeff Haggit	Jeff Haggit
+Candidate	Jeremy Haroldson	Jeremy Haroldson
+Candidate	Jerry Obermueller	Jerry Obermueller
+Candidate	Jerry Paxton	Jerry Paxton
+Candidate	Jim Anderson	Jim Anderson
+Candidate	Jim Blackburn	Jim Blackburn
+Candidate	Jim Rosco	Jim Rosco
+Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy 'Spike' Cohen
+Candidate	Joe MacGuire	Joe MacGuire
+Candidate	John B. Romero-Martinez	John B. Romero-Martinez
+Candidate	John Bear	John Bear
+Candidate	John Eklund	John Eklund
+Candidate	John K. Kolb	John K. Kolb
+Candidate	John Kerry	JOHN KERRY
+Candidate	John McCain	JOHN MCCAIN
+Candidate	John R. Winter	John R. Winter
+Candidate	Joseph R. Biden	Joseph R. Biden and Kamala D. Harris
+Candidate	Joseph S. Porambo	Joseph S. Porambo
+Candidate	Karlee Provenza	Karlee Provenza
+Candidate	Kevin C. O'Hearn	Kevin C. O'Hearn
+Candidate	Kevin Wilson	Kevin Wilson
+Candidate	Landon J. Brown	Landon J. Brown
+Candidate	Lee Filer	Lee Filer
+Candidate	Lela Konecny	Lela Konecny
+Candidate	Levi J. Shinkle	Levi J. Shinkle
+Candidate	Liisa Anselmi-Dalton	Liisa Anselmi-Dalton
+Candidate	Lindsey Travis	Lindsey Travis
+Candidate	Liz Cheney	Liz Cheney
+Candidate	Lloyd Charles Larsen	Lloyd Charles Larsen
+Candidate	Lynne Huskinson	Lynne Huskinson
+Candidate	Lynnette Grey Bull	Lynnette Grey Bull
+Candidate	Marcie Kindred	Marcie Kindred
+Candidate	Mark Baker	Mark Baker
+Candidate	Mark Jennings	Mark Jennings
+Candidate	Mark S. Kinner	Mark S. Kinner
+Candidate	Marshall A. Burt	Marshall A. Burt
+Candidate	Matthew Burkhart	Matthew Burkhart
+Candidate	Merav Ben David	Merav Ben David
+Candidate	Mike A Gilmore	Mike A Gilmore
+Candidate	Mike Greear	Mike Greear
+Candidate	Mike Yin	Mike Yin
+Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Ocean Andrew	Ocean Andrew
+Candidate	Other	OTHER
+Candidate	Patrick 'Pat' Sweeney	Patrick 'Pat' Sweeney
+Candidate	Pepper L Ottman	Pepper L Ottman
+Candidate	Rachel Rodriguez-Williams	Rachel Rodriguez-Williams
+Candidate	Ralph Nader	RALPH NADER
+Candidate	Rebecca Fields	Rebecca Fields
+Candidate	Richard Brubaker	Richard Brubaker
+Candidate	Robert A. Wharff	Robert A. Wharff
+Candidate	Roxie Hensley	Roxie Hensley
+Candidate	Roy Edwards	Roy Edwards
+Candidate	Sandy Newsome	Sandy Newsome
+Candidate	Sara Burlingame	Sara Burlingame
+Candidate	Scott Heiner	Scott Heiner
+Candidate	Shawn Johnson	Shawn Johnson
+Candidate	Shelly Duncan	Shelly Duncan
+Candidate	Stan Blake	Stan Blake
+Candidate	Steve Harshman	Steve Harshman
+Candidate	Sue Wilson	Sue Wilson
+Candidate	Tara Nethercott	Tara Nethercott
+Candidate	Theresa Livingston	Theresa Livingston
+Candidate	Tim Chesnut	Tim Chesnut
+Candidate	Tim French	Tim French
+Candidate	Tim Salazar	Tim Salazar
+Candidate	Timothy Hallinan	Timothy Hallinan
+Candidate	Tom Walters	Tom Walters
+Candidate	Trey Sherwood	Trey Sherwood
+Candidate	Troy D. McKeown	Troy D. McKeown
+Candidate	Undervotes.1	Undervotes.1
+Candidate	Valaira Whiteman	Valaira Whiteman
+Candidate	Wendy Degroot	Wendy Degroot
+Candidate	Write-Ins	Write-Ins
+CandidateContest	US House WY District 1	United States Representative
+CandidateContest	US President (WY)	PRESIDENT
+CandidateContest	US President (WY)	US PRESIDENT
+CandidateContest	US President (WY)	United States President
+CandidateContest	US Senate WY	United States Senator
+CandidateContest	WY Attorney General	WY Attorney General
+CandidateContest	WY Governor	WY Governor
 CandidateContest	WY House District 1	House District 1
-CandidateContest	WY House District 2	House District 2
-CandidateContest	WY House District 3	House District 3
-CandidateContest	WY House District 4	House District 4
-CandidateContest	WY House District 5	House District 5
-CandidateContest	WY House District 6	House District 6
-CandidateContest	WY House District 7	House District 7
-CandidateContest	WY House District 8	House District 8
-CandidateContest	WY House District 9	House District 9
 CandidateContest	WY House District 10	House District 10
 CandidateContest	WY House District 11	House District 11
 CandidateContest	WY House District 12	House District 12
@@ -18,6 +144,7 @@ CandidateContest	WY House District 16	House District 16
 CandidateContest	WY House District 17	House District 17
 CandidateContest	WY House District 18	House District 18
 CandidateContest	WY House District 19	House District 19
+CandidateContest	WY House District 2	House District 2
 CandidateContest	WY House District 20	House District 20
 CandidateContest	WY House District 21	House District 21
 CandidateContest	WY House District 22	House District 22
@@ -28,6 +155,7 @@ CandidateContest	WY House District 26	House District 26
 CandidateContest	WY House District 27	House District 27
 CandidateContest	WY House District 28	House District 28
 CandidateContest	WY House District 29	House District 29
+CandidateContest	WY House District 3	House District 3
 CandidateContest	WY House District 30	House District 30
 CandidateContest	WY House District 31	House District 31
 CandidateContest	WY House District 32	House District 32
@@ -38,6 +166,7 @@ CandidateContest	WY House District 36	House District 36
 CandidateContest	WY House District 37	House District 37
 CandidateContest	WY House District 38	House District 38
 CandidateContest	WY House District 39	House District 39
+CandidateContest	WY House District 4	House District 4
 CandidateContest	WY House District 40	House District 40
 CandidateContest	WY House District 41	House District 41
 CandidateContest	WY House District 42	House District 42
@@ -48,6 +177,7 @@ CandidateContest	WY House District 46	House District 46
 CandidateContest	WY House District 47	House District 47
 CandidateContest	WY House District 48	House District 48
 CandidateContest	WY House District 49	House District 49
+CandidateContest	WY House District 5	House District 5
 CandidateContest	WY House District 50	House District 50
 CandidateContest	WY House District 51	House District 51
 CandidateContest	WY House District 52	House District 52
@@ -58,16 +188,14 @@ CandidateContest	WY House District 56	House District 56
 CandidateContest	WY House District 57	House District 57
 CandidateContest	WY House District 58	House District 58
 CandidateContest	WY House District 59	House District 59
+CandidateContest	WY House District 6	House District 6
 CandidateContest	WY House District 60	House District 60
+CandidateContest	WY House District 7	House District 7
+CandidateContest	WY House District 8	House District 8
+CandidateContest	WY House District 9	House District 9
+CandidateContest	WY Lieutenant Governor	WY Lieutenant Governor
+CandidateContest	WY Secretary of State	WY Secretary of State
 CandidateContest	WY Senate District 1	Senate District 1
-CandidateContest	WY Senate District 2	Senate District 2
-CandidateContest	WY Senate District 3	Senate District 3
-CandidateContest	WY Senate District 4	Senate District 4
-CandidateContest	WY Senate District 5	Senate District 5
-CandidateContest	WY Senate District 6	Senate District 6
-CandidateContest	WY Senate District 7	Senate District 7
-CandidateContest	WY Senate District 8	Senate District 8
-CandidateContest	WY Senate District 9	Senate District 9
 CandidateContest	WY Senate District 10	Senate District 10
 CandidateContest	WY Senate District 11	Senate District 11
 CandidateContest	WY Senate District 12	Senate District 12
@@ -78,6 +206,7 @@ CandidateContest	WY Senate District 16	Senate District 16
 CandidateContest	WY Senate District 17	Senate District 17
 CandidateContest	WY Senate District 18	Senate District 18
 CandidateContest	WY Senate District 19	Senate District 19
+CandidateContest	WY Senate District 2	Senate District 2
 CandidateContest	WY Senate District 20	Senate District 20
 CandidateContest	WY Senate District 21	Senate District 21
 CandidateContest	WY Senate District 22	Senate District 22
@@ -88,163 +217,75 @@ CandidateContest	WY Senate District 26	Senate District 26
 CandidateContest	WY Senate District 27	Senate District 27
 CandidateContest	WY Senate District 28	Senate District 28
 CandidateContest	WY Senate District 29	Senate District 29
+CandidateContest	WY Senate District 3	Senate District 3
 CandidateContest	WY Senate District 30	Senate District 30
-CandidateContest	US House WY District 1	United States Representative
-CandidateContest	US President (WY)	United States President
-CandidateContest	WY Governor	WY Governor
-CandidateContest	US Senate WY	United States Senator
-CandidateContest	WY Attorney General	WY Attorney General
-CandidateContest	WY Lieutenant Governor	WY Lieutenant Governor
+CandidateContest	WY Senate District 4	Senate District 4
+CandidateContest	WY Senate District 5	Senate District 5
+CandidateContest	WY Senate District 6	Senate District 6
+CandidateContest	WY Senate District 7	Senate District 7
+CandidateContest	WY Senate District 8	Senate District 8
+CandidateContest	WY Senate District 9	Senate District 9
 CandidateContest	WY Treasurer	WY Treasurer
-CandidateContest	WY Secretary of State	WY Secretary of State
+CountItemType	total	TOTAL
+Election	2016 General	2016 General
+Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
-Election	2018 General	2018 General
-Election	2016 General	2016 General
-Party	Democratic Party	D
-Party	Republican Party	R
-Party	Green Party	Green Party
-Party	Libertarian Party	L
 Party	Constitution Party	CONST
+Party	Democratic Party	D
+Party	Democratic Party	DEMOCRAT
+Party	Green Party	GREEN
+Party	Green Party	Green Party
 Party	Independent	I
+Party	Libertarian Party	L
+Party	Libertarian Party	LIBERTARIAN
+Party	Republican Party	R
+Party	Republican Party	REPUBLICAN
+Party	none or unknown	OTHER
 ReportingUnit	Wyoming	Wyoming
 ReportingUnit	Wyoming;Albany County	Albany
+ReportingUnit	Wyoming;Albany County	fips56001
 ReportingUnit	Wyoming;Big Horn County	Big Horn
+ReportingUnit	Wyoming;Big Horn County	fips56003
 ReportingUnit	Wyoming;Campbell County	Campbell
+ReportingUnit	Wyoming;Campbell County	fips56005
 ReportingUnit	Wyoming;Carbon County	Carbon
+ReportingUnit	Wyoming;Carbon County	fips56007
 ReportingUnit	Wyoming;Converse County	Converse
+ReportingUnit	Wyoming;Converse County	fips56009
 ReportingUnit	Wyoming;Crook County	Crook
+ReportingUnit	Wyoming;Crook County	fips56011
 ReportingUnit	Wyoming;Fremont County	Fremont
+ReportingUnit	Wyoming;Fremont County	fips56013
 ReportingUnit	Wyoming;Goshen County	Goshen
+ReportingUnit	Wyoming;Goshen County	fips56015
 ReportingUnit	Wyoming;Hot Springs County	Hot Springs
+ReportingUnit	Wyoming;Hot Springs County	fips56017
 ReportingUnit	Wyoming;Johnson County	Johnson
+ReportingUnit	Wyoming;Johnson County	fips56019
 ReportingUnit	Wyoming;Laramie County	Laramie
+ReportingUnit	Wyoming;Laramie County	fips56021
 ReportingUnit	Wyoming;Lincoln County	Lincoln
+ReportingUnit	Wyoming;Lincoln County	fips56023
 ReportingUnit	Wyoming;Natrona County	Natrona
+ReportingUnit	Wyoming;Natrona County	fips56025
 ReportingUnit	Wyoming;Niobrara County	Niobrara
+ReportingUnit	Wyoming;Niobrara County	fips56027
 ReportingUnit	Wyoming;Park County	Park
+ReportingUnit	Wyoming;Park County	fips56029
 ReportingUnit	Wyoming;Platte County	Platte
+ReportingUnit	Wyoming;Platte County	fips56031
 ReportingUnit	Wyoming;Sheridan County	Sheridan
+ReportingUnit	Wyoming;Sheridan County	fips56033
 ReportingUnit	Wyoming;Sublette County	Sublette
+ReportingUnit	Wyoming;Sublette County	fips56035
 ReportingUnit	Wyoming;Sweetwater County	Sweetwater
+ReportingUnit	Wyoming;Sweetwater County	fips56037
 ReportingUnit	Wyoming;Teton County	Teton
+ReportingUnit	Wyoming;Teton County	fips56039
 ReportingUnit	Wyoming;Uinta County	Uinta
+ReportingUnit	Wyoming;Uinta County	fips56041
 ReportingUnit	Wyoming;Washakie County	Washakie
+ReportingUnit	Wyoming;Washakie County	fips56043
 ReportingUnit	Wyoming;Weston County	Weston
-Candidate	Write-Ins	Write-Ins
-Candidate	Richard Brubaker	Richard Brubaker
-Candidate	Merav Ben David	Merav Ben David
-Candidate	Lynnette Grey Bull	Lynnette Grey Bull
-Candidate	Liz Cheney	Liz Cheney
-Candidate	Joseph R. Biden	Joseph R. Biden and Kamala D. Harris
-Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy 'Spike' Cohen
-Candidate	Jeff Haggit	Jeff Haggit
-Candidate	Donald J. Trump	Donald J. Trump and Michael R. Pence
-Candidate	Cynthia M. Lummis	Cynthia M. Lummis
-Candidate	Brock Pierce	Brock Pierce and Karla Ballard
-Candidate	Trey Sherwood	Trey Sherwood
-Candidate	Tom Walters	Tom Walters
-Candidate	Timothy Hallinan	Timothy Hallinan
-Candidate	Tim Chesnut	Tim Chesnut
-Candidate	Sue Wilson	Sue Wilson
-Candidate	Steve Harshman	Steve Harshman
-Candidate	Stan Blake	Stan Blake
-Candidate	Shelly Duncan	Shelly Duncan
-Candidate	Shawn Johnson	Shawn Johnson
-Candidate	Scott Heiner	Scott Heiner
-Candidate	Sara Burlingame	Sara Burlingame
-Candidate	Sandy Newsome	Sandy Newsome
-Candidate	Roy Edwards	Roy Edwards
-Candidate	Roxie Hensley	Roxie Hensley
-Candidate	Robert A. Wharff	Robert A. Wharff
-Candidate	Rebecca Fields	Rebecca Fields
-Candidate	Rachel Rodriguez-Williams	Rachel Rodriguez-Williams
-Candidate	Pepper L Ottman	Pepper L Ottman
-Candidate	Patrick 'Pat' Sweeney	Patrick 'Pat' Sweeney
-Candidate	Ocean Andrew	Ocean Andrew
-Candidate	Mike Yin	Mike Yin
-Candidate	Mike Greear	Mike Greear
-Candidate	Mike A Gilmore	Mike A Gilmore
-Candidate	Matthew Burkhart	Matthew Burkhart
-Candidate	Marshall A. Burt	Marshall A. Burt
-Candidate	Mark S. Kinner	Mark S. Kinner
-Candidate	Mark Jennings	Mark Jennings
-Candidate	Mark Baker	Mark Baker
-Candidate	Marcie Kindred	Marcie Kindred
-Candidate	Lynne Huskinson	Lynne Huskinson
-Candidate	Lloyd Charles Larsen	Lloyd Charles Larsen
-Candidate	Lindsey Travis	Lindsey Travis
-Candidate	Levi J. Shinkle	Levi J. Shinkle
-Candidate	Lela Konecny	Lela Konecny
-Candidate	Lee Filer	Lee Filer
-Candidate	Landon J. Brown	Landon J. Brown
-Candidate	Kevin Wilson	Kevin Wilson
-Candidate	Kevin C. O'Hearn	Kevin C. O'Hearn
-Candidate	Karlee Provenza	Karlee Provenza
-Candidate	Joseph S. Porambo	Joseph S. Porambo
-Candidate	John R. Winter	John R. Winter
-Candidate	John Eklund	John Eklund
-Candidate	John Bear	John Bear
-Candidate	John B. Romero-Martinez	John B. Romero-Martinez
-Candidate	Joe MacGuire	Joe MacGuire
-Candidate	Jim Rosco	Jim Rosco
-Candidate	Jim Blackburn	Jim Blackburn
-Candidate	Jerry Paxton	Jerry Paxton
-Candidate	Jerry Obermueller	Jerry Obermueller
-Candidate	Jeremy Haroldson	Jeremy Haroldson
-Candidate	Jared Olsen	Jared Olsen
-Candidate	Jane Ifland	Jane Ifland
-Candidate	Jamie Flitner	Jamie Flitner
-Candidate	Jacquelin Wells	Jacquelin Wells
-Candidate	Hans Hunt	Hans Hunt
-Candidate	Evan J. Simpson	Evan J. Simpson
-Candidate	Eric Barlow	Eric Barlow
-Candidate	Ember Oakley	Ember Oakley
-Candidate	Donald Burkhart	Donald Burkhart
-Candidate	Danny Eyre	Danny Eyre
-Candidate	Dan Zwonitzer	Dan Zwonitzer
-Candidate	Dan Laursen	Dan Laursen
-Candidate	Cyrus Western	Cyrus Western
-Candidate	Clinton D Wagon	Clinton D Wagon
-Candidate	Clark Stith	Clark Stith
-Candidate	Clarence Styvar	Clarence Styvar
-Candidate	Cindy Johnson Bennett	Cindy Johnson Bennett
-Candidate	Chuck Gray	Chuck Gray
-Candidate	Chip Neiman	Chip Neiman
-Candidate	Chad M. Banks	Chad M. Banks
-Candidate	Cathy Connolly	Cathy Connolly
-Candidate	Bob Nicholas	Bob Nicholas
-Candidate	Bill Winney	Bill Winney
-Candidate	Bill Henderson	Bill Henderson
-Candidate	Bill Fortner	Bill Fortner
-Candidate	Bethany Baldes	Bethany Baldes
-Candidate	Barry Crago	Barry Crago
-Candidate	Art Washut	Art Washut
-Candidate	Andy Schwartz	Andy Schwartz
-Candidate	Andi Clifford	Andi Clifford
-Candidate	Amy Spieker	Amy Spieker
-Candidate	Albert Sommers	Albert Sommers
-Candidate	Aaron Clausen	Aaron Clausen
-Candidate	Wendy Degroot	Wendy Degroot
-Candidate	Undervotes.1	Undervotes.1
-Candidate	Troy D. McKeown	Troy D. McKeown
-Candidate	Tim Salazar	Tim Salazar
-Candidate	Tim French	Tim French
-Candidate	Theresa Livingston	Theresa Livingston
-Candidate	Tara Nethercott	Tara Nethercott
-Candidate	Liisa Anselmi-Dalton	Liisa Anselmi-Dalton
-Candidate	John K. Kolb	John K. Kolb
-Candidate	Jim Anderson	Jim Anderson
-Candidate	James Byrd	James Byrd
-Candidate	Jackie Grimes	Jackie Grimes
-Candidate	Fred Baldwin	Fred Baldwin
-Candidate	Ed Cooper	Ed Cooper
-Candidate	Dave Kinskey	Dave Kinskey
-Candidate	Daniel Furphy	Daniel Furphy
-Candidate	Dan Dockstader	Dan Dockstader
-Candidate	Charles K. Scott	Charles K. Scott
-Candidate	Britney Wallesch	Britney Wallesch
-Candidate	Brian Boner	Brian Boner
-Candidate	Anthony Bouchard	Anthony Bouchard
-Candidate	Affie Ellis	Affie Ellis
-Candidate	Valaira Whiteman	Valaira Whiteman
+ReportingUnit	Wyoming;Weston County	fips56045

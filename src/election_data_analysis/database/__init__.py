@@ -180,7 +180,7 @@ def restore_to_db(dbname: str, dump_file: str, url: sqlalchemy.engine.url.URL) -
         f" -h {url.host} "
         f" -U {url.username} "
         f" -p {url.port}"
-        f" -d {dbname} -F t {dump_file}"
+        f" -d {dbname} -F t \"{dump_file}\""
     )
     try:
         os.system(cmd)
@@ -555,9 +555,10 @@ def insert_to_cdf_db(
     # identify new ReportingUnits, must later enter nesting info in db
     if element == "ReportingUnit":
         working = m.clean_strings(working, ["Name"])
-        # find any new RUs
+        # append ids (if matched) and nulls (if not matched)
+
         matched_with_old = append_id_to_dframe(
-            engine, working, "ReportingUnit", {"Name": "Name"}
+            engine, working, "ReportingUnit", {"Name": "Name"}, null_ids_to_zero=False
         )
 
     # name temp table by username and timestamp to avoid conflict
@@ -701,18 +702,19 @@ def insert_to_cdf_db(
             temp_table=sql.Identifier(temp_table)
         )
         cursor.execute(q_remove)
-    except Exception as exc:
+    except psycopg2.errors.InFailedSqlTransaction as exc:
         err = ui.add_new_error(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unexpected exception removing temp table during insert/update of {element}: {exc}",
+            f"During insert/update of {element}, previous query caused transaction to fail:\n"
+            f"{cursor.mogrify(q_insert)}",
         )
         return err
 
     if element == "ReportingUnit":
         # check get RUs not matched and process them
-        mask = matched_with_old.ReportingUnit_Id > 0
+        mask = (matched_with_old.ReportingUnit_Id.notnull()) & (matched_with_old.ReportingUnit_Id > 0)
         new_rus = matched_with_old[~mask]
         if not new_rus.empty:
             append_err = append_to_composing_reporting_unit_join(
@@ -740,9 +742,11 @@ def append_id_to_dframe(
     df: pd.DataFrame,
     element: str,
     col_map: Optional[dict] = None,
+    null_ids_to_zero: bool = True,
 ) -> pd.DataFrame:
     """Using <col_map> to map columns of <df> onto defining columns of <table>, returns
-    a copy of <df> with appended column <table>_Id. Unmatched items returned with null value for <table>_Id"""
+    a copy of <df> with appended column <table>_Id. Unmatched items returned with
+    null value for <table>_Id"""
     if col_map is None:
         col_map = {element: get_name_field(element)}
 
@@ -788,7 +792,8 @@ def append_id_to_dframe(
     connection.commit()
     connection.close()
     df_appended = df.join(w[["Id"]]).rename(columns={"Id": f"{element}_Id"})
-    df_appended, err_df = m.clean_ids(df_appended, [f"{element}_Id"])
+    if null_ids_to_zero:
+        df_appended, _ = m.clean_ids(df_appended, [f"{element}_Id"])
     return df_appended
 
 
@@ -956,8 +961,27 @@ def active_vote_types(session: Session, election, jurisdiction):
     return active_list
 
 
-def remove_vote_counts(connection, cursor, id: int) -> str:
+def remove_record_from_datafile_table(session, idx) -> Optional[str]:
+
+    err_str = None
+    try:
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        q = sql.SQL("""DELETE FROM _datafile WHERE "Id" = {idx}""").format(
+            idx=sql.Literal(str(idx)))
+        cursor.execute(q)
+        connection.commit()
+        cursor.close()
+        connection.close()
+    except Exception as exc:
+        err_str = f"Error deleting record from _datafile table: {exc}"
+        print(err_str)
+    return err_str
+
+def remove_vote_counts(session: Session, id: int) -> Optional[str]:
     """Remove all VoteCount data from a particular file, and remove that file from _datafile"""
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
     try:
         q = 'SELECT "Id", file_name, download_date, created_at, is_preliminary FROM _datafile WHERE _datafile."Id"=%s;'
         cursor.execute(q, [id])
@@ -969,16 +993,20 @@ def remove_vote_counts(connection, cursor, id: int) -> str:
             preliminary,
         ) = cursor.fetchall()[0]
     except KeyError as exc:
-        return f"No datafile found with Id = {id}"
+        cursor.close()
+        connection.close()
+        return f"No datafile found with Id = {id}: {exc}"
     try:
         q = 'DELETE FROM "VoteCount" where "_datafile_Id"=%s;Delete from _datafile where "Id"=%s;'
         cursor.execute(q, [id, id])
         connection.commit()
-        print(f"{file_name}: VoteCounts deleted from results file\n")
+        print(f"{file_name}: VoteCounts deleted from db for datafile id {id}\n")
         err_str = None
     except Exception as exc:
         err_str = f"{file_name}: Error deleting data: {exc}"
         print(err_str)
+    cursor.close()
+    connection.close()
     return err_str
 
 
@@ -995,7 +1023,7 @@ def get_relevant_election(session: Session, filters: List[str]) -> pd.DataFrame:
     return election_df
 
 
-def get_relevant_contests(session: Session, filters: List[str]) -> pd.DataFrame:
+def get_relevant_contests(session: Session, filters: List[str], repository_content_root: str) -> pd.DataFrame:
     """expects the filters list to have an election and jurisdiction.
     finds all contests for that combination. Returns a dataframe sorted by contest name.
     Omits any counts that don't
@@ -1004,7 +1032,11 @@ def get_relevant_contests(session: Session, filters: List[str]) -> pd.DataFrame:
     election_id = list_to_id(session, "Election", filters)
     jurisdiction_id = list_to_id(session, "ReportingUnit", filters)
     jurisdiction = name_from_id(session, "ReportingUnit", jurisdiction_id) # TODO tech debt
-    subdivision_type_id, other_subdivision_type = get_major_subdiv_id_and_othertext(session, jurisdiction)
+    subdivision_type_id, other_subdivision_type = get_major_subdiv_id_and_othertext(
+        session, jurisdiction, file_path=os.path.join(
+            repository_content_root,"jurisdictions", "000_major_subjurisdiction_types.txt"
+        ),
+    )
     working = unsummed_vote_counts_with_rollup_subdivision_id(
         session, election_id, jurisdiction_id, subdivision_type_id, other_subdivision_type,
     )[[ "ElectionDistrict", "Contest", "contest_district_type", "contest_district_othertype"]].drop_duplicates()
@@ -1202,8 +1234,7 @@ def unsummed_vote_counts_with_rollup_subdivision_id(
         ],
     )
     result = cursor.fetchall()
-    result_df = pd.DataFrame(result)
-    result_df.columns = [
+    columns = [
         "VoteCount_Id",
         "Count",
         "CountItemType_Id",
@@ -1229,6 +1260,7 @@ def unsummed_vote_counts_with_rollup_subdivision_id(
         "contest_district_othertype",
         "Party",
     ]
+    result_df = pd.DataFrame(result, columns=columns)
     return result_df
 
 
@@ -1492,10 +1524,10 @@ def export_rollup_from_db(
 def read_vote_count(
     session: Session,
     election_id: int,
-    reporting_unit_id: int,
+    jurisdiction_id: int,
     fields: List[str],
     aliases: List[str],
-):
+) -> pd.DataFrame:
     """The VoteCount table is the only place that maps contests to a specific
     election. But this table is the largest one, so we don't want to use pandas methods
     to read into a DF and then filter. Data returns is determined by <fields> (column names from SQL query);
@@ -1545,7 +1577,7 @@ def read_vote_count(
     )
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
-    cursor.execute(q, [election_id, reporting_unit_id])
+    cursor.execute(q,[election_id,jurisdiction_id])
     results = cursor.fetchall()
     results_df = pd.DataFrame(results, columns=aliases)
     # accommodate "other" type election districts

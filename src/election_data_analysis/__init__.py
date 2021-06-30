@@ -7,11 +7,12 @@ from election_data_analysis import (
     analyze as a,
     nistformats as nist,
     visualize as viz,
-    externaldata as exd
+    externaldata as exd,
+    multielection as multi
 )
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
-from typing import List, Dict, Optional, Any, Tuple
+from typing import List, Dict, Optional, Any, Tuple, Union
 import datetime
 import os
 import re
@@ -80,7 +81,7 @@ class SingleDataLoader:
     def __init__(
         self,
         results_dir: str,
-        par_file_name: str,
+        param_file: str,
         session: Session,
         mungers_path: str,
         juris_true_name: str,
@@ -90,15 +91,15 @@ class SingleDataLoader:
         self.session = session
         self.results_dir = results_dir
         self.juris_true_name = juris_true_name
-        self.par_file_name = par_file_name
+        self.param_file = param_file
 
         # calculate useful parameters
         self.juris_system_name = jm.system_name_from_true_name(self.juris_true_name)
         self.path_to_jurisdiction_dir = path_to_jurisdiction_dir
 
         # grab parameters (known to exist from __new__, so can ignore error variable)
-        par_file = os.path.join(results_dir, par_file_name)
-        self.d, dummy_err = ui.get_parameters(
+        par_file = os.path.join(results_dir,param_file)
+        self.d, _ = ui.get_parameters(
             required_keys=sdl_pars_req,
             optional_keys=sdl_pars_opt,
             param_file=par_file,
@@ -126,9 +127,9 @@ class SingleDataLoader:
         self.mungers_dir = mungers_path
         self.munger_list = [x.strip() for x in self.d["munger_list"].split(",")]
 
-    def track_results(self) -> (dict, Optional[dict]):
+    def track_results(self) -> (List[int], Optional[dict]):
         """insert a record for the _datafile, recording any error string <e>.
-        Return Id of _datafile.Id and Election.Id"""
+        Return _datafile.Id and Election_Id"""
         err = None
         filename = self.d["results_file"]
         jurisdiction_id = db.name_to_id(
@@ -138,7 +139,7 @@ class SingleDataLoader:
             err = ui.add_new_error(
                 err,
                 "ini",
-                self.par_file_name,
+                self.param_file,
                 f"No ReportingUnit named {self.d['jurisdiction']} found in database",
             )
             return [0, 0], err
@@ -147,58 +148,24 @@ class SingleDataLoader:
             err = ui.add_new_error(
                 err,
                 "ini",
-                self.par_file_name,
+                self.param_file,
                 f"No election named {self.d['election']} found in database",
             )
             return [0, 0], err
-        data = pd.DataFrame(
-            [
-                [
-                    self.d["results_short_name"],
-                    filename,
-                    self.d["results_download_date"],
-                    self.d["results_source"],
-                    self.d["results_note"],
-                    jurisdiction_id,
-                    election_id,
-                    datetime.datetime.now(),
-                    self.d["is_preliminary"],
-                ]
-            ],
-            columns=[
-                "short_name",
-                "file_name",
-                "download_date",
-                "source",
-                "note",
-                "ReportingUnit_Id",
-                "Election_Id",
-                "created_at",
-                "is_preliminary",
-            ],
+        datafile_id, err = datafile_info(
+            self.session.bind,
+            self.param_file,
+            self.d["results_short_name"],
+            filename,
+            self.d["results_download_date"],
+            self.d["results_source"],
+            self.d["results_note"],
+            jurisdiction_id,
+            election_id,
+            self.d["is_preliminary"],
         )
-        data = m.clean_strings(data, ["short_name"])
-        try:
-            err = db.insert_to_cdf_db(
-                self.session.bind, data, "_datafile", "ini", self.par_file_name
-            )
-            if ui.fatal_error(err):
-                return [0, 0], err
-            else:
-                col_map = {"short_name": "short_name"}
-                datafile_id = db.append_id_to_dframe(
-                    self.session.bind, data, "_datafile", col_map=col_map
-                ).iloc[0]["_datafile_Id"]
-        except Exception as exc:
-            err = ui.add_new_error(
-                err,
-                "system",
-                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"Error inserting record to _datafile table or retrieving _datafile_Id: {exc}",
-            )
-            return [0, 0], err
+        return [datafile_id, election_id], err
 
-        return {"_datafile_Id": datafile_id, "Election_Id": election_id}, err
 
     def load_results(
         self, rollup: bool = False, rollup_rut: Optional[str] = None
@@ -208,7 +175,7 @@ class SingleDataLoader:
         print(f'\n\nProcessing {self.d["results_file"]}')
 
         # Enter datafile info to db and collect _datafile_Id and Election_Id
-        results_info, new_err = self.track_results()
+        [datafile_id, election_id], new_err = self.track_results()
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             return err
@@ -226,7 +193,8 @@ class SingleDataLoader:
                     mu_path,
                     f_path,
                     self.juris_true_name,
-                    results_info,
+                    datafile_id,
+                    election_id,
                     constants,
                     self.results_dir,
                     self.path_to_jurisdiction_dir,
@@ -305,10 +273,15 @@ class SingleDataLoader:
         return values, err
 
 
+# noinspection PyTypeChecker
 class DataLoader:
-    def __new__(cls, param_file: str = "run_time.ini", dbname: Optional[str] = None):
+    def __new__(cls, param_file: Optional[str] = None, dbname: Optional[str] = None):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
+
+        # default param_file is run_time.ini in current directory
+        if not param_file:
+            param_file = "run_time.ini"
 
         d, err = ui.get_parameters(
             required_keys=multi_data_loader_pars,
@@ -322,7 +295,11 @@ class DataLoader:
 
         return super().__new__(cls)
 
-    def __init__(self, param_file="run_time.ini", dbname: Optional[str] = None):
+    def __init__(self, param_file: Optional[str] = None, dbname: Optional[str] = None):
+        # default param_file is run_time.ini in current directory
+        if not param_file:
+            param_file = "run_time.ini"
+
         # grab parameters
         self.d, self.parameter_err = ui.get_parameters(
             required_keys=multi_data_loader_pars,
@@ -602,6 +579,7 @@ class DataLoader:
         else:
             print("No jurisdictions loaded because load_jurisdictions==False")
 
+        latest_download_date = dict()
         for jurisdiction in jurisdictions:
             juris_err = None
             for election in elections[jurisdiction]:
@@ -609,7 +587,7 @@ class DataLoader:
                 (
                     success_list,
                     failure_list,
-                    latest_download_date,
+                    latest_download_date[jurisdiction],
                     new_err,
                 ) = self.load_ej_pair(
                     election,
@@ -643,7 +621,7 @@ class DataLoader:
                             juris_results_path,
                             os.path.join(
                                 self.d["archive_dir"],
-                                f"{juris_system_name}_{latest_download_date}",
+                                f"{juris_system_name}_{latest_download_date[jurisdiction]}",
                             ),
                             report_error=False,
                         )
@@ -706,6 +684,7 @@ class DataLoader:
         juris_id: int,
     ) -> Optional[str]:
         """Remove from the db all data for the given <election_id> in the given <juris>"""
+        err_str = None
         # get connection & cursor
         connection = self.session.bind.raw_connection()
         cursor = connection.cursor()
@@ -718,9 +697,18 @@ class DataLoader:
             return err_str
 
         # remove data from all those datafiles
+        err_str_list = list()
         for idx in df_list:
-            db.remove_vote_counts(connection, cursor, idx)
-        return None
+            err_str = db.remove_vote_counts(self.session, idx)
+            if err_str:
+                err_str_list.append(err_str)
+            err_str = db.remove_record_from_datafile_table(self.session, idx)
+            if err_str:
+                err_str_list.append(err_str)
+        if err_str_list:
+            return ";".join(err_str_list)
+        else:
+            return None
 
     def add_totals_if_missing(self, election, jurisdiction) -> Optional[dict]:
         """for each contest, add 'total' vote type wherever it's missing
@@ -812,7 +800,6 @@ class DataLoader:
             source,
             year,
             note,
-            order_within_category=order_within_category,
             replace_existing=replace_existing,
         )
         return err
@@ -901,10 +888,13 @@ class DataLoader:
         for category in exd.acs5_columns.keys():
             columns_to_get = exd.acs5_columns[category].keys()
             working = exd.get_raw_acs5_data(columns_to_get, census_year)
+            if working.empty:
+                err = ui.add_new_error(err, "census", census_year, "No data found at census.gov")
+                continue
             working = exd.combine_and_rename_columns(working, exd.acs_5_label_summands)
             working = exd.normalize(working, exd.acs_5_label_summands.keys())
             working["Category"] = category
-        df = pd.concat(df, working)
+            df = pd.concat(df, working)
         self.load_single_external_data_set()
         # TODO
         return err
@@ -927,7 +917,7 @@ class DataLoader:
             self.load_single_external_data_set(
                 working,
                 "American Community Survey 5",
-                y,
+                f"{y}",
                 "",
             )
 
@@ -947,6 +937,265 @@ class DataLoader:
         )
         return err
 
+    def update_juris_from_multifile(self, working: pd.DataFrame,juris_true,juris_system) -> Optional[dict]:
+        update_err = None
+
+        # add elections to Election.txt
+        election_df = pd.DataFrame(
+            [[f"{e} General","general"] for e in multi.mit_elections],columns=["Name","ElectionType"]
+        )
+
+        # add candidates to Candidate.txt
+        candidate_col = "Candidate_raw"
+        candidates = sorted(working[candidate_col].unique())
+
+        # add candidates to dictionary
+        candidate_map = {x:multi.correct(x.title()) for x in multi.mit_candidates}
+        update_err = ui.consolidate_errors(
+            [update_err,multi.add_candidates(
+                juris_system,self.d["repository_content_root"],candidates,candidate_map
+            )]
+        )
+
+        # add contests to dictionary  # TODO this belongs with constants, but depends on jurisdiction...
+        contest_d = {
+            "PRESIDENT":f"US President ({multi.abbr[juris_true]})",
+            "US PRESIDENT":f"US President ({multi.abbr[juris_true]})",
+        }
+        update_err = ui.consolidate_errors(
+            [update_err,
+             multi.add_dictionary_entries(juris_system,self.d["repository_content_root"],"CandidateContest",contest_d)]
+        )
+        # add parties to dictionary
+        update_err = ui.consolidate_errors(
+            [update_err,multi.add_dictionary_entries(
+                juris_system,self.d["repository_content_root"],"Party",multi.mit_party
+            )]
+        )
+
+        # add vote_count_types to dictionary
+        update_err = ui.consolidate_errors(
+            [update_err,multi.add_dictionary_entries(
+                juris_system, self.d["repository_content_root"], "CountItemType", multi.mit_cit
+            )]
+        )
+        ## load jurisdiction info to db
+        juris.load_or_update_juris_to_db(self.session,self.d["repository_content_root"],juris_true,juris_system)
+
+        return update_err
+
+    def load_multielection(
+            self, multi_file: str, overwrite_existing: bool = False, load_jurisdictions: bool = True,
+    ) -> (Dict[str, List[str]], Optional[dict]):
+        """load multi-election data from <multi_file> 
+        (as of 6/2021, this works just for the MIT presidential file)
+        If override_existing is True, unload any jurisdictions already there;
+        otherwise do *not* overwrite"""
+        err = None
+        success: Dict[str,List[str]] = dict()
+
+        # add elections to db
+        multi.add_elections_to_db(self.session)
+        # read data
+        try:
+            df = pd.read_csv(multi_file,sep="\t",dtype=str, index_col=None)
+            if df.empty:
+                err = ui.add_new_error(
+                    err,
+                    "file",
+                    multi_file,
+                    f"No data read",
+                )
+                return list(), err
+        except FileNotFoundError:
+            err = ui.add_new_error(
+                err,
+                "file",
+                multi_file,
+                f"file not found",
+            )
+            return success, err
+
+        # rename columns to match internal db elements
+        df.rename(columns={v:k for k,v in multi.mit_cols.items()},inplace=True)
+        # retype count column to int
+        df["Count"] = df["Count"].fillna(0).astype(int,errors="ignore")
+
+        df = df[df["Election"].isin(multi.mit_elections.keys())]
+
+        # regularize fips to match standard in jurisdiction/dictionary.txt files
+        df["ReportingUnit_raw"] = "fips"+ df["ReportingUnit_raw"]
+        
+        # treat jurisdictions one by one
+        jurisdictions = sorted(list(df["Jurisdiction"].unique()))
+
+        for j in jurisdictions:
+            juris_true_name = multi.correct(j.title())
+            success[juris_true_name]: List[str] = list()
+            print(f"Starting {juris_true_name}")
+            juris_system_name = juris.system_name_from_true_name(juris_true_name)
+
+            if load_jurisdictions:
+                # update juris in db
+                juris.load_or_update_juris_to_db(
+                    self.session,self.d["repository_content_root"],juris_true_name,juris_system_name
+                )
+
+            jurisdiction_id = db.name_to_id(self.session,"ReportingUnit",juris_true_name)
+            if not jurisdiction_id:
+                err = ui.add_new_error(
+                    err,
+                    "jurisdiction",
+                    juris_system_name,
+                    f"No ReportingUnit in database matches the jurisdiction itself."
+                )
+                continue
+            j_df = df[(df["Jurisdiction"] == j)]
+            # proceed only if data exists for this jurisdiction
+            if j_df.empty:
+                continue
+
+
+            ## load results to db
+            for election in j_df["Election"].unique():
+                election_true_name = multi.mit_elections[election]
+
+                print(f"\t{election_true_name}")
+                election_id = db.name_to_id(self.session,"Election", election_true_name)
+                if not election_id:
+                    err = ui.add_new_error(
+                        err,
+                        "warn-database",
+                        f"{self.session.bind.url.database}",
+                        f"Election {election_true_name} not found"
+                    )
+                    print(f"\t\tElection not found")
+                # get list of datafiles in db with the election and jurisdiction
+                df_list, err_str = db.data_file_list(
+                    self.session,election_id,reporting_unit_id=jurisdiction_id
+                )
+                if err_str:
+                    err = ui.add_new_error(
+                        err,
+                        "database",
+                        f"{self.session.bind.url.database}",
+                        err_str,
+                    )
+                    f"Not loaded: {err_str}"
+                    continue
+
+                # remove existing data if overwriting
+                if df_list and overwrite_existing:
+                    # remove old data
+                    err_str = self.remove_data(election_id,jurisdiction_id)
+                    if err_str:
+                        err = ui.add_new_error(
+                            err,
+                            "database",
+                            f"{self.session.bind.url.database}",
+                            f"Error removing existing data for {election} {juris_true_name}:\n{err}",
+                        )
+                        print(f"\t\tError removing data: {err_str}")
+                    # warn that data was removed:
+                    err = ui.add_new_error(
+                        err,
+                        "warn-database",
+                        f"{self.session.bind.url.database}",
+                        f"data removed for {election} {juris_true_name}"
+                    )
+                # skip, with warning if not overwriting
+                elif df_list and not overwrite_existing:
+                    err = ui.add_new_error(
+                        err,
+                        "warn-database",
+                        f"{self.session.bind.url.database}",
+                        f"Data in db for {election} {juris_true_name} exists; will not be replaced with new data."
+                    )
+                    print(f"\t\tData exists in db; will not be replaced with new data.")
+                    continue
+
+                # create record in _datafile table
+                datafile_id, new_err = datafile_info(
+                    self.session.bind,
+                    multi_file,
+                    f"MIT_pres_gen_Y2K_{juris_system_name}_{election}",
+                    Path(multi_file).name,
+                    multi.mit_datafile_info["download_date"],
+                    multi.mit_datafile_info["source"],
+                    multi.mit_datafile_info["note"],
+                    jurisdiction_id,
+                    election_id,
+                    False,
+                )
+                if new_err:
+                    err = ui.consolidate_errors([err, new_err])
+                    if ui.fatal_error(new_err):
+                        print(f"\t\tNot loaded due to error creating datafile record")
+                        continue
+
+                # rename datafile columns
+                je_df = j_df[j_df["Election"] == election]
+                try:
+                    # load data
+                    new_err = load_results_df(self.session, je_df, dict(),juris_true_name,
+                                              "load_multi_ej_file",
+                                              os.path.join(self.d["repository_content_root"],"jurisdictions",
+                                                           juris_system_name),
+                                              datafile_id, election_id, "flat_text"
+                                              )
+                    if new_err:
+                        err = ui.consolidate_errors([err,new_err])
+                        if ui.fatal_error(new_err):
+                            print(f"\t\tError during data loading: {new_err}")
+                            err_str = db.remove_record_from_datafile_table(self.session, datafile_id)
+                            if err_str:
+                                ui.add_new_error(
+                                    err,
+                                    "database",
+                                    self.session.bind.url.database,
+                                    f"Error removing record with id {datafile_id}: {err_str}"
+                                )
+                                print("Error removing datafile record")
+                            continue
+                        else:
+                            success[juris_true_name].append(election_true_name)
+                            print(f"Successful load: {election} {juris_true_name}")
+                except Exception as exc:
+                    err = ui.add_new_error(
+                        err,
+                        "munge",
+                        "load_multi_ej_file",
+                        f"Unexpected error while loading results dataframe "
+                        f"for {election_true_name} {juris_true_name}: {exc}"
+                    )
+                    err_str = db.remove_vote_counts(self.session, datafile_id)
+                    if err_str:
+                        err = ui.add_new_error(
+                            err,
+                            "warn-database",
+                            f"{self.session.bind.url.database}",
+                            f"Vote counts not removed for datafile id {datafile_id} because of error: {err_str}"
+                        )
+                    else:
+                        err_str = db.remove_record_from_datafile_table(self.session,datafile_id)
+                        if err_str:
+                            err = ui.add_new_error(
+                                err,
+                                "warn-database",
+                                f"{self.session.bind.url.database}",
+                                f"Vote counts removed but datafile record not removed for datafile id {datafile_id} "
+                                f"because of error: {err_str}",
+                            )
+                    continue
+        ts = datetime.datetime.now().strftime("%m%d_%H%M")
+        report_dir = os.path.join(
+            self.d["reports_and_plots_dir"], f"multielection_{self.session.bind.url.database}_{ts}"
+        )
+        err = ui.report(
+            err,
+            report_dir
+        )
+        return success, err
 
 def check_par_file_elements(
     ini_d: dict,
@@ -1377,9 +1626,11 @@ class JurisdictionPrepper:
         par_file_name: str,
         sub_ru_type: str = "precinct",
         county_type="county",
+        dbname: Optional[str] = None,
+        paraam_file: Optional[str] = None
     ) -> Optional[dict]:
         err_list = list()
-        dl = DataLoader()
+        dl = DataLoader(dbname=dbname, param_file=paraam_file)
         path_to_jurisdiction_dir = os.path.join(
             self.d["jurisdiction_path"], self.d["___"]
         )
@@ -1719,7 +1970,7 @@ class Analyzer:
         try:
             filters_mapped = ui.get_contest_type_mappings(filters)
             results = ui.get_filtered_input_options(
-                self.session, input_str, filters_mapped
+                self.session, input_str, filters_mapped, self.repository_content_root
             )
         except Exception as exc:
             results = None
@@ -1745,7 +1996,11 @@ class Analyzer:
         (
             subdivision_type_id,
             other_subdivision_type,
-        ) = db.get_major_subdiv_id_and_othertext(self.session, jurisdiction)
+        ) = db.get_major_subdiv_id_and_othertext(
+            self.session, jurisdiction, file_path=os.path.join(
+                self.repository_content_root,"jurisdictions","000_major_subjurisdiction_types.txt"
+            )
+        )
         h_election_id = db.name_to_id(self.session, "Election", h_election)
         v_election_id = db.name_to_id(self.session, "Election", v_election)
         # *_type is either candidates or contests or parties
@@ -1816,13 +2071,13 @@ class Analyzer:
         Candidate total or Contest absentee-mail. Cleans this and returns
         something usable for the system to identify what the user is asking for."""
         if input_str.startswith("Candidate"):
-            return "candidates", input_str.replace("Candidate", "").strip()
+            return "candidates", input_str.replace("Candidate", "", regex=True).strip()
         elif input_str.startswith("Contest"):
-            return "contests", input_str.replace("Contest", "").strip()
+            return "contests", input_str.replace("Contest", "", regex=True).strip()
         elif input_str.startswith("Party"):
-            return "parties", input_str.replace("Party", "").strip()
+            return "parties", input_str.replace("Party", "", regex=True).strip()
         elif input_str.startswith("Population"):
-            return "Population", input_str.replace("Population", "").strip()
+            return "Population", input_str.replace("Population", "", regex=True).strip()
 
     def export_outlier_data(
         self,
@@ -1871,7 +2126,7 @@ class Analyzer:
 
     def export_nist(
             self, election: str, jurisdiction, major_subdivision: Optional[str] = None
-    ) -> str:
+    ) -> Union[str, Dict[str, Any]]:
         """picks either version 1.0 (json) or version 2.0 (xml) based on value of nistformats.nist_version"""
         if nist.nist_version == "1.0":
             return self.export_nist_v1_json(election, jurisdiction)
@@ -1880,7 +2135,7 @@ class Analyzer:
         else:
             return ""
 
-    def export_nist_v1_json(self, election: str, jurisdiction: str) -> dict:
+    def export_nist_v1_json(self, election: str, jurisdiction: str) -> Dict[str, Any]:
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
 
@@ -1923,8 +2178,7 @@ class Analyzer:
         major_subdivision: Optional[str] = None,
     ) -> str:
         """exports NIST v2 xml string"""
-        xml_string = ET.tostring(
-            nist.nist_v2_xml_export_tree(
+        xml_tree, err = nist.nist_v2_xml_export_tree(
                 self.session,
                 election,
                 jurisdiction,
@@ -1933,7 +2187,8 @@ class Analyzer:
                 issuer_abbreviation=nist.default_issuer_abbreviation,
                 status=nist.default_status,
                 vendor_application_id=nist.default_vendor_application_id,
-            ).getroot(),
+            )
+        xml_string = ET.tostring(xml_tree.getroot(),
             encoding=m.default_encoding,
             method="xml",
         )
@@ -2494,12 +2749,100 @@ def get_contest_with_unknown_candidates(
     return contests
 
 
+def load_results_df(
+        session: Session,
+        df_original: pd.DataFrame,
+        necessary_constants: dict,
+        juris_true_name: str,
+        munger_name: str,
+        path_to_jurisdiction_dir: str,
+        datafile_id: int,
+        election_id: int,
+        file_type: str,
+        rollup: bool = False,
+        rollup_rut: str = "county",
+) -> Optional[dict]:
+    err = None
+    df = df_original.copy()
+    # # add Id columns for all but Count, removing raw-munged
+    try:
+        df, new_err = m.munge_raw_to_ids(
+            df,
+            necessary_constants,
+            path_to_jurisdiction_dir,
+            munger_name,
+            juris_true_name,
+            session,
+            file_type,
+        )
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return err
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while munging raw to ids: {exc}",
+        )
+        return err
+
+    # # for each contest, if none or unknown candidate has total votes 0, remove rows with that contest & candidate
+    nou_candidate_id = db.name_to_id(session, "Candidate", "none or unknown")
+    nou_selection_ids = db.selection_ids_from_candidate_id(session, nou_candidate_id)
+    unknown = (
+        df[df.Selection_Id.isin(nou_selection_ids)]
+        .groupby(["Contest_Id", "Selection_Id"])
+        .sum()
+    )
+    for (contest_id, selection_id) in unknown.index:
+        mask = df[["Contest_Id", "Selection_Id"]] == (contest_id, selection_id)
+        df = df[~mask.all(axis=1)]
+
+    if df.empty:
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            juris_true_name,
+            f"No contest-selection pairs recognized via munger {munger_name}",
+        )
+        return err
+
+    # rollup_dataframe results if requested
+    if rollup:
+        df, new_err = a.rollup_dataframe(
+            session, df, "Count", "ReportingUnit_Id", "ReportingUnit_Id", rollup_rut
+        )
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return err
+
+    # add_datafile_Id and Election_Id columns
+    df = m.add_constant_column(df, "_datafile_Id", datafile_id)
+    df = m.add_constant_column(df, "Election_Id", election_id)
+    # load counts to db
+    try:
+        err = m.fill_vote_count(df, session, munger_name, err)
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while filling vote count table: {exc}",
+        )
+        return err
+    return err
+
+
 def load_results_file(
     session: Session,
     munger_path: str,
     f_path: str,
     juris_true_name: str,
-    election_datafile_ids: dict,
+    datafile_id: int,
+    election_id: int,
     constants: Dict[str, str],
     results_directory_path: str,
     path_to_jurisdiction_dir: str,
@@ -2532,77 +2875,11 @@ def load_results_file(
     # # delete any rows with items to be ignored
     df = m.remove_ignored_rows(df, munger_path)
 
-    # # add Id columns for all but Count, removing raw-munged
-    try:
-        df, new_err = m.munge_raw_to_ids(
-            df,
-            necessary_constants,
-            path_to_jurisdiction_dir,
-            munger_name,
-            juris_true_name,
-            session,
-            p["file_type"],
-        )
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return err
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while munging raw to ids: {exc}",
-        )
-        return err
-
-    # # for each contest, if none or unknown candidate has total votes 0, remove rows with that contest & candidate
-    nou_candidate_id = db.name_to_id(session, "Candidate", "none or unknown")
-    nou_selection_ids = db.selection_ids_from_candidate_id(session, nou_candidate_id)
-    unknown = (
-        df[df.Selection_Id.isin(nou_selection_ids)]
-        .groupby(["Contest_Id", "Selection_Id"])
-        .sum()
+    new_err = load_results_df(
+        session,df,necessary_constants, juris_true_name, munger_name,path_to_jurisdiction_dir,datafile_id, election_id,
+        p["file_type"], rollup=rollup, rollup_rut=rollup_rut
     )
-    for (contest_id, selection_id) in unknown.index:
-        mask = df[["Contest_Id", "Selection_Id"]] == (contest_id, selection_id)
-        df = df[~mask.all(axis=1)]
-
-    if df.empty:
-        err = ui.add_new_error(
-            err,
-            "jurisdiction",
-            juris_true_name,
-            f"No contest-selection pairs recognized via munger {munger_name} from {Path(f_path).name}",
-        )
-        return err
-
-    # rollup_dataframe results if requested
-    if rollup:
-        df, new_err = a.rollup_dataframe(
-            session, df, "Count", "ReportingUnit_Id", "ReportingUnit_Id", rollup_rut
-        )
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return err
-
-    # add_datafile_Id and Election_Id columns
-    for c in ["_datafile_Id", "Election_Id"]:
-        df = m.add_constant_column(df, c, election_datafile_ids[c])
-    # load counts to db
-    try:
-        err = m.fill_vote_count(df, session, munger_name, err)
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while filling vote count table: {exc}",
-        )
-        return err
-    return err
-
+    return ui.consolidate_errors([err, new_err])
 
 def create_from_template(
     template_file: str, target_file: str, replace_dict: Dict[str, str]
@@ -2616,10 +2893,10 @@ def create_from_template(
 
 
 def load_or_reload_all(
-    test_dir: Optional[str] = None, rollup: bool = False
+    test_dir: Optional[str] = None, rollup: bool = False, dbname: Optional[str] = None, param_file: Optional[str] = None
 ) -> Optional[dict]:
     err = None
-    dataloader = DataLoader()
+    dataloader = DataLoader(dbname=dbname, param_file=param_file)
     if dataloader:
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         error_and_warning_dir = os.path.join(
@@ -2647,6 +2924,8 @@ def load_or_reload_all(
                     test_dir,
                     error_and_warning_dir,
                     rollup=rollup,
+                    dbname=dbname,
+                    param_file=param_file,
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
@@ -2668,12 +2947,22 @@ def load_or_reload_all(
     return err
 
 
+def test_and_load_multifile(
+        multi_file: str, test_dir: Optional[str], dbname: Optional[str] = None, param_file: Optional[str] = None
+) -> Optional[dict]:
+    err = None
+    # TODO
+    return err
+
+
 def reload_juris_election(
     juris_name: str,
     election_name: str,
     test_dir: str,
     report_dir,
     rollup: bool = False,
+    dbname: Optional[str] = None,
+    param_file: Optional[str] = None,
 ) -> Optional[dict]:
     """Loads and archives each results file in each direct subfolder of the results_dir
     named in ./run_time.ini -- provided there the results file is specified in a *.ini file in the
@@ -2681,7 +2970,7 @@ def reload_juris_election(
     """
     # initialize dataloader
     err = None
-    dl = DataLoader()
+    dl = DataLoader(dbname=dbname, param_file=param_file)
     db_params, _ = ui.get_parameters(
         [
             "host",
@@ -2732,7 +3021,14 @@ def reload_juris_election(
             election_id = db.name_to_id(dl.session, "Election", election_name)
             juris_id = db.name_to_id(dl.session, "ReportingUnit", juris_name)
             if election_id and juris_id:
-                dl.remove_data(election_id, juris_id)
+                err_str = dl.remove_data(election_id, juris_id)
+                if err_str:
+                    err = ui.add_new_error(
+                        err,
+                        "warn-database",
+                        f"{dl.session.bind.url.database}",
+                        f"Error removing data: {err_str}",
+                    )
 
             # Load new data into live db (and move successful to archive)
             success, failure, new_err = dl.load_all(
@@ -2765,3 +3061,88 @@ def reload_juris_election(
     if db_params["dbname"] == temp_db:
         db.remove_database(db_params)
     return err
+
+
+def datafile_info(connection,results_filename_for_error_reporting,
+                  results_short_name,file_name,download_date: str,source: str,note: str,
+                  jurisdiction_id: int,election_id: int,is_preliminary: bool
+                  ) -> (int, Optional[dict]):
+    """Inserts record into _datafile table. Returns id of datafile record"""
+    err = None
+    data = pd.DataFrame(
+        [
+            [
+                results_short_name,
+                file_name,
+                download_date,
+                source,
+                note,
+                jurisdiction_id,
+                election_id,
+                datetime.datetime.now(),
+                is_preliminary,
+            ]
+        ],
+        columns=[
+            "short_name",
+            "file_name",
+            "download_date",
+            "source",
+            "note",
+            "ReportingUnit_Id",
+            "Election_Id",
+            "created_at",
+            "is_preliminary",
+        ],
+    )
+    data = m.clean_strings(data,["short_name"])
+    try:
+        err = db.insert_to_cdf_db(
+            connection, data,"_datafile","ini", results_filename_for_error_reporting,
+        )
+        if ui.fatal_error(err):
+            return 0, err
+        else:
+            # TODO tech debt not sure why we need to rename here but not elsewhere, has to do with col_map
+            data.rename(columns={"short_name": "_datafile"}, inplace=True)
+            datafile_id = db.append_id_to_dframe(
+                connection,data,"_datafile",
+            ).iloc[0]["_datafile_Id"]
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Error inserting record to _datafile table or retrieving _datafile_Id: {exc}",
+        )
+        return 0, err
+
+    return datafile_id, err
+
+
+def bad_multi_presidentials(
+        dbname: str, param_file: str, compare_file: str
+) -> List[str]:
+    """Compares presidential results for elections and jurisdictions listed
+    in <compare_file>. Assumes <compare_file> has columns
+    Election, Jurisdiction, Total Presidential"""
+
+    results = pd.read_csv(compare_file,sep="\t")
+    bad_list: List[str] = list()
+    good_list: List[str] = list()
+    an = Analyzer(dbname=dbname, param_file=param_file)
+    for idx, r in results.iterrows():
+        election_id = db.name_to_id(an.session,"Election", r["Election"])
+        jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", r["Jurisdiction"])
+        db_counts = db.read_vote_count(
+            an.session, election_id, jurisdiction_id, ["ContestName", "Count"], ["ContestName", "Count"]
+        )
+        if db_counts[db_counts.ContestName.str.contains("US President")].empty:
+            bad_list.append(f"{r['Election']} {r['Jurisdiction']}: no results found")
+        else:
+            total = db_counts[db_counts.ContestName.str.contains("US President")].sum()["Count"]
+            if total != r["Total_Presidential"]:
+                bad_list.append(f"{r['Election']} {r['Jurisdiction']}:\n\t{total}\tfrom db \n\t{r['Total_Presidential']}\t from compare file")
+            else:
+                good_list.append(f"{r['Election']} {r['Jurisdiction']}: {total}")
+    return good_list, bad_list

@@ -12,7 +12,7 @@ Julie A. Hall
 Jake Auchincloss
 Seth W. Moulton
 John Paul Moran
-"Roy A. Owens, Sr"
+Roy A. Owens, Sr
 Rayla Danella Campbell
 Rachel Nicole Miselman
 Claudette N. Joseph
@@ -29,3 +29,14 @@ Tracy Lyn Lovvorn
 James P. McGovern
 Lori Loureiro Trahan
 Stephen F. Lynch
+Al Gore
+Barack Obama
+George W. Bush
+Hillary Clinton
+John Kerry
+John Mccain
+Mitt Romney
+Other
+Ralph Nader
+John MCCain
+John McCain

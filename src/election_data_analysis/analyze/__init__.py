@@ -470,8 +470,8 @@ def create_bar(
     top_ru_id: int,
     subdivision_type_id: int,
     other_subdivision_type: str,
-    contest_type: str,
-    contest: str,
+    contest_type: Optional[str],
+    contest: Optional[str],
     election_id: int,
     for_export: bool,
 ):
@@ -496,6 +496,7 @@ def create_bar(
     if contest and not contest.startswith("All "):
         unsummed = unsummed[unsummed["Contest"] == contest]
 
+    multiple_ballot_types = len(unsummed["CountItemType"].unique()) > 1
     groupby_cols = [
         "ParentReportingUnit_Id",
         "ReportingUnitOtherType",
@@ -514,7 +515,6 @@ def create_bar(
         "Party",
     ]
     unsummed = unsummed.groupby(groupby_cols).sum().reset_index()
-    multiple_ballot_types = len(unsummed["CountItemType"].unique()) > 1
 
     # Now process data - this is the heart of the scoring/ranking algorithm
     try:
@@ -589,7 +589,7 @@ def create_bar(
             cursor, "Contest", int(temp_df.iloc[0]["Contest_Id"])
         )
         if other_subdivision_type == "":
-            results["subdivision_type"] = db.name_to_id(session, "ReportingUnitType", subdivision_type_id)
+            results["subdivision_type"] = db.name_from_id(session, "ReportingUnitType", subdivision_type_id)
         else:
             results["subdivision_type"] = other_subdivision_type
         results["count_item_type"] = temp_df.iloc[0]["CountItemType"]

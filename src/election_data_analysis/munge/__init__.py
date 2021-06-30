@@ -84,7 +84,8 @@ def clean_count_cols(
 ) -> (pd.DataFrame, pd.DataFrame):
     """Casts the given columns as integers, replacing any bad
     values with 0 and reporting a dataframe of any rows so changed.
-    If <thousands> separator is given, check for it"""
+    If <thousands> separator is given, check for it.
+    Also returns dataframe of rows where count failed"""
     if cols is None:
         return df, pd.DataFrame(columns=df.columns)
     else:
@@ -94,7 +95,7 @@ def clean_count_cols(
             if c in working.columns:
                 # remove the thousands separator if the column is not already int64
                 if thousands and (df.dtypes[c] == "object"):
-                    working[c] = working[c].str.replace(thousands, "")
+                    working[c] = working[c].str.replace(thousands, "", regex=True)
                 mask = ~working[c].astype(str).str.isdigit()
                 if mask.any():
                     # return bad rows for error reporting
@@ -156,7 +157,7 @@ def clean_strings(
             try:
                 # replace any " by '
                 mask = working[c].str.contains('"').fillna(False)
-                working.loc[mask, c] = working[c].str.replace('"', "'")[mask]
+                working.loc[mask, c] = working[c].str.replace('"', "'", regex=True)[mask]
             except AttributeError or TypeError:
                 pass
             try:
@@ -341,6 +342,7 @@ def replace_raw_with_internal_ids(
         os.path.join(path_to_jurisdiction_dir, "dictionary.txt"),
         sep="\t",
         encoding=jm.default_juris_encoding,
+        dtype=str,
     )
 
     # restrict to the element at hand
@@ -359,13 +361,13 @@ def replace_raw_with_internal_ids(
         raw_ids_for_element["cdf_internal_name"] = regularize_candidate_names(
             raw_ids_for_element["cdf_internal_name"]
         )
-        raw_ids_for_element.drop_duplicates(inplace=True)
-
         # Regularize candidate names from results file and from dictionary.txt
         working.Candidate_raw = regularize_candidate_names(working.Candidate_raw)
         raw_ids_for_element.raw_identifier_value = regularize_candidate_names(
             raw_ids_for_element.raw_identifier_value
         )
+        # NB: regularizing can create duplicates (e.g., HILLARY CLINTON and Hillary Clinton regularize to the sam)
+        raw_ids_for_element.drop_duplicates(inplace=True)
 
     working = working.merge(
         raw_ids_for_element,
@@ -377,7 +379,9 @@ def replace_raw_with_internal_ids(
 
     # identify unmatched
     try:
-        unmatched = working[working["cdf_internal_name"].isnull()]
+        unmatched = working[
+            working["cdf_internal_name"].isnull() & working[f"{element}_raw"].notnull()
+        ]
         unmatched_raw = sorted(unmatched[f"{element}_raw"].unique(), reverse=True)
         unmatched_raw = [x for x in unmatched_raw if x != ""]
     except Exception:
@@ -512,7 +516,8 @@ def enum_col_to_id_othertext(
 ) -> (pd.DataFrame, List[str]):
     """Returns a copy of dataframe <df>, replacing a plaintext <type_col> column (e.g., 'CountItemType') with
     the corresponding two id and othertext columns (e.g., 'CountItemType_Id' and 'OtherCountItemType
-    using the enumeration given in <enum_df>. Optionally drops the original column <type_col>"""
+    using the enumeration given in <enum_df>. Optionally drops the original column <type_col>.
+    Also returns a list of all non-standard types found"""
     if df.empty:
         # add two columns
         df[f"{type_col}_Id"] = df[f"Other{type_col}"] = df.iloc[:, 0]
@@ -925,6 +930,7 @@ def raw_to_id_simple(
                         os.path.join(path_to_jurisdiction_dir, "dictionary.txt"),
                         sep="\t",
                         encoding=jm.default_juris_encoding,
+                        dtype=str,
                     )
                     r_i = r_i[r_i.cdf_element == "CountItemType"]
                 recognized = r_i.raw_identifier_value.unique()
@@ -942,16 +948,16 @@ def raw_to_id_simple(
                 # get list of raw CountItemTypes in case they are needed for error reporting
                 all_raw_cit = working.CountItemType_raw.unique().tolist()
                 # get internal CountItemType for all matched lines
-                working = (
-                    working[matched]
-                    .merge(
+                working = working[matched].merge(
                         r_i,
                         how="left",
                         left_on="CountItemType_raw",
                         right_on="raw_identifier_value",
-                    )
-                    .rename(columns={"cdf_internal_name": "CountItemType"})
-                )
+                    ).rename(columns={"cdf_internal_name": "CountItemType"})
+
+
+
+
 
                 # if no CountItemTypes matched to dictionary
                 if working.CountItemType.isnull().all():
@@ -1023,7 +1029,7 @@ def raw_to_id_simple(
                 err,
                 "system",
                 f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"Unexpected exception ({exc}) while adding internal ids for {t}.",
+                f"Unexpected exception while adding internal ids for {t}:\n{exc}",
             )
 
     return working, err
@@ -2486,7 +2492,7 @@ def blank_out(df: pd.DataFrame, regex: str) -> pd.DataFrame:
     new = df.copy()
     for c in df.columns:
         try:
-            new[c] = df[c].str.replace(p, "")
+            new[c] = df[c].str.replace(p, "", regex=True)
         except Exception:
             pass
     return new
