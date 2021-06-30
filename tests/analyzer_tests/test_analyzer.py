@@ -16,7 +16,7 @@ def data(runtime):
         "ga20p": data_exists("2020 Primary", "Georgia", p_path=runtime),
         "ga20g": data_exists("2020 General", "Georgia", p_path=runtime),
         "nc18g": data_exists("2018 General", "North Carolina", p_path=runtime),
-        "ak16g": data_exists("2016 General", "Alaska", p_path=runtime),
+        "ak20g": data_exists("2020 General", "Alaska", p_path=runtime),
         "ga18census": external_data_exists("2018 General","Georgia",p_path=runtime),
     }
 
@@ -84,6 +84,19 @@ def test_bar_congressional(runtime):
         )
         == results.ga_2018_bar_congressional
     )
+
+def test_alaska_non_county_hierarchy(runtime):
+    assert pytest.ok["ak20g"], "No Alaska 2020 General data"
+    analyzer = Analyzer(runtime)
+    assert (
+        analyzer.scatter(
+            "Alaska",
+                      "2020 General", "Candidate total", "Joseph R. Biden",
+"2020 General", "Candidate total", "Donald J. Trump",
+        )
+        == results.ak20g_pres_scatter
+    )
+
 
 
 
@@ -301,23 +314,6 @@ def test_contest_updatelabels_display(runtime):
             filters=["2018 General", "Georgia", "State Senate"],
         )
         == results.ga_2018_congressional_contests_state_senate
-    )
-
-
-def test_alaska_non_county_hierarchy(runtime):
-    assert pytest.ok["ak16g"], "No Alaska 2016 General data"
-    analyzer = Analyzer(runtime)
-    assert (
-        analyzer.scatter(
-            "Alaska",
-            "2016 General",
-            "Contest early",
-            "US President (AK)",
-            "2016 General",
-            "Contest election-day",
-            "US President (AK)",
-        )
-        == results.ak_2016_scatter
     )
 
 
