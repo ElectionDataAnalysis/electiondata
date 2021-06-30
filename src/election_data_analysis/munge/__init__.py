@@ -95,7 +95,7 @@ def clean_count_cols(
             if c in working.columns:
                 # remove the thousands separator if the column is not already int64
                 if thousands and (df.dtypes[c] == "object"):
-                    working[c] = working[c].str.replace(thousands, "", regex=True)
+                    working[c] = working[c].str.replace(thousands, "")
                 mask = ~working[c].astype(str).str.isdigit()
                 if mask.any():
                     # return bad rows for error reporting
@@ -157,7 +157,7 @@ def clean_strings(
             try:
                 # replace any " by '
                 mask = working[c].str.contains('"').fillna(False)
-                working.loc[mask, c] = working[c].str.replace('"', "'", regex=True)[mask]
+                working.loc[mask, c] = working[c].str.replace('"', "'")[mask]
             except AttributeError or TypeError:
                 pass
             try:
@@ -2492,7 +2492,7 @@ def blank_out(df: pd.DataFrame, regex: str) -> pd.DataFrame:
     new = df.copy()
     for c in df.columns:
         try:
-            new[c] = df[c].str.replace(p, "", regex=True)
+            new[c] = df[c].str.replace(p, "")
         except Exception:
             pass
     return new
