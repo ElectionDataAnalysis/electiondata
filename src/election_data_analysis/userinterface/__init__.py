@@ -1227,7 +1227,7 @@ def get_contest_type_display(item: str) -> str:
 
 
 def get_filtered_input_options(
-    session: Session, menu_type: str, filters: List[str]
+    session: Session, menu_type: str, filters: List[str], repository_content_root: str
 ) -> List[Dict[str, Any]]:
     """Display dropdown menu options for menu <menu_type>, limited to any strings in <filters>
     (unless <filters> is None, in which case all are displayed. Sort as necessary"""
@@ -1243,7 +1243,8 @@ def get_filtered_input_options(
                 "type": [None for election in elections],
             }
             df = pd.DataFrame(data=dropdown_options)
-            df[["year", "election_type"]] = df["name"].str.split(" ", expand=True)
+            df["year"] = df["name"].str[:4]
+            df["election_type"] = df["name"].str[5:]
             df.sort_values(
                 ["year", "election_type"], ascending=[False, True], inplace=True
             )
@@ -1255,7 +1256,7 @@ def get_filtered_input_options(
         if filters:
             df = df[df["parent"].isin(filters)]
     elif menu_type == "contest_type":
-        contest_df = db.get_relevant_contests(session, filters)
+        contest_df = db.get_relevant_contests(session, filters, repository_content_root)
         contest_types = contest_df["type"].unique()
         contest_types.sort()
         dropdown_options = {
@@ -1286,7 +1287,7 @@ def get_filtered_input_options(
             ]
         )
         # define input options for each particular contest
-        contest_df = db.get_relevant_contests(session, filters)
+        contest_df = db.get_relevant_contests(session, filters, repository_content_root)
         contest_df = contest_df[contest_df["type"].isin(filters)]
         df = pd.concat([contest_type_df, contest_df])
     elif menu_type == "category":

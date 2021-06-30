@@ -1023,7 +1023,7 @@ def get_relevant_election(session: Session, filters: List[str]) -> pd.DataFrame:
     return election_df
 
 
-def get_relevant_contests(session: Session, filters: List[str]) -> pd.DataFrame:
+def get_relevant_contests(session: Session, filters: List[str], repository_content_root: str) -> pd.DataFrame:
     """expects the filters list to have an election and jurisdiction.
     finds all contests for that combination. Returns a dataframe sorted by contest name.
     Omits any counts that don't
@@ -1032,7 +1032,11 @@ def get_relevant_contests(session: Session, filters: List[str]) -> pd.DataFrame:
     election_id = list_to_id(session, "Election", filters)
     jurisdiction_id = list_to_id(session, "ReportingUnit", filters)
     jurisdiction = name_from_id(session, "ReportingUnit", jurisdiction_id) # TODO tech debt
-    subdivision_type_id, other_subdivision_type = get_major_subdiv_id_and_othertext(session, jurisdiction)
+    subdivision_type_id, other_subdivision_type = get_major_subdiv_id_and_othertext(
+        session, jurisdiction, file_path=os.path.join(
+            repository_content_root,"jurisdictions", "000_major_subjurisdiction_types.txt"
+        ),
+    )
     working = unsummed_vote_counts_with_rollup_subdivision_id(
         session, election_id, jurisdiction_id, subdivision_type_id, other_subdivision_type,
     )[[ "ElectionDistrict", "Contest", "contest_district_type", "contest_district_othertype"]].drop_duplicates()
@@ -1230,8 +1234,7 @@ def unsummed_vote_counts_with_rollup_subdivision_id(
         ],
     )
     result = cursor.fetchall()
-    result_df = pd.DataFrame(result)
-    result_df.columns = [
+    columns = [
         "VoteCount_Id",
         "Count",
         "CountItemType_Id",
@@ -1257,6 +1260,7 @@ def unsummed_vote_counts_with_rollup_subdivision_id(
         "contest_district_othertype",
         "Party",
     ]
+    result_df = pd.DataFrame(result, columns=columns)
     return result_df
 
 

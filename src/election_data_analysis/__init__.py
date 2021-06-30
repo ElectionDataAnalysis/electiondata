@@ -888,6 +888,9 @@ class DataLoader:
         for category in exd.acs5_columns.keys():
             columns_to_get = exd.acs5_columns[category].keys()
             working = exd.get_raw_acs5_data(columns_to_get, census_year)
+            if working.empty:
+                err = ui.add_new_error(err, "census", census_year, "No data found at census.gov")
+                continue
             working = exd.combine_and_rename_columns(working, exd.acs_5_label_summands)
             working = exd.normalize(working, exd.acs_5_label_summands.keys())
             working["Category"] = category
@@ -1967,7 +1970,7 @@ class Analyzer:
         try:
             filters_mapped = ui.get_contest_type_mappings(filters)
             results = ui.get_filtered_input_options(
-                self.session, input_str, filters_mapped
+                self.session, input_str, filters_mapped, self.repository_content_root
             )
         except Exception as exc:
             results = None
@@ -1993,7 +1996,11 @@ class Analyzer:
         (
             subdivision_type_id,
             other_subdivision_type,
-        ) = db.get_major_subdiv_id_and_othertext(self.session, jurisdiction)
+        ) = db.get_major_subdiv_id_and_othertext(
+            self.session, jurisdiction, file_path=os.path.join(
+                self.repository_content_root,"jurisdictions","000_major_subjurisdiction_types.txt"
+            )
+        )
         h_election_id = db.name_to_id(self.session, "Election", h_election)
         v_election_id = db.name_to_id(self.session, "Election", v_election)
         # *_type is either candidates or contests or parties

@@ -589,7 +589,7 @@ def create_bar(
             cursor, "Contest", int(temp_df.iloc[0]["Contest_Id"])
         )
         if other_subdivision_type == "":
-            results["subdivision_type"] = db.name_to_id(session, "ReportingUnitType", subdivision_type_id)
+            results["subdivision_type"] = db.name_from_id(session, "ReportingUnitType", subdivision_type_id)
         else:
             results["subdivision_type"] = other_subdivision_type
         results["count_item_type"] = temp_df.iloc[0]["CountItemType"]

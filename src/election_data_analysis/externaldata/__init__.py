@@ -4,6 +4,7 @@ from typing import List, Dict
 from election_data_analysis import munge as m
 
 # constants
+census_noncount_columns = ["Name", "state", "county"]
 fips = {
     "Alabama": "01",
     "Alaska": "02",
@@ -67,7 +68,7 @@ fips = {
 acs5_columns = {
     # {display category: {census.gov column name: internal column name}}
     "Population": {"B01001_001E": "Population"},
-    "Pop. by Income (Avg Household)": {  # TODO check definitions at census.gov
+    "Pop. by Income (Avg Household)": {
         "B19001_002E": "Less than $10,000",
         "B19001_003E": "$10,000 to $14,999",
         "B19001_004E": "$15,000 to $19,999",
@@ -229,9 +230,11 @@ def get_raw_acs5_data(
     census_df.columns = headers
 
     # make count columns numeric
-    census_df = m.clean_count_cols(
-        census_df, census_df.columns.to_list().remove("Name")
+    census_df, bad_rows = m.clean_count_cols(
+        census_df, [c for c in census_df.columns if c not in census_noncount_columns]
     )
+    if not bad_rows.empty:
+        print(f"Not all rows processed. Bad rows are\n{bad_rows}")
     return census_df
 
 

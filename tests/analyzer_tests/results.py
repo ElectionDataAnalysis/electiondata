@@ -10818,7 +10818,7 @@ nc_2018_category = [
         "order_by": 14,
     },
     {"parent": "North Carolina", "name": "Party total", "type": None, "order_by": 15},
-    {"parent": "North Carolina", "name": "Census data", "type": None, "order_by": 16},
+    ## {"parent": "North Carolina", "name": "Census data", "type": None, "order_by": 16},
 ]
 
 

@@ -84,7 +84,8 @@ def clean_count_cols(
 ) -> (pd.DataFrame, pd.DataFrame):
     """Casts the given columns as integers, replacing any bad
     values with 0 and reporting a dataframe of any rows so changed.
-    If <thousands> separator is given, check for it"""
+    If <thousands> separator is given, check for it.
+    Also returns dataframe of rows where count failed"""
     if cols is None:
         return df, pd.DataFrame(columns=df.columns)
     else:
@@ -360,13 +361,13 @@ def replace_raw_with_internal_ids(
         raw_ids_for_element["cdf_internal_name"] = regularize_candidate_names(
             raw_ids_for_element["cdf_internal_name"]
         )
-        raw_ids_for_element.drop_duplicates(inplace=True)
-
         # Regularize candidate names from results file and from dictionary.txt
         working.Candidate_raw = regularize_candidate_names(working.Candidate_raw)
         raw_ids_for_element.raw_identifier_value = regularize_candidate_names(
             raw_ids_for_element.raw_identifier_value
         )
+        # NB: regularizing can create duplicates (e.g., HILLARY CLINTON and Hillary Clinton regularize to the sam)
+        raw_ids_for_element.drop_duplicates(inplace=True)
 
     working = working.merge(
         raw_ids_for_element,
