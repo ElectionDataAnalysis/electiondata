@@ -22,3 +22,4 @@ Candidate={<count_header_4>,^(.*)\n*.*$}
 
 [ignore]
 Party=Total Votes Cast
+ReportingUnit=Office Totals:

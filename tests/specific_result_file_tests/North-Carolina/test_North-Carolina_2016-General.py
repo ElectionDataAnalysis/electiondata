@@ -24,12 +24,12 @@ total_cd_votes = (
     217531 + 106170
 )  # total votes in that US House contest in the chosen cd
 shd = 4  # state house district
-total_shd_votes = 409541  # total votes in that State House contest
+total_shd_votes = 24646  # total votes in that State House contest
 ssd = 15  # state senate district
-total_ssd_votes = 58999 + 53905 + 5001  # total votes in that State Senate contest
+total_ssd_votes = 117985  # total votes in that State Senate contest
 single_vote_type = "early"  # pick any one with corresponding data in your file, but use internal db name
 pres_votes_vote_type = (
-    98147 + 91980 + 6330 + 2668 + 650
+    2929797
 )  # total votes for US President of that vote type
 county_or_other = "county"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia

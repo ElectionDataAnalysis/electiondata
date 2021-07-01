@@ -6382,7 +6382,25 @@ Candidate	Ryan Cason	Ryan Cason (Write-in) No Candidate
 Candidate	Robbie Hoffman	Robbie Hoffman (Write-in) No Candidate
 Candidate	Richard Michael Turtenwald	Richard Michael Turtenwald (Write-in) No Candidate
 Candidate	Paul Boucher	Paul Boucher (Write-in) No Candidate
-Candidate	William Henry Davis III	No Candidate William Henry Davis III
-Candidate	Corban Gehler	No Candidate Corban Gehler
+Candidate	William Henry Davis III	No Candidate William Henry Davis III (Write-in)
+Candidate	Corban Gehler	No Candidate Corban Gehler (Write-in)
 Candidate	Mark S. Grimek	Mark S. Grimek (Write-in) No Candidate
 Candidate	Jared William Landry	Jared William Landry (Write-in) No Candidate
+
+Candidate	Tom Hoefling (write-in)	Tom Hoefling Steve Schulin (write-in)
+Candidate	Rocky Roque De La Fuente	Rocky Roque De La Fuente Michael Steinberg
+Candidate	Monica Moorehead	Monica Moorehead Lamont Lilly
+Candidate	Michael A. Maturen (write-in)	Michael A. Maturen Juan Munoz (write-in)
+Candidate	Marshall Schoenke (write-in)	Marshall Schoenke James Creighton Mitchell Jr. (write-in)
+Candidate	Laurence Kotlikoff (write-in)	Laurence Kotlikoff Edward E. Leamer (write-in)
+Candidate	Jill Stein	Jill Stein Ajamu Baraka
+Candidate	Hillary Clinton	Hillary Clinton Tim Kaine
+Candidate	Gary Johnson	Gary Johnson Bill Weld
+Candidate	Evan McMullin (write-in)	Evan McMullin Nathan Johnson (write-in)
+Candidate	Emidio Soltysik (write-in)	Emidio Soltysik Angela Nicole Walker (write-in)
+Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
+Candidate	Darrell L. Castle	Darrell L. Castle Scott N. Bradley
+Candidate	Chris Keniston (write-in)	Chris Keniston Deacon Taylor (write-in)
+Candidate	Cherunda Fox (write-in)	Cherunda Fox Roger Kushner (write-in)
+
+
