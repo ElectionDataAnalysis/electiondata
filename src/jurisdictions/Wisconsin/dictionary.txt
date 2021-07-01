@@ -2250,7 +2250,6 @@ Party	Unknown	Unnamed: 7_level_0
 Party	Unknown	Unnamed: 8_level_0
 Party	none or unknown	OTHER
 ReportingUnit	County	County
-ReportingUnit	Office Totals:	Office Totals:
 ReportingUnit	Wisconsin	Wisconsin
 ReportingUnit	Wisconsin;Adams County	ADAMS
 ReportingUnit	Wisconsin;Adams County	ADAMS;CITY OF WISCONSIN DELLS Wards 5,9
@@ -6379,3 +6378,11 @@ ReportingUnit	Wisconsin;Wood County	WOOD;Village of VESPER Ward 1
 ReportingUnit	Wisconsin;Wood County	Wisconsin;Wood County
 ReportingUnit	Wisconsin;Wood County	Wood
 ReportingUnit	Wisconsin;Wood County	fips55141
+Candidate	Ryan Cason	Ryan Cason (Write-in) No Candidate
+Candidate	Robbie Hoffman	Robbie Hoffman (Write-in) No Candidate
+Candidate	Richard Michael Turtenwald	Richard Michael Turtenwald (Write-in) No Candidate
+Candidate	Paul Boucher	Paul Boucher (Write-in) No Candidate
+Candidate	William Henry Davis III	No Candidate William Henry Davis III
+Candidate	Corban Gehler	No Candidate Corban Gehler
+Candidate	Mark S. Grimek	Mark S. Grimek (Write-in) No Candidate
+Candidate	Jared William Landry	Jared William Landry (Write-in) No Candidate
