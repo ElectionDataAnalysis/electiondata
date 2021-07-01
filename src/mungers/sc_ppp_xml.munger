@@ -1,0 +1,12 @@
+[format]
+file_type=xml
+count_location=ElectionResult/Contest/Choice/VoteType/County.votes
+
+encoding=utf_8
+
+[munge formulas]
+ReportingUnit=<County.name>
+Party=<Choice.party>
+CandidateContest=<Contest.text> (<Choice.party>)
+Candidate={<Choice.text>,^(?:[A-Z]{3} )?(Write-In|Write-in|.*)$}
+CountItemType=<VoteType.name>

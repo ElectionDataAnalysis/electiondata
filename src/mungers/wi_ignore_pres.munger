@@ -38,4 +38,5 @@ CandidateContest=<row_0>
 [ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
 Candidate=<Total Votes Cast>
+ReportingUnit=Office Totals:
 ##################################################################
