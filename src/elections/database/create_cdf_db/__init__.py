@@ -16,17 +16,18 @@ from sqlalchemy import (
     Index,
     Boolean,
 )
+### do not remove
 from sqlalchemy import (
     Date,
     TIMESTAMP,
 )  # these are used, even if syntax-checker can't tell
 import os
 import pandas as pd
-from elections import database as db
+from elections import database as db, constants
 
 
 # constants
-bmselections = ["Yes", "No", "none or unknown"]
+
 
 
 def create_common_data_format_tables(session, dirpath="CDF_schema_def_info/"):
@@ -370,7 +371,7 @@ def fill_standard_tables(session, schema, dirpath="CDF_schema_def_info"):
         dframe.to_sql(f, session.bind, schema=schema, if_exists="append", index=False)
 
     # fill BallotMeasureSelection table
-    load_bms(session.bind, bmselections)
+    load_bms(session.bind, constants.bmselections)
     session.flush()
     return e_table_list
 

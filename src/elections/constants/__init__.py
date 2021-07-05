@@ -242,6 +242,7 @@ standard_juris_csv_reading_kwargs = {
     "keep_default_na": False,
     "na_values": "",
 }
+bmselections = ["Yes", "No", "none or unknown"]
 
 # encodings
 default_encoding = "utf_8"
