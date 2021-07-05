@@ -8,7 +8,8 @@ from elections import (
     nistformats as nist,
     visualize as viz,
     externaldata as exd,
-    multielection as multi
+    multielection as multi,
+    constants,
 )
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
@@ -24,57 +25,7 @@ import itertools
 import shutil
 import json
 
-# constants
-from elections.userinterface import add_new_error
-
-sdl_pars_req = [
-    "munger_list",
-    "results_file",
-    "results_short_name",
-    "results_download_date",
-    "results_source",
-    "results_note",
-    "jurisdiction",
-    "election",
-]
-
 # nb: jurisdiction_path is for backward compatibility
-sdl_pars_opt = [
-    "jurisdiction_path",
-    "CandidateContest",
-    "BallotMeasureContest",
-    "BallotMeasureSelection",
-    "Candidate",
-    "Party",
-    "CountItemType",
-    "ReportingUnit",
-    "Contest",
-    "is_preliminary",
-]
-
-multi_data_loader_pars = [
-    "results_dir",
-    "archive_dir",
-    "repository_content_root",
-    "reports_and_plots_dir",
-]
-
-optional_mdl_pars = [
-    "unloaded_dir",
-]
-
-prep_pars = [
-    "name",
-    "abbreviated_name",
-    "count_of_state_house_districts",
-    "count_of_state_senate_districts",
-    "count_of_us_house_districts",
-    "reporting_unit_type",
-]
-
-optional_prep_pars = []
-
-analyze_pars = ["db_paramfile", "db_name"]
 
 # classes
 class SingleDataLoader:
@@ -100,8 +51,8 @@ class SingleDataLoader:
         # grab parameters (known to exist from __new__, so can ignore error variable)
         par_file = os.path.join(results_dir,param_file)
         self.d, _ = ui.get_parameters(
-            required_keys=sdl_pars_req,
-            optional_keys=sdl_pars_opt,
+            required_keys=constants.sdl_pars_req,
+            optional_keys=constants.sdl_pars_opt,
             param_file=par_file,
             header="elections",
         )
@@ -284,8 +235,8 @@ class DataLoader:
             param_file = "run_time.ini"
 
         d, err = ui.get_parameters(
-            required_keys=multi_data_loader_pars,
-            optional_keys=optional_mdl_pars,
+            required_keys=constants.multi_data_loader_pars,
+            optional_keys=constants.optional_mdl_pars,
             param_file=param_file,
             header="elections",
         )
@@ -302,8 +253,8 @@ class DataLoader:
 
         # grab parameters
         self.d, self.parameter_err = ui.get_parameters(
-            required_keys=multi_data_loader_pars,
-            optional_keys=optional_mdl_pars,
+            required_keys=constants.multi_data_loader_pars,
+            optional_keys=constants.optional_mdl_pars,
             param_file=param_file,
             header="elections",
         )
@@ -1248,8 +1199,8 @@ def check_and_init_singledataloader(
     par_file = os.path.join(results_dir, par_file_name)
     sdl = None
     d, err = ui.get_parameters(
-        required_keys=sdl_pars_req,
-        optional_keys=sdl_pars_opt,
+        required_keys=constants.sdl_pars_req,
+        optional_keys=constants.sdl_pars_opt,
         param_file=par_file,
         header="elections",
     )
@@ -1294,7 +1245,7 @@ class JurisdictionPrepper:
         """Checks if parameter file exists and is correct. If not, does
         not create JurisdictionPrepper object."""
         for param_file, required in [
-            (prep_param_file, prep_pars),
+            (prep_param_file,constants.prep_pars),
             (run_time_param_file, ["repository_content_root", "reports_and_plots_dir"]),
         ]:
             try:
@@ -1832,7 +1783,7 @@ class JurisdictionPrepper:
         self.d = dict()
         # get parameters from jurisdiction_prep.ini and run_time.ini
         for param_file, required in [
-            (prep_param_file, prep_pars),
+            (prep_param_file,constants.prep_pars),
             (run_time_param_file, ["repository_content_root", "reports_and_plots_dir"]),
         ]:
             d, parameter_err = ui.get_parameters(
@@ -2461,7 +2412,7 @@ class Analyzer:
         # exclude any redundant total vote types
         if len(vc_df.CountItemType.unique()) > 1:
             vc_df = vc_df[vc_df.CountItemType != "total"]
-        vc_dict = vc_df.groupby(name_field).sum("Count").to_dict()["Count"]
+        vc_dict = vc_df.groupby(name_field).sum().to_dict()["Count"]
         return vc_dict
 
 
@@ -3122,7 +3073,7 @@ def datafile_info(connection,results_filename_for_error_reporting,
 
 def bad_multi_presidentials(
         dbname: str, param_file: str, compare_file: str
-) -> List[str]:
+) -> (List[str], List[str]):
     """Compares presidential results for elections and jurisdictions listed
     in <compare_file>. Assumes <compare_file> has columns
     Election, Jurisdiction, Total Presidential"""
