@@ -1,3 +1,4 @@
+import elections.constants
 import elections.juris
 from elections import (
     database as db,
@@ -2079,9 +2080,9 @@ class Analyzer:
             self, election: str, jurisdiction, major_subdivision: Optional[str] = None
     ) -> Union[str, Dict[str, Any]]:
         """picks either version 1.0 (json) or version 2.0 (xml) based on value of nistformats.nist_version"""
-        if nist.nist_version == "1.0":
+        if elections.constants.nist_version == "1.0":
             return self.export_nist_v1_json(election, jurisdiction)
-        elif nist.nist_version == "2.0":
+        elif elections.constants.nist_version == "2.0":
             return self.export_nist_v2(election, jurisdiction, major_subdivision)
         else:
             return ""
@@ -2134,10 +2135,10 @@ class Analyzer:
                 election,
                 jurisdiction,
                 major_subdivision=major_subdivision,
-                issuer=nist.default_issuer,
-                issuer_abbreviation=nist.default_issuer_abbreviation,
-                status=nist.default_status,
-                vendor_application_id=nist.default_vendor_application_id,
+                issuer=elections.constants.default_issuer,
+                issuer_abbreviation=elections.constants.default_issuer_abbreviation,
+                status=elections.constants.default_status,
+                vendor_application_id=elections.constants.default_vendor_application_id,
             )
         xml_string = ET.tostring(xml_tree.getroot(),
             encoding=m.default_encoding,

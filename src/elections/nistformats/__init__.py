@@ -9,21 +9,8 @@ from datetime import datetime, timezone
 from elections import (
     database as db,
     userinterface as ui,
+    constants,
 )
-
-nist_version = "1.0"
-# constants set by issuer
-default_issuer = "unspecified user of code base at github.com/ElectionDataAnalysis/elections"
-default_issuer_abbreviation = "unspecified"
-default_status = "unofficial-partial"  # choices are limited by xsd schema
-default_vendor_application_id = (
-    "open source software at github.com/ElectionDataAnalysis/elections"
-)
-
-# constants dictated by NIST
-schema_location = \
-    "https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd"
-namespace = "http://itl.nist.gov/ns/voting/1500-100/v2"
 
 
 def nist_v2_xml_export_tree(
@@ -33,10 +20,10 @@ def nist_v2_xml_export_tree(
     rollup: bool = False,
     major_subdivision: Optional[str] = None,
     sub_div_type_file: Optional[str] = None,
-    issuer: str = default_issuer,
-    issuer_abbreviation: str = default_issuer_abbreviation,
-    status: str = default_status,
-    vendor_application_id: str = default_vendor_application_id,
+    issuer: str = constants.default_issuer,
+    issuer_abbreviation: str = constants.default_issuer_abbreviation,
+    status: str = constants.default_status,
+    vendor_application_id: str = constants.default_vendor_application_id,
 ) -> (ET.ElementTree, Dict[str, Any]):
     """Creates a tree in the NIST common data format (V2) containing the results
     from the given election and jurisdiction. Note that all available results will
@@ -55,7 +42,7 @@ def nist_v2_xml_export_tree(
             err,
             "database",
             session.bind.url.database,
-            f"One or more of election {election} or jurisdiction {jurisdiction} not found in diatabase"
+            f"One or more of election {election} or jurisdiction {jurisdiction} not found in database"
         )
         tree = ET.ElementTree()
         return tree, err
@@ -82,8 +69,8 @@ def nist_v2_xml_export_tree(
     # ElectionReport (root)
     attr = {
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
-        "xsi:schemaLocation": schema_location,
-        "xmlns": namespace,
+        "xsi:schemaLocation":constants.nist_schema_location,
+        "xmlns":constants.nist_namespace,
     }
     root = ET.Element("ElectionReport",attr)
 
@@ -261,30 +248,13 @@ def nist_v2_xml_export_tree(
 
 # constants
 # NB: if nist schema were out of sync with internal db schema, this would be non-trivial
-cit_list = [
-    "absentee",
-    "absentee-fwab",
-    "absentee-in-person",
-    "absentee-mail",
-    "early",
-    "election-day",
-    "provisional",
-    "seats",
-    "total",
-    "uocava",
-    "write-in",
-]
-cit_from_raw_nist_df = pd.DataFrame(
-    [["CountItemType", x, x] for x in cit_list],
-    columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
-)
 
 
 def tree_parse_info(xpath: str,ns: Optional[str]) -> Dict[str,Any]:
     """extracts xml path-parsing info from xpath with
     optional .* attribute. E.g., Election/Contest.name
     gets parsed to path Election/Contest and attribute
-    name. If namespace (e.g., 'html') is given, then namespase is
+    name. If namespace (e.g., 'html') is given, then namespace is
     prepended as appropriate in path (e.g. {html}Election/{html}Contest)"""
     if "." in xpath:
         [no_ns_path, attrib] = xpath.split(".")
@@ -404,7 +374,7 @@ def df_from_tree(
     return df, err
 
 
-def nist_namespace(f_path, key) -> Optional[dict]:
+def check_nist_namespace(f_path,key) -> Optional[dict]:
     """get the namespaces in the XML and return error if the one we're expecting
     is not found"""
     namespaces = dict(

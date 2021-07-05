@@ -1,3 +1,5 @@
+import pandas as pd
+
 sdl_pars_req = [
     "munger_list",
     "results_file",
@@ -324,3 +326,32 @@ error_keys = {
     "test",
 }
 warning_keys = {f"warn-{ek}" for ek in error_keys}
+
+# constants dictated by NIST
+nist_version = "1.0"
+default_issuer = "unspecified user of code base at github.com/ElectionDataAnalysis/elections"
+default_issuer_abbreviation = "unspecified"
+default_status = "unofficial-partial"  # choices are limited by xsd schema
+default_vendor_application_id = (
+    "open source software at github.com/ElectionDataAnalysis/elections"
+)
+nist_schema_location = \
+    "https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd"
+nist_namespace = "http://itl.nist.gov/ns/voting/1500-100/v2"
+cit_list = [
+    "absentee",
+    "absentee-fwab",
+    "absentee-in-person",
+    "absentee-mail",
+    "early",
+    "election-day",
+    "provisional",
+    "seats",
+    "total",
+    "uocava",
+    "write-in",
+]
+cit_from_raw_nist_df = pd.DataFrame(
+    [["CountItemType", x, x] for x in cit_list],
+    columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
+)

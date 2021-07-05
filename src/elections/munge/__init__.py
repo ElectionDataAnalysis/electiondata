@@ -1,5 +1,7 @@
 import inspect
 from pathlib import Path
+
+import elections.constants
 from elections import (
     database as db,
     userinterface as ui,
@@ -924,7 +926,7 @@ def raw_to_id_simple(
             if t == "CountItemType":
                 # munge raw to internal CountItemType
                 if file_type == "nist_v2_xml":
-                    r_i = nist.cit_from_raw_nist_df
+                    r_i = elections.constants.cit_from_raw_nist_df
                 else:
                     r_i = pd.read_csv(
                         os.path.join(path_to_jurisdiction_dir, "dictionary.txt"),
