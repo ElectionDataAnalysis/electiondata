@@ -3,8 +3,6 @@ import requests
 from typing import List, Dict
 from elections import munge as m, constants
 
-# constants
-
 
 def get_raw_acs5_data(
     columns_to_get: List[str], census_year: int, reporting_unit_type: str = "county"
