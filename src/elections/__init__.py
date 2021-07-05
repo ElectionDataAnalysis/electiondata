@@ -8,7 +8,7 @@ from elections import (
     analyze as a,
     nist,
     visualize as viz,
-    externaldata as exd,
+    otherdata as exd,
     multielection as multi,
     constants,
 )
@@ -837,14 +837,14 @@ class DataLoader:
         pairs for any juris that has nontrivial join."""
         err = None
         df = pd.DataFrame()
-        for category in exd.acs5_columns.keys():
-            columns_to_get = exd.acs5_columns[category].keys()
+        for category in elections.constants.acs5_columns.keys():
+            columns_to_get = elections.constants.acs5_columns[category].keys()
             working = exd.get_raw_acs5_data(columns_to_get, census_year)
             if working.empty:
                 err = ui.add_new_error(err, "census", census_year, "No data found at census.gov")
                 continue
-            working = exd.combine_and_rename_columns(working, exd.acs_5_label_summands)
-            working = exd.normalize(working, exd.acs_5_label_summands.keys())
+            working = exd.combine_and_rename_columns(working,elections.constants.acs_5_label_summands)
+            working = exd.normalize(working,elections.constants.acs_5_label_summands.keys())
             working["Category"] = category
             df = pd.concat(df, working)
         self.load_single_external_data_set()
