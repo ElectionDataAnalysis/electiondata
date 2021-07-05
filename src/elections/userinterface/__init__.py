@@ -9,7 +9,7 @@ from elections import (
     database as db,
     munge as m,
     juris as jm,
-    nistformats as nist,
+    nist as nist,
     constants
 )
 import pandas as pd

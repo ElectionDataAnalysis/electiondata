@@ -6,7 +6,7 @@ from elections import (
     userinterface as ui,
     munge as m,
     analyze as a,
-    nistformats as nist,
+    nist,
     visualize as viz,
     externaldata as exd,
     multielection as multi,
@@ -2079,7 +2079,7 @@ class Analyzer:
     def export_nist(
             self, election: str, jurisdiction, major_subdivision: Optional[str] = None
     ) -> Union[str, Dict[str, Any]]:
-        """picks either version 1.0 (json) or version 2.0 (xml) based on value of nistformats.nist_version"""
+        """picks either version 1.0 (json) or version 2.0 (xml) based on value of constants.nist_version"""
         if elections.constants.nist_version == "1.0":
             return self.export_nist_v1_json(election, jurisdiction)
         elif elections.constants.nist_version == "2.0":

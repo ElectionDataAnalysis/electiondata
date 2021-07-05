@@ -6,7 +6,7 @@ from elections import (
     database as db,
     userinterface as ui,
     juris as jm,
-    nistformats as nist,
+    nist as nist,
 )
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
