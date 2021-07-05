@@ -894,7 +894,7 @@ class DataLoader:
 
         # add elections to Election.txt
         election_df = pd.DataFrame(
-            [[f"{e} General","general"] for e in multi.mit_elections],columns=["Name","ElectionType"]
+            [[f"{e} General","general"] for e in elections.constants.mit_elections],columns=["Name","ElectionType"]
         )
 
         # add candidates to Candidate.txt
@@ -902,7 +902,7 @@ class DataLoader:
         candidates = sorted(working[candidate_col].unique())
 
         # add candidates to dictionary
-        candidate_map = {x:multi.correct(x.title()) for x in multi.mit_candidates}
+        candidate_map = {x:multi.correct(x.title()) for x in elections.constants.mit_candidates}
         update_err = ui.consolidate_errors(
             [update_err,multi.add_candidates(
                 juris_system,self.d["repository_content_root"],candidates,candidate_map
@@ -911,8 +911,8 @@ class DataLoader:
 
         # add contests to dictionary  # TODO this belongs with constants, but depends on jurisdiction...
         contest_d = {
-            "PRESIDENT":f"US President ({multi.abbr[juris_true]})",
-            "US PRESIDENT":f"US President ({multi.abbr[juris_true]})",
+            "PRESIDENT":f"US President ({elections.constants.abbr[juris_true]})",
+            "US PRESIDENT":f"US President ({elections.constants.abbr[juris_true]})",
         }
         update_err = ui.consolidate_errors(
             [update_err,
@@ -921,14 +921,14 @@ class DataLoader:
         # add parties to dictionary
         update_err = ui.consolidate_errors(
             [update_err,multi.add_dictionary_entries(
-                juris_system,self.d["repository_content_root"],"Party",multi.mit_party
+                juris_system,self.d["repository_content_root"],"Party",elections.constants.mit_party
             )]
         )
 
         # add vote_count_types to dictionary
         update_err = ui.consolidate_errors(
             [update_err,multi.add_dictionary_entries(
-                juris_system, self.d["repository_content_root"], "CountItemType", multi.mit_cit
+                juris_system, self.d["repository_content_root"], "CountItemType",elections.constants.mit_cit
             )]
         )
         ## load jurisdiction info to db
@@ -969,11 +969,11 @@ class DataLoader:
             return success, err
 
         # rename columns to match internal db elements
-        df.rename(columns={v:k for k,v in multi.mit_cols.items()},inplace=True)
+        df.rename(columns={v:k for k,v in elections.constants.mit_cols.items()},inplace=True)
         # retype count column to int
         df["Count"] = df["Count"].fillna(0).astype(int,errors="ignore")
 
-        df = df[df["Election"].isin(multi.mit_elections.keys())]
+        df = df[df["Election"].isin(elections.constants.mit_elections.keys())]
 
         # regularize fips to match standard in jurisdiction/dictionary.txt files
         df["ReportingUnit_raw"] = "fips"+ df["ReportingUnit_raw"]
@@ -1010,7 +1010,7 @@ class DataLoader:
 
             ## load results to db
             for election in j_df["Election"].unique():
-                election_true_name = multi.mit_elections[election]
+                election_true_name = elections.constants.mit_elections[election]
 
                 print(f"\t{election_true_name}")
                 election_id = db.name_to_id(self.session,"Election", election_true_name)
@@ -1072,9 +1072,9 @@ class DataLoader:
                     multi_file,
                     f"MIT_pres_gen_Y2K_{juris_system_name}_{election}",
                     Path(multi_file).name,
-                    multi.mit_datafile_info["download_date"],
-                    multi.mit_datafile_info["source"],
-                    multi.mit_datafile_info["note"],
+                    elections.constants.mit_datafile_info["download_date"],
+                    elections.constants.mit_datafile_info["source"],
+                    elections.constants.mit_datafile_info["note"],
                     jurisdiction_id,
                     election_id,
                     False,

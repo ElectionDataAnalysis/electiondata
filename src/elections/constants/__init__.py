@@ -3,6 +3,66 @@ from typing import Dict,List,Any
 
 import pandas as pd
 
+abbr = {
+    "Alabama": "AL",
+    "Alaska": "AK",
+    "Arizona": "AZ",
+    "Arkansas": "AR",
+    "California": "CA",
+    "Colorado": "CO",
+    "Connecticut": "CT",
+    "Delaware": "DE",
+    "Florida": "FL",
+    "Georgia": "GA",
+    "Hawaii": "HI",
+    "Idaho": "ID",
+    "Illinois": "IL",
+    "Indiana": "IN",
+    "Iowa": "IA",
+    "Kansas": "KS",
+    "Kentucky": "KY",
+    "Louisiana": "LA",
+    "Maine": "ME",
+    "Maryland": "MD",
+    "Massachusetts": "MA",
+    "Michigan": "MI",
+    "Minnesota": "MN",
+    "Mississippi": "MS",
+    "Missouri": "MO",
+    "Montana": "MT",
+    "Nebraska": "NE",
+    "Nevada": "NV",
+    "New Hampshire": "NH",
+    "New Jersey": "NJ",
+    "New Mexico": "NM",
+    "New York": "NY",
+    "North Carolina": "NC",
+    "North Dakota": "ND",
+    "Ohio": "OH",
+    "Oklahoma": "OK",
+    "Oregon": "OR",
+    "Pennsylvania": "PA",
+    "Rhode Island": "RI",
+    "South Carolina": "SC",
+    "South Dakota": "SD",
+    "Tennessee": "TN",
+    "Texas": "TX",
+    "Utah": "UT",
+    "Vermont": "VT",
+    "Virginia": "VA",
+    "Washington": "WA",
+    "West Virginia": "WV",
+    "Wisconsin": "WI",
+    "Wyoming": "WY",
+    "American Samoa": "AS",
+    "District of Columbia": "DC",
+    "District Of Columbia": "DC",
+    "Guam": "GU",
+    "Marshall Islands": "MH",
+    "Northern Mariana Island": "MP",
+    "Puerto Rico": "PR",
+    "Virgin Islands": "VI",
+}
 sdl_pars_req = [
     "munger_list",
     "results_file",
@@ -329,38 +389,7 @@ error_keys = {
     "test",
 }
 warning_keys = {f"warn-{ek}" for ek in error_keys}
-
-# constants dictated by NIST
-nist_version = "1.0"
-default_issuer = "unspecified user of code base at github.com/ElectionDataAnalysis/elections"
-default_issuer_abbreviation = "unspecified"
-default_status = "unofficial-partial"  # choices are limited by xsd schema
-default_vendor_application_id = (
-    "open source software at github.com/ElectionDataAnalysis/elections"
-)
-nist_schema_location = \
-    "https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd"
-nist_namespace = "http://itl.nist.gov/ns/voting/1500-100/v2"
-cit_list = [
-    "absentee",
-    "absentee-fwab",
-    "absentee-in-person",
-    "absentee-mail",
-    "early",
-    "election-day",
-    "provisional",
-    "seats",
-    "total",
-    "uocava",
-    "write-in",
-]
-cit_from_raw_nist_df = pd.DataFrame(
-    [["CountItemType", x, x] for x in cit_list],
-    columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
-)
 default_encoding = "utf_8"
-brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")
-pandas_default_pattern = r"^Unnamed: (\d+)_level_(\d+)$"
 no_param_file_types = {"nist_v2_xml"}
 opt_munger_data_types: Dict[str, str] = {
     "count_location": "string-with-opt-list",
@@ -414,3 +443,90 @@ all_munge_elements = [
     "ReportingUnit",
     "CountItemType",
 ]
+
+# regex patterns
+brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")
+pandas_default_pattern = r"^Unnamed: (\d+)_level_(\d+)$"
+
+# constants dictated by NIST
+nist_version = "1.0"
+default_issuer = "unspecified user of code base at github.com/ElectionDataAnalysis/elections"
+default_issuer_abbreviation = "unspecified"
+default_status = "unofficial-partial"  # choices are limited by xsd schema
+default_vendor_application_id = (
+    "open source software at github.com/ElectionDataAnalysis/elections"
+)
+nist_schema_location = \
+    "https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd"
+nist_namespace = "http://itl.nist.gov/ns/voting/1500-100/v2"
+cit_list = [
+    "absentee",
+    "absentee-fwab",
+    "absentee-in-person",
+    "absentee-mail",
+    "early",
+    "election-day",
+    "provisional",
+    "seats",
+    "total",
+    "uocava",
+    "write-in",
+]
+cit_from_raw_nist_df = pd.DataFrame(
+    [["CountItemType", x, x] for x in cit_list],
+    columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
+)
+
+# constants related to MIT Election Data Science presidential data set
+mit_datafile_info = {
+    "download_date": "2021-06-20",
+    "note":"Presidential only, total only, results by county",
+    "source": 'MIT Election Data and Science Lab, 2018, "County Presidential Election Returns 2000-2020",' 
+    'https://doi.org/10.7910/DVN/VOQCHQ, Harvard Dataverse, V8, UNF:6:20+0NUTez42tTN5eqIKd5g== [fileUNF]',
+
+}
+mit_cols = {
+    "Jurisdiction": "state",
+    "Election": "year",
+    "Count": "candidatevotes",
+    "ReportingUnit_raw": "county_fips",
+    "CandidateContest_raw": "office",
+    "Party_raw": "party",
+    "Candidate_raw": "candidate",
+    "CountItemType_raw": "mode"
+}
+mit_party = {
+    "DEMOCRAT": "Democratic Party",
+    "OTHER": "none or unknown",
+    "REPUBLICAN": "Republican Party",
+    "LIBERTARIAN": "Libertarian Party",
+    "GREEN": "Green Party",
+}
+mit_elections = {"2000": "2000 General",
+                 "2004": "2004 General",
+                 "2008": "2008 General",
+                "2012": "2012 General",
+                "2016": "2016 General",
+}  # 2020 is there but we won't load it.
+mit_election_types = {
+    "2000": "general",
+    "2004": "general",
+    "2008": "general",
+                "2012": "general",
+                "2016": "general",
+}
+mit_cit = {"TOTAL": "total"}
+mit_candidates = ['MITT ROMNEY', 'OTHER', 'DONALD J TRUMP', 'DONALD TRUMP',
+       'HILLARY CLINTON', 'PRINCESS KHADIJAH M JACOB-FAMBRO',
+       'JOHN KERRY', 'JOHN MCCAIN', 'BARACK OBAMA', 'JOSEPH R BIDEN JR',
+       'RALPH NADER', 'JO JORGENSEN', 'WRITEIN', 'AL GORE',
+       'ROQUE "ROCKY" DE LA FUENTE', 'GEORGE W. BUSH',
+       'BRIAN CARROLL', 'JEROME M SEGAL',
+       'BROCK PIERCE', 'DON BLANKENSHIP']
+mit_correction ={
+    "District Of Columbia": "District of Columbia",
+    "Donald Trump": "Donald J. Trump",
+    "Joseph R Biden Jr": "Joseph R. Biden",
+    "John Mccain": "John McCain",
+    """Roque "Rocky" De La Fuenta""": "Roque 'Rocky' de la Fuenta"
+}
