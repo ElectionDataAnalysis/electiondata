@@ -5,6 +5,7 @@ from configparser import (
     ParsingError,
 )
 
+import elections.constants
 from elections import (
     database as db,
     munge as m,
@@ -109,7 +110,7 @@ def basic_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
         kwargs["thousands"] = p["thousands_separator"]
     if p["file_type"] in ["flat_text"]:
         if p["encoding"] is None:
-            kwargs["encoding"] = m.default_encoding
+            kwargs["encoding"] = elections.constants.default_encoding
         else:
             kwargs["encoding"] = p["encoding"]
 

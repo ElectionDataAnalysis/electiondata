@@ -15,6 +15,8 @@ import sqlalchemy as db
 import datetime
 from configparser import MissingSectionHeaderError
 import pandas as pd
+
+import elections.constants
 from elections import (
     munge as m,analyze as an,
 )
@@ -403,7 +405,7 @@ def sql_alchemy_connect(
 
     # The return value of create_engine() is our connection object
     engine = db.create_engine(
-        url, client_encoding=m.default_encoding, pool_size=20, max_overflow=40
+        url, client_encoding=elections.constants.default_encoding, pool_size=20, max_overflow=40
     )
     return engine, err
 
@@ -532,7 +534,7 @@ def insert_to_cdf_db(
     error_type: str,
     error_name: str,
     sep: str = "\t",
-    encoding: str = m.default_encoding,
+    encoding: str = elections.constants.default_encoding,
     timestamp: Optional[str] = None,
     on_conflict: str = "NOTHING",
 ) -> Optional[dict]:

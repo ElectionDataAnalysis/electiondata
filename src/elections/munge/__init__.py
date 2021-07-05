@@ -1,12 +1,11 @@
 import inspect
 from pathlib import Path
 
-import elections.constants
 from elections import (
     database as db,
     userinterface as ui,
     juris as jm,
-    nist as nist,
+    constants,
 )
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
@@ -14,71 +13,6 @@ from typing import Optional, List, Dict, Any
 import re
 import os
 from sqlalchemy.orm.session import Session
-
-# constants
-default_encoding = "utf_8"
-brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")
-pandas_default_pattern = r"^Unnamed: (\d+)_level_(\d+)$"
-
-# common data format file types need no extra parameters
-no_param_file_types = {"nist_v2_xml"}
-
-opt_munger_data_types: Dict[str, str] = {
-    "count_location": "string-with-opt-list",
-    "munge_field_types": "list-of-strings",
-    "sheets_to_read_names": "list-of-strings",
-    "sheets_to_skip_names": "list-of-strings",
-    "sheets_to_read_numbers": "list-of-integers",
-    "sheets_to_skip_names_numbers": "list-of-integers",
-    "rows_to_skip": "integer",
-    "flat_text_delimiter": "string",
-    "quoting": "string",
-    "thousands_separator": "string",
-    "encoding": "string",
-    "namespace": "string",
-    "count_field_name_row": "int",
-    "string_field_column_numbers": "list-of-integers",
-    "count_header_row_numbers": "list-of-integers",
-    "noncount_header_row": "int",
-    "all_rows": "string",
-    "multi_block": "string",
-    "merged_cells": "string",
-    "max_blocks": "integer",
-    "constant_over_file": "list-of-strings",
-}
-
-munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
-    "file_type": {
-        "flat_text": ["flat_text_delimiter", "count_location"],
-        "xml": ["count_location"],
-        "json-nested": ["count_location"],
-        "excel": ["count_location"],
-    },
-}
-
-req_munger_parameters: Dict[str, Dict[str, Any]] = {
-    "file_type": {
-        "data_type": "string",
-        "allowed_values": ["excel", "json-nested", "xml", "flat_text", "nist_v2_xml"],
-    },
-}
-
-string_location_reqs: Dict[str, List[str]] = {
-    "by_column_name": [],
-    "in_count_headers": ["count_header_row_numbers"],
-    "constant_over_file": [],
-    "constant_over_sheet_or_block": ["constant_over_sheet_or_block"],
-}
-
-all_munge_elements = [
-    "BallotMeasureContest",
-    "CandidateContest",
-    "BallotMeasureSelection",
-    "Candidate",
-    "Party",
-    "ReportingUnit",
-    "CountItemType",
-]
 
 
 def clean_count_cols(
@@ -245,7 +179,7 @@ def add_column_from_formula(
     # (assuming formula is well-formed)
     try:
         temp_cols = []
-        for x in brace_pattern.finditer(formula):
+        for x in constants.brace_pattern.finditer(formula):
             # create a new column with the extracted info
             old_col, pattern_str = x.groups()
             temp_col = f"extracted_from_{old_col}"
@@ -926,7 +860,7 @@ def raw_to_id_simple(
             if t == "CountItemType":
                 # munge raw to internal CountItemType
                 if file_type == "nist_v2_xml":
-                    r_i = elections.constants.cit_from_raw_nist_df
+                    r_i = constants.cit_from_raw_nist_df
                 else:
                     r_i = pd.read_csv(
                         os.path.join(path_to_jurisdiction_dir, "dictionary.txt"),
@@ -1071,14 +1005,9 @@ def missing_total_counts(
     return sums_df
 
 
-if __name__ == "__main__":
-    pass
-    exit()
-
-
 def munge_raw_to_ids(
     df: pd.DataFrame,
-    constants: dict,
+    constant_dict: dict,
     path_to_jurisdiction_dir: str,
     munger_name: str,
     juris_true_name: str,
@@ -1090,14 +1019,14 @@ def munge_raw_to_ids(
     working = df.copy()
 
     # add Contest_Id column and contest_type column
-    if "CandidateContest" in constants.keys():
-        contest_id = db.name_to_id(session, "Contest", constants["CandidateContest"])
+    if "CandidateContest" in constant_dict.keys():
+        contest_id = db.name_to_id(session, "Contest",constant_dict["CandidateContest"])
         if not contest_id:
             err = ui.add_new_error(
                 err,
                 "jurisdiction",
                 juris_true_name,
-                f"CandidateContest specified in ini file ({constants['CandidateContest']}) "
+                f"CandidateContest specified in ini file ({constant_dict['CandidateContest']}) "
                 f"not found. Check CandidateContest.txt.",
             )
             return df, err
@@ -1108,11 +1037,11 @@ def munge_raw_to_ids(
         )
         working = add_constant_column(working, "contest_type", "Candidate")
         working.drop("CandidateContest", axis=1, inplace=True)
-    elif "BallotMeasureContest" in constants.keys():
+    elif "BallotMeasureContest" in constant_dict.keys():
         working = add_constant_column(
             working,
             "Contest_Id",
-            db.name_to_id(session, "Contest", constants["BallotMeasureContest"]),
+            db.name_to_id(session, "Contest",constant_dict["BallotMeasureContest"]),
         )
         working.drop("BallotMeasureContest", axis=1, inplace=True)
         working = add_constant_column(working, "contest_type", "BallotMeasure")
@@ -1135,13 +1064,13 @@ def munge_raw_to_ids(
     # add all other _Ids/Other except Selection_Id
     # # for constants
     other_constants = [
-        t for t in constants.keys() if t[-7:] != "Contest" and (t[-9:] != "Selection")
+        t for t in constant_dict.keys() if t[-7:] != "Contest" and (t[-9:] != "Selection")
     ]
     for element in other_constants:
         # CountItemType is the only enumeration
         if element == "CountItemType":
             enum_df = pd.read_sql_table(element, session.bind)
-            one_line = pd.DataFrame([[constants[element]]], columns=[element])
+            one_line = pd.DataFrame([[constant_dict[element]]],columns=[element])
             id_txt_one_line, non_standard = enum_col_to_id_othertext(
                 one_line, element, enum_df, drop_type_col=False
             )
@@ -1152,7 +1081,7 @@ def munge_raw_to_ids(
             working = add_constant_column(
                 working,
                 f"{element}_Id",
-                db.name_to_id(session, element, constants[element]),
+                db.name_to_id(session,element,constant_dict[element]),
             )
             working.drop(element, axis=1, inplace=True)
             working, err_df = clean_ids(working, [f"{element}_Id"])
@@ -1167,10 +1096,10 @@ def munge_raw_to_ids(
 
     other_elements = [
         t
-        for t in all_munge_elements
+        for t in constants.all_munge_elements
         if (t[-7:] != "Contest")
         and (t[-9:] != "Selection")
-        and (t not in constants.keys())
+        and (t not in constant_dict.keys())
     ]
     working, new_err = raw_to_id_simple(
         working,
@@ -1223,7 +1152,7 @@ def get_munge_formulas(
     err = None
     f, new_err = ui.get_parameters(
         required_keys=[],
-        optional_keys=all_munge_elements,
+        optional_keys=constants.all_munge_elements,
         header="munge formulas",
         param_file=munger_path,
     )
@@ -1446,8 +1375,8 @@ def get_and_check_munger_params(
     If results_dir is included, then existence of any required
     auxiliary files is checked as well"""
     raw_params, err = ui.get_parameters(
-        required_keys=list(req_munger_parameters.keys()),
-        optional_keys=list(opt_munger_data_types.keys()),
+        required_keys=list(constants.req_munger_parameters.keys()),
+        optional_keys=list(constants.opt_munger_data_types.keys()),
         param_file=munger_path,
         header="format",
         err=None,
@@ -1455,7 +1384,7 @@ def get_and_check_munger_params(
     if ui.fatal_error(err):
         return dict(), err
 
-    if raw_params["file_type"] in no_param_file_types:
+    if raw_params["file_type"] in constants.no_param_file_types:
         return raw_params, err
 
     # get name of munger for error reporting
@@ -1464,10 +1393,10 @@ def get_and_check_munger_params(
     # define dictionary of munger parameters
     data_types = {
         **{
-            k: req_munger_parameters[k]["data_type"]
-            for k in req_munger_parameters.keys()
+            k: constants.req_munger_parameters[k]["data_type"]
+            for k in constants.req_munger_parameters.keys()
         },
-        **opt_munger_data_types,
+        **constants.opt_munger_data_types,
     }
     params, new_err = jm.recast_options(raw_params, data_types, munger_name)
 
@@ -1479,33 +1408,33 @@ def get_and_check_munger_params(
 
     # Check munger values
     # # main parameters recognized
-    for k in req_munger_parameters.keys():
-        if req_munger_parameters[k]["data_type"] == "string":
-            if not params[k] in req_munger_parameters[k]["allowed_values"]:
+    for k in constants.req_munger_parameters.keys():
+        if constants.req_munger_parameters[k]["data_type"] == "string":
+            if not params[k] in constants.req_munger_parameters[k]["allowed_values"]:
                 err = ui.add_new_error(
                     err,
                     "munger",
                     munger_name,
-                    f'Value of {k} must be one of these: {req_munger_parameters[k]["allowed_values"]}',
+                    f'Value of {k} must be one of these: {constants.req_munger_parameters[k]["allowed_values"]}',
                 )
-        elif req_munger_parameters[k]["data_type"] == "list_of_strings":
+        elif constants.req_munger_parameters[k]["data_type"] == "list_of_strings":
             bad = [
                 x
                 for x in params[k]
-                if x not in req_munger_parameters[k]["allowed_values"]
+                if x not in constants.req_munger_parameters[k]["allowed_values"]
             ]
             if bad:
                 err = ui.add_new_error(
                     err,
                     "munger",
                     munger_name,
-                    f'Each listed value of {k} must be one of these: {req_munger_parameters[k]["allowed_values"]}',
+                    f'Each listed value of {k} must be one of these: {constants.req_munger_parameters[k]["allowed_values"]}',
                 )
 
     # # simple non-null dependencies
-    for k0 in munger_dependent_reqs.keys():
-        for k1 in munger_dependent_reqs[k0]:
-            for v2 in munger_dependent_reqs[k0][k1]:
+    for k0 in constants.munger_dependent_reqs.keys():
+        for k1 in constants.munger_dependent_reqs[k0]:
+            for v2 in constants.munger_dependent_reqs[k0][k1]:
                 if (params[k0] == k1) and (not params[v2]):
                     err = ui.add_new_error(
                         err, "munger", munger_name, f"{k0}={k1}', but {v2} not found"
@@ -1697,7 +1626,7 @@ def get_string_fields_from_munger(
     err = None
     formulas, new_err = ui.get_parameters(
         required_keys=[],
-        optional_keys=all_munge_elements,
+        optional_keys=constants.all_munge_elements,
         header="munge formulas",
         param_file=munger_path,
     )
@@ -1743,7 +1672,7 @@ def check_formula(formula: str) -> Optional[str]:
     """Runs syntax checks on a concatenation (or concatenation-with-regex) formula"""
     # brace pairs { ... , .... } contain well-formed regex as second entry with one capturing group
     err_str_list = list()
-    cr_pairs = brace_pattern.findall(formula)
+    cr_pairs = constants.brace_pattern.findall(formula)
     for _, regex in cr_pairs:
         # test regex well-formed
         try:
@@ -1864,8 +1793,8 @@ def to_standard_count_frame(
     munger_name = Path(munger_path).stem
     err = None
     # initialize error, count_cols dictionaries
-    error_by_df: Dict[int, Optional[dict]] = dict()
-    cc_by_name: Dict[int, List[str]] = dict()
+    error_by_df = dict()
+    cc_by_name = dict()
 
     # get lists of string fields expected in raw file
     try:
@@ -2087,7 +2016,7 @@ def to_standard_count_frame(
             )
 
             # clean Unnamed:... out of any values
-            working = blank_out(working, pandas_default_pattern)
+            working = blank_out(working,constants.pandas_default_pattern)
 
             # append data from the nth dataframe to the standard-form dataframe
             ## NB: if df_list[n] fails it should not reach this statement
@@ -2211,17 +2140,17 @@ def get_aux_info(
         # if there is a lookup for this field, grab it
         f_p, f_err = ui.get_parameters(
             required_keys=["lookup_id"],
-            optional_keys=list(opt_munger_data_types.keys())
+            optional_keys=list(constants.opt_munger_data_types.keys())
             + ["source_file", "file_type"],
             header=f"{fk} lookup",
             param_file=munger_path,
         )
         # convert parameters to appropriate types
         type_dict = {
-            **opt_munger_data_types,
+            **constants.opt_munger_data_types,
             **{
-                k: req_munger_parameters[k]["data_type"]
-                for k in req_munger_parameters.keys()
+                k: constants.req_munger_parameters[k]["data_type"]
+                for k in constants.req_munger_parameters.keys()
             },
         }
         f_p, new_err = jm.recast_options(f_p, type_dict, Path(munger_path).stem)
@@ -2242,8 +2171,8 @@ def get_aux_info(
             if ("source_file" not in f_p.keys()) or (not f_p["source_file"]):
                 # we read all data from the original file (e.g., for xml)
                 main_format_params, new_err = ui.get_parameters(
-                    required_keys=list(req_munger_parameters.keys()),
-                    optional_keys=list(opt_munger_data_types.keys()),
+                    required_keys=list(constants.req_munger_parameters.keys()),
+                    optional_keys=list(constants.opt_munger_data_types.keys()),
                     header="format",
                     param_file=munger_path,
                 )
@@ -2437,12 +2366,12 @@ def file_to_raw_df(
     return df, err
 
 
-def add_constants_to_df(df: pd.DataFrame, constants: Dict[str, Any]) -> pd.DataFrame:
-    for element in constants.keys():
+def add_constants_to_df(df: pd.DataFrame,constant_dict: Dict[str,Any]) -> pd.DataFrame:
+    for element in constant_dict.keys():
         df = add_constant_column(
             df,
             element,
-            constants[element],
+            constant_dict[element],
         )
     return df
 

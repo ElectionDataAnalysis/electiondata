@@ -1605,7 +1605,7 @@ class JurisdictionPrepper:
             ru_formula = ""
             headers = [
                 x
-                for x in m.req_munger_parameters["munge_field_types"]
+                for x in elections.constants.req_munger_parameters["munge_field_types"]
                 if x != "constant_over_file"
             ]
             for header in headers:
@@ -2141,9 +2141,9 @@ class Analyzer:
                 vendor_application_id=elections.constants.default_vendor_application_id,
             )
         xml_string = ET.tostring(xml_tree.getroot(),
-            encoding=m.default_encoding,
-            method="xml",
-        )
+                                 encoding=elections.constants.default_encoding,
+                                 method="xml",
+                                 )
         return xml_string
 
     def diff_in_diff(

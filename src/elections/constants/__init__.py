@@ -1,3 +1,6 @@
+import re
+from typing import Dict,List,Any
+
 import pandas as pd
 
 sdl_pars_req = [
@@ -355,3 +358,59 @@ cit_from_raw_nist_df = pd.DataFrame(
     [["CountItemType", x, x] for x in cit_list],
     columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
 )
+default_encoding = "utf_8"
+brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")
+pandas_default_pattern = r"^Unnamed: (\d+)_level_(\d+)$"
+no_param_file_types = {"nist_v2_xml"}
+opt_munger_data_types: Dict[str, str] = {
+    "count_location": "string-with-opt-list",
+    "munge_field_types": "list-of-strings",
+    "sheets_to_read_names": "list-of-strings",
+    "sheets_to_skip_names": "list-of-strings",
+    "sheets_to_read_numbers": "list-of-integers",
+    "sheets_to_skip_names_numbers": "list-of-integers",
+    "rows_to_skip": "integer",
+    "flat_text_delimiter": "string",
+    "quoting": "string",
+    "thousands_separator": "string",
+    "encoding": "string",
+    "namespace": "string",
+    "count_field_name_row": "int",
+    "string_field_column_numbers": "list-of-integers",
+    "count_header_row_numbers": "list-of-integers",
+    "noncount_header_row": "int",
+    "all_rows": "string",
+    "multi_block": "string",
+    "merged_cells": "string",
+    "max_blocks": "integer",
+    "constant_over_file": "list-of-strings",
+}
+munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
+    "file_type": {
+        "flat_text": ["flat_text_delimiter", "count_location"],
+        "xml": ["count_location"],
+        "json-nested": ["count_location"],
+        "excel": ["count_location"],
+    },
+}
+req_munger_parameters: Dict[str, Dict[str, Any]] = {
+    "file_type": {
+        "data_type": "string",
+        "allowed_values": ["excel", "json-nested", "xml", "flat_text", "nist_v2_xml"],
+    },
+}
+string_location_reqs: Dict[str, List[str]] = {
+    "by_column_name": [],
+    "in_count_headers": ["count_header_row_numbers"],
+    "constant_over_file": [],
+    "constant_over_sheet_or_block": ["constant_over_sheet_or_block"],
+}
+all_munge_elements = [
+    "BallotMeasureContest",
+    "CandidateContest",
+    "BallotMeasureSelection",
+    "Candidate",
+    "Party",
+    "ReportingUnit",
+    "CountItemType",
+]
