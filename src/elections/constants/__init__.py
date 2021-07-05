@@ -4,6 +4,72 @@ from typing import Dict,List,Any
 
 import pandas as pd
 
+array_of_jurisdictions = """Alabama
+Alaska
+American Samoa
+Arizona
+Arkansas
+California
+Colorado
+Connecticut
+Delaware
+District of Columbia
+Florida
+Georgia
+Guam
+Hawaii
+Idaho
+Illinois
+Indiana
+Iowa
+Kansas
+Kentucky
+Louisiana
+Maine
+Maryland
+Massachusetts
+Michigan
+Minnesota
+Mississippi
+Missouri
+Montana
+Nebraska
+Nevada
+New Hampshire
+New Jersey
+New Mexico
+New York
+North Carolina
+North Dakota
+Northern Mariana Islands
+Ohio
+Oklahoma
+Oregon
+Pennsylvania
+Puerto Rico
+Rhode Island
+South Carolina
+South Dakota
+Tennessee
+Texas
+Utah
+US Virgin Islands
+Vermont
+Virginia
+Washington
+West Virginia
+Wisconsin
+Wyoming"""
+contest_type_mappings = {
+    "congressional":"Congressional",
+    "state":"Statewide",
+    "state-house":"State House",
+    "state-senate":"State Senate",
+    "city":"Citywide",
+    "ward":"Ward",
+    "territory":"Territory-wide",
+}
+contest_types_model = contest_type_mappings.keys()
 abbr = {
     "Alabama": "AL",
     "Alaska": "AK",

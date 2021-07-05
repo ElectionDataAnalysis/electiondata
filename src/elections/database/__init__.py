@@ -20,87 +20,19 @@ import elections.constants
 from elections import (
     munge as m,analyze as an,
 )
+from elections.constants import array_of_jurisdictions,contest_types_model
 from elections.database import create_cdf_db as db_cdf
 import re
 import os
 
 # sqlalchemy imports below are necessary, even if syntax-checker doesn't think so!
-from sqlalchemy import MetaData, Table, Column, Integer, Float
 
-from typing import Optional, List, Dict, Any, Iterable, Set
+from typing import Optional, List, Dict, Any,Set
 from elections import userinterface as ui
 
 # these form the universe of jurisdictions that can be displayed via the display_jurisdictions function.
-array_of_jurisdictions = """Alabama
-Alaska
-American Samoa
-Arizona
-Arkansas
-California
-Colorado
-Connecticut
-Delaware
-District of Columbia
-Florida
-Georgia
-Guam
-Hawaii
-Idaho
-Illinois
-Indiana
-Iowa
-Kansas
-Kentucky
-Louisiana
-Maine
-Maryland
-Massachusetts
-Michigan
-Minnesota
-Mississippi
-Missouri
-Montana
-Nebraska
-Nevada
-New Hampshire
-New Jersey
-New Mexico
-New York
-North Carolina
-North Dakota
-Northern Mariana Islands
-Ohio
-Oklahoma
-Oregon
-Pennsylvania
-Puerto Rico
-Rhode Island
-South Carolina
-South Dakota
-Tennessee
-Texas
-Utah
-US Virgin Islands
-Vermont
-Virginia
-Washington
-West Virginia
-Wisconsin
-Wyoming"""
 
 db_pars = ["host", "port", "dbname", "user", "password"]
-
-contest_type_mappings = {
-    "congressional": "Congressional",
-    "state": "Statewide",
-    "state-house": "State House",
-    "state-senate": "State Senate",
-    "city": "Citywide",
-    "ward": "Ward",
-    "territory": "Territory-wide",
-}
-
-contest_types_model = contest_type_mappings.keys()
 
 
 def get_database_names(con: psycopg2.extensions.connection):

@@ -5,13 +5,12 @@ from configparser import (
     ParsingError,
 )
 
-import elections.constants
 from elections import (
     database as db,
     munge as m,
     juris as jm,
     nist as nist,
-    constants
+    constants,
 )
 import pandas as pd
 from pandas.errors import ParserError
@@ -110,7 +109,7 @@ def basic_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
         kwargs["thousands"] = p["thousands_separator"]
     if p["file_type"] in ["flat_text"]:
         if p["encoding"] is None:
-            kwargs["encoding"] = elections.constants.default_encoding
+            kwargs["encoding"] = constants.default_encoding
         else:
             kwargs["encoding"] = p["encoding"]
 
@@ -913,7 +912,7 @@ def get_contest_type_mappings(filters: list) -> Optional[list]:
     """get mappings for a list to the contest type database labels"""
     if not filters:
         return None
-    contest_types = db.contest_type_mappings.items()
+    contest_types = constants.contest_type_mappings.items()
     for index, item in enumerate(filters):
         for contest_type in contest_types:
             if item == contest_type[1]:
@@ -924,7 +923,7 @@ def get_contest_type_mappings(filters: list) -> Optional[list]:
 
 def get_contest_type_mapping(item: str) -> str:
     """get mappings for a string to the contest type database labels"""
-    contest_types = db.contest_type_mappings.items()
+    contest_types = constants.contest_type_mappings.items()
     for contest_type in contest_types:
         if contest_type[1] in item:
             return item.replace(contest_type[1], contest_type[0])
@@ -935,9 +934,9 @@ def get_contest_type_display(item: str) -> str:
     """get the user-friendly version of the contest_type"""
     item_list = item.split(" ")
     for index in range(len(item_list)):
-        for key in db.contest_type_mappings.keys():
+        for key in constants.contest_type_mappings.keys():
             if key == item_list[index]:
-                item_list[index] = db.contest_type_mappings[key]
+                item_list[index] = constants.contest_type_mappings[key]
                 break
     return " ".join(item_list)
 
@@ -982,7 +981,7 @@ def get_filtered_input_options(
         }
         df = pd.DataFrame(data=dropdown_options)
     elif menu_type == "contest":
-        contest_type = list(set(db.contest_types_model) & set(filters))[0]
+        contest_type = list(set(constants.contest_types_model) & set(filters))[0]
 
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
@@ -997,7 +996,7 @@ def get_filtered_input_options(
             [
                 {
                     "parent": reporting_unit,
-                    "name": f"All {db.contest_type_mappings[contest_type]}",
+                    "name": f"All {constants.contest_type_mappings[contest_type]}",
                     "type": contest_type,
                 }
             ]
@@ -1132,8 +1131,8 @@ def package_display_results(data: pd.DataFrame) -> List[Dict[str, Any]]:
     Result set should already be ordered as desired for display"""
     results = []
     for i, row in data.iterrows():
-        if row[1] in db.contest_type_mappings:
-            row[1] = db.contest_type_mappings[row[1]]
+        if row[1] in constants.contest_type_mappings:
+            row[1] = constants.contest_type_mappings[row[1]]
         temp = {"parent": row[0], "name": row[1], "type": row[2], "order_by": i + 1}
         results.append(temp)
     return results
