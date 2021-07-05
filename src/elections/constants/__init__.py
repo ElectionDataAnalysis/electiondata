@@ -130,6 +130,7 @@ abbr = {
     "Puerto Rico": "PR",
     "Virgin Islands": "VI",
 }
+default_subdivision_type = "county"
 sdl_pars_req = [
     "munger_list",
     "results_file",

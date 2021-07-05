@@ -1577,7 +1577,7 @@ class JurisdictionPrepper:
         self,
         par_file_name: str,
         sub_ru_type: str = "precinct",
-        county_type="county",
+        county_type=constants.default_subdivision_type,
         dbname: Optional[str] = None,
         paraam_file: Optional[str] = None
     ) -> Optional[dict]:
@@ -2166,7 +2166,7 @@ class Analyzer:
         rows = list()  # collects rows for output dataframe
         cols = [
             "state",
-            "county",
+            constants.default_subdivision_type,
             "district_type",
             "party",
             "contest_pair",
@@ -2425,7 +2425,7 @@ def aggregate_results(
     sub_unit: Optional[str] = None,
     contest: Optional[str] = None,
     contest_type: str = "Candidate",
-    sub_unit_type: str = "county",
+    sub_unit_type: str = constants.default_subdivision_type,
     exclude_redundant_total: bool = True,
 ) -> pd.DataFrame:
     """if a vote type is given, restricts to that vote type; otherwise returns all vote types;
@@ -2548,7 +2548,7 @@ def external_data_exists(
 def check_totals_match_vote_types(
     election: str,
     jurisdiction: str,
-    sub_unit_type="county",
+    sub_unit_type=constants.default_subdivision_type,
     dbname=None,
 ) -> bool:
     """Interesting if there are both total and other vote types;
@@ -2607,7 +2607,7 @@ def contest_total(
     dbname: Optional[str] = None,
     vote_type: Optional[str] = None,
     county: Optional[str] = None,
-    sub_unit_type: str = "county",
+    sub_unit_type: str = constants.default_subdivision_type,
     contest_type: Optional[str] = "Candidate",
 ) -> int:
     df = aggregate_results(
@@ -2628,7 +2628,7 @@ def count_type_total(
     jurisdiction: str,
     contest: str,
     count_item_type: str,
-    sub_unit_type: str = "county",
+    sub_unit_type: str = constants.default_subdivision_type,
     dbname: Optional[str] = None,
 ) -> int:
     df_candidate = aggregate_results(
@@ -2712,7 +2712,7 @@ def load_results_df(
         election_id: int,
         file_type: str,
         rollup: bool = False,
-        rollup_rut: str = "county",
+        rollup_rut: str = constants.default_subdivision_type,
 ) -> Optional[dict]:
     err = None
     df = df_original.copy()
@@ -2799,7 +2799,7 @@ def load_results_file(
     results_directory_path: str,
     path_to_jurisdiction_dir: str,
     rollup: bool = False,
-    rollup_rut: str = "county",
+    rollup_rut: str = constants.default_subdivision_type,
 ) -> Optional[dict]:
 
     # TODO tech debt: redundant to pass results_directory_path and f_path

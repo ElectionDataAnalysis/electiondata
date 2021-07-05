@@ -16,11 +16,9 @@ import datetime
 from configparser import MissingSectionHeaderError
 import pandas as pd
 
-import elections.constants
 from elections import (
-    munge as m,analyze as an,
+    munge as m,analyze as an,constants
 )
-from elections.constants import array_of_jurisdictions,contest_types_model
 from elections.database import create_cdf_db as db_cdf
 import re
 import os
@@ -1090,7 +1088,7 @@ def get_jurisdiction_hierarchy(
             [
                 jurisdiction_id,
                 tuple(
-                    contest_types_model
+                    constants.contest_types_model
                 ),  # list of election-district reporting-unit types
                 jurisdiction_id,
                 jurisdiction_id,
@@ -1700,7 +1698,7 @@ def display_jurisdictions(session: Session, cols: List[str]) -> pd.DataFrame:
                 ON s."Id" = d."Election_Id" AND s.jurisdiction_id = d."ReportingUnit_Id"
         ORDER BY order_by
     """
-    ).format(states=sql.Literal(array_of_jurisdictions))
+    ).format(states=sql.Literal(constants.array_of_jurisdictions))
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     cursor.execute(q)
@@ -1838,7 +1836,7 @@ def id_other_cols_to_enum(
 def parents_by_cursor(
     cursor: psycopg2.extensions.cursor,
     ru_id_list: List[int],
-    subunit_type: str = "county",
+    subunit_type: str = constants.default_subdivision_type,
 ) -> (pd.DataFrame, Optional[str]):
     err_str = None
     # kludge, because ru_ids in ru_id_list are typed as np.int64
@@ -1873,7 +1871,7 @@ def parents_by_cursor(
 
 
 def parents(
-    session: Session, ru_id_list: iter, subunit_type: str = "county"
+    session: Session, ru_id_list: iter, subunit_type: str = constants.default_subdivision_type
 ) -> (pd.DataFrame, Optional[str]):
     """returns dataframe of all reporting units of the given type that are
     parents of a reporting unit identified by an id in ru_id_list

@@ -8,6 +8,7 @@ from elections import (
     userinterface as ui,
     munge as m,
     database as db,
+    constants,
 )
 import datetime
 import os
@@ -1226,7 +1227,7 @@ def rollup_dataframe(
     count_col: str,
     ru_id_column: str,
     new_ru_id_column: str,
-    rollup_rut: str = "county",
+    rollup_rut: str = constants.default_subdivision_type,
     ignore: Optional[List] = None,
 ) -> (pd.DataFrame(), Optional[dict]):
     """Returns datafrome of results rolled up to the reporting unit type <rollup_rut>.
