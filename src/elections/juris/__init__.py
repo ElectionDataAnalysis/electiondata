@@ -5,28 +5,16 @@ from elections import (
     database as db,
     munge as m,
     userinterface as ui,
+    constants,
 )
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
 from typing import Optional, Dict, Any, List
 import numpy as np
 from pathlib import Path
-import csv
 import inspect
 import psycopg2
 from sqlalchemy.orm import Session
-
-
-# constants
-default_juris_encoding = "utf_8"
-standard_juris_csv_reading_kwargs = {
-    "index_col": False,
-    "encoding": default_juris_encoding,
-    "quoting": csv.QUOTE_MINIMAL,
-    "sep": "\t",
-    "keep_default_na": False,
-    "na_values": "",
-}
 
 
 def recast_options(
@@ -158,7 +146,7 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
         template_path = os.path.join(templates_dir, f"{juris_file}.txt")
         try:
             if os.path.isfile(template_path):
-                temp = pd.read_csv(template_path, **standard_juris_csv_reading_kwargs)
+                temp = pd.read_csv(template_path,**constants.standard_juris_csv_reading_kwargs)
             else:
                 err = ui.add_new_error(
                     err,
@@ -180,7 +168,7 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
         # if file does not exist
         if not os.path.isfile(cf_path):
             # create the file
-            temp.to_csv(cf_path, sep="\t", index=False, encoding=default_juris_encoding)
+            temp.to_csv(cf_path,sep="\t",index=False,encoding=default_encoding)
             created = True
 
         # if file exists, check format against template
@@ -188,7 +176,7 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
             try:
                 cf_df = pd.read_csv(
                     os.path.join(juris_path, f"{juris_file}.txt"),
-                    **standard_juris_csv_reading_kwargs,
+                    **constants.standard_juris_csv_reading_kwargs,
                 )
             except pd.errors.ParserError as pe:
                 err = ui.add_new_error(
@@ -213,7 +201,7 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
                 # dedupe the dictionary
                 clean_and_dedupe(cf_path)
                 # check that no entry is null
-                df = pd.read_csv(cf_path, **standard_juris_csv_reading_kwargs)
+                df = pd.read_csv(cf_path,**constants.standard_juris_csv_reading_kwargs)
                 null_mask = df.T.isnull().any()
                 if null_mask.any():
                     err = ui.add_new_error(
@@ -278,7 +266,7 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
 
 def find_ambiguous_names(element: str, cf_path: str) -> List[str]:
     name_field = db.get_name_field(element)
-    df = pd.read_csv(cf_path, **standard_juris_csv_reading_kwargs)
+    df = pd.read_csv(cf_path,**constants.standard_juris_csv_reading_kwargs)
     ambiguous_names = [
         name
         for name in df[name_field].unique()
@@ -344,7 +332,7 @@ def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
 def clean_and_dedupe(f_path: str):
     """Dedupe the file, removing any leading or trailing whitespace and compressing any internal whitespace"""
     # TODO allow specification of unique constraints
-    df = pd.read_csv(f_path, **standard_juris_csv_reading_kwargs)
+    df = pd.read_csv(f_path,**constants.standard_juris_csv_reading_kwargs)
 
     for c in df.columns:
         if not is_numeric_dtype(df.dtypes[c]):
@@ -357,7 +345,7 @@ def clean_and_dedupe(f_path: str):
                 pass
     dupes_df, df = ui.find_dupes(df)
     if not dupes_df.empty:
-        df.to_csv(f_path, sep="\t", index=False, encoding=default_juris_encoding)
+        df.to_csv(f_path,sep="\t",index=False,encoding=default_encoding)
     return
 
 
@@ -371,8 +359,8 @@ def check_nulls(element, f_path, project_root):
         element,
         "not_null_fields.txt",
     )
-    not_nulls = pd.read_csv(nn_path, sep="\t", encoding=default_juris_encoding)
-    df = pd.read_csv(f_path, **standard_juris_csv_reading_kwargs)
+    not_nulls = pd.read_csv(nn_path,sep="\t",encoding=default_encoding)
+    df = pd.read_csv(f_path,**constants.standard_juris_csv_reading_kwargs)
 
     problem_columns = []
 
@@ -398,7 +386,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
     d = juris_dependency_dictionary()
     f_path = os.path.join(juris_dir, f"{element}.txt")
     try:
-        element_df = pd.read_csv(f_path, **standard_juris_csv_reading_kwargs)
+        element_df = pd.read_csv(f_path,**constants.standard_juris_csv_reading_kwargs)
     except FileNotFoundError:
         err = ui.add_new_error(
             err,
@@ -416,7 +404,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
         ed = (
             pd.read_csv(
                 os.path.join(juris_dir, f"{element}.txt"),
-                **standard_juris_csv_reading_kwargs,
+                **constants.standard_juris_csv_reading_kwargs,
             )
             .fillna("")
             .loc[:, c]
@@ -427,7 +415,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
         ru = list(
             pd.read_csv(
                 os.path.join(juris_dir, f"{target}.txt"),
-                **standard_juris_csv_reading_kwargs,
+                **constants.standard_juris_csv_reading_kwargs,
             )
             .fillna("")
             .loc[:, db.get_name_field(target)]
@@ -506,7 +494,7 @@ def load_juris_dframe_into_cdf(
         return err
 
     # read info from <element>.txt, filling null fields with 'none or unknown'
-    df = pd.read_csv(element_file, **standard_juris_csv_reading_kwargs).fillna(
+    df = pd.read_csv(element_file,**constants.standard_juris_csv_reading_kwargs).fillna(
         "none or unknown"
     )
     # TODO check that df has the right format
@@ -642,7 +630,7 @@ def load_or_update_contests(
             f"file not found: {contest_type}Contest.txt",
         )
         return err
-    df = pd.read_csv(element_fpath, **standard_juris_csv_reading_kwargs).fillna(
+    df = pd.read_csv(element_fpath,**constants.standard_juris_csv_reading_kwargs).fillna(
         "none or unknown"
     )
 
@@ -738,7 +726,7 @@ def get_element(juris_path: str, element: str) -> pd.DataFrame:
             f_path,
             sep="\t",
             dtype="object",
-            encoding=default_juris_encoding,
+            encoding=default_encoding,
         )
     else:
         element_df = pd.DataFrame()
@@ -779,7 +767,7 @@ def write_element(
             os.path.join(juris_path, file_name),
             index=False,
             sep="\t",
-            encoding=default_juris_encoding,
+            encoding=default_encoding,
         )
     except Exception as e:
         err = ui.add_new_error(

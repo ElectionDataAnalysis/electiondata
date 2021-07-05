@@ -1,3 +1,4 @@
+import csv
 import re
 from typing import Dict,List,Any
 
@@ -104,6 +105,72 @@ prep_pars = [
 ]
 optional_prep_pars = []
 analyze_pars = ["db_paramfile", "db_name"]
+error_keys = {
+    "ini",
+    "munger",
+    "jurisdiction",
+    "file",
+    "system",
+    "database",
+    "test",
+}
+warning_keys = {f"warn-{ek}" for ek in error_keys}
+no_param_file_types = {"nist_v2_xml"}
+opt_munger_data_types: Dict[str, str] = {
+    "count_location": "string-with-opt-list",
+    "munge_field_types": "list-of-strings",
+    "sheets_to_read_names": "list-of-strings",
+    "sheets_to_skip_names": "list-of-strings",
+    "sheets_to_read_numbers": "list-of-integers",
+    "sheets_to_skip_names_numbers": "list-of-integers",
+    "rows_to_skip": "integer",
+    "flat_text_delimiter": "string",
+    "quoting": "string",
+    "thousands_separator": "string",
+    "encoding": "string",
+    "namespace": "string",
+    "count_field_name_row": "int",
+    "string_field_column_numbers": "list-of-integers",
+    "count_header_row_numbers": "list-of-integers",
+    "noncount_header_row": "int",
+    "all_rows": "string",
+    "multi_block": "string",
+    "merged_cells": "string",
+    "max_blocks": "integer",
+    "constant_over_file": "list-of-strings",
+}
+munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
+    "file_type": {
+        "flat_text": ["flat_text_delimiter", "count_location"],
+        "xml": ["count_location"],
+        "json-nested": ["count_location"],
+        "excel": ["count_location"],
+    },
+}
+req_munger_parameters: Dict[str, Dict[str, Any]] = {
+    "file_type": {
+        "data_type": "string",
+        "allowed_values": ["excel", "json-nested", "xml", "flat_text", "nist_v2_xml"],
+    },
+}
+string_location_reqs: Dict[str, List[str]] = {
+    "by_column_name": [],
+    "in_count_headers": ["count_header_row_numbers"],
+    "constant_over_file": [],
+    "constant_over_sheet_or_block": ["constant_over_sheet_or_block"],
+}
+all_munge_elements = [
+    "BallotMeasureContest",
+    "CandidateContest",
+    "BallotMeasureSelection",
+    "Candidate",
+    "Party",
+    "ReportingUnit",
+    "CountItemType",
+]
+
+# encodings
+default_encoding = "utf_8"
 recognized_encodings = {
     "iso2022jp",
     "arabic",
@@ -379,70 +446,7 @@ recognized_encodings = {
     "EBCDIC-CP-HE",
     "ks_c-5601-1987",
 }
-error_keys = {
-    "ini",
-    "munger",
-    "jurisdiction",
-    "file",
-    "system",
-    "database",
-    "test",
-}
-warning_keys = {f"warn-{ek}" for ek in error_keys}
-default_encoding = "utf_8"
-no_param_file_types = {"nist_v2_xml"}
-opt_munger_data_types: Dict[str, str] = {
-    "count_location": "string-with-opt-list",
-    "munge_field_types": "list-of-strings",
-    "sheets_to_read_names": "list-of-strings",
-    "sheets_to_skip_names": "list-of-strings",
-    "sheets_to_read_numbers": "list-of-integers",
-    "sheets_to_skip_names_numbers": "list-of-integers",
-    "rows_to_skip": "integer",
-    "flat_text_delimiter": "string",
-    "quoting": "string",
-    "thousands_separator": "string",
-    "encoding": "string",
-    "namespace": "string",
-    "count_field_name_row": "int",
-    "string_field_column_numbers": "list-of-integers",
-    "count_header_row_numbers": "list-of-integers",
-    "noncount_header_row": "int",
-    "all_rows": "string",
-    "multi_block": "string",
-    "merged_cells": "string",
-    "max_blocks": "integer",
-    "constant_over_file": "list-of-strings",
-}
-munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
-    "file_type": {
-        "flat_text": ["flat_text_delimiter", "count_location"],
-        "xml": ["count_location"],
-        "json-nested": ["count_location"],
-        "excel": ["count_location"],
-    },
-}
-req_munger_parameters: Dict[str, Dict[str, Any]] = {
-    "file_type": {
-        "data_type": "string",
-        "allowed_values": ["excel", "json-nested", "xml", "flat_text", "nist_v2_xml"],
-    },
-}
-string_location_reqs: Dict[str, List[str]] = {
-    "by_column_name": [],
-    "in_count_headers": ["count_header_row_numbers"],
-    "constant_over_file": [],
-    "constant_over_sheet_or_block": ["constant_over_sheet_or_block"],
-}
-all_munge_elements = [
-    "BallotMeasureContest",
-    "CandidateContest",
-    "BallotMeasureSelection",
-    "Candidate",
-    "Party",
-    "ReportingUnit",
-    "CountItemType",
-]
+
 
 # regex patterns
 brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")
@@ -529,4 +533,14 @@ mit_correction ={
     "Joseph R Biden Jr": "Joseph R. Biden",
     "John Mccain": "John McCain",
     """Roque "Rocky" De La Fuenta""": "Roque 'Rocky' de la Fuenta"
+}
+
+
+standard_juris_csv_reading_kwargs = {
+    "index_col": False,
+    "encoding": default_encoding,
+    "quoting": csv.QUOTE_MINIMAL,
+    "sep": "\t",
+    "keep_default_na": False,
+    "na_values": "",
 }

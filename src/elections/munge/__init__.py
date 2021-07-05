@@ -277,7 +277,7 @@ def replace_raw_with_internal_ids(
     raw_identifiers = pd.read_csv(
         os.path.join(path_to_jurisdiction_dir, "dictionary.txt"),
         sep="\t",
-        encoding=jm.default_juris_encoding,
+        encoding=jm.default_encoding,
         dtype=str,
     )
 
@@ -865,7 +865,7 @@ def raw_to_id_simple(
                     r_i = pd.read_csv(
                         os.path.join(path_to_jurisdiction_dir, "dictionary.txt"),
                         sep="\t",
-                        encoding=jm.default_juris_encoding,
+                        encoding=jm.default_encoding,
                         dtype=str,
                     )
                     r_i = r_i[r_i.cdf_element == "CountItemType"]
