@@ -1,4 +1,4 @@
-import election_data_analysis as e
+import elections as e
 
 # Instructions:
 #   Copy this template and rename, including your jurisdiction and the timestamp of the results file
@@ -12,7 +12,7 @@ import election_data_analysis as e
 #   (e.g., Florida has no US Senate contest)
 #   (Optional) Change district numbers
 #   Replace each '-1' with the correct number calculated from the results file.
-#   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
+#   Move this testing file to the correct jurisdiction folder in `elections/tests`
 
 # # # constants - CHANGE THESE!! - use internal db names
 election = "2016 General"

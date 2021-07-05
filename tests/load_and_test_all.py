@@ -5,9 +5,9 @@ import datetime
 from pathlib import Path
 import shutil
 from typing import Optional
-import election_data_analysis as eda
-from election_data_analysis import database as db
-from election_data_analysis import userinterface as ui
+import elections as eda
+from elections import database as db
+from elections import userinterface as ui
 from distutils.dir_util import copy_tree
 
 
@@ -218,7 +218,7 @@ if __name__ == "__main__":
         params, new_err = ui.get_parameters(
             required_keys=["reports_and_plots_dir"],
             param_file="run_time.ini",
-            header="election_data_analysis",
+            header="elections",
         )
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         if not new_err:
