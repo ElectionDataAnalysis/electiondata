@@ -1,4 +1,4 @@
-import elections as e
+import electiondata as e
 
 election = "2020 Primary"
 jurisdiction = "Indiana"

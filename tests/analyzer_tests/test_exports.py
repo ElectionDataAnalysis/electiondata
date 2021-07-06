@@ -1,6 +1,6 @@
 import os
-from elections import Analyzer, DataLoader
-from elections import database as db
+from electiondata import Analyzer, DataLoader
+from electiondata import database as db
 from pathlib import Path
 import datetime
 

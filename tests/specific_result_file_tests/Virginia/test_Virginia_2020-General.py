@@ -1,4 +1,4 @@
-import elections as e
+import electiondata as e
 
 # Instructions:
 #   Change the constants to values from your file

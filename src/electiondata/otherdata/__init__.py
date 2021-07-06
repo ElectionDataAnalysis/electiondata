@@ -1,7 +1,7 @@
 import pandas as pd
 import requests
 from typing import List, Dict
-from elections import munge as m, constants
+from electiondata import munge as m, constants
 
 
 def get_raw_acs5_data(

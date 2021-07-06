@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 import psycopg2
 import pandas as pd
 import inspect
-from elections import (
+from electiondata import (
     userinterface as ui,
     munge as m,
     database as db,

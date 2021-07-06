@@ -1,4 +1,4 @@
-import elections as eda
+import electiondata as eda
 import os
 from pathlib import Path
 

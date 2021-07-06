@@ -1,7 +1,7 @@
 import inspect
 from pathlib import Path
 
-from elections import (
+from electiondata import (
     database as db,
     userinterface as ui,
     juris as jm,

@@ -1,10 +1,9 @@
 import results
-import os
-from elections import Analyzer
-from elections import database as db
-from elections import data_exists
-from elections import external_data_exists
-from psycopg2 import sql
+from electiondata import Analyzer
+from electiondata import data_exists
+from electiondata import external_data_exists
+from typing import Dict, Any, List, Optional
+
 import pytest
 
 
@@ -25,6 +24,15 @@ def data(runtime):
 def test_config(data):
     return pytest.ok
 
+
+# some lists of dictionaries need to be sorted by a particular key
+def dict_sort(list_of_dicts: List[Dict[str, Any]], sort_key: Optional[str] == None) -> List[Dict[str, Any]]:
+    """If <key> is given, sort items by value of that key in each dictionary.
+    If <key> is not given, return <list_of_dicts>"""
+    if sort_key:
+        new = sorted(list_of_dicts, key=lambda k: k[sort_key])
+    else: new = list_of_dicts
+    return new
 
 # should be non-null on DB with any data
 def test_election_display(runtime):
@@ -283,7 +291,6 @@ def test_scatter_county_rollup(runtime):
 
 # check that search works correctly
 def test_candidate_search_display(runtime):
-    assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
@@ -296,7 +303,6 @@ def test_candidate_search_display(runtime):
 
 
 def test_count_contest_display(runtime):
-    assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
@@ -309,16 +315,16 @@ def test_count_contest_display(runtime):
 
 
 def test_contest_updatelabels_display(runtime):
-    assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
-    assert (
-        analyzer.display_options(
+    new = dict_sort(analyzer.display_options(
             "contest",
             verbose=True,
             filters=["2018 General", "Georgia", "State Senate"],
-        )
-        == results.ga_2018_congressional_contests_state_senate
+        ), key="order_by"
     )
+    correct = dict_sort(results.ga_2018_congressional_contests_state_senate, key="order_by")
+
+    assert new == correct
 
 
 """

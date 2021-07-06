@@ -6,7 +6,7 @@ import pandas as pd
 from lxml import etree as lxml_et
 from sqlalchemy.orm import Session
 from datetime import datetime, timezone
-from elections import (
+from electiondata import (
     database as db,
     userinterface as ui,
     constants,

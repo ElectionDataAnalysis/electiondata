@@ -1,7 +1,7 @@
 import os
 import os.path
 
-from elections import (
+from electiondata import (
     database as db,
     munge as m,
     userinterface as ui,
@@ -228,7 +228,7 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
 
                 # check for problematic null entries
                 null_columns = check_nulls(
-                    juris_file, cf_path, os.path.join(repository_content_root, "elections")
+                    juris_file, cf_path, os.path.join(repository_content_root, "electiondata")
                 )
                 if null_columns:
                     err = ui.add_new_error(
@@ -359,7 +359,7 @@ def check_nulls(element, f_path, project_root):
         element,
         "not_null_fields.txt",
     )
-    not_nulls = pd.read_csv(nn_path,sep="\t",encoding=default_encoding)
+    not_nulls = pd.read_csv(nn_path,sep="\t",encoding=constants.default_encoding)
     df = pd.read_csv(f_path,**constants.standard_juris_csv_reading_kwargs)
 
     problem_columns = []
@@ -726,7 +726,7 @@ def get_element(juris_path: str, element: str) -> pd.DataFrame:
             f_path,
             sep="\t",
             dtype="object",
-            encoding=default_encoding,
+            encoding=constants.default_encoding,
         )
     else:
         element_df = pd.DataFrame()

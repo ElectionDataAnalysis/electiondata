@@ -1,8 +1,8 @@
-import elections as eda
+import electiondata as eda
 from pathlib import Path
 import os
 import pandas as pd
-from elections import database as db
+from electiondata import database as db
 
 # # # constants - CHANGE THESE!! - use internal db names
 

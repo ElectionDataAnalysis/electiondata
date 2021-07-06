@@ -1,5 +1,5 @@
 
-from elections import (
+from electiondata import (
     juris,
     munge,
     userinterface as ui,

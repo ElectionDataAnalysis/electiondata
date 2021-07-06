@@ -1,4 +1,4 @@
-import elections as e
+import electiondata as e
 
 election = "2018 General"
 jurisdiction = "Wisconsin"

@@ -1,4 +1,4 @@
-[election_data_analysis]
+[electiondata]
 results_dir=</path/to/folder/containing/result/files/for/batch/upload>
 archive_dir=</path/to/folder/for/archiving/uploaded/files>
 repository_content_root=

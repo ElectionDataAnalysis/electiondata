@@ -1,6 +1,6 @@
-import elections.constants
-import elections.juris
-from elections import (
+import electiondata.constants
+import electiondata.juris
+from electiondata import (
     database as db,
     juris as jm,
     userinterface as ui,
@@ -55,7 +55,7 @@ class SingleDataLoader:
             required_keys=constants.sdl_pars_req,
             optional_keys=constants.sdl_pars_opt,
             param_file=par_file,
-            header="elections",
+            header="election_results",
         )
 
         # assign True to is_preliminary if necessary
@@ -239,7 +239,7 @@ class DataLoader:
             required_keys=constants.multi_data_loader_pars,
             optional_keys=constants.optional_mdl_pars,
             param_file=param_file,
-            header="elections",
+            header="electiondata",
         )
         if err:
             print(f"DataLoader object not created. Error:\n{err}")
@@ -257,7 +257,7 @@ class DataLoader:
             required_keys=constants.multi_data_loader_pars,
             optional_keys=constants.optional_mdl_pars,
             param_file=param_file,
-            header="elections",
+            header="electiondata",
         )
 
         # define parameters derived from run_time.ini
@@ -399,7 +399,7 @@ class DataLoader:
                 params, new_err = ui.get_parameters(
                     required_keys=["election", "jurisdiction", "results_file"],
                     param_file=ini_path,
-                    header="elections",
+                    header="election_results",
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
@@ -837,14 +837,14 @@ class DataLoader:
         pairs for any juris that has nontrivial join."""
         err = None
         df = pd.DataFrame()
-        for category in elections.constants.acs5_columns.keys():
-            columns_to_get = elections.constants.acs5_columns[category].keys()
+        for category in electiondata.constants.acs5_columns.keys():
+            columns_to_get = electiondata.constants.acs5_columns[category].keys()
             working = exd.get_raw_acs5_data(columns_to_get, census_year)
             if working.empty:
                 err = ui.add_new_error(err, "census", census_year, "No data found at census.gov")
                 continue
-            working = exd.combine_and_rename_columns(working,elections.constants.acs_5_label_summands)
-            working = exd.normalize(working,elections.constants.acs_5_label_summands.keys())
+            working = exd.combine_and_rename_columns(working,electiondata.constants.acs_5_label_summands)
+            working = exd.normalize(working,electiondata.constants.acs_5_label_summands.keys())
             working["Category"] = category
             df = pd.concat(df, working)
         self.load_single_external_data_set()
@@ -894,7 +894,7 @@ class DataLoader:
 
         # add elections to Election.txt
         election_df = pd.DataFrame(
-            [[f"{e} General","general"] for e in elections.constants.mit_elections],columns=["Name","ElectionType"]
+            [[f"{e} General","general"] for e in electiondata.constants.mit_elections],columns=["Name","ElectionType"]
         )
 
         # add candidates to Candidate.txt
@@ -902,7 +902,7 @@ class DataLoader:
         candidates = sorted(working[candidate_col].unique())
 
         # add candidates to dictionary
-        candidate_map = {x:multi.correct(x.title()) for x in elections.constants.mit_candidates}
+        candidate_map = {x:multi.correct(x.title()) for x in electiondata.constants.mit_candidates}
         update_err = ui.consolidate_errors(
             [update_err,multi.add_candidates(
                 juris_system,self.d["repository_content_root"],candidates,candidate_map
@@ -911,8 +911,8 @@ class DataLoader:
 
         # add contests to dictionary  # TODO this belongs with constants, but depends on jurisdiction...
         contest_d = {
-            "PRESIDENT":f"US President ({elections.constants.abbr[juris_true]})",
-            "US PRESIDENT":f"US President ({elections.constants.abbr[juris_true]})",
+            "PRESIDENT":f"US President ({electiondata.constants.abbr[juris_true]})",
+            "US PRESIDENT":f"US President ({electiondata.constants.abbr[juris_true]})",
         }
         update_err = ui.consolidate_errors(
             [update_err,
@@ -921,14 +921,14 @@ class DataLoader:
         # add parties to dictionary
         update_err = ui.consolidate_errors(
             [update_err,multi.add_dictionary_entries(
-                juris_system,self.d["repository_content_root"],"Party",elections.constants.mit_party
+                juris_system,self.d["repository_content_root"],"Party",electiondata.constants.mit_party
             )]
         )
 
         # add vote_count_types to dictionary
         update_err = ui.consolidate_errors(
             [update_err,multi.add_dictionary_entries(
-                juris_system, self.d["repository_content_root"], "CountItemType",elections.constants.mit_cit
+                juris_system, self.d["repository_content_root"], "CountItemType",electiondata.constants.mit_cit
             )]
         )
         ## load jurisdiction info to db
@@ -969,11 +969,11 @@ class DataLoader:
             return success, err
 
         # rename columns to match internal db elements
-        df.rename(columns={v:k for k,v in elections.constants.mit_cols.items()},inplace=True)
+        df.rename(columns={v:k for k,v in electiondata.constants.mit_cols.items()},inplace=True)
         # retype count column to int
         df["Count"] = df["Count"].fillna(0).astype(int,errors="ignore")
 
-        df = df[df["Election"].isin(elections.constants.mit_elections.keys())]
+        df = df[df["Election"].isin(electiondata.constants.mit_elections.keys())]
 
         # regularize fips to match standard in jurisdiction/dictionary.txt files
         df["ReportingUnit_raw"] = "fips"+ df["ReportingUnit_raw"]
@@ -1010,7 +1010,7 @@ class DataLoader:
 
             ## load results to db
             for election in j_df["Election"].unique():
-                election_true_name = elections.constants.mit_elections[election]
+                election_true_name = electiondata.constants.mit_elections[election]
 
                 print(f"\t{election_true_name}")
                 election_id = db.name_to_id(self.session,"Election", election_true_name)
@@ -1072,9 +1072,9 @@ class DataLoader:
                     multi_file,
                     f"MIT_pres_gen_Y2K_{juris_system_name}_{election}",
                     Path(multi_file).name,
-                    elections.constants.mit_datafile_info["download_date"],
-                    elections.constants.mit_datafile_info["source"],
-                    elections.constants.mit_datafile_info["note"],
+                    electiondata.constants.mit_datafile_info["download_date"],
+                    electiondata.constants.mit_datafile_info["source"],
+                    electiondata.constants.mit_datafile_info["note"],
                     jurisdiction_id,
                     election_id,
                     False,
@@ -1203,7 +1203,7 @@ def check_and_init_singledataloader(
         required_keys=constants.sdl_pars_req,
         optional_keys=constants.sdl_pars_opt,
         param_file=par_file,
-        header="elections",
+        header="electiondata",
     )
     if err:
         return sdl, err
@@ -1253,7 +1253,7 @@ class JurisdictionPrepper:
                 d, parameter_err = ui.get_parameters(
                     required_keys=required,
                     param_file=param_file,
-                    header="elections",
+                    header="electiondata",
                 )
             except FileNotFoundError:
                 print(
@@ -1290,7 +1290,7 @@ class JurisdictionPrepper:
                 "jurisdictions/000_jurisdiction_templates",
             )
         for element in ["Party", "Election"]:
-            new_err = elections.juris.add_defaults(self.d["jurisdiction_path"],templates,element)
+            new_err = electiondata.juris.add_defaults(self.d["jurisdiction_path"],templates,element)
             if new_err:
                 error = ui.consolidate_errors([error, new_err])
 
@@ -1314,9 +1314,9 @@ class JurisdictionPrepper:
 
         primaries = {}
         # read CandidateContest.txt, Party.txt and dictionary.txt
-        cc = elections.juris.get_element(self.d["jurisdiction_path"],"CandidateContest")
-        p = elections.juris.get_element(self.d["jurisdiction_path"],"Party")
-        d = elections.juris.get_element(self.d["jurisdiction_path"],"dictionary")
+        cc = electiondata.juris.get_element(self.d["jurisdiction_path"],"CandidateContest")
+        p = electiondata.juris.get_element(self.d["jurisdiction_path"],"Party")
+        d = electiondata.juris.get_element(self.d["jurisdiction_path"],"dictionary")
         # for each CandidateContest line in dictionary.txt with cdf_identifier in CandidateContest.txt
         # and for each Party line in dictionary.txt with cdf_identifier in Party.txt
         # append corresponding line in dictionary.txt
@@ -1338,7 +1338,7 @@ class JurisdictionPrepper:
             primaries[p["raw_identifier_value"]]["cdf_internal_name"] = primaries[
                 p["raw_identifier_value"]
             ].apply(
-                lambda row: elections.juris.primary(
+                lambda row: electiondata.juris.primary(
                     row, p["cdf_internal_name"], "contest_internal"
                 ),
                 axis=1,
@@ -1346,7 +1346,7 @@ class JurisdictionPrepper:
             primaries[p["raw_identifier_value"]]["raw_identifier_value"] = primaries[
                 p["raw_identifier_value"]
             ].apply(
-                lambda row: elections.juris.primary(row,p["raw_identifier_value"],"contest_raw"),
+                lambda row: electiondata.juris.primary(row,p["raw_identifier_value"],"contest_raw"),
                 axis=1,
             )
 
@@ -1359,7 +1359,7 @@ class JurisdictionPrepper:
             new_dictionary = pd.concat(df_list)
         else:
             new_dictionary = d
-        new_err = elections.juris.write_element(
+        new_err = electiondata.juris.write_element(
             self.d["jurisdiction_path"], "dictionary", new_dictionary
         )
         ui.consolidate_errors([error, new_err])
@@ -1393,9 +1393,9 @@ class JurisdictionPrepper:
                 count[k] = other_districts[k]["count"]
                 ru_type[k] = other_districts[k]["ReportingUnitType"]
 
-        w_office = elections.juris.get_element(self.d["jurisdiction_path"],"Office")
-        w_ru = elections.juris.get_element(self.d["jurisdiction_path"],"ReportingUnit")
-        w_cc = elections.juris.get_element(self.d["jurisdiction_path"],"CandidateContest")
+        w_office = electiondata.juris.get_element(self.d["jurisdiction_path"],"Office")
+        w_ru = electiondata.juris.get_element(self.d["jurisdiction_path"],"ReportingUnit")
+        w_cc = electiondata.juris.get_element(self.d["jurisdiction_path"],"CandidateContest")
         cols_off = ["Name", "ElectionDistrict"]
         cols_ru = ["Name", "ReportingUnitType"]
         cols_cc = ["Name", "NumberElected", "Office", "PrimaryParty"]
@@ -1465,7 +1465,7 @@ class JurisdictionPrepper:
         w_cc = w_cc.append(jw_cc, ignore_index=True)
 
         # write office df to Office.txt
-        new_err = elections.juris.write_element(
+        new_err = electiondata.juris.write_element(
             self.d["jurisdiction_path"], "Office", w_office.drop_duplicates()
         )
         if new_err:
@@ -1473,14 +1473,14 @@ class JurisdictionPrepper:
             if ui.fatal_error(new_err):
                 return err
 
-        new_err = elections.juris.write_element(
+        new_err = electiondata.juris.write_element(
             self.d["jurisdiction_path"], "ReportingUnit", w_ru.drop_duplicates()
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
                 return err
-        new_err = elections.juris.write_element(
+        new_err = electiondata.juris.write_element(
             self.d["jurisdiction_path"], "CandidateContest", w_cc.drop_duplicates()
         )
         if new_err:
@@ -1496,7 +1496,7 @@ class JurisdictionPrepper:
         err_str = None
 
         # get contests that are not already primaries
-        contests = elections.juris.get_element(self.d["jurisdiction_path"],"CandidateContest")
+        contests = electiondata.juris.get_element(self.d["jurisdiction_path"],"CandidateContest")
         # TODO might have to check for '' as well as nulls
         non_p_contests = contests[contests["PrimaryParty"].isnull()]
         if non_p_contests.empty:
@@ -1504,7 +1504,7 @@ class JurisdictionPrepper:
             return err_str
 
         # get parties
-        parties = elections.juris.get_element(self.d["jurisdiction_path"],"Party")
+        parties = electiondata.juris.get_element(self.d["jurisdiction_path"],"Party")
         if parties.empty:
             if err_str:
                 err_str += (
@@ -1518,12 +1518,12 @@ class JurisdictionPrepper:
             p = party["Name"]
             primaries[p] = non_p_contests.copy()
             primaries[p]["Name"] = non_p_contests.apply(
-                lambda row: elections.juris.primary(row,p,"Name"), axis=1
+                lambda row: electiondata.juris.primary(row,p,"Name"), axis=1
             )
             primaries[p]["PrimaryParty"] = p
 
         all_primaries = [primaries[p] for p in parties.Name.unique()]
-        new_err = elections.juris.write_element(
+        new_err = electiondata.juris.write_element(
             self.d["jurisdiction_path"],
             "CandidateContest",
             pd.concat([contests] + all_primaries),
@@ -1545,11 +1545,11 @@ class JurisdictionPrepper:
             "Party",
             "ReportingUnit",
         ]
-        old = elections.juris.get_element(self.d["jurisdiction_path"],"dictionary")
+        old = electiondata.juris.get_element(self.d["jurisdiction_path"],"dictionary")
         if not include_existing:
             old.drop()
         for element in elements:
-            w[element] = elections.juris.get_element(self.d["jurisdiction_path"],element)
+            w[element] = electiondata.juris.get_element(self.d["jurisdiction_path"],element)
             name_field = db.get_name_field(element)
             w[element] = m.add_constant_column(w[element], "cdf_element", element)
             w[element].rename(columns={name_field: "cdf_internal_name"}, inplace=True)
@@ -1567,7 +1567,7 @@ class JurisdictionPrepper:
         else:
             ssd_str = "current directory (not in jurisdiction directory)"
             starter_dict_dir = "."
-        err = elections.juris.write_element(
+        err = electiondata.juris.write_element(
             starter_dict_dir, "dictionary", starter, file_name=starter_file_name
         )
         print(f"Starter dictionary created in {ssd_str}:\n{starter_file_name}")
@@ -1605,7 +1605,7 @@ class JurisdictionPrepper:
             ru_formula = ""
             headers = [
                 x
-                for x in elections.constants.req_munger_parameters["munge_field_types"]
+                for x in electiondata.constants.req_munger_parameters["munge_field_types"]
                 if x != "constant_over_file"
             ]
             for header in headers:
@@ -1631,8 +1631,8 @@ class JurisdictionPrepper:
                     err_list.append(new_err)
             else:
                 # create raw -> internal dictionary of county_type names
-                jd_df = elections.juris.get_element(self.d["jurisdiction_path"],"dictionary")
-                ru_df = elections.juris.get_element(self.d["jurisdiction_path"],"ReportingUnit")
+                jd_df = electiondata.juris.get_element(self.d["jurisdiction_path"],"dictionary")
+                ru_df = electiondata.juris.get_element(self.d["jurisdiction_path"],"ReportingUnit")
                 internal = (
                     jd_df[jd_df["cdf_element"] == "ReportingUnit"]
                     .merge(
@@ -1651,7 +1651,7 @@ class JurisdictionPrepper:
                 good_vals = [v for v in vals if county[v] in internal.keys()]
 
                 # write to ReportingUnit.txt
-                new_err = elections.juris.write_element(
+                new_err = electiondata.juris.write_element(
                     self.d["jurisdiction_path"],
                     "ReportingUnit",
                     pd.concat(
@@ -1674,7 +1674,7 @@ class JurisdictionPrepper:
                     err_list.append(new_err)
 
                 # write to dictionary.txt
-                new_err = elections.juris.write_element(
+                new_err = electiondata.juris.write_element(
                     self.d["jurisdiction_path"],
                     "dictionary",
                     pd.concat(
@@ -1790,7 +1790,7 @@ class JurisdictionPrepper:
             d, parameter_err = ui.get_parameters(
                 required_keys=required,
                 param_file=param_file,
-                header="elections",
+                header="electiondata",
             )
             self.d.update(d)
 
@@ -1847,7 +1847,7 @@ def make_ini_file_batch(
     juris_system_name = jm.system_name_from_true_name(jurisdiction)
     for f in data_file_list:
         par_text = (
-            f"[elections]\nresults_file={juris_system_name}/{f}\n"
+            f"[election_results]\nresults_file={juris_system_name}/{f}\n"
             f"munger_list={munger_list}\njurisdiction={jurisdiction}\nelection={election}\n"
             f"results_short_name={jurisdiction}_{f}\nresults_download_date={download_date}\n"
             f"results_source={source}\nresults_note={results_note}\n"
@@ -1873,7 +1873,7 @@ class Analyzer:
             d, eda_err = ui.get_parameters(
                 required_keys=["reports_and_plots_dir"],
                 param_file=param_file,
-                header="elections",
+                header="electiondata",
             )
             if eda_err:
                 print(eda_err)
@@ -1903,7 +1903,7 @@ class Analyzer:
         d, error = ui.get_parameters(
             required_keys=["reports_and_plots_dir", "repository_content_root"],
             param_file=param_file,
-            header="elections",
+            header="electiondata",
         )
         self.reports_and_plots_dir = d["reports_and_plots_dir"]
         self.repository_content_root = d["repository_content_root"]
@@ -2080,9 +2080,9 @@ class Analyzer:
             self, election: str, jurisdiction, major_subdivision: Optional[str] = None
     ) -> Union[str, Dict[str, Any]]:
         """picks either version 1.0 (json) or version 2.0 (xml) based on value of constants.nist_version"""
-        if elections.constants.nist_version == "1.0":
+        if electiondata.constants.nist_version == "1.0":
             return self.export_nist_v1_json(election, jurisdiction)
-        elif elections.constants.nist_version == "2.0":
+        elif electiondata.constants.nist_version == "2.0":
             return self.export_nist_v2(election, jurisdiction, major_subdivision)
         else:
             return ""
@@ -2135,13 +2135,13 @@ class Analyzer:
                 election,
                 jurisdiction,
                 major_subdivision=major_subdivision,
-                issuer=elections.constants.default_issuer,
-                issuer_abbreviation=elections.constants.default_issuer_abbreviation,
-                status=elections.constants.default_status,
-                vendor_application_id=elections.constants.default_vendor_application_id,
+                issuer=electiondata.constants.default_issuer,
+                issuer_abbreviation=electiondata.constants.default_issuer_abbreviation,
+                status=electiondata.constants.default_status,
+                vendor_application_id=electiondata.constants.default_vendor_application_id,
             )
         xml_string = ET.tostring(xml_tree.getroot(),
-                                 encoding=elections.constants.default_encoding,
+                                 encoding=electiondata.constants.default_encoding,
                                  method="xml",
                                  )
         return xml_string

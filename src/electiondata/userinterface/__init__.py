@@ -5,7 +5,7 @@ from configparser import (
     ParsingError,
 )
 
-from elections import (
+from electiondata import (
     database as db,
     munge as m,
     juris as jm,
@@ -893,7 +893,7 @@ def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> li
                 full_path = os.path.join(subdir, f)
                 d, err = get_parameters(
                     param_file=full_path,
-                    header="elections",
+                    header="election_results",
                     required_keys=["election", "jurisdiction", "results_file"],
                 )
                 # if parameters were read without error
@@ -1000,7 +1000,7 @@ def get_filtered_input_options(
                     "type": contest_type,
                 }
             ]
-        ).sort_values(by="parent")
+        ).sort_values(by=["parent", "type", "name"])
         # define input options for each particular contest
         contest_df = db.get_relevant_contests(session, filters, repository_content_root)
         contest_df = contest_df[contest_df["type"].isin(filters)]

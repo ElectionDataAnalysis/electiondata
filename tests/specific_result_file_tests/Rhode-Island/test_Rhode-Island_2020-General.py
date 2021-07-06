@@ -1,4 +1,4 @@
-import elections as e
+import electiondata as e
 
 # Instructions:
 #   Copy this template and rename, including your jurisdiction and the timestamp of the results file
