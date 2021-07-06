@@ -6,6 +6,11 @@ import sqlalchemy
 import sqlalchemy as sa
 import sqlalchemy.orm
 from sqlalchemy import MetaData,Table,Column,Integer,Index,CheckConstraint,ForeignKey,String,UniqueConstraint
+from sqlalchemy import (
+    Date,
+    TIMESTAMP,
+    Boolean
+)  # these are used, even if syntax-checker can't tell
 from sqlalchemy.orm import Session
 import io
 import csv
@@ -13,7 +18,6 @@ import inspect
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from pathlib import Path
 from psycopg2 import sql
-import sqlalchemy as db
 import datetime
 from configparser import MissingSectionHeaderError
 import pandas as pd
@@ -335,7 +339,7 @@ def sql_alchemy_connect(
     url = url.format(**params)
 
     # The return value of create_engine() is our connection object
-    engine = db.create_engine(
+    engine = sa.create_engine(
         url, client_encoding=constants.default_encoding, pool_size=20, max_overflow=40
     )
     return engine, err
@@ -2071,7 +2075,7 @@ def create_common_data_format_tables(session, dirpath="CDF_schema_def_info/"):
         elif element == "ReportingUnit":
             create_indices = ["ReportingUnitType_Id"]
         else:
-            # create_indices = [[db.get_name_field(element)]]
+            # create_indices = [[get_name_field(element)]]
             create_indices = None
             # TODO fix for efficiency -- note <contest_type>Contest, <contest_type>Selection may need special treatment
 
@@ -2367,7 +2371,7 @@ def load_bms(engine, bms_list: list):
     bms_df = pd.DataFrame([[s] for s in bms_list], columns=["Name"])
 
     # Create 3 entries in Selection table
-    id_list = db.add_records_to_selection_table(engine, len(bms_list))
+    id_list = add_records_to_selection_table(engine, len(bms_list))
 
     # Create entries in BallotMeasureSelection table
     bms_df["Id"] = pd.Series(id_list, index=bms_df.index)

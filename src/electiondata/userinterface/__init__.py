@@ -1003,7 +1003,7 @@ def get_filtered_input_options(
         ).sort_values(by=["parent", "type", "name"])
         # define input options for each particular contest
         contest_df = db.get_relevant_contests(session, filters, repository_content_root)
-        contest_df = contest_df[contest_df["type"].isin(filters)]
+        contest_df = contest_df[contest_df["type"].isin(filters)].sort_values(by=["parent", "type", "name"])
         df = pd.concat([contest_type_df, contest_df])
     elif menu_type == "category":
         election_id = db.list_to_id(session, "Election", filters)
@@ -1128,10 +1128,12 @@ def get_filtered_input_options(
 
 def package_display_results(data: pd.DataFrame) -> List[Dict[str, Any]]:
     """takes a result set and packages into JSON to return.
-    Result set should already be ordered as desired for display"""
+    Result set should already be ordered as desired for display
+    with display order controlled by "order_by" key"""
     results = []
-    for i, row in data.iterrows():
-        if row[1] in constants.contest_type_mappings:
+    for i in range(data.shape[0]):
+        row = data.iloc[i]
+        if row[1] in constants.contest_type_mappings.keys():
             row[1] = constants.contest_type_mappings[row[1]]
         temp = {"parent": row[0], "name": row[1], "type": row[2], "order_by": i + 1}
         results.append(temp)
@@ -1140,7 +1142,7 @@ def package_display_results(data: pd.DataFrame) -> List[Dict[str, Any]]:
 
 def clean_candidate_names(df):
     """takes a df that has contest, candidate name, and party in the columns. Cleans the
-    data as described in https://github.com/ElectionDataAnalysis/election_data_analysis/issues/207"""
+    data as described in https://github.com/ElectionDataAnalysis/electiondata/issues/207"""
     # Get first letter of each word in the party name except for "Party"
     # if "Party" is not in the name, then it's "None"
     cols = df.columns

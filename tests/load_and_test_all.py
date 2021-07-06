@@ -44,7 +44,7 @@ def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool)
     remove_db = input(f"Remove test db {dl.d['dbname']} (y/n)?\n")
 
     if remove_db == "y":
-        err = close_and_erase(dl)
+        err = dl.close_and_erase()
         if not err:
             db_removed = True
             print(f"db removed")

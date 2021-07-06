@@ -168,7 +168,7 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
         # if file does not exist
         if not os.path.isfile(cf_path):
             # create the file
-            temp.to_csv(cf_path,sep="\t",index=False,encoding=default_encoding)
+            temp.to_csv(cf_path,sep="\t",index=False,encoding=constants.default_encoding)
             created = True
 
         # if file exists, check format against template
@@ -345,7 +345,7 @@ def clean_and_dedupe(f_path: str):
                 pass
     dupes_df, df = ui.find_dupes(df)
     if not dupes_df.empty:
-        df.to_csv(f_path,sep="\t",index=False,encoding=default_encoding)
+        df.to_csv(f_path,sep="\t",index=False,encoding=constants.default_encoding)
     return
 
 
@@ -767,7 +767,7 @@ def write_element(
             os.path.join(juris_path, file_name),
             index=False,
             sep="\t",
-            encoding=default_encoding,
+            encoding=constants.default_encoding,
         )
     except Exception as e:
         err = ui.add_new_error(

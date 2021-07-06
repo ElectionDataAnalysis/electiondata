@@ -309,6 +309,20 @@ class DataLoader:
         db.create_db_if_not_ok(dbname=new_db_name)
         return
 
+    def close_and_erase(self) -> Optional[dict]:
+        db_params = {
+            "host":self.engine.url.host,
+            "port":self.engine.url.port,
+            "user":self.engine.url.username,
+            "password":self.engine.url.password,
+            "dbname":self.engine.url.database,
+        }
+        # point dataloader to default database
+        self.change_db("postgres")
+        # remove the db
+        err = db.remove_database(db_params)
+        return err
+
     def change_dir(self, dir_param: str, new_dir: str):
         # TODO technical debt: error handling
         self.d[dir_param] = new_dir
@@ -1203,7 +1217,7 @@ def check_and_init_singledataloader(
         required_keys=constants.sdl_pars_req,
         optional_keys=constants.sdl_pars_opt,
         param_file=par_file,
-        header="electiondata",
+        header="election_results",
     )
     if err:
         return sdl, err
