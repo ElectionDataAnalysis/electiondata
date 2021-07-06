@@ -6,8 +6,8 @@ setup(
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     include_package_data=True,
-    url="https://github.com/sfsinger19103/results_analysis",
-    author="Stephanie Singer",
+    url="https://github.com/ElectionDataAnalysis/election_data_analysis",
+    author="Stephanie Frank Singer, et al.",
     author_email="sfsinger@campaignscientific.com",
     install_requires=["sqlalchemy", "pandas"],
 )
