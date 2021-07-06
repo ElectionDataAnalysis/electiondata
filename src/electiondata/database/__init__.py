@@ -293,7 +293,7 @@ def create_or_reset_db(
         sess_new = Session_new()
         reset_db(
             sess_new,
-            os.path.join(project_root,"../CDF_schema_def_info"),
+            os.path.join(project_root,"CDF_schema_def_info"),
         )
     else:
         create_database(con, cur, dbname)
@@ -305,12 +305,12 @@ def create_or_reset_db(
     # load cdf tables
     create_common_data_format_tables(
         sess_new,
-        dirpath=os.path.join(project_root,"../CDF_schema_def_info"),
+        dirpath=os.path.join(project_root,"CDF_schema_def_info"),
     )
     fill_standard_tables(
         sess_new,
         None,
-        dirpath=os.path.join(project_root,"../CDF_schema_def_info"),
+        dirpath=os.path.join(project_root,"CDF_schema_def_info"),
     )
     con.close()
     return err
