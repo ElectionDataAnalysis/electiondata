@@ -6137,6 +6137,7 @@ Election	2018 General	2018 General
 Election	2018 Primary	2018 Primary
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
+Party	AMR Party	AMR
 Party	Alliance Party	ALN
 Party	Alliance Party	Alliance Party
 Party	Constitution Party	CON
@@ -6158,7 +6159,6 @@ Party	Republican Party	REP
 Party	Republican Party	REPUBLICAN
 Party	Republican Party	Republican Party
 Party	UNC Party	UNC
-Party	AMR Party	AMR
 Party	United Citizens Party	United Citizens Party
 Party	Working Families Party	WFM
 Party	Working Families Party	Working Families Party

@@ -16,7 +16,7 @@ abbr = "TX"
 party1 = "Democratic Party"
 party2 = "Republican Party"
 pres_total_party1 = -1  # total of all votes for President in that party
-cd = 3  # congressional district
+congressional_contest = f"US House {abbr} District 3"  # congressional contest
 total_cd_votes_party2 = (
     -1
 )  # total votes for Congressional rep in the chosen cd and party
@@ -90,7 +90,7 @@ def test_us_house_totals(dbname):
         e.contest_total(
             election,
             jurisdiction,
-            f"US House {abbr} District {cd} ({party2})",
+            f"US House {abbr} District {congressional_contest} ({party2})",
             sub_unit_type=jurisdiction_type,
             dbname=dbname,
         )

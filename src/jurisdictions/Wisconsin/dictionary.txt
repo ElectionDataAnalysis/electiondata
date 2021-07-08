@@ -2250,7 +2250,6 @@ Party	Unknown	Unnamed: 7_level_0
 Party	Unknown	Unnamed: 8_level_0
 Party	none or unknown	OTHER
 ReportingUnit	County	County
-ReportingUnit	Office Totals:	Office Totals:
 ReportingUnit	Wisconsin	Wisconsin
 ReportingUnit	Wisconsin;Adams County	ADAMS
 ReportingUnit	Wisconsin;Adams County	ADAMS;CITY OF WISCONSIN DELLS Wards 5,9
@@ -6387,3 +6386,18 @@ Candidate	No Candidate	No Candidate William Henry Davis III (Write-in)
 Candidate	No Candidate	No Candidate Corban Gehler (Write-in)
 Candidate	Mark S. Grimek (Write-in)	Mark S. Grimek (Write-in) No Candidate
 Candidate	Jared William Landry (Write-in)	Jared William Landry (Write-in) No Candidate
+Candidate	Tom Hoefling (write-in)	Tom Hoefling Steve Schulin (write-in)
+Candidate	Rocky Roque De La Fuente	Rocky Roque De La Fuente Michael Steinberg
+Candidate	Monica Moorehead	Monica Moorehead Lamont Lilly
+Candidate	Michael A. Maturen (write-in)	Michael A. Maturen Juan Munoz (write-in)
+Candidate	Marshall Schoenke (write-in)	Marshall Schoenke James Creighton Mitchell Jr. (write-in)
+Candidate	Laurence Kotlikoff (write-in)	Laurence Kotlikoff Edward E. Leamer (write-in)
+Candidate	Jill Stein	Jill Stein Ajamu Baraka
+Candidate	Hillary Clinton	Hillary Clinton Tim Kaine
+Candidate	Gary Johnson	Gary Johnson Bill Weld
+Candidate	Evan McMullin (write-in)	Evan McMullin Nathan Johnson (write-in)
+Candidate	Emidio Soltysik (write-in)	Emidio Soltysik Angela Nicole Walker (write-in)
+Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
+Candidate	Darrell L. Castle	Darrell L. Castle Scott N. Bradley
+Candidate	Chris Keniston (write-in)	Chris Keniston Deacon Taylor (write-in)
+Candidate	Cherunda Fox (write-in)	Cherunda Fox Roger Kushner (write-in)

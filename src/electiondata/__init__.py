@@ -2456,14 +2456,14 @@ def aggregate_results(
     connection = an.session.bind.raw_connection()
     cursor = connection.cursor()
 
-    datafile_list, e = db.data_file_list_cursor(
+    datafile_list, err_str1 = db.data_file_list_cursor(
         cursor,
         election_id,
         reporting_unit_id=jurisdiction_id,
         by="Id",
     )
-    if e:
-        print(e)
+    if err_str1:
+        print(err_str1)
         return empty_df_with_good_cols
     if len(datafile_list) == 0:
         print(

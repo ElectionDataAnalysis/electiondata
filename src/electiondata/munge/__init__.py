@@ -340,8 +340,11 @@ def replace_raw_with_internal_ids(
         working = working[working["cdf_internal_name"] != "row should be dropped"]
 
     if working.empty:
-        e = f"No true raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file"
+        raws = "\n".join(list(df[f"{element}_raw"].unique()))
+        e = f"No true raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file.\n" \
+            f"true raw {element}s:\n{raws}"
         if drop_unmatched and not drop_all_ok:
+
             error = ui.add_new_error(
                 error,
                 "jurisdiction",

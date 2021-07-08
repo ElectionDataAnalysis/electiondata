@@ -4,10 +4,12 @@ count_location=electionResult/contests/contest/choices/choice/jurisdictions/juri
 
 encoding=ASCII
 
-
 [munge formulas]
 ReportingUnit=<jurisdiction.name>
 Party=<choice.party>
 CandidateContest=<contest.contestLongName>
 Candidate=<choice.choiceName>
 CountItemType=<voteType.voteTypeName>
+
+[ignore]
+ReportingUnit=State
