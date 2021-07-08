@@ -321,6 +321,10 @@ def read_single_datafile(
         )
     else:
         # drop any empty dataframes
+        empties = [k for k in df_dict.keys() if df_dict[k].empty]
+        if empties:
+            empty_str = ", ".join(empties)
+            err = add_new_error(err, "warn-munger", munger_name, f"Nothing read from {file_name} sheets {empty_str}")
         df_dict = {k: v for k, v in df_dict.items() if not v.empty}
     return df_dict, row_constants, err
 
@@ -618,10 +622,11 @@ def report(
     key_list: list = None,
     file_prefix: str = "",
 ) -> Optional[dict]:
-    """unpacks error dictionary <err> for reporting.
+    """unpacks error dictionary <err_warn> for reporting.
     <output_location> is directory for writing error files.
     Use <key_list> to report only on some keys, and return a copy of err_warn with those keys removed"""
-    if err_warn:
+
+    if err_warn and [k for k in err_warn.keys() if err_warn[k]]:
         # create reporting directory if it does not exist
         if os.path.isfile(output_location):
             print(
@@ -632,8 +637,11 @@ def report(
             Path(output_location).mkdir(parents=True, exist_ok=True)
 
         if not key_list:
-            # report all keys (otherwise report only key-list keys)
+            # report all keys ()
             key_list = err_warn.keys()
+        else:
+            # report only key-list keys, and only those with content
+            key_list = [k for k in err_warn.keys() if k in key_list]
 
         # create error/warning messages for each error_type/name_key pair
         # list keys with content
@@ -687,7 +695,7 @@ def report(
             only_warns = [
                 nk
                 for nk in err_warn[f"warn-{et}"].keys()
-                if nk not in err_warn[et].keys()
+                if (et not in err_warn.keys()) or (nk not in err_warn[et].keys())
             ]
             for nk in only_warns:
                 # prepare output string

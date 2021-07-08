@@ -526,7 +526,7 @@ def load_juris_dframe_into_cdf(
                     err = ui.add_new_error(
                         err,
                         "warn-jurisdiction",
-                        Path(all_juris_path).name,
+                        juris_true_name,
                         f"Some {e}s are non-standard:\n\t{ns}",
                     )
 

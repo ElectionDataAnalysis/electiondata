@@ -524,7 +524,18 @@ standard_juris_csv_reading_kwargs = {
 }
 bmselections = ["Yes", "No", "none or unknown"]
 
-
+juris_load_report_keys = [
+                    "munger",
+                    "warn-munger",
+                    "jurisdiction",
+                    "warn-jurisdiction",
+                    "file",
+                    "warn-file",
+                    "ini",
+                    "warn-ini",
+                    "warn-database",
+                    "database",
+                ]
 # regex patterns
 brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")
 pandas_default_pattern = r"^Unnamed: (\d+)_level_(\d+)$"

@@ -253,7 +253,9 @@ def compress_whitespace(s: str) -> str:
 def replace_raw_with_internal_ids(
     df: pd.DataFrame,
     path_to_jurisdiction_dir: str,
-    juris_true_name: str,
+    juris_true_name: str,  # for error reporting
+    munger_name: str,  # for error reporting
+    file_name: str,  # for error reporting
     table_df: pd.DataFrame,
     element: str,
     internal_name_column: str,
@@ -404,8 +406,8 @@ def replace_raw_with_internal_ids(
         ]
         unmatched_str = "\n".join(unmatched_pairs)
         e = (
-            f"Warning: Results for {working_unmatched.shape[0]} rows with unmatched {element}s "
-            f"will not be loaded to database. "
+            f"\nResults for {working_unmatched.shape[0]} rows with unmatched {element}s "
+            f"will not be loaded to database from file {file_name} with munger {munger_name}. "
             f"These records (internal name, raw identifier) were found in dictionary.txt, but "
             f"no corresponding record was found in the {element} table in the database: \n{unmatched_str}"
         )
@@ -627,6 +629,8 @@ def add_contest_id(
     df: pd.DataFrame,
     path_to_jurisdiction_dir: str,
     juris_true_name: str,
+    file_name: str,
+    munger_name: str,
     err: Optional[dict],
     session: Session,
 ) -> (pd.DataFrame, dict):
@@ -649,6 +653,8 @@ def add_contest_id(
                 working,
                 path_to_jurisdiction_dir,
                 juris_true_name,
+                file_name,
+                munger_name,
                 df_for_type[c_type],
                 f"{c_type}Contest",
                 "Name",
@@ -713,6 +719,7 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
     path_to_jurisdiction_dir: str,
     juris_true_name: str,
     munger_name: str,
+    file_name: str,
     err: dict,
 ) -> (pd.DataFrame, dict):
     """Assumes <df> has contest_type, BallotMeasureSelection_raw, Candidate_Id column.
@@ -731,6 +738,8 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
             w["BallotMeasure"],
             path_to_jurisdiction_dir,
             juris_true_name,
+            file_name,
+            munger_name,
             bms,
             "BallotMeasureSelection",
             "Name",
@@ -838,6 +847,7 @@ def raw_to_id_simple(
     path_to_jurisdiction_dir,
     element_list: list,
     session: Session,
+    file_name: str,
     munger_name: str,
     juris_true_name,
     file_type: str,
@@ -933,6 +943,8 @@ def raw_to_id_simple(
                     working,
                     path_to_jurisdiction_dir,
                     juris_true_name,
+                    file_name,
+                    munger_name,
                     element_df,
                     t,
                     name_field,
@@ -1009,6 +1021,7 @@ def munge_raw_to_ids(
     df: pd.DataFrame,
     constant_dict: dict,
     path_to_jurisdiction_dir: str,
+    file_name: str,
     munger_name: str,
     juris_true_name: str,
     session: Session,
@@ -1048,7 +1061,7 @@ def munge_raw_to_ids(
     else:
         try:
             working, err = add_contest_id(
-                working, path_to_jurisdiction_dir, juris_true_name, err, session
+                working, path_to_jurisdiction_dir, juris_true_name, file_name, munger_name, err, session
             )
         except Exception as exc:
             err = ui.add_new_error(
@@ -1107,6 +1120,7 @@ def munge_raw_to_ids(
         other_elements,
         session,
         munger_name,
+        file_name,
         juris_true_name,
         file_type,
     )
@@ -1122,6 +1136,7 @@ def munge_raw_to_ids(
             session.bind,
             path_to_jurisdiction_dir,
             juris_true_name,
+            file_name,
             munger_name,
             err,
         )
@@ -1843,6 +1858,7 @@ def to_standard_count_frame(
     keys_in_order.sort()
     for sheet in keys_in_order:
         error_by_sheet[sheet] = None
+        row_constants = dict()   # for syntax checker
         # set any nulls to blank in dataframe for that sheet
         raw_dict[sheet] = raw_dict[sheet].fillna("")
         if p["multi_block"] == "yes":
@@ -1970,7 +1986,7 @@ def to_standard_count_frame(
                         )
                     elif working.empty:
                         error_by_df[n] = ui.add_new_error(
-                            err, "munger", munger_name, f"No data returned from pivot"
+                            err, "munger", munger_name, f"No data returned from pivot in file {file_name}"
                         )
                 except Exception as exc:
                     error_by_df[n] = ui.add_new_error(
@@ -2005,7 +2021,7 @@ def to_standard_count_frame(
                     error_by_df[n],
                     "munger",
                     munger_name,
-                    f"In sheet {sheet}: Field in munge formulas not found in file column headers read from file: {ke}. "
+                    f"In file {file_name} sheet {sheet}: Field in munge formulas not found in file column headers read from file: {ke}. "
                     f"Columns are {working.columns}",
                 )
                 continue

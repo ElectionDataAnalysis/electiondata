@@ -6379,3 +6379,11 @@ ReportingUnit	Wisconsin;Wood County	WOOD;Village of VESPER Ward 1
 ReportingUnit	Wisconsin;Wood County	Wisconsin;Wood County
 ReportingUnit	Wisconsin;Wood County	Wood
 ReportingUnit	Wisconsin;Wood County	fips55141
+Candidate	Ryan Cason (Write-in)	Ryan Cason (Write-in) No Candidate
+Candidate	Robbie Hoffman (Write-in)	Robbie Hoffman (Write-in) No Candidate
+Candidate	Richard Michael Turtenwald (Write-in)	Richard Michael Turtenwald (Write-in) No Candidate
+Candidate	Paul Boucher (Write-in)	Paul Boucher (Write-in) No Candidate
+Candidate	No Candidate	No Candidate William Henry Davis III (Write-in)
+Candidate	No Candidate	No Candidate Corban Gehler (Write-in)
+Candidate	Mark S. Grimek (Write-in)	Mark S. Grimek (Write-in) No Candidate
+Candidate	Jared William Landry (Write-in)	Jared William Landry (Write-in) No Candidate

@@ -508,6 +508,7 @@ class DataLoader:
             for j in jurisdictions
         }
         if load_jurisdictions:
+            ok_jurisdictions = list()
             for juris in jurisdictions:
                 # check jurisdiction
                 juris_system_name = jm.system_name_from_true_name(juris)
@@ -527,6 +528,13 @@ class DataLoader:
                             for (e, j) in election_jurisdiction_list
                             if j != juris
                         ]
+                        # add juris to failure list
+                        failure[juris] = "Jurisdiction files did not load. See .errors"
+                        err = ui.report(
+                            err,
+                            report_dir,
+                            key_list=constants.juris_load_report_keys,
+                        )
                         continue
                 print(f"Loading/updating jurisdiction {juris} to {self.session.bind}")
                 try:
@@ -538,15 +546,18 @@ class DataLoader:
                     )
                     if new_err:
                         err = ui.consolidate_errors([err, new_err])
+                    if not ui.fatal_error(new_err):
+                        ok_jurisdictions.append(juris)
                 except Exception as exc:
                     err = ui.add_new_error(
                         err, "jurisdiction", juris, f"Exception during loading: {exc}"
                     )
         else:
-            print("No jurisdictions loaded because load_jurisdictions==False")
+            print("No jurisdictions loaded because load_jurisdictions==False. All jurisdictions assumed to be OK")
+            ok_jurisdictions = jurisdictions
 
         latest_download_date = dict()
-        for jurisdiction in jurisdictions:
+        for jurisdiction in ok_jurisdictions:
             juris_err = None
             for election in elections[jurisdiction]:
                 # load the relevant files
@@ -606,20 +617,8 @@ class DataLoader:
             err = ui.report(
                 err,
                 report_dir,
-                key_list=[
-                    "munger",
-                    "warn-munger",
-                    "jurisdiction",
-                    "warn-jurisdiction",
-                    "file",
-                    "warn-file",
-                    "ini",
-                    "warn-ini",
-                    "warn-database",
-                    "database",
-                ],
+                key_list=constants.juris_load_report_keys,
             )
-        #  report munger, jurisdiction and file errors & warnings
 
         # report remaining errors
         ui.report(err, report_dir, file_prefix="system")
@@ -959,6 +958,7 @@ class DataLoader:
         otherwise do *not* overwrite"""
         err = None
         success: Dict[str,List[str]] = dict()
+        file_name = Path(multi_file).name
 
         # add elections to db
         multi.add_elections_to_db(self.session)
@@ -969,7 +969,7 @@ class DataLoader:
                 err = ui.add_new_error(
                     err,
                     "file",
-                    multi_file,
+                    file_name,
                     f"No data read",
                 )
                 return list(), err
@@ -977,7 +977,7 @@ class DataLoader:
             err = ui.add_new_error(
                 err,
                 "file",
-                multi_file,
+                file_name,
                 f"file not found",
             )
             return success, err
@@ -1085,7 +1085,7 @@ class DataLoader:
                     self.session.bind,
                     multi_file,
                     f"MIT_pres_gen_Y2K_{juris_system_name}_{election}",
-                    Path(multi_file).name,
+                    file_name,
                     electiondata.constants.mit_datafile_info["download_date"],
                     electiondata.constants.mit_datafile_info["source"],
                     electiondata.constants.mit_datafile_info["note"],
@@ -1103,7 +1103,7 @@ class DataLoader:
                 je_df = j_df[j_df["Election"] == election]
                 try:
                     # load data
-                    new_err = load_results_df(self.session, je_df, dict(),juris_true_name,
+                    new_err = load_results_df(self.session, je_df, dict(),juris_true_name, file_name,
                                               "load_multi_ej_file",
                                               os.path.join(self.d["repository_content_root"],"jurisdictions",
                                                            juris_system_name),
@@ -2720,6 +2720,7 @@ def load_results_df(
         df_original: pd.DataFrame,
         necessary_constants: dict,
         juris_true_name: str,
+        file_name: str,
         munger_name: str,
         path_to_jurisdiction_dir: str,
         datafile_id: int,
@@ -2736,6 +2737,7 @@ def load_results_df(
             df,
             necessary_constants,
             path_to_jurisdiction_dir,
+            file_name,
             munger_name,
             juris_true_name,
             session,
@@ -2818,6 +2820,7 @@ def load_results_file(
 
     # TODO tech debt: redundant to pass results_directory_path and f_path
     munger_name = Path(munger_path).name
+    file_name = Path(f_path).name
     # read parameters from munger file
     p, err = m.get_and_check_munger_params(munger_path)
     if ui.fatal_error(err):
@@ -2842,7 +2845,7 @@ def load_results_file(
     df = m.remove_ignored_rows(df, munger_path)
 
     new_err = load_results_df(
-        session,df,necessary_constants, juris_true_name, munger_name,path_to_jurisdiction_dir,datafile_id, election_id,
+        session,df,necessary_constants, juris_true_name, file_name, munger_name,path_to_jurisdiction_dir,datafile_id, election_id,
         p["file_type"], rollup=rollup, rollup_rut=rollup_rut
     )
     return ui.consolidate_errors([err, new_err])
@@ -2903,7 +2906,7 @@ def load_or_reload_all(
                 "No results had corresponding file in ini_files_for_results",
             )
         # report errors to file
-        ui.report(err, error_and_warning_dir, file_prefix=f"loading_")
+        err = ui.report(err, error_and_warning_dir, file_prefix="loading")
     else:
         current_directory = os.getcwd()
         print(
@@ -2958,12 +2961,20 @@ def reload_juris_election(
 
     # load all data into temp db
     dl.change_db(temp_db)
-    dl.load_all(
+    success, failure, load_err = dl.load_all(
         report_dir=report_dir,
         move_files=False,
         rollup=rollup,
         election_jurisdiction_list=[(election_name, juris_name)],
     )
+    if load_err:
+        err = ui.consolidate_errors([err, load_err])
+    if failure:
+        # cleanup temp database
+        if db_params["dbname"] == temp_db:
+            db.remove_database(db_params)
+        return err
+
     add_err = dl.add_totals_if_missing(election_name, juris_name)
     if add_err:
         err = ui.consolidate_errors([err, add_err])

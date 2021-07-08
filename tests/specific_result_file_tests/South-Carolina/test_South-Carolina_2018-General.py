@@ -17,7 +17,7 @@ import electiondata as e
 election = "2018 General"
 jurisdiction = "South Carolina"
 abbr = "SC"
-total_gov_votes = 1707569  # total of all votes for US President
+total_gov_votes = 1707569  # total of all votes for US Governor
 cd = 3  # US House congressional district
 total_cd_votes = 226204  # total votes in that US House contest in the chosen cd
 shd = 1  # state house district
@@ -36,13 +36,14 @@ def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
 
 
-def test_presidential(dbname):
+def test_governor(dbname):
     assert (
         e.contest_total(
             election,
             jurisdiction,
             f"{abbr} Governor",
             dbname=dbname,
+            sub_unit_type=county_or_other,
         )
         == total_gov_votes
     )

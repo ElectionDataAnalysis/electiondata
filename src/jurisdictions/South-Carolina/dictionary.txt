@@ -204,7 +204,7 @@ Candidate	Harvey Peeler	Harvey Peeler
 Candidate	Heather Ammons Crawford	Heather Ammons Crawford
 Candidate	Heather Bauer	Heather Bauer
 Candidate	Helen Pendarvis	Helen Pendarvis
-Candidate	Henry McMaster / Pamela Evette	Henry McMaster / Pamela Evette
+Candidate	Henry McMaster	Henry McMaster / Pamela Evette
 Candidate	Hillary Clinton	HILLARY CLINTON
 Candidate	Hosea Cleveland	Hosea Cleveland
 Candidate	Howie Hawkins | Angela Walker	Howie Hawkins | Angela Walker
@@ -225,7 +225,7 @@ Candidate	Jaime Harrison	Jaime Harrison
 Candidate	James E Jim Clyburn	James E Jim Clyburn
 Candidate	James Johnson	James Johnson
 Candidate	James Pearman	James Pearman
-Candidate	James Smith / Mandy Powers Norrell	James Smith / Mandy Powers Norrell
+Candidate	James Smith	James Smith / Mandy Powers Norrell
 Candidate	Janice S Curtis	Janice S Curtis
 Candidate	Jarred Spencer	Jarred Spencer
 Candidate	Jason Elliott	Jason Elliott
@@ -6137,7 +6137,6 @@ Election	2018 General	2018 General
 Election	2018 Primary	2018 Primary
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
-Party	AMR	AMR
 Party	Alliance Party	ALN
 Party	Alliance Party	Alliance Party
 Party	Constitution Party	CON
@@ -6158,11 +6157,12 @@ Party	Libertarian Party	Libertarian Party
 Party	Republican Party	REP
 Party	Republican Party	REPUBLICAN
 Party	Republican Party	Republican Party
-Party	UNC	UNC
+Party	UNC Party	UNC
+Party	AMR Party	AMR
 Party	United Citizens Party	United Citizens Party
 Party	Working Families Party	WFM
 Party	Working Families Party	Working Families Party
-Party	no party	NON
+Party	No Party	NON
 Party	none or unknown	OTHER
 ReportingUnit	South Carolina	South Carolina
 ReportingUnit	South Carolina;Abbeville County	Abbeville
