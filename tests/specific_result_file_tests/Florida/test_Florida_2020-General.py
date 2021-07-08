@@ -1,4 +1,4 @@
-import election_data_analysis as e
+import electiondata as e
 
 # Instructions:
 #   Copy this template and rename, including your jurisdiction and the timestamp of the results file
@@ -11,7 +11,7 @@ import election_data_analysis as e
 #   "triple-quote" out any tests for contest types your state doesn't have in 2020 (e.g., Florida has no US Senate contest)
 #   (Optional) Change district numbers
 #   Replace each '-1' with the correct number calculated from the results file.
-#   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
+#   Move this testing file to the correct jurisdiction folder in `elections/tests`
 
 # # # constants
 election = "2020 General"

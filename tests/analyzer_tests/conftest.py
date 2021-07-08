@@ -1,6 +1,7 @@
 import pytest
 import os
 from pathlib import Path
+from electiondata import data_exists, external_data_exists
 
 
 def pytest_addoption(parser):
@@ -27,5 +28,5 @@ def ok(runtime):
         "ga20p": data_exists("2020 Primary", "Georgia", p_path=runtime),
         "nc18g": data_exists("2018 General", "North Carolina", p_path=runtime),
         "ak16g": data_exists("2016 General", "Alaska", p_path=runtime),
-        "ga18census": census_data_exists("2018 General", "Georgia", p_path=runtime),
+        "ga18census": external_data_exists("2018 General", "Georgia", p_path=runtime),
     }

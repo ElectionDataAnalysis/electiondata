@@ -1,11 +1,11 @@
-import election_data_analysis as e
+import electiondata as e
 
 # Instructions:
 #   Change the constants to values from your file
 #   Delete any tests for contest types your state doesn't have in 2020 (e.g., Florida has no US Senate contest)
 #   (Optional) Change district numbers
 #   Replace each '-1' with the correct number calculated from the results file.
-#   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
+#   Move this testing file to the correct jurisdiction folder in `elections/tests`
 
 # source for totals:
 # https://results.elections.virginia.gov/vaelections/2020%20November%20General/Site/Congress.html

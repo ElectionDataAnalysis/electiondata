@@ -5,9 +5,9 @@ import datetime
 from pathlib import Path
 import shutil
 from typing import Optional
-import election_data_analysis as eda
-from election_data_analysis import database as db
-from election_data_analysis import userinterface as ui
+import electiondata as eda
+from electiondata import database as db
+from electiondata import userinterface as ui
 from distutils.dir_util import copy_tree
 
 
@@ -44,7 +44,7 @@ def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool)
     remove_db = input(f"Remove test db {dl.d['dbname']} (y/n)?\n")
 
     if remove_db == "y":
-        err = close_and_erase(dl)
+        err = dl.close_and_erase()
         if not err:
             db_removed = True
             print(f"db removed")
@@ -218,7 +218,7 @@ if __name__ == "__main__":
         params, new_err = ui.get_parameters(
             required_keys=["reports_and_plots_dir"],
             param_file="run_time.ini",
-            header="election_data_analysis",
+            header="electiondata",
         )
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         if not new_err:

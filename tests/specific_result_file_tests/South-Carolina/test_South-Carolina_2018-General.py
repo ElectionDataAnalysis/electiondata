@@ -1,4 +1,4 @@
-import election_data_analysis as e
+import electiondata as e
 
 # Instructions:
 #   Copy this template and rename, including your jurisdiction and the timestamp of the results file
@@ -11,13 +11,13 @@ import election_data_analysis as e
 #   "triple-quote" out any tests for contest types your state doesn't have in 2020 (e.g., Florida has no US Senate contest)
 #   (Optional) Change district numbers
 #   Replace each '-1' with the correct number calculated from the results file.
-#   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
+#   Move this testing file to the correct jurisdiction folder in `elections/tests`
 
 # # # constants - CHANGE THESE!! - use internal db names
 election = "2018 General"
 jurisdiction = "South Carolina"
 abbr = "SC"
-total_gov_votes = 1707569  # total of all votes for US President
+total_gov_votes = 1707569  # total of all votes for US Governor
 cd = 3  # US House congressional district
 total_cd_votes = 226204  # total votes in that US House contest in the chosen cd
 shd = 1  # state house district
@@ -36,13 +36,14 @@ def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
 
 
-def test_presidential(dbname):
+def test_governor(dbname):
     assert (
         e.contest_total(
             election,
             jurisdiction,
             f"{abbr} Governor",
             dbname=dbname,
+            sub_unit_type=county_or_other,
         )
         == total_gov_votes
     )

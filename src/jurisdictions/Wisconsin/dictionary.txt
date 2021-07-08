@@ -6378,15 +6378,14 @@ ReportingUnit	Wisconsin;Wood County	WOOD;Village of VESPER Ward 1
 ReportingUnit	Wisconsin;Wood County	Wisconsin;Wood County
 ReportingUnit	Wisconsin;Wood County	Wood
 ReportingUnit	Wisconsin;Wood County	fips55141
-Candidate	Ryan Cason	Ryan Cason (Write-in) No Candidate
-Candidate	Robbie Hoffman	Robbie Hoffman (Write-in) No Candidate
-Candidate	Richard Michael Turtenwald	Richard Michael Turtenwald (Write-in) No Candidate
-Candidate	Paul Boucher	Paul Boucher (Write-in) No Candidate
-Candidate	William Henry Davis III	No Candidate William Henry Davis III (Write-in)
-Candidate	Corban Gehler	No Candidate Corban Gehler (Write-in)
-Candidate	Mark S. Grimek	Mark S. Grimek (Write-in) No Candidate
-Candidate	Jared William Landry	Jared William Landry (Write-in) No Candidate
-
+Candidate	Ryan Cason (Write-in)	Ryan Cason (Write-in) No Candidate
+Candidate	Robbie Hoffman (Write-in)	Robbie Hoffman (Write-in) No Candidate
+Candidate	Richard Michael Turtenwald (Write-in)	Richard Michael Turtenwald (Write-in) No Candidate
+Candidate	Paul Boucher (Write-in)	Paul Boucher (Write-in) No Candidate
+Candidate	No Candidate	No Candidate William Henry Davis III (Write-in)
+Candidate	No Candidate	No Candidate Corban Gehler (Write-in)
+Candidate	Mark S. Grimek (Write-in)	Mark S. Grimek (Write-in) No Candidate
+Candidate	Jared William Landry (Write-in)	Jared William Landry (Write-in) No Candidate
 Candidate	Tom Hoefling (write-in)	Tom Hoefling Steve Schulin (write-in)
 Candidate	Rocky Roque De La Fuente	Rocky Roque De La Fuente Michael Steinberg
 Candidate	Monica Moorehead	Monica Moorehead Lamont Lilly
@@ -6402,5 +6401,3 @@ Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
 Candidate	Darrell L. Castle	Darrell L. Castle Scott N. Bradley
 Candidate	Chris Keniston (write-in)	Chris Keniston Deacon Taylor (write-in)
 Candidate	Cherunda Fox (write-in)	Cherunda Fox Roger Kushner (write-in)
-
-

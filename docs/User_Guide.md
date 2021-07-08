@@ -203,7 +203,7 @@ It's easiest to use the JurisdictionPrepper() object to create or update jurisdi
 
  (1) From the directory containing `jurisdiction_prep.ini`, open a python interpreter. Import the package and initialize a JurisdictionPrepper(), e.g.:
 ```
->>> import election_data_analysis as ea
+>>> import elections as ea
 >>> jp = ea.JurisdictionPrepper()
 ```
  (2) Call new_juris_files(), which will create the necessary files in the jurisdiction directory, as well as a starter dictionary file (`XX_starter_dictionary.txt`) in the current directory.
@@ -225,7 +225,7 @@ Texas;Harrison County	county
 ```
 Counties must be added by hand. 
 
-NB: in some jurisdictions, the major subdivision type is not 'county. For instance, Louisiana's major subdivisions are called 'parish'. In the `election_data_analysis.analyze` module, several routines roll up results to the major subdivision -- usually counties. The ReportingUnitType of the major subdivision is read from the file `src/jurisdictions/000_major_subjurisdiction_types.txt` if possible; if that file is missing, or does not provide a subdivision type for the particular jurisdiction in question, the system will try to deduce the major subdivision type from the database.
+NB: in some jurisdictions, the major subdivision type is not 'county. For instance, Louisiana's major subdivisions are called 'parish'. In the `elections.analyze` module, several routines roll up results to the major subdivision -- usually counties. The ReportingUnitType of the major subdivision is read from the file `src/jurisdictions/000_major_subjurisdiction_types.txt` if possible; if that file is missing, or does not provide a subdivision type for the particular jurisdiction in question, the system will try to deduce the major subdivision type from the database.
 
 The system assumes that internal database names of ReportingUnits carry information about the nesting of the basic ReportingUnits (e.g., counties, towns, wards, etc., but not congressional districts) via semicolons. For example: `
  * `Pennsylvania;Philadelphia;Ward 8;Division 6` is a precinct in 
@@ -385,7 +385,7 @@ There are routines in the `JurisdictionPrepper()` class to help prepare a jurisd
      * `add_elements_from_multi_results_file(directory)` does the same for every file/munger in the directory named in a `.ini` file in the directory
  
 ## Load Data
-Each results file to be loaded must be designated in a `*.ini` file inside the corresponding jurisdiction's subfolder of `ini_files_for_results` in the repository. The `*.ini` files currrently in this repository correspond to data files available from the [TestingData repository](https://github.com/ElectionDataAnalysis/TestingData). These should load directly with the munger and jurisdiction files from the election_data_analysis repository.
+Each results file to be loaded must be designated in a `*.ini` file inside the corresponding jurisdiction's subfolder of `ini_files_for_results` in the repository. The `*.ini` files currrently in this repository correspond to data files available from the [TestingData repository](https://github.com/ElectionDataAnalysis/TestingData). These should load directly with the munger and jurisdiction files from the elections repository.
 
 If all the `.ini` files in a single directory will use the same munger, jurisdiction and election, you can use `make_ini_file_batch` to create these `.ini` files in batches. For example, 
 ```
@@ -405,7 +405,7 @@ The DataLoader class allows batch uploading of all data in a given directory. Th
 The `load_all()` method will read each `.ini` file and make the corresponding upload.
 From a directory containing a `run_time.ini` parameter file, run
 ```
-import election_data_analysis as ea
+import elections as ea
 dl = ea.DataLoader()
 dl.load_all()
 ```
@@ -424,7 +424,7 @@ If there are no errors, the results files will be moved to a subdirectory of the
 ## Pull Data
 The Analyzer class uses parameters in the file `run_time.ini`, which should be in the directory from which you are running the program. This class has a number of functions that allow you to aggregate the data for analysis purposes. For example, running the `.top_counts()` function exports files into your rollup_dataframe directory which with counts summed up at a particular reporting unit level. This function expects 4 arguments: the election, the jurisdiction, the reporting unit level at which the aggregation will occur, and a boolean variable indicating whether you would like the data aggregated by vote count type. For example:
 ```
-from election_data_analysis import Analyzer
+from elections import Analyzer
 analyzer = Analyzer()
 analyzer.top_counts('2018 General', 'North Carolina', 'county', True)
 ```
@@ -522,7 +522,7 @@ Some xml files (e.g., Ohio 2020 General) use the older Version 1 common data for
 
 This package also provides functionality to export the data to xml according to the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd). This is as simple as identifying an election and jurisdiction of interest:
 ```
-from election_data_analysis import Analyzer
+from elections import Analyzer
 analyzer = Analyzer()
 election_report = analyzer.export_nist_v2("2020 General", "Georgia")
 ```

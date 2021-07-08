@@ -1,4 +1,4 @@
-import election_data_analysis as e
+import electiondata as e
 
 election = "2018 General"
 jurisdiction = "Illinois"

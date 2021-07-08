@@ -1,4 +1,4 @@
-[election_data_analysis]
+[electiondata]
 name=<internal db name from ReportingUnit table>
 reporting_unit_type=<type of reporting unit named above, typically state>
 abbreviated_name=<2 character abbreviation for name>

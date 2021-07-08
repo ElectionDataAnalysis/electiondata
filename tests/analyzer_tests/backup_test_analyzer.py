@@ -1,9 +1,9 @@
 import results
 import os
-from election_data_analysis import Analyzer
-from election_data_analysis import database as db
-from election_data_analysis import data_exists
-from election_data_analysis import external_data_exists
+from electiondata import Analyzer
+from electiondata import database as db
+from electiondata import data_exists
+from electiondata import external_data_exists
 from psycopg2 import sql
 import pytest
 
