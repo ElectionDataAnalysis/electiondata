@@ -469,7 +469,6 @@ Candidate	Heather A. Freese	Heather A. Freese
 Candidate	Heather Bishoff	Heather Bishoff
 Candidate	Heidi Rosales	Heidi Rosales
 Candidate	Henry Todd	Henry Todd
-Candidate	Hillary Clinton	HILLARY CLINTON
 Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hillary Mueri	Hillary Mueri
 Candidate	Hillary O'Connor Mueri	Hillary O'Connor Mueri
@@ -637,12 +636,12 @@ Candidate	John J. Carlisle	John J. Carlisle
 Candidate	John J. Eklund	John J. Eklund
 Candidate	John K. Hartman (WI)*	John K. Hartman (WI)*
 Candidate	John Kennedy	John Kennedy
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John Kolesar	John Kolesar
 Candidate	John L. Juergensen	John L. Juergensen
 Candidate	John M. Durkin	John M. Durkin
 Candidate	John M. Rogers	John M. Rogers
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John McCain
 Candidate	John McManus	John McManus
 Candidate	John Mchenry	John Mchenry
 Candidate	John Mullins	John Mullins

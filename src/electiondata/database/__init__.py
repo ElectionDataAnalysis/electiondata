@@ -1343,7 +1343,7 @@ def export_rollup_from_db(
             ]
         )
         count_item_type_sql = sql.SQL(
-            "IntermediateRU.{countitemtype}"
+            "vc.{countitemtype}"
         ).format(countitemtype=sql.Identifier("CountItemType"))
     else:
         count_item_type_sql = sql.Literal("total")
@@ -1359,7 +1359,7 @@ def export_rollup_from_db(
                 [
                     restrict,
                     sql.SQL(" AND vc.{countitemtype} != {total}").format(
-                        txt=sql.Identifier("CountItemType"), total=sql.Literal("total")
+                        countitemtype=sql.Identifier("CountItemType"), total=sql.Literal("total")
                     ),
                 ]
             )
@@ -2070,7 +2070,7 @@ def create_table(
 
         # require uniqueness for entire record (except `Id` and `timestamp`)
         all_content_fields = (
-            field_col_names + enum_id_names + enum_other_names + foreign_ish_keys
+            field_col_names + foreign_ish_keys
         )
         unique_constraint_list.append(
             UniqueConstraint(*all_content_fields, name=f"{short_name}_no_dupes")
@@ -2093,8 +2093,6 @@ def create_table(
                 name,
                 metadata,
                 *field_col_list,
-                *enum_id_list,
-                *enum_other_list,
                 *foreign_key_list,
                 *null_constraint_list,
                 *unique_constraint_list,
@@ -2114,8 +2112,6 @@ def create_table(
                     primary_key=True,
                 ),
                 *field_col_list,
-                *enum_id_list,
-                *enum_other_list,
                 *foreign_key_list,
                 *null_constraint_list,
                 *unique_constraint_list,

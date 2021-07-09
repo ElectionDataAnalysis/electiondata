@@ -2816,7 +2816,7 @@ def load_results_df(
 ) -> Optional[dict]:
     err = None
     df = df_original.copy()
-    # # add Id columns for all but Count, removing raw-munged
+    # add text column for internal CountItemType name, Id columns for all but Count, removing raw-munged
     try:
         df, new_err = m.munge_raw_to_ids(
             df,

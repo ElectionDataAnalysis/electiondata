@@ -813,18 +813,19 @@ def raw_to_id_simple(
 
     err = None
     working = df.copy()
-    for t in element_list:
+    for element in element_list:
         try:
             # capture id from db in new column and erase any now-redundant cols
-            element_df = pd.read_sql_table(t, session.bind)
-            name_field = db.get_name_field(t)
+            if element != "CountItemType":
+                element_df = pd.read_sql_table(element, session.bind)
+                name_field = db.get_name_field(element)
             # set drop_unmatched = True for fields necessary to BallotMeasure rows,
             #  drop_unmatched = False otherwise to prevent losing BallotMeasureContests for BM-inessential fields
-            if t == "ReportingUnit" or t == "CountItemType":
+            if element == "ReportingUnit" or element == "CountItemType":
                 drop = True
             else:
                 drop = False
-            if t == "CountItemType":
+            if element == "CountItemType":
                 # munge raw to internal CountItemType
                 if file_type == "nist_v2_xml":
                     r_i = constants.cit_from_raw_nist_df
@@ -892,7 +893,7 @@ def raw_to_id_simple(
                     ["raw_identifier_value", "cdf_element", "CountItemType_raw"], axis=1
                 )
             else:
-                none_or_unknown_id = db.name_to_id(session, t, "none or unknown")
+                none_or_unknown_id = db.name_to_id(session, element, "none or unknown")
                 working, new_err = replace_raw_with_internal_ids(
                     working,
                     path_to_jurisdiction_dir,
@@ -900,7 +901,7 @@ def raw_to_id_simple(
                     file_name,
                     munger_name,
                     element_df,
-                    t,
+                    element,
                     name_field,
                     err,
                     drop_unmatched=drop,
@@ -909,21 +910,21 @@ def raw_to_id_simple(
                 err = ui.consolidate_errors([err, new_err])
                 if ui.fatal_error(new_err):
                     return working, err
-                working.drop(t, axis=1, inplace=True)
+                working.drop(element, axis=1, inplace=True)
 
         except KeyError as exc:
             err = ui.add_new_error(
                 err,
                 "munger",
                 munger_name,
-                f"KeyError ({exc}) while adding internal ids for {t}. " f"Check munger",
+                f"KeyError ({exc}) while adding internal ids for {element}. " f"Check munger",
             )
         except AttributeError as exc:
             err = ui.add_new_error(
                 err,
                 "munger",
                 munger_name,
-                f"AttributeError ({exc}) while adding internal ids for {t}."
+                f"AttributeError ({exc}) while adding internal ids for {element}."
                 f"Check munger",
             )
         except Exception as exc:
@@ -931,7 +932,7 @@ def raw_to_id_simple(
                 err,
                 "system",
                 f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"Unexpected exception while adding internal ids for {t}:\n{exc}",
+                f"Unexpected exception while adding internal ids for {element}:\n{exc}",
             )
 
     return working, err
@@ -977,6 +978,8 @@ def munge_raw_to_ids(
     session: Session,
     file_type: str,
 ) -> (pd.DataFrame, Optional[dict]):
+    """Replace raw-munged columns with internal columns. For CountItemType
+    this will be a text column; for others it will be an Id column """
 
     err = None
     working = df.copy()
@@ -1061,11 +1064,11 @@ def munge_raw_to_ids(
                 )
 
     other_elements = [
-        t
-        for t in constants.all_munge_elements
-        if (t[-7:] != "Contest")
-        and (t[-9:] != "Selection")
-        and (t not in constant_dict.keys())
+        element
+        for element in constants.all_munge_elements
+        if (element[-7:] != "Contest")
+        and (element[-9:] != "Selection")
+        and (element not in constant_dict.keys())
     ]
     working, new_err = raw_to_id_simple(
         working,
