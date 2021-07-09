@@ -230,6 +230,24 @@ def ensure_juris_files(
                         juris_name,
                         f"dictionary.txt has more than one entry for each of these:\n {dupes_df}",
                     )
+                # TODO check that there are no candidate dupes after regularization
+                cands = two_column_df[two_column_df.cdf_element == "Candidate"].copy()
+                cands["regular"] = m.regularize_candidate_names(cands.raw_identifier_value)
+                dupe_reg = list()
+                for reg in cands.regular.unique():
+                    all_match = cands[cands.regular == reg].copy()
+                    if all_match.shape[0] >1:
+                        dupe_reg.append(f"{reg} is regular version of: {list(all_match.raw_identifier_value.unique())}")
+                if dupe_reg:
+                    dupe_str = "\n".join(dupe_reg)
+                    err = ui.add_new_error(
+                        err,
+                        "jurisdiction",
+                        juris_name,
+                        f"Some raw candidate names match after regularization, "
+                        f"so are effectively dupes and should be deduped.:\n{dupe_str}"
+                    )
+
             else:
                 # dedupe the file
                 clean_and_dedupe(cf_path)

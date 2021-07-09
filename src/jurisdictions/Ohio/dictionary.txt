@@ -360,7 +360,6 @@ Candidate	Donald J. Trump	DONALD TRUMP
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald P. Larson	Donald P. Larson
 Candidate	Donald Truex	Donald Truex
-Candidate	Donald Trump	Donald Trump
 Candidate	Donna Beheydt	Donna Beheydt
 Candidate	Donna J. Carr	Donna J. Carr
 Candidate	Dontavius Jarrells	Dontavius Jarrells
@@ -674,13 +673,13 @@ Candidate	Jonathan Dever	Jonathan Dever
 Candidate	Jonathan Schulz	Jonathan Schulz
 Candidate	Jordan Garcea	Jordan Garcea
 Candidate	Joseph A. Monbeck	Joseph A. Monbeck
-Candidate	Joseph Biden	Joseph Biden
+Candidate	Joseph R. Biden	Joseph Biden
 Candidate	Joseph F. Russo	Joseph F. Russo
 Candidate	Joseph J. Bruzzese Jr	Joseph J. Bruzzese Jr
 Candidate	Joseph L. Jerger	Joseph L. Jerger
 Candidate	Joseph Maldonado	Joseph Maldonado
 Candidate	Joseph Monbeck	Joseph Monbeck
-Candidate	Joseph R. Biden Jr	Joseph R. Biden Jr
+Candidate	Joseph R. Biden	Joseph R. Biden Jr
 Candidate	Joseph R. DeMare	Joseph R. DeMare
 Candidate	Joseph S. Begeny	Joseph S. Begeny
 Candidate	Josh Sines	Josh Sines
@@ -2220,6 +2219,7 @@ Party	Republican Party	REPUBLICAN
 Party	Republican Party	Republican
 Party	Write-in	Not Applicable - WI
 Party	Write-in	Write-in
+Party	Write-in	WI
 Party	none or unknown	OTHER
 ReportingUnit	Ohio	Ohio
 ReportingUnit	Ohio;Adams County	Adams
@@ -2546,3 +2546,36 @@ ReportingUnit	Ohio;Wood County	Wood
 ReportingUnit	Ohio;Wood County	fips39173
 ReportingUnit	Ohio;Wyandot County	Wyandot
 ReportingUnit	Ohio;Wyandot County	fips39175
+Candidate	Tom Hoefling	Tom Hoefling and Andy Prior
+Candidate	Todd E. Beegle	Todd E. Beegle
+Candidate	President R19 Boddie	President R19 Boddie and Eric Stoneham
+Candidate	Kasey Wells	Kasey Wells and Rachel Wells
+Candidate	Joseph R. Biden	Joseph R. Biden and Kamala D. Harris
+Candidate	Jo Jorgensen	Jo Jorgensen and Spike Cohen
+Candidate	Jerry V. Powell	Jerry V. Powell
+Candidate	Jay A. Conrad	Jay A. Conrad
+Candidate	Jade Simmons	Jade Simmons and Claudeliah J. Roze
+Candidate	Harrison T. Stanley	Harrison T. Stanley
+Candidate	Donald J. Trump	Donald J. Trump and Michael R. Pence
+Candidate	Dario Hunter	Dario Hunter and Dawn Neptune Adams
+Candidate	Brian S. Stewart	Brian S. Stewart
+Candidate	Brian Carroll	Brian Carroll and Amar Patel
+Candidate	Howie Hawkins	Howie Hawkins and Angela Walker
+Candidate	Nicholas D. Moss	Nicholas D. Moss
+Candidate	John S. Stewart	John S. Stewart
+CandidateContest	US House OH District 16	Representative to Congress - District 16
+CandidateContest	US House OH District 15	Representative to Congress - District 15
+CandidateContest	US House OH District 14	Representative to Congress - District 14
+CandidateContest	US House OH District 13	Representative to Congress - District 13
+CandidateContest	US House OH District 12	Representative to Congress - District 12
+CandidateContest	US House OH District 11	Representative to Congress - District 11
+CandidateContest	US House OH District 10	Representative to Congress - District 10
+CandidateContest	US House OH District 9	Representative to Congress - District 09
+CandidateContest	US House OH District 8	Representative to Congress - District 08
+CandidateContest	US House OH District 7	Representative to Congress - District 07
+CandidateContest	US House OH District 6	Representative to Congress - District 06
+CandidateContest	US House OH District 5	Representative to Congress - District 05
+CandidateContest	US House OH District 4	Representative to Congress - District 04
+CandidateContest	US House OH District 3	Representative to Congress - District 03
+CandidateContest	US House OH District 2	Representative to Congress - District 02
+CandidateContest	US House OH District 1	Representative to Congress - District 01

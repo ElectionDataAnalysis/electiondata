@@ -1136,7 +1136,7 @@ Michael Fricke
 Christina Marie Holloway (WI)*
 Oscar Herrera
 Michael Bennet
-Joseph R. Biden Jr
+Joseph R. Biden
 Michael R. Bloomberg
 Pete Buttigieg
 Tulsi Gabbard
@@ -1323,7 +1323,7 @@ Jay Conrad
 Jean Mastin
 Jeffrey Crossman
 Jennifer Gross
-Jerry  Powell
+Jerry Powell
 Jim Lewis
 Jo Jorgensen
 Joan Sweeny
@@ -1415,4 +1415,12 @@ Other
 Ralph Nader
 John McCain
 Kanye West
+Jerry V. Powell
+Brian S. Stewart
+Todd E. Beegle
+President R19 Boddie
+Jay A. Conrad
+Harrison T. Stanley
+Nicholas D. Moss
+John S. Stewart
 

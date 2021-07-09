@@ -156,13 +156,13 @@ def run2(
                 rollup=rollup,
             )
             if success:
-                print(f"Files loading successfully:\n{success}")
+                print(f"Files loaded:\n{success}")
             else:
-                print(f"No files loaded successfully")
+                print(f"No files loaded")
             if failure:
                 print(f"Files failing to load:\n{failure}")
             else:
-                print("All files loaded successfully")
+                print("All files loaded.")
 
         except Exception as exc:
             print(f"Exception occurred: {exc}")
@@ -187,6 +187,10 @@ def run2(
         election_jurisdiction_list=loaded_ej_list,
         report_dir=report_dir,
     )
+    if failures:
+        print("At least one test failed")
+    else:
+        print("All tests passed for loaded files.")
     if test_dir:
         for k in failures.keys():
             err = ui.add_new_error(
