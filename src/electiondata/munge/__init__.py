@@ -341,8 +341,10 @@ def replace_raw_with_internal_ids(
 
     if working.empty:
         raws = "\n".join(list(df[f"{element}_raw"].unique()))
-        e = f"No true raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file.\n" \
+        e = (
+            f"No true raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file.\n"
             f"true raw {element}s:\n{raws}"
+        )
         if drop_unmatched and not drop_all_ok:
 
             error = ui.add_new_error(
@@ -449,65 +451,17 @@ def replace_raw_with_internal_ids(
     return working, error
 
 
-def enum_col_to_id_othertext(
+def get_non_standard(
     df: pd.DataFrame,
     type_col: str,
-    enum_df: pd.DataFrame,
-    drop_type_col: bool = True,
 ) -> (pd.DataFrame, List[str]):
-    """Returns a copy of dataframe <df>, replacing a plaintext <type_col> column (e.g., 'CountItemType') with
-    the corresponding two id and othertext columns (e.g., 'CountItemType_Id' and 'OtherCountItemType
-    using the enumeration given in <enum_df>. Optionally drops the original column <type_col>.
-    Also returns a list of all non-standard types found"""
-    if df.empty:
-        # add two columns
-        df[f"{type_col}_Id"] = df[f"Other{type_col}"] = df.iloc[:, 0]
-        non_standard = list()
-    else:
-        assert type_col not in ["Id", "Txt"], "type_col cannot be Id or Txt"
-        # get the Id of 'other' in the enumeration
-        other_id = enum_df[enum_df.Txt == "other"]["Id"].iloc[0]
-
-        # ensure Id is a column, not the index, of enum_df (otherwise df index will be lost in merge)
-        if "Id" not in enum_df.columns:
-            enum_df["Id"] = enum_df.index
-
-        for c in ["Id", "Txt"]:
-            if c in df.columns:
-                # avoid conflict by temporarily renaming the column in the main dataframe
-                assert c * 3 not in df.colums, (
-                    "Column name " + c * 3 + " conflicts with variable used in code"
-                )
-                df.rename(columns={c: c * 3}, inplace=True)
-
-        # create and fill the *_Id column
-        df = df.merge(enum_df, how="left", left_on=type_col, right_on="Txt").rename(
-            columns={"Id": f"{type_col}_Id"}
-        )
-        df[f"{type_col}_Id"].fillna(other_id, inplace=True)
-
-        # create and fill the Other* column (type_col if *_Id = other_id, otherwise '')
-        df = add_constant_column(df, f"Other{type_col}", "")
-        mask = df[f"{type_col}_Id"] == other_id
-        df.loc[mask, f"Other{type_col}"] = df.loc[mask, type_col]
-
-        # drop the Txt column from the enumeration
-        df = df.drop(["Txt"], axis=1)
-
-        # if we renamed, then undo the renaming
-        for c in ["Id", "Txt"]:
-            if c * 3 in df.columns:
-                df.rename(columns={c * 3: c}, inplace=True)
-        # create list of non-standard items found
-        non_standard = list(df.loc[mask, f"Other{type_col}"].unique())
-        for ok in ["", "none or unknown"]:
-            if ok in non_standard:
-                non_standard.remove(ok)
-
-    if drop_type_col:
-        df = df.drop([type_col], axis=1)
-
-    return df, non_standard
+    """Returns list of all non-standard types found"""
+    non_standard = list(
+        x
+        for x in df[type_col]
+        if x not in constants.nist_standard[type_col]
+    )
+    return non_standard
 
 
 def regularize_candidate_names(
@@ -897,16 +851,16 @@ def raw_to_id_simple(
                 # get list of raw CountItemTypes in case they are needed for error reporting
                 all_raw_cit = working.CountItemType_raw.unique().tolist()
                 # get internal CountItemType for all matched lines
-                working = working[matched].merge(
+                working = (
+                    working[matched]
+                    .merge(
                         r_i,
                         how="left",
                         left_on="CountItemType_raw",
                         right_on="raw_identifier_value",
-                    ).rename(columns={"cdf_internal_name": "CountItemType"})
-
-
-
-
+                    )
+                    .rename(columns={"cdf_internal_name": "CountItemType"})
+                )
 
                 # if no CountItemTypes matched to dictionary
                 if working.CountItemType.isnull().all():
@@ -919,10 +873,9 @@ def raw_to_id_simple(
                     )
                     return working, err
 
-                # join CountItemType_Id and OtherCountItemType
-                cit = pd.read_sql_table("CountItemType", session.bind)
-                working, non_standard = enum_col_to_id_othertext(
-                    working, "CountItemType", cit
+                # report non-standard CountItemTypes
+                non_standard = get_non_standard(
+                    working, "CountItemType"
                 )
                 if non_standard:
                     try:
@@ -933,10 +886,8 @@ def raw_to_id_simple(
                         err,
                         "warn-jurisdiction",
                         juris_true_name,
-                        f"Some recognized CountItemTypes are not standard:\n\t{ns}",
+                        f"Some recognized CountItemTypes are not in the NIST standard list:\n\t{ns}",
                     )
-                working, err_df = clean_ids(working, ["CountItemType_Id"])
-                working = clean_strings(working, ["OtherCountItemType"])
                 working = working.drop(
                     ["raw_identifier_value", "cdf_element", "CountItemType_raw"], axis=1
                 )
@@ -990,32 +941,28 @@ def missing_total_counts(
     df: pd.DataFrame,
     session: Session,
 ) -> pd.DataFrame:
-    """Assumes cols of df include Count and CountItemType_Id, OtherCountItemType
+    """Assumes cols of df include Count and CCountItemType
     Return df of "total" type records that are missing
     """
-
-    # find CountItemType_Id for 'total'
-    total_idx = db.name_to_id(session, "CountItemType", "total")
 
     # get all totals by all but count, count-item-type-related and id columns
     group_cols = [
         x
         for x in df.columns
-        if x not in ["Count", "CountItemType_Id", "OtherCountItemType", "Id"]
+        if x not in ["Count", "CountItemTypee", "Id"]
     ]
     sums = df.groupby(group_cols)["Count"].sum()
 
     # keep only sums that already involve a total
     no_total = (
-        df.groupby(group_cols)["CountItemType_Id"]
+        df.groupby(group_cols)["CountItemType"]
         .apply(list)
-        .apply(lambda x: total_idx not in x)
+        .apply(lambda x: "total" not in x)
     )
     sums = sums[no_total]
     sums_df = sums.reset_index()
 
-    sums_df = add_constant_column(sums_df, "CountItemType_Id", total_idx)
-    sums_df = add_constant_column(sums_df, "OtherCountItemType", "")
+    sums_df = add_constant_column(sums_df, "CountItemType", "total")
 
     return sums_df
 
@@ -1036,7 +983,9 @@ def munge_raw_to_ids(
 
     # add Contest_Id column and contest_type column
     if "CandidateContest" in constant_dict.keys():
-        contest_id = db.name_to_id(session, "Contest",constant_dict["CandidateContest"])
+        contest_id = db.name_to_id(
+            session, "Contest", constant_dict["CandidateContest"]
+        )
         if not contest_id:
             err = ui.add_new_error(
                 err,
@@ -1057,14 +1006,20 @@ def munge_raw_to_ids(
         working = add_constant_column(
             working,
             "Contest_Id",
-            db.name_to_id(session, "Contest",constant_dict["BallotMeasureContest"]),
+            db.name_to_id(session, "Contest", constant_dict["BallotMeasureContest"]),
         )
         working.drop("BallotMeasureContest", axis=1, inplace=True)
         working = add_constant_column(working, "contest_type", "BallotMeasure")
     else:
         try:
             working, err = add_contest_id(
-                working, path_to_jurisdiction_dir, juris_true_name, file_name, munger_name, err, session
+                working,
+                path_to_jurisdiction_dir,
+                juris_true_name,
+                file_name,
+                munger_name,
+                err,
+                session,
             )
         except Exception as exc:
             err = ui.add_new_error(
@@ -1077,27 +1032,22 @@ def munge_raw_to_ids(
         if ui.fatal_error(err):
             return working, err
 
-    # add all other _Ids/Other except Selection_Id
+    # add all other _Ids/Types except Selection_Id
     # # for constants
     other_constants = [
-        t for t in constant_dict.keys() if t[-7:] != "Contest" and (t[-9:] != "Selection")
+        t
+        for t in constant_dict.keys()
+        if t[-7:] != "Contest" and (t[-9:] != "Selection")
     ]
     for element in other_constants:
-        # CountItemType is the only enumeration
+        # only CountItemType is kept as text
         if element == "CountItemType":
-            enum_df = pd.read_sql_table(element, session.bind)
-            one_line = pd.DataFrame([[constant_dict[element]]],columns=[element])
-            id_txt_one_line, non_standard = enum_col_to_id_othertext(
-                one_line, element, enum_df, drop_type_col=False
-            )
-            for c in [f"{element}_Id", f"Other{element}"]:
-                working = add_constant_column(working, c, id_txt_one_line.loc[0, c])
-            working.drop(element, axis=1, inplace=True)
+            working = add_constant_column(working, "CountItemType", constant_dict["CountItemType"])
         else:
             working = add_constant_column(
                 working,
                 f"{element}_Id",
-                db.name_to_id(session,element,constant_dict[element]),
+                db.name_to_id(session, element, constant_dict[element]),
             )
             working.drop(element, axis=1, inplace=True)
             working, err_df = clean_ids(working, [f"{element}_Id"])
@@ -1861,7 +1811,7 @@ def to_standard_count_frame(
     keys_in_order.sort()
     for sheet in keys_in_order:
         error_by_sheet[sheet] = None
-        row_constants = dict()   # for syntax checker
+        row_constants = dict()  # for syntax checker
         # set any nulls to blank in dataframe for that sheet
         raw_dict[sheet] = raw_dict[sheet].fillna("")
         if p["multi_block"] == "yes":
@@ -1989,7 +1939,10 @@ def to_standard_count_frame(
                         )
                     elif working.empty:
                         error_by_df[n] = ui.add_new_error(
-                            err, "munger", munger_name, f"No data returned from pivot in file {file_name}"
+                            err,
+                            "munger",
+                            munger_name,
+                            f"No data returned from pivot in file {file_name}",
                         )
                 except Exception as exc:
                     error_by_df[n] = ui.add_new_error(
@@ -2035,7 +1988,7 @@ def to_standard_count_frame(
             )
 
             # clean Unnamed:... out of any values
-            working = blank_out(working,constants.pandas_default_pattern)
+            working = blank_out(working, constants.pandas_default_pattern)
 
             # append data from the nth dataframe to the standard-form dataframe
             ## NB: if df_list[n] fails it should not reach this statement
@@ -2095,8 +2048,7 @@ def fill_vote_count(
     # restrict to just the VoteCount columns (so that groupby.sum will work)
     vc_cols = [
         "Count",
-        "CountItemType_Id",
-        "OtherCountItemType",
+        "CountItemType",
         "ReportingUnit_Id",
         "Contest_Id",
         "Selection_Id",
@@ -2385,7 +2337,9 @@ def file_to_raw_df(
     return df, err
 
 
-def add_constants_to_df(df: pd.DataFrame,constant_dict: Dict[str,Any]) -> pd.DataFrame:
+def add_constants_to_df(
+    df: pd.DataFrame, constant_dict: Dict[str, Any]
+) -> pd.DataFrame:
     for element in constant_dict.keys():
         df = add_constant_column(
             df,

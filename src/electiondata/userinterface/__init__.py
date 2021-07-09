@@ -25,6 +25,7 @@ import xml.etree.ElementTree as et
 import json
 import shutil
 import xlrd
+
 # may need for certain excel imports: import openpyxl
 from sqlalchemy.orm import Session
 
@@ -202,11 +203,11 @@ def read_single_datafile(
     try:
         if p["file_type"] in ["xml"]:
             if driving_path:
-                temp_d = nist.tree_parse_info(driving_path,None)
+                temp_d = nist.tree_parse_info(driving_path, None)
                 driver = {"main_path": temp_d["path"], "main_attrib": temp_d["attrib"]}
             else:
-                driver = nist.xml_count_parse_info(p,ignore_namespace=True)
-            xml_path_info = nist.xml_string_path_info(p["munge_fields"],p["namespace"])
+                driver = nist.xml_count_parse_info(p, ignore_namespace=True)
+            xml_path_info = nist.xml_string_path_info(p["munge_fields"], p["namespace"])
             tree = et.parse(f_path)
             df, err = nist.df_from_tree(
                 tree,
@@ -324,7 +325,12 @@ def read_single_datafile(
         empties = [k for k in df_dict.keys() if df_dict[k].empty]
         if empties:
             empty_str = ", ".join(empties)
-            err = add_new_error(err, "warn-munger", munger_name, f"Nothing read from {file_name} sheets {empty_str}")
+            err = add_new_error(
+                err,
+                "warn-munger",
+                munger_name,
+                f"Nothing read from {file_name} sheets {empty_str}",
+            )
         df_dict = {k: v for k, v in df_dict.items() if not v.empty}
     return df_dict, row_constants, err
 
@@ -529,7 +535,7 @@ def get_parameters(
         err = add_new_error(
             err, "ini", param_file, f"Something is defined twice: {doe}"
         )
-        return d,err
+        return d, err
     except ParsingError as pe:
         err = add_new_error(
             err,
@@ -537,7 +543,7 @@ def get_parameters(
             param_file,
             f"{pe}",
         )
-        return d,err
+        return d, err
     except Exception as exc:
         err = add_new_error(
             err,
@@ -545,7 +551,7 @@ def get_parameters(
             param_file,
             f"{exc}",
         )
-        return d,err
+        return d, err
 
     # read required info
     missing_required_params = list()
@@ -1011,7 +1017,9 @@ def get_filtered_input_options(
         ).sort_values(by=["parent", "type", "name"])
         # define input options for each particular contest
         contest_df = db.get_relevant_contests(session, filters, repository_content_root)
-        contest_df = contest_df[contest_df["type"].isin(filters)].sort_values(by=["parent", "type", "name"])
+        contest_df = contest_df[contest_df["type"].isin(filters)].sort_values(
+            by=["parent", "type", "name"]
+        )
         df = pd.concat([contest_type_df, contest_df])
     elif menu_type == "category":
         election_id = db.list_to_id(session, "Election", filters)

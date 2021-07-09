@@ -24,7 +24,8 @@ def get_raw_acs5_data(
 
     # make count columns numeric
     census_df, bad_rows = m.clean_count_cols(
-        census_df, [c for c in census_df.columns if c not in constants.census_noncount_columns]
+        census_df,
+        [c for c in census_df.columns if c not in constants.census_noncount_columns],
     )
     if not bad_rows.empty:
         print(f"Not all rows processed. Bad rows are\n{bad_rows}")

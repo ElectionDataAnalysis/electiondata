@@ -92,7 +92,9 @@ def ensure_jurisdiction_dir(
     repository_content_root, juris_system_name: str, ignore_empty: bool = False
 ) -> Optional[dict]:
     # create directory if it doesn't exist
-    juris_path = os.path.join(repository_content_root, "src/jurisdictions", juris_system_name)
+    juris_path = os.path.join(
+        repository_content_root, "src/jurisdictions", juris_system_name
+    )
     try:
         Path(juris_path).mkdir(parents=True)
     except FileExistsError:
@@ -101,11 +103,15 @@ def ensure_jurisdiction_dir(
         print(f"Directory created: {juris_path}")
 
     # ensure the contents of the jurisdiction directory are correct
-    err = ensure_juris_files(repository_content_root, juris_path, ignore_empty=ignore_empty)
+    err = ensure_juris_files(
+        repository_content_root, juris_path, ignore_empty=ignore_empty
+    )
     return err
 
 
-def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: bool = False) -> Optional[dict]:
+def ensure_juris_files(
+    repository_content_root, juris_path: str, ignore_empty: bool = False
+) -> Optional[dict]:
     """Check that the jurisdiction files are complete and consistent with one another.
     Check for extraneous files in Jurisdiction directory.
     Assumes Jurisdiction directory exists. Assumes dictionary.txt is in the template file"""
@@ -116,7 +122,7 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
     juris_true_name = juris_name.replace("-", " ")
 
     templates_dir = os.path.join(
-        repository_content_root,"jurisdictions/000_jurisdiction_templates"
+        repository_content_root, "jurisdictions/000_jurisdiction_templates"
     )
     # notify user of any extraneous files
     extraneous = [
@@ -146,7 +152,9 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
         template_path = os.path.join(templates_dir, f"{juris_file}.txt")
         try:
             if os.path.isfile(template_path):
-                temp = pd.read_csv(template_path,**constants.standard_juris_csv_reading_kwargs)
+                temp = pd.read_csv(
+                    template_path, **constants.standard_juris_csv_reading_kwargs
+                )
             else:
                 err = ui.add_new_error(
                     err,
@@ -168,7 +176,9 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
         # if file does not exist
         if not os.path.isfile(cf_path):
             # create the file
-            temp.to_csv(cf_path,sep="\t",index=False,encoding=constants.default_encoding)
+            temp.to_csv(
+                cf_path, sep="\t", index=False, encoding=constants.default_encoding
+            )
             created = True
 
         # if file exists, check format against template
@@ -201,7 +211,7 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
                 # dedupe the dictionary
                 clean_and_dedupe(cf_path)
                 # check that no entry is null
-                df = pd.read_csv(cf_path,**constants.standard_juris_csv_reading_kwargs)
+                df = pd.read_csv(cf_path, **constants.standard_juris_csv_reading_kwargs)
                 null_mask = df.T.isnull().any()
                 if null_mask.any():
                     err = ui.add_new_error(
@@ -228,7 +238,9 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
 
                 # check for problematic null entries
                 null_columns = check_nulls(
-                    juris_file, cf_path, os.path.join(repository_content_root, "electiondata")
+                    juris_file,
+                    cf_path,
+                    os.path.join(repository_content_root, "electiondata"),
                 )
                 if null_columns:
                     err = ui.add_new_error(
@@ -266,7 +278,7 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
 
 def find_ambiguous_names(element: str, cf_path: str) -> List[str]:
     name_field = db.get_name_field(element)
-    df = pd.read_csv(cf_path,**constants.standard_juris_csv_reading_kwargs)
+    df = pd.read_csv(cf_path, **constants.standard_juris_csv_reading_kwargs)
     ambiguous_names = [
         name
         for name in df[name_field].unique()
@@ -277,7 +289,7 @@ def find_ambiguous_names(element: str, cf_path: str) -> List[str]:
 
 def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
     err = None
-    ru = get_element(juris_path,"ReportingUnit")
+    ru = get_element(juris_path, "ReportingUnit")
 
     # create set of all parents, all lead rus
     parents = set()
@@ -322,9 +334,8 @@ def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
             err,
             "jurisdiction",
             Path(juris_path).name,
-            f"\nReportingUnit Names must be unique. These are listed on more than one row:\n{dupe_str}"
+            f"\nReportingUnit Names must be unique. These are listed on more than one row:\n{dupe_str}",
         )
-
 
     return err
 
@@ -332,7 +343,7 @@ def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
 def clean_and_dedupe(f_path: str):
     """Dedupe the file, removing any leading or trailing whitespace and compressing any internal whitespace"""
     # TODO allow specification of unique constraints
-    df = pd.read_csv(f_path,**constants.standard_juris_csv_reading_kwargs)
+    df = pd.read_csv(f_path, **constants.standard_juris_csv_reading_kwargs)
 
     for c in df.columns:
         if not is_numeric_dtype(df.dtypes[c]):
@@ -345,7 +356,7 @@ def clean_and_dedupe(f_path: str):
                 pass
     dupes_df, df = ui.find_dupes(df)
     if not dupes_df.empty:
-        df.to_csv(f_path,sep="\t",index=False,encoding=constants.default_encoding)
+        df.to_csv(f_path, sep="\t", index=False, encoding=constants.default_encoding)
     return
 
 
@@ -359,8 +370,8 @@ def check_nulls(element, f_path, project_root):
         element,
         "not_null_fields.txt",
     )
-    not_nulls = pd.read_csv(nn_path,sep="\t",encoding=constants.default_encoding)
-    df = pd.read_csv(f_path,**constants.standard_juris_csv_reading_kwargs)
+    not_nulls = pd.read_csv(nn_path, sep="\t", encoding=constants.default_encoding)
+    df = pd.read_csv(f_path, **constants.standard_juris_csv_reading_kwargs)
 
     problem_columns = []
 
@@ -386,7 +397,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
     d = juris_dependency_dictionary()
     f_path = os.path.join(juris_dir, f"{element}.txt")
     try:
-        element_df = pd.read_csv(f_path,**constants.standard_juris_csv_reading_kwargs)
+        element_df = pd.read_csv(f_path, **constants.standard_juris_csv_reading_kwargs)
     except FileNotFoundError:
         err = ui.add_new_error(
             err,
@@ -478,9 +489,6 @@ def load_juris_dframe_into_cdf(
         "CDF_schema_def_info",
     )
     element_file = os.path.join(all_juris_path, juris_system_name, f"{element}.txt")
-    enum_file = os.path.join(
-        cdf_schema_def_dir, "elements", element, "enumerations.txt"
-    )
     fk_file = os.path.join(cdf_schema_def_dir, "elements", element, "foreign_keys.txt")
 
     # fail if <element>.txt does not exist
@@ -494,9 +502,9 @@ def load_juris_dframe_into_cdf(
         return err
 
     # read info from <element>.txt, filling null fields with 'none or unknown'
-    df = pd.read_csv(element_file,**constants.standard_juris_csv_reading_kwargs).fillna(
-        "none or unknown"
-    )
+    df = pd.read_csv(
+        element_file, **constants.standard_juris_csv_reading_kwargs
+    ).fillna("none or unknown")
     # TODO check that df has the right format
 
     # add 'none or unknown' record
@@ -511,24 +519,6 @@ def load_juris_dframe_into_cdf(
             Path(all_juris_path).name,
             f"Duplicates were found in {element}.txt",
         )
-
-    # replace plain text enumerations from file system with id/othertext from db
-    if os.path.isfile(enum_file):  # (if not, there are no enums for this element)
-        enums = pd.read_csv(enum_file, sep="\t")
-        # get all relevant enumeration tables
-        for e in enums["enumeration"]:  # e.g., e = "ReportingUnitType"
-            cdf_e = pd.read_sql_table(e, session.bind)
-            # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
-            if e in df.columns:
-                df, non_standard = m.enum_col_to_id_othertext(df, e, cdf_e)
-                if non_standard:
-                    ns = "\n\t".join(non_standard)
-                    err = ui.add_new_error(
-                        err,
-                        "warn-jurisdiction",
-                        juris_true_name,
-                        f"Some {e}s are non-standard:\n\t{ns}",
-                    )
 
     # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.
     if os.path.isfile(fk_file):
@@ -579,7 +569,10 @@ def add_none_or_unknown(df: pd.DataFrame, contest_type: str = None) -> pd.DataFr
 
 
 def load_or_update_juris_to_db(
-    session: Session, repository_content_root: str, juris_true_name: str, juris_system_name: str
+    session: Session,
+    repository_content_root: str,
+    juris_true_name: str,
+    juris_system_name: str,
 ) -> Optional[dict]:
     """Load info from each element in the Jurisdiction's directory into the db.
     On conflict, update the db to match the files in the Jurisdiction's directory"""
@@ -605,11 +598,13 @@ def load_or_update_juris_to_db(
     # Load CandidateContests and BallotMeasureContests
     for contest_type in ["BallotMeasure", "Candidate"]:
         new_err = load_or_update_contests(
-            session.bind, os.path.join(
-                repository_content_root, "jurisdictions", juris_system_name
-            ), juris_true_name, contest_type, err
+            session.bind,
+            os.path.join(repository_content_root, "jurisdictions", juris_system_name),
+            juris_true_name,
+            contest_type,
+            err,
         )
-        err = ui.consolidate_errors([err,new_err])
+        err = ui.consolidate_errors([err, new_err])
     return err
 
 
@@ -630,9 +625,9 @@ def load_or_update_contests(
             f"file not found: {contest_type}Contest.txt",
         )
         return err
-    df = pd.read_csv(element_fpath,**constants.standard_juris_csv_reading_kwargs).fillna(
-        "none or unknown"
-    )
+    df = pd.read_csv(
+        element_fpath, **constants.standard_juris_csv_reading_kwargs
+    ).fillna("none or unknown")
 
     # add contest_type column
     df = m.add_constant_column(df, "contest_type", contest_type)

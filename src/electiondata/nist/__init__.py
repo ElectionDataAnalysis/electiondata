@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-from typing import Optional,Dict,Any,List,Union,Pattern
+from typing import Optional, Dict, Any, List, Union, Pattern
 from urllib import request
 
 import pandas as pd
@@ -42,7 +42,7 @@ def nist_v2_xml_export_tree(
             err,
             "database",
             session.bind.url.database,
-            f"One or more of election {election} or jurisdiction {jurisdiction} not found in database"
+            f"One or more of election {election} or jurisdiction {jurisdiction} not found in database",
         )
         tree = ET.ElementTree()
         return tree, err
@@ -69,17 +69,17 @@ def nist_v2_xml_export_tree(
     # ElectionReport (root)
     attr = {
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
-        "xsi:schemaLocation":constants.nist_schema_location,
-        "xmlns":constants.nist_namespace,
+        "xsi:schemaLocation": constants.nist_schema_location,
+        "xmlns": constants.nist_namespace,
     }
-    root = ET.Element("ElectionReport",attr)
+    root = ET.Element("ElectionReport", attr)
 
     # add election sub-element of ElectionReport
-    e_elt = ET.SubElement(root,"Election")
+    e_elt = ET.SubElement(root, "Election")
 
     # other sub-elements of ElectionReport
-    ET.SubElement(root,"Format").text = "summary-contest"  # NB NIST restricts choices
-    ET.SubElement(root,"GeneratedDate").text = datetime.now(tz=timezone.utc).strftime(
+    ET.SubElement(root, "Format").text = "summary-contest"  # NB NIST restricts choices
+    ET.SubElement(root, "GeneratedDate").text = datetime.now(tz=timezone.utc).strftime(
         "%Y-%m-%dT%H:%M:%SZ"
     )
 
@@ -103,23 +103,23 @@ def nist_v2_xml_export_tree(
             "ObjectId": f"oid{idx}",
             "xsi:type": "ReportingUnit",
         }
-        gpu_elt = ET.SubElement(root,"GpUnit",attr)
+        gpu_elt = ET.SubElement(root, "GpUnit", attr)
         if children:
-            children_elt = ET.SubElement(gpu_elt,"ComposingGpUnitIds")
+            children_elt = ET.SubElement(gpu_elt, "ComposingGpUnitIds")
             children_elt.text = " ".join(children)
-        gpu_name = ET.SubElement(gpu_elt,"Name")
-        ET.SubElement(gpu_name,"Text",{"Language":"en"}).text = name
-        ET.SubElement(gpu_elt,"Type").text = ru_types.loc[
+        gpu_name = ET.SubElement(gpu_elt, "Name")
+        ET.SubElement(gpu_name, "Text", {"Language": "en"}).text = name
+        ET.SubElement(gpu_elt, "Type").text = ru_types.loc[
             rus.loc[idx]["ReportingUnitType_Id"]
         ]["Txt"]
         if ru_types.loc[rus.loc[idx]["ReportingUnitType_Id"]]["Txt"] == "other":
-            ET.SubElement(gpu_elt,"OtherType").text = rus.loc[idx][
+            ET.SubElement(gpu_elt, "OtherType").text = rus.loc[idx][
                 "OtherReportingUnitType"
             ]
 
     # other sub-elements of ElectionReport
-    ET.SubElement(root,"Issuer").text = issuer
-    ET.SubElement(root,"IssuerAbbreviation").text = issuer_abbreviation
+    ET.SubElement(root, "Issuer").text = issuer
+    ET.SubElement(root, "IssuerAbbreviation").text = issuer_abbreviation
 
     # add each party
     party_df = results_df[["Party_Id", "PartyName"]].drop_duplicates()
@@ -131,14 +131,14 @@ def nist_v2_xml_export_tree(
                 "ObjectId": f'oid{p["Party_Id"]}',
             },
         )
-        p_name_elt = ET.SubElement(p_elt,"Name")
-        ET.SubElement(p_name_elt,"Text",{"Language":"en"}).text = p["PartyName"]
+        p_name_elt = ET.SubElement(p_elt, "Name")
+        ET.SubElement(p_name_elt, "Text", {"Language": "en"}).text = p["PartyName"]
 
     # still more sub-elements of ElectionReport
-    ET.SubElement(root,"SequenceStart").text = "1"  # TODO placeholder
-    ET.SubElement(root,"SequenceEnd").text = "1"  # TODO placeholder
-    ET.SubElement(root,"Status").text = status
-    ET.SubElement(root,"VendorApplicationId").text = vendor_application_id
+    ET.SubElement(root, "SequenceStart").text = "1"  # TODO placeholder
+    ET.SubElement(root, "SequenceEnd").text = "1"  # TODO placeholder
+    ET.SubElement(root, "Status").text = status
+    ET.SubElement(root, "VendorApplicationId").text = vendor_application_id
 
     # add each candidate (as sub-element of Election)
     candidate_df = results_df[
@@ -148,9 +148,9 @@ def nist_v2_xml_export_tree(
         can_elt = ET.SubElement(
             e_elt, "Candidate", {"ObjectId": f'oid{can["Candidate_Id"]}'}
         )
-        bn_elt = ET.SubElement(can_elt,"BallotName")
-        ET.SubElement(bn_elt,"Text",{"Language":"en"}).text = can["BallotName"]
-        party_id_elt = ET.SubElement(can_elt,"PartyId")
+        bn_elt = ET.SubElement(can_elt, "BallotName")
+        ET.SubElement(bn_elt, "Text", {"Language": "en"}).text = can["BallotName"]
+        party_id_elt = ET.SubElement(can_elt, "PartyId")
         party_id_elt.text = f'oid{can["Party_Id"]}'
 
     # add each contest (as sub-element of Election)
@@ -163,7 +163,7 @@ def nist_v2_xml_export_tree(
             "ObjectId": f'oid{con["Contest_Id"]}',
             "xsi:type": f'{con["ContestType"]}Contest',
         }
-        con_elt = ET.SubElement(e_elt,"Contest",attr)
+        con_elt = ET.SubElement(e_elt, "Contest", attr)
 
         # create ballot selection sub-elements
         # TODO (remove assumption that it's a  CandidateContest)
@@ -175,7 +175,7 @@ def nist_v2_xml_export_tree(
                 "ObjectId": f"oid{s_idx}",
                 "xsi:type": "CandidateSelection",
             }
-            cs_elt = ET.SubElement(con_elt,"ContestSelection",attr)
+            cs_elt = ET.SubElement(con_elt, "ContestSelection", attr)
             vc_df = results_df[
                 (results_df.Contest_Id == con["Contest_Id"])
                 & (results_df.Selection_Id == s_idx)
@@ -189,22 +189,22 @@ def nist_v2_xml_export_tree(
                 ]
             ].drop_duplicates()
             for idx, vc in vc_df.iterrows():
-                vote_counts_elt = ET.SubElement(cs_elt,"VoteCounts")
+                vote_counts_elt = ET.SubElement(cs_elt, "VoteCounts")
                 # create GpUnitId sub-element
                 ET.SubElement(
                     vote_counts_elt, "GpUnitId"
                 ).text = f'oid{vc["ReportingUnit_Id"]}'
                 # create Type sub-elements (for CountItemType)
-                ET.SubElement(vote_counts_elt,"Type").text = vc["CountItemType"]
+                ET.SubElement(vote_counts_elt, "Type").text = vc["CountItemType"]
                 if vc["CountItemType"] == "other":
-                    ET.SubElement(vote_counts_elt,"OtherType").text = vc[
+                    ET.SubElement(vote_counts_elt, "OtherType").text = vc[
                         "OtherCountItemType"
                     ]
                 # create Count sub-element
-                ET.SubElement(vote_counts_elt,"Count").text = str(vc["Count"])
+                ET.SubElement(vote_counts_elt, "Count").text = str(vc["Count"])
 
             candidate_ids = " ".join([f"oid{x}" for x in vc_df.Candidate_Id.unique()])
-            ET.SubElement(cs_elt,"CandidateIds").text = candidate_ids
+            ET.SubElement(cs_elt, "CandidateIds").text = candidate_ids
 
         # create ElectionDistrictId sub-element
         ET.SubElement(
@@ -212,33 +212,33 @@ def nist_v2_xml_export_tree(
         ).text = f'oid{con["ElectionDistrict_Id"]}'
 
         # create Name sub-element
-        ET.SubElement(con_elt,"Name").text = con["ContestName"]
+        ET.SubElement(con_elt, "Name").text = con["ContestName"]
 
         # create VotesAllowed sub-element
-        ET.SubElement(con_elt,"VotesAllowed").text = "1"
+        ET.SubElement(con_elt, "VotesAllowed").text = "1"
         # TODO tech debt allow arbitrary "votes allowed
 
     # election scope (geographic unit for whole election)
-    ET.SubElement(e_elt,"ElectionScopeId").text = f"oid{jurisdiction_id}"
+    ET.SubElement(e_elt, "ElectionScopeId").text = f"oid{jurisdiction_id}"
 
     # add properties of particular election
     # NB we assume only one election!
     election_df = pd.read_sql_table("Election", session.bind, index_col="Id")
     election_type_df = pd.read_sql_table("ElectionType", session.bind, index_col="Id")
-    election_name_elt = ET.SubElement(e_elt,"Name")
-    ET.SubElement(election_name_elt,"Text",{"Language":"en"}).text = election_df.loc[
+    election_name_elt = ET.SubElement(e_elt, "Name")
+    ET.SubElement(election_name_elt, "Text", {"Language": "en"}).text = election_df.loc[
         election_id
     ]["Name"]
-    ET.SubElement(e_elt,"StartDate").text = "1900-01-01"  # placeholder
-    ET.SubElement(e_elt,"EndDate").text = "1900-01-01"  # placeholder
+    ET.SubElement(e_elt, "StartDate").text = "1900-01-01"  # placeholder
+    ET.SubElement(e_elt, "EndDate").text = "1900-01-01"  # placeholder
 
     # election type
     e_type = election_type_df.loc[election_df.loc[election_id]["ElectionType_Id"]][
         "Txt"
     ]
-    ET.SubElement(e_elt,"Type").text = e_type
+    ET.SubElement(e_elt, "Type").text = e_type
     if e_type == "other":
-        ET.SubElement(e_elt,"OtherType").text = election_df.loc[election_id][
+        ET.SubElement(e_elt, "OtherType").text = election_df.loc[election_id][
             "OtherElectionType"
         ]
 
@@ -250,7 +250,7 @@ def nist_v2_xml_export_tree(
 # NB: if nist schema were out of sync with internal db schema, this would be non-trivial
 
 
-def tree_parse_info(xpath: str,ns: Optional[str]) -> Dict[str,Any]:
+def tree_parse_info(xpath: str, ns: Optional[str]) -> Dict[str, Any]:
     """extracts xml path-parsing info from xpath with
     optional .* attribute. E.g., Election/Contest.name
     gets parsed to path Election/Contest and attribute
@@ -305,7 +305,7 @@ def xml_string_path_info(
     """For each munge string, extracts info for traversing tree"""
     info_dict = dict()
     for field in munge_fields:
-        info_dict[field] = tree_parse_info(field,ns)
+        info_dict[field] = tree_parse_info(field, ns)
     return info_dict
 
 
@@ -374,7 +374,7 @@ def df_from_tree(
     return df, err
 
 
-def check_nist_namespace(f_path,key) -> Optional[dict]:
+def check_nist_namespace(f_path, key) -> Optional[dict]:
     """get the namespaces in the XML and return error if the one we're expecting
     is not found"""
     namespaces = dict(

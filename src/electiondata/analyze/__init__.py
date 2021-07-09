@@ -19,11 +19,11 @@ from scipy import stats
 import json
 
 
-def child_rus_by_id(session, parents, ru_type=None):
+def child_rus_by_id(session, parents, ru_type: str =None):
     """Given a list <parents> of parent ids (or just a single parent_id), return
     list containing all children of those parents.
     (By convention, a ReportingUnit counts as one of its own 'parents',)
-    If (ReportingUnitType_Id,OtherReportingUnit) pair <rutype> is given,
+    If  <rutype> is given,
     restrict children to that ReportingUnitType"""
     cruj = pd.read_sql_table("ComposingReportingUnitJoin", session.bind)
     children = list(
@@ -33,8 +33,7 @@ def child_rus_by_id(session, parents, ru_type=None):
         assert len(ru_type) == 2, f"argument {ru_type} does not have exactly 2 elements"
         ru = pd.read_sql_table("ReportingUnit", session.bind, index_col="Id")
         right_type_ru = ru[
-            (ru.ReportingUnitType_Id == ru_type[0])
-            & (ru.OtherReportingUnitType == ru_type[1])
+            (ru.ReportingUnitType == ru_type)
         ]
         children = [x for x in children if x in right_type_ru.index]
     return children
@@ -141,8 +140,7 @@ def create_rollup(
 def create_scatter(
     session,
     jurisdiction_id,
-    subdivision_type_id,
-    other_subdivision_type,
+    subdivision_type,
     h_election_id,
     h_category,
     h_count,
@@ -164,8 +162,7 @@ def create_scatter(
     dfh = get_data_for_scatter(
         session,
         jurisdiction_id,
-        subdivision_type_id,
-        other_subdivision_type,
+        subdivision_type,
         h_election_id,
         h_category,
         h_count,
@@ -175,8 +172,7 @@ def create_scatter(
     dfv = get_data_for_scatter(
         session,
         jurisdiction_id,
-        subdivision_type_id,
-        other_subdivision_type,
+        subdivision_type,
         v_election_id,
         v_category,
         v_count,
@@ -201,7 +197,7 @@ def create_scatter(
         pivot_col = "CountItemType"
     elif single_selection and single_count_type:
         pivot_col = "Election_Id"
-    else: # no runoffs, not single_selection
+    else:  # no runoffs, not single_selection
         pivot_col = "Selection"
     pivot_df = pd.pivot_table(
         unsummed, values="Count", index=["Name"], columns=pivot_col, aggfunc=np.sum
@@ -300,8 +296,7 @@ def package_results(data, jurisdiction, x, y, restrict=None):
 def get_data_for_scatter(
     session,
     jurisdiction_id,
-    subdivision_type_id,
-    other_subdivision_type,
+    subdivision_type,
     election_id,
     count_item_type,
     filter_str,
@@ -315,15 +310,13 @@ def get_data_for_scatter(
             election_id,
             f"{count_type} {count_item_type}".strip(),  # category
             filter_str,  # Label
-            subdivision_type_id=subdivision_type_id,
-            other_subdivision_type=other_subdivision_type,
+            subdivision_type=subdivision_type,
         )
     else:
         return get_votecount_data(
             session,
             jurisdiction_id,
-            subdivision_type_id,
-            other_subdivision_type,
+            subdivision_type,
             election_id,
             count_item_type,
             filter_str,
@@ -386,8 +379,7 @@ def get_external_data(
 def get_votecount_data(
     session: Session,
     jurisdiction_id: int,
-    subdivision_type_id: int,
-    other_subdivision_type: str,
+    subdivision_type: str,
     election_id: int,
     count_item_type: str,
     filter_str: str,
@@ -398,8 +390,7 @@ def get_votecount_data(
         session,
         election_id,
         jurisdiction_id,
-        subdivision_type_id,
-        other_subdivision_type,
+        subdivision_type,
     )
 
     # limit to relevant data - runoff
@@ -481,14 +472,14 @@ def create_bar(
     cursor = connection.cursor()
 
     unsummed = db.unsummed_vote_counts_with_rollup_subdivision_id(
-        session, election_id, top_ru_id, subdivision_type_id, other_subdivision_type
+        session, election_id, top_ru_id, subdivision_type
     )
 
     if contest_type:
         contest_type = ui.get_contest_type_mapping(contest_type)
         unsummed = unsummed[
-            (unsummed["contest_district_type"] == contest_type) |
-            (unsummed["contest_district_othertype"] == contest_type)
+            (unsummed["contest_district_type"] == contest_type)
+            | (unsummed["contest_district_othertype"] == contest_type)
         ]
 
     # through front end, contest_type must be truthy if contest is truthy
@@ -499,12 +490,10 @@ def create_bar(
 
     multiple_ballot_types = len(unsummed["CountItemType"].unique()) > 1
     groupby_cols = [
-        "ParentReportingUnit_Id",
-        "ReportingUnitOtherType",
+        "ReportingUnitType",
         "ParentName",
-        "ParentReportingUnitType_Id",
+        "ParentReportingUnitType",
         "Candidate_Id",
-        "CountItemType_Id",
         "CountItemType",
         "Contest_Id",
         "Contest",
@@ -512,7 +501,6 @@ def create_bar(
         "Selection_Id",
         "contest_type",
         "contest_district_type",
-        "contest_district_othertype",
         "Party",
     ]
     unsummed = unsummed.groupby(groupby_cols).sum().reset_index()
@@ -590,7 +578,9 @@ def create_bar(
             cursor, "Contest", int(temp_df.iloc[0]["Contest_Id"])
         )
         if other_subdivision_type == "":
-            results["subdivision_type"] = db.name_from_id(session, "ReportingUnitType", subdivision_type_id)
+            results["subdivision_type"] = db.name_from_id(
+                session, "ReportingUnitType", subdivision_type_id
+            )
         else:
             results["subdivision_type"] = other_subdivision_type
         results["count_item_type"] = temp_df.iloc[0]["CountItemType"]
