@@ -448,14 +448,7 @@ def name_to_id(session: Session, element: str, name: str) -> Optional[int]:
 
 
 def get_name_field(element: str) -> str:
-    if element in [
-        "CountItemType",
-        "ElectionType",
-        "IdentifierType",
-        "ReportingUnitType",
-    ]:
-        field = "Txt"
-    elif element in ["CandidateSelection", "BallotMeasureSelection"]:
+    if element in ["CandidateSelection", "BallotMeasureSelection"]:
         field = "Id"
     elif element == "Candidate":
         field = "BallotName"
@@ -1385,7 +1378,7 @@ def export_rollup_from_db(
         """
     SELECT %s contest_type,  -- contest_type
         C."Name" "Contest",
-        EDRUT."Txt" contest_district_type,
+        ED."ReportingUnitType" contest_district_type,
         {selection} "Selection",
         IntermediateRU."Name" "ReportingUnit",
         {count_item_type_sql} "CountItemType",
@@ -1406,7 +1399,6 @@ def export_rollup_from_db(
     LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
     LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
     {election_district_join}
-    LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
     WHERE C.contest_type = %s -- contest type
         AND e."Name" = %s -- election name
         AND TopRU."Name" = %s  -- top RU
@@ -1614,12 +1606,11 @@ def read_external(
 def display_elections(session: Session) -> pd.DataFrame:
     result = session.execute(
         f"""
-        SELECT  e."Id" AS parent, "Name" AS name, "Txt" as type
+        SELECT  e."Id" AS parent, "Name" AS name, "ElectionType" as type
         FROM    "VoteCount" vc
                 JOIN "Election" e ON vc."Election_Id" = e."Id"
-                JOIN "ElectionType" et ON e."ElectionType_Id" = et."Id"
-        WHERE   "Name" != 'none or unknown'
-        GROUP BY e."Id", "Name", "Txt"
+         WHERE   "Name" != 'none or unknown'
+        GROUP BY e."Id", "Name", "ElectionType"
         ORDER BY LEFT("Name", 4) DESC, RIGHT("Name", LENGTH("Name") - 5)
     """
     )
@@ -1747,54 +1738,6 @@ def contest_families_by_juris(
     return result_df
 
 
-def id_othertext_from_plaintext(
-    session: Session, enum: str, plaintext: str
-) -> (Optional[int], Optional[str]):
-    lookup_df = pd.read_sql_table(enum, session.bind, index_col="Id")
-    if plaintext in lookup_df.Txt.unique():
-        idx = lookup_df[lookup_df.Txt == plaintext].first_valid_index()
-        other_text = ""
-    else:
-        idx = lookup_df[lookup_df.Txt == "other"].first_valid_index()
-        other_text = plaintext
-    return idx, other_text
-
-
-def id_other_cols_to_enum(
-    session: Session, df: pd.DataFrame, enum: str
-) -> (pd.DataFrame, Optional[dict]):
-    err = None
-    try:
-        lookup = pd.read_sql_table(enum, session.bind, index_col="Id")
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unable to read table {enum} from database. Exception: {exc}",
-        )
-        return df, err
-
-    id = f"{enum}_Id"
-    other = f"Other{enum}"
-    missing = [x for x in [id, other] if x not in df.columns]
-    if missing:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Expected column(s) missing from dataframe: {missing}",
-        )
-        return df, err
-    working = df.merge(lookup, how="left", left_on=id, right_index=True).rename(
-        columns={"Txt": enum}
-    )
-    mask = working[enum] == "other"
-    working.loc[mask, enum] = working[mask][other]
-    working.drop([id, other], axis=1, inplace=True)
-    return working, err
-
-
 def parents_by_cursor(
     cursor: psycopg2.extensions.cursor,
     ru_id_list: List[int],
@@ -1809,7 +1752,6 @@ def parents_by_cursor(
     FROM "ReportingUnit" as child
     LEFT JOIN "ComposingReportingUnitJoin" as cruj on cruj."ChildReportingUnit_Id" = child."Id"
     LEFT JOIN "ReportingUnit" as parent on cruj."ParentReportingUnit_Id" = parent."Id"
-    LEFT JOIN "ReportingUnitType" as rut on rut."Id" = parent."ReportingUnitType_Id"
     WHERE  (parent."ReportingUnitType" = {subunit_type})
     and child."Id" in {ru_id_list}
     """
@@ -1895,7 +1837,7 @@ def read_vote_count_nist(
     to read into a DF and then filter"""
 
     fields = [
-        "ReportingUnitType_Id",
+        "ReportingUnitType",
         "Party_Id",
         "PartyName",
         "Candidate_Id",
@@ -1926,12 +1868,10 @@ def read_vote_count_nist(
                 JOIN "CandidateContest" cc ON con."Id" = cc."Id"
                 JOIN (SELECT "Id", "Name" as "OfficeName", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
                 -- this reporting unit info refers to the districts (state house, state senate, etc)
-                JOIN (SELECT "Id", "Name" AS "ElectionDistrict", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
-                JOIN (SELECT "Id", "Txt" AS unit_type FROM "ReportingUnitType") rut on ru."ReportingUnitType_Id" = rut."Id"
-                -- this reporting unit info refers to the geopolitical divisions (county, state, etc)
-                JOIN (SELECT "Id" as "GP_Id", "Name" AS "GPReportingUnitName", "ReportingUnitType_Id" AS "GPReportingUnitType_Id" FROM "ReportingUnit") gpru on vc."ReportingUnit_Id" = gpru."GP_Id"
-                JOIN (SELECT "Id", "Txt" AS "GPType" FROM "ReportingUnitType") gprut on gpru."GPReportingUnitType_Id" = gprut."Id"
-                JOIN (SELECT "Id", "Name" as "ElectionName", "ElectionType_Id", "ElectionType" FROM "Election") e on vc."Election_Id" = e."Id"
+                JOIN (SELECT "Id", "Name" AS "ElectionDistrict", "ReportingUnitType" as unit_type FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
+                 -- this reporting unit info refers to the geopolitical divisions (county, state, etc)
+                JOIN (SELECT "Id" as "GP_Id", "Name" AS "GPReportingUnitName", "ReportingUnitType" AS "GPType" FROM "ReportingUnit") gpru on vc."ReportingUnit_Id" = gpru."GP_Id"
+                JOIN (SELECT "Id", "Name" as "ElectionName",  "ElectionType" FROM "Election") e on vc."Election_Id" = e."Id"
         WHERE   "Election_Id" = %s
                 AND "ParentReportingUnit_Id" = %s
         """
@@ -1952,14 +1892,7 @@ def read_vote_count_nist(
             "ReportingUnit_Id",
             "ReportingUnit_Id",
             rollup_rut=rollup_ru_type,
-            ignore=["ReportingUnitType_Id"],
-        )
-        # add ReportingUnitType_Id column
-        # TODO error handling -- what if sub_type is non-standard?
-        rut = pd.read_sql_table("ReportingUnitType", session.bind, index_col="Id")
-        sub_type_id = rut[rut.Txt == rollup_ru_type].first_valid_index()
-        results_df = m.add_constant_column(
-            results_df, "ReportingUnitType_Id", sub_type_id, dtype="int"
+            ignore=["ReportingUnitType"],
         )
         #  NB: the ReportingUnitType from read_vote_count is the Election District type
     else:
@@ -2010,8 +1943,6 @@ def create_common_data_format_tables(session, dirpath="CDF_schema_def_info/"):
             ]
         elif element == "CandidateSelection":
             create_indices = ["Candidate_Id", "Party_Id"]
-        elif element == "ReportingUnit":
-            create_indices = ["ReportingUnitType_Id"]
         else:
             # create_indices = [[get_name_field(element)]]
             create_indices = None
