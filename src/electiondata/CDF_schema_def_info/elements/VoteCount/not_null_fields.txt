@@ -1,6 +1,5 @@
 not_null_fields
 Count
-CountItemType_Id
 ReportingUnit_Id
 Contest_Id
 Selection_Id

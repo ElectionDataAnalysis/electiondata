@@ -668,9 +668,8 @@ def assign_anomaly_score(data):
             [
                 "ParentReportingUnit_Id",
                 "ParentName",
-                "ParentReportingUnitType_Id",
+                "ParentReportingUnitType",
                 "Candidate_Id",
-                "CountItemType_Id",
                 "CountItemType",
                 "Contest_Id",
                 "Contest",
@@ -688,7 +687,7 @@ def assign_anomaly_score(data):
         columns={
             "ParentReportingUnit_Id": "ReportingUnit_Id",
             "ParentName": "Name",
-            "ParentReportingUnitType_Id": "ReportingUnitType_Id",
+            "ParentReportingUnitType": "ReportingUnitType",
         },
         inplace=True,
     )
@@ -700,12 +699,12 @@ def assign_anomaly_score(data):
     # ru_type, and count type. These will be updated later to account
     # for 2 candidate pairings
     df_unit = grouped_df[
-        ["Contest_Id", "ReportingUnitType_Id", "CountItemType"]
+        ["Contest_Id", "ReportingUnitType", "CountItemType"]
     ].drop_duplicates()
     df_unit = df_unit.reset_index()
     df_unit["unit_id_tmp"] = df_unit.index
     df_with_units = grouped_df.merge(
-        df_unit, how="left", on=["Contest_Id", "ReportingUnitType_Id", "CountItemType"]
+        df_unit, how="left", on=["Contest_Id", "ReportingUnitType", "CountItemType"]
     )
 
     # loop through each unit ID and assign anomaly scores
@@ -786,21 +785,21 @@ def get_most_anomalous(data, n):
     zeros_df = data[
         [
             "Contest_Id",
-            "ReportingUnitType_Id",
+            "ReportingUnitType",
             "CountItemType",
             "ReportingUnit_Id",
             "Count",
         ]
     ]
     zeros_df = zeros_df.groupby(
-        ["Contest_Id", "ReportingUnitType_Id", "ReportingUnit_Id", "CountItemType"]
+        ["Contest_Id", "ReportingUnitType", "ReportingUnit_Id", "CountItemType"]
     ).sum()
     zeros_df = zeros_df.reset_index()
     no_zeros = zeros_df[zeros_df["Count"] != 0]
     data = data.merge(
         no_zeros,
         how="inner",
-        on=["Contest_Id", "ReportingUnitType_Id", "ReportingUnit_Id", "CountItemType"],
+        on=["Contest_Id", "ReportingUnitType", "ReportingUnit_Id", "CountItemType"],
     )
     data.rename(columns={"Count_x": "Count"}, inplace=True)
     data.drop(columns=["Count_y"], inplace=True)

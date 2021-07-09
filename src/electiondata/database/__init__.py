@@ -779,10 +779,9 @@ def vote_type_list(
 
     q = sql.SQL(
         """
-        SELECT distinct CIT."Txt"
+        SELECT distinct VC."CountItemType"
         FROM "VoteCount" VC
         LEFT JOIN _datafile d on VC."_datafile_Id" = d."Id"
-        LEFT JOIN "CountItemType" CIT on VC."CountItemType_Id" = CIT."Id"
         WHERE d.{by} in %s
     """
     ).format(by=sql.Identifier(by))
@@ -842,9 +841,8 @@ def active_vote_types_from_ids(
 ) -> List[str]:
     if election_id:
         if jurisdiction_id:
-            q = """SELECT distinct cit."Txt"
-                FROM "VoteCount" vc LEFT JOIN "CountItemType" cit
-                ON vc."CountItemType_Id" = cit."Id"
+            q = """SELECT distinct vc."CountItemType"
+                FROM "VoteCount" vc 
                 LEFT JOIN "ComposingReportingUnitJoin" cruj
                 on cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
                 AND cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
@@ -852,9 +850,8 @@ def active_vote_types_from_ids(
                 """
             str_vars = (election_id, jurisdiction_id)
         else:  # if election_id but no jurisdiction_id
-            q = """SELECT distinct cit."Txt"
-                FROM "VoteCount" vc LEFT JOIN "CountItemType" cit
-                ON vc."CountItemType_Id" = cit."Id"
+            q = """SELECT distinct vc."CountItemType"
+                FROM "VoteCount" vc 
                 LEFT JOIN "ComposingReportingUnitJoin" cruj
                 on cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
                 AND cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
@@ -863,9 +860,8 @@ def active_vote_types_from_ids(
             str_vars = (election_id,)
 
     elif jurisdiction_id:  # if jurisdiction_id but no election_id
-        q = """SELECT distinct cit."Txt"
-            FROM "VoteCount" vc LEFT JOIN "CountItemType" cit
-            ON vc."CountItemType_Id" = cit."Id"
+        q = """SELECT distinct vc."CountItemType"
+            FROM "VoteCount" vc 
             LEFT JOIN "ComposingReportingUnitJoin" cruj
             on cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
             AND cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
@@ -873,9 +869,8 @@ def active_vote_types_from_ids(
             """
         str_vars = (jurisdiction_id,)
     else:
-        q = """SELECT distinct cit."Txt"
-                FROM "VoteCount" vc LEFT JOIN "CountItemType" cit
-                ON vc."CountItemType_Id" = cit."Id"
+        q = """SELECT distinct vc."CountItemType"
+                FROM "VoteCount" vc 
                 LEFT JOIN "ComposingReportingUnitJoin" cruj
                 on cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
                 AND cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
@@ -1123,14 +1118,14 @@ def unsummed_vote_counts_with_rollup_subdivision_id(
     cursor = connection.cursor()
     q = sql.SQL(
         """
-            SELECT  vc."Id" AS "VoteCount_Id", "Count", "CountItemType_Id",
+            SELECT  vc."Id" AS "VoteCount_Id", "Count", 
                     vc."ReportingUnit_Id", "Contest_Id", "Selection_Id",
                     vc."Election_Id", cruj."ParentReportingUnit_Id",
                     cru."Name", 
                     cru."ReportingUnitType",
                     IntermediateRU."Name" AS "ParentName", 
                     IntermediateRU."ReportingUnitType" AS "ParentReportingUnitType",
-                    vc."CountItemType" AS "CountItemType", C."Name" AS "Contest",
+                    vc."CountItemType", C."Name" AS "Contest",
                     Cand."BallotName" AS "Selection", 
                     "ElectionDistrict_Id", ED."Name" as "ElectionDistrict",
                     Cand."Id" AS "Candidate_Id", 
@@ -1167,7 +1162,6 @@ def unsummed_vote_counts_with_rollup_subdivision_id(
     columns = [
         "VoteCount_Id",
         "Count",
-        "CountItemType_Id",
         "ReportingUnit_Id",
         "Contest_Id",
         "Selection_Id",
@@ -1252,10 +1246,10 @@ def export_rollup_from_db(
     # and the string variables to be passed to query
     restrict = sql.SQL("")
     group_and_order_by = sql.SQL(
-        "C.{name}, EDRUT.{txt}, Cand.{bname}, IntermediateRU.{name} "
+        "C.{name}, ED.{ru_type}, Cand.{bname}, IntermediateRU.{name} "
     ).format(
         name=sql.Identifier("Name"),
-        txt=sql.Identifier("Txt"),
+        ru_type=sql.Identifier("ReportingUnitType"),
         bname=sql.Identifier("BallotName"),
     )
     columns = [
@@ -1352,10 +1346,12 @@ def export_rollup_from_db(
         group_and_order_by = sql.Composed(
             [
                 group_and_order_by,
-                sql.SQL(", CIT.{txt}").format(txt=sql.Identifier("Txt")),
+                sql.SQL(", vc.{countitemtype}").format(countitemtype=sql.Identifier("CountItemType")),
             ]
         )
-        count_item_type_sql = sql.SQL("CIT.{txt}").format(txt=sql.Identifier("Txt"))
+        count_item_type_sql = sql.SQL(
+            "IntermediateRU.{countitemtype}"
+        ).format(countitemtype=sql.Identifier("CountItemType"))
     else:
         count_item_type_sql = sql.Literal("total")
 
@@ -1369,8 +1365,8 @@ def export_rollup_from_db(
             restrict = sql.Composed(
                 [
                     restrict,
-                    sql.SQL(" AND CIT.{txt} != {total}").format(
-                        txt=sql.Identifier("Txt"), total=sql.Literal("total")
+                    sql.SQL(" AND vc.{countitemtype} != {total}").format(
+                        txt=sql.Identifier("CountItemType"), total=sql.Literal("total")
                     ),
                 ]
             )
@@ -1406,11 +1402,9 @@ def export_rollup_from_db(
     LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
     -- roll up to the intermediate RUs
     LEFT JOIN "ReportingUnit" IntermediateRU on CRUJ_sum."ParentReportingUnit_Id" =IntermediateRU."Id"
-    LEFT JOIN "ReportingUnitType" IntermediateRUT on IntermediateRU."ReportingUnitType_Id" = IntermediateRUT."Id"
     -- intermediate RUs must nest in top RU
     LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
     LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
-    LEFT JOIN "CountItemType" CIT on vc."CountItemType_Id" = CIT."Id"
     {election_district_join}
     LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
     WHERE C.contest_type = %s -- contest type
