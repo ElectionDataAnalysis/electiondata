@@ -24,3 +24,5 @@ Party=<count_header_2>
 # Values to ignore (optional) #
 [ignore]
 Candidate=BLANK,TBC,blank,Blank
+ReportingUnit=AND,ARD,CUM,FRA,HAN,KEN,KNO,LIN,OXF,PEN,PIS,SAG,SOM,WAL,WAS,YOR
+

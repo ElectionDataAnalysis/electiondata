@@ -228,12 +228,7 @@ def create_scatter(
         results = package_results(pivot_df, jurisdiction, h_count, v_count)
     results["x-election"] = db.name_from_id_cursor(cursor, "Election", h_election_id)
     results["y-election"] = db.name_from_id_cursor(cursor, "Election", v_election_id)
-    if other_subdivision_type == "":
-        results["subdivision_type"] = db.name_from_id_cursor(
-            cursor, "ReportingUnitType", subdivision_type_id
-        )
-    else:
-        results["subdivision_type"] = other_subdivision_type
+    results["subdivision_type"] = subdivision_type
     results["x-count_item_type"] = h_category
     results["y-count_item_type"] = v_category
     results["x-title"] = scatter_axis_title(
@@ -331,8 +326,7 @@ def get_external_data(
     election_id,
     category,
     label,
-    subdivision_type_id,
-    other_subdivision_type,
+    subdivision_type,
 ):
     # get the census data
     connection = session.bind.raw_connection()
@@ -344,8 +338,7 @@ def get_external_data(
         ["Name", "Category", "Label", "Value", "Source"],
         restrict_by_label=label,
         restrict_by_category=category,
-        subdivision_type_id=subdivision_type_id,
-        other_subdivision_type=other_subdivision_type,
+        subdivision_type=subdivision_type,
     )
     cursor.close()
 
@@ -460,8 +453,7 @@ def get_votecount_data(
 def create_bar(
     session: Session,
     top_ru_id: int,
-    subdivision_type_id: int,
-    other_subdivision_type: str,
+    subdivision_type: str,
     contest_type: Optional[str],
     contest: Optional[str],
     election_id: int,
@@ -477,10 +469,7 @@ def create_bar(
 
     if contest_type:
         contest_type = ui.get_contest_type_mapping(contest_type)
-        unsummed = unsummed[
-            (unsummed["contest_district_type"] == contest_type)
-            | (unsummed["contest_district_othertype"] == contest_type)
-        ]
+        unsummed = unsummed[unsummed["contest_district_type"] == contest_type]
 
     # through front end, contest_type must be truthy if contest is truthy
     # Only filter when there is an actual contest passed through, as opposed to
@@ -577,12 +566,7 @@ def create_bar(
         results["contest"] = db.name_from_id_cursor(
             cursor, "Contest", int(temp_df.iloc[0]["Contest_Id"])
         )
-        if other_subdivision_type == "":
-            results["subdivision_type"] = db.name_from_id(
-                session, "ReportingUnitType", subdivision_type_id
-            )
-        else:
-            results["subdivision_type"] = other_subdivision_type
+        results["subdivision_type"] = subdivision_type
         results["count_item_type"] = temp_df.iloc[0]["CountItemType"]
 
         # display votes at stake, margin info

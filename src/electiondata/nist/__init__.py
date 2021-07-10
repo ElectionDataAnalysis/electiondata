@@ -85,7 +85,6 @@ def nist_v2_xml_export_tree(
 
     # get name, ru-type and composing info for all gpus
     rus = pd.read_sql("ReportingUnit", session.bind, index_col="Id")
-    ru_types = pd.read_sql("ReportingUnitType", session.bind, index_col="Id")
     cruj = pd.read_sql("ComposingReportingUnitJoin", session.bind, index_col="Id")
 
     # add each gpu
@@ -109,13 +108,12 @@ def nist_v2_xml_export_tree(
             children_elt.text = " ".join(children)
         gpu_name = ET.SubElement(gpu_elt, "Name")
         ET.SubElement(gpu_name, "Text", {"Language": "en"}).text = name
-        ET.SubElement(gpu_elt, "Type").text = ru_types.loc[
-            rus.loc[idx]["ReportingUnitType_Id"]
-        ]["Txt"]
-        if ru_types.loc[rus.loc[idx]["ReportingUnitType_Id"]]["Txt"] == "other":
-            ET.SubElement(gpu_elt, "OtherType").text = rus.loc[idx][
-                "OtherReportingUnitType"
-            ]
+        ru_type = rus.loc[idx]["ReportingUnitType"]
+        if ru_type in constants.nist_standard["ReportingUnitType"]:
+            ET.SubElement(gpu_elt, "Type").text = ru_type
+        else:
+            ET.SubElement(gpu_elt,"Type").text = "other"
+            ET.SubElement(gpu_elt, "OtherType").text = ru_type
 
     # other sub-elements of ElectionReport
     ET.SubElement(root, "Issuer").text = issuer
@@ -184,7 +182,6 @@ def nist_v2_xml_export_tree(
                     "ReportingUnit_Id",
                     "Candidate_Id",
                     "CountItemType",
-                    "OtherCountItemType",
                     "Count",
                 ]
             ].drop_duplicates()
@@ -195,10 +192,12 @@ def nist_v2_xml_export_tree(
                     vote_counts_elt, "GpUnitId"
                 ).text = f'oid{vc["ReportingUnit_Id"]}'
                 # create Type sub-elements (for CountItemType)
-                ET.SubElement(vote_counts_elt, "Type").text = vc["CountItemType"]
-                if vc["CountItemType"] == "other":
+                if vc["CountItemType"] in constants.nist_standard["CountItemType"]:
+                    ET.SubElement(vote_counts_elt, "Type").text = vc["CountItemType"]
+                else:
+                    ET.SubElement(vote_counts_elt,"Type").text = "other"
                     ET.SubElement(vote_counts_elt, "OtherType").text = vc[
-                        "OtherCountItemType"
+                        "CountItemType"
                     ]
                 # create Count sub-element
                 ET.SubElement(vote_counts_elt, "Count").text = str(vc["Count"])
@@ -224,7 +223,6 @@ def nist_v2_xml_export_tree(
     # add properties of particular election
     # NB we assume only one election!
     election_df = pd.read_sql_table("Election", session.bind, index_col="Id")
-    election_type_df = pd.read_sql_table("ElectionType", session.bind, index_col="Id")
     election_name_elt = ET.SubElement(e_elt, "Name")
     ET.SubElement(election_name_elt, "Text", {"Language": "en"}).text = election_df.loc[
         election_id
@@ -233,14 +231,12 @@ def nist_v2_xml_export_tree(
     ET.SubElement(e_elt, "EndDate").text = "1900-01-01"  # placeholder
 
     # election type
-    e_type = election_type_df.loc[election_df.loc[election_id]["ElectionType_Id"]][
-        "Txt"
-    ]
-    ET.SubElement(e_elt, "Type").text = e_type
-    if e_type == "other":
-        ET.SubElement(e_elt, "OtherType").text = election_df.loc[election_id][
-            "OtherElectionType"
-        ]
+    e_type = election_df.loc[election_id]["ElectionType"]
+    if e_type in constants.nist_standard["ElectionType"]:
+        ET.SubElement(e_elt, "Type").text = e_type
+    else:
+        ET.SubElement(e_elt, "Type").text = "other"
+        ET.SubElement(e_elt, "OtherType").text = e_type
 
     tree = ET.ElementTree(root)
     return tree, err

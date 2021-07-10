@@ -969,7 +969,6 @@ Candidate	Edgar Flores	'Flores, Edgar'
 Candidate	Edgar Flores	Flores, Edgar
 Candidate	Edgington, Roy	'Edgington, Roy'
 Candidate	Edgington, Roy	Edgington, Roy
-Candidate	Edward Bridges II	BRIDGES II, EDWARD
 Candidate	Edward Bridges II	Bridges II, Edward
 Candidate	Edward Bridges II	Bridges Ii, Edward
 Candidate	Edwards, Chris	'Edwards, Chris'
@@ -1539,7 +1538,6 @@ Candidate	Hill, Jesse J	'Hill, Jesse J'
 Candidate	Hill, Jesse J	Hill, Jesse J
 Candidate	Hill, Richard	'Hill, Richard'
 Candidate	Hill, Richard	Hill, Richard
-Candidate	Hillary Clinton	HILLARY CLINTON
 Candidate	Hilton, Burton W.	'Hilton, Burton W.'
 Candidate	Hilton, Burton W.	Hilton, Burton W.
 Candidate	Hilton, Phillip A.	'Hilton, Phillip A.'

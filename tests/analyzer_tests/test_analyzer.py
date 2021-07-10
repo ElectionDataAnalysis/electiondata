@@ -15,7 +15,8 @@ def dict_sort(
 ) -> List[Dict[str, Any]]:
     """If <key> is given, sort items by value of that key in each dictionary.
     If <key> is not given, return <list_of_dicts>"""
-    if sort_key:
+
+    if list_of_dicts and sort_key:
         new = sorted(list_of_dicts, key=lambda k: k[sort_key])
         if drop_key:
             for d in new:

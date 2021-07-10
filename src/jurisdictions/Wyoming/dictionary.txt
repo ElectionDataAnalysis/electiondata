@@ -289,3 +289,116 @@ ReportingUnit	Wyoming;Washakie County	Washakie
 ReportingUnit	Wyoming;Washakie County	fips56043
 ReportingUnit	Wyoming;Weston County	Weston
 ReportingUnit	Wyoming;Weston County	fips56045
+CandidateContest	WY Senate District 8	WY Senate District 8
+CandidateContest	WY Senate District 6	WY Senate District 6
+CandidateContest	WY Senate District 4	WY Senate District 4
+CandidateContest	WY Senate District 30	WY Senate District 30
+CandidateContest	WY Senate District 28	WY Senate District 28
+CandidateContest	WY Senate District 26	WY Senate District 26
+CandidateContest	WY Senate District 24	WY Senate District 24
+CandidateContest	WY Senate District 22	WY Senate District 22
+CandidateContest	WY Senate District 20	WY Senate District 20
+CandidateContest	WY Senate District 2	WY Senate District 2
+CandidateContest	WY Senate District 18	WY Senate District 18
+CandidateContest	WY Senate District 16	WY Senate District 16
+CandidateContest	WY Senate District 14	WY Senate District 14
+CandidateContest	WY Senate District 12	WY Senate District 12
+CandidateContest	WY Senate District 10	WY Senate District 10
+CandidateContest	WY House District 9	WY House District 9
+CandidateContest	WY House District 8	WY House District 8
+CandidateContest	WY House District 7	WY House District 7
+CandidateContest	WY House District 60	WY House District 60
+CandidateContest	WY House District 6	WY House District 6
+CandidateContest	WY House District 59	WY House District 59
+CandidateContest	WY House District 58	WY House District 58
+CandidateContest	WY House District 57	WY House District 57
+CandidateContest	WY House District 56	WY House District 56
+CandidateContest	WY House District 55	WY House District 55
+CandidateContest	WY House District 54	WY House District 54
+CandidateContest	WY House District 53	WY House District 53
+CandidateContest	WY House District 52	WY House District 52
+CandidateContest	WY House District 51	WY House District 51
+CandidateContest	WY House District 50	WY House District 50
+CandidateContest	WY House District 5	WY House District 5
+CandidateContest	WY House District 49	WY House District 49
+CandidateContest	WY House District 48	WY House District 48
+CandidateContest	WY House District 47	WY House District 47
+CandidateContest	WY House District 46	WY House District 46
+CandidateContest	WY House District 45	WY House District 45
+CandidateContest	WY House District 44	WY House District 44
+CandidateContest	WY House District 43	WY House District 43
+CandidateContest	WY House District 42	WY House District 42
+CandidateContest	WY House District 41	WY House District 41
+CandidateContest	WY House District 40	WY House District 40
+CandidateContest	WY House District 4	WY House District 4
+CandidateContest	WY House District 39	WY House District 39
+CandidateContest	WY House District 38	WY House District 38
+CandidateContest	WY House District 37	WY House District 37
+CandidateContest	WY House District 36	WY House District 36
+CandidateContest	WY House District 35	WY House District 35
+CandidateContest	WY House District 34	WY House District 34
+CandidateContest	WY House District 33	WY House District 33
+CandidateContest	WY House District 32	WY House District 32
+CandidateContest	WY House District 31	WY House District 31
+CandidateContest	WY House District 30	WY House District 30
+CandidateContest	WY House District 3	WY House District 3
+CandidateContest	WY House District 29	WY House District 29
+CandidateContest	WY House District 28	WY House District 28
+CandidateContest	WY House District 27	WY House District 27
+CandidateContest	WY House District 26	WY House District 26
+CandidateContest	WY House District 25	WY House District 25
+CandidateContest	WY House District 24	WY House District 24
+CandidateContest	WY House District 23	WY House District 23
+CandidateContest	WY House District 22	WY House District 22
+CandidateContest	WY House District 21	WY House District 21
+CandidateContest	WY House District 20	WY House District 20
+CandidateContest	WY House District 2	WY House District 2
+CandidateContest	WY House District 19	WY House District 19
+CandidateContest	WY House District 18	WY House District 18
+CandidateContest	WY House District 17	WY House District 17
+CandidateContest	WY House District 16	WY House District 16
+CandidateContest	WY House District 15	WY House District 15
+CandidateContest	WY House District 14	WY House District 14
+CandidateContest	WY House District 13	WY House District 13
+CandidateContest	WY House District 12	WY House District 12
+CandidateContest	WY House District 11	WY House District 11
+CandidateContest	WY House District 10	WY House District 10
+CandidateContest	WY House District 1	WY House District 1
+CandidateContest	US Senate WY	US Senate WY
+CandidateContest	US President (WY)	US President (WY)
+CandidateContest	US House WY District 1	US House WY District 1
+ReportingUnit	Wyoming;Albany County	Wyoming;Albany County
+ReportingUnit	Wyoming;Big Horn County	Wyoming;Big Horn County
+ReportingUnit	Wyoming;Campbell County	Wyoming;Campbell County
+ReportingUnit	Wyoming;Carbon County	Wyoming;Carbon County
+ReportingUnit	Wyoming;Converse County	Wyoming;Converse County
+ReportingUnit	Wyoming;Crook County	Wyoming;Crook County
+ReportingUnit	Wyoming;Fremont County	Wyoming;Fremont County
+ReportingUnit	Wyoming;Goshen County	Wyoming;Goshen County
+ReportingUnit	Wyoming;Hot Springs County	Wyoming;Hot Springs County
+ReportingUnit	Wyoming;Johnson County	Wyoming;Johnson County
+ReportingUnit	Wyoming;Laramie County	Wyoming;Laramie County
+ReportingUnit	Wyoming;Lincoln County	Wyoming;Lincoln County
+ReportingUnit	Wyoming;Natrona County	Wyoming;Natrona County
+ReportingUnit	Wyoming;Niobrara County	Wyoming;Niobrara County
+ReportingUnit	Wyoming;Park County	Wyoming;Park County
+ReportingUnit	Wyoming;Platte County	Wyoming;Platte County
+ReportingUnit	Wyoming;Sheridan County	Wyoming;Sheridan County
+ReportingUnit	Wyoming;Sublette County	Wyoming;Sublette County
+ReportingUnit	Wyoming;Sweetwater County	Wyoming;Sweetwater County
+ReportingUnit	Wyoming;Teton County	Wyoming;Teton County
+ReportingUnit	Wyoming;Uinta County	Wyoming;Uinta County
+ReportingUnit	Wyoming;Washakie County	Wyoming;Washakie County
+ReportingUnit	Wyoming;Weston County	Wyoming;Weston County
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Brock Pierce	Brock Pierce
+Party	none or unknown	none or unknown
+Party	Republican Party	Republican Party
+Party	Libertarian Party	Libertarian Party
+Party	Independent	Independent
+Party	Democratic Party	Democratic Party
+Party	Constitution Party	Constitution Party
+CountItemType	total	total
+

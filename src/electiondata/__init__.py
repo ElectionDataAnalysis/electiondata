@@ -476,7 +476,8 @@ class DataLoader:
         Returns a post-reporting error dictionary, and a dictionary of
         successfully-loaded files (by election-jurisdiction pair).
         (Note: errors initializing loading process (e.g., results file not found) do *not* generate
-        <success> = False, though those errors are reported in <err>"""
+        <success> = False, though those errors are reported in <err>
+        If <archive> is true, archive the files"""
         # initialize
         err = None
         success = dict()
@@ -2962,6 +2963,7 @@ def load_or_reload_all(
     rollup: bool = False,
     dbname: Optional[str] = None,
     param_file: Optional[str] = None,
+    move_files: bool = True,
 ) -> Optional[dict]:
     err = None
     dataloader = DataLoader(dbname=dbname, param_file=param_file)
@@ -2994,6 +2996,7 @@ def load_or_reload_all(
                     rollup=rollup,
                     dbname=dbname,
                     param_file=param_file,
+                    move_files=move_files,
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
@@ -3034,6 +3037,7 @@ def reload_juris_election(
     rollup: bool = False,
     dbname: Optional[str] = None,
     param_file: Optional[str] = None,
+    move_files: bool = True,
 ) -> Optional[dict]:
     """Loads and archives each results file in each direct subfolder of the results_dir
     named in ./run_time.ini -- provided there the results file is specified in a *.ini file in the
@@ -3114,6 +3118,7 @@ def reload_juris_election(
                 report_dir=report_dir,
                 rollup=rollup,
                 election_jurisdiction_list=[(election_name, juris_name)],
+                move_files=move_files
             )
             if success:
                 # run tests on live db

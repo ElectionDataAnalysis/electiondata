@@ -1,3 +1,4 @@
+
 import electiondata as e
 
 # Instructions:
@@ -22,7 +23,7 @@ total_shd_votes = 6470
 ssd = 1  # state senate district
 total_ssd_votes = 18996
 single_vote_type = "not-uocava"  # pick any one from your file ***NOT AVAILABLE***
-pres_votes_vote_type = 0  # actually 828305 - 5771, but showing as 'other' right now
+pres_votes_vote_type = 828305 - 5771  # actually 828305 - 5771, but showing as 'other' right now
 single_county = "Maine;Androscoggin County"  # pick any one from your file
 pres_votes_county = 58707  # total votes for pres of that county
 

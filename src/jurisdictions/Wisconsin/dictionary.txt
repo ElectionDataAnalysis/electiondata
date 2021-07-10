@@ -216,7 +216,6 @@ Candidate	Gwen S. Moore	Gwen S. Moore
 Candidate	Halle E. Hatch	Halle E. Hatch
 Candidate	Heather Driscoll	Heather Driscoll
 Candidate	Helmut Fritz	Helmut Fritz
-Candidate	Hillary Clinton	HILLARY CLINTON
 Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Howard Marklein	Howard Marklein
 Candidate	Howie Hawkins	Howie Hawkins

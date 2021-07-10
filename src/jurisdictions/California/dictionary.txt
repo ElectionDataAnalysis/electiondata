@@ -346,7 +346,6 @@ Candidate	Helen L. Horvath	Helen L. Horvath
 Candidate	Henry Alan Ota	Henry Alan Ota
 Candidate	Henry Gomez Nickel	Henry Gomez Nickel
 Candidate	Henry Stern	Henry Stern
-Candidate	Hillary Clinton	HILLARY CLINTON
 Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Holly J. Mitchell	Holly J. Mitchell
 Candidate	Honor 'Mimi' Robson	Honor 'Mimi' Robson

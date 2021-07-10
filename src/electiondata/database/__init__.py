@@ -199,7 +199,7 @@ def append_to_composing_reporting_unit_join(
     return err
 
 
-def test_connection(
+def test_connection_and_tables(
     db_param_file: str = "run_time.ini", dbname: str = None
 ) -> (bool, Optional[dict]):
     """Check for DB and relevant tables; if they don't exist, return
@@ -227,26 +227,26 @@ def test_connection(
         err = ui.add_new_error(
             err,
             "system",
-            "database.test_connection",
+            "database.test_connection_and_tables",
             f"Error connecting to database: {e}",
         )
         return False, err
 
     # Look for tables
     try:
-        engine, new_err = sql_alchemy_connect(db_param_file)
+        engine, new_err = sql_alchemy_connect(param_file=db_param_file, dbname=dbname)
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             engine.dispose()
             return False, err
-        elems, ballot_measure_enums, joins, o = get_cdf_db_table_names(engine)
+        elems, joins, o = get_cdf_db_table_names(engine)
         # Essentially looks for
         # a "complete" database.
-        if not elems or not ballot_measure_enums or not joins:
+        if not elems or not joins:
             err = ui.add_new_error(
                 err,
                 "system",
-                "database.test_connection",
+                "database.test_connection_and_tables",
                 "Required tables not found in database",
             )
             engine.dispose()
@@ -257,7 +257,7 @@ def test_connection(
         err = ui.add_new_error(
             err,
             "system",
-            "database.test_connection",
+            "database.test_connection_and_tables",
             f"Unexpected exception while connecting to database: {e}",
         )
         return False, err
@@ -353,7 +353,7 @@ def create_db_if_not_ok(
     dbname: Optional[str] = None, db_param_file: str = "run_time.ini"
 ) -> Optional[dict]:
     # create db if it does not already exist and have right tables
-    ok, err = test_connection(dbname=dbname, db_param_file=db_param_file)
+    ok, err = test_connection_and_tables(dbname=dbname,db_param_file=db_param_file)
     if not ok:
         create_or_reset_db(dbname=dbname, db_param_file=db_param_file)
     return err
@@ -364,7 +364,6 @@ def get_cdf_db_table_names(eng: sqlalchemy.engine):
     db_columns = pd.read_sql_table("columns", eng, schema="information_schema")
     public = db_columns[db_columns.table_schema == "public"]
     cdf_elements = set()
-    cdf_enumerations = set()  # TODO when BallotMeasureSelection table is removed, this can go too
     cdf_joins = set()
     others = set()
     for t in public.table_name.unique():
@@ -374,14 +373,9 @@ def get_cdf_db_table_names(eng: sqlalchemy.engine):
         elif t[-4:] == "Join":
             cdf_joins.add(t)
         else:
-            # main_routines columns
-            cols = public[public.table_name == t].column_name.unique()
-            if set(cols) == {"Id", "Selection"}:
-                cdf_enumerations.add(t)
-            else:
-                cdf_elements.add(t)
+            cdf_elements.add(t)
     # TODO order cdf_elements and cdf_joins by references to one another
-    return cdf_elements, cdf_enumerations, cdf_joins, others
+    return cdf_elements, cdf_joins, others
 
 
 def name_from_id_cursor(
@@ -988,14 +982,10 @@ def get_relevant_contests(
             "ElectionDistrict",
             "Contest",
             "contest_district_type",
-            "contest_district_othertype",
         ]
     ].drop_duplicates()
-    mask = working.contest_district_type == "other"
-    working.loc[mask, "type"] = working.loc[mask, "contest_district_othertype"]
-    working.loc[~mask, "type"] = working.loc[~mask, "contest_district_type"]
-    result_df = working.drop("contest_district_othertype", axis=1).rename(
-        columns={"ElectionDistrict": "parent", "Contest": "name"}
+    result_df = working.rename(
+        columns={"ElectionDistrict": "parent", "Contest": "name", "contest_district_type": "type"}
     )
 
     # sort by contest name
@@ -1089,12 +1079,11 @@ def get_jurisdiction_hierarchy(
             ],
         )
         result = cursor.fetchall()
-        (subdivision_type_id, other_subdiv_type) = (result[0][0], result[0][1])
+        subdivision_type = result[0][0]
     except:
-        subdivision_type_id = None
-        other_subdiv_type = None
+        subdivision_type = None
     cursor.close()
-    return subdivision_type_id, other_subdiv_type
+    return subdivision_type
 
 
 def unsummed_vote_counts_with_rollup_subdivision_id(
@@ -1139,7 +1128,7 @@ def unsummed_vote_counts_with_rollup_subdivision_id(
                      JOIN "Party" p on CS."Party_Id" = p."Id"
                 WHERE d."Election_Id" = %s  -- election_id
                     AND d."ReportingUnit_Id" = %s  -- jurisdiction_id
-                        AND IntermediateRU."ReportingUnitType" = %s -- other subdivision type
+                        AND IntermediateRU."ReportingUnitType" = %s --  subdivision type
                         AND C.contest_type = 'Candidate'
     """
     )
@@ -1445,7 +1434,6 @@ def read_vote_count(
     election. But this table is the largest one, so we don't want to use pandas methods
     to read into a DF and then filter. Data returns is determined by <fields> (column names from SQL query);
     the columns in the returned database can be renamed as <aliases>"""
-    # change field list to accommodate "other" type election districts if necessary
     q = sql.SQL(
         """
         SELECT  DISTINCT {fields}
@@ -1484,7 +1472,6 @@ def read_vote_count(
     cursor.execute(q, [election_id, jurisdiction_id])
     results = cursor.fetchall()
     results_df = pd.DataFrame(results, columns=aliases)
-    # accommodate "other" type election districts
     return results_df
 
 
@@ -1868,7 +1855,7 @@ def read_vote_count_nist(
                 JOIN "CandidateContest" cc ON con."Id" = cc."Id"
                 JOIN (SELECT "Id", "Name" as "OfficeName", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
                 -- this reporting unit info refers to the districts (state house, state senate, etc)
-                JOIN (SELECT "Id", "Name" AS "ElectionDistrict", "ReportingUnitType" as unit_type FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
+                JOIN (SELECT "Id", "Name" AS "ElectionDistrict", "ReportingUnitType" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
                  -- this reporting unit info refers to the geopolitical divisions (county, state, etc)
                 JOIN (SELECT "Id" as "GP_Id", "Name" AS "GPReportingUnitName", "ReportingUnitType" AS "GPType" FROM "ReportingUnit") gpru on vc."ReportingUnit_Id" = gpru."GP_Id"
                 JOIN (SELECT "Id", "Name" as "ElectionName",  "ElectionType" FROM "Election") e on vc."Election_Id" = e."Id"

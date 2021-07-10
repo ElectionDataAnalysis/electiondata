@@ -458,7 +458,7 @@ def get_non_standard(
     """Returns list of all non-standard types found"""
     non_standard = list(
         x
-        for x in df[type_col]
+        for x in df[type_col].unique()
         if x not in constants.nist_standard[type_col]
     )
     return non_standard
@@ -942,15 +942,14 @@ def missing_total_counts(
     df: pd.DataFrame,
     session: Session,
 ) -> pd.DataFrame:
-    """Assumes cols of df include Count and CCountItemType
+    """Assumes cols of df include Count and CountItemType
     Return df of "total" type records that are missing
     """
-
     # get all totals by all but count, count-item-type-related and id columns
     group_cols = [
         x
         for x in df.columns
-        if x not in ["Count", "CountItemTypee", "Id"]
+        if x not in ["Count", "CountItemType", "Id"]
     ]
     sums = df.groupby(group_cols)["Count"].sum()
 
