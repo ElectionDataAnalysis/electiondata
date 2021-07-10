@@ -997,7 +997,7 @@ class DataLoader:
     ) -> (Dict[str, List[str]], Optional[dict]):
         """load multi-election data from <multi_file>
         (as of 6/2021, this works just for the MIT presidential file)
-        If override_existing is True, unload any jurisdictions already there;
+        If overwrite_existing is True, unload any jurisdictions already there;
         otherwise do *not* overwrite"""
         err = None
         success: Dict[str, List[str]] = dict()
@@ -1189,7 +1189,7 @@ class DataLoader:
                             continue
                         else:
                             success[juris_true_name].append(election_true_name)
-                            print(f"Successful load: {election} {juris_true_name}")
+                            print(f"Successful load: {election} {juris_true_name}; however, see warnings when program finishes")
                 except Exception as exc:
                     err = ui.add_new_error(
                         err,

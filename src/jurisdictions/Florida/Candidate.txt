@@ -902,7 +902,7 @@ James 'Jamie' Clemons
 John F Crawford
 Danny Riddick
 Donald J. Trump
-Hillary R. Clinton
+Hillary Clinton
 Gary Johnson
 Darrell L. Castle
 Jill Stein
@@ -994,7 +994,7 @@ John W Sawyer III
 Noel Stephen
 Michael Hazellief
 Mickey Bandi
-"Steve Kahuna"" Cates"
+Steve 'Kahuna' Cates
 Sharon Wallace
 David E. Hazellief
 Michael Slayton

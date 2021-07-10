@@ -1149,9 +1149,10 @@ Candidate	Henry McCray	Henry McCray
 Candidate	Henry Quinn Johnson	Henry Quinn Johnson
 Candidate	Herb Sennett	Herb Sennett
 Candidate	Herman W. Moore	Herman W. Moore
-Candidate	Hillary R. Clinton	Clinton / Kaine
-Candidate	Hillary R. Clinton	Hillary R. Clinton
-Candidate	Hillary R. Clinton	Hillary Rodham Clinton
+Candidate	Hillary Clinton	Clinton / Kaine
+Candidate	Hillary Clinton	Hillary R. Clinton
+Candidate	Hillary Clinton	Hillary Rodham Clinton
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Holly Raschein	Holly Raschein
 Candidate	Hope Brisette	Hope Brisette
 Candidate	Horng Andrew Jeng	Horng Andrew Jeng

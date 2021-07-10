@@ -655,8 +655,8 @@ Candidate	Clifford, Cathie	'Clifford, Cathie'
 Candidate	Clifford, Cathie	Clifford, Cathie
 Candidate	Clifton, David W.	'Clifton, David W.'
 Candidate	Clifton, David W.	Clifton, David W.
-Candidate	Clinton, Hillary	'Clinton, Hillary'
-Candidate	Clinton, Hillary	Clinton, Hillary
+Candidate	Hillary Clinton	'Clinton, Hillary'
+Candidate	Hillary Clinton	Clinton, Hillary
 Candidate	Cloninger, Jennifer	'Cloninger, Jennifer'
 Candidate	Cloninger, Jennifer	Cloninger, Jennifer
 Candidate	Coates, Andrew	'Coates, Andrew'
@@ -7428,3 +7428,4 @@ ReportingUnit	Nevada;White Pine County;Precinct 8	White Pine;Precinct 8
 ReportingUnit	Nevada;White Pine County;Precinct 88	White Pine;Precinct 88
 ReportingUnit	Nevada;White Pine County;Precinct 9	White Pine;Precinct 9
 ReportingUnit	Nevada;White Pine County;Precinct 99	White Pine;Precinct 99
+Candidate	Hillary Clinton	Hillary Clinton
