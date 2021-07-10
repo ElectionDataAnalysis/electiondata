@@ -20,3 +20,4 @@ Party=<count_header_2>
 # Values to ignore (optional) #
 [ignore]
 Candidate=BLANK,TBC,blank,Blank
+ReportingUnit=;YOR Total,;WAS Total,;WAL Total,;Statewide Total,;STATE UOCAVA,;SOM Totals,;SAG Total,;PIS Total,;PEN Total,;OXF Total,;LIN Total,;KNO Total,;KEN Total,;HAN Total,;FRA Total,;CUM Total,;ARO Total,;AND Total,;,

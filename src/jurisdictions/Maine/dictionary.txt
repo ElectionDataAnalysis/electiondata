@@ -39,7 +39,7 @@ Candidate	Michael R. Bloomberg	Bloomberg, Michael R.
 Candidate	Michael R. Bloomberg	Michael R. Bloomberg
 Candidate	Mitt Romney	MITT ROMNEY
 Candidate	Other	OTHER
-Candidate	Others	Others
+Candidate	Unspecified Candidates	Others
 Candidate	Peter Buttigieg	Buttigieg, Peter
 Candidate	Peter Buttigieg	Peter Buttigieg
 Candidate	Pingree, Chellie M.	Pingree, Chellie M.
