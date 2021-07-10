@@ -17,7 +17,8 @@ import electiondata as e
 election = "2020 General"
 jurisdiction = "Kentucky"
 abbr = "KY"
-total_pres_votes = 1326646 + 772474 + 26234 + 6483 + 3599 + 716 + 408 + 98 + 43 + 29 + 20 + 9 + 7 + 1 +1  # total of all votes for US President
+#  + 716 + 408 + 98 + 43 + 29 + 20 + 9 + 7 + 1 +1 votes for Howie Hawkins, Brian Carroll and others not in xml file.
+total_pres_votes = 2134996  # total of all votes for US President
 cd = 3  # US House congressional district
 total_cd_votes = 367999  # total votes in that US House contest in the chosen cd
 shd = 1  # state house district
@@ -33,7 +34,8 @@ county_or_other = "county"
 single_county = (
     "Kentucky;Adair County"  # pick any one from your file, but use internal db name
 )
-pres_votes_county = 7276 + 1392 + 60 + 25 + 10 + 5  # total votes for US President in that county
+# 5 votes for Howie Hawkins per KY SoS website not in xml file, so not included here
+pres_votes_county = 7276 + 1392 + 60 + 25 + 10  # total votes for US President in that county
 
 
 def test_data_exists(dbname):

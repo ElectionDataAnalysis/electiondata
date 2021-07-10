@@ -6,7 +6,7 @@ Arizona	county
 Arkansas	county
 California	county
 Colorado	county
-Connecticut	town
+Connecticut	county
 Delaware	county
 District of Columbia	ward
 Florida	county
