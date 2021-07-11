@@ -1412,9 +1412,7 @@ def export_rollup_from_db(
     try:
         cursor.execute(q, string_vars)
         results = cursor.fetchall()
-        results_df = pd.DataFrame(results)
-        if not results_df.empty:
-            results_df.columns = columns
+        results_df = pd.DataFrame(results, columns=columns)
         err_str = None
     except Exception as exc:
         results_df = pd.DataFrame()
