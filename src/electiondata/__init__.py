@@ -2156,9 +2156,9 @@ class Analyzer:
         return agg_results
 
     def top_counts(
-        self, election: str, rollup_unit: str, sub_unit: str, by_vote_type: bool
+        self, election: str, jurisdiction: str, sub_unit: str, by_vote_type: bool
     ) -> Optional[str]:
-        rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
+        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit",jurisdiction)
         sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
         sub_rutype_othertext = ""
         if sub_unit_id is None:
@@ -2167,7 +2167,7 @@ class Analyzer:
         err = a.create_rollup(
             self.session,
             self.reports_and_plots_dir,
-            top_ru_id=rollup_unit_id,
+            jurisdiction_id=jurisdiction_id,
             sub_rutype_id=sub_unit_id,
             election_id=election_id,
             by_vote_type=by_vote_type,
@@ -2515,6 +2515,35 @@ class Analyzer:
             vc_df = vc_df[vc_df.CountItemType != "total"]
         vc_dict = vc_df.groupby(name_field).sum().to_dict()["Count"]
         return vc_dict
+
+    def pres_counts_by_vote_type_and_major_subdiv(self, jurisdiction: str) -> pd.DataFrame:
+        # TODO return dataframe with columns jurisdiction, subdivision, year, CountItemType,
+        #  total votes for pres in general election
+        columns = [
+            "contest_type",
+            "contest",
+            "contest_district_type",
+            "selection",
+            "reporting_unit",
+            "count_item_type",
+            "count",
+        ]
+        group_by_cols = ["contest","count_item_type","reporting_unit"]
+        df_pres = pd.DataFrame(columns=columns)
+        major_subdiv = db.get_major_subdiv_type(self.session, jurisdiction)
+        el = pd.read_sql_table("Election", self.session.bind)
+        pres_gen_elections = el[(el.Name.str[-8:] == " General") & (int(el.Name.str[:4]) % 4 == 0)]
+        for idx, r in pres_gen_elections.iterrows():
+            df = self.top_counts(r["Name"], jurisdiction, major_subdiv, by_vote_type=True)
+            # restrict to presidential results
+            df = df[df["contest"].str.contains("US President")]
+            # sum over major subdivision and count item type
+            df = df[group_by_cols + ["count"]].groupby(group_by_cols).sum().reset_index()
+
+            df_pres = pd.concat([df_pres, df], axis=1)
+        df_pres = m.add_constant_column(df_pres, "Jurisdiction", jurisdiction)
+
+        return df_pres
 
 
 def aggregate_results(
