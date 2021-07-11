@@ -994,16 +994,25 @@ def get_relevant_contests(
 
 
 def get_major_subdiv_type(
-    session: Session, jurisdiction: str, file_path: Optional[str] = None
+    session: Session, jurisdiction: str, file_path: Optional[str] = None, repo_content_root: Optional[str] = None
 ) -> Optional[str]:
     """Returns the type of the major subdivision, if found. Tries first from <file_path> (if given);
     if that fails, or no file_path given, tries from database. If nothing found, returns None"""
-    # if file is given, try to get the major subdivision type from the file
+    # if file is given,
     if file_path:
+        # try to get the major subdivision type from the file
         subdiv_from_file = get_major_subdiv_from_file(file_path, jurisdiction)
         if subdiv_from_file:
             return subdiv_from_file
-    # if not found in file, calculate major subdivision type from the db
+    elif repo_content_root:
+        # try from file in repo
+        subdiv_from_repo = get_major_subdiv_from_file(
+            os.path.join(repo_content_root, "jurisdictions","000_major_subjurisdiction_types.txt"),
+            jurisdiction,
+        )
+        if subdiv_from_repo:
+            return subdiv_from_repo
+    # if not found in file or repo, calculate major subdivision type from the db
     jurisdiction_id = name_to_id(session, "ReportingUnit", jurisdiction)
     subdiv_type = get_jurisdiction_hierarchy(session, jurisdiction_id)
     return subdiv_type

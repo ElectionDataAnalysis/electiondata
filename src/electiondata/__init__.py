@@ -2582,7 +2582,9 @@ class Analyzer:
             "reporting_unit", "count_item_type",
         ]
         p_year = re.compile(r"\d{4}")
-        major_subdiv = db.get_major_subdiv_type(self.session, jurisdiction)
+        major_subdiv = db.get_major_subdiv_type(
+            self.session, jurisdiction, repo_content_root=self.repository_content_root
+        )
         elections = list(pd.read_sql_table("Election", self.session.bind)["Name"].unique())
         df_pres = pd.DataFrame()
         pres_gen_elections = [
@@ -2593,12 +2595,26 @@ class Analyzer:
                 jurisdiction,
                 contest=f"US President ({constants.abbr[jurisdiction]})",
                 sub_unit_type=major_subdiv,
-            )[group_cols + ["count"]].groupby(group_cols).sum().reset_index()
-            df = m.add_constant_column(df, "Election", el)
-            df_pres = pd.concat([df_pres, df])
-        df_pres = m.add_constant_column(df_pres, "Jurisdiction", jurisdiction)
-
+                exclude_redundant_total=False,
+            )
+            missing = [c for c in (group_cols + ["count"]) if c not in df.columns]
+            if not missing:
+                df = df[group_cols + ["count"]].groupby(group_cols).sum().reset_index()
+                df = m.add_constant_column(df, "Election", el)
+                df_pres = pd.concat([df_pres, df])
+        df_pres = m.add_constant_column(
+            df_pres, "Jurisdiction", jurisdiction
+        ).rename(columns={"count":"votes_for_president"})
         return df_pres
+
+    def pres_counts_by_vote_type_and_major_subdiv_all(self) -> pd.DataFrame:
+        all_df = pd.DataFrame()
+        for jurisdiction in constants.abbr.keys():
+            df = self.pres_counts_by_vote_type_and_major_subdiv(jurisdiction)
+            all_df = pd.concat([all_df, df])
+
+        return all_df
+
 
 
 def aggregate_results(
