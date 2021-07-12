@@ -2611,6 +2611,7 @@ class Analyzer:
         all_df = pd.DataFrame()
         for jurisdiction in constants.abbr.keys():
             df = self.pres_counts_by_vote_type_and_major_subdiv(jurisdiction)
+            df = m.add_constant_column(df, "abbr", constants.abbr[jurisdiction])
             all_df = pd.concat([all_df, df])
 
         return all_df
