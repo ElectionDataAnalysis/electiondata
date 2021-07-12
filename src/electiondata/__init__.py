@@ -2156,9 +2156,9 @@ class Analyzer:
         return agg_results
 
     def top_counts(
-        self, election: str, rollup_unit: str, sub_unit: str, by_vote_type: bool
+        self, election: str, jurisdiction: str, sub_unit: str, by_vote_type: bool
     ) -> Optional[str]:
-        rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
+        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit",jurisdiction)
         sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
         sub_rutype_othertext = ""
         if sub_unit_id is None:
@@ -2167,7 +2167,7 @@ class Analyzer:
         err = a.create_rollup(
             self.session,
             self.reports_and_plots_dir,
-            top_ru_id=rollup_unit_id,
+            jurisdiction_id=jurisdiction_id,
             sub_rutype_id=sub_unit_id,
             election_id=election_id,
             by_vote_type=by_vote_type,
@@ -2516,6 +2516,107 @@ class Analyzer:
         vc_dict = vc_df.groupby(name_field).sum().to_dict()["Count"]
         return vc_dict
 
+    def aggregate(
+            self,
+            election: str,
+            jurisdiction: str,
+            vote_type: Optional[str] = None,
+            sub_unit: Optional[str] = None,
+            contest: Optional[str] = None,
+            contest_type: str = "Candidate",
+            sub_unit_type: str = constants.default_subdivision_type,
+            exclude_redundant_total: bool = True,
+    ) -> pd.DataFrame:
+        """if a vote type is given, restricts to that vote type; otherwise returns all vote types;
+        Similarly for sub_unit and contest"""
+        # using the analyzer gives us access to DB session
+        empty_df_with_good_cols = pd.DataFrame(columns=["contest","count"])
+        election_id = db.name_to_id(self.session,"Election",election)
+        jurisdiction_id = db.name_to_id(self.session,"ReportingUnit",jurisdiction)
+        if not election_id:
+            return empty_df_with_good_cols
+        connection = self.session.bind.raw_connection()
+        cursor = connection.cursor()
+
+        datafile_list,err_str1 = db.data_file_list_cursor(
+            cursor,
+            election_id,
+            reporting_unit_id=jurisdiction_id,
+            by="Id",
+        )
+        if err_str1:
+            print(err_str1)
+            return empty_df_with_good_cols
+        if len(datafile_list) == 0:
+            print(
+                f"No datafiles found for election {election} and jurisdiction {jurisdiction}"
+                f"(election_id={election_id} and jurisdiction_id={jurisdiction_id})"
+            )
+            return empty_df_with_good_cols
+
+        df, err_str = db.export_rollup_from_db(
+            # cursor=cursor,
+            session=self.session,
+            top_ru=jurisdiction,
+            election=election,
+            sub_unit_type=sub_unit_type,
+            contest_type=contest_type,
+            datafile_list=datafile_list,
+            by="Id",
+            exclude_redundant_total=exclude_redundant_total,
+            by_vote_type=True,
+            contest=contest,
+        )
+        if err_str or df.empty:
+            return empty_df_with_good_cols
+        if vote_type:
+            df = df[df.count_item_type == vote_type]
+        if sub_unit:
+            df = df[df.reporting_unit == sub_unit]
+        return df
+
+    def pres_counts_by_vote_type_and_major_subdiv(self, jurisdiction: str) -> pd.DataFrame:
+        # TODO return dataframe with columns jurisdiction, subdivision, year, CountItemType,
+        #  total votes for pres in general election
+        group_cols = [
+            "reporting_unit", "count_item_type",
+        ]
+        p_year = re.compile(r"\d{4}")
+        major_subdiv = db.get_major_subdiv_type(
+            self.session, jurisdiction, repo_content_root=self.repository_content_root
+        )
+        elections = list(pd.read_sql_table("Election", self.session.bind)["Name"].unique())
+        df_pres = pd.DataFrame()
+        pres_gen_elections = [
+            el for el in elections if el.endswith(" General") and p_year.match(el[:4]) and int(el[:4]) % 4 == 0]
+        for el in pres_gen_elections:
+            df = self.aggregate(
+                el,
+                jurisdiction,
+                contest=f"US President ({constants.abbr[jurisdiction]})",
+                sub_unit_type=major_subdiv,
+                exclude_redundant_total=False,
+            )
+            missing = [c for c in (group_cols + ["count"]) if c not in df.columns]
+            if not missing:
+                df = df[group_cols + ["count"]].groupby(group_cols).sum().reset_index()
+                df = m.add_constant_column(df, "Election", el)
+                df_pres = pd.concat([df_pres, df])
+        df_pres = m.add_constant_column(
+            df_pres, "Jurisdiction", jurisdiction
+        ).rename(columns={"count":"votes_for_president"})
+        return df_pres
+
+    def pres_counts_by_vote_type_and_major_subdiv_all(self) -> pd.DataFrame:
+        all_df = pd.DataFrame()
+        for jurisdiction in constants.abbr.keys():
+            df = self.pres_counts_by_vote_type_and_major_subdiv(jurisdiction)
+            df = m.add_constant_column(df, "abbr", constants.abbr[jurisdiction])
+            all_df = pd.concat([all_df, df])
+
+        return all_df
+
+
 
 def aggregate_results(
     election: str,
@@ -2535,49 +2636,17 @@ def aggregate_results(
     an = Analyzer(dbname=dbname)
     if not an:
         return empty_df_with_good_cols
-    election_id = db.name_to_id(an.session, "Election", election)
-    jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
-    if not election_id:
-        return empty_df_with_good_cols
-    connection = an.session.bind.raw_connection()
-    cursor = connection.cursor()
-
-    datafile_list, err_str1 = db.data_file_list_cursor(
-        cursor,
-        election_id,
-        reporting_unit_id=jurisdiction_id,
-        by="Id",
-    )
-    if err_str1:
-        print(err_str1)
-        return empty_df_with_good_cols
-    if len(datafile_list) == 0:
-        print(
-            f"No datafiles found for election {election} and jurisdiction {jurisdiction}"
-            f"(election_id={election_id} and jurisdiction_id={jurisdiction_id})"
+    else:
+        return an.aggregate(
+            election,
+            jurisdiction,
+            vote_type=vote_type,
+            sub_unit=sub_unit,
+            contest=contest,
+            contest_type=contest_type,
+            sub_unit_type=sub_unit_type,
+            exclude_redundant_total=exclude_redundant_total,
         )
-        return empty_df_with_good_cols
-
-    df, err_str = db.export_rollup_from_db(
-        # cursor=cursor,
-        session=an.session,
-        top_ru=jurisdiction,
-        election=election,
-        sub_unit_type=sub_unit_type,
-        contest_type=contest_type,
-        datafile_list=datafile_list,
-        by="Id",
-        exclude_redundant_total=exclude_redundant_total,
-        by_vote_type=True,
-        contest=contest,
-    )
-    if err_str or df.empty:
-        return empty_df_with_good_cols
-    if vote_type:
-        df = df[df.count_item_type == vote_type]
-    if sub_unit:
-        df = df[df.reporting_unit == sub_unit]
-    return df
 
 
 def data_exists(

@@ -42,7 +42,7 @@ def child_rus_by_id(session, parents, ru_type: str =None):
 def create_rollup(
     session,
     target_dir: str,
-    top_ru_id: int,
+    jurisdiction_id: int,
     sub_rutype_id: int,
     election_id: int,
     datafile_list: list = None,
@@ -82,7 +82,7 @@ def create_rollup(
         exclude_redundant_total = False
 
     # get names from ids (and sub_rutype othertext if appropriate)
-    top_ru = db.name_from_id_cursor(cursor, "ReportingUnit", top_ru_id)
+    top_ru = db.name_from_id_cursor(cursor, "ReportingUnit",jurisdiction_id)
     election = db.name_from_id_cursor(cursor, "Election", election_id)
     sub_rutype = db.name_from_id_cursor(cursor, "ReportingUnitType", sub_rutype_id)
     if sub_rutype == "other" and sub_rutype_othertext != "":
