@@ -2305,7 +2305,7 @@ class Analyzer:
                 state,
                 election,
                 major_sub_ru_type_name,
-                "Candidate",  # TODO extend to ballotmeasure contests too
+                "Candidate",
                 data_file_list,
                 exclude_redundant_total=True,
                 by_vote_type=True,
