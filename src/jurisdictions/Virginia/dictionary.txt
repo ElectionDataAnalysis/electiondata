@@ -5543,3 +5543,17 @@ ReportingUnit	Virginia;Portsmouth City;011 - JOSEPH E. PARKER RECREATION CENTER	
 ReportingUnit	Virginia;Newport News city;204 - MARINERS' MUSEUM	NEWPORT NEWS CITY;204 - MARINERS' MUSEUM
 ReportingUnit	Virginia;Goochland County;502 - BLAIR	GOOCHLAND COUNTY;502 - BLAIR
 ReportingUnit	Virginia;Galax city;005 - WEST	GALAX CITY;005 - WEST
+Candidate	Wren Montgomery Williams	Wren Montgomery Williams
+Candidate	Timothy Vitow Anderson	Timothy Vitow Anderson
+Candidate	Timothy David Cox	Timothy David Cox
+Candidate	Thomas Charles Gardner	Thomas Charles Gardner
+Candidate	Ronnie Ray Campbell	Ronnie Ray Campbell
+Candidate	Philip Mark Kazmierczak Jr.	PHILIP MARK KAZMIERCZAK Jr.
+Candidate	Michael Robert Dickinson	Michael Robert Dickinson
+Candidate	Mark Hudson Reed	Mark Hudson Reed
+Candidate	Mark Lawrence Earley Jr.	MARK LAWRENCE EARLEY Jr.
+Candidate	Kathy Jayne Byron	Kathy Jayne Byron
+Candidate	Isaiah Joseph Knight	Isaiah Joseph Knight
+Candidate	Christopher Thomas Holmes	Christopher Thomas Holmes
+Candidate	Christopher Patrick Stolle	Christopher Patrick Stolle
+Candidate	Charles Douglas Poindexter	Charles Douglas Poindexter

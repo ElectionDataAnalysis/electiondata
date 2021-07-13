@@ -15,15 +15,16 @@ from electiondata import constants
 #   Move this testing file to the correct jurisdiction folder in `elections/tests`
 
 # # # constants - CHANGE THESE!! - use internal db names
-election = "2021 Democratic Primary"
+election = "2021 Republican Primary"
 jurisdiction = "Virginia"
-top_contest = "VA Governor"
+"""top_contest = "VA Governor"
 total_top_contest = 307367 + 58213 + 98052 + 13694 + 17606  # total of all votes for US President
-district_contest_1 = "VA House District 66"
-total_district_contest_1 = 2916 + 1842
-single_vote_type = "total"  # pick any one with corresponding data in your file, but use internal db name
-top_contest_vote_type =  307367 + 58213 + 98052 + 13694 + 17606 # total votes for US President of that vote type
-county_or_other = "county"  # Change this only if results are subdivided by something other than counties
+"""
+district_contest_1 = "VA House District 22"
+total_district_contest_1 = 739 + 3200
+single_vote_type = "provisional"  # pick any one with corresponding data in your file, but use internal db name
+top_contest_vote_type = 912 # total votes for top contest of that vote type
+county_or_other = "locality"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
 single_county = "Virginia;Fairfax County"  # pick any one from your file, but use internal db name
 top_contest_votes_county =  53783 + 8792 + 16220 + 2712 + 2168 # total votes for US President in that county
@@ -33,7 +34,7 @@ abbr = constants.abbr[jurisdiction]
 def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
 
-
+"""
 def test_top_contest(dbname):
     assert (
         e.contest_total(
@@ -45,7 +46,7 @@ def test_top_contest(dbname):
         )
         == total_top_contest
     )
-
+"""
 
 def test_district_1(dbname):
     assert (
@@ -74,13 +75,13 @@ def test_all_candidates_known(dbname):
         == []
     )
 
-
+"""
 def test_count_type_subtotal(dbname):
     assert (
             e.contest_total(
             election,
             jurisdiction,
-            f"US President ({abbr})",
+            top_contest,
             dbname=dbname,
             sub_unit_type=county_or_other,
             vote_type=single_vote_type,
@@ -94,10 +95,11 @@ def test_county_subtotal(dbname):
             e.contest_total(
             election,
             jurisdiction,
-            f"US President ({abbr})",
+            top_contest,
             dbname=dbname,
             county=single_county,
             sub_unit_type=county_or_other,
         )
             == top_contest_votes_county
     )
+"""

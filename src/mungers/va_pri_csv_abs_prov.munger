@@ -8,6 +8,8 @@ flat_text_delimiter=,
 noncount_header_row=0
 count_field_name_row=0
 
+constant_over_file=Party
+
 [munge formulas]
 ReportingUnit=<LocalityName>
 Party=<Party>
