@@ -2274,11 +2274,6 @@ class Analyzer:
             "vote_type_pair",
             "abs_diff_in_diff",
         ]
-        # TODO tech debt works for candidate contests only
-
-        # TODO: tech debt code treats 'other' like county or any county-like ru-type,
-        #  which might cause trouble if there is a non-standard major subdivision type
-
         election_id = db.name_to_id(self.session, "Election", election)
 
         # loop through state-like jurisdictions with multiple vote types
