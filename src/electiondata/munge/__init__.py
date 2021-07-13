@@ -239,11 +239,13 @@ def add_column_from_formula(
     return w, err
 
 
-def compress_whitespace(s: str) -> str:
+def compress_whitespace(s: Optional[str]) -> str:
     """Return a string where every instance of consecutive whitespaces internal to <s> has been replace
     by the first of those consecutive whitespace characters,
     leading and trailing whitespace is eliminated
     and any carriage returns are changed to spaces"""
+    if not s:
+        return ""
     new_s = re.sub(r"(\s)\s+", "\\1", s)
     new_s = new_s.strip()
     new_s = new_s.replace("\n", " ")
@@ -254,8 +256,8 @@ def replace_raw_with_internal_ids(
     df: pd.DataFrame,
     path_to_jurisdiction_dir: str,
     juris_true_name: str,  # for error reporting
-    munger_name: str,  # for error reporting
     file_name: str,  # for error reporting
+    munger_name: str,  # for error reporting
     table_df: pd.DataFrame,
     element: str,
     internal_name_column: str,
@@ -813,6 +815,8 @@ def raw_to_id_simple(
 
     err = None
     working = df.copy()
+    element_df = pd.DataFrame()
+    name_field = ""
     for element in element_list:
         try:
             # capture id from db in new column and erase any now-redundant cols
@@ -1074,8 +1078,8 @@ def munge_raw_to_ids(
         path_to_jurisdiction_dir,
         other_elements,
         session,
-        munger_name,
         file_name,
+        munger_name,
         juris_true_name,
         file_type,
     )

@@ -2246,7 +2246,7 @@ class Analyzer:
         )
         return xml_string
 
-    def diff_in_diff(
+    def diff_in_diff_dem_vs_rep(
         self,
         election: str,
     ) -> (pd.DataFrame, list):
@@ -2274,11 +2274,6 @@ class Analyzer:
             "vote_type_pair",
             "abs_diff_in_diff",
         ]
-        # TODO tech debt works for candidate contests only
-
-        # TODO: tech debt code treats 'other' like county or any county-like ru-type,
-        #  which might cause trouble if there is a non-standard major subdivision type
-
         election_id = db.name_to_id(self.session, "Election", election)
 
         # loop through state-like jurisdictions with multiple vote types
@@ -2310,7 +2305,7 @@ class Analyzer:
                 state,
                 election,
                 major_sub_ru_type_name,
-                "Candidate",  # TODO extend to ballotmeasure contests too
+                "Candidate",
                 data_file_list,
                 exclude_redundant_total=True,
                 by_vote_type=True,

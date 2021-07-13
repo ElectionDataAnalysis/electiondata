@@ -446,13 +446,13 @@ def copy_directory_with_backup(
     <copy_path> exists, move it to a backup file whose name gets the suffix
     <backup_suffix>"""
     err = None
-    # TODO
     # if the original to be copied is actually a directory
     if os.path.isdir(original_path):
         if backup_suffix:
             # make backup of anything with existing name
             if os.path.isdir(copy_path):
                 shutil.move(copy_path, f"{copy_path}{backup_suffix}")
+                print(f"Moved {copy_path} to {copy_path}{backup_suffix}")
             elif os.path.isfile(copy_path):
                 old_stem = Path(copy_path).stem
                 backup_path = os.path.join(
@@ -493,6 +493,7 @@ def copy_with_err_handling(
             new = os.path.join(new_root, f)
             try:
                 shutil.copy(old, new)
+                print(f"Copied {old} to {new}")
             except Exception as she:
                 if report_error:
                     err = add_new_error(
