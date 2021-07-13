@@ -2246,7 +2246,7 @@ class Analyzer:
         )
         return xml_string
 
-    def diff_in_diff(
+    def diff_in_diff_dem_vs_rep(
         self,
         election: str,
     ) -> (pd.DataFrame, list):

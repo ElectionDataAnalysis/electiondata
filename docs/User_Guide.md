@@ -536,12 +536,12 @@ export_nist_v1_json("2020 General","Georgia")
 The output is a string, the contents of the json file.
 
 ### Difference-in-Difference calculations
-The system provides a way to calculate difference-in-difference statistics. For any particular election, `Analyzer.diff_in_diff` produces a dataframe of values for any county with results by vote type, with Democratic or Republican candidates, and any comparable pair of contests both on some ballots in the county. Contests are considered "comparable" if their districts are of the same geographical district type -- e.g., both statewide, or both state-house, etc. The method also returns a list of jurisdictions for which vote counts were zero or missing.
+The system provides a way to calculate difference-in-difference statistics. For any particular election, `Analyzer.diff_in_diff_dem_vs_rep` produces a dataframe of values for any county with results by vote type, with Democratic or Republican candidates, and any comparable pair of contests both on some ballots in the county. Contests are considered "comparable" if their districts are of the same geographical district type -- e.g., both statewide, or both state-house, etc. The method also returns a list of jurisdictions for which vote counts were zero or missing.
 ```
 dbname = "test_0314_1836"
 election = "2020 General"
 an = eda.Analyzer(dbname=dbname)
-diff_in_diff, missing = an.diff_in_diff(election)
+diff_in_diff_dem_vs_rep, missing = an.diff_in_diff_dem_vs_rep(election)
 ```
 
 Specifically, for a fixed county and party, for a fixed pair of vote types and for a fixed pair of contests, we calculate the difference-in-difference value to be
