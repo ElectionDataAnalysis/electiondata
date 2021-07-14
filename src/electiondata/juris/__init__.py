@@ -214,12 +214,15 @@ def ensure_juris_files(
                 df = pd.read_csv(cf_path, **constants.standard_juris_csv_reading_kwargs)
                 null_mask = df.T.isnull().any()
                 if null_mask.any():
+                    # drop null rows and report error
                     err = ui.add_new_error(
                         err,
                         "jurisdiction",
                         juris_name,
                         f"dictionary.txt has some null entries:\n{df[null_mask]}",
                     )
+                    df = df[~null_mask]
+
                 # check that cdf_element-raw_identifier_value pairs are unique
                 two_column_df = df[["cdf_element", "raw_identifier_value"]]
                 dupes_df, _ = ui.find_dupes(two_column_df)
@@ -230,7 +233,7 @@ def ensure_juris_files(
                         juris_name,
                         f"dictionary.txt has more than one entry for each of these:\n {dupes_df}",
                     )
-                # TODO check that there are no candidate dupes after regularization
+                # check that there are no candidate dupes after regularization
                 cands = two_column_df[two_column_df.cdf_element == "Candidate"].copy()
                 cands["regular"] = m.regularize_candidate_names(cands.raw_identifier_value)
                 dupe_reg = list()

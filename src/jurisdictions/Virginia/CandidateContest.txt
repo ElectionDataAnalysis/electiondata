@@ -157,6 +157,7 @@ VA Attorney General	1	VA Attorney General
 VA Lieutenant Governor	1	VA Lieutenant Governor	
 VA Treasurer	1	VA Treasurer	
 VA Secretary of State	1	VA Secretary of State	
+VA Commonwealth's Attorney	1	VA Commonwealth's Attorney
 VA House District 1 (Democratic Party)	1	VA House District 1	Democratic Party
 VA House District 2 (Democratic Party)	1	VA House District 2	Democratic Party
 VA House District 3 (Democratic Party)	1	VA House District 3	Democratic Party
@@ -1105,3 +1106,4 @@ VA Attorney General (Independent Party)	1	VA Attorney General	Independent Party
 VA Lieutenant Governor (Independent Party)	1	VA Lieutenant Governor	Independent Party
 VA Treasurer (Independent Party)	1	VA Treasurer	Independent Party
 VA Secretary of State (Independent Party)	1	VA Secretary of State	Independent Party
+

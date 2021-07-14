@@ -151,7 +151,7 @@ def run2(
 
             dl.change_dir("results_dir", "TestingData")
             success, failure, err = dl.load_all(
-                move_files=True,
+                move_files=False,
                 election_jurisdiction_list=election_jurisdiction_list,
                 rollup=rollup,
             )

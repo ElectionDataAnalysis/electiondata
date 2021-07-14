@@ -1,42 +1,42 @@
 Name	ReportingUnitType
-Virginia;Alexandria city	city
-Virginia;Bristol city	city
-Virginia;Buena Vista city	city
-Virginia;Charlottesville city	city
-Virginia;Chesapeake city	city
-Virginia;Colonial Heights city	city
-Virginia;Covington city	city
-Virginia;Danville city	city
-Virginia;Emporia city	city
-Virginia;Fairfax city	city
-Virginia;Falls Church city	city
-Virginia;Franklin city	city
-Virginia;Fredericksburg city	city
-Virginia;Galax city	city
-Virginia;Hampton city	city
-Virginia;Harrisonburg city	city
-Virginia;Hopewell city	city
-Virginia;Lexington city	city
-Virginia;Lynchburg city	city
-Virginia;Manassas Park city	city
-Virginia;Manassas city	city
-Virginia;Martinsville city	city
-Virginia;Newport News city	city
-Virginia;Norfolk city	city
-Virginia;Norton city	city
-Virginia;Petersburg city	city
-Virginia;Poquoson city	city
-Virginia;Portsmouth city	city
-Virginia;Radford city	city
-Virginia;Richmond city	city
-Virginia;Roanoke city	city
-Virginia;Salem city	city
-Virginia;Staunton city	city
-Virginia;Suffolk city	city
-Virginia;Virginia Beach city	city
-Virginia;Waynesboro city	city
-Virginia;Williamsburg city	city
-Virginia;Winchester city	city
+Virginia;Alexandria city	locality
+Virginia;Bristol city	locality
+Virginia;Buena Vista city	locality
+Virginia;Charlottesville city	locality
+Virginia;Chesapeake city	locality
+Virginia;Colonial Heights city	locality
+Virginia;Covington city	locality
+Virginia;Danville city	locality
+Virginia;Emporia city	locality
+Virginia;Fairfax city	locality
+Virginia;Falls Church city	locality
+Virginia;Franklin city	locality
+Virginia;Fredericksburg city	locality
+Virginia;Galax city	locality
+Virginia;Hampton city	locality
+Virginia;Harrisonburg city	locality
+Virginia;Hopewell city	locality
+Virginia;Lexington city	locality
+Virginia;Lynchburg city	locality
+Virginia;Manassas Park city	locality
+Virginia;Manassas city	locality
+Virginia;Martinsville city	locality
+Virginia;Newport News city	locality
+Virginia;Norfolk city	locality
+Virginia;Norton city	locality
+Virginia;Petersburg city	locality
+Virginia;Poquoson city	locality
+Virginia;Portsmouth city	locality
+Virginia;Radford city	locality
+Virginia;Richmond city	locality
+Virginia;Roanoke city	locality
+Virginia;Salem city	locality
+Virginia;Staunton city	locality
+Virginia;Suffolk city	locality
+Virginia;Virginia Beach city	locality
+Virginia;Waynesboro city	locality
+Virginia;Williamsburg city	locality
+Virginia;Winchester city	locality
 Virginia;US House VA District 1	congressional
 Virginia;US House VA District 10	congressional
 Virginia;US House VA District 11	congressional
@@ -48,141 +48,141 @@ Virginia;US House VA District 6	congressional
 Virginia;US House VA District 7	congressional
 Virginia;US House VA District 8	congressional
 Virginia;US House VA District 9	congressional
-Virginia;Accomack County	county
-Virginia;Albemarle County	county
-Virginia;Alexandria City	county
-Virginia;Alleghany County	county
-Virginia;Amelia County	county
-Virginia;Amherst County	county
-Virginia;Appomattox County	county
-Virginia;Arlington County	county
-Virginia;Augusta County	county
-Virginia;Bath County	county
-Virginia;Bedford County	county
-Virginia;Bland County	county
-Virginia;Botetourt County	county
-Virginia;Bristol City	county
-Virginia;Brunswick County	county
-Virginia;Buchanan County	county
-Virginia;Buckingham County	county
-Virginia;Buena Vista City	county
-Virginia;Campbell County	county
-Virginia;Caroline County	county
-Virginia;Carroll County	county
-Virginia;Charles City County	county
-Virginia;Charlotte County	county
-Virginia;Charlottesville City	county
-Virginia;Chesapeake City	county
-Virginia;Chesterfield County	county
-Virginia;Clarke County	county
-Virginia;Colonial Heights City	county
-Virginia;Covington City	county
-Virginia;Craig County	county
-Virginia;Culpeper County	county
-Virginia;Cumberland County	county
-Virginia;Danville City	county
-Virginia;Dickenson County	county
-Virginia;Dinwiddie County	county
-Virginia;Emporia City	county
-Virginia;Essex County	county
-Virginia;Fairfax City	county
-Virginia;Fairfax County	county
-Virginia;Falls Church City	county
-Virginia;Fauquier County	county
-Virginia;Floyd County	county
-Virginia;Fluvanna County	county
-Virginia;Franklin City	county
-Virginia;Franklin County	county
-Virginia;Frederick County	county
-Virginia;Fredericksburg City	county
-Virginia;Galax City	county
-Virginia;Giles County	county
-Virginia;Gloucester County	county
-Virginia;Goochland County	county
-Virginia;Grayson County	county
-Virginia;Greene County	county
-Virginia;Greensville County	county
-Virginia;Halifax County	county
-Virginia;Hampton City	county
-Virginia;Hanover County	county
-Virginia;Harrisonburg City	county
-Virginia;Henrico County	county
-Virginia;Henry County	county
-Virginia;Highland County	county
-Virginia;Hopewell City	county
-Virginia;Isle Of Wight County	county
-Virginia;Isle of Wight County	county
-Virginia;James City County	county
-Virginia;King & Queen County	county
-Virginia;King George County	county
-Virginia;King William County	county
-Virginia;King and Queen County	county
-Virginia;Lancaster County	county
-Virginia;Lee County	county
-Virginia;Lexington City	county
-Virginia;Loudoun County	county
-Virginia;Louisa County	county
-Virginia;Lunenburg County	county
-Virginia;Lynchburg City	county
-Virginia;Madison County	county
-Virginia;Manassas City	county
-Virginia;Manassas Park City	county
-Virginia;Martinsville City	county
-Virginia;Mathews County	county
-Virginia;Mecklenburg County	county
-Virginia;Middlesex County	county
-Virginia;Montgomery County	county
-Virginia;Nelson County	county
-Virginia;New Kent County	county
-Virginia;Newport News City	county
-Virginia;Norfolk City	county
-Virginia;Northampton County	county
-Virginia;Northumberland County	county
-Virginia;Norton City	county
-Virginia;Nottoway County	county
-Virginia;Orange County	county
-Virginia;Page County	county
-Virginia;Patrick County	county
-Virginia;Petersburg City	county
-Virginia;Pittsylvania County	county
-Virginia;Poquoson City	county
-Virginia;Portsmouth City	county
-Virginia;Powhatan County	county
-Virginia;Prince Edward County	county
-Virginia;Prince George County	county
-Virginia;Prince William County	county
-Virginia;Pulaski County	county
-Virginia;Radford City	county
-Virginia;Rappahannock County	county
-Virginia;Richmond City	county
-Virginia;Richmond County	county
-Virginia;Roanoke City	county
-Virginia;Roanoke County	county
-Virginia;Rockbridge County	county
-Virginia;Rockingham County	county
-Virginia;Russell County	county
-Virginia;Salem City	county
-Virginia;Scott County	county
-Virginia;Shenandoah County	county
-Virginia;Smyth County	county
-Virginia;Southampton County	county
-Virginia;Spotsylvania County	county
-Virginia;Stafford County	county
-Virginia;Staunton City	county
-Virginia;Suffolk City	county
-Virginia;Surry County	county
-Virginia;Sussex County	county
-Virginia;Tazewell County	county
-Virginia;Virginia Beach City	county
-Virginia;Warren County	county
-Virginia;Washington County	county
-Virginia;Waynesboro City	county
-Virginia;Westmoreland County	county
-Virginia;Williamsburg City	county
-Virginia;Winchester City	county
-Virginia;Wise County	county
-Virginia;Wythe County	county
-Virginia;York County	county
+Virginia;Accomack County	locality
+Virginia;Albemarle County	locality
+Virginia;Alexandria City	locality
+Virginia;Alleghany County	locality
+Virginia;Amelia County	locality
+Virginia;Amherst County	locality
+Virginia;Appomattox County	locality
+Virginia;Arlington County	locality
+Virginia;Augusta County	locality
+Virginia;Bath County	locality
+Virginia;Bedford County	locality
+Virginia;Bland County	locality
+Virginia;Botetourt County	locality
+Virginia;Bristol City	locality
+Virginia;Brunswick County	locality
+Virginia;Buchanan County	locality
+Virginia;Buckingham County	locality
+Virginia;Buena Vista City	locality
+Virginia;Campbell County	locality
+Virginia;Caroline County	locality
+Virginia;Carroll County	locality
+Virginia;Charles City County	locality
+Virginia;Charlotte County	locality
+Virginia;Charlottesville City	locality
+Virginia;Chesapeake City	locality
+Virginia;Chesterfield County	locality
+Virginia;Clarke County	locality
+Virginia;Colonial Heights City	locality
+Virginia;Covington City	locality
+Virginia;Craig County	locality
+Virginia;Culpeper County	locality
+Virginia;Cumberland County	locality
+Virginia;Danville City	locality
+Virginia;Dickenson County	locality
+Virginia;Dinwiddie County	locality
+Virginia;Emporia City	locality
+Virginia;Essex County	locality
+Virginia;Fairfax City	locality
+Virginia;Fairfax County	locality
+Virginia;Falls Church City	locality
+Virginia;Fauquier County	locality
+Virginia;Floyd County	locality
+Virginia;Fluvanna County	locality
+Virginia;Franklin City	locality
+Virginia;Franklin County	locality
+Virginia;Frederick County	locality
+Virginia;Fredericksburg City	locality
+Virginia;Galax City	locality
+Virginia;Giles County	locality
+Virginia;Gloucester County	locality
+Virginia;Goochland County	locality
+Virginia;Grayson County	locality
+Virginia;Greene County	locality
+Virginia;Greensville County	locality
+Virginia;Halifax County	locality
+Virginia;Hampton City	locality
+Virginia;Hanover County	locality
+Virginia;Harrisonburg City	locality
+Virginia;Henrico County	locality
+Virginia;Henry County	locality
+Virginia;Highland County	locality
+Virginia;Hopewell City	locality
+Virginia;Isle Of Wight County	locality
+Virginia;Isle of Wight County	locality
+Virginia;James City County	locality
+Virginia;King & Queen County	locality
+Virginia;King George County	locality
+Virginia;King William County	locality
+Virginia;King and Queen County	locality
+Virginia;Lancaster County	locality
+Virginia;Lee County	locality
+Virginia;Lexington City	locality
+Virginia;Loudoun County	locality
+Virginia;Louisa County	locality
+Virginia;Lunenburg County	locality
+Virginia;Lynchburg City	locality
+Virginia;Madison County	locality
+Virginia;Manassas City	locality
+Virginia;Manassas Park City	locality
+Virginia;Martinsville City	locality
+Virginia;Mathews County	locality
+Virginia;Mecklenburg County	locality
+Virginia;Middlesex County	locality
+Virginia;Montgomery County	locality
+Virginia;Nelson County	locality
+Virginia;New Kent County	locality
+Virginia;Newport News City	locality
+Virginia;Norfolk City	locality
+Virginia;Northampton County	locality
+Virginia;Northumberland County	locality
+Virginia;Norton City	locality
+Virginia;Nottoway County	locality
+Virginia;Orange County	locality
+Virginia;Page County	locality
+Virginia;Patrick County	locality
+Virginia;Petersburg City	locality
+Virginia;Pittsylvania County	locality
+Virginia;Poquoson City	locality
+Virginia;Portsmouth City	locality
+Virginia;Powhatan County	locality
+Virginia;Prince Edward County	locality
+Virginia;Prince George County	locality
+Virginia;Prince William County	locality
+Virginia;Pulaski County	locality
+Virginia;Radford City	locality
+Virginia;Rappahannock County	locality
+Virginia;Richmond City	locality
+Virginia;Richmond County	locality
+Virginia;Roanoke City	locality
+Virginia;Roanoke County	locality
+Virginia;Rockbridge County	locality
+Virginia;Rockingham County	locality
+Virginia;Russell County	locality
+Virginia;Salem City	locality
+Virginia;Scott County	locality
+Virginia;Shenandoah County	locality
+Virginia;Smyth County	locality
+Virginia;Southampton County	locality
+Virginia;Spotsylvania County	locality
+Virginia;Stafford County	locality
+Virginia;Staunton City	locality
+Virginia;Suffolk City	locality
+Virginia;Surry County	locality
+Virginia;Sussex County	locality
+Virginia;Tazewell County	locality
+Virginia;Virginia Beach City	locality
+Virginia;Warren County	locality
+Virginia;Washington County	locality
+Virginia;Waynesboro City	locality
+Virginia;Westmoreland County	locality
+Virginia;Williamsburg City	locality
+Virginia;Winchester City	locality
+Virginia;Wise County	locality
+Virginia;Wythe County	locality
+Virginia;York County	locality
 Virginia;Accomack County;# Ab - Central Absentee Precinct	precinct
 Virginia;Accomack County;## Provisional	precinct
 Virginia;Accomack County;101 - Chincoteague	precinct
@@ -3071,3 +3071,13 @@ Virginia;VA Senate District 6	state-senate
 Virginia;VA Senate District 7	state-senate
 Virginia;VA Senate District 8	state-senate
 Virginia;VA Senate District 9	state-senate
+Virginia;Spotsylvania County;203 - NI RIVER ELYS FORD	precinct
+Virginia;Prince William County;405 - UNITY BRAXTON	precinct
+Virginia;Portsmouth City;036 - CHURCHLAND HIGH SCHOOL	precinct
+Virginia;Portsmouth City;029 - MANOR HIGH SCHOOL	precinct
+Virginia;Portsmouth City;025 - WATERVIEW ELEMENTARY SCHOOL	precinct
+Virginia;Portsmouth City;011 - JOSEPH E. PARKER RECREATION CENTER	precinct
+Virginia;Newport News city;204 - MARINERS' MUSEUM	precinct
+Virginia;Goochland County;502 - BLAIR	precinct
+Virginia;Galax city;005 - WEST	precinct
+

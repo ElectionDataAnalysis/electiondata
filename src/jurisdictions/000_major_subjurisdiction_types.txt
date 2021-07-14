@@ -52,7 +52,7 @@ Texas	county
 US Virgin Islands	district
 Utah	county
 Vermont	town
-Virginia	county
+Virginia	locality
 Washington	county
 West Virginia	county
 Wisconsin	county
