@@ -1064,7 +1064,7 @@ def munge_raw_to_ids(
 
     other_elements = [
         element
-        for element in constants.all_munge_elements
+        for element in constants.single_ej_munge_elements
         if (element[-7:] != "Contest")
         and (element[-9:] != "Selection")
         and (element not in constant_dict.keys())
@@ -1122,7 +1122,7 @@ def get_munge_formulas(
     err = None
     f, new_err = ui.get_parameters(
         required_keys=[],
-        optional_keys=constants.all_munge_elements,
+        optional_keys=constants.single_ej_munge_elements,
         header="munge formulas",
         param_file=munger_path,
     )
@@ -1591,12 +1591,16 @@ def get_and_check_munger_params(
 
 def get_string_fields_from_munger(
     munger_path: str,
+    extra_formula_keys: Optional[List[str]] = None
 ) -> (List[str], Optional[dict]):
     """Finds the field names expected by the munger formulas"""
     err = None
+    optional_keys = constants.single_ej_munge_elements
+    if extra_formula_keys:
+        optional_keys += extra_formula_keys
     formulas, new_err = ui.get_parameters(
         required_keys=[],
-        optional_keys=constants.all_munge_elements,
+        optional_keys=optional_keys,
         header="munge formulas",
         param_file=munger_path,
     )
@@ -1753,6 +1757,7 @@ def to_standard_count_frame(
     munger_path: str,
     p: dict,
     suffix: Optional[str] = None,
+    extra_formula_keys: Optional[List[str]] = None,
 ) -> (pd.DataFrame, Optional[dict]):
     """Read data from file at <f_path>; return a standard dataframe with one clean count column
     and all other columns typed as 'string'.
@@ -1768,7 +1773,9 @@ def to_standard_count_frame(
 
     # get lists of string fields expected in raw file
     try:
-        munge_string_fields, new_err = get_string_fields_from_munger(munger_path)
+        munge_string_fields, new_err = get_string_fields_from_munger(
+            munger_path, extra_formula_keys=extra_formula_keys,
+        )
     except Exception as exc:
         err = ui.add_new_error(
             None,
@@ -2283,9 +2290,10 @@ def extract_blocks(
 
 def file_to_raw_df(
     munger_path: str,
-    p,
+    p: Dict[str, Any],
     f_path: str,
-    results_directory_path,
+    results_directory_path: str,
+    extra_formula_keys: Optional[List[str]] = None,
 ) -> (pd.DataFrame, Optional[dict]):
     err = None
 
@@ -2298,6 +2306,7 @@ def file_to_raw_df(
             munger_path,
             p,
             suffix="_SOURCE",
+            extra_formula_keys=extra_formula_keys,
         )
         if ui.fatal_error(err):
             return pd.DataFrame(), err

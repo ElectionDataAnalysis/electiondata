@@ -74,10 +74,10 @@ class SingleDataLoader:
 
         # pick mungers (Note: munger_list is comma-separated list of munger names)
         self.munger = dict()
-        self.munger_err = dict()
-        # TODO document
         self.mungers_dir = mungers_path
         self.munger_list = [x.strip() for x in self.d["munger_list"].split(",")]
+        # can't return error, so we pass it as an attribute.
+        self.munger_err = dict()
 
     def track_results(self) -> (List[int], Optional[dict]):
         """insert a record for the _datafile, recording any error string <e>.
@@ -989,6 +989,68 @@ class DataLoader:
 
         return update_err
 
+    def load_multielection_from_ini(
+            self,
+            ini: str,
+            overwrite_existing: bool = False,
+            load_jurisdictions: bool = True,
+    ) -> (Dict[str,List[str]],Optional[dict]):
+        err = None
+        success = list()
+        ini_params, new_err = ui.get_parameters(
+            required_keys=["results_file","munger_list","results_download_date","results_source","results_note","secondary_source"],
+            param_file=ini,
+            header="election_results",
+        )
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return success, err
+        # TODO: check that secondary_source directory has necessary files without flaws
+        results_path = os.path.join(self.d["results_dir"], ini_params["results_file"])
+        new_err = multi.add_elections_to_db(
+            self.session, os.path.join(self.d["repository_content_root"], "secondary_sources", "Election.txt")
+        )
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return success, err
+
+        # get list of mungers to apply
+        mungers = [x.strip() for x in ini_params["munger_list"].split(",")]
+        for munger in mungers:
+            # TODO read file to dict of dataframes, one for each ej-pair
+            # read file format parameters from munger
+            munger_path = os.path.join(self.d["repository_content_root"], "mungers", f"{munger}.munger")
+            p, new_err = m.get_and_check_munger_params(munger_path)
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                continue
+
+            """            df_dict, row_constants, err = ui.read_single_datafile(
+                            results_path,
+                            p,
+                            munger_path,
+                            err,
+                        )
+            """
+            working, new_err = m.file_to_raw_df(
+                munger_path,p,results_path,self.d["results_dir"],extra_formula_keys=["Election", "Jurisdiction"])
+            # TODO collect election-jurisdiction pairs
+            working = m.raw_to_id_simple(
+                working,
+                os.path.join(
+                    self.d["repository_content_root"],
+                    "secondary-sources",
+                    ini_params["secondary_source"]
+                ),
+                ["Election", "Jurisdiction"]
+            )
+
+            # TODO for each ej-pair, load data from dg
+            pass
+        return success, err
+
+
+
     def load_multielection(
         self,
         multi_file: str,
@@ -1004,7 +1066,9 @@ class DataLoader:
         file_name = Path(multi_file).name
 
         # add elections to db
-        multi.add_elections_to_db(self.session)
+        multi.add_elections_to_db(
+            self.session, os.path.join(self.d["repository_content_root"], "secondary_sources", "Election.txt")
+        )
         # read data
         try:
             df = pd.read_csv(multi_file, sep="\t", dtype=str, index_col=None)
@@ -1027,7 +1091,7 @@ class DataLoader:
 
         # rename columns to match internal db elements
         df.rename(
-            columns={v: k for k, v in electiondata.constants.mit_cols.items()},
+            columns={v: k for k, v in electiondata.constants.mit_pres_cols.items()},
             inplace=True,
         )
         # retype count column to int
@@ -1138,9 +1202,9 @@ class DataLoader:
                     multi_file,
                     f"MIT_pres_gen_Y2K_{juris_system_name}_{election}",
                     file_name,
-                    electiondata.constants.mit_datafile_info["download_date"],
-                    electiondata.constants.mit_datafile_info["source"],
-                    electiondata.constants.mit_datafile_info["note"],
+                    electiondata.constants.mit_pres_datafile_info["download_date"],
+                    electiondata.constants.mit_pres_datafile_info["source"],
+                    electiondata.constants.mit_pres_datafile_info["note"],
                     jurisdiction_id,
                     election_id,
                     False,

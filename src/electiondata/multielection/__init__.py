@@ -11,22 +11,17 @@ import re
 from typing import Optional, List, Dict, Any
 
 
-def add_elections_to_db(session) -> Optional[Dict[str, Any]]:
+def add_elections_to_db(session, election_file: str) -> Optional[Dict[str, Any]]:
     err = None
     try:
-        e_df = pd.DataFrame(
-                [
-                    [constants.mit_elections[y], constants.mit_election_types[y]]
-                    for y in constants.mit_elections.keys()
-                ],
-                columns=["Name", "ElectionType"],
-            )
+        e_df = pd.read_csv(election_file, sep="\t")
         err = db.insert_to_cdf_db(
             session.bind, e_df, "Election", "database", session.bind.url.database
         )
+
     except Exception as exc:
         err = ui.add_new_error(
-            err, "database", session.bind.url.database, f"Error adding elections: {exc}"
+            err, "file", election_file, f"Error adding elections to database {session.bind.url.database}: {exc}"
         )
     return err
 
