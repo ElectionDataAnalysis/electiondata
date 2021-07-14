@@ -1233,7 +1233,6 @@ class DataLoader:
                         ),
                         datafile_id,
                         election_id,
-                        "flat_text",
                     )
                     if new_err:
                         err = ui.consolidate_errors([err, new_err])
@@ -2875,7 +2874,6 @@ def load_results_df(
     path_to_jurisdiction_dir: str,
     datafile_id: int,
     election_id: int,
-    file_type: str,
     rollup: bool = False,
     rollup_rut: str = constants.default_subdivision_type,
 ) -> Optional[dict]:
@@ -2891,7 +2889,6 @@ def load_results_df(
             munger_name,
             juris_true_name,
             session,
-            file_type,
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
@@ -3004,7 +3001,6 @@ def load_results_file(
         path_to_jurisdiction_dir,
         datafile_id,
         election_id,
-        p["file_type"],
         rollup=rollup,
         rollup_rut=rollup_rut,
     )

@@ -819,7 +819,9 @@ def raw_to_id_simple(
     munger_name: str,
     juris_true_name,
 ) -> (pd.DataFrame, Optional[dict]):
-    """Append ids to <df> for any row- or column- sourced elements given in <element_list>"""
+    """Append ids to <df> for all elements given in <element_list>.
+
+    """
 
     err = None
     working = df.copy()
@@ -969,7 +971,6 @@ def munge_raw_to_ids(
     munger_name: str,
     juris_true_name: str,
     session: Session,
-    file_type: str,
 ) -> (pd.DataFrame, Optional[dict]):
     """Replace raw-munged columns with internal columns. For CountItemType
     this will be a text column; for others it will be an Id column """
