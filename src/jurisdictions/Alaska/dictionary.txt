@@ -562,11 +562,6 @@ Candidate	Zulkosky, Tiffany	Zulkosky  Tiffany - D
 Candidate	Zulkosky, Tiffany	"Zulkosky Tiffany"""""
 Candidate	Zulkosky, Tiffany	Zulkosky Tiffany''
 Candidate	Zulkosky, Tiffany	Zulkosky, Tiffany
-Candidate	row should be dropped	Number of Precincts
-Candidate	row should be dropped	Number of Precincts Reporting
-Candidate	row should be dropped	Number of Precincts for Race
-Candidate	row should be dropped	Registered Voters
-Candidate	row should be dropped	Times Counted
 CandidateContest	AK Governor	GOVERNOR/LT. GOVERNOR
 CandidateContest	AK Governor	"GOVERNOR/LT. GOVERNOR"""""
 CandidateContest	AK House District 1	HOUSE DISTRICT 1

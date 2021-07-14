@@ -13,3 +13,5 @@ Party=<column_5>
 CandidateContest=<column_1>
 Candidate=<column_4>
 
+[ignore]
+Candidate=,Number of Precincts,Number of Precincts Reporting,Number of Precincts for Race,Registered Voters,Times Counted

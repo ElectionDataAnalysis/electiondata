@@ -12,3 +12,6 @@ Party=<column_5>
 CandidateContest=<column_1>
 Candidate=<column_4>
 CountItemType={<column_0>,^HD99\s+(Fed Overseas Absentee)$}
+
+[ignore]
+Candidate=,Number of Precincts,Number of Precincts Reporting,Number of Precincts for Race,Registered Voters,Times Counted

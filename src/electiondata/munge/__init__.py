@@ -250,6 +250,116 @@ def compress_whitespace(s: str) -> str:
     return new_s
 
 
+def replace_raw_with_internal_name(
+        df: pd.DataFrame,
+        path_to_jurisdiction_dir: str,
+        juris_true_name: str,  # for error reporting
+        munger_name: str,  # for error reporting
+        file_name: str,  # for error reporting
+        table_df: pd.DataFrame,
+        element: str,
+        internal_name_column: str,
+        drop_unmatched: bool = False,
+        unmatched_id: int = 0,
+        drop_all_ok: bool = False,
+) -> (pd.DataFrame,Optional[dict]):
+    err = None
+    working = df.copy()
+    dictionary = pd.read_csv(
+        os.path.join(path_to_jurisdiction_dir, "dictionary.txt"),
+        sep="\t",
+        encoding=constants.default_encoding,
+        dtype=str,
+    )
+    # restrict to the element at hand, drop column naming element
+    dictionary = dictionary[
+        dictionary["cdf_element"] == element
+    ].copy().drop("cdf_element", axis=1)
+    if element == "Candidate":
+        # Regularize candidate names from dictionary (to match what's done during upload of candidates to Candidate
+        #  table in db)
+        dictionary["cdf_internal_name"] = regularize_candidate_names(
+            dictionary["cdf_internal_name"]
+        )
+
+        # Regularize candidate names from results file and from dictionary.txt
+        working.Candidate_raw = regularize_candidate_names(working.Candidate_raw)
+        dictionary.raw_identifier_value = regularize_candidate_names(
+            dictionary.raw_identifier_value
+        )
+        # NB: regularizing can create duplicates (e.g., HILLARY CLINTON and Hillary Clinton regularize to the same)
+        dictionary.drop_duplicates(inplace=True)
+
+    working = working.merge(
+        dictionary,
+        how="left",
+        left_on=f"{element}_raw",
+        right_on="raw_identifier_value",
+    ).rename(columns={"cdf_internal_name": element})
+
+    # identify unmatched
+    unmatched = working[
+        working[element].isnull() & working[f"{element}_raw"].notnull()
+    ]
+    unmatched_raw = sorted(unmatched[f"{element}_raw"].unique(), reverse=True)
+    unmatched_raw = [x for x in unmatched_raw if x != ""]
+    if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
+        unmatched_str = "\n".join(unmatched_raw)
+        e = f"\n{element}s (found with munger {munger_name}) not found in dictionary.txt :\n{unmatched_str}"
+        err = ui.add_new_error(err, "warn-jurisdiction", juris_true_name, e)
+
+    if drop_unmatched:
+        working = working[working["cdf_internal_name"].notnull()]
+
+    if working.empty:
+        raws = "\n".join(list(df[f"{element}_raw"].unique()))
+        e = (
+            f"No true raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file.\n"
+            f"true raw {element}s:\n{raws}"
+        )
+        if drop_unmatched and not drop_all_ok:
+
+            err = ui.add_new_error(
+                err,
+                "jurisdiction",
+                juris_true_name,
+                e,
+            )
+        else:
+            err = ui.add_new_error(err, "warn-jurisdiction", juris_true_name, e)
+        # give working the proper columns and return
+        new_cols = [
+            c
+            for c in working.columns
+            if (
+                c
+                not in [
+                    "raw_identifier_value",
+                    "cdf_element",
+                    f"_{element}_ei",
+                    "cdf_internal_name",
+                ]
+            )
+        ] + [f"{element}_Id", element]
+        working = pd.DataFrame(columns=new_cols)
+
+        return working, error
+
+    # unmatched elements get nan in fields from dictionary table. Change these to "none or unknown"
+    if not drop_unmatched:
+        working["cdf_internal_name"] = working["cdf_internal_name"].fillna(
+            "none or unknown"
+        )
+
+    # drop extraneous cols from mu.raw_identifier
+    working = working.drop(["raw_identifier_value", "cdf_element"], axis=1)
+
+
+
+    # TODO
+    return working, err
+
+
 def replace_raw_with_internal_ids(
     df: pd.DataFrame,
     path_to_jurisdiction_dir: str,
@@ -261,7 +371,6 @@ def replace_raw_with_internal_ids(
     internal_name_column: str,
     error: dict,
     drop_unmatched: bool = False,
-    drop_extraneous: bool = True,
     unmatched_id: int = 0,
     drop_all_ok: bool = False,
 ) -> (pd.DataFrame, dict):
@@ -332,12 +441,6 @@ def replace_raw_with_internal_ids(
 
     if drop_unmatched:
         working = working[working["cdf_internal_name"].notnull()]
-
-    if drop_extraneous:
-        # TODO tech debt - note change of case for Candidate above which, if
-        #  changed, might affect this in unexpected ways
-        # drop extraneous rows identified in dictionary
-        working = working[working["cdf_internal_name"] != "row should be dropped"]
 
     if working.empty:
         raws = "\n".join(list(df[f"{element}_raw"].unique()))
@@ -616,7 +719,6 @@ def add_contest_id(
                 f"{c_type}Contest",
                 "Name",
                 err,
-                drop_unmatched=False,
                 unmatched_id=none_or_unknown_id,
                 drop_all_ok=True,
             )
@@ -701,7 +803,6 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
             "BallotMeasureSelection",
             "Name",
             err,
-            drop_unmatched=True,
             drop_all_ok=True,
         )
         w["BallotMeasure"].rename(
