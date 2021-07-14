@@ -250,21 +250,13 @@ def compress_whitespace(s: str) -> str:
     return new_s
 
 
-def replace_raw_with_internal_name(
-        df: pd.DataFrame,
-        path_to_jurisdiction_dir: str,
-        juris_true_name: str,  # for error reporting
-        munger_name: str,  # for error reporting
-        file_name: str,  # for error reporting
-        table_df: pd.DataFrame,
+def raw_to_internal_dictionary_df(
+path_to_jurisdiction_dir: str,
         element: str,
-        internal_name_column: str,
-        drop_unmatched: bool = False,
-        unmatched_id: int = 0,
-        drop_all_ok: bool = False,
-) -> (pd.DataFrame,Optional[dict]):
-    err = None
-    working = df.copy()
+):
+    """creates two-column dictionary dataframe labeled
+    <element>, <element>_raw
+    """
     dictionary = pd.read_csv(
         os.path.join(path_to_jurisdiction_dir, "dictionary.txt"),
         sep="\t",
@@ -274,18 +266,41 @@ def replace_raw_with_internal_name(
     # restrict to the element at hand, drop column naming element
     dictionary = dictionary[
         dictionary["cdf_element"] == element
-    ].copy().drop("cdf_element", axis=1)
+    ].copy().drop("cdf_element", axis=1).rename(
+        columns={"cdf_internal_name": element, "raw_identifier_value": f"{element}_raw"}
+    )
+    # map NIST standard CountItemTypes to themselves if not already assigned in the dictionary
+    if element in constants.nist_standard.keys():
+        nist_standards = [[x,x] for x in constants.nist_standard[element] if x not in dictionary[f"{element}_raw"]]
+        dictionary.append(nist_standards)
     if element == "Candidate":
         # Regularize candidate names from dictionary (to match what's done during upload of candidates to Candidate
         #  table in db)
-        dictionary["cdf_internal_name"] = regularize_candidate_names(
-            dictionary["cdf_internal_name"]
+        dictionary[element] = regularize_candidate_names(
+            dictionary[element]
         )
 
+    return dictionary
+
+
+def replace_raw_with_internal_name(
+        df: pd.DataFrame,
+        path_to_jurisdiction_dir: str,
+        juris_true_name: str,  # for error reporting
+        munger_name: str,  # for error reporting
+        element: str,
+        drop_unmatched: bool = False,
+        drop_all_ok: bool = False,
+) -> (pd.DataFrame,Optional[dict]):
+    err = None
+    working = df.copy()
+    dictionary = raw_to_internal_dictionary_df(path_to_jurisdiction_dir,element)
+
+    if element == "Candidate":
         # Regularize candidate names from results file and from dictionary.txt
         working.Candidate_raw = regularize_candidate_names(working.Candidate_raw)
-        dictionary.raw_identifier_value = regularize_candidate_names(
-            dictionary.raw_identifier_value
+        dictionary[f"{element}_raw"] = regularize_candidate_names(
+            dictionary[f"{element}_raw"]
         )
         # NB: regularizing can create duplicates (e.g., HILLARY CLINTON and Hillary Clinton regularize to the same)
         dictionary.drop_duplicates(inplace=True)
@@ -293,9 +308,8 @@ def replace_raw_with_internal_name(
     working = working.merge(
         dictionary,
         how="left",
-        left_on=f"{element}_raw",
-        right_on="raw_identifier_value",
-    ).rename(columns={"cdf_internal_name": element})
+        on=f"{element}_raw",
+    )
 
     # identify unmatched
     unmatched = working[
@@ -309,7 +323,7 @@ def replace_raw_with_internal_name(
         err = ui.add_new_error(err, "warn-jurisdiction", juris_true_name, e)
 
     if drop_unmatched:
-        working = working[working["cdf_internal_name"].notnull()]
+        working = working[working[element].notnull()]
 
     if working.empty:
         raws = "\n".join(list(df[f"{element}_raw"].unique()))
@@ -328,170 +342,31 @@ def replace_raw_with_internal_name(
         else:
             err = ui.add_new_error(err, "warn-jurisdiction", juris_true_name, e)
         # give working the proper columns and return
-        new_cols = [
-            c
-            for c in working.columns
-            if (
-                c
-                not in [
-                    "raw_identifier_value",
-                    "cdf_element",
-                    f"_{element}_ei",
-                    "cdf_internal_name",
-                ]
-            )
-        ] + [f"{element}_Id", element]
-        working = pd.DataFrame(columns=new_cols)
 
-        return working, error
+        return working, err
 
     # unmatched elements get nan in fields from dictionary table. Change these to "none or unknown"
     if not drop_unmatched:
-        working["cdf_internal_name"] = working["cdf_internal_name"].fillna(
+        working[element] = working[element].fillna(
             "none or unknown"
         )
 
-    # drop extraneous cols from mu.raw_identifier
-    working = working.drop(["raw_identifier_value", "cdf_element"], axis=1)
-
-
-
-    # TODO
     return working, err
 
 
-def replace_raw_with_internal_ids(
+def replace_internal_names_with_ids(
     df: pd.DataFrame,
-    path_to_jurisdiction_dir: str,
     juris_true_name: str,  # for error reporting
     munger_name: str,  # for error reporting
     file_name: str,  # for error reporting
     table_df: pd.DataFrame,
     element: str,
     internal_name_column: str,
-    error: dict,
     drop_unmatched: bool = False,
     unmatched_id: int = 0,
-    drop_all_ok: bool = False,
-) -> (pd.DataFrame, dict):
-    """replace columns in <working> with raw_identifier values by columns with internal names and Ids
-    from <table_df>, which has structure of a db table for <element>.
-    <unmatched_id> is the id to assign to unmatched records.
-    If <drop_extraneous> = True and dictionary matches raw_identifier to "row should be dropped",
-    drop that row EVEN IF <drop_unmatched> = False.
-    """
+) -> (pd.DataFrame, Optional[dict]):
+    err = None
     working = df.copy()
-    # join the 'cdf_internal_name' from the raw_identifier table -- this is the internal name field value,
-    # no matter what the name field name is in the internal element table (e.g. 'Name', 'BallotName' or 'Selection')
-    # use dictionary.txt from jurisdiction
-
-    raw_identifiers = pd.read_csv(
-        os.path.join(path_to_jurisdiction_dir, "dictionary.txt"),
-        sep="\t",
-        encoding=constants.default_encoding,
-        dtype=str,
-    )
-
-    # restrict to the element at hand
-    raw_ids_for_element = raw_identifiers[
-        raw_identifiers["cdf_element"] == element
-    ].copy()
-
-    if element == "Candidate":
-        # remove any lines with nulls
-        raw_ids_for_element = raw_ids_for_element[
-            raw_ids_for_element.notnull().all(axis=1)
-        ]
-
-        # Regularize candidate names from dictionary (to match what's done during upload of candidates to Candidate
-        #  table in db)
-        raw_ids_for_element["cdf_internal_name"] = regularize_candidate_names(
-            raw_ids_for_element["cdf_internal_name"]
-        )
-        # Regularize candidate names from results file and from dictionary.txt
-        working.Candidate_raw = regularize_candidate_names(working.Candidate_raw)
-        raw_ids_for_element.raw_identifier_value = regularize_candidate_names(
-            raw_ids_for_element.raw_identifier_value
-        )
-        # NB: regularizing can create duplicates (e.g., HILLARY CLINTON and Hillary Clinton regularize to the sam)
-        raw_ids_for_element.drop_duplicates(inplace=True)
-
-    working = working.merge(
-        raw_ids_for_element,
-        how="left",
-        left_on=f"{element}_raw",
-        right_on="raw_identifier_value",
-        suffixes=["", f"_{element}_ei"],
-    )
-
-    # identify unmatched
-    try:
-        unmatched = working[
-            working["cdf_internal_name"].isnull() & working[f"{element}_raw"].notnull()
-        ]
-        unmatched_raw = sorted(unmatched[f"{element}_raw"].unique(), reverse=True)
-        unmatched_raw = [x for x in unmatched_raw if x != ""]
-    except Exception:
-        unmatched_raw = list()  # for syntax-checker
-        pass
-    if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
-        unmatched_str = "\n".join(unmatched_raw)
-        e = f"\n{element}s not found in dictionary.txt with munger {munger_name}:\n{unmatched_str}"
-        error = ui.add_new_error(error, "warn-jurisdiction", juris_true_name, e)
-
-    if drop_unmatched:
-        working = working[working["cdf_internal_name"].notnull()]
-
-    if working.empty:
-        raws = "\n".join(list(df[f"{element}_raw"].unique()))
-        e = (
-            f"No true raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file.\n"
-            f"true raw {element}s:\n{raws}"
-        )
-        if drop_unmatched and not drop_all_ok:
-
-            error = ui.add_new_error(
-                error,
-                "jurisdiction",
-                juris_true_name,
-                e,
-            )
-        else:
-            error = ui.add_new_error(error, "warn-jurisdiction", juris_true_name, e)
-        # give working the proper columns and return
-        new_cols = [
-            c
-            for c in working.columns
-            if (
-                c
-                not in [
-                    "raw_identifier_value",
-                    "cdf_element",
-                    f"_{element}_ei",
-                    "cdf_internal_name",
-                ]
-            )
-        ] + [f"{element}_Id", element]
-        working = pd.DataFrame(columns=new_cols)
-
-        return working, error
-
-    # unmatched elements get nan in fields from dictionary table. Change these to "none or unknown"
-    if not drop_unmatched:
-        working["cdf_internal_name"] = working["cdf_internal_name"].fillna(
-            "none or unknown"
-        )
-
-    # drop extraneous cols from mu.raw_identifier
-    working = working.drop(["raw_identifier_value", "cdf_element"], axis=1)
-
-    # ensure that there is a column in working called by the element
-    # containing the internal name of the element
-    if f"_{element}_ei" in working.columns:
-        working.rename(columns={f"_{element}_ei": element}, inplace=True)
-    else:
-        working.rename(columns={"cdf_internal_name": element}, inplace=True)
-
     # join the element table Id and name columns.
     # This will create two columns with the internal name field,
     # whose names will be <element> (from above)
@@ -519,8 +394,8 @@ def replace_raw_with_internal_ids(
             f"These records (internal name, raw identifier) were found in dictionary.txt, but "
             f"no corresponding record was found in the {element} table in the database: \n{unmatched_str}"
         )
-        error = ui.add_new_error(
-            error,
+        err = ui.add_new_error(
+            err,
             "warn-jurisdiction",
             juris_true_name,
             e,
@@ -529,8 +404,8 @@ def replace_raw_with_internal_ids(
     if drop_unmatched:
         # if all are unmatched
         if working_unmatched.shape[0] == working.shape[0]:
-            error = ui.add_new_error(
-                error,
+            err = ui.add_new_error(
+                err,
                 "jurisdiction",
                 juris_true_name,
                 (
@@ -538,7 +413,7 @@ def replace_raw_with_internal_ids(
                     f"the corresponding cdf_internal_names are missing from {element}.txt"
                 ),
             )
-            return working.drop(working.index), error
+            return working.drop(working.index), err
         # if only some are unmatched
         else:
             # drop the unmatched ones
@@ -551,7 +426,43 @@ def replace_raw_with_internal_ids(
 
     working = working.drop([internal_name_column, f"{element}_raw"], axis=1)
     working.rename(columns={"Id": f"{element}_Id"}, inplace=True)
-    return working, error
+
+    return working, err
+
+def replace_raw_with_internal_ids(
+    df: pd.DataFrame,
+    path_to_jurisdiction_dir: str,
+    juris_true_name: str,  # for error reporting
+    munger_name: str,  # for error reporting
+    file_name: str,  # for error reporting
+    table_df: pd.DataFrame,
+    element: str,
+    internal_name_column: str,
+    drop_unmatched: bool = False,
+    unmatched_id: int = 0,
+    drop_all_ok: bool = False,
+) -> (pd.DataFrame, dict):
+    """replace columns in <working> with raw_identifier values by columns with internal names and Ids
+    from <table_df>, which has structure of a db table for <element>.
+    <unmatched_id> is the id to assign to unmatched records.
+    If <drop_extraneous> = True and dictionary matches raw_identifier to "row should be dropped",
+    drop that row EVEN IF <drop_unmatched> = False.
+    """
+    working, new_err = replace_raw_with_internal_name(
+        df, path_to_jurisdiction_dir, juris_true_name, munger_name, element,
+        drop_unmatched=drop_unmatched,drop_all_ok=drop_all_ok,
+    )
+    if ui.fatal_error(new_err):
+        return working, new_err
+    else:
+        err = new_err
+
+    working, new_err = replace_internal_names_with_ids(
+        working,juris_true_name, munger_name,file_name, table_df, element, internal_name_column,
+        drop_unmatched=drop_unmatched, unmatched_id=unmatched_id,
+    )
+    err = ui.consolidate_errors([err, new_err])
+    return working, err
 
 
 def get_non_standard(
@@ -718,7 +629,6 @@ def add_contest_id(
                 df_for_type[c_type],
                 f"{c_type}Contest",
                 "Name",
-                err,
                 unmatched_id=none_or_unknown_id,
                 drop_all_ok=True,
             )
@@ -793,7 +703,7 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
     # append BallotMeasureSelection_Id as Selection_Id to w['BallotMeasure']
     if not w["BallotMeasure"].empty:
         bms = pd.read_sql_table(f"BallotMeasureSelection", engine)
-        w["BallotMeasure"], err = replace_raw_with_internal_ids(
+        w["BallotMeasure"], new_err = replace_raw_with_internal_ids(
             w["BallotMeasure"],
             path_to_jurisdiction_dir,
             juris_true_name,
@@ -802,9 +712,9 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
             bms,
             "BallotMeasureSelection",
             "Name",
-            err,
             drop_all_ok=True,
         )
+        err = ui.consolidate_errors([err, new_err])
         w["BallotMeasure"].rename(
             columns={"BallotMeasureSelection_Id": "Selection_Id"}, inplace=True
         )
@@ -908,7 +818,6 @@ def raw_to_id_simple(
     file_name: str,
     munger_name: str,
     juris_true_name,
-    file_type: str,
 ) -> (pd.DataFrame, Optional[dict]):
     """Append ids to <df> for any row- or column- sourced elements given in <element_list>"""
 
@@ -916,10 +825,6 @@ def raw_to_id_simple(
     working = df.copy()
     for element in element_list:
         try:
-            # capture id from db in new column and erase any now-redundant cols
-            if element != "CountItemType":
-                element_df = pd.read_sql_table(element, session.bind)
-                name_field = db.get_name_field(element)
             # set drop_unmatched = True for fields necessary to BallotMeasure rows,
             #  drop_unmatched = False otherwise to prevent losing BallotMeasureContests for BM-inessential fields
             if element == "ReportingUnit" or element == "CountItemType":
@@ -928,17 +833,8 @@ def raw_to_id_simple(
                 drop = False
             if element == "CountItemType":
                 # munge raw to internal CountItemType
-                if file_type == "nist_v2_xml":
-                    r_i = constants.cit_from_raw_nist_df
-                else:
-                    r_i = pd.read_csv(
-                        os.path.join(path_to_jurisdiction_dir, "dictionary.txt"),
-                        sep="\t",
-                        encoding=constants.default_encoding,
-                        dtype=str,
-                    )
-                    r_i = r_i[r_i.cdf_element == "CountItemType"]
-                recognized = r_i.raw_identifier_value.unique()
+                r_i = raw_to_internal_dictionary_df(path_to_jurisdiction_dir, "CountItemType")
+                recognized = r_i.CountItemType_raw.unique()
                 matched = working.CountItemType_raw.isin(recognized)
                 if not matched.all():
                     unmatched = "\n".join(
@@ -958,10 +854,8 @@ def raw_to_id_simple(
                     .merge(
                         r_i,
                         how="left",
-                        left_on="CountItemType_raw",
-                        right_on="raw_identifier_value",
+                        on="CountItemType_raw",
                     )
-                    .rename(columns={"cdf_internal_name": "CountItemType"})
                 )
 
                 # if no CountItemTypes matched to dictionary
@@ -990,10 +884,10 @@ def raw_to_id_simple(
                         juris_true_name,
                         f"Some recognized CountItemTypes are not in the NIST standard list:\n\t{ns}",
                     )
-                working = working.drop(
-                    ["raw_identifier_value", "cdf_element", "CountItemType_raw"], axis=1
-                )
+                working.drop("CountItemType_raw", axis=1, inplace=True)
             else:
+                element_df = pd.read_sql_table(element,session.bind)
+                name_field = db.get_name_field(element)
                 none_or_unknown_id = db.name_to_id(session, element, "none or unknown")
                 working, new_err = replace_raw_with_internal_ids(
                     working,
@@ -1004,7 +898,6 @@ def raw_to_id_simple(
                     element_df,
                     element,
                     name_field,
-                    err,
                     drop_unmatched=drop,
                     unmatched_id=none_or_unknown_id,
                 )
@@ -1178,7 +1071,6 @@ def munge_raw_to_ids(
         munger_name,
         file_name,
         juris_true_name,
-        file_type,
     )
     if new_err:
         err = ui.consolidate_errors([err, new_err])
