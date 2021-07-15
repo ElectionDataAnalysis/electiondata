@@ -239,14 +239,17 @@ def add_column_from_formula(
     return w, err
 
 
-def compress_whitespace(s: str) -> str:
+def compress_whitespace(s: Optional[str]) -> str:
     """Return a string where every instance of consecutive whitespaces internal to <s> has been replace
     by the first of those consecutive whitespace characters,
     leading and trailing whitespace is eliminated
     and any carriage returns are changed to spaces"""
-    new_s = re.sub(r"(\s)\s+", "\\1", s)
-    new_s = new_s.strip()
-    new_s = new_s.replace("\n", " ")
+    try:
+        new_s = re.sub(r"(\s)\s+", "\\1", s)
+        new_s = new_s.strip()
+        new_s = new_s.replace("\n", " ")
+    except Exception as exc:
+        new_s = ""
     return new_s
 
 
@@ -285,16 +288,18 @@ path_to_jurisdiction_dir: str,
 
 def replace_raw_with_internal_name(
         df: pd.DataFrame,
-        path_to_jurisdiction_dir: str,
+        dictionary_directory: str,
         juris_true_name: str,  # for error reporting
         munger_name: str,  # for error reporting
         element: str,
         drop_unmatched: bool = False,
         drop_all_ok: bool = False,
 ) -> (pd.DataFrame,Optional[dict]):
+    """Uses dictionary.txt file in dictionary_directory to replace raw names  with names
+    matching internal db standard."""
     err = None
     working = df.copy()
-    dictionary = raw_to_internal_dictionary_df(path_to_jurisdiction_dir,element)
+    dictionary = raw_to_internal_dictionary_df(dictionary_directory,element)
 
     if element == "Candidate":
         # Regularize candidate names from results file and from dictionary.txt
@@ -342,7 +347,7 @@ def replace_raw_with_internal_name(
         else:
             err = ui.add_new_error(err, "warn-jurisdiction", juris_true_name, e)
         # give working the proper columns and return
-
+        working.drop(f"{element}_raw", axis=1, inplace=True)
         return working, err
 
     # unmatched elements get nan in fields from dictionary table. Change these to "none or unknown"

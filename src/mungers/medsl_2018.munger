@@ -14,7 +14,7 @@ constant_over_file=
 
 [munge formulas]
 # give formulas for all elements (except constant_over_file elements)
-CandidateContest=<office> District <district>
+CandidateContest=<state_po>;<office>;<district>
 Candidate=<candidate>
 Party=<party>
 CountItemType=<mode>
