@@ -199,7 +199,7 @@ Candidate	DANIEL CALLAHAN AND SUE FOWLER(Write-In)	DANIEL CALLAHAN AND SUE FOWLE
 Candidate	DANIEL NADEAU	DANIEL NADEAU
 Candidate	DANIEL NOYES	DANIEL NOYES
 Candidate	DAVE EMERY(Write-In)	DAVE EMERY(Write-In)
-Candidate	DAVE MARX -  JOSH DOUBLEDAY(Write-In)	DAVE MARX/ JOSH DOUBLEDAY(Write-In)
+Candidate	DAVE MARX - JOSH DOUBLEDAY(Write-In)	DAVE MARX/ JOSH DOUBLEDAY(Write-In)
 Candidate	DAVE POTTER	DAVE POTTER
 Candidate	DAVID COOTWARE(Write-In)	DAVID COOTWARE(Write-In)
 Candidate	DAVID FRENCH (Write-In)	DAVID FRENCH (Write-In)
@@ -2165,3 +2165,219 @@ ReportingUnit	Vermont;Woodstock;WDR-5	WOODSTOCK;WDR-5
 ReportingUnit	Vermont;Worcester	Vermont;Worcester
 ReportingUnit	Vermont;Worcester	WORCESTER
 ReportingUnit	Vermont;Worcester;LAM-WAS	WORCESTER;LAM-WAS
+CandidateContest	VT Attorney General	VT;Attorney General
+CandidateContest	VT Auditor of Accounts	VT;Auditor of Accounts;statewide
+CandidateContest	VT Governor	VT;Governor;statewide
+CandidateContest	VT Lieutenant Governor	VT;Lieutenant Governor;statewide
+CandidateContest	VT Secretary of State	VT;Secretary of State;statewide
+CandidateContest	VT House District Addison 1	VT;State Representative;Addison-1
+CandidateContest	VT House District Addison 2	VT;State Representative;Addison-2
+CandidateContest	VT House District Addison 3	VT;State Representative;Addison-3
+CandidateContest	VT House District Addison 4	VT;State Representative;Addison-4
+CandidateContest	VT House District Addison 5	VT;State Representative;Addison-5
+CandidateContest	VT House District Addison-Rutland	VT;State Representative;Addison-Rutland
+CandidateContest	VT House District Orange-Washington-Addison	VT;State Representative;Orange-Washington-Addison
+CandidateContest	VT Senate District Addison 1	VT;State Senator;Addison-1
+CandidateContest	VT Senate District Addison 2	VT;State Senator;Addison-2
+CandidateContest	VT Senate District Addison 3	VT;State Senator;Addison-3
+CandidateContest	VT Senate District Addison 4	VT;State Senator;Addison-4
+CandidateContest	VT Senate District Addison 5	VT;State Senator;Addison-5
+CandidateContest	VT Senate District Addison-Rutland	VT;State Senator;Addison-Rutland
+CandidateContest	VT Senate District Orange-Washington-Addison	VT;State Senator;Orange-Washington-Addison
+CandidateContest	VT State Treasurer	VT;State Treasurer;statewide
+CandidateContest	US House VT District 0	VT;US Representative;District 0
+CandidateContest	VT US Senator	VT;US Senator;statewide
+CandidateContest	VT House District Bennington 1	VT;State Representative;Bennington-1
+CandidateContest	VT House District Bennington 2-1	VT;State Representative;Bennington-2-1
+CandidateContest	VT House District Bennington 2-2	VT;State Representative;Bennington-2-2
+CandidateContest	VT House District Bennington 3	VT;State Representative;Bennington-3
+CandidateContest	VT House District Bennington 4	VT;State Representative;Bennington-4
+CandidateContest	VT House District Bennington-Rutland	VT;State Representative;Bennington-Rutland
+CandidateContest	VT House District Rutland-Bennington	VT;State Representative;Rutland-Bennington
+CandidateContest	VT House District Windham-Bennington	VT;State Representative;Windham-Bennington
+CandidateContest	VT House District Windham-Bennington-Windsor	VT;State Representative;Windham-Bennington-Windsor
+CandidateContest	VT Senate District Bennington 1	VT;State Senator;Bennington-1
+CandidateContest	VT Senate District Bennington 2-1	VT;State Senator;Bennington-2-1
+CandidateContest	VT Senate District Bennington 2-2	VT;State Senator;Bennington-2-2
+CandidateContest	VT Senate District Bennington 3	VT;State Senator;Bennington-3
+CandidateContest	VT Senate District Bennington 4	VT;State Senator;Bennington-4
+CandidateContest	VT Senate District Bennington-Rutland	VT;State Senator;Bennington-Rutland
+CandidateContest	VT Senate District Rutland-Bennington	VT;State Senator;Rutland-Bennington
+CandidateContest	VT Senate District Windham-Bennington	VT;State Senator;Windham-Bennington
+CandidateContest	VT Senate District Windham-Bennington-Windsor	VT;State Senator;Windham-Bennington-Windsor
+CandidateContest	VT House District Caledonia 1	VT;State Representative;Caledonia-1
+CandidateContest	VT House District Caledonia 2	VT;State Representative;Caledonia-2
+CandidateContest	VT House District Caledonia 3	VT;State Representative;Caledonia-3
+CandidateContest	VT House District Caledonia 4	VT;State Representative;Caledonia-4
+CandidateContest	VT House District Caledonia-Washington	VT;State Representative;Caledonia-Washington
+CandidateContest	VT House District Essex-Caledonia	VT;State Representative;Essex-Caledonia
+CandidateContest	VT House District Essex-Caledonia-Orleans	VT;State Representative;Essex-Caledonia-Orleans
+CandidateContest	VT House District Orange-Caledonia	VT;State Representative;Orange-Caledonia
+CandidateContest	VT House District Orleans-Caledonia	VT;State Representative;Orleans-Caledonia
+CandidateContest	VT Senate District Caledonia 1	VT;State Senator;Caledonia-1
+CandidateContest	VT Senate District Caledonia 2	VT;State Senator;Caledonia-2
+CandidateContest	VT Senate District Caledonia 3	VT;State Senator;Caledonia-3
+CandidateContest	VT Senate District Caledonia 4	VT;State Senator;Caledonia-4
+CandidateContest	VT Senate District Caledonia-Washington	VT;State Senator;Caledonia-Washington
+CandidateContest	VT Senate District Essex-Caledonia	VT;State Senator;Essex-Caledonia
+CandidateContest	VT Senate District Essex-Caledonia-Orleans	VT;State Senator;Essex-Caledonia-Orleans
+CandidateContest	VT Senate District Orange-Caledonia	VT;State Senator;Orange-Caledonia
+CandidateContest	VT Senate District Orleans-Caledonia	VT;State Senator;Orleans-Caledonia
+CandidateContest	VT House District Chittenden 1	VT;State Representative;Chittenden-1
+CandidateContest	VT House District Chittenden 10	VT;State Representative;Chittenden-10
+CandidateContest	VT House District Chittenden 2	VT;State Representative;Chittenden-2
+CandidateContest	VT House District Chittenden 3	VT;State Representative;Chittenden-3
+CandidateContest	VT House District Chittenden 4-1	VT;State Representative;Chittenden-4-1
+CandidateContest	VT House District Chittenden 4-2	VT;State Representative;Chittenden-4-2
+CandidateContest	VT House District Chittenden 5-1	VT;State Representative;Chittenden-5-1
+CandidateContest	VT House District Chittenden 5-2	VT;State Representative;Chittenden-5-2
+CandidateContest	VT House District Chittenden 6-1	VT;State Representative;Chittenden-6-1
+CandidateContest	VT House District Chittenden 6-2	VT;State Representative;Chittenden-6-2
+CandidateContest	VT House District Chittenden 6-3	VT;State Representative;Chittenden-6-3
+CandidateContest	VT House District Chittenden 6-4	VT;State Representative;Chittenden-6-4
+CandidateContest	VT House District Chittenden 6-5	VT;State Representative;Chittenden-6-5
+CandidateContest	VT House District Chittenden 6-6	VT;State Representative;Chittenden-6-6
+CandidateContest	VT House District Chittenden 6-7	VT;State Representative;Chittenden-6-7
+CandidateContest	VT House District Chittenden 7-1	VT;State Representative;Chittenden-7-1
+CandidateContest	VT House District Chittenden 7-2	VT;State Representative;Chittenden-7-2
+CandidateContest	VT House District Chittenden 7-3	VT;State Representative;Chittenden-7-3
+CandidateContest	VT House District Chittenden 7-4	VT;State Representative;Chittenden-7-4
+CandidateContest	VT House District Chittenden 8-1	VT;State Representative;Chittenden-8-1
+CandidateContest	VT House District Chittenden 8-2	VT;State Representative;Chittenden-8-2
+CandidateContest	VT House District Chittenden 8-3	VT;State Representative;Chittenden-8-3
+CandidateContest	VT House District Chittenden 9-1	VT;State Representative;Chittenden-9-1
+CandidateContest	VT House District Chittenden 9-2	VT;State Representative;Chittenden-9-2
+CandidateContest	VT House District Grand IsleChittenden	VT;State Representative;Grand IsleChittenden
+CandidateContest	VT House District Washington-Chittenden	VT;State Representative;Washington-Chittenden
+CandidateContest	VT Senate District Chittenden 1	VT;State Senator;Chittenden-1
+CandidateContest	VT Senate District Chittenden 10	VT;State Senator;Chittenden-10
+CandidateContest	VT Senate District Chittenden 2	VT;State Senator;Chittenden-2
+CandidateContest	VT Senate District Chittenden 3	VT;State Senator;Chittenden-3
+CandidateContest	VT Senate District Chittenden 4-1	VT;State Senator;Chittenden-4-1
+CandidateContest	VT Senate District Chittenden 4-2	VT;State Senator;Chittenden-4-2
+CandidateContest	VT Senate District Chittenden 5-1	VT;State Senator;Chittenden-5-1
+CandidateContest	VT Senate District Chittenden 5-2	VT;State Senator;Chittenden-5-2
+CandidateContest	VT Senate District Chittenden 6-1	VT;State Senator;Chittenden-6-1
+CandidateContest	VT Senate District Chittenden 6-2	VT;State Senator;Chittenden-6-2
+CandidateContest	VT Senate District Chittenden 6-3	VT;State Senator;Chittenden-6-3
+CandidateContest	VT Senate District Chittenden 6-4	VT;State Senator;Chittenden-6-4
+CandidateContest	VT Senate District Chittenden 6-5	VT;State Senator;Chittenden-6-5
+CandidateContest	VT Senate District Chittenden 6-6	VT;State Senator;Chittenden-6-6
+CandidateContest	VT Senate District Chittenden 6-7	VT;State Senator;Chittenden-6-7
+CandidateContest	VT Senate District Chittenden 7-1	VT;State Senator;Chittenden-7-1
+CandidateContest	VT Senate District Chittenden 7-2	VT;State Senator;Chittenden-7-2
+CandidateContest	VT Senate District Chittenden 7-3	VT;State Senator;Chittenden-7-3
+CandidateContest	VT Senate District Chittenden 7-4	VT;State Senator;Chittenden-7-4
+CandidateContest	VT Senate District Chittenden 8-1	VT;State Senator;Chittenden-8-1
+CandidateContest	VT Senate District Chittenden 8-2	VT;State Senator;Chittenden-8-2
+CandidateContest	VT Senate District Chittenden 8-3	VT;State Senator;Chittenden-8-3
+CandidateContest	VT Senate District Chittenden 9-1	VT;State Senator;Chittenden-9-1
+CandidateContest	VT Senate District Chittenden 9-2	VT;State Senator;Chittenden-9-2
+CandidateContest	VT Senate District Grand IsleChittenden	VT;State Senator;Grand IsleChittenden
+CandidateContest	VT Senate District Washington-Chittenden	VT;State Senator;Washington-Chittenden
+CandidateContest	VT House District Franklin 1	VT;State Representative;Franklin-1
+CandidateContest	VT House District Franklin 2	VT;State Representative;Franklin-2
+CandidateContest	VT House District Franklin 3-1	VT;State Representative;Franklin-3-1
+CandidateContest	VT House District Franklin 3-2	VT;State Representative;Franklin-3-2
+CandidateContest	VT House District Franklin 4	VT;State Representative;Franklin-4
+CandidateContest	VT House District Franklin 5	VT;State Representative;Franklin-5
+CandidateContest	VT House District Franklin 6	VT;State Representative;Franklin-6
+CandidateContest	VT House District Franklin 7	VT;State Representative;Franklin-7
+CandidateContest	VT Senate District Franklin 1	VT;State Senator;Franklin-1
+CandidateContest	VT Senate District Franklin 2	VT;State Senator;Franklin-2
+CandidateContest	VT Senate District Franklin 3-1	VT;State Senator;Franklin-3-1
+CandidateContest	VT Senate District Franklin 3-2	VT;State Senator;Franklin-3-2
+CandidateContest	VT Senate District Franklin 4	VT;State Senator;Franklin-4
+CandidateContest	VT Senate District Franklin 5	VT;State Senator;Franklin-5
+CandidateContest	VT Senate District Franklin 6	VT;State Senator;Franklin-6
+CandidateContest	VT Senate District Franklin 7	VT;State Senator;Franklin-7
+CandidateContest	VT House District Lamoille 1	VT;State Representative;Lamoille-1
+CandidateContest	VT House District Lamoille 2	VT;State Representative;Lamoille-2
+CandidateContest	VT House District Lamoille 3	VT;State Representative;Lamoille-3
+CandidateContest	VT House District Lamoille-Washington	VT;State Representative;Lamoille-Washington
+CandidateContest	VT House District Orleans-Lamoille	VT;State Representative;Orleans-Lamoille
+CandidateContest	VT Senate District Lamoille 1	VT;State Senator;Lamoille-1
+CandidateContest	VT Senate District Lamoille 2	VT;State Senator;Lamoille-2
+CandidateContest	VT Senate District Lamoille 3	VT;State Senator;Lamoille-3
+CandidateContest	VT Senate District Lamoille-Washington	VT;State Senator;Lamoille-Washington
+CandidateContest	VT Senate District Orleans-Lamoille	VT;State Senator;Orleans-Lamoille
+CandidateContest	VT House District Orange 1	VT;State Representative;Orange-1
+CandidateContest	VT House District Orange 2	VT;State Representative;Orange-2
+CandidateContest	VT House District Windsor-Orange-1	VT;State Representative;Windsor-Orange-1
+CandidateContest	VT House District Windsor-Orange-2	VT;State Representative;Windsor-Orange-2
+CandidateContest	VT Senate District Orange 1	VT;State Senator;Orange-1
+CandidateContest	VT Senate District Orange 2	VT;State Senator;Orange-2
+CandidateContest	VT Senate District Windsor-Orange-1	VT;State Senator;Windsor-Orange-1
+CandidateContest	VT Senate District Windsor-Orange-2	VT;State Senator;Windsor-Orange-2
+CandidateContest	VT House District Orleans 1	VT;State Representative;Orleans-1
+CandidateContest	VT House District Orleans 2	VT;State Representative;Orleans-2
+CandidateContest	VT Senate District Orleans 1	VT;State Senator;Orleans-1
+CandidateContest	VT Senate District Orleans 2	VT;State Senator;Orleans-2
+CandidateContest	VT House District Rutland 1	VT;State Representative;Rutland-1
+CandidateContest	VT House District Rutland 2	VT;State Representative;Rutland-2
+CandidateContest	VT House District Rutland 3	VT;State Representative;Rutland-3
+CandidateContest	VT House District Rutland 4	VT;State Representative;Rutland-4
+CandidateContest	VT House District Rutland 5-1	VT;State Representative;Rutland-5-1
+CandidateContest	VT House District Rutland 5-2	VT;State Representative;Rutland-5-2
+CandidateContest	VT House District Rutland 5-3	VT;State Representative;Rutland-5-3
+CandidateContest	VT House District Rutland 5-4	VT;State Representative;Rutland-5-4
+CandidateContest	VT House District Rutland 6	VT;State Representative;Rutland-6
+CandidateContest	VT House District Rutland-Windsor-1	VT;State Representative;Rutland-Windsor-1
+CandidateContest	VT House District Rutland-Windsor-2	VT;State Representative;Rutland-Windsor-2
+CandidateContest	VT House District Windsor-Rutland	VT;State Representative;Windsor-Rutland
+CandidateContest	VT Senate District Rutland 1	VT;State Senator;Rutland-1
+CandidateContest	VT Senate District Rutland 2	VT;State Senator;Rutland-2
+CandidateContest	VT Senate District Rutland 3	VT;State Senator;Rutland-3
+CandidateContest	VT Senate District Rutland 4	VT;State Senator;Rutland-4
+CandidateContest	VT Senate District Rutland 5-1	VT;State Senator;Rutland-5-1
+CandidateContest	VT Senate District Rutland 5-2	VT;State Senator;Rutland-5-2
+CandidateContest	VT Senate District Rutland 5-3	VT;State Senator;Rutland-5-3
+CandidateContest	VT Senate District Rutland 5-4	VT;State Senator;Rutland-5-4
+CandidateContest	VT Senate District Rutland 6	VT;State Senator;Rutland-6
+CandidateContest	VT Senate District Rutland-Windsor-1	VT;State Senator;Rutland-Windsor-1
+CandidateContest	VT Senate District Rutland-Windsor-2	VT;State Senator;Rutland-Windsor-2
+CandidateContest	VT Senate District Windsor-Rutland	VT;State Senator;Windsor-Rutland
+CandidateContest	VT House District Washington 1	VT;State Representative;Washington-1
+CandidateContest	VT House District Washington 2	VT;State Representative;Washington-2
+CandidateContest	VT House District Washington 3	VT;State Representative;Washington-3
+CandidateContest	VT House District Washington 4	VT;State Representative;Washington-4
+CandidateContest	VT House District Washington 5	VT;State Representative;Washington-5
+CandidateContest	VT House District Washington 6	VT;State Representative;Washington-6
+CandidateContest	VT House District Washington 7	VT;State Representative;Washington-7
+CandidateContest	VT Senate District Washington 1	VT;State Senator;Washington-1
+CandidateContest	VT Senate District Washington 2	VT;State Senator;Washington-2
+CandidateContest	VT Senate District Washington 3	VT;State Senator;Washington-3
+CandidateContest	VT Senate District Washington 4	VT;State Senator;Washington-4
+CandidateContest	VT Senate District Washington 5	VT;State Senator;Washington-5
+CandidateContest	VT Senate District Washington 6	VT;State Senator;Washington-6
+CandidateContest	VT Senate District Washington 7	VT;State Senator;Washington-7
+CandidateContest	VT House District Windham 1	VT;State Representative;Windham-1
+CandidateContest	VT House District Windham 2-1	VT;State Representative;Windham-2-1
+CandidateContest	VT House District Windham 2-2	VT;State Representative;Windham-2-2
+CandidateContest	VT House District Windham 2-3	VT;State Representative;Windham-2-3
+CandidateContest	VT House District Windham 3	VT;State Representative;Windham-3
+CandidateContest	VT House District Windham 4	VT;State Representative;Windham-4
+CandidateContest	VT House District Windham 5	VT;State Representative;Windham-5
+CandidateContest	VT House District Windham 6	VT;State Representative;Windham-6
+CandidateContest	VT Senate District Windham 1	VT;State Senator;Windham-1
+CandidateContest	VT Senate District Windham 2-1	VT;State Senator;Windham-2-1
+CandidateContest	VT Senate District Windham 2-2	VT;State Senator;Windham-2-2
+CandidateContest	VT Senate District Windham 2-3	VT;State Senator;Windham-2-3
+CandidateContest	VT Senate District Windham 3	VT;State Senator;Windham-3
+CandidateContest	VT Senate District Windham 4	VT;State Senator;Windham-4
+CandidateContest	VT Senate District Windham 5	VT;State Senator;Windham-5
+CandidateContest	VT Senate District Windham 6	VT;State Senator;Windham-6
+CandidateContest	VT House District Windsor 1	VT;State Representative;Windsor-1
+CandidateContest	VT House District Windsor 2	VT;State Representative;Windsor-2
+CandidateContest	VT House District Windsor 3-1	VT;State Representative;Windsor-3-1
+CandidateContest	VT House District Windsor 3-2	VT;State Representative;Windsor-3-2
+CandidateContest	VT House District Windsor 4-1	VT;State Representative;Windsor-4-1
+CandidateContest	VT House District Windsor 4-2	VT;State Representative;Windsor-4-2
+CandidateContest	VT House District Windsor 5	VT;State Representative;Windsor-5
+CandidateContest	VT Senate District Windsor 1	VT;State Senator;Windsor-1
+CandidateContest	VT Senate District Windsor 2	VT;State Senator;Windsor-2
+CandidateContest	VT Senate District Windsor 3-1	VT;State Senator;Windsor-3-1
+CandidateContest	VT Senate District Windsor 3-2	VT;State Senator;Windsor-3-2
+CandidateContest	VT Senate District Windsor 4-1	VT;State Senator;Windsor-4-1
+CandidateContest	VT Senate District Windsor 4-2	VT;State Senator;Windsor-4-2
+CandidateContest	VT Senate District Windsor 5	VT;State Senator;Windsor-5

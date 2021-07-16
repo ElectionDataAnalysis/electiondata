@@ -6400,3 +6400,132 @@ Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
 Candidate	Darrell L. Castle	Darrell L. Castle Scott N. Bradley
 Candidate	Chris Keniston (write-in)	Chris Keniston Deacon Taylor (write-in)
 Candidate	Cherunda Fox (write-in)	Cherunda Fox Roger Kushner (write-in)
+CandidateContest	WI Attorney General	WI;Attorney General
+CandidateContest	WI Governor/Lieutenant Governor	WI;Governor/Lieutenant Governor;statewide
+CandidateContest	WI Secretary of State	WI;Secretary of State;statewide
+CandidateContest	WI House District 41	WI;State Assembly Representative;District 41
+CandidateContest	WI House District 72	WI;State Assembly Representative;District 72
+CandidateContest	WI State Treasurer	WI;State Treasurer;statewide
+CandidateContest	US House WI District 3	WI;US Representative;District 3
+CandidateContest	WI US Senator	WI;US Senator;statewide
+CandidateContest	WI House District 74	WI;State Assembly Representative;District 74
+CandidateContest	WI Senate District 25	WI;State Senator;District 25
+CandidateContest	US House WI District 7	WI;US Representative;District 7
+CandidateContest	WI House District 67	WI;State Assembly Representative;District 67
+CandidateContest	WI House District 75	WI;State Assembly Representative;District 75
+CandidateContest	WI Senate District 23	WI;State Senator;District 23
+CandidateContest	WI House District 1	WI;State Assembly Representative;District 1
+CandidateContest	WI House District 2	WI;State Assembly Representative;District 2
+CandidateContest	WI House District 4	WI;State Assembly Representative;District 4
+CandidateContest	WI House District 5	WI;State Assembly Representative;District 5
+CandidateContest	WI House District 6	WI;State Assembly Representative;District 6
+CandidateContest	WI House District 88	WI;State Assembly Representative;District 88
+CandidateContest	WI House District 89	WI;State Assembly Representative;District 89
+CandidateContest	WI House District 90	WI;State Assembly Representative;District 90
+CandidateContest	WI Senate District 1	WI;State Senator;District 1
+CandidateContest	US House WI District 8	WI;US Representative;District 8
+CandidateContest	WI House District 92	WI;State Assembly Representative;District 92
+CandidateContest	WI House District 93	WI;State Assembly Representative;District 93
+CandidateContest	WI Senate District 31	WI;State Senator;District 31
+CandidateContest	WI House District 28	WI;State Assembly Representative;District 28
+CandidateContest	WI House District 73	WI;State Assembly Representative;District 73
+CandidateContest	WI House District 25	WI;State Assembly Representative;District 25
+CandidateContest	WI House District 27	WI;State Assembly Representative;District 27
+CandidateContest	WI House District 3	WI;State Assembly Representative;District 3
+CandidateContest	WI House District 59	WI;State Assembly Representative;District 59
+CandidateContest	WI Senate District 9	WI;State Senator;District 9
+CandidateContest	WI House District 68	WI;State Assembly Representative;District 68
+CandidateContest	WI House District 91	WI;State Assembly Representative;District 91
+CandidateContest	WI House District 69	WI;State Assembly Representative;District 69
+CandidateContest	WI House District 87	WI;State Assembly Representative;District 87
+CandidateContest	WI Senate District 29	WI;State Senator;District 29
+CandidateContest	WI House District 37	WI;State Assembly Representative;District 37
+CandidateContest	WI House District 42	WI;State Assembly Representative;District 42
+CandidateContest	WI House District 81	WI;State Assembly Representative;District 81
+CandidateContest	WI Senate District 13	WI;State Senator;District 13
+CandidateContest	WI Senate District 27	WI;State Senator;District 27
+CandidateContest	US House WI District 6	WI;US Representative;District 6
+CandidateContest	WI House District 96	WI;State Assembly Representative;District 96
+CandidateContest	WI House District 38	WI;State Assembly Representative;District 38
+CandidateContest	WI House District 43	WI;State Assembly Representative;District 43
+CandidateContest	WI House District 46	WI;State Assembly Representative;District 46
+CandidateContest	WI House District 47	WI;State Assembly Representative;District 47
+CandidateContest	WI House District 48	WI;State Assembly Representative;District 48
+CandidateContest	WI House District 76	WI;State Assembly Representative;District 76
+CandidateContest	WI House District 77	WI;State Assembly Representative;District 77
+CandidateContest	WI House District 78	WI;State Assembly Representative;District 78
+CandidateContest	WI House District 79	WI;State Assembly Representative;District 79
+CandidateContest	WI House District 80	WI;State Assembly Representative;District 80
+CandidateContest	WI Senate District 15	WI;State Senator;District 15
+CandidateContest	US House WI District 2	WI;US Representative;District 2
+CandidateContest	WI House District 39	WI;State Assembly Representative;District 39
+CandidateContest	WI House District 53	WI;State Assembly Representative;District 53
+CandidateContest	US House WI District 5	WI;US Representative;District 5
+CandidateContest	WI House District 29	WI;State Assembly Representative;District 29
+CandidateContest	WI House District 34	WI;State Assembly Representative;District 34
+CandidateContest	WI House District 52	WI;State Assembly Representative;District 52
+CandidateContest	WI House District 36	WI;State Assembly Representative;District 36
+CandidateContest	WI House District 49	WI;State Assembly Representative;District 49
+CandidateContest	WI Senate District 17	WI;State Senator;District 17
+CandidateContest	WI House District 45	WI;State Assembly Representative;District 45
+CandidateContest	WI House District 51	WI;State Assembly Representative;District 51
+CandidateContest	WI House District 70	WI;State Assembly Representative;District 70
+CandidateContest	WI House District 33	WI;State Assembly Representative;District 33
+CandidateContest	WI Senate District 11	WI;State Senator;District 11
+CandidateContest	WI House District 50	WI;State Assembly Representative;District 50
+CandidateContest	WI House District 32	WI;State Assembly Representative;District 32
+CandidateContest	WI House District 61	WI;State Assembly Representative;District 61
+CandidateContest	WI House District 64	WI;State Assembly Representative;District 64
+CandidateContest	WI House District 65	WI;State Assembly Representative;District 65
+CandidateContest	WI Senate District 21	WI;State Senator;District 21
+CandidateContest	US House WI District 1	WI;US Representative;District 1
+CandidateContest	WI House District 94	WI;State Assembly Representative;District 94
+CandidateContest	WI House District 95	WI;State Assembly Representative;District 95
+CandidateContest	WI House District 35	WI;State Assembly Representative;District 35
+CandidateContest	WI House District 85	WI;State Assembly Representative;District 85
+CandidateContest	WI House District 86	WI;State Assembly Representative;District 86
+CandidateContest	WI House District 10	WI;State Assembly Representative;District 10
+CandidateContest	WI House District 11	WI;State Assembly Representative;District 11
+CandidateContest	WI House District 12	WI;State Assembly Representative;District 12
+CandidateContest	WI House District 13	WI;State Assembly Representative;District 13
+CandidateContest	WI House District 14	WI;State Assembly Representative;District 14
+CandidateContest	WI House District 15	WI;State Assembly Representative;District 15
+CandidateContest	WI House District 16	WI;State Assembly Representative;District 16
+CandidateContest	WI House District 17	WI;State Assembly Representative;District 17
+CandidateContest	WI House District 18	WI;State Assembly Representative;District 18
+CandidateContest	WI House District 19	WI;State Assembly Representative;District 19
+CandidateContest	WI House District 20	WI;State Assembly Representative;District 20
+CandidateContest	WI House District 21	WI;State Assembly Representative;District 21
+CandidateContest	WI House District 22	WI;State Assembly Representative;District 22
+CandidateContest	WI House District 23	WI;State Assembly Representative;District 23
+CandidateContest	WI House District 24	WI;State Assembly Representative;District 24
+CandidateContest	WI House District 7	WI;State Assembly Representative;District 7
+CandidateContest	WI House District 8	WI;State Assembly Representative;District 8
+CandidateContest	WI House District 82	WI;State Assembly Representative;District 82
+CandidateContest	WI House District 83	WI;State Assembly Representative;District 83
+CandidateContest	WI House District 84	WI;State Assembly Representative;District 84
+CandidateContest	WI House District 9	WI;State Assembly Representative;District 9
+CandidateContest	WI Senate District 3	WI;State Senator;District 3
+CandidateContest	WI Senate District 5	WI;State Senator;District 5
+CandidateContest	WI Senate District 7	WI;State Senator;District 7
+CandidateContest	US House WI District 4	WI;US Representative;District 4
+CandidateContest	WI House District 40	WI;State Assembly Representative;District 40
+CandidateContest	WI House District 55	WI;State Assembly Representative;District 55
+CandidateContest	WI House District 56	WI;State Assembly Representative;District 56
+CandidateContest	WI House District 57	WI;State Assembly Representative;District 57
+CandidateContest	WI Senate District 19	WI;State Senator;District 19
+CandidateContest	WI House District 60	WI;State Assembly Representative;District 60
+CandidateContest	WI House District 30	WI;State Assembly Representative;District 30
+CandidateContest	WI House District 71	WI;State Assembly Representative;District 71
+CandidateContest	WI House District 62	WI;State Assembly Representative;District 62
+CandidateContest	WI House District 63	WI;State Assembly Representative;District 63
+CandidateContest	WI House District 66	WI;State Assembly Representative;District 66
+CandidateContest	WI House District 31	WI;State Assembly Representative;District 31
+CandidateContest	WI House District 44	WI;State Assembly Representative;District 44
+CandidateContest	WI House District 26	WI;State Assembly Representative;District 26
+CandidateContest	WI House District 58	WI;State Assembly Representative;District 58
+CandidateContest	WI House District 97	WI;State Assembly Representative;District 97
+CandidateContest	WI House District 98	WI;State Assembly Representative;District 98
+CandidateContest	WI House District 99	WI;State Assembly Representative;District 99
+CandidateContest	WI Senate District 33	WI;State Senator;District 33
+CandidateContest	WI House District 54	WI;State Assembly Representative;District 54

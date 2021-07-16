@@ -921,3 +921,259 @@ ReportingUnit	New York;Wyoming County	Wyoming County
 ReportingUnit	New York;Wyoming County	fips36121
 ReportingUnit	New York;Yates County	Yates County
 ReportingUnit	New York;Yates County	fips36123
+CandidateContest	NY Attorney General	NY;Attorney General
+CandidateContest	NY Comptroller	NY;Comptroller;statewide
+CandidateContest	NY Governor and Lt. Governor	NY;Governor and Lt. Governor;statewide
+CandidateContest	NY State Assembly Member District 102	NY;State Assembly Member;District 102
+CandidateContest	NY State Assembly Member District 108	NY;State Assembly Member;District 108
+CandidateContest	NY State Assembly Member District 109	NY;State Assembly Member;District 109
+CandidateContest	NY State Assembly Member District 110	NY;State Assembly Member;District 110
+CandidateContest	NY State Assembly Member District 111	NY;State Assembly Member;District 111
+CandidateContest	NY Senate District 44	NY;State Senator;District 44
+CandidateContest	NY Senate District 46	NY;State Senator;District 46
+CandidateContest	NY Supreme Court Justice District 3	NY;Supreme Court Justice;District 3
+CandidateContest	US House NY District 20	NY;US Representative;District 20
+CandidateContest	NY US Senator	NY;US Senator;statewide
+CandidateContest	NY State Assembly Member District 148	NY;State Assembly Member;District 148
+CandidateContest	NY Senate District 57	NY;State Senator;District 57
+CandidateContest	NY Supreme Court Justice District 8	NY;Supreme Court Justice;District 8
+CandidateContest	US House NY District 23	NY;US Representative;District 23
+CandidateContest	NY State Assembly Member District 77	NY;State Assembly Member;District 77
+CandidateContest	NY State Assembly Member District 78	NY;State Assembly Member;District 78
+CandidateContest	NY State Assembly Member District 79	NY;State Assembly Member;District 79
+CandidateContest	NY State Assembly Member District 80	NY;State Assembly Member;District 80
+CandidateContest	NY State Assembly Member District 81	NY;State Assembly Member;District 81
+CandidateContest	NY State Assembly Member District 82	NY;State Assembly Member;District 82
+CandidateContest	NY State Assembly Member District 83	NY;State Assembly Member;District 83
+CandidateContest	NY State Assembly Member District 84	NY;State Assembly Member;District 84
+CandidateContest	NY State Assembly Member District 85	NY;State Assembly Member;District 85
+CandidateContest	NY State Assembly Member District 86	NY;State Assembly Member;District 86
+CandidateContest	NY State Assembly Member District 87	NY;State Assembly Member;District 87
+CandidateContest	NY Senate District 29	NY;State Senator;District 29
+CandidateContest	NY Senate District 32	NY;State Senator;District 32
+CandidateContest	NY Senate District 33	NY;State Senator;District 33
+CandidateContest	NY Senate District 34	NY;State Senator;District 34
+CandidateContest	NY Senate District 36	NY;State Senator;District 36
+CandidateContest	NY Supreme Court Justice District 12	NY;Supreme Court Justice;District 12
+CandidateContest	US House NY District 13	NY;US Representative;District 13
+CandidateContest	US House NY District 14	NY;US Representative;District 14
+CandidateContest	US House NY District 15	NY;US Representative;District 15
+CandidateContest	US House NY District 16	NY;US Representative;District 16
+CandidateContest	NY State Assembly Member District 122	NY;State Assembly Member;District 122
+CandidateContest	NY State Assembly Member District 123	NY;State Assembly Member;District 123
+CandidateContest	NY State Assembly Member District 124	NY;State Assembly Member;District 124
+CandidateContest	NY Senate District 52	NY;State Senator;District 52
+CandidateContest	NY Supreme Court Justice District 6	NY;Supreme Court Justice;District 6
+CandidateContest	US House NY District 19	NY;US Representative;District 19
+CandidateContest	US House NY District 22	NY;US Representative;District 22
+CandidateContest	NY State Assembly Member District 126	NY;State Assembly Member;District 126
+CandidateContest	NY State Assembly Member District 130	NY;State Assembly Member;District 130
+CandidateContest	NY Senate District 50	NY;State Senator;District 50
+CandidateContest	NY Senate District 51	NY;State Senator;District 51
+CandidateContest	NY Senate District 54	NY;State Senator;District 54
+CandidateContest	NY Supreme Court Justice District 7	NY;Supreme Court Justice;District 7
+CandidateContest	US House NY District 24	NY;US Representative;District 24
+CandidateContest	NY State Assembly Member District 150	NY;State Assembly Member;District 150
+CandidateContest	NY State Assembly Member District 132	NY;State Assembly Member;District 132
+CandidateContest	NY Senate District 58	NY;State Senator;District 58
+CandidateContest	NY State Assembly Member District 115	NY;State Assembly Member;District 115
+CandidateContest	NY Senate District 45	NY;State Senator;District 45
+CandidateContest	US House NY District 21	NY;US Representative;District 21
+CandidateContest	NY State Assembly Member District 106	NY;State Assembly Member;District 106
+CandidateContest	NY State Assembly Member District 107	NY;State Assembly Member;District 107
+CandidateContest	NY Senate District 43	NY;State Senator;District 43
+CandidateContest	NY State Assembly Member District 125	NY;State Assembly Member;District 125
+CandidateContest	NY State Assembly Member District 101	NY;State Assembly Member;District 101
+CandidateContest	NY Senate District 42	NY;State Senator;District 42
+CandidateContest	NY State Assembly Member District 103	NY;State Assembly Member;District 103
+CandidateContest	NY State Assembly Member District 104	NY;State Assembly Member;District 104
+CandidateContest	NY State Assembly Member District 105	NY;State Assembly Member;District 105
+CandidateContest	NY Senate District 40	NY;State Senator;District 40
+CandidateContest	NY Senate District 41	NY;State Senator;District 41
+CandidateContest	NY Supreme Court Justice District 9	NY;Supreme Court Justice;District 9
+CandidateContest	US House NY District 18	NY;US Representative;District 18
+CandidateContest	NY State Assembly Member District 140	NY;State Assembly Member;District 140
+CandidateContest	NY State Assembly Member District 141	NY;State Assembly Member;District 141
+CandidateContest	NY State Assembly Member District 142	NY;State Assembly Member;District 142
+CandidateContest	NY State Assembly Member District 143	NY;State Assembly Member;District 143
+CandidateContest	NY State Assembly Member District 144	NY;State Assembly Member;District 144
+CandidateContest	NY State Assembly Member District 145	NY;State Assembly Member;District 145
+CandidateContest	NY State Assembly Member District 146	NY;State Assembly Member;District 146
+CandidateContest	NY State Assembly Member District 147	NY;State Assembly Member;District 147
+CandidateContest	NY State Assembly Member District 149	NY;State Assembly Member;District 149
+CandidateContest	NY Senate District 59	NY;State Senator;District 59
+CandidateContest	NY Senate District 60	NY;State Senator;District 60
+CandidateContest	NY Senate District 61	NY;State Senator;District 61
+CandidateContest	NY Senate District 63	NY;State Senator;District 63
+CandidateContest	US House NY District 26	NY;US Representative;District 26
+CandidateContest	US House NY District 27	NY;US Representative;District 27
+CandidateContest	NY State Assembly Member District 114	NY;State Assembly Member;District 114
+CandidateContest	NY State Assembly Member District 118	NY;State Assembly Member;District 118
+CandidateContest	NY Senate District 49	NY;State Senator;District 49
+CandidateContest	NY State Assembly Member District 139	NY;State Assembly Member;District 139
+CandidateContest	NY State Assembly Member District 119	NY;State Assembly Member;District 119
+CandidateContest	NY Supreme Court Justice District 5	NY;Supreme Court Justice;District 5
+CandidateContest	NY State Assembly Member District 116	NY;State Assembly Member;District 116
+CandidateContest	NY State Assembly Member District 117	NY;State Assembly Member;District 117
+CandidateContest	NY State Assembly Member District 120	NY;State Assembly Member;District 120
+CandidateContest	NY Senate District 48	NY;State Senator;District 48
+CandidateContest	NY State Assembly Member District 41	NY;State Assembly Member;District 41
+CandidateContest	NY State Assembly Member District 42	NY;State Assembly Member;District 42
+CandidateContest	NY State Assembly Member District 43	NY;State Assembly Member;District 43
+CandidateContest	NY State Assembly Member District 44	NY;State Assembly Member;District 44
+CandidateContest	NY State Assembly Member District 45	NY;State Assembly Member;District 45
+CandidateContest	NY State Assembly Member District 46	NY;State Assembly Member;District 46
+CandidateContest	NY State Assembly Member District 47	NY;State Assembly Member;District 47
+CandidateContest	NY State Assembly Member District 48	NY;State Assembly Member;District 48
+CandidateContest	NY State Assembly Member District 49	NY;State Assembly Member;District 49
+CandidateContest	NY State Assembly Member District 50	NY;State Assembly Member;District 50
+CandidateContest	NY State Assembly Member District 51	NY;State Assembly Member;District 51
+CandidateContest	NY State Assembly Member District 52	NY;State Assembly Member;District 52
+CandidateContest	NY State Assembly Member District 53	NY;State Assembly Member;District 53
+CandidateContest	NY State Assembly Member District 54	NY;State Assembly Member;District 54
+CandidateContest	NY State Assembly Member District 55	NY;State Assembly Member;District 55
+CandidateContest	NY State Assembly Member District 56	NY;State Assembly Member;District 56
+CandidateContest	NY State Assembly Member District 57	NY;State Assembly Member;District 57
+CandidateContest	NY State Assembly Member District 58	NY;State Assembly Member;District 58
+CandidateContest	NY State Assembly Member District 59	NY;State Assembly Member;District 59
+CandidateContest	NY State Assembly Member District 60	NY;State Assembly Member;District 60
+CandidateContest	NY State Assembly Member District 64	NY;State Assembly Member;District 64
+CandidateContest	NY Senate District 17	NY;State Senator;District 17
+CandidateContest	NY Senate District 18	NY;State Senator;District 18
+CandidateContest	NY Senate District 19	NY;State Senator;District 19
+CandidateContest	NY Senate District 20	NY;State Senator;District 20
+CandidateContest	NY Senate District 21	NY;State Senator;District 21
+CandidateContest	NY Senate District 22	NY;State Senator;District 22
+CandidateContest	NY Senate District 23	NY;State Senator;District 23
+CandidateContest	NY Senate District 25	NY;State Senator;District 25
+CandidateContest	NY Senate District 26	NY;State Senator;District 26
+CandidateContest	NY Supreme Court Justice District 2	NY;Supreme Court Justice;District 2
+CandidateContest	US House NY District 10	NY;US Representative;District 10
+CandidateContest	US House NY District 11	NY;US Representative;District 11
+CandidateContest	US House NY District 12	NY;US Representative;District 12
+CandidateContest	US House NY District 7	NY;US Representative;District 7
+CandidateContest	US House NY District 8	NY;US Representative;District 8
+CandidateContest	US House NY District 9	NY;US Representative;District 9
+CandidateContest	NY Senate District 47	NY;State Senator;District 47
+CandidateContest	NY State Assembly Member District 133	NY;State Assembly Member;District 133
+CandidateContest	NY State Assembly Member District 121	NY;State Assembly Member;District 121
+CandidateContest	NY Senate District 53	NY;State Senator;District 53
+CandidateContest	NY State Assembly Member District 134	NY;State Assembly Member;District 134
+CandidateContest	NY State Assembly Member District 135	NY;State Assembly Member;District 135
+CandidateContest	NY State Assembly Member District 136	NY;State Assembly Member;District 136
+CandidateContest	NY State Assembly Member District 137	NY;State Assembly Member;District 137
+CandidateContest	NY State Assembly Member District 138	NY;State Assembly Member;District 138
+CandidateContest	NY Senate District 55	NY;State Senator;District 55
+CandidateContest	NY Senate District 56	NY;State Senator;District 56
+CandidateContest	NY Senate District 62	NY;State Senator;District 62
+CandidateContest	US House NY District 25	NY;US Representative;District 25
+CandidateContest	NY State Assembly Member District 13	NY;State Assembly Member;District 13
+CandidateContest	NY State Assembly Member District 14	NY;State Assembly Member;District 14
+CandidateContest	NY State Assembly Member District 15	NY;State Assembly Member;District 15
+CandidateContest	NY State Assembly Member District 16	NY;State Assembly Member;District 16
+CandidateContest	NY State Assembly Member District 17	NY;State Assembly Member;District 17
+CandidateContest	NY State Assembly Member District 18	NY;State Assembly Member;District 18
+CandidateContest	NY State Assembly Member District 19	NY;State Assembly Member;District 19
+CandidateContest	NY State Assembly Member District 20	NY;State Assembly Member;District 20
+CandidateContest	NY State Assembly Member District 21	NY;State Assembly Member;District 21
+CandidateContest	NY State Assembly Member District 22	NY;State Assembly Member;District 22
+CandidateContest	NY State Assembly Member District 9	NY;State Assembly Member;District 9
+CandidateContest	NY Senate District 5	NY;State Senator;District 5
+CandidateContest	NY Senate District 6	NY;State Senator;District 6
+CandidateContest	NY Senate District 7	NY;State Senator;District 7
+CandidateContest	NY Senate District 8	NY;State Senator;District 8
+CandidateContest	NY Senate District 9	NY;State Senator;District 9
+CandidateContest	NY Supreme Court Justice District 10	NY;Supreme Court Justice;District 10
+CandidateContest	US House NY District 2	NY;US Representative;District 2
+CandidateContest	US House NY District 3	NY;US Representative;District 3
+CandidateContest	US House NY District 4	NY;US Representative;District 4
+CandidateContest	US House NY District 5	NY;US Representative;District 5
+CandidateContest	NY State Assembly Member District 65	NY;State Assembly Member;District 65
+CandidateContest	NY State Assembly Member District 66	NY;State Assembly Member;District 66
+CandidateContest	NY State Assembly Member District 67	NY;State Assembly Member;District 67
+CandidateContest	NY State Assembly Member District 68	NY;State Assembly Member;District 68
+CandidateContest	NY State Assembly Member District 69	NY;State Assembly Member;District 69
+CandidateContest	NY State Assembly Member District 70	NY;State Assembly Member;District 70
+CandidateContest	NY State Assembly Member District 71	NY;State Assembly Member;District 71
+CandidateContest	NY State Assembly Member District 72	NY;State Assembly Member;District 72
+CandidateContest	NY State Assembly Member District 73	NY;State Assembly Member;District 73
+CandidateContest	NY State Assembly Member District 74	NY;State Assembly Member;District 74
+CandidateContest	NY State Assembly Member District 75	NY;State Assembly Member;District 75
+CandidateContest	NY State Assembly Member District 76	NY;State Assembly Member;District 76
+CandidateContest	NY Senate District 27	NY;State Senator;District 27
+CandidateContest	NY Senate District 28	NY;State Senator;District 28
+CandidateContest	NY Senate District 30	NY;State Senator;District 30
+CandidateContest	NY Senate District 31	NY;State Senator;District 31
+CandidateContest	NY Supreme Court Justice District 1	NY;Supreme Court Justice;District 1
+CandidateContest	NY State Assembly Member District 127	NY;State Assembly Member;District 127
+CandidateContest	NY State Assembly Member District 128	NY;State Assembly Member;District 128
+CandidateContest	NY State Assembly Member District 129	NY;State Assembly Member;District 129
+CandidateContest	NY State Assembly Member District 131	NY;State Assembly Member;District 131
+CandidateContest	NY State Assembly Member District 100	NY;State Assembly Member;District 100
+CandidateContest	NY State Assembly Member District 98	NY;State Assembly Member;District 98
+CandidateContest	NY State Assembly Member District 99	NY;State Assembly Member;District 99
+CandidateContest	NY Senate District 39	NY;State Senator;District 39
+CandidateContest	NY State Assembly Member District 94	NY;State Assembly Member;District 94
+CandidateContest	NY State Assembly Member District 95	NY;State Assembly Member;District 95
+CandidateContest	NY State Assembly Member District 23	NY;State Assembly Member;District 23
+CandidateContest	NY State Assembly Member District 24	NY;State Assembly Member;District 24
+CandidateContest	NY State Assembly Member District 25	NY;State Assembly Member;District 25
+CandidateContest	NY State Assembly Member District 26	NY;State Assembly Member;District 26
+CandidateContest	NY State Assembly Member District 27	NY;State Assembly Member;District 27
+CandidateContest	NY State Assembly Member District 28	NY;State Assembly Member;District 28
+CandidateContest	NY State Assembly Member District 29	NY;State Assembly Member;District 29
+CandidateContest	NY State Assembly Member District 30	NY;State Assembly Member;District 30
+CandidateContest	NY State Assembly Member District 31	NY;State Assembly Member;District 31
+CandidateContest	NY State Assembly Member District 32	NY;State Assembly Member;District 32
+CandidateContest	NY State Assembly Member District 33	NY;State Assembly Member;District 33
+CandidateContest	NY State Assembly Member District 34	NY;State Assembly Member;District 34
+CandidateContest	NY State Assembly Member District 35	NY;State Assembly Member;District 35
+CandidateContest	NY State Assembly Member District 36	NY;State Assembly Member;District 36
+CandidateContest	NY State Assembly Member District 37	NY;State Assembly Member;District 37
+CandidateContest	NY State Assembly Member District 38	NY;State Assembly Member;District 38
+CandidateContest	NY State Assembly Member District 39	NY;State Assembly Member;District 39
+CandidateContest	NY State Assembly Member District 40	NY;State Assembly Member;District 40
+CandidateContest	NY Senate District 10	NY;State Senator;District 10
+CandidateContest	NY Senate District 11	NY;State Senator;District 11
+CandidateContest	NY Senate District 12	NY;State Senator;District 12
+CandidateContest	NY Senate District 13	NY;State Senator;District 13
+CandidateContest	NY Senate District 14	NY;State Senator;District 14
+CandidateContest	NY Senate District 15	NY;State Senator;District 15
+CandidateContest	NY Senate District 16	NY;State Senator;District 16
+CandidateContest	NY Supreme Court Justice District 11	NY;Supreme Court Justice;District 11
+CandidateContest	US House NY District 6	NY;US Representative;District 6
+CandidateContest	NY State Assembly Member District 61	NY;State Assembly Member;District 61
+CandidateContest	NY State Assembly Member District 62	NY;State Assembly Member;District 62
+CandidateContest	NY State Assembly Member District 63	NY;State Assembly Member;District 63
+CandidateContest	NY Senate District 24	NY;State Senator;District 24
+CandidateContest	NY Supreme Court Justice District 13	NY;Supreme Court Justice;District 13
+CandidateContest	NY State Assembly Member District 96	NY;State Assembly Member;District 96
+CandidateContest	NY State Assembly Member District 97	NY;State Assembly Member;District 97
+CandidateContest	NY Senate District 38	NY;State Senator;District 38
+CandidateContest	US House NY District 17	NY;US Representative;District 17
+CandidateContest	NY State Assembly Member District 112	NY;State Assembly Member;District 112
+CandidateContest	NY State Assembly Member District 113	NY;State Assembly Member;District 113
+CandidateContest	NY State Assembly Member District 1	NY;State Assembly Member;District 1
+CandidateContest	NY State Assembly Member District 10	NY;State Assembly Member;District 10
+CandidateContest	NY State Assembly Member District 11	NY;State Assembly Member;District 11
+CandidateContest	NY State Assembly Member District 12	NY;State Assembly Member;District 12
+CandidateContest	NY State Assembly Member District 2	NY;State Assembly Member;District 2
+CandidateContest	NY State Assembly Member District 3	NY;State Assembly Member;District 3
+CandidateContest	NY State Assembly Member District 4	NY;State Assembly Member;District 4
+CandidateContest	NY State Assembly Member District 5	NY;State Assembly Member;District 5
+CandidateContest	NY State Assembly Member District 6	NY;State Assembly Member;District 6
+CandidateContest	NY State Assembly Member District 7	NY;State Assembly Member;District 7
+CandidateContest	NY State Assembly Member District 8	NY;State Assembly Member;District 8
+CandidateContest	NY Senate District 1	NY;State Senator;District 1
+CandidateContest	NY Senate District 2	NY;State Senator;District 2
+CandidateContest	NY Senate District 3	NY;State Senator;District 3
+CandidateContest	NY Senate District 4	NY;State Senator;District 4
+CandidateContest	US House NY District 1	NY;US Representative;District 1
+CandidateContest	NY State Assembly Member District 88	NY;State Assembly Member;District 88
+CandidateContest	NY State Assembly Member District 89	NY;State Assembly Member;District 89
+CandidateContest	NY State Assembly Member District 90	NY;State Assembly Member;District 90
+CandidateContest	NY State Assembly Member District 91	NY;State Assembly Member;District 91
+CandidateContest	NY State Assembly Member District 92	NY;State Assembly Member;District 92
+CandidateContest	NY State Assembly Member District 93	NY;State Assembly Member;District 93
+CandidateContest	NY Senate District 35	NY;State Senator;District 35
+CandidateContest	NY Senate District 37	NY;State Senator;District 37

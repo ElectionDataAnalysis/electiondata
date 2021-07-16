@@ -669,3 +669,93 @@ ReportingUnit	West Virginia;Wood County	Wood
 ReportingUnit	West Virginia;Wood County	fips54107
 ReportingUnit	West Virginia;Wyoming County	Wyoming
 ReportingUnit	West Virginia;Wyoming County	fips54109
+CandidateContest	WV Justice of The Supreme Court of Appeals - Division 1	WV;Justice of The Supreme Court of Appeals - Division 1;statewide
+CandidateContest	WV Justice of The Supreme Court of Appeals - Division 2	WV;Justice of The Supreme Court of Appeals - Division 2;statewide
+CandidateContest	WV State House District 47	WV;State House Delegate;District 47 (1)
+CandidateContest	WV Senate District 14	WV;State Senator;District 14
+CandidateContest	US House WV District 1	WV;US Representative;District 1
+CandidateContest	WV US Senator	WV;US Senator;statewide
+CandidateContest	WV State House District 59	WV;State House Delegate;District 59 (1)
+CandidateContest	WV State House District 60	WV;State House Delegate;District 60 (1)
+CandidateContest	WV State House District 61	WV;State House Delegate;District 61 (1)
+CandidateContest	WV State House District 62	WV;State House Delegate;District 62 (1)
+CandidateContest	WV State House District 63	WV;State House Delegate;District 63 (1)
+CandidateContest	WV State House District 64	WV;State House Delegate;District 64 (1)
+CandidateContest	WV Senate District 15	WV;State Senator;District 15
+CandidateContest	WV Senate District 16	WV;State Senator;District 16
+CandidateContest	US House WV District 2	WV;US Representative;District 2
+CandidateContest	WV State House District 22	WV;State House Delegate;District 22 (2)
+CandidateContest	WV State House District 23	WV;State House Delegate;District 23 (1)
+CandidateContest	WV State House District 24	WV;State House Delegate;District 24 (2)
+CandidateContest	WV Senate District 7	WV;State Senator;District 7
+CandidateContest	US House WV District 3	WV;US Representative;District 3
+CandidateContest	WV State House District 34	WV;State House Delegate;District 34 (1)
+CandidateContest	WV Senate District 12	WV;State Senator;District 12
+CandidateContest	WV State House District 1	WV;State House Delegate;District 1 (2)
+CandidateContest	WV State House District 2	WV;State House Delegate;District 2 (1)
+CandidateContest	WV Senate District 1	WV;State Senator;District 1
+CandidateContest	WV State House District 16	WV;State House Delegate;District 16 (3)
+CandidateContest	WV State House District 17	WV;State House Delegate;District 17 (2)
+CandidateContest	WV State House District 18	WV;State House Delegate;District 18 (1)
+CandidateContest	WV Senate District 5	WV;State Senator;District 5
+CandidateContest	WV State House District 33	WV;State House Delegate;District 33 (1)
+CandidateContest	WV Senate District 2	WV;State Senator;District 2
+CandidateContest	WV State House District 32	WV;State House Delegate;District 32 (3)
+CandidateContest	WV State House District 6	WV;State House Delegate;District 6 (1)
+CandidateContest	WV Senate District 10	WV;State Senator;District 10
+CandidateContest	WV State House District 54	WV;State House Delegate;District 54 (1)
+CandidateContest	WV Senate District 11	WV;State Senator;District 11
+CandidateContest	WV State House District 41	WV;State House Delegate;District 41 (1)
+CandidateContest	WV State House District 42	WV;State House Delegate;District 42 (2)
+CandidateContest	WV State House District 57	WV;State House Delegate;District 57 (1)
+CandidateContest	WV State House District 58	WV;State House Delegate;District 58 (1)
+CandidateContest	WV State House District 55	WV;State House Delegate;District 55 (1)
+CandidateContest	WV State House District 48	WV;State House Delegate;District 48 (4)
+CandidateContest	WV State House District 11	WV;State House Delegate;District 11 (1)
+CandidateContest	WV State House District 12	WV;State House Delegate;District 12 (1)
+CandidateContest	WV State House District 13	WV;State House Delegate;District 13 (2)
+CandidateContest	WV Senate District 4	WV;State Senator;District 4
+CandidateContest	WV State House District 65	WV;State House Delegate;District 65 (1)
+CandidateContest	WV State House District 66	WV;State House Delegate;District 66 (1)
+CandidateContest	WV State House District 67	WV;State House Delegate;District 67 (1)
+CandidateContest	WV State House District 35	WV;State House Delegate;District 35 (4)
+CandidateContest	WV State House District 36	WV;State House Delegate;District 36 (3)
+CandidateContest	WV State House District 37	WV;State House Delegate;District 37 (1)
+CandidateContest	WV State House District 38	WV;State House Delegate;District 38 (1)
+CandidateContest	WV State House District 39	WV;State House Delegate;District 39 (1)
+CandidateContest	WV State House District 40	WV;State House Delegate;District 40 (1)
+CandidateContest	WV Senate District 17	WV;State Senator;District 17
+CandidateContest	WV Senate District 8	WV;State Senator;District 8
+CandidateContest	WV State House District 46	WV;State House Delegate;District 46 (1)
+CandidateContest	WV State House District 20	WV;State House Delegate;District 20 (1)
+CandidateContest	WV State House District 49	WV;State House Delegate;District 49 (1)
+CandidateContest	WV State House District 50	WV;State House Delegate;District 50 (3)
+CandidateContest	WV Senate District 13	WV;State Senator;District 13
+CandidateContest	WV State House District 4	WV;State House Delegate;District 4 (2)
+CandidateContest	WV State House District 14	WV;State House Delegate;District 14 (1)
+CandidateContest	WV State House District 21	WV;State House Delegate;District 21 (1)
+CandidateContest	WV State House District 25	WV;State House Delegate;District 25 (1)
+CandidateContest	WV State House District 26	WV;State House Delegate;District 26 (1)
+CandidateContest	WV Senate District 6	WV;State Senator;District 6
+CandidateContest	WV Senate District 9	WV;State Senator;District 9
+CandidateContest	WV State House District 27	WV;State House Delegate;District 27 (3)
+CandidateContest	WV State House District 56	WV;State House Delegate;District 56 (1)
+CandidateContest	WV State House District 5	WV;State House Delegate;District 5 (1)
+CandidateContest	WV State House District 51	WV;State House Delegate;District 51 (5)
+CandidateContest	WV State House District 28	WV;State House Delegate;District 28 (2)
+CandidateContest	WV State House District 44	WV;State House Delegate;District 44 (1)
+CandidateContest	WV State House District 3	WV;State House Delegate;District 3 (2)
+CandidateContest	WV State House District 7	WV;State House Delegate;District 7 (1)
+CandidateContest	WV Senate District 3	WV;State Senator;District 3
+CandidateContest	WV State House District 43	WV;State House Delegate;District 43 (2)
+CandidateContest	WV State House District 52	WV;State House Delegate;District 52 (1)
+CandidateContest	WV State House District 53	WV;State House Delegate;District 53 (1)
+CandidateContest	WV State House District 15	WV;State House Delegate;District 15 (1)
+CandidateContest	WV State House District 29	WV;State House Delegate;District 29 (1)
+CandidateContest	WV State House District 30	WV;State House Delegate;District 30 (1)
+CandidateContest	WV State House District 31	WV;State House Delegate;District 31 (1)
+CandidateContest	WV State House District 45	WV;State House Delegate;District 45 (1)
+CandidateContest	WV State House District 19	WV;State House Delegate;District 19 (2)
+CandidateContest	WV State House District 9	WV;State House Delegate;District 9 (1)
+CandidateContest	WV State House District 10	WV;State House Delegate;District 10 (3)
+CandidateContest	WV State House District 8	WV;State House Delegate;District 8 (1)

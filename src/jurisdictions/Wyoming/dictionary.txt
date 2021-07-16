@@ -401,4 +401,85 @@ Party	Independent	Independent
 Party	Democratic Party	Democratic Party
 Party	Constitution Party	Constitution Party
 CountItemType	total	total
-
+CandidateContest	WY Governor	WY;Governor;statewide
+CandidateContest	WY Secretary of State	WY;Secretary of State;statewide
+CandidateContest	WY State Auditor	WY;State Auditor;statewide
+CandidateContest	WY House District 13	WY;State Representative;District 13
+CandidateContest	WY House District 14	WY;State Representative;District 14
+CandidateContest	WY House District 45	WY;State Representative;District 45
+CandidateContest	WY House District 46	WY;State Representative;District 46
+CandidateContest	WY House District 47	WY;State Representative;District 47
+CandidateContest	WY Senate District 11	WY;State Senator;District 11
+CandidateContest	WY Senate District 9	WY;State Senator;District 9
+CandidateContest	WY State Treasurer	WY;State Treasurer;statewide
+CandidateContest	WY Superintendent of Public Instruction	WY;Superintendent of Public Instruction;statewide
+CandidateContest	US House WY District 0	WY;US Representative;District 0
+CandidateContest	WY US Senator	WY;US Senator;statewide
+CandidateContest	WY House District 26	WY;State Representative;District 26
+CandidateContest	WY House District 27	WY;State Representative;District 27
+CandidateContest	WY House District 28	WY;State Representative;District 28
+CandidateContest	WY Senate District 19	WY;State Senator;District 19
+CandidateContest	WY House District 3	WY;State Representative;District 3
+CandidateContest	WY House District 31	WY;State Representative;District 31
+CandidateContest	WY House District 32	WY;State Representative;District 32
+CandidateContest	WY House District 52	WY;State Representative;District 52
+CandidateContest	WY House District 53	WY;State Representative;District 53
+CandidateContest	WY Senate District 1	WY;State Senator;District 1
+CandidateContest	WY Senate District 23	WY;State Senator;District 23
+CandidateContest	WY House District 15	WY;State Representative;District 15
+CandidateContest	WY House District 4	WY;State Representative;District 4
+CandidateContest	WY House District 6	WY;State Representative;District 6
+CandidateContest	WY House District 1	WY;State Representative;District 1
+CandidateContest	WY House District 33	WY;State Representative;District 33
+CandidateContest	WY House District 34	WY;State Representative;District 34
+CandidateContest	WY House District 54	WY;State Representative;District 54
+CandidateContest	WY House District 55	WY;State Representative;District 55
+CandidateContest	WY Senate District 25	WY;State Senator;District 25
+CandidateContest	WY House District 10	WY;State Representative;District 10
+CandidateContest	WY House District 2	WY;State Representative;District 2
+CandidateContest	WY House District 5	WY;State Representative;District 5
+CandidateContest	WY Senate District 3	WY;State Senator;District 3
+CandidateContest	WY House District 40	WY;State Representative;District 40
+CandidateContest	WY House District 11	WY;State Representative;District 11
+CandidateContest	WY House District 12	WY;State Representative;District 12
+CandidateContest	WY House District 41	WY;State Representative;District 41
+CandidateContest	WY House District 42	WY;State Representative;District 42
+CandidateContest	WY House District 43	WY;State Representative;District 43
+CandidateContest	WY House District 44	WY;State Representative;District 44
+CandidateContest	WY House District 7	WY;State Representative;District 7
+CandidateContest	WY House District 8	WY;State Representative;District 8
+CandidateContest	WY House District 9	WY;State Representative;District 9
+CandidateContest	WY Senate District 5	WY;State Senator;District 5
+CandidateContest	WY Senate District 7	WY;State Senator;District 7
+CandidateContest	WY House District 18	WY;State Representative;District 18
+CandidateContest	WY House District 21	WY;State Representative;District 21
+CandidateContest	WY House District 22	WY;State Representative;District 22
+CandidateContest	WY House District 35	WY;State Representative;District 35
+CandidateContest	WY House District 36	WY;State Representative;District 36
+CandidateContest	WY House District 37	WY;State Representative;District 37
+CandidateContest	WY House District 38	WY;State Representative;District 38
+CandidateContest	WY House District 56	WY;State Representative;District 56
+CandidateContest	WY House District 57	WY;State Representative;District 57
+CandidateContest	WY House District 58	WY;State Representative;District 58
+CandidateContest	WY House District 59	WY;State Representative;District 59
+CandidateContest	WY Senate District 27	WY;State Senator;District 27
+CandidateContest	WY Senate District 29	WY;State Senator;District 29
+CandidateContest	WY House District 24	WY;State Representative;District 24
+CandidateContest	WY House District 25	WY;State Representative;District 25
+CandidateContest	WY House District 50	WY;State Representative;District 50
+CandidateContest	WY House District 29	WY;State Representative;District 29
+CandidateContest	WY House District 30	WY;State Representative;District 30
+CandidateContest	WY House District 51	WY;State Representative;District 51
+CandidateContest	WY Senate District 21	WY;State Senator;District 21
+CandidateContest	WY House District 20	WY;State Representative;District 20
+CandidateContest	WY House District 17	WY;State Representative;District 17
+CandidateContest	WY House District 39	WY;State Representative;District 39
+CandidateContest	WY House District 48	WY;State Representative;District 48
+CandidateContest	WY House District 60	WY;State Representative;District 60
+CandidateContest	WY Senate District 13	WY;State Senator;District 13
+CandidateContest	WY House District 16	WY;State Representative;District 16
+CandidateContest	WY House District 23	WY;State Representative;District 23
+CandidateContest	WY Senate District 17	WY;State Senator;District 17
+CandidateContest	WY House District 19	WY;State Representative;District 19
+CandidateContest	WY House District 49	WY;State Representative;District 49
+CandidateContest	WY Senate District 15	WY;State Senator;District 15

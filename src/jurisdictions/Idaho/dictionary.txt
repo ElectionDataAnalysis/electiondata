@@ -260,3 +260,117 @@ ReportingUnit	Idaho;Valley County	Valley
 ReportingUnit	Idaho;Valley County	fips16085
 ReportingUnit	Idaho;Washington County	Washington
 ReportingUnit	Idaho;Washington County	fips16087
+CandidateContest	ID Attorney General	ID;Attorney General
+CandidateContest	ID Governor	ID;Governor;statewide
+CandidateContest	ID Lieutenant Governor	ID;Lieutenant Governor;statewide
+CandidateContest	ID Secretary of State	ID;Secretary of State;statewide
+CandidateContest	ID State Controller	ID;State Controller;statewide
+CandidateContest	ID State Representative A District 14	ID;State Representative A;District 14
+CandidateContest	ID State Representative A District 15	ID;State Representative A;District 15
+CandidateContest	ID State Representative A District 16	ID;State Representative A;District 16
+CandidateContest	ID State Representative A District 17	ID;State Representative A;District 17
+CandidateContest	ID State Representative A District 18	ID;State Representative A;District 18
+CandidateContest	ID State Representative A District 19	ID;State Representative A;District 19
+CandidateContest	ID State Representative A District 20	ID;State Representative A;District 20
+CandidateContest	ID State Representative A District 21	ID;State Representative A;District 21
+CandidateContest	ID State Representative A District 22	ID;State Representative A;District 22
+CandidateContest	ID State Representative B District 14	ID;State Representative B;District 14
+CandidateContest	ID State Representative B District 15	ID;State Representative B;District 15
+CandidateContest	ID State Representative B District 16	ID;State Representative B;District 16
+CandidateContest	ID State Representative B District 17	ID;State Representative B;District 17
+CandidateContest	ID State Representative B District 18	ID;State Representative B;District 18
+CandidateContest	ID State Representative B District 19	ID;State Representative B;District 19
+CandidateContest	ID State Representative B District 20	ID;State Representative B;District 20
+CandidateContest	ID State Representative B District 21	ID;State Representative B;District 21
+CandidateContest	ID State Representative B District 22	ID;State Representative B;District 22
+CandidateContest	ID Senate District 14	ID;State Senator;District 14
+CandidateContest	ID Senate District 15	ID;State Senator;District 15
+CandidateContest	ID Senate District 16	ID;State Senator;District 16
+CandidateContest	ID Senate District 17	ID;State Senator;District 17
+CandidateContest	ID Senate District 18	ID;State Senator;District 18
+CandidateContest	ID Senate District 19	ID;State Senator;District 19
+CandidateContest	ID Senate District 20	ID;State Senator;District 20
+CandidateContest	ID Senate District 21	ID;State Senator;District 21
+CandidateContest	ID Senate District 22	ID;State Senator;District 22
+CandidateContest	ID State Treasurer	ID;State Treasurer;statewide
+CandidateContest	ID Superintendent of Public Instruction	ID;Superintendent of Public Instruction;statewide
+CandidateContest	US House ID District 1	ID;US Representative;District 1
+CandidateContest	US House ID District 2	ID;US Representative;District 2
+CandidateContest	ID State Representative A District 9	ID;State Representative A;District 9
+CandidateContest	ID State Representative B District 9	ID;State Representative B;District 9
+CandidateContest	ID Senate District 9	ID;State Senator;District 9
+CandidateContest	ID State Representative A District 28	ID;State Representative A;District 28
+CandidateContest	ID State Representative A District 29	ID;State Representative A;District 29
+CandidateContest	ID State Representative B District 28	ID;State Representative B;District 28
+CandidateContest	ID State Representative B District 29	ID;State Representative B;District 29
+CandidateContest	ID Senate District 28	ID;State Senator;District 28
+CandidateContest	ID Senate District 29	ID;State Senator;District 29
+CandidateContest	ID State Representative A District 32	ID;State Representative A;District 32
+CandidateContest	ID State Representative B District 32	ID;State Representative B;District 32
+CandidateContest	ID Senate District 32	ID;State Senator;District 32
+CandidateContest	ID State Representative A District 5	ID;State Representative A;District 5
+CandidateContest	ID State Representative B District 5	ID;State Representative B;District 5
+CandidateContest	ID Senate District 5	ID;State Senator;District 5
+CandidateContest	ID State Representative A District 31	ID;State Representative A;District 31
+CandidateContest	ID State Representative B District 31	ID;State Representative B;District 31
+CandidateContest	ID Senate District 31	ID;State Senator;District 31
+CandidateContest	ID State Representative A District 26	ID;State Representative A;District 26
+CandidateContest	ID State Representative B District 26	ID;State Representative B;District 26
+CandidateContest	ID Senate District 26	ID;State Senator;District 26
+CandidateContest	ID State Representative A District 8	ID;State Representative A;District 8
+CandidateContest	ID State Representative B District 8	ID;State Representative B;District 8
+CandidateContest	ID Senate District 8	ID;State Senator;District 8
+CandidateContest	ID State Representative A District 1	ID;State Representative A;District 1
+CandidateContest	ID State Representative A District 7	ID;State Representative A;District 7
+CandidateContest	ID State Representative B District 1	ID;State Representative B;District 1
+CandidateContest	ID State Representative B District 7	ID;State Representative B;District 7
+CandidateContest	ID Senate District 1	ID;State Senator;District 1
+CandidateContest	ID Senate District 7	ID;State Senator;District 7
+CandidateContest	ID State Representative A District 30	ID;State Representative A;District 30
+CandidateContest	ID State Representative A District 33	ID;State Representative A;District 33
+CandidateContest	ID State Representative A District 34	ID;State Representative A;District 34
+CandidateContest	ID State Representative B District 30	ID;State Representative B;District 30
+CandidateContest	ID State Representative B District 33	ID;State Representative B;District 33
+CandidateContest	ID State Representative B District 34	ID;State Representative B;District 34
+CandidateContest	ID Senate District 30	ID;State Senator;District 30
+CandidateContest	ID Senate District 33	ID;State Senator;District 33
+CandidateContest	ID Senate District 34	ID;State Senator;District 34
+CandidateContest	ID State Representative A District 35	ID;State Representative A;District 35
+CandidateContest	ID State Representative B District 35	ID;State Representative B;District 35
+CandidateContest	ID Senate District 35	ID;State Senator;District 35
+CandidateContest	ID State Representative A District 10	ID;State Representative A;District 10
+CandidateContest	ID State Representative A District 11	ID;State Representative A;District 11
+CandidateContest	ID State Representative A District 12	ID;State Representative A;District 12
+CandidateContest	ID State Representative A District 13	ID;State Representative A;District 13
+CandidateContest	ID State Representative B District 10	ID;State Representative B;District 10
+CandidateContest	ID State Representative B District 11	ID;State Representative B;District 11
+CandidateContest	ID State Representative B District 12	ID;State Representative B;District 12
+CandidateContest	ID State Representative B District 13	ID;State Representative B;District 13
+CandidateContest	ID Senate District 10	ID;State Senator;District 10
+CandidateContest	ID Senate District 11	ID;State Senator;District 11
+CandidateContest	ID Senate District 12	ID;State Senator;District 12
+CandidateContest	ID Senate District 13	ID;State Senator;District 13
+CandidateContest	ID State Representative A District 27	ID;State Representative A;District 27
+CandidateContest	ID State Representative B District 27	ID;State Representative B;District 27
+CandidateContest	ID Senate District 27	ID;State Senator;District 27
+CandidateContest	ID State Representative A District 23	ID;State Representative A;District 23
+CandidateContest	ID State Representative B District 23	ID;State Representative B;District 23
+CandidateContest	ID Senate District 23	ID;State Senator;District 23
+CandidateContest	ID State Representative A District 25	ID;State Representative A;District 25
+CandidateContest	ID State Representative B District 25	ID;State Representative B;District 25
+CandidateContest	ID Senate District 25	ID;State Senator;District 25
+CandidateContest	ID State Representative A District 2	ID;State Representative A;District 2
+CandidateContest	ID State Representative A District 3	ID;State Representative A;District 3
+CandidateContest	ID State Representative A District 4	ID;State Representative A;District 4
+CandidateContest	ID State Representative B District 2	ID;State Representative B;District 2
+CandidateContest	ID State Representative B District 3	ID;State Representative B;District 3
+CandidateContest	ID State Representative B District 4	ID;State Representative B;District 4
+CandidateContest	ID Senate District 2	ID;State Senator;District 2
+CandidateContest	ID Senate District 3	ID;State Senator;District 3
+CandidateContest	ID Senate District 4	ID;State Senator;District 4
+CandidateContest	ID State Representative A District 6	ID;State Representative A;District 6
+CandidateContest	ID State Representative B District 6	ID;State Representative B;District 6
+CandidateContest	ID Senate District 6	ID;State Senator;District 6
+CandidateContest	ID State Representative A District 24	ID;State Representative A;District 24
+CandidateContest	ID State Representative B District 24	ID;State Representative B;District 24
+CandidateContest	ID Senate District 24	ID;State Senator;District 24

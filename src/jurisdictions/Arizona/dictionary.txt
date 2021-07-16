@@ -1253,3 +1253,80 @@ ReportingUnit	Arizona;Yavapai County	Yavapai
 ReportingUnit	Arizona;Yavapai County	fips04025
 ReportingUnit	Arizona;Yuma County	Yuma
 ReportingUnit	Arizona;Yuma County	fips04027
+CandidateContest	AZ Attorney General	AZ;Attorney General
+CandidateContest	AZ Corporation Commissioner	AZ;Corporation Commissioner;statewide
+CandidateContest	AZ Governor	AZ;Governor;statewide
+CandidateContest	AZ Secretary of State	AZ;Secretary of State;statewide
+CandidateContest	AZ State Mine Inspector	AZ;State Mine Inspector;statewide
+CandidateContest	AZ House District 7	AZ;State Representative;District 7
+CandidateContest	AZ Senate District 7	AZ;State Senator;District 7
+CandidateContest	AZ State Treasurer	AZ;State Treasurer;statewide
+CandidateContest	AZ Superintendant of Public Instruction	AZ;Superintendant of Public Instruction;statewide
+CandidateContest	US House AZ District 1	AZ;US Representative;District 1
+CandidateContest	AZ US Senator	AZ;US Senator;statewide
+CandidateContest	AZ House District 14	AZ;State Representative;District 14
+CandidateContest	AZ Senate District 14	AZ;State Senator;District 14
+CandidateContest	US House AZ District 2	AZ;US Representative;District 2
+CandidateContest	AZ House District 6	AZ;State Representative;District 6
+CandidateContest	AZ Senate District 6	AZ;State Senator;District 6
+CandidateContest	AZ House District 8	AZ;State Representative;District 8
+CandidateContest	AZ Senate District 8	AZ;State Senator;District 8
+CandidateContest	US House AZ District 4	AZ;US Representative;District 4
+CandidateContest	AZ House District 26	AZ;State Representative;District 26
+CandidateContest	AZ House District 5	AZ;State Representative;District 5
+CandidateContest	AZ Senate District 5	AZ;State Senator;District 5
+CandidateContest	AZ House District 1	AZ;State Representative;District 1
+CandidateContest	AZ House District 12	AZ;State Representative;District 12
+CandidateContest	AZ House District 13	AZ;State Representative;District 13
+CandidateContest	AZ House District 15	AZ;State Representative;District 15
+CandidateContest	AZ House District 16	AZ;State Representative;District 16
+CandidateContest	AZ House District 17	AZ;State Representative;District 17
+CandidateContest	AZ House District 18	AZ;State Representative;District 18
+CandidateContest	AZ House District 19	AZ;State Representative;District 19
+CandidateContest	AZ House District 20	AZ;State Representative;District 20
+CandidateContest	AZ House District 21	AZ;State Representative;District 21
+CandidateContest	AZ House District 22	AZ;State Representative;District 22
+CandidateContest	AZ House District 23	AZ;State Representative;District 23
+CandidateContest	AZ House District 24	AZ;State Representative;District 24
+CandidateContest	AZ House District 25	AZ;State Representative;District 25
+CandidateContest	AZ House District 27	AZ;State Representative;District 27
+CandidateContest	AZ House District 28	AZ;State Representative;District 28
+CandidateContest	AZ House District 29	AZ;State Representative;District 29
+CandidateContest	AZ House District 30	AZ;State Representative;District 30
+CandidateContest	AZ House District 4	AZ;State Representative;District 4
+CandidateContest	AZ Senate District 1	AZ;State Senator;District 1
+CandidateContest	AZ Senate District 12	AZ;State Senator;District 12
+CandidateContest	AZ Senate District 13	AZ;State Senator;District 13
+CandidateContest	AZ Senate District 15	AZ;State Senator;District 15
+CandidateContest	AZ Senate District 16	AZ;State Senator;District 16
+CandidateContest	AZ Senate District 17	AZ;State Senator;District 17
+CandidateContest	AZ Senate District 18	AZ;State Senator;District 18
+CandidateContest	AZ Senate District 19	AZ;State Senator;District 19
+CandidateContest	AZ Senate District 20	AZ;State Senator;District 20
+CandidateContest	AZ Senate District 21	AZ;State Senator;District 21
+CandidateContest	AZ Senate District 22	AZ;State Senator;District 22
+CandidateContest	AZ Senate District 23	AZ;State Senator;District 23
+CandidateContest	AZ Senate District 24	AZ;State Senator;District 24
+CandidateContest	AZ Senate District 25	AZ;State Senator;District 25
+CandidateContest	AZ Senate District 26	AZ;State Senator;District 26
+CandidateContest	AZ Senate District 27	AZ;State Senator;District 27
+CandidateContest	AZ Senate District 28	AZ;State Senator;District 28
+CandidateContest	AZ Senate District 29	AZ;State Senator;District 29
+CandidateContest	AZ Senate District 30	AZ;State Senator;District 30
+CandidateContest	AZ Senate District 4	AZ;State Senator;District 4
+CandidateContest	US House AZ District 3	AZ;US Representative;District 3
+CandidateContest	US House AZ District 5	AZ;US Representative;District 5
+CandidateContest	US House AZ District 6	AZ;US Representative;District 6
+CandidateContest	US House AZ District 7	AZ;US Representative;District 7
+CandidateContest	US House AZ District 8	AZ;US Representative;District 8
+CandidateContest	US House AZ District 9	AZ;US Representative;District 9
+CandidateContest	AZ House District 10	AZ;State Representative;District 10
+CandidateContest	AZ House District 11	AZ;State Representative;District 11
+CandidateContest	AZ House District 2	AZ;State Representative;District 2
+CandidateContest	AZ House District 3	AZ;State Representative;District 3
+CandidateContest	AZ House District 9	AZ;State Representative;District 9
+CandidateContest	AZ Senate District 10	AZ;State Senator;District 10
+CandidateContest	AZ Senate District 11	AZ;State Senator;District 11
+CandidateContest	AZ Senate District 2	AZ;State Senator;District 2
+CandidateContest	AZ Senate District 3	AZ;State Senator;District 3
+CandidateContest	AZ Senate District 9	AZ;State Senator;District 9

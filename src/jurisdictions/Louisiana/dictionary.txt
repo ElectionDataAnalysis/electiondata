@@ -8405,3 +8405,13 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Winn;4
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Winn;5
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Winn;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Winn;7
+CandidateContest	LA Secretary of State	LA;Secretary of State;statewide
+CandidateContest	LA Senate District 26	LA;State Senator;District 26
+CandidateContest	US House LA District 3	LA;US Representative;District 3
+CandidateContest	US House LA District 4	LA;US Representative;District 4
+CandidateContest	US House LA District 2	LA;US Representative;District 2
+CandidateContest	US House LA District 6	LA;US Representative;District 6
+CandidateContest	US House LA District 5	LA;US Representative;District 5
+CandidateContest	LA House District 33	LA;State Representative;District 33
+CandidateContest	US House LA District 1	LA;US Representative;District 1
+CandidateContest	LA House District 90	LA;State Representative;District 90

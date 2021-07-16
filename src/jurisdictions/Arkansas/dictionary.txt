@@ -2493,3 +2493,70 @@ ReportingUnit	Arkansas;Woodruff County	Woodruff
 ReportingUnit	Arkansas;Woodruff County	fips05147
 ReportingUnit	Arkansas;Yell County	Yell
 ReportingUnit	Arkansas;Yell County	fips05149
+CandidateContest	AR Attorney General	AR;Attorney General
+CandidateContest	AR Auditor of State	AR;Auditor of State;statewide
+CandidateContest	AR Commissioner of State Lands	AR;Commissioner of State Lands;statewide
+CandidateContest	AR Governor	AR;Governor;statewide
+CandidateContest	AR Lieutenant Governor	AR;Lieutenant Governor;statewide
+CandidateContest	AR Secretary of State	AR;Secretary of State;statewide
+CandidateContest	AR House District 12	AR;State Representative;District 12
+CandidateContest	AR State Supreme Court Associate Justice Position 3	AR;State Supreme Court Associate Justice Position 3;statewide
+CandidateContest	AR State Treasurer	AR;State Treasurer;statewide
+CandidateContest	US House AR District 1	AR;US Representative;District 1
+CandidateContest	AR House District 11	AR;State Representative;District 11
+CandidateContest	US House AR District 4	AR;US Representative;District 4
+CandidateContest	AR House District 61	AR;State Representative;District 61
+CandidateContest	AR Senate District 17	AR;State Senate;District 17
+CandidateContest	AR House District 87	AR;State Representative;District 87
+CandidateContest	AR House District 90	AR;State Representative;District 90
+CandidateContest	AR House District 92	AR;State Representative;District 92
+CandidateContest	AR House District 93	AR;State Representative;District 93
+CandidateContest	AR House District 94	AR;State Representative;District 94
+CandidateContest	AR House District 95	AR;State Representative;District 95
+CandidateContest	AR House District 96	AR;State Representative;District 96
+CandidateContest	AR Senate District 3	AR;State Senate;District 3
+CandidateContest	US House AR District 3	AR;US Representative;District 3
+CandidateContest	AR House District 97	AR;State Representative;District 97
+CandidateContest	AR Senate District 5	AR;State Senate;District 5
+CandidateContest	AR House District 19	AR;State Representative;District 19
+CandidateContest	AR Senate District 10	AR;State Senate;District 10
+CandidateContest	AR House District 56	AR;State Representative;District 56
+CandidateContest	AR House District 5	AR;State Representative;District 5
+CandidateContest	AR House District 65	AR;State Representative;District 65
+CandidateContest	AR House District 73	AR;State Representative;District 73
+CandidateContest	US House AR District 2	AR;US Representative;District 2
+CandidateContest	AR House District 80	AR;State Representative;District 80
+CandidateContest	AR House District 81	AR;State Representative;District 81
+CandidateContest	AR House District 55	AR;State Representative;District 55
+CandidateContest	AR House District 49	AR;State Representative;District 49
+CandidateContest	AR House District 67	AR;State Representative;District 67
+CandidateContest	AR House District 70	AR;State Representative;District 70
+CandidateContest	AR Senate District 35	AR;State Senate;District 35
+CandidateContest	AR Senate District 19	AR;State Senate;District 19
+CandidateContest	AR House District 21	AR;State Representative;District 21
+CandidateContest	AR House District 22	AR;State Representative;District 22
+CandidateContest	AR House District 24	AR;State Representative;District 24
+CandidateContest	AR House District 26	AR;State Representative;District 26
+CandidateContest	AR Senate District 14	AR;State Senate;District 14
+CandidateContest	AR House District 15	AR;State Representative;District 15
+CandidateContest	AR House District 47	AR;State Representative;District 47
+CandidateContest	AR House District 17	AR;State Representative;District 17
+CandidateContest	AR House District 69	AR;State Representative;District 69
+CandidateContest	AR House District 54	AR;State Representative;District 54
+CandidateContest	AR House District 71	AR;State Representative;District 71
+CandidateContest	AR House District 30	AR;State Representative;District 30
+CandidateContest	AR House District 31	AR;State Representative;District 31
+CandidateContest	AR House District 32	AR;State Representative;District 32
+CandidateContest	AR House District 35	AR;State Representative;District 35
+CandidateContest	AR House District 38	AR;State Representative;District 38
+CandidateContest	AR House District 39	AR;State Representative;District 39
+CandidateContest	AR House District 41	AR;State Representative;District 41
+CandidateContest	AR House District 42	AR;State Representative;District 42
+CandidateContest	AR Senate District 33	AR;State Senate;District 33
+CandidateContest	AR House District 28	AR;State Representative;District 28
+CandidateContest	AR House District 77	AR;State Representative;District 77
+CandidateContest	AR Senate District 8	AR;State Senate;District 8
+CandidateContest	AR House District 84	AR;State Representative;District 84
+CandidateContest	AR House District 89	AR;State Representative;District 89
+CandidateContest	AR Senate District 4	AR;State Senate;District 4
+CandidateContest	AR House District 46	AR;State Representative;District 46

@@ -161,3 +161,25 @@ ReportingUnit	New Jersey;Union County	UNION
 ReportingUnit	New Jersey;Union County	fips34039
 ReportingUnit	New Jersey;Warren County	WARREN
 ReportingUnit	New Jersey;Warren County	fips34041
+CandidateContest	US House NJ District 2	NJ;US Representative;District 2
+CandidateContest	NJ US Senator	NJ;US Senator;statewide
+CandidateContest	NJ State Assembly Member District 32	NJ;State Assembly Member;District 32
+CandidateContest	NJ State Assembly Member District 36	NJ;State Assembly Member;District 36
+CandidateContest	NJ State House District 38	NJ;State Assembly Member;District 38 (2)
+CandidateContest	NJ Senate District 38	NJ;State Senator;District 38
+CandidateContest	US House NJ District 5	NJ;US Representative;District 5
+CandidateContest	US House NJ District 8	NJ;US Representative;District 8
+CandidateContest	US House NJ District 9	NJ;US Representative;District 9
+CandidateContest	US House NJ District 1	NJ;US Representative;District 1
+CandidateContest	US House NJ District 3	NJ;US Representative;District 3
+CandidateContest	NJ US Senator District 1	NJ;US Senator;District 1
+CandidateContest	NJ State Assembly Member District 5	NJ;State Assembly Member;District 5
+CandidateContest	NJ State Assembly Member District 34	NJ;State Assembly Member;District 34
+CandidateContest	US House NJ District 10	NJ;US Representative;District 10
+CandidateContest	US House NJ District 11	NJ;US Representative;District 11
+CandidateContest	US House NJ District 7	NJ;US Representative;District 7
+CandidateContest	NJ State House District 15	NJ;State Assembly Member;District 15 (2)
+CandidateContest	US House NJ District 12	NJ;US Representative;District 12
+CandidateContest	US House NJ District 4	NJ;US Representative;District 4
+CandidateContest	NJ State Assembly Member District 22	NJ;State Assembly Member;District 22
+CandidateContest	US House NJ District 6	NJ;US Representative;District 6

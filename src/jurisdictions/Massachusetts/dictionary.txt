@@ -848,3 +848,226 @@ ReportingUnit	Massachusetts;Worcester County;Westborough	Westborough
 ReportingUnit	Massachusetts;Worcester County;Westminster	Westminster
 ReportingUnit	Massachusetts;Worcester County;Winchendon	Winchendon
 ReportingUnit	Massachusetts;Worcester County;Worcester	Worcester
+CandidateContest	MA Attorney General	MA;Attorney General
+CandidateContest	MA Auditor	MA;Auditor;statewide
+CandidateContest	MA Governor	MA;Governor;statewide
+CandidateContest	MA Governor's Council District 1	MA;Governor's Council;District 1
+CandidateContest	MA Secretary of the Commonwealth	MA;Secretary of the Commonwealth;statewide
+CandidateContest	MA House District 1 Barnstable	MA;State Representative;District 1 Barnstable
+CandidateContest	MA House District 2 Barnstable	MA;State Representative;District 2 Barnstable
+CandidateContest	MA House District 3 Barnstable	MA;State Representative;District 3 Barnstable
+CandidateContest	MA House District 4 Barnstable	MA;State Representative;District 4 Barnstable
+CandidateContest	MA House District 5 Barnstable	MA;State Representative;District 5 Barnstable
+CandidateContest	MA House District District Barnstable, Dukes a Nantucket	MA;State Representative;District Barnstable, Dukes a Nantucket
+CandidateContest	MA Senate District Cape a Islands	MA;State Senator;District Cape a Islands
+CandidateContest	MA Senate District Plymou a Barnstable	MA;State Senator;District Plymou a Barnstable
+CandidateContest	MA Treasurer	MA;Treasurer;statewide
+CandidateContest	US House MA District 9	MA;US Representative;District 9
+CandidateContest	MA US Senator	MA;US Senator;statewide
+CandidateContest	MA Governor's Council District 8	MA;Governor's Council;District 8
+CandidateContest	MA House District 1 Berkshire	MA;State Representative;District 1 Berkshire
+CandidateContest	MA House District 2 Berkshire	MA;State Representative;District 2 Berkshire
+CandidateContest	MA House District 3 Berkshire	MA;State Representative;District 3 Berkshire
+CandidateContest	MA House District 4 Berkshire	MA;State Representative;District 4 Berkshire
+CandidateContest	MA Senate District Berkshire, Hampshire a Franklin	MA;State Senator;District Berkshire, Hampshire a Franklin
+CandidateContest	US House MA District 1	MA;US Representative;District 1
+CandidateContest	MA Governor's Council District 2	MA;Governor's Council;District 2
+CandidateContest	MA Governor's Council District 4	MA;Governor's Council;District 4
+CandidateContest	MA House District 1 Bristol	MA;State Representative;District 1 Bristol
+CandidateContest	MA House District 10 Bristol	MA;State Representative;District 10 Bristol
+CandidateContest	MA House District 11 Bristol	MA;State Representative;District 11 Bristol
+CandidateContest	MA House District 11 Plymouth	MA;State Representative;District 11 Plymouth
+CandidateContest	MA House District 12 Bristol	MA;State Representative;District 12 Bristol
+CandidateContest	MA House District 13 Bristol	MA;State Representative;District 13 Bristol
+CandidateContest	MA House District 14 Bristol	MA;State Representative;District 14 Bristol
+CandidateContest	MA House District 2 Bristol	MA;State Representative;District 2 Bristol
+CandidateContest	MA House District 3 Bristol	MA;State Representative;District 3 Bristol
+CandidateContest	MA House District 4 Bristol	MA;State Representative;District 4 Bristol
+CandidateContest	MA House District 5 Bristol	MA;State Representative;District 5 Bristol
+CandidateContest	MA House District 6 Bristol	MA;State Representative;District 6 Bristol
+CandidateContest	MA House District 7 Bristol	MA;State Representative;District 7 Bristol
+CandidateContest	MA House District 8 Bristol	MA;State Representative;District 8 Bristol
+CandidateContest	MA House District 8 Norfolk	MA;State Representative;District 8 Norfolk
+CandidateContest	MA House District 8 Plymouth	MA;State Representative;District 8 Plymouth
+CandidateContest	MA House District 9 Bristol	MA;State Representative;District 9 Bristol
+CandidateContest	MA Senate District 1 Bristol a Plymouth	MA;State Senator;District 1 Bristol a Plymouth
+CandidateContest	MA Senate District 1 Plymou a Bristol	MA;State Senator;District 1 Plymou a Bristol
+CandidateContest	MA Senate District 2 Bristol a Plymouth	MA;State Senator;District 2 Bristol a Plymouth
+CandidateContest	MA Senate District 2 Plymou a Bristol	MA;State Senator;District 2 Plymou a Bristol
+CandidateContest	MA Senate District Bristol a Norfolk	MA;State Senator;District Bristol a Norfolk
+CandidateContest	MA Senate District Norfolk, Bristol a Middlesex	MA;State Senator;District Norfolk, Bristol a Middlesex
+CandidateContest	MA Senate District Norfolk, Bristol a Plymouth	MA;State Senator;District Norfolk, Bristol a Plymouth
+CandidateContest	US House MA District 4	MA;US Representative;District 4
+CandidateContest	US House MA District 8	MA;US Representative;District 8
+CandidateContest	MA Governor's Council District 5	MA;Governor's Council;District 5
+CandidateContest	MA Governor's Council District 6	MA;Governor's Council;District 6
+CandidateContest	MA House District 1 Essex	MA;State Representative;District 1 Essex
+CandidateContest	MA House District 10 Essex	MA;State Representative;District 10 Essex
+CandidateContest	MA House District 11 Essex	MA;State Representative;District 11 Essex
+CandidateContest	MA House District 12 Essex	MA;State Representative;District 12 Essex
+CandidateContest	MA House District 13 Essex	MA;State Representative;District 13 Essex
+CandidateContest	MA House District 14 Essex	MA;State Representative;District 14 Essex
+CandidateContest	MA House District 15 Essex	MA;State Representative;District 15 Essex
+CandidateContest	MA House District 16 Essex	MA;State Representative;District 16 Essex
+CandidateContest	MA House District 16 Suffolk	MA;State Representative;District 16 Suffolk
+CandidateContest	MA House District 17 Essex	MA;State Representative;District 17 Essex
+CandidateContest	MA House District 18 Essex	MA;State Representative;District 18 Essex
+CandidateContest	MA House District 2 Essex	MA;State Representative;District 2 Essex
+CandidateContest	MA House District 20 Middlesex	MA;State Representative;District 20 Middlesex
+CandidateContest	MA House District 3 Essex	MA;State Representative;District 3 Essex
+CandidateContest	MA House District 4 Essex	MA;State Representative;District 4 Essex
+CandidateContest	MA House District 5 Essex	MA;State Representative;District 5 Essex
+CandidateContest	MA House District 6 Essex	MA;State Representative;District 6 Essex
+CandidateContest	MA House District 7 Essex	MA;State Representative;District 7 Essex
+CandidateContest	MA House District 8 Essex	MA;State Representative;District 8 Essex
+CandidateContest	MA House District 9 Essex	MA;State Representative;District 9 Essex
+CandidateContest	MA Senate District 1 Essex	MA;State Senator;District 1 Essex
+CandidateContest	MA Senate District 1 Essex a Middlesex	MA;State Senator;District 1 Essex a Middlesex
+CandidateContest	MA Senate District 2 Essex	MA;State Senator;District 2 Essex
+CandidateContest	MA Senate District 2 Essex a Middlesex	MA;State Senator;District 2 Essex a Middlesex
+CandidateContest	MA Senate District 3 Essex	MA;State Senator;District 3 Essex
+CandidateContest	US House MA District 3	MA;US Representative;District 3
+CandidateContest	US House MA District 6	MA;US Representative;District 6
+CandidateContest	MA House District 1 Franklin	MA;State Representative;District 1 Franklin
+CandidateContest	MA House District 2 Franklin	MA;State Representative;District 2 Franklin
+CandidateContest	MA Senate District Hampshire, Franklin a Worcester	MA;State Senator;District Hampshire, Franklin a Worcester
+CandidateContest	US House MA District 2	MA;US Representative;District 2
+CandidateContest	MA Governor's Council District 7	MA;Governor's Council;District 7
+CandidateContest	MA House District 1 Hampden	MA;State Representative;District 1 Hampden
+CandidateContest	MA House District 1 Hampshire	MA;State Representative;District 1 Hampshire
+CandidateContest	MA House District 10 Hampden	MA;State Representative;District 10 Hampden
+CandidateContest	MA House District 11 Hampden	MA;State Representative;District 11 Hampden
+CandidateContest	MA House District 12 Hampden	MA;State Representative;District 12 Hampden
+CandidateContest	MA House District 2 Hampden	MA;State Representative;District 2 Hampden
+CandidateContest	MA House District 3 Hampden	MA;State Representative;District 3 Hampden
+CandidateContest	MA House District 4 Hampden	MA;State Representative;District 4 Hampden
+CandidateContest	MA House District 5 Hampden	MA;State Representative;District 5 Hampden
+CandidateContest	MA House District 6 Hampden	MA;State Representative;District 6 Hampden
+CandidateContest	MA House District 7 Hampden	MA;State Representative;District 7 Hampden
+CandidateContest	MA House District 8 Hampden	MA;State Representative;District 8 Hampden
+CandidateContest	MA House District 9 Hampden	MA;State Representative;District 9 Hampden
+CandidateContest	MA Senate District 1 Hampden a Hampshire	MA;State Senator;District 1 Hampden a Hampshire
+CandidateContest	MA Senate District 2 Hampden a Hampshire	MA;State Senator;District 2 Hampden a Hampshire
+CandidateContest	MA Senate District Hampden	MA;State Senator;District Hampden
+CandidateContest	MA Senate District Worcester, Hampden, Hampshire a Middlesex	MA;State Senator;District Worcester, Hampden, Hampshire a Middlesex
+CandidateContest	MA House District 2 Hampshire	MA;State Representative;District 2 Hampshire
+CandidateContest	MA House District 3 Hampshire	MA;State Representative;District 3 Hampshire
+CandidateContest	MA House District 5 Worcester	MA;State Representative;District 5 Worcester
+CandidateContest	MA Governor's Council District 3	MA;Governor's Council;District 3
+CandidateContest	MA House District 1 Middlesex	MA;State Representative;District 1 Middlesex
+CandidateContest	MA House District 10 Middlesex	MA;State Representative;District 10 Middlesex
+CandidateContest	MA House District 11 Middlesex	MA;State Representative;District 11 Middlesex
+CandidateContest	MA House District 12 Middlesex	MA;State Representative;District 12 Middlesex
+CandidateContest	MA House District 13 Middlesex	MA;State Representative;District 13 Middlesex
+CandidateContest	MA House District 14 Middlesex	MA;State Representative;District 14 Middlesex
+CandidateContest	MA House District 14 Norfolk	MA;State Representative;District 14 Norfolk
+CandidateContest	MA House District 15 Middlesex	MA;State Representative;District 15 Middlesex
+CandidateContest	MA House District 16 Middlesex	MA;State Representative;District 16 Middlesex
+CandidateContest	MA House District 17 Middlesex	MA;State Representative;District 17 Middlesex
+CandidateContest	MA House District 18 Middlesex	MA;State Representative;District 18 Middlesex
+CandidateContest	MA House District 19 Middlesex	MA;State Representative;District 19 Middlesex
+CandidateContest	MA House District 2 Middlesex	MA;State Representative;District 2 Middlesex
+CandidateContest	MA House District 21 Middlesex	MA;State Representative;District 21 Middlesex
+CandidateContest	MA House District 22 Middlesex	MA;State Representative;District 22 Middlesex
+CandidateContest	MA House District 23 Middlesex	MA;State Representative;District 23 Middlesex
+CandidateContest	MA House District 24 Middlesex	MA;State Representative;District 24 Middlesex
+CandidateContest	MA House District 25 Middlesex	MA;State Representative;District 25 Middlesex
+CandidateContest	MA House District 26 Middlesex	MA;State Representative;District 26 Middlesex
+CandidateContest	MA House District 27 Middlesex	MA;State Representative;District 27 Middlesex
+CandidateContest	MA House District 28 Middlesex	MA;State Representative;District 28 Middlesex
+CandidateContest	MA House District 29 Middlesex	MA;State Representative;District 29 Middlesex
+CandidateContest	MA House District 3 Middlesex	MA;State Representative;District 3 Middlesex
+CandidateContest	MA House District 30 Middlesex	MA;State Representative;District 30 Middlesex
+CandidateContest	MA House District 31 Middlesex	MA;State Representative;District 31 Middlesex
+CandidateContest	MA House District 32 Middlesex	MA;State Representative;District 32 Middlesex
+CandidateContest	MA House District 33 Middlesex	MA;State Representative;District 33 Middlesex
+CandidateContest	MA House District 34 Middlesex	MA;State Representative;District 34 Middlesex
+CandidateContest	MA House District 35 Middlesex	MA;State Representative;District 35 Middlesex
+CandidateContest	MA House District 36 Middlesex	MA;State Representative;District 36 Middlesex
+CandidateContest	MA House District 37 Middlesex	MA;State Representative;District 37 Middlesex
+CandidateContest	MA House District 4 Middlesex	MA;State Representative;District 4 Middlesex
+CandidateContest	MA House District 5 Middlesex	MA;State Representative;District 5 Middlesex
+CandidateContest	MA House District 6 Middlesex	MA;State Representative;District 6 Middlesex
+CandidateContest	MA House District 7 Middlesex	MA;State Representative;District 7 Middlesex
+CandidateContest	MA House District 8 Middlesex	MA;State Representative;District 8 Middlesex
+CandidateContest	MA House District 8 Suffolk	MA;State Representative;District 8 Suffolk
+CandidateContest	MA House District 9 Middlesex	MA;State Representative;District 9 Middlesex
+CandidateContest	MA Senate District 1 Middlesex	MA;State Senator;District 1 Middlesex
+CandidateContest	MA Senate District 1 Middlesex a Norfolk	MA;State Senator;District 1 Middlesex a Norfolk
+CandidateContest	MA Senate District 1 Suffolk a Middlesex	MA;State Senator;District 1 Suffolk a Middlesex
+CandidateContest	MA Senate District 2 Middlesex	MA;State Senator;District 2 Middlesex
+CandidateContest	MA Senate District 2 Middlesex a Norfolk	MA;State Senator;District 2 Middlesex a Norfolk
+CandidateContest	MA Senate District 2 Suffolk a Middlesex	MA;State Senator;District 2 Suffolk a Middlesex
+CandidateContest	MA Senate District 3 Middlesex	MA;State Senator;District 3 Middlesex
+CandidateContest	MA Senate District 4 Middlesex	MA;State Senator;District 4 Middlesex
+CandidateContest	MA Senate District 5 Middlesex	MA;State Senator;District 5 Middlesex
+CandidateContest	MA Senate District Middlesex a Suffolk	MA;State Senator;District Middlesex a Suffolk
+CandidateContest	MA Senate District Middlesex a Worcester	MA;State Senator;District Middlesex a Worcester
+CandidateContest	MA Senate District Worcester a Middlesex	MA;State Senator;District Worcester a Middlesex
+CandidateContest	US House MA District 5	MA;US Representative;District 5
+CandidateContest	US House MA District 7	MA;US Representative;District 7
+CandidateContest	MA House District 1 Norfolk	MA;State Representative;District 1 Norfolk
+CandidateContest	MA House District 10 Norfolk	MA;State Representative;District 10 Norfolk
+CandidateContest	MA House District 10 Suffolk	MA;State Representative;District 10 Suffolk
+CandidateContest	MA House District 10 Worcester	MA;State Representative;District 10 Worcester
+CandidateContest	MA House District 11 Norfolk	MA;State Representative;District 11 Norfolk
+CandidateContest	MA House District 12 Norfolk	MA;State Representative;District 12 Norfolk
+CandidateContest	MA House District 12 Suffolk	MA;State Representative;District 12 Suffolk
+CandidateContest	MA House District 13 Norfolk	MA;State Representative;District 13 Norfolk
+CandidateContest	MA House District 13 Suffolk	MA;State Representative;District 13 Suffolk
+CandidateContest	MA House District 15 Norfolk	MA;State Representative;District 15 Norfolk
+CandidateContest	MA House District 15 Suffolk	MA;State Representative;District 15 Suffolk
+CandidateContest	MA House District 18 Suffolk	MA;State Representative;District 18 Suffolk
+CandidateContest	MA House District 2 Norfolk	MA;State Representative;District 2 Norfolk
+CandidateContest	MA House District 3 Norfolk	MA;State Representative;District 3 Norfolk
+CandidateContest	MA House District 3 Plymouth	MA;State Representative;District 3 Plymouth
+CandidateContest	MA House District 4 Norfolk	MA;State Representative;District 4 Norfolk
+CandidateContest	MA House District 5 Norfolk	MA;State Representative;District 5 Norfolk
+CandidateContest	MA House District 6 Norfolk	MA;State Representative;District 6 Norfolk
+CandidateContest	MA House District 7 Norfolk	MA;State Representative;District 7 Norfolk
+CandidateContest	MA House District 8 Worcester	MA;State Representative;District 8 Worcester
+CandidateContest	MA House District 9 Norfolk	MA;State Representative;District 9 Norfolk
+CandidateContest	MA Senate District Norfolk a Plymouth	MA;State Senator;District Norfolk a Plymouth
+CandidateContest	MA Senate District Norfolk a Suffolk	MA;State Senator;District Norfolk a Suffolk
+CandidateContest	MA Senate District Plymou a Norfolk	MA;State Senator;District Plymou a Norfolk
+CandidateContest	MA Senate District Worcester a Norfolk	MA;State Senator;District Worcester a Norfolk
+CandidateContest	MA House District 1 Plymouth	MA;State Representative;District 1 Plymouth
+CandidateContest	MA House District 10 Plymouth	MA;State Representative;District 10 Plymouth
+CandidateContest	MA House District 12 Plymouth	MA;State Representative;District 12 Plymouth
+CandidateContest	MA House District 2 Plymouth	MA;State Representative;District 2 Plymouth
+CandidateContest	MA House District 4 Plymouth	MA;State Representative;District 4 Plymouth
+CandidateContest	MA House District 5 Plymouth	MA;State Representative;District 5 Plymouth
+CandidateContest	MA House District 6 Plymouth	MA;State Representative;District 6 Plymouth
+CandidateContest	MA House District 7 Plymouth	MA;State Representative;District 7 Plymouth
+CandidateContest	MA House District 9 Plymouth	MA;State Representative;District 9 Plymouth
+CandidateContest	MA House District 1 Suffolk	MA;State Representative;District 1 Suffolk
+CandidateContest	MA House District 11 Suffolk	MA;State Representative;District 11 Suffolk
+CandidateContest	MA House District 14 Suffolk	MA;State Representative;District 14 Suffolk
+CandidateContest	MA House District 17 Suffolk	MA;State Representative;District 17 Suffolk
+CandidateContest	MA House District 19 Suffolk	MA;State Representative;District 19 Suffolk
+CandidateContest	MA House District 2 Suffolk	MA;State Representative;District 2 Suffolk
+CandidateContest	MA House District 3 Suffolk	MA;State Representative;District 3 Suffolk
+CandidateContest	MA House District 4 Suffolk	MA;State Representative;District 4 Suffolk
+CandidateContest	MA House District 5 Suffolk	MA;State Representative;District 5 Suffolk
+CandidateContest	MA House District 6 Suffolk	MA;State Representative;District 6 Suffolk
+CandidateContest	MA House District 7 Suffolk	MA;State Representative;District 7 Suffolk
+CandidateContest	MA House District 9 Suffolk	MA;State Representative;District 9 Suffolk
+CandidateContest	MA Senate District 1 Suffolk	MA;State Senator;District 1 Suffolk
+CandidateContest	MA Senate District 2 Suffolk	MA;State Senator;District 2 Suffolk
+CandidateContest	MA House District 1 Worcester	MA;State Representative;District 1 Worcester
+CandidateContest	MA House District 11 Worcester	MA;State Representative;District 11 Worcester
+CandidateContest	MA House District 12 Worcester	MA;State Representative;District 12 Worcester
+CandidateContest	MA House District 13 Worcester	MA;State Representative;District 13 Worcester
+CandidateContest	MA House District 14 Worcester	MA;State Representative;District 14 Worcester
+CandidateContest	MA House District 15 Worcester	MA;State Representative;District 15 Worcester
+CandidateContest	MA House District 16 Worcester	MA;State Representative;District 16 Worcester
+CandidateContest	MA House District 17 Worcester	MA;State Representative;District 17 Worcester
+CandidateContest	MA House District 18 Worcester	MA;State Representative;District 18 Worcester
+CandidateContest	MA House District 2 Worcester	MA;State Representative;District 2 Worcester
+CandidateContest	MA House District 3 Worcester	MA;State Representative;District 3 Worcester
+CandidateContest	MA House District 4 Worcester	MA;State Representative;District 4 Worcester
+CandidateContest	MA House District 6 Worcester	MA;State Representative;District 6 Worcester
+CandidateContest	MA House District 7 Worcester	MA;State Representative;District 7 Worcester
+CandidateContest	MA House District 9 Worcester	MA;State Representative;District 9 Worcester
+CandidateContest	MA Senate District 1 Worcester	MA;State Senator;District 1 Worcester
+CandidateContest	MA Senate District 2 Worcester	MA;State Senator;District 2 Worcester

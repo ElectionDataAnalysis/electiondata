@@ -3617,3 +3617,140 @@ ReportingUnit	Washington;Whitman County	Whitman
 ReportingUnit	Washington;Whitman County	fips53075
 ReportingUnit	Washington;Yakima County	Yakima
 ReportingUnit	Washington;Yakima County	fips53077
+CandidateContest	WA House District 9 Position 1	WA;State Representative Pos. 1;District 9
+CandidateContest	WA House District 9 Position 2	WA;State Representative Pos. 2;District 9
+CandidateContest	WA Supreme Court Justice Position 2	WA;Supreme Court Justice Position 2;statewide
+CandidateContest	WA Supreme Court Justice Position 8	WA;Supreme Court Justice Position 8;statewide
+CandidateContest	WA Supreme Court Justice Position 9	WA;Supreme Court Justice Position 9;statewide
+CandidateContest	US House WA District 4	WA;US Representative;District 4
+CandidateContest	WA US Senator	WA;US Senator;statewide
+CandidateContest	US House WA District 5	WA;US Representative;District 5
+CandidateContest	WA House District 16 Position 1	WA;State Representative Pos. 1;District 16
+CandidateContest	WA House District 8 Position 1	WA;State Representative Pos. 1;District 8
+CandidateContest	WA House District 16 Position 2	WA;State Representative Pos. 2;District 16
+CandidateContest	WA House District 8 Position 2	WA;State Representative Pos. 2;District 8
+CandidateContest	WA Senate District 8	WA;State Senator;District 8
+CandidateContest	WA House District 12 Position 1	WA;State Representative Pos. 1;District 12
+CandidateContest	WA House District 12 Position 2	WA;State Representative Pos. 2;District 12
+CandidateContest	US House WA District 8	WA;US Representative;District 8
+CandidateContest	WA House District 24 Position 1	WA;State Representative Pos. 1;District 24
+CandidateContest	WA House District 24 Position 2	WA;State Representative Pos. 2;District 24
+CandidateContest	US House WA District 6	WA;US Representative;District 6
+CandidateContest	WA House District 14 Position 1	WA;State Representative Pos. 1;District 14
+CandidateContest	WA House District 17 Position 1	WA;State Representative Pos. 1;District 17
+CandidateContest	WA House District 18 Position 1	WA;State Representative Pos. 1;District 18
+CandidateContest	WA House District 20 Position 1	WA;State Representative Pos. 1;District 20
+CandidateContest	WA House District 49 Position 1	WA;State Representative Pos. 1;District 49
+CandidateContest	WA House District 14 Position 2	WA;State Representative Pos. 2;District 14
+CandidateContest	WA House District 17 Position 2	WA;State Representative Pos. 2;District 17
+CandidateContest	WA House District 18 Position 2	WA;State Representative Pos. 2;District 18
+CandidateContest	WA House District 20 Position 2	WA;State Representative Pos. 2;District 20
+CandidateContest	WA House District 49 Position 2	WA;State Representative Pos. 2;District 49
+CandidateContest	US House WA District 3	WA;US Representative;District 3
+CandidateContest	WA House District 19 Position 1	WA;State Representative Pos. 1;District 19
+CandidateContest	WA House District 19 Position 2	WA;State Representative Pos. 2;District 19
+CandidateContest	WA House District 7 Position 1	WA;State Representative Pos. 1;District 7
+CandidateContest	WA House District 7 Position 2	WA;State Representative Pos. 2;District 7
+CandidateContest	WA Senate District 7	WA;State Senator;District 7
+CandidateContest	WA House District 13 Position 1	WA;State Representative Pos. 1;District 13
+CandidateContest	WA House District 13 Position 2	WA;State Representative Pos. 2;District 13
+CandidateContest	WA Senate District 13	WA;State Senator;District 13
+CandidateContest	WA House District 10 Position 1	WA;State Representative Pos. 1;District 10
+CandidateContest	WA House District 10 Position 2	WA;State Representative Pos. 2;District 10
+CandidateContest	US House WA District 2	WA;US Representative;District 2
+CandidateContest	WA House District 1 Position 1	WA;State Representative Pos. 1;District 1
+CandidateContest	WA House District 11 Position 1	WA;State Representative Pos. 1;District 11
+CandidateContest	WA House District 30 Position 1	WA;State Representative Pos. 1;District 30
+CandidateContest	WA House District 31 Position 1	WA;State Representative Pos. 1;District 31
+CandidateContest	WA House District 32 Position 1	WA;State Representative Pos. 1;District 32
+CandidateContest	WA House District 33 Position 1	WA;State Representative Pos. 1;District 33
+CandidateContest	WA House District 34 Position 1	WA;State Representative Pos. 1;District 34
+CandidateContest	WA House District 36 Position 1	WA;State Representative Pos. 1;District 36
+CandidateContest	WA House District 37 Position 1	WA;State Representative Pos. 1;District 37
+CandidateContest	WA House District 39 Position 1	WA;State Representative Pos. 1;District 39
+CandidateContest	WA House District 41 Position 1	WA;State Representative Pos. 1;District 41
+CandidateContest	WA House District 43 Position 1	WA;State Representative Pos. 1;District 43
+CandidateContest	WA House District 45 Position 1	WA;State Representative Pos. 1;District 45
+CandidateContest	WA House District 46 Position 1	WA;State Representative Pos. 1;District 46
+CandidateContest	WA House District 47 Position 1	WA;State Representative Pos. 1;District 47
+CandidateContest	WA House District 48 Position 1	WA;State Representative Pos. 1;District 48
+CandidateContest	WA House District 5 Position 1	WA;State Representative Pos. 1;District 5
+CandidateContest	WA House District 1 Position 2	WA;State Representative Pos. 2;District 1
+CandidateContest	WA House District 11 Position 2	WA;State Representative Pos. 2;District 11
+CandidateContest	WA House District 30 Position 2	WA;State Representative Pos. 2;District 30
+CandidateContest	WA House District 31 Position 2	WA;State Representative Pos. 2;District 31
+CandidateContest	WA House District 32 Position 2	WA;State Representative Pos. 2;District 32
+CandidateContest	WA House District 33 Position 2	WA;State Representative Pos. 2;District 33
+CandidateContest	WA House District 34 Position 2	WA;State Representative Pos. 2;District 34
+CandidateContest	WA House District 36 Position 2	WA;State Representative Pos. 2;District 36
+CandidateContest	WA House District 37 Position 2	WA;State Representative Pos. 2;District 37
+CandidateContest	WA House District 39 Position 2	WA;State Representative Pos. 2;District 39
+CandidateContest	WA House District 41 Position 2	WA;State Representative Pos. 2;District 41
+CandidateContest	WA House District 43 Position 2	WA;State Representative Pos. 2;District 43
+CandidateContest	WA House District 45 Position 2	WA;State Representative Pos. 2;District 45
+CandidateContest	WA House District 46 Position 2	WA;State Representative Pos. 2;District 46
+CandidateContest	WA House District 47 Position 2	WA;State Representative Pos. 2;District 47
+CandidateContest	WA House District 48 Position 2	WA;State Representative Pos. 2;District 48
+CandidateContest	WA House District 5 Position 2	WA;State Representative Pos. 2;District 5
+CandidateContest	WA Senate District 30	WA;State Senator;District 30
+CandidateContest	WA Senate District 31	WA;State Senator;District 31
+CandidateContest	WA Senate District 32	WA;State Senator;District 32
+CandidateContest	WA Senate District 33	WA;State Senator;District 33
+CandidateContest	WA Senate District 34	WA;State Senator;District 34
+CandidateContest	WA Senate District 36	WA;State Senator;District 36
+CandidateContest	WA Senate District 37	WA;State Senator;District 37
+CandidateContest	WA Senate District 39	WA;State Senator;District 39
+CandidateContest	WA Senate District 43	WA;State Senator;District 43
+CandidateContest	WA Senate District 45	WA;State Senator;District 45
+CandidateContest	WA Senate District 46	WA;State Senator;District 46
+CandidateContest	WA Senate District 47	WA;State Senator;District 47
+CandidateContest	WA Senate District 48	WA;State Senator;District 48
+CandidateContest	US House WA District 1	WA;US Representative;District 1
+CandidateContest	US House WA District 7	WA;US Representative;District 7
+CandidateContest	US House WA District 9	WA;US Representative;District 9
+CandidateContest	WA House District 23 Position 1	WA;State Representative Pos. 1;District 23
+CandidateContest	WA House District 26 Position 1	WA;State Representative Pos. 1;District 26
+CandidateContest	WA House District 35 Position 1	WA;State Representative Pos. 1;District 35
+CandidateContest	WA House District 23 Position 2	WA;State Representative Pos. 2;District 23
+CandidateContest	WA House District 26 Position 2	WA;State Representative Pos. 2;District 26
+CandidateContest	WA House District 35 Position 2	WA;State Representative Pos. 2;District 35
+CandidateContest	WA Senate District 26	WA;State Senator;District 26
+CandidateContest	WA Senate District 35	WA;State Senator;District 35
+CandidateContest	US House WA District 10	WA;US Representative;District 10
+CandidateContest	WA House District 2 Position 1	WA;State Representative Pos. 1;District 2
+CandidateContest	WA House District 25 Position 1	WA;State Representative Pos. 1;District 25
+CandidateContest	WA House District 27 Position 1	WA;State Representative Pos. 1;District 27
+CandidateContest	WA House District 28 Position 1	WA;State Representative Pos. 1;District 28
+CandidateContest	WA House District 29 Position 1	WA;State Representative Pos. 1;District 29
+CandidateContest	WA House District 2 Position 2	WA;State Representative Pos. 2;District 2
+CandidateContest	WA House District 25 Position 2	WA;State Representative Pos. 2;District 25
+CandidateContest	WA House District 27 Position 2	WA;State Representative Pos. 2;District 27
+CandidateContest	WA House District 28 Position 2	WA;State Representative Pos. 2;District 28
+CandidateContest	WA House District 29 Position 2	WA;State Representative Pos. 2;District 29
+CandidateContest	WA Senate District 29	WA;State Senator;District 29
+CandidateContest	WA House District 40 Position 1	WA;State Representative Pos. 1;District 40
+CandidateContest	WA House District 40 Position 2	WA;State Representative Pos. 2;District 40
+CandidateContest	WA House District 21 Position 1	WA;State Representative Pos. 1;District 21
+CandidateContest	WA House District 38 Position 1	WA;State Representative Pos. 1;District 38
+CandidateContest	WA House District 44 Position 1	WA;State Representative Pos. 1;District 44
+CandidateContest	WA House District 21 Position 2	WA;State Representative Pos. 2;District 21
+CandidateContest	WA House District 38 Position 2	WA;State Representative Pos. 2;District 38
+CandidateContest	WA House District 44 Position 2	WA;State Representative Pos. 2;District 44
+CandidateContest	WA Senate District 21	WA;State Senator;District 21
+CandidateContest	WA Senate District 38	WA;State Senator;District 38
+CandidateContest	WA Senate District 44	WA;State Senator;District 44
+CandidateContest	WA House District 3 Position 1	WA;State Representative Pos. 1;District 3
+CandidateContest	WA House District 4 Position 1	WA;State Representative Pos. 1;District 4
+CandidateContest	WA House District 6 Position 1	WA;State Representative Pos. 1;District 6
+CandidateContest	WA House District 3 Position 2	WA;State Representative Pos. 2;District 3
+CandidateContest	WA House District 4 Position 2	WA;State Representative Pos. 2;District 4
+CandidateContest	WA House District 6 Position 2	WA;State Representative Pos. 2;District 6
+CandidateContest	WA Senate District 6	WA;State Senator;District 6
+CandidateContest	WA House District 22 Position 1	WA;State Representative Pos. 1;District 22
+CandidateContest	WA House District 22 Position 2	WA;State Representative Pos. 2;District 22
+CandidateContest	WA House District 42 Position 1	WA;State Representative Pos. 1;District 42
+CandidateContest	WA House District 42 Position 2	WA;State Representative Pos. 2;District 42
+CandidateContest	WA Senate District 42	WA;State Senator;District 42
+CandidateContest	WA House District 15 Position 1	WA;State Representative Pos. 1;District 15
+CandidateContest	WA House District 15 Position 2	WA;State Representative Pos. 2;District 15
+CandidateContest	WA Senate District 15	WA;State Senator;District 15

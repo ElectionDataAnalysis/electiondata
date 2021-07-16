@@ -14552,3 +14552,136 @@ ReportingUnit	Florida;Washington County;Precinct 6	Washington;Precinct 6
 ReportingUnit	Florida;Washington County;Precinct 7	Washington;Precinct 7
 ReportingUnit	Florida;Washington County;Precinct 8	Washington;Precinct 8
 ReportingUnit	Florida;Washington County;Precinct 9	Washington;Precinct 9
+CandidateContest	FL Attorney General	FL;Attorney General
+CandidateContest	FL Chief Financial officer	FL;Chief Financial officer;statewide
+CandidateContest	FL Commissioner of Agriculture	FL;Commissioner of Agriculture;statewide
+CandidateContest	FL Governor	FL;Governor;statewide
+CandidateContest	FL House District 10	FL;State Representative;District 10
+CandidateContest	FL House District 21	FL;State Representative;District 21
+CandidateContest	FL Senate District 8	FL;State Senator;District 8
+CandidateContest	US House FL District 3	FL;US Representative;District 3
+CandidateContest	FL US Senator	FL;US Senator;statewide
+CandidateContest	US House FL District 5	FL;US Representative;District 5
+CandidateContest	FL House District 6	FL;State Representative;District 6
+CandidateContest	FL Senate District 2	FL;State Senator;District 2
+CandidateContest	US House FL District 2	FL;US Representative;District 2
+CandidateContest	FL House District 19	FL;State Representative;District 19
+CandidateContest	FL House District 50	FL;State Representative;District 50
+CandidateContest	FL House District 51	FL;State Representative;District 51
+CandidateContest	FL House District 52	FL;State Representative;District 52
+CandidateContest	FL House District 53	FL;State Representative;District 53
+CandidateContest	FL Senate District 14	FL;State Senator;District 14
+CandidateContest	US House FL District 8	FL;US Representative;District 8
+CandidateContest	FL House District 103	FL;State Representative;District 103
+CandidateContest	FL House District 105	FL;State Representative;District 105
+CandidateContest	FL House District 93	FL;State Representative;District 93
+CandidateContest	FL House District 98	FL;State Representative;District 98
+CandidateContest	FL Senate District 34	FL;State Senator;District 34
+CandidateContest	US House FL District 20	FL;US Representative;District 20
+CandidateContest	US House FL District 22	FL;US Representative;District 22
+CandidateContest	US House FL District 23	FL;US Representative;District 23
+CandidateContest	FL State Attorney District 20	FL;State Attorney;District 20
+CandidateContest	FL Senate District 23	FL;State Senator;District 23
+CandidateContest	FL Senate District 26	FL;State Senator;District 26
+CandidateContest	US House FL District 17	FL;US Representative;District 17
+CandidateContest	FL House District 34	FL;State Representative;District 34
+CandidateContest	FL Senate District 10	FL;State Senator;District 10
+CandidateContest	US House FL District 11	FL;US Representative;District 11
+CandidateContest	FL House District 106	FL;State Representative;District 106
+CandidateContest	FL House District 80	FL;State Representative;District 80
+CandidateContest	FL Senate District 28	FL;State Senator;District 28
+CandidateContest	US House FL District 19	FL;US Representative;District 19
+CandidateContest	US House FL District 25	FL;US Representative;District 25
+CandidateContest	FL House District 56	FL;State Representative;District 56
+CandidateContest	FL House District 11	FL;State Representative;District 11
+CandidateContest	FL House District 12	FL;State Representative;District 12
+CandidateContest	FL House District 15	FL;State Representative;District 15
+CandidateContest	FL House District 16	FL;State Representative;District 16
+CandidateContest	FL Senate District 4	FL;State Senator;District 4
+CandidateContest	US House FL District 4	FL;US Representative;District 4
+CandidateContest	FL House District 1	FL;State Representative;District 1
+CandidateContest	US House FL District 1	FL;US Representative;District 1
+CandidateContest	FL House District 24	FL;State Representative;District 24
+CandidateContest	US House FL District 6	FL;US Representative;District 6
+CandidateContest	FL House District 55	FL;State Representative;District 55
+CandidateContest	FL House District 35	FL;State Representative;District 35
+CandidateContest	FL House District 57	FL;State Representative;District 57
+CandidateContest	FL House District 58	FL;State Representative;District 58
+CandidateContest	FL House District 59	FL;State Representative;District 59
+CandidateContest	FL House District 60	FL;State Representative;District 60
+CandidateContest	FL House District 61	FL;State Representative;District 61
+CandidateContest	FL House District 63	FL;State Representative;District 63
+CandidateContest	FL House District 64	FL;State Representative;District 64
+CandidateContest	FL Senate District 18	FL;State Senator;District 18
+CandidateContest	FL Senate District 20	FL;State Senator;District 20
+CandidateContest	US House FL District 12	FL;US Representative;District 12
+CandidateContest	US House FL District 15	FL;US Representative;District 15
+CandidateContest	US House FL District 16	FL;US Representative;District 16
+CandidateContest	FL House District 54	FL;State Representative;District 54
+CandidateContest	FL House District 31	FL;State Representative;District 31
+CandidateContest	FL House District 32	FL;State Representative;District 32
+CandidateContest	FL House District 33	FL;State Representative;District 33
+CandidateContest	FL Senate District 12	FL;State Senator;District 12
+CandidateContest	FL Senate District 22	FL;State Senator;District 22
+CandidateContest	FL House District 76	FL;State Representative;District 76
+CandidateContest	FL House District 77	FL;State Representative;District 77
+CandidateContest	FL House District 78	FL;State Representative;District 78
+CandidateContest	FL House District 79	FL;State Representative;District 79
+CandidateContest	FL House District 22	FL;State Representative;District 22
+CandidateContest	FL House District 71	FL;State Representative;District 71
+CandidateContest	FL House District 73	FL;State Representative;District 73
+CandidateContest	FL House District 23	FL;State Representative;District 23
+CandidateContest	FL House District 82	FL;State Representative;District 82
+CandidateContest	FL House District 83	FL;State Representative;District 83
+CandidateContest	FL Senate District 25	FL;State Senator;District 25
+CandidateContest	US House FL District 18	FL;US Representative;District 18
+CandidateContest	FL House District 108	FL;State Representative;District 108
+CandidateContest	FL House District 111	FL;State Representative;District 111
+CandidateContest	FL House District 112	FL;State Representative;District 112
+CandidateContest	FL House District 113	FL;State Representative;District 113
+CandidateContest	FL House District 114	FL;State Representative;District 114
+CandidateContest	FL House District 115	FL;State Representative;District 115
+CandidateContest	FL House District 116	FL;State Representative;District 116
+CandidateContest	FL House District 118	FL;State Representative;District 118
+CandidateContest	FL House District 119	FL;State Representative;District 119
+CandidateContest	FL House District 120	FL;State Representative;District 120
+CandidateContest	FL Senate District 36	FL;State Senator;District 36
+CandidateContest	FL Senate District 40	FL;State Senator;District 40
+CandidateContest	US House FL District 26	FL;US Representative;District 26
+CandidateContest	US House FL District 27	FL;US Representative;District 27
+CandidateContest	FL House District 3	FL;State Representative;District 3
+CandidateContest	FL House District 4	FL;State Representative;District 4
+CandidateContest	FL House District 30	FL;State Representative;District 30
+CandidateContest	FL House District 44	FL;State Representative;District 44
+CandidateContest	FL House District 47	FL;State Representative;District 47
+CandidateContest	FL House District 48	FL;State Representative;District 48
+CandidateContest	FL House District 49	FL;State Representative;District 49
+CandidateContest	US House FL District 7	FL;US Representative;District 7
+CandidateContest	US House FL District 9	FL;US Representative;District 9
+CandidateContest	FL House District 39	FL;State Representative;District 39
+CandidateContest	FL House District 42	FL;State Representative;District 42
+CandidateContest	FL House District 85	FL;State Representative;District 85
+CandidateContest	FL House District 86	FL;State Representative;District 86
+CandidateContest	FL House District 87	FL;State Representative;District 87
+CandidateContest	FL House District 89	FL;State Representative;District 89
+CandidateContest	FL Senate District 30	FL;State Senator;District 30
+CandidateContest	FL House District 36	FL;State Representative;District 36
+CandidateContest	FL House District 37	FL;State Representative;District 37
+CandidateContest	FL House District 38	FL;State Representative;District 38
+CandidateContest	FL Senate District 16	FL;State Senator;District 16
+CandidateContest	FL House District 65	FL;State Representative;District 65
+CandidateContest	FL House District 66	FL;State Representative;District 66
+CandidateContest	FL House District 67	FL;State Representative;District 67
+CandidateContest	FL House District 69	FL;State Representative;District 69
+CandidateContest	FL Senate District 24	FL;State Senator;District 24
+CandidateContest	US House FL District 13	FL;US Representative;District 13
+CandidateContest	FL House District 40	FL;State Representative;District 40
+CandidateContest	FL House District 72	FL;State Representative;District 72
+CandidateContest	FL House District 74	FL;State Representative;District 74
+CandidateContest	FL House District 28	FL;State Representative;District 28
+CandidateContest	FL House District 29	FL;State Representative;District 29
+CandidateContest	FL House District 17	FL;State Representative;District 17
+CandidateContest	FL House District 84	FL;State Representative;District 84
+CandidateContest	FL House District 25	FL;State Representative;District 25
+CandidateContest	FL House District 26	FL;State Representative;District 26
+CandidateContest	FL House District 27	FL;State Representative;District 27

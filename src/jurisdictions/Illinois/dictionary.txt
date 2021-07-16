@@ -3273,3 +3273,183 @@ ReportingUnit	Illinois;Winnebago County	WINNEBAGO
 ReportingUnit	Illinois;Winnebago County	fips17201
 ReportingUnit	Illinois;Woodford County	WOODFORD
 ReportingUnit	Illinois;Woodford County	fips17203
+CandidateContest	IL Attorney General	IL;Attorney General
+CandidateContest	IL Comptroller	IL;Comptroller;statewide
+CandidateContest	IL Governor and Lieutenant Governor	IL;Governor and Lieutenant Governor;statewide
+CandidateContest	IL Secretary of State	IL;Secretary of State;statewide
+CandidateContest	IL House District 94	IL;State Representative;District 94
+CandidateContest	IL Senate District 47	IL;State Senator;District 47
+CandidateContest	IL Treasurer	IL;Treasurer;statewide
+CandidateContest	US House IL District 18	IL;US Representative;District 18
+CandidateContest	IL House District 118	IL;State Representative;District 118
+CandidateContest	IL Senate District 59	IL;State Senator;District 59
+CandidateContest	US House IL District 12	IL;US Representative;District 12
+CandidateContest	IL House District 107	IL;State Representative;District 107
+CandidateContest	IL Senate District 54	IL;State Senator;District 54
+CandidateContest	US House IL District 13	IL;US Representative;District 13
+CandidateContest	US House IL District 15	IL;US Representative;District 15
+CandidateContest	IL House District 69	IL;State Representative;District 69
+CandidateContest	IL House District 70	IL;State Representative;District 70
+CandidateContest	IL Senate District 35	IL;State Senator;District 35
+CandidateContest	US House IL District 16	IL;US Representative;District 16
+CandidateContest	IL House District 93	IL;State Representative;District 93
+CandidateContest	IL House District 73	IL;State Representative;District 73
+CandidateContest	IL House District 74	IL;State Representative;District 74
+CandidateContest	IL House District 76	IL;State Representative;District 76
+CandidateContest	IL Senate District 38	IL;State Senator;District 38
+CandidateContest	IL House District 100	IL;State Representative;District 100
+CandidateContest	IL Senate District 50	IL;State Senator;District 50
+CandidateContest	IL House District 71	IL;State Representative;District 71
+CandidateContest	IL House District 89	IL;State Representative;District 89
+CandidateContest	IL Senate District 36	IL;State Senator;District 36
+CandidateContest	IL Senate District 45	IL;State Senator;District 45
+CandidateContest	US House IL District 17	IL;US Representative;District 17
+CandidateContest	IL House District 101	IL;State Representative;District 101
+CandidateContest	IL House District 102	IL;State Representative;District 102
+CandidateContest	IL House District 103	IL;State Representative;District 103
+CandidateContest	IL House District 104	IL;State Representative;District 104
+CandidateContest	IL Senate District 51	IL;State Senator;District 51
+CandidateContest	IL House District 95	IL;State Representative;District 95
+CandidateContest	IL House District 96	IL;State Representative;District 96
+CandidateContest	IL Senate District 48	IL;State Senator;District 48
+CandidateContest	IL House District 110	IL;State Representative;District 110
+CandidateContest	IL House District 109	IL;State Representative;District 109
+CandidateContest	IL House District 108	IL;State Representative;District 108
+CandidateContest	IL House District 1	IL;State Representative;District 1
+CandidateContest	IL House District 10	IL;State Representative;District 10
+CandidateContest	IL House District 11	IL;State Representative;District 11
+CandidateContest	IL House District 12	IL;State Representative;District 12
+CandidateContest	IL House District 13	IL;State Representative;District 13
+CandidateContest	IL House District 14	IL;State Representative;District 14
+CandidateContest	IL House District 15	IL;State Representative;District 15
+CandidateContest	IL House District 16	IL;State Representative;District 16
+CandidateContest	IL House District 17	IL;State Representative;District 17
+CandidateContest	IL House District 18	IL;State Representative;District 18
+CandidateContest	IL House District 19	IL;State Representative;District 19
+CandidateContest	IL House District 2	IL;State Representative;District 2
+CandidateContest	IL House District 20	IL;State Representative;District 20
+CandidateContest	IL House District 21	IL;State Representative;District 21
+CandidateContest	IL House District 22	IL;State Representative;District 22
+CandidateContest	IL House District 23	IL;State Representative;District 23
+CandidateContest	IL House District 24	IL;State Representative;District 24
+CandidateContest	IL House District 25	IL;State Representative;District 25
+CandidateContest	IL House District 26	IL;State Representative;District 26
+CandidateContest	IL House District 27	IL;State Representative;District 27
+CandidateContest	IL House District 28	IL;State Representative;District 28
+CandidateContest	IL House District 29	IL;State Representative;District 29
+CandidateContest	IL House District 3	IL;State Representative;District 3
+CandidateContest	IL House District 30	IL;State Representative;District 30
+CandidateContest	IL House District 31	IL;State Representative;District 31
+CandidateContest	IL House District 32	IL;State Representative;District 32
+CandidateContest	IL House District 33	IL;State Representative;District 33
+CandidateContest	IL House District 34	IL;State Representative;District 34
+CandidateContest	IL House District 35	IL;State Representative;District 35
+CandidateContest	IL House District 36	IL;State Representative;District 36
+CandidateContest	IL House District 37	IL;State Representative;District 37
+CandidateContest	IL House District 38	IL;State Representative;District 38
+CandidateContest	IL House District 39	IL;State Representative;District 39
+CandidateContest	IL House District 4	IL;State Representative;District 4
+CandidateContest	IL House District 40	IL;State Representative;District 40
+CandidateContest	IL House District 43	IL;State Representative;District 43
+CandidateContest	IL House District 44	IL;State Representative;District 44
+CandidateContest	IL House District 45	IL;State Representative;District 45
+CandidateContest	IL House District 47	IL;State Representative;District 47
+CandidateContest	IL House District 49	IL;State Representative;District 49
+CandidateContest	IL House District 5	IL;State Representative;District 5
+CandidateContest	IL House District 51	IL;State Representative;District 51
+CandidateContest	IL House District 52	IL;State Representative;District 52
+CandidateContest	IL House District 53	IL;State Representative;District 53
+CandidateContest	IL House District 54	IL;State Representative;District 54
+CandidateContest	IL House District 55	IL;State Representative;District 55
+CandidateContest	IL House District 56	IL;State Representative;District 56
+CandidateContest	IL House District 57	IL;State Representative;District 57
+CandidateContest	IL House District 58	IL;State Representative;District 58
+CandidateContest	IL House District 59	IL;State Representative;District 59
+CandidateContest	IL House District 6	IL;State Representative;District 6
+CandidateContest	IL House District 7	IL;State Representative;District 7
+CandidateContest	IL House District 77	IL;State Representative;District 77
+CandidateContest	IL House District 78	IL;State Representative;District 78
+CandidateContest	IL House District 8	IL;State Representative;District 8
+CandidateContest	IL House District 80	IL;State Representative;District 80
+CandidateContest	IL House District 82	IL;State Representative;District 82
+CandidateContest	IL House District 9	IL;State Representative;District 9
+CandidateContest	IL Senate District 11	IL;State Senator;District 11
+CandidateContest	IL Senate District 12	IL;State Senator;District 12
+CandidateContest	IL Senate District 14	IL;State Senator;District 14
+CandidateContest	IL Senate District 15	IL;State Senator;District 15
+CandidateContest	IL Senate District 17	IL;State Senator;District 17
+CandidateContest	IL Senate District 18	IL;State Senator;District 18
+CandidateContest	IL Senate District 2	IL;State Senator;District 2
+CandidateContest	IL Senate District 20	IL;State Senator;District 20
+CandidateContest	IL Senate District 23	IL;State Senator;District 23
+CandidateContest	IL Senate District 24	IL;State Senator;District 24
+CandidateContest	IL Senate District 26	IL;State Senator;District 26
+CandidateContest	IL Senate District 27	IL;State Senator;District 27
+CandidateContest	IL Senate District 29	IL;State Senator;District 29
+CandidateContest	IL Senate District 3	IL;State Senator;District 3
+CandidateContest	IL Senate District 30	IL;State Senator;District 30
+CandidateContest	IL Senate District 39	IL;State Senator;District 39
+CandidateContest	IL Senate District 41	IL;State Senator;District 41
+CandidateContest	IL Senate District 5	IL;State Senator;District 5
+CandidateContest	IL Senate District 6	IL;State Senator;District 6
+CandidateContest	IL Senate District 8	IL;State Senator;District 8
+CandidateContest	IL Senate District 9	IL;State Senator;District 9
+CandidateContest	US House IL District 1	IL;US Representative;District 1
+CandidateContest	US House IL District 10	IL;US Representative;District 10
+CandidateContest	US House IL District 11	IL;US Representative;District 11
+CandidateContest	US House IL District 2	IL;US Representative;District 2
+CandidateContest	US House IL District 3	IL;US Representative;District 3
+CandidateContest	US House IL District 4	IL;US Representative;District 4
+CandidateContest	US House IL District 5	IL;US Representative;District 5
+CandidateContest	US House IL District 6	IL;US Representative;District 6
+CandidateContest	US House IL District 7	IL;US Representative;District 7
+CandidateContest	US House IL District 8	IL;US Representative;District 8
+CandidateContest	US House IL District 9	IL;US Representative;District 9
+CandidateContest	IL House District 90	IL;State Representative;District 90
+CandidateContest	US House IL District 14	IL;US Representative;District 14
+CandidateContest	IL House District 41	IL;State Representative;District 41
+CandidateContest	IL House District 42	IL;State Representative;District 42
+CandidateContest	IL House District 46	IL;State Representative;District 46
+CandidateContest	IL House District 48	IL;State Representative;District 48
+CandidateContest	IL House District 81	IL;State Representative;District 81
+CandidateContest	IL House District 84	IL;State Representative;District 84
+CandidateContest	IL House District 85	IL;State Representative;District 85
+CandidateContest	IL Senate District 21	IL;State Senator;District 21
+CandidateContest	IL Senate District 42	IL;State Senator;District 42
+CandidateContest	IL House District 106	IL;State Representative;District 106
+CandidateContest	IL Senate District 53	IL;State Senator;District 53
+CandidateContest	IL House District 117	IL;State Representative;District 117
+CandidateContest	IL House District 91	IL;State Representative;District 91
+CandidateContest	IL House District 75	IL;State Representative;District 75
+CandidateContest	IL House District 79	IL;State Representative;District 79
+CandidateContest	IL House District 115	IL;State Representative;District 115
+CandidateContest	IL House District 111	IL;State Representative;District 111
+CandidateContest	IL Senate District 56	IL;State Senator;District 56
+CandidateContest	IL House District 50	IL;State Representative;District 50
+CandidateContest	IL House District 65	IL;State Representative;District 65
+CandidateContest	IL House District 66	IL;State Representative;District 66
+CandidateContest	IL House District 83	IL;State Representative;District 83
+CandidateContest	IL Senate District 33	IL;State Senator;District 33
+CandidateContest	IL House District 97	IL;State Representative;District 97
+CandidateContest	IL House District 60	IL;State Representative;District 60
+CandidateContest	IL House District 61	IL;State Representative;District 61
+CandidateContest	IL House District 62	IL;State Representative;District 62
+CandidateContest	IL House District 64	IL;State Representative;District 64
+CandidateContest	IL Senate District 32	IL;State Senator;District 32
+CandidateContest	IL House District 105	IL;State Representative;District 105
+CandidateContest	IL House District 87	IL;State Representative;District 87
+CandidateContest	IL Senate District 44	IL;State Senator;District 44
+CandidateContest	IL House District 112	IL;State Representative;District 112
+CandidateContest	IL House District 113	IL;State Representative;District 113
+CandidateContest	IL Senate District 57	IL;State Senator;District 57
+CandidateContest	IL House District 63	IL;State Representative;District 63
+CandidateContest	IL House District 88	IL;State Representative;District 88
+CandidateContest	IL House District 116	IL;State Representative;District 116
+CandidateContest	IL House District 92	IL;State Representative;District 92
+CandidateContest	IL House District 72	IL;State Representative;District 72
+CandidateContest	IL House District 99	IL;State Representative;District 99
+CandidateContest	IL House District 114	IL;State Representative;District 114
+CandidateContest	IL House District 86	IL;State Representative;District 86
+CandidateContest	IL House District 98	IL;State Representative;District 98
+CandidateContest	IL House District 67	IL;State Representative;District 67
+CandidateContest	IL House District 68	IL;State Representative;District 68

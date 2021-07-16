@@ -12084,3 +12084,161 @@ ReportingUnit	Michigan;Wexford County;SOUTH BRANCH TOWNSHIP;Ward 0;Precinct 1 La
 ReportingUnit	Michigan;Wexford County;SPRINGVILLE TOWNSHIP;Ward 0;Precinct 1 Label	WEXFORD;SPRINGVILLE TOWNSHIP;Ward 0;Precinct 1 Label
 ReportingUnit	Michigan;Wexford County;WEXFORD TOWNSHIP;Ward 0;Precinct 1 Label	WEXFORD;WEXFORD TOWNSHIP;Ward 0;Precinct 1 Label
 ReportingUnit	Michigan;Wexford County;{Statistical Adjustments};Ward 0;Precinct 9999 Label	WEXFORD;{Statistical Adjustments};Ward 0;Precinct 9999 Label
+CandidateContest	MI Attorney General	MI;Attorney General
+CandidateContest	MI Governor	MI;Governor;statewide
+CandidateContest	MI Justice of Supreme Court	MI;Justice of Supreme Court;statewide
+CandidateContest	MI Member of the State Board of Education	MI;Member of the State Board of Education;statewide
+CandidateContest	MI Regent of the University of Michigan	MI;Regent of the University of Michigan;statewide
+CandidateContest	MI Secretary of State	MI;Secretary of State;statewide
+CandidateContest	MI House District 10	MI;State Representative;District 10
+CandidateContest	MI Senate District 36	MI;State Senator;District 36
+CandidateContest	US House MI District 1	MI;US Representative;District 1
+CandidateContest	MI US Senator	MI;US Senator;statewide
+CandidateContest	MI Senate District 38	MI;State Senator;District 38
+CandidateContest	MI House District 72	MI;State Representative;District 72
+CandidateContest	MI House District 80	MI;State Representative;District 80
+CandidateContest	MI Senate District 26	MI;State Senator;District 26
+CandidateContest	US House MI District 2	MI;US Representative;District 2
+CandidateContest	US House MI District 6	MI;US Representative;District 6
+CandidateContest	MI Senate District 37	MI;State Senator;District 37
+CandidateContest	MI House District 97	MI;State Representative;District 97
+CandidateContest	US House MI District 5	MI;US Representative;District 5
+CandidateContest	MI House District 11	MI;State Representative;District 11
+CandidateContest	MI House District 87	MI;State Representative;District 87
+CandidateContest	MI Senate District 19	MI;State Senator;District 19
+CandidateContest	US House MI District 3	MI;US Representative;District 3
+CandidateContest	MI House District 96	MI;State Representative;District 96
+CandidateContest	MI House District 98	MI;State Representative;District 98
+CandidateContest	MI Senate District 31	MI;State Senator;District 31
+CandidateContest	MI Senate District 35	MI;State Senator;District 35
+CandidateContest	MI House District 78	MI;State Representative;District 78
+CandidateContest	MI House District 79	MI;State Representative;District 79
+CandidateContest	MI Senate District 21	MI;State Senator;District 21
+CandidateContest	MI House District 58	MI;State Representative;District 58
+CandidateContest	MI Senate District 16	MI;State Senator;District 16
+CandidateContest	US House MI District 7	MI;US Representative;District 7
+CandidateContest	MI House District 62	MI;State Representative;District 62
+CandidateContest	MI House District 63	MI;State Representative;District 63
+CandidateContest	MI House District 59	MI;State Representative;District 59
+CandidateContest	MI Senate District 33	MI;State Senator;District 33
+CandidateContest	US House MI District 4	MI;US Representative;District 4
+CandidateContest	MI House District 93	MI;State Representative;District 93
+CandidateContest	MI Senate District 24	MI;State Senator;District 24
+CandidateContest	MI House District 65	MI;State Representative;District 65
+CandidateContest	MI House District 71	MI;State Representative;District 71
+CandidateContest	MI House District 34	MI;State Representative;District 34
+CandidateContest	MI House District 48	MI;State Representative;District 48
+CandidateContest	MI House District 49	MI;State Representative;District 49
+CandidateContest	MI House District 50	MI;State Representative;District 50
+CandidateContest	MI House District 51	MI;State Representative;District 51
+CandidateContest	MI Senate District 14	MI;State Senator;District 14
+CandidateContest	MI Senate District 27	MI;State Senator;District 27
+CandidateContest	MI Senate District 32	MI;State Senator;District 32
+CandidateContest	MI House District 70	MI;State Representative;District 70
+CandidateContest	MI House District 84	MI;State Representative;District 84
+CandidateContest	MI Senate District 25	MI;State Senator;District 25
+CandidateContest	US House MI District 10	MI;US Representative;District 10
+CandidateContest	MI House District 67	MI;State Representative;District 67
+CandidateContest	MI House District 68	MI;State Representative;District 68
+CandidateContest	MI House District 69	MI;State Representative;District 69
+CandidateContest	MI Senate District 23	MI;State Senator;District 23
+CandidateContest	US House MI District 8	MI;US Representative;District 8
+CandidateContest	MI House District 86	MI;State Representative;District 86
+CandidateContest	MI House District 99	MI;State Representative;District 99
+CandidateContest	MI House District 64	MI;State Representative;District 64
+CandidateContest	MI House District 60	MI;State Representative;District 60
+CandidateContest	MI House District 61	MI;State Representative;District 61
+CandidateContest	MI House District 66	MI;State Representative;District 66
+CandidateContest	MI Senate District 20	MI;State Senator;District 20
+CandidateContest	MI House District 73	MI;State Representative;District 73
+CandidateContest	MI House District 74	MI;State Representative;District 74
+CandidateContest	MI House District 75	MI;State Representative;District 75
+CandidateContest	MI House District 76	MI;State Representative;District 76
+CandidateContest	MI House District 77	MI;State Representative;District 77
+CandidateContest	MI Senate District 28	MI;State Senator;District 28
+CandidateContest	MI Senate District 29	MI;State Senator;District 29
+CandidateContest	MI House District 82	MI;State Representative;District 82
+CandidateContest	MI House District 57	MI;State Representative;District 57
+CandidateContest	MI Senate District 17	MI;State Senator;District 17
+CandidateContest	MI House District 42	MI;State Representative;District 42
+CandidateContest	MI House District 47	MI;State Representative;District 47
+CandidateContest	MI Senate District 22	MI;State Senator;District 22
+CandidateContest	MI House District 18	MI;State Representative;District 18
+CandidateContest	MI House District 22	MI;State Representative;District 22
+CandidateContest	MI House District 24	MI;State Representative;District 24
+CandidateContest	MI House District 25	MI;State Representative;District 25
+CandidateContest	MI House District 28	MI;State Representative;District 28
+CandidateContest	MI House District 30	MI;State Representative;District 30
+CandidateContest	MI House District 31	MI;State Representative;District 31
+CandidateContest	MI House District 32	MI;State Representative;District 32
+CandidateContest	MI House District 33	MI;State Representative;District 33
+CandidateContest	MI House District 36	MI;State Representative;District 36
+CandidateContest	MI Senate District 10	MI;State Senator;District 10
+CandidateContest	MI Senate District 8	MI;State Senator;District 8
+CandidateContest	MI Senate District 9	MI;State Senator;District 9
+CandidateContest	US House MI District 9	MI;US Representative;District 9
+CandidateContest	MI House District 17	MI;State Representative;District 17
+CandidateContest	MI House District 56	MI;State Representative;District 56
+CandidateContest	MI House District 91	MI;State Representative;District 91
+CandidateContest	MI House District 92	MI;State Representative;District 92
+CandidateContest	MI Senate District 34	MI;State Senator;District 34
+CandidateContest	MI House District 26	MI;State Representative;District 26
+CandidateContest	MI House District 27	MI;State Representative;District 27
+CandidateContest	MI House District 29	MI;State Representative;District 29
+CandidateContest	MI House District 35	MI;State Representative;District 35
+CandidateContest	MI House District 37	MI;State Representative;District 37
+CandidateContest	MI House District 38	MI;State Representative;District 38
+CandidateContest	MI House District 39	MI;State Representative;District 39
+CandidateContest	MI House District 40	MI;State Representative;District 40
+CandidateContest	MI House District 41	MI;State Representative;District 41
+CandidateContest	MI House District 43	MI;State Representative;District 43
+CandidateContest	MI House District 44	MI;State Representative;District 44
+CandidateContest	MI House District 45	MI;State Representative;District 45
+CandidateContest	MI House District 46	MI;State Representative;District 46
+CandidateContest	MI Senate District 11	MI;State Senator;District 11
+CandidateContest	MI Senate District 12	MI;State Senator;District 12
+CandidateContest	MI Senate District 13	MI;State Senator;District 13
+CandidateContest	MI Senate District 15	MI;State Senator;District 15
+CandidateContest	US House MI District 11	MI;US Representative;District 11
+CandidateContest	US House MI District 14	MI;US Representative;District 14
+CandidateContest	MI House District 88	MI;State Representative;District 88
+CandidateContest	MI House District 89	MI;State Representative;District 89
+CandidateContest	MI House District 90	MI;State Representative;District 90
+CandidateContest	MI Senate District 30	MI;State Senator;District 30
+CandidateContest	MI House District 85	MI;State Representative;District 85
+CandidateContest	MI House District 94	MI;State Representative;District 94
+CandidateContest	MI House District 95	MI;State Representative;District 95
+CandidateContest	MI House District 83	MI;State Representative;District 83
+CandidateContest	MI House District 81	MI;State Representative;District 81
+CandidateContest	MI House District 52	MI;State Representative;District 52
+CandidateContest	MI House District 53	MI;State Representative;District 53
+CandidateContest	MI House District 54	MI;State Representative;District 54
+CandidateContest	MI House District 55	MI;State Representative;District 55
+CandidateContest	MI Senate District 18	MI;State Senator;District 18
+CandidateContest	US House MI District 12	MI;US Representative;District 12
+CandidateContest	MI House District 1	MI;State Representative;District 1
+CandidateContest	MI House District 12	MI;State Representative;District 12
+CandidateContest	MI House District 13	MI;State Representative;District 13
+CandidateContest	MI House District 14	MI;State Representative;District 14
+CandidateContest	MI House District 15	MI;State Representative;District 15
+CandidateContest	MI House District 16	MI;State Representative;District 16
+CandidateContest	MI House District 19	MI;State Representative;District 19
+CandidateContest	MI House District 2	MI;State Representative;District 2
+CandidateContest	MI House District 20	MI;State Representative;District 20
+CandidateContest	MI House District 21	MI;State Representative;District 21
+CandidateContest	MI House District 23	MI;State Representative;District 23
+CandidateContest	MI House District 3	MI;State Representative;District 3
+CandidateContest	MI House District 4	MI;State Representative;District 4
+CandidateContest	MI House District 5	MI;State Representative;District 5
+CandidateContest	MI House District 6	MI;State Representative;District 6
+CandidateContest	MI House District 7	MI;State Representative;District 7
+CandidateContest	MI House District 8	MI;State Representative;District 8
+CandidateContest	MI House District 9	MI;State Representative;District 9
+CandidateContest	MI Senate District 1	MI;State Senator;District 1
+CandidateContest	MI Senate District 2	MI;State Senator;District 2
+CandidateContest	MI Senate District 3	MI;State Senator;District 3
+CandidateContest	MI Senate District 4	MI;State Senator;District 4
+CandidateContest	MI Senate District 5	MI;State Senator;District 5
+CandidateContest	MI Senate District 6	MI;State Senator;District 6
+CandidateContest	MI Senate District 7	MI;State Senator;District 7
+CandidateContest	US House MI District 13	MI;US Representative;District 13

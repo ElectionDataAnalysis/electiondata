@@ -575,3 +575,11 @@ ReportingUnit	Mississippi;Yalobusha County	Yalobusha
 ReportingUnit	Mississippi;Yalobusha County	fips28161
 ReportingUnit	Mississippi;Yazoo County	Yazoo
 ReportingUnit	Mississippi;Yazoo County	fips28163
+CandidateContest	MS District 2 (Southern) Position 1	MS;District 2 (Southern) Position 1;statewide
+CandidateContest	US House MS District 3	MS;US Representative;District 3
+CandidateContest	MS US Senator	MS;US Senator;statewide
+CandidateContest	US House MS District 1	MS;US Representative;District 1
+CandidateContest	US House MS District 2	MS;US Representative;District 2
+CandidateContest	MS House District 85	MS;State Representative;District 85
+CandidateContest	US House MS District 4	MS;US Representative;District 4
+CandidateContest	MS House District 31	MS;State Representative;District 31

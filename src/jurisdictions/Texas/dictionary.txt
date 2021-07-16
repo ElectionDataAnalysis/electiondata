@@ -7170,3 +7170,176 @@ ReportingUnit	Texas;Zapata County	ZAPATA
 ReportingUnit	Texas;Zapata County	fips48505
 ReportingUnit	Texas;Zavala County	ZAVALA
 ReportingUnit	Texas;Zavala County	fips48507
+CandidateContest	TX Attorney General	TX;Attorney General
+CandidateContest	TX Commissioner of Agriculture	TX;Commissioner of Agriculture;statewide
+CandidateContest	TX Commissioner of the General Land office	TX;Commissioner of the General Land office;statewide
+CandidateContest	TX Comptroller of Public Accounts	TX;Comptroller of Public Accounts;statewide
+CandidateContest	TX Governor	TX;Governor;statewide
+CandidateContest	TX Judge, Court of Criminal Appeals Place 7	TX;Judge, Court of Criminal Appeals Place 7;statewide
+CandidateContest	TX Judge, Court of Criminal Appeals Place 8	TX;Judge, Court of Criminal Appeals Place 8;statewide
+CandidateContest	TX Justice, Supreme Court, Place 2	TX;Justice, Supreme Court, Place 2;statewide
+CandidateContest	TX Justice, Supreme Court, Place 4	TX;Justice, Supreme Court, Place 4;statewide
+CandidateContest	TX Justice, Supreme Court, Place 6	TX;Justice, Supreme Court, Place 6;statewide
+CandidateContest	TX Lieutenant Governor	TX;Lieutenant Governor;statewide
+CandidateContest	TX Presiding Judge, Court of Criminal Appeals	TX;Presiding Judge, Court of Criminal Appeals;statewide
+CandidateContest	TX Railroad Commissioner	TX;Railroad Commissioner;statewide
+CandidateContest	TX House District 8	TX;State Representative;District 8
+CandidateContest	TX Senate District 3	TX;State Senator;District 3
+CandidateContest	US House TX District 5	TX;US Representative;District 5
+CandidateContest	TX US Senator	TX;US Senator;statewide
+CandidateContest	TX House District 81	TX;State Representative;District 81
+CandidateContest	TX Senate District 31	TX;State Senator;District 31
+CandidateContest	US House TX District 11	TX;US Representative;District 11
+CandidateContest	TX House District 57	TX;State Representative;District 57
+CandidateContest	US House TX District 1	TX;US Representative;District 1
+CandidateContest	TX Member, State Board of Education District 2	TX;Member, State Board of Education;District 2
+CandidateContest	TX House District 30	TX;State Representative;District 30
+CandidateContest	US House TX District 27	TX;US Representative;District 27
+CandidateContest	TX Senate District 30	TX;State Senator;District 30
+CandidateContest	US House TX District 13	TX;US Representative;District 13
+CandidateContest	TX House District 88	TX;State Representative;District 88
+CandidateContest	US House TX District 28	TX;US Representative;District 28
+CandidateContest	TX House District 13	TX;State Representative;District 13
+CandidateContest	US House TX District 10	TX;US Representative;District 10
+CandidateContest	US House TX District 19	TX;US Representative;District 19
+CandidateContest	TX House District 53	TX;State Representative;District 53
+CandidateContest	US House TX District 21	TX;US Representative;District 21
+CandidateContest	TX House District 17	TX;State Representative;District 17
+CandidateContest	TX Senate District 14	TX;State Senator;District 14
+CandidateContest	US House TX District 17	TX;US Representative;District 17
+CandidateContest	TX House District 43	TX;State Representative;District 43
+CandidateContest	US House TX District 34	TX;US Representative;District 34
+CandidateContest	TX House District 54	TX;State Representative;District 54
+CandidateContest	US House TX District 25	TX;US Representative;District 25
+CandidateContest	US House TX District 31	TX;US Representative;District 31
+CandidateContest	TX House District 116	TX;State Representative;District 116
+CandidateContest	TX House District 117	TX;State Representative;District 117
+CandidateContest	TX House District 118	TX;State Representative;District 118
+CandidateContest	TX House District 120	TX;State Representative;District 120
+CandidateContest	TX House District 121	TX;State Representative;District 121
+CandidateContest	TX House District 122	TX;State Representative;District 122
+CandidateContest	TX House District 124	TX;State Representative;District 124
+CandidateContest	TX House District 125	TX;State Representative;District 125
+CandidateContest	TX Senate District 25	TX;State Senator;District 25
+CandidateContest	US House TX District 20	TX;US Representative;District 20
+CandidateContest	US House TX District 23	TX;US Representative;District 23
+CandidateContest	US House TX District 35	TX;US Representative;District 35
+CandidateContest	TX House District 45	TX;State Representative;District 45
+CandidateContest	TX House District 83	TX;State Representative;District 83
+CandidateContest	US House TX District 4	TX;US Representative;District 4
+CandidateContest	TX Member, State Board of Education District 7	TX;Member, State Board of Education;District 7
+CandidateContest	TX House District 29	TX;State Representative;District 29
+CandidateContest	TX Senate District 17	TX;State Senator;District 17
+CandidateContest	US House TX District 14	TX;US Representative;District 14
+CandidateContest	US House TX District 22	TX;US Representative;District 22
+CandidateContest	TX House District 12	TX;State Representative;District 12
+CandidateContest	TX House District 14	TX;State Representative;District 14
+CandidateContest	TX Senate District 5	TX;State Senator;District 5
+CandidateContest	US House TX District 15	TX;US Representative;District 15
+CandidateContest	TX House District 20	TX;State Representative;District 20
+CandidateContest	TX House District 5	TX;State Representative;District 5
+CandidateContest	TX House District 23	TX;State Representative;District 23
+CandidateContest	US House TX District 36	TX;US Representative;District 36
+CandidateContest	TX House District 11	TX;State Representative;District 11
+CandidateContest	TX Member, State Board of Education District 12	TX;Member, State Board of Education;District 12
+CandidateContest	TX House District 33	TX;State Representative;District 33
+CandidateContest	TX House District 66	TX;State Representative;District 66
+CandidateContest	TX House District 67	TX;State Representative;District 67
+CandidateContest	TX House District 70	TX;State Representative;District 70
+CandidateContest	TX House District 89	TX;State Representative;District 89
+CandidateContest	TX Senate District 8	TX;State Senator;District 8
+CandidateContest	US House TX District 3	TX;US Representative;District 3
+CandidateContest	US House TX District 32	TX;US Representative;District 32
+CandidateContest	TX House District 73	TX;State Representative;District 73
+CandidateContest	TX House District 82	TX;State Representative;District 82
+CandidateContest	TX House District 86	TX;State Representative;District 86
+CandidateContest	TX Member, State Board of Education District 11	TX;Member, State Board of Education;District 11
+CandidateContest	TX Member, State Board of Education District 13	TX;Member, State Board of Education;District 13
+CandidateContest	TX House District 102	TX;State Representative;District 102
+CandidateContest	TX House District 103	TX;State Representative;District 103
+CandidateContest	TX House District 105	TX;State Representative;District 105
+CandidateContest	TX House District 107	TX;State Representative;District 107
+CandidateContest	TX House District 108	TX;State Representative;District 108
+CandidateContest	TX House District 112	TX;State Representative;District 112
+CandidateContest	TX House District 113	TX;State Representative;District 113
+CandidateContest	TX House District 114	TX;State Representative;District 114
+CandidateContest	TX House District 115	TX;State Representative;District 115
+CandidateContest	TX Senate District 16	TX;State Senator;District 16
+CandidateContest	TX Senate District 2	TX;State Senator;District 2
+CandidateContest	TX Senate District 9	TX;State Senator;District 9
+CandidateContest	US House TX District 24	TX;US Representative;District 24
+CandidateContest	US House TX District 26	TX;US Representative;District 26
+CandidateContest	US House TX District 30	TX;US Representative;District 30
+CandidateContest	US House TX District 33	TX;US Representative;District 33
+CandidateContest	TX House District 62	TX;State Representative;District 62
+CandidateContest	TX House District 106	TX;State Representative;District 106
+CandidateContest	TX House District 63	TX;State Representative;District 63
+CandidateContest	TX House District 64	TX;State Representative;District 64
+CandidateContest	TX House District 65	TX;State Representative;District 65
+CandidateContest	TX House District 78	TX;State Representative;District 78
+CandidateContest	US House TX District 16	TX;US Representative;District 16
+CandidateContest	TX House District 10	TX;State Representative;District 10
+CandidateContest	US House TX District 6	TX;US Representative;District 6
+CandidateContest	TX House District 26	TX;State Representative;District 26
+CandidateContest	TX House District 28	TX;State Representative;District 28
+CandidateContest	TX House District 85	TX;State Representative;District 85
+CandidateContest	US House TX District 9	TX;US Representative;District 9
+CandidateContest	TX House District 24	TX;State Representative;District 24
+CandidateContest	US House TX District 8	TX;US Representative;District 8
+CandidateContest	TX House District 44	TX;State Representative;District 44
+CandidateContest	TX House District 19	TX;State Representative;District 19
+CandidateContest	TX House District 126	TX;State Representative;District 126
+CandidateContest	TX House District 127	TX;State Representative;District 127
+CandidateContest	TX House District 129	TX;State Representative;District 129
+CandidateContest	TX House District 130	TX;State Representative;District 130
+CandidateContest	TX House District 131	TX;State Representative;District 131
+CandidateContest	TX House District 132	TX;State Representative;District 132
+CandidateContest	TX House District 133	TX;State Representative;District 133
+CandidateContest	TX House District 134	TX;State Representative;District 134
+CandidateContest	TX House District 135	TX;State Representative;District 135
+CandidateContest	TX House District 137	TX;State Representative;District 137
+CandidateContest	TX House District 138	TX;State Representative;District 138
+CandidateContest	TX House District 139	TX;State Representative;District 139
+CandidateContest	TX House District 144	TX;State Representative;District 144
+CandidateContest	TX House District 145	TX;State Representative;District 145
+CandidateContest	TX House District 146	TX;State Representative;District 146
+CandidateContest	TX House District 147	TX;State Representative;District 147
+CandidateContest	TX House District 148	TX;State Representative;District 148
+CandidateContest	TX House District 149	TX;State Representative;District 149
+CandidateContest	TX House District 150	TX;State Representative;District 150
+CandidateContest	TX Senate District 15	TX;State Senator;District 15
+CandidateContest	TX Senate District 7	TX;State Senator;District 7
+CandidateContest	US House TX District 18	TX;US Representative;District 18
+CandidateContest	US House TX District 2	TX;US Representative;District 2
+CandidateContest	US House TX District 29	TX;US Representative;District 29
+CandidateContest	US House TX District 7	TX;US Representative;District 7
+CandidateContest	TX House District 4	TX;State Representative;District 4
+CandidateContest	TX House District 41	TX;State Representative;District 41
+CandidateContest	TX House District 2	TX;State Representative;District 2
+CandidateContest	TX House District 71	TX;State Representative;District 71
+CandidateContest	TX House District 18	TX;State Representative;District 18
+CandidateContest	TX House District 84	TX;State Representative;District 84
+CandidateContest	TX House District 56	TX;State Representative;District 56
+CandidateContest	TX House District 15	TX;State Representative;District 15
+CandidateContest	TX House District 16	TX;State Representative;District 16
+CandidateContest	TX House District 3	TX;State Representative;District 3
+CandidateContest	TX House District 34	TX;State Representative;District 34
+CandidateContest	US House TX District 12	TX;US Representative;District 12
+CandidateContest	TX House District 6	TX;State Representative;District 6
+CandidateContest	TX House District 101	TX;State Representative;District 101
+CandidateContest	TX House District 91	TX;State Representative;District 91
+CandidateContest	TX House District 92	TX;State Representative;District 92
+CandidateContest	TX House District 93	TX;State Representative;District 93
+CandidateContest	TX House District 94	TX;State Representative;District 94
+CandidateContest	TX House District 95	TX;State Representative;District 95
+CandidateContest	TX House District 96	TX;State Representative;District 96
+CandidateContest	TX House District 97	TX;State Representative;District 97
+CandidateContest	TX House District 98	TX;State Representative;District 98
+CandidateContest	TX House District 99	TX;State Representative;District 99
+CandidateContest	TX Senate District 10	TX;State Senator;District 10
+CandidateContest	TX House District 46	TX;State Representative;District 46
+CandidateContest	TX House District 47	TX;State Representative;District 47
+CandidateContest	TX House District 49	TX;State Representative;District 49
+CandidateContest	TX House District 42	TX;State Representative;District 42
+CandidateContest	TX House District 136	TX;State Representative;District 136
+CandidateContest	TX House District 52	TX;State Representative;District 52

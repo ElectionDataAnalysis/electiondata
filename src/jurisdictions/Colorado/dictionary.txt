@@ -5732,3 +5732,101 @@ ReportingUnit	Colorado;Weld County	fips08123
 ReportingUnit	Colorado;Yuma County	YUMA
 ReportingUnit	Colorado;Yuma County	Yuma
 ReportingUnit	Colorado;Yuma County	fips08125
+CandidateContest	CO Attorney General	CO;Attorney General
+CandidateContest	CO Governor/Lieutenant Governor	CO;Governor/Lieutenant Governor;statewide
+CandidateContest	CO Regent of the University of Colorado	CORegent of the University of Colorado;At Large
+CandidateContest	CO Secretary of State	CO;Secretary of State;statewide
+CandidateContest	CO State Board of Education Member District 4	CO;State Board of Education Member;District 4
+CandidateContest	CO House District 30	CO;State Representative;District 30
+CandidateContest	CO House District 31	CO;State Representative;District 31
+CandidateContest	CO House District 32	CO;State Representative;District 32
+CandidateContest	CO House District 34	CO;State Representative;District 34
+CandidateContest	CO House District 35	CO;State Representative;District 35
+CandidateContest	CO House District 56	CO;State Representative;District 56
+CandidateContest	CO Senate District 24	CO;State Senate;District 24
+CandidateContest	CO State Treasurer	CO;State Treasurer;statewide
+CandidateContest	US House CO District 4	CO;US Representative;District 4
+CandidateContest	US House CO District 6	CO;US Representative;District 6
+CandidateContest	US House CO District 7	CO;US Representative;District 7
+CandidateContest	CO Regent of the University of Colorado District 3	CO;Regent of the University of Colorado;District 3
+CandidateContest	CO House District 62	CO;State Representative;District 62
+CandidateContest	US House CO District 3	CO;US Representative;District 3
+CandidateContest	CO House District 3	CO;State Representative;District 3
+CandidateContest	CO House District 36	CO;State Representative;District 36
+CandidateContest	CO House District 37	CO;State Representative;District 37
+CandidateContest	CO House District 38	CO;State Representative;District 38
+CandidateContest	CO House District 40	CO;State Representative;District 40
+CandidateContest	CO House District 41	CO;State Representative;District 41
+CandidateContest	CO House District 42	CO;State Representative;District 42
+CandidateContest	CO House District 9	CO;State Representative;District 9
+CandidateContest	US House CO District 1	CO;US Representative;District 1
+CandidateContest	CO House District 59	CO;State Representative;District 59
+CandidateContest	CO Senate District 6	CO;State Senate;District 6
+CandidateContest	CO House District 64	CO;State Representative;District 64
+CandidateContest	CO State Board of Education Member District 2	CO;State Board of Education Member;District 2
+CandidateContest	CO House District 10	CO;State Representative;District 10
+CandidateContest	CO House District 11	CO;State Representative;District 11
+CandidateContest	CO House District 12	CO;State Representative;District 12
+CandidateContest	CO House District 13	CO;State Representative;District 13
+CandidateContest	CO House District 33	CO;State Representative;District 33
+CandidateContest	CO Senate District 16	CO;State Senate;District 16
+CandidateContest	US House CO District 2	CO;US Representative;District 2
+CandidateContest	CO Regent of the University of Colorado District 5	CO;Regent of the University of Colorado;District 5
+CandidateContest	CO House District 60	CO;State Representative;District 60
+CandidateContest	CO Senate District 5	CO;State Senate;District 5
+CandidateContest	US House CO District 5	CO;US Representative;District 5
+CandidateContest	CO House District 65	CO;State Representative;District 65
+CandidateContest	CO Senate District 1	CO;State Senate;District 1
+CandidateContest	CO Senate District 2	CO;State Senate;District 2
+CandidateContest	CO House District 54	CO;State Representative;District 54
+CandidateContest	CO House District 61	CO;State Representative;District 61
+CandidateContest	CO House District 1	CO;State Representative;District 1
+CandidateContest	CO House District 2	CO;State Representative;District 2
+CandidateContest	CO House District 4	CO;State Representative;District 4
+CandidateContest	CO House District 5	CO;State Representative;District 5
+CandidateContest	CO House District 6	CO;State Representative;District 6
+CandidateContest	CO House District 7	CO;State Representative;District 7
+CandidateContest	CO House District 8	CO;State Representative;District 8
+CandidateContest	CO Senate District 32	CO;State Senate;District 32
+CandidateContest	CO Senate District 34	CO;State Senate;District 34
+CandidateContest	CO House District 58	CO;State Representative;District 58
+CandidateContest	CO House District 39	CO;State Representative;District 39
+CandidateContest	CO House District 43	CO;State Representative;District 43
+CandidateContest	CO House District 44	CO;State Representative;District 44
+CandidateContest	CO House District 45	CO;State Representative;District 45
+CandidateContest	CO Senate District 30	CO;State Senate;District 30
+CandidateContest	CO House District 26	CO;State Representative;District 26
+CandidateContest	CO House District 14	CO;State Representative;District 14
+CandidateContest	CO House District 15	CO;State Representative;District 15
+CandidateContest	CO House District 16	CO;State Representative;District 16
+CandidateContest	CO House District 17	CO;State Representative;District 17
+CandidateContest	CO House District 18	CO;State Representative;District 18
+CandidateContest	CO House District 19	CO;State Representative;District 19
+CandidateContest	CO House District 20	CO;State Representative;District 20
+CandidateContest	CO House District 21	CO;State Representative;District 21
+CandidateContest	CO Senate District 11	CO;State Senate;District 11
+CandidateContest	CO Senate District 9	CO;State Senate;District 9
+CandidateContest	CO House District 47	CO;State Representative;District 47
+CandidateContest	CO House District 57	CO;State Representative;District 57
+CandidateContest	CO House District 22	CO;State Representative;District 22
+CandidateContest	CO House District 23	CO;State Representative;District 23
+CandidateContest	CO House District 24	CO;State Representative;District 24
+CandidateContest	CO House District 25	CO;State Representative;District 25
+CandidateContest	CO House District 27	CO;State Representative;District 27
+CandidateContest	CO House District 28	CO;State Representative;District 28
+CandidateContest	CO House District 29	CO;State Representative;District 29
+CandidateContest	CO Senate District 20	CO;State Senate;District 20
+CandidateContest	CO Senate District 22	CO;State Senate;District 22
+CandidateContest	CO House District 49	CO;State Representative;District 49
+CandidateContest	CO House District 51	CO;State Representative;District 51
+CandidateContest	CO House District 52	CO;State Representative;District 52
+CandidateContest	CO House District 53	CO;State Representative;District 53
+CandidateContest	CO Senate District 15	CO;State Senate;District 15
+CandidateContest	CO House District 55	CO;State Representative;District 55
+CandidateContest	CO Senate District 7	CO;State Senate;District 7
+CandidateContest	CO House District 46	CO;State Representative;District 46
+CandidateContest	CO Senate District 3	CO;State Senate;District 3
+CandidateContest	CO House District 48	CO;State Representative;District 48
+CandidateContest	CO House District 50	CO;State Representative;District 50
+CandidateContest	CO House District 63	CO;State Representative;District 63
+CandidateContest	CO Senate District 13	CO;State Senate;District 13

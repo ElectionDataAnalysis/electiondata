@@ -3315,3 +3315,169 @@ ReportingUnit	California;Yolo County	Yolo
 ReportingUnit	California;Yolo County	fips06113
 ReportingUnit	California;Yuba County	Yuba
 ReportingUnit	California;Yuba County	fips06115
+CandidateContest	CA Attorney General	CA;Attorney General
+CandidateContest	CA Board of Equalization Member District 2	CA;Board of Equalization Member;District 2
+CandidateContest	CA Controller	CA;Controller;statewide
+CandidateContest	CA Governor	CA;Governor;statewide
+CandidateContest	CA Insurance Commissioner	CA;Insurance Commissioner;statewide
+CandidateContest	CA Lieutenant Governor	CA;Lieutenant Governor;statewide
+CandidateContest	CA Secretary of State	CA;Secretary of State;statewide
+CandidateContest	CA State Assembly Member District 15	CA;State Assembly Member;District 15
+CandidateContest	CA State Assembly Member District 16	CA;State Assembly Member;District 16
+CandidateContest	CA State Assembly Member District 18	CA;State Assembly Member;District 18
+CandidateContest	CA State Assembly Member District 20	CA;State Assembly Member;District 20
+CandidateContest	CA State Assembly Member District 25	CA;State Assembly Member;District 25
+CandidateContest	CA Senate District 10	CA;State Senator;District 10
+CandidateContest	CA Superintendent of Public Instruction	CA;Superintendent of Public Instruction;statewide
+CandidateContest	CA Treasurer	CA;Treasurer;statewide
+CandidateContest	US House CA District 13	CA;US Representative;District 13
+CandidateContest	US House CA District 15	CA;US Representative;District 15
+CandidateContest	US House CA District 17	CA;US Representative;District 17
+CandidateContest	CA US Senator	CA;US Senator;statewide
+CandidateContest	CA Board of Equalization Member District 1	CA;Board of Equalization Member;District 1
+CandidateContest	CA State Assembly Member District 5	CA;State Assembly Member;District 5
+CandidateContest	US House CA District 4	CA;US Representative;District 4
+CandidateContest	CA Senate District 8	CA;State Senator;District 8
+CandidateContest	CA State Assembly Member District 1	CA;State Assembly Member;District 1
+CandidateContest	CA State Assembly Member District 3	CA;State Assembly Member;District 3
+CandidateContest	CA Senate District 4	CA;State Senator;District 4
+CandidateContest	US House CA District 1	CA;US Representative;District 1
+CandidateContest	CA State Assembly Member District 4	CA;State Assembly Member;District 4
+CandidateContest	US House CA District 3	CA;US Representative;District 3
+CandidateContest	CA State Assembly Member District 11	CA;State Assembly Member;District 11
+CandidateContest	CA State Assembly Member District 14	CA;State Assembly Member;District 14
+CandidateContest	US House CA District 11	CA;US Representative;District 11
+CandidateContest	US House CA District 5	CA;US Representative;District 5
+CandidateContest	US House CA District 9	CA;US Representative;District 9
+CandidateContest	CA State Assembly Member District 2	CA;State Assembly Member;District 2
+CandidateContest	CA Senate District 2	CA;State Senator;District 2
+CandidateContest	US House CA District 2	CA;US Representative;District 2
+CandidateContest	CA State Assembly Member District 6	CA;State Assembly Member;District 6
+CandidateContest	CA State Assembly Member District 23	CA;State Assembly Member;District 23
+CandidateContest	CA State Assembly Member District 31	CA;State Assembly Member;District 31
+CandidateContest	CA Senate District 12	CA;State Senator;District 12
+CandidateContest	CA Senate District 14	CA;State Senator;District 14
+CandidateContest	US House CA District 16	CA;US Representative;District 16
+CandidateContest	US House CA District 21	CA;US Representative;District 21
+CandidateContest	US House CA District 22	CA;US Representative;District 22
+CandidateContest	CA Board of Equalization Member District 4	CA;Board of Equalization Member;District 4
+CandidateContest	CA State Assembly Member District 56	CA;State Assembly Member;District 56
+CandidateContest	CA Senate District 40	CA;State Senator;District 40
+CandidateContest	US House CA District 51	CA;US Representative;District 51
+CandidateContest	CA State Assembly Member District 26	CA;State Assembly Member;District 26
+CandidateContest	US House CA District 8	CA;US Representative;District 8
+CandidateContest	CA State Assembly Member District 32	CA;State Assembly Member;District 32
+CandidateContest	CA State Assembly Member District 34	CA;State Assembly Member;District 34
+CandidateContest	CA State Assembly Member District 36	CA;State Assembly Member;District 36
+CandidateContest	CA Senate District 16	CA;State Senator;District 16
+CandidateContest	US House CA District 23	CA;US Representative;District 23
+CandidateContest	CA Board of Equalization Member District 3	CA;Board of Equalization Member;District 3
+CandidateContest	CA State Assembly Member District 38	CA;State Assembly Member;District 38
+CandidateContest	CA State Assembly Member District 39	CA;State Assembly Member;District 39
+CandidateContest	CA State Assembly Member District 41	CA;State Assembly Member;District 41
+CandidateContest	CA State Assembly Member District 43	CA;State Assembly Member;District 43
+CandidateContest	CA State Assembly Member District 44	CA;State Assembly Member;District 44
+CandidateContest	CA State Assembly Member District 45	CA;State Assembly Member;District 45
+CandidateContest	CA State Assembly Member District 46	CA;State Assembly Member;District 46
+CandidateContest	CA State Assembly Member District 48	CA;State Assembly Member;District 48
+CandidateContest	CA State Assembly Member District 49	CA;State Assembly Member;District 49
+CandidateContest	CA State Assembly Member District 50	CA;State Assembly Member;District 50
+CandidateContest	CA State Assembly Member District 51	CA;State Assembly Member;District 51
+CandidateContest	CA State Assembly Member District 52	CA;State Assembly Member;District 52
+CandidateContest	CA State Assembly Member District 53	CA;State Assembly Member;District 53
+CandidateContest	CA State Assembly Member District 54	CA;State Assembly Member;District 54
+CandidateContest	CA State Assembly Member District 55	CA;State Assembly Member;District 55
+CandidateContest	CA State Assembly Member District 57	CA;State Assembly Member;District 57
+CandidateContest	CA State Assembly Member District 58	CA;State Assembly Member;District 58
+CandidateContest	CA State Assembly Member District 59	CA;State Assembly Member;District 59
+CandidateContest	CA State Assembly Member District 62	CA;State Assembly Member;District 62
+CandidateContest	CA State Assembly Member District 63	CA;State Assembly Member;District 63
+CandidateContest	CA State Assembly Member District 64	CA;State Assembly Member;District 64
+CandidateContest	CA State Assembly Member District 66	CA;State Assembly Member;District 66
+CandidateContest	CA State Assembly Member District 70	CA;State Assembly Member;District 70
+CandidateContest	CA Senate District 18	CA;State Senator;District 18
+CandidateContest	CA Senate District 20	CA;State Senator;District 20
+CandidateContest	CA Senate District 22	CA;State Senator;District 22
+CandidateContest	CA Senate District 24	CA;State Senator;District 24
+CandidateContest	CA Senate District 26	CA;State Senator;District 26
+CandidateContest	CA Senate District 30	CA;State Senator;District 30
+CandidateContest	CA Senate District 32	CA;State Senator;District 32
+CandidateContest	CA Senate District 34	CA;State Senator;District 34
+CandidateContest	US House CA District 25	CA;US Representative;District 25
+CandidateContest	US House CA District 26	CA;US Representative;District 26
+CandidateContest	US House CA District 27	CA;US Representative;District 27
+CandidateContest	US House CA District 28	CA;US Representative;District 28
+CandidateContest	US House CA District 29	CA;US Representative;District 29
+CandidateContest	US House CA District 30	CA;US Representative;District 30
+CandidateContest	US House CA District 32	CA;US Representative;District 32
+CandidateContest	US House CA District 33	CA;US Representative;District 33
+CandidateContest	US House CA District 34	CA;US Representative;District 34
+CandidateContest	US House CA District 35	CA;US Representative;District 35
+CandidateContest	US House CA District 37	CA;US Representative;District 37
+CandidateContest	US House CA District 38	CA;US Representative;District 38
+CandidateContest	US House CA District 39	CA;US Representative;District 39
+CandidateContest	US House CA District 40	CA;US Representative;District 40
+CandidateContest	US House CA District 43	CA;US Representative;District 43
+CandidateContest	US House CA District 44	CA;US Representative;District 44
+CandidateContest	US House CA District 47	CA;US Representative;District 47
+CandidateContest	CA State Assembly Member District 10	CA;State Assembly Member;District 10
+CandidateContest	CA State Assembly Member District 21	CA;State Assembly Member;District 21
+CandidateContest	CA State Assembly Member District 29	CA;State Assembly Member;District 29
+CandidateContest	CA State Assembly Member District 30	CA;State Assembly Member;District 30
+CandidateContest	US House CA District 20	CA;US Representative;District 20
+CandidateContest	CA State Assembly Member District 65	CA;State Assembly Member;District 65
+CandidateContest	CA State Assembly Member District 68	CA;State Assembly Member;District 68
+CandidateContest	CA State Assembly Member District 69	CA;State Assembly Member;District 69
+CandidateContest	CA State Assembly Member District 72	CA;State Assembly Member;District 72
+CandidateContest	CA State Assembly Member District 73	CA;State Assembly Member;District 73
+CandidateContest	CA State Assembly Member District 74	CA;State Assembly Member;District 74
+CandidateContest	CA Senate District 36	CA;State Senator;District 36
+CandidateContest	US House CA District 45	CA;US Representative;District 45
+CandidateContest	US House CA District 46	CA;US Representative;District 46
+CandidateContest	US House CA District 48	CA;US Representative;District 48
+CandidateContest	US House CA District 49	CA;US Representative;District 49
+CandidateContest	CA State Assembly Member District 42	CA;State Assembly Member;District 42
+CandidateContest	CA State Assembly Member District 60	CA;State Assembly Member;District 60
+CandidateContest	CA State Assembly Member District 61	CA;State Assembly Member;District 61
+CandidateContest	CA State Assembly Member District 67	CA;State Assembly Member;District 67
+CandidateContest	CA State Assembly Member District 71	CA;State Assembly Member;District 71
+CandidateContest	CA State Assembly Member District 75	CA;State Assembly Member;District 75
+CandidateContest	CA Senate District 28	CA;State Senator;District 28
+CandidateContest	US House CA District 36	CA;US Representative;District 36
+CandidateContest	US House CA District 41	CA;US Representative;District 41
+CandidateContest	US House CA District 42	CA;US Representative;District 42
+CandidateContest	US House CA District 50	CA;US Representative;District 50
+CandidateContest	CA State Assembly Member District 7	CA;State Assembly Member;District 7
+CandidateContest	CA State Assembly Member District 8	CA;State Assembly Member;District 8
+CandidateContest	CA State Assembly Member District 9	CA;State Assembly Member;District 9
+CandidateContest	CA Senate District 6	CA;State Senator;District 6
+CandidateContest	US House CA District 6	CA;US Representative;District 6
+CandidateContest	US House CA District 7	CA;US Representative;District 7
+CandidateContest	CA State Assembly Member District 33	CA;State Assembly Member;District 33
+CandidateContest	CA State Assembly Member District 40	CA;State Assembly Member;District 40
+CandidateContest	CA State Assembly Member District 47	CA;State Assembly Member;District 47
+CandidateContest	US House CA District 31	CA;US Representative;District 31
+CandidateContest	CA State Assembly Member District 76	CA;State Assembly Member;District 76
+CandidateContest	CA State Assembly Member District 77	CA;State Assembly Member;District 77
+CandidateContest	CA State Assembly Member District 78	CA;State Assembly Member;District 78
+CandidateContest	CA State Assembly Member District 79	CA;State Assembly Member;District 79
+CandidateContest	CA State Assembly Member District 80	CA;State Assembly Member;District 80
+CandidateContest	CA Senate District 38	CA;State Senator;District 38
+CandidateContest	US House CA District 52	CA;US Representative;District 52
+CandidateContest	US House CA District 53	CA;US Representative;District 53
+CandidateContest	CA State Assembly Member District 17	CA;State Assembly Member;District 17
+CandidateContest	CA State Assembly Member District 19	CA;State Assembly Member;District 19
+CandidateContest	US House CA District 12	CA;US Representative;District 12
+CandidateContest	US House CA District 14	CA;US Representative;District 14
+CandidateContest	CA State Assembly Member District 12	CA;State Assembly Member;District 12
+CandidateContest	CA State Assembly Member District 13	CA;State Assembly Member;District 13
+CandidateContest	US House CA District 10	CA;US Representative;District 10
+CandidateContest	CA State Assembly Member District 35	CA;State Assembly Member;District 35
+CandidateContest	CA State Assembly Member District 37	CA;State Assembly Member;District 37
+CandidateContest	US House CA District 24	CA;US Representative;District 24
+CandidateContest	CA State Assembly Member District 22	CA;State Assembly Member;District 22
+CandidateContest	CA State Assembly Member District 24	CA;State Assembly Member;District 24
+CandidateContest	US House CA District 18	CA;US Representative;District 18
+CandidateContest	CA State Assembly Member District 27	CA;State Assembly Member;District 27
+CandidateContest	CA State Assembly Member District 28	CA;State Assembly Member;District 28
+CandidateContest	US House CA District 19	CA;US Representative;District 19

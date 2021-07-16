@@ -480,3 +480,33 @@ ReportingUnit	Hawaii;Maui County;Precinct 13-06	13-06
 ReportingUnit	Hawaii;Maui County;Precinct 13-07	13-07
 ReportingUnit	Hawaii;Maui County;Precinct 13-08	13-08
 ReportingUnit	Hawaii;Maui County;Precinct 13-09	13-09
+CandidateContest	HI Governor and Lieutenant Governor	HI;Governor and Lieutenant Governor;statewide
+CandidateContest	HI House District 2	HI;State Representative;District 2
+CandidateContest	HI House District 3	HI;State Representative;District 3
+CandidateContest	HI House District 7	HI;State Representative;District 7
+CandidateContest	HI Senate District 1	HI;State Senator;District 1
+CandidateContest	HI Senate District 3	HI;State Senator;District 3
+CandidateContest	US House HI District 2	HI;US Representative;District 2
+CandidateContest	HI US Senator	HI;US Senator;statewide
+CandidateContest	HI House District 17	HI;State Representative;District 17
+CandidateContest	HI House District 18	HI;State Representative;District 18
+CandidateContest	HI House District 20	HI;State Representative;District 20
+CandidateContest	HI House District 22	HI;State Representative;District 22
+CandidateContest	HI House District 27	HI;State Representative;District 27
+CandidateContest	HI House District 30	HI;State Representative;District 30
+CandidateContest	HI House District 36	HI;State Representative;District 36
+CandidateContest	HI House District 37	HI;State Representative;District 37
+CandidateContest	HI House District 40	HI;State Representative;District 40
+CandidateContest	HI House District 41	HI;State Representative;District 41
+CandidateContest	HI House District 46	HI;State Representative;District 46
+CandidateContest	HI House District 47	HI;State Representative;District 47
+CandidateContest	HI House District 50	HI;State Representative;District 50
+CandidateContest	HI House District 51	HI;State Representative;District 51
+CandidateContest	HI Senate District 12	HI;State Senator;District 12
+CandidateContest	HI Senate District 17	HI;State Senator;District 17
+CandidateContest	HI Senate District 18	HI;State Senator;District 18
+CandidateContest	HI Senate District 21	HI;State Senator;District 21
+CandidateContest	US House HI District 1	HI;US Representative;District 1
+CandidateContest	HI House District 10	HI;State Representative;District 10
+CandidateContest	HI House District 13	HI;State Representative;District 13
+CandidateContest	HI Senate District 6	HI;State Senator;District 6

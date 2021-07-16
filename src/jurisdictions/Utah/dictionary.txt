@@ -341,3 +341,104 @@ ReportingUnit	Utah;Wayne County	Wayne
 ReportingUnit	Utah;Wayne County	fips49055
 ReportingUnit	Utah;Weber County	Weber
 ReportingUnit	Utah;Weber County	fips49057
+CandidateContest	UT State Board of Education District 14	UT;State Board of Education;District 14
+CandidateContest	UT House District 68	UT;State Representative;District 68
+CandidateContest	UT House District 73	UT;State Representative;District 73
+CandidateContest	UT Senate District 28	UT;State Senator;District 28
+CandidateContest	US House UT District 2	UT;US Representative;District 2
+CandidateContest	UT US Senator	UT;US Senator;statewide
+CandidateContest	UT State Board of Education District 1	UT;State Board of Education;District 1
+CandidateContest	UT House District 1	UT;State Representative;District 1
+CandidateContest	UT House District 29	UT;State Representative;District 29
+CandidateContest	UT Senate District 17	UT;State Senator;District 17
+CandidateContest	US House UT District 1	UT;US Representative;District 1
+CandidateContest	UT House District 3	UT;State Representative;District 3
+CandidateContest	UT House District 4	UT;State Representative;District 4
+CandidateContest	UT House District 5	UT;State Representative;District 5
+CandidateContest	UT House District 69	UT;State Representative;District 69
+CandidateContest	US House UT District 3	UT;US Representative;District 3
+CandidateContest	UT House District 53	UT;State Representative;District 53
+CandidateContest	UT Senate District 26	UT;State Senator;District 26
+CandidateContest	UT State Board of Education District 5	UT;State Board of Education;District 5
+CandidateContest	UT House District 11	UT;State Representative;District 11
+CandidateContest	UT House District 12	UT;State Representative;District 12
+CandidateContest	UT House District 13	UT;State Representative;District 13
+CandidateContest	UT House District 14	UT;State Representative;District 14
+CandidateContest	UT House District 15	UT;State Representative;District 15
+CandidateContest	UT House District 16	UT;State Representative;District 16
+CandidateContest	UT House District 17	UT;State Representative;District 17
+CandidateContest	UT House District 18	UT;State Representative;District 18
+CandidateContest	UT House District 19	UT;State Representative;District 19
+CandidateContest	UT House District 20	UT;State Representative;District 20
+CandidateContest	UT Senate District 18	UT;State Senator;District 18
+CandidateContest	UT Senate District 21	UT;State Senator;District 21
+CandidateContest	UT Senate District 22	UT;State Senator;District 22
+CandidateContest	UT House District 55	UT;State Representative;District 55
+CandidateContest	UT House District 70	UT;State Representative;District 70
+CandidateContest	UT House District 71	UT;State Representative;District 71
+CandidateContest	UT House District 72	UT;State Representative;District 72
+CandidateContest	UT State Board of Education District 3	UT;State Board of Education;District 3
+CandidateContest	UT House District 58	UT;State Representative;District 58
+CandidateContest	US House UT District 4	UT;US Representative;District 4
+CandidateContest	UT State Board of Education District 6	UT;State Board of Education;District 6
+CandidateContest	UT House District 22	UT;State Representative;District 22
+CandidateContest	UT House District 23	UT;State Representative;District 23
+CandidateContest	UT House District 24	UT;State Representative;District 24
+CandidateContest	UT House District 25	UT;State Representative;District 25
+CandidateContest	UT House District 26	UT;State Representative;District 26
+CandidateContest	UT House District 28	UT;State Representative;District 28
+CandidateContest	UT House District 30	UT;State Representative;District 30
+CandidateContest	UT House District 31	UT;State Representative;District 31
+CandidateContest	UT House District 32	UT;State Representative;District 32
+CandidateContest	UT House District 33	UT;State Representative;District 33
+CandidateContest	UT House District 34	UT;State Representative;District 34
+CandidateContest	UT House District 35	UT;State Representative;District 35
+CandidateContest	UT House District 36	UT;State Representative;District 36
+CandidateContest	UT House District 37	UT;State Representative;District 37
+CandidateContest	UT House District 38	UT;State Representative;District 38
+CandidateContest	UT House District 39	UT;State Representative;District 39
+CandidateContest	UT House District 40	UT;State Representative;District 40
+CandidateContest	UT House District 41	UT;State Representative;District 41
+CandidateContest	UT House District 42	UT;State Representative;District 42
+CandidateContest	UT House District 43	UT;State Representative;District 43
+CandidateContest	UT House District 44	UT;State Representative;District 44
+CandidateContest	UT House District 45	UT;State Representative;District 45
+CandidateContest	UT House District 46	UT;State Representative;District 46
+CandidateContest	UT House District 47	UT;State Representative;District 47
+CandidateContest	UT House District 49	UT;State Representative;District 49
+CandidateContest	UT House District 50	UT;State Representative;District 50
+CandidateContest	UT House District 51	UT;State Representative;District 51
+CandidateContest	UT House District 52	UT;State Representative;District 52
+CandidateContest	UT Senate District 11	UT;State Senator;District 11
+CandidateContest	UT Senate District 12	UT;State Senator;District 12
+CandidateContest	UT Senate District 2	UT;State Senator;District 2
+CandidateContest	UT Senate District 3	UT;State Senator;District 3
+CandidateContest	UT Senate District 4	UT;State Senator;District 4
+CandidateContest	UT Senate District 5	UT;State Senator;District 5
+CandidateContest	UT Senate District 9	UT;State Senator;District 9
+CandidateContest	UT House District 54	UT;State Representative;District 54
+CandidateContest	UT House District 21	UT;State Representative;District 21
+CandidateContest	UT State Board of Education District 9	UT;State Board of Education;District 9
+CandidateContest	UT House District 2	UT;State Representative;District 2
+CandidateContest	UT House District 27	UT;State Representative;District 27
+CandidateContest	UT House District 48	UT;State Representative;District 48
+CandidateContest	UT House District 56	UT;State Representative;District 56
+CandidateContest	UT House District 57	UT;State Representative;District 57
+CandidateContest	UT House District 59	UT;State Representative;District 59
+CandidateContest	UT House District 6	UT;State Representative;District 6
+CandidateContest	UT House District 60	UT;State Representative;District 60
+CandidateContest	UT House District 61	UT;State Representative;District 61
+CandidateContest	UT House District 63	UT;State Representative;District 63
+CandidateContest	UT House District 64	UT;State Representative;District 64
+CandidateContest	UT House District 65	UT;State Representative;District 65
+CandidateContest	UT House District 66	UT;State Representative;District 66
+CandidateContest	UT House District 67	UT;State Representative;District 67
+CandidateContest	UT Senate District 15	UT;State Senator;District 15
+CandidateContest	UT House District 62	UT;State Representative;District 62
+CandidateContest	UT House District 74	UT;State Representative;District 74
+CandidateContest	UT House District 75	UT;State Representative;District 75
+CandidateContest	UT State Board of Education District 2	UT;State Board of Education;District 2
+CandidateContest	UT House District 10	UT;State Representative;District 10
+CandidateContest	UT House District 7	UT;State Representative;District 7
+CandidateContest	UT House District 8	UT;State Representative;District 8
+CandidateContest	UT House District 9	UT;State Representative;District 9

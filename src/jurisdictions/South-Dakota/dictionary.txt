@@ -511,3 +511,77 @@ ReportingUnit	South Dakota;Yankton County	Yankton (Vote Center)
 ReportingUnit	South Dakota;Yankton County	fips46135
 ReportingUnit	South Dakota;Ziebach County	Ziebach
 ReportingUnit	South Dakota;Ziebach County	fips46137
+CandidateContest	SD Attorney General	SD;Attorney General
+CandidateContest	SD Commissioner School Public Lands	SD;Commissioner School Public Lands;statewide
+CandidateContest	SD Governor and Lieutenant Governor	SD;Governor and Lieutenant Governor;statewide
+CandidateContest	SD Public Utilities Commissioner	SD;Public Utilities Commissioner;statewide
+CandidateContest	SD Secretary of State	SD;Secretary of State;statewide
+CandidateContest	SD State Auditor	SD;State Auditor;statewide
+CandidateContest	SD House District 20	SD;State Representative;District 20
+CandidateContest	SD Senate District 20	SD;State Senator;District 20
+CandidateContest	SD State Treasurer	SD;State Treasurer;statewide
+CandidateContest	US House SD District 0	SD;US Representative;District 0
+CandidateContest	SD House District 22	SD;State Representative;District 22
+CandidateContest	SD Senate District 22	SD;State Senator;District 22
+CandidateContest	SD House District 27	SD;State Representative;District 27
+CandidateContest	SD Senate District 27	SD;State Senator;District 27
+CandidateContest	SD House District 19	SD;State Representative;District 19
+CandidateContest	SD House District 21	SD;State Representative;District 21
+CandidateContest	SD Senate District 19	SD;State Senator;District 19
+CandidateContest	SD Senate District 21	SD;State Senator;District 21
+CandidateContest	SD House District 4	SD;State Representative;District 4
+CandidateContest	SD House District 7	SD;State Representative;District 7
+CandidateContest	SD Senate District 4	SD;State Senator;District 4
+CandidateContest	SD Senate District 7	SD;State Senator;District 7
+CandidateContest	SD House District 1	SD;State Representative;District 1
+CandidateContest	SD House District 2	SD;State Representative;District 2
+CandidateContest	SD House District 3	SD;State Representative;District 3
+CandidateContest	SD Senate District 1	SD;State Senator;District 1
+CandidateContest	SD Senate District 2	SD;State Senator;District 2
+CandidateContest	SD Senate District 3	SD;State Senator;District 3
+CandidateContest	SD House District 26B	SD;State Representative;District 26B
+CandidateContest	SD Senate District 26	SD;State Senator;District 26
+CandidateContest	SD House District 28B	SD;State Representative;District 28B
+CandidateContest	SD House District 29	SD;State Representative;District 29
+CandidateContest	SD Senate District 28	SD;State Senator;District 28
+CandidateContest	SD Senate District 29	SD;State Senator;District 29
+CandidateContest	SD House District 23	SD;State Representative;District 23
+CandidateContest	SD Senate District 23	SD;State Senator;District 23
+CandidateContest	SD House District 17	SD;State Representative;District 17
+CandidateContest	SD Senate District 17	SD;State Senator;District 17
+CandidateContest	SD House District 5	SD;State Representative;District 5
+CandidateContest	SD Senate District 5	SD;State Senator;District 5
+CandidateContest	SD House District 28A	SD;State Representative;District 28A
+CandidateContest	SD House District 30	SD;State Representative;District 30
+CandidateContest	SD House District 24	SD;State Representative;District 24
+CandidateContest	SD Senate District 24	SD;State Senator;District 24
+CandidateContest	SD House District 8	SD;State Representative;District 8
+CandidateContest	SD Senate District 8	SD;State Senator;District 8
+CandidateContest	SD House District 31	SD;State Representative;District 31
+CandidateContest	SD House District 12	SD;State Representative;District 12
+CandidateContest	SD House District 13	SD;State Representative;District 13
+CandidateContest	SD House District 16	SD;State Representative;District 16
+CandidateContest	SD House District 6	SD;State Representative;District 6
+CandidateContest	SD Senate District 12	SD;State Senator;District 12
+CandidateContest	SD Senate District 13	SD;State Senator;District 13
+CandidateContest	SD Senate District 16	SD;State Senator;District 16
+CandidateContest	SD Senate District 6	SD;State Senator;District 6
+CandidateContest	SD House District 33	SD;State Representative;District 33
+CandidateContest	SD House District 26A	SD;State Representative;District 26A
+CandidateContest	SD House District 10	SD;State Representative;District 10
+CandidateContest	SD House District 11	SD;State Representative;District 11
+CandidateContest	SD House District 14	SD;State Representative;District 14
+CandidateContest	SD House District 15	SD;State Representative;District 15
+CandidateContest	SD House District 25	SD;State Representative;District 25
+CandidateContest	SD House District 9	SD;State Representative;District 9
+CandidateContest	SD Senate District 10	SD;State Senator;District 10
+CandidateContest	SD Senate District 11	SD;State Senator;District 11
+CandidateContest	SD Senate District 14	SD;State Senator;District 14
+CandidateContest	SD Senate District 15	SD;State Senator;District 15
+CandidateContest	SD Senate District 25	SD;State Senator;District 25
+CandidateContest	SD Senate District 9	SD;State Senator;District 9
+CandidateContest	SD House District 32	SD;State Representative;District 32
+CandidateContest	SD House District 34	SD;State Representative;District 34
+CandidateContest	SD House District 35	SD;State Representative;District 35
+CandidateContest	SD House District 18	SD;State Representative;District 18
+CandidateContest	SD Senate District 18	SD;State Senator;District 18

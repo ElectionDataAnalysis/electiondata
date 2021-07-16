@@ -13448,3 +13448,158 @@ y	IA	IA
 y	IND	IND
 y	SLP	SLP
 y	VPM	VPM
+CandidateContest	MN Associate Justice - Supreme Court 1	MN;Associate Justice - Supreme Court 1;statewide
+CandidateContest	MN Associate Justice - Supreme Court 2	MN;Associate Justice - Supreme Court 2;statewide
+CandidateContest	MN Associate Justice - Supreme Court 5	MN;Associate Justice - Supreme Court 5;statewide
+CandidateContest	MN Attorney General	MN;Attorney General
+CandidateContest	MN Chief Justice - Supreme Court	MN;Chief Justice - Supreme Court;statewide
+CandidateContest	MN Governor & Lt Governor	MN;Governor & Lt Governor;statewide
+CandidateContest	MN Judge - Court of Appeals 2	MN;Judge - Court of Appeals 2;statewide
+CandidateContest	MN Judge - Court of Appeals 4	MN;Judge - Court of Appeals 4;statewide
+CandidateContest	MN Secretary of State	MN;Secretary of State;statewide
+CandidateContest	MN State Auditor	MN;State Auditor;statewide
+CandidateContest	MN House District 10B	MN;State Representative;District 10B
+CandidateContest	US House MN District 8	MN;US Representative;District 8
+CandidateContest	MN US Senator	MN;US Senator;statewide
+CandidateContest	MN House District 31A	MN;State Representative;District 31A
+CandidateContest	MN House District 31B	MN;State Representative;District 31B
+CandidateContest	MN House District 35A	MN;State Representative;District 35A
+CandidateContest	MN House District 35B	MN;State Representative;District 35B
+CandidateContest	MN House District 36A	MN;State Representative;District 36A
+CandidateContest	MN House District 36B	MN;State Representative;District 36B
+CandidateContest	MN House District 37A	MN;State Representative;District 37A
+CandidateContest	MN House District 37B	MN;State Representative;District 37B
+CandidateContest	MN House District 38A	MN;State Representative;District 38A
+CandidateContest	MN House District 41A	MN;State Representative;District 41A
+CandidateContest	MN House District 41B	MN;State Representative;District 41B
+CandidateContest	US House MN District 3	MN;US Representative;District 3
+CandidateContest	US House MN District 5	MN;US Representative;District 5
+CandidateContest	US House MN District 6	MN;US Representative;District 6
+CandidateContest	MN House District 2B	MN;State Representative;District 2B
+CandidateContest	MN House District 4B	MN;State Representative;District 4B
+CandidateContest	US House MN District 7	MN;US Representative;District 7
+CandidateContest	MN House District 2A	MN;State Representative;District 2A
+CandidateContest	MN House District 5A	MN;State Representative;District 5A
+CandidateContest	MN House District 13B	MN;State Representative;District 13B
+CandidateContest	MN House District 14B	MN;State Representative;District 14B
+CandidateContest	MN House District 15B	MN;State Representative;District 15B
+CandidateContest	MN Senate District 13	MN;State Senator;District 13
+CandidateContest	MN House District 12A	MN;State Representative;District 12A
+CandidateContest	MN House District 19A	MN;State Representative;District 19A
+CandidateContest	MN House District 19B	MN;State Representative;District 19B
+CandidateContest	MN House District 23A	MN;State Representative;District 23A
+CandidateContest	MN House District 23B	MN;State Representative;District 23B
+CandidateContest	US House MN District 1	MN;US Representative;District 1
+CandidateContest	MN House District 16B	MN;State Representative;District 16B
+CandidateContest	MN House District 11A	MN;State Representative;District 11A
+CandidateContest	MN House District 47B	MN;State Representative;Distrcit 47B
+CandidateContest	MN House District 47B	MN;State Representative;District 47B
+CandidateContest	MN House District 33B	MN;State Representative;District 33B
+CandidateContest	MN House District 47A	MN;State Representative;District 47A
+CandidateContest	MN House District 5B	MN;State Representative;District 5B
+CandidateContest	MN House District 9A	MN;State Representative;District 9A
+CandidateContest	MN House District 16A	MN;State Representative;District 16A
+CandidateContest	MN House District 17A	MN;State Representative;District 17A
+CandidateContest	MN House District 32A	MN;State Representative;District 32A
+CandidateContest	MN House District 32B	MN;State Representative;District 32B
+CandidateContest	MN House District 39A	MN;State Representative;District 39A
+CandidateContest	MN House District 4A	MN;State Representative;District 4A
+CandidateContest	MN House District 3A	MN;State Representative;District 3A
+CandidateContest	MN House District 22B	MN;State Representative;District 22B
+CandidateContest	MN House District 10A	MN;State Representative;District 10A
+CandidateContest	MN House District 51A	MN;State Representative;District 51A
+CandidateContest	MN House District 51B	MN;State Representative;District 51B
+CandidateContest	MN House District 52A	MN;State Representative;District 52A
+CandidateContest	MN House District 52B	MN;State Representative;District 52B
+CandidateContest	MN House District 54A	MN;State Representative;District 54A
+CandidateContest	MN House District 54B	MN;State Representative;District 54B
+CandidateContest	MN House District 56A	MN;State Representative;District 56A
+CandidateContest	MN House District 56B	MN;State Representative;District 56B
+CandidateContest	MN House District 57A	MN;State Representative;District 57A
+CandidateContest	MN House District 57B	MN;State Representative;District 57B
+CandidateContest	MN House District 58A	MN;State Representative;District 58A
+CandidateContest	MN House District 58B	MN;State Representative;District 58B
+CandidateContest	US House MN District 2	MN;US Representative;District 2
+CandidateContest	MN House District 21B	MN;State Representative;District 21B
+CandidateContest	MN House District 24B	MN;State Representative;District 24B
+CandidateContest	MN House District 25A	MN;State Representative;District 25A
+CandidateContest	MN House District 27A	MN;State Representative;District 27A
+CandidateContest	MN House District 27B	MN;State Representative;District 27B
+CandidateContest	MN House District 12B	MN;State Representative;District 12B
+CandidateContest	MN House District 8B	MN;State Representative;District 8B
+CandidateContest	MN House District 28B	MN;State Representative;District 28B
+CandidateContest	MN House District 21A	MN;State Representative;District 21A
+CandidateContest	MN House District 29A	MN;State Representative;District 29A
+CandidateContest	MN House District 30B	MN;State Representative;District 30B
+CandidateContest	MN House District 33A	MN;State Representative;District 33A
+CandidateContest	MN House District 34A	MN;State Representative;District 34A
+CandidateContest	MN House District 34B	MN;State Representative;District 34B
+CandidateContest	MN House District 40A	MN;State Representative;District 40A
+CandidateContest	MN House District 40B	MN;State Representative;District 40B
+CandidateContest	MN House District 44A	MN;State Representative;District 44A
+CandidateContest	MN House District 44B	MN;State Representative;District 44B
+CandidateContest	MN House District 45A	MN;State Representative;District 45A
+CandidateContest	MN House District 45B	MN;State Representative;District 45B
+CandidateContest	MN House District 46A	MN;State Representative;District 46A
+CandidateContest	MN House District 46B	MN;State Representative;District 46B
+CandidateContest	MN House District 48A	MN;State Representative;District 48A
+CandidateContest	MN House District 48B	MN;State Representative;District 48B
+CandidateContest	MN House District 49A	MN;State Representative;District 49A
+CandidateContest	MN House District 49B	MN;State Representative;District 49B
+CandidateContest	MN House District 50A	MN;State Representative;District 50A
+CandidateContest	MN House District 50B	MN;State Representative;District 50B
+CandidateContest	MN House District 59A	MN;State Representative;District 59A
+CandidateContest	MN House District 59B	MN;State Representative;District 59B
+CandidateContest	MN House District 60A	MN;State Representative;District 60A
+CandidateContest	MN House District 60B	MN;State Representative;District 60B
+CandidateContest	MN House District 61A	MN;State Representative;District 61A
+CandidateContest	MN House District 61B	MN;State Representative;District 61B
+CandidateContest	MN House District 62A	MN;State Representative;District 62A
+CandidateContest	MN House District 62B	MN;State Representative;District 62B
+CandidateContest	MN House District 63A	MN;State Representative;District 63A
+CandidateContest	MN House District 63B	MN;State Representative;District 63B
+CandidateContest	MN House District 6A	MN;State Representative;District 6A
+CandidateContest	MN House District 11B	MN;State Representative;District 11B
+CandidateContest	MN House District 15A	MN;State Representative;District 15A
+CandidateContest	MN House District 17B	MN;State Representative;District 17B
+CandidateContest	MN House District 1A	MN;State Representative;District 1A
+CandidateContest	MN House District 3B	MN;State Representative;District 3B
+CandidateContest	MN House District 20A	MN;State Representative;District 20A
+CandidateContest	MN House District 20B	MN;State Representative;District 20B
+CandidateContest	MN House District 22A	MN;State Representative;District 22A
+CandidateContest	MN House District 18A	MN;State Representative;District 18A
+CandidateContest	MN House District 18B	MN;State Representative;District 18B
+CandidateContest	MN House District 9B	MN;State Representative;District 9B
+CandidateContest	MN House District 25B	MN;State Representative;District 25B
+CandidateContest	MN House District 26A	MN;State Representative;District 26A
+CandidateContest	MN House District 26B	MN;State Representative;District 26B
+CandidateContest	MN House District 8A	MN;State Representative;District 8A
+CandidateContest	MN House District 1B	MN;State Representative;District 1B
+CandidateContest	MN House District 38B	MN;State Representative;District 38B
+CandidateContest	MN House District 42A	MN;State Representative;District 42A
+CandidateContest	MN House District 42B	MN;State Representative;District 42B
+CandidateContest	MN House District 43A	MN;State Representative;District 43A
+CandidateContest	MN House District 43B	MN;State Representative;District 43B
+CandidateContest	MN House District 53A	MN;State Representative;District 53A
+CandidateContest	MN House District 64A	MN;State Representative;District 64A
+CandidateContest	MN House District 64B	MN;State Representative;District 64B
+CandidateContest	MN House District 65A	MN;State Representative;District 65A
+CandidateContest	MN House District 65B	MN;State Representative;District 65B
+CandidateContest	MN House District 66A	MN;State Representative;District 66A
+CandidateContest	MN House District 66B	MN;State Representative;District 66B
+CandidateContest	MN House District 67A	MN;State Representative;District 67A
+CandidateContest	MN House District 67B	MN;State Representative;District 67B
+CandidateContest	US House MN District 4	MN;US Representative;District 4
+CandidateContest	MN House District 55A	MN;State Representative;District 55A
+CandidateContest	MN House District 55B	MN;State Representative;District 55B
+CandidateContest	MN House District 30A	MN;State Representative;District 30A
+CandidateContest	MN House District 6B	MN;State Representative;District 6B
+CandidateContest	MN House District 7A	MN;State Representative;District 7A
+CandidateContest	MN House District 7B	MN;State Representative;District 7B
+CandidateContest	MN House District 13A	MN;State Representative;District 13A
+CandidateContest	MN House District 14A	MN;State Representative;District 14A
+CandidateContest	MN House District 24A	MN;State Representative;District 24A
+CandidateContest	MN House District 39B	MN;State Representative;District 39B
+CandidateContest	MN House District 53B	MN;State Representative;District 53B
+CandidateContest	MN House District 28A	MN;State Representative;District 28A
+CandidateContest	MN House District 29B	MN;State Representative;District 29B

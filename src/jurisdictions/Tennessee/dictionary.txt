@@ -2587,3 +2587,131 @@ ReportingUnit	Tennessee;Wilson County;7-2	Wilson;7-2
 ReportingUnit	Tennessee;Wilson County;8-1	Wilson;8-1
 ReportingUnit	Tennessee;Wilson County;9-1	Wilson;9-1
 ReportingUnit	Tennessee;Wilson County;9-2	Wilson;9-2
+CandidateContest	TN Governor	TN;Governor;statewide
+CandidateContest	TN House District 33	TN;State Representative;District 33
+CandidateContest	TN House District 36	TN;State Representative;District 36
+CandidateContest	TN Senate District 5	TN;State Senator;District 5
+CandidateContest	US House TN District 3	TN;US Representative;District 3
+CandidateContest	TN US Senator	TN;US Senator;statewide
+CandidateContest	TN House District 62	TN;State Representative;District 62
+CandidateContest	US House TN District 4	TN;US Representative;District 4
+CandidateContest	TN House District 75	TN;State Representative;District 75
+CandidateContest	US House TN District 7	TN;US Representative;District 7
+CandidateContest	US House TN District 8	TN;US Representative;District 8
+CandidateContest	TN House District 31	TN;State Representative;District 31
+CandidateContest	TN Senate District 15	TN;State Senator;District 15
+CandidateContest	TN House District 20	TN;State Representative;District 20
+CandidateContest	TN House District 8	TN;State Representative;District 8
+CandidateContest	TN Senate District 2	TN;State Senator;District 2
+CandidateContest	US House TN District 2	TN;US Representative;District 2
+CandidateContest	TN House District 22	TN;State Representative;District 22
+CandidateContest	TN House District 24	TN;State Representative;District 24
+CandidateContest	TN Senate District 9	TN;State Senator;District 9
+CandidateContest	TN House District 46	TN;State Representative;District 46
+CandidateContest	TN Senate District 17	TN;State Senator;District 17
+CandidateContest	US House TN District 6	TN;US Representative;District 6
+CandidateContest	TN House District 76	TN;State Representative;District 76
+CandidateContest	TN House District 79	TN;State Representative;District 79
+CandidateContest	TN House District 3	TN;State Representative;District 3
+CandidateContest	TN House District 4	TN;State Representative;District 4
+CandidateContest	TN Senate District 3	TN;State Senator;District 3
+CandidateContest	US House TN District 1	TN;US Representative;District 1
+CandidateContest	TN House District 78	TN;State Representative;District 78
+CandidateContest	TN Senate District 25	TN;State Senator;District 25
+CandidateContest	US House TN District 5	TN;US Representative;District 5
+CandidateContest	TN House District 72	TN;State Representative;District 72
+CandidateContest	TN House District 35	TN;State Representative;District 35
+CandidateContest	TN House District 38	TN;State Representative;District 38
+CandidateContest	TN House District 11	TN;State Representative;District 11
+CandidateContest	TN Senate District 1	TN;State Senator;District 1
+CandidateContest	TN House District 47	TN;State Representative;District 47
+CandidateContest	TN House District 82	TN;State Representative;District 82
+CandidateContest	TN Senate District 27	TN;State Senator;District 27
+CandidateContest	TN House District 25	TN;State Representative;District 25
+CandidateContest	TN House District 50	TN;State Representative;District 50
+CandidateContest	TN House District 51	TN;State Representative;District 51
+CandidateContest	TN House District 52	TN;State Representative;District 52
+CandidateContest	TN House District 53	TN;State Representative;District 53
+CandidateContest	TN House District 54	TN;State Representative;District 54
+CandidateContest	TN House District 55	TN;State Representative;District 55
+CandidateContest	TN House District 56	TN;State Representative;District 56
+CandidateContest	TN House District 58	TN;State Representative;District 58
+CandidateContest	TN House District 59	TN;State Representative;District 59
+CandidateContest	TN House District 60	TN;State Representative;District 60
+CandidateContest	TN Senate District 19	TN;State Senator;District 19
+CandidateContest	TN Senate District 21	TN;State Senator;District 21
+CandidateContest	TN House District 40	TN;State Representative;District 40
+CandidateContest	TN House District 69	TN;State Representative;District 69
+CandidateContest	TN House District 77	TN;State Representative;District 77
+CandidateContest	TN House District 94	TN;State Representative;District 94
+CandidateContest	TN House District 41	TN;State Representative;District 41
+CandidateContest	TN House District 39	TN;State Representative;District 39
+CandidateContest	TN House District 92	TN;State Representative;District 92
+CandidateContest	TN House District 70	TN;State Representative;District 70
+CandidateContest	TN House District 5	TN;State Representative;District 5
+CandidateContest	TN House District 43	TN;State Representative;District 43
+CandidateContest	TN House District 10	TN;State Representative;District 10
+CandidateContest	TN House District 26	TN;State Representative;District 26
+CandidateContest	TN House District 27	TN;State Representative;District 27
+CandidateContest	TN House District 28	TN;State Representative;District 28
+CandidateContest	TN House District 29	TN;State Representative;District 29
+CandidateContest	TN House District 30	TN;State Representative;District 30
+CandidateContest	TN Senate District 11	TN;State Senator;District 11
+CandidateContest	TN House District 9	TN;State Representative;District 9
+CandidateContest	TN House District 80	TN;State Representative;District 80
+CandidateContest	TN House District 71	TN;State Representative;District 71
+CandidateContest	TN House District 74	TN;State Representative;District 74
+CandidateContest	TN House District 17	TN;State Representative;District 17
+CandidateContest	TN House District 13	TN;State Representative;District 13
+CandidateContest	TN House District 14	TN;State Representative;District 14
+CandidateContest	TN House District 15	TN;State Representative;District 15
+CandidateContest	TN House District 16	TN;State Representative;District 16
+CandidateContest	TN House District 18	TN;State Representative;District 18
+CandidateContest	TN House District 19	TN;State Representative;District 19
+CandidateContest	TN House District 89	TN;State Representative;District 89
+CandidateContest	TN Senate District 7	TN;State Senator;District 7
+CandidateContest	TN House District 21	TN;State Representative;District 21
+CandidateContest	TN House District 32	TN;State Representative;District 32
+CandidateContest	TN House District 73	TN;State Representative;District 73
+CandidateContest	TN House District 64	TN;State Representative;District 64
+CandidateContest	TN House District 23	TN;State Representative;District 23
+CandidateContest	TN House District 67	TN;State Representative;District 67
+CandidateContest	TN House District 68	TN;State Representative;District 68
+CandidateContest	TN House District 42	TN;State Representative;District 42
+CandidateContest	TN House District 66	TN;State Representative;District 66
+CandidateContest	TN House District 34	TN;State Representative;District 34
+CandidateContest	TN House District 37	TN;State Representative;District 37
+CandidateContest	TN House District 48	TN;State Representative;District 48
+CandidateContest	TN House District 49	TN;State Representative;District 49
+CandidateContest	TN Senate District 13	TN;State Senator;District 13
+CandidateContest	TN House District 12	TN;State Representative;District 12
+CandidateContest	TN House District 83	TN;State Representative;District 83
+CandidateContest	TN House District 84	TN;State Representative;District 84
+CandidateContest	TN House District 85	TN;State Representative;District 85
+CandidateContest	TN House District 86	TN;State Representative;District 86
+CandidateContest	TN House District 87	TN;State Representative;District 87
+CandidateContest	TN House District 88	TN;State Representative;District 88
+CandidateContest	TN House District 90	TN;State Representative;District 90
+CandidateContest	TN House District 91	TN;State Representative;District 91
+CandidateContest	TN House District 93	TN;State Representative;District 93
+CandidateContest	TN House District 95	TN;State Representative;District 95
+CandidateContest	TN House District 96	TN;State Representative;District 96
+CandidateContest	TN House District 97	TN;State Representative;District 97
+CandidateContest	TN House District 98	TN;State Representative;District 98
+CandidateContest	TN House District 99	TN;State Representative;District 99
+CandidateContest	TN Senate District 29	TN;State Senator;District 29
+CandidateContest	TN Senate District 31	TN;State Senator;District 31
+CandidateContest	TN Senate District 33	TN;State Senator;District 33
+CandidateContest	US House TN District 9	TN;US Representative;District 9
+CandidateContest	TN House District 1	TN;State Representative;District 1
+CandidateContest	TN House District 2	TN;State Representative;District 2
+CandidateContest	TN House District 44	TN;State Representative;District 44
+CandidateContest	TN House District 45	TN;State Representative;District 45
+CandidateContest	TN House District 81	TN;State Representative;District 81
+CandidateContest	TN House District 6	TN;State Representative;District 6
+CandidateContest	TN House District 7	TN;State Representative;District 7
+CandidateContest	TN House District 61	TN;State Representative;District 61
+CandidateContest	TN House District 63	TN;State Representative;District 63
+CandidateContest	TN House District 65	TN;State Representative;District 65
+CandidateContest	TN Senate District 23	TN;State Senator;District 23
+CandidateContest	TN House District 57	TN;State Representative;District 57

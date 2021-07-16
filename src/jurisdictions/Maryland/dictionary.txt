@@ -2384,3 +2384,129 @@ ReportingUnit	Maryland;Worcester County;District 006 Precinct 001	24;District 00
 ReportingUnit	Maryland;Worcester County;District 006 Precinct 002	24;District 006 Precinct 002
 ReportingUnit	Maryland;Worcester County;District 006 Precinct 003	24;District 006 Precinct 003
 ReportingUnit	Maryland;Worcester County;District 007 Precinct 001	24;District 007 Precinct 001
+CandidateContest	MD Attorney General	MD;Attorney General
+CandidateContest	MD Comptroller	MD;Comptroller;statewide
+CandidateContest	MD Governor / Lt. Governor	MD;Governor / Lt. Governor;statewide
+CandidateContest	MD House District 1A	MD;House of Delegates Member;District 1A
+CandidateContest	MD House District 1B	MD;House of Delegates Member;District 1B
+CandidateContest	MD House District 1C	MD;House of Delegates Member;District 1C
+CandidateContest	MD Senate District 1	MD;State Senator;District 1
+CandidateContest	US House MD District 6	MD;US Representative;District 6
+CandidateContest	MD US Senator	MD;US Senator;statewide
+CandidateContest	MD House District 21	MD;House of Delegates Member;District 21
+CandidateContest	MD House District 30A	MD;House of Delegates Member;District 30A
+CandidateContest	MD House District 30B	MD;House of Delegates Member;District 30B
+CandidateContest	MD House District 31A	MD;House of Delegates Member;District 31A
+CandidateContest	MD House District 31B	MD;House of Delegates Member;District 31B
+CandidateContest	MD House District 32	MD;House of Delegates Member;District 32
+CandidateContest	MD House District 33	MD;House of Delegates Member;District 33
+CandidateContest	MD Senate District 21	MD;State Senator;District 21
+CandidateContest	MD Senate District 30	MD;State Senator;District 30
+CandidateContest	MD Senate District 31	MD;State Senator;District 31
+CandidateContest	MD Senate District 32	MD;State Senator;District 32
+CandidateContest	MD Senate District 33	MD;State Senator;District 33
+CandidateContest	US House MD District 2	MD;US Representative;District 2
+CandidateContest	US House MD District 3	MD;US Representative;District 3
+CandidateContest	US House MD District 4	MD;US Representative;District 4
+CandidateContest	US House MD District 5	MD;US Representative;District 5
+CandidateContest	MD House District 10	MD;House of Delegates Member;District 10
+CandidateContest	MD House District 11	MD;House of Delegates Member;District 11
+CandidateContest	MD House District 12	MD;House of Delegates Member;District 12
+CandidateContest	MD House District 42A	MD;House of Delegates Member;District 42A
+CandidateContest	MD House District 42B	MD;House of Delegates Member;District 42B
+CandidateContest	MD House District 44B	MD;House of Delegates Member;District 44B
+CandidateContest	MD House District 6	MD;House of Delegates Member;District 6
+CandidateContest	MD House District 7	MD;House of Delegates Member;District 7
+CandidateContest	MD House District 8	MD;House of Delegates Member;District 8
+CandidateContest	MD Senate District 10	MD;State Senator;District 10
+CandidateContest	MD Senate District 11	MD;State Senator;District 11
+CandidateContest	MD Senate District 12	MD;State Senator;District 12
+CandidateContest	MD Senate District 42	MD;State Senator;District 42
+CandidateContest	MD Senate District 44	MD;State Senator;District 44
+CandidateContest	MD Senate District 6	MD;State Senator;District 6
+CandidateContest	MD Senate District 7	MD;State Senator;District 7
+CandidateContest	MD Senate District 8	MD;State Senator;District 8
+CandidateContest	US House MD District 1	MD;US Representative;District 1
+CandidateContest	US House MD District 7	MD;US Representative;District 7
+CandidateContest	MD House District 40	MD;House of Delegates Member;District 40
+CandidateContest	MD House District 41	MD;House of Delegates Member;District 41
+CandidateContest	MD House District 43	MD;House of Delegates Member;District 43
+CandidateContest	MD House District 44A	MD;House of Delegates Member;District 44A
+CandidateContest	MD House District 45	MD;House of Delegates Member;District 45
+CandidateContest	MD House District 46	MD;House of Delegates Member;District 46
+CandidateContest	MD Senate District 40	MD;State Senator;District 40
+CandidateContest	MD Senate District 41	MD;State Senator;District 41
+CandidateContest	MD Senate District 43	MD;State Senator;District 43
+CandidateContest	MD Senate District 45	MD;State Senator;District 45
+CandidateContest	MD Senate District 46	MD;State Senator;District 46
+CandidateContest	MD House District 27B	MD;House of Delegates Member;District 27B
+CandidateContest	MD House District 27C	MD;House of Delegates Member;District 27C
+CandidateContest	MD House District 29C	MD;House of Delegates Member;District 29C
+CandidateContest	MD Senate District 27	MD;State Senator;District 27
+CandidateContest	MD Senate District 29	MD;State Senator;District 29
+CandidateContest	MD House District 36	MD;House of Delegates Member;District 36
+CandidateContest	MD House District 37B	MD;House of Delegates Member;District 37B
+CandidateContest	MD Senate District 36	MD;State Senator;District 36
+CandidateContest	MD Senate District 37	MD;State Senator;District 37
+CandidateContest	MD House District 4	MD;House of Delegates Member;District 4
+CandidateContest	MD House District 5	MD;House of Delegates Member;District 5
+CandidateContest	MD House District 9A	MD;House of Delegates Member;District 9A
+CandidateContest	MD Senate District 4	MD;State Senator;District 4
+CandidateContest	MD Senate District 5	MD;State Senator;District 5
+CandidateContest	MD Senate District 9	MD;State Senator;District 9
+CandidateContest	US House MD District 8	MD;US Representative;District 8
+CandidateContest	MD House District 35A	MD;House of Delegates Member;District 35A
+CandidateContest	MD House District 35B	MD;House of Delegates Member;District 35B
+CandidateContest	MD Senate District 35	MD;State Senator;District 35
+CandidateContest	MD House District 27A	MD;House of Delegates Member;District 27A
+CandidateContest	MD House District 28	MD;House of Delegates Member;District 28
+CandidateContest	MD Senate District 28	MD;State Senator;District 28
+CandidateContest	MD House District 37A	MD;House of Delegates Member;District 37A
+CandidateContest	MD House District 3A	MD;House of Delegates Member;District 3A
+CandidateContest	MD House District 3B	MD;House of Delegates Member;District 3B
+CandidateContest	MD Senate District 3	MD;State Senator;District 3
+CandidateContest	MD House District 34A	MD;House of Delegates Member;District 34A
+CandidateContest	MD House District 34B	MD;House of Delegates Member;District 34B
+CandidateContest	MD Senate District 34	MD;State Senator;District 34
+CandidateContest	MD House District 13	MD;House of Delegates Member;District 13
+CandidateContest	MD House District 9B	MD;House of Delegates Member;District 9B
+CandidateContest	MD Senate District 13	MD;State Senator;District 13
+CandidateContest	MD House District 14	MD;House of Delegates Member;District 14
+CandidateContest	MD House District 15	MD;House of Delegates Member;District 15
+CandidateContest	MD House District 16	MD;House of Delegates Member;District 16
+CandidateContest	MD House District 17	MD;House of Delegates Member;District 17
+CandidateContest	MD House District 18	MD;House of Delegates Member;District 18
+CandidateContest	MD House District 19	MD;House of Delegates Member;District 19
+CandidateContest	MD House District 20	MD;House of Delegates Member;District 20
+CandidateContest	MD House District 39	MD;House of Delegates Member;District 39
+CandidateContest	MD Senate District 14	MD;State Senator;District 14
+CandidateContest	MD Senate District 15	MD;State Senator;District 15
+CandidateContest	MD Senate District 16	MD;State Senator;District 16
+CandidateContest	MD Senate District 17	MD;State Senator;District 17
+CandidateContest	MD Senate District 18	MD;State Senator;District 18
+CandidateContest	MD Senate District 19	MD;State Senator;District 19
+CandidateContest	MD Senate District 20	MD;State Senator;District 20
+CandidateContest	MD Senate District 39	MD;State Senator;District 39
+CandidateContest	MD House District 22	MD;House of Delegates Member;District 22
+CandidateContest	MD House District 23A	MD;House of Delegates Member;District 23A
+CandidateContest	MD House District 23B	MD;House of Delegates Member;District 23B
+CandidateContest	MD House District 24	MD;House of Delegates Member;District 24
+CandidateContest	MD House District 25	MD;House of Delegates Member;District 25
+CandidateContest	MD House District 26	MD;House of Delegates Member;District 26
+CandidateContest	MD House District 47A	MD;House of Delegates Member;District 47A
+CandidateContest	MD House District 47B	MD;House of Delegates Member;District 47B
+CandidateContest	MD Senate District 22	MD;State Senator;District 22
+CandidateContest	MD Senate District 23	MD;State Senator;District 23
+CandidateContest	MD Senate District 24	MD;State Senator;District 24
+CandidateContest	MD Senate District 25	MD;State Senator;District 25
+CandidateContest	MD Senate District 26	MD;State Senator;District 26
+CandidateContest	MD Senate District 47	MD;State Senator;District 47
+CandidateContest	MD House District 38A	MD;House of Delegates Member;District 38A
+CandidateContest	MD Senate District 38	MD;State Senator;District 38
+CandidateContest	MD House District 29A	MD;House of Delegates Member;District 29A
+CandidateContest	MD House District 29B	MD;House of Delegates Member;District 29B
+CandidateContest	MD House District 2A	MD;House of Delegates Member;District 2A
+CandidateContest	MD House District 2B	MD;House of Delegates Member;District 2B
+CandidateContest	MD Senate District 2	MD;State Senator;District 2
+CandidateContest	MD House District 38B	MD;House of Delegates Member;District 38B
+CandidateContest	MD House District 38C	MD;House of Delegates Member;District 38C

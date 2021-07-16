@@ -2185,3 +2185,168 @@ ReportingUnit	Alabama;Winston County;OLD UNION CHURCH	Winston;OLD UNION CHURCH
 ReportingUnit	Alabama;Winston County;PEBBLE FIRE HOUSE	Winston;PEBBLE FIRE HOUSE
 ReportingUnit	Alabama;Winston County;UPSHAW FIRE DEPT_	Winston;UPSHAW FIRE DEPT_
 ReportingUnit	Alabama;Winston County;WALDROP FREEWILL BAPT_	Winston;WALDROP FREEWILL BAPT_
+CandidateContest	AL Attorney General	AL;Attorney General
+CandidateContest	AL Chief Justice of the Supreme Court	AL;Chief Justice of the Supreme Court;statewide
+CandidateContest	AL Commissioner of Agriculture and Industries	AL;Commissioner of Agriculture and Industries;statewide
+CandidateContest	AL Governor	AL;Governor;statewide
+CandidateContest	AL Lieutenant Governor	AL;Lieutenant Governor;statewide
+CandidateContest	AL Public Service Commission, Place 1	AL;Public Service Commission, Place 1;statewide
+CandidateContest	AL Public Service Commission, Place 2	AL;Public Service Commission, Place 2;statewide
+CandidateContest	AL Secretary of State	AL;Secretary of State;statewide
+CandidateContest	AL State Auditor	AL;State Auditor;statewide
+CandidateContest	AL House District 42	AL;State Representative;District 42
+CandidateContest	AL House District 69	AL;State Representative;District 69
+CandidateContest	AL House District 88	AL;State Representative;District 88
+CandidateContest	AL Senate District 30	AL;State Senator;District 30
+CandidateContest	AL State Treasurer	AL;State Treasurer;statewide
+CandidateContest	US House AL District 2	AL;US Representative;District 2
+CandidateContest	AL House District 64	AL;State Representative;District 64
+CandidateContest	AL House District 66	AL;State Representative;District 66
+CandidateContest	AL House District 94	AL;State Representative;District 94
+CandidateContest	AL House District 95	AL;State Representative;District 95
+CandidateContest	AL House District 96	AL;State Representative;District 96
+CandidateContest	AL Senate District 22	AL;State Senator;District 22
+CandidateContest	AL Senate District 32	AL;State Senator;District 32
+CandidateContest	US House AL District 1	AL;US Representative;District 1
+CandidateContest	AL State Board of Education Member District 2	AL;State Board of Education Member;District 2
+CandidateContest	AL House District 84	AL;State Representative;District 84
+CandidateContest	AL Senate District 28	AL;State Senator;District 28
+CandidateContest	AL State Board of Education Member District 4	AL;State Board of Education Member;District 4
+CandidateContest	AL House District 49	AL;State Representative;District 49
+CandidateContest	AL House District 72	AL;State Representative;District 72
+CandidateContest	AL Senate District 14	AL;State Senator;District 14
+CandidateContest	US House AL District 6	AL;US Representative;District 6
+CandidateContest	AL State Board of Education Member District 6	AL;State Board of Education Member;District 6
+CandidateContest	AL House District 11	AL;State Representative;District 11
+CandidateContest	AL House District 13	AL;State Representative;District 13
+CandidateContest	AL House District 27	AL;State Representative;District 27
+CandidateContest	AL House District 34	AL;State Representative;District 34
+CandidateContest	AL Senate District 17	AL;State Senator;District 17
+CandidateContest	AL Senate District 9	AL;State Senator;District 9
+CandidateContest	US House AL District 4	AL;US Representative;District 4
+CandidateContest	AL House District 90	AL;State Representative;District 90
+CandidateContest	AL Senate District 23	AL;State Senator;District 23
+CandidateContest	AL House District 29	AL;State Representative;District 29
+CandidateContest	AL House District 32	AL;State Representative;District 32
+CandidateContest	AL House District 35	AL;State Representative;District 35
+CandidateContest	AL House District 36	AL;State Representative;District 36
+CandidateContest	AL House District 39	AL;State Representative;District 39
+CandidateContest	AL House District 40	AL;State Representative;District 40
+CandidateContest	AL Senate District 12	AL;State Senator;District 12
+CandidateContest	US House AL District 3	AL;US Representative;District 3
+CandidateContest	AL House District 37	AL;State Representative;District 37
+CandidateContest	AL House District 38	AL;State Representative;District 38
+CandidateContest	AL Senate District 13	AL;State Senator;District 13
+CandidateContest	AL Senate District 10	AL;State Senator;District 10
+CandidateContest	AL House District 81	AL;State Representative;District 81
+CandidateContest	AL House District 65	AL;State Representative;District 65
+CandidateContest	AL Senate District 24	AL;State Senator;District 24
+CandidateContest	US House AL District 7	AL;US Representative;District 7
+CandidateContest	AL House District 68	AL;State Representative;District 68
+CandidateContest	AL House District 33	AL;State Representative;District 33
+CandidateContest	AL House District 91	AL;State Representative;District 91
+CandidateContest	AL House District 92	AL;State Representative;District 92
+CandidateContest	AL Senate District 31	AL;State Senator;District 31
+CandidateContest	AL House District 18	AL;State Representative;District 18
+CandidateContest	AL House District 3	AL;State Representative;District 3
+CandidateContest	AL Senate District 6	AL;State Senator;District 6
+CandidateContest	AL Senate District 25	AL;State Senator;District 25
+CandidateContest	AL House District 12	AL;State Representative;District 12
+CandidateContest	AL House District 9	AL;State Representative;District 9
+CandidateContest	AL Senate District 4	AL;State Senator;District 4
+CandidateContest	AL House District 89	AL;State Representative;District 89
+CandidateContest	AL House District 93	AL;State Representative;District 93
+CandidateContest	AL Senate District 29	AL;State Senator;District 29
+CandidateContest	AL House District 67	AL;State Representative;District 67
+CandidateContest	AL State Board of Education Member District 8	AL;State Board of Education Member;District 8
+CandidateContest	AL House District 23	AL;State Representative;District 23
+CandidateContest	AL House District 24	AL;State Representative;District 24
+CandidateContest	AL House District 26	AL;State Representative;District 26
+CandidateContest	AL Senate District 8	AL;State Senator;District 8
+CandidateContest	AL House District 31	AL;State Representative;District 31
+CandidateContest	AL House District 75	AL;State Representative;District 75
+CandidateContest	AL House District 28	AL;State Representative;District 28
+CandidateContest	AL House District 30	AL;State Representative;District 30
+CandidateContest	AL House District 16	AL;State Representative;District 16
+CandidateContest	AL Senate District 5	AL;State Senator;District 5
+CandidateContest	AL House District 7	AL;State Representative;District 7
+CandidateContest	AL House District 87	AL;State Representative;District 87
+CandidateContest	AL House District 71	AL;State Representative;District 71
+CandidateContest	AL House District 85	AL;State Representative;District 85
+CandidateContest	AL House District 86	AL;State Representative;District 86
+CandidateContest	AL House District 22	AL;State Representative;District 22
+CandidateContest	US House AL District 5	AL;US Representative;District 5
+CandidateContest	AL House District 14	AL;State Representative;District 14
+CandidateContest	AL House District 15	AL;State Representative;District 15
+CandidateContest	AL House District 44	AL;State Representative;District 44
+CandidateContest	AL House District 45	AL;State Representative;District 45
+CandidateContest	AL House District 46	AL;State Representative;District 46
+CandidateContest	AL House District 47	AL;State Representative;District 47
+CandidateContest	AL House District 48	AL;State Representative;District 48
+CandidateContest	AL House District 51	AL;State Representative;District 51
+CandidateContest	AL House District 52	AL;State Representative;District 52
+CandidateContest	AL House District 54	AL;State Representative;District 54
+CandidateContest	AL House District 55	AL;State Representative;District 55
+CandidateContest	AL House District 56	AL;State Representative;District 56
+CandidateContest	AL House District 57	AL;State Representative;District 57
+CandidateContest	AL House District 58	AL;State Representative;District 58
+CandidateContest	AL House District 59	AL;State Representative;District 59
+CandidateContest	AL House District 60	AL;State Representative;District 60
+CandidateContest	AL Senate District 15	AL;State Senator;District 15
+CandidateContest	AL Senate District 16	AL;State Senator;District 16
+CandidateContest	AL Senate District 18	AL;State Senator;District 18
+CandidateContest	AL Senate District 19	AL;State Senator;District 19
+CandidateContest	AL Senate District 20	AL;State Senator;District 20
+CandidateContest	AL House District 17	AL;State Representative;District 17
+CandidateContest	AL Senate District 21	AL;State Senator;District 21
+CandidateContest	AL House District 1	AL;State Representative;District 1
+CandidateContest	AL House District 2	AL;State Representative;District 2
+CandidateContest	AL Senate District 1	AL;State Senator;District 1
+CandidateContest	AL House District 79	AL;State Representative;District 79
+CandidateContest	AL House District 80	AL;State Representative;District 80
+CandidateContest	AL House District 82	AL;State Representative;District 82
+CandidateContest	AL House District 83	AL;State Representative;District 83
+CandidateContest	AL Senate District 27	AL;State Senator;District 27
+CandidateContest	AL House District 25	AL;State Representative;District 25
+CandidateContest	AL House District 4	AL;State Representative;District 4
+CandidateContest	AL House District 5	AL;State Representative;District 5
+CandidateContest	AL House District 6	AL;State Representative;District 6
+CandidateContest	AL Senate District 2	AL;State Senator;District 2
+CandidateContest	AL Senate District 3	AL;State Senator;District 3
+CandidateContest	AL House District 10	AL;State Representative;District 10
+CandidateContest	AL House District 19	AL;State Representative;District 19
+CandidateContest	AL House District 20	AL;State Representative;District 20
+CandidateContest	AL House District 21	AL;State Representative;District 21
+CandidateContest	AL House District 53	AL;State Representative;District 53
+CandidateContest	AL Senate District 7	AL;State Senator;District 7
+CandidateContest	AL House District 100	AL;State Representative;District 100
+CandidateContest	AL House District 101	AL;State Representative;District 101
+CandidateContest	AL House District 102	AL;State Representative;District 102
+CandidateContest	AL House District 103	AL;State Representative;District 103
+CandidateContest	AL House District 104	AL;State Representative;District 104
+CandidateContest	AL House District 105	AL;State Representative;District 105
+CandidateContest	AL House District 97	AL;State Representative;District 97
+CandidateContest	AL House District 98	AL;State Representative;District 98
+CandidateContest	AL House District 99	AL;State Representative;District 99
+CandidateContest	AL Senate District 33	AL;State Senator;District 33
+CandidateContest	AL Senate District 34	AL;State Senator;District 34
+CandidateContest	AL Senate District 35	AL;State Senator;District 35
+CandidateContest	AL House District 74	AL;State Representative;District 74
+CandidateContest	AL House District 76	AL;State Representative;District 76
+CandidateContest	AL House District 77	AL;State Representative;District 77
+CandidateContest	AL House District 78	AL;State Representative;District 78
+CandidateContest	AL Senate District 26	AL;State Senator;District 26
+CandidateContest	AL House District 8	AL;State Representative;District 8
+CandidateContest	AL House District 61	AL;State Representative;District 61
+CandidateContest	AL House District 41	AL;State Representative;District 41
+CandidateContest	AL House District 43	AL;State Representative;District 43
+CandidateContest	AL House District 73	AL;State Representative;District 73
+CandidateContest	AL Senate District 11	AL;State Senator;District 11
+CandidateContest	AL House District 50	AL;State Representative;District 50
+CandidateContest	AL House District 62	AL;State Representative;District 62
+CandidateContest	AL House District 63	AL;State Representative;District 63
+CandidateContest	AL House District 70	AL;State Representative;District 70
+CandidateContest	AL Associate Justice of the Supreme Court, Place 1	AL;Associate Justice of the Supreme Court, Place 1;statewide
+CandidateContest	AL Associate Justice of the Supreme Court, Place 2	AL;Associate Justice of the Supreme Court, Place 2;statewide
+CandidateContest	AL Associate Justice of the Supreme Court, Place 3	AL;Associate Justice of the Supreme Court, Place 3;statewide
+CandidateContest	AL Associate Justice of the Supreme Court, Place 4	AL;Associate Justice of the Supreme Court, Place 4;statewide

@@ -1011,3 +1011,59 @@ ReportingUnit	Delaware;Sussex County;41-06	Election District 41-06
 ReportingUnit	Delaware;Sussex County;41-07	Election District 41-07
 ReportingUnit	Delaware;Sussex County;41-08	Election District 41-08
 ReportingUnit	Delaware;Sussex County;41-16	Election District 41-16
+CandidateContest	DE Attorney General	DE;Attorney General
+CandidateContest	DE Auditor of Accounts	DE;Auditor of Accounts;statewide
+CandidateContest	DE House District 11	DE;State Representative;District 11
+CandidateContest	DE House District 28	DE;State Representative;District 28
+CandidateContest	DE House District 29	DE;State Representative;District 29
+CandidateContest	DE House District 30	DE;State Representative;District 30
+CandidateContest	DE House District 31	DE;State Representative;District 31
+CandidateContest	DE House District 32	DE;State Representative;District 32
+CandidateContest	DE House District 33	DE;State Representative;District 33
+CandidateContest	DE House District 34	DE;State Representative;District 34
+CandidateContest	DE Senate District 16	DE;State Senator;District 16
+CandidateContest	DE Senate District 17	DE;State Senator;District 17
+CandidateContest	DE Senate District 18	DE;State Senator;District 18
+CandidateContest	DE State Treasurer	DE;State Treasurer;statewide
+CandidateContest	US House DE District 0	DE;US Representative;District 0
+CandidateContest	DE US Senator	DE;US Senator;statewide
+CandidateContest	DE House District 1	DE;State Representative;District 1
+CandidateContest	DE House District 10	DE;State Representative;District 10
+CandidateContest	DE House District 12	DE;State Representative;District 12
+CandidateContest	DE House District 13	DE;State Representative;District 13
+CandidateContest	DE House District 15	DE;State Representative;District 15
+CandidateContest	DE House District 16	DE;State Representative;District 16
+CandidateContest	DE House District 17	DE;State Representative;District 17
+CandidateContest	DE House District 18	DE;State Representative;District 18
+CandidateContest	DE House District 19	DE;State Representative;District 19
+CandidateContest	DE House District 2	DE;State Representative;District 2
+CandidateContest	DE House District 21	DE;State Representative;District 21
+CandidateContest	DE House District 22	DE;State Representative;District 22
+CandidateContest	DE House District 23	DE;State Representative;District 23
+CandidateContest	DE House District 24	DE;State Representative;District 24
+CandidateContest	DE House District 25	DE;State Representative;District 25
+CandidateContest	DE House District 26	DE;State Representative;District 26
+CandidateContest	DE House District 27	DE;State Representative;District 27
+CandidateContest	DE House District 3	DE;State Representative;District 3
+CandidateContest	DE House District 4	DE;State Representative;District 4
+CandidateContest	DE House District 5	DE;State Representative;District 5
+CandidateContest	DE House District 6	DE;State Representative;District 6
+CandidateContest	DE House District 7	DE;State Representative;District 7
+CandidateContest	DE House District 8	DE;State Representative;District 8
+CandidateContest	DE House District 9	DE;State Representative;District 9
+CandidateContest	DE Senate District 10	DE;State Senator;District 10
+CandidateContest	DE Senate District 11	DE;State Senator;District 11
+CandidateContest	DE Senate District 2	DE;State Senator;District 2
+CandidateContest	DE Senate District 3	DE;State Senator;District 3
+CandidateContest	DE Senate District 4	DE;State Senator;District 4
+CandidateContest	DE House District 14	DE;State Representative;District 14
+CandidateContest	DE House District 20	DE;State Representative;District 20
+CandidateContest	DE House District 35	DE;State Representative;District 35
+CandidateContest	DE House District 36	DE;State Representative;District 36
+CandidateContest	DE House District 37	DE;State Representative;District 37
+CandidateContest	DE House District 38	DE;State Representative;District 38
+CandidateContest	DE House District 39	DE;State Representative;District 39
+CandidateContest	DE House District 40	DE;State Representative;District 40
+CandidateContest	DE House District 41	DE;State Representative;District 41
+CandidateContest	DE Senate District 21	DE;State Senator;District 21
+CandidateContest	DE Senate District 6	DE;State Senator;District 6

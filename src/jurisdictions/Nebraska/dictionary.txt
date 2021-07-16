@@ -223,3 +223,46 @@ ReportingUnit	Nebraska;Wheeler County	Wheeler
 ReportingUnit	Nebraska;Wheeler County	fips31183
 ReportingUnit	Nebraska;York County	York
 ReportingUnit	Nebraska;York County	fips31185
+CandidateContest	NE Attorney General	NE;Attorney General
+CandidateContest	NE Auditor of Public Accounts	NE;Auditor of Public Accounts;statewide
+CandidateContest	NE Governor and Lt. Governor	NE;Governor and Lt. Governor;statewide
+CandidateContest	NE Member of the State Board of Education District 6	NE;Member of the State Board of Education;District 6
+CandidateContest	NE Secretary of State	NE;Secretary of State;statewide
+CandidateContest	NE State Treasurer	NE;State Treasurer;statewide
+CandidateContest	US House NE District 3	NE;US Representative;District 3
+CandidateContest	NE US Senator	NE;US Senator;statewide
+CandidateContest	NE Member of the State Board of Education District 7	NE;Member of the State Board of Education;District 7
+CandidateContest	NE Senate District 40	NE;State Senator;District 40
+CandidateContest	NE Senate District 36	NE;State Senator;District 36
+CandidateContest	NE Senate District 38	NE;State Senator;District 38
+CandidateContest	NE Member of the Board of Regents University of Nebraska District 3	NE;Member of the Board of Regents University of Nebraska;District 3
+CandidateContest	NE Senate District 16	NE;State Senator;District 16
+CandidateContest	US House NE District 1	NE;US Representative;District 1
+CandidateContest	NE Member of the Board of Regents University of Nebraska District 5	NE;Member of the Board of Regents University of Nebraska;District 5
+CandidateContest	NE Member of the State Board of Education District 5	NE;Member of the State Board of Education;District 5
+CandidateContest	NE Public Service Commissioner District 1	NE;Public Service Commissioner;District 1
+CandidateContest	NE Senate District 2	NE;State Senator;District 2
+CandidateContest	NE Senate District 44	NE;State Senator;District 44
+CandidateContest	NE Senate District 22	NE;State Senator;District 22
+CandidateContest	NE Member of the Board of Regents University of Nebraska District 4	NE;Member of the Board of Regents University of Nebraska;District 4
+CandidateContest	NE Member of the Board of Regents University of Nebraska District 8	NE;Member of the Board of Regents University of Nebraska;District 8
+CandidateContest	NE Member of the State Board of Education District 8	NE;Member of the State Board of Education;District 8
+CandidateContest	NE Public Service Commissioner District 3	NE;Public Service Commissioner;District 3
+CandidateContest	NE Senate District 10	NE;State Senator;District 10
+CandidateContest	NE Senate District 12	NE;State Senator;District 12
+CandidateContest	NE Senate District 18	NE;State Senator;District 18
+CandidateContest	NE Senate District 20	NE;State Senator;District 20
+CandidateContest	NE Senate District 4	NE;State Senator;District 4
+CandidateContest	NE Senate District 6	NE;State Senator;District 6
+CandidateContest	NE Senate District 8	NE;State Senator;District 8
+CandidateContest	US House NE District 2	NE;US Representative;District 2
+CandidateContest	NE Senate District 32	NE;State Senator;District 32
+CandidateContest	NE Senate District 30	NE;State Senator;District 30
+CandidateContest	NE Senate District 34	NE;State Senator;District 34
+CandidateContest	NE Senate District 26	NE;State Senator;District 26
+CandidateContest	NE Senate District 28	NE;State Senator;District 28
+CandidateContest	NE Senate District 46	NE;State Senator;District 46
+CandidateContest	NE Senate District 42	NE;State Senator;District 42
+CandidateContest	NE Senate District 24	NE;State Senator;District 24
+CandidateContest	NE Senate District 14	NE;State Senator;District 14
+CandidateContest	NE Senate District 48	NE;State Senator;District 48

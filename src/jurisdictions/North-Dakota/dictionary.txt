@@ -1104,3 +1104,57 @@ ReportingUnit	North Dakota;Wells County	Wells
 ReportingUnit	North Dakota;Wells County	fips38103
 ReportingUnit	North Dakota;Williams County	Williams
 ReportingUnit	North Dakota;Williams County	fips38105
+CandidateContest	ND Agriculture Commissioner	ND;Agriculture Commissioner;statewide
+CandidateContest	ND Attorney General	ND;Attorney General
+CandidateContest	ND Justice of the Supreme Court	ND;Justice of the Supreme Court;statewide
+CandidateContest	ND Secretary of State	ND;Secretary of State;statewide
+CandidateContest	ND House District 39	ND;State Representative;District 39
+CandidateContest	ND Senate District 39	ND;State Senator;District 39
+CandidateContest	US House ND District 0	ND;US Representative;District 0
+CandidateContest	ND US Senator	ND;US Senator;statewide
+CandidateContest	ND House District 23	ND;State Representative;District 23
+CandidateContest	ND Senate District 23	ND;State Senator;District 23
+CandidateContest	ND House District 35	ND;State Representative;District 35
+CandidateContest	ND House District 47	ND;State Representative;District 47
+CandidateContest	ND House District 7	ND;State Representative;District 7
+CandidateContest	ND Senate District 35	ND;State Senator;District 35
+CandidateContest	ND Senate District 47	ND;State Senator;District 47
+CandidateContest	ND Senate District 7	ND;State Senator;District 7
+CandidateContest	ND House District 11	ND;State Representative;District 11
+CandidateContest	ND House District 13	ND;State Representative;District 13
+CandidateContest	ND House District 21	ND;State Representative;District 21
+CandidateContest	ND House District 25	ND;State Representative;District 25
+CandidateContest	ND House District 27	ND;State Representative;District 27
+CandidateContest	ND House District 41	ND;State Representative;District 41
+CandidateContest	ND House District 45	ND;State Representative;District 45
+CandidateContest	ND Senate District 11	ND;State Senator;District 11
+CandidateContest	ND Senate District 13	ND;State Senator;District 13
+CandidateContest	ND Senate District 21	ND;State Senator;District 21
+CandidateContest	ND Senate District 25	ND;State Senator;District 25
+CandidateContest	ND Senate District 27	ND;State Senator;District 27
+CandidateContest	ND Senate District 41	ND;State Senator;District 41
+CandidateContest	ND Senate District 45	ND;State Senator;District 45
+CandidateContest	ND House District 29	ND;State Representative;District 29
+CandidateContest	ND Senate District 29	ND;State Senator;District 29
+CandidateContest	ND House District 17	ND;State Representative;District 17
+CandidateContest	ND House District 19	ND;State Representative;District 19
+CandidateContest	ND House District 43	ND;State Representative;District 43
+CandidateContest	ND Senate District 17	ND;State Senator;District 17
+CandidateContest	ND Senate District 19	ND;State Senator;District 19
+CandidateContest	ND Senate District 43	ND;State Senator;District 43
+CandidateContest	ND House District 31	ND;State Representative;District 31
+CandidateContest	ND Senate District 31	ND;State Senator;District 31
+CandidateContest	ND House District 33	ND;State Representative;District 33
+CandidateContest	ND Senate District 33	ND;State Senator;District 33
+CandidateContest	ND House District 15	ND;State Representative;District 15
+CandidateContest	ND Senate District 15	ND;State Senator;District 15
+CandidateContest	ND House District 9	ND;State Representative;District 9
+CandidateContest	ND Senate District 9	ND;State Senator;District 9
+CandidateContest	ND House District 37	ND;State Representative;District 37
+CandidateContest	ND Senate District 37	ND;State Senator;District 37
+CandidateContest	ND House District 3	ND;State Representative;District 3
+CandidateContest	ND House District 5	ND;State Representative;District 5
+CandidateContest	ND Senate District 3	ND;State Senator;District 3
+CandidateContest	ND Senate District 5	ND;State Senator;District 5
+CandidateContest	ND House District 1	ND;State Representative;District 1
+CandidateContest	ND Senate District 1	ND;State Senator;District 1

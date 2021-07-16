@@ -5557,3 +5557,15 @@ Candidate	Isaiah Joseph Knight	Isaiah Joseph Knight
 Candidate	Christopher Thomas Holmes	Christopher Thomas Holmes
 Candidate	Christopher Patrick Stolle	Christopher Patrick Stolle
 Candidate	Charles Douglas Poindexter	Charles Douglas Poindexter
+CandidateContest	US House VA District 2	VA;US Representative;District 2
+CandidateContest	VA US Senator	VA;US Senator;statewide
+CandidateContest	US House VA District 5	VA;US Representative;District 5
+CandidateContest	US House VA District 8	VA;US Representative;District 8
+CandidateContest	US House VA District 9	VA;US Representative;District 9
+CandidateContest	US House VA District 7	VA;US Representative;District 7
+CandidateContest	US House VA District 6	VA;US Representative;District 6
+CandidateContest	US House VA District 1	VA;US Representative;District 1
+CandidateContest	US House VA District 4	VA;US Representative;District 4
+CandidateContest	US House VA District 3	VA;US Representative;District 3
+CandidateContest	US House VA District 0	VA;US Representative;District 0
+CandidateContest	VA House District 8	VA;State Representative;District 8
