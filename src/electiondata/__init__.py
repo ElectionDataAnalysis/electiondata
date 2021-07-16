@@ -1058,7 +1058,6 @@ class DataLoader:
                 working, new_err[element] = m.replace_raw_with_internal_name(
                     working,
                     dictionary_directory,
-                    ini_params["secondary_source"],
                     munger,
                     element,
                     drop_unmatched=True,
@@ -2894,6 +2893,7 @@ def load_results_df(
     election_id: int,
     rollup: bool = False,
     rollup_rut: str = constants.default_subdivision_type,
+    alternate_dictionary: Optional[str] = None   # when given, use this dictionary, not the one in the jurisdiction directory
 ) -> Optional[dict]:
     err = None
     df = df_original.copy()
@@ -2907,6 +2907,7 @@ def load_results_df(
             munger_name,
             juris_true_name,
             session,
+            alternate_dictionary=alternate_dictionary,
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])

@@ -289,7 +289,6 @@ path_to_jurisdiction_dir: str,
 def replace_raw_with_internal_name(
         df: pd.DataFrame,
         dictionary_directory: str,
-        juris_true_name: str,  # for error reporting
         munger_name: str,  # for error reporting
         element: str,
         drop_unmatched: bool = False,
@@ -300,6 +299,7 @@ def replace_raw_with_internal_name(
     err = None
     working = df.copy()
     dictionary = raw_to_internal_dictionary_df(dictionary_directory,element)
+    dictionary_dir_name = Path(dictionary_directory).name
 
     if element == "Candidate":
         # Regularize candidate names from results file and from dictionary.txt
@@ -325,7 +325,7 @@ def replace_raw_with_internal_name(
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
         unmatched_str = "\n".join(unmatched_raw)
         e = f"\n{element}s (found with munger {munger_name}) not found in dictionary.txt :\n{unmatched_str}"
-        err = ui.add_new_error(err, "warn-jurisdiction", juris_true_name, e)
+        err = ui.add_new_error(err, "warn-jurisdiction",dictionary_dir_name,e)
 
     if drop_unmatched:
         working = working[working[element].notnull()]
@@ -340,12 +340,12 @@ def replace_raw_with_internal_name(
 
             err = ui.add_new_error(
                 err,
-                "jurisdiction",
-                juris_true_name,
+                "dictionary",
+                dictionary_dir_name,
                 e,
             )
         else:
-            err = ui.add_new_error(err, "warn-jurisdiction", juris_true_name, e)
+            err = ui.add_new_error(err, "warn-jurisdiction",dictionary_dir_name,e)
         # give working the proper columns and return
         working.drop(f"{element}_raw", axis=1, inplace=True)
         return working, err
@@ -436,7 +436,7 @@ def replace_internal_names_with_ids(
 
 def replace_raw_with_internal_ids(
     df: pd.DataFrame,
-    path_to_jurisdiction_dir: str,
+    dictionary_dir: str,
     juris_true_name: str,  # for error reporting
     munger_name: str,  # for error reporting
     file_name: str,  # for error reporting
@@ -454,7 +454,7 @@ def replace_raw_with_internal_ids(
     drop that row EVEN IF <drop_unmatched> = False.
     """
     working, new_err = replace_raw_with_internal_name(
-        df, path_to_jurisdiction_dir, juris_true_name, munger_name, element,
+        df, dictionary_dir, munger_name, element,
         drop_unmatched=drop_unmatched,drop_all_ok=drop_all_ok,
     )
     if ui.fatal_error(new_err):
@@ -603,7 +603,7 @@ def add_constant_column(
 
 def add_contest_id(
     df: pd.DataFrame,
-    path_to_jurisdiction_dir: str,
+    dictionary_dir: str,
     juris_true_name: str,
     file_name: str,
     munger_name: str,
@@ -627,7 +627,7 @@ def add_contest_id(
             )
             working, new_err = replace_raw_with_internal_ids(
                 working,
-                path_to_jurisdiction_dir,
+                dictionary_dir,
                 juris_true_name,
                 file_name,
                 munger_name,
@@ -976,12 +976,17 @@ def munge_raw_to_ids(
     munger_name: str,
     juris_true_name: str,
     session: Session,
+    alternate_dictionary: Optional[str] = None   # when given, use this dictionary, not the one in the jurisdiction directory
 ) -> (pd.DataFrame, Optional[dict]):
     """Replace raw-munged columns with internal columns. For CountItemType
     this will be a text column; for others it will be an Id column """
 
     err = None
     working = df.copy()
+    if alternate_dictionary:
+        dictionary_dir = alternate_dictionary
+    else:
+        dictionary_dir = path_to_jurisdiction_dir
 
     # add Contest_Id column and contest_type column
     if "CandidateContest" in constant_dict.keys():
@@ -1016,7 +1021,7 @@ def munge_raw_to_ids(
         try:
             working, err = add_contest_id(
                 working,
-                path_to_jurisdiction_dir,
+                dictionary_dir,
                 juris_true_name,
                 file_name,
                 munger_name,
@@ -1071,7 +1076,7 @@ def munge_raw_to_ids(
     ]
     working, new_err = raw_to_id_simple(
         working,
-        path_to_jurisdiction_dir,
+        dictionary_dir,
         other_elements,
         session,
         munger_name,
@@ -1088,7 +1093,7 @@ def munge_raw_to_ids(
         working, err = add_selection_id(  # TODO this is where FutureWarning occurs
             working,
             session.bind,
-            path_to_jurisdiction_dir,
+            dictionary_dir,
             juris_true_name,
             file_name,
             munger_name,

@@ -552,6 +552,8 @@ if 1:
         "warn-ini",
         "warn-database",
         "database",
+        "warn-dictionary",
+        "dictionary"
     ]
 # regex patterns
 if 1:
