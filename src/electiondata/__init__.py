@@ -1061,6 +1061,7 @@ class DataLoader:
             # collect election-jurisdiction pairs
             new_err = dict()
             for element in ["Election", "Jurisdiction"]:
+                # use multi-file's dictionary to get internal names of election and jurisdiction
                 working, new_err[element] = m.replace_raw_with_internal_name(
                     working,
                     dictionary_directory,
@@ -1188,7 +1189,7 @@ class DataLoader:
                         ),
                         datafile_id,
                         e_id[election],
-                        alternate_dictionary=dictionary_directory,
+                        alt_dictionary=dictionary_directory,
                     )
                     if new_err:
                         err = ui.consolidate_errors([err, new_err])
@@ -2900,7 +2901,7 @@ def load_results_df(
     election_id: int,
     rollup: bool = False,
     rollup_rut: str = constants.default_subdivision_type,
-    alternate_dictionary: Optional[str] = None   # when given, use this dictionary, not the one in the jurisdiction directory
+    alt_dictionary: Optional[str] = None   # when given, use this dictionary, not the one in the jurisdiction directory
 ) -> Optional[dict]:
     err = None
     df = df_original.copy()
@@ -2914,7 +2915,7 @@ def load_results_df(
             munger_name,
             juris_true_name,
             session,
-            alternate_dictionary=alternate_dictionary,
+            alternate_dictionary=alt_dictionary,
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
