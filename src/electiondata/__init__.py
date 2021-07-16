@@ -997,6 +997,7 @@ class DataLoader:
     ) -> (Dict[str,List[str]],Optional[dict]):
         err = None
         success = list()
+        ts = datetime.datetime.now().strftime("%m%d_%H%M")
         ini_params, new_err = ui.get_parameters(
             required_keys=["results_file","munger_list","results_download_date","results_source","results_note","secondary_source","results_short_name"],
             param_file=ini,
@@ -1004,15 +1005,20 @@ class DataLoader:
         )
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
+            err = ui.report(err, os.path.join(self.d["reports_and_plots_dir"], f"multi_{ts}"), file_prefix="multi_dictionary")
             return success, err
 
-        # TODO: check that secondary_source directory has necessary files without flaws
         results_path = os.path.join(self.d["results_dir"], ini_params["results_file"])
         multi_file_name = Path(ini_params["results_file"]).name
         ini_file = Path(ini).name
         dictionary_directory = os.path.join(
             self.d["repository_content_root"], "secondary_sources", ini_params["secondary_source"]
         )
+        # check that secondary_source directory has necessary files without flaws
+        new_err = juris.check_dictionary(os.path.join(dictionary_directory, "dictionary.txt"))
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return success, err
 
         # load items from the secondary source tables to the db
         # NB: Office, CandidateContest and sub-jurisdiction ReportingUnits are specific to the various jurisdictions
@@ -1182,6 +1188,7 @@ class DataLoader:
                         ),
                         datafile_id,
                         e_id[election],
+                        alternate_dictionary=dictionary_directory,
                     )
                     if new_err:
                         err = ui.consolidate_errors([err, new_err])

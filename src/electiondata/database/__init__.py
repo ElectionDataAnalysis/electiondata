@@ -623,6 +623,7 @@ def insert_to_cdf_db(
             error_name,
             f"Exception inserting element {element}: {exc}",
         )
+        q_insert = "<unknown query>"
 
     # remove temp table
     try:

@@ -88,6 +88,54 @@ def recast_options(
     return options, err
 
 
+def check_dictionary(dictionary_file: str) -> Optional[dict]:
+    err = None
+    dictionary_dir = Path(dictionary_file).parent.name
+    # dedupe the dictionary
+    clean_and_dedupe(dictionary_file)
+    # check that no entry is null
+    df = pd.read_csv(dictionary_file,**constants.standard_juris_csv_reading_kwargs)
+    null_mask = df.T.isnull().any()
+    if null_mask.any():
+        # drop null rows and report error
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            dictionary_dir,
+            f"dictionary.txt has some null entries:\n{df[null_mask]}",
+        )
+        df = df[~null_mask]
+
+    # check that cdf_element-raw_identifier_value pairs are unique
+    two_column_df = df[["cdf_element","raw_identifier_value"]]
+    dupes_df,_ = ui.find_dupes(two_column_df)
+    if not dupes_df.empty:
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            dictionary_dir,
+            f"dictionary.txt has more than one entry for each of these:\n {dupes_df}",
+        )
+    # check that there are no candidate dupes after regularization
+    cands = two_column_df[two_column_df.cdf_element == "Candidate"].copy()
+    cands["regular"] = m.regularize_candidate_names(cands.raw_identifier_value)
+    dupe_reg = list()
+    for reg in cands.regular.unique():
+        all_match = cands[cands.regular == reg].copy()
+        if all_match.shape[0] > 1:
+            dupe_reg.append(f"{reg} is regular version of: {list(all_match.raw_identifier_value.unique())}")
+    if dupe_reg:
+        dupe_str = "\n".join(dupe_reg)
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            dictionary_dir,
+            f"Some raw candidate names match after regularization, "
+            f"so are effectively dupes and should be deduped.:\n{dupe_str}"
+        )
+    return err
+
+
 def ensure_jurisdiction_dir(
     repository_content_root, juris_system_name: str, ignore_empty: bool = False
 ) -> Optional[dict]:
@@ -208,54 +256,14 @@ def ensure_juris_files(
                 )
 
             if juris_file == "dictionary":
-                # dedupe the dictionary
-                clean_and_dedupe(cf_path)
-                # check that no entry is null
-                df = pd.read_csv(cf_path, **constants.standard_juris_csv_reading_kwargs)
-                null_mask = df.T.isnull().any()
-                if null_mask.any():
-                    # drop null rows and report error
-                    err = ui.add_new_error(
-                        err,
-                        "jurisdiction",
-                        juris_name,
-                        f"dictionary.txt has some null entries:\n{df[null_mask]}",
-                    )
-                    df = df[~null_mask]
-
-                # check that cdf_element-raw_identifier_value pairs are unique
-                two_column_df = df[["cdf_element", "raw_identifier_value"]]
-                dupes_df, _ = ui.find_dupes(two_column_df)
-                if not dupes_df.empty:
-                    err = ui.add_new_error(
-                        err,
-                        "jurisdiction",
-                        juris_name,
-                        f"dictionary.txt has more than one entry for each of these:\n {dupes_df}",
-                    )
-                # check that there are no candidate dupes after regularization
-                cands = two_column_df[two_column_df.cdf_element == "Candidate"].copy()
-                cands["regular"] = m.regularize_candidate_names(cands.raw_identifier_value)
-                dupe_reg = list()
-                for reg in cands.regular.unique():
-                    all_match = cands[cands.regular == reg].copy()
-                    if all_match.shape[0] >1:
-                        dupe_reg.append(f"{reg} is regular version of: {list(all_match.raw_identifier_value.unique())}")
-                if dupe_reg:
-                    dupe_str = "\n".join(dupe_reg)
-                    err = ui.add_new_error(
-                        err,
-                        "jurisdiction",
-                        juris_name,
-                        f"Some raw candidate names match after regularization, "
-                        f"so are effectively dupes and should be deduped.:\n{dupe_str}"
-                    )
+                new_err = check_dictionary(cf_path)
+                err = ui.consolidate_errors([err, new_err])
 
             else:
                 # dedupe the file
                 clean_and_dedupe(cf_path)
 
-                # TODO check for lines that are too lone
+                # TODO check for lines that are too long
 
                 # check for problematic null entries
                 null_columns = check_nulls(
