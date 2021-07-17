@@ -7498,3 +7498,161 @@ CandidateContest	NV State Assembly Member District 27	NV;State Assembly Member;D
 CandidateContest	NV State Assembly Member District 30	NV;State Assembly Member;District 30
 CandidateContest	NV State Assembly Member District 31	NV;State Assembly Member;District 31
 CandidateContest	NV Senate District 13	NV;State Senator;District 13
+Candidate	Aaron Ford	Aaron Ford
+Candidate	Abbi Silver	Abbi Silver
+Candidate	Adam Paul Laxalt	Adam Paul Laxalt
+Candidate	Al Kramer	Al Kramer
+Candidate	Alexander Assefa	Alexander Assefa
+Candidate	Alexis M. Hansen	Alexis M. Hansen
+Candidate	Amy Carvalho	Amy Carvalho
+Candidate	Andrew Coates	Andrew Coates
+Candidate	Autumn Zemke	Autumn Zemke
+Candidate	Barbara K. Cegavske	Barbara K. Cegavske
+Candidate	Ben Kieckhefer	Ben Kieckhefer
+Candidate	Bill Hoge	Bill Hoge
+Candidate	Bob Beers	Bob Beers
+Candidate	Bob Lystrup	Bob Lystrup
+Candidate	Brittney Miller	Brittney Miller
+Candidate	Bruce James-Newman	Bruce James-Newman
+Candidate	Calvin 'Cal' Border	"Calvin ""Cal"" Border"
+Candidate	Catherine Byrne	Catherine Byrne
+Candidate	Charlene Y. Young	Charlene Y. Young
+Candidate	Cherlyn Arrington	Cherlyn Arrington
+Candidate	Chris Brooks	Chris Brooks
+Candidate	Chris Edwards	Chris Edwards
+Candidate	Clint Koble	Clint Koble
+Candidate	Connie Munk	Connie Munk
+Candidate	Craig Jordahl	Craig Jordahl
+Candidate	Cresent Hardy	Cresent Hardy
+Candidate	Curtis W. Cannon	Curtis W. Cannon
+Candidate	Dan Garfield	Dan Garfield
+Candidate	Daniel Hofstein	Daniel Hofstein
+Candidate	Daniele Monroe-Moreno	Daniele Monroe-Moreno
+Candidate	Danny Tarkanian	Danny Tarkanian
+Candidate	David Goossen	David Goossen
+Candidate	David Schoen	David Schoen
+Candidate	Dean Heller	Dean Heller
+Candidate	Dean McGonigle	Dean McGonigle
+Candidate	Dennis Hof	Dennis Hof
+Candidate	Dina Neal	Dina Neal
+Candidate	Dina Titus	Dina Titus
+Candidate	Ed Uehling	Ed Uehling
+Candidate	Edgar Flores	Edgar Flores
+Candidate	Elissa Cadish	Elissa Cadish
+Candidate	Ellen Spiegel	Ellen Spiegel
+Candidate	Gianna Miceli	Gianna Miceli
+Candidate	Gil Eisner	Gil Eisner
+Candidate	Glen Leavitt	Glen Leavitt
+Candidate	Gregg Luckner	Gregg Luckner
+Candidate	Gregory J. Shorts	Gregory J. Shorts
+Candidate	Harry L. Vickers	Harry L. Vickers
+Candidate	Heidi Swank	Heidi Swank
+Candidate	Howard Watts III	Howard Watts III
+Candidate	Ira Hansen	Ira Hansen
+Candidate	Jacky Rosen	Jacky Rosen
+Candidate	James Arnold Settelmeyer	James Arnold Settelmeyer
+Candidate	James Ohrenschall	James Ohrenschall
+Candidate	Janice E. Wesen	Janice E. Wesen
+Candidate	Jared Lord	Jared Lord
+Candidate	Jason Burke	Jason Burke
+Candidate	Jason Frierson	Jason Frierson
+Candidate	Jennie Sherwood	Jennie Sherwood
+Candidate	Jerry Tao	Jerry Tao
+Candidate	Jill Ann Dickman	Jill Ann Dickman
+Candidate	Jill Tolles	Jill Tolles
+Candidate	Jim Marchant	Jim Marchant
+Candidate	Jim Wheeler	Jim Wheeler
+Candidate	Jo Cato	Jo Cato
+Candidate	Joe Hardy	Joe Hardy
+Candidate	Joel F. Hansen	Joel F. Hansen
+Candidate	John C. Ellison	John C. Ellison
+Candidate	John Hambrick	John Hambrick
+Candidate	John Wagner	John Wagner
+Candidate	Jonathan Friedrich	Jonathan Friedrich
+Candidate	Joyce Bentley	Joyce Bentley
+Candidate	Julia Ratti	Julia Ratti
+Candidate	Julie Pazina	Julie Pazina
+Candidate	June Joseph	June Joseph
+Candidate	Kamau A. Bakari	Kamau A. Bakari
+Candidate	Kate Marshall	Kate Marshall
+Candidate	Keith Pickard	Keith Pickard
+Candidate	Kristee Watson	Kristee Watson
+Candidate	Laura E. Perkins	Laura E. Perkins
+Candidate	Leonard Foster	Leonard Foster
+Candidate	Lesia Romanov	Lesia Romanov
+Candidate	Lesley Elizabeth Cohen	Lesley Elizabeth Cohen
+Candidate	Lidia Stiglich	Lidia Stiglich
+Candidate	Linda Cannon	Linda Cannon
+Candidate	Lisa Krasner	Lisa Krasner
+Candidate	Maggie Carlton	Maggie Carlton
+Candidate	Marilyn Dondero Loop	Marilyn Dondero Loop
+Candidate	Mark E. Amodei	Mark E. Amodei
+Candidate	Mary Elizabeth Boyer Martinez	Mary Elizabeth Boyer Martinez
+Candidate	Mathew Harter	Mathew Harter
+Candidate	Matt Sadler	Matt Sadler
+Candidate	Melanie Scheible	Melanie Scheible
+Candidate	Melissa Hardy	Melissa Hardy
+Candidate	Michael L. McDonald	Michael L. McDonald
+Candidate	Michael Roberson	Michael Roberson
+Candidate	Michael Sprinkle	Michael Sprinkle
+Candidate	Michelle Gorelow	Michelle Gorelow
+Candidate	Mo Denis	Mo Denis
+Candidate	Nelson Araujo	Nelson Araujo
+Candidate	Noel Searles	Noel Searles
+Candidate	None Of These Candidate	None Of These Candidate
+Candidate	Olivia Diaz	Olivia Diaz
+Candidate	Ozzie Fumo	Ozzie Fumo
+Candidate	Paris Wade	Paris Wade
+Candidate	Patricia 'Pat' Little	"Patricia ""Pat"" Little"
+Candidate	Patricia Ackerman	Patricia Ackerman
+Candidate	Paul Cwalina	Paul Cwalina
+Candidate	Paula Povilaitis	Paula Povilaitis
+Candidate	Ralph Preta	Ralph Preta
+Candidate	Richard 'Rick' Bronstein	"Richard ""Rick"" Bronstein"
+Candidate	Richard 'Skip' Daly	"Richard ""Skip"" Daly"
+Candidate	Richard Carrillo	Richard Carrillo
+Candidate	Richard Fletcher	Richard Fletcher
+Candidate	Richard McArthur	Richard McArthur
+Candidate	Robert Strawder	Robert Strawder
+Candidate	Robin L. Titus	Robin L. Titus
+Candidate	Rodney Smith	Rodney Smith
+Candidate	Ron Knecht	Ron Knecht
+Candidate	Ron McGinnis	Ron McGinnis
+Candidate	Ronald Newsome	Ronald Newsome
+Candidate	Russell Best	Russell Best
+Candidate	Ryan Bundy	Ryan Bundy
+Candidate	Sandra Jauregui	Sandra Jauregui
+Candidate	Sarah Peters	Sarah Peters
+Candidate	Selena Torres	Selena Torres
+Candidate	Shannon Bilbray-Axelrod	Shannon Bilbray-Axelrod
+Candidate	Shea Backus	Shea Backus
+Candidate	Stan Vaughan	Stan Vaughan
+Candidate	Stephen G. Sedlmeyer	Stephen G. Sedlmeyer
+Candidate	Stephen H. Silberkraus	Stephen H. Silberkraus
+Candidate	Steve Brown	Steve Brown
+Candidate	Steve Sisolak	Steve Sisolak
+Candidate	Steve Yeager	Steve Yeager
+Candidate	Steven A. Horsford	Steven A. Horsford
+Candidate	Susan Martinez	Susan Martinez
+Candidate	Susie Lee	Susie Lee
+Candidate	Teresa Benitez-Thompson	Teresa Benitez-Thompson
+Candidate	Tiffany Jones	Tiffany Jones
+Candidate	Tim Hagan	Tim Hagan
+Candidate	Tina Davis-Hersey	Tina Davis-Hersey
+Candidate	Tina M. Peetris	Tina M. Peetris
+Candidate	Tom Roberts	Tom Roberts
+Candidate	Tony Gumina	Tony Gumina
+Candidate	Tyrone Thompson	Tyrone Thompson
+Candidate	Valerie Weber	Valerie Weber
+Candidate	Warren Ross Markowitz	Warren Ross Markowitz
+Candidate	Wendy Boszak	Wendy Boszak
+Candidate	Wes Duncan	Wes Duncan
+Candidate	William O'Neil McCurdy II	William O'Neil McCurdy II
+Candidate	Yvanna Cancela	Yvanna Cancela
+Candidate	Zach Conine	Zach Conine
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Independent American Party	independent american
+Party	Libertarian Party	libertarian
+Party	Nonpartisan Party	nonpartisan
+Party	Republican Party	republican

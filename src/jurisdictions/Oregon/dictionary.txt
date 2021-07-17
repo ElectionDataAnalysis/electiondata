@@ -2337,3 +2337,114 @@ CandidateContest	OR House District 29	OR;State Representative;District 29
 CandidateContest	OR House District 30	OR;State Representative;District 30
 CandidateContest	OR House District 34	OR;State Representative;District 34
 CandidateContest	OR Senate District 15	OR;State Senator;District 15
+Candidate	Aaron Auer	Aaron Auer
+Candidate	Adrienne Nelson	Adrienne Nelson
+Candidate	Alan R Olsen	Alan R Olsen
+Candidate	Alissa Keny-Guyer	Alissa Keny-Guyer
+Candidate	Amanda La Bell	Amanda La Bell
+Candidate	Barry Shapiro	Barry Shapiro
+Candidate	Betsy Johnson	Betsy Johnson
+Candidate	Brian P Halvorsen	Brian P Halvorsen
+Candidate	Brian Pierson	Brian Pierson
+Candidate	Bruce Alexander Knight	Bruce Alexander Knight
+Candidate	Bryan Eggiman	Bryan Eggiman
+Candidate	Caddy McKeown	Caddy McKeown
+Candidate	Carl Wilson	Carl Wilson
+Candidate	Carla C Piluso	Carla C Piluso
+Candidate	Charles Gallia	Charles Gallia
+Candidate	Chrissy Reitz	Chrissy Reitz
+Candidate	Christy Inskip	Christy Inskip
+Candidate	Chuck Riley	Chuck Riley
+Candidate	Chuck Thomsen	Chuck Thomsen
+Candidate	Cynthia Hyatt	Cynthia Hyatt
+Candidate	Dan Souza	Dan Souza
+Candidate	Dave McCall	Dave McCall
+Candidate	David C Poulson	David C Poulson
+Candidate	David Molina	David Molina
+Candidate	Denyc Nicole Boles	Denyc Nicole Boles
+Candidate	Dorothy Merritt	Dorothy Merritt
+Candidate	Drew A Layda	Drew A Layda
+Candidate	Eldon Rollins	Eldon Rollins
+Candidate	Elizabeth Graser-Lindsey	Elizabeth Graser-Lindsey
+Candidate	Elizabeth Reye	Elizabeth Reye
+Candidate	Elizabeth Steiner Hayward	Elizabeth Steiner Hayward
+Candidate	Erik S Parks	Erik S Parks
+Candidate	Floyd Prozanski	Floyd Prozanski
+Candidate	Frank L Lengele Jr	Frank L Lengele Jr
+Candidate	Gary Lyndon Dye	Gary Lyndon Dye
+Candidate	Greg Barreto	Greg Barreto
+Candidate	Greg Walden	Greg Walden
+Candidate	Greg Warnock	Greg Warnock
+Candidate	Heather Ricks	Heather Ricks
+Candidate	Jackie F Winters	Jackie F Winters
+Candidate	James I Manning Jr	James I Manning Jr
+Candidate	Jamie McLeod-Skinner	Jamie McLeod-Skinner
+Candidate	Jeff Barker	Jeff Barker
+Candidate	Jeff Golden	Jeff Golden
+Candidate	Jennifer Williamson	Jennifer Williamson
+Candidate	Jerred Taylor	Jerred Taylor
+Candidate	Jessica Gomez	Jessica Gomez
+Candidate	John Verbeek	John Verbeek
+Candidate	Josh Hill	Josh Hill
+Candidate	Joshua Ryan Johnston	Joshua Ryan Johnston
+Candidate	Julie Parrish	Julie Parrish
+Candidate	Karen Rippberger	Karen Rippberger
+Candidate	Kate Brown	Kate Brown
+Candidate	Katy Brumbelow	Katy Brumbelow
+Candidate	Knute Buehler	Knute Buehler
+Candidate	Lee L Beyer	Lee L Beyer
+Candidate	Lori Chavez-DeRemer	Lori Chavez-DeRemer
+Candidate	Manny Guerra	Manny Guerra
+Candidate	Marc W Koller	Marc W Koller
+Candidate	Margaret Doherty	Margaret Doherty
+Candidate	Mark Callahan	Mark Callahan
+Candidate	Mark F Herbert	Mark F Herbert
+Candidate	Mark Karnowski	Mark Karnowski
+Candidate	Mark Meek	Mark Meek
+Candidate	Mark R Roberts	Mark R Roberts
+Candidate	Martha Sherwood	Martha Sherwood
+Candidate	Marty Heyen	Marty Heyen
+Candidate	Marvin Sandnes	Marvin Sandnes
+Candidate	Megan Salter	Megan Salter
+Candidate	Michael Marsh	Michael Marsh
+Candidate	Michael Ngo	Michael Ngo
+Candidate	Michelle Blum Atkinson	Michelle Blum Atkinson
+Candidate	Mike Ellison	Mike Ellison
+Candidate	Mike McLane	Mike McLane
+Candidate	Mitch Greenlick	Mitch Greenlick
+Candidate	NA Davis	NA Davis
+Candidate	NA NA	NA NA
+Candidate	Nathan K Boddie	Nathan K Boddie
+Candidate	Nick Chen	Nick Chen
+Candidate	Patrick Starnes	Patrick Starnes
+Candidate	Peter Courtney	Peter Courtney
+Candidate	Peter DeFazio	Peter DeFazio
+Candidate	Randell Carlson	Randell Carlson
+Candidate	Ray Biggs	Ray Biggs
+Candidate	Renee Windsor-White	Renee Windsor-White
+Candidate	Rich Vial	Rich Vial
+Candidate	Richard R Jacobson	Richard R Jacobson
+Candidate	Rob Wagner	Rob Wagner
+Candidate	Robert Schwartz	Robert Schwartz
+Candidate	Sara A Gelser	Sara A Gelser
+Candidate	Sarah Grider	Sarah Grider
+Candidate	Scott Rohter	Scott Rohter
+Candidate	Shannon Souza	Shannon Souza
+Candidate	Sheri Malstrom	Sheri Malstrom
+Candidate	Skye Farnam	Skye Farnam
+Candidate	Sonny Yellott	Sonny Yellott
+Candidate	Susan McLain	Susan McLain
+Candidate	Taylor Tupper	Taylor Tupper
+Candidate	Teri Grier	Teri Grier
+Candidate	Thomas M Donohue	Thomas M Donohue
+Candidate	Tiffiny K Mitchell	Tiffiny K Mitchell
+Candidate	Tom Harrison	Tom Harrison
+Candidate	Vineeta Lower	Vineeta Lower
+Candidate	William A Namestnik	William A Namestnik
+Party	Constitution Party	constitution
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Pacific Green Party	pacific green
+Party	Republican Party	republican
+Party	Working Families Party	working families

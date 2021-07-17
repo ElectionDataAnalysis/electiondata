@@ -994,3 +994,78 @@ CandidateContest	NM House District 48	NM;State Representative;District 48
 CandidateContest	NM House District 42	NM;State Representative;District 42
 CandidateContest	NM House District 7	NM;State Representative;District 7
 CandidateContest	NM House District 8	NM;State Representative;District 8
+Candidate	A Blair Dunn	A Blair Dunn
+Candidate	Abbas A Akhil	Abbas A Akhil
+Candidate	Alexis Jimenez	Alexis Jimenez
+Candidate	Andrea D Romero	Andrea D Romero
+Candidate	Antonio 'Moe' Maestas	"Antonio ""Moe"" Maestas"
+Candidate	Arthur L Castillo	Arthur L Castillo
+Candidate	Benton Howell	Benton Howell
+Candidate	Bev Courtney	Bev Courtney
+Candidate	Brad Winter	Brad Winter
+Candidate	Brenda Diane Boatman	Brenda Diane Boatman
+Candidate	Brian F Egolf Jr	Brian F Egolf Jr
+Candidate	Brian S Colon	Brian S Colon
+Candidate	Carl M Swinney	Carl M Swinney
+Candidate	Charles R Wendler	Charles R Wendler
+Candidate	Christopher Manning	Christopher Manning
+Candidate	David E Adkins	David E Adkins
+Candidate	David H Tofsted	David H Tofsted
+Candidate	David L Cheek	David L Cheek
+Candidate	Dayan M Hochman	Dayan M Hochman
+Candidate	Debra A Haaland	Debra A Haaland
+Candidate	Doreen W Johnson	Doreen W Johnson
+Candidate	Doreen Ybarra Gallegos	Doreen Ybarra Gallegos
+Candidate	Eliseo Lee Alcon	Eliseo Lee Alcon
+Candidate	Gail 'Missy' Armstrong	"Gail ""Missy"" Armstrong"
+Candidate	Gary E Johnson	Gary E Johnson
+Candidate	Gary L Clingman	Gary L Clingman
+Candidate	Gavin S Clarkson	Gavin S Clarkson
+Candidate	George Dodge Jr	George Dodge Jr
+Candidate	Ginger G Grider	Ginger G Grider
+Candidate	Hector Balderas	Hector Balderas
+Candidate	James RJ Strickler	James RJ Strickler
+Candidate	Jarratt Applewhite	Jarratt Applewhite
+Candidate	Jerald Steve McFall	Jerald Steve McFall
+Candidate	Jim Dines	Jim Dines
+Candidate	Jim R Trujillo	Jim R Trujillo
+Candidate	Jimmie C Hall	Jimmie C Hall
+Candidate	Joan Antoinette Marentes	Joan Antoinette Marentes
+Candidate	Jonathan Kyle Allen	Jonathan Kyle Allen
+Candidate	Joseph L Sanchez	Joseph L Sanchez
+Candidate	Laura C Boyd	Laura C Boyd
+Candidate	Lee S Cotter	Lee S Cotter
+Candidate	Lisa Shin	Lisa Shin
+Candidate	Lloyd J Princeton	Lloyd J Princeton
+Candidate	Maggie Toulouse Oliver	Maggie Toulouse Oliver
+Candidate	Mark D McDonald	Mark D McDonald
+Candidate	Martin T Heinrich	Martin T Heinrich
+Candidate	Mary Jo Jaramillo	Mary Jo Jaramillo
+Candidate	Mary P Schildmeyer	Mary P Schildmeyer
+Candidate	Matthew McQueen	Matthew McQueen
+Candidate	Michael E Vigil	Michael E Vigil
+Candidate	Michael G Lucero	Michael G Lucero
+Candidate	Michelle Lujan Grisham and Howie C Morales	Michelle Lujan Grisham and Howie C Morales
+Candidate	Mick Rich	Mick Rich
+Candidate	Monica C Youngblood	Monica C Youngblood
+Candidate	Patricia 'Patty' A Lundstrom	"Patricia ""Patty"" A Lundstrom"
+Candidate	Patricio R Ruiloba	Patricio R Ruiloba
+Candidate	Patrick H Lyons	Patrick H Lyons
+Candidate	Paul C Bandy	Paul C Bandy
+Candidate	Ray L Gallegos	Ray L Gallegos
+Candidate	Roberto 'Bobby' Jesse Gonzales	"Roberto ""Bobby"" Jesse Gonzales"
+Candidate	Sharon E Clahchischilliage	Sharon E Clahchischilliage
+Candidate	Stephanie Garcia Richard	Stephanie Garcia Richard
+Candidate	Steve Pearce and Michelle Garcia Holmes	Steve Pearce and Michelle Garcia Holmes
+Candidate	T Tweeti Blancett	T Tweeti Blancett
+Candidate	Tim Eichenberg	Tim Eichenberg
+Candidate	Tomas E Salazar	Tomas E Salazar
+Candidate	Trey Stephen Morris	Trey Stephen Morris
+Candidate	Wayne A Johnson	Wayne A Johnson
+Candidate	William Arnold Wiley Jr	William Arnold Wiley Jr
+Candidate	William B Pratt	William B Pratt
+Candidate	Willie A Madrid	Willie A Madrid
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican

@@ -5830,3 +5830,20 @@ CandidateContest	CO House District 48	CO;State Representative;District 48
 CandidateContest	CO House District 50	CO;State Representative;District 50
 CandidateContest	CO House District 63	CO;State Representative;District 63
 CandidateContest	CO Senate District 13	CO;State Senate;District 13
+Candidate	Alexander ''Skinny'' Winkler	Alexander ''Skinny'' Winkler
+Candidate	Beth ''Hart'' Harz	Beth ''Hart'' Harz
+Candidate	Bill Hammons / Eric Bodenstab	Bill Hammons / Eric Bodenstab
+Candidate	James D. ''Jim'' Wilson	James D. ''Jim'' Wilson
+Candidate	Jared Polis / Dianne Primavera	Jared Polis / Dianne Primavera
+Candidate	Robert ''Dave'' John	Robert ''Dave'' John
+Candidate	Scott Helker / Michele Poague	Scott Helker / Michele Poague
+Candidate	Thomas ''Tony'' Exum Sr.	Thomas ''Tony'' Exum Sr.
+Candidate	Walker Stapleton / Lang Sias	Walker Stapleton / Lang Sias
+Party	American Constitution Party	american constitution
+Party	Approval Voting Party	approval voting
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+Party	none or unknown	unaffiliated
+Party	Unity Party	unity

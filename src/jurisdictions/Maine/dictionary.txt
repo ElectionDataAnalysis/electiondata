@@ -1203,3 +1203,399 @@ CandidateContest	ME Senate District 33	ME;State Senator;District 33
 CandidateContest	ME Senate District 34	ME;State Senator;District 34
 CandidateContest	ME Senate District 35	ME;State Senator;District 35
 CandidateContest	ME House District 17	ME;State Representative;District 17
+Candidate	A. Michael Nadeau	A. Michael Nadeau
+Candidate	Aaron Blaschke Rowden	Aaron Blaschke Rowden
+Candidate	Aaron Cyr	Aaron Cyr
+Candidate	Aaron M. Frey	Aaron M. Frey
+Candidate	Abden Stephen Simmons	Abden Stephen Simmons
+Candidate	Abigail W. Griffin	Abigail W. Griffin
+Candidate	Allison L. Hepler	Allison L. Hepler
+Candidate	Allyson M. Cavaretta	Allyson M. Cavaretta
+Candidate	Amy B. Arata	Amy B. Arata
+Candidate	Amy Fern Volk	Amy Fern Volk
+Candidate	Andrew Gattine	Andrew Gattine
+Candidate	Andrew Howard	Andrew Howard
+Candidate	Andrew John McLean	Andrew John McLean
+Candidate	Angus S. King Jr.	Angus S. King Jr.
+Candidate	Ann E. Peoples	Ann E. Peoples
+Candidate	Ann H. Matlack	Ann H. Matlack
+Candidate	Anne B. Gass	Anne B. Gass
+Candidate	Anne C. Amadon	Anne C. Amadon
+Candidate	Anne C. Perry	Anne C. Perry
+Candidate	Anne H. Beebe-Center	Anne H. Beebe-Center
+Candidate	Anne M. Carney	Anne M. Carney
+Candidate	Anne-Marie Mastraccio	Anne-Marie Mastraccio
+Candidate	April Dawn Turner	April Dawn Turner
+Candidate	Arthur C. Verow	Arthur C. Verow
+Candidate	Arthur L. Carter	Arthur L. Carter
+Candidate	Barbara A. Cardone	Barbara A. Cardone
+Candidate	Benjamin B. III Twitchell	Benjamin B. III Twitchell
+Candidate	Benjamin M. Chipman	Benjamin M. Chipman
+Candidate	Benjamin S. McCollister	Benjamin S. McCollister
+Candidate	Benjamin T. Collings	Benjamin T. Collings
+Candidate	Beth A. O'Connor	Beth A. O'Connor
+Candidate	Betty A. Austin	Betty A. Austin
+Candidate	Bettyann W. Sheats	Bettyann W. Sheats
+Candidate	Bevelyn Zakia Beatty	Bevelyn Zakia Beatty
+Candidate	Beverly B. Uhlenhake	Beverly B. Uhlenhake
+Candidate	Bil Weidner	Bil Weidner
+Candidate	Bonnie Lee Young	Bonnie Lee Young
+Candidate	Braden K. Sharpe	Braden K. Sharpe
+Candidate	Bradlee Thomas Farrin	Bradlee Thomas Farrin
+Candidate	Bradley S. Moulton	Bradley S. Moulton
+Candidate	Bradley Scott Ducharme	Bradley Scott Ducharme
+Candidate	Brian Kresge	Brian Kresge
+Candidate	Brian L. Hubbell	Brian L. Hubbell
+Candidate	Brian S. Carrier	Brian S. Carrier
+Candidate	Bruce A. Bickford	Bruce A. Bickford
+Candidate	Bruce A. White	Bruce A. White
+Candidate	Bruce Poliquin	Bruce Poliquin
+Candidate	Carol L. Carothers	Carol L. Carothers
+Candidate	Carrie Mae Smith	Carrie Mae Smith
+Candidate	Catherine E. Breen	Catherine E. Breen
+Candidate	Catherine M. Nadeau	Catherine M. Nadeau
+Candidate	Cathleen M. Nichols	Cathleen M. Nichols
+Candidate	Chad Wayne Grignon	Chad Wayne Grignon
+Candidate	Charles Galemmo	Charles Galemmo
+Candidate	Charles Peter Rich	Charles Peter Rich
+Candidate	Charlotte May Warren	Charlotte May Warren
+Candidate	Chellie Pingree	Chellie Pingree
+Candidate	Cherieann Harrison	Cherieann Harrison
+Candidate	Chloe S. Maxmin	Chloe S. Maxmin
+Candidate	Chris A. Johansen	Chris A. Johansen
+Candidate	Christina Marie Therrien	Christina Marie Therrien
+Candidate	Christina Riley	Christina Riley
+Candidate	Christopher J. Caiazzo	Christopher J. Caiazzo
+Candidate	Christopher J. Hoy	Christopher J. Hoy
+Candidate	Christopher J. Kessler	Christopher J. Kessler
+Candidate	Christopher W. Babbidge	Christopher W. Babbidge
+Candidate	Cody R. Blackburn	Cody R. Blackburn
+Candidate	Colleen M. Madigan	Colleen M. Madigan
+Candidate	Craig V. Hickman	Craig V. Hickman
+Candidate	Crystal Canney	Crystal Canney
+Candidate	Cynthia J. Soma-Hernandez	Cynthia J. Soma-Hernandez
+Candidate	Dale Denno	Dale Denno
+Candidate	Dan Lee Ammons	Dan Lee Ammons
+Candidate	Dana L. Dow	Dana L. Dow
+Candidate	Daniel J. Hobbs	Daniel J. Hobbs
+Candidate	Daniel J. Lauzon	Daniel J. Lauzon
+Candidate	Daniel R. LaPointe	Daniel R. LaPointe
+Candidate	Danny E. Costain	Danny E. Costain
+Candidate	David G. Haggan	David G. Haggan
+Candidate	David H. McCrea	David H. McCrea
+Candidate	David P. Durrell	David P. Durrell
+Candidate	David R. Miramant	David R. Miramant
+Candidate	David Woodsome	David Woodsome
+Candidate	Dawn Marie Castner	Dawn Marie Castner
+Candidate	Deane Rykerson	Deane Rykerson
+Candidate	Debbi J. Perkins	Debbi J. Perkins
+Candidate	Delaina Marie Toothman	Delaina Marie Toothman
+Candidate	Denis Coutts	Denis Coutts
+Candidate	Denise A. Tepler	Denise A. Tepler
+Candidate	Denise Mary Hurilla	Denise Mary Hurilla
+Candidate	Dennis L. Keschl	Dennis L. Keschl
+Candidate	Dennis M. O'Connor	Dennis M. O'Connor
+Candidate	Dennis Ward Welsh	Dennis Ward Welsh
+Candidate	Derek Andrew Jones	Derek Andrew Jones
+Candidate	Diana Garcia	Diana Garcia
+Candidate	Diane M. Denk	Diane M. Denk
+Candidate	Donald G. Marean	Donald G. Marean
+Candidate	Donald M. Green	Donald M. Green
+Candidate	Donna Bailey	Donna Bailey
+Candidate	Donna R. Doore	Donna R. Doore
+Candidate	Doretta M. Colburn	Doretta M. Colburn
+Candidate	Douglas S. Bunker	Douglas S. Bunker
+Candidate	Dustin Michael White	Dustin Michael White
+Candidate	Dwayne W. Prescott	Dwayne W. Prescott
+Candidate	Earle L. McCormick	Earle L. McCormick
+Candidate	Eleanor Espling	Eleanor Espling
+Candidate	Eloise A. Vitelli	Eloise A. Vitelli
+Candidate	Emily M. Rousseau	Emily M. Rousseau
+Candidate	Eric L. Brakey	Eric L. Brakey
+Candidate	Erik Clark Jorgensen	Erik Clark Jorgensen
+Candidate	Erin D. Herbig	Erin D. Herbig
+Candidate	Eryn M. Gilchrist	Eryn M. Gilchrist
+Candidate	Everett Brownie Carson	Everett Brownie Carson
+Candidate	Frances M. Head	Frances M. Head
+Candidate	Frederick H. Austin	Frederick H. Austin
+Candidate	Frederick Samp	Frederick Samp
+Candidate	G. William Diamond	G. William Diamond
+Candidate	Galen S. Hale	Galen S. Hale
+Candidate	Garrel Robert Craig	Garrel Robert Craig
+Candidate	Gary A. Drinkwater	Gary A. Drinkwater
+Candidate	Gary E. Capehart	Gary E. Capehart
+Candidate	Genevieve L. McDonald	Genevieve L. McDonald
+Candidate	Geoffrey M. Gratwick	Geoffrey M. Gratwick
+Candidate	George Willard Van Syckel	George Willard Van Syckel
+Candidate	Gina M. Melaragno	Gina M. Melaragno
+Candidate	Gregory Earl Foster	Gregory Earl Foster
+Candidate	Gregory Lewis Swallow	Gregory Lewis Swallow
+Candidate	Guy M. Lebida	Guy M. Lebida
+Candidate	H. Sawin Jr. Millett	H. Sawin Jr. Millett
+Candidate	H. Scott Jr. Landry	H. Scott Jr. Landry
+Candidate	Harold L. III Stewart	Harold L. III Stewart
+Candidate	Heather B. Sanborn	Heather B. Sanborn
+Candidate	Heidi E. Brooks	Heidi E. Brooks
+Candidate	Heidi H. Sampson	Heidi H. Sampson
+Candidate	Henry L. Ingwersen	Henry L. Ingwersen
+Candidate	Holly B. Stover	Holly B. Stover
+Candidate	Jaco Bebop Deertrack	Jaco Bebop Deertrack
+Candidate	James Andrew Glusker	James Andrew Glusker
+Candidate	James Booth	James Booth
+Candidate	James C. LaBrecque	James C. LaBrecque
+Candidate	James E. Davitt	James E. Davitt
+Candidate	James F. Dill	James F. Dill
+Candidate	James F. Wilfong	James F. Wilfong
+Candidate	James M. Hamper	James M. Hamper
+Candidate	James R. Bourque	James R. Bourque
+Candidate	James R. Handy	James R. Handy
+Candidate	Jan M. Collins	Jan M. Collins
+Candidate	Janet T. Mills	Janet T. Mills
+Candidate	Janice C. Barter	Janice C. Barter
+Candidate	Janice E. Cooper	Janice E. Cooper
+Candidate	Janice S. Dodge	Janice S. Dodge
+Candidate	Jared F. Golden	Jared F. Golden
+Candidate	Jason G. Putnam	Jason G. Putnam
+Candidate	Jayne Crosby Giles	Jayne Crosby Giles
+Candidate	Jeffery P. Hanley	Jeffery P. Hanley
+Candidate	Jeffrey B. Johnson	Jeffrey B. Johnson
+Candidate	Jeffrey Evangelos	Jeffrey Evangelos
+Candidate	Jeffrey K. Pierce	Jeffrey K. Pierce
+Candidate	Jeffrey L. Timberlake	Jeffrey L. Timberlake
+Candidate	Jennie L. Butler	Jennie L. Butler
+Candidate	Jennifer DeChant	Jennifer DeChant
+Candidate	Jennifer L. Day	Jennifer L. Day
+Candidate	Jeremy Meadows Mele	Jeremy Meadows Mele
+Candidate	Jessica L. Fay	Jessica L. Fay
+Candidate	Joel R. Stetkis	Joel R. Stetkis
+Candidate	John C. Schneck	John C. Schneck
+Candidate	John D. Reeder	John D. Reeder
+Candidate	John DeVeau	John DeVeau
+Candidate	John E. Andrews	John E. Andrews
+Candidate	John E. Jr. Madigan	John E. Jr. Madigan
+Candidate	John L. Jr. Tuttle	John L. Jr. Tuttle
+Candidate	John L. Martin	John L. Martin
+Candidate	John M. Nutting	John M. Nutting
+Candidate	John R. Clark	John R. Clark
+Candidate	John Thiele	John Thiele
+Candidate	John W. Howarth	John W. Howarth
+Candidate	Josanne C. Dolloff	Josanne C. Dolloff
+Candidate	Joseph F. Lynch	Joseph F. Lynch
+Candidate	Joshua K. Morris	Joshua K. Morris
+Candidate	Joshua Timothy Hiatt	Joshua Timothy Hiatt
+Candidate	Joyce McCreight	Joyce McCreight
+Candidate	Justin Benjamin Pollard	Justin Benjamin Pollard
+Candidate	Justin J. Fecteau	Justin J. Fecteau
+Candidate	Justin L. Reinhardt	Justin L. Reinhardt
+Candidate	Justin M. Chenette	Justin M. Chenette
+Candidate	Justin Thompson	Justin Thompson
+Candidate	Karen A. Rancourt-Thomas	Karen A. Rancourt-Thomas
+Candidate	Karen Ann Reynolds	Karen Ann Reynolds
+Candidate	Karen Kusiak	Karen Kusiak
+Candidate	Karen R. Vachon	Karen R. Vachon
+Candidate	Katherine J. Wilder	Katherine J. Wilder
+Candidate	Katherine Louise Schupbach	Katherine Louise Schupbach
+Candidate	Kathleen Rose Jackson Dillingham	Kathleen Rose Jackson Dillingham
+Candidate	Kathryn J. Schrock	Kathryn J. Schrock
+Candidate	Kathy I. Javner	Kathy I. Javner
+Candidate	Kelcy McNamara	Kelcy McNamara
+Candidate	Kellie Julia	Kellie Julia
+Candidate	Kenneth R. Decatur	Kenneth R. Decatur
+Candidate	Kent Ackley	Kent Ackley
+Candidate	Kevin A. Bushey	Kevin A. Bushey
+Candidate	Kimberley C. Rosen	Kimberley C. Rosen
+Candidate	Kimberley Robinson	Kimberley Robinson
+Candidate	Kimberly C. Hammill	Kimberly C. Hammill
+Candidate	Kimberly K. Pfusch	Kimberly K. Pfusch
+Candidate	Kristen S. Cloutier	Kristen S. Cloutier
+Candidate	Kylie A. Bragdon	Kylie A. Bragdon
+Candidate	Laura A. Farnsworth	Laura A. Farnsworth
+Candidate	Laura A. Fortman	Laura A. Fortman
+Candidate	Lawrence E. Lockman	Lawrence E. Lockman
+Candidate	Leon C. Brillant	Leon C. Brillant
+Candidate	Leslie T. Dubois	Leslie T. Dubois
+Candidate	Lester S. Ordway	Lester S. Ordway
+Candidate	Linda F. Sanborn	Linda F. Sanborn
+Candidate	Lindsey D. Harwath	Lindsey D. Harwath
+Candidate	Linwood M. Higgins	Linwood M. Higgins
+Candidate	Lisa M. Hanscom	Lisa M. Hanscom
+Candidate	Lisa M. Keim	Lisa M. Keim
+Candidate	Lois E. Kilby-Chesley	Lois E. Kilby-Chesley
+Candidate	Lois Galgay Reckitt	Lois Galgay Reckitt
+Candidate	Lori Kathryn Gramlich	Lori Kathryn Gramlich
+Candidate	Louis Joseph Luchini	Louis Joseph Luchini
+Candidate	Luke Dylan Jensen	Luke Dylan Jensen
+Candidate	Lydia Blume	Lydia Blume
+Candidate	Maia R. Dendinger	Maia R. Dendinger
+Candidate	Maitland David Jr. Lord	Maitland David Jr. Lord
+Candidate	Manley C. Sr. Gove	Manley C. Sr. Gove
+Candidate	Margaret M. Craven	Margaret M. Craven
+Candidate	Margaret M. O'Neil	Margaret M. O'Neil
+Candidate	Marianne Moore	Marianne Moore
+Candidate	Mark E. Bryant	Mark E. Bryant
+Candidate	Mark I. Holbrook	Mark I. Holbrook
+Candidate	Mark John Blier	Mark John Blier
+Candidate	Mark R. Andre	Mark R. Andre
+Candidate	Mark S. Remick	Mark S. Remick
+Candidate	Mark W. Lawrence	Mark W. Lawrence
+Candidate	Martha M. S. Poliquin	Martha M. S. Poliquin
+Candidate	Martin J. Grohman	Martin J. Grohman
+Candidate	MaryAnne Kinney	MaryAnne Kinney
+Candidate	Matthea E. L. Daughtry	Matthea E. L. Daughtry
+Candidate	Matthew A. Harrington	Matthew A. Harrington
+Candidate	Matthew Pouliot	Matthew Pouliot
+Candidate	Matthew W. Moonen	Matthew W. Moonen
+Candidate	Matthew William Stone	Matthew William Stone
+Candidate	Maureen Fitzgerald Terry	Maureen Fitzgerald Terry
+Candidate	Maurice Joseph Marshall	Maurice Joseph Marshall
+Candidate	Maynard L. Jr. Stanley	Maynard L. Jr. Stanley
+Candidate	Michael A. McKinney	Michael A. McKinney
+Candidate	Michael C. Travers	Michael C. Travers
+Candidate	Michael D. Perkins	Michael D. Perkins
+Candidate	Michael E. Carpenter	Michael E. Carpenter
+Candidate	Michael F. Brennan	Michael F. Brennan
+Candidate	Michael Gilbert Devin	Michael Gilbert Devin
+Candidate	Michael H. Lemelin	Michael H. Lemelin
+Candidate	Michael J. Lawler	Michael J. Lawler
+Candidate	Michael L. Estes	Michael L. Estes
+Candidate	Michael L. Reynolds	Michael L. Reynolds
+Candidate	Michael R. Lachance	Michael R. Lachance
+Candidate	Michael R. Stevens	Michael R. Stevens
+Candidate	Michael Sylvester	Michael Sylvester
+Candidate	Michele Meyer	Michele Meyer
+Candidate	Michelle Dunphy	Michelle Dunphy
+Candidate	Misty L. Coolidge	Misty L. Coolidge
+Candidate	Nancy Colwell	Nancy Colwell
+Candidate	Nathalie J. Arruda	Nathalie J. Arruda
+Candidate	Nathan J. Wadsworth	Nathan J. Wadsworth
+Candidate	Nathan L. Libby	Nathan L. Libby
+Candidate	Ned Claxton	Ned Claxton
+Candidate	Nelson M. J. Jr. Peters	Nelson M. J. Jr. Peters
+Candidate	Nicole Grohoski	Nicole Grohoski
+Candidate	Noah Arthur Cobb	Noah Arthur Cobb
+Candidate	Norman E. Higgins	Norman E. Higgins
+Candidate	Others	Others
+Candidate	overvote	overvote
+Candidate	Owen D. Casas	Owen D. Casas
+Candidate	Pamela Diane Buck	Pamela Diane Buck
+Candidate	Patricia A. Nobel	Patricia A. Nobel
+Candidate	Patricia Hymanson	Patricia Hymanson
+Candidate	Patrick W. Corey	Patrick W. Corey
+Candidate	Paul A. Stearns	Paul A. Stearns
+Candidate	Paul B. Chace	Paul B. Chace
+Candidate	Paul Benjamin Schulz	Paul Benjamin Schulz
+Candidate	Paul R. Brown	Paul R. Brown
+Candidate	Paul T. Sr. Davis	Paul T. Sr. Davis
+Candidate	Paula G. Sutton	Paula G. Sutton
+Candidate	Peter A. Lyford	Peter A. Lyford
+Candidate	Peter I. Doyle	Peter I. Doyle
+Candidate	Philip A. Curtis	Philip A. Curtis
+Candidate	Philip Jr. Brady	Philip Jr. Brady
+Candidate	Rachel Talbot Ross	Rachel Talbot Ross
+Candidate	Ralph L. Tucker	Ralph L. Tucker
+Candidate	Randall Adam Greenwood	Randall Adam Greenwood
+Candidate	Randall C. Hall	Randall C. Hall
+Candidate	Raymond Cote	Raymond Cote
+Candidate	Rebecca J. Millett	Rebecca J. Millett
+Candidate	Richard A. Evans	Richard A. Evans
+Candidate	Richard A. Pickett	Richard A. Pickett
+Candidate	Richard E. Van Knowe	Richard E. Van Knowe
+Candidate	Richard G. Mason	Richard G. Mason
+Candidate	Richard H. Campbell	Richard H. Campbell
+Candidate	Richard J. Fitzgerald	Richard J. Fitzgerald
+Candidate	Richard M. Cebra	Richard M. Cebra
+Candidate	Richard R. Farnsworth	Richard R. Farnsworth
+Candidate	Richard S. Malaby	Richard S. Malaby
+Candidate	Richard T . Bradstreet	Richard T . Bradstreet
+Candidate	Richard W. Donaldson	Richard W. Donaldson
+Candidate	Robert A. Foley	Robert A. Foley
+Candidate	Robert F. Faunce	Robert F. Faunce
+Candidate	Robert J. Saucier	Robert J. Saucier
+Candidate	Robert M. Currier	Robert M. Currier
+Candidate	Robert P. II Staples	Robert P. II Staples
+Candidate	Robert W. Sr. Alley	Robert W. Sr. Alley
+Candidate	Robin M. Downs	Robin M. Downs
+Candidate	Roger Alan Seavey	Roger Alan Seavey
+Candidate	Roger E. III Densmore	Roger E. III Densmore
+Candidate	Roger E. Reed	Roger E. Reed
+Candidate	Roland Daniel Martin	Roland Daniel Martin
+Candidate	Russell Black	Russell Black
+Candidate	Ryan Michael Fecteau	Ryan Michael Fecteau
+Candidate	Ryan S. Tipping	Ryan S. Tipping
+Candidate	Samuel P. Ledue	Samuel P. Ledue
+Candidate	Sara Gideon	Sara Gideon
+Candidate	Sarah A. Pebworth	Sarah A. Pebworth
+Candidate	Sarah E. LeClaire	Sarah E. LeClaire
+Candidate	Sarah Sandlin	Sarah Sandlin
+Candidate	Scott W. Cuddy	Scott W. Cuddy
+Candidate	Scott W. Cyrway	Scott W. Cyrway
+Candidate	Scott Wageman Normandeau	Scott Wageman Normandeau
+Candidate	Scott Walter Strom	Scott Walter Strom
+Candidate	Sean N. Hall	Sean N. Hall
+Candidate	Seth A. Berry	Seth A. Berry
+Candidate	Sharri K. MacDonald	Sharri K. MacDonald
+Candidate	Shawn A. Babine	Shawn A. Babine
+Candidate	Shawn H. Moody	Shawn H. Moody
+Candidate	Sheldon M. Hanington	Sheldon M. Hanington
+Candidate	Shelley J. Rudnicki	Shelley J. Rudnicki
+Candidate	Shenna Bellows	Shenna Bellows
+Candidate	Sherman H. Hutchins	Sherman H. Hutchins
+Candidate	Stacey K. Guerin	Stacey K. Guerin
+Candidate	Stanley Byron Jr. Short	Stanley Byron Jr. Short
+Candidate	Stanley Paige Zeigler	Stanley Paige Zeigler
+Candidate	Stavros J. Mendros	Stavros J. Mendros
+Candidate	Stephanie Hawke	Stephanie Hawke
+Candidate	Stephanie L. LeBlanc	Stephanie L. LeBlanc
+Candidate	Stephen Ball	Stephen Ball
+Candidate	Stephen R. DuPuis	Stephen R. DuPuis
+Candidate	Stephen S. Stanley	Stephen S. Stanley
+Candidate	Steven D. Foster	Steven D. Foster
+Candidate	Susan A. Deschambault	Susan A. Deschambault
+Candidate	Susan D. Mackey Andrews	Susan D. Mackey Andrews
+Candidate	Susan M. Abercrombie	Susan M. Abercrombie
+Candidate	Susan M. Austin	Susan M. Austin
+Candidate	Tammy B. Walter	Tammy B. Walter
+Candidate	Tamsin M. Thomas	Tamsin M. Thomas
+Candidate	Ted L. Sussman	Ted L. Sussman
+Candidate	Teresa S. Pierce	Teresa S. Pierce
+Candidate	Teresea M. Hayes	Teresea M. Hayes
+Candidate	Terri Jane Casavant	Terri Jane Casavant
+Candidate	Theodore J. Jr. Kryzak	Theodore J. Jr. Kryzak
+Candidate	Thomas A. Harnett	Thomas A. Harnett
+Candidate	Thomas H. Jr. Martin	Thomas H. Jr. Martin
+Candidate	Thomas H. Skolfield	Thomas H. Skolfield
+Candidate	Thomas J. Wright	Thomas J. Wright
+Candidate	Thomas M. Tyler	Thomas M. Tyler
+Candidate	Tiffany D. Roberts-Lovell	Tiffany D. Roberts-Lovell
+Candidate	Tiffany L. Bond	Tiffany L. Bond
+Candidate	Timothy H. Goodwin	Timothy H. Goodwin
+Candidate	Timothy S. Theriault	Timothy S. Theriault
+Candidate	Tony W. Lorrain	Tony W. Lorrain
+Candidate	Troy Dale Jackson	Troy Dale Jackson
+Candidate	Tyler Jay Adkins	Tyler Jay Adkins
+Candidate	undervote	undervote
+Candidate	Victoria E. Morales	Victoria E. Morales
+Candidate	Victoria Foley	Victoria Foley
+Candidate	Victoria P. Kornfield	Victoria P. Kornfield
+Candidate	Victoria W. Doudera	Victoria W. Doudera
+Candidate	W. Edward Crockett	W. Edward Crockett
+Candidate	Walter N. Riseman	Walter N. Riseman
+Candidate	Warren E. Richardson	Warren E. Richardson
+Candidate	Wendy P. Pelletier	Wendy P. Pelletier
+Candidate	William Donohue Pluecker	William Donohue Pluecker
+Candidate	William J. Lippincott	William J. Lippincott
+Candidate	William R. Faulkingham	William R. Faulkingham
+Candidate	William R. Tuell	William R. Tuell
+Candidate	William R.S. Hoar	William R.S. Hoar
+Candidate	Zak Ringelstein	Zak Ringelstein
+Party	Candid Common Sense Party	candid common sense
+Party	Common Sense Independent Party	common sense independent
+Party	Democratic Party	democrat
+Party	Green Independent Party	green independent
+Party	Independent Party	independent
+Party	Independent For Maine Party	independent for maine
+Party	Libertarian Party	libertarian
+Party	Maine Socialist Party Party	maine socialist party
+Party	People's Unenrolled Independent Party	people's unenrolled independent
+Party	Republican Party	republican
+Party	none or unknown	unenrolled

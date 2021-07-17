@@ -3754,3 +3754,9 @@ CandidateContest	WA Senate District 42	WA;State Senator;District 42
 CandidateContest	WA House District 15 Position 1	WA;State Representative Pos. 1;District 15
 CandidateContest	WA House District 15 Position 2	WA;State Representative Pos. 2;District 15
 CandidateContest	WA Senate District 15	WA;State Senator;District 15
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Independent Republican Party	independent republican
+Party	Libertarian Party	libertarian
+Party	none or unknown	no party preference
+Party	Republican Party	republican

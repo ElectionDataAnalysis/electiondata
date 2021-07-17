@@ -870,3 +870,209 @@ CandidateContest	OK House District 80	OK;State Representative;District 80
 CandidateContest	OK House District 98	OK;State Representative;District 98
 CandidateContest	OK Senate District 36	OK;State Senator;District 36
 CandidateContest	OK House District 12	OK;State Representative;District 12
+Candidate	Amanda Jeffers	Amanda Jeffers
+Candidate	Anastasia A. Pittman	Anastasia A. Pittman
+Candidate	Andy Richardson	Andy Richardson
+Candidate	Angela Graham	Angela Graham
+Candidate	Arnold Bourne	Arnold Bourne
+Candidate	Ashley Lehnert	Ashley Lehnert
+Candidate	Ashley McCarter	Ashley McCarter
+Candidate	Ashley Nicole McCray	Ashley Nicole McCray
+Candidate	Avery Carl Frix	Avery Carl Frix
+Candidate	Becki Maldonado	Becki Maldonado
+Candidate	Ben Loring	Ben Loring
+Candidate	Bob Anthony	Bob Anthony
+Candidate	Brandon R. Thompson	Brandon R. Thompson
+Candidate	Brandt Dismukes	Brandt Dismukes
+Candidate	Brenda Stanley	Brenda Stanley
+Candidate	Brent Howard	Brent Howard
+Candidate	Brian Hill	Brian Hill
+Candidate	Bryan O'Brien	Bryan O'Brien
+Candidate	Bryan Vinyard	Bryan Vinyard
+Candidate	Carly Hotvedt	Carly Hotvedt
+Candidate	Carol M. Bush	Carol M. Bush
+Candidate	Carri Hicks	Carri Hicks
+Candidate	Chad Caldwell	Chad Caldwell
+Candidate	Chandler Torbett	Chandler Torbett
+Candidate	Chantelle Cory	Chantelle Cory
+Candidate	Charles Arnall	Charles Arnall
+Candidate	Charles McCall	Charles McCall
+Candidate	Charles Wells	Charles Wells
+Candidate	Cheryl Key	Cheryl Key
+Candidate	Chris Kannady	Chris Kannady
+Candidate	Chris Powell	Chris Powell
+Candidate	Chris Sneed	Chris Sneed
+Candidate	Christi Wolff	Christi Wolff
+Candidate	Christopher Hensley	Christopher Hensley
+Candidate	Chuck Hall	Chuck Hall
+Candidate	Cindy Byrd	Cindy Byrd
+Candidate	Clay Layton	Clay Layton
+Candidate	Craig John Hoxie	Craig John Hoxie
+Candidate	Cyndi Ralston	Cyndi Ralston
+Candidate	Cynthia Roe	Cynthia Roe
+Candidate	Dan Hicks	Dan Hicks
+Candidate	Daniel D. Manuel	Daniel D. Manuel
+Candidate	Darrell Moore	Darrell Moore
+Candidate	Darrell Weaver	Darrell Weaver
+Candidate	David Bullard	David Bullard
+Candidate	David Hardin	David Hardin
+Candidate	David Perryman	David Perryman
+Candidate	David Pilon	David Pilon
+Candidate	David Smith	David Smith
+Candidate	Dean F. Davis	Dean F. Davis
+Candidate	Denise Crosswhite Hader	Denise Crosswhite Hader
+Candidate	Dennis Dugger	Dennis Dugger
+Candidate	Devyn Denton	Devyn Denton
+Candidate	Donnie Condit	Donnie Condit
+Candidate	Drew Edmondson	Drew Edmondson
+Candidate	Ed Trumbull	Ed Trumbull
+Candidate	Eddie Martin	Eddie Martin
+Candidate	Forrest Mayer	Forrest Mayer
+Candidate	Frank Simpson	Frank Simpson
+Candidate	Frankie Robbins	Frankie Robbins
+Candidate	Fred Dorrell	Fred Dorrell
+Candidate	Garry Mize	Garry Mize
+Candidate	Gary Rhynes	Gary Rhynes
+Candidate	Gene Bell	Gene Bell
+Candidate	George E. Young	George E. Young
+Candidate	Glen Mulready	Glen Mulready
+Candidate	Heady Coleman	Heady Coleman
+Candidate	Heather Chenoweth	Heather Chenoweth
+Candidate	Ivan Holmes	Ivan Holmes
+Candidate	J. Lee Miller Jr.	J. Lee Miller Jr.
+Candidate	Jack Beall Jr	Jack Beall Jr
+Candidate	Jackie Phillips	Jackie Phillips
+Candidate	Jackie Short	Jackie Short
+Candidate	Jacobi Crowley	Jacobi Crowley
+Candidate	James Delso	James Delso
+Candidate	James Leewright	James Leewright
+Candidate	Janice J. Graham	Janice J. Graham
+Candidate	Jasha Lyons Echo-Hawk	Jasha Lyons Echo-Hawk
+Candidate	Jason N. Smalley	Jason N. Smalley
+Candidate	Jason Nichols	Jason Nichols
+Candidate	Jason Reese	Jason Reese
+Candidate	Jason Sansone	Jason Sansone
+Candidate	Jay W. Steagall	Jay W. Steagall
+Candidate	Jeff Berrong	Jeff Berrong
+Candidate	Jeff Boatman	Jeff Boatman
+Candidate	Jennie Scott	Jennie Scott
+Candidate	Jennifer Esau	Jennifer Esau
+Candidate	Jesse Goodwin	Jesse Goodwin
+Candidate	Jim Grego	Jim Grego
+Candidate	Jim Olsen	Jim Olsen
+Candidate	Jj Burnam	Jj Burnam
+Candidate	Joan E. Gabelmann	Joan E. Gabelmann
+Candidate	Joe Howell	Joe Howell
+Candidate	John Carpenter	John Carpenter
+Candidate	John Cox	John Cox
+Candidate	John Foreman	John Foreman
+Candidate	John Haste	John Haste
+Candidate	John L. Myers	John L. Myers
+Candidate	John Michael Montgomery	John Michael Montgomery
+Candidate	John Symcox	John Symcox
+Candidate	John Waldron	John Waldron
+Candidate	John Yeutter	John Yeutter
+Candidate	Jolene Armstrong	Jolene Armstrong
+Candidate	Josh West	Josh West
+Candidate	Joy Hofmeister	Joy Hofmeister
+Candidate	Judd Strom	Judd Strom
+Candidate	Judy Ross Moore	Judy Ross Moore
+Candidate	Julia Kirt	Julia Kirt
+Candidate	Justin Arledge	Justin Arledge
+Candidate	Justin J.J. Humphrey	Justin J.J. Humphrey
+Candidate	Kara Sawyer	Kara Sawyer
+Candidate	Karen Gaddis	Karen Gaddis
+Candidate	Katelyn Dockery	Katelyn Dockery
+Candidate	Kathy Wallis	Kathy Wallis
+Candidate	Kelli Krebs	Kelli Krebs
+Candidate	Kendra Horn	Kendra Horn
+Candidate	Kenton Patzkowsky	Kenton Patzkowsky
+Candidate	Kevin McDugle	Kevin McDugle
+Candidate	Kevin Stacy	Kevin Stacy
+Candidate	Kevin Stitt	Kevin Stitt
+Candidate	Kevin Wallace	Kevin Wallace
+Candidate	Kevin West	Kevin West
+Candidate	Kilmyn Easley-Graf	Kilmyn Easley-Graf
+Candidate	Kim David	Kim David
+Candidate	Kimberly Fobbs	Kimberly Fobbs
+Candidate	Kyle Webb	Kyle Webb
+Candidate	Larry Huff	Larry Huff
+Candidate	Lauren Morris	Lauren Morris
+Candidate	Lavelle C. Compton	Lavelle C. Compton
+Candidate	Leslie Bonebreak	Leslie Bonebreak
+Candidate	Leslie Osborn	Leslie Osborn
+Candidate	Lewis Collins	Lewis Collins
+Candidate	Lewis H. Moore	Lewis H. Moore
+Candidate	Linda Wade	Linda Wade
+Candidate	Liz George	Liz George
+Candidate	Lundy Kiger	Lundy Kiger
+Candidate	Marc Etters	Marc Etters
+Candidate	Marilyn M Stark	Marilyn M Stark
+Candidate	Mark Dean Allen	Mark Dean Allen
+Candidate	Mark Lepak	Mark Lepak
+Candidate	Mark McBride	Mark McBride
+Candidate	Mark Myles	Mark Myles
+Candidate	Marlena Nobles	Marlena Nobles
+Candidate	Marty Quinn	Marty Quinn
+Candidate	Mary B. Boren	Mary B. Boren
+Candidate	Matt Campbell	Matt Campbell
+Candidate	Matt Jackson	Matt Jackson
+Candidate	Matt Pinnell	Matt Pinnell
+Candidate	Mike Hunter	Mike Hunter
+Candidate	Miranda Shelton	Miranda Shelton
+Candidate	Nicole Miller	Nicole Miller
+Candidate	Norman Grey	Norman Grey
+Candidate	Oraynab Jwayyed	Oraynab Jwayyed
+Candidate	Paul Brewbaker	Paul Brewbaker
+Candidate	Peggy Defrange	Peggy Defrange
+Candidate	Randy McDaniel	Randy McDaniel
+Candidate	Randy Randleman	Randy Randleman
+Candidate	Rashard D Bickham	Rashard D Bickham
+Candidate	Renae Ward	Renae Ward
+Candidate	Renee Jerden	Renee Jerden
+Candidate	Rhonda Cox	Rhonda Cox
+Candidate	Richard Castaldo	Richard Castaldo
+Candidate	Richard Prawdzienski	Richard Prawdzienski
+Candidate	Roger Thompson	Roger Thompson
+Candidate	Ronny Johns	Ronny Johns
+Candidate	Ross Ford	Ross Ford
+Candidate	Ruby Peters	Ruby Peters
+Candidate	Rusty Cornwell	Rusty Cornwell
+Candidate	Ryan Martinez	Ryan Martinez
+Candidate	Sarah Carnes	Sarah Carnes
+Candidate	Scott Fetgatter	Scott Fetgatter
+Candidate	Sean Parrish	Sean Parrish
+Candidate	Shannan Tucker	Shannan Tucker
+Candidate	Sheila Dills	Sheila Dills
+Candidate	Sherrie Conley	Sherrie Conley
+Candidate	Stan May	Stan May
+Candidate	Stephanie R. Sanders	Stephanie R. Sanders
+Candidate	Stephen Paulsen	Stephen Paulsen
+Candidate	Steve Barnes	Steve Barnes
+Candidate	Steve Jarman	Steve Jarman
+Candidate	Steve Russell	Steve Russell
+Candidate	T. J. Marti	T. J. Marti
+Candidate	Tammy Townley	Tammy Townley
+Candidate	Tammy West	Tammy West
+Candidate	Terry S. O'Donnell	Terry S. O'Donnell
+Candidate	Terry W Hopkins	Terry W Hopkins
+Candidate	Tim Gilpin	Tim Gilpin
+Candidate	Todd Blackburn	Todd Blackburn
+Candidate	Tom Gann	Tom Gann
+Candidate	Tom Hackelman	Tom Hackelman
+Candidate	Tom Stites	Tom Stites
+Candidate	Tommy C Hardin	Tommy C Hardin
+Candidate	Trey Caldwell	Trey Caldwell
+Candidate	Troy Dyer	Troy Dyer
+Candidate	Ty Burns	Ty Burns
+Candidate	Wayne Eidson	Wayne Eidson
+Candidate	Willard Linzy	Willard Linzy
+Candidate	William Andrews	William Andrews
+Candidate	William Cagle	William Cagle
+Candidate	William Leonard	William Leonard
+Candidate	Zach Pearson	Zach Pearson
+Candidate	Zack Taylor	Zack Taylor
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican

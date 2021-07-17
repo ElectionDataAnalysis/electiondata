@@ -759,3 +759,191 @@ CandidateContest	WV State House District 19	WV;State House Delegate;District 19 
 CandidateContest	WV State House District 9	WV;State House Delegate;District 9 (1)
 CandidateContest	WV State House District 10	WV;State House Delegate;District 10 (3)
 CandidateContest	WV State House District 8	WV;State House Delegate;District 8 (1)
+Candidate	Aaron Metz	Aaron Metz
+Candidate	Aaron Stone	Aaron Stone
+Candidate	Alex X. Mooney	Alex X. Mooney
+Candidate	Andrew D. Byrd	Andrew D. Byrd
+Candidate	Andrew Evans	Andrew Evans
+Candidate	Andy Daniel	Andy Daniel
+Candidate	Andy Vance	Andy Vance
+Candidate	Austin Zuchowski	Austin Zuchowski
+Candidate	Barbara Daniels	Barbara Daniels
+Candidate	Barby Frankenberry	Barby Frankenberry
+Candidate	Becky Uhlly	Becky Uhlly
+Candidate	Ben Schneider	Ben Schneider
+Candidate	Bibi Hahn	Bibi Hahn
+Candidate	Bill Bryant	Bill Bryant
+Candidate	Bill Hamilton	Bill Hamilton
+Candidate	Brenden D. Long	Brenden D. Long
+Candidate	Brian Prim	Brian Prim
+Candidate	Brianne Solomon	Brianne Solomon
+Candidate	Buddy A Guthrie	Buddy A Guthrie
+Candidate	Carl 'Robbie' Martin	"Carl ""Robbie"" Martin"
+Candidate	Carlos Walker	Carlos Walker
+Candidate	Carol B. Bailey	Carol B. Bailey
+Candidate	Casey Wade Horton	Casey Wade Horton
+Candidate	Charles Clements	Charles Clements
+Candidate	Charles E. Sammons	Charles E. Sammons
+Candidate	Charles S. Trump IV	Charles S. Trump IV
+Candidate	Charlotte R. Lane	Charlotte R. Lane
+Candidate	Chris Wilkes	Chris Wilkes
+Candidate	Christopher Wayne Toney	Christopher Wayne Toney
+Candidate	Cody H. Thompson	Cody H. Thompson
+Candidate	Cynthia Toodle	Cynthia Toodle
+Candidate	D.C. Offutt, Jr.	D.C. Offutt, Jr.
+Candidate	D.r. 'Buck' Jennings	"D.r. ""Buck"" Jennings"
+Candidate	Dana J. Ferrell	Dana J. Ferrell
+Candidate	Dana L. Lynch	Dana L. Lynch
+Candidate	Daniel P. 'Danny' Lutz Jr.	"Daniel P. ""Danny"" Lutz Jr."
+Candidate	Daryl E. Cowles	Daryl E. Cowles
+Candidate	Dave Sypolt	Dave Sypolt
+Candidate	David 'Elliott' Pritt	"David ""Elliott"" Pritt"
+Candidate	David 'Woody' Holmes	"David ""Woody"" Holmes"
+Candidate	David A Walker	David A Walker
+Candidate	David B McKinley	David B McKinley
+Candidate	David Bland	David Bland
+Candidate	David Cox	David Cox
+Candidate	David M. Dinges	David M. Dinges
+Candidate	Debbie Warner	Debbie Warner
+Candidate	Debra S. Shrieves	Debra S. Shrieves
+Candidate	Dennise Renee Smith	Dennise Renee Smith
+Candidate	Denny Longwell	Denny Longwell
+Candidate	Denny R. Canterbury	Denny R. Canterbury
+Candidate	Derek McIntyre	Derek McIntyre
+Candidate	Diana Magnone	Diana Magnone
+Candidate	Doug Skaff Jr.	Doug Skaff Jr.
+Candidate	Ed Gaunch	Ed Gaunch
+Candidate	Edward R. Burgess	Edward R. Burgess
+Candidate	Eric J. Tarr	Eric J. Tarr
+Candidate	Eric Lee Householder	Eric Lee Householder
+Candidate	Eric Porterfield	Eric Porterfield
+Candidate	Ethan Morris	Ethan Morris
+Candidate	Evan Jenkins	Evan Jenkins
+Candidate	Gary Knotts	Gary Knotts
+Candidate	Gary McCallister	Gary McCallister
+Candidate	George Allen Abel	George Allen Abel
+Candidate	George Boogie Ambler	George Boogie Ambler
+Candidate	Harry C. 'Bo' Bruner, Jr.	"Harry C. ""Bo"" Bruner, Jr."
+Candidate	Harry Deitzler	Harry Deitzler
+Candidate	Harry V Bertram	Harry V Bertram
+Candidate	Hiram 'Buck' Lewis, IV	"Hiram ""Buck"" Lewis, IV"
+Candidate	Isaac Sponaugle	Isaac Sponaugle
+Candidate	J. Morgan Leach	J. Morgan Leach
+Candidate	J. Scott Beaver	J. Scott Beaver
+Candidate	James P. Robinette	James P. Robinette
+Candidate	Jason A. Armentrout	Jason A. Armentrout
+Candidate	Jason S. Harshbarger	Jason S. Harshbarger
+Candidate	Jeff C. Woods	Jeff C. Woods
+Candidate	Jeff E Eldridge	Jeff E Eldridge
+Candidate	Jeffrey Kessler	Jeffrey Kessler
+Candidate	Jill Upson	Jill Upson
+Candidate	Jim Butler	Jim Butler
+Candidate	Jim Douglas	Jim Douglas
+Candidate	Jim Leach	Jim Leach
+Candidate	Jim O'Brien	Jim O'Brien
+Candidate	Joanna I. Tabit	Joanna I. Tabit
+Candidate	Joe C. Ellington, Jr.	Joe C. Ellington, Jr.
+Candidate	Joe Canestraro	Joe Canestraro
+Candidate	John F. Mandt Jr.	John F. Mandt Jr.
+Candidate	John H. Shott	John H. Shott
+Candidate	John Isner	John Isner
+Candidate	John Paul Hott II	John Paul Hott II
+Candidate	John Unger	John Unger
+Candidate	Jon Dodds	Jon Dodds
+Candidate	Jon Hof	Jon Hof
+Candidate	Jordan Hill	Jordan Hill
+Candidate	Joseph 'Joe' Jeffries	"Joseph ""Joe"" Jeffries"
+Candidate	Joseph Manchin, III	Joseph Manchin, III
+Candidate	Joyce W. Holland	Joyce W. Holland
+Candidate	Karen Denise White	Karen Denise White
+Candidate	Karen Nance	Karen Nance
+Candidate	Ken Hicks	Ken Hicks
+Candidate	Kendra Fershee	Kendra Fershee
+Candidate	Kent 'Brooks' McCumbee	"Kent ""Brooks"" McCumbee"
+Candidate	Lacy Watson	Lacy Watson
+Candidate	Larry Brooke Lunsford	Larry Brooke Lunsford
+Candidate	Larry D. Kump	Larry D. Kump
+Candidate	Larry L . Rowe	Larry L . Rowe
+Candidate	Laura M. Finch	Laura M. Finch
+Candidate	Linda Longstreth	Linda Longstreth
+Candidate	Lissa Lucas	Lissa Lucas
+Candidate	Logan M. Thompson	Logan M. Thompson
+Candidate	Luke Lively	Luke Lively
+Candidate	Mark Hunt	Mark Hunt
+Candidate	Mark R. Maynard	Mark R. Maynard
+Candidate	Mark Ross	Mark Ross
+Candidate	Martin 'Rick' Atkinson III	"Martin ""Rick"" Atkinson III"
+Candidate	Marty 'Redshoes' Sheehan	"Marty ""Redshoes"" Sheehan"
+Candidate	Matt Spurlock	Matt Spurlock
+Candidate	Matthew Jarrett	Matthew Jarrett
+Candidate	Matthew Kerner	Matthew Kerner
+Candidate	Melissa Riggs Huffman	Melissa Riggs Huffman
+Candidate	Melvin 'Mel' Kessler	"Melvin ""Mel"" Kessler"
+Candidate	Michael Craig Folk	Michael Craig Folk
+Candidate	Mike Azinger	Mike Azinger
+Candidate	Mike House	Mike House
+Candidate	Mike Oliverio	Mike Oliverio
+Candidate	Mike Romano	Mike Romano
+Candidate	Mike Woelfel	Mike Woelfel
+Candidate	Missy Morris	Missy Morris
+Candidate	Pat McGeehan	Pat McGeehan
+Candidate	Paul O'Dell, Jr	Paul O'Dell, Jr
+Candidate	Phillip W Diserio	Phillip W Diserio
+Candidate	Phillip Wiley	Phillip Wiley
+Candidate	Phoebe Jeffries Meadows	Phoebe Jeffries Meadows
+Candidate	Phyllis Riffe White	Phyllis Riffe White
+Candidate	Ray Hollen	Ray Hollen
+Candidate	Renate Pore	Renate Pore
+Candidate	Richard J. Iaquinta	Richard J. Iaquinta
+Candidate	Richard L. Patrick	Richard L. Patrick
+Candidate	Richard Lindsay	Richard Lindsay
+Candidate	Richard Ojeda II	Richard Ojeda II
+Candidate	Ricky Moye	Ricky Moye
+Candidate	Robert 'Rob' Garcia	"Robert ""Rob"" Garcia"
+Candidate	Robert H Carlton	Robert H Carlton
+Candidate	Robert J Frank	Robert J Frank
+Candidate	Robert L. 'Bob' Stultz	"Robert L. ""Bob"" Stultz"
+Candidate	Robert Thompson	Robert Thompson
+Candidate	Rodney A Miller	Rodney A Miller
+Candidate	Rodney A. Pyles	Rodney A. Pyles
+Candidate	Roger Shuttlesworth	Roger Shuttlesworth
+Candidate	Rollan A. Roberts	Rollan A. Roberts
+Candidate	Ron Stollings	Ron Stollings
+Candidate	Ronald H. Hatfield, Jr.	Ronald H. Hatfield, Jr.
+Candidate	Rusty Hollen	Rusty Hollen
+Candidate	Ryan Ferns	Ryan Ferns
+Candidate	S. Marshall Wilson	S. Marshall Wilson
+Candidate	Sam Brown	Sam Brown
+Candidate	Sandy Shaw	Sandy Shaw
+Candidate	Sarah Duncan	Sarah Duncan
+Candidate	Scott Cadle	Scott Cadle
+Candidate	Sharon Lewis Malcolm	Sharon Lewis Malcolm
+Candidate	Stephanie Zucker	Stephanie Zucker
+Candidate	Stephen Baldwin	Stephen Baldwin
+Candidate	Steve Malcomb	Steve Malcomb
+Candidate	T. Chris Combs	T. Chris Combs
+Candidate	Talley Sergent	Talley Sergent
+Candidate	Terrell Ellis	Terrell Ellis
+Candidate	Terry Waxman	Terry Waxman
+Candidate	Theresa 'Tess' Jackson	"Theresa ""Tess"" Jackson"
+Candidate	Tim Armstead	Tim Armstead
+Candidate	Tim Miley	Tim Miley
+Candidate	Timothy Ryan	Timothy Ryan
+Candidate	Todd Mullins	Todd Mullins
+Candidate	Tom Azinger	Tom Azinger
+Candidate	Tom Bibby	Tom Bibby
+Candidate	Tom Takubo	Tom Takubo
+Candidate	Tom Tull	Tom Tull
+Candidate	Trevor Barnhart	Trevor Barnhart
+Candidate	Vera Miller	Vera Miller
+Candidate	Waymond Cork II	Waymond Cork II
+Candidate	William 'Ty' Nestor	"William ""Ty"" Nestor"
+Candidate	William R. 'Bill' Wooton	"William R. ""Bill"" Wooton"
+Candidate	William Schwartz	William Schwartz
+Candidate	William Stewart Thompson	William Stewart Thompson
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Mountain Party	mountain
+Party	Nonpartisan Party	nonpartisan
+Party	Republican Party	republican

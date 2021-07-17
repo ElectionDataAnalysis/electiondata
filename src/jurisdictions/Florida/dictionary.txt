@@ -14685,3 +14685,13 @@ CandidateContest	FL House District 84	FL;State Representative;District 84
 CandidateContest	FL House District 25	FL;State Representative;District 25
 CandidateContest	FL House District 26	FL;State Representative;District 26
 CandidateContest	FL House District 27	FL;State Representative;District 27
+Candidate	Bobby Powell	Bobby Powell
+Candidate	Manny Diaz	Manny Diaz
+Candidate	Ron DeSantis	Ron DeSantis
+Candidate	Ronald W. Williams	Ronald W. Williams
+Party	Democratic Party	democrat
+Party	Green Party Party	green party
+Party	Libertarian Party Of Florida Party	libertarian party of florida
+Party	none or unknown	no party affiliation
+Party	Reform Party Of Florida Party	reform party of florida
+Party	Republican Party	republican

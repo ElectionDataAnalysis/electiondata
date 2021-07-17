@@ -1750,3 +1750,293 @@ CandidateContest	CT Senate District 35	CT;State Senator;District 35
 CandidateContest	CT House District 44	CT;State Representative;District 44
 CandidateContest	CT House District 49	CT;State Representative;District 49
 CandidateContest	CT House District 51	CT;State Representative;District 51
+Candidate	Adam Dunsby	Adam Dunsby
+Candidate	Adam Greenberg	Adam Greenberg
+Candidate	Aili McKeen	Aili McKeen
+Candidate	AJ Kerouac	AJ Kerouac
+Candidate	Alex Larsson	Alex Larsson
+Candidate	Alexandra 'Alex' Bergstein	"Alexandra ""Alex"" Bergstein"
+Candidate	Alfred P Mayo	Alfred P Mayo
+Candidate	Allen Marko	Allen Marko
+Candidate	Alphonse Paolillo Jr	Alphonse Paolillo Jr
+Candidate	Althea Candy Perez	Althea Candy Perez
+Candidate	Amanda Webster	Amanda Webster
+Candidate	Andre F Baker Jr	Andre F Baker Jr
+Candidate	Andrew A Lanciotto	Andrew A Lanciotto
+Candidate	Andrew Lockwood	Andrew Lockwood
+Candidate	Angel Cadena	Angel Cadena
+Candidate	Anne Harrigan	Anne Harrigan
+Candidate	Annie Hornish	Annie Hornish
+Candidate	Anthony Armetta	Anthony Armetta
+Candidate	Anthony Gennaro	Anthony Gennaro
+Candidate	Anthony J D'Amelio	Anthony J D'Amelio
+Candidate	Anzelmo Graziosi	Anzelmo Graziosi
+Candidate	Arthur O'Neill	Arthur O'Neill
+Candidate	Ashley Gaudiano	Ashley Gaudiano
+Candidate	Barbara Barry	Barbara Barry
+Candidate	Benjamin Taylor Conroy	Benjamin Taylor Conroy
+Candidate	Beth Bye	Beth Bye
+Candidate	Bill Simanski	Bill Simanski
+Candidate	Bob Stefanowski and Joe Markley	Bob Stefanowski and Joe Markley
+Candidate	Bobby Sanchez	Bobby Sanchez
+Candidate	Brandon McGee	Brandon McGee
+Candidate	Brenda L Kupchick	Brenda L Kupchick
+Candidate	Brian M Ohler	Brian M Ohler
+Candidate	Bryan C Nelson	Bryan C Nelson
+Candidate	Caitlin Clarkson Pereira	Caitlin Clarkson Pereira
+Candidate	Cara C Pavalock-D'Amato	Cara C Pavalock-D'Amato
+Candidate	Catherine A Osten	Catherine A Osten
+Candidate	Catherine F Abercrombie	Catherine F Abercrombie
+Candidate	Catherine P DeCarli	Catherine P DeCarli
+Candidate	Charles J Ferraro	Charles J Ferraro
+Candidate	Chris Forster	Chris Forster
+Candidate	Chris Soto	Chris Soto
+Candidate	Christie M Carpino	Christie M Carpino
+Candidate	Christopher A Wright	Christopher A Wright
+Candidate	Christopher Davis	Christopher Davis
+Candidate	Christopher S Murphy	Christopher S Murphy
+Candidate	Cindy Wolfe Boynton	Cindy Wolfe Boynton
+Candidate	Colin Anthony Hosten	Colin Anthony Hosten
+Candidate	Colin C Souney	Colin C Souney
+Candidate	Connie Jagodzinski	Connie Jagodzinski
+Candidate	Cora M Santaguida	Cora M Santaguida
+Candidate	Craig A Miner	Craig A Miner
+Candidate	Dan Pannone	Dan Pannone
+Candidate	Daniel Fontaine	Daniel Fontaine
+Candidate	Daniel J Fox	Daniel J Fox
+Candidate	Daniel Pearson	Daniel Pearson
+Candidate	Danielle N. Albert	Danielle N. Albert
+Candidate	Danny Postemski Jr	Danny Postemski Jr
+Candidate	David A Lawson	David A Lawson
+Candidate	David Arconti Jr	David Arconti Jr
+Candidate	David Borzellino	David Borzellino
+Candidate	David F Walsh	David F Walsh
+Candidate	David J Rutigliano	David J Rutigliano
+Candidate	David K Labriola	David K Labriola
+Candidate	David T Wilson	David T Wilson
+Candidate	David W Coderre	David W Coderre
+Candidate	David W Yaccarino	David W Yaccarino
+Candidate	Debra Rigney	Debra Rigney
+Candidate	Denise W Merrill	Denise W Merrill
+Candidate	Dennis Milanovich	Dennis Milanovich
+Candidate	Devin R Carney	Devin R Carney
+Candidate	Diane Pagano	Diane Pagano
+Candidate	Don Crouch	Don Crouch
+Candidate	Douglas E Losty	Douglas E Losty
+Candidate	Ed Charamut	Ed Charamut
+Candidate	Edward G Heflin	Edward G Heflin
+Candidate	Edwin Vargas	Edwin Vargas
+Candidate	Eleni Kavros Degraw	Eleni Kavros Degraw
+Candidate	Elizabeth Schwebel	Elizabeth Schwebel
+Candidate	Ellen Beatty	Ellen Beatty
+Candidate	Emil 'Buddy' Altobello	"Emil ""Buddy"" Altobello"
+Candidate	Emmett D Riley	Emmett D Riley
+Candidate	Eric C Berthel	Eric C Berthel
+Candidate	Eric Michael Mastroianni Sr	Eric Michael Mastroianni Sr
+Candidate	Erin M Domenech	Erin M Domenech
+Candidate	Ethan Book	Ethan Book
+Candidate	Ezequiel Santiago	Ezequiel Santiago
+Candidate	Frank Page	Frank Page
+Candidate	Fred Camillo	Fred Camillo
+Candidate	Fritz Blau	Fritz Blau
+Candidate	Gail Lavielle	Gail Lavielle
+Candidate	Gale L Mastrofrancesco	Gale L Mastrofrancesco
+Candidate	Gary Byron	Gary Byron
+Candidate	Gary J Walsh	Gary J Walsh
+Candidate	George S Logan	George S Logan
+Candidate	Geraldo C Reyes Jr	Geraldo C Reyes Jr
+Candidate	Giselle Gigi Jacobs	Giselle Gigi Jacobs
+Candidate	Grant Richardson	Grant Richardson
+Candidate	Greg Cava	Greg Cava
+Candidate	Greg Kraut	Greg Kraut
+Candidate	Greg Stokes	Greg Stokes
+Candidate	Heather Lynn Sylvestre Gwynn	Heather Lynn Sylvestre Gwynn
+Candidate	Henry J Genga	Henry J Genga
+Candidate	Hilda E Santiago	Hilda E Santiago
+Candidate	Holly H Cheeseman	Holly H Cheeseman
+Candidate	Hugh McKenney	Hugh McKenney
+Candidate	Irene Haines	Irene Haines
+Candidate	James J Maroney	James J Maroney
+Candidate	James Kiochko	James Kiochko
+Candidate	James M Albis	James M Albis
+Candidate	James Russell	James Russell
+Candidate	Jane M Garibay	Jane M Garibay
+Candidate	Jason Adler	Jason Adler
+Candidate	Jay M Case	Jay M Case
+Candidate	Jeff Desmarais	Jeff Desmarais
+Candidate	Jeff Russell	Jeff Russell
+Candidate	Jennifer Fiereck	Jennifer Fiereck
+Candidate	Jennifer L Lovett	Jennifer L Lovett
+Candidate	Jennifer T Nye	Jennifer T Nye
+Candidate	Jerry Bosak	Jerry Bosak
+Candidate	Jesse MacLachlan	Jesse MacLachlan
+Candidate	Joan V Hartley	Joan V Hartley
+Candidate	Joe Aresimowicz	Joe Aresimowicz
+Candidate	Joe Polletta	Joe Polletta
+Candidate	Joe Verrengia	Joe Verrengia
+Candidate	John (Jack) F Hennessy	John (Jack) F Hennessy
+Candidate	John A Kissel	John A Kissel
+Candidate	John B Larson	John B Larson
+Candidate	John Carlson	John Carlson
+Candidate	John F Scott	John F Scott
+Candidate	John H Frey	John H Frey
+Candidate	John Hampton	John Hampton
+Candidate	John J Flynn	John J Flynn
+Candidate	John P Pelkey	John P Pelkey
+Candidate	John Perrier	John Perrier
+Candidate	John Rodriguez	John Rodriguez
+Candidate	John W Fonfara	John W Fonfara
+Candidate	Jordan A Grode	Jordan A Grode
+Candidate	Jose F Goncalves	Jose F Goncalves
+Candidate	Jose L Quiroga	Jose L Quiroga
+Candidate	Joseph E Serra	Joseph E Serra
+Candidate	Joseph Jaumann	Joseph Jaumann
+Candidate	Joseph P Gresko	Joseph P Gresko
+Candidate	Joshua Alan Rose	Joshua Alan Rose
+Candidate	Joshua Malik Hall	Joshua Malik Hall
+Candidate	Joshua W Van Hoesen	Joshua W Van Hoesen
+Candidate	Julio A Concepcion	Julio A Concepcion
+Candidate	Kathleen M McCarty	Kathleen M McCarty
+Candidate	Kennard Ray	Kennard Ray
+Candidate	Kenneth W Richards	Kenneth W Richards
+Candidate	Kent Johnson	Kent Johnson
+Candidate	Kevin C Kelly	Kevin C Kelly
+Candidate	Kevin Fuller	Kevin Fuller
+Candidate	Kevin Lembo	Kevin Lembo
+Candidate	Kevin McDuffie	Kevin McDuffie
+Candidate	Kim Rose	Kim Rose
+Candidate	Kurt Miller	Kurt Miller
+Candidate	L Scott Frantz	L Scott Frantz
+Candidate	Larry B Butler	Larry B Butler
+Candidate	Larry Groh Jr	Larry Groh Jr
+Candidate	Laura B Bush	Laura B Bush
+Candidate	Laura Kostin	Laura Kostin
+Candidate	Laura M Devlin	Laura M Devlin
+Candidate	Laurel Steinhauser	Laurel Steinhauser
+Candidate	Len Fasano	Len Fasano
+Candidate	Leslee B Hill	Leslee B Hill
+Candidate	Lezlye W Zupkus	Lezlye W Zupkus
+Candidate	Lillian Tanski	Lillian Tanski
+Candidate	Linda A Orange	Linda A Orange
+Candidate	Linda Louise LaCasse	Linda Louise LaCasse
+Candidate	Livvy Floren	Livvy Floren
+Candidate	Lynne A Schlosser	Lynne A Schlosser
+Candidate	Madeleine Leveille	Madeleine Leveille
+Candidate	Manny Santos	Manny Santos
+Candidate	Manuel Bataguas	Manuel Bataguas
+Candidate	Marc D'Amelio	Marc D'Amelio
+Candidate	Maria P Horn	Maria P Horn
+Candidate	Mark A Lounsbury	Mark A Lounsbury
+Candidate	Mark DeCaprio	Mark DeCaprio
+Candidate	Mark Stewart Greenstein and John Demitrus	Mark Stewart Greenstein and John Demitrus
+Candidate	Mark Tweedie	Mark Tweedie
+Candidate	Martha E Marx	Martha E Marx
+Candidate	Martin M Looney	Martin M Looney
+Candidate	Mary L Sanders	Mary L Sanders
+Candidate	Mary M Fay	Mary M Fay
+Candidate	Mary M Mushinsky	Mary M Mushinsky
+Candidate	Matt Pugliese	Matt Pugliese
+Candidate	Matthew Corey	Matthew Corey
+Candidate	Megan E Cassano	Megan E Cassano
+Candidate	Melissa E Osborne	Melissa E Osborne
+Candidate	Melissa Ziobron	Melissa Ziobron
+Candidate	Michael A Dimassa	Michael A Dimassa
+Candidate	Michael A McLachlan	Michael A McLachlan
+Candidate	Michael D'Agostino	Michael D'Agostino
+Candidate	Michael Gagliardi	Michael Gagliardi
+Candidate	Michael Hurley	Michael Hurley
+Candidate	Michael N Cervellino III	Michael N Cervellino III
+Candidate	Michael P Barlowski	Michael P Barlowski
+Candidate	Michael Pitassi	Michael Pitassi
+Candidate	Michael S Ferguson	Michael S Ferguson
+Candidate	Michelle L Cook	Michelle L Cook
+Candidate	Michelle Lapine McCabe	Michelle Lapine McCabe
+Candidate	Michelle Louise Bicking	Michelle Louise Bicking
+Candidate	Mike Bocchino	Mike Bocchino
+Candidate	Molly Spino	Molly Spino
+Candidate	Monica Tujak Brill	Monica Tujak Brill
+Candidate	Ned Lamont and Susan Bysiewicz	Ned Lamont and Susan Bysiewicz
+Candidate	Nick DeLucia	Nick DeLucia
+Candidate	Norman Needleman	Norman Needleman
+Candidate	Oz Griebel and Monte E Frank	Oz Griebel and Monte E Frank
+Candidate	Pam Staneski	Pam Staneski
+Candidate	Pat Dillon	Pat Dillon
+Candidate	Paul M Formica	Paul M Formica
+Candidate	Paul Passarelli	Paul Passarelli
+Candidate	Peter A Tercyak	Peter A Tercyak
+Candidate	Peter D Goselin	Peter D Goselin
+Candidate	Philip Balestriere	Philip Balestriere
+Candidate	Philip Young	Philip Young
+Candidate	Prez Palmer	Prez Palmer
+Candidate	Quentin W Phipps	Quentin W Phipps
+Candidate	Rich Deecken	Rich Deecken
+Candidate	Richard A Smith	Richard A Smith
+Candidate	Richard D DePalma	Richard D DePalma
+Candidate	Richard Ireland Jr	Richard Ireland Jr
+Candidate	Richard Lion	Richard Lion
+Candidate	Ricky L Hayes	Ricky L Hayes
+Candidate	Robert B Mitchell	Robert B Mitchell
+Candidate	Robert H Kalechman	Robert H Kalechman
+Candidate	Robert Imperato	Robert Imperato
+Candidate	Robert M Parente	Robert M Parente
+Candidate	Robert R Statchen	Robert R Statchen
+Candidate	Robert Smedley	Robert Smedley
+Candidate	Robin E Comey	Robin E Comey
+Candidate	Rodney Hanscomb and Jeffrey Thibeault	Rodney Hanscomb and Jeffrey Thibeault
+Candidate	Roger P Misbach	Roger P Misbach
+Candidate	Ronald A Napoli Jr	Ronald A Napoli Jr
+Candidate	Rosa L DeLauro	Rosa L DeLauro
+Candidate	Rosa Rebimbas	Rosa Rebimbas
+Candidate	Ross Tartell	Ross Tartell
+Candidate	Russell A Morin	Russell A Morin
+Candidate	Ryan Rogers	Ryan Rogers
+Candidate	S Michael DeRosa	S Michael DeRosa
+Candidate	Sally Connolly	Sally Connolly
+Candidate	Samuel P Belsito Jr	Samuel P Belsito Jr
+Candidate	Scott A Storms	Scott A Storms
+Candidate	Sharon Beloin Saavedra	Sharon Beloin Saavedra
+Candidate	Shaun Mastroianni	Shaun Mastroianni
+Candidate	Stephen G Harding	Stephen G Harding
+Candidate	Stephen R Ferrucci III	Stephen R Ferrucci III
+Candidate	Steven Mikutel	Steven Mikutel
+Candidate	Steven R Giacomi	Steven R Giacomi
+Candidate	Sue Hatfield	Sue Hatfield
+Candidate	Ted Derouin	Ted Derouin
+Candidate	Terrie E Wood	Terrie E Wood
+Candidate	Terry A Sullivan	Terry A Sullivan
+Candidate	Terry Bielinski Gerratana	Terry Bielinski Gerratana
+Candidate	Themis Klarides	Themis Klarides
+Candidate	Theresa Govert	Theresa Govert
+Candidate	Theresa Ranciato-Viele	Theresa Ranciato-Viele
+Candidate	Thomas J Tierney	Thomas J Tierney
+Candidate	Thomas McCormick	Thomas McCormick
+Candidate	Thomas P O'Brien	Thomas P O'Brien
+Candidate	Tiffany V Thiele	Tiffany V Thiele
+Candidate	Tim Ackert	Tim Ackert
+Candidate	Tim Larson	Tim Larson
+Candidate	Tim Walczak	Tim Walczak
+Candidate	Tom O'Dea	Tom O'Dea
+Candidate	Toni Boucher	Toni Boucher
+Candidate	Toni Walker	Toni Walker
+Candidate	Tony DiPace	Tony DiPace
+Candidate	Tremell J Collins	Tremell J Collins
+Candidate	Vallorie L Clark	Vallorie L Clark
+Candidate	Veasna Roeun	Veasna Roeun
+Candidate	Vickie Orsini Nardello	Vickie Orsini Nardello
+Candidate	Vincent J Candelora	Vincent J Candelora
+Candidate	Vincent J Mase Sr	Vincent J Mase Sr
+Candidate	Wayne A Jackson	Wayne A Jackson
+Candidate	Wendy M Tyson-Wood	Wendy M Tyson-Wood
+Candidate	William A Petit Jr	William A Petit Jr
+Candidate	William Buckbee	William Buckbee
+Candidate	William Duff	William Duff
+Candidate	William Tong	William Tong
+Party	Amigo Constitution Liberty Party	amigo constitution liberty
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	Griebel Frank For Ct Party	griebel frank for ct
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Petitioning Candidate Party	petitioning candidate
+Party	Republican Party	republican
+Party	Working Families Party	working families

@@ -583,3 +583,38 @@ CandidateContest	US House MS District 2	MS;US Representative;District 2
 CandidateContest	MS House District 85	MS;State Representative;District 85
 CandidateContest	US House MS District 4	MS;US Representative;District 4
 CandidateContest	MS House District 31	MS;State Representative;District 31
+Candidate	Ada M. Lindsey	Ada M. Lindsey
+Candidate	B.C. Hammond	B.C. Hammond
+Candidate	Barbara Rose Brooks	Barbara Rose Brooks
+Candidate	Carolyn Steele Johnson	Carolyn Steele Johnson
+Candidate	Charles Modley	Charles Modley
+Candidate	Chris McDaniel	Chris McDaniel
+Candidate	Danny Bedwell	Danny Bedwell
+Candidate	David Baria	David Baria
+Candidate	David M. Ishee	David M. Ishee
+Candidate	Irving Harris	Irving Harris
+Candidate	Jeanette Knighten-Washington	Jeanette Knighten-Washington
+Candidate	Jeffery Harness	Jeffery Harness
+Candidate	Jeramey Anderson	Jeramey Anderson
+Candidate	Jo Ann Collins-Smith	Jo Ann Collins-Smith
+Candidate	Lajena Sheets	Lajena Sheets
+Candidate	Matthew Holland	Matthew Holland
+Candidate	Maurice Hudson	Maurice Hudson
+Candidate	Michael Ted Evans	Michael Ted Evans
+Candidate	Mike Epsy	Mike Epsy
+Candidate	Otis L. Anthony	Otis L. Anthony
+Candidate	Randy Mack Wadkins	Randy Mack Wadkins
+Candidate	Roger F. Wicker	Roger F. Wicker
+Candidate	Shannon D. Brown	Shannon D. Brown
+Candidate	Shawn O'Hara	Shawn O'Hara
+Candidate	Steven Palazzo	Steven Palazzo
+Candidate	Tobey Bernard Bartee	Tobey Bernard Bartee
+Candidate	Tracella Lou O'Hara Hill	Tracella Lou O'Hara Hill
+Candidate	Troy Ray	Troy Ray
+Candidate	Tyler K. Doss	Tyler K. Doss
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Nonpartisan Party	nonpartisan
+Party	Reform Party	reform
+Party	Republican Party	republican

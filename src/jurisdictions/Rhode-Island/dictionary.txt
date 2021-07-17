@@ -1009,3 +1009,107 @@ CandidateContest	RI House District 39	RI;State Representative;District 39
 CandidateContest	RI Senate District 36	RI;State Senator;District 36
 CandidateContest	RI Senate District 37	RI;State Senator;District 37
 CandidateContest	RI Senate District 38	RI;State Senator;District 38
+Candidate	Adam J. Satchell	Adam J. Satchell
+Candidate	Alan Gordon	Alan Gordon
+Candidate	Allan W. Fung	Allan W. Fung
+Candidate	Anne Armstrong	Anne Armstrong
+Candidate	Billy J. Charette	Billy J. Charette
+Candidate	Brandon Scott Bell	Brandon Scott Bell
+Candidate	Cale P. Keable	Cale P. Keable
+Candidate	Christopher T. Millea	Christopher T. Millea
+Candidate	Dan Elliott	Dan Elliott
+Candidate	Dana W. Gee	Dana W. Gee
+Candidate	Daniel J. McKee	Daniel J. McKee
+Candidate	Daniel P. McKiernan	Daniel P. McKiernan
+Candidate	Daryl Gould	Daryl Gould
+Candidate	David A. Quiroa	David A. Quiroa
+Candidate	David A. Quiroa, Jr.	David A. Quiroa, Jr.
+Candidate	David Aucoin	David Aucoin
+Candidate	David F. Gaipo	David F. Gaipo
+Candidate	Deborah Rowley	Deborah Rowley
+Candidate	Dennis Lavallee	Dennis Lavallee
+Candidate	Dennis M. Canario	Dennis M. Canario
+Candidate	Donna M. Nesselbush	Donna M. Nesselbush
+Candidate	Dorinne L. Albright	Dorinne L. Albright
+Candidate	Douglas W. Gablinske	Douglas W. Gablinske
+Candidate	Elizabeth A. Crowley	Elizabeth A. Crowley
+Candidate	Erin Lynch Prata	Erin Lynch Prata
+Candidate	Ernest J. Nardolillo	Ernest J. Nardolillo
+Candidate	Ewa M. Dzwierzynski	Ewa M. Dzwierzynski
+Candidate	Frank A. Ciccone, III	Frank A. Ciccone, III
+Candidate	Gina M. Raimondo	Gina M. Raimondo
+Candidate	Glenn F. Dusablon	Glenn F. Dusablon
+Candidate	Gregory James Tocco	Gregory James Tocco
+Candidate	Harold M. Metts	Harold M. Metts
+Candidate	Jack R. Peters	Jack R. Peters
+Candidate	James C. Sheehan	James C. Sheehan
+Candidate	James S. Safford	James S. Safford
+Candidate	Jennifer R. Moffat	Jennifer R. Moffat
+Candidate	Joel J. Hellmann	Joel J. Hellmann
+Candidate	John Brandon Monk	John Brandon Monk
+Candidate	John Joseph Lombardi	John Joseph Lombardi
+Candidate	John P. Silvaggio	John P. Silvaggio
+Candidate	Jonathan J. Riccitelli	Jonathan J. Riccitelli
+Candidate	Jose R. Serodio	Jose R. Serodio
+Candidate	Joseph A. Trillo	Joseph A. Trillo
+Candidate	Joseph S. Almeida	Joseph S. Almeida
+Candidate	Julie C. Caiozzo	Julie C. Caiozzo
+Candidate	Kevin D. Heitke	Kevin D. Heitke
+Candidate	Laufton Ascencao	Laufton Ascencao
+Candidate	Lauren Niedel-Gresh	Lauren Niedel-Gresh
+Candidate	Lucas W. Murray	Lucas W. Murray
+Candidate	Luis Antonio Vargas	Luis Antonio Vargas
+Candidate	Luis Daniel Munoz	Luis Daniel Munoz
+Candidate	Marcia Ranglin-Vassell	Marcia Ranglin-Vassell
+Candidate	Mario F. Mendez	Mario F. Mendez
+Candidate	Mark E. Bourget	Mark E. Bourget
+Candidate	Mark P. McKenney	Mark P. McKenney
+Candidate	Matthew Paul Perry	Matthew Paul Perry
+Candidate	Michael A. Morin	Michael A. Morin
+Candidate	Michael A. Veri	Michael A. Veri
+Candidate	Michael Christopher Steiner	Michael Christopher Steiner
+Candidate	Michael D. Fine	Michael D. Fine
+Candidate	Michael Disney	Michael Disney
+Candidate	Michael G. Riley	Michael G. Riley
+Candidate	Michael James Geary	Michael James Geary
+Candidate	Michael L. Underwood	Michael L. Underwood
+Candidate	Moira Jayne Walsh	Moira Jayne Walsh
+Candidate	Nathan T. Luciano	Nathan T. Luciano
+Candidate	Nellie M. Gorbea	Nellie M. Gorbea
+Candidate	Paul E. Pence	Paul E. Pence
+Candidate	Peter F. Neronha	Peter F. Neronha
+Candidate	Peter S. Friedrichs	Peter S. Friedrichs
+Candidate	Raymond H. Johnston, Jr.	Raymond H. Johnston, Jr.
+Candidate	Rebecca Schiff	Rebecca Schiff
+Candidate	Rhonda Holmes	Rhonda Holmes
+Candidate	Richard A. Poirier	Richard A. Poirier
+Candidate	Richard L. Garrepy	Richard L. Garrepy
+Candidate	Robert B. Jacquard	Robert B. Jacquard
+Candidate	Robert E. Craven, Sr.	Robert E. Craven, Sr.
+Candidate	Robert G. Flanders, Jr.	Robert G. Flanders, Jr.
+Candidate	Ross K. McCurdy	Ross K. McCurdy
+Candidate	Rufus R. Bailey, Jr.	Rufus R. Bailey, Jr.
+Candidate	Ruth M. Page	Ruth M. Page
+Candidate	Salvatore G. Caiozzo	Salvatore G. Caiozzo
+Candidate	Scott R. Copley	Scott R. Copley
+Candidate	Seth Magaziner	Seth Magaziner
+Candidate	Shelby Maldonado	Shelby Maldonado
+Candidate	Sheldon Whitehouse	Sheldon Whitehouse
+Candidate	Stephanie L. Calise	Stephanie L. Calise
+Candidate	Stephen R. Ucci	Stephen R. Ucci
+Candidate	Steven Frias	Steven Frias
+Candidate	Tammy L. Collins	Tammy L. Collins
+Candidate	Teresa Tanzi	Teresa Tanzi
+Candidate	V. Susan Sosnowski	V. Susan Sosnowski
+Candidate	William Degnan	William Degnan
+Candidate	William H. Gilbert	William H. Gilbert
+Candidate	William J. Conley, Jr.	William J. Conley, Jr.
+Candidate	William James Hunt, Jr.	William James Hunt, Jr.
+Candidate	William W. Murphy	William W. Murphy
+Party	A Better Rhode Island Party	a better rhode island
+Party	Compassion Party	compassion
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Moderate Party	moderate
+Party	Republican Party	republican

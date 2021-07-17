@@ -3481,3 +3481,17 @@ CandidateContest	US House CA District 18	CA;US Representative;District 18
 CandidateContest	CA State Assembly Member District 27	CA;State Assembly Member;District 27
 CandidateContest	CA State Assembly Member District 28	CA;State Assembly Member;District 28
 CandidateContest	US House CA District 19	CA;US Representative;District 19
+Candidate	"Alexandria """"Alex'' Coronado"	"Alexandria """"Alex"""" Coronado"
+Candidate	Cristina Osmena	Cristina Osmena
+Candidate	"Honor """"Mimi'' Robson"	"Honor """"Mimi"""" Robson"
+Candidate	"Jacalyn """"Jackie'' Smith"	"Jacalyn """"Jackie"""" Smith"
+Candidate	Linda T. Sanchez	Linda T. Sanchez
+Candidate	Nanette Diaz Barragan	Nanette Diaz Barragan
+Candidate	S. Monique Limon	S. Monique Limon
+Candidate	"Veronica """"Roni'' Jacobi"	"Veronica """"Roni"""" Jacobi"
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	Libertarian Party	libertarian
+Party	none or unknown	no party preference
+Party	Nonpartisan Party	nonpartisan
+Party	Republican Party	republican

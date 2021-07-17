@@ -5569,3 +5569,27 @@ CandidateContest	US House VA District 4	VA;US Representative;District 4
 CandidateContest	US House VA District 3	VA;US Representative;District 3
 CandidateContest	US House VA District 0	VA;US Representative;District 0
 CandidateContest	VA House District 8	VA;State Representative;District 8
+Candidate	A. Donald McEachin	A. Donald McEachin
+Candidate	Anthony J. Flaccavento	Anthony J. Flaccavento
+Candidate	Barbara J. Comstock	Barbara J. Comstock
+Candidate	Corey A. Stewart	Corey A. Stewart
+Candidate	Dave A. Brat	Dave A. Brat
+Candidate	Denver L. Riggleman, III	Denver L. Riggleman, III
+Candidate	Donald S. Beyer, Jr.	Donald S. Beyer, Jr.
+Candidate	E. Carter Turner III	E. Carter Turner III
+Candidate	Jeff A. Dove Jr.	Jeff A. Dove Jr.
+Candidate	Joseph B. Walton	Joseph B. Walton
+Candidate	Joseph P. 'Joe' McNamara	"Joseph P. ""Joe"" McNamara"
+Candidate	Leslie C. Cockburn	Leslie C. Cockburn
+Candidate	Matt J. Waters	Matt J. Waters
+Candidate	Peter J. 'Pete' Wells	"Peter J. ""Pete"" Wells"
+Candidate	Robert C. 'Bobby' Scott	"Robert C. ""Bobby"" Scott"
+Candidate	Robert J. 'Rob' Wittman	"Robert J. ""Rob"" Wittman"
+Candidate	Ryan A. McAdams	Ryan A. McAdams
+Candidate	Stevan M. Porter	Stevan M. Porter
+Candidate	Thomas S. Oh	Thomas S. Oh
+Candidate	Timothy M. Kaine	Timothy M. Kaine
+Candidate	Vangie A. Williams	Vangie A. Williams
+Party	Democratic Party	democrat
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican

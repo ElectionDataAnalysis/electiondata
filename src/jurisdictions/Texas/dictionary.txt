@@ -7343,3 +7343,17 @@ CandidateContest	TX House District 49	TX;State Representative;District 49
 CandidateContest	TX House District 42	TX;State Representative;District 42
 CandidateContest	TX House District 136	TX;State Representative;District 136
 CandidateContest	TX House District 52	TX;State Representative;District 52
+Candidate	"Charles """"Doc'' Anderson"	"Charles """"Doc"""" Anderson"
+Candidate	"Charles """"Tad'' Hasse"	"Charles """"Tad"""" Hasse"
+Candidate	"D.F. """"Rick'' Miller"	"D.F. """"Rick"""" Miller"
+Candidate	"Elizabeth """"Eliz'' Markowitz"	"Elizabeth """"Eliz"""" Markowitz"
+Candidate	"Gilberto """"Gil'' Velasquez, Jr."	"Gilberto """"Gil"""" Velasquez, Jr."
+Candidate	L. Sarah DeMerchant	L. Sarah DeMerchant
+Candidate	"Mary Jennings """"MJ'' Hegar"	"Mary Jennings """"MJ"""" Hegar"
+Candidate	"Patricia """"Pat'' Hardy"	"Patricia """"Pat"""" Hardy"
+Candidate	Suzanne Smith	Suzanne Smith
+Candidate	"Thresa """"Terry'' Meza"	"Thresa """"Terry"""" Meza"
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican

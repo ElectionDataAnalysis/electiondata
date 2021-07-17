@@ -374,3 +374,195 @@ CandidateContest	ID Senate District 6	ID;State Senator;District 6
 CandidateContest	ID State Representative A District 24	ID;State Representative A;District 24
 CandidateContest	ID State Representative B District 24	ID;State Representative B;District 24
 CandidateContest	ID Senate District 24	ID;State Senator;District 24
+Candidate	Aaron J. Tribble	Aaron J. Tribble
+Candidate	Aaron Swisher	Aaron Swisher
+Candidate	Abby Lee	Abby Lee
+Candidate	Alanna Brooks	Alanna Brooks
+Candidate	Allen Schmid	Allen Schmid
+Candidate	Anthony Thomas Dephue	Anthony Thomas Dephue
+Candidate	Anthony Tomkins	Anthony Tomkins
+Candidate	Barbara Ehardt	Barbara Ehardt
+Candidate	Bert Brackett	Bert Brackett
+Candidate	Bev 'Angel' Boeck	"Bev ""Angel"" Boeck"
+Candidate	Bill Goesling	Bill Goesling
+Candidate	Bill Sifford	Bill Sifford
+Candidate	Brad Little	Brad Little
+Candidate	Brandon D Woolf	Brandon D Woolf
+Candidate	Brent Hill	Brent Hill
+Candidate	Brent J. Crane	Brent J. Crane
+Candidate	Brian A. Ertz	Brian A. Ertz
+Candidate	Britt Raybould	Britt Raybould
+Candidate	Brooke Green	Brooke Green
+Candidate	Bruce S. Bistline	Bruce S. Bistline
+Candidate	Bryan N. Zollinger	Bryan N. Zollinger
+Candidate	C. Scott Grow	C. Scott Grow
+Candidate	Carl G. Crabtree	Carl G. Crabtree
+Candidate	Caroline Nilsson Troy	Caroline Nilsson Troy
+Candidate	Chad Christensen	Chad Christensen
+Candidate	Chase Van Weerdhuizen	Chase Van Weerdhuizen
+Candidate	Chelle Gluch	Chelle Gluch
+Candidate	Chelsea Gaona-Lincoln	Chelsea Gaona-Lincoln
+Candidate	Cherie Buckner-Webb	Cherie Buckner-Webb
+Candidate	Chris Abernathy	Chris Abernathy
+Candidate	Chris Ho	Chris Ho
+Candidate	Christy Zito	Christy Zito
+Candidate	Chuck Winder	Chuck Winder
+Candidate	Cindy Wilson	Cindy Wilson
+Candidate	Clark Kauffman	Clark Kauffman
+Candidate	Clifford R. 'Cliff' Bayer	"Clifford R. ""Cliff"" Bayer"
+Candidate	Cory Jane English	Cory Jane English
+Candidate	Cristina McNeil	Cristina McNeil
+Candidate	Dale R Broadsword	Dale R Broadsword
+Candidate	Dan Foreman	Dan Foreman
+Candidate	Dan Hanks	Dan Hanks
+Candidate	Daniel Johnson	Daniel Johnson
+Candidate	Daniel S. Weston	Daniel S. Weston
+Candidate	Dave Lent	Dave Lent
+Candidate	David L. DeHaas	David L. DeHaas
+Candidate	David Nelson	David Nelson
+Candidate	Dawn C. Pierce	Dawn C. Pierce
+Candidate	Dean M. Mortimer	Dean M. Mortimer
+Candidate	Deborah Silver	Deborah Silver
+Candidate	Don Cheatham	Don Cheatham
+Candidate	Dorothy Moon	Dorothy Moon
+Candidate	Doug Ricks	Doug Ricks
+Candidate	Dustin Whitney Manwaring	Dustin Whitney Manwaring
+Candidate	Edward Savala	Edward Savala
+Candidate	Elaine Smith	Elaine Smith
+Candidate	Ellen Weissman	Ellen Weissman
+Candidate	Evangeline Beechler	Evangeline Beechler
+Candidate	Fred S. Martin	Fred S. Martin
+Candidate	Fred Wood	Fred Wood
+Candidate	Gary E. Collins	Gary E. Collins
+Candidate	Gary L Marshall	Gary L Marshall
+Candidate	Gayann DeMordaunt	Gayann DeMordaunt
+Candidate	George Morrison	George Morrison
+Candidate	Gordon Counsil	Gordon Counsil
+Candidate	Graham Paterson	Graham Paterson
+Candidate	Grant Burgoyne	Grant Burgoyne
+Candidate	Greg Chaney	Greg Chaney
+Candidate	Heather Scott	Heather Scott
+Candidate	Idaho Lorax Carta	Idaho Lorax Carta
+Candidate	Ilana Rubel	Ilana Rubel
+Candidate	Jake Ellis	Jake Ellis
+Candidate	James Holtzclaw	James Holtzclaw
+Candidate	Jane M. Rohling	Jane M. Rohling
+Candidate	Janice McGeachin	Janice McGeachin
+Candidate	Janie Ward-Engelking	Janie Ward-Engelking
+Candidate	Jarom Wagoner	Jarom Wagoner
+Candidate	Jason Monks	Jason Monks
+Candidate	Jeff C Agenbroad	Jeff C Agenbroad
+Candidate	Jerald Raymond	Jerald Raymond
+Candidate	Jerry L. Browne	Jerry L. Browne
+Candidate	Jerry Sehlke	Jerry Sehlke
+Candidate	Jill Humble	Jill Humble
+Candidate	Jim Addis	Jim Addis
+Candidate	Jim Bratnober	Jim Bratnober
+Candidate	Jim De Angelis	Jim De Angelis
+Candidate	Jim Guthrie	Jim Guthrie
+Candidate	Jim Patrick	Jim Patrick
+Candidate	Jim Rice	Jim Rice
+Candidate	Jim Silsby	Jim Silsby
+Candidate	Jim Woodward	Jim Woodward
+Candidate	Joe A Palmer	Joe A Palmer
+Candidate	John A. McCrostie	John A. McCrostie
+Candidate	John Gannon	John Gannon
+Candidate	John Green	John Green
+Candidate	John Rusche	John Rusche
+Candidate	John Vander Woude	John Vander Woude
+Candidate	Joshua Robinson	Joshua Robinson
+Candidate	Judy Boyle	Judy Boyle
+Candidate	Julianne Young	Julianne Young
+Candidate	Julie A. Ellsworth	Julie A. Ellsworth
+Candidate	Julie Lynn	Julie Lynn
+Candidate	Kelly Arthur Anthon	Kelly Arthur Anthon
+Candidate	Kevin Andrus	Kevin Andrus
+Candidate	Kevin James Brown	Kevin James Brown
+Candidate	Kevin Rhoades	Kevin Rhoades
+Candidate	Kirsten Faith Richardson	Kirsten Faith Richardson
+Candidate	Kristin Collum	Kristin Collum
+Candidate	Lance Clow	Lance Clow
+Candidate	Lance Kolbet	Lance Kolbet
+Candidate	Laurene Sorensen	Laurene Sorensen
+Candidate	Laurie Lickley	Laurie Lickley
+Candidate	Lawerence E. Denney	Lawerence E. Denney
+Candidate	Lawrence Wasden	Lawrence Wasden
+Candidate	Lee Heider	Lee Heider
+Candidate	LeeJoe Lay	LeeJoe Lay
+Candidate	Linda Wright Hartgen	Linda Wright Hartgen
+Candidate	Lori Den Hartog	Lori Den Hartog
+Candidate	Lynn M. Luker	Lynn M. Luker
+Candidate	Marc Gibbs	Marc Gibbs
+Candidate	Margaret R Gannon	Margaret R Gannon
+Candidate	Maria Andrews	Maria Andrews
+Candidate	Mark Harris	Mark Harris
+Candidate	Mark Nye	Mark Nye
+Candidate	Mark Patten	Mark Patten
+Candidate	Mary Souza	Mary Souza
+Candidate	Maryanne Jordan	Maryanne Jordan
+Candidate	Mathew 'Mat' Erpelding	"Mathew ""Mat"" Erpelding"
+Candidate	Megan C. Blanksma	Megan C. Blanksma
+Candidate	Melissa Wintrow	Melissa Wintrow
+Candidate	Michelle Stennett	Michelle Stennett
+Candidate	Mik W. Lose	Mik W. Lose
+Candidate	Mike Kingsley	Mike Kingsley
+Candidate	Mike McFadyen	Mike McFadyen
+Candidate	Mike Moyle	Mike Moyle
+Candidate	Mike Saville	Mike Saville
+Candidate	Muffy Davis	Muffy Davis
+Candidate	Natalie M. Fleming	Natalie M. Fleming
+Candidate	Neil A Anderson	Neil A Anderson
+Candidate	Pat Day Hartwell	Pat Day Hartwell
+Candidate	Pat Tucker	Pat Tucker
+Candidate	Patrick Lippert	Patrick Lippert
+Candidate	Patrick McDonald	Patrick McDonald
+Candidate	Patti Anne Lodge	Patti Anne Lodge
+Candidate	Paul Amador	Paul Amador
+Candidate	Paul E. Shepherd	Paul E. Shepherd
+Candidate	Paul Farmer	Paul Farmer
+Candidate	Priscilla Giddings	Priscilla Giddings
+Candidate	Randy Armstrong	Randy Armstrong
+Candidate	Rebecca Schroeder	Rebecca Schroeder
+Candidate	Richard Boozel	Richard Boozel
+Candidate	Rick D. Youngblood	Rick D. Youngblood
+Candidate	Rob Mason	Rob Mason
+Candidate	Robert Anderst	Robert Anderst
+Candidate	Robert S. Nielsen	Robert S. Nielsen
+Candidate	Rod Furniss	Rod Furniss
+Candidate	Ron Mendive	Ron Mendive
+Candidate	Ryan Kerby	Ryan Kerby
+Candidate	Sage G. Dixon	Sage G. Dixon
+Candidate	Sally Toone	Sally Toone
+Candidate	Scott Bedke	Scott Bedke
+Candidate	Scott Syme	Scott Syme
+Candidate	Sead Muradbegovic	Sead Muradbegovic
+Candidate	Shem Hanks	Shem Hanks
+Candidate	Sherri Ybarra	Sherri Ybarra
+Candidate	Shon Luoma	Shon Luoma
+Candidate	Stephen F. Howlett	Stephen F. Howlett
+Candidate	Steve Bair	Steve Bair
+Candidate	Steve Berch	Steve Berch
+Candidate	Steve Landon	Steve Landon
+Candidate	Steve Miller	Steve Miller
+Candidate	Steve Simmons	Steve Simmons
+Candidate	Steve Vick	Steve Vick
+Candidate	Steven C. Harris	Steven C. Harris
+Candidate	Steven Thayn	Steven Thayn
+Candidate	Sue Chew	Sue Chew
+Candidate	Tammy Nichols	Tammy Nichols
+Candidate	Terry F. Gestrin	Terry F. Gestrin
+Candidate	Thomas E. 'Tom' Dayley	"Thomas E. ""Tom"" Dayley"
+Candidate	Thyra K. Stevenson	Thyra K. Stevenson
+Candidate	Todd Lakey	Todd Lakey
+Candidate	Tony Wisniewski	Tony Wisniewski
+Candidate	Van Burtenshaw	Van Burtenshaw
+Candidate	Vera Gadman	Vera Gadman
+Candidate	Vito Barbieri	Vito Barbieri
+Candidate	W. Scott Howard	W. Scott Howard
+Candidate	Walter L. Bayes	Walter L. Bayes
+Candidate	Wendy Horman	Wendy Horman
+Party	Constitution Party	constitution
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican

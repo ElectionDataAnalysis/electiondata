@@ -15334,3 +15334,9 @@ CandidateContest	NC Senate District 15	NC;State Senate;District 15
 CandidateContest	NC Senate District 16	NC;State Senate;District 16
 CandidateContest	NC Senate District 17	NC;State Senate;District 17
 CandidateContest	NC House District 24	NC;State Representative;District 24
+Party	Constitution Party	constitution
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+Party	none or unknown	unaffiliated

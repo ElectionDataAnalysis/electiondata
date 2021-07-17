@@ -8415,3 +8415,39 @@ CandidateContest	US House LA District 5	LA;US Representative;District 5
 CandidateContest	LA House District 33	LA;State Representative;District 33
 CandidateContest	US House LA District 1	LA;US Representative;District 1
 CandidateContest	LA House District 90	LA;State Representative;District 90
+Candidate	A.G. Crowe	A.G. Crowe
+Candidate	Aaron J. Andrus	Aaron J. Andrus
+Candidate	Billy Burkette	Billy Burkette
+Candidate	Brian Glorioso	Brian Glorioso
+Candidate	Cedric Richmond	Cedric Richmond
+Candidate	Devin Lance Graham	Devin Lance Graham
+Candidate	Frederick 'Ferd' Jones	"Frederick ""Ferd"" Jones"
+Candidate	Heather Cloud	Heather Cloud
+Candidate	Jean Menard	Jean Menard
+Candidate	Jerry Gaspard	Jerry Gaspard
+Candidate	Jesse Schmidt	Jesse Schmidt
+Candidate	Jessee Carlton Fleenor	Jessee Carlton Fleenor
+Candidate	John Raymond	John Raymond
+Candidate	Julie Stokes	Julie Stokes
+Candidate	Justin Dewitt	Justin Dewitt
+Candidate	Kyle Ardoin	Kyle Ardoin
+Candidate	Kyle Randol	Kyle Randol
+Candidate	Larry Rader	Larry Rader
+Candidate	Mark David Halverson	Mark David Halverson
+Candidate	Mary DuBuisson	Mary DuBuisson
+Candidate	Matthew Paul 'Matt' Moreau	"Matthew Paul ""Matt"" Moreau"
+Candidate	Mildred 'Mimi' Methvin	"Mildred ""Mimi"" Methvin"
+Candidate	Ralph Abraham	Ralph Abraham
+Candidate	Renee Fontenot Free	Renee Fontenot Free
+Candidate	Sean Morrison	Sean Morrison
+Candidate	Shawndra Rodriguez	Shawndra Rodriguez
+Candidate	Stuart Moss	Stuart Moss
+Candidate	Tammy M. Savoie	Tammy M. Savoie
+Candidate	Teri A. Johnson	Teri A. Johnson
+Candidate	Thomas J. Kennedy III	Thomas J. Kennedy III
+Candidate	Verone Thomas	Verone Thomas
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	none or unknown	no party
+Party	Republican Party	republican

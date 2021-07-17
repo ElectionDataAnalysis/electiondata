@@ -2354,7 +2354,6 @@ Jonathan 'J.P.' Parker
 Kevin J. Foley
 Luis CalderÃÂÃÂ³n
 RenÃÂÃÂ© Garcia
-Steve 'Kahuna' Cates
 Greg Merk
 John Mills
 Kat Cammack
@@ -2944,7 +2943,6 @@ Anthony 'Tony' Eldon
 Al Gore
 Barack Obama
 George W. Bush
-Hillary Clinton
 John Kerry
 John Mccain
 Mitt Romney
@@ -2952,3 +2950,6 @@ Other
 Ralph Nader
 John MCCain
 John McCain
+Manny Diaz
+Ron DeSantis
+Ronald W. Williams

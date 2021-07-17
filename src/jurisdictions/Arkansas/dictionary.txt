@@ -2560,3 +2560,68 @@ CandidateContest	AR House District 84	AR;State Representative;District 84
 CandidateContest	AR House District 89	AR;State Representative;District 89
 CandidateContest	AR Senate District 4	AR;State Senate;District 4
 CandidateContest	AR House District 46	AR;State Representative;District 46
+Candidate	Aaron Pilkington	Aaron Pilkington
+Candidate	Andrea Lea	Andrea Lea
+Candidate	Andy Davis	Andy Davis
+Candidate	Asa Hutchinson	Asa Hutchinson
+Candidate	Austin McCollum	Austin McCollum
+Candidate	Bill Sample	Bill Sample
+Candidate	Bob Ballinger	Bob Ballinger
+Candidate	Bruce Coleman	Bruce Coleman
+Candidate	Bruce Cozart	Bruce Cozart
+Candidate	Bruce Westerman	Bruce Westerman
+Candidate	Carlton Wing	Carlton Wing
+Candidate	Cecile Bledsoe	Cecile Bledsoe
+Candidate	Charlene Fite	Charlene Fite
+Candidate	Charlie Collins	Charlie Collins
+Candidate	Chris Richey	Chris Richey
+Candidate	Courtney Goodson	Courtney Goodson
+Candidate	David Fielding	David Fielding
+Candidate	Dennis Milligan	Dennis Milligan
+Candidate	Fred Allen	Fred Allen
+Candidate	French Hill	French Hill
+Candidate	Grant Hodges	Grant Hodges
+Candidate	Greg Leding	Greg Leding
+Candidate	James Sturch	James Sturch
+Candidate	Jana Della Rosa	Jana Della Rosa
+Candidate	Jason Rapert	Jason Rapert
+Candidate	Jeff Williams	Jeff Williams
+Candidate	Jim Dotson	Jim Dotson
+Candidate	Jim Sorvillo	Jim Sorvillo
+Candidate	Joe Jett	Joe Jett
+Candidate	John Thurston	John Thurston
+Candidate	Johnny Rye	Johnny Rye
+Candidate	Justin Boyd	Justin Boyd
+Candidate	Justin Gonzales	Justin Gonzales
+Candidate	Karilyn Brown	Karilyn Brown
+Candidate	Ken Bragg	Ken Bragg
+Candidate	Kim Hammer	Kim Hammer
+Candidate	Larry Teague	Larry Teague
+Candidate	Laurie Rushing	Laurie Rushing
+Candidate	Les Eaves	Les Eaves
+Candidate	Leslie Rutledge	Leslie Rutledge
+Candidate	Marcus E. Richmond	Marcus E. Richmond
+Candidate	Mark Lowery	Mark Lowery
+Candidate	Mark McElroy	Mark McElroy
+Candidate	Mary Bentley	Mary Bentley
+Candidate	Mathew Pitsch	Mathew Pitsch
+Candidate	Michael John Gray	Michael John Gray
+Candidate	Mickey Gates	Mickey Gates
+Candidate	Monte Hodges	Monte Hodges
+Candidate	Rebecca Petty	Rebecca Petty
+Candidate	Rick Beck	Rick Beck
+Candidate	Rick Crawford	Rick Crawford
+Candidate	Robin Lundstrum	Robin Lundstrum
+Candidate	Scott Baltz	Scott Baltz
+Candidate	Scott Flippo	Scott Flippo
+Candidate	Spencer Hawks	Spencer Hawks
+Candidate	Stephen Meeks	Stephen Meeks
+Candidate	Steve Hollowell	Steve Hollowell
+Candidate	Steve Womack	Steve Womack
+Candidate	Tim Griffin	Tim Griffin
+Candidate	Vivian Flowers	Vivian Flowers
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Nonpartisan Party	nonpartisan
+Party	Republican Party	republican

@@ -6529,3 +6529,10 @@ CandidateContest	WI House District 98	WI;State Assembly Representative;District 
 CandidateContest	WI House District 99	WI;State Assembly Representative;District 99
 CandidateContest	WI Senate District 33	WI;State Senator;District 33
 CandidateContest	WI House District 54	WI;State Assembly Representative;District 54
+Candidate	Lisa Subeck	Lisa Subeck
+Candidate	Nancy Lynn Vander Meer	Nancy Lynn Vander Meer
+Party	Constitution Party	constitution
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican

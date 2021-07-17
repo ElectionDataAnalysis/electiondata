@@ -2715,3 +2715,195 @@ CandidateContest	TN House District 63	TN;State Representative;District 63
 CandidateContest	TN House District 65	TN;State Representative;District 65
 CandidateContest	TN Senate District 23	TN;State Senator;District 23
 CandidateContest	TN House District 57	TN;State Representative;District 57
+Candidate	A. J. Holmes	A. J. Holmes
+Candidate	Alfred Shawn Rapoza	Alfred Shawn Rapoza
+Candidate	Allan Creasy	Allan Creasy
+Candidate	Amberlee' Brooks	Amberlee' Brooks
+Candidate	Andrew E. Farmer	Andrew E. Farmer
+Candidate	Andy Holt	Andy Holt
+Candidate	Angela Hedgecough	Angela Hedgecough
+Candidate	Anne F. Quillen	Anne F. Quillen
+Candidate	Arvil Love Jr.	Arvil Love Jr.
+Candidate	Barbara Simmons	Barbara Simmons
+Candidate	Bill Dunn	Bill Dunn
+Candidate	Bill Lee	Bill Lee
+Candidate	Bill Peach	Bill Peach
+Candidate	Bill Sanderson	Bill Sanderson
+Candidate	Billy Borchert	Billy Borchert
+Candidate	Bo Watson	Bo Watson
+Candidate	Brad W. Hartley	Brad W. Hartley
+Candidate	Brenda Gilmore	Brenda Gilmore
+Candidate	Brent Legendre	Brent Legendre
+Candidate	Brent Moody	Brent Moody
+Candidate	Brent S. Morris	Brent S. Morris
+Candidate	Breton Phillips	Breton Phillips
+Candidate	Brian Kelsey	Brian Kelsey
+Candidate	C.S. 'Scott' Coffey	"C.S. ""Scott"" Coffey"
+Candidate	Carl Lansden	Carl Lansden
+Candidate	Carl R. Eggers, Sr.	Carl R. Eggers, Sr.
+Candidate	Carol Venea' Abney	Carol Venea' Abney
+Candidate	Cassandra Mitchell	Cassandra Mitchell
+Candidate	Chad Riden	Chad Riden
+Candidate	Chris Mayor	Chris Mayor
+Candidate	Christina 'Chris' Callaway	"Christina ""Chris"" Callaway"
+Candidate	Coleen Martinez	Coleen Martinez
+Candidate	Cory King	Cory King
+Candidate	Danielle Mitchell	Danielle Mitchell
+Candidate	Danielle Schonbaum	Danielle Schonbaum
+Candidate	David 'Coach' Byrd	"David ""Coach"" Byrd"
+Candidate	David Cambron	David Cambron
+Candidate	David Dennison	David Dennison
+Candidate	David R. Birdsong	David R. Birdsong
+Candidate	David Ross	David Ross
+Candidate	David W Ross	David W Ross
+Candidate	Dawn Barlow	Dawn Barlow
+Candidate	Dawn White	Dawn White
+Candidate	Dean Hill	Dean Hill
+Candidate	Dean M Sparks	Dean M Sparks
+Candidate	Deane Arganbright	Deane Arganbright
+Candidate	DeAnna D. Osborne	DeAnna D. Osborne
+Candidate	Debra Moody	Debra Moody
+Candidate	Dennis H. Powers	Dennis H. Powers
+Candidate	Dennis Potvin	Dennis Potvin
+Candidate	Derek Winkle	Derek Winkle
+Candidate	Ed Butler	Ed Butler
+Candidate	Ed Jackson	Ed Jackson
+Candidate	Eddie Smith	Eddie Smith
+Candidate	Edward Nelson	Edward Nelson
+Candidate	Frankie G. Floied	Frankie G. Floied
+Candidate	G. A. Hardaway, Sr.	G. A. Hardaway, Sr.
+Candidate	Gabriel Fancher	Gabriel Fancher
+Candidate	Gary W. Hicks, Jr.	Gary W. Hicks, Jr.
+Candidate	George Blackwell Smith IV	George Blackwell Smith IV
+Candidate	Ginger Smith	Ginger Smith
+Candidate	Greg Mackay	Greg Mackay
+Candidate	Greg Samples	Greg Samples
+Candidate	Gregory Frye	Gregory Frye
+Candidate	Hana Ali	Hana Ali
+Candidate	Heather Scott	Heather Scott
+Candidate	J. Michael Holloway	J. Michael Holloway
+Candidate	Jack Johnson	Jack Johnson
+Candidate	James A. Baxter	James A. Baxter
+Candidate	James T. Haynes	James T. Haynes
+Candidate	Jamie Ballinger	Jamie Ballinger
+Candidate	Jaron D. Weidner	Jaron D. Weidner
+Candidate	Jason Powell	Jason Powell
+Candidate	Jean-Marie Lawrence	Jean-Marie Lawrence
+Candidate	Jeff Yarbro	Jeff Yarbro
+Candidate	Jeffrey A. Grunau	Jeffrey A. Grunau
+Candidate	Jennifer Vannoy	Jennifer Vannoy
+Candidate	Jeremy Allen Stephenson	Jeremy Allen Stephenson
+Candidate	Jerome Moon	Jerome Moon
+Candidate	Jessica B. Yokley	Jessica B. Yokley
+Candidate	Jessie D. McDonald	Jessie D. McDonald
+Candidate	Jim Coley	Jim Coley
+Candidate	Joda Thongnopnua	Joda Thongnopnua
+Candidate	Jody M. Ball	Jody M. Ball
+Candidate	Joe B. Wilmoth	Joe B. Wilmoth
+Candidate	John 'Big John' Smith	"John ""Big John"" Smith"
+Candidate	John B Holsclaw Jr.	John B Holsclaw Jr.
+Candidate	John Carico	John Carico
+Candidate	John Crawford	John Crawford
+Candidate	John D. Ragan	John D. Ragan
+Candidate	John E. Patrick	John E. Patrick
+Candidate	Johnny C. Garrett	Johnny C. Garrett
+Candidate	Jordan Cole	Jordan Cole
+Candidate	Judd Cowan	Judd Cowan
+Candidate	Justin Cornett	Justin Cornett
+Candidate	Justin Kanew	Justin Kanew
+Candidate	Karl Dean	Karl Dean
+Candidate	Kate Trudell	Kate Trudell
+Candidate	Katrina Robinson	Katrina Robinson
+Candidate	Keith A. LaTorre	Keith A. LaTorre
+Candidate	Kelly Northcutt	Kelly Northcutt
+Candidate	Kerry Roberts	Kerry Roberts
+Candidate	Kevin Lee McCants	Kevin Lee McCants
+Candidate	Kevin Vaughan	Kevin Vaughan
+Candidate	Kris L. Todd	Kris L. Todd
+Candidate	Kristen Grimm	Kristen Grimm
+Candidate	Larry Proffitt	Larry Proffitt
+Candidate	Laura Miller	Laura Miller
+Candidate	Lemon C. Williams, Jr.	Lemon C. Williams, Jr.
+Candidate	Leo AwGoWhat	Leo AwGoWhat
+Candidate	Leonard D. (Lenny) Ladner	Leonard D. (Lenny) Ladner
+Candidate	Les Trotman	Les Trotman
+Candidate	Lloyd Dunn	Lloyd Dunn
+Candidate	London P. Lamar	London P. Lamar
+Candidate	Mallory Pickert	Mallory Pickert
+Candidate	Marc Whitmire	Marc Whitmire
+Candidate	Mariah Phillips	Mariah Phillips
+Candidate	Mark Cagle	Mark Cagle
+Candidate	Mark CoonRippy Brown	Mark CoonRippy Brown
+Candidate	Mark Pody	Mark Pody
+Candidate	Mark Wright	Mark Wright
+Candidate	Marsha Blackburn	Marsha Blackburn
+Candidate	Martin B. Daniel	Martin B. Daniel
+Candidate	Marty Davis	Marty Davis
+Candidate	Marty Olsen	Marty Olsen
+Candidate	Mary Alice Carfi	Mary Alice Carfi
+Candidate	Mary Ellen Blencoe	Mary Ellen Blencoe
+Candidate	Matthew Hill	Matthew Hill
+Candidate	Matthew Koch	Matthew Koch
+Candidate	Micah Van Huss	Micah Van Huss
+Candidate	Michael D. Salyer	Michael D. Salyer
+Candidate	Michael Shupe	Michael Shupe
+Candidate	Michael Stewart	Michael Stewart
+Candidate	Michelle Westover	Michelle Westover
+Candidate	Mike Bell	Mike Bell
+Candidate	Mike Toews	Mike Toews
+Candidate	Mike Winton	Mike Winton
+Candidate	Murphey Johnson	Murphey Johnson
+Candidate	Nathan Farnor	Nathan Farnor
+Candidate	Park Overall	Park Overall
+Candidate	Patrick Whitlock	Patrick Whitlock
+Candidate	Paul Bailey	Paul Bailey
+Candidate	Phil Bredesen	Phil Bredesen
+Candidate	Phil Roe	Phil Roe
+Candidate	Rachel Mackey	Rachel Mackey
+Candidate	Randall 'Randy' Price	"Randall ""Randy"" Price"
+Candidate	Randell Stroud	Randell Stroud
+Candidate	Randy McNally	Randy McNally
+Candidate	Raumesh Akbari	Raumesh Akbari
+Candidate	Rebecca Purington	Rebecca Purington
+Candidate	Richard Briggs	Richard Briggs
+Candidate	Richard Carl	Richard Carl
+Candidate	Richard Dawson	Richard Dawson
+Candidate	Rick Staples	Rick Staples
+Candidate	Rick Tillis	Rick Tillis
+Candidate	Rick Tyler	Rick Tyler
+Candidate	Robert G Williams	Robert G Williams
+Candidate	Robert M. Ellis	Robert M. Ellis
+Candidate	Robert Sawyers Sr.	Robert Sawyers Sr.
+Candidate	Robin Smith	Robin Smith
+Candidate	Roy Donald Waldrop	Roy Donald Waldrop
+Candidate	Rueben Dockery	Rueben Dockery
+Candidate	Rusty Crowe	Rusty Crowe
+Candidate	Sabi 'Doc' Kumar	"Sabi ""Doc"" Kumar"
+Candidate	Sanjeev Memula	Sanjeev Memula
+Candidate	Savannah Williamson	Savannah Williamson
+Candidate	Scott McCormick	Scott McCormick
+Candidate	Sean Bruce Fleming	Sean Bruce Fleming
+Candidate	Sharon 'Layne' Adams	"Sharon ""Layne"" Adams"
+Candidate	Sherry L. Clark	Sherry L. Clark
+Candidate	Steve Southerland	Steve Southerland
+Candidate	Stuart Starr	Stuart Starr
+Candidate	Tammy Magouirk	Tammy Magouirk
+Candidate	Terry S. Saine	Terry S. Saine
+Candidate	Terry Scott	Terry Scott
+Candidate	Timothy Hill	Timothy Hill
+Candidate	Toby Shaffer	Toby Shaffer
+Candidate	Tom Stephens	Tom Stephens
+Candidate	Tommy J. Vallejos	Tommy J. Vallejos
+Candidate	Tommy Ray McAnally	Tommy Ray McAnally
+Candidate	Toney Randall Mitchell	Toney Randall Mitchell
+Candidate	Tracy C. Yaste Tisdale	Tracy C. Yaste Tisdale
+Candidate	Trudy A. Austin	Trudy A. Austin
+Candidate	Vincyl Fitzgerald II	Vincyl Fitzgerald II
+Candidate	Vinnie Vineyard	Vinnie Vineyard
+Candidate	Wade Munday	Wade Munday
+Candidate	William Andrew Helmstetter	William Andrew Helmstetter
+Candidate	Yvonne Neubert	Yvonne Neubert
+Candidate	Zachary Houk	Zachary Houk
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Republican Party	republican

@@ -2724,3 +2724,7 @@ CandidateContest	US House OH District 7	OH;US Representative;District 7
 CandidateContest	US House OH District 8	OH;US Representative;District 8
 CandidateContest	US House OH District 9	OH;US Representative;District 9
 CandidateContest	OH US Senator	OH;US Senator;statewide
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican

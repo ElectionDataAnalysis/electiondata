@@ -12242,3 +12242,32 @@ CandidateContest	MI Senate District 5	MI;State Senator;District 5
 CandidateContest	MI Senate District 6	MI;State Senator;District 6
 CandidateContest	MI Senate District 7	MI;State Senator;District 7
 CandidateContest	US House MI District 13	MI;US Representative;District 13
+Candidate	Bill LaVoy	Bill LaVoy
+Candidate	Chad McNamara	Chad McNamara
+Candidate	Curt VanderWall	Curt VanderWall
+Candidate	DeShawn Wilkins	DeShawn Wilkins
+Candidate	Ed McBroom	Ed McBroom
+Candidate	George E. Huffman III	George E. Huffman III
+Candidate	Hali McEachern	Hali McEachern
+Candidate	John V. McDermott	John V. McDermott
+Candidate	Joseph H. LeBlanc	Joseph H. LeBlanc
+Candidate	Kelly Rossman-McKinney	Kelly Rossman-McKinney
+Candidate	Kim LaSata	Kim LaSata
+Candidate	Kyle McKee	Kyle McKee
+Candidate	LaTanya Garrett	LaTanya Garrett
+Candidate	Mallory McMorrow	Mallory McMorrow
+Candidate	Michael D. McCready	Michael D. McCready
+Candidate	Michael MacDonald	Michael MacDonald
+Candidate	Michelle LaVoy	Michelle LaVoy
+Candidate	Peter MacGregor	Peter MacGregor
+Candidate	Robert VanNoller	Robert VanNoller
+Candidate	Sean McCann	Sean McCann
+Candidate	Terri McKinnon	Terri McKinnon
+Candidate	Theodore Alfonsetti III	Theodore Alfonsetti III
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	Libertarian Party	libertarian
+Party	Natural Law Party	natural law
+Party	Republican Party	republican
+Party	Us Taxpayers Party	us taxpayers
+Party	Working Class Party	working class

@@ -3612,3 +3612,16 @@ CandidateContest	IA House District 13	IA;State Representative;District 13
 CandidateContest	IA House District 14	IA;State Representative;District 14
 CandidateContest	IA House District 6	IA;State Representative;District 6
 CandidateContest	IA Senate District 7	IA;State Senator;District 7
+Candidate	Fred Hubbell/Rita R. Hart	Fred Hubbell/Rita R. Hart
+Candidate	Gary Mohr	Gary Mohr
+Candidate	Gary Siegwarth/Natalia Blaskovich	Gary Siegwarth/Natalia Blaskovich
+Candidate	Jake Porter/Lynne Gentry	Jake Porter/Lynne Gentry
+Candidate	Kim Reynolds/Adam Gregg	Kim Reynolds/Adam Gregg
+Candidate	Warren Varley	Warren Varley
+Party	Clear Water Party	clear water
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	Independent Party	independent
+Party	Legal Medical Now Party	legal medical now
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican

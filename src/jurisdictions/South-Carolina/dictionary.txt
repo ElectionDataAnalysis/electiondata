@@ -6523,3 +6523,15 @@ CandidateContest	SC House District 46	SC;State Representative;District 46
 CandidateContest	SC House District 47	SC;State Representative;District 47
 CandidateContest	SC House District 48	SC;State Representative;District 48
 CandidateContest	SC House District 49	SC;State Representative;District 49
+Candidate	Henry McMaster / Pamela Evette	Henry McMaster / Pamela Evette
+Candidate	James Smith / Mandy Powers Norrell	James Smith / Mandy Powers Norrell
+Candidate	WRITE-IN	WRITE-IN
+Party	American Party	american
+Party	Constitution Party	constitution
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	Independence Party	independence
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+Party	United Citizens Party	united citizens
+Party	Working Families Party	working families

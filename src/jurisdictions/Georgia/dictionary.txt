@@ -8777,3 +8777,199 @@ CandidateContest	GA House District 125	GA;State Representative;District 125
 CandidateContest	GA Senate District 22	GA;State Senator;District 22
 CandidateContest	GA House District 115	GA;State Representative;District 115
 CandidateContest	GA House District 4	GA;State Representative;District 4
+Candidate	Al Williams	Al Williams
+Candidate	Alan Powell	Alan Powell
+Candidate	Alicia 'Aer' Scott	"Alicia ""Aer"" Scott"
+Candidate	Andy Welch	Andy Welch
+Candidate	Austin Scott	Austin Scott
+Candidate	Barry Fleming	Barry Fleming
+Candidate	Barry Loudermilk	Barry Loudermilk
+Candidate	Bee Nguyen	Bee Nguyen
+Candidate	Ben Watson	Ben Watson
+Candidate	Bert Reeves	Bert Reeves
+Candidate	Beth Beskin	Beth Beskin
+Candidate	Bill Cowsert	Bill Cowsert
+Candidate	Bill Heath	Bill Heath
+Candidate	Bill Hitchens	Bill Hitchens
+Candidate	Billy Mitchell	Billy Mitchell
+Candidate	Bob Trammell Jr	Bob Trammell Jr
+Candidate	Brandon Beach	Brandon Beach
+Candidate	Brett Harrell	Brett Harrell
+Candidate	Brian L. Prince	Brian L. Prince
+Candidate	Brian Strickland	Brian Strickland
+Candidate	Bruce Thompson	Bruce Thompson
+Candidate	Bruce Williamson	Bruce Williamson
+Candidate	Burt Jones	Burt Jones
+Candidate	Butch Parrish	Butch Parrish
+Candidate	Calvin Smyre	Calvin Smyre
+Candidate	Carl Wayne Gilliard	Carl Wayne Gilliard
+Candidate	Carolyn Hugley	Carolyn Hugley
+Candidate	Cecil T. 'Butch' Miller	"Cecil T. ""Butch"" Miller"
+Candidate	Charles 'Chuck' Hogg	"Charles ""Chuck"" Hogg"
+Candidate	Charles E. 'Chuck' Martin	"Charles E. ""Chuck"" Martin"
+Candidate	Chris Carr	Chris Carr
+Candidate	Chuck Eaton	Chuck Eaton
+Candidate	Chuck Efstration	Chuck Efstration
+Candidate	Chuck Hufstetler	Chuck Hufstetler
+Candidate	Chuck Payne	Chuck Payne
+Candidate	Clay Pirkle	Clay Pirkle
+Candidate	Dale Rutledge	Dale Rutledge
+Candidate	Darlene Taylor	Darlene Taylor
+Candidate	Darshun Kendrick	Darshun Kendrick
+Candidate	Dave Belton	Dave Belton
+Candidate	David Clark	David Clark
+Candidate	David Knight	David Knight
+Candidate	David Ralston	David Ralston
+Candidate	David Scott	David Scott
+Candidate	David Stover	David Stover
+Candidate	David Wilkerson	David Wilkerson
+Candidate	Dean Burke	Dean Burke
+Candidate	Debbie G. Buckner	Debbie G. Buckner
+Candidate	Deborah Gonzalez	Deborah Gonzalez
+Candidate	Demetrius Douglas	Demetrius Douglas
+Candidate	Dewey L. McClain	Dewey L. McClain
+Candidate	Dexter L. Sharper	Dexter L. Sharper
+Candidate	Dominic Lariccia	Dominic Lariccia
+Candidate	Don L. Parsons	Don L. Parsons
+Candidate	Donna McLeod	Donna McLeod
+Candidate	Donzella James	Donzella James
+Candidate	Doreen Carter	Doreen Carter
+Candidate	Earl L. 'Buddy' Carter	"Earl L. ""Buddy"" Carter"
+Candidate	Ed Harbison	Ed Harbison
+Candidate	Ed Rynders	Ed Rynders
+Candidate	Ed Setzler	Ed Setzler
+Candidate	Eddie Lumsden	Eddie Lumsden
+Candidate	Elena Parent	Elena Parent
+Candidate	Ellis Black	Ellis Black
+Candidate	Emanuel Jones	Emanuel Jones
+Candidate	Emory Dunahoo Jr	Emory Dunahoo Jr
+Candidate	Erica Thomas	Erica Thomas
+Candidate	Fran Millar	Fran Millar
+Candidate	Frank Ginn	Frank Ginn
+Candidate	Freddie Powell Sims	Freddie Powell Sims
+Candidate	Gail Davenport	Gail Davenport
+Candidate	Gary Black	Gary Black
+Candidate	Geoff Cauble	Geoff Cauble
+Candidate	Gerald Greene	Gerald Greene
+Candidate	Gloria Frazier	Gloria Frazier
+Candidate	Gloria S. Butler	Gloria S. Butler
+Candidate	Greg Kirk	Greg Kirk
+Candidate	Greg Morris	Greg Morris
+Candidate	Harold V. Jones II	Harold V. Jones II
+Candidate	Heath Clark	Heath Clark
+Candidate	Henry 'Wayne' Howard	"Henry ""Wayne"" Howard"
+Candidate	Henry C 'Hank' Johnson Jr	"Henry C ""Hank"" Johnson Jr"
+Candidate	Horacena Tate	Horacena Tate
+Candidate	J. Craig Gordon	J. Craig Gordon
+Candidate	Jack Hill	Jack Hill
+Candidate	James 'J. W.' Morrow Jr	"James ""J. W."" Morrow Jr"
+Candidate	James Beverly	James Beverly
+Candidate	Jan Jones	Jan Jones
+Candidate	Jan Tankersley	Jan Tankersley
+Candidate	Jason Shaw	Jason Shaw
+Candidate	Jay Powell	Jay Powell
+Candidate	Jeff Jones	Jeff Jones
+Candidate	Jeff Mullis	Jeff Mullis
+Candidate	Jen Jordan	Jen Jordan
+Candidate	Jesse Petrea	Jesse Petrea
+Candidate	Jesse Stone	Jesse Stone
+Candidate	Jimmy Pruett	Jimmy Pruett
+Candidate	Jodi Lott	Jodi Lott
+Candidate	Jody Hice	Jody Hice
+Candidate	John Albers	John Albers
+Candidate	John Burnette II	John Burnette II
+Candidate	John Carson	John Carson
+Candidate	John Corbett	John Corbett
+Candidate	John F. Kennedy	John F. Kennedy
+Candidate	John Lahood	John Lahood
+Candidate	John Meadows	John Meadows
+Candidate	John R. Lewis	John R. Lewis
+Candidate	Jon G. Burns	Jon G. Burns
+Candidate	Josh McCall	Josh McCall
+Candidate	Josh McLaurin	Josh McLaurin
+Candidate	Karen Bennett	Karen Bennett
+Candidate	Karla Drenner	Karla Drenner
+Candidate	Kasey Carpenter	Kasey Carpenter
+Candidate	Katie Dempsey	Katie Dempsey
+Candidate	Kay Kirkpatrick	Kay Kirkpatrick
+Candidate	Kim Schofield	Kim Schofield
+Candidate	Kimberly Alexander	Kimberly Alexander
+Candidate	Larry Walker	Larry Walker
+Candidate	Lee Hawkins	Lee Hawkins
+Candidate	Lester G. Jackson IIi	Lester G. Jackson IIi
+Candidate	Lindsey Tippins	Lindsey Tippins
+Candidate	Lucy McBath	Lucy McBath
+Candidate	Lynn Smith	Lynn Smith
+Candidate	Mack Jackson	Mack Jackson
+Candidate	Mandi Ballinger	Mandi Ballinger
+Candidate	Marc Morris	Marc Morris
+Candidate	Marie R. Metze	Marie R. Metze
+Candidate	Mark Butler	Mark Butler
+Candidate	Marty Harbin	Marty Harbin
+Candidate	Mary Margaret Oliver	Mary Margaret Oliver
+Candidate	Matt Dollar	Matt Dollar
+Candidate	Matt Hatchett	Matt Hatchett
+Candidate	Micah Gravley	Micah Gravley
+Candidate	Michael Dugan	Michael Dugan
+Candidate	Michael Rhett	Michael Rhett
+Candidate	Michael Smith	Michael Smith
+Candidate	Michele Henson	Michele Henson
+Candidate	Mickey Stephens	Mickey Stephens
+Candidate	Mike Glanton	Mike Glanton
+Candidate	Nan Orrock	Nan Orrock
+Candidate	P. K. Martin Iv	P. K. Martin Iv
+Candidate	Pam Dickerson	Pam Dickerson
+Candidate	Pam Stephenson	Pam Stephenson
+Candidate	Park Cannon	Park Cannon
+Candidate	Pat Gardner	Pat Gardner
+Candidate	Patty Bentley	Patty Bentley
+Candidate	Pedro 'Pete' Marin	"Pedro ""Pete"" Marin"
+Candidate	Penny Houston	Penny Houston
+Candidate	Randy Nix	Randy Nix
+Candidate	Richard H. Smith	Richard H. Smith
+Candidate	Richard Woods	Richard Woods
+Candidate	Rick Jasperse	Rick Jasperse
+Candidate	Rick W. Allen	Rick W. Allen
+Candidate	Ricky A. Williams	Ricky A. Williams
+Candidate	Rob Woodall	Rob Woodall
+Candidate	Robert Dickey	Robert Dickey
+Candidate	Roger Bruce	Roger Bruce
+Candidate	Ron Stephens	Ron Stephens
+Candidate	Sam Park	Sam Park
+Candidate	Sam Teasley	Sam Teasley
+Candidate	Sam Watson	Sam Watson
+Candidate	Sandra Givens Scott	Sandra Givens Scott
+Candidate	Sanford Bishop	Sanford Bishop
+Candidate	Scot Turner	Scot Turner
+Candidate	Scott Holcomb	Scott Holcomb
+Candidate	Sharon Beasley-Teague	Sharon Beasley-Teague
+Candidate	Sharon Cooper	Sharon Cooper
+Candidate	Shaw Blackmon	Shaw Blackmon
+Candidate	Sheila Jones	Sheila Jones
+Candidate	Sheri Smallwood Gilligan	Sheri Smallwood Gilligan
+Candidate	Spencer Frye	Spencer Frye
+Candidate	Steve Gooch	Steve Gooch
+Candidate	Steve Henson	Steve Henson
+Candidate	Steve Tarvin	Steve Tarvin
+Candidate	Susan Holmes	Susan Holmes
+Candidate	Teri Anulewicz	Teri Anulewicz
+Candidate	Terry England	Terry England
+Candidate	Terry Rogers	Terry Rogers
+Candidate	Timothy Barr	Timothy Barr
+Candidate	Tom Graves	Tom Graves
+Candidate	Tom Kirby	Tom Kirby
+Candidate	Tom McCall	Tom McCall
+Candidate	Tommy Benton	Tommy Benton
+Candidate	Trey Kelley	Trey Kelley
+Candidate	Trey Rhodes	Trey Rhodes
+Candidate	Tricia Pridemore	Tricia Pridemore
+Candidate	Tyler Harper	Tyler Harper
+Candidate	Valencia Seay	Valencia Seay
+Candidate	Wes Cantrell	Wes Cantrell
+Candidate	William 'Bill' Werkheiser	"William ""Bill"" Werkheiser"
+Candidate	William T. Ligon Jr	William T. Ligon Jr
+Candidate	Winfred Dukes	Winfred Dukes
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican

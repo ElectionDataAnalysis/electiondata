@@ -22204,3 +22204,14 @@ CandidateContest	IN House District 77	IN;State Representative;District 77
 CandidateContest	IN House District 78	IN;State Representative;District 78
 CandidateContest	IN House District 43	IN;State Representative;District 43
 CandidateContest	IN House District 56	IN;State Representative;District 56
+Candidate	"Anthony J. (""""Tony'') Cook"	"Anthony J. (""""Tony"""") Cook"
+Candidate	"Charles """"Chuck'' Moseley"	"Charles """"Chuck"""" Moseley"
+Candidate	"Clyde A. """"Chip'' Perfect Jr."	"Clyde A. """"Chip"""" Perfect Jr."
+Candidate	"Elizabeth """"Liz'' Brown"	"Elizabeth """"Liz"""" Brown"
+Candidate	"Joseph """"Joe'' Lannan"	"Joseph """"Joe"""" Lannan"
+Candidate	"Robert """"Bob'' Cherry"	"Robert """"Bob"""" Cherry"
+Candidate	"Wayne """"Gunny'' Harmon"	"Wayne """"Gunny"""" Harmon"
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican

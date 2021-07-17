@@ -13603,3 +13603,27 @@ CandidateContest	MN House District 39B	MN;State Representative;District 39B
 CandidateContest	MN House District 53B	MN;State Representative;District 53B
 CandidateContest	MN House District 28A	MN;State Representative;District 28A
 CandidateContest	MN House District 29B	MN;State Representative;District 29B
+Candidate	Calvin 'Cal' K. Bahr	"Calvin ""Cal"" K. Bahr"
+Candidate	Chris Wright & Judith Schwartzbacker	Chris Wright & Judith Schwartzbacker
+Candidate	Debra 'Deb' Kiel	"Debra ""Deb"" Kiel"
+Candidate	Drew Christenen	Drew Christenen
+Candidate	Jeff Johnson & Donna Bergstrom	Jeff Johnson & Donna Bergstrom
+Candidate	Jennifer Ziellnski	Jennifer Ziellnski
+Candidate	Jermain A. Botsio	Jermain A. Botsio
+Candidate	Jill Galban	Jill Galban
+Candidate	John lesch	John lesch
+Candidate	Josh Welter & Mary O'Connor	Josh Welter & Mary O'Connor
+Candidate	Marinda 'Mindy' Kimmel	"Marinda ""Mindy"" Kimmel"
+Candidate	Peter M. Fischer	Peter M. Fischer
+Candidate	Robert J. 'Bob' Cardinal	"Robert J. ""Bob"" Cardinal"
+Candidate	Tim Walz & Peggy Flanagan	Tim Walz & Peggy Flanagan
+Party	Democratic-Farmer-Labor Party	democratic-farmer-labor
+Party	Grassroots-Legalize Cannabis Party	grassroots-legalize cannabis
+Party	Independence Party	independence
+Party	Independent Party	independent
+Party	Legal Marijuana Now Party	legal marijuana now
+Party	Libertarian Party	libertarian
+Party	Minnesota Green Party	minnesota green
+Party	Nonpartisan Party	nonpartisan
+Party	Republican Party	republican
+Party	none or unknown	unaffiliated

@@ -1158,3 +1158,7 @@ CandidateContest	ND Senate District 3	ND;State Senator;District 3
 CandidateContest	ND Senate District 5	ND;State Senator;District 5
 CandidateContest	ND House District 1	ND;State Representative;District 1
 CandidateContest	ND Senate District 1	ND;State Senator;District 1
+Party	Democratic-Npl Party	democratic-npl
+Party	Independent Nomination Party	independent nomination
+Party	Nonpartisan Party	nonpartisan
+Party	Republican Party	republican

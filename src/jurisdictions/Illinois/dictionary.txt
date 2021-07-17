@@ -3453,3 +3453,47 @@ CandidateContest	IL House District 86	IL;State Representative;District 86
 CandidateContest	IL House District 98	IL;State Representative;District 98
 CandidateContest	IL House District 67	IL;State Representative;District 67
 CandidateContest	IL House District 68	IL;State Representative;District 68
+Candidate	Andre Thapedi	Andre Thapedi
+Candidate	Angelique \Angie\ Bodine	Angelique \Angie\ Bodine
+Candidate	Anthony Deluca	Anthony Deluca
+Candidate	Christopher \C.D.\ Davidsmeyer	Christopher \C.D.\ Davidsmeyer
+Candidate	Curtis J. Tarver II	Curtis J. Tarver II
+Candidate	Dan McConchie	Dan McConchie
+Candidate	Darin Lahood	Darin Lahood
+Candidate	David Mcsweeney	David Mcsweeney
+Candidate	Donald P. Dewitte	Donald P. Dewitte
+Candidate	Elizabeth \Lisa\ Hernandez	Elizabeth \Lisa\ Hernandez
+Candidate	Emanuel \Chris\ Welch	Emanuel \Chris\ Welch
+Candidate	Emil Jones, III	Emil Jones, III
+Candidate	Fredric Bryan \Rick\ Lesser	Fredric Bryan \Rick\ Lesser
+Candidate	James M. \Jim\ Caffrey	James M. \Jim\ Caffrey
+Candidate	Jennifer Mcmillin	Jennifer Mcmillin
+Candidate	Jerry Costello II	Jerry Costello II
+Candidate	Jesus \Chuy\ Garcia	Jesus \Chuy\ Garcia
+Candidate	Jimmy Lee Tillman, II	Jimmy Lee Tillman, II
+Candidate	Jitendra \Jd\ Diganvker	Jitendra \Jd\ Diganvker
+Candidate	Joan McCarthy Lasonde	Joan McCarthy Lasonde
+Candidate	Latoya N. Greenwood	Latoya N. Greenwood
+Candidate	Lawrence \Larry\ Walsh, Jr.	Lawrence \Larry\ Walsh, Jr.
+Candidate	Linda Chapa Lavia	Linda Chapa Lavia
+Candidate	Margo Mcdermed	Margo Mcdermed
+Candidate	Maurice A. West II	Maurice A. West II
+Candidate	Michael P. Mcauliffe	Michael P. Mcauliffe
+Candidate	Napoleon B. Harris, III	Napoleon B. Harris, III
+Candidate	Nicholas \Nick\ Smith	Nicholas \Nick\ Smith
+Candidate	Randall M. \Randy\ Hultgren	Randall M. \Randy\ Hultgren
+Candidate	Robert \Bob\ Rita	Robert \Bob\ Rita
+Candidate	Seth Mcmillan	Seth Mcmillan
+Candidate	Steve McClure	Steve McClure
+Candidate	Suzanne \Suzy\ Glowiak	Suzanne \Suzy\ Glowiak
+Candidate	Tony M. McCombie	Tony M. McCombie
+Candidate	William \Sam\ McCann	William \Sam\ McCann
+Candidate	William \Will\ Davis	William \Will\ Davis
+Candidate	William W. \Bill\ Fawell	William W. \Bill\ Fawell
+Party	Conservative Party	conservative
+Party	Democratic Party	democrat
+Party	Downstate United Party	downstate united
+Party	Green Party	green
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican

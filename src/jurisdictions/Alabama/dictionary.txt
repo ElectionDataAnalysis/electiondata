@@ -2350,3 +2350,259 @@ CandidateContest	AL Associate Justice of the Supreme Court, Place 1	AL;Associate
 CandidateContest	AL Associate Justice of the Supreme Court, Place 2	AL;Associate Justice of the Supreme Court, Place 2;statewide
 CandidateContest	AL Associate Justice of the Supreme Court, Place 3	AL;Associate Justice of the Supreme Court, Place 3;statewide
 CandidateContest	AL Associate Justice of the Supreme Court, Place 4	AL;Associate Justice of the Supreme Court, Place 4;statewide
+Candidate	Adam Jortner	Adam Jortner
+Candidate	Adline C. Clarke	Adline C. Clarke
+Candidate	Alan Baker	Alan Baker
+Candidate	Allen Farley	Allen Farley
+Candidate	Allen Treadaway	Allen Treadaway
+Candidate	Alli Summerford	Alli Summerford
+Candidate	Amber Selman-Lynn	Amber Selman-Lynn
+Candidate	Amy Wasyluka	Amy Wasyluka
+Candidate	Andrew Jones	Andrew Jones
+Candidate	Andrew Sorrell	Andrew Sorrell
+Candidate	Andy Whitt	Andy Whitt
+Candidate	Anthony Daniels	Anthony Daniels
+Candidate	April Weaver	April Weaver
+Candidate	Arlene Cunningham Easley	Arlene Cunningham Easley
+Candidate	Arnold G. Mooney II	Arnold G. Mooney II
+Candidate	Arthur Orr	Arthur Orr
+Candidate	Artis 'A.J.' McCampbell	"Artis ""A.J."" McCampbell"
+Candidate	B. Craig Lipscomb	B. Craig Lipscomb
+Candidate	Barbara Bigsby Boyd	Barbara Bigsby Boyd
+Candidate	Barbara Drummond	Barbara Drummond
+Candidate	Becky Nordgren	Becky Nordgren
+Candidate	Berry Forte	Berry Forte
+Candidate	Bill Jones	Bill Jones
+Candidate	Bill Poole	Bill Poole
+Candidate	Billy Beasley	Billy Beasley
+Candidate	Billy Jackson	Billy Jackson
+Candidate	Bob Fincher	Bob Fincher
+Candidate	Bob Vance, Jr.	Bob Vance, Jr.
+Candidate	Bobby James Dolan III	Bobby James Dolan III
+Candidate	Bobby Singleton	Bobby Singleton
+Candidate	Bradley Byrne	Bradley Byrne
+Candidate	Brett Easterbrook	Brett Easterbrook
+Candidate	Brian D Williams	Brian D Williams
+Candidate	Brian McGee	Brian McGee
+Candidate	Cam Ward	Cam Ward
+Candidate	Cara Y. McClure	Cara Y. McClure
+Candidate	Carin Mayo	Carin Mayo
+Candidate	Carl Carter	Carl Carter
+Candidate	Caroline Self	Caroline Self
+Candidate	Chad Young	Chad Young
+Candidate	Charles W. Talbert	Charles W. Talbert
+Candidate	Charlotte A. Clark-Frieson	Charlotte A. Clark-Frieson
+Candidate	Chip Brown	Chip Brown
+Candidate	Chris 'Chip' Beeker Jr.	"Chris ""Chip"" Beeker Jr."
+Candidate	Chris E. Blackshear	Chris E. Blackshear
+Candidate	Chris Elliott	Chris Elliott
+Candidate	Chris Pringle	Chris Pringle
+Candidate	Chris Sells	Chris Sells
+Candidate	Christopher F. 'Apostle' Davis	"Christopher F. ""Apostle"" Davis"
+Candidate	Christopher John England	Christopher John England
+Candidate	Clay Scofield	Clay Scofield
+Candidate	Clyde Chambliss, Jr.	Clyde Chambliss, Jr.
+Candidate	Connie Cooner Rowe	Connie Cooner Rowe
+Candidate	Corey Harbison	Corey Harbison
+Candidate	Corley Ellis	Corley Ellis
+Candidate	Cory Creel	Cory Creel
+Candidate	Craig Ford	Craig Ford
+Candidate	Cynthia McCarty	Cynthia McCarty
+Candidate	D. J. Johnson	D. J. Johnson
+Candidate	Dan Roberts	Dan Roberts
+Candidate	Danielle Mashburn-Myrick	Danielle Mashburn-Myrick
+Candidate	Danner Kline	Danner Kline
+Candidate	Danny F. Crawford	Danny F. Crawford
+Candidate	Danny Garrett	Danny Garrett
+Candidate	Darrell Turner	Darrell Turner
+Candidate	David 'Coach' Burkette	"David ""Coach"" Burkette"
+Candidate	David A. Sadler	David A. Sadler
+Candidate	David Faulkner	David Faulkner
+Candidate	David Sessions	David Sessions
+Candidate	David Standridge	David Standridge
+Candidate	David Wheeler	David Wheeler
+Candidate	Debbie Hamby Wood	Debbie Hamby Wood
+Candidate	Deborah Barros	Deborah Barros
+Candidate	Del Marsh	Del Marsh
+Candidate	Dexter Grimsley	Dexter Grimsley
+Candidate	Dickie Drake	Dickie Drake
+Candidate	Dimitri Polizos	Dimitri Polizos
+Candidate	Don Wallace	Don Wallace
+Candidate	Donna Wesson Smalley	Donna Wesson Smalley
+Candidate	Donnie Chesteen	Donnie Chesteen
+Candidate	Ed Oliver	Ed Oliver
+Candidate	Eddie Britton	Eddie Britton
+Candidate	Elaine Beech	Elaine Beech
+Candidate	Elijah J. Boyd	Elijah J. Boyd
+Candidate	Emily Anne Marcum	Emily Anne Marcum
+Candidate	Felicia Stewart	Felicia Stewart
+Candidate	Garlan Gudger	Garlan Gudger
+Candidate	Gerald Allen	Gerald Allen
+Candidate	Gil F. Isbell	Gil F. Isbell
+Candidate	Ginny Shaver	Ginny Shaver
+Candidate	Greg Albritton	Greg Albritton
+Candidate	Greg J. Reed	Greg J. Reed
+Candidate	Harry Shiver	Harry Shiver
+Candidate	Heather Milam	Heather Milam
+Candidate	Howard Sanderford	Howard Sanderford
+Candidate	J. Matthew 'Matt' Shelby	"J. Matthew ""Matt"" Shelby"
+Candidate	J. Ron Wilson	J. Ron Wilson
+Candidate	J.B. King	J.B. King
+Candidate	J.T. 'Jabo' Waggoner	"J.T. ""Jabo"" Waggoner"
+Candidate	Jack Jacobs	Jack Jacobs
+Candidate	Jack Williams	Jack Williams
+Candidate	James Allen Lloyd	James Allen Lloyd
+Candidate	James M. 'Jimmy' Martin	"James M. ""Jimmy"" Martin"
+Candidate	Jamie Kiel	Jamie Kiel
+Candidate	Jared Millican	Jared Millican
+Candidate	Jared Vaughn	Jared Vaughn
+Candidate	Jason Fisher	Jason Fisher
+Candidate	Jay Mitchell	Jay Mitchell
+Candidate	Jeff Sorrells	Jeff Sorrells
+Candidate	Jenn Gray	Jenn Gray
+Candidate	Jeremy 'J.J.' Jeffcoat	"Jeremy ""J.J."" Jeffcoat"
+Candidate	Jeremy 'Mr. Eyg' Gray	"Jeremy ""Mr. Eyg"" Gray"
+Candidate	Jeremy H. Oden	Jeremy H. Oden
+Candidate	Jerry McDonald	Jerry McDonald
+Candidate	Jessica Fortune Barker	Jessica Fortune Barker
+Candidate	Jim Carns	Jim Carns
+Candidate	Jim Hill	Jim Hill
+Candidate	Jim McClendon	Jim McClendon
+Candidate	Jim Toomey	Jim Toomey
+Candidate	Jim Williams	Jim Williams
+Candidate	Jim Zeigler	Jim Zeigler
+Candidate	Jimmy W. Holley	Jimmy W. Holley
+Candidate	Jo Ann Cummings	Jo Ann Cummings
+Candidate	Joanne Whetstone	Joanne Whetstone
+Candidate	Joe Faust	Joe Faust
+Candidate	Joe Lovvorn	Joe Lovvorn
+Candidate	Joel Lee Williams	Joel Lee Williams
+Candidate	John H. Merrill	John H. Merrill
+Candidate	John McMillan	John McMillan
+Candidate	John W. Rogers, Jr.	John W. Rogers, Jr.
+Candidate	Johnny Mack Morrow	Johnny Mack Morrow
+Candidate	Joseph Casper Baker III	Joseph Casper Baker III
+Candidate	Joseph Siegelman	Joseph Siegelman
+Candidate	Juandalynn Givan	Juandalynn Givan
+Candidate	Kari Powell	Kari Powell
+Candidate	Kay Ivey	Kay Ivey
+Candidate	Kelvin Jamichael Lawrence	Kelvin Jamichael Lawrence
+Candidate	Kenneth A. Brackins	Kenneth A. Brackins
+Candidate	Kerry Rich	Kerry Rich
+Candidate	Kirk Hatcher	Kirk Hatcher
+Candidate	Koven 'K.L.' Brown	"Koven ""K.L."" Brown"
+Candidate	Kristy M. Kirkland	Kristy M. Kirkland
+Candidate	Kyle Pierce	Kyle Pierce
+Candidate	Kyle South	Kyle South
+Candidate	Larry Stutts	Larry Stutts
+Candidate	Laura Hall	Laura Hall
+Candidate	Lee Auman	Lee Auman
+Candidate	Linda Coleman-Madison	Linda Coleman-Madison
+Candidate	Linda Meigs	Linda Meigs
+Candidate	Lindsey Deckard	Lindsey Deckard
+Candidate	Lora Kay Morrow	Lora Kay Morrow
+Candidate	Louise 'Lulu' Alexander	"Louise ""Lulu"" Alexander"
+Candidate	Lynn Greer	Lynn Greer
+Candidate	Mac McCutcheon	Mac McCutcheon
+Candidate	Malika Sanders-Fortier	Malika Sanders-Fortier
+Candidate	Mallory Hagan	Mallory Hagan
+Candidate	Margie Wilcox	Margie Wilcox
+Candidate	Mark Story	Mark Story
+Candidate	Martha Roby	Martha Roby
+Candidate	Mary Moore	Mary Moore
+Candidate	Mary Wynne Kling	Mary Wynne Kling
+Candidate	Matt Fridy	Matt Fridy
+Candidate	Matt Simpson	Matt Simpson
+Candidate	Maurice Horsey	Maurice Horsey
+Candidate	Merika Coleman	Merika Coleman
+Candidate	Michael J Holden II	Michael J Holden II
+Candidate	Mike Ball	Mike Ball
+Candidate	Mike Holmes	Mike Holmes
+Candidate	Mike Jones, Jr.	Mike Jones, Jr.
+Candidate	Miranda Karrine Joseph	Miranda Karrine Joseph
+Candidate	Nancy Carlton Bendinger	Nancy Carlton Bendinger
+Candidate	Napoleon Bracy, Jr.	Napoleon Bracy, Jr.
+Candidate	Nathaniel Ledbetter	Nathaniel Ledbetter
+Candidate	Neil Rafferty	Neil Rafferty
+Candidate	Nicki Arnold-Swindle	Nicki Arnold-Swindle
+Candidate	Over Votes	Over Votes
+Candidate	Pamela Jean Howard	Pamela Jean Howard
+Candidate	Parker Duncan Moore	Parker Duncan Moore
+Candidate	Paul W. Lee	Paul W. Lee
+Candidate	Pebblin Walker Warren	Pebblin Walker Warren
+Candidate	Peter Joffrion	Peter Joffrion
+Candidate	Phillip Pettus	Phillip Pettus
+Candidate	Polan 'Pete' Willis, Jr.	"Polan ""Pete"" Willis, Jr."
+Candidate	Prince Chestnut	Prince Chestnut
+Candidate	Priscilla Dunn	Priscilla Dunn
+Candidate	Proncey Robertson	Proncey Robertson
+Candidate	Ralph A. Howard	Ralph A. Howard
+Candidate	Randall Shedd	Randall Shedd
+Candidate	Randy Price	Randy Price
+Candidate	Randy Wood	Randy Wood
+Candidate	Rayford Mack	Rayford Mack
+Candidate	Reed Ingram	Reed Ingram
+Candidate	Rex Reynolds	Rex Reynolds
+Candidate	Rhett Marques	Rhett Marques
+Candidate	Rich Wingo	Rich Wingo
+Candidate	Rick Burnham	Rick Burnham
+Candidate	Rick Pate	Rick Pate
+Candidate	Ritchie Whorton	Ritchie Whorton
+Candidate	Robert Kennedy, Jr.	Robert Kennedy, Jr.
+Candidate	Roderick 'Rod' Hampton Scott	"Roderick ""Rod"" Hampton Scott"
+Candidate	Rodger M. Smitherman	Rodger M. Smitherman
+Candidate	Rodney Sullivan	Rodney Sullivan
+Candidate	Rolanda Hollis	Rolanda Hollis
+Candidate	Ron Johnson	Ron Johnson
+Candidate	Sam Givhan	Sam Givhan
+Candidate	Sam Jones	Sam Jones
+Candidate	Sarah Hicks Stewart	Sarah Hicks Stewart
+Candidate	Scott Brewer	Scott Brewer
+Candidate	Scott Stadthagen	Scott Stadthagen
+Candidate	Shane Stringer	Shane Stringer
+Candidate	Shay Shelnutt	Shay Shelnutt
+Candidate	Stephen McNair	Stephen McNair
+Candidate	Steve Clouse	Steve Clouse
+Candidate	Steve Hurst	Steve Hurst
+Candidate	Steve Livingston	Steve Livingston
+Candidate	Steve Marshall	Steve Marshall
+Candidate	Steve McMillan	Steve McMillan
+Candidate	Susan E. Smith	Susan E. Smith
+Candidate	Suzanna Coleman	Suzanna Coleman
+Candidate	Tabitha Isner	Tabitha Isner
+Candidate	Tashina Morris	Tashina Morris
+Candidate	Terri Collins	Terri Collins
+Candidate	Terry Jones	Terry Jones
+Candidate	Thad McClammy	Thad McClammy
+Candidate	Thomas 'Tommy' Hyche	"Thomas ""Tommy"" Hyche"
+Candidate	Thomas E. 'Action' Jackson	"Thomas E. ""Action"" Jackson"
+Candidate	Tijuanna Adetunji	Tijuanna Adetunji
+Candidate	Tim Melson	Tim Melson
+Candidate	Tim Wadsworth	Tim Wadsworth
+Candidate	Tom Butler	Tom Butler
+Candidate	Tom Holmes	Tom Holmes
+Candidate	Tom Parker	Tom Parker
+Candidate	Tom Whatley	Tom Whatley
+Candidate	Tommy Bryan	Tommy Bryan
+Candidate	Tommy Hanes	Tommy Hanes
+Candidate	Tracie West	Tracie West
+Candidate	Tracy Estes	Tracy Estes
+Candidate	Under Votes	Under Votes
+Candidate	Veronica R. Johnson	Veronica R. Johnson
+Candidate	Victor Gaston	Victor Gaston
+Candidate	Vivian Davis Figures	Vivian Davis Figures
+Candidate	Walt Maddox	Walt Maddox
+Candidate	Wayne Reynolds	Wayne Reynolds
+Candidate	Wes Allen	Wes Allen
+Candidate	Wes Kitchens	Wes Kitchens
+Candidate	Will Ainsworth	Will Ainsworth
+Candidate	Will Barfoot	Will Barfoot
+Candidate	Will Benton	Will Benton
+Candidate	Will Boyd	Will Boyd
+Candidate	Will Dismukes	Will Dismukes
+Candidate	Will Sellers	Will Sellers
+Candidate	Yvette M. Richardson	Yvette M. Richardson
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican

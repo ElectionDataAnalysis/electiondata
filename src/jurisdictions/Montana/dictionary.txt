@@ -2534,3 +2534,148 @@ CandidateContest	MT House District 56	MT;State Representative;District 56
 CandidateContest	MT Senate District 22	MT;State Senator;District 22
 CandidateContest	MT Senate District 24	MT;State Senator;District 24
 CandidateContest	MT Senate District 27	MT;State Senator;District 27
+Candidate	A. Alexander Fetto	A. Alexander Fetto
+Candidate	Adam Hertz	Adam Hertz
+Candidate	Adam Rosendale	Adam Rosendale
+Candidate	Adam S. Pummill	Adam S. Pummill
+Candidate	Alan Doane	Alan Doane
+Candidate	Alan Redfield	Alan Redfield
+Candidate	Aldo Sardot	Aldo Sardot
+Candidate	Amelia Marquez	Amelia Marquez
+Candidate	Anna Drew	Anna Drew
+Candidate	Austen Lee Nelson	Austen Lee Nelson
+Candidate	Ben Mckee	Ben Mckee
+Candidate	Bert Pezzarossi	Bert Pezzarossi
+Candidate	Bill Dwyer	Bill Dwyer
+Candidate	Bill Jones	Bill Jones
+Candidate	Blair Koch	Blair Koch
+Candidate	Bob Keenan	Bob Keenan
+Candidate	Bob Moretti	Bob Moretti
+Candidate	Bob Petersen	Bob Petersen
+Candidate	Bradley E. Tschida	Bradley E. Tschida
+Candidate	Brian Hoven	Brian Hoven
+Candidate	Bruce (Butch) Gillespie	Bruce (Butch) Gillespie
+Candidate	Bryan Stafford	Bryan Stafford
+Candidate	Carlie Boland	Carlie Boland
+Candidate	Cary L. Smith	Cary L. Smith
+Candidate	Casey Schreiner	Casey Schreiner
+Candidate	Chase Reynolds	Chase Reynolds
+Candidate	Chris Gross	Chris Gross
+Candidate	Chris Richards	Chris Richards
+Candidate	Cindy Dyson	Cindy Dyson
+Candidate	Clementine Lindley	Clementine Lindley
+Candidate	Colin Nygaard	Colin Nygaard
+Candidate	Colton Zaugg	Colton Zaugg
+Candidate	Conor Burns	Conor Burns
+Candidate	Dale Mortensen	Dale Mortensen
+Candidate	Dan Nelsen	Dan Nelsen
+Candidate	Dan Skattum	Dan Skattum
+Candidate	Danny Choriki	Danny Choriki
+Candidate	Darryl S Wilson	Darryl S Wilson
+Candidate	David Doc Moore	David Doc Moore
+Candidate	David Howard	David Howard
+Candidate	Dean Rehbein	Dean Rehbein
+Candidate	Denise Albrecht	Denise Albrecht
+Candidate	Denise Johnson	Denise Johnson
+Candidate	Diane Sands	Diane Sands
+Candidate	Diane Taylor-Mahnke	Diane Taylor-Mahnke
+Candidate	Donald Coats	Donald Coats
+Candidate	Donald Kenck	Donald Kenck
+Candidate	Douglas 'Doug' Kary	"Douglas ""Doug"" Kary"
+Candidate	Duane Ankney	Duane Ankney
+Candidate	Eldena N. Bear Don't Walk	Eldena N. Bear Don't Walk
+Candidate	Elinor Swanson	Elinor Swanson
+Candidate	Elizabeth 'Betsy' Scanlin	"Elizabeth ""Betsy"" Scanlin"
+Candidate	Frank McLain	Frank McLain
+Candidate	Frederick (Eric) Moore	Frederick (Eric) Moore
+Candidate	Gilbert Bruce Meyers	Gilbert Bruce Meyers
+Candidate	Gordon 'Gordy' Vance	"Gordon ""Gordy"" Vance"
+Candidate	Gordon Pierson Jr	Gordon Pierson Jr
+Candidate	Greg Gianforte	Greg Gianforte
+Candidate	J. Bryher Herak	J. Bryher Herak
+Candidate	Jacob D. Bachmeier	Jacob D. Bachmeier
+Candidate	James H Cossitt	James H Cossitt
+Candidate	Janet Ellis	Janet Ellis
+Candidate	Janna J. Lind	Janna J. Lind
+Candidate	Jason F. Nickisch	Jason F. Nickisch
+Candidate	Jason W. Ellsworth	Jason W. Ellsworth
+Candidate	Jay A. Frederick	Jay A. Frederick
+Candidate	Jennifer 'Jp' Pomnichowski	"Jennifer ""Jp"" Pomnichowski"
+Candidate	Jennifer Merecki	Jennifer Merecki
+Candidate	Jerry O'neil	Jerry O'neil
+Candidate	Jessica L. Karjala	Jessica L. Karjala
+Candidate	Jessuah Bardgett	Jessuah Bardgett
+Candidate	Jill Cohenour	Jill Cohenour
+Candidate	Jim Sadler	Jim Sadler
+Candidate	Jobeth Blair	Jobeth Blair
+Candidate	Joey Chester	Joey Chester
+Candidate	John Esp	John Esp
+Candidate	John Schmidt	John Schmidt
+Candidate	Jon Tester	Jon Tester
+Candidate	Joshua J Kassmier	Joshua J Kassmier
+Candidate	Joshua-Luke O'connor	Joshua-Luke O'connor
+Candidate	K. Webb Galbreath	K. Webb Galbreath
+Candidate	Kathleen O'donnell	Kathleen O'donnell
+Candidate	Kathryn G.h. Nicholes	Kathryn G.h. Nicholes
+Candidate	Keaton Sunchild	Keaton Sunchild
+Candidate	Kenneth Bogner	Kenneth Bogner
+Candidate	Kerry E. White	Kerry E. White
+Candidate	Kevin Vincent Leatherbarrow	Kevin Vincent Leatherbarrow
+Candidate	Kristine Menicucci	Kristine Menicucci
+Candidate	Kurt J. Dyer	Kurt J. Dyer
+Candidate	Kwen Shirley	Kwen Shirley
+Candidate	Laura Dever	Laura Dever
+Candidate	Laura Garber	Laura Garber
+Candidate	Lee Bridges	Lee Bridges
+Candidate	Leesha Ford	Leesha Ford
+Candidate	Lisa Barton	Lisa Barton
+Candidate	Lynelle Melton	Lynelle Melton
+Candidate	Marilyn Ryan	Marilyn Ryan
+Candidate	Mark W. Blasdel	Mark W. Blasdel
+Candidate	Mary Custer	Mary Custer
+Candidate	Mary M. Caferro	Mary M. Caferro
+Candidate	Mary McNally	Mary McNally
+Candidate	Mary Zeiss Stange	Mary Zeiss Stange
+Candidate	Michael K. Cooper Sr	Michael K. Cooper Sr
+Candidate	Michael White	Michael White
+Candidate	Mike 'Mac' McNamara	"Mike ""Mac"" McNamara"
+Candidate	Mike Cuffe	Mike Cuffe
+Candidate	Ming Cabrera	Ming Cabrera
+Candidate	Nate McConnell	Nate McConnell
+Candidate	Nathan Mckenty	Nathan Mckenty
+Candidate	Nick Knowles	Nick Knowles
+Candidate	Pat Flowers	Pat Flowers
+Candidate	Patrick Maloney	Patrick Maloney
+Candidate	Paul Tuss	Paul Tuss
+Candidate	Peggy Webb	Peggy Webb
+Candidate	Quenby Iandiorio	Quenby Iandiorio
+Candidate	Quentin Eggart	Quentin Eggart
+Candidate	Raney Tschida	Raney Tschida
+Candidate	Ray L. Shaw	Ray L. Shaw
+Candidate	Richard 'Dick' Motta	Richard 'Dick' Motta
+Candidate	Richard (Rick) Kerr	Richard (Rick) Kerr
+Candidate	Rick Breckenridge	Rick Breckenridge
+Candidate	Robert Farris-Olsen	Robert Farris-Olsen
+Candidate	Robert Sivertsen	Robert Sivertsen
+Candidate	Ross H. Fitzgerald	Ross H. Fitzgerald
+Candidate	Russel E Tempel	Russel E Tempel
+Candidate	Sam Newville	Sam Newville
+Candidate	Seth Mangini	Seth Mangini
+Candidate	Shane A. Morigeau	Shane A. Morigeau
+Candidate	Shawn Leslie Guymon	Shawn Leslie Guymon
+Candidate	Sid Daoud	Sid Daoud
+Candidate	Steven E Galloway	Steven E Galloway
+Candidate	Susan A. Webber	Susan A. Webber
+Candidate	Susan T. Evans	Susan T. Evans
+Candidate	Thomas Winter	Thomas Winter
+Candidate	Tom Burnett	Tom Burnett
+Candidate	Tom Jacobson	Tom Jacobson
+Candidate	Tom McGillvray	Tom McGillvray
+Candidate	Tyson T Runningwolf	Tyson T Runningwolf
+Candidate	William Smith	William Smith
+Candidate	Zac Perry	Zac Perry
+Candidate	Zach Brown	Zach Brown
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican

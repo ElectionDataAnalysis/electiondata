@@ -1067,3 +1067,107 @@ CandidateContest	DE House District 40	DE;State Representative;District 40
 CandidateContest	DE House District 41	DE;State Representative;District 41
 CandidateContest	DE Senate District 21	DE;State Senator;District 21
 CandidateContest	DE Senate District 6	DE;State Senator;District 6
+Candidate	Adewunmi Kuforiji	Adewunmi Kuforiji
+Candidate	Albert John Ament	Albert John Ament
+Candidate	Amy Merlino	Amy Merlino
+Candidate	Andria Bennett	Andria Bennett
+Candidate	Bernard V Pepukayi Sr	Bernard V Pepukayi Sr
+Candidate	Bryan K Rash	Bryan K Rash
+Candidate	Bryan Townsend	Bryan Townsend
+Candidate	Bryan W Shupe	Bryan W Shupe
+Candidate	Bryant L Richardson	Bryant L Richardson
+Candidate	Charles Groce	Charles Groce
+Candidate	Charles S Postles Jr	Charles S Postles Jr
+Candidate	Charlotte Middleton	Charlotte Middleton
+Candidate	Cheryl Precourt	Cheryl Precourt
+Candidate	Christine Metzing	Christine Metzing
+Candidate	Cody Mcnutt	Cody Mcnutt
+Candidate	Colleen Davis	Colleen Davis
+Candidate	Daniel B Short	Daniel B Short
+Candidate	Daniel Kapitanic	Daniel Kapitanic
+Candidate	Daniel Zitofsky	Daniel Zitofsky
+Candidate	Darius Brown	Darius Brown
+Candidate	David B Baker	David B Baker
+Candidate	David B Chandler	David B Chandler
+Candidate	David L Wilson	David L Wilson
+Candidate	David Levi Anderson	David Levi Anderson
+Candidate	David S Bentz	David S Bentz
+Candidate	Deborah D Hudson	Deborah D Hudson
+Candidate	Debra Heffernan	Debra Heffernan
+Candidate	Demitri G Theodoropoulos	Demitri G Theodoropoulos
+Candidate	Donald M Allan Jr	Donald M Allan Jr
+Candidate	Earl G Jaques Jr	Earl G Jaques Jr
+Candidate	Edward Osienski	Edward Osienski
+Candidate	Eric Braunstein	Eric Braunstein
+Candidate	Erin L Wienner	Erin L Wienner
+Candidate	Ernesto B Lopez	Ernesto B Lopez
+Candidate	Franklin D Cooke Jr	Franklin D Cooke Jr
+Candidate	Gerald L Brady	Gerald L Brady
+Candidate	Gregory F Lavelle	Gregory F Lavelle
+Candidate	Guillermina Gonzalez	Guillermina Gonzalez
+Candidate	Harry R Smouse Jr	Harry R Smouse Jr
+Candidate	James A Purcell	James A Purcell
+Candidate	James L Demartino	James L Demartino
+Candidate	James R Startzman Jr	James R Startzman Jr
+Candidate	James Spadola	James Spadola
+Candidate	James Todd Webb	James Todd Webb
+Candidate	Jeffrey L Olmstead	Jeffrey L Olmstead
+Candidate	Jeffrey N Spiegelman	Jeffrey N Spiegelman
+Candidate	Jesse R Vanderwende	Jesse R Vanderwende
+Candidate	John A Kowalko Jr	John A Kowalko Jr
+Candidate	John D Bucchioni	John D Bucchioni
+Candidate	John L Mitchell Jr	John L Mitchell Jr
+Candidate	John Viola	John Viola
+Candidate	Justin Cruice	Justin Cruice
+Candidate	Justin King	Justin King
+Candidate	Kathleen Jennings	Kathleen Jennings
+Candidate	Kathleen K Mcguiness	Kathleen K Mcguiness
+Candidate	Kendra Johnson	Kendra Johnson
+Candidate	Kenneth A Simpler	Kenneth A Simpler
+Candidate	Kevin S Hensley	Kevin S Hensley
+Candidate	Kimberly Williams	Kimberly Williams
+Candidate	Krista Griffith	Krista Griffith
+Candidate	Laura Sturgeon	Laura Sturgeon
+Candidate	Louisa Phillips	Louisa Phillips
+Candidate	Lyndon D Yearick	Lyndon D Yearick
+Candidate	Meghan M Kelly	Meghan M Kelly
+Candidate	Melissa Minor-Brown	Melissa Minor-Brown
+Candidate	Michael F Smith	Michael F Smith
+Candidate	Michael Ramone	Michael Ramone
+Candidate	Nadine M Frost	Nadine M Frost
+Candidate	Nnamdi O Chukwuocha	Nnamdi O Chukwuocha
+Candidate	Paul A Thornburg	Paul A Thornburg
+Candidate	Paul S Baumbach	Paul S Baumbach
+Candidate	Peter C Schwartzkopf	Peter C Schwartzkopf
+Candidate	Raymond Seigfried	Raymond Seigfried
+Candidate	Richard G Collins	Richard G Collins
+Candidate	Robert B Arlett	Robert B Arlett
+Candidate	Robert C Wheatley	Robert C Wheatley
+Candidate	Robin R Hayes	Robin R Hayes
+Candidate	Ronald E Gray	Ronald E Gray
+Candidate	Ruth Briggs King	Ruth Briggs King
+Candidate	S Bradley Connor	S Bradley Connor
+Candidate	S Elizabeth Lockman	S Elizabeth Lockman
+Candidate	S Quinton Johnson	S Quinton Johnson
+Candidate	Scott Gesty	Scott Gesty
+Candidate	Scott Walker	Scott Walker
+Candidate	Sean M Lynn	Sean M Lynn
+Candidate	Sherry Dorsey Walker	Sherry Dorsey Walker
+Candidate	Stephanie Barry	Stephanie Barry
+Candidate	Stephanie L Hansen	Stephanie L Hansen
+Candidate	Stephanie T Bolden	Stephanie T Bolden
+Candidate	Stephen T Smyk	Stephen T Smyk
+Candidate	Thomas R Carper	Thomas R Carper
+Candidate	Timothy D Dukes	Timothy D Dukes
+Candidate	Valerie Longhurst	Valerie Longhurst
+Candidate	W Charles Paradee Iii	W Charles Paradee Iii
+Candidate	W Shannon Morris	W Shannon Morris
+Candidate	William Bush	William Bush
+Candidate	William Hinds	William Hinds
+Candidate	William J Carson Jr	William J Carson Jr
+Candidate	William Mcvay	William Mcvay
+Candidate	William W Dilks Sr	William W Dilks Sr
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican

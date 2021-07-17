@@ -266,3 +266,81 @@ CandidateContest	NE Senate District 42	NE;State Senator;District 42
 CandidateContest	NE Senate District 24	NE;State Senator;District 24
 CandidateContest	NE Senate District 14	NE;State Senator;District 14
 CandidateContest	NE Senate District 48	NE;State Senator;District 48
+Candidate	Adam Morfeld	Adam Morfeld
+Candidate	Barbara Weitz	Barbara Weitz
+Candidate	Ben Hansen	Ben Hansen
+Candidate	Bob Evnen	Bob Evnen
+Candidate	Bob Krist and Lynne M. Walz	Bob Krist and Lynne M. Walz
+Candidate	Bob Van Valkenburg	Bob Van Valkenburg
+Candidate	Brett Lindstrom	Brett Lindstrom
+Candidate	Charlie Janssen	Charlie Janssen
+Candidate	Christa Yoakum	Christa Yoakum
+Candidate	Chuck Hassebrook	Chuck Hassebrook
+Candidate	Curt Friesen	Curt Friesen
+Candidate	Dan Hughes	Dan Hughes
+Candidate	Dan Watermeier	Dan Watermeier
+Candidate	Dave Murman	Dave Murman
+Candidate	Deb Fischer	Deb Fischer
+Candidate	Deborah Neary	Deborah Neary
+Candidate	Don Bacon	Don Bacon
+Candidate	Don Schuller	Don Schuller
+Candidate	Doug Oertwich	Doug Oertwich
+Candidate	Doug Peterson	Doug Peterson
+Candidate	Elizabeth O'Connor	Elizabeth O'Connor
+Candidate	Hal Daub	Hal Daub
+Candidate	Jackie Collett	Jackie Collett
+Candidate	Jane Raybould	Jane Raybould
+Candidate	Jane Skinner	Jane Skinner
+Candidate	Jeff Parris	Jeff Parris
+Candidate	Jessica McClure	Jessica McClure
+Candidate	Jim Pillen	Jim Pillen
+Candidate	Jim Schultz	Jim Schultz
+Candidate	John Arch	John Arch
+Candidate	John McCollister S.	John McCollister S.
+Candidate	John Murante	John Murante
+Candidate	John Stinner P.	John Stinner P.
+Candidate	Judy Pederson	Judy Pederson
+Candidate	Keith Kube F.	Keith Kube F.
+Candidate	Larry Bradley	Larry Bradley
+Candidate	Laura Ebke	Laura Ebke
+Candidate	Machaela Cavanaugh	Machaela Cavanaugh
+Candidate	Maris Bentley	Maris Bentley
+Candidate	Mark Kolterman A.	Mark Kolterman A.
+Candidate	Marsha Fangmeyer	Marsha Fangmeyer
+Candidate	Matt Deaver	Matt Deaver
+Candidate	Matt Hansen	Matt Hansen
+Candidate	Matt Williams	Matt Williams
+Candidate	Maureen Nickels	Maureen Nickels
+Candidate	Megan Hunt	Megan Hunt
+Candidate	Merv Riepe	Merv Riepe
+Candidate	Mike Forsythe	Mike Forsythe
+Candidate	Mike Groene	Mike Groene
+Candidate	Mike Moser	Mike Moser
+Candidate	Mina Davis	Mina Davis
+Candidate	Myron Dorn	Myron Dorn
+Candidate	Pat McPherson	Pat McPherson
+Candidate	Patricia Timm H.	Patricia Timm H.
+Candidate	Patty Pansing Brooks	Patty Pansing Brooks
+Candidate	Paul Theobald	Paul Theobald
+Candidate	Pete Ricketts and Mike Foley	Pete Ricketts and Mike Foley
+Candidate	Rob Schafer	Rob Schafer
+Candidate	Robert Clements	Robert Clements
+Candidate	Robert Hilkemann Bob	Robert Hilkemann Bob
+Candidate	Robert Prokop J.	Robert Prokop J.
+Candidate	Robin Stevens R.	Robin Stevens R.
+Candidate	Scott Winkler	Scott Winkler
+Candidate	Shannon Coryell	Shannon Coryell
+Candidate	Spencer Danner	Spencer Danner
+Candidate	Stephanie Malcolm L.	Stephanie Malcolm L.
+Candidate	Stephanie Nantkes	Stephanie Nantkes
+Candidate	Steve Lathrop	Steve Lathrop
+Candidate	Susan Lorence D.	Susan Lorence D.
+Candidate	Theresa Thibodeau	Theresa Thibodeau
+Candidate	Tim Gragert	Tim Gragert
+Candidate	Tim Schram	Tim Schram
+Candidate	Tom Brandt	Tom Brandt
+Candidate	Wendy DeBoer	Wendy DeBoer
+Party	Democratic Party	democrat
+Party	Libertarian Party	libertarian
+Party	Nonpartisan Party	nonpartisan
+Party	Republican Party	republican

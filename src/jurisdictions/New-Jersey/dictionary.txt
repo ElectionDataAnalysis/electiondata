@@ -183,3 +183,107 @@ CandidateContest	US House NJ District 12	NJ;US Representative;District 12
 CandidateContest	US House NJ District 4	NJ;US Representative;District 4
 CandidateContest	NJ State Assembly Member District 22	NJ;State Assembly Member;District 22
 CandidateContest	US House NJ District 6	NJ;US Representative;District 6
+Candidate	Agha Khan	Agha Khan
+Candidate	Albio Sires	Albio Sires
+Candidate	Alex Bethea	Alex Bethea
+Candidate	Allen Yusufov	Allen Yusufov
+Candidate	Andy Kim	Andy Kim
+Candidate	Anthony Parisi Sanchez	Anthony Parisi Sanchez
+Candidate	Anthony Verrelli	Anthony Verrelli
+Candidate	Bill Pascrell Jr.	Bill Pascrell Jr.
+Candidate	Bob Hugin	Bob Hugin
+Candidate	Bonnie Watson Coleman	Bonnie Watson Coleman
+Candidate	Brian J. Reynolds	Brian J. Reynolds
+Candidate	Britnee N. Timberlake	Britnee N. Timberlake
+Candidate	Christopher H. Smith	Christopher H. Smith
+Candidate	Christopher Tully	Christopher Tully
+Candidate	Claudio Belusic	Claudio Belusic
+Candidate	Clenard Howard Childress Jr.	Clenard Howard Childress Jr.
+Candidate	Clinton Calabrese	Clinton Calabrese
+Candidate	Cynthia Johnson	Cynthia Johnson
+Candidate	Daisy Ortiz Berger	Daisy Ortiz Berger
+Candidate	Daryl Kipnis	Daryl Kipnis
+Candidate	Diane Moxley	Diane Moxley
+Candidate	Donald M. Payne Jr.	Donald M. Payne Jr.
+Candidate	Donald W. Norcross	Donald W. Norcross
+Candidate	Edward C. Stackhouse Jr.	Edward C. Stackhouse Jr.
+Candidate	Edward Forchion	Edward Forchion
+Candidate	Eric P. Fisher	Eric P. Fisher
+Candidate	Felicia Stoler	Felicia Stoler
+Candidate	Frank Pallone Jr.	Frank Pallone Jr.
+Candidate	Gail Horton	Gail Horton
+Candidate	Gregg Mele	Gregg Mele
+Candidate	Irene Devita	Irene Devita
+Candidate	James Tosone	James Tosone
+Candidate	Jay Webber	Jay Webber
+Candidate	Jayme Ouellette	Jayme Ouellette
+Candidate	Jeff Van Drew	Jeff Van Drew
+Candidate	Joanne Miller	Joanne Miller
+Candidate	John J. Mccann Jr.	John J. Mccann Jr.
+Candidate	John Ordille	John Ordille
+Candidate	John Quattrocchi	John Quattrocchi
+Candidate	John R. Muniz	John R. Muniz
+Candidate	Joseph A Lagana	Joseph A Lagana
+Candidate	Josh Gottheimer	Josh Gottheimer
+Candidate	Joshua Welle	Joshua Welle
+Candidate	Justin Tibbetts	Justin Tibbetts
+Candidate	Kevin Kimple	Kevin Kimple
+Candidate	Lawrence Berlinski	Lawrence Berlinski
+Candidate	Leonard Lance	Leonard Lance
+Candidate	Linda Carter	Linda Carter
+Candidate	Lisa Swain	Lisa Swain
+Candidate	Mahmoud Mahmoud	Mahmoud Mahmoud
+Candidate	Marc Marsi	Marc Marsi
+Candidate	Michael Rufo	Michael Rufo
+Candidate	Mikie Sherrill	Mikie Sherrill
+Candidate	Mohammad Kabir	Mohammad Kabir
+Candidate	Murray Sabrin	Murray Sabrin
+Candidate	Natalie Lynn Rivera	Natalie Lynn Rivera
+Candidate	Nicholas Kush	Nicholas Kush
+Candidate	Paul E. Dilks	Paul E. Dilks
+Candidate	Paul Hamlin	Paul Hamlin
+Candidate	Pedro Mejia	Pedro Mejia
+Candidate	Richard J. Pezzullo	Richard J. Pezzullo
+Candidate	Robert F. Crook	Robert F. Crook
+Candidate	Robert Menendez	Robert Menendez
+Candidate	Ryan Martinez	Ryan Martinez
+Candidate	Scott Diroma	Scott Diroma
+Candidate	Seth Grossman	Seth Grossman
+Candidate	Steven Fenichel	Steven Fenichel
+Candidate	Tom Macarthur	Tom Macarthur
+Candidate	Tom Malinowski	Tom Malinowski
+Candidate	Tracy R. Sinatra	Tracy R. Sinatra
+Candidate	Tricia Flanagan	Tricia Flanagan
+Candidate	Verlina Reynolds-Jackson	Verlina Reynolds-Jackson
+Candidate	Wendy W. Goetz	Wendy W. Goetz
+Candidate	William R. Benfer	William R. Benfer
+Candidate	William W. Spearman	William W. Spearman
+Party	Bringing Back Manufacturing Party	bringing back manufacturing
+Party	C4C 2018 Party	c4c 2018
+Party	Cannot Be Bought Party	cannot be bought
+Party	Check This Column Party	check this column
+Party	Constitution Party	constitution
+Party	Democratic Party	democrat
+Party	Economic Growth Party	economic growth
+Party	Ed The Barber Party	ed the barber
+Party	For The People Party	for the people
+Party	Freedom, Responsibility, Action Party	freedom, responsibility, action
+Party	Green Party	green
+Party	Honesty, Integrity, Compassion Party	honesty, integrity, compassion
+Party	Hope In Unity Party	hope in unity
+Party	Integrity Transparency Accountability Party	integrity transparency accountability
+Party	Libertarian Party	libertarian
+Party	Make It Simple Party	make it simple
+Party	Never Give Up Party	never give up
+Party	New Day Nj Party	new day nj
+Party	New Way Forward Party	new way forward
+Party	Repeal Bail Reform Party	repeal bail reform
+Party	Republican Party	republican
+Party	Stop The Insanity Party	stop the insanity
+Party	The Inclusion Candidate Party	the inclusion candidate
+Party	Time For Change Party	time for change
+Party	Time For Truth Party	time for truth
+Party	Together We Can Party	together we can
+Party	Trade, Health, Environment Party	trade, health, environment
+Party	We Deserve Better Party	we deserve better
+Party	Your Voice Heard Party	your voice hard

@@ -1177,3 +1177,361 @@ CandidateContest	NY State Assembly Member District 92	NY;State Assembly Member;D
 CandidateContest	NY State Assembly Member District 93	NY;State Assembly Member;District 93
 CandidateContest	NY Senate District 35	NY;State Senator;District 35
 CandidateContest	NY Senate District 37	NY;State Senator;District 37
+Candidate	Aaron W. Gladd	Aaron W. Gladd
+Candidate	Adam Baumel	Adam Baumel
+Candidate	Adam P. Ohar	Adam P. Ohar
+Candidate	Addie A. E. Jenne	Addie A. E. Jenne
+Candidate	Aidan S. O'Connor, Jr.	Aidan S. O'Connor, Jr.
+Candidate	Alexander M. Tisch	Alexander M. Tisch
+Candidate	Allen F. Foley	Allen F. Foley
+Candidate	Alpheaus E. Marcus	Alpheaus E. Marcus
+Candidate	Amanda Kirchgessner	Amanda Kirchgessner
+Candidate	Amanda Septimo	Amanda Septimo
+Candidate	Ameer N. Benno	Ameer N. Benno
+Candidate	Andrew G. Gilchrist	Andrew G. Gilchrist
+Candidate	Andrew M. Cuomo and Kathy C. Hochul	Andrew M. Cuomo and Kathy C. Hochul
+Candidate	Andrew P. Raia	Andrew P. Raia
+Candidate	Angharad Vaughan	Angharad Vaughan
+Candidate	Ann G. Rabbitt	Ann G. Rabbitt
+Candidate	Ann Marie Taddeo	Ann Marie Taddeo
+Candidate	Anthony Arias	Anthony Arias
+Candidate	Anthony Beckford	Anthony Beckford
+Candidate	Anthony Durso	Anthony Durso
+Candidate	Anthony Pappas	Anthony Pappas
+Candidate	Anthony R. Caccamo	Anthony R. Caccamo
+Candidate	Aravella Simotas	Aravella Simotas
+Candidate	Ari Espinal	Ari Espinal
+Candidate	Ariel A. Rivera-Diaz	Ariel A. Rivera-Diaz
+Candidate	Aston G. Lee	Aston G. Lee
+Candidate	Avrum J. Rosen	Avrum J. Rosen
+Candidate	Barbara A. Baer	Barbara A. Baer
+Candidate	Barbara S. Lifton	Barbara S. Lifton
+Candidate	Barry E. Warhit	Barry E. Warhit
+Candidate	Benison DeFunis	Benison DeFunis
+Candidate	Benjamin R. Barbato	Benjamin R. Barbato
+Candidate	Bill Batrowny	Bill Batrowny
+Candidate	Bill Magee	Bill Magee
+Candidate	Billy Carr	Billy Carr
+Candidate	Blank	Blank
+Candidate	Bob Cohen	Bob Cohen
+Candidate	Bobby K. Kalotee	Bobby K. Kalotee
+Candidate	Brandon S. Washington	Brandon S. Washington
+Candidate	Brian F. Curran	Brian F. Curran
+Candidate	Brian M. Kolb	Brian M. Kolb
+Candidate	Brian McGarry	Brian McGarry
+Candidate	Brian T. Barnwell	Brian T. Barnwell
+Candidate	Brian V. Phillips	Brian V. Phillips
+Candidate	Bryan Cooper	Bryan Cooper
+Candidate	Byron A. Divins, Jr.	Byron A. Divins, Jr.
+Candidate	C. Scott Vanderhoef	C. Scott Vanderhoef
+Candidate	Carima C. El Behairy	Carima C. El Behairy
+Candidate	Carl E. Heastie	Carl E. Heastie
+Candidate	Carl L. Marcellino	Carl L. Marcellino
+Candidate	Carmen N. De La Rosa	Carmen N. De La Rosa
+Candidate	Catharine M. Young	Catharine M. Young
+Candidate	Catherine T. Nolan	Catherine T. Nolan
+Candidate	Chele Chiavacci Farley	Chele Chiavacci Farley
+Candidate	Chris Collins	Chris Collins
+Candidate	Christian W. Kalinowski	Christian W. Kalinowski
+Candidate	Christina Cagnina	Christina Cagnina
+Candidate	Christopher B. Garvey	Christopher B. Garvey
+Candidate	Christopher F. Davis	Christopher F. Davis
+Candidate	Christopher J. Carey	Christopher J. Carey
+Candidate	Christopher L. Grayson	Christopher L. Grayson
+Candidate	Christopher L. Jacobs	Christopher L. Jacobs
+Candidate	Christopher S. Ciaccio	Christopher S. Ciaccio
+Candidate	Clifford W. Crouch	Clifford W. Crouch
+Candidate	Clyde E. Parker	Clyde E. Parker
+Candidate	Corina Cotenescu	Corina Cotenescu
+Candidate	Cruger E. Gallaudet	Cruger E. Gallaudet
+Candidate	Cynthia E. Nixon	Cynthia E. Nixon
+Candidate	Daby Carreras	Daby Carreras
+Candidate	Dan Donovan	Dan Donovan
+Candidate	Dan P. DeBono	Dan P. DeBono
+Candidate	Daniel A. Rosenthal	Daniel A. Rosenthal
+Candidate	Daniel Falcone	Daniel Falcone
+Candidate	Daniel R. Centinello, Sr.	Daniel R. Centinello, Sr.
+Candidate	Daniel Ramos	Daniel Ramos
+Candidate	Daniel T. Driscoll	Daniel T. Driscoll
+Candidate	Danilo Lawvere	Danilo Lawvere
+Candidate	David A. Bellon	David A. Bellon
+Candidate	David A. Morris	David A. Morris
+Candidate	David Buchwald	David Buchwald
+Candidate	David Carlucci	David Carlucci
+Candidate	David F. Everett	David F. Everett
+Candidate	David F. Gantt	David F. Gantt
+Candidate	David J. Morrissey	David J. Morrissey
+Candidate	David J. Valesky	David J. Valesky
+Candidate	David Krainert	David Krainert
+Candidate	David L. Bressler	David L. Bressler
+Candidate	Dean Murray	Dean Murray
+Candidate	Deborah Poulos	Deborah Poulos
+Candidate	Debra Brown	Debra Brown
+Candidate	Dennis B. Bova, Jr.	Dennis B. Bova, Jr.
+Candidate	Devin P. Cohen	Devin P. Cohen
+Candidate	Diane Neal (FRI)	Diane Neal (FRI)
+Candidate	Donald A. Greenwood	Donald A. Greenwood
+Candidate	Douglass Seidman	Douglass Seidman
+Candidate	Eddie J. McShan	Eddie J. McShan
+Candidate	Edward L. Ott	Edward L. Ott
+Candidate	Elaine R. Phillips	Elaine R. Phillips
+Candidate	Eliot L. Engel	Eliot L. Engel
+Candidate	Eliot Rabin	Eliot Rabin
+Candidate	Elizabeth A. Burns	Elizabeth A. Burns
+Candidate	Elizabeth A. English	Elizabeth A. English
+Candidate	Elizabeth A. Taylor	Elizabeth A. Taylor
+Candidate	Elizabeth O'C. Little	Elizabeth O'C. Little
+Candidate	Emily L. Martz	Emily L. Martz
+Candidate	Eric I. Prus	Eric I. Prus
+Candidate	Eric J. Butkiewicz	Eric J. Butkiewicz
+Candidate	Erik T. Bohen	Erik T. Bohen
+Candidate	Ernest C. Johnson	Ernest C. Johnson
+Candidate	Ethan Lustig-Elgrably	Ethan Lustig-Elgrably
+Candidate	Felix W. Ortiz	Felix W. Ortiz
+Candidate	Florence A. LaSalle	Florence A. LaSalle
+Candidate	Francis X. Becker, Jr.	Francis X. Becker, Jr.
+Candidate	Gary D. Finch	Gary D. Finch
+Candidate	George A. Amedore, Jr.	George A. Amedore, Jr.
+Candidate	George Nolan	George Nolan
+Candidate	Gerry Neri	Gerry Neri
+Candidate	Gino A. Marmorato	Gino A. Marmorato
+Candidate	Glenn A. Yost	Glenn A. Yost
+Candidate	Gonald Moncion	Gonald Moncion
+Candidate	Gregory M. Torres	Gregory M. Torres
+Candidate	Gregory-John Fischer	Gregory-John Fischer
+Candidate	Hal B. Greenwald	Hal B. Greenwald
+Candidate	Harvey D. Epstein	Harvey D. Epstein
+Candidate	Helen Voutsinas	Helen Voutsinas
+Candidate	Henry J. Bardel	Henry J. Bardel
+Candidate	Horrie J. Johnson	Horrie J. Johnson
+Candidate	Howie Hawkins and Jia Lee	Howie Hawkins and Jia Lee
+Candidate	Ingrid Joseph	Ingrid Joseph
+Candidate	Jack Vobis	Jack Vobis
+Candidate	James F. Reitz	James F. Reitz
+Candidate	James L. Seward	James L. Seward
+Candidate	James Lamarre	James Lamarre
+Candidate	James O'Donnell	James O'Donnell
+Candidate	James P. Murphy	James P. Murphy
+Candidate	Jamie L. Romeo	Jamie L. Romeo
+Candidate	Janet Berl Burman	Janet Berl Burman
+Candidate	Jasmine L. Robinson	Jasmine L. Robinson
+Candidate	Jason D. Gonzalez	Jason D. Gonzalez
+Candidate	Jeff Ascherman	Jeff Ascherman
+Candidate	Jeffrey D. Klein	Jeffrey D. Klein
+Candidate	Jeffrey J. Ferretti	Jeffrey J. Ferretti
+Candidate	Jeffrey M. Kurzon	Jeffrey M. Kurzon
+Candidate	Jeffrey P. Pravato	Jeffrey P. Pravato
+Candidate	Jen Lunsford	Jen Lunsford
+Candidate	Jeremy G. Williams	Jeremy G. Williams
+Candidate	Jesse E. Hamilton	Jesse E. Hamilton
+Candidate	Jessica L. White	Jessica L. White
+Candidate	Jim Maxwell	Jim Maxwell
+Candidate	Jineea Butler	Jineea Butler
+Candidate	Jo Anna Simon	Jo Anna Simon
+Candidate	Joan B. Lefkowitz	Joan B. Lefkowitz
+Candidate	Joan Elizabeth Seamans	Joan Elizabeth Seamans
+Candidate	Joe Errigo	Joe Errigo
+Candidate	Joe McBride	Joe McBride
+Candidate	Joe Pinion	Joe Pinion
+Candidate	Joe Vitollo	Joe Vitollo
+Candidate	Joel Anabilah-Azumah	Joel Anabilah-Azumah
+Candidate	John B. Zollo	John B. Zollo
+Candidate	John Dennie	John Dennie
+Candidate	John J. Faso	John J. Faso
+Candidate	John J. Flanagan	John J. Flanagan
+Candidate	John Liu	John Liu
+Candidate	John M. Curran	John M. Curran
+Candidate	John N. Scandalios	John N. Scandalios
+Candidate	Jonathan Trichter	Jonathan Trichter
+Candidate	Jose E. Serrano	Jose E. Serrano
+Candidate	Jose Marte	Jose Marte
+Candidate	Jose R. Peralta	Jose R. Peralta
+Candidate	Joseph Bogdany	Joseph Bogdany
+Candidate	Joseph Cote	Joseph Cote
+Candidate	Joseph Crowley	Joseph Crowley
+Candidate	Joseph DiPasquale	Joseph DiPasquale
+Candidate	Joseph E. Robach	Joseph E. Robach
+Candidate	Joseph F. Kasper	Joseph F. Kasper
+Candidate	Joseph J. Ciardullo	Joseph J. Ciardullo
+Candidate	Joseph Lieberman	Joseph Lieberman
+Candidate	Joseph P. Sullivan	Joseph P. Sullivan
+Candidate	Joseph R. Lentol	Joseph R. Lentol
+Candidate	Joyce St. George	Joyce St. George
+Candidate	Juan C. Vides	Juan C. Vides
+Candidate	Juan Pagan	Juan Pagan
+Candidate	Judith S. Einach	Judith S. Einach
+Candidate	Julio Rodriguez	Julio Rodriguez
+Candidate	Jumaane D. Williams	Jumaane D. Williams
+Candidate	Karen M. Brandt	Karen M. Brandt
+Candidate	Kate M. Browning	Kate M. Browning
+Candidate	Kathie E. Davidson	Kathie E. Davidson
+Candidate	Kathleen Bradbury Cleary	Kathleen Bradbury Cleary
+Candidate	Kathryn K. Wilson	Kathryn K. Wilson
+Candidate	Keith A. Rubino	Keith A. Rubino
+Candidate	Keith Batman	Keith Batman
+Candidate	Keith Wofford	Keith Wofford
+Candidate	Kemp Hannon	Kemp Hannon
+Candidate	Kenan S. Baldridge	Kenan S. Baldridge
+Candidate	Kenneth D. Schaeffer	Kenneth D. Schaeffer
+Candidate	Kenneth P. La Valle	Kenneth P. La Valle
+Candidate	Kevin Cahill	Kevin Cahill
+Candidate	Kevin M. Byrne	Kevin M. Byrne
+Candidate	Kevin V. Sabella	Kevin V. Sabella
+Candidate	Kieran M. Lalor	Kieran M. Lalor
+Candidate	Kimberly L. Snow	Kimberly L. Snow
+Candidate	Kirsten E. Gillibrand	Kirsten E. Gillibrand
+Candidate	Lalita L. Etwaroo	Lalita L. Etwaroo
+Candidate	Larry Kelly	Larry Kelly
+Candidate	Larry Piegza	Larry Piegza
+Candidate	Larry Sharpe and Andrew C. Hollister	Larry Sharpe and Andrew C. Hollister
+Candidate	Latrice M. Walker	Latrice M. Walker
+Candidate	Laurence L. Love	Laurence L. Love
+Candidate	Leroy R. Bates	Leroy R. Bates
+Candidate	Letitia A. James	Letitia A. James
+Candidate	Lisa S. Ottley	Lisa S. Ottley
+Candidate	Liuba Grechen Shirley	Liuba Grechen Shirley
+Candidate	Llinet Rosado	Llinet Rosado
+Candidate	Lou Puliafito	Lou Puliafito
+Candidate	Louis D'Amaro	Louis D'Amaro
+Candidate	Louis Perri	Louis Perri
+Candidate	Luis Rivera	Luis Rivera
+Candidate	Luis Sepulveda	Luis Sepulveda
+Candidate	Luke E. Wochensky	Luke E. Wochensky
+Candidate	Lutchi Gayot	Lutchi Gayot
+Candidate	Lynn Kahn	Lynn Kahn
+Candidate	Lynn R. Kotler	Lynn R. Kotler
+Candidate	Marc Molinaro and Julie Killian	Marc Molinaro and Julie Killian
+Candidate	Marcos A. Crespo	Marcos A. Crespo
+Candidate	Margaret Fasano	Margaret Fasano
+Candidate	Margaret T. Walsh	Margaret T. Walsh
+Candidate	Marian R. Tinari	Marian R. Tinari
+Candidate	Marina Cora Mundy	Marina Cora Mundy
+Candidate	Marisol Alcantara	Marisol Alcantara
+Candidate	Mark Dunlea	Mark Dunlea
+Candidate	Mark Schneider	Mark Schneider
+Candidate	Marsha D. Michael	Marsha D. Michael
+Candidate	Martin J. Golden	Martin J. Golden
+Candidate	Mary Ann Brigantti	Mary Ann Brigantti
+Candidate	Mary V. Rosado	Mary V. Rosado
+Candidate	Matthew A. Rettig	Matthew A. Rettig
+Candidate	Matthew G. Pecorino	Matthew G. Pecorino
+Candidate	Matthew Williams	Matthew Williams
+Candidate	Maureen A. Healy	Maureen A. Healy
+Candidate	Michael A. Blake	Michael A. Blake
+Candidate	Michael A. Gajdos, Jr.	Michael A. Gajdos, Jr.
+Candidate	Michael Dennis	Michael Dennis
+Candidate	Michael E. Walters	Michael E. Walters
+Candidate	Michael F. Reid	Michael F. Reid
+Candidate	Michael G. DenDekker	Michael G. DenDekker
+Candidate	Michael G. Miller	Michael G. Miller
+Candidate	Michael H. Ranzenhofer	Michael H. Ranzenhofer
+Candidate	Michael Lausell	Michael Lausell
+Candidate	Michael R. Hunter	Michael R. Hunter
+Candidate	Michael Sussman	Michael Sussman
+Candidate	Michele R. Titus	Michele R. Titus
+Candidate	Michelle G. Weston	Michelle G. Weston
+Candidate	Michelle M. Kennedy	Michelle M. Kennedy
+Candidate	Michelle Ostrelich	Michelle Ostrelich
+Candidate	Migdalia Denis	Migdalia Denis
+Candidate	Mike LiPetri	Mike LiPetri
+Candidate	Monica Piga Wallace	Monica Piga Wallace
+Candidate	Morgan Zegers	Morgan Zegers
+Candidate	Nader Sayegh	Nader Sayegh
+Candidate	Nancy B. Sliwa	Nancy B. Sliwa
+Candidate	Naomi Levin	Naomi Levin
+Candidate	Nicholas R. Libous	Nicholas R. Libous
+Candidate	Nicholas R. Paro	Nicholas R. Paro
+Candidate	Nita M. Lowey	Nita M. Lowey
+Candidate	Norman St. George	Norman St. George
+Candidate	Opportunity To Ballot	Opportunity To Ballot
+Candidate	Orlando Marrazzo, Jr.	Orlando Marrazzo, Jr.
+Candidate	Oswald Denis	Oswald Denis
+Candidate	Pamela Stewart-Martinez	Pamela Stewart-Martinez
+Candidate	Pat Courtney Strong	Pat Courtney Strong
+Candidate	Patricia E. Gallaher	Patricia E. Gallaher
+Candidate	Patricia Kane	Patricia Kane
+Candidate	Patricia Latzman	Patricia Latzman
+Candidate	Patrick Dwyer	Patrick Dwyer
+Candidate	Patrick M. O'Connor	Patrick M. O'Connor
+Candidate	Patsy A. Iacovangelo	Patsy A. Iacovangelo
+Candidate	Paula L. Feroleto	Paula L. Feroleto
+Candidate	Perry Gershon	Perry Gershon
+Candidate	Peter A. Diachun	Peter A. Diachun
+Candidate	Peter A. Lawrence	Peter A. Lawrence
+Candidate	Peter A. Lynch	Peter A. Lynch
+Candidate	Peter Holmberg	Peter Holmberg
+Candidate	Peter Holmberg (SDB)	Peter Holmberg (SDB)
+Candidate	Peter T. King	Peter T. King
+Candidate	Phillip A. Grimaldi, Jr.	Phillip A. Grimaldi, Jr.
+Candidate	Ralph J. Porzio	Ralph J. Porzio
+Candidate	Raymond W. Walter	Raymond W. Walter
+Candidate	Renee M. Zeno	Renee M. Zeno
+Candidate	Rich Funke	Rich Funke
+Candidate	Richard A. Ribustello	Richard A. Ribustello
+Candidate	Robert E. Antonacci, II	Robert E. Antonacci, II
+Candidate	Robert E. Antonacci, II (UPS)	Robert E. Antonacci, II (UPS)
+Candidate	Robert E. Torres	Robert E. Torres
+Candidate	Robert H. Freehill	Robert H. Freehill
+Candidate	Robert I. Caloras	Robert I. Caloras
+Candidate	Robert L. Diamond	Robert L. Diamond
+Candidate	Robert M. Nigro	Robert M. Nigro
+Candidate	Robin Schimminger	Robin Schimminger
+Candidate	Rona Smith	Rona Smith
+Candidate	Ronald J. Kim	Ronald J. Kim
+Candidate	Ronny Goodman	Ronny Goodman
+Candidate	Rosario Presti, Jr.	Rosario Presti, Jr.
+Candidate	Rosemary Mangino	Rosemary Mangino
+Candidate	Ross M. Kostecky	Ross M. Kostecky
+Candidate	Ruth C. Balkin	Ruth C. Balkin
+Candidate	Scattering	Scattering
+Candidate	Scott J. DelConte	Scott J. DelConte
+Candidate	Scott M. Manley	Scott M. Manley
+Candidate	Scott Martens	Scott Martens
+Candidate	Shonde M. Lennon	Shonde M. Lennon
+Candidate	Simon H. Minching	Simon H. Minching
+Candidate	Stephanie A. Miner and Michael J. Volpe (SAM)	Stephanie A. Miner and Michael J. Volpe (SAM)
+Candidate	Stephen F. Kiely	Stephen F. Kiely
+Candidate	Stephen J. Lynch	Stephen J. Lynch
+Candidate	Steven Saperstein	Steven Saperstein
+Candidate	Stuart J. Avrick	Stuart J. Avrick
+Candidate	Sylvia O. Hinds-Radix	Sylvia O. Hinds-Radix
+Candidate	Taylor R. Raynor	Taylor R. Raynor
+Candidate	Ted Limpert	Ted Limpert
+Candidate	Terrence P. Murphy	Terrence P. Murphy
+Candidate	Thomas E. Murray, III	Thomas E. Murray, III
+Candidate	Thomas F. O'Mara	Thomas F. O'Mara
+Candidate	Thomas J. Hillgardner	Thomas J. Hillgardner
+Candidate	Thomas P. DiNapoli	Thomas P. DiNapoli
+Candidate	Thomas P. Zugibe	Thomas P. Zugibe
+Candidate	Thomas Rademaker	Thomas Rademaker
+Candidate	Thomas W. Reed, II	Thomas W. Reed, II
+Candidate	Timothy L. Hall	Timothy L. Hall
+Candidate	Tistrya G. Houghtling	Tistrya G. Houghtling
+Candidate	Tom Basile	Tom Basile
+Candidate	Tony Avella	Tony Avella
+Candidate	Tremaine S. Wright	Tremaine S. Wright
+Candidate	Ushir Pandit-Durant	Ushir Pandit-Durant
+Candidate	Valerie Brathwaite Nelson	Valerie Brathwaite Nelson
+Candidate	Vedat Gashi	Vedat Gashi
+Candidate	Velmanette Montgomery	Velmanette Montgomery
+Candidate	Vicki Argento	Vicki Argento
+Candidate	Vickie Paladino	Vickie Paladino
+Candidate	Vincent J. Messina, Jr.	Vincent J. Messina, Jr.
+Candidate	Vincent J. Pazienza	Vincent J. Pazienza
+Candidate	Void	Void
+Candidate	Wayne Saitta	Wayne Saitta
+Candidate	William E. McCarthy	William E. McCarthy
+Candidate	William G. Truitt	William G. Truitt
+Candidate	William J. Giacomo	William J. Giacomo
+Candidate	Yevgeny G. Goldberg	Yevgeny G. Goldberg
+Party	Conservative Party	conservative
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	In Maio We Trust Party	in maio we trust
+Party	Independence Party	independence
+Party	Libertarian Party	libertarian
+Party	Reform Party	reform
+Party	Republican Party	republican
+Party	Tax Revolt Party	tax revolt
+Party	Women's Equality Party	women's equality
+Party	Working Families Party	working families

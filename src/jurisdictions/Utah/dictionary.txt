@@ -442,3 +442,239 @@ CandidateContest	UT House District 10	UT;State Representative;District 10
 CandidateContest	UT House District 7	UT;State Representative;District 7
 CandidateContest	UT House District 8	UT;State Representative;District 8
 CandidateContest	UT House District 9	UT;State Representative;District 9
+Candidate	Mitt Romney	Mitt Romney
+Candidate	Aaron Heineman	Aaron Heineman
+Candidate	Abrian B. Velarde	Abrian B. Velarde
+Candidate	Adam Alba	Adam Alba
+Candidate	Adam Davis	Adam Davis
+Candidate	Adam Robertson	Adam Robertson
+Candidate	Alan F. Keele	Alan F. Keele
+Candidate	Alan Monsen	Alan Monsen
+Candidate	Alexander Castagno	Alexander Castagno
+Candidate	Amber Christiansen Beltran	Amber Christiansen Beltran
+Candidate	Amy L Martz	Amy L Martz
+Candidate	Andrew Stoddard	Andrew Stoddard
+Candidate	Angela Romero	Angela Romero
+Candidate	Ann Millner	Ann Millner
+Candidate	Anthony Sudweeks	Anthony Sudweeks
+Candidate	Arnold M Jones	Arnold M Jones
+Candidate	Avalie Muhlestein	Avalie Muhlestein
+Candidate	Barbara M. Stallone	Barbara M. Stallone
+Candidate	Barry Evan Short	Barry Evan Short
+Candidate	Ben McAdams	Ben McAdams
+Candidate	Bjorn N. Jones	Bjorn N. Jones
+Candidate	Brad Bonham	Brad Bonham
+Candidate	Brad Daw	Brad Daw
+Candidate	Brad Last	Brad Last
+Candidate	Brad Wilson	Brad Wilson
+Candidate	Brady Brammer	Brady Brammer
+Candidate	Brent Zimmerman	Brent Zimmerman
+Candidate	Brian L. Fabbi	Brian L. Fabbi
+Candidate	Brian S. King	Brian S. King
+Candidate	Brian Zehnder	Brian Zehnder
+Candidate	Brittney Cummins	Brittney Cummins
+Candidate	Bruce R. Cutler	Bruce R. Cutler
+Candidate	Cabot W. Nelson	Cabot W. Nelson
+Candidate	Calvin R. Musselman	Calvin R. Musselman
+Candidate	Carl R. Albrecht	Carl R. Albrecht
+Candidate	Carol Spackman Moss	Carol Spackman Moss
+Candidate	Casey Snider	Casey Snider
+Candidate	Cathy Callow-Heusser	Cathy Callow-Heusser
+Candidate	Chase Winder	Chase Winder
+Candidate	Chelsea Travis	Chelsea Travis
+Candidate	Cheryl K. Acton	Cheryl K. Acton
+Candidate	Cheryl Nunn	Cheryl Nunn
+Candidate	Christian Burridge	Christian Burridge
+Candidate	Christina Higgins	Christina Higgins
+Candidate	Christine F. Watkins	Christine F. Watkins
+Candidate	Christopher Neville	Christopher Neville
+Candidate	Chuck Goode	Chuck Goode
+Candidate	Cindy Davis	Cindy Davis
+Candidate	Clare Collard	Clare Collard
+Candidate	Cory Maloy	Cory Maloy
+Candidate	Courtney Jones	Courtney Jones
+Candidate	Craig Hall	Craig Hall
+Candidate	Craig K. Pitts	Craig K. Pitts
+Candidate	Craig R. Bowden	Craig R. Bowden
+Candidate	Curt Crosby	Curt Crosby
+Candidate	Dan McCay	Dan McCay
+Candidate	Dan McClellan	Dan McClellan
+Candidate	Dan N. Johnson	Dan N. Johnson
+Candidate	Daniel Craig Friend	Daniel Craig Friend
+Candidate	Daniel Holloway	Daniel Holloway
+Candidate	Daniel W. Thatcher	Daniel W. Thatcher
+Candidate	David Else	David Else
+Candidate	David N. Sundwall	David N. Sundwall
+Candidate	David Owen	David Owen
+Candidate	David Young	David Young
+Candidate	Dawn Nunn	Dawn Nunn
+Candidate	Deana Froerer	Deana Froerer
+Candidate	Debbie K. Vigil	Debbie K. Vigil
+Candidate	Denyse Housley Cox	Denyse Housley Cox
+Candidate	Derek Lloyd Kitchen	Derek Lloyd Kitchen
+Candidate	Derrin R. Owens	Derrin R. Owens
+Candidate	Diane Lewis	Diane Lewis
+Candidate	Douglas Sagers	Douglas Sagers
+Candidate	Edgar Harwood	Edgar Harwood
+Candidate	Eileen Gallagher	Eileen Gallagher
+Candidate	Elisabeth Luntz	Elisabeth Luntz
+Candidate	Elizabeth Weight	Elizabeth Weight
+Candidate	Eric Chase	Eric Chase
+Candidate	Eric Eliason	Eric Eliason
+Candidate	Eric Hutchings	Eric Hutchings
+Candidate	Evan J Vickers	Evan J Vickers
+Candidate	Francis D. Gibson	Francis D. Gibson
+Candidate	Fred Johnson	Fred Johnson
+Candidate	Gene Davis	Gene Davis
+Candidate	Greg Johnson	Greg Johnson
+Candidate	Gregory C. Duerden	Gregory C. Duerden
+Candidate	Gregory Hmura	Gregory Hmura
+Candidate	Hal Miller	Hal Miller
+Candidate	Hillary Stirling	Hillary Stirling
+Candidate	Ira D. Hatch	Ira D. Hatch
+Candidate	Jake Penrod	Jake Penrod
+Candidate	James Courage Singer	James Courage Singer
+Candidate	Jani Iwamoto	Jani Iwamoto
+Candidate	Jason M. Allen	Jason M. Allen
+Candidate	Jason Yu	Jason Yu
+Candidate	Jeff Stenquist	Jeff Stenquist
+Candidate	Jefferson R. Moss	Jefferson R. Moss
+Candidate	Jeffrey Whipple	Jeffrey Whipple
+Candidate	Jen Dailey-Provost	Jen Dailey-Provost
+Candidate	Jennie L. Earl	Jennie L. Earl
+Candidate	Jenny Wilson	Jenny Wilson
+Candidate	Jeremy D. Egan	Jeremy D. Egan
+Candidate	Jerry W. Stevenson	Jerry W. Stevenson
+Candidate	Jim Dunnigan	Jim Dunnigan
+Candidate	Joe Speciale	Joe Speciale
+Candidate	Joel Ferry	Joel Ferry
+Candidate	Joel K. Briscoe	Joel K. Briscoe
+Candidate	John Jackson	John Jackson
+Candidate	John Knotwell	John Knotwell
+Candidate	Jon Hawkins	Jon Hawkins
+Candidate	Jonathan Greene	Jonathan Greene
+Candidate	Joseph Geddes Buchman	Joseph Geddes Buchman
+Candidate	Josh Brundage	Josh Brundage
+Candidate	Joshua Hardy	Joshua Hardy
+Candidate	Karen Kwan	Karen Kwan
+Candidate	Karen Mayne	Karen Mayne
+Candidate	Karianne Lisonbee	Karianne Lisonbee
+Candidate	Karina Andelin Brown	Karina Andelin Brown
+Candidate	Kathie J. Darby	Kathie J. Darby
+Candidate	Kathleen Riebe	Kathleen Riebe
+Candidate	Keith Grover	Keith Grover
+Candidate	Keith R. Kelsch	Keith R. Kelsch
+Candidate	Kelly B. Miles	Kelly B. Miles
+Candidate	Ken Ivory	Ken Ivory
+Candidate	Kerry M Wayne	Kerry M Wayne
+Candidate	Keven J. Stratton	Keven J. Stratton
+Candidate	Kevin L. Bryan	Kevin L. Bryan
+Candidate	Kim Coleman	Kim Coleman
+Candidate	Kimdyl Allen	Kimdyl Allen
+Candidate	Kirk A. Cullimore Jr.	Kirk A. Cullimore Jr.
+Candidate	Kirk D Pearson	Kirk D Pearson
+Candidate	Kyle R. Andersen	Kyle R. Andersen
+Candidate	Laura Collier Belnap	Laura Collier Belnap
+Candidate	Lawanna 'Lou' Shurtliff	"Lawanna ""Lou"" Shurtliff"
+Candidate	Lee Anne Walker	Lee Anne Walker
+Candidate	Lee B. Perry	Lee B. Perry
+Candidate	Lee Castillo	Lee Castillo
+Candidate	Lee D Houghton	Lee D Houghton
+Candidate	Linda B. Hansen	Linda B. Hansen
+Candidate	Logan Wilde	Logan Wilde
+Candidate	Lorraine P. Brown	Lorraine P. Brown
+Candidate	Lynn Zaritsky	Lynn Zaritsky
+Candidate	Man Hung	Man Hung
+Candidate	Marc Roberts	Marc Roberts
+Candidate	Marie H. Poulson	Marie H. Poulson
+Candidate	Marilee Roose	Marilee Roose
+Candidate	Marilyn Mecham	Marilyn Mecham
+Candidate	Mark A. Huntsman	Mark A. Huntsman
+Candidate	Mark A. Strong	Mark A. Strong
+Candidate	Mark A. Wheatley	Mark A. Wheatley
+Candidate	Mark Chambers	Mark Chambers
+Candidate	Mark Russell	Mark Russell
+Candidate	Marsha Judkins	Marsha Judkins
+Candidate	Marsha M Holland	Marsha M Holland
+Candidate	Matt Styles	Matt Styles
+Candidate	Meaghan Miller	Meaghan Miller
+Candidate	Megan Wiesen	Megan Wiesen
+Candidate	Melissa Garff Ballard	Melissa Garff Ballard
+Candidate	Merle Travis Wall	Merle Travis Wall
+Candidate	Merrill Nelson	Merrill Nelson
+Candidate	Mia B. Love	Mia B. Love
+Candidate	Michael A Gardner	Michael A Gardner
+Candidate	Michael A Keil	Michael A Keil
+Candidate	Michele Weeks	Michele Weeks
+Candidate	Mike McKell	Mike McKell
+Candidate	Mike Schultz	Mike Schultz
+Candidate	Mike Winder	Mike Winder
+Candidate	Norm Thurston	Norm Thurston
+Candidate	Patrice Arent	Patrice Arent
+Candidate	Patrick D. Riley	Patrick D. Riley
+Candidate	Paul Jones Dayton	Paul Jones Dayton
+Candidate	Paul Ray	Paul Ray
+Candidate	Peter L. Kraus	Peter L. Kraus
+Candidate	Phil Lyman	Phil Lyman
+Candidate	Raymond Ward	Raymond Ward
+Candidate	Reed C. McCandless	Reed C. McCandless
+Candidate	Rex P Shipp	Rex P Shipp
+Candidate	Rich Miller	Rich Miller
+Candidate	Rick Edwin Jones	Rick Edwin Jones
+Candidate	Rob Bishop	Rob Bishop
+Candidate	Robert Burch, Jr.	Robert Burch, Jr.
+Candidate	Robert Edgel	Robert Edgel
+Candidate	Robert Greenberg	Robert Greenberg
+Candidate	Robert Spendlove	Robert Spendlove
+Candidate	Ronald Winterton	Ronald Winterton
+Candidate	Russell G. Hatch	Russell G. Hatch
+Candidate	Ryan L Jones	Ryan L Jones
+Candidate	Sandra Hollins	Sandra Hollins
+Candidate	Scott Bell	Scott Bell
+Candidate	Scott H. Chew	Scott H. Chew
+Candidate	Scott L. Hansen	Scott L. Hansen
+Candidate	Scott Rosenbush	Scott Rosenbush
+Candidate	Scott Sandall	Scott Sandall
+Candidate	Shanell Day	Shanell Day
+Candidate	Shawn Curtis	Shawn Curtis
+Candidate	Sherry Phipps	Sherry Phipps
+Candidate	Shireen Ghorbani	Shireen Ghorbani
+Candidate	Stephanie Pitcher	Stephanie Pitcher
+Candidate	Stephen Peck	Stephen Peck
+Candidate	Steve Eliason	Steve Eliason
+Candidate	Steve Handy	Steve Handy
+Candidate	Steve Waldrip	Steve Waldrip
+Candidate	Steve Walston	Steve Walston
+Candidate	Stewart E. Barlow	Stewart E. Barlow
+Candidate	Stuart Adams	Stuart Adams
+Candidate	Sue A. Womack	Sue A. Womack
+Candidate	Susan D Duckworth	Susan D Duckworth
+Candidate	Susan Pulsipher	Susan Pulsipher
+Candidate	Suzanne Harrison	Suzanne Harrison
+Candidate	Tab Lyn Uno	Tab Lyn Uno
+Candidate	Terryl Warner	Terryl Warner
+Candidate	Thomas E. Nedreberg	Thomas E. Nedreberg
+Candidate	Tim Aalders	Tim Aalders
+Candidate	Tim Glenn	Tim Glenn
+Candidate	Tim Quinn	Tim Quinn
+Candidate	Timothy D. Hawkes	Timothy D. Hawkes
+Candidate	Timothy L. Zeidner	Timothy L. Zeidner
+Candidate	Todd E. Zenger	Todd E. Zenger
+Candidate	Tommy Williams	Tommy Williams
+Candidate	Travis M. Seegmiller	Travis M. Seegmiller
+Candidate	Tyler Allred	Tyler Allred
+Candidate	V. Lowry Snow	V. Lowry Snow
+Candidate	Val K. Potter	Val K. Potter
+Candidate	Val L. Peterson	Val L. Peterson
+Candidate	Walt Brooks	Walt Brooks
+Candidate	Warren Rogers	Warren Rogers
+Candidate	Wendy Garvin	Wendy Garvin
+Candidate	Zeno B. Parry	Zeno B. Parry
+Party	Constitution Party	constitution
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	Independent American Party	independent american
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+Party	none or unknown	unaffiliated
+Party	United Utah Party	united utah

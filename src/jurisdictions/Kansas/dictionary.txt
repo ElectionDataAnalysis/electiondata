@@ -6437,3 +6437,207 @@ CandidateContest	KS House District 34	KS;State Representative;District 34
 CandidateContest	KS House District 35	KS;State Representative;District 35
 CandidateContest	KS House District 36	KS;State Representative;District 36
 CandidateContest	KS House District 37	KS;State Representative;District 37
+Candidate	Abraham Rafie	Abraham Rafie
+Candidate	Adam J. Sr. Lusker	Adam J. Sr. Lusker
+Candidate	Adam Smith	Adam Smith
+Candidate	Adam Thomas	Adam Thomas
+Candidate	Alan LaPolice	Alan LaPolice
+Candidate	Alex Van Dyke	Alex Van Dyke
+Candidate	Annie Kuether	Annie Kuether
+Candidate	Barbara K. Wasinger	Barbara K. Wasinger
+Candidate	Barbara W. Ballard	Barbara W. Ballard
+Candidate	Becky Barber	Becky Barber
+Candidate	Bill Pannbacker	Bill Pannbacker
+Candidate	Bill Rhiley	Bill Rhiley
+Candidate	Bill Sutton	Bill Sutton
+Candidate	Blaine Finch	Blaine Finch
+Candidate	Boyd Orr	Boyd Orr
+Candidate	Bradley Ralph	Bradley Ralph
+Candidate	Brandon J. Whipple	Brandon J. Whipple
+Candidate	Brandon Woodard	Brandon Woodard
+Candidate	Brenda K. Landwehr	Brenda K. Landwehr
+Candidate	Brett Parker	Brett Parker
+Candidate	Brian 'BAM' McClendon	"Brian ""BAM"" McClendon"
+Candidate	Brian Clausen	Brian Clausen
+Candidate	Bryan Bombardier	Bryan Bombardier
+Candidate	Bryan Hoffman	Bryan Hoffman
+Candidate	Cheryl Helmer	Cheryl Helmer
+Candidate	Chiquita C. Coggs	Chiquita C. Coggs
+Candidate	Chris Clemmons	Chris Clemmons
+Candidate	Chris Haulmark	Chris Haulmark
+Candidate	Cindy Neighbor	Cindy Neighbor
+Candidate	Clifton Beck	Clifton Beck
+Candidate	Cynthia Smith	Cynthia Smith
+Candidate	Dan Stiffler	Dan Stiffler
+Candidate	Danette Harris	Danette Harris
+Candidate	Daniel Hawkins	Daniel Hawkins
+Candidate	Darnell W. Hunt	Darnell W. Hunt
+Candidate	Dave Baker	Dave Baker
+Candidate	David J. Robbins	David J. Robbins
+Candidate	David L. Benson	David L. Benson
+Candidate	David Loomis	David Loomis
+Candidate	David W. Curtis	David W. Curtis
+Candidate	David W. French	David W. French
+Candidate	Deann Mitchell	Deann Mitchell
+Candidate	Debbie Deere	Debbie Deere
+Candidate	Dennis 'Boog' Highberger	"Dennis ""Boog"" Highberger"
+Candidate	Derek Schmidt	Derek Schmidt
+Candidate	Diana Dierks	Diana Dierks
+Candidate	Don Hineman	Don Hineman
+Candidate	Doug Blex	Doug Blex
+Candidate	Down River Dan Brennan	Down River Dan Brennan
+Candidate	Eber Phelps	Eber Phelps
+Candidate	Ed Trimmer	Ed Trimmer
+Candidate	Edgar Chambers	Edgar Chambers
+Candidate	Eileen Horn	Eileen Horn
+Candidate	Elizabeth Bishop	Elizabeth Bishop
+Candidate	Emil M. Bergquist	Emil M. Bergquist
+Candidate	Eric Jenkins	Eric Jenkins
+Candidate	Eric L. Smith	Eric L. Smith
+Candidate	Francis Awerkamp	Francis Awerkamp
+Candidate	Gail Finney	Gail Finney
+Candidate	George D. Hanna	George D. Hanna
+Candidate	Gerrett Morris	Gerrett Morris
+Candidate	Greg Lewis	Greg Lewis
+Candidate	Greg Orman	Greg Orman
+Candidate	J. Russell 'Russ' Jennings	"J. Russell ""Russ"" Jennings"
+Candidate	J.C. Moore	J.C. Moore
+Candidate	J.R. Claeys	J.R. Claeys
+Candidate	Jack Thimesch	Jack Thimesch
+Candidate	James A. Thompson	James A. Thompson
+Candidate	James Todd	James Todd
+Candidate	Jan H. Kessinger	Jan H. Kessinger
+Candidate	Jarrod Ousley	Jarrod Ousley
+Candidate	Jason Conley	Jason Conley
+Candidate	Jason K. Darby	Jason K. Darby
+Candidate	Jason Probst	Jason Probst
+Candidate	Jeff Caldwell	Jeff Caldwell
+Candidate	Jene Vickrey	Jene Vickrey
+Candidate	Jennifer Winn	Jennifer Winn
+Candidate	Jerry Hill	Jerry Hill
+Candidate	Jerry Stogsdill	Jerry Stogsdill
+Candidate	Jim Gartner	Jim Gartner
+Candidate	Jim Karleskint	Jim Karleskint
+Candidate	Jim Kelly	Jim Kelly
+Candidate	Jim Price	Jim Price
+Candidate	Jim Ward	Jim Ward
+Candidate	Jo Schwartz	Jo Schwartz
+Candidate	Joe Seiwert	Joe Seiwert
+Candidate	John Alcala	John Alcala
+Candidate	John Carmichael	John Carmichael
+Candidate	John E Barker	John E Barker
+Candidate	John Hall	John Hall
+Candidate	John P. Jr. Wheeler	John P. Jr. Wheeler
+Candidate	John R. Eplee	John R. Eplee
+Candidate	John Resman	John Resman
+Candidate	KC Ohaebosim	KC Ohaebosim
+Candidate	Kellie Warren	Kellie Warren
+Candidate	Kelly Standley	Kelly Standley
+Candidate	Ken Corbet	Ken Corbet
+Candidate	Ken Rahjes	Ken Rahjes
+Candidate	Kenneth Collins	Kenneth Collins
+Candidate	Kent L. Thompson	Kent L. Thompson
+Candidate	Kevin Yoder	Kevin Yoder
+Candidate	Kim Thomas	Kim Thomas
+Candidate	Kris Kobach	Kris Kobach
+Candidate	Kristey S. Williams	Kristey S. Williams
+Candidate	Kristi Kirk	Kristi Kirk
+Candidate	Kyle D. Hoffman	Kyle D. Hoffman
+Candidate	Larry P. Hibbard	Larry P. Hibbard
+Candidate	Lassey Murphy	Lassey Murphy
+Candidate	Laura Kelly	Laura Kelly
+Candidate	Laura Smith-Everett	Laura Smith-Everett
+Candidate	Lawrence Forbach	Lawrence Forbach
+Candidate	Leo G. Delperdang	Leo G. Delperdang
+Candidate	Leonard A. Mastroni	Leonard A. Mastroni
+Candidate	Les Mason	Les Mason
+Candidate	Linda Gallagher	Linda Gallagher
+Candidate	Lonnie Clark	Lonnie Clark
+Candidate	Marci Francisco	Marci Francisco
+Candidate	Mark Samsel	Mark Samsel
+Candidate	Mark Schreiber	Mark Schreiber
+Candidate	Martin (Marty) Long	Martin (Marty) Long
+Candidate	Megan Lynn	Megan Lynn
+Candidate	Melissa A. Rooker	Melissa A. Rooker
+Candidate	Melvin L. Baker	Melvin L. Baker
+Candidate	Michael Bolton	Michael Bolton
+Candidate	Michael Capps	Michael Capps
+Candidate	Michael Houser	Michael Houser
+Candidate	Michael J. Snowden	Michael J. Snowden
+Candidate	Michael Kerner	Michael Kerner
+Candidate	Michele Lobitz	Michele Lobitz
+Candidate	Mike Amyx	Mike Amyx
+Candidate	Monica Marks	Monica Marks
+Candidate	Monica Murnan	Monica Murnan
+Candidate	Nancy Lusk	Nancy Lusk
+Candidate	Nathaniel McLaughlin	Nathaniel McLaughlin
+Candidate	Nick Gill	Nick Gill
+Candidate	Nick J. Hoheisel	Nick J. Hoheisel
+Candidate	Nicole Rome	Nicole Rome
+Candidate	Noah L. Wright	Noah L. Wright
+Candidate	Owen Donohoe	Owen Donohoe
+Candidate	Pam Curtis	Pam Curtis
+Candidate	Pamela Finley	Pamela Finley
+Candidate	Paul Davis	Paul Davis
+Candidate	Paul Waggoner	Paul Waggoner
+Candidate	Pedro Rodriguez	Pedro Rodriguez
+Candidate	Ponka-We Victors	Ponka-We Victors
+Candidate	Randy Garber	Randy Garber
+Candidate	Rebecca Jenek	Rebecca Jenek
+Candidate	Renee Erickson	Renee Erickson
+Candidate	Richard Hilderbrand	Richard Hilderbrand
+Candidate	Richard J. Proehl	Richard J. Proehl
+Candidate	Rob Hodgkinson	Rob Hodgkinson
+Candidate	Robert Firestone	Robert Firestone
+Candidate	Roger Marshall	Roger Marshall
+Candidate	Ron Howard	Ron Howard
+Candidate	Ron Ryckman	Ron Ryckman
+Candidate	Rui Xu	Rui Xu
+Candidate	Sam Habjan	Sam Habjan
+Candidate	Sarah Coats	Sarah Coats
+Candidate	Sarah G. Swain	Sarah G. Swain
+Candidate	Scott Schwab	Scott Schwab
+Candidate	Sean E. Tarwater Sr.	Sean E. Tarwater Sr.
+Candidate	Shala Perez	Shala Perez
+Candidate	Shanna Henry	Shanna Henry
+Candidate	Shannon Francis	Shannon Francis
+Candidate	Sharice Davids	Sharice Davids
+Candidate	Stan Frownfelter	Stan Frownfelter
+Candidate	Stephanie S. Clayton	Stephanie S. Clayton
+Candidate	Stephen Owens	Stephen Owens
+Candidate	Stephen Wyatt	Stephen Wyatt
+Candidate	Steve Huebert	Steve Huebert
+Candidate	Steve Watkins	Steve Watkins
+Candidate	Steven G. Crum	Steven G. Crum
+Candidate	Steven G. Kelly	Steven G. Kelly
+Candidate	Steven Johnson	Steven Johnson
+Candidate	Stuart W. Sweeney	Stuart W. Sweeney
+Candidate	Susan 'Sue' Huff	"Susan ""Sue"" Huff"
+Candidate	Susan 'Suzi' L. Carlson	"Susan ""Suzi"" L. Carlson"
+Candidate	Susan Humphries	Susan Humphries
+Candidate	Susan L Concannon	Susan L Concannon
+Candidate	Susan Ruiz	Susan Ruiz
+Candidate	Sydney Carlin	Sydney Carlin
+Candidate	Terry Calloway	Terry Calloway
+Candidate	Thea Perry	Thea Perry
+Candidate	Tim Hodge	Tim Hodge
+Candidate	Tom Burroughs	Tom Burroughs
+Candidate	Tom Cox	Tom Cox
+Candidate	Tom Phillips	Tom Phillips
+Candidate	Tom Sawyer	Tom Sawyer
+Candidate	Toni Scalia	Toni Scalia
+Candidate	Tony Barton	Tony Barton
+Candidate	Tory Marie Arnberger	Tory Marie Arnberger
+Candidate	Trevor Jacobs	Trevor Jacobs
+Candidate	Troy L. Waymaster	Troy L. Waymaster
+Candidate	Valdenia C. Winn	Valdenia C. Winn
+Candidate	Vic (T-Bone) Miller	Vic (T-Bone) Miller
+Candidate	Vicki Schmidt	Vicki Schmidt
+Candidate	Virgil Weigel	Virgil Weigel
+Candidate	Wendy Bingesser	Wendy Bingesser
+Candidate	Will Carpenter	Will Carpenter
+Candidate	Willie Dove	Willie Dove
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican

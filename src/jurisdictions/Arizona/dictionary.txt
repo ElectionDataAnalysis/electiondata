@@ -1330,3 +1330,201 @@ CandidateContest	AZ Senate District 11	AZ;State Senator;District 11
 CandidateContest	AZ Senate District 2	AZ;State Senator;District 2
 CandidateContest	AZ Senate District 3	AZ;State Senator;District 3
 CandidateContest	AZ Senate District 9	AZ;State Senator;District 9
+Candidate	Aaron Lieberman	Aaron Lieberman
+Candidate	Alma Hernandez	Alma Hernandez
+Candidate	Amish Shah	Amish Shah
+Candidate	Ana Henderson	Ana Henderson
+Candidate	Andrea Dalessandro	Andrea Dalessandro
+Candidate	Andres Cano	Andres Cano
+Candidate	Andy Biggs	Andy Biggs
+Candidate	Angel Torres	Angel Torres
+Candidate	Angela Green	Angela Green
+Candidate	Anita Malik	Anita Malik
+Candidate	Ann Kirkpatrick	Ann Kirkpatrick
+Candidate	Anthony Kern	Anthony Kern
+Candidate	Anthony Sizer	Anthony Sizer
+Candidate	Arlando Teller	Arlando Teller
+Candidate	Athena Salman	Athena Salman
+Candidate	Becky Nutt	Becky Nutt
+Candidate	Ben Toma	Ben Toma
+Candidate	"Benjamin """"Ben'' Carmitchel"	"Benjamin """"Ben"""" Carmitchel"
+Candidate	Beryl Baker	Beryl Baker
+Candidate	Bob Karp	Bob Karp
+Candidate	Bob Thorpe	Bob Thorpe
+Candidate	Bobby Tyler	Bobby Tyler
+Candidate	Bradley Hughes	Bradley Hughes
+Candidate	Bret Roberts	Bret Roberts
+Candidate	Carmen Casillas	Carmen Casillas
+Candidate	Cesar Chavez	Cesar Chavez
+Candidate	Charlene Fernandez	Charlene Fernandez
+Candidate	Christine Porter Marsh	Christine Porter Marsh
+Candidate	"Christopher """"Chris'' Gilfillan"	"Christopher """"Chris"""" Gilfillan"
+Candidate	Daniel Hernandez Jr	Daniel Hernandez Jr
+Candidate	Daria Lohman	Daria Lohman
+Candidate	David Alger Srre	David Alger Srre
+Candidate	David Bradley	David Bradley
+Candidate	David Brill	David Brill
+Candidate	David Christian Farnsworth	David Christian Farnsworth
+Candidate	David Cook	David Cook
+Candidate	David Garcia	David Garcia
+Candidate	David Gowan	David Gowan
+Candidate	David Livingston	David Livingston
+Candidate	David Schweikert	David Schweikert
+Candidate	David Stringer	David Stringer
+Candidate	Debbie Lesko	Debbie Lesko
+Candidate	"Denise """"Mitzi'' Epstein"	"Denise """"Mitzi"""" Epstein"
+Candidate	Diego Espinoza	Diego Espinoza
+Candidate	Diego Rodriguez	Diego Rodriguez
+Candidate	Domingo DeGrazia	Domingo DeGrazia
+Candidate	Doug Ducey	Doug Ducey
+Candidate	Douglas Ervin	Douglas Ervin
+Candidate	Doyel Shamley	Doyel Shamley
+Candidate	Ed Gogek	Ed Gogek
+Candidate	Eddie Farnsworth	Eddie Farnsworth
+Candidate	Elizabeth Brown	Elizabeth Brown
+Candidate	Eric Kurland	Eric Kurland
+Candidate	Felicia French	Felicia French
+Candidate	Frank Carroll	Frank Carroll
+Candidate	Frank Pratt	Frank Pratt
+Candidate	Frank Riggs	Frank Riggs
+Candidate	Frank Schmuck	Frank Schmuck
+Candidate	Gail Griffin	Gail Griffin
+Candidate	Gary Spears	Gary Spears
+Candidate	Gary Swing	Gary Swing
+Candidate	"Geraldine """"Gerae'' Peten"	"Geraldine """"Gerae"""" Peten"
+Candidate	Gilbert Romero	Gilbert Romero
+Candidate	Greg Patterson	Greg Patterson
+Candidate	Greg Stanton	Greg Stanton
+Candidate	Haryaksha Gregor Knauer	Haryaksha Gregor Knauer
+Candidate	Hazel Chandler	Hazel Chandler
+Candidate	Heather Carter	Heather Carter
+Candidate	Hiral Tipirneni	Hiral Tipirneni
+Candidate	Hollace Lyon	Hollace Lyon
+Candidate	Isela Blanc	Isela Blanc
+Candidate	J.D. Mesnard	J.D. Mesnard
+Candidate	J'aime Morgaine	J'aime Morgaine
+Candidate	Jaime Alvarez	Jaime Alvarez
+Candidate	Jamescita Peshlakai	Jamescita Peshlakai
+Candidate	Jan Manolis	Jan Manolis
+Candidate	January Contreras	January Contreras
+Candidate	Jay Lawrence	Jay Lawrence
+Candidate	Jeff Weninger	Jeff Weninger
+Candidate	Jennifer Jermaine	Jennifer Jermaine
+Candidate	Jennifer Longdon	Jennifer Longdon
+Candidate	Jennifer Pawlik	Jennifer Pawlik
+Candidate	Jennifer Samuels	Jennifer Samuels
+Candidate	Jill Norgaard	Jill Norgaard
+Candidate	JL Mealer	JL Mealer
+Candidate	Jo Craycraft	Jo Craycraft
+Candidate	Joan Greene	Joan Greene
+Candidate	Joanne Osborne	Joanne Osborne
+Candidate	Joe Bisaccia	Joe Bisaccia
+Candidate	Joe Hart	Joe Hart
+Candidate	John Allen	John Allen
+Candidate	John Christopher Ackerley	John Christopher Ackerley
+Candidate	John Fillmore	John Fillmore
+Candidate	John Kavanagh	John Kavanagh
+Candidate	Johnny Martin	Johnny Martin
+Candidate	Joshua Reillly	Joshua Reillly
+Candidate	Juan Mendez	Juan Mendez
+Candidate	Julie Gunnigle	Julie Gunnigle
+Candidate	Justin Olson	Justin Olson
+Candidate	Karen Fann	Karen Fann
+Candidate	Kate Brophy McGee	Kate Brophy McGee
+Candidate	Kathy Hoffman	Kathy Hoffman
+Candidate	Kathy Mohr-Almeida	Kathy Mohr-Almeida
+Candidate	Kathy Pappas Petsas	Kathy Pappas Petsas
+Candidate	Katie Hobbs	Katie Hobbs
+Candidate	Kelli Butler	Kelli Butler
+Candidate	Kelly Townsend	Kelly Townsend
+Candidate	Kevin Payne	Kevin Payne
+Candidate	Kiana Maria Sears	Kiana Maria Sears
+Candidate	Kimberly Yee	Kimberly Yee
+Candidate	Kirsten Engel	Kirsten Engel
+Candidate	Kristin Dybvig-Pawelko	Kristin Dybvig-Pawelko
+Candidate	Kyrsten Sinema	Kyrsten Sinema
+Candidate	Lea Marquez Peterson	Lea Marquez Peterson
+Candidate	Lela Alston	Lela Alston
+Candidate	Leo Biaslucci	Leo Biaslucci
+Candidate	Linda C Gross	Linda C Gross
+Candidate	Lisa Otondo	Lisa Otondo
+Candidate	Lorenzo Sierra	Lorenzo Sierra
+Candidate	Lupe Chavira Contreras	Lupe Chavira Contreras
+Candidate	Lynsey Robinson	Lynsey Robinson
+Candidate	Marcela Quiroz	Marcela Quiroz
+Candidate	Maria Syms	Maria Syms
+Candidate	Marilyn Wiles	Marilyn Wiles
+Candidate	Mark Bmovich	Mark Bmovich
+Candidate	Mark Finchem	Mark Finchem
+Candidate	Mark Manoil	Mark Manoil
+Candidate	Martha McSally	Martha McSally
+Candidate	Martin J. Quezada	Martin J. Quezada
+Candidate	Mary McCord Robinson	Mary McCord Robinson
+Candidate	Michelle Harris	Michelle Harris
+Candidate	Michelle Udall	Michelle Udall
+Candidate	Michelle Ugenti-Rita	Michelle Ugenti-Rita
+Candidate	Mohammad Arif	Mohammad Arif
+Candidate	Myron Tsosie	Myron Tsosie
+Candidate	Nancy Barto	Nancy Barto
+Candidate	"Nicolas """"Nick'' Pierson"	"Nicolas """"Nick"""" Pierson"
+Candidate	Noel Campbell	Noel Campbell
+Candidate	Nora Ellen	Nora Ellen
+Candidate	"Otoniel """"Tony'' Navarrete"	"Otoniel """"Tony"""" Navarrete"
+Candidate	Pamela Powers Hannley	Pamela Powers Hannley
+Candidate	Paul Boyer	Paul Boyer
+Candidate	Paul Gosar	Paul Gosar
+Candidate	Ralph Atchue	Ralph Atchue
+Candidate	"Randall """"Randy'' Friese"	"Randall """"Randy"""" Friese"
+Candidate	Randy Fleenor	Randy Fleenor
+Candidate	Raquel Teran	Raquel Teran
+Candidate	Raul Grijalva	Raul Grijalva
+Candidate	Raymond D Speakman	Raymond D Speakman
+Candidate	Rebecca Rios	Rebecca Rios
+Candidate	Rebecca Speakman	Rebecca Speakman
+Candidate	Regina Cobb	Regina Cobb
+Candidate	Reginald Bolding	Reginald Bolding
+Candidate	Richard Andrade	Richard Andrade
+Candidate	Richard Grayson	Richard Grayson
+Candidate	Rick Gray	Rick Gray
+Candidate	Robert Meza	Robert Meza
+Candidate	Rodney Glassman	Rodney Glassman
+Candidate	Rosanna Gabaldon	Rosanna Gabaldon
+Candidate	Ruben Gallego	Ruben Gallego
+Candidate	"Russell W. """"Rusty'' Bowers"	"Russell W. """"Rusty"""" Bowers"
+Candidate	Sally Ann Gonzales	Sally Ann Gonzales
+Candidate	Sandra Kennedy	Sandra Kennedy
+Candidate	Sara Mae Williams	Sara Mae Williams
+Candidate	Sean Bowie	Sean Bowie
+Candidate	Sharon Girard	Sharon Girard
+Candidate	Sharon Stinard	Sharon Stinard
+Candidate	Shawnna Bolick	Shawnna Bolick
+Candidate	Shelley Kais	Shelley Kais
+Candidate	Shelley Renne-Leon	Shelley Renne-Leon
+Candidate	Sine Kerr	Sine Kerr
+Candidate	Sonny Borrelli	Sonny Borrelli
+Candidate	Stephen L Ferrara	Stephen L Ferrara
+Candidate	Steve Gaynor	Steve Gaynor
+Candidate	Steve Weichert	Steve Weichert
+Candidate	Sylvia Tenney Allen	Sylvia Tenney Allen
+Candidate	Teri Sarmiento	Teri Sarmiento
+Candidate	"Thomas """"T.J.'' Shope"	"Thomas """"T.J."""" Shope"
+Candidate	Thomas Tzitzura	Thomas Tzitzura
+Candidate	"Timothy """"Tim'' Dunn"	"Timothy """"Tim"""" Dunn"
+Candidate	Todd Clodfelter	Todd Clodfelter
+Candidate	Tom O'Halleran	Tom O'Halleran
+Candidate	Tony Rivero	Tony Rivero
+Candidate	Travis Grantham	Travis Grantham
+Candidate	Tyler Pace	Tyler Pace
+Candidate	Valerie Harris	Valerie Harris
+Candidate	"Venden """"Vince'' Leach"	"Venden """"Vince"""" Leach"
+Candidate	Vicki Alger	Vicki Alger
+Candidate	Victoria Steele	Victoria Steele
+Candidate	Wade Carlisle	Wade Carlisle
+Candidate	"Walter """"Walt'' Blackman"	"Walter """"Walt"""" Blackman"
+Candidate	Warren Petersen	Warren Petersen
+Candidate	Wendy Garcia	Wendy Garcia
+Candidate	Wendy Rogers	Wendy Rogers
+Candidate	"William """"Bill'' Pierce"	"William """"Bill"""" Pierce"
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	Republican Party	republican
