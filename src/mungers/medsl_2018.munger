@@ -24,4 +24,6 @@ Election=<year>
 
 [ignore]
 CountItemType=Over Votes,Under Votes,Blank Votes,overvote,undervote
+ReportingUnit=California;State Totals County,California;State Totals
+Candidate=undervote,overvote
 

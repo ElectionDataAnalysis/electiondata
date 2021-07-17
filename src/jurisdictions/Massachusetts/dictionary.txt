@@ -863,7 +863,7 @@ CandidateContest	MA Senate District Cape a Islands	MA;State Senator;District Cap
 CandidateContest	MA Senate District Plymou a Barnstable	MA;State Senator;District Plymou a Barnstable
 CandidateContest	MA Treasurer	MA;Treasurer;statewide
 CandidateContest	US House MA District 9	MA;US Representative;District 9
-CandidateContest	MA US Senator	MA;US Senator;statewide
+CandidateContest	US Senate MA	MA;US Senator;statewide
 CandidateContest	MA Governor's Council District 8	MA;Governor's Council;District 8
 CandidateContest	MA House District 1 Berkshire	MA;State Representative;District 1 Berkshire
 CandidateContest	MA House District 2 Berkshire	MA;State Representative;District 2 Berkshire
@@ -1414,3 +1414,17 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	Massachusetts;Barnstable County	Massachusetts;Barnstable
+ReportingUnit	Massachusetts;Berkshire County	Massachusetts;Berkshire
+ReportingUnit	Massachusetts;Bristol County	Massachusetts;Bristol
+ReportingUnit	Massachusetts;Dukes County	Massachusetts;Dukes
+ReportingUnit	Massachusetts;Essex County	Massachusetts;Essex
+ReportingUnit	Massachusetts;Franklin County	Massachusetts;Franklin
+ReportingUnit	Massachusetts;Hampden County	Massachusetts;Hampden
+ReportingUnit	Massachusetts;Hampshire County	Massachusetts;Hampshire
+ReportingUnit	Massachusetts;Middlesex County	Massachusetts;Middlesex
+ReportingUnit	Massachusetts;Nantucket County	Massachusetts;Nantucket
+ReportingUnit	Massachusetts;Norfolk County	Massachusetts;Norfolk
+ReportingUnit	Massachusetts;Plymouth County	Massachusetts;Plymouth
+ReportingUnit	Massachusetts;Suffolk County	Massachusetts;Suffolk
+ReportingUnit	Massachusetts;Worcester County	Massachusetts;Worcester

@@ -197,4 +197,6 @@ US Senate CT	Connecticut
 CT Attorney General	Connecticut
 CT Lieutenant Governor	Connecticut
 CT Treasurer	Connecticut
-CT Secretary of State	Connecticut
+CT Secretary of the State	Connecticut
+CT Comptroller	Connecticut
+

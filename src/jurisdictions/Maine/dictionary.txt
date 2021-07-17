@@ -1035,7 +1035,7 @@ CandidateContest	ME Senate District 18	ME;State Senator;District 18
 CandidateContest	ME Senate District 20	ME;State Senator;District 20
 CandidateContest	ME Senate District 21	ME;State Senator;District 21
 CandidateContest	ME Senate District 22	ME;State Senator;District 22
-CandidateContest	ME US Senator	ME;US Senator;statewide
+CandidateContest	US Senate ME	ME;US Senator;statewide
 CandidateContest	ME House District 144	ME;State Representative;District 144
 CandidateContest	ME House District 145	ME;State Representative;District 145
 CandidateContest	ME House District 146	ME;State Representative;District 146
@@ -1474,8 +1474,6 @@ Candidate	Nelson M. J. Jr. Peters	Nelson M. J. Jr. Peters
 Candidate	Nicole Grohoski	Nicole Grohoski
 Candidate	Noah Arthur Cobb	Noah Arthur Cobb
 Candidate	Norman E. Higgins	Norman E. Higgins
-Candidate	Others	Others
-Candidate	overvote	overvote
 Candidate	Owen D. Casas	Owen D. Casas
 Candidate	Pamela Diane Buck	Pamela Diane Buck
 Candidate	Patricia A. Nobel	Patricia A. Nobel
@@ -1573,7 +1571,6 @@ Candidate	Timothy S. Theriault	Timothy S. Theriault
 Candidate	Tony W. Lorrain	Tony W. Lorrain
 Candidate	Troy Dale Jackson	Troy Dale Jackson
 Candidate	Tyler Jay Adkins	Tyler Jay Adkins
-Candidate	undervote	undervote
 Candidate	Victoria E. Morales	Victoria E. Morales
 Candidate	Victoria Foley	Victoria Foley
 Candidate	Victoria P. Kornfield	Victoria P. Kornfield
@@ -1613,3 +1610,22 @@ CountItemType	election-day	machine
 CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
+ReportingUnit	Maine;Androscoggin County	Maine;Androscoggin
+ReportingUnit	Maine;Aroostook County	Maine;Aroostook
+ReportingUnit	Maine;Cumberland County	Maine;Cumberland
+ReportingUnit	Maine;Franklin County	Maine;Franklin
+ReportingUnit	Maine;Hancock County	Maine;Hancock
+ReportingUnit	Maine;Kennebec County	Maine;Kennebec
+ReportingUnit	Maine;Knox County	Maine;Knox
+ReportingUnit	Maine;Lincoln County	Maine;Lincoln
+ReportingUnit	Maine;Oxford County	Maine;Oxford
+ReportingUnit	Maine;Penobscot County	Maine;Penobscot
+ReportingUnit	Maine;Piscataquis County	Maine;Piscataquis
+ReportingUnit	Maine;Sagadahoc County	Maine;Sagadahoc
+ReportingUnit	Maine;Somerset County	Maine;Somerset
+ReportingUnit	Maine	Maine;State UOCAVA
+ReportingUnit	Maine;Waldo County	Maine;Waldo
+ReportingUnit	Maine;Washington County	Maine;Washington
+ReportingUnit	Maine;York County	Maine;York
+ReportingUnit	Maine	Maine;
+

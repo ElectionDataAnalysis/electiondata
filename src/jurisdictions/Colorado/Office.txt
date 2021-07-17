@@ -113,3 +113,8 @@ CO Attorney General	Colorado
 CO Lieutenant Governor	Colorado
 CO State Treasurer	Colorado
 CO Secretary of State	Colorado
+CO State Board of Education Member District 4	Colorado;CO State Board of Education Member District 4
+CO Regent of the University of Colorado District 3	Colorado;CO Regent of the University of Colorado District 3
+CO State Board of Education Member District 2	Colorado;CO State Board of Education Member District 2
+CO Regent of the University of Colorado District 5	Colorado;CO Regent of the University of Colorado District 5
+

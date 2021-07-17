@@ -12093,7 +12093,7 @@ CandidateContest	MI Secretary of State	MI;Secretary of State;statewide
 CandidateContest	MI House District 10	MI;State Representative;District 10
 CandidateContest	MI Senate District 36	MI;State Senator;District 36
 CandidateContest	US House MI District 1	MI;US Representative;District 1
-CandidateContest	MI US Senator	MI;US Senator;statewide
+CandidateContest	US Senate MI	MI;US Senator;statewide
 CandidateContest	MI Senate District 38	MI;State Senator;District 38
 CandidateContest	MI House District 72	MI;State Representative;District 72
 CandidateContest	MI House District 80	MI;State Representative;District 80
@@ -12285,3 +12285,86 @@ CountItemType	election-day	machine
 CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
+ReportingUnit	Michigan;Alcona County	Michigan;Alcona
+ReportingUnit	Michigan;Alger County	Michigan;Alger
+ReportingUnit	Michigan;Allegan County	Michigan;Allegan
+ReportingUnit	Michigan;Alpena County	Michigan;Alpena
+ReportingUnit	Michigan;Antrim County	Michigan;Antrim
+ReportingUnit	Michigan;Arenac County	Michigan;Arenac
+ReportingUnit	Michigan;Baraga County	Michigan;Baraga
+ReportingUnit	Michigan;Barry County	Michigan;Barry
+ReportingUnit	Michigan;Bay County	Michigan;Bay
+ReportingUnit	Michigan;Benzie County	Michigan;Benzie
+ReportingUnit	Michigan;Berrien County	Michigan;Berrien
+ReportingUnit	Michigan;Branch County	Michigan;Branch
+ReportingUnit	Michigan;Calhoun County	Michigan;Calhoun
+ReportingUnit	Michigan;Cass County	Michigan;Cass
+ReportingUnit	Michigan;Charlevoix County	Michigan;Charlevoix
+ReportingUnit	Michigan;Cheboygan County	Michigan;Cheboygan
+ReportingUnit	Michigan;Chippewa County	Michigan;Chippewa
+ReportingUnit	Michigan;Clare County	Michigan;Clare
+ReportingUnit	Michigan;Clinton County	Michigan;Clinton
+ReportingUnit	Michigan;Crawford County	Michigan;Crawford
+ReportingUnit	Michigan;Delta County	Michigan;Delta
+ReportingUnit	Michigan;Dickinson County	Michigan;Dickinson
+ReportingUnit	Michigan;Eaton County	Michigan;Eaton
+ReportingUnit	Michigan;Emmet County	Michigan;Emmet
+ReportingUnit	Michigan;Genesee County	Michigan;Genesee
+ReportingUnit	Michigan;Gladwin County	Michigan;Gladwin
+ReportingUnit	Michigan;Gogebic County	Michigan;Gogebic
+ReportingUnit	Michigan;Grand Traverse County	Michigan;Grand Traverse
+ReportingUnit	Michigan;Gratiot County	Michigan;Gratiot
+ReportingUnit	Michigan;Hillsdale County	Michigan;Hillsdale
+ReportingUnit	Michigan;Houghton County	Michigan;Houghton
+ReportingUnit	Michigan;Huron County	Michigan;Huron
+ReportingUnit	Michigan;Ingham County	Michigan;Ingham
+ReportingUnit	Michigan;Ionia County	Michigan;Ionia
+ReportingUnit	Michigan;Iosco County	Michigan;Iosco
+ReportingUnit	Michigan;Iron County	Michigan;Iron
+ReportingUnit	Michigan;Isabella County	Michigan;Isabella
+ReportingUnit	Michigan;Jackson County	Michigan;Jackson
+ReportingUnit	Michigan;Kalamazoo County	Michigan;Kalamazoo
+ReportingUnit	Michigan;Kalkaska County	Michigan;Kalkaska
+ReportingUnit	Michigan;Kent County	Michigan;Kent
+ReportingUnit	Michigan;Keweenaw County	Michigan;Keweenaw
+ReportingUnit	Michigan;Lake County	Michigan;Lake
+ReportingUnit	Michigan;Lapeer County	Michigan;Lapeer
+ReportingUnit	Michigan;Leelanau County	Michigan;Leelanau
+ReportingUnit	Michigan;Lenawee County	Michigan;Lenawee
+ReportingUnit	Michigan;Livingston County	Michigan;Livingston
+ReportingUnit	Michigan;Luce County	Michigan;Luce
+ReportingUnit	Michigan;Mackinac County	Michigan;Mackinac
+ReportingUnit	Michigan;Macomb County	Michigan;Macomb
+ReportingUnit	Michigan;Manistee County	Michigan;Manistee
+ReportingUnit	Michigan;Marquette County	Michigan;Marquette
+ReportingUnit	Michigan;Mason County	Michigan;Mason
+ReportingUnit	Michigan;Mecosta County	Michigan;Mecosta
+ReportingUnit	Michigan;Menominee County	Michigan;Menominee
+ReportingUnit	Michigan;Midland County	Michigan;Midland
+ReportingUnit	Michigan;Missaukee County	Michigan;Missaukee
+ReportingUnit	Michigan;Monroe County	Michigan;Monroe
+ReportingUnit	Michigan;Montcalm County	Michigan;Montcalm
+ReportingUnit	Michigan;Montmorency County	Michigan;Montmorency
+ReportingUnit	Michigan;Muskegon County	Michigan;Muskegon
+ReportingUnit	Michigan;Newaygo County	Michigan;Newaygo
+ReportingUnit	Michigan;Oakland County	Michigan;Oakland
+ReportingUnit	Michigan;Oceana County	Michigan;Oceana
+ReportingUnit	Michigan;Ogemaw County	Michigan;Ogemaw
+ReportingUnit	Michigan;Ontonagon County	Michigan;Ontonagon
+ReportingUnit	Michigan;Osceola County	Michigan;Osceola
+ReportingUnit	Michigan;Oscoda County	Michigan;Oscoda
+ReportingUnit	Michigan;Otsego County	Michigan;Otsego
+ReportingUnit	Michigan;Ottawa County	Michigan;Ottawa
+ReportingUnit	Michigan;Presque Isle County	Michigan;Presque Isle
+ReportingUnit	Michigan;Roscommon County	Michigan;Roscommon
+ReportingUnit	Michigan;Saginaw County	Michigan;Saginaw
+ReportingUnit	Michigan;Sanilac County	Michigan;Sanilac
+ReportingUnit	Michigan;Schoolcraft County	Michigan;Schoolcraft
+ReportingUnit	Michigan;Shiawassee County	Michigan;Shiawassee
+ReportingUnit	Michigan;St. Clair County	Michigan;St. Clair
+ReportingUnit	Michigan;St. Joseph County	Michigan;St. Joseph
+ReportingUnit	Michigan;Tuscola County	Michigan;Tuscola
+ReportingUnit	Michigan;Van Buren County	Michigan;Van Buren
+ReportingUnit	Michigan;Washtenaw County	Michigan;Washtenaw
+ReportingUnit	Michigan;Wayne County	Michigan;Wayne
+ReportingUnit	Michigan;Wexford County	Michigan;Wexford

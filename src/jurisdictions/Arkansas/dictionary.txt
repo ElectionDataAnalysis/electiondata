@@ -2493,7 +2493,7 @@ ReportingUnit	Arkansas;Woodruff County	Woodruff
 ReportingUnit	Arkansas;Woodruff County	fips05147
 ReportingUnit	Arkansas;Yell County	Yell
 ReportingUnit	Arkansas;Yell County	fips05149
-CandidateContest	AR Attorney General	AR;Attorney General
+CandidateContest	AR Attorney General	AR;Attorney General;statewide
 CandidateContest	AR Auditor of State	AR;Auditor of State;statewide
 CandidateContest	AR Commissioner of State Lands	AR;Commissioner of State Lands;statewide
 CandidateContest	AR Governor	AR;Governor;statewide
@@ -2639,3 +2639,78 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	Arkansas;Arkansas County	Arkansas;Arkansas
+ReportingUnit	Arkansas;Ashley County	Arkansas;Ashley
+ReportingUnit	Arkansas;Baxter County	Arkansas;Baxter
+ReportingUnit	Arkansas;Benton County	Arkansas;Benton
+ReportingUnit	Arkansas;Boone County	Arkansas;Boone
+ReportingUnit	Arkansas;Bradley County	Arkansas;Bradley
+ReportingUnit	Arkansas;Calhoun County	Arkansas;Calhoun
+ReportingUnit	Arkansas;Carroll County	Arkansas;Carroll
+ReportingUnit	Arkansas;Chicot County	Arkansas;Chicot
+ReportingUnit	Arkansas;Clark County	Arkansas;Clark
+ReportingUnit	Arkansas;Clay County	Arkansas;Clay
+ReportingUnit	Arkansas;Cleburne County	Arkansas;Cleburne
+ReportingUnit	Arkansas;Cleveland County	Arkansas;Cleveland
+ReportingUnit	Arkansas;Columbia County	Arkansas;Columbia
+ReportingUnit	Arkansas;Conway County	Arkansas;Conway
+ReportingUnit	Arkansas;Craighead County	Arkansas;Craighead
+ReportingUnit	Arkansas;Crawford County	Arkansas;Crawford
+ReportingUnit	Arkansas;Crittenden County	Arkansas;Crittenden
+ReportingUnit	Arkansas;Cross County	Arkansas;Cross
+ReportingUnit	Arkansas;Dallas County	Arkansas;Dallas
+ReportingUnit	Arkansas;Desha County	Arkansas;Desha
+ReportingUnit	Arkansas;Drew County	Arkansas;Drew
+ReportingUnit	Arkansas;Faulkner County	Arkansas;Faulkner
+ReportingUnit	Arkansas;Franklin County	Arkansas;Franklin
+ReportingUnit	Arkansas;Fulton County	Arkansas;Fulton
+ReportingUnit	Arkansas;Garland County	Arkansas;Garland
+ReportingUnit	Arkansas;Grant County	Arkansas;Grant
+ReportingUnit	Arkansas;Greene County	Arkansas;Greene
+ReportingUnit	Arkansas;Hempstead County	Arkansas;Hempstead
+ReportingUnit	Arkansas;Hot Spring County	Arkansas;Hot Spring
+ReportingUnit	Arkansas;Howard County	Arkansas;Howard
+ReportingUnit	Arkansas;Independence County	Arkansas;Independence
+ReportingUnit	Arkansas;Izard County	Arkansas;Izard
+ReportingUnit	Arkansas;Jackson County	Arkansas;Jackson
+ReportingUnit	Arkansas;Jefferson County	Arkansas;Jefferson
+ReportingUnit	Arkansas;Johnson County	Arkansas;Johnson
+ReportingUnit	Arkansas;Lafayette County	Arkansas;Lafayette
+ReportingUnit	Arkansas;Lawrence County	Arkansas;Lawrence
+ReportingUnit	Arkansas;Lee County	Arkansas;Lee
+ReportingUnit	Arkansas;Lincoln County	Arkansas;Lincoln
+ReportingUnit	Arkansas;Little River County	Arkansas;Little River
+ReportingUnit	Arkansas;Logan County	Arkansas;Logan
+ReportingUnit	Arkansas;Lonoke County	Arkansas;Lonoke
+ReportingUnit	Arkansas;Madison County	Arkansas;Madison
+ReportingUnit	Arkansas;Marion County	Arkansas;Marion
+ReportingUnit	Arkansas;Miller County	Arkansas;Miller
+ReportingUnit	Arkansas;Mississippi County	Arkansas;Mississippi
+ReportingUnit	Arkansas;Monroe County	Arkansas;Monroe
+ReportingUnit	Arkansas;Montgomery County	Arkansas;Montgomery
+ReportingUnit	Arkansas;Nevada County	Arkansas;Nevada
+ReportingUnit	Arkansas;Newton County	Arkansas;Newton
+ReportingUnit	Arkansas;Ouachita County	Arkansas;Ouachita
+ReportingUnit	Arkansas;Perry County	Arkansas;Perry
+ReportingUnit	Arkansas;Phillips County	Arkansas;Phillips
+ReportingUnit	Arkansas;Pike County	Arkansas;Pike
+ReportingUnit	Arkansas;Poinsett County	Arkansas;Poinsett
+ReportingUnit	Arkansas;Polk County	Arkansas;Polk
+ReportingUnit	Arkansas;Pope County	Arkansas;Pope
+ReportingUnit	Arkansas;Prairie County	Arkansas;Prairie
+ReportingUnit	Arkansas;Pulaski County	Arkansas;Pulaski
+ReportingUnit	Arkansas;Randolph County	Arkansas;Randolph
+ReportingUnit	Arkansas;Saline County	Arkansas;Saline
+ReportingUnit	Arkansas;Scott County	Arkansas;Scott
+ReportingUnit	Arkansas;Searcy County	Arkansas;Searcy
+ReportingUnit	Arkansas;Sebastian County	Arkansas;Sebastian
+ReportingUnit	Arkansas;Sevier County	Arkansas;Sevier
+ReportingUnit	Arkansas;Sharp County	Arkansas;Sharp
+ReportingUnit	Arkansas;St Francis County	Arkansas;St Francis
+ReportingUnit	Arkansas;Stone County	Arkansas;Stone
+ReportingUnit	Arkansas;Union County	Arkansas;Union
+ReportingUnit	Arkansas;Van Buren County	Arkansas;Van Buren
+ReportingUnit	Arkansas;Washington County	Arkansas;Washington
+ReportingUnit	Arkansas;White County	Arkansas;White
+ReportingUnit	Arkansas;Woodruff County	Arkansas;Woodruff
+ReportingUnit	Arkansas;Yell County	Arkansas;Yell

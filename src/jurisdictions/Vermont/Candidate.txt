@@ -1,7 +1,7 @@
 BallotName
 ZOILE APOLO HAMLIN(Write-In)
 ZADA GILMORE(Write-In)
-ZACHARY SCALF
+Zachary Scalf
 YZOBELLA PERCE-ENEIDI(Write-In)
 YVETTE ROY - MARIE BOUTIN(Write-In)
 YORUM SANATS(Write-In)
@@ -90,7 +90,7 @@ SAM ELLIOT(Write-In)
 ROSE FREIDMANT(Write-In)
 ROSANNE CYR(Write-In)
 ROSA LUXEMBOURG(Write-In)
-ROQUE 'ROCKY' DE LA FUENTE
+Roque 'Rocky' De La Fuente
 RONALD REAGAN (Write-In)
 RONALD DALY(Write-In)
 RON PAUL(Write-In)
@@ -110,7 +110,7 @@ RICK SANTORUM (Write-In)
 RICHARD VANDEN BERGH(Write-In)
 RICHARD SCHNEIDER(Write-In)
 RICHARD PLASSE(Write-In)
-RICHARD DUNCAN
+Richard Duncan
 REGGIE NOBLE(Write-In)
 REAGAN BECK(Write-In)
 RANDY LEBAY(Write-In)
@@ -122,7 +122,7 @@ PIERCE DUFRESNE(Write-In)
 PHILLIP J CITEK(Write-In)
 PHILLIP J BARNEY(Write-In)
 PHIL SCOTT(Write-In)
-PHIL COLLINS
+Phil Collins
 PETER EDSON(Write-In)
 PETE BUTTEGIEG(Write-In)
 PAULINE BROUSSEAU(Write-In)
@@ -205,7 +205,7 @@ LEONARD KIPP(Write-In)
 LEON C. GEOGHOSZ(Write-In)
 LARRY SHARP(Write-In)
 LABRON JAMES(Write-In)
-KYLE KENLEY KOPITKE
+Kyle Kenley Kopitke
 KURT ZSCHAU(Write-In)
 KULE KULINSKI(Write-In)
 KSHAMA SAWANT(Write-In)
@@ -223,12 +223,12 @@ KENNETH IRA KRIGSTEIN(Write-In)
 KELSIE GABBARD(Write-In)
 KELLY ANN CONWAY(Write-In)
 KEITH STERN(Write-In)
-KEITH MCCORMIC
+Keith Mccormic
 KEITH GROCHOWIK(Write-In)
 KEANU REEVES(Write-In)
 KATHRYN ZELLNER(Write-In)
 KASIC - BUDTTIGIG(Write-In)
-KANYE WEST
+Kanye West
 KAMALA HARRIS(Write-In)
 JUSTIN MONTEITH(Write-In)
 JUSTIN LINDOR(Write-In)
@@ -237,7 +237,7 @@ JULIE ANN BYTHROW(Write-In)
 JULIAN ASSANGE(Write-In)
 JUDY YOUNG(Write-In)
 JUDD GREGG(Write-In)
-JOSEPH R. BIDEN
+Joseph R. Biden
 JOSEPH KISHORE(Write-In)
 JONATHAN GENTINE(Write-In)
 JONATHAN FISHMAN(Write-In)
@@ -266,7 +266,7 @@ JOE MONTANA(Write-In)
 JOE BIDEN(Write-In)
 JOCKO WILLINK(Write-In)
 JOCKO WILLAH(Write-In)
-JO JORGENSEN
+Jo Jorgensen
 JIMMY BUFFET(Write-In)
 JIM MATTIS(Write-In)
 JIM DOUGLAS(Write-In)
@@ -276,7 +276,7 @@ JESUS CALDERON(Write-In)
 JESSIE VENTURA(Write-In)
 JESSI VENTURA(Write-In)
 JESSE VENTURA(Write-In)
-JEROME SEGAL
+Jerome Segal
 JENIFER LOPEZ(Write-In)
 JEFFRY LACLAIR(Write-In)
 JEFFREY BEERWORTH(Write-In)
@@ -305,24 +305,24 @@ JADE SIMMONS(Write-In)
 JACKO WILLINK(Write-In)
 J SPRAKE(Write-In)
 HUNTER BIDEN(Write-In)
-HOWIE HAWKINS
+Howie Hawkins
 HOWARD DEAN(Write-In)
 HILARY CLINTON(Write-In)
-H. BROOKE PAIGE
+H. Brooke Paige
 GUY PAGE(Write-In)
 GREGORY DOVILLARD AND JOSEPH GOLDBERG(Write-In)
 GOVERNOR CUOMO(Write-In)
 GORGE CHAPAEY(Write-In)
 GORDON HAYES(Write-In)
 GLORIA LARIVA(Write-In)
-GLORIA LARIVA
+Gloria Lariva
 GILBERT FITZHUGH(Write-In)
 GEORGE W. BUSH(Write-In)
 GEORGE TRIEB(Write-In)
 GEORGE BUSH(Write-In)
 GENNIFER SET(Write-In)
 GENERAL ROBERT SPAULDING(Write-In)
-GARY SWING
+Gary Swing
 FRED BRIGHAM(Write-In)
 FRANKLIN GRAHAM(Write-In)
 FRANK OTT(Write-In)
@@ -349,12 +349,12 @@ DR. FAUCCI(Write-In)
 DR. ANTHONY FAUCI(Write-In)
 DOUG GRANT(Write-In)
 DONALD TRUMP(Write-In)
-DONALD J. TRUMP
+Donald J. Trump
 DONALD HART(Write-In)
 DONALD DIXON(Write-In)
 DON STEVENS(Write-In)
 DON CREWSHAW(Write-In)
-DON BLANKENSHIP
+Don Blankenship
 DOMINIC FACTORY & SHANE ALTERI(Write-In)
 DISMANTLE TWO PARTY SYSTEM(Write-In)
 DICK GREGORY(Write-In)
@@ -368,7 +368,7 @@ DAVID MARK JACOBS(Write-In)
 DAVID LIEBOW(Write-In)
 DAVID FRENCH (Write-In)
 DAVID COOTWARE(Write-In)
-DAVE MARX -  JOSH DOUBLEDAY(Write-In)
+DAVE MARX - JOSH DOUBLEDAY(Write-In)
 DAVE EMERY(Write-In)
 DANIEL CALLAHAN AND SUE FOWLER(Write-In)
 DANIEL AIROLDI(Write-In)
@@ -395,7 +395,7 @@ CJ JOHN ROBERTS(Write-In)
 CIARAM NOBLE(Write-In)
 CHUCK NORRIS(Write-In)
 CHRISTOPHER SUNUNU(Write-In)
-CHRISTOPHER LAFONTAINE
+Christopher Lafontaine
 CHRISTOPHER BOLOGNA(Write-In)
 CHRISTINA NANOPOLOUS(Write-In)
 CHRISOTPHER M ANTRY(Write-In)
@@ -420,18 +420,18 @@ BLANK VOTESBUTTIGIEG(Write-In)
 BRYAN LIACCIA(Write-In)
 BRYAN BRUSSA(Write-In)
 BRUCE SMITH(Write-In)
-BROCK PIERCE
+Brock Pierce
 BROCK ALLEN(Write-In)
 BRITNEY HALLOCK(Write-In)
 BRIANNA TAYLOR(Write-In)
 BRIAN DUBE(Write-In)
-BRIAN CARROLL
+Brian Carroll
 BRET WEINSTEIN(Write-In)
 BRENDA TAYLOR(Write-In)
 BRADLEY COOPER(Write-In)
 BLANK(Write-In)
 BLAKE SHELTON(Write-In)
-BLAKE HUBER
+Blake Huber
 BILL WELD(Write-In)
 BILL WELCH(Write-In)
 BILL LEE(Write-In)
@@ -470,7 +470,7 @@ AMY COMEY BARRETT(Write-In)
 AMY CHESLEY(Write-In)
 AMANDA L. MARCY(Write-In)
 ALYSSA FILLION(Write-In)
-ALYSON KENNEDY
+Alyson Kennedy
 ALICIA COTE - DOUGLAS COTE(Write-In)
 ALICE COOPER(Write-In)
 ALFRED E NEWMAN(Write-In)
@@ -484,365 +484,364 @@ ADRIAN WALLACE(Write-In)
 ADRIAN NOYES(Write-In)
 A SCJWAMZEMEGGER(Write-In)
 BUTTIGIEG(Write-In)
-ELIZABETH BURROWS
-JILL KROWINSKI
-EMBER QUINN
-RALPH CORBO
-KATE MACLEAN
-PATRICK BRENNAN
-TIM BUSKEY
-LYNN DIKE
-AMY KAMSTRA
-MATT BIRONG
-PAUL VALLERAND
-DOUG HOFFER
-DWAYNE TUCKER
-CHLOE COLLINS
-DESERAE MORIN
-ROBERT HOOPER
-DAVE POTTER
-MARI CORDES
-WILLIAM NOTTE
-CHARLIE KIMBELL
-JESSICA BRUMSTED
-BRIAN CINA
-KEN FREDETTE
-SHANNARA JOHNSON
-MARCIA ROBINSON MARTEL
-RODNEY GRAHAM
-DOUG WOOD
-THOMAS TERENZINI
-GABRIELLE STEBBINS
-WESLEY RANEY
-LAURA SIBILIA
-ANTHONY POLLINA
-VALERIE MULLIN
-CHRISTOPHER BRAY
-JACOB HOLMES
-FERRON WAMBOLD
-CURT TAYLOR
-EMILY LONG
-PETER BRIGGS
-ZACHARY MICHAEL LANG
-JON LYNCH
-MATTHEW SOMERVILLE
-SETH CHASE
-JON CHRISTIANO
-SELENE COLBURN
-MARK DONKA
-KELLY MACLAURY PAJALA
-CURT MCCORMACK
-EMILIE KORNHEISER
-SAMANTHA LEFEBVRE
-JOHN BARTHOLOMEW
-BARBARA SMITH MURPHY
-SARAH TOSCANO
-EMILY HECKER
-BARBARA RACHELSON
-SUSAN HATCH DAVIS
-HEATHER SURPRENANT
-CAROL ODE
-TIM BRIGLIN
-TOM BURDITT
-BETH PEARCE
-TYLER MACHIA
-MARTIN LALONDE
-KEN ALGER
-RUTH HARDY
-ARTHUR PETERSON
-CARL DEMROW
-ALEX WRIGHT
-SARA COFFEY
-AVRAM PATT
-MAXINE GRAD
-LOGAN NICOLL
-RANDY BROCK
-MOLLY GRAY
-COREY PARENT
-JANA BROWN
-KATHLEEN JAMES
-SHERRI PROUTY
-RICHARD MORTON
-CRIS ERICSON
-JOHN MACGOVERN
-DAVID YACOVONE
-DYLAN STETSON
-LUCY ROGERS
-CHIP TROIANO
-DAWNMARIE TOMASI
-CARL ROSENQUIST
-BILL LIPPERT
-TODD BUIK
-JIM MASLAND
-SETH BONGARTZ
-TIFF BLUEMLE
-TOM LICATA
-TAYLOR SMALL
-JOHN PALASIK
-SCOTT MILNE
-JAMES GREGOIRE
-ANN CUMMINGS
-RAMA SCHNEIDER
-LINDA JOY SULLIVAN
-HAL COLSTON
-TRISTAN TOLENO
-CHRIS MATTOS
-BARBARA NOYES PULLING
-SARITA AUSTIN
-STEVE FISHER
-CAROLYN WHITNEY BRANAGAN
-KARI DOLAN
-STEVE THURSTON
-JAMES EHLERS
-DIANE LANPHER
-ANN PUGH
-JAMES CLARK
-BEN CHIAPPINELLI
-JIM HARRISON
-SARAH COPELAND HANZAS
-WAYNE BILLADO III
-ANDREW PERCHLIK
-CALEB ELDER
-NELSON BROWNELL
-KATE WEBB
-JOHN KILLACKY
-PETER CONLON
-LUKE RICHTER
-JOHN GANNON
-TERRY MOULTROUP
-ARCHIE FLOWER
-CYNTHIA BROWNING
-AMY SHELDON
-JAY HOOPER
-CHARLES RUSSELL
-T.J. DONOVAN
-CHARLES W. WILSON
-ANDY WATTS
-DAVID SOULIA
-PETER D. ANTHONY
-BRITTANY D. CAVACAS
-MASON WADE
-TERRY K. WILLIAMS
-CHESTER ALDEN
-JACK WILLIAMS
-TYLER COLFORD
-ANNE B. DONAHUE
-KEVIN 'COACH' CHRISTIE
-ROBERT W. NORRIS
-DENNIS A. WILLIAMS
-DEAN ROLLAND
-REBECCA WHITE
-RICHARD 'SENSEI' LENCHUS
-WOODMAN 'WOODY' H. PAGE
-ROBERT 'BOB' HELM
-MARTHA 'MARTY' FELTUS
-TIMOTHY R. CORCORAN II
-LYNN D. BATCHELOR
-TANYA VYHOVSKY
-JOHN STEINMAN
-PETER J. BRADY SR
-CASEY TOOF
-PAMALA SMITH
-DENISE MACMARTIN
-HEIDI E. SCHEUERMANN
-LELAND J. MORGAN
-MARY E. HOWARD
-ALICE FLANDERS
-RICHARD J. 'DICK' MCCORMACK
-JOHN ARRISON
-KUMULIA 'KASE' LONG
-KIMBERLY JESSUP
-MICHAEL R. MORGAN
-BRUCE A. MELENDY
-CASEY JENNINGS
-MARCUS R. PARISH
-MICHAEL NIGRO
-KEITH STERN
-VICKI STRONG
-BECCA BALINT
-SEAN WHALEN
-JO SABEL COURTNEY
-BROCK CODERRE
-MICHAEL F. KELL SR
-DAVID HAMMOND
-LARRY COURCELLE
-MARK A. HIGLEY
-NICHOLAS BRAMLAGE
-FRANCIS 'TOPPER' MCFAUN
-JEANNINE A. YOUNG
-CLEMENT 'CLEM' BISSONNETTE
-MARK A. MACDONALD
-SUSAN BOWEN
-DAVID K. DURFEE
-MARY S. HOOPER
-ALYSSA BLACK
-JOE BENNING
-ROBIN SCHEU
-RICHARD 'DICK' MAZZA
-MARYBETH REDMOND
-ERIN BRADY
-MICHAEL SHANK
-MIKE MROWICKI
-J.T. DODGE
-JANE KITCHEL
-PAUL MARTIN
-MICHAEL SIROTKIN
-BILL T. HUFF
-PETER REED
-EMILY PEYTON
-PATRICK SEYMOUR
-ROBERT 'BOB' RICHARDS
-JOHN S. RODGERS
-STUART BEAM
-VIRGINIA 'GINNY' LYONS
-BRUCE F. CHEESEMAN
-VICTOR K. HARWOOD JR
-MATTHEW CHOATE
-EDMOND J. DAUDELIN
-ROB LACLAIR
-ROBERT STARR
-EMMA MULVANEY
-SALLY ACHEY
-MICHAEL J. MARCOTTE
-FELISHA ROSE LEFFLER
-JANET ANCEL
-THOMAS CHITTENDEN
-RICHARD J. BAILEY
-BRIAN K. SAVAGE
-KATHERINE SIMS
-NICHOLAS A. BROSSEAU
-MICHELLE BOS
-PETER J. FAGAN
-RON HORTON
-MICHAEL JASINSKI SR
-BRICE C. SIMON
-DOUG WILBERDING
-HENRY PEARL
-DANE WHITMAN
-WAYNE D. TOWNSEND
-GEORGE TILL
-FRANK EMPSALL
-TERRI LYNN WILLIAMS
-SCOTT CAMPBELL
-WILLIAM 'BILL' CANFIELD
-ERYNN HAZLETT WHITNEY
-CHARLY DICKERSON
-JUBILEE MCGILL
-HARVEY T. SMITH
-KAREN DOLAN
-THOMAS A. HUGHES
-TYLER
-CHERYL M. HOOKER
-DICK SEARS
-MEG HANSEN
-CHRIS VIENS
-RUSS INGALLS
-ANTHONY 'TONY' O'ROURKE
-TOM CHASTENAY
-DANIEL NADEAU
-GREG COX
-CHRISTOPHER PEARSON
-CHARLES 'BUTCH' SHAW
-RICHARD A. WESTMAN
-JIM MCCULLOUGH
-ANDY JULOW
-JIM CARROLL
-JEANETTE WHITE
-MIKE MCCARTHY
-THOMAS A. BOCK
-THOMAS M. NELSON
-KRISTI C. MORRIS
-DENNIS R. LABOUNTY
-GLENNIE FITZGERALD SEWELL
-KEVIN P. DOERING
-SHAYNE SPENCE
-KIRK WHITE
-ERICKA REDIC
-EILEEN 'LYNN' DICKINSON
-TOMMY WALZ
-LARRY 'COOPER' CUPOLI
-MICHAEL 'MIKE' HALL
-RYAN COYNE
-BRIAN SMITH
-CAROLYN W. PARTRIDGE
-BRETT L. GASKILL
-V. CHASE
-KENNETH W. GOSLANT
-LEWIS G. GRAHAM JR
-MITZI JOHNSON
-DANIEL NOYES
-MOLLIE S. BURKE
-ROBERT L. BANCROFT
-GORDON BOCK
-JOHN LYDDY
-KATE DONNALLY
-MARYSE B. DUNBAR
-LISA A. HANGO
-DAVID ZUCKERMAN
-WARREN KITZMILLER
-JOHN P. CIOFFI JR
-KAREN LAUZON
-ROBIN CHESNUT
-MARTHA W. ALLEN
-MATTHEW S. SELLERS
-KELSEY ROOT
-JIM CONDOS
-BRIAN 'BC' COLLAMORE
-PHIL SCOTT
-ALICE M. EMMONS
-MICHAEL A. DEVOST
-KYLIE HOLLINGSWORTH
-CHAREN FEGARD
-MICHAEL 'MIKE' YANTACHKA
-RANDY A. GRAY
-JOHN ELWELL
-JOHN O'BRIEN
-FRANK HUARD
-TERRY NORRIS
-KEVIN HOYT
-RUTH SHATTUCK BERNSTEIN
-ALISON H. CLARKSON
-ALICE W. NITKA
-ROBERT 'ROB' LEHMERT
-LARRY SATCOWITZ
-DAVID GLIDDEN
-BRIAN CAMPION
-MARY A. MORRISSEY
-THERESA A. M. WOOD
-JOSEPH ROCHE
-COLLEEN HARRINGTON
-BENJAMIN MUTOLO
-SCOTT BECK
-TOMAS CUMMINGS
-TREVOR J. SQUIRRELL
-STEPHANIE Z. JEROME
-LORI HOUGHTON
-LESLIE GOLDMAN
-JONATHAN L. MORIN
-KESHA RAM
-PAUL LEFEBVRE
-THOMAS STEVENS
-PHIL BARUTH
-PAUL GROSS
-MAIDA F. TOWNSEND
-JOSHUA C. TERENZINI
-JOE PARSONS
-TYLER-JOSEPH BALLARD
-KELSEY ROOT-WINCHESTER
-MICHELLE BOS-LUN
-PATRICIA A. MCCOY
-SHAWN ORR
-PETER WELCH
-PETER R. BECKER
-MIRIAM BERRY
-MARCIA HORNE
-JERRY TRUDELL
-CHRISTOPHER HELALI
-EMMA MULVANEY-STANAK
-ROBIN CHESNUT-TANGERMAN
+Elizabeth Burrows
+Jill Krowinski
+Ember Quinn
+Ralph Corbo
+Kate Maclean
+Patrick Brennan
+Tim Buskey
+Lynn Dike
+Amy Kamstra
+Matt Birong
+Paul Vallerand
+Doug Hoffer
+Dwayne Tucker
+Chloe Collins
+Deserae Morin
+Robert Hooper
+Dave Potter
+Mari Cordes
+William Notte
+Charlie Kimbell
+Jessica Brumsted
+Brian Cina
+Ken Fredette
+Shannara Johnson
+Marcia Robinson Martel
+Rodney Graham
+Doug Wood
+Thomas Terenzini
+Gabrielle Stebbins
+Wesley Raney
+Laura Sibilia
+Anthony Pollina
+Valerie Mullin
+Christopher Bray
+Jacob Holmes
+Ferron Wambold
+Curt Taylor
+Emily Long
+Peter Briggs
+Zachary Michael Lang
+Jon Lynch
+Matthew Somerville
+Seth Chase
+Jon Christiano
+Selene Colburn
+Mark Donka
+Kelly Maclaury Pajala
+Curt Mccormack
+Emilie Kornheiser
+Samantha Lefebvre
+John Bartholomew
+Barbara Smith Murphy
+Sarah Toscano
+Emily Hecker
+Barbara Rachelson
+Susan Hatch Davis
+Heather Surprenant
+Carol Ode
+Tim Briglin
+Tom Burditt
+Beth Pearce
+Tyler Machia
+Martin Lalonde
+Ken Alger
+Ruth Hardy
+Arthur Peterson
+Carl Demrow
+Alex Wright
+Sara Coffey
+Avram Patt
+Maxine Grad
+Logan Nicoll
+Randy Brock
+Molly Gray
+Corey Parent
+Jana Brown
+Kathleen James
+Sherri Prouty
+Richard Morton
+Cris Ericson
+John Macgovern
+David Yacovone
+Dylan Stetson
+Lucy Rogers
+Chip Troiano
+Dawnmarie Tomasi
+Carl Rosenquist
+Bill Lippert
+Todd Buik
+Jim Masland
+Seth Bongartz
+Tiff Bluemle
+Tom Licata
+Taylor Small
+John Palasik
+Scott Milne
+James Gregoire
+Ann Cummings
+Rama Schneider
+Linda Joy Sullivan
+Hal Colston
+Tristan Toleno
+Chris Mattos
+Barbara Noyes Pulling
+Sarita Austin
+Steve Fisher
+Carolyn Whitney Branagan
+Kari Dolan
+Steve Thurston
+James Ehlers
+Diane Lanpher
+Ann Pugh
+James Clark
+Ben Chiappinelli
+Jim Harrison
+Sarah Copeland Hanzas
+Wayne Billado Iii
+Andrew Perchlik
+Caleb Elder
+Nelson Brownell
+Kate Webb
+John Killacky
+Peter Conlon
+Luke Richter
+John Gannon
+Terry Moultroup
+Archie Flower
+Cynthia Browning
+Amy Sheldon
+Jay Hooper
+Charles Russell
+T.J. Donovan
+Charles W. Wilson
+Andy Watts
+David Soulia
+Peter D. Anthony
+Brittany D. Cavacas
+Mason Wade
+Terry K. Williams
+Chester Alden
+Jack Williams
+Tyler Colford
+Anne B. Donahue
+Kevin 'Coach' Christie
+Robert W. Norris
+Dennis A. Williams
+Dean Rolland
+Rebecca White
+Richard 'Sensei' Lenchus
+Woodman 'Woody' H. Page
+Robert 'Bob' Helm
+Martha 'Marty' Feltus
+Timothy R. Corcoran Ii
+Lynn D. Batchelor
+Tanya Vyhovsky
+John Steinman
+Peter J. Brady Sr
+Casey Toof
+Pamala Smith
+Denise Macmartin
+Heidi E. Scheuermann
+Leland J. Morgan
+Mary E. Howard
+Alice Flanders
+Richard J. 'Dick' Mccormack
+John Arrison
+Kumulia 'Kase' Long
+Kimberly Jessup
+Michael R. Morgan
+Bruce A. Melendy
+Casey Jennings
+Marcus R. Parish
+Michael Nigro
+Keith Stern
+Vicki Strong
+Becca Balint
+Sean Whalen
+Jo Sabel Courtney
+Brock Coderre
+Michael F. Kell Sr
+David Hammond
+Larry Courcelle
+Mark A. Higley
+Nicholas Bramlage
+Francis 'Topper' Mcfaun
+Jeannine A. Young
+Clement 'Clem' Bissonnette
+Mark A. Macdonald
+Susan Bowen
+David K. Durfee
+Mary S. Hooper
+Alyssa Black
+Joe Benning
+Robin Scheu
+Richard 'Dick' Mazza
+Marybeth Redmond
+Erin Brady
+Michael Shank
+Mike Mrowicki
+J.T. Dodge
+Jane Kitchel
+Paul Martin
+Michael Sirotkin
+Bill T. Huff
+Peter Reed
+Emily Peyton
+Patrick Seymour
+Robert 'Bob' Richards
+John S. Rodgers
+Stuart Beam
+Virginia 'Ginny' Lyons
+Bruce F. Cheeseman
+Victor K. Harwood Jr
+Matthew Choate
+Edmond J. Daudelin
+Rob Laclair
+Robert Starr
+Emma Mulvaney
+Sally Achey
+Michael J. Marcotte
+Felisha Rose Leffler
+Janet Ancel
+Thomas Chittenden
+Richard J. Bailey
+Brian K. Savage
+Katherine Sims
+Nicholas A. Brosseau
+Michelle Bos
+Peter J. Fagan
+Ron Horton
+Michael Jasinski Sr
+Brice C. Simon
+Doug Wilberding
+Henry Pearl
+Dane Whitman
+Wayne D. Townsend
+George Till
+Frank Empsall
+Terri Lynn Williams
+Scott Campbell
+William 'Bill' Canfield
+Erynn Hazlett Whitney
+Charly Dickerson
+Jubilee Mcgill
+Harvey T. Smith
+Karen Dolan
+Thomas A. Hughes
+Tyler
+Cheryl M. Hooker
+Dick Sears
+Meg Hansen
+Chris Viens
+Russ Ingalls
+Anthony 'Tony' O'Rourke
+Tom Chastenay
+Daniel Nadeau
+Greg Cox
+Christopher Pearson
+Charles 'Butch' Shaw
+Richard A. Westman
+Jim Mccullough
+Andy Julow
+Jim Carroll
+Jeanette White
+Mike Mccarthy
+Thomas A. Bock
+Thomas M. Nelson
+Kristi C. Morris
+Dennis R. Labounty
+Glennie Fitzgerald Sewell
+Kevin P. Doering
+Shayne Spence
+Kirk White
+Ericka Redic
+Eileen 'Lynn' Dickinson
+Tommy Walz
+Larry 'Cooper' Cupoli
+Michael 'Mike' Hall
+Ryan Coyne
+Brian Smith
+Carolyn W. Partridge
+Brett L. Gaskill
+V. Chase
+Kenneth W. Goslant
+Lewis G. Graham Jr
+Mitzi Johnson
+Daniel Noyes
+Mollie S. Burke
+Robert L. Bancroft
+Gordon Bock
+John Lyddy
+Kate Donnally
+Maryse B. Dunbar
+Lisa A. Hango
+David Zuckerman
+Warren Kitzmiller
+John P. Cioffi Jr
+Karen Lauzon
+Robin Chesnut
+Martha W. Allen
+Matthew S. Sellers
+Kelsey Root
+Jim Condos
+Brian 'Bc' Collamore
+Phil Scott
+Alice M. Emmons
+Michael A. Devost
+Kylie Hollingsworth
+Charen Fegard
+Michael 'Mike' Yantachka
+Randy A. Gray
+John Elwell
+John O'Brien
+Frank Huard
+Terry Norris
+Kevin Hoyt
+Ruth Shattuck Bernstein
+Alison H. Clarkson
+Alice W. Nitka
+Robert 'Rob' Lehmert
+Larry Satcowitz
+David Glidden
+Brian Campion
+Mary A. Morrissey
+Theresa A. M. Wood
+Joseph Roche
+Colleen Harrington
+Benjamin Mutolo
+Scott Beck
+Tomas Cummings
+Trevor J. Squirrell
+Stephanie Z. Jerome
+Lori Houghton
+Leslie Goldman
+Jonathan L. Morin
+Kesha Ram
+Paul Lefebvre
+Thomas Stevens
+Phil Baruth
+Paul Gross
+Maida F. Townsend
+Joshua C. Terenzini
+Joe Parsons
+Tyler-Joseph Ballard
+Kelsey Root-Winchester
+Michelle Bos-Lun
+Patricia A. Mccoy
+Shawn Orr
+Peter Welch
+Peter R. Becker
+Miriam Berry
+Marcia Horne
+Jerry Trudell
+Christopher Helali
+Emma Mulvaney-Stanak
+Robin Chesnut-Tangerman
 Al Gore
 Barack Obama
-Donald J. Trump
 George W. Bush
 Hillary Clinton
 John Kerry
@@ -852,96 +851,48 @@ Other
 Ralph Nader
 John MCCain
 John McCain
-
 Aaron Diamondstone
 Alex R. Farrell
-Alice M. Emmons
-Alice W. Nitka
-Alison H. Clarkson
-Amy Sheldon
-Andrew Perchlik
-Ann Cummings
-Ann Pugh
-Anne B. Donahue
 Annmarie Christensen
-Anthony Pollina
 Anya Tynio
-Archie Flower
-Avram Patt
-Barbara Rachelson
-Barbara Smith Murphy
 Barbara Wilson
 Barry Wadle
-Becca Balint
 Ben Jickling
 Ben W. Joseph
 Bernie Sanders
-Beth Pearce
 Beverly Stone
-Bill Lippert
-Bill T. Huff
 Bob Readie
 Brad J. Peacock
 Brendan Hughes
 Brian Bc' Collamore'
-Brian Campion
-Brian Cina
-Brian K. Savage
 Brian Keefe
-Brian Smith
 Bruce Busa
-Caleb Elder
-Carl Demrow
-Carl Rosenquist
-Carol Ode
-Carolyn W. Partridge
-Casey Toof
 Catherine Kitty' Toll'
-Charen Fegard
 Charles Butch' Shaw'
 Charles Laramie
-Charlie Kimbell
 Cheryl Hooker
 Chip Conquest
-Chip Troiano
 Chris Bates
 Chris S. Bradley
 Christine Hallquist
 Christopher A. Pearson
-Christopher Bray
 Christopher Covey
 Christopher Mattos
 Cindy Weed
 Clark Sweeney
 Clement Clem' Bissonnette'
 Connie Quimby
-Corey Parent
-Cris Ericson
 Curt McCormack
-Curt Taylor
-Cynthia Browning
 Dana Maxfield
 Daniel L. Brown
-Daniel Nadeau
-Daniel Noyes
 Danielle Cote Sukkaew
-Dave Potter
-David K. Durfee
 David M. Ainsworth
 David McWilliams
-David Yacovone
-David Zuckerman
 Debbie Ingram
-Denise Macmartin
 Dennis Labounty
-Deserae Morin
 Diana Gonzalez
-Diane Lanpher
-Dick Sears
 Don Turner Jr
-Doug Hoffer
 Dustin Tanner
-Dwayne Tucker
 Dylan Giambatista
 Ed Read
 Edgar Cleveland
@@ -950,233 +901,120 @@ Edward S. Gilbert Jr
 Edward Simon
 Eileen Lynn' Dickinson'
 Elizabeth Gray
-Emilie Kornheiser
 Emily Em' Peyton'
-Emily Long
 Felisha Leffler
 Folasade Adeluola
 Francis Topper' McFaun'
 Frank Davis
-Frank Huard
 Fred K. Baser
 Frederick Miller
 Gary Nolan
 George T. McNaughton
-George Till
 Gina Ottoboni
 Glennie Sewell
-Gordon Bock
-Greg Cox
-H. Brooke Paige
-Harvey T. Smith
 Heather Juliussen-Stevenson
-Heidi E. Scheuermann
 Herb Downing
 J. Guy Isabelle
-Jack Williams
 Jacqueline Beth' Fleck'
 James B. Fitzgerald
-James Gregoire
 James L. McNeil
-Jane Kitchel
 Jane Pompeo
-Janet Ancel
 Janssen Willhoit
-Jay Hooper
 Jean O'Sullivan
-Jeanette White
 Jeff Kaufer
 Jeremy Hansen
 Jerry Levy
-Jessica Brumsted
-Jill Krowinski
 Jill Wilcox
-Jim Carroll
-Jim Condos
-Jim Harrison
-Jim Masland
 Jim McCullough
 Jim O'Connor
-Joe Benning
-Joe Parsons
 Johannah Leddy Donovan
-John Bartholomew
 John F. Steinman
 John Freitag
-John Gannon
-John Killacky
-John O'Brien
-John Palasik
 John R. Brennan
-John S. Rodgers
 Jon Svitavsky
 Joshua C. Aldrich
 Joshua H. Knox
 Joy Limoge
-Kari Dolan
 Kate Larose
-Kate Webb
-Kathleen James
 Kathleen Orion
 Kelly Cummings
 Kelly M. Pajala
-Ken Alger
-Ken Fredette
 Kendall Lambert
-Kenneth W. Goslant
 Kevin Coach' Christie'
-Kevin Hoyt
-Kimberly Jessup
 Kurt Wright
 Larry Cooper' Cupoli'
-Larry Satcowitz
 Laura S. Potter
-Laura Sibilia
 Lawrence W. Hamel
 Lawrence Zupan
-Leland J. Morgan
 Linda Collins
-Linda Joy Sullivan
 Linda K. Myers
-Logan Nicoll
-Lori Houghton
 Louis Meyers
 Loyal Ploof
-Lucy Rogers
-Lynn D. Batchelor
-Maida F. Townsend
 Marcia Lawrence Gardner
-Marcia Robinson Martel
-Mari Cordes
 Marianna Gamache
 Marie Audet
 Marina Brown
 Marina Meerburg
-Mark A. Macdonald
 Mark Higley
 Martha Marty' Feltus'
-Martha W. Allen
-Martin Lalonde
-Mary A. Morrissey
 Mary Alice Hebert
 Mary Beerworth
-Mary E. Howard
 Mary M. Sullivan
-Mary S. Hooper
-Marybeth Redmond
-Mason Wade
-Matt Birong
 Matt Hill
 Matthew A. Trieber
-Maxine Grad
-Michael J. Marcotte
-Michael R. Morgan
-Michael Sirotkin
 Michael Stern
 Michael Yantachka
 Mike King
 Mike McCarthy
-Mike Mrowicki
-Mitzi Johnson
-Mollie S. Burke
 Murray Ngoima
 Nader Hashim
 Neil Johnson
-Nelson Brownell
 Nicholas Brosseau
 Nick Clark
 Pam Loranger
 Pam McCarthy
 Patricia A. McCoy
-Patrick Brennan
 Patrick Gilligan
-Patrick Seymour
 Paul D. Lefebvre
 Paul Dame
 Paul N. Poirier
 Paul Ralston
 Peter Berger
-Peter Briggs
-Peter Conlon
-Peter D. Anthony
-Peter J. Fagan
-Peter Welch
-Phil Baruth
-Phil Scott
 Randall Szott
-Randy A. Gray
-Randy Brock
 Rebecca A. Trower
-Rebecca White
 Reid Kane
-Richard A. Westman
 Richard Dick' Mazza'
 Richard Dick' McCormack'
 Richard Kenyon
-Richard Morton
-Rob Laclair
 Robert A. Starr
 Robert Bob' Forguites'
 Robert Bob' Helm'
-Robert Hooper
 Robert J. Richards
-Robert L. Bancroft
 Robert McFadden
-Robin Chesnut-Tangerman
-Robin Scheu
-Rodney Graham
-Ron Horton
 Rosemarie Jackowski
 Russell Beste
-Ruth Hardy
 Sam Young
 Sandy Haas
-Sara Coffey
-Sarah Copeland Hanzas
-Sarah Toscano
-Sarita Austin
-Scott Beck
-Scott Campbell
 Scott Garren
-Selene Colburn
-Seth Chase
 Seth Cournoyer
 Seth Hopkins
 Shane Rhodes
 Stephanie Jerome
 Stephen Marx
 Stephen W. Webster
-Susan Hatch Davis
-T.J. Donovan
 Tabitha Armstrong
-Tanya Vyhovsky
 Terry Macaig
-Terry Moultroup
-Terry Norris
 Theresa Wood
-Thomas A. Bock
-Thomas Stevens
-Thomas Terenzini
 Thomas Tom' Burditt'
 Tim Ashe
-Tim Briglin
 Tim Guiles
 Timothy R. Corcoran II
-Todd Buik
 Tommy J. Walz
 Trevor Barlow
 Trevor Squirrell
-Tristan Toleno
-Tyler Colford
-Valerie Mullin
-Vicki Strong
 Virginia Ginny' Lyons'
-Warren Kitzmiller
 Warren Van Wyck
-Wayne D. Townsend
-Wesley Raney
 William Bill' Canfield'
-William Notte
 Woodman Woody' H. Page'
 Zachariah Ralph
 Zachary L. Mayo

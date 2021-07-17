@@ -6,19 +6,17 @@ Candidate	Aaron Harber	Aaron Harber
 Candidate	Adam J. Espinosa	Adam J. Espinosa
 Candidate	Adam Matkowsky	Adam Matkowsky
 Candidate	Adam Shuknecht	Adam Shuknecht
-Candidate	Adrian 'Buzz' Sweeney	Adrian ''Buzz'' Sweeney
 Candidate	Adrian 'Buzz' Sweeney	Adrian 'Buzz' Sweeney
-Candidate	Adrian 'Buzz' Sweeney TOTAL	Adrian ''Buzz'' Sweeney TOTAL
+Candidate	Adrian 'Buzz' Sweeney TOTAL	Adrian 'Buzz' Sweeney TOTAL
 Candidate	Adrienne Benavidez	Adrienne Benavidez
 Candidate	Adrienne Benavidez TOTAL	Adrienne Benavidez TOTAL
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alan Hayman	Alan Hayman
 Candidate	Alec Garnett	Alec Garnett
 Candidate	Alec Garnett TOTAL	Alec Garnett TOTAL
 Candidate	Alec Garnett Vote %	Alec Garnett Vote %
 Candidate	Alex Valdez	Alex Valdez
 Candidate	Alex Valdez Vote %	Alex Valdez Vote %
-Candidate	Alexander 'Skinny' Winkler	Alexander ''Skinny'' Winkler
 Candidate	Alexander 'Skinny' Winkler	Alexander 'Skinny' Winkler
 Candidate	Alexander D. Jacobson	Alexander D. Jacobson
 Candidate	Alexander Lucero-Mugatu	Alexander Lucero-Mugatu
@@ -62,7 +60,7 @@ Candidate	Asia M. Zanders	Asia M. Zanders
 Candidate	Assembly Age	Assembly Age
 Candidate	Audrey Herman	Audrey Herman
 Candidate	Ballot Format for Judicial Races	Ballot Format for Judicial Races
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara A. Zollars	Barbara A. Zollars
 Candidate	Barbara Hall McLachlan	Barbara Hall McLachlan
 Candidate	Barbara Kirkmeyer	Barbara Kirkmeyer
@@ -72,7 +70,6 @@ Candidate	Barrett Rothe	Barrett Rothe
 Candidate	Ben A. Morris	Ben A. Morris
 Candidate	Ben L. Leutwyler III	Ben L. Leutwyler III
 Candidate	Bernie Sanders	Bernie Sanders
-Candidate	Beth 'Hart' Harz	Beth ''Hart'' Harz
 Candidate	Beth 'Hart' Harz	Beth 'Hart' Harz
 Candidate	Beth A. Faragher	Beth A. Faragher
 Candidate	Beth Martinez Humenik	Beth Martinez Humenik
@@ -154,11 +151,10 @@ Candidate	Caryn Ann Harlos^	Caryn Ann Harlos^
 Candidate	Catherine A. Lemon	Catherine A. Lemon
 Candidate	Cathy Kipp	Cathy Kipp
 Candidate	Chance Hill	Chance Hill
-Candidate	Charles 'Casper' Stockham	Charles ''Casper'' Stockham
 Candidate	Charles 'Casper' Stockham	Charles 'Casper' Stockham
-Candidate	Charles 'Casper' Stockham TOTAL	Charles ''Casper'' Stockham TOTAL
-Candidate	Charles 'Casper' Stockham Total Votes	Charles ''Casper'' Stockham Total Votes
-Candidate	Charles 'Casper' Stockham Vote %	Charles ''Casper'' Stockham Vote %
+Candidate	Charles 'Casper' Stockham TOTAL	Charles 'Casper' Stockham TOTAL
+Candidate	Charles 'Casper' Stockham Total Votes	Charles 'Casper' Stockham Total Votes
+Candidate	Charles 'Casper' Stockham Vote %	Charles 'Casper' Stockham Vote %
 Candidate	Charles Casper Stockham	Charles Casper Stockham
 Candidate	Charles M. Hobbs	Charles M. Hobbs
 Candidate	Charles Messick	Charles Messick
@@ -268,9 +264,8 @@ Candidate	David Lee Lobato	David Lee Lobato
 Candidate	David Olszta	David Olszta
 Candidate	David Ortiz	David Ortiz
 Candidate	David P. Jurist	David P. Jurist
-Candidate	David Perry	David Perry / Eric ''Rick'' Seiley
-Candidate	David Perry	David Perry / Eric ''Rick'' Seiley TOTAL
 Candidate	David Perry	David Perry / Eric 'Rick' Seiley
+Candidate	David Perry	David Perry / Eric 'Rick' Seiley TOTAL
 Candidate	Dean L. Titterington	Dean L. Titterington
 Candidate	Dean Ormiston	Dean Ormiston
 Candidate	Debora L. Scheffel	Debora L. Scheffel
@@ -306,7 +301,7 @@ Candidate	Donald E. Valdez	Donald E. Valdez
 Candidate	Donald E. Valdez TOTAL	Donald E. Valdez TOTAL
 Candidate	Donald E. Valdez Vote %	Donald E. Valdez Vote %
 Candidate	Donald Howbert	Donald Howbert
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Donald J. Trump / Michael R. Pence
 Candidate	Donald Osborn	Donald Osborn
@@ -389,7 +384,7 @@ Candidate	George Athanasopoulos	George Athanasopoulos
 Candidate	George Brauchler	George Brauchler
 Candidate	George H. Brauchler	George H. Brauchler
 Candidate	George M. Rapko	George M. Rapko
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Gerald F. Kilpatrick	Gerald F. Kilpatrick
 Candidate	Gerald Keefe	Gerald Keefe
 Candidate	Gerald Stephen Jaramillo	Gerald Stephen Jaramillo
@@ -421,7 +416,7 @@ Candidate	Heidi McCollum	Heidi McCollum
 Candidate	Helen Morgan	Helen Morgan
 Candidate	Henry L. Solano	Henry L. Solano
 Candidate	Henry Solano	Henry Solano
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hillary Clinton	Hillary Clinton / Tim Kaine
 Candidate	Holly A. Herson	Holly A. Herson
 Candidate	Howie Hawkins	Howie Hawkins / Angela Nicole Walker
@@ -443,10 +438,8 @@ Candidate	Jaclyn Brown	Jaclyn Brown
 Candidate	Jaimie Lynn Kulikowski	Jaimie Lynn Kulikowski
 Candidate	Jake Lilly	Jake Lilly
 Candidate	James Berkley Boyd	James Berkley Boyd
-Candidate	James D. 'Jim' Wilson	James D. ''Jim'' Wilson
 Candidate	James D. 'Jim' Wilson	James D. 'Jim' Wilson
 Candidate	James D. 'Jim' Wilson TOTAL	James D. 'Jim' Wilson TOTAL
-Candidate	James E. 'Jed' Gilman	James E. ''Jed'' Gilman
 Candidate	James E. 'Jed' Gilman	James E. 'Jed' Gilman
 Candidate	James F. Hartmann	James F. Hartmann
 Candidate	James Gilman	James Gilman
@@ -457,9 +450,8 @@ Candidate	James K. Treibert	James K. Treibert
 Candidate	James R. Bullock	James R. Bullock
 Candidate	James Rashad Coleman	James Rashad Coleman
 Candidate	James Rashad Coleman Vote %	James Rashad Coleman Vote %
-Candidate	James W. 'Jim' Casias	James W. ''Jim'' Casias
 Candidate	James W. 'Jim' Casias	James W. 'Jim' Casias
-Candidate	James W. 'Jim' Casias TOTAL	James W. ''Jim'' Casias TOTAL
+Candidate	James W. 'Jim' Casias TOTAL	James W. 'Jim' Casias TOTAL
 Candidate	James Woodley	James Woodley
 Candidate	Jan Kok	Jan Kok
 Candidate	Janet Buckner	Janet Buckner
@@ -489,9 +481,8 @@ Candidate	Jeffrey Raymond Wilson	Jeffrey Raymond Wilson
 Candidate	Jena Griswold	Jena Griswold
 Candidate	Jeni Arndt	Jeni Arndt
 Candidate	Jeni Arndt TOTAL	Jeni Arndt TOTAL
-Candidate	Jenice 'JJ' Dove	Jenice ''JJ'' Dove
 Candidate	Jenice 'JJ' Dove	Jenice 'JJ' Dove
-Candidate	Jenice 'JJ' Dove TOTAL	Jenice ''JJ'' Dove TOTAL
+Candidate	Jenice 'JJ' Dove TOTAL	Jenice 'JJ' Dove TOTAL
 Candidate	Jenise May	Jenise May
 Candidate	JenniLynn Lawrence	JenniLynn Lawrence
 Candidate	Jennifer B. Torrington	Jennifer B. Torrington
@@ -513,7 +504,7 @@ Candidate	Jill-Ellyn Straus	Jill-Ellyn Straus
 Candidate	Jillian Freeland	Jillian Freeland
 Candidate	Jim Smallwood	Jim Smallwood
 Candidate	Jim Smallwood Vote %	Jim Smallwood Vote %
-Candidate	Jo Jorgensen	Jo Jorgensen / Jeremy ''Spike'' Cohen
+Candidate	Jo Jorgensen	Jo Jorgensen / Jeremy 'Spike' Cohen
 Candidate	JoAnn Windholz	JoAnn Windholz
 Candidate	Joan Poston	Joan Poston
 Candidate	Joan Shaffer	Joan Shaffer
@@ -541,9 +532,9 @@ Candidate	John Hjersman	John Hjersman
 Candidate	John Joseph Briggs	John Joseph Briggs
 Candidate	John Kefalas	John Kefalas
 Candidate	John Kellner	John Kellner
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John M. Marcucci	John M. Marcucci
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John Pickerill	John Pickerill
 Candidate	John Pyne IV	John Pyne IV
 Candidate	John Ronquillo	John Ronquillo
@@ -558,7 +549,7 @@ Candidate	Jonathan Bruce Pototsky	Jonathan Bruce Pototsky
 Candidate	Jonathan Shamis	Jonathan Shamis
 Candidate	Jonathan Singer	Jonathan Singer
 Candidate	Jonathan Woodley	Jonathan Woodley
-Candidate	Jordan 'Cancer' Scott	Jordan ''Cancer'' Scott / Jennifer Tepool
+Candidate	Jordan 'Cancer' Scott	Jordan 'Cancer' Scott / Jennifer Tepool
 Candidate	Joseph Allen Maldonado	Joseph Allen Maldonado / Douglas K. Terranova
 Candidate	Joseph E. DeMott	Joseph E. DeMott
 Candidate	Joseph Kishore	Joseph Kishore / Norissa Santa Cruz
@@ -723,10 +714,9 @@ Candidate	Margaret (Peggy) A. Catlin	Margaret (Peggy) A. Catlin
 Candidate	Margot Herzl	Margot Herzl
 Candidate	Maria E. Orms	Maria E. Orms
 Candidate	Marianne Williamson	Marianne Williamson
-Candidate	Marijane Paulsen (Pedro 'Pete' Roybal)	Marijane Paulsen (Pedro ''Pete'' Roybal)
 Candidate	Marijane Paulsen (Pedro 'Pete' Roybal)	Marijane Paulsen (Pedro 'Pete' Roybal)
-Candidate	Marijane Paulsen (Pedro 'Pete' Roybal) Total Votes	Marijane Paulsen (Pedro ''Pete'' Roybal) Total Votes
-Candidate	Marijane Paulsen (Pedro 'Pete' Roybal) Vote %	Marijane Paulsen (Pedro ''Pete'' Roybal) Vote %
+Candidate	Marijane Paulsen (Pedro 'Pete' Roybal) Total Votes	Marijane Paulsen (Pedro 'Pete' Roybal) Total Votes
+Candidate	Marijane Paulsen (Pedro 'Pete' Roybal) Vote %	Marijane Paulsen (Pedro 'Pete' Roybal) Vote %
 Candidate	Marilyn Harris	Marilyn Harris
 Candidate	Marjorie Sloan	Marjorie Sloan
 Candidate	Mark A. MacDonnell	Mark A. MacDonnell
@@ -814,7 +804,7 @@ Candidate	Millie Hamner	Millie Hamner
 Candidate	Mindy Quiachon	Mindy Quiachon
 Candidate	Misty Plowright	Misty Plowright
 Candidate	Mitch Murray	Mitch Murray
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Molly Chilson	Molly Chilson
 Candidate	Molly Falk Jansen	Molly Falk Jansen
 Candidate	Monica Duran	Monica Duran
@@ -840,12 +830,11 @@ Candidate	Nicole M. Rodarte	Nicole M. Rodarte
 Candidate	Nolbert Chavez	Nolbert Chavez
 Candidate	Norm Olsen	Norm Olsen
 Candidate	Norma A. Sierra	Norma A. Sierra
-Candidate	Norman 'Paotie' Dawson	Norman ''Paotie'' Dawson
 Candidate	Norman 'Paotie' Dawson	Norman 'Paotie' Dawson
-Candidate	Norman 'Paotie' Dawson TOTAL	Norman ''Paotie'' Dawson TOTAL
+Candidate	Norman 'Paotie' Dawson TOTAL	Norman 'Paotie' Dawson TOTAL
 Candidate	Olen Lund	Olen Lund
 Candidate	Olympia Z. Fay	Olympia Z. Fay
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Owen Hill	Owen Hill
 Candidate	Palmer L. Boyette	Palmer L. Boyette
 Candidate	Pat McIntire	Pat McIntire
@@ -870,7 +859,6 @@ Candidate	Paul Stevens Martin	Paul Stevens Martin
 Candidate	Paul Wiese	Paul Wiese
 Candidate	Paula Dickerson	Paula Dickerson
 Candidate	Payday Loans	Payday Loans
-Candidate	Pedro 'Pete' Roybal	Pedro ''Pete'' Roybal
 Candidate	Pedro 'Pete' Roybal	Pedro 'Pete' Roybal
 Candidate	Peg Cage	Peg Cage
 Candidate	Perry L. Buck	Perry L. Buck
@@ -898,7 +886,7 @@ Candidate	Prohibit Slavery and Involuntary Servitude	Prohibit Slavery and Involu
 Candidate	Rachel J. Olguin-Fresquez	Rachel J. Olguin-Fresquez
 Candidate	Rachel Zenzinger	Rachel Zenzinger
 Candidate	Rachel Zenzinger Vote %	Rachel Zenzinger Vote %
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Ramsey Lama	Ramsey Lama
 Candidate	Randi McCallian	Randi McCallian
 Candidate	Randy L. Baumgardner	Randy L. Baumgardner
@@ -933,11 +921,9 @@ Candidate	Rob Harrison	Rob Harrison
 Candidate	Rob Stutz	Rob Stutz
 Candidate	Rob Woodward	Rob Woodward
 Candidate	Robby Wells	Robby Wells
-Candidate	Robert 'Bob' Andrews	Robert ''Bob'' Andrews
 Candidate	Robert 'Bob' Andrews	Robert 'Bob' Andrews
-Candidate	Robert 'Bob' Andrews Total Votes	Robert ''Bob'' Andrews Total Votes
-Candidate	Robert 'Bob' Andrews Vote %	Robert ''Bob'' Andrews Vote %
-Candidate	Robert 'Dave' John	Robert ''Dave'' John
+Candidate	Robert 'Bob' Andrews Total Votes	Robert 'Bob' Andrews Total Votes
+Candidate	Robert 'Bob' Andrews Vote %	Robert 'Bob' Andrews Vote %
 Candidate	Robert 'Dave' John	Robert 'Dave' John
 Candidate	Robert Ardini	Robert Ardini
 Candidate	Robert Bowen	Robert Bowen
@@ -962,11 +948,10 @@ Candidate	Ron Hanks	Ron Hanks
 Candidate	Ron Parker	Ron Parker
 Candidate	Ronnie Nelson	Ronnie Nelson
 Candidate	Roque 'Rocky' De La Fuente	Rocky Roque De La Fuente / Michael Steinberg
-Candidate	Roque 'Rocky' De La Fuente	Roque ''Rocky'' De La Fuente / Darcy G. Richardson
-Candidate	Roque 'Rocky' De La Fuente III	Roque ''Rocky'' De La Fuente III
-Candidate	Roque 'Rocky' De La Fuente III	Roque ''Rocky'' De La Fuente III Total Votes
-Candidate	Roque 'Rocky' De La Fuente III	Roque ''Rocky'' De La Fuente III Vote %
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente / Darcy G. Richardson
 Candidate	Roque 'Rocky' De La Fuente III	Roque 'Rocky' De La Fuente III
+Candidate	Roque 'Rocky' De La Fuente III	Roque 'Rocky' De La Fuente III Total Votes
+Candidate	Roque 'Rocky' De La Fuente III	Roque 'Rocky' De La Fuente III Vote %
 Candidate	Rory Lamberton	Rory Lamberton
 Candidate	Ross B. H. Buchanan	Ross B. H. Buchanan
 Candidate	Ross Klopf	Ross Klopf
@@ -1020,7 +1005,6 @@ Candidate	Stan Garnett	Stan Garnett
 Candidate	Stanley A. Brinkley	Stanley A. Brinkley
 Candidate	State Healthcare System	State Healthcare System
 Candidate	State Minimum Wage	State Minimum Wage
-Candidate	Stephan 'Seku' Evans	Stephan ''Seku'' Evans
 Candidate	Stephan 'Seku' Evans	Stephan 'Seku' Evans
 Candidate	Stephanie E. Dunn	Stephanie E. Dunn
 Candidate	Stephanie Luck	Stephanie Luck
@@ -1073,11 +1057,10 @@ Candidate	Theresa L. Kilgore	Theresa L. Kilgore
 Candidate	Theresa Stets	Theresa Stets
 Candidate	Thom Atkinson	Thom Atkinson
 Candidate	Thom K. LeDoux	Thom K. LeDoux
-Candidate	Thomas 'Tony' Exum Sr.	Thomas ''Tony'' Exum Sr.
 Candidate	Thomas 'Tony' Exum Sr.	Thomas 'Tony' Exum Sr.
 Candidate	Thomas 'Tony' Exum Sr. TOTAL	Thomas 'Tony' Exum Sr. TOTAL
-Candidate	Thomas 'Tony' Exum Sr. Total Votes	Thomas ''Tony'' Exum Sr. Total Votes
-Candidate	Thomas 'Tony' Exum Sr. Vote %	Thomas ''Tony'' Exum Sr. Vote %
+Candidate	Thomas 'Tony' Exum Sr. Total Votes	Thomas 'Tony' Exum Sr. Total Votes
+Candidate	Thomas 'Tony' Exum Sr. Vote %	Thomas 'Tony' Exum Sr. Vote %
 Candidate	Thomas A. Hudson	Thomas A. Hudson
 Candidate	Thomas B. Flesher	Thomas B. Flesher
 Candidate	Thomas Francis Mulvahill	Thomas Francis Mulvahill
@@ -1143,10 +1126,9 @@ Candidate	William F. Robinson III	William F. Robinson III
 Candidate	William Hood	William Hood
 Candidate	William L. Herringer	William L. Herringer
 Candidate	William P. Alderton	William P. Alderton
-Candidate	William S. 'Bill' Klocek	William S. ''Bill'' Klocek
 Candidate	William S. 'Bill' Klocek	William S. 'Bill' Klocek
-Candidate	William S. 'Bill' Klocek Total Votes	William S. ''Bill'' Klocek Total Votes
-Candidate	William S. 'Bill' Klocek Vote %	William S. ''Bill'' Klocek Vote %
+Candidate	William S. 'Bill' Klocek Total Votes	William S. 'Bill' Klocek Total Votes
+Candidate	William S. 'Bill' Klocek Vote %	William S. 'Bill' Klocek Vote %
 Candidate	William Stuart Bartley	William Stuart Bartley
 Candidate	Yadira Caraveo	Yadira Caraveo
 Candidate	Yadira Caraveo Vote %	Yadira Caraveo Vote %
@@ -5732,9 +5714,9 @@ ReportingUnit	Colorado;Weld County	fips08123
 ReportingUnit	Colorado;Yuma County	YUMA
 ReportingUnit	Colorado;Yuma County	Yuma
 ReportingUnit	Colorado;Yuma County	fips08125
-CandidateContest	CO Attorney General	CO;Attorney General
-CandidateContest	CO Governor/Lieutenant Governor	CO;Governor/Lieutenant Governor;statewide
-CandidateContest	CO Regent of the University of Colorado	CORegent of the University of Colorado;At Large
+CandidateContest	CO Attorney General	CO;Attorney General;statewide
+CandidateContest	CO Governor	CO;Governor/Lieutenant Governor;statewide
+CandidateContest	CO Regent of the University of Colorado	CO;Regent of the University of Colorado;At Large
 CandidateContest	CO Secretary of State	CO;Secretary of State;statewide
 CandidateContest	CO State Board of Education Member District 4	CO;State Board of Education Member;District 4
 CandidateContest	CO House District 30	CO;State Representative;District 30
@@ -5830,15 +5812,6 @@ CandidateContest	CO House District 48	CO;State Representative;District 48
 CandidateContest	CO House District 50	CO;State Representative;District 50
 CandidateContest	CO House District 63	CO;State Representative;District 63
 CandidateContest	CO Senate District 13	CO;State Senate;District 13
-Candidate	Alexander ''Skinny'' Winkler	Alexander ''Skinny'' Winkler
-Candidate	Beth ''Hart'' Harz	Beth ''Hart'' Harz
-Candidate	Bill Hammons / Eric Bodenstab	Bill Hammons / Eric Bodenstab
-Candidate	James D. ''Jim'' Wilson	James D. ''Jim'' Wilson
-Candidate	Jared Polis / Dianne Primavera	Jared Polis / Dianne Primavera
-Candidate	Robert ''Dave'' John	Robert ''Dave'' John
-Candidate	Scott Helker / Michele Poague	Scott Helker / Michele Poague
-Candidate	Thomas ''Tony'' Exum Sr.	Thomas ''Tony'' Exum Sr.
-Candidate	Walker Stapleton / Lang Sias	Walker Stapleton / Lang Sias
 Party	American Constitution Party	american constitution
 Party	Approval Voting Party	approval voting
 Party	Democratic Party	democrat
@@ -5861,3 +5834,67 @@ CountItemType	election-day	machine
 CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
+ReportingUnit	Colorado;Adams County	Colorado;Adams
+ReportingUnit	Colorado;Alamosa County	Colorado;Alamosa
+ReportingUnit	Colorado;Arapahoe County	Colorado;Arapahoe
+ReportingUnit	Colorado;Archuleta County	Colorado;Archuleta
+ReportingUnit	Colorado;Baca County	Colorado;Baca
+ReportingUnit	Colorado;Bent County	Colorado;Bent
+ReportingUnit	Colorado;Boulder County	Colorado;Boulder
+ReportingUnit	Colorado;Broomfield County	Colorado;Broomfield
+ReportingUnit	Colorado;Chaffee County	Colorado;Chaffee
+ReportingUnit	Colorado;Cheyenne County	Colorado;Cheyenne
+ReportingUnit	Colorado;Clear Creek County	Colorado;Clear Creek
+ReportingUnit	Colorado;Conejos County	Colorado;Conejos
+ReportingUnit	Colorado;Costilla County	Colorado;Costilla
+ReportingUnit	Colorado;Crowley County	Colorado;Crowley
+ReportingUnit	Colorado;Custer County	Colorado;Custer
+ReportingUnit	Colorado;Delta County	Colorado;Delta
+ReportingUnit	Colorado;Denver County	Colorado;Denver
+ReportingUnit	Colorado;Dolores County	Colorado;Dolores
+ReportingUnit	Colorado;Douglas County	Colorado;Douglas
+ReportingUnit	Colorado;Eagle County	Colorado;Eagle
+ReportingUnit	Colorado;El Paso County	Colorado;El Paso
+ReportingUnit	Colorado;Elbert County	Colorado;Elbert
+ReportingUnit	Colorado;Fremont County	Colorado;Fremont
+ReportingUnit	Colorado;Garfield County	Colorado;Garfield
+ReportingUnit	Colorado;Gilpin County	Colorado;Gilpin
+ReportingUnit	Colorado;Grand County	Colorado;Grand
+ReportingUnit	Colorado;Gunnison County	Colorado;Gunnison
+ReportingUnit	Colorado;Hinsdale County	Colorado;Hinsdale
+ReportingUnit	Colorado;Huerfano County	Colorado;Huerfano
+ReportingUnit	Colorado;Jackson County	Colorado;Jackson
+ReportingUnit	Colorado;Jefferson County	Colorado;Jefferson
+ReportingUnit	Colorado;Kiowa County	Colorado;Kiowa
+ReportingUnit	Colorado;Kit Carson County	Colorado;Kit Carson
+ReportingUnit	Colorado;La Plata County	Colorado;La Plata
+ReportingUnit	Colorado;Lake County	Colorado;Lake
+ReportingUnit	Colorado;Larimer County	Colorado;Larimer
+ReportingUnit	Colorado;Las Animas County	Colorado;Las Animas
+ReportingUnit	Colorado;Lincoln County	Colorado;Lincoln
+ReportingUnit	Colorado;Logan County	Colorado;Logan
+ReportingUnit	Colorado;Mesa County	Colorado;Mesa
+ReportingUnit	Colorado;Mineral County	Colorado;Mineral
+ReportingUnit	Colorado;Moffat County	Colorado;Moffat
+ReportingUnit	Colorado;Montezuma County	Colorado;Montezuma
+ReportingUnit	Colorado;Montrose County	Colorado;Montrose
+ReportingUnit	Colorado;Morgan County	Colorado;Morgan
+ReportingUnit	Colorado;Otero County	Colorado;Otero
+ReportingUnit	Colorado;Ouray County	Colorado;Ouray
+ReportingUnit	Colorado;Park County	Colorado;Park
+ReportingUnit	Colorado;Phillips County	Colorado;Phillips
+ReportingUnit	Colorado;Pitkin County	Colorado;Pitkin
+ReportingUnit	Colorado;Prowers County	Colorado;Prowers
+ReportingUnit	Colorado;Pueblo County	Colorado;Pueblo
+ReportingUnit	Colorado;Rio Blanco County	Colorado;Rio Blanco
+ReportingUnit	Colorado;Rio Grande County	Colorado;Rio Grande
+ReportingUnit	Colorado;Routt County	Colorado;Routt
+ReportingUnit	Colorado;Saguache County	Colorado;Saguache
+ReportingUnit	Colorado;San Juan County	Colorado;San Juan
+ReportingUnit	Colorado;San Miguel County	Colorado;San Miguel
+ReportingUnit	Colorado;Sedgwick County	Colorado;Sedgwick
+ReportingUnit	Colorado;Summit County	Colorado;Summit
+ReportingUnit	Colorado;Teller County	Colorado;Teller
+ReportingUnit	Colorado;Washington County	Colorado;Washington
+ReportingUnit	Colorado;Weld County	Colorado;Weld
+ReportingUnit	Colorado;Yuma County	Colorado;Yuma

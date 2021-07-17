@@ -6523,9 +6523,6 @@ CandidateContest	SC House District 46	SC;State Representative;District 46
 CandidateContest	SC House District 47	SC;State Representative;District 47
 CandidateContest	SC House District 48	SC;State Representative;District 48
 CandidateContest	SC House District 49	SC;State Representative;District 49
-Candidate	Henry McMaster / Pamela Evette	Henry McMaster / Pamela Evette
-Candidate	James Smith / Mandy Powers Norrell	James Smith / Mandy Powers Norrell
-Candidate	WRITE-IN	WRITE-IN
 Party	American Party	american
 Party	Constitution Party	constitution
 Party	Democratic Party	democrat
@@ -6550,3 +6547,49 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	South Carolina;Abbeville County	South Carolina;Abbeville
+ReportingUnit	South Carolina;Aiken County	South Carolina;Aiken
+ReportingUnit	South Carolina;Allendale County	South Carolina;Allendale
+ReportingUnit	South Carolina;Anderson County	South Carolina;Anderson
+ReportingUnit	South Carolina;Bamberg County	South Carolina;Bamberg
+ReportingUnit	South Carolina;Barnwell County	South Carolina;Barnwell
+ReportingUnit	South Carolina;Beaufort County	South Carolina;Beaufort
+ReportingUnit	South Carolina;Berkeley County	South Carolina;Berkeley
+ReportingUnit	South Carolina;Calhoun County	South Carolina;Calhoun
+ReportingUnit	South Carolina;Charleston County	South Carolina;Charleston
+ReportingUnit	South Carolina;Cherokee County	South Carolina;Cherokee
+ReportingUnit	South Carolina;Chester County	South Carolina;Chester
+ReportingUnit	South Carolina;Chesterfield County	South Carolina;Chesterfield
+ReportingUnit	South Carolina;Clarendon County	South Carolina;Clarendon
+ReportingUnit	South Carolina;Colleton County	South Carolina;Colleton
+ReportingUnit	South Carolina;Darlington County	South Carolina;Darlington
+ReportingUnit	South Carolina;Dillon County	South Carolina;Dillon
+ReportingUnit	South Carolina;Dorchester County	South Carolina;Dorchester
+ReportingUnit	South Carolina;Edgefield County	South Carolina;Edgefield
+ReportingUnit	South Carolina;Fairfield County	South Carolina;Fairfield
+ReportingUnit	South Carolina;Florence County	South Carolina;Florence
+ReportingUnit	South Carolina;Georgetown County	South Carolina;Georgetown
+ReportingUnit	South Carolina;Greenville County	South Carolina;Greenville
+ReportingUnit	South Carolina;Greenwood County	South Carolina;Greenwood
+ReportingUnit	South Carolina;Hampton County	South Carolina;Hampton
+ReportingUnit	South Carolina;Horry County	South Carolina;Horry
+ReportingUnit	South Carolina;Jasper County	South Carolina;Jasper
+ReportingUnit	South Carolina;Kershaw County	South Carolina;Kershaw
+ReportingUnit	South Carolina;Lancaster County	South Carolina;Lancaster
+ReportingUnit	South Carolina;Laurens County	South Carolina;Laurens
+ReportingUnit	South Carolina;Lee County	South Carolina;Lee
+ReportingUnit	South Carolina;Lexington County	South Carolina;Lexington
+ReportingUnit	South Carolina;Marion County	South Carolina;Marion
+ReportingUnit	South Carolina;Marlboro County	South Carolina;Marlboro
+ReportingUnit	South Carolina;McCormick County	South Carolina;McCormick
+ReportingUnit	South Carolina;Newberry County	South Carolina;Newberry
+ReportingUnit	South Carolina;Oconee County	South Carolina;Oconee
+ReportingUnit	South Carolina;Orangeburg County	South Carolina;Orangeburg
+ReportingUnit	South Carolina;Pickens County	South Carolina;Pickens
+ReportingUnit	South Carolina;Richland County	South Carolina;Richland
+ReportingUnit	South Carolina;Saluda County	South Carolina;Saluda
+ReportingUnit	South Carolina;Spartanburg County	South Carolina;Spartanburg
+ReportingUnit	South Carolina;Sumter County	South Carolina;Sumter
+ReportingUnit	South Carolina;Union County	South Carolina;Union
+ReportingUnit	South Carolina;Williamsburg County	South Carolina;Williamsburg
+ReportingUnit	South Carolina;York County	South Carolina;York

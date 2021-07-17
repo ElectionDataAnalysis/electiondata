@@ -1140,7 +1140,7 @@ CandidateContest	MO House District 3	MO;State Representative;District 3
 CandidateContest	MO House District 4	MO;State Representative;District 4
 CandidateContest	MO Senate District 18	MO;State Senator;District 18
 CandidateContest	US House MO District 6	MO;US Representative;District 6
-CandidateContest	MO US Senator	MO;US Senator;statewide
+CandidateContest	US Senate MO	MO;US Senator;statewide
 CandidateContest	MO House District 9	MO;State Representative;District 9
 CandidateContest	MO Senate District 12	MO;State Senator;District 12
 CandidateContest	MO House District 1	MO;State Representative;District 1
@@ -1627,3 +1627,119 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	Missouri;Adair County	Missouri;Adair
+ReportingUnit	Missouri;Andrew County	Missouri;Andrew
+ReportingUnit	Missouri;Atchison County	Missouri;Atchison
+ReportingUnit	Missouri;Audrain County	Missouri;Audrain
+ReportingUnit	Missouri;Barry County	Missouri;Barry
+ReportingUnit	Missouri;Barton County	Missouri;Barton
+ReportingUnit	Missouri;Bates County	Missouri;Bates
+ReportingUnit	Missouri;Benton County	Missouri;Benton
+ReportingUnit	Missouri;Bollinger County	Missouri;Bollinger
+ReportingUnit	Missouri;Boone County	Missouri;Boone
+ReportingUnit	Missouri;Buchanan County	Missouri;Buchanan
+ReportingUnit	Missouri;Butler County	Missouri;Butler
+ReportingUnit	Missouri;Caldwell County	Missouri;Caldwell
+ReportingUnit	Missouri;Callaway County	Missouri;Callaway
+ReportingUnit	Missouri;Camden County	Missouri;Camden
+ReportingUnit	Missouri;Cape Girardeau County	Missouri;Cape Girardeau
+ReportingUnit	Missouri;Carroll County	Missouri;Carroll
+ReportingUnit	Missouri;Carter County	Missouri;Carter
+ReportingUnit	Missouri;Cass County	Missouri;Cass
+ReportingUnit	Missouri;Cedar County	Missouri;Cedar
+ReportingUnit	Missouri;Chariton County	Missouri;Chariton
+ReportingUnit	Missouri;Christian County	Missouri;Christian
+ReportingUnit	Missouri;Clark County	Missouri;Clark
+ReportingUnit	Missouri;Clay County	Missouri;Clay
+ReportingUnit	Missouri;Clinton County	Missouri;Clinton
+ReportingUnit	Missouri;Cole County	Missouri;Cole
+ReportingUnit	Missouri;Cooper County	Missouri;Cooper
+ReportingUnit	Missouri;Crawford County	Missouri;Crawford
+ReportingUnit	Missouri;Dade County	Missouri;Dade
+ReportingUnit	Missouri;Dallas County	Missouri;Dallas
+ReportingUnit	Missouri;Daviess County	Missouri;Daviess
+ReportingUnit	Missouri;De Kalb County	Missouri;De Kalb
+ReportingUnit	Missouri;Dent County	Missouri;Dent
+ReportingUnit	Missouri;Douglas County	Missouri;Douglas
+ReportingUnit	Missouri;Dunklin County	Missouri;Dunklin
+ReportingUnit	Missouri;Franklin County	Missouri;Franklin
+ReportingUnit	Missouri;Gasconade County	Missouri;Gasconade
+ReportingUnit	Missouri;Gentry County	Missouri;Gentry
+ReportingUnit	Missouri;Greene County	Missouri;Greene
+ReportingUnit	Missouri;Grundy County	Missouri;Grundy
+ReportingUnit	Missouri;Harrison County	Missouri;Harrison
+ReportingUnit	Missouri;Henry County	Missouri;Henry
+ReportingUnit	Missouri;Hickory County	Missouri;Hickory
+ReportingUnit	Missouri;Holt County	Missouri;Holt
+ReportingUnit	Missouri;Howard County	Missouri;Howard
+ReportingUnit	Missouri;Howell County	Missouri;Howell
+ReportingUnit	Missouri;Iron County	Missouri;Iron
+ReportingUnit	Missouri;Jackson County	Missouri;Jackson
+ReportingUnit	Missouri;Jasper County	Missouri;Jasper
+ReportingUnit	Missouri;Jefferson County	Missouri;Jefferson
+ReportingUnit	Missouri;Johnson County	Missouri;Johnson
+ReportingUnit	Missouri;Kansas City County	Missouri;Kansas City
+ReportingUnit	Missouri;Knox County	Missouri;Knox
+ReportingUnit	Missouri;Laclede County	Missouri;Laclede
+ReportingUnit	Missouri;Lafayette County	Missouri;Lafayette
+ReportingUnit	Missouri;Lawrence County	Missouri;Lawrence
+ReportingUnit	Missouri;Lewis County	Missouri;Lewis
+ReportingUnit	Missouri;Lincoln County	Missouri;Lincoln
+ReportingUnit	Missouri;Linn County	Missouri;Linn
+ReportingUnit	Missouri;Livingston County	Missouri;Livingston
+ReportingUnit	Missouri;Macon County	Missouri;Macon
+ReportingUnit	Missouri;Madison County	Missouri;Madison
+ReportingUnit	Missouri;Maries County	Missouri;Maries
+ReportingUnit	Missouri;Marion County	Missouri;Marion
+ReportingUnit	Missouri;McDonald County	Missouri;McDonald
+ReportingUnit	Missouri;Mercer County	Missouri;Mercer
+ReportingUnit	Missouri;Miller County	Missouri;Miller
+ReportingUnit	Missouri;Mississippi County	Missouri;Mississippi
+ReportingUnit	Missouri;Moniteau County	Missouri;Moniteau
+ReportingUnit	Missouri;Monroe County	Missouri;Monroe
+ReportingUnit	Missouri;Montgomery County	Missouri;Montgomery
+ReportingUnit	Missouri;Morgan County	Missouri;Morgan
+ReportingUnit	Missouri;New Madrid County	Missouri;New Madrid
+ReportingUnit	Missouri;Newton County	Missouri;Newton
+ReportingUnit	Missouri;Nodaway County	Missouri;Nodaway
+ReportingUnit	Missouri;Oregon County	Missouri;Oregon
+ReportingUnit	Missouri;Osage County	Missouri;Osage
+ReportingUnit	Missouri;Ozark County	Missouri;Ozark
+ReportingUnit	Missouri;Pemiscot County	Missouri;Pemiscot
+ReportingUnit	Missouri;Perry County	Missouri;Perry
+ReportingUnit	Missouri;Pettis County	Missouri;Pettis
+ReportingUnit	Missouri;Phelps County	Missouri;Phelps
+ReportingUnit	Missouri;Pike County	Missouri;Pike
+ReportingUnit	Missouri;Platte County	Missouri;Platte
+ReportingUnit	Missouri;Polk County	Missouri;Polk
+ReportingUnit	Missouri;Pulaski County	Missouri;Pulaski
+ReportingUnit	Missouri;Putnam County	Missouri;Putnam
+ReportingUnit	Missouri;Ralls County	Missouri;Ralls
+ReportingUnit	Missouri;Randolph County	Missouri;Randolph
+ReportingUnit	Missouri;Ray County	Missouri;Ray
+ReportingUnit	Missouri;Reynolds County	Missouri;Reynolds
+ReportingUnit	Missouri;Ripley County	Missouri;Ripley
+ReportingUnit	Missouri;Saline County	Missouri;Saline
+ReportingUnit	Missouri;Schuyler County	Missouri;Schuyler
+ReportingUnit	Missouri;Scotland County	Missouri;Scotland
+ReportingUnit	Missouri;Scott County	Missouri;Scott
+ReportingUnit	Missouri;Shannon County	Missouri;Shannon
+ReportingUnit	Missouri;Shelby County	Missouri;Shelby
+ReportingUnit	Missouri;St. Charles County	Missouri;St. Charles
+ReportingUnit	Missouri;St. Clair County	Missouri;St. Clair
+ReportingUnit	Missouri;St. Francois County	Missouri;St. Francois
+ReportingUnit	Missouri;St. Louis County	Missouri;St. Louis
+ReportingUnit	Missouri;St. Louis City County	Missouri;St. Louis City
+ReportingUnit	Missouri;Ste. Genevieve County	Missouri;Ste. Genevieve
+ReportingUnit	Missouri;Stoddard County	Missouri;Stoddard
+ReportingUnit	Missouri;Stone County	Missouri;Stone
+ReportingUnit	Missouri;Sullivan County	Missouri;Sullivan
+ReportingUnit	Missouri;Taney County	Missouri;Taney
+ReportingUnit	Missouri;Texas County	Missouri;Texas
+ReportingUnit	Missouri;Vernon County	Missouri;Vernon
+ReportingUnit	Missouri;Warren County	Missouri;Warren
+ReportingUnit	Missouri;Washington County	Missouri;Washington
+ReportingUnit	Missouri;Wayne County	Missouri;Wayne
+ReportingUnit	Missouri;Webster County	Missouri;Webster
+ReportingUnit	Missouri;Worth County	Missouri;Worth
+ReportingUnit	Missouri;Wright County	Missouri;Wright

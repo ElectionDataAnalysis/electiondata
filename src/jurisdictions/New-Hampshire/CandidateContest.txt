@@ -2204,9 +2204,9 @@ NH House Coos County District 4	1	NH House Coos County District 4
 NH House Coos County District 5	1	NH House Coos County District 5	
 NH House Coos County District 6	1	NH House Coos County District 6	
 NH House Coos County District 7	1	NH House Coos County District 7	
-NH;Grafton County;District No 11 (1)
-NH;Grafton County;District No 4 (1)
-NH;Grafton County;District No 8 (3)
+NH House Grafton County District No 11	1	NH House Grafton County District No 11
+NH House Grafton County District No 4	1	NH House Grafton County District No 4
+NH House Grafton County District No 8	3	NH House Grafton County District No 8
 NH House Grafton County District 1	2	NH House Grafton County District 1	
 NH House Grafton County District 10	1	NH House Grafton County District 10	
 NH House Grafton County District 12	4	NH House Grafton County District 12	
@@ -2220,10 +2220,10 @@ NH House Grafton County District 3	1	NH House Grafton County District 3
 NH House Grafton County District 5	1	NH House Grafton County District 5	
 NH House Grafton County District 6	1	NH House Grafton County District 6	
 NH House Grafton County District 9	2	NH House Grafton County District 9	
-NH;Grafton County;District No.7 (1)
-NH;Hillsborough County;District No 17 (2)
-NH;Hillsborough County;District No 37 (11)
-NH;Hillsborough County;District No.  4 (2)
+NH House Grafton County District No.7	1	NH House Grafton County District No.7
+NH House Hillsborough County District No 17	3	NH House Hillsborough County District No 17
+NH House Hillsborough County District No 37	3	NH House Hillsborough County District No 37
+NH House Hillsborough County District No. 4	3	NH House Hillsborough County District No. 4
 NH House Hillsborough County District 1	2	NH House Hillsborough County District 1	
 NH House Hillsborough County District 10	2	NH House Hillsborough County District 10	
 NH House Hillsborough County District 11	2	NH House Hillsborough County District 11	

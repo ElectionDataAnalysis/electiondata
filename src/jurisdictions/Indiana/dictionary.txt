@@ -135,7 +135,7 @@ Candidate	Aisha Patton Martin	Aisha Patton Martin
 Candidate	Aj Sinha	Aj Sinha
 Candidate	Al Bennett	Al Bennett
 Candidate	Al C. Green	Al C. Green
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Al Lindsey	Al Lindsey
 Candidate	Al Logsdon	Al Logsdon
 Candidate	Al Parsons	Al Parsons
@@ -770,7 +770,7 @@ Candidate	B. J. Mclain	B. J. Mclain
 Candidate	B. Patrick Bauer	B. Patrick Bauer
 Candidate	Babette S Boling	Babette S Boling
 Candidate	Bambi L Deig	Bambi L Deig
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barb Hackman	Barb Hackman
 Candidate	Barb Kaffenberger-Scherzinger	Barb Kaffenberger-Scherzinger
 Candidate	Barb Mcfeaters	Barb Mcfeaters
@@ -3863,7 +3863,7 @@ Candidate	Donald J Steinmetz	Donald J Steinmetz
 Candidate	Donald J. Astrike	Donald J. Astrike
 Candidate	Donald J. Dulaney	Donald J. Dulaney
 Candidate	Donald J. Lehe	Donald J. Lehe
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Donald J. Trump & Michael R. Pence
 Candidate	Donald K Walton	Donald K Walton
@@ -4852,7 +4852,7 @@ Candidate	George Taylor	George Taylor
 Candidate	George W (Wes) Kuntzman	George W (Wes) Kuntzman
 Candidate	George W Gauntt	George W Gauntt
 Candidate	George W Spencer	George W Spencer
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	George W. Gilbert	George W. Gilbert
 Candidate	George Wichlinski	George Wichlinski
 Candidate	George William Wolfe (Write-In)	George William Wolfe (W/I)
@@ -7027,7 +7027,7 @@ Candidate	John K Pratt	John K Pratt
 Candidate	John K. Pratt	John K. Pratt
 Candidate	John Kenneth Fitzpatrick	John Kenneth Fitzpatrick
 Candidate	John Kerlin	John Kerlin
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John Kimmick	John Kimmick
 Candidate	John L (Jack) Emly	John L (Jack) Emly
 Candidate	John L Baker	John L Baker
@@ -7075,7 +7075,7 @@ Candidate	John M. Wrightsman	John M. Wrightsman
 Candidate	John Mallers	John Mallers
 Candidate	John Mario Acosta Jr.	John Mario Acosta Jr.
 Candidate	John Matwyshyn	John Matwyshyn
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John Mcpherson	John Mcpherson
 Candidate	John Merson	John Merson
 Candidate	John Meyer (Write-In)	John Meyer (W/I)
@@ -10453,7 +10453,7 @@ Candidate	Mitchell Conley	Mitchell Conley
 Candidate	Mitchell L. Russell	Mitchell L. Russell
 Candidate	Mitchell Moore	Mitchell Moore
 Candidate	Mitchell Williams (Write-In)	Mitchell Williams (W/I)
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Mk Watkins	Mk Watkins
 Candidate	Molly Bradford	Molly Bradford
 Candidate	Molly Oconnor	Molly Oconnor
@@ -10753,7 +10753,7 @@ Candidate	Orion P Mccormack	Orion P Mccormack
 Candidate	Orville Mcguire	Orville Mcguire
 Candidate	Oscar Alvarez	Oscar Alvarez
 Candidate	Oscar Martinez	Oscar Martinez
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Owen J Brown	Owen J Brown
 Candidate	Oxana Werbiansky	Oxana Werbiansky
 Candidate	P J Corwin	P J Corwin
@@ -11281,7 +11281,7 @@ Candidate	Ralph Flowers	Ralph Flowers
 Candidate	Ralph H. Zarse	Ralph H. Zarse
 Candidate	Ralph Hillenburg	Ralph Hillenburg
 Candidate	Ralph Kugler	Ralph Kugler
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Ralph R Anderson	Ralph R Anderson
 Candidate	Ralph Spelbring	Ralph Spelbring
 Candidate	Ralph Weinzapfel	Ralph Weinzapfel
@@ -22072,7 +22072,7 @@ CandidateContest	IN House District 79	IN;State Representative;District 79
 CandidateContest	IN Senate District 19	IN;State Senator;District 19
 CandidateContest	IN Treasurer of State	IN;Treasurer of State;statewide
 CandidateContest	US House IN District 3	IN;US Representative;District 3
-CandidateContest	IN US Senator	IN;US Senator;statewide
+CandidateContest	US Senate IN	IN;US Senator;statewide
 CandidateContest	IN House District 50	IN;State Representative;District 50
 CandidateContest	IN House District 52	IN;State Representative;District 52
 CandidateContest	IN House District 80	IN;State Representative;District 80
@@ -22204,13 +22204,6 @@ CandidateContest	IN House District 77	IN;State Representative;District 77
 CandidateContest	IN House District 78	IN;State Representative;District 78
 CandidateContest	IN House District 43	IN;State Representative;District 43
 CandidateContest	IN House District 56	IN;State Representative;District 56
-Candidate	"Anthony J. (""""Tony'') Cook"	"Anthony J. (""""Tony"""") Cook"
-Candidate	"Charles """"Chuck'' Moseley"	"Charles """"Chuck"""" Moseley"
-Candidate	"Clyde A. """"Chip'' Perfect Jr."	"Clyde A. """"Chip"""" Perfect Jr."
-Candidate	"Elizabeth """"Liz'' Brown"	"Elizabeth """"Liz"""" Brown"
-Candidate	"Joseph """"Joe'' Lannan"	"Joseph """"Joe"""" Lannan"
-Candidate	"Robert """"Bob'' Cherry"	"Robert """"Bob"""" Cherry"
-Candidate	"Wayne """"Gunny'' Harmon"	"Wayne """"Gunny"""" Harmon"
 Party	Democratic Party	democrat
 Party	Independent Party	independent
 Party	Libertarian Party	libertarian
@@ -22229,3 +22222,95 @@ CountItemType	election-day	machine
 CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
+ReportingUnit	Indiana;Adams County	Indiana;Adams
+ReportingUnit	Indiana;Allen County	Indiana;Allen
+ReportingUnit	Indiana;Bartholomew County	Indiana;Bartholomew
+ReportingUnit	Indiana;Benton County	Indiana;Benton
+ReportingUnit	Indiana;Blackford County	Indiana;Blackford
+ReportingUnit	Indiana;Boone County	Indiana;Boone
+ReportingUnit	Indiana;Brown County	Indiana;Brown
+ReportingUnit	Indiana;Carroll County	Indiana;Carroll
+ReportingUnit	Indiana;Cass County	Indiana;Cass
+ReportingUnit	Indiana;Clark County	Indiana;Clark
+ReportingUnit	Indiana;Clay County	Indiana;Clay
+ReportingUnit	Indiana;Clinton County	Indiana;Clinton
+ReportingUnit	Indiana;Crawford County	Indiana;Crawford
+ReportingUnit	Indiana;Daviess County	Indiana;Daviess
+ReportingUnit	Indiana;Dearborn County	Indiana;Dearborn
+ReportingUnit	Indiana;Decatur County	Indiana;Decatur
+ReportingUnit	Indiana;Dekalb County	Indiana;Dekalb
+ReportingUnit	Indiana;Delaware County	Indiana;Delaware
+ReportingUnit	Indiana;Dubois County	Indiana;Dubois
+ReportingUnit	Indiana;Elkhart County	Indiana;Elkhart
+ReportingUnit	Indiana;Fayette County	Indiana;Fayette
+ReportingUnit	Indiana;Floyd County	Indiana;Floyd
+ReportingUnit	Indiana;Fountain County	Indiana;Fountain
+ReportingUnit	Indiana;Franklin County	Indiana;Franklin
+ReportingUnit	Indiana;Fulton County	Indiana;Fulton
+ReportingUnit	Indiana;Gibson County	Indiana;Gibson
+ReportingUnit	Indiana;Grant County	Indiana;Grant
+ReportingUnit	Indiana;Greene County	Indiana;Greene
+ReportingUnit	Indiana;Hamilton County	Indiana;Hamilton
+ReportingUnit	Indiana;Hancock County	Indiana;Hancock
+ReportingUnit	Indiana;Harrison County	Indiana;Harrison
+ReportingUnit	Indiana;Hendricks County	Indiana;Hendricks
+ReportingUnit	Indiana;Henry County	Indiana;Henry
+ReportingUnit	Indiana;Howard County	Indiana;Howard
+ReportingUnit	Indiana;Huntington County	Indiana;Huntington
+ReportingUnit	Indiana;Jackson County	Indiana;Jackson
+ReportingUnit	Indiana;Jasper County	Indiana;Jasper
+ReportingUnit	Indiana;Jay County	Indiana;Jay
+ReportingUnit	Indiana;Jefferson County	Indiana;Jefferson
+ReportingUnit	Indiana;Jennings County	Indiana;Jennings
+ReportingUnit	Indiana;Johnson County	Indiana;Johnson
+ReportingUnit	Indiana;Knox County	Indiana;Knox
+ReportingUnit	Indiana;Kosciusko County	Indiana;Kosciusko
+ReportingUnit	Indiana;Lagrange County	Indiana;Lagrange
+ReportingUnit	Indiana;Lake County	Indiana;Lake
+ReportingUnit	Indiana;Laporte County	Indiana;Laporte
+ReportingUnit	Indiana;Lawrence County	Indiana;Lawrence
+ReportingUnit	Indiana;Madison County	Indiana;Madison
+ReportingUnit	Indiana;Marion County	Indiana;Marion
+ReportingUnit	Indiana;Marshall County	Indiana;Marshall
+ReportingUnit	Indiana;Martin County	Indiana;Martin
+ReportingUnit	Indiana;Miami County	Indiana;Miami
+ReportingUnit	Indiana;Monroe County	Indiana;Monroe
+ReportingUnit	Indiana;Montgomery County	Indiana;Montgomery
+ReportingUnit	Indiana;Morgan County	Indiana;Morgan
+ReportingUnit	Indiana;Newton County	Indiana;Newton
+ReportingUnit	Indiana;Noble County	Indiana;Noble
+ReportingUnit	Indiana;Ohio County	Indiana;Ohio
+ReportingUnit	Indiana;Orange County	Indiana;Orange
+ReportingUnit	Indiana;Owen County	Indiana;Owen
+ReportingUnit	Indiana;Parke County	Indiana;Parke
+ReportingUnit	Indiana;Perry County	Indiana;Perry
+ReportingUnit	Indiana;Pike County	Indiana;Pike
+ReportingUnit	Indiana;Porter County	Indiana;Porter
+ReportingUnit	Indiana;Posey County	Indiana;Posey
+ReportingUnit	Indiana;Pulaski County	Indiana;Pulaski
+ReportingUnit	Indiana;Putnam County	Indiana;Putnam
+ReportingUnit	Indiana;Randolph County	Indiana;Randolph
+ReportingUnit	Indiana;Ripley County	Indiana;Ripley
+ReportingUnit	Indiana;Rush County	Indiana;Rush
+ReportingUnit	Indiana;Scott County	Indiana;Scott
+ReportingUnit	Indiana;Shelby County	Indiana;Shelby
+ReportingUnit	Indiana;Spencer County	Indiana;Spencer
+ReportingUnit	Indiana;St. Joseph County	Indiana;St. Joseph
+ReportingUnit	Indiana;Starke County	Indiana;Starke
+ReportingUnit	Indiana;Steuben County	Indiana;Steuben
+ReportingUnit	Indiana;Sullivan County	Indiana;Sullivan
+ReportingUnit	Indiana;Switzerland County	Indiana;Switzerland
+ReportingUnit	Indiana;Tippecanoe County	Indiana;Tippecanoe
+ReportingUnit	Indiana;Tipton County	Indiana;Tipton
+ReportingUnit	Indiana;Union County	Indiana;Union
+ReportingUnit	Indiana;Vanderburgh County	Indiana;Vanderburgh
+ReportingUnit	Indiana;Vermillion County	Indiana;Vermillion
+ReportingUnit	Indiana;Vigo County	Indiana;Vigo
+ReportingUnit	Indiana;Wabash County	Indiana;Wabash
+ReportingUnit	Indiana;Warren County	Indiana;Warren
+ReportingUnit	Indiana;Warrick County	Indiana;Warrick
+ReportingUnit	Indiana;Washington County	Indiana;Washington
+ReportingUnit	Indiana;Wayne County	Indiana;Wayne
+ReportingUnit	Indiana;Wells County	Indiana;Wells
+ReportingUnit	Indiana;White County	Indiana;White
+ReportingUnit	Indiana;Whitley County	Indiana;Whitley

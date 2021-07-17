@@ -533,5 +533,7 @@ US Senate AZ (Libertarian Party)	1	US Senate AZ	Libertarian Party
 AZ Corporation Commissioner (Libertarian Party)	1	AZ Corporation Commissioner	Libertarian Party
 AZ Attorney General (Libertarian Party)	1	AZ Attorney General	Libertarian Party
 AZ Lieutenant Governor (Libertarian Party)	1	AZ Lieutenant Governor	Libertarian Party
-AZ Treasurer (Libertarian Party)	1	AZ Treasurer	Libertarian Party
+AZ State Treasurer (Libertarian Party)	1	AZ State Treasurer	Libertarian Party
 AZ Secretary of State (Libertarian Party)	1	AZ Secretary of State	Libertarian Party
+AZ Superintendant of Public Instruction	1	AZ Superintendant of Public Instruction
+AZ State Mine Inspector	Arizona	1	AZ State Mine Inspector	Arizona

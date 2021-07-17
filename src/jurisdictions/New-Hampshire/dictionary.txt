@@ -5836,3 +5836,13 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	New Hampshire;Belknap County	New Hampshire;Belknap
+ReportingUnit	New Hampshire;Carroll County	New Hampshire;Carroll
+ReportingUnit	New Hampshire;Cheshire County	New Hampshire;Cheshire
+ReportingUnit	New Hampshire;Coos County	New Hampshire;Coos
+ReportingUnit	New Hampshire;Grafton County	New Hampshire;Grafton
+ReportingUnit	New Hampshire;Hillsborough County	New Hampshire;Hillsborough
+ReportingUnit	New Hampshire;Merrimack County	New Hampshire;Merrimack
+ReportingUnit	New Hampshire;Rockingham County	New Hampshire;Rockingham
+ReportingUnit	New Hampshire;Strafford County	New Hampshire;Strafford
+ReportingUnit	New Hampshire;Sullivan County	New Hampshire;Sullivan

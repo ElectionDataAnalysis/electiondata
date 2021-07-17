@@ -4,8 +4,8 @@ BallotMeasureSelection	Yes	YES
 Candidate	'Able' Mable Thomas	'Able' Mable Thomas (I)
 Candidate	'Able' Mable Thomas	Able Mable Thomas (I)
 Candidate	'Able' Mable Thomas	Able' Mable Thomas (I)
-Candidate	'Mokah' Jasmine Johnson	''Mokah'' Jasmine Johnson
-Candidate	'Mokah' Jasmine Johnson	Mokah'' Jasmine Johnson
+Candidate	'Mokah' Jasmine Johnson	'Mokah' Jasmine Johnson
+Candidate	'Mokah' Jasmine Johnson	Mokah' Jasmine Johnson
 Candidate	A. Wayne Johnson	A. Wayne Johnson
 Candidate	Aaron Chausmer	Aaron Chausmer
 Candidate	Adam Bridges	Adam Bridges
@@ -14,7 +14,7 @@ Candidate	Adriane Latrell Love	Adriane Latrell Love
 Candidate	Afoma Eguh-Okafor	Afoma Eguh-Okafor
 Candidate	Aisha Yaqoob	Aisha Yaqoob
 Candidate	Al Bartell	Al Bartell
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Al Williams	Al Williams (I)
 Candidate	Alan Cole	Alan Cole
 Candidate	Alan Powell	Alan Powell (I)
@@ -73,7 +73,7 @@ Candidate	B. Alison Sosebee	B. Alison Sosebee (I)
 Candidate	B. Chan Caudell	B. Chan Caudell (I)
 Candidate	B. Scott Minter	B. Scott Minter (I)
 Candidate	B. T. Parker	B. T. Parker
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara Seidman	Barbara Seidman
 Candidate	Bardin Hooks	Bardin Hooks
 Candidate	Barrington D. Martin, II	Barrington D. Martin, II
@@ -193,16 +193,14 @@ Candidate	Caroline L. Holko	Caroline L. Holko
 Candidate	Carolyn Bourdeaux	Carolyn Bourdeaux
 Candidate	Carolyn Hugley	Carolyn Hugley (I)
 Candidate	Cason Hightower	Cason Hightower
-Candidate	Cecil T. 'Butch' Miller	Cecil T. ''Butch'' Miller (I)
-Candidate	Cecil T. 'Butch' Miller	Cecil T. 'Butch' Miller
 Candidate	Cecil T. 'Butch' Miller	Cecil T. 'Butch' Miller (I)
+Candidate	Cecil T. 'Butch' Miller	Cecil T. 'Butch' Miller
 Candidate	Cecil T. 'Butch' Miller	Cecil T. Butch Miller (I)
 Candidate	Cedric Z. King	Cedric Z. King
 Candidate	Ceretta Smith	Ceretta Smith
 Candidate	Chad Nimmer	Chad Nimmer (I)
 Candidate	Charles 'Chuck' Hogg	Charles 'Chuck' Hogg
 Candidate	Charles DeYoung	Charles DeYoung
-Candidate	Charles E. 'Chuck' Martin	Charles E. ''Chuck'' Martin (I)
 Candidate	Charles E. 'Chuck' Martin	Charles E. 'Chuck' Martin (I)
 Candidate	Charles E. Chuck Martin	Charles E. Chuck Martin (I)
 Candidate	Charles Paul Rose, Jr.	Charles Paul Rose, Jr. (I)
@@ -351,7 +349,7 @@ Candidate	Don Hogan	Don Hogan
 Candidate	Don Hogan	Don Hogan (I)
 Candidate	Don L. Parsons	Don L. Parsons (I)
 Candidate	Don Wilson	Don Wilson
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Donald J. Trump (I)
 Candidate	Donald Schmidt	Donald Schmidt
@@ -373,9 +371,8 @@ Candidate	Durwood R. 'Woody' Davis	Durwood R. 'Woody' Davis
 Candidate	Earl 'Buddy' Carter	Earl “Buddy” Carter (I)
 Candidate	Earl Ehrhart	Earl Ehrhart (I)
 Candidate	Earl L. 'Buddy' Carter	Earl 'Buddy' Carter (I)
-Candidate	Earl L. 'Buddy' Carter	Earl L. ''Buddy'' Carter (I)
-Candidate	Earl L. 'Buddy' Carter	Earl L. 'Buddy' Carter
 Candidate	Earl L. 'Buddy' Carter	Earl L. 'Buddy' Carter (I)
+Candidate	Earl L. 'Buddy' Carter	Earl L. 'Buddy' Carter
 Candidate	Earnest 'Coach' Williams	Earnest 'Coach' Williams (I)
 Candidate	Ebony Carter	Ebony Carter
 Candidate	Ed Harbison	Ed Harbison (I)
@@ -443,7 +440,7 @@ Candidate	Geoff Duncan	Geoff Duncan (I)
 Candidate	George E. Barnhill	George E. Barnhill (I)
 Candidate	George Hartwig	George Hartwig (I)
 Candidate	George R. Christian	George R. Christian (I)
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Gerald E. Greene	Gerald E. Greene (I)
 Candidate	Gerald Greene	Gerald Greene (I)
 Candidate	Gil Freeman	Gil Freeman
@@ -473,7 +470,7 @@ Candidate	Gregory Williams	Gregory Williams
 Candidate	H. Patrick Haggard	H. Patrick Haggard (I)
 Candidate	Hal Hinesley	Hal Hinesley (I)
 Candidate	Hal Moroz	Hal Moroz
-Candidate	Harmel 'Mel' Codi	Harmel ''Mel'' Codi
+Candidate	Harmel 'Mel' Codi	Harmel 'Mel' Codi
 Candidate	Harold V. Jones Ii	Harold V. Jones Ii (I)
 Candidate	Harold V. Jones, II	Harold V. Jones, II (I)
 Candidate	Harrison Lance	Harrison Lance
@@ -481,13 +478,11 @@ Candidate	Harvey Wasserman	Harvey Wasserman
 Candidate	Hayward Altman	Hayward Altman (I)
 Candidate	Heath Clark	Heath Clark (I)
 Candidate	Heather Hendricks Lanier	Heather Hendricks Lanier (I)
-Candidate	Henry 'Wayne' Howard	Henry ''Wayne'' Howard (I)
 Candidate	Henry 'Wayne' Howard	Henry 'Wayne' Howard (I)
 Candidate	Henry C 'Hank' Johnson Jr	Henry C 'Hank' Johnson Jr
 Candidate	Henry C 'Hank' Johnson Jr	Henry C “Hank” Johnson Jr (I)
 Candidate	Henry C. 'Hank' Johnson, Jr.	Henry C 'Hank' Johnson Jr (I)
 Candidate	Henry C. 'Hank' Johnson, Jr.	Henry C Hank Johnson Jr (I)
-Candidate	Henry C. 'Hank' Johnson, Jr.	Henry C. ''Hank'' Johnson, Jr. (I)
 Candidate	Henry C. 'Hank' Johnson, Jr.	Henry C. 'Hank' Johnson, Jr. (I)
 Candidate	Henry M. Newkirk	Henry M. Newkirk (I)
 Candidate	Henry Mathis, Jr.	Henry Mathis, Jr.
@@ -562,7 +557,7 @@ Candidate	Jeffrey L. Foster	Jeffrey L. Foster
 Candidate	Jen Jordan	Jen Jordan (I)
 Candidate	Jen Slipakoff	Jen Slipakoff
 Candidate	Jenne Shepherd	Jenne Shepherd
-Candidate	Jennifer 'Jen' Jordan	Jennifer ''Jen'' Jordan (I)
+Candidate	Jennifer 'Jen' Jordan	Jennifer 'Jen' Jordan (I)
 Candidate	Jennifer Lankford Hulsey	Jennifer Lankford Hulsey
 Candidate	Jerrold Dagen	Jerrold Dagen
 Candidate	Jesse Petrea	Jesse Petrea (I)
@@ -603,12 +598,12 @@ Candidate	John K Wilkinson	John K Wilkinson (I)
 Candidate	John K Wilkinson	John K. Wilkinson (I)
 Candidate	John K. Delaney	John K. Delaney
 Candidate	John K. Wilkinson	John K. Wilkinson
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John L. Corbett	John L. Corbett (I)
 Candidate	John LaHood	John LaHood (I)
 Candidate	John Lahood	John Lahood (I)
 Candidate	John M. Ott	John M. Ott (I)
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John Meadows	John Meadows (I)
 Candidate	John Noel	John Noel
 Candidate	John Pezold	John Pezold (I)
@@ -697,7 +692,7 @@ Candidate	Ken Pullin	Ken Pullin
 Candidate	Ken Wright	Ken Wright
 Candidate	Ken Wynne	Ken Wynne (I)
 Candidate	Ken Yasger	Ken Yasger
-Candidate	Kenneth 'Ken' Kincaid	Kenneth ''Ken'' Kincaid
+Candidate	Kenneth 'Ken' Kincaid	Kenneth 'Ken' Kincaid
 Candidate	Kenneth Brett Quarterman	Kenneth Brett Quarterman
 Candidate	Kenneth Zachary Jr	Kenneth Zachary Jr
 Candidate	Kenny Coggins	Kenny Coggins
@@ -840,7 +835,7 @@ Candidate	Melinda 'Mindy' Pillow	Melinda 'Mindy' Pillow
 Candidate	Melynee Leftridge Harris	Melynee Leftridge Harris
 Candidate	Mesha Mainor	Mesha Mainor
 Candidate	Micah Gravley	Micah Gravley (I)
-Candidate	Michael 'Buckle' Moore	Michael ''Buckle'' Moore
+Candidate	Michael 'Buckle' Moore	Michael 'Buckle' Moore
 Candidate	Michael Bennet	Michael Bennet
 Candidate	Michael Boggus	Michael Boggus
 Candidate	Michael Caldwell	Michael Caldwell
@@ -872,7 +867,7 @@ Candidate	Miranda Britt	Miranda Britt
 Candidate	Miriam Paris	Miriam Paris
 Candidate	Miriam Paris	Miriam Paris (I)
 Candidate	Mitchell Scoggins	Mitchell Scoggins (I)
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Mohammed Jahangir Hossain	Mohammed Jahangir Hossain
 Candidate	Montenia Edwards	Montenia Edwards
 Candidate	Myah Johnson	Myah Johnson
@@ -898,7 +893,7 @@ Candidate	Noel Williams, Jr.	Noel Williams, Jr. (I)
 Candidate	Noemi Puntier	Noemi Puntier
 Candidate	Oscar 'Asghar' Hajloo	Oscar 'Asghar' Hajloo
 Candidate	Otha E. Thornton, Jr	Otha E. Thornton, Jr
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	P. K. Martin	P. K. Martin (I)
 Candidate	P. K. Martin Iv	P. K. Martin Iv (I)
 Candidate	P. K. Martin, IV	P. K. Martin, IV (I)
@@ -923,7 +918,6 @@ Candidate	Paul Howard Jr.	Paul Howard Jr. (I)
 Candidate	Paula Hastings	Paula Hastings
 Candidate	Paulette Rakestraw	Paulette Rakestraw (I)
 Candidate	Paulette Smith	Paulette Smith
-Candidate	Pedro 'Pete' Marin	Pedro ''Pete'' Marin (I)
 Candidate	Pedro 'Pete' Marin	Pedro 'Pete' Marin (I)
 Candidate	Penny A Penn	Penny A Penn (I)
 Candidate	Penny A. Penn	Penny A. Penn (I)
@@ -943,9 +937,9 @@ Candidate	Rachel A. Kinsey	Rachel A. Kinsey
 Candidate	Rachel Krause	Rachel Krause (I)
 Candidate	Rachelle Carnesale	Rachelle Carnesale (I)
 Candidate	Rahim Talley	Rahim Talley
-Candidate	Rajpal 'Raj' Sagoo	Rajpal ''Raj' Sagoo
+Candidate	Rajpal 'Raj' Sagoo	Rajpal 'Raj' Sagoo
 Candidate	Ralph Meers	Ralph Meers
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Ralph Nobles	Ralph Nobles
 Candidate	Randy McGinley	Randy McGinley
 Candidate	Randy Nix	Randy Nix (I)
@@ -985,12 +979,12 @@ Candidate	Rick Ballew	Rick Ballew
 Candidate	Rick D. Day	Rick D. Day
 Candidate	Rick Jasperse	Rick Jasperse (I)
 Candidate	Rick W. Allen	Rick W. Allen (I)
-Candidate	Ricky 'Rick' Williams	Ricky ''Rick'' Williams (I)
+Candidate	Ricky 'Rick' Williams	Ricky 'Rick' Williams (I)
 Candidate	Ricky A Williams	Ricky A Williams
 Candidate	Ricky A. Williams	Ricky A. Williams (I)
 Candidate	Rob Leverett	Rob Leverett
 Candidate	Rob Woodall	Rob Woodall (I)
-Candidate	Robert 'Bobby' Mehan	Robert ''Bobby'' Mehan
+Candidate	Robert 'Bobby' Mehan	Robert 'Bobby' Mehan
 Candidate	Robert A. Crumley	Robert A. Crumley
 Candidate	Robert Bob Gibeling	Robert Bob Gibeling
 Candidate	Robert Dickey	Robert Dickey (I)
@@ -1214,7 +1208,6 @@ Candidate	Wendell Willard	Wendell Willard (I)
 Candidate	Wes Cantrell	Wes Cantrell (I)
 Candidate	Wesley 'Wes' Person	Wesley 'Wes' Person
 Candidate	Will Wade	Will Wade
-Candidate	William 'Bill' Werkheiser	William ''Bill'' Werkheiser (I)
 Candidate	William 'Bill' Werkheiser	William 'Bill' Werkheiser (I)
 Candidate	William C. Rumer	William C. Rumer (I)
 Candidate	William D. Hughes	William D. Hughes
@@ -8779,7 +8772,6 @@ CandidateContest	GA House District 115	GA;State Representative;District 115
 CandidateContest	GA House District 4	GA;State Representative;District 4
 Candidate	Al Williams	Al Williams
 Candidate	Alan Powell	Alan Powell
-Candidate	Alicia 'Aer' Scott	"Alicia ""Aer"" Scott"
 Candidate	Andy Welch	Andy Welch
 Candidate	Austin Scott	Austin Scott
 Candidate	Barry Fleming	Barry Fleming
@@ -8804,9 +8796,7 @@ Candidate	Butch Parrish	Butch Parrish
 Candidate	Calvin Smyre	Calvin Smyre
 Candidate	Carl Wayne Gilliard	Carl Wayne Gilliard
 Candidate	Carolyn Hugley	Carolyn Hugley
-Candidate	Cecil T. 'Butch' Miller	"Cecil T. ""Butch"" Miller"
-Candidate	Charles 'Chuck' Hogg	"Charles ""Chuck"" Hogg"
-Candidate	Charles E. 'Chuck' Martin	"Charles E. ""Chuck"" Martin"
+Candidate	Charles E. 'Chuck' Martin	Charles E. 'Chuck' Martin
 Candidate	Chris Carr	Chris Carr
 Candidate	Chuck Eaton	Chuck Eaton
 Candidate	Chuck Efstration	Chuck Efstration
@@ -8834,7 +8824,6 @@ Candidate	Don L. Parsons	Don L. Parsons
 Candidate	Donna McLeod	Donna McLeod
 Candidate	Donzella James	Donzella James
 Candidate	Doreen Carter	Doreen Carter
-Candidate	Earl L. 'Buddy' Carter	"Earl L. ""Buddy"" Carter"
 Candidate	Ed Harbison	Ed Harbison
 Candidate	Ed Rynders	Ed Rynders
 Candidate	Ed Setzler	Ed Setzler
@@ -8857,12 +8846,10 @@ Candidate	Greg Kirk	Greg Kirk
 Candidate	Greg Morris	Greg Morris
 Candidate	Harold V. Jones II	Harold V. Jones II
 Candidate	Heath Clark	Heath Clark
-Candidate	Henry 'Wayne' Howard	"Henry ""Wayne"" Howard"
-Candidate	Henry C 'Hank' Johnson Jr	"Henry C ""Hank"" Johnson Jr"
+Candidate	Henry 'Wayne' Howard	Henry 'Wayne' Howard
 Candidate	Horacena Tate	Horacena Tate
 Candidate	J. Craig Gordon	J. Craig Gordon
 Candidate	Jack Hill	Jack Hill
-Candidate	James 'J. W.' Morrow Jr	"James ""J. W."" Morrow Jr"
 Candidate	James Beverly	James Beverly
 Candidate	Jan Jones	Jan Jones
 Candidate	Jan Tankersley	Jan Tankersley
@@ -8923,7 +8910,7 @@ Candidate	Pam Stephenson	Pam Stephenson
 Candidate	Park Cannon	Park Cannon
 Candidate	Pat Gardner	Pat Gardner
 Candidate	Patty Bentley	Patty Bentley
-Candidate	Pedro 'Pete' Marin	"Pedro ""Pete"" Marin"
+Candidate	Pedro 'Pete' Marin	Pedro 'Pete' Marin
 Candidate	Penny Houston	Penny Houston
 Candidate	Randy Nix	Randy Nix
 Candidate	Richard H. Smith	Richard H. Smith
@@ -8966,7 +8953,7 @@ Candidate	Tricia Pridemore	Tricia Pridemore
 Candidate	Tyler Harper	Tyler Harper
 Candidate	Valencia Seay	Valencia Seay
 Candidate	Wes Cantrell	Wes Cantrell
-Candidate	William 'Bill' Werkheiser	"William ""Bill"" Werkheiser"
+Candidate	William 'Bill' Werkheiser	William 'Bill' Werkheiser
 Candidate	William T. Ligon Jr	William T. Ligon Jr
 Candidate	Winfred Dukes	Winfred Dukes
 Party	Democratic Party	democrat
@@ -8988,3 +8975,162 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	Georgia;Appling County	Georgia;Appling
+ReportingUnit	Georgia;Atkinson County	Georgia;Atkinson
+ReportingUnit	Georgia;Bacon County	Georgia;Bacon
+ReportingUnit	Georgia;Baker County	Georgia;Baker
+ReportingUnit	Georgia;Baldwin County	Georgia;Baldwin
+ReportingUnit	Georgia;Banks County	Georgia;Banks
+ReportingUnit	Georgia;Barrow County	Georgia;Barrow
+ReportingUnit	Georgia;Bartow County	Georgia;Bartow
+ReportingUnit	Georgia;Ben Hill County	Georgia;Ben Hill
+ReportingUnit	Georgia;Berrien County	Georgia;Berrien
+ReportingUnit	Georgia;Bibb County	Georgia;Bibb
+ReportingUnit	Georgia;Bleckley County	Georgia;Bleckley
+ReportingUnit	Georgia;Brantley County	Georgia;Brantley
+ReportingUnit	Georgia;Brooks County	Georgia;Brooks
+ReportingUnit	Georgia;Bryan County	Georgia;Bryan
+ReportingUnit	Georgia;Bulloch County	Georgia;Bulloch
+ReportingUnit	Georgia;Burke County	Georgia;Burke
+ReportingUnit	Georgia;Butts County	Georgia;Butts
+ReportingUnit	Georgia;Calhoun County	Georgia;Calhoun
+ReportingUnit	Georgia;Camden County	Georgia;Camden
+ReportingUnit	Georgia;Candler County	Georgia;Candler
+ReportingUnit	Georgia;Carroll County	Georgia;Carroll
+ReportingUnit	Georgia;Catoosa County	Georgia;Catoosa
+ReportingUnit	Georgia;Charlton County	Georgia;Charlton
+ReportingUnit	Georgia;Chatham County	Georgia;Chatham
+ReportingUnit	Georgia;Chattahoochee County	Georgia;Chattahoochee
+ReportingUnit	Georgia;Chattooga County	Georgia;Chattooga
+ReportingUnit	Georgia;Cherokee County	Georgia;Cherokee
+ReportingUnit	Georgia;Clarke County	Georgia;Clarke
+ReportingUnit	Georgia;Clay County	Georgia;Clay
+ReportingUnit	Georgia;Clayton County	Georgia;Clayton
+ReportingUnit	Georgia;Clinch County	Georgia;Clinch
+ReportingUnit	Georgia;Cobb County	Georgia;Cobb
+ReportingUnit	Georgia;Coffee County	Georgia;Coffee
+ReportingUnit	Georgia;Colquitt County	Georgia;Colquitt
+ReportingUnit	Georgia;Columbia County	Georgia;Columbia
+ReportingUnit	Georgia;Cook County	Georgia;Cook
+ReportingUnit	Georgia;Coweta County	Georgia;Coweta
+ReportingUnit	Georgia;Crawford County	Georgia;Crawford
+ReportingUnit	Georgia;Crisp County	Georgia;Crisp
+ReportingUnit	Georgia;Dade County	Georgia;Dade
+ReportingUnit	Georgia;Dawson County	Georgia;Dawson
+ReportingUnit	Georgia;Decatur County	Georgia;Decatur
+ReportingUnit	Georgia;DeKalb County	Georgia;DeKalb
+ReportingUnit	Georgia;Dodge County	Georgia;Dodge
+ReportingUnit	Georgia;Dooly County	Georgia;Dooly
+ReportingUnit	Georgia;Dougherty County	Georgia;Dougherty
+ReportingUnit	Georgia;Douglas County	Georgia;Douglas
+ReportingUnit	Georgia;Early County	Georgia;Early
+ReportingUnit	Georgia;Echols County	Georgia;Echols
+ReportingUnit	Georgia;Effingham County	Georgia;Effingham
+ReportingUnit	Georgia;Elbert County	Georgia;Elbert
+ReportingUnit	Georgia;Emanuel County	Georgia;Emanuel
+ReportingUnit	Georgia;Evans County	Georgia;Evans
+ReportingUnit	Georgia;Fannin County	Georgia;Fannin
+ReportingUnit	Georgia;Fayette County	Georgia;Fayette
+ReportingUnit	Georgia;Floyd County	Georgia;Floyd
+ReportingUnit	Georgia;Forsyth County	Georgia;Forsyth
+ReportingUnit	Georgia;Franklin County	Georgia;Franklin
+ReportingUnit	Georgia;Fulton County	Georgia;Fulton
+ReportingUnit	Georgia;Gilmer County	Georgia;Gilmer
+ReportingUnit	Georgia;Glascock County	Georgia;Glascock
+ReportingUnit	Georgia;Glynn County	Georgia;Glynn
+ReportingUnit	Georgia;Gordon County	Georgia;Gordon
+ReportingUnit	Georgia;Grady County	Georgia;Grady
+ReportingUnit	Georgia;Greene County	Georgia;Greene
+ReportingUnit	Georgia;Gwinnett County	Georgia;Gwinnett
+ReportingUnit	Georgia;Habersham County	Georgia;Habersham
+ReportingUnit	Georgia;Hall County	Georgia;Hall
+ReportingUnit	Georgia;Hancock County	Georgia;Hancock
+ReportingUnit	Georgia;Haralson County	Georgia;Haralson
+ReportingUnit	Georgia;Harris County	Georgia;Harris
+ReportingUnit	Georgia;Hart County	Georgia;Hart
+ReportingUnit	Georgia;Heard County	Georgia;Heard
+ReportingUnit	Georgia;Henry County	Georgia;Henry
+ReportingUnit	Georgia;Houston County	Georgia;Houston
+ReportingUnit	Georgia;Irwin County	Georgia;Irwin
+ReportingUnit	Georgia;Jackson County	Georgia;Jackson
+ReportingUnit	Georgia;Jasper County	Georgia;Jasper
+ReportingUnit	Georgia;Jeff Davis County	Georgia;Jeff Davis
+ReportingUnit	Georgia;Jefferson County	Georgia;Jefferson
+ReportingUnit	Georgia;Jenkins County	Georgia;Jenkins
+ReportingUnit	Georgia;Johnson County	Georgia;Johnson
+ReportingUnit	Georgia;Jones County	Georgia;Jones
+ReportingUnit	Georgia;Lamar County	Georgia;Lamar
+ReportingUnit	Georgia;Lanier County	Georgia;Lanier
+ReportingUnit	Georgia;Laurens County	Georgia;Laurens
+ReportingUnit	Georgia;Lee County	Georgia;Lee
+ReportingUnit	Georgia;Liberty County	Georgia;Liberty
+ReportingUnit	Georgia;Lincoln County	Georgia;Lincoln
+ReportingUnit	Georgia;Long County	Georgia;Long
+ReportingUnit	Georgia;Lowndes County	Georgia;Lowndes
+ReportingUnit	Georgia;Lumpkin County	Georgia;Lumpkin
+ReportingUnit	Georgia;Macon County	Georgia;Macon
+ReportingUnit	Georgia;Madison County	Georgia;Madison
+ReportingUnit	Georgia;Marion County	Georgia;Marion
+ReportingUnit	Georgia;McDuffie County	Georgia;McDuffie
+ReportingUnit	Georgia;McIntosh County	Georgia;McIntosh
+ReportingUnit	Georgia;Meriwether County	Georgia;Meriwether
+ReportingUnit	Georgia;Miller County	Georgia;Miller
+ReportingUnit	Georgia;Mitchell County	Georgia;Mitchell
+ReportingUnit	Georgia;Monroe County	Georgia;Monroe
+ReportingUnit	Georgia;Montgomery County	Georgia;Montgomery
+ReportingUnit	Georgia;Morgan County	Georgia;Morgan
+ReportingUnit	Georgia;Murray County	Georgia;Murray
+ReportingUnit	Georgia;Muscogee County	Georgia;Muscogee
+ReportingUnit	Georgia;Newton County	Georgia;Newton
+ReportingUnit	Georgia;Oconee County	Georgia;Oconee
+ReportingUnit	Georgia;Oglethorpe County	Georgia;Oglethorpe
+ReportingUnit	Georgia;Paulding County	Georgia;Paulding
+ReportingUnit	Georgia;Peach County	Georgia;Peach
+ReportingUnit	Georgia;Pickens County	Georgia;Pickens
+ReportingUnit	Georgia;Pierce County	Georgia;Pierce
+ReportingUnit	Georgia;Pike County	Georgia;Pike
+ReportingUnit	Georgia;Polk County	Georgia;Polk
+ReportingUnit	Georgia;Pulaski County	Georgia;Pulaski
+ReportingUnit	Georgia;Putnam County	Georgia;Putnam
+ReportingUnit	Georgia;Quitman County	Georgia;Quitman
+ReportingUnit	Georgia;Rabun County	Georgia;Rabun
+ReportingUnit	Georgia;Randolph County	Georgia;Randolph
+ReportingUnit	Georgia;Richmond County	Georgia;Richmond
+ReportingUnit	Georgia;Rockdale County	Georgia;Rockdale
+ReportingUnit	Georgia;Schley County	Georgia;Schley
+ReportingUnit	Georgia;Screven County	Georgia;Screven
+ReportingUnit	Georgia;Seminole County	Georgia;Seminole
+ReportingUnit	Georgia;Spalding County	Georgia;Spalding
+ReportingUnit	Georgia;Stephens County	Georgia;Stephens
+ReportingUnit	Georgia;Stewart County	Georgia;Stewart
+ReportingUnit	Georgia;Sumter County	Georgia;Sumter
+ReportingUnit	Georgia;Talbot County	Georgia;Talbot
+ReportingUnit	Georgia;Taliaferro County	Georgia;Taliaferro
+ReportingUnit	Georgia;Tattnall County	Georgia;Tattnall
+ReportingUnit	Georgia;Taylor County	Georgia;Taylor
+ReportingUnit	Georgia;Telfair County	Georgia;Telfair
+ReportingUnit	Georgia;Terrell County	Georgia;Terrell
+ReportingUnit	Georgia;Thomas County	Georgia;Thomas
+ReportingUnit	Georgia;Tift County	Georgia;Tift
+ReportingUnit	Georgia;Toombs County	Georgia;Toombs
+ReportingUnit	Georgia;Towns County	Georgia;Towns
+ReportingUnit	Georgia;Treutlen County	Georgia;Treutlen
+ReportingUnit	Georgia;Troup County	Georgia;Troup
+ReportingUnit	Georgia;Turner County	Georgia;Turner
+ReportingUnit	Georgia;Twiggs County	Georgia;Twiggs
+ReportingUnit	Georgia;Union County	Georgia;Union
+ReportingUnit	Georgia;Upson County	Georgia;Upson
+ReportingUnit	Georgia;Walker County	Georgia;Walker
+ReportingUnit	Georgia;Walton County	Georgia;Walton
+ReportingUnit	Georgia;Ware County	Georgia;Ware
+ReportingUnit	Georgia;Warren County	Georgia;Warren
+ReportingUnit	Georgia;Washington County	Georgia;Washington
+ReportingUnit	Georgia;Wayne County	Georgia;Wayne
+ReportingUnit	Georgia;Webster County	Georgia;Webster
+ReportingUnit	Georgia;Wheeler County	Georgia;Wheeler
+ReportingUnit	Georgia;White County	Georgia;White
+ReportingUnit	Georgia;Whitfield County	Georgia;Whitfield
+ReportingUnit	Georgia;Wilcox County	Georgia;Wilcox
+ReportingUnit	Georgia;Wilkes County	Georgia;Wilkes
+ReportingUnit	Georgia;Wilkinson County	Georgia;Wilkinson
+ReportingUnit	Georgia;Worth County	Georgia;Worth

@@ -230,7 +230,7 @@ CandidateContest	NE Member of the State Board of Education District 6	NE;Member 
 CandidateContest	NE Secretary of State	NE;Secretary of State;statewide
 CandidateContest	NE State Treasurer	NE;State Treasurer;statewide
 CandidateContest	US House NE District 3	NE;US Representative;District 3
-CandidateContest	NE US Senator	NE;US Senator;statewide
+CandidateContest	US Senate NE	NE;US Senator;statewide
 CandidateContest	NE Member of the State Board of Education District 7	NE;Member of the State Board of Education;District 7
 CandidateContest	NE Senate District 40	NE;State Senator;District 40
 CandidateContest	NE Senate District 36	NE;State Senator;District 36
@@ -359,3 +359,96 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	Nebraska;Adams County	Nebraska;Adams
+ReportingUnit	Nebraska;Antelope County	Nebraska;Antelope
+ReportingUnit	Nebraska;Arthur County	Nebraska;Arthur
+ReportingUnit	Nebraska;Banner County	Nebraska;Banner
+ReportingUnit	Nebraska;Blaine County	Nebraska;Blaine
+ReportingUnit	Nebraska;Boone County	Nebraska;Boone
+ReportingUnit	Nebraska;Box Butte County	Nebraska;Box Butte
+ReportingUnit	Nebraska;Boyd County	Nebraska;Boyd
+ReportingUnit	Nebraska;Brown County	Nebraska;Brown
+ReportingUnit	Nebraska;Buffalo County	Nebraska;Buffalo
+ReportingUnit	Nebraska;Burt County	Nebraska;Burt
+ReportingUnit	Nebraska;Butler County	Nebraska;Butler
+ReportingUnit	Nebraska;Cass County	Nebraska;Cass
+ReportingUnit	Nebraska;Cedar County	Nebraska;Cedar
+ReportingUnit	Nebraska;Chase County	Nebraska;Chase
+ReportingUnit	Nebraska;Cherry County	Nebraska;Cherry
+ReportingUnit	Nebraska;Cheyenne County	Nebraska;Cheyenne
+ReportingUnit	Nebraska;Clay County	Nebraska;Clay
+ReportingUnit	Nebraska;Colfax County	Nebraska;Colfax
+ReportingUnit	Nebraska;Cuming County	Nebraska;Cuming
+ReportingUnit	Nebraska;Custer County	Nebraska;Custer
+ReportingUnit	Nebraska;Dakota County	Nebraska;Dakota
+ReportingUnit	Nebraska;Dawes County	Nebraska;Dawes
+ReportingUnit	Nebraska;Dawson County	Nebraska;Dawson
+ReportingUnit	Nebraska;Deuel County	Nebraska;Deuel
+ReportingUnit	Nebraska;Dixon County	Nebraska;Dixon
+ReportingUnit	Nebraska;Dodge County	Nebraska;Dodge
+ReportingUnit	Nebraska;Douglas County	Nebraska;Douglas
+ReportingUnit	Nebraska;Dundy County	Nebraska;Dundy
+ReportingUnit	Nebraska;Fillmore County	Nebraska;Fillmore
+ReportingUnit	Nebraska;Franklin County	Nebraska;Franklin
+ReportingUnit	Nebraska;Frontier County	Nebraska;Frontier
+ReportingUnit	Nebraska;Furnas County	Nebraska;Furnas
+ReportingUnit	Nebraska;Gage County	Nebraska;Gage
+ReportingUnit	Nebraska;Garden County	Nebraska;Garden
+ReportingUnit	Nebraska;Garfield County	Nebraska;Garfield
+ReportingUnit	Nebraska;Gosper County	Nebraska;Gosper
+ReportingUnit	Nebraska;Grant County	Nebraska;Grant
+ReportingUnit	Nebraska;Greeley County	Nebraska;Greeley
+ReportingUnit	Nebraska;Hall County	Nebraska;Hall
+ReportingUnit	Nebraska;Hamilton County	Nebraska;Hamilton
+ReportingUnit	Nebraska;Harlan County	Nebraska;Harlan
+ReportingUnit	Nebraska;Hayes County	Nebraska;Hayes
+ReportingUnit	Nebraska;Hitchcock County	Nebraska;Hitchcock
+ReportingUnit	Nebraska;Holt County	Nebraska;Holt
+ReportingUnit	Nebraska;Hooker County	Nebraska;Hooker
+ReportingUnit	Nebraska;Howard County	Nebraska;Howard
+ReportingUnit	Nebraska;Jefferson County	Nebraska;Jefferson
+ReportingUnit	Nebraska;Johnson County	Nebraska;Johnson
+ReportingUnit	Nebraska;Kearney County	Nebraska;Kearney
+ReportingUnit	Nebraska;Keith County	Nebraska;Keith
+ReportingUnit	Nebraska;Keya Paha County	Nebraska;Keya Paha
+ReportingUnit	Nebraska;Kimball County	Nebraska;Kimball
+ReportingUnit	Nebraska;Knox County	Nebraska;Knox
+ReportingUnit	Nebraska;Lancaster County	Nebraska;Lancaster
+ReportingUnit	Nebraska;Lincoln County	Nebraska;Lincoln
+ReportingUnit	Nebraska;Logan County	Nebraska;Logan
+ReportingUnit	Nebraska;Loup County	Nebraska;Loup
+ReportingUnit	Nebraska;Madison County	Nebraska;Madison
+ReportingUnit	Nebraska;McPherson County	Nebraska;McPherson
+ReportingUnit	Nebraska;Merrick County	Nebraska;Merrick
+ReportingUnit	Nebraska;Morrill County	Nebraska;Morrill
+ReportingUnit	Nebraska;Nance County	Nebraska;Nance
+ReportingUnit	Nebraska;Nemaha County	Nebraska;Nemaha
+ReportingUnit	Nebraska;Nuckolls County	Nebraska;Nuckolls
+ReportingUnit	Nebraska;Otoe County	Nebraska;Otoe
+ReportingUnit	Nebraska;Pawnee County	Nebraska;Pawnee
+ReportingUnit	Nebraska;Perkins County	Nebraska;Perkins
+ReportingUnit	Nebraska;Phelps County	Nebraska;Phelps
+ReportingUnit	Nebraska;Pierce County	Nebraska;Pierce
+ReportingUnit	Nebraska;Platte County	Nebraska;Platte
+ReportingUnit	Nebraska;Polk County	Nebraska;Polk
+ReportingUnit	Nebraska;Red Willow County	Nebraska;Red Willow
+ReportingUnit	Nebraska;Richardson County	Nebraska;Richardson
+ReportingUnit	Nebraska;Rock County	Nebraska;Rock
+ReportingUnit	Nebraska;Saline County	Nebraska;Saline
+ReportingUnit	Nebraska;Sarpy County	Nebraska;Sarpy
+ReportingUnit	Nebraska;Saunders County	Nebraska;Saunders
+ReportingUnit	Nebraska;Scotts Bluff County	Nebraska;Scotts Bluff
+ReportingUnit	Nebraska;Seward County	Nebraska;Seward
+ReportingUnit	Nebraska;Sheridan County	Nebraska;Sheridan
+ReportingUnit	Nebraska;Sherman County	Nebraska;Sherman
+ReportingUnit	Nebraska;Sioux County	Nebraska;Sioux
+ReportingUnit	Nebraska;Stanton County	Nebraska;Stanton
+ReportingUnit	Nebraska;Thayer County	Nebraska;Thayer
+ReportingUnit	Nebraska;Thomas County	Nebraska;Thomas
+ReportingUnit	Nebraska;Thurston County	Nebraska;Thurston
+ReportingUnit	Nebraska;Valley County	Nebraska;Valley
+ReportingUnit	Nebraska;Washington County	Nebraska;Washington
+ReportingUnit	Nebraska;Wayne County	Nebraska;Wayne
+ReportingUnit	Nebraska;Webster County	Nebraska;Webster
+ReportingUnit	Nebraska;Wheeler County	Nebraska;Wheeler
+ReportingUnit	Nebraska;York County	Nebraska;York

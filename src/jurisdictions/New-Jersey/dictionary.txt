@@ -162,7 +162,7 @@ ReportingUnit	New Jersey;Union County	fips34039
 ReportingUnit	New Jersey;Warren County	WARREN
 ReportingUnit	New Jersey;Warren County	fips34041
 CandidateContest	US House NJ District 2	NJ;US Representative;District 2
-CandidateContest	NJ US Senator	NJ;US Senator;statewide
+CandidateContest	US Senate NJ	NJ;US Senator;statewide
 CandidateContest	NJ State Assembly Member District 32	NJ;State Assembly Member;District 32
 CandidateContest	NJ State Assembly Member District 36	NJ;State Assembly Member;District 36
 CandidateContest	NJ State House District 38	NJ;State Assembly Member;District 38 (2)
@@ -301,3 +301,24 @@ CountItemType	election-day	machine
 CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
+ReportingUnit	New Jersey;Atlantic County	New Jersey;Atlantic
+ReportingUnit	New Jersey;Bergen County	New Jersey;Bergen
+ReportingUnit	New Jersey;Burlington County	New Jersey;Burlington
+ReportingUnit	New Jersey;Camden County	New Jersey;Camden
+ReportingUnit	New Jersey;Cape May County	New Jersey;Cape May
+ReportingUnit	New Jersey;Cumberland County	New Jersey;Cumberland
+ReportingUnit	New Jersey;Essex County	New Jersey;Essex
+ReportingUnit	New Jersey;Gloucester County	New Jersey;Gloucester
+ReportingUnit	New Jersey;Hudson County	New Jersey;Hudson
+ReportingUnit	New Jersey;Hunterdon County	New Jersey;Hunterdon
+ReportingUnit	New Jersey;Mercer County	New Jersey;Mercer
+ReportingUnit	New Jersey;Middlesex County	New Jersey;Middlesex
+ReportingUnit	New Jersey;Monmouth County	New Jersey;Monmouth
+ReportingUnit	New Jersey;Morris County	New Jersey;Morris
+ReportingUnit	New Jersey;Ocean County	New Jersey;Ocean
+ReportingUnit	New Jersey;Passaic County	New Jersey;Passaic
+ReportingUnit	New Jersey;Salem County	New Jersey;Salem
+ReportingUnit	New Jersey;Somerset County	New Jersey;Somerset
+ReportingUnit	New Jersey;Sussex County	New Jersey;Sussex
+ReportingUnit	New Jersey;Union County	New Jersey;Union
+ReportingUnit	New Jersey;Warren County	New Jersey;Warren

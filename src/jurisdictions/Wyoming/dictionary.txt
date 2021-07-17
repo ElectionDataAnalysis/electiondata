@@ -413,8 +413,8 @@ CandidateContest	WY Senate District 11	WY;State Senator;District 11
 CandidateContest	WY Senate District 9	WY;State Senator;District 9
 CandidateContest	WY State Treasurer	WY;State Treasurer;statewide
 CandidateContest	WY Superintendent of Public Instruction	WY;Superintendent of Public Instruction;statewide
-CandidateContest	US House WY District 0	WY;US Representative;District 0
-CandidateContest	WY US Senator	WY;US Senator;statewide
+CandidateContest	US House WY District 1	WY;US Representative;District 0
+CandidateContest	US Senate WY	WY;US Senator;statewide
 CandidateContest	WY House District 26	WY;State Representative;District 26
 CandidateContest	WY House District 27	WY;State Representative;District 27
 CandidateContest	WY House District 28	WY;State Representative;District 28
@@ -506,3 +506,106 @@ CountItemType	election-day	machine
 CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
+ReportingUnit	Wyoming;Albany County	Wyoming;Albany
+ReportingUnit	Wyoming;Big Horn County	Wyoming;Big Horn
+ReportingUnit	Wyoming;Campbell County	Wyoming;Campbell
+ReportingUnit	Wyoming;Carbon County	Wyoming;Carbon
+ReportingUnit	Wyoming;Converse County	Wyoming;Converse
+ReportingUnit	Wyoming;Crook County	Wyoming;Crook
+ReportingUnit	Wyoming;Fremont County	Wyoming;Fremont
+ReportingUnit	Wyoming;Goshen County	Wyoming;Goshen
+ReportingUnit	Wyoming;Hot Springs County	Wyoming;Hot Springs
+ReportingUnit	Wyoming;Johnson County	Wyoming;Johnson
+ReportingUnit	Wyoming;Laramie County	Wyoming;Laramie
+ReportingUnit	Wyoming;Lincoln County	Wyoming;Lincoln
+ReportingUnit	Wyoming;Natrona County	Wyoming;Natrona
+ReportingUnit	Wyoming;Niobrara County	Wyoming;Niobrara
+ReportingUnit	Wyoming;Park County	Wyoming;Park
+ReportingUnit	Wyoming;Platte County	Wyoming;Platte
+ReportingUnit	Wyoming;Sheridan County	Wyoming;Sheridan
+ReportingUnit	Wyoming;Sublette County	Wyoming;Sublette
+ReportingUnit	Wyoming;Sweetwater County	Wyoming;Sweetwater
+ReportingUnit	Wyoming;Teton County	Wyoming;Teton
+ReportingUnit	Wyoming;Uinta County	Wyoming;Uinta
+ReportingUnit	Wyoming;Washakie County	Wyoming;Washakie
+ReportingUnit	Wyoming;Weston County	Wyoming;Weston
+Candidate	William (Bill) Pownall	William (Bill) Pownall
+Candidate	Wendy Davis Schuler	Wendy Davis Schuler
+Candidate	Tyler Lindholm	Tyler Lindholm
+Candidate	Traci Ciepiel	Traci Ciepiel
+Candidate	Tom James	Tom James
+Candidate	Timothy P. Hallinan	Timothy P. Hallinan
+Candidate	Thomas D. Crank	Thomas D. Crank
+Candidate	Ted L. Barney	Ted L. Barney
+Candidate	Stephan A. Pappas	Stephan A. Pappas
+Candidate	Sean Castaneda	Sean Castaneda
+Candidate	Scott Clem	Scott Clem
+Candidate	Ryan Lindsey	Ryan Lindsey
+Candidate	Roxie Jackson Hensley	Roxie Jackson Hensley
+Candidate	Richard L. Tass	Richard L. Tass
+Candidate	Rex 'T-Rex' Rammell	Rex 'T-Rex' Rammell
+Candidate	R J Kost	R J Kost
+Candidate	Paul Fees	Paul Fees
+Candidate	Paul E. Johnson	Paul E. Johnson
+Candidate	Ogden Driskill	Ogden Driskill
+Candidate	Mitch Guthrie	Mitch Guthrie
+Candidate	Mike Specht	Mike Specht
+Candidate	Mike Gierau	Mike Gierau
+Candidate	Mary A. Throne	Mary A. Throne
+Candidate	Marti Halverson	Marti Halverson
+Candidate	Mark Gordon	Mark Gordon
+Candidate	Mark Calhoun	Mark Calhoun
+Candidate	Marci Shaver	Marci Shaver
+Candidate	Lynn Hutchings	Lynn Hutchings
+Candidate	Lorraine Saulino-Klein	Lorraine Saulino-Klein
+Candidate	Lee Ann Stephenson	Lee Ann Stephenson
+Candidate	Laurie L Longtine	Laurie L Longtine
+Candidate	Larry Hicks	Larry Hicks
+Candidate	Kristi Racines	Kristi Racines
+Candidate	Kit Carson III	Kit Carson III
+Candidate	Kate Mead	Kate Mead
+Candidate	Juliet Daniels	Juliet Daniels
+Candidate	Joseph Porambo	Joseph Porambo
+Candidate	John M. Hastert	John M. Hastert
+Candidate	John L. Freeman	John L. Freeman
+Candidate	John Barrasso	John Barrasso
+Candidate	Joan Brinkley	Joan Brinkley
+Candidate	JoAnn Dayton	JoAnn Dayton
+Candidate	Jim Roscoe	Jim Roscoe
+Candidate	Jim Allen	Jim Allen
+Candidate	Jillian Balow	Jillian Balow
+Candidate	Jenefer Pasqua	Jenefer Pasqua
+Candidate	Jeff Wasserburger	Jeff Wasserburger
+Candidate	Jeff Dockter	Jeff Dockter
+Candidate	James W. Byrd	James W. Byrd
+Candidate	Howie Samelson	Howie Samelson
+Candidate	Hollis Hackman	Hollis Hackman
+Candidate	Greg Hunter	Greg Hunter
+Candidate	Gary Trauner	Gary Trauner
+Candidate	Garry Piiparinen	Garry Piiparinen
+Candidate	Edward Buchanan	Edward Buchanan
+Candidate	Drew Perkins	Drew Perkins
+Candidate	Debbie Bovee	Debbie Bovee
+Candidate	David R Miller	David R Miller
+Candidate	David Northrup	David Northrup
+Candidate	Dave Hardesty	Dave Hardesty
+Candidate	Daniel Clyde Cummings	Daniel Clyde Cummings
+Candidate	Dan R. Kirkbride	Dan R. Kirkbride
+Candidate	Curt Meier	Curt Meier
+Candidate	Clarence L. Styvar	Clarence L. Styvar
+Candidate	Chris Schock	Chris Schock
+Candidate	Chris Rothfuss	Chris Rothfuss
+Candidate	Chris Lowry	Chris Lowry
+Candidate	Cheri E. Steinmetz	Cheri E. Steinmetz
+Candidate	Charles F. Pelkey	Charles F. Pelkey
+Candidate	Chad M Trebby	Chad M Trebby
+Candidate	Calob Taylor	Calob Taylor
+Candidate	Cale Case	Cale Case
+Candidate	Bunky Loucks	Bunky Loucks
+Candidate	Bo Biteman	Bo Biteman
+Candidate	Bill Landen	Bill Landen
+Candidate	Bill Haley	Bill Haley
+Candidate	Barbara Allen	Barbara Allen
+Candidate	Andrea Clifford	Andrea Clifford
+Candidate	Alex Muromcew	Alex Muromcew
+Candidate		

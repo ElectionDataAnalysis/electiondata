@@ -3273,9 +3273,9 @@ ReportingUnit	Illinois;Winnebago County	WINNEBAGO
 ReportingUnit	Illinois;Winnebago County	fips17201
 ReportingUnit	Illinois;Woodford County	WOODFORD
 ReportingUnit	Illinois;Woodford County	fips17203
-CandidateContest	IL Attorney General	IL;Attorney General
+CandidateContest	IL Attorney General	IL;Attorney General;statewide
 CandidateContest	IL Comptroller	IL;Comptroller;statewide
-CandidateContest	IL Governor and Lieutenant Governor	IL;Governor and Lieutenant Governor;statewide
+CandidateContest	IL Governor	IL;Governor and Lieutenant Governor;statewide
 CandidateContest	IL Secretary of State	IL;Secretary of State;statewide
 CandidateContest	IL House District 94	IL;State Representative;District 94
 CandidateContest	IL Senate District 47	IL;State Senator;District 47
@@ -3511,3 +3511,105 @@ CountItemType	election-day	machine
 CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
+ReportingUnit	Illinois;Adams County	Illinois;Adams
+ReportingUnit	Illinois;Alexander County	Illinois;Alexander
+ReportingUnit	Illinois;Bond County	Illinois;Bond
+ReportingUnit	Illinois;Boone County	Illinois;Boone
+ReportingUnit	Illinois;Brown County	Illinois;Brown
+ReportingUnit	Illinois;Bureau County	Illinois;Bureau
+ReportingUnit	Illinois;Calhoun County	Illinois;Calhoun
+ReportingUnit	Illinois;Carroll County	Illinois;Carroll
+ReportingUnit	Illinois;Cass County	Illinois;Cass
+ReportingUnit	Illinois;Champaign County	Illinois;Champaign
+ReportingUnit	Illinois;Christian County	Illinois;Christian
+ReportingUnit	Illinois;Clark County	Illinois;Clark
+ReportingUnit	Illinois;Clay County	Illinois;Clay
+ReportingUnit	Illinois;Clinton County	Illinois;Clinton
+ReportingUnit	Illinois;Coles County	Illinois;Coles
+ReportingUnit	Illinois;Cook County	Illinois;Cook
+ReportingUnit	Illinois;Crawford County	Illinois;Crawford
+ReportingUnit	Illinois;Cumberland County	Illinois;Cumberland
+ReportingUnit	Illinois;Dekalb County	Illinois;Dekalb
+ReportingUnit	Illinois;Dewitt County	Illinois;Dewitt
+ReportingUnit	Illinois;Douglas County	Illinois;Douglas
+ReportingUnit	Illinois;Dupage County	Illinois;Dupage
+ReportingUnit	Illinois;Edgar County	Illinois;Edgar
+ReportingUnit	Illinois;Edwards County	Illinois;Edwards
+ReportingUnit	Illinois;Effingham County	Illinois;Effingham
+ReportingUnit	Illinois;Fayette County	Illinois;Fayette
+ReportingUnit	Illinois;Ford County	Illinois;Ford
+ReportingUnit	Illinois;Franklin County	Illinois;Franklin
+ReportingUnit	Illinois;Fulton County	Illinois;Fulton
+ReportingUnit	Illinois;Gallatin County	Illinois;Gallatin
+ReportingUnit	Illinois;Greene County	Illinois;Greene
+ReportingUnit	Illinois;Grundy County	Illinois;Grundy
+ReportingUnit	Illinois;Hamilton County	Illinois;Hamilton
+ReportingUnit	Illinois;Hancock County	Illinois;Hancock
+ReportingUnit	Illinois;Hardin County	Illinois;Hardin
+ReportingUnit	Illinois;Henderson County	Illinois;Henderson
+ReportingUnit	Illinois;Henry County	Illinois;Henry
+ReportingUnit	Illinois;Iroquois County	Illinois;Iroquois
+ReportingUnit	Illinois;Jackson County	Illinois;Jackson
+ReportingUnit	Illinois;Jasper County	Illinois;Jasper
+ReportingUnit	Illinois;Jefferson County	Illinois;Jefferson
+ReportingUnit	Illinois;Jersey County	Illinois;Jersey
+ReportingUnit	Illinois;Jodaviess County	Illinois;Jodaviess
+ReportingUnit	Illinois;Johnson County	Illinois;Johnson
+ReportingUnit	Illinois;Kane County	Illinois;Kane
+ReportingUnit	Illinois;Kankakee County	Illinois;Kankakee
+ReportingUnit	Illinois;Kendall County	Illinois;Kendall
+ReportingUnit	Illinois;Knox County	Illinois;Knox
+ReportingUnit	Illinois;Lake County	Illinois;Lake
+ReportingUnit	Illinois;Lasalle County	Illinois;Lasalle
+ReportingUnit	Illinois;Lawrence County	Illinois;Lawrence
+ReportingUnit	Illinois;Lee County	Illinois;Lee
+ReportingUnit	Illinois;Livingston County	Illinois;Livingston
+ReportingUnit	Illinois;Logan County	Illinois;Logan
+ReportingUnit	Illinois;Macon County	Illinois;Macon
+ReportingUnit	Illinois;Macoupin County	Illinois;Macoupin
+ReportingUnit	Illinois;Madison County	Illinois;Madison
+ReportingUnit	Illinois;Marion County	Illinois;Marion
+ReportingUnit	Illinois;Marshall County	Illinois;Marshall
+ReportingUnit	Illinois;Mason County	Illinois;Mason
+ReportingUnit	Illinois;Massac County	Illinois;Massac
+ReportingUnit	Illinois;Mcdonough County	Illinois;Mcdonough
+ReportingUnit	Illinois;Mchenry County	Illinois;Mchenry
+ReportingUnit	Illinois;Mclean County	Illinois;Mclean
+ReportingUnit	Illinois;Menard County	Illinois;Menard
+ReportingUnit	Illinois;Mercer County	Illinois;Mercer
+ReportingUnit	Illinois;Monroe County	Illinois;Monroe
+ReportingUnit	Illinois;Montgomery County	Illinois;Montgomery
+ReportingUnit	Illinois;Morgan County	Illinois;Morgan
+ReportingUnit	Illinois;Moultrie County	Illinois;Moultrie
+ReportingUnit	Illinois;Ogle County	Illinois;Ogle
+ReportingUnit	Illinois;Peoria County	Illinois;Peoria
+ReportingUnit	Illinois;Perry County	Illinois;Perry
+ReportingUnit	Illinois;Piatt County	Illinois;Piatt
+ReportingUnit	Illinois;Pike County	Illinois;Pike
+ReportingUnit	Illinois;Pope County	Illinois;Pope
+ReportingUnit	Illinois;Pulaski County	Illinois;Pulaski
+ReportingUnit	Illinois;Putnam County	Illinois;Putnam
+ReportingUnit	Illinois;Randolph County	Illinois;Randolph
+ReportingUnit	Illinois;Richland County	Illinois;Richland
+ReportingUnit	Illinois;Rock Island County	Illinois;Rock Island
+ReportingUnit	Illinois;Saline County	Illinois;Saline
+ReportingUnit	Illinois;Sangamon County	Illinois;Sangamon
+ReportingUnit	Illinois;Schuyler County	Illinois;Schuyler
+ReportingUnit	Illinois;Scott County	Illinois;Scott
+ReportingUnit	Illinois;Shelby County	Illinois;Shelby
+ReportingUnit	Illinois;St. Clair County	Illinois;St. Clair
+ReportingUnit	Illinois;Stark County	Illinois;Stark
+ReportingUnit	Illinois;Stephenson County	Illinois;Stephenson
+ReportingUnit	Illinois;Tazewell County	Illinois;Tazewell
+ReportingUnit	Illinois;Union County	Illinois;Union
+ReportingUnit	Illinois;Vermilion County	Illinois;Vermilion
+ReportingUnit	Illinois;Wabash County	Illinois;Wabash
+ReportingUnit	Illinois;Warren County	Illinois;Warren
+ReportingUnit	Illinois;Washington County	Illinois;Washington
+ReportingUnit	Illinois;Wayne County	Illinois;Wayne
+ReportingUnit	Illinois;White County	Illinois;White
+ReportingUnit	Illinois;Whiteside County	Illinois;Whiteside
+ReportingUnit	Illinois;Will County	Illinois;Will
+ReportingUnit	Illinois;Williamson County	Illinois;Williamson
+ReportingUnit	Illinois;Winnebago County	Illinois;Winnebago
+ReportingUnit	Illinois;Woodford County	Illinois;Woodford

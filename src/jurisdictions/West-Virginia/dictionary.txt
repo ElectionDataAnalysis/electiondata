@@ -1,6 +1,6 @@
 cdf_element	cdf_internal_name	raw_identifier_value
 Candidate	Adam Burkhammer	Adam Burkhammer
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alex X Mooney	Alex X Mooney
 Candidate	Amanda Estep-Burton	Amanda Estep-Burton
 Candidate	Amy Nichole Grady	Amy Nichole Grady
@@ -9,7 +9,7 @@ Candidate	Andrew Alvarez	Andrew Alvarez
 Candidate	Andrew Robinson	Andrew Robinson
 Candidate	Anna Lewis	Anna Lewis
 Candidate	Austin Haynes	Austin Haynes
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara Evans Fleischauer	Barbara Evans Fleischauer
 Candidate	Barry L. Bruce	Barry L. Bruce
 Candidate	Ben Queen	Ben Queen
@@ -74,7 +74,7 @@ Candidate	Denise Campbell	Denise Campbell
 Candidate	Derrick Evans	Derrick Evans
 Candidate	Dianna Graves	Dianna Graves
 Candidate	Don Forsht	Don Forsht
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald Kinnie	Donald Kinnie
 Candidate	Donna J Boley	Donna J Boley
@@ -94,13 +94,13 @@ Candidate	Evan Worrell	Evan Worrell
 Candidate	Gary G. Howell	Gary G. Howell
 Candidate	Geoff Foster	Geoff Foster
 Candidate	George A Miller	George A Miller
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Glenn D. Jeffries	Glenn D. Jeffries
 Candidate	Gordon K. Greer	Gordon K. Greer
 Candidate	Guy Ward	Guy Ward
 Candidate	Heather Tully	Heather Tully
 Candidate	Hilary Turner	Hilary Turner
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Howie Hawkins	Howie Hawkins
 Candidate	J. Steve Hamilton	J. Steve Hamilton
 Candidate	Jack David Woodrum	Jack David Woodrum
@@ -124,9 +124,9 @@ Candidate	John 'Jb' Mccuskey	John 'Jb' Mccuskey
 Candidate	John D. Perdue	John D. Perdue
 Candidate	John Doyle	John Doyle
 Candidate	John Hardy	John Hardy
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John Mandt	John Mandt
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John Paul Hott Ii	John Paul Hott Ii
 Candidate	John R. Kelly	John R. Kelly
 Candidate	John Williams	John Williams
@@ -177,14 +177,14 @@ Candidate	Mike Caputo	Mike Caputo
 Candidate	Mike Manypenny	Mike Manypenny
 Candidate	Mike Maroney	Mike Maroney
 Candidate	Mike Pushkin	Mike Pushkin
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Moore Capito	Moore Capito
 Candidate	N. Riley Keaton	N. Riley Keaton
 Candidate	Natalie Cline	Natalie Cline
 Candidate	Natalie Tennant	Natalie Tennant
 Candidate	Nathan D. Brown	Nathan D. Brown
 Candidate	Nikki Ardman	Nikki Ardman
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Pat Mcgeehan	Pat Mcgeehan
 Candidate	Patricia 'Patch' Adams	Patricia 'Patch' Adams
 Candidate	Patricia Rucker	Patricia Rucker
@@ -198,7 +198,7 @@ Candidate	Phil Mallow	Phil Mallow
 Candidate	Phillip W Wiley	Phillip W Wiley
 Candidate	Phillip W. Diserio	Phillip W. Diserio
 Candidate	Phyllis White	Phyllis White
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Ralph Rodighiero	Ralph Rodighiero
 Candidate	Randy E Smith	Randy E Smith
 Candidate	Randy Swartzmiller	Randy Swartzmiller
@@ -674,7 +674,7 @@ CandidateContest	WV Justice of The Supreme Court of Appeals - Division 2	WV;Just
 CandidateContest	WV State House District 47	WV;State House Delegate;District 47 (1)
 CandidateContest	WV Senate District 14	WV;State Senator;District 14
 CandidateContest	US House WV District 1	WV;US Representative;District 1
-CandidateContest	WV US Senator	WV;US Senator;statewide
+CandidateContest	US Senate WV	WV;US Senator;statewide
 CandidateContest	WV State House District 59	WV;State House Delegate;District 59 (1)
 CandidateContest	WV State House District 60	WV;State House Delegate;District 60 (1)
 CandidateContest	WV State House District 61	WV;State House Delegate;District 61 (1)
@@ -778,7 +778,6 @@ Candidate	Brenden D. Long	Brenden D. Long
 Candidate	Brian Prim	Brian Prim
 Candidate	Brianne Solomon	Brianne Solomon
 Candidate	Buddy A Guthrie	Buddy A Guthrie
-Candidate	Carl 'Robbie' Martin	"Carl ""Robbie"" Martin"
 Candidate	Carlos Walker	Carlos Walker
 Candidate	Carol B. Bailey	Carol B. Bailey
 Candidate	Casey Wade Horton	Casey Wade Horton
@@ -791,14 +790,13 @@ Candidate	Christopher Wayne Toney	Christopher Wayne Toney
 Candidate	Cody H. Thompson	Cody H. Thompson
 Candidate	Cynthia Toodle	Cynthia Toodle
 Candidate	D.C. Offutt, Jr.	D.C. Offutt, Jr.
-Candidate	D.r. 'Buck' Jennings	"D.r. ""Buck"" Jennings"
+Candidate	D.r. 'Buck' Jennings	D.r. 'Buck' Jennings
 Candidate	Dana J. Ferrell	Dana J. Ferrell
 Candidate	Dana L. Lynch	Dana L. Lynch
-Candidate	Daniel P. 'Danny' Lutz Jr.	"Daniel P. ""Danny"" Lutz Jr."
+Candidate	Daniel P. 'Danny' Lutz Jr.	Daniel P. 'Danny' Lutz Jr.
 Candidate	Daryl E. Cowles	Daryl E. Cowles
 Candidate	Dave Sypolt	Dave Sypolt
-Candidate	David 'Elliott' Pritt	"David ""Elliott"" Pritt"
-Candidate	David 'Woody' Holmes	"David ""Woody"" Holmes"
+Candidate	David 'Elliott' Pritt	David 'Elliott' Pritt
 Candidate	David A Walker	David A Walker
 Candidate	David B McKinley	David B McKinley
 Candidate	David Bland	David Bland
@@ -823,10 +821,10 @@ Candidate	Gary Knotts	Gary Knotts
 Candidate	Gary McCallister	Gary McCallister
 Candidate	George Allen Abel	George Allen Abel
 Candidate	George Boogie Ambler	George Boogie Ambler
-Candidate	Harry C. 'Bo' Bruner, Jr.	"Harry C. ""Bo"" Bruner, Jr."
+Candidate	Harry C. 'Bo' Bruner, Jr.	Harry C. 'Bo' Bruner, Jr.
 Candidate	Harry Deitzler	Harry Deitzler
 Candidate	Harry V Bertram	Harry V Bertram
-Candidate	Hiram 'Buck' Lewis, IV	"Hiram ""Buck"" Lewis, IV"
+Candidate	Hiram 'Buck' Lewis, IV	Hiram 'Buck' Lewis, IV
 Candidate	Isaac Sponaugle	Isaac Sponaugle
 Candidate	J. Morgan Leach	J. Morgan Leach
 Candidate	J. Scott Beaver	J. Scott Beaver
@@ -852,14 +850,14 @@ Candidate	John Unger	John Unger
 Candidate	Jon Dodds	Jon Dodds
 Candidate	Jon Hof	Jon Hof
 Candidate	Jordan Hill	Jordan Hill
-Candidate	Joseph 'Joe' Jeffries	"Joseph ""Joe"" Jeffries"
+Candidate	Joseph 'Joe' Jeffries	Joseph 'Joe' Jeffries
 Candidate	Joseph Manchin, III	Joseph Manchin, III
 Candidate	Joyce W. Holland	Joyce W. Holland
 Candidate	Karen Denise White	Karen Denise White
 Candidate	Karen Nance	Karen Nance
 Candidate	Ken Hicks	Ken Hicks
 Candidate	Kendra Fershee	Kendra Fershee
-Candidate	Kent 'Brooks' McCumbee	"Kent ""Brooks"" McCumbee"
+Candidate	Kent 'Brooks' McCumbee	Kent 'Brooks' McCumbee
 Candidate	Lacy Watson	Lacy Watson
 Candidate	Larry Brooke Lunsford	Larry Brooke Lunsford
 Candidate	Larry D. Kump	Larry D. Kump
@@ -872,13 +870,13 @@ Candidate	Luke Lively	Luke Lively
 Candidate	Mark Hunt	Mark Hunt
 Candidate	Mark R. Maynard	Mark R. Maynard
 Candidate	Mark Ross	Mark Ross
-Candidate	Martin 'Rick' Atkinson III	"Martin ""Rick"" Atkinson III"
-Candidate	Marty 'Redshoes' Sheehan	"Marty ""Redshoes"" Sheehan"
+Candidate	Martin 'Rick' Atkinson III	Martin 'Rick' Atkinson III
+Candidate	Marty 'Redshoes' Sheehan	Marty 'Redshoes' Sheehan
 Candidate	Matt Spurlock	Matt Spurlock
 Candidate	Matthew Jarrett	Matthew Jarrett
 Candidate	Matthew Kerner	Matthew Kerner
 Candidate	Melissa Riggs Huffman	Melissa Riggs Huffman
-Candidate	Melvin 'Mel' Kessler	"Melvin ""Mel"" Kessler"
+Candidate	Melvin 'Mel' Kessler	Melvin 'Mel' Kessler
 Candidate	Michael Craig Folk	Michael Craig Folk
 Candidate	Mike Azinger	Mike Azinger
 Candidate	Mike House	Mike House
@@ -899,10 +897,9 @@ Candidate	Richard L. Patrick	Richard L. Patrick
 Candidate	Richard Lindsay	Richard Lindsay
 Candidate	Richard Ojeda II	Richard Ojeda II
 Candidate	Ricky Moye	Ricky Moye
-Candidate	Robert 'Rob' Garcia	"Robert ""Rob"" Garcia"
 Candidate	Robert H Carlton	Robert H Carlton
 Candidate	Robert J Frank	Robert J Frank
-Candidate	Robert L. 'Bob' Stultz	"Robert L. ""Bob"" Stultz"
+Candidate	Robert L. 'Bob' Stultz	Robert L. 'Bob' Stultz
 Candidate	Robert Thompson	Robert Thompson
 Candidate	Rodney A Miller	Rodney A Miller
 Candidate	Rodney A. Pyles	Rodney A. Pyles
@@ -925,7 +922,6 @@ Candidate	T. Chris Combs	T. Chris Combs
 Candidate	Talley Sergent	Talley Sergent
 Candidate	Terrell Ellis	Terrell Ellis
 Candidate	Terry Waxman	Terry Waxman
-Candidate	Theresa 'Tess' Jackson	"Theresa ""Tess"" Jackson"
 Candidate	Tim Armstead	Tim Armstead
 Candidate	Tim Miley	Tim Miley
 Candidate	Timothy Ryan	Timothy Ryan
@@ -937,8 +933,7 @@ Candidate	Tom Tull	Tom Tull
 Candidate	Trevor Barnhart	Trevor Barnhart
 Candidate	Vera Miller	Vera Miller
 Candidate	Waymond Cork II	Waymond Cork II
-Candidate	William 'Ty' Nestor	"William ""Ty"" Nestor"
-Candidate	William R. 'Bill' Wooton	"William R. ""Bill"" Wooton"
+Candidate	William R. 'Bill' Wooton	William R. 'Bill' Wooton
 Candidate	William Schwartz	William Schwartz
 Candidate	William Stewart Thompson	William Stewart Thompson
 Party	Democratic Party	democrat
@@ -962,3 +957,61 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	West Virginia;Barbour County	West Virginia;Barbour
+ReportingUnit	West Virginia;Berkeley County	West Virginia;Berkeley
+ReportingUnit	West Virginia;Boone County	West Virginia;Boone
+ReportingUnit	West Virginia;Braxton County	West Virginia;Braxton
+ReportingUnit	West Virginia;Brooke County	West Virginia;Brooke
+ReportingUnit	West Virginia;Cabell County	West Virginia;Cabell
+ReportingUnit	West Virginia;Calhoun County	West Virginia;Calhoun
+ReportingUnit	West Virginia;Clay County	West Virginia;Clay
+ReportingUnit	West Virginia;Doddridge County	West Virginia;Doddridge
+ReportingUnit	West Virginia;Fayette County	West Virginia;Fayette
+ReportingUnit	West Virginia;Gilmer County	West Virginia;Gilmer
+ReportingUnit	West Virginia;Grant County	West Virginia;Grant
+ReportingUnit	West Virginia;Greenbrier County	West Virginia;Greenbrier
+ReportingUnit	West Virginia;Hampshire County	West Virginia;Hampshire
+ReportingUnit	West Virginia;Hancock County	West Virginia;Hancock
+ReportingUnit	West Virginia;Hardy County	West Virginia;Hardy
+ReportingUnit	West Virginia;Harrison County	West Virginia;Harrison
+ReportingUnit	West Virginia;Jackson County	West Virginia;Jackson
+ReportingUnit	West Virginia;Jefferson County	West Virginia;Jefferson
+ReportingUnit	West Virginia;Kanawha County	West Virginia;Kanawha
+ReportingUnit	West Virginia;Lewis County	West Virginia;Lewis
+ReportingUnit	West Virginia;Lincoln County	West Virginia;Lincoln
+ReportingUnit	West Virginia;Logan County	West Virginia;Logan
+ReportingUnit	West Virginia;Marion County	West Virginia;Marion
+ReportingUnit	West Virginia;Marshall County	West Virginia;Marshall
+ReportingUnit	West Virginia;Mason County	West Virginia;Mason
+ReportingUnit	West Virginia;McDowell County	West Virginia;McDowell
+ReportingUnit	West Virginia;Mercer County	West Virginia;Mercer
+ReportingUnit	West Virginia;Mineral County	West Virginia;Mineral
+ReportingUnit	West Virginia;Mingo County	West Virginia;Mingo
+ReportingUnit	West Virginia;Monongalia County	West Virginia;Monongalia
+ReportingUnit	West Virginia;Monroe County	West Virginia;Monroe
+ReportingUnit	West Virginia;Morgan County	West Virginia;Morgan
+ReportingUnit	West Virginia;Nicholas County	West Virginia;Nicholas
+ReportingUnit	West Virginia;Ohio County	West Virginia;Ohio
+ReportingUnit	West Virginia;Pendleton County	West Virginia;Pendleton
+ReportingUnit	West Virginia;Pleasants County	West Virginia;Pleasants
+ReportingUnit	West Virginia;Pocahontas County	West Virginia;Pocahontas
+ReportingUnit	West Virginia;Preston County	West Virginia;Preston
+ReportingUnit	West Virginia;Putnam County	West Virginia;Putnam
+ReportingUnit	West Virginia;Raleigh County	West Virginia;Raleigh
+ReportingUnit	West Virginia;Randolph County	West Virginia;Randolph
+ReportingUnit	West Virginia;Ritchie County	West Virginia;Ritchie
+ReportingUnit	West Virginia;Roane County	West Virginia;Roane
+ReportingUnit	West Virginia;Summers County	West Virginia;Summers
+ReportingUnit	West Virginia;Taylor County	West Virginia;Taylor
+ReportingUnit	West Virginia;Tucker County	West Virginia;Tucker
+ReportingUnit	West Virginia;Tyler County	West Virginia;Tyler
+ReportingUnit	West Virginia;Upshur County	West Virginia;Upshur
+ReportingUnit	West Virginia;Wayne County	West Virginia;Wayne
+ReportingUnit	West Virginia;Webster County	West Virginia;Webster
+ReportingUnit	West Virginia;Wetzel County	West Virginia;Wetzel
+ReportingUnit	West Virginia;Wirt County	West Virginia;Wirt
+ReportingUnit	West Virginia;Wood County	West Virginia;Wood
+ReportingUnit	West Virginia;Wyoming County	West Virginia;Wyoming
+Candidate	William Ihlenfeld	William Ihlenfeld
+Candidate	Richard 'Rick' Snuffer II	Richard 'Rick' Snuffer II
+Candidate	Nathan Brown	Nathan Brown

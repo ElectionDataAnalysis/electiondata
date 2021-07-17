@@ -191,7 +191,9 @@ FL Governor	1	FL Governor
 US Senate FL	1	US Senate FL	
 FL Attorney General	1	FL Attorney General	
 FL Chief Financial Officer	1	FL Chief Financial Officer	
-FL Commissioner of Agriculture	1	FL Commissioner of Agriculture	
+FL Commissioner of Agriculture	1	FL Commissioner of Agriculture
+FL State Attorney District 20	1	FL State Attorney District 20
+FL Chief Financial officer	1	FL Chief Financial officer
 FL House District 1 (Democratic Party)	1	FL House District 1	Democratic Party
 FL House District 2 (Democratic Party)	1	FL House District 2	Democratic Party
 FL House District 3 (Democratic Party)	1	FL House District 3	Democratic Party

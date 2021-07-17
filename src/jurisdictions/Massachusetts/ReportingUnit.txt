@@ -574,3 +574,212 @@ Massachusetts;MA Senate District 6	state-senate
 Massachusetts;MA Senate District 7	state-senate
 Massachusetts;MA Senate District 8	state-senate
 Massachusetts;MA Senate District 9	state-senate
+Massachusetts;MA Governor's Council District 1	governors-council
+Massachusetts;MA Governor's Council District 2	governors-council
+Massachusetts;MA Governor's Council District 3	governors-council
+Massachusetts;MA Governor's Council District 4	governors-council
+Massachusetts;MA Governor's Council District 5	governors-council
+Massachusetts;MA Governor's Council District 6	governors-council
+Massachusetts;MA Governor's Council District 7	governors-council
+Massachusetts;MA Governor's Council District 8	governors-council
+Massachusetts;MA House District 1 Barnstable	state-house
+Massachusetts;MA House District 1 Berkshire	state-house
+Massachusetts;MA House District 1 Bristol	state-house
+Massachusetts;MA House District 1 Essex	state-house
+Massachusetts;MA House District 1 Franklin	state-house
+Massachusetts;MA House District 1 Hampden	state-house
+Massachusetts;MA House District 1 Hampshire	state-house
+Massachusetts;MA House District 1 Middlesex	state-house
+Massachusetts;MA House District 1 Norfolk	state-house
+Massachusetts;MA House District 1 Plymouth	state-house
+Massachusetts;MA House District 1 Suffolk	state-house
+Massachusetts;MA House District 1 Worcester	state-house
+Massachusetts;MA House District 10 Bristol	state-house
+Massachusetts;MA House District 10 Essex	state-house
+Massachusetts;MA House District 10 Hampden	state-house
+Massachusetts;MA House District 10 Middlesex	state-house
+Massachusetts;MA House District 10 Norfolk	state-house
+Massachusetts;MA House District 10 Plymouth	state-house
+Massachusetts;MA House District 10 Suffolk	state-house
+Massachusetts;MA House District 10 Worcester	state-house
+Massachusetts;MA House District 11 Bristol	state-house
+Massachusetts;MA House District 11 Essex	state-house
+Massachusetts;MA House District 11 Hampden	state-house
+Massachusetts;MA House District 11 Middlesex	state-house
+Massachusetts;MA House District 11 Norfolk	state-house
+Massachusetts;MA House District 11 Plymouth	state-house
+Massachusetts;MA House District 11 Suffolk	state-house
+Massachusetts;MA House District 11 Worcester	state-house
+Massachusetts;MA House District 12 Bristol	state-house
+Massachusetts;MA House District 12 Essex	state-house
+Massachusetts;MA House District 12 Hampden	state-house
+Massachusetts;MA House District 12 Middlesex	state-house
+Massachusetts;MA House District 12 Norfolk	state-house
+Massachusetts;MA House District 12 Plymouth	state-house
+Massachusetts;MA House District 12 Suffolk	state-house
+Massachusetts;MA House District 12 Worcester	state-house
+Massachusetts;MA House District 13 Bristol	state-house
+Massachusetts;MA House District 13 Essex	state-house
+Massachusetts;MA House District 13 Middlesex	state-house
+Massachusetts;MA House District 13 Norfolk	state-house
+Massachusetts;MA House District 13 Suffolk	state-house
+Massachusetts;MA House District 13 Worcester	state-house
+Massachusetts;MA House District 14 Bristol	state-house
+Massachusetts;MA House District 14 Essex	state-house
+Massachusetts;MA House District 14 Middlesex	state-house
+Massachusetts;MA House District 14 Norfolk	state-house
+Massachusetts;MA House District 14 Suffolk	state-house
+Massachusetts;MA House District 14 Worcester	state-house
+Massachusetts;MA House District 15 Essex	state-house
+Massachusetts;MA House District 15 Middlesex	state-house
+Massachusetts;MA House District 15 Norfolk	state-house
+Massachusetts;MA House District 15 Suffolk	state-house
+Massachusetts;MA House District 15 Worcester	state-house
+Massachusetts;MA House District 16 Essex	state-house
+Massachusetts;MA House District 16 Middlesex	state-house
+Massachusetts;MA House District 16 Suffolk	state-house
+Massachusetts;MA House District 16 Worcester	state-house
+Massachusetts;MA House District 17 Essex	state-house
+Massachusetts;MA House District 17 Middlesex	state-house
+Massachusetts;MA House District 17 Suffolk	state-house
+Massachusetts;MA House District 17 Worcester	state-house
+Massachusetts;MA House District 18 Essex	state-house
+Massachusetts;MA House District 18 Middlesex	state-house
+Massachusetts;MA House District 18 Suffolk	state-house
+Massachusetts;MA House District 18 Worcester	state-house
+Massachusetts;MA House District 19 Middlesex	state-house
+Massachusetts;MA House District 19 Suffolk	state-house
+Massachusetts;MA House District 2 Barnstable	state-house
+Massachusetts;MA House District 2 Berkshire	state-house
+Massachusetts;MA House District 2 Bristol	state-house
+Massachusetts;MA House District 2 Essex	state-house
+Massachusetts;MA House District 2 Franklin	state-house
+Massachusetts;MA House District 2 Hampden	state-house
+Massachusetts;MA House District 2 Hampshire	state-house
+Massachusetts;MA House District 2 Middlesex	state-house
+Massachusetts;MA House District 2 Norfolk	state-house
+Massachusetts;MA House District 2 Plymouth	state-house
+Massachusetts;MA House District 2 Suffolk	state-house
+Massachusetts;MA House District 2 Worcester	state-house
+Massachusetts;MA House District 20 Middlesex	state-house
+Massachusetts;MA House District 21 Middlesex	state-house
+Massachusetts;MA House District 22 Middlesex	state-house
+Massachusetts;MA House District 23 Middlesex	state-house
+Massachusetts;MA House District 24 Middlesex	state-house
+Massachusetts;MA House District 25 Middlesex	state-house
+Massachusetts;MA House District 26 Middlesex	state-house
+Massachusetts;MA House District 27 Middlesex	state-house
+Massachusetts;MA House District 28 Middlesex	state-house
+Massachusetts;MA House District 29 Middlesex	state-house
+Massachusetts;MA House District 3 Barnstable	state-house
+Massachusetts;MA House District 3 Berkshire	state-house
+Massachusetts;MA House District 3 Bristol	state-house
+Massachusetts;MA House District 3 Essex	state-house
+Massachusetts;MA House District 3 Hampden	state-house
+Massachusetts;MA House District 3 Hampshire	state-house
+Massachusetts;MA House District 3 Middlesex	state-house
+Massachusetts;MA House District 3 Norfolk	state-house
+Massachusetts;MA House District 3 Plymouth	state-house
+Massachusetts;MA House District 3 Suffolk	state-house
+Massachusetts;MA House District 3 Worcester	state-house
+Massachusetts;MA House District 30 Middlesex	state-house
+Massachusetts;MA House District 31 Middlesex	state-house
+Massachusetts;MA House District 32 Middlesex	state-house
+Massachusetts;MA House District 33 Middlesex	state-house
+Massachusetts;MA House District 34 Middlesex	state-house
+Massachusetts;MA House District 35 Middlesex	state-house
+Massachusetts;MA House District 36 Middlesex	state-house
+Massachusetts;MA House District 37 Middlesex	state-house
+Massachusetts;MA House District 4 Barnstable	state-house
+Massachusetts;MA House District 4 Berkshire	state-house
+Massachusetts;MA House District 4 Bristol	state-house
+Massachusetts;MA House District 4 Essex	state-house
+Massachusetts;MA House District 4 Hampden	state-house
+Massachusetts;MA House District 4 Middlesex	state-house
+Massachusetts;MA House District 4 Norfolk	state-house
+Massachusetts;MA House District 4 Plymouth	state-house
+Massachusetts;MA House District 4 Suffolk	state-house
+Massachusetts;MA House District 4 Worcester	state-house
+Massachusetts;MA House District 5 Barnstable	state-house
+Massachusetts;MA House District 5 Bristol	state-house
+Massachusetts;MA House District 5 Essex	state-house
+Massachusetts;MA House District 5 Hampden	state-house
+Massachusetts;MA House District 5 Middlesex	state-house
+Massachusetts;MA House District 5 Norfolk	state-house
+Massachusetts;MA House District 5 Plymouth	state-house
+Massachusetts;MA House District 5 Suffolk	state-house
+Massachusetts;MA House District 5 Worcester	state-house
+Massachusetts;MA House District 6 Bristol	state-house
+Massachusetts;MA House District 6 Essex	state-house
+Massachusetts;MA House District 6 Hampden	state-house
+Massachusetts;MA House District 6 Middlesex	state-house
+Massachusetts;MA House District 6 Norfolk	state-house
+Massachusetts;MA House District 6 Plymouth	state-house
+Massachusetts;MA House District 6 Suffolk	state-house
+Massachusetts;MA House District 6 Worcester	state-house
+Massachusetts;MA House District 7 Bristol	state-house
+Massachusetts;MA House District 7 Essex	state-house
+Massachusetts;MA House District 7 Hampden	state-house
+Massachusetts;MA House District 7 Middlesex	state-house
+Massachusetts;MA House District 7 Norfolk	state-house
+Massachusetts;MA House District 7 Plymouth	state-house
+Massachusetts;MA House District 7 Suffolk	state-house
+Massachusetts;MA House District 7 Worcester	state-house
+Massachusetts;MA House District 8 Bristol	state-house
+Massachusetts;MA House District 8 Essex	state-house
+Massachusetts;MA House District 8 Hampden	state-house
+Massachusetts;MA House District 8 Middlesex	state-house
+Massachusetts;MA House District 8 Norfolk	state-house
+Massachusetts;MA House District 8 Plymouth	state-house
+Massachusetts;MA House District 8 Suffolk	state-house
+Massachusetts;MA House District 8 Worcester	state-house
+Massachusetts;MA House District 9 Bristol	state-house
+Massachusetts;MA House District 9 Essex	state-house
+Massachusetts;MA House District 9 Hampden	state-house
+Massachusetts;MA House District 9 Middlesex	state-house
+Massachusetts;MA House District 9 Norfolk	state-house
+Massachusetts;MA House District 9 Plymouth	state-house
+Massachusetts;MA House District 9 Suffolk	state-house
+Massachusetts;MA House District 9 Worcester	state-house
+Massachusetts;MA House District Barnstable, Dukes a Nantucket	state-house
+Massachusetts;MA Senate District 1 Bristol a Plymouth	state-senate
+Massachusetts;MA Senate District 1 Essex	state-senate
+Massachusetts;MA Senate District 1 Essex a Middlesex	state-senate
+Massachusetts;MA Senate District 1 Hampden a Hampshire	state-senate
+Massachusetts;MA Senate District 1 Middlesex	state-senate
+Massachusetts;MA Senate District 1 Middlesex a Norfolk	state-senate
+Massachusetts;MA Senate District 1 Plymou a Bristol	state-senate
+Massachusetts;MA Senate District 1 Suffolk	state-senate
+Massachusetts;MA Senate District 1 Suffolk a Middlesex	state-senate
+Massachusetts;MA Senate District 1 Worcester	state-senate
+Massachusetts;MA Senate District 2 Bristol a Plymouth	state-senate
+Massachusetts;MA Senate District 2 Essex	state-senate
+Massachusetts;MA Senate District 2 Essex a Middlesex	state-senate
+Massachusetts;MA Senate District 2 Hampden a Hampshire	state-senate
+Massachusetts;MA Senate District 2 Middlesex	state-senate
+Massachusetts;MA Senate District 2 Middlesex a Norfolk	state-senate
+Massachusetts;MA Senate District 2 Plymou a Bristol	state-senate
+Massachusetts;MA Senate District 2 Suffolk	state-senate
+Massachusetts;MA Senate District 2 Suffolk a Middlesex	state-senate
+Massachusetts;MA Senate District 2 Worcester	state-senate
+Massachusetts;MA Senate District 3 Essex	state-senate
+Massachusetts;MA Senate District 3 Middlesex	state-senate
+Massachusetts;MA Senate District 4 Middlesex	state-senate
+Massachusetts;MA Senate District 5 Middlesex	state-senate
+Massachusetts;MA Senate District Berkshire, Hampshire a Franklin	state-senate
+Massachusetts;MA Senate District Bristol a Norfolk	state-senate
+Massachusetts;MA Senate District Cape a Islands	state-senate
+Massachusetts;MA Senate District Hampden	state-senate
+Massachusetts;MA Senate District Hampshire, Franklin a Worcester	state-senate
+Massachusetts;MA Senate District Middlesex a Suffolk	state-senate
+Massachusetts;MA Senate District Middlesex a Worcester	state-senate
+Massachusetts;MA Senate District Norfolk a Plymouth	state-senate
+Massachusetts;MA Senate District Norfolk a Suffolk	state-senate
+Massachusetts;MA Senate District Norfolk, Bristol a Middlesex	state-senate
+Massachusetts;MA Senate District Norfolk, Bristol a Plymouth	state-senate
+Massachusetts;MA Senate District Plymou a Barnstable	state-senate
+Massachusetts;MA Senate District Plymou a Norfolk	state-senate
+Massachusetts;MA Senate District Worcester a Middlesex	state-senate
+Massachusetts;MA Senate District Worcester a Norfolk	state-senate
+Massachusetts;MA Senate District Worcester, Hampden, Hampshire a Middlesex	state-senate
+

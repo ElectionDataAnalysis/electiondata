@@ -1,4 +1,17 @@
 BallotName
+William 'Bill' Pierce
+Walter 'Walt' Blackman
+Venden 'Vince' Leach
+Timothy 'Tim' Dunn
+Thomas 'T.J.' Shope
+Russell W. 'Rusty' Bowers
+Randall 'Randy' Friese
+Otoniel 'Tony' Navarrete
+Nicolas 'Nick' Pierson
+Geraldine 'Gerae' Peten
+Denise 'Mitzi' Epstein
+Christopher 'Chris' Gilfillan
+Benjamin 'Ben' Carmitchel
 Garcia, Bo 'Heir Archy'
 Kelly, Mark
 Hess, Barry
@@ -314,7 +327,6 @@ Other
 Ralph Nader
 John MCCain
 John McCain
-
 Aaron Lieberman
 Alma Hernandez
 Amish Shah
@@ -332,7 +344,6 @@ Arlando Teller
 Athena Salman
 Becky Nutt
 Ben Toma
-Benjamin ""Ben'' Carmitchel
 Beryl Baker
 Bob Karp
 Bob Thorpe
@@ -343,7 +354,6 @@ Carmen Casillas
 Cesar Chavez
 Charlene Fernandez
 Christine Porter Marsh
-Christopher ""Chris'' Gilfillan
 Daniel Hernandez Jr
 Daria Lohman
 David Alger Srre
@@ -357,7 +367,6 @@ David Livingston
 David Schweikert
 David Stringer
 Debbie Lesko
-Denise ""Mitzi'' Epstein
 Diego Espinoza
 Diego Rodriguez
 Domingo DeGrazia
@@ -376,7 +385,6 @@ Frank Schmuck
 Gail Griffin
 Gary Spears
 Gary Swing
-Geraldine ""Gerae'' Peten
 Gilbert Romero
 Greg Patterson
 Greg Stanton
@@ -451,15 +459,12 @@ Michelle Ugenti-Rita
 Mohammad Arif
 Myron Tsosie
 Nancy Barto
-Nicolas ""Nick'' Pierson
 Noel Campbell
 Nora Ellen
-Otoniel ""Tony'' Navarrete
 Pamela Powers Hannley
 Paul Boyer
 Paul Gosar
 Ralph Atchue
-Randall ""Randy'' Friese
 Randy Fleenor
 Raquel Teran
 Raul Grijalva
@@ -475,7 +480,6 @@ Robert Meza
 Rodney Glassman
 Rosanna Gabaldon
 Ruben Gallego
-Russell W. ""Rusty'' Bowers
 Sally Ann Gonzales
 Sandra Kennedy
 Sara Mae Williams
@@ -492,21 +496,16 @@ Steve Gaynor
 Steve Weichert
 Sylvia Tenney Allen
 Teri Sarmiento
-Thomas ""T.J.'' Shope
 Thomas Tzitzura
-Timothy ""Tim'' Dunn
 Todd Clodfelter
 Tom O'Halleran
 Tony Rivero
 Travis Grantham
 Tyler Pace
 Valerie Harris
-Venden ""Vince'' Leach
 Vicki Alger
 Victoria Steele
 Wade Carlisle
-Walter ""Walt'' Blackman
 Warren Petersen
 Wendy Garcia
 Wendy Rogers
-William ""Bill'' Pierce

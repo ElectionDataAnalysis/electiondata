@@ -1,5 +1,5 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alger, David, Sr.	Alger, David, Sr.
 Candidate	Allen, Sylvia Tenney	Allen, Sylvia Tenney
 Candidate	Alston, Lela	Alston, Lela
@@ -10,17 +10,15 @@ Candidate	Arif, Mohammad 'Mike Obama'	Arif, Mohammad 'Mike Obama'
 Candidate	Art Babbott	Babbott, Art
 Candidate	Backus, Brent	Backus, Brent
 Candidate	Bah, Iman	Bah, Iman
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barnett, Joshua	Barnett, Joshua
 Candidate	Barto, Nancy	Barto, Nancy
 Candidate	Barton, Brenda	Barton, Brenda
-Candidate	Beach - Moschetti, Kimberly 'Kim'	"Beach - Moschetti, Kimberly ""Kim"""
 Candidate	Beach - Moschetti, Kimberly 'Kim'	Beach - Moschetti, Kimberly 'Kim'
 Candidate	Beckett, Christopher	Beckett, Christopher
 Candidate	Bernie Sanders	Bernie Sanders
 Candidate	Biasiucci, Leo	Biasiucci, Leo
 Candidate	Biggs, Andy	Biggs, Andy
-Candidate	Blackman, Walter 'Walt'	"Blackman, Walter ""Walt"""
 Candidate	Blackman, Walter 'Walt'	Blackman, Walter 'Walt'
 Candidate	Blattman, Seth	Blattman, Seth
 Candidate	Bliss, Selina	Bliss, Selina
@@ -28,9 +26,7 @@ Candidate	Boddie, President R.	Boddie, President R.
 Candidate	Bolding, Reginald	Bolding, Reginald
 Candidate	Bolick, Shawnna	Bolick, Shawnna
 Candidate	Borrelli, Sonny	Borrelli, Sonny
-Candidate	Bowers, Kenneth R 'Ken', Jr	"Bowers, Kenneth R ""Ken"", Jr"
 Candidate	Bowers, Kenneth R 'Ken', Jr	Bowers, Kenneth R 'Ken', Jr
-Candidate	Bowers, Russell W. 'Rusty'	"Bowers, Russell W. ""Rusty"""
 Candidate	Bowers, Russell W. 'Rusty'	Bowers, Russell W. 'Rusty'
 Candidate	Bowie, Sean	Bowie, Sean
 Candidate	Boyer, Paul	Boyer, Paul
@@ -42,7 +38,6 @@ Candidate	Busch, Shelby	Busch, Shelby
 Candidate	Butler, Kelli	Butler, Kelli
 Candidate	Cano, Andrés	Cano, AndrÃ©s
 Candidate	Cano, Andrés	Cano, Andrés
-Candidate	Carillo, Gilbert 'Gilbert'	"Carillo, Gilbert ""Gilbert"""
 Candidate	Carillo, Gilbert 'Gilbert'	Carillo, Gilbert 'Gilbert'
 Candidate	Carpenter, Charles	Carpenter, Charles
 Candidate	Carroll, Frank	Carroll, Frank
@@ -67,17 +62,15 @@ Candidate	Decker, William 'Will'	Decker, William 'Will'
 Candidate	Deval Patrick	Deval Patrick
 Candidate	DiCarlo, Van	DiCarlo, Van
 Candidate	DiSanto, Delina	DiSanto, Delina
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Trump, Donald J.
 Candidate	Donnelly, Brandon 'Brandon'	Donnelly, Brandon 'Brandon'
 Candidate	Dorchester, Matthew 'Doc'	Dorchester, Matthew 'Doc'
-Candidate	Dunn, Timothy 'Tim'	"Dunn, Timothy ""Tim"""
 Candidate	Dunn, Timothy 'Tim'	Dunn, Timothy 'Tim'
 Candidate	Dybvig-Pawelko, Kristin	Dybvig-Pawelko, Kristin
 Candidate	Eldridge, Ryan	Eldridge, Ryan
 Candidate	Elizabeth Warren	Elizabeth Warren
 Candidate	Engel, Kirsten	Engel, Kirsten
-Candidate	Epstein, Denise 'Mitzi'	"Epstein, Denise ""Mitzi"""
 Candidate	Epstein, Denise 'Mitzi'	Epstein, Denise 'Mitzi'
 Candidate	Ervin, Douglas	Ervin, Douglas
 Candidate	Espinoza, Diego	Espinoza, Diego
@@ -91,7 +84,6 @@ Candidate	Finerd, Patrick	Finerd, Patrick
 Candidate	Flayer, Jordan	Flayer, Jordan
 Candidate	FokszanskyJ-Conti, Helen	FokszanskyJ-Conti, Helen
 Candidate	French, Felicia	French, Felicia
-Candidate	Friese, Randall 'Randy'	"Friese, Randall ""Randy"""
 Candidate	Friese, Randall 'Randy'	Friese, Randall 'Randy'
 Candidate	Gabaldón, Rosanna	GabaldÃ³n, Rosanna
 Candidate	Gabaldón, Rosanna	Gabaldón, Rosanna
@@ -100,7 +92,7 @@ Candidate	Garcia, Bo 'Heir Archy'	Garcia, Bo &quot;Heir Archy&quot;
 Candidate	Garcia, Bo 'Heir Archy'	Garcia, Bo 'Heir Archy'
 Candidate	Garcia, Wendy	Garcia, Wendy
 Candidate	Gentles, Karl	Gentles, Karl
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Gibson, Christina	Gibson, Christina
 Candidate	Giles, Dave	Giles, Dave
 Candidate	Girard, Sharon	Girard, Sharon
@@ -132,9 +124,8 @@ Candidate	Hernandez, Daniel, Jr.	Hernandez, Daniel, Jr.
 Candidate	Hernandez, Melody	Hernandez, Melody
 Candidate	Hess, Barry	Hess, Barry
 Candidate	Hicks, Michael	Hicks, Michael
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hoffman, Jake	Hoffman, Jake
-Candidate	Honne, Mary 'Kathleen'	"Honne, Mary ""Kathleen"""
 Candidate	Honne, Mary 'Kathleen'	Honne, Mary 'Kathleen'
 Candidate	Huang, Sam	Huang, Sam
 Candidate	Hug, Suzanne	Hug, Suzanne
@@ -143,8 +134,8 @@ Candidate	Ireland, Jon	Ireland, Jon
 Candidate	Jackson, Jana	Jackson, Jana
 Candidate	Jermaine, Jennifer	Jermaine, Jennifer
 Candidate	Jo Jorgensen	Jorgensen, Jo
-Candidate	John Kerry	JOHN KERRY
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John Kerry	John Kerry
+Candidate	John McCain	John Mccain
 Candidate	John, Joel	John, Joel
 Candidate	Jolley, Richard	Jolley, Richard
 Candidate	Jones, Miko	Jones, Miko
@@ -164,12 +155,10 @@ Candidate	Kirkpatrick, Ann	Kirkpatrick, Ann
 Candidate	Kirsch, Kyle	Kirsch, Kyle
 Candidate	Knecht, Kathy	Knecht, Kathy
 Candidate	Kolodin, Alexander	Kolodin, Alexander
-Candidate	Kurdoglu, Ajlan 'A.J.'	"Kurdoglu, Ajlan ""A.J."""
 Candidate	Kurdoglu, Ajlan 'A.J.'	Kurdoglu, Ajlan 'A.J.'
 Candidate	Kurland, Eric	Kurland, Eric
 Candidate	La Riva, Gloria	La Riva, Gloria
 Candidate	Lawrence, Jay	Lawrence, Jay
-Candidate	Leach, Venden 'Vince'	"Leach, Venden ""Vince"""
 Candidate	Leach, Venden 'Vince'	Leach, Venden 'Vince'
 Candidate	Lesko, Debbie	Lesko, Debbie
 Candidate	Lessard, Cristefano	Lessard, Cristefano
@@ -199,35 +188,31 @@ Candidate	Michael Ellinger	Michael Ellinger
 Candidate	Michaels, Ray	Michaels, Ray
 Candidate	Miller, Randy	Miller, Randy
 Candidate	Miranda, Catherine	Miranda, Catherine
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Montenegro, Steve	Montenegro, Steve
 Candidate	Moore, David 'Dave'	Moore, David 'Dave'
 Candidate	Morales, Patrick	Morales, Patrick
 Candidate	Morgan, Joseph	Morgan, Joseph
 Candidate	Moriarty, Forest John	Moriarty, Forest John
-Candidate	Mundell, William 'Bill'	"Mundell, William ""Bill"""
 Candidate	Mundell, William 'Bill'	Mundell, William 'Bill'
 Candidate	Murphy, Wade	Murphy, Wade
 Candidate	Murray, Amanda	Murray, Amanda
 Candidate	Muscato, Michael	Muscato, Michael
 Candidate	Musselwhite, Bob	Musselwhite, Bob
-Candidate	Navarrete, Otoniel 'Tony'	"Navarrete, Otoniel ""Tony"""
 Candidate	Navarrete, Otoniel 'Tony'	Navarrete, Otoniel 'Tony'
 Candidate	Nez-Manuel, Debbie	Nez-Manuel, Debbie
 Candidate	Nguyen, Hop	Nguyen, Hop
 Candidate	Nguyen, Quang	Nguyen, Quang
 Candidate	Nutt, Becky	Nutt, Becky
-Candidate	O'Connor, James 'Jim'	"O'Connor, James ""Jim"""
 Candidate	O'Connor, James 'Jim'	O'Connor, James 'Jim'
 Candidate	O'Halleran, Tom	O'Halleran, Tom
 Candidate	Olsen, Robert 'Bob'	Olsen, Robert 'Bob'
 Candidate	Osborne, Joanne	Osborne, Joanne
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Otondo, Lisa	Otondo, Lisa
 Candidate	Overholser, Don	Overholser, Don
 Candidate	Pace, Tyler	Pace, Tyler
 Candidate	Parker, Jacqueline	Parker, Jacqueline
-Candidate	Parks, James 'Jim'	"Parks, James ""Jim"""
 Candidate	Parks, James 'Jim'	Parks, James 'Jim'
 Candidate	Parra, Luis	Parra, Luis
 Candidate	Patterson, Linda	Patterson, Linda
@@ -240,7 +225,6 @@ Candidate	Perez Gissy, Ana	Perez Gissy, Ana
 Candidate	Perez, Felipe R	Perez, Felipe R
 Candidate	Peshlakai, Jamescita	Peshlakai, Jamescita
 Candidate	Pete Buttigieg	Pete Buttigieg
-Candidate	Peten, Geraldine 'Gerae'	"Peten, Geraldine ""Gerae"""
 Candidate	Peten, Geraldine 'Gerae'	Peten, Geraldine 'Gerae'
 Candidate	Petersen, Warren	Petersen, Warren
 Candidate	Peña M., Tatiana	PeÃ±a M., Tatiana
@@ -254,7 +238,7 @@ Candidate	Quezada, Martín J.	Quezada, MartÃ­n J.
 Candidate	Quezada, Martín J.	Quezada, Martín J.
 Candidate	Quijada, Joe	Quijada, Joe
 Candidate	Quilter, Peter	Quilter, Peter
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Ramos, Javier	Ramos, Javier
 Candidate	Reidhead, Nolan	Reidhead, Nolan
 Candidate	Rimmer, Stephanie	Rimmer, Stephanie
@@ -284,12 +268,9 @@ Candidate	Sensmeier, Steven	Sensmeier, Steven
 Candidate	Shah, Amish	Shah, Amish
 Candidate	Sharer, Suzanne	Sharer, Suzanne
 Candidate	Shedd, Tiffany	Shedd, Tiffany
-Candidate	Shope, Thomas 'T.J.'	"Shope, Thomas ""T.J."""
 Candidate	Shope, Thomas 'T.J.'	Shope, Thomas 'T.J.'
 Candidate	Shreves, Garland	Shreves, Garland
 Candidate	Sierra, Lorenzo	Sierra, Lorenzo
-Candidate	Sifuentes, Seth 'Marcus'	"Sifuentes, Seth """"Marcus"""""
-Candidate	Sifuentes, Seth 'Marcus'	Sifuentes, Seth ''Marcus''
 Candidate	Sifuentes, Seth 'Marcus'	Sifuentes, Seth 'Marcus'
 Candidate	Simmons, Debbie	Simmons, Debbie
 Candidate	Simmons, Jade	Simmons, Jade
@@ -1263,7 +1244,7 @@ CandidateContest	AZ Senate District 7	AZ;State Senator;District 7
 CandidateContest	AZ State Treasurer	AZ;State Treasurer;statewide
 CandidateContest	AZ Superintendant of Public Instruction	AZ;Superintendant of Public Instruction;statewide
 CandidateContest	US House AZ District 1	AZ;US Representative;District 1
-CandidateContest	AZ US Senator	AZ;US Senator;statewide
+CandidateContest	US Senate AZ	AZ;US Senator;statewide
 CandidateContest	AZ House District 14	AZ;State Representative;District 14
 CandidateContest	AZ Senate District 14	AZ;State Senator;District 14
 CandidateContest	US House AZ District 2	AZ;US Representative;District 2
@@ -1347,7 +1328,7 @@ Candidate	Arlando Teller	Arlando Teller
 Candidate	Athena Salman	Athena Salman
 Candidate	Becky Nutt	Becky Nutt
 Candidate	Ben Toma	Ben Toma
-Candidate	"Benjamin """"Ben'' Carmitchel"	"Benjamin """"Ben"""" Carmitchel"
+Candidate	"Benjamin """"Ben'' Carmitchel"	Benjamin 'Ben' Carmitchel
 Candidate	Beryl Baker	Beryl Baker
 Candidate	Bob Karp	Bob Karp
 Candidate	Bob Thorpe	Bob Thorpe
@@ -1358,7 +1339,7 @@ Candidate	Carmen Casillas	Carmen Casillas
 Candidate	Cesar Chavez	Cesar Chavez
 Candidate	Charlene Fernandez	Charlene Fernandez
 Candidate	Christine Porter Marsh	Christine Porter Marsh
-Candidate	"Christopher """"Chris'' Gilfillan"	"Christopher """"Chris"""" Gilfillan"
+Candidate	"Christopher """"Chris'' Gilfillan"	Christopher 'Chris' Gilfillan
 Candidate	Daniel Hernandez Jr	Daniel Hernandez Jr
 Candidate	Daria Lohman	Daria Lohman
 Candidate	David Alger Srre	David Alger Srre
@@ -1372,7 +1353,7 @@ Candidate	David Livingston	David Livingston
 Candidate	David Schweikert	David Schweikert
 Candidate	David Stringer	David Stringer
 Candidate	Debbie Lesko	Debbie Lesko
-Candidate	"Denise """"Mitzi'' Epstein"	"Denise """"Mitzi"""" Epstein"
+Candidate	"Denise """"Mitzi'' Epstein"	Denise 'Mitzi' Epstein
 Candidate	Diego Espinoza	Diego Espinoza
 Candidate	Diego Rodriguez	Diego Rodriguez
 Candidate	Domingo DeGrazia	Domingo DeGrazia
@@ -1391,7 +1372,7 @@ Candidate	Frank Schmuck	Frank Schmuck
 Candidate	Gail Griffin	Gail Griffin
 Candidate	Gary Spears	Gary Spears
 Candidate	Gary Swing	Gary Swing
-Candidate	"Geraldine """"Gerae'' Peten"	"Geraldine """"Gerae"""" Peten"
+Candidate	"Geraldine """"Gerae'' Peten"	Geraldine 'Gerae' Peten
 Candidate	Gilbert Romero	Gilbert Romero
 Candidate	Greg Patterson	Greg Patterson
 Candidate	Greg Stanton	Greg Stanton
@@ -1466,15 +1447,15 @@ Candidate	Michelle Ugenti-Rita	Michelle Ugenti-Rita
 Candidate	Mohammad Arif	Mohammad Arif
 Candidate	Myron Tsosie	Myron Tsosie
 Candidate	Nancy Barto	Nancy Barto
-Candidate	"Nicolas """"Nick'' Pierson"	"Nicolas """"Nick"""" Pierson"
+Candidate	"Nicolas """"Nick'' Pierson"	Nicolas 'Nick' Pierson
 Candidate	Noel Campbell	Noel Campbell
 Candidate	Nora Ellen	Nora Ellen
-Candidate	"Otoniel """"Tony'' Navarrete"	"Otoniel """"Tony"""" Navarrete"
+Candidate	"Otoniel """"Tony'' Navarrete"	Otoniel 'Tony' Navarrete
 Candidate	Pamela Powers Hannley	Pamela Powers Hannley
 Candidate	Paul Boyer	Paul Boyer
 Candidate	Paul Gosar	Paul Gosar
 Candidate	Ralph Atchue	Ralph Atchue
-Candidate	"Randall """"Randy'' Friese"	"Randall """"Randy"""" Friese"
+Candidate	"Randall """"Randy'' Friese"	Randall 'Randy' Friese
 Candidate	Randy Fleenor	Randy Fleenor
 Candidate	Raquel Teran	Raquel Teran
 Candidate	Raul Grijalva	Raul Grijalva
@@ -1490,7 +1471,7 @@ Candidate	Robert Meza	Robert Meza
 Candidate	Rodney Glassman	Rodney Glassman
 Candidate	Rosanna Gabaldon	Rosanna Gabaldon
 Candidate	Ruben Gallego	Ruben Gallego
-Candidate	"Russell W. """"Rusty'' Bowers"	"Russell W. """"Rusty"""" Bowers"
+Candidate	"Russell W. """"Rusty'' Bowers"	Russell W. 'Rusty' Bowers
 Candidate	Sally Ann Gonzales	Sally Ann Gonzales
 Candidate	Sandra Kennedy	Sandra Kennedy
 Candidate	Sara Mae Williams	Sara Mae Williams
@@ -1507,24 +1488,24 @@ Candidate	Steve Gaynor	Steve Gaynor
 Candidate	Steve Weichert	Steve Weichert
 Candidate	Sylvia Tenney Allen	Sylvia Tenney Allen
 Candidate	Teri Sarmiento	Teri Sarmiento
-Candidate	"Thomas """"T.J.'' Shope"	"Thomas """"T.J."""" Shope"
+Candidate	"Thomas """"T.J.'' Shope"	Thomas 'T.J.' Shope
 Candidate	Thomas Tzitzura	Thomas Tzitzura
-Candidate	"Timothy """"Tim'' Dunn"	"Timothy """"Tim"""" Dunn"
+Candidate	"Timothy """"Tim'' Dunn"	Timothy 'Tim' Dunn
 Candidate	Todd Clodfelter	Todd Clodfelter
 Candidate	Tom O'Halleran	Tom O'Halleran
 Candidate	Tony Rivero	Tony Rivero
 Candidate	Travis Grantham	Travis Grantham
 Candidate	Tyler Pace	Tyler Pace
 Candidate	Valerie Harris	Valerie Harris
-Candidate	"Venden """"Vince'' Leach"	"Venden """"Vince"""" Leach"
+Candidate	"Venden """"Vince'' Leach"	Venden 'Vince' Leach
 Candidate	Vicki Alger	Vicki Alger
 Candidate	Victoria Steele	Victoria Steele
 Candidate	Wade Carlisle	Wade Carlisle
-Candidate	"Walter """"Walt'' Blackman"	"Walter """"Walt"""" Blackman"
+Candidate	"Walter """"Walt'' Blackman"	Walter 'Walt' Blackman
 Candidate	Warren Petersen	Warren Petersen
 Candidate	Wendy Garcia	Wendy Garcia
 Candidate	Wendy Rogers	Wendy Rogers
-Candidate	"William """"Bill'' Pierce"	"William """"Bill"""" Pierce"
+Candidate	"William """"Bill'' Pierce"	William 'Bill' Pierce
 Party	Democratic Party	democrat
 Party	Green Party	green
 Party	Republican Party	republican
@@ -1542,3 +1523,18 @@ CountItemType	election-day	machine
 CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
+ReportingUnit	Arizona;Apache County	Arizona;Apache
+ReportingUnit	Arizona;Cochise County	Arizona;Cochise
+ReportingUnit	Arizona;Coconino County	Arizona;Coconino
+ReportingUnit	Arizona;Gila County	Arizona;Gila
+ReportingUnit	Arizona;Graham County	Arizona;Graham
+ReportingUnit	Arizona;Greenlee County	Arizona;Greenlee
+ReportingUnit	Arizona;La Paz County	Arizona;La Paz
+ReportingUnit	Arizona;Maricopa County	Arizona;Maricopa
+ReportingUnit	Arizona;Mohave County	Arizona;Mohave
+ReportingUnit	Arizona;Navajo County	Arizona;Navajo
+ReportingUnit	Arizona;Pima County	Arizona;Pima
+ReportingUnit	Arizona;Pinal County	Arizona;Pinal
+ReportingUnit	Arizona;Santa Cruz County	Arizona;Santa Cruz
+ReportingUnit	Arizona;Yavapai County	Arizona;Yavapai
+ReportingUnit	Arizona;Yuma County	Arizona;Yuma

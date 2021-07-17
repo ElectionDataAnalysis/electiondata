@@ -933,7 +933,7 @@ CandidateContest	NY Senate District 44	NY;State Senator;District 44
 CandidateContest	NY Senate District 46	NY;State Senator;District 46
 CandidateContest	NY Supreme Court Justice District 3	NY;Supreme Court Justice;District 3
 CandidateContest	US House NY District 20	NY;US Representative;District 20
-CandidateContest	NY US Senator	NY;US Senator;statewide
+CandidateContest	US Senate NY	NY;US Senator;statewide
 CandidateContest	NY State Assembly Member District 148	NY;State Assembly Member;District 148
 CandidateContest	NY Senate District 57	NY;State Senator;District 57
 CandidateContest	NY Supreme Court Justice District 8	NY;Supreme Court Justice;District 8
@@ -1550,3 +1550,68 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	New York;Albany County	New York;Albany County
+ReportingUnit	New York;Allegany County	New York;Allegany County
+ReportingUnit	New York;Bronx County	New York;Bronx County
+ReportingUnit	New York;Broome County	New York;Broome County
+ReportingUnit	New York;Cattaraugus County	New York;Cattaraugus County
+ReportingUnit	New York;Cayuga County	New York;Cayuga County
+ReportingUnit	New York;Chautauqua County	New York;Chautauqua County
+ReportingUnit	New York;Chemung County	New York;Chemung County
+ReportingUnit	New York;Chenago County	New York;Chenago County
+ReportingUnit	New York;Chenango County	New York;Chenango County
+ReportingUnit	New York;Clinton County	New York;Clinton County
+ReportingUnit	New York;Columbia County	New York;Columbia County
+ReportingUnit	New York;Cortland County	New York;Cortland County
+ReportingUnit	New York;Delaware County	New York;Delaware County
+ReportingUnit	New York;Dutchess County	New York;Dutchess County
+ReportingUnit	New York;Erie County	New York;Erie County
+ReportingUnit	New York;Essex County	New York;Essex County
+ReportingUnit	New York;Franklin County	New York;Franklin County
+ReportingUnit	New York;Fulton County	New York;Fulton County
+ReportingUnit	New York;Genesee County	New York;Genesee County
+ReportingUnit	New York;Greene County	New York;Greene County
+ReportingUnit	New York;Hamilton County	New York;Hamilton County
+ReportingUnit	New York;Herkimer County	New York;Herkimer County
+ReportingUnit	New York;Jefferson County	New York;Jefferson County
+ReportingUnit	New York;Kings County	New York;Kings County
+ReportingUnit	New York;Lewis County	New York;Lewis County
+ReportingUnit	New York;Livingston County	New York;Livingston County
+ReportingUnit	New York;Madison County	New York;Madison County
+ReportingUnit	New York;Monroe County	New York;Monroe County
+ReportingUnit	New York;Montgomery County	New York;Montgomery County
+ReportingUnit	New York;Nassau County	New York;Nassau County
+ReportingUnit	New York;New York County	New York;New York County
+ReportingUnit	New York;Niagara County	New York;Niagara County
+ReportingUnit	New York;Oneida County	New York;Oneida County
+ReportingUnit	New York;Onondaga County	New York;Onondaga County
+ReportingUnit	New York;Ontario County	New York;Ontario County
+ReportingUnit	New York;Orange County	New York;Orange County
+ReportingUnit	New York;Orleans County	New York;Orleans County
+ReportingUnit	New York;Oswego County	New York;Oswego County
+ReportingUnit	New York;Otsego County	New York;Otsego County
+ReportingUnit	New York;Putnam County	New York;Putnam County
+ReportingUnit	New York;Queens County	New York;Queens County
+ReportingUnit	New York;Rensselaer County	New York;Rensselaer County
+ReportingUnit	New York;Richmond County	New York;Richmond County
+ReportingUnit	New York;Rockland County	New York;Rockland County
+ReportingUnit	New York;Saratoga County	New York;Saratoga County
+ReportingUnit	New York;Schenectady County	New York;Schenectady County
+ReportingUnit	New York;Schoharie County	New York;Schoharie County
+ReportingUnit	New York;Schuyler County	New York;Schuyler County
+ReportingUnit	New York;Seneca County	New York;Seneca County
+ReportingUnit	New York;St. Lawrence County	New York;St. Lawrence County
+ReportingUnit	New York;Steuben County	New York;Steuben County
+ReportingUnit	New York;Suffolk County	New York;Suffolk County
+ReportingUnit	New York;Sullivan County	New York;Sullivan County
+ReportingUnit	New York;Tioga County	New York;Tioga County
+ReportingUnit	New York;Tompkins County	New York;Tompkins County
+ReportingUnit	New York;Total Votes by Candidate	New York;Total Votes by Candidate
+ReportingUnit	New York;Total Votes by Party	New York;Total Votes by Party
+ReportingUnit	New York;Ulster County	New York;Ulster County
+ReportingUnit	New York;Warren County	New York;Warren County
+ReportingUnit	New York;Washington County	New York;Washington County
+ReportingUnit	New York;Wayne County	New York;Wayne County
+ReportingUnit	New York;Westchester County	New York;Westchester County
+ReportingUnit	New York;Wyoming County	New York;Wyoming County
+ReportingUnit	New York;Yates County	New York;Yates County

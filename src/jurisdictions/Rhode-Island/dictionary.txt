@@ -901,7 +901,7 @@ CandidateContest	RI Senate District 10	RI;State Senator;District 10
 CandidateContest	RI Senate District 11	RI;State Senator;District 11
 CandidateContest	RI Senate District 32	RI;State Senator;District 32
 CandidateContest	US House RI District 1	RI;US Representative;District 1
-CandidateContest	RI US Senator	RI;US Senator;statewide
+CandidateContest	US Senate RI	RI;US Senator;statewide
 CandidateContest	US House RI District 2	RI;US Representative;District 2
 CandidateContest	RI House District 19	RI;State Representative;District 19
 CandidateContest	RI House District 20	RI;State Representative;District 20
@@ -1128,3 +1128,9 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	Rhode Island;Bristol County	Rhode Island;Bristol
+ReportingUnit	Rhode Island;Federal Precinct County	Rhode Island;Federal Precinct
+ReportingUnit	Rhode Island;Kent County	Rhode Island;Kent
+ReportingUnit	Rhode Island;Newport County	Rhode Island;Newport
+ReportingUnit	Rhode Island;Providence County	Rhode Island;Providence
+ReportingUnit	Rhode Island;Washington County	Rhode Island;Washington

@@ -3623,7 +3623,7 @@ CandidateContest	WA Supreme Court Justice Position 2	WA;Supreme Court Justice Po
 CandidateContest	WA Supreme Court Justice Position 8	WA;Supreme Court Justice Position 8;statewide
 CandidateContest	WA Supreme Court Justice Position 9	WA;Supreme Court Justice Position 9;statewide
 CandidateContest	US House WA District 4	WA;US Representative;District 4
-CandidateContest	WA US Senator	WA;US Senator;statewide
+CandidateContest	US Senate WA	WA;US Senator;statewide
 CandidateContest	US House WA District 5	WA;US Representative;District 5
 CandidateContest	WA House District 16 Position 1	WA;State Representative Pos. 1;District 16
 CandidateContest	WA House District 8 Position 1	WA;State Representative Pos. 1;District 8
@@ -3774,3 +3774,42 @@ CountItemType	election-day	machine
 CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
+ReportingUnit	Washington;Adams County	Washington;Adams
+ReportingUnit	Washington;Asotin County	Washington;Asotin
+ReportingUnit	Washington;Benton County	Washington;Benton
+ReportingUnit	Washington;Chelan County	Washington;Chelan
+ReportingUnit	Washington;Clallam County	Washington;Clallam
+ReportingUnit	Washington;Clark County	Washington;Clark
+ReportingUnit	Washington;Columbia County	Washington;Columbia
+ReportingUnit	Washington;Cowlitz County	Washington;Cowlitz
+ReportingUnit	Washington;Douglas County	Washington;Douglas
+ReportingUnit	Washington;Ferry County	Washington;Ferry
+ReportingUnit	Washington;Franklin County	Washington;Franklin
+ReportingUnit	Washington;Garfield County	Washington;Garfield
+ReportingUnit	Washington;Grant County	Washington;Grant
+ReportingUnit	Washington;Grays Harbor County	Washington;Grays Harbor
+ReportingUnit	Washington;Island County	Washington;Island
+ReportingUnit	Washington;Jefferson County	Washington;Jefferson
+ReportingUnit	Washington;King County	Washington;King
+ReportingUnit	Washington;Kitsap County	Washington;Kitsap
+ReportingUnit	Washington;Kittitas County	Washington;Kittitas
+ReportingUnit	Washington;Klickitat County	Washington;Klickitat
+ReportingUnit	Washington;Lewis County	Washington;Lewis
+ReportingUnit	Washington;Lincoln County	Washington;Lincoln
+ReportingUnit	Washington;Mason County	Washington;Mason
+ReportingUnit	Washington;Okanogan County	Washington;Okanogan
+ReportingUnit	Washington;Pacific County	Washington;Pacific
+ReportingUnit	Washington;Pend Oreille County	Washington;Pend Oreille
+ReportingUnit	Washington;Pierce County	Washington;Pierce
+ReportingUnit	Washington;San Juan County	Washington;San Juan
+ReportingUnit	Washington;Skagit County	Washington;Skagit
+ReportingUnit	Washington;Skamania County	Washington;Skamania
+ReportingUnit	Washington;Snohomish County	Washington;Snohomish
+ReportingUnit	Washington;Spokane County	Washington;Spokane
+ReportingUnit	Washington;Stevens County	Washington;Stevens
+ReportingUnit	Washington;Thurston County	Washington;Thurston
+ReportingUnit	Washington;Wahkiakum County	Washington;Wahkiakum
+ReportingUnit	Washington;Walla Walla County	Washington;Walla Walla
+ReportingUnit	Washington;Whatcom County	Washington;Whatcom
+ReportingUnit	Washington;Whitman County	Washington;Whitman
+ReportingUnit	Washington;Yakima County	Washington;Yakima

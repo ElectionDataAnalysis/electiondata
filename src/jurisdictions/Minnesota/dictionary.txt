@@ -16,7 +16,7 @@ Candidate	Aisha Gomez	Aisha Gomez
 Candidate	Al Bauer	Al Bauer
 Candidate	Al Doty	Al Doty
 Candidate	Al Fowler	Al Fowler
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Al Koczur	Al Koczur
 Candidate	Al Kruse	Al Kruse
 Candidate	Al Linder	Al Linder
@@ -114,7 +114,7 @@ Candidate	Athena Hollins	Athena Hollins
 Candidate	Audra Veroeven	Audra Veroeven
 Candidate	Austin Grossenburg	Austin Grossenburg
 Candidate	Bala Chintaginjala	Bala Chintaginjala
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barb Haley	Barb Haley
 Candidate	Barb Olsen	Barb Olsen
 Candidate	Barb Yarusso	Barb Yarusso
@@ -712,7 +712,7 @@ Candidate	Donald Casmey	Donald Casmey
 Candidate	Donald E. Evers	Donald E. Evers
 Candidate	Donald F. Goodell	Donald F. Goodell
 Candidate	Donald F. Ryan	Donald F. Ryan
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump and Michael R. Pence	Donald J. Trump and Michael R. Pence
 Candidate	Donald Jensen	Donald Jensen
@@ -918,7 +918,7 @@ Candidate	George Hanson	George Hanson
 Candidate	George McMahon	George McMahon
 Candidate	George Nyakasi Bass	George Nyakasi Bass
 Candidate	George T. Stephenson	George T. Stephenson
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Georgia Dietz	Georgia Dietz
 Candidate	Gerald Mueller	Gerald Mueller
 Candidate	Gerald Telker	Gerald Telker
@@ -994,7 +994,7 @@ Candidate	Heidi L. Everett	Heidi L. Everett
 Candidate	Heidi M. Chandler	Heidi M. Chandler
 Candidate	Heidi Schellhas	Heidi Schellhas
 Candidate	Hilary Caligiuri	Hilary Caligiuri
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hillary Clinton and Tim Kaine	Hillary Clinton and Tim Kaine
 Candidate	Hoang Murphy	Hoang Murphy
 Candidate	Hodan Hassan	Hodan Hassan
@@ -1259,7 +1259,6 @@ Candidate	Jim Thoreen	Jim Thoreen
 Candidate	Jim Utermarck	Jim Utermarck
 Candidate	Jim Veldkamp	Jim Veldkamp
 Candidate	Jo Anne Kovach	Jo Anne Kovach
-Candidate	Jo Jorgensen	"Jo Jorgensen and Jeremy ""Spike"" Cohen"
 Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy 'Spike' Cohen
 Candidate	JoAnn I. Weaver	JoAnn I. Weaver
 Candidate	JoAnn Ward	JoAnn Ward
@@ -1342,7 +1341,7 @@ Candidate	John J. Moren	John J. Moren
 Candidate	John Jaeger	John Jaeger
 Candidate	John Jasinski	John Jasinski
 Candidate	John K. Delaney	John K. Delaney
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John King	John King
 Candidate	John L Thompson	John L Thompson
 Candidate	John L. Berman	John L. Berman
@@ -1355,7 +1354,7 @@ Candidate	John M. Poston	John M. Poston
 Candidate	John Maatz	John Maatz
 Candidate	John Marty	John Marty
 Candidate	John Mason	John Mason
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John O Cunningham	John O Cunningham
 Candidate	John P Fahey	John P Fahey
 Candidate	John P. Dehen	John P. Dehen
@@ -1994,7 +1993,7 @@ Candidate	Mike Wobbe	Mike Wobbe
 Candidate	Mikki Murray	Mikki Murray
 Candidate	Mitch Bernstein	Mitch Bernstein
 Candidate	Mitch Lentz	Mitch Lentz
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Mohamud Noor	Mohamud Noor
 Candidate	Molly Hicken	Molly Hicken
 Candidate	Mona Henkels	Mona Henkels
@@ -2051,7 +2050,7 @@ Candidate	Oliver (Skip) Swanson	Oliver (Skip) Swanson
 Candidate	Oliver Steinberg	Oliver Steinberg
 Candidate	Omar Fateh	Omar Fateh
 Candidate	Orvin Gronseth	Orvin Gronseth
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Owen Miller	Owen Miller
 Candidate	P. Paul Yang	P. Paul Yang
 Candidate	P.J. LaCroix	P.J. LaCroix
@@ -2184,7 +2183,7 @@ Candidate	Ralph Kaehler	Ralph Kaehler
 Candidate	Ralph Lewis	Ralph Lewis
 Candidate	Ralph Miller	Ralph Miller
 Candidate	Ralph Morris	Ralph Morris
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Randall Carow	Randall Carow
 Candidate	Randall Feist	Randall Feist
 Candidate	Randall Pederson	Randall Pederson
@@ -2310,7 +2309,7 @@ Candidate	Robert Walkes	Robert Walkes
 Candidate	Robyn Ann Millenacker	Robyn Ann Millenacker
 Candidate	Robyn Smith	Robyn Smith
 Candidate	Robyn West	Robyn West
-Candidate	Rocky Roque De La Fuente and Michael Steinberg	Rocky Roque De La Fuente and Michael Steinberg
+Candidate	Rocky Roque De La Fuente	Rocky Roque De La Fuente and Michael Steinberg
 Candidate	Rod Hamilton	Rod Hamilton
 Candidate	Rod Skoe	Rod Skoe
 Candidate	Rod Steele	Rod Steele
@@ -2365,8 +2364,7 @@ Candidate	Ronald Ray Vogel	Ronald Ray Vogel
 Candidate	Ronald Reisdorph	Ronald Reisdorph
 Candidate	Ronald Thorsrud	Ronald Thorsrud
 Candidate	Ronald W. Peterson	Ronald W. Peterson
-Candidate	"Roque ""Rocky"" De La Fuente"	"Roque ""Rocky"" De La Fuente and Darcy Richardson"
-Candidate	Roque 'Rocky' De La Fuente and Darcy Richardson	Roque 'Rocky' De La Fuente and Darcy Richardson
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente and Darcy Richardson
 Candidate	Rory Jensen	Rory Jensen
 Candidate	Rosemary Franzen	Rosemary Franzen
 Candidate	Rosemary Weber	Rosemary Weber
@@ -13460,7 +13458,7 @@ CandidateContest	MN Secretary of State	MN;Secretary of State;statewide
 CandidateContest	MN State Auditor	MN;State Auditor;statewide
 CandidateContest	MN House District 10B	MN;State Representative;District 10B
 CandidateContest	US House MN District 8	MN;US Representative;District 8
-CandidateContest	MN US Senator	MN;US Senator;statewide
+CandidateContest	US Senate MN	MN;US Senator;statewide
 CandidateContest	MN House District 31A	MN;State Representative;District 31A
 CandidateContest	MN House District 31B	MN;State Representative;District 31B
 CandidateContest	MN House District 35A	MN;State Representative;District 35A
@@ -13603,9 +13601,9 @@ CandidateContest	MN House District 39B	MN;State Representative;District 39B
 CandidateContest	MN House District 53B	MN;State Representative;District 53B
 CandidateContest	MN House District 28A	MN;State Representative;District 28A
 CandidateContest	MN House District 29B	MN;State Representative;District 29B
-Candidate	Calvin 'Cal' K. Bahr	"Calvin ""Cal"" K. Bahr"
+Candidate	Calvin 'Cal' K. Bahr	Calvin 'Cal' K. Bahr
 Candidate	Chris Wright & Judith Schwartzbacker	Chris Wright & Judith Schwartzbacker
-Candidate	Debra 'Deb' Kiel	"Debra ""Deb"" Kiel"
+Candidate	Debra 'Deb' Kiel	Debra 'Deb' Kiel
 Candidate	Drew Christenen	Drew Christenen
 Candidate	Jeff Johnson & Donna Bergstrom	Jeff Johnson & Donna Bergstrom
 Candidate	Jennifer Ziellnski	Jennifer Ziellnski
@@ -13613,9 +13611,7 @@ Candidate	Jermain A. Botsio	Jermain A. Botsio
 Candidate	Jill Galban	Jill Galban
 Candidate	John lesch	John lesch
 Candidate	Josh Welter & Mary O'Connor	Josh Welter & Mary O'Connor
-Candidate	Marinda 'Mindy' Kimmel	"Marinda ""Mindy"" Kimmel"
 Candidate	Peter M. Fischer	Peter M. Fischer
-Candidate	Robert J. 'Bob' Cardinal	"Robert J. ""Bob"" Cardinal"
 Candidate	Tim Walz & Peggy Flanagan	Tim Walz & Peggy Flanagan
 Party	Democratic-Farmer-Labor Party	democratic-farmer-labor
 Party	Grassroots-Legalize Cannabis Party	grassroots-legalize cannabis
@@ -13641,3 +13637,94 @@ CountItemType	election-day	machine
 CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
+ReportingUnit	Minnesota;Aitkin County	Minnesota;Aitkin
+ReportingUnit	Minnesota;Anoka County	Minnesota;Anoka
+ReportingUnit	Minnesota;Becker County	Minnesota;Becker
+ReportingUnit	Minnesota;Beltrami County	Minnesota;Beltrami
+ReportingUnit	Minnesota;Benton County	Minnesota;Benton
+ReportingUnit	Minnesota;Big Stone County	Minnesota;Big Stone
+ReportingUnit	Minnesota;Blue Earth County	Minnesota;Blue Earth
+ReportingUnit	Minnesota;Brown County	Minnesota;Brown
+ReportingUnit	Minnesota;Carlton County	Minnesota;Carlton
+ReportingUnit	Minnesota;Carver County	Minnesota;Carver
+ReportingUnit	Minnesota;Cass County	Minnesota;Cass
+ReportingUnit	Minnesota;Chippewa County	Minnesota;Chippewa
+ReportingUnit	Minnesota;Chisago County	Minnesota;Chisago
+ReportingUnit	Minnesota;Clay County	Minnesota;Clay
+ReportingUnit	Minnesota;Clearwater County	Minnesota;Clearwater
+ReportingUnit	Minnesota;Cook County	Minnesota;Cook
+ReportingUnit	Minnesota;Cottonwood County	Minnesota;Cottonwood
+ReportingUnit	Minnesota;Crow Wing County	Minnesota;Crow Wing
+ReportingUnit	Minnesota;Dakota County	Minnesota;Dakota
+ReportingUnit	Minnesota;Dodge County	Minnesota;Dodge
+ReportingUnit	Minnesota;Douglas County	Minnesota;Douglas
+ReportingUnit	Minnesota;Faribault County	Minnesota;Faribault
+ReportingUnit	Minnesota;Fillmore County	Minnesota;Fillmore
+ReportingUnit	Minnesota;Freeborn County	Minnesota;Freeborn
+ReportingUnit	Minnesota;Goodhue County	Minnesota;Goodhue
+ReportingUnit	Minnesota;Grant County	Minnesota;Grant
+ReportingUnit	Minnesota;Hennepin County	Minnesota;Hennepin
+ReportingUnit	Minnesota;Houston County	Minnesota;Houston
+ReportingUnit	Minnesota;Hubbard County	Minnesota;Hubbard
+ReportingUnit	Minnesota;Isanti County	Minnesota;Isanti
+ReportingUnit	Minnesota;Itasca County	Minnesota;Itasca
+ReportingUnit	Minnesota;Jackson County	Minnesota;Jackson
+ReportingUnit	Minnesota;Kanabec County	Minnesota;Kanabec
+ReportingUnit	Minnesota;Kandiyohi County	Minnesota;Kandiyohi
+ReportingUnit	Minnesota;Kittson County	Minnesota;Kittson
+ReportingUnit	Minnesota;Koochiching County	Minnesota;Koochiching
+ReportingUnit	Minnesota;Lac Qui Parle County	Minnesota;Lac Qui Parle
+ReportingUnit	Minnesota;Lac Qui Parte County	Minnesota;Lac Qui Parte
+ReportingUnit	Minnesota;Lake County	Minnesota;Lake
+ReportingUnit	Minnesota;Lake of the Woods County	Minnesota;Lake of the Woods
+ReportingUnit	Minnesota;Lake Of the Woods County	Minnesota;Lake Of the Woods
+ReportingUnit	Minnesota;Lake Of The Woods County	Minnesota;Lake Of The Woods
+ReportingUnit	Minnesota;Le Sueur County	Minnesota;Le Sueur
+ReportingUnit	Minnesota;Lincoln County	Minnesota;Lincoln
+ReportingUnit	Minnesota;Lyon County	Minnesota;Lyon
+ReportingUnit	Minnesota;Mahnomen County	Minnesota;Mahnomen
+ReportingUnit	Minnesota;Marshall County	Minnesota;Marshall
+ReportingUnit	Minnesota;Martin County	Minnesota;Martin
+ReportingUnit	Minnesota;Mcleod County	Minnesota;Mcleod
+ReportingUnit	Minnesota;Meeer County	Minnesota;Meeer
+ReportingUnit	Minnesota;Meeker County	Minnesota;Meeker
+ReportingUnit	Minnesota;Mille Lacs County	Minnesota;Mille Lacs
+ReportingUnit	Minnesota;Morrison County	Minnesota;Morrison
+ReportingUnit	Minnesota;Mower County	Minnesota;Mower
+ReportingUnit	Minnesota;Murray County	Minnesota;Murray
+ReportingUnit	Minnesota;Nicollet County	Minnesota;Nicollet
+ReportingUnit	Minnesota;Nobles County	Minnesota;Nobles
+ReportingUnit	Minnesota;Norman County	Minnesota;Norman
+ReportingUnit	Minnesota;Olmsted County	Minnesota;Olmsted
+ReportingUnit	Minnesota;Otter Tail County	Minnesota;Otter Tail
+ReportingUnit	Minnesota;Pennington County	Minnesota;Pennington
+ReportingUnit	Minnesota;Pine County	Minnesota;Pine
+ReportingUnit	Minnesota;Pipestone County	Minnesota;Pipestone
+ReportingUnit	Minnesota;Polk County	Minnesota;Polk
+ReportingUnit	Minnesota;Pope County	Minnesota;Pope
+ReportingUnit	Minnesota;Ramsey County	Minnesota;Ramsey
+ReportingUnit	Minnesota;Red Lake County	Minnesota;Red Lake
+ReportingUnit	Minnesota;Redwood County	Minnesota;Redwood
+ReportingUnit	Minnesota;Renville County	Minnesota;Renville
+ReportingUnit	Minnesota;Rice County	Minnesota;Rice
+ReportingUnit	Minnesota;Rock County	Minnesota;Rock
+ReportingUnit	Minnesota;Roseau County	Minnesota;Roseau
+ReportingUnit	Minnesota;Scott County	Minnesota;Scott
+ReportingUnit	Minnesota;Sherburne County	Minnesota;Sherburne
+ReportingUnit	Minnesota;Sibley County	Minnesota;Sibley
+ReportingUnit	Minnesota;St. Louis County	Minnesota;St. Louis
+ReportingUnit	Minnesota;Stearns County	Minnesota;Stearns
+ReportingUnit	Minnesota;Steele County	Minnesota;Steele
+ReportingUnit	Minnesota;Stevens County	Minnesota;Stevens
+ReportingUnit	Minnesota;Swift County	Minnesota;Swift
+ReportingUnit	Minnesota;Todd County	Minnesota;Todd
+ReportingUnit	Minnesota;Traverse County	Minnesota;Traverse
+ReportingUnit	Minnesota;Wabasha County	Minnesota;Wabasha
+ReportingUnit	Minnesota;Wadena County	Minnesota;Wadena
+ReportingUnit	Minnesota;Waseca County	Minnesota;Waseca
+ReportingUnit	Minnesota;Washington County	Minnesota;Washington
+ReportingUnit	Minnesota;Watonwan County	Minnesota;Watonwan
+ReportingUnit	Minnesota;Wilkin County	Minnesota;Wilkin
+ReportingUnit	Minnesota;Winona County	Minnesota;Winona
+ReportingUnit	Minnesota;Wright County	Minnesota;Wright
+ReportingUnit	Minnesota;Yellow Medicine County	Minnesota;Yellow Medicine

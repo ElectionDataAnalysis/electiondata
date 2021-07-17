@@ -2,7 +2,7 @@ cdf_element	cdf_internal_name	raw_identifier_value
 Candidate	Aaron Coleman	Aaron Coleman
 Candidate	Adam Smith	Smith, Adam
 Candidate	Adam T. Thomas	Thomas, Adam T.
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alana Cloutier	Cloutier, Alana
 Candidate	Alicia (Schartz) Straub	Straub, Alicia (Schartz)
 Candidate	Amanda L. Adkins	Adkins, Amanda L.
@@ -11,7 +11,7 @@ Candidate	Angela Justus Schweller	Angela Justus Schweller
 Candidate	Anthony Hensley	Anthony Hensley
 Candidate	Anthony Hensley	Hensley, Anthony
 Candidate	Avery Anderson	Anderson, Avery
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barb Wasinger	Wasinger, Barb
 Candidate	Barbara Bollier	Bollier, Barbara
 Candidate	Barbara W. Ballard	Ballard, Barbara W.
@@ -49,7 +49,7 @@ Candidate	David W. French	French, David W.
 Candidate	Dennis 'Boog' Highberger	Highberger, Dennis 'Boog'
 Candidate	Dennis Pyle	Pyle, Dennis
 Candidate	Diana Whittington	Diana Whittington
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Donald J. Trump / Michael R. Pence
 Candidate	Donald J. Trump	Trump and Pence
@@ -67,9 +67,9 @@ Candidate	Ethan D. Caylor	Caylor, Ethan D.
 Candidate	Francis Awerkamp	Awerkamp, Francis
 Candidate	Fred C. Patton	Fred C. Patton
 Candidate	Garth Strand	Strand, Garth
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Henry Helgerson	Henry Helgerson
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	J. Russell 'Russ' Jennings	Jennings, J. Russell 'Russ'
 Candidate	J.R. Claeys	Claeys, J.R.
 Candidate	Jake LaTurner	Jake LaTurner
@@ -90,7 +90,6 @@ Candidate	Jim Kelly	Kelly, Jim
 Candidate	Jim Minnix	Minnix, Jim
 Candidate	Jim Vathauer	Vathauer, Jim
 Candidate	Jo Jorgensen	Jo Jorgensen
-Candidate	Jo Jorgensen	"Jo Jorgensen / Jeremy ""Spike"" Cohen"
 Candidate	Jo Jorgensen	Jo Jorgensen / Jeremy 'Spike' Cohen
 Candidate	Jo Jorgensen	Jorgensen and Cohen
 Candidate	Jo Jorgensen	Jorgensen and Cohen.1
@@ -101,8 +100,8 @@ Candidate	Joe Seiwert	Seiwert, Joe
 Candidate	John Brosz	Brosz, John
 Candidate	John Doll	Doll, John
 Candidate	John E Barker	Barker, John E
-Candidate	John Kerry	JOHN KERRY
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John Kerry	John Kerry
+Candidate	John McCain	John Mccain
 Candidate	John P. Wheeler Jr.	Wheeler Jr., John P.
 Candidate	John R. Eplee	Eplee, John R.
 Candidate	John Toplikar	John Toplikar
@@ -163,11 +162,11 @@ Candidate	Mike Bruner	Bruner, Mike
 Candidate	Mike Dodson	Dodson, Mike
 Candidate	Mike Griswold	Griswold, Mike
 Candidate	Mike Thompson	Mike Thompson
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Molly Baumgardner	Baumgardner, Molly
 Candidate	Monica Murnan	Murnan, Monica
 Candidate	Nancy J. Ingle	Ingle, Nancy J.
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Over Votes	Over Votes
 Candidate	Pat Pettey	Pat Pettey
 Candidate	Pat Proctor	Proctor, Pat
@@ -176,7 +175,7 @@ Candidate	Paul M. Waggoner	Waggoner, Paul M.
 Candidate	Phil Hodson	Hodson, Phil
 Candidate	Rachel Willis	Rachel Willis
 Candidate	Rachel Willis	Willis, Rachel
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Randy Garber	Garber, Randy
 Candidate	Richard (Rick) Billinger	Billinger, Richard (Rick)
 Candidate	Richard Hilderbrand	Hilderbrand, Richard
@@ -6457,7 +6456,7 @@ Candidate	Brandon J. Whipple	Brandon J. Whipple
 Candidate	Brandon Woodard	Brandon Woodard
 Candidate	Brenda K. Landwehr	Brenda K. Landwehr
 Candidate	Brett Parker	Brett Parker
-Candidate	Brian 'BAM' McClendon	"Brian ""BAM"" McClendon"
+Candidate	Brian 'BAM' McClendon	Brian 'BAM' McClendon
 Candidate	Brian Clausen	Brian Clausen
 Candidate	Bryan Bombardier	Bryan Bombardier
 Candidate	Bryan Hoffman	Bryan Hoffman
@@ -6480,7 +6479,7 @@ Candidate	David W. Curtis	David W. Curtis
 Candidate	David W. French	David W. French
 Candidate	Deann Mitchell	Deann Mitchell
 Candidate	Debbie Deere	Debbie Deere
-Candidate	Dennis 'Boog' Highberger	"Dennis ""Boog"" Highberger"
+Candidate	Dennis 'Boog' Highberger	Dennis 'Boog' Highberger
 Candidate	Derek Schmidt	Derek Schmidt
 Candidate	Diana Dierks	Diana Dierks
 Candidate	Don Hineman	Don Hineman
@@ -6500,7 +6499,7 @@ Candidate	George D. Hanna	George D. Hanna
 Candidate	Gerrett Morris	Gerrett Morris
 Candidate	Greg Lewis	Greg Lewis
 Candidate	Greg Orman	Greg Orman
-Candidate	J. Russell 'Russ' Jennings	"J. Russell ""Russ"" Jennings"
+Candidate	J. Russell 'Russ' Jennings	J. Russell 'Russ' Jennings
 Candidate	J.C. Moore	J.C. Moore
 Candidate	J.R. Claeys	J.R. Claeys
 Candidate	Jack Thimesch	Jack Thimesch
@@ -6612,8 +6611,8 @@ Candidate	Steven G. Crum	Steven G. Crum
 Candidate	Steven G. Kelly	Steven G. Kelly
 Candidate	Steven Johnson	Steven Johnson
 Candidate	Stuart W. Sweeney	Stuart W. Sweeney
-Candidate	Susan 'Sue' Huff	"Susan ""Sue"" Huff"
-Candidate	Susan 'Suzi' L. Carlson	"Susan ""Suzi"" L. Carlson"
+Candidate	Susan 'Sue' Huff	Susan 'Sue' Huff
+Candidate	Susan 'Suzi' L. Carlson	Susan 'Suzi' L. Carlson
 Candidate	Susan Humphries	Susan Humphries
 Candidate	Susan L Concannon	Susan L Concannon
 Candidate	Susan Ruiz	Susan Ruiz
@@ -6656,3 +6655,108 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	Kansas;Allen County	Kansas;Allen
+ReportingUnit	Kansas;Anderson County	Kansas;Anderson
+ReportingUnit	Kansas;Atchison County	Kansas;Atchison
+ReportingUnit	Kansas;Barber County	Kansas;Barber
+ReportingUnit	Kansas;Barton County	Kansas;Barton
+ReportingUnit	Kansas;Bourbon County	Kansas;Bourbon
+ReportingUnit	Kansas;Brown County	Kansas;Brown
+ReportingUnit	Kansas;Butler County	Kansas;Butler
+ReportingUnit	Kansas;Chase County	Kansas;Chase
+ReportingUnit	Kansas;Chautauqua County	Kansas;Chautauqua
+ReportingUnit	Kansas;Cherokee County	Kansas;Cherokee
+ReportingUnit	Kansas;Cheyenne County	Kansas;Cheyenne
+ReportingUnit	Kansas;Clark County	Kansas;Clark
+ReportingUnit	Kansas;Clay County	Kansas;Clay
+ReportingUnit	Kansas;Cloud County	Kansas;Cloud
+ReportingUnit	Kansas;Coffey County	Kansas;Coffey
+ReportingUnit	Kansas;Comanche County	Kansas;Comanche
+ReportingUnit	Kansas;Cowley County	Kansas;Cowley
+ReportingUnit	Kansas;Crawford County	Kansas;Crawford
+ReportingUnit	Kansas;Decatur County	Kansas;Decatur
+ReportingUnit	Kansas;Dickinson County	Kansas;Dickinson
+ReportingUnit	Kansas;Doniphan County	Kansas;Doniphan
+ReportingUnit	Kansas;Douglas County	Kansas;Douglas
+ReportingUnit	Kansas;Edwards County	Kansas;Edwards
+ReportingUnit	Kansas;Elk County	Kansas;Elk
+ReportingUnit	Kansas;Ellis County	Kansas;Ellis
+ReportingUnit	Kansas;Ellsworth County	Kansas;Ellsworth
+ReportingUnit	Kansas;Finney County	Kansas;Finney
+ReportingUnit	Kansas;Ford County	Kansas;Ford
+ReportingUnit	Kansas;Franklin County	Kansas;Franklin
+ReportingUnit	Kansas;Geary County	Kansas;Geary
+ReportingUnit	Kansas;Gove County	Kansas;Gove
+ReportingUnit	Kansas;Graham County	Kansas;Graham
+ReportingUnit	Kansas;Grant County	Kansas;Grant
+ReportingUnit	Kansas;Gray County	Kansas;Gray
+ReportingUnit	Kansas;Greeley County	Kansas;Greeley
+ReportingUnit	Kansas;Greenwood County	Kansas;Greenwood
+ReportingUnit	Kansas;Hamilton County	Kansas;Hamilton
+ReportingUnit	Kansas;Harper County	Kansas;Harper
+ReportingUnit	Kansas;Harvey County	Kansas;Harvey
+ReportingUnit	Kansas;Haskell County	Kansas;Haskell
+ReportingUnit	Kansas;Hodgeman County	Kansas;Hodgeman
+ReportingUnit	Kansas;Jackson County	Kansas;Jackson
+ReportingUnit	Kansas;Jefferson County	Kansas;Jefferson
+ReportingUnit	Kansas;Jewell County	Kansas;Jewell
+ReportingUnit	Kansas;Johnson County	Kansas;Johnson
+ReportingUnit	Kansas;Kearny County	Kansas;Kearny
+ReportingUnit	Kansas;Kingman County	Kansas;Kingman
+ReportingUnit	Kansas;Kiowa County	Kansas;Kiowa
+ReportingUnit	Kansas;Labette County	Kansas;Labette
+ReportingUnit	Kansas;Lane County	Kansas;Lane
+ReportingUnit	Kansas;Leavenworth County	Kansas;Leavenworth
+ReportingUnit	Kansas;Lincoln County	Kansas;Lincoln
+ReportingUnit	Kansas;Linn County	Kansas;Linn
+ReportingUnit	Kansas;Logan County	Kansas;Logan
+ReportingUnit	Kansas;Lyon County	Kansas;Lyon
+ReportingUnit	Kansas;Marion County	Kansas;Marion
+ReportingUnit	Kansas;Marshall County	Kansas;Marshall
+ReportingUnit	Kansas;Mcpherson County	Kansas;Mcpherson
+ReportingUnit	Kansas;Meade County	Kansas;Meade
+ReportingUnit	Kansas;Miami County	Kansas;Miami
+ReportingUnit	Kansas;Mitchell County	Kansas;Mitchell
+ReportingUnit	Kansas;Montgomery County	Kansas;Montgomery
+ReportingUnit	Kansas;Morris County	Kansas;Morris
+ReportingUnit	Kansas;Morton County	Kansas;Morton
+ReportingUnit	Kansas;Nemaha County	Kansas;Nemaha
+ReportingUnit	Kansas;Neosho County	Kansas;Neosho
+ReportingUnit	Kansas;Ness County	Kansas;Ness
+ReportingUnit	Kansas;Norton County	Kansas;Norton
+ReportingUnit	Kansas;Osage County	Kansas;Osage
+ReportingUnit	Kansas;Osborne County	Kansas;Osborne
+ReportingUnit	Kansas;Ottawa County	Kansas;Ottawa
+ReportingUnit	Kansas;Pawnee County	Kansas;Pawnee
+ReportingUnit	Kansas;Phillips County	Kansas;Phillips
+ReportingUnit	Kansas;Pottawatomie County	Kansas;Pottawatomie
+ReportingUnit	Kansas;Pratt County	Kansas;Pratt
+ReportingUnit	Kansas;Rawlins County	Kansas;Rawlins
+ReportingUnit	Kansas;Reno County	Kansas;Reno
+ReportingUnit	Kansas;Republic County	Kansas;Republic
+ReportingUnit	Kansas;Rice County	Kansas;Rice
+ReportingUnit	Kansas;Riley County	Kansas;Riley
+ReportingUnit	Kansas;Rooks County	Kansas;Rooks
+ReportingUnit	Kansas;Rush County	Kansas;Rush
+ReportingUnit	Kansas;Russell County	Kansas;Russell
+ReportingUnit	Kansas;Saline County	Kansas;Saline
+ReportingUnit	Kansas;Scott County	Kansas;Scott
+ReportingUnit	Kansas;Sedgwick County	Kansas;Sedgwick
+ReportingUnit	Kansas;Seward County	Kansas;Seward
+ReportingUnit	Kansas;Shawnee County	Kansas;Shawnee
+ReportingUnit	Kansas;Sheridan County	Kansas;Sheridan
+ReportingUnit	Kansas;Sherman County	Kansas;Sherman
+ReportingUnit	Kansas;Smith County	Kansas;Smith
+ReportingUnit	Kansas;Stafford County	Kansas;Stafford
+ReportingUnit	Kansas;Stanton County	Kansas;Stanton
+ReportingUnit	Kansas;Stevens County	Kansas;Stevens
+ReportingUnit	Kansas;Sumner County	Kansas;Sumner
+ReportingUnit	Kansas;Thomas County	Kansas;Thomas
+ReportingUnit	Kansas;Trego County	Kansas;Trego
+ReportingUnit	Kansas;Wabaunsee County	Kansas;Wabaunsee
+ReportingUnit	Kansas;Wallace County	Kansas;Wallace
+ReportingUnit	Kansas;Washington County	Kansas;Washington
+ReportingUnit	Kansas;Wichita County	Kansas;Wichita
+ReportingUnit	Kansas;Wilson County	Kansas;Wilson
+ReportingUnit	Kansas;Woodson County	Kansas;Woodson
+ReportingUnit	Kansas;Wyandotte County	Kansas;Wyandotte

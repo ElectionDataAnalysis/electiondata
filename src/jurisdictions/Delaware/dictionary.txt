@@ -125,6 +125,7 @@ Candidate	William Bell	William Bell
 Candidate	Yolanda Mccoy	Yolanda Mccoy
 Candidate	Yvette Santiago	Yvette Santiago
 Candidate	Zanthia Oliver	Zanthia Oliver
+CandidateContest	DE Attorney General	DE;Attorney General;statewide
 CandidateContest	DE Attorney General	DE Attorney General
 CandidateContest	DE Attorney General (Democratic Party)	DE Attorney General (Democratic)
 CandidateContest	DE Attorney General (Green Party)	DE Attorney General (Green Party)
@@ -1025,8 +1026,8 @@ CandidateContest	DE Senate District 16	DE;State Senator;District 16
 CandidateContest	DE Senate District 17	DE;State Senator;District 17
 CandidateContest	DE Senate District 18	DE;State Senator;District 18
 CandidateContest	DE State Treasurer	DE;State Treasurer;statewide
-CandidateContest	US House DE District 0	DE;US Representative;District 0
-CandidateContest	DE US Senator	DE;US Senator;statewide
+CandidateContest	US House DE District 1	DE;US Representative;District 0
+CandidateContest	US Senate DE	DE;US Senator;statewide
 CandidateContest	DE House District 1	DE;State Representative;District 1
 CandidateContest	DE House District 10	DE;State Representative;District 10
 CandidateContest	DE House District 12	DE;State Representative;District 12
@@ -1186,3 +1187,6 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	Delaware;Kent County	Delaware;Kent
+ReportingUnit	Delaware;New Castle County	Delaware;New Castle
+ReportingUnit	Delaware;Sussex County	Delaware;Sussex

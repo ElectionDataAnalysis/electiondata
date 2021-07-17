@@ -1,4 +1,7 @@
 BallotName
+William Ihlenfeld
+Richard 'Rick' Snuffer II
+Nathan Brown
 Zack Maynard
 Zach Lemaire
 Xavier Oglesby

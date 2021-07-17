@@ -162,4 +162,7 @@ US Senate WA	1	US Senate WA
 WA Attorney General	1	WA Attorney General	
 WA Lieutenant Governor	1	WA Lieutenant Governor	
 WA Treasurer	1	WA Treasurer	
-WA Secretary of State	1	WA Secretary of State	
+WA Secretary of State	1	WA Secretary of State
+WA Supreme Court Justice Position 2	1	WA Supreme Court Justice Position 2
+WA Supreme Court Justice Position 8	1	WA Supreme Court Justice Position 8
+WA Supreme Court Justice Position 9	1	WA Supreme Court Justice Position 9

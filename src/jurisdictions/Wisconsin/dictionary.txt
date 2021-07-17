@@ -6401,13 +6401,14 @@ Candidate	Darrell L. Castle	Darrell L. Castle Scott N. Bradley
 Candidate	Chris Keniston (write-in)	Chris Keniston Deacon Taylor (write-in)
 Candidate	Cherunda Fox (write-in)	Cherunda Fox Roger Kushner (write-in)
 CandidateContest	WI Attorney General	WI;Attorney General
-CandidateContest	WI Governor/Lieutenant Governor	WI;Governor/Lieutenant Governor;statewide
+CandidateContest	WI Attorney General	WI;Attorney General;statewide
+CandidateContest	WI Governor	WI;Governor/Lieutenant Governor;statewide
 CandidateContest	WI Secretary of State	WI;Secretary of State;statewide
 CandidateContest	WI House District 41	WI;State Assembly Representative;District 41
 CandidateContest	WI House District 72	WI;State Assembly Representative;District 72
 CandidateContest	WI State Treasurer	WI;State Treasurer;statewide
 CandidateContest	US House WI District 3	WI;US Representative;District 3
-CandidateContest	WI US Senator	WI;US Senator;statewide
+CandidateContest	US Senate WI	WI;US Senator;statewide
 CandidateContest	WI House District 74	WI;State Assembly Representative;District 74
 CandidateContest	WI Senate District 25	WI;State Senator;District 25
 CandidateContest	US House WI District 7	WI;US Representative;District 7
@@ -6529,8 +6530,6 @@ CandidateContest	WI House District 98	WI;State Assembly Representative;District 
 CandidateContest	WI House District 99	WI;State Assembly Representative;District 99
 CandidateContest	WI Senate District 33	WI;State Senator;District 33
 CandidateContest	WI House District 54	WI;State Assembly Representative;District 54
-Candidate	Lisa Subeck	Lisa Subeck
-Candidate	Nancy Lynn Vander Meer	Nancy Lynn Vander Meer
 Party	Constitution Party	constitution
 Party	Democratic Party	democrat
 Party	Independent Party	independent
@@ -6550,3 +6549,77 @@ CountItemType	election-day	machine
 CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
+ReportingUnit	Wisconsin;Adams County	Wisconsin;Adams
+ReportingUnit	Wisconsin;Ashland County	Wisconsin;Ashland
+ReportingUnit	Wisconsin;Barron County	Wisconsin;Barron
+ReportingUnit	Wisconsin;Bayfield County	Wisconsin;Bayfield
+ReportingUnit	Wisconsin;Brown County	Wisconsin;Brown
+ReportingUnit	Wisconsin;Buffalo County	Wisconsin;Buffalo
+ReportingUnit	Wisconsin;Burnett County	Wisconsin;Burnett
+ReportingUnit	Wisconsin;Calumet County	Wisconsin;Calumet
+ReportingUnit	Wisconsin;Chippewa County	Wisconsin;Chippewa
+ReportingUnit	Wisconsin;Clark County	Wisconsin;Clark
+ReportingUnit	Wisconsin;Columbia County	Wisconsin;Columbia
+ReportingUnit	Wisconsin;Crawford County	Wisconsin;Crawford
+ReportingUnit	Wisconsin;Dane County	Wisconsin;Dane
+ReportingUnit	Wisconsin;Dodge County	Wisconsin;Dodge
+ReportingUnit	Wisconsin;Door County	Wisconsin;Door
+ReportingUnit	Wisconsin;Douglas County	Wisconsin;Douglas
+ReportingUnit	Wisconsin;Dunn County	Wisconsin;Dunn
+ReportingUnit	Wisconsin;Eau Claire County	Wisconsin;Eau Claire
+ReportingUnit	Wisconsin;Florence County	Wisconsin;Florence
+ReportingUnit	Wisconsin;Fond du Lac County	Wisconsin;Fond du Lac
+ReportingUnit	Wisconsin;Forest County	Wisconsin;Forest
+ReportingUnit	Wisconsin;Grant County	Wisconsin;Grant
+ReportingUnit	Wisconsin;Green County	Wisconsin;Green
+ReportingUnit	Wisconsin;Green Lake County	Wisconsin;Green Lake
+ReportingUnit	Wisconsin;Iowa County	Wisconsin;Iowa
+ReportingUnit	Wisconsin;Iron County	Wisconsin;Iron
+ReportingUnit	Wisconsin;Jackson County	Wisconsin;Jackson
+ReportingUnit	Wisconsin;Jefferson County	Wisconsin;Jefferson
+ReportingUnit	Wisconsin;Juneau County	Wisconsin;Juneau
+ReportingUnit	Wisconsin;Kenosha County	Wisconsin;Kenosha
+ReportingUnit	Wisconsin;Kewaunee County	Wisconsin;Kewaunee
+ReportingUnit	Wisconsin;La Crosse County	Wisconsin;La Crosse
+ReportingUnit	Wisconsin;Lafayette County	Wisconsin;Lafayette
+ReportingUnit	Wisconsin;Langlade County	Wisconsin;Langlade
+ReportingUnit	Wisconsin;Lincoln County	Wisconsin;Lincoln
+ReportingUnit	Wisconsin;Manitowoc County	Wisconsin;Manitowoc
+ReportingUnit	Wisconsin;Marathon County	Wisconsin;Marathon
+ReportingUnit	Wisconsin;Marinette County	Wisconsin;Marinette
+ReportingUnit	Wisconsin;Marquette County	Wisconsin;Marquette
+ReportingUnit	Wisconsin;Menominee County	Wisconsin;Menominee
+ReportingUnit	Wisconsin;Milwaukee County	Wisconsin;Milwaukee
+ReportingUnit	Wisconsin;Monroe County	Wisconsin;Monroe
+ReportingUnit	Wisconsin;Oconto County	Wisconsin;Oconto
+ReportingUnit	Wisconsin;Oneida County	Wisconsin;Oneida
+ReportingUnit	Wisconsin;Outagamie County	Wisconsin;Outagamie
+ReportingUnit	Wisconsin;Ozaukee County	Wisconsin;Ozaukee
+ReportingUnit	Wisconsin;Pepin County	Wisconsin;Pepin
+ReportingUnit	Wisconsin;Pierce County	Wisconsin;Pierce
+ReportingUnit	Wisconsin;Polk County	Wisconsin;Polk
+ReportingUnit	Wisconsin;Portage County	Wisconsin;Portage
+ReportingUnit	Wisconsin;Price County	Wisconsin;Price
+ReportingUnit	Wisconsin;Racine County	Wisconsin;Racine
+ReportingUnit	Wisconsin;Richland County	Wisconsin;Richland
+ReportingUnit	Wisconsin;Rock County	Wisconsin;Rock
+ReportingUnit	Wisconsin;Rusk County	Wisconsin;Rusk
+ReportingUnit	Wisconsin;Sauk County	Wisconsin;Sauk
+ReportingUnit	Wisconsin;Sawyer County	Wisconsin;Sawyer
+ReportingUnit	Wisconsin;Shawano County	Wisconsin;Shawano
+ReportingUnit	Wisconsin;Sheboygan County	Wisconsin;Sheboygan
+ReportingUnit	Wisconsin;St. Croix County	Wisconsin;St. Croix
+ReportingUnit	Wisconsin;Taylor County	Wisconsin;Taylor
+ReportingUnit	Wisconsin;Trempealeau County	Wisconsin;Trempealeau
+ReportingUnit	Wisconsin;Vernon County	Wisconsin;Vernon
+ReportingUnit	Wisconsin;Vilas County	Wisconsin;Vilas
+ReportingUnit	Wisconsin;Walworth County	Wisconsin;Walworth
+ReportingUnit	Wisconsin;Washburn County	Wisconsin;Washburn
+ReportingUnit	Wisconsin;Washington County	Wisconsin;Washington
+ReportingUnit	Wisconsin;Waukesha County	Wisconsin;Waukesha
+ReportingUnit	Wisconsin;Waupaca County	Wisconsin;Waupaca
+ReportingUnit	Wisconsin;Waushara County	Wisconsin;Waushara
+ReportingUnit	Wisconsin;Winnebago County	Wisconsin;Winnebago
+ReportingUnit	Wisconsin;Wood County	Wisconsin;Wood
+Candidate	André Jacque	AndrÃ© Jacque
+Candidate	André Jacque	André Jacque

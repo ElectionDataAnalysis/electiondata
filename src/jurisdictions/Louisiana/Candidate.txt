@@ -1,4 +1,14 @@
 BallotName
+Mildred 'Mimi' Methvin
+Matthew Paul 'Matt' Moreau
+Frederick 'Ferd' Jones
+'Rick' Edmonds
+'Les' Farnum
+'Josh' Guillory
+'Jim' Francis
+'Gwen' Collins-Greenup
+'Bob' Hensgens
+'Andie' Saizan
 Joseph R. Biden
 Jo Jorgensen
 Donald J. Trump
@@ -78,7 +88,6 @@ Billy Burkette
 Brian Glorioso
 Cedric Richmond
 Devin Lance Graham
-Frederick 'Ferd' Jones
 Heather Cloud
 Jean Menard
 Jerry Gaspard
@@ -92,8 +101,6 @@ Kyle Randol
 Larry Rader
 Mark David Halverson
 Mary DuBuisson
-Matthew Paul 'Matt' Moreau
-Mildred 'Mimi' Methvin
 Ralph Abraham
 Renee Fontenot Free
 Sean Morrison

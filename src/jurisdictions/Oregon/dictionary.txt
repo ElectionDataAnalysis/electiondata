@@ -1386,8 +1386,8 @@ Candidate	Penelope (Penny) Cheek	Penelope (Penny) Cheek
 Candidate	Pete Siragusa	Pete Siragusa
 Candidate	Pete Wall	Pete Wall
 Candidate	Peter Case	Peter Case
-Candidate	Peter Defazio	Peter DeFazio
-Candidate	Peter Defazio	Peter Defazio
+Candidate	Peter DeFazio	Peter DeFazio
+Candidate	Peter DeFazio	Peter Defazio
 Candidate	Peter Edison	Peter Edison
 Candidate	Peter Hall	Peter Hall
 Candidate	Peter Mc Hugh	Peter Mc Hugh
@@ -2418,7 +2418,6 @@ Candidate	Nathan K Boddie	Nathan K Boddie
 Candidate	Nick Chen	Nick Chen
 Candidate	Patrick Starnes	Patrick Starnes
 Candidate	Peter Courtney	Peter Courtney
-Candidate	Peter DeFazio	Peter DeFazio
 Candidate	Randell Carlson	Randell Carlson
 Candidate	Ray Biggs	Ray Biggs
 Candidate	Renee Windsor-White	Renee Windsor-White
@@ -2463,3 +2462,39 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	Oregon;Baker County	Oregon;Baker
+ReportingUnit	Oregon;Benton County	Oregon;Benton
+ReportingUnit	Oregon;Clackamas County	Oregon;Clackamas
+ReportingUnit	Oregon;Clatsop County	Oregon;Clatsop
+ReportingUnit	Oregon;Columbia County	Oregon;Columbia
+ReportingUnit	Oregon;Coos County	Oregon;Coos
+ReportingUnit	Oregon;Crook County	Oregon;Crook
+ReportingUnit	Oregon;Curry County	Oregon;Curry
+ReportingUnit	Oregon;Deschutes County	Oregon;Deschutes
+ReportingUnit	Oregon;Douglas County	Oregon;Douglas
+ReportingUnit	Oregon;Gilliam County	Oregon;Gilliam
+ReportingUnit	Oregon;Grant County	Oregon;Grant
+ReportingUnit	Oregon;Harney County	Oregon;Harney
+ReportingUnit	Oregon;Hood River County	Oregon;Hood River
+ReportingUnit	Oregon;Jackson County	Oregon;Jackson
+ReportingUnit	Oregon;Jefferson County	Oregon;Jefferson
+ReportingUnit	Oregon;Josephine County	Oregon;Josephine
+ReportingUnit	Oregon;Klamath County	Oregon;Klamath
+ReportingUnit	Oregon;Lake County	Oregon;Lake
+ReportingUnit	Oregon;Lane County	Oregon;Lane
+ReportingUnit	Oregon;Lincoln County	Oregon;Lincoln
+ReportingUnit	Oregon;Linn County	Oregon;Linn
+ReportingUnit	Oregon;Malheur County	Oregon;Malheur
+ReportingUnit	Oregon;Marion County	Oregon;Marion
+ReportingUnit	Oregon;Morrow County	Oregon;Morrow
+ReportingUnit	Oregon;Multnomah County	Oregon;Multnomah
+ReportingUnit	Oregon;Polk County	Oregon;Polk
+ReportingUnit	Oregon;Sherman County	Oregon;Sherman
+ReportingUnit	Oregon;Tillamook County	Oregon;Tillamook
+ReportingUnit	Oregon;Umatilla County	Oregon;Umatilla
+ReportingUnit	Oregon;Union County	Oregon;Union
+ReportingUnit	Oregon;Wallowa County	Oregon;Wallowa
+ReportingUnit	Oregon;Wasco County	Oregon;Wasco
+ReportingUnit	Oregon;Washington County	Oregon;Washington
+ReportingUnit	Oregon;Wheeler County	Oregon;Wheeler
+ReportingUnit	Oregon;Yamhill County	Oregon;Yamhill

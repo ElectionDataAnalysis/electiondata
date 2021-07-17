@@ -1,15 +1,14 @@
 BallotName
-Brock Pierce Karla Ballard
-Don Blankenship William Mohr
-Donald J. Trump Michael R. Pence
+Brock Pierce
+Kay J. Christofferson
+Don Blankenship
+Donald J. Trump
 Gloria La Riva
 Howie Hawkins Angela Walker
 Jo Jorgensen Jeremy Cohen
 Joe Mchugh Elizabeth Storm
 Joseph R. Biden Kamala D. Harris
 Kanye West Michelle Tidball
-<- did not match regex ^(.*) \([A-Z]{3}\)$
-County <- did not match regex ^(.*) \([A-Z]{3}\)$County
 Blake David Moore
 Darren Parry
 Chris Stewart

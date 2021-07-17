@@ -1,5 +1,5 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-Candidate	<- did not match regex ^(.*) \([A-Z]{3}\)$	<- did not match regex ^(.*) \([A-Z]{3}\)$
+Candidate	Kay J. Christofferson	Kay J. Christofferson
 Candidate	Al Gore	AL GORE
 Candidate	Barack Obama	BARACK OBAMA
 Candidate	Ben Mcadams	Ben Mcadams
@@ -8,7 +8,6 @@ Candidate	Brock Pierce	Brock Pierce Karla Ballard
 Candidate	Burgess Owens	Burgess Owens
 Candidate	Chris Peterson	Chris Peterson Karina Brown
 Candidate	Chris Stewart	Chris Stewart
-Candidate	County <- did not match regex ^(.*) \([A-Z]{3}\)$County	County <- did not match regex ^(.*) \([A-Z]{3}\)$County
 Candidate	Daniel Clyde Cummings	Daniel Clyde Cummings
 Candidate	Daniel Rhead Cottam	Daniel Rhead Cottam Barry Evan Short
 Candidate	Darren Parry	Darren Parry
@@ -33,7 +32,7 @@ Candidate	Jonia M Broderick	Jonia M Broderick
 Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harris
 Candidate	Kael Weston	Kael Weston
 Candidate	Kanye West	Kanye West Michelle Tidball
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Other	OTHER
 Candidate	Ralph Nader	RALPH NADER
 Candidate	Rudy J. Bautista	Rudy J. Bautista
@@ -346,7 +345,7 @@ CandidateContest	UT House District 68	UT;State Representative;District 68
 CandidateContest	UT House District 73	UT;State Representative;District 73
 CandidateContest	UT Senate District 28	UT;State Senator;District 28
 CandidateContest	US House UT District 2	UT;US Representative;District 2
-CandidateContest	UT US Senator	UT;US Senator;statewide
+CandidateContest	US Senate UT	UT;US Senator;statewide
 CandidateContest	UT State Board of Education District 1	UT;State Board of Education;District 1
 CandidateContest	UT House District 1	UT;State Representative;District 1
 CandidateContest	UT House District 29	UT;State Representative;District 29
@@ -442,7 +441,6 @@ CandidateContest	UT House District 10	UT;State Representative;District 10
 CandidateContest	UT House District 7	UT;State Representative;District 7
 CandidateContest	UT House District 8	UT;State Representative;District 8
 CandidateContest	UT House District 9	UT;State Representative;District 9
-Candidate	Mitt Romney	Mitt Romney
 Candidate	Aaron Heineman	Aaron Heineman
 Candidate	Abrian B. Velarde	Abrian B. Velarde
 Candidate	Adam Alba	Adam Alba
@@ -693,3 +691,32 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	Utah;Beaver County	Utah;Beaver
+ReportingUnit	Utah;Box Elder County	Utah;Box Elder
+ReportingUnit	Utah;Cache County	Utah;Cache
+ReportingUnit	Utah;Carbon County	Utah;Carbon
+ReportingUnit	Utah;Daggett County	Utah;Daggett
+ReportingUnit	Utah;Davis County	Utah;Davis
+ReportingUnit	Utah;Duchesne County	Utah;Duchesne
+ReportingUnit	Utah;Emery County	Utah;Emery
+ReportingUnit	Utah;Garfield County	Utah;Garfield
+ReportingUnit	Utah;Grand County	Utah;Grand
+ReportingUnit	Utah;Iron County	Utah;Iron
+ReportingUnit	Utah;Juab County	Utah;Juab
+ReportingUnit	Utah;Kane County	Utah;Kane
+ReportingUnit	Utah;Millard County	Utah;Millard
+ReportingUnit	Utah;Morgan County	Utah;Morgan
+ReportingUnit	Utah;Piute County	Utah;Piute
+ReportingUnit	Utah;Rich County	Utah;Rich
+ReportingUnit	Utah;Salt Lake County	Utah;Salt Lake
+ReportingUnit	Utah;San Juan County	Utah;San Juan
+ReportingUnit	Utah;Sanpete County	Utah;Sanpete
+ReportingUnit	Utah;Sevier County	Utah;Sevier
+ReportingUnit	Utah;Summit County	Utah;Summit
+ReportingUnit	Utah;Tooele County	Utah;Tooele
+ReportingUnit	Utah;Uintah County	Utah;Uintah
+ReportingUnit	Utah;Utah County	Utah;Utah
+ReportingUnit	Utah;Wasatch County	Utah;Wasatch
+ReportingUnit	Utah;Washington County	Utah;Washington
+ReportingUnit	Utah;Wayne County	Utah;Wayne
+ReportingUnit	Utah;Weber County	Utah;Weber

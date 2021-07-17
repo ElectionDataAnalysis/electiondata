@@ -520,7 +520,7 @@ CandidateContest	SD State Auditor	SD;State Auditor;statewide
 CandidateContest	SD House District 20	SD;State Representative;District 20
 CandidateContest	SD Senate District 20	SD;State Senator;District 20
 CandidateContest	SD State Treasurer	SD;State Treasurer;statewide
-CandidateContest	US House SD District 0	SD;US Representative;District 0
+CandidateContest	US House SD District 1	SD;US Representative;District 0
 CandidateContest	SD House District 22	SD;State Representative;District 22
 CandidateContest	SD Senate District 22	SD;State Senator;District 22
 CandidateContest	SD House District 27	SD;State Representative;District 27
@@ -755,3 +755,69 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	South Dakota;Aurora County	South Dakota;Aurora
+ReportingUnit	South Dakota;Beadle County	South Dakota;Beadle
+ReportingUnit	South Dakota;Bennett County	South Dakota;Bennett
+ReportingUnit	South Dakota;Bon Homme County	South Dakota;Bon Homme
+ReportingUnit	South Dakota;Brookings County	South Dakota;Brookings
+ReportingUnit	South Dakota;Brown County	South Dakota;Brown
+ReportingUnit	South Dakota;Brule County	South Dakota;Brule
+ReportingUnit	South Dakota;Buffalo County	South Dakota;Buffalo
+ReportingUnit	South Dakota;Butte County	South Dakota;Butte
+ReportingUnit	South Dakota;Campbell County	South Dakota;Campbell
+ReportingUnit	South Dakota;Charles Mix County	South Dakota;Charles Mix
+ReportingUnit	South Dakota;Clark County	South Dakota;Clark
+ReportingUnit	South Dakota;Clay County	South Dakota;Clay
+ReportingUnit	South Dakota;Codington County	South Dakota;Codington
+ReportingUnit	South Dakota;Corson County	South Dakota;Corson
+ReportingUnit	South Dakota;Custer County	South Dakota;Custer
+ReportingUnit	South Dakota;Davison County	South Dakota;Davison
+ReportingUnit	South Dakota;Day County	South Dakota;Day
+ReportingUnit	South Dakota;Deuel County	South Dakota;Deuel
+ReportingUnit	South Dakota;Dewey County	South Dakota;Dewey
+ReportingUnit	South Dakota;Douglas County	South Dakota;Douglas
+ReportingUnit	South Dakota;Edmunds County	South Dakota;Edmunds
+ReportingUnit	South Dakota;Fall River County	South Dakota;Fall River
+ReportingUnit	South Dakota;Faulk County	South Dakota;Faulk
+ReportingUnit	South Dakota;Grant County	South Dakota;Grant
+ReportingUnit	South Dakota;Gregory County	South Dakota;Gregory
+ReportingUnit	South Dakota;Haakon County	South Dakota;Haakon
+ReportingUnit	South Dakota;Hamlin County	South Dakota;Hamlin
+ReportingUnit	South Dakota;Hand County	South Dakota;Hand
+ReportingUnit	South Dakota;Hanson County	South Dakota;Hanson
+ReportingUnit	South Dakota;Harding County	South Dakota;Harding
+ReportingUnit	South Dakota;Hughes County	South Dakota;Hughes
+ReportingUnit	South Dakota;Hutchinson County	South Dakota;Hutchinson
+ReportingUnit	South Dakota;Hyde County	South Dakota;Hyde
+ReportingUnit	South Dakota;Jackson County	South Dakota;Jackson
+ReportingUnit	South Dakota;Jerauld County	South Dakota;Jerauld
+ReportingUnit	South Dakota;Jones County	South Dakota;Jones
+ReportingUnit	South Dakota;Kingsbury County	South Dakota;Kingsbury
+ReportingUnit	South Dakota;Lake County	South Dakota;Lake
+ReportingUnit	South Dakota;Lawrence County	South Dakota;Lawrence
+ReportingUnit	South Dakota;Lincoln County	South Dakota;Lincoln
+ReportingUnit	South Dakota;Lyman County	South Dakota;Lyman
+ReportingUnit	South Dakota;Marshall County	South Dakota;Marshall
+ReportingUnit	South Dakota;McCook County	South Dakota;McCook
+ReportingUnit	South Dakota;McPherson County	South Dakota;McPherson
+ReportingUnit	South Dakota;Meade County	South Dakota;Meade
+ReportingUnit	South Dakota;Mellette County	South Dakota;Mellette
+ReportingUnit	South Dakota;Miner County	South Dakota;Miner
+ReportingUnit	South Dakota;Minnehaha County	South Dakota;Minnehaha
+ReportingUnit	South Dakota;Moody County	South Dakota;Moody
+ReportingUnit	South Dakota;Oglala Lakota County	South Dakota;Oglala Lakota
+ReportingUnit	South Dakota;Pennington County	South Dakota;Pennington
+ReportingUnit	South Dakota;Perkins County	South Dakota;Perkins
+ReportingUnit	South Dakota;Potter County	South Dakota;Potter
+ReportingUnit	South Dakota;Roberts County	South Dakota;Roberts
+ReportingUnit	South Dakota;Sanborn County	South Dakota;Sanborn
+ReportingUnit	South Dakota;Spink County	South Dakota;Spink
+ReportingUnit	South Dakota;Stanley County	South Dakota;Stanley
+ReportingUnit	South Dakota;Sully County	South Dakota;Sully
+ReportingUnit	South Dakota;Todd County	South Dakota;Todd
+ReportingUnit	South Dakota;Tripp County	South Dakota;Tripp
+ReportingUnit	South Dakota;Turner County	South Dakota;Turner
+ReportingUnit	South Dakota;Union County	South Dakota;Union
+ReportingUnit	South Dakota;Walworth County	South Dakota;Walworth
+ReportingUnit	South Dakota;Yankton County	South Dakota;Yankton
+ReportingUnit	South Dakota;Ziebach County	South Dakota;Ziebach

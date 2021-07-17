@@ -1,4 +1,10 @@
 BallotName
+Sharon 'Layne' Adams
+Sabi 'Doc' Kumar
+Randall 'Randy' Price
+John 'Big John' Smith
+Christina 'Chris' Callaway
+C.S. 'Scott' Coffey
 Yusuf A. Hakeem
 Write-In - Brian Carroll
 William Lamberth
@@ -276,14 +282,12 @@ Brent Moody
 Brent S. Morris
 Breton Phillips
 Brian Kelsey
-C.S. 'Scott' Coffey
 Carl Lansden
 Carl R. Eggers, Sr.
 Carol Venea' Abney
 Cassandra Mitchell
 Chad Riden
 Chris Mayor
-Christina 'Chris' Callaway
 Coleen Martinez
 Cory King
 Danielle Mitchell
@@ -337,7 +341,6 @@ Jim Coley
 Joda Thongnopnua
 Jody M. Ball
 Joe B. Wilmoth
-John 'Big John' Smith
 John B Holsclaw Jr.
 John Carico
 John Crawford
@@ -397,7 +400,6 @@ Paul Bailey
 Phil Bredesen
 Phil Roe
 Rachel Mackey
-Randall 'Randy' Price
 Randell Stroud
 Randy McNally
 Raumesh Akbari
@@ -415,12 +417,10 @@ Robin Smith
 Roy Donald Waldrop
 Rueben Dockery
 Rusty Crowe
-Sabi 'Doc' Kumar
 Sanjeev Memula
 Savannah Williamson
 Scott McCormick
 Sean Bruce Fleming
-Sharon 'Layne' Adams
 Sherry L. Clark
 Steve Southerland
 Stuart Starr

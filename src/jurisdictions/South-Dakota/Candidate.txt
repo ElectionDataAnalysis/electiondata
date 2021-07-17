@@ -1,4 +1,6 @@
 BallotName
+Dwight W. 'Bill' Adamson
+Dustin 'Dusty' Johnson
 Joseph R Biden
 Jo Jorgensen
 Donald J Trump
@@ -233,8 +235,6 @@ Debra Smith
 Dennis Evenson
 Diana Hane
 Doug Post
-Dustin 'Dusty' Johnson
-Dwight W. 'Bill' Adamson
 Eleanor Iverson
 Elizabeth May
 Elizabeth Merrigan

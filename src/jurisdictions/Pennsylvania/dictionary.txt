@@ -3830,7 +3830,7 @@ CandidateContest	PA Governor	PA;Governor;statewide
 CandidateContest	PA House District 193	PA;State Representative;District 193
 CandidateContest	PA House District 91	PA;State Representative;District 91
 CandidateContest	US House PA District 13	PA;US Representative;District 13
-CandidateContest	PA US Senator	PA;US Senator;statewide
+CandidateContest	US Senate PA	PA;US Senator;statewide
 CandidateContest	PA House District 16	PA;State Representative;District 16
 CandidateContest	PA House District 19	PA;State Representative;District 19
 CandidateContest	PA House District 20	PA;State Representative;District 20
@@ -4526,3 +4526,70 @@ CountItemType	election-day	machine
 CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
+ReportingUnit	Pennsylvania;Adams County	Pennsylvania;Adams
+ReportingUnit	Pennsylvania;Allegheny County	Pennsylvania;Allegheny
+ReportingUnit	Pennsylvania;Armstrong County	Pennsylvania;Armstrong
+ReportingUnit	Pennsylvania;Beaver County	Pennsylvania;Beaver
+ReportingUnit	Pennsylvania;Bedford County	Pennsylvania;Bedford
+ReportingUnit	Pennsylvania;Berks County	Pennsylvania;Berks
+ReportingUnit	Pennsylvania;Blair County	Pennsylvania;Blair
+ReportingUnit	Pennsylvania;Bradford County	Pennsylvania;Bradford
+ReportingUnit	Pennsylvania;Bucks County	Pennsylvania;Bucks
+ReportingUnit	Pennsylvania;Butler County	Pennsylvania;Butler
+ReportingUnit	Pennsylvania;Cambria County	Pennsylvania;Cambria
+ReportingUnit	Pennsylvania;Cameron County	Pennsylvania;Cameron
+ReportingUnit	Pennsylvania;Carbon County	Pennsylvania;Carbon
+ReportingUnit	Pennsylvania;Centre County	Pennsylvania;Centre
+ReportingUnit	Pennsylvania;Chester County	Pennsylvania;Chester
+ReportingUnit	Pennsylvania;Clarion County	Pennsylvania;Clarion
+ReportingUnit	Pennsylvania;Clearfield County	Pennsylvania;Clearfield
+ReportingUnit	Pennsylvania;Clinton County	Pennsylvania;Clinton
+ReportingUnit	Pennsylvania;Columbia County	Pennsylvania;Columbia
+ReportingUnit	Pennsylvania;Crawford County	Pennsylvania;Crawford
+ReportingUnit	Pennsylvania;Cumberland County	Pennsylvania;Cumberland
+ReportingUnit	Pennsylvania;Dauphin County	Pennsylvania;Dauphin
+ReportingUnit	Pennsylvania;Delaware County	Pennsylvania;Delaware
+ReportingUnit	Pennsylvania;Elk County	Pennsylvania;Elk
+ReportingUnit	Pennsylvania;Erie County	Pennsylvania;Erie
+ReportingUnit	Pennsylvania;Fayette County	Pennsylvania;Fayette
+ReportingUnit	Pennsylvania;Forest County	Pennsylvania;Forest
+ReportingUnit	Pennsylvania;Franklin County	Pennsylvania;Franklin
+ReportingUnit	Pennsylvania;Fulton County	Pennsylvania;Fulton
+ReportingUnit	Pennsylvania;Greene County	Pennsylvania;Greene
+ReportingUnit	Pennsylvania;Huntingdon County	Pennsylvania;Huntingdon
+ReportingUnit	Pennsylvania;Indiana County	Pennsylvania;Indiana
+ReportingUnit	Pennsylvania;Jefferson County	Pennsylvania;Jefferson
+ReportingUnit	Pennsylvania;Juniata County	Pennsylvania;Juniata
+ReportingUnit	Pennsylvania;Lackawanna County	Pennsylvania;Lackawanna
+ReportingUnit	Pennsylvania;Lancaster County	Pennsylvania;Lancaster
+ReportingUnit	Pennsylvania;Lawrence County	Pennsylvania;Lawrence
+ReportingUnit	Pennsylvania;Lebanon County	Pennsylvania;Lebanon
+ReportingUnit	Pennsylvania;Lehigh County	Pennsylvania;Lehigh
+ReportingUnit	Pennsylvania;Luzerne County	Pennsylvania;Luzerne
+ReportingUnit	Pennsylvania;Lycoming County	Pennsylvania;Lycoming
+ReportingUnit	Pennsylvania;McKean County	Pennsylvania;McKean
+ReportingUnit	Pennsylvania;Mercer County	Pennsylvania;Mercer
+ReportingUnit	Pennsylvania;Mifflin County	Pennsylvania;Mifflin
+ReportingUnit	Pennsylvania;Monroe County	Pennsylvania;Monroe
+ReportingUnit	Pennsylvania;Montgomery County	Pennsylvania;Montgomery
+ReportingUnit	Pennsylvania;Montour County	Pennsylvania;Montour
+ReportingUnit	Pennsylvania;Northampton County	Pennsylvania;Northampton
+ReportingUnit	Pennsylvania;Northumberland County	Pennsylvania;Northumberland
+ReportingUnit	Pennsylvania;Perry County	Pennsylvania;Perry
+ReportingUnit	Pennsylvania;Philadelphia County	Pennsylvania;Philadelphia
+ReportingUnit	Pennsylvania;Pike County	Pennsylvania;Pike
+ReportingUnit	Pennsylvania;Potter County	Pennsylvania;Potter
+ReportingUnit	Pennsylvania;Schuylkill County	Pennsylvania;Schuylkill
+ReportingUnit	Pennsylvania;Snyder County	Pennsylvania;Snyder
+ReportingUnit	Pennsylvania;Somerset County	Pennsylvania;Somerset
+ReportingUnit	Pennsylvania;Sullivan County	Pennsylvania;Sullivan
+ReportingUnit	Pennsylvania;Susquehanna County	Pennsylvania;Susquehanna
+ReportingUnit	Pennsylvania;Tioga County	Pennsylvania;Tioga
+ReportingUnit	Pennsylvania;Union County	Pennsylvania;Union
+ReportingUnit	Pennsylvania;Venango County	Pennsylvania;Venango
+ReportingUnit	Pennsylvania;Warren County	Pennsylvania;Warren
+ReportingUnit	Pennsylvania;Washington County	Pennsylvania;Washington
+ReportingUnit	Pennsylvania;Wayne County	Pennsylvania;Wayne
+ReportingUnit	Pennsylvania;Westmoreland County	Pennsylvania;Westmoreland
+ReportingUnit	Pennsylvania;Wyoming County	Pennsylvania;Wyoming
+ReportingUnit	Pennsylvania;York County	Pennsylvania;York

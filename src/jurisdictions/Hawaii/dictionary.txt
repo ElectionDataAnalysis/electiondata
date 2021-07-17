@@ -487,7 +487,7 @@ CandidateContest	HI House District 7	HI;State Representative;District 7
 CandidateContest	HI Senate District 1	HI;State Senator;District 1
 CandidateContest	HI Senate District 3	HI;State Senator;District 3
 CandidateContest	US House HI District 2	HI;US Representative;District 2
-CandidateContest	HI US Senator	HI;US Senator;statewide
+CandidateContest	US Senate HI	HI;US Senator;statewide
 CandidateContest	HI House District 17	HI;State Representative;District 17
 CandidateContest	HI House District 18	HI;State Representative;District 18
 CandidateContest	HI House District 20	HI;State Representative;District 20
@@ -598,3 +598,7 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	Hawaii;Hawaii County	Hawaii;Hawaii
+ReportingUnit	Hawaii;Honolulu County	Hawaii;Honolulu
+ReportingUnit	Hawaii;Kauai County	Hawaii;Kauai
+ReportingUnit	Hawaii;Maui County	Hawaii;Maui

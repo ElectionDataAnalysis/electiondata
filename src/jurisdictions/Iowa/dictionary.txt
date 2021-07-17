@@ -221,7 +221,6 @@ Candidate	Garrett Dozark	Garrett Dozark
 Candidate	Garrett Gobble	Garrett Gobble
 Candidate	Gary Carlson	Gary Carlson
 Candidate	Gary M. Mohr	Gary M. Mohr
-Candidate	Gary M. Mohr	Gary Mohr
 Candidate	Gary Siegwarth	Gary Siegwarth/Natalia Blaskov
 Candidate	Gary Siegwarth	Gary Siegwarth/Natalia Blaskovich
 Candidate	Gary Waechter	Gary Waechter
@@ -640,7 +639,6 @@ Candidate	Vicky Brenner	Vicky Brenner
 Candidate	Victoria Sinclair	Victoria Sinclair
 Candidate	Walt Rogers	Walt Rogers
 Candidate	Warren Andrew Varley	Warren Andrew Varley
-Candidate	Warren Andrew Varley	Warren Varley
 Candidate	Waylon Brown	Waylon Brown
 Candidate	Waylon Brown	Waylon Brown (write-in)
 Candidate	Wes Breckenridge	Wes Breckenridge
@@ -3612,11 +3610,7 @@ CandidateContest	IA House District 13	IA;State Representative;District 13
 CandidateContest	IA House District 14	IA;State Representative;District 14
 CandidateContest	IA House District 6	IA;State Representative;District 6
 CandidateContest	IA Senate District 7	IA;State Senator;District 7
-Candidate	Fred Hubbell/Rita R. Hart	Fred Hubbell/Rita R. Hart
 Candidate	Gary Mohr	Gary Mohr
-Candidate	Gary Siegwarth/Natalia Blaskovich	Gary Siegwarth/Natalia Blaskovich
-Candidate	Jake Porter/Lynne Gentry	Jake Porter/Lynne Gentry
-Candidate	Kim Reynolds/Adam Gregg	Kim Reynolds/Adam Gregg
 Candidate	Warren Varley	Warren Varley
 Party	Clear Water Party	clear water
 Party	Democratic Party	democrat
@@ -3640,3 +3634,102 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	Iowa;Adair County	Iowa;Adair
+ReportingUnit	Iowa;Adams County	Iowa;Adams
+ReportingUnit	Iowa;Allamakee County	Iowa;Allamakee
+ReportingUnit	Iowa;Appanoose County	Iowa;Appanoose
+ReportingUnit	Iowa;Audubon County	Iowa;Audubon
+ReportingUnit	Iowa;Benton County	Iowa;Benton
+ReportingUnit	Iowa;Black Hawk County	Iowa;Black Hawk
+ReportingUnit	Iowa;Boone County	Iowa;Boone
+ReportingUnit	Iowa;Bremer County	Iowa;Bremer
+ReportingUnit	Iowa;Buchanan County	Iowa;Buchanan
+ReportingUnit	Iowa;Buena Vista County	Iowa;Buena Vista
+ReportingUnit	Iowa;Butler County	Iowa;Butler
+ReportingUnit	Iowa;Calhoun County	Iowa;Calhoun
+ReportingUnit	Iowa;Carroll County	Iowa;Carroll
+ReportingUnit	Iowa;Cass County	Iowa;Cass
+ReportingUnit	Iowa;Cedar County	Iowa;Cedar
+ReportingUnit	Iowa;Cerro Gordo County	Iowa;Cerro Gordo
+ReportingUnit	Iowa;Cherokee County	Iowa;Cherokee
+ReportingUnit	Iowa;Chickasaw County	Iowa;Chickasaw
+ReportingUnit	Iowa;Clarke County	Iowa;Clarke
+ReportingUnit	Iowa;Clay County	Iowa;Clay
+ReportingUnit	Iowa;Clayton County	Iowa;Clayton
+ReportingUnit	Iowa;Clinton County	Iowa;Clinton
+ReportingUnit	Iowa;Crawford County	Iowa;Crawford
+ReportingUnit	Iowa;Dallas County	Iowa;Dallas
+ReportingUnit	Iowa;Davis County	Iowa;Davis
+ReportingUnit	Iowa;Decatur County	Iowa;Decatur
+ReportingUnit	Iowa;Delaware County	Iowa;Delaware
+ReportingUnit	Iowa;Des Moines County	Iowa;Des Moines
+ReportingUnit	Iowa;Dickinson County	Iowa;Dickinson
+ReportingUnit	Iowa;Dubuque County	Iowa;Dubuque
+ReportingUnit	Iowa;Emmet County	Iowa;Emmet
+ReportingUnit	Iowa;Fayette County	Iowa;Fayette
+ReportingUnit	Iowa;Floyd County	Iowa;Floyd
+ReportingUnit	Iowa;Franklin County	Iowa;Franklin
+ReportingUnit	Iowa;Fremont County	Iowa;Fremont
+ReportingUnit	Iowa;Greene County	Iowa;Greene
+ReportingUnit	Iowa;Grundy County	Iowa;Grundy
+ReportingUnit	Iowa;Guthrie County	Iowa;Guthrie
+ReportingUnit	Iowa;Hamilton County	Iowa;Hamilton
+ReportingUnit	Iowa;Hancock County	Iowa;Hancock
+ReportingUnit	Iowa;Hardin County	Iowa;Hardin
+ReportingUnit	Iowa;Harrison County	Iowa;Harrison
+ReportingUnit	Iowa;Henry County	Iowa;Henry
+ReportingUnit	Iowa;Howard County	Iowa;Howard
+ReportingUnit	Iowa;Humboldt County	Iowa;Humboldt
+ReportingUnit	Iowa;Ida County	Iowa;Ida
+ReportingUnit	Iowa;Iowa County	Iowa;Iowa
+ReportingUnit	Iowa;Jackson County	Iowa;Jackson
+ReportingUnit	Iowa;Jasper County	Iowa;Jasper
+ReportingUnit	Iowa;Jefferson County	Iowa;Jefferson
+ReportingUnit	Iowa;Johnson County	Iowa;Johnson
+ReportingUnit	Iowa;Jones County	Iowa;Jones
+ReportingUnit	Iowa;Keokuk County	Iowa;Keokuk
+ReportingUnit	Iowa;Kossuth County	Iowa;Kossuth
+ReportingUnit	Iowa;Lee County	Iowa;Lee
+ReportingUnit	Iowa;Linn County	Iowa;Linn
+ReportingUnit	Iowa;Louisa County	Iowa;Louisa
+ReportingUnit	Iowa;Lucas County	Iowa;Lucas
+ReportingUnit	Iowa;Lyon County	Iowa;Lyon
+ReportingUnit	Iowa;Madison County	Iowa;Madison
+ReportingUnit	Iowa;Mahaska County	Iowa;Mahaska
+ReportingUnit	Iowa;Marion County	Iowa;Marion
+ReportingUnit	Iowa;Marshall County	Iowa;Marshall
+ReportingUnit	Iowa;Mills County	Iowa;Mills
+ReportingUnit	Iowa;Mitchell County	Iowa;Mitchell
+ReportingUnit	Iowa;Monona County	Iowa;Monona
+ReportingUnit	Iowa;Monroe County	Iowa;Monroe
+ReportingUnit	Iowa;Montgomery County	Iowa;Montgomery
+ReportingUnit	Iowa;Muscatine County	Iowa;Muscatine
+ReportingUnit	Iowa;O'Brien County	Iowa;O'Brien
+ReportingUnit	Iowa;Osceola County	Iowa;Osceola
+ReportingUnit	Iowa;Page County	Iowa;Page
+ReportingUnit	Iowa;Palo Alto County	Iowa;Palo Alto
+ReportingUnit	Iowa;Plymouth County	Iowa;Plymouth
+ReportingUnit	Iowa;Pocahontas County	Iowa;Pocahontas
+ReportingUnit	Iowa;Polk County	Iowa;Polk
+ReportingUnit	Iowa;Pottawattamie County	Iowa;Pottawattamie
+ReportingUnit	Iowa;Poweshiek County	Iowa;Poweshiek
+ReportingUnit	Iowa;Ringgold County	Iowa;Ringgold
+ReportingUnit	Iowa;Sac County	Iowa;Sac
+ReportingUnit	Iowa;Scott County	Iowa;Scott
+ReportingUnit	Iowa;Shelby County	Iowa;Shelby
+ReportingUnit	Iowa;Sioux County	Iowa;Sioux
+ReportingUnit	Iowa;Story County	Iowa;Story
+ReportingUnit	Iowa;Tama County	Iowa;Tama
+ReportingUnit	Iowa;Taylor County	Iowa;Taylor
+ReportingUnit	Iowa;Union County	Iowa;Union
+ReportingUnit	Iowa;Van Buren County	Iowa;Van Buren
+ReportingUnit	Iowa;Wapello County	Iowa;Wapello
+ReportingUnit	Iowa;Warren County	Iowa;Warren
+ReportingUnit	Iowa;Washington County	Iowa;Washington
+ReportingUnit	Iowa;Wayne County	Iowa;Wayne
+ReportingUnit	Iowa;Webster County	Iowa;Webster
+ReportingUnit	Iowa;Winnebago County	Iowa;Winnebago
+ReportingUnit	Iowa;Winneshiek County	Iowa;Winneshiek
+ReportingUnit	Iowa;Woodbury County	Iowa;Woodbury
+ReportingUnit	Iowa;Worth County	Iowa;Worth
+ReportingUnit	Iowa;Wright County	Iowa;Wright

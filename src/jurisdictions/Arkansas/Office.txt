@@ -147,3 +147,4 @@ AR State Treasurer	Arkansas
 AR Auditor of State	Arkansas
 AR Secretary of State	Arkansas
 AR Commissioner of State Lands	Arkansas
+AR State Supreme Court Associate Justice Position 3	Arkansas

@@ -104,5 +104,9 @@ US Senate AZ	Arizona
 AZ Corporation Commissioner	Arizona
 AZ Attorney General	Arizona
 AZ Lieutenant Governor	Arizona
-AZ Treasurer	Arizona
+AZ State Treasurer	Arizona
 AZ Secretary of State	Arizona
+AZ Superintendant of Public Instruction	Arizona
+AZ State Mine Inspector	Arizona
+
+

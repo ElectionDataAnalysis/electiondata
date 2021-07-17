@@ -9,7 +9,7 @@ BallotMeasureSelection	Yes	Yes
 Candidate	Aaron Meaders	Aaron Meaders
 Candidate	Adrienne S. Dube	Adrienne S. Dube
 Candidate	Al 'Doc' Olszewski	Al 'Doc' Olszewski And Ken Bogner
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alan H. George	Alan H. George
 Candidate	Albert- Mary Sparklin	Albert- Mary Sparklin
 Candidate	Alex Gray	Alex Gray
@@ -31,7 +31,7 @@ Candidate	Arthur Weatherwax	Arthur Weatherwax
 Candidate	Athina Collins	Athina Collins
 Candidate	August Scalpcane	August Scalpcane
 Candidate	Austin Knudsen	Austin Knudsen
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara Bessette	Barbara Bessette
 Candidate	Barbara T. Hoven	Barbara T. Hoven
 Candidate	Barnett G. Sporkin-Morrison	Barnett G. Sporkin-Morrison
@@ -143,7 +143,7 @@ Candidate	Diana Youngquist	Diana Youngquist
 Candidate	Diane L. Magone	Diane L. Magone
 Candidate	Don Seifert	Don Seifert
 Candidate	Donald J Trump	Donald J Trump
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump And Michael R. Pence
 Candidate	Donald Seifert	Donald Seifert
 Candidate	Donald St. Peter	Donald St. Peter
@@ -186,7 +186,7 @@ Candidate	Gary Marbut	Gary Marbut
 Candidate	Gary Perry	Gary Perry
 Candidate	George Anthony Schultz	George Anthony Schultz
 Candidate	George Mollander	George Mollander
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Gerald J Cuvillier	Gerald J Cuvillier
 Candidate	Geraldine Custer	Geraldine Custer
 Candidate	Gerry Browning	Gerry Browning
@@ -205,7 +205,7 @@ Candidate	Heather Blom	Heather Blom
 Candidate	Heidi Haymaker	Heidi Haymaker
 Candidate	Helena Lovick	Helena Lovick
 Candidate	Henry Curtis	Henry Curtis
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hollis Poe	Hollis Poe
 Candidate	Howard F. Recht	Howard F. Recht
 Candidate	Ian Root	Ian Root
@@ -270,9 +270,9 @@ Candidate	John Dallas Teini	John Dallas Teini
 Candidate	John Evankovich	John Evankovich
 Candidate	John Fuller	John Fuller
 Candidate	John Gibney	John Gibney
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John Lamb	John Lamb
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John Mues	John Mues
 Candidate	John R Mercer	John R Mercer
 Candidate	John W. Parker	John W. Parker
@@ -401,7 +401,7 @@ Candidate	Mike Knoles	Mike Knoles
 Candidate	Mike Lang	Mike Lang
 Candidate	Mike Warner	Mike Warner
 Candidate	Mike Winsor	Mike Winsor
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Moffie Funk	Moffie Funk
 Candidate	Monica Tranel	Monica Tranel
 Candidate	Nadiya Stough	Nadiya Stough
@@ -418,7 +418,7 @@ Candidate	Niki Sardot	Niki Sardot
 Candidate	No Preference	No Preference
 Candidate	Nolen W Skime	Nolen W Skime
 Candidate	Norm Nunnally	Norm Nunnally
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Pat Mischel	Pat Mischel
 Candidate	Paul C. Fielder	Paul C. Fielder
 Candidate	Paul J. Longfield	Paul J. Longfield
@@ -427,7 +427,7 @@ Candidate	Philip Olson	Philip Olson
 Candidate	Rachel Stansberry	Rachel Stansberry
 Candidate	Rae Peppers	Rae Peppers
 Candidate	Ralph Foster	Ralph Foster
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Randy C Boling	Randy C Boling
 Candidate	Randy Chamberlin	Randy Chamberlin
 Candidate	Randy Pinocci	Randy Pinocci
@@ -2408,8 +2408,8 @@ ReportingUnit	Montana;Wibaux County	fips30109
 ReportingUnit	Montana;Yellowstone County	Yellowstone
 ReportingUnit	Montana;Yellowstone County	fips30111
 CandidateContest	MT House District 72	MT;State Representative;District 72
-CandidateContest	US House MT District 0	MT;US Representative;District 0
-CandidateContest	MT US Senator	MT;US Senator;statewide
+CandidateContest	US House MT District 1	MT;US Representative;District 0
+CandidateContest	US Senate MT	MT;US Senator;statewide
 CandidateContest	MT House District 41	MT;State Representative;District 41
 CandidateContest	MT House District 42	MT;State Representative;District 42
 CandidateContest	MT House District 32	MT;State Representative;District 32
@@ -2581,15 +2581,14 @@ Candidate	Diane Sands	Diane Sands
 Candidate	Diane Taylor-Mahnke	Diane Taylor-Mahnke
 Candidate	Donald Coats	Donald Coats
 Candidate	Donald Kenck	Donald Kenck
-Candidate	Douglas 'Doug' Kary	"Douglas ""Doug"" Kary"
+Candidate	Douglas 'Doug' Kary	Douglas 'Doug' Kary
 Candidate	Duane Ankney	Duane Ankney
 Candidate	Eldena N. Bear Don't Walk	Eldena N. Bear Don't Walk
 Candidate	Elinor Swanson	Elinor Swanson
-Candidate	Elizabeth 'Betsy' Scanlin	"Elizabeth ""Betsy"" Scanlin"
 Candidate	Frank McLain	Frank McLain
 Candidate	Frederick (Eric) Moore	Frederick (Eric) Moore
 Candidate	Gilbert Bruce Meyers	Gilbert Bruce Meyers
-Candidate	Gordon 'Gordy' Vance	"Gordon ""Gordy"" Vance"
+Candidate	Gordon 'Gordy' Vance	Gordon 'Gordy' Vance
 Candidate	Gordon Pierson Jr	Gordon Pierson Jr
 Candidate	Greg Gianforte	Greg Gianforte
 Candidate	J. Bryher Herak	J. Bryher Herak
@@ -2600,7 +2599,7 @@ Candidate	Janna J. Lind	Janna J. Lind
 Candidate	Jason F. Nickisch	Jason F. Nickisch
 Candidate	Jason W. Ellsworth	Jason W. Ellsworth
 Candidate	Jay A. Frederick	Jay A. Frederick
-Candidate	Jennifer 'Jp' Pomnichowski	"Jennifer ""Jp"" Pomnichowski"
+Candidate	Jennifer 'Jp' Pomnichowski	Jennifer 'Jp' Pomnichowski
 Candidate	Jennifer Merecki	Jennifer Merecki
 Candidate	Jerry O'neil	Jerry O'neil
 Candidate	Jessica L. Karjala	Jessica L. Karjala
@@ -2638,7 +2637,7 @@ Candidate	Mary McNally	Mary McNally
 Candidate	Mary Zeiss Stange	Mary Zeiss Stange
 Candidate	Michael K. Cooper Sr	Michael K. Cooper Sr
 Candidate	Michael White	Michael White
-Candidate	Mike 'Mac' McNamara	"Mike ""Mac"" McNamara"
+Candidate	Mike 'Mac' McNamara	Mike 'Mac' McNamara
 Candidate	Mike Cuffe	Mike Cuffe
 Candidate	Ming Cabrera	Ming Cabrera
 Candidate	Nate McConnell	Nate McConnell
@@ -2693,3 +2692,59 @@ CountItemType	election-day	machine
 CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
+ReportingUnit	Montana;Beaverhead County	Montana;Beaverhead
+ReportingUnit	Montana;Big Horn County	Montana;Big Horn
+ReportingUnit	Montana;Blaine County	Montana;Blaine
+ReportingUnit	Montana;Broadwater County	Montana;Broadwater
+ReportingUnit	Montana;Carbon County	Montana;Carbon
+ReportingUnit	Montana;Carter County	Montana;Carter
+ReportingUnit	Montana;Cascade County	Montana;Cascade
+ReportingUnit	Montana;Chouteau County	Montana;Chouteau
+ReportingUnit	Montana;Custer County	Montana;Custer
+ReportingUnit	Montana;Daniels County	Montana;Daniels
+ReportingUnit	Montana;Dawson County	Montana;Dawson
+ReportingUnit	Montana;Deer Lodge County	Montana;Deer Lodge
+ReportingUnit	Montana;Fallon County	Montana;Fallon
+ReportingUnit	Montana;Fergus County	Montana;Fergus
+ReportingUnit	Montana;Flathead County	Montana;Flathead
+ReportingUnit	Montana;Gallatin County	Montana;Gallatin
+ReportingUnit	Montana;Garfield County	Montana;Garfield
+ReportingUnit	Montana;Glacier County	Montana;Glacier
+ReportingUnit	Montana;Golden Valley County	Montana;Golden Valley
+ReportingUnit	Montana;Granite County	Montana;Granite
+ReportingUnit	Montana;Hill County	Montana;Hill
+ReportingUnit	Montana;Jefferson County	Montana;Jefferson
+ReportingUnit	Montana;Judith Basin County	Montana;Judith Basin
+ReportingUnit	Montana;Lake County	Montana;Lake
+ReportingUnit	Montana;Lewis & Clark County	Montana;Lewis & Clark
+ReportingUnit	Montana;Liberty County	Montana;Liberty
+ReportingUnit	Montana;Lincoln County	Montana;Lincoln
+ReportingUnit	Montana;Madison County	Montana;Madison
+ReportingUnit	Montana;McCone County	Montana;McCone
+ReportingUnit	Montana;Meagher County	Montana;Meagher
+ReportingUnit	Montana;Mineral County	Montana;Mineral
+ReportingUnit	Montana;Missoula County	Montana;Missoula
+ReportingUnit	Montana;Musselshell County	Montana;Musselshell
+ReportingUnit	Montana;Park County	Montana;Park
+ReportingUnit	Montana;Petroleum County	Montana;Petroleum
+ReportingUnit	Montana;Phillips County	Montana;Phillips
+ReportingUnit	Montana;Pondera County	Montana;Pondera
+ReportingUnit	Montana;Powder River County	Montana;Powder River
+ReportingUnit	Montana;Powell County	Montana;Powell
+ReportingUnit	Montana;Prairie County	Montana;Prairie
+ReportingUnit	Montana;Ravalli County	Montana;Ravalli
+ReportingUnit	Montana;Richland County	Montana;Richland
+ReportingUnit	Montana;Roosevelt County	Montana;Roosevelt
+ReportingUnit	Montana;Rosebud County	Montana;Rosebud
+ReportingUnit	Montana;Sanders County	Montana;Sanders
+ReportingUnit	Montana;Sheridan County	Montana;Sheridan
+ReportingUnit	Montana;Silver Bow County	Montana;Silver Bow
+ReportingUnit	Montana;Stillwater County	Montana;Stillwater
+ReportingUnit	Montana;Sweet Grass County	Montana;Sweet Grass
+ReportingUnit	Montana;Teton County	Montana;Teton
+ReportingUnit	Montana;Toole County	Montana;Toole
+ReportingUnit	Montana;Treasure County	Montana;Treasure
+ReportingUnit	Montana;Valley County	Montana;Valley
+ReportingUnit	Montana;Wheatland County	Montana;Wheatland
+ReportingUnit	Montana;Wibaux County	Montana;Wibaux
+ReportingUnit	Montana;Yellowstone County	Montana;Yellowstone

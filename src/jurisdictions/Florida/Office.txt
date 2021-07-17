@@ -192,3 +192,5 @@ US Senate FL	Florida
 FL Attorney General	Florida
 FL Chief Financial Officer	Florida
 FL Commissioner of Agriculture	Florida
+FL Chief Financial officer	Florida
+FL State Attorney District 20	Florida;FL State Attorney District 20

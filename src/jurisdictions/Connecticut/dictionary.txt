@@ -409,6 +409,7 @@ Candidate	William J. Buckbee	William J. Buckbee
 Candidate	Wilm Donath	Wilm Donath
 Candidate	Yusheng Peng	Yusheng Peng
 CandidateContest	CT Attorney General	CT Attorney General
+CandidateContest	CT Attorney General	CT;Attorney General;statewide
 CandidateContest	CT Governor	CT Governor
 CandidateContest	CT House District 1	State Representative 01
 CandidateContest	CT House District 10	State Representative 10
@@ -1559,7 +1560,7 @@ Candidate	Emmanuel 'Manny' Sanchez	Emmanuel Manny' Sanchez
 Candidate	Christopher 'Chris' DeMatteo	Christopher Chris' DeMatteo
 CandidateContest	CT Attorney General	CT;Attorney General
 CandidateContest	CT Comptroller	CT;Comptroller;statewide
-CandidateContest	CT Governor and Lieutenant Governor	CT;Governor and Lieutenant Governor;statewide
+CandidateContest	CT Governor	CT;Governor and Lieutenant Governor;statewide
 CandidateContest	CT Secretary of the State	CT;Secretary of the State;statewide
 CandidateContest	CT House District 106	CT;State Representative;District 106
 CandidateContest	CT House District 107	CT;State Representative;District 107
@@ -1611,7 +1612,7 @@ CandidateContest	CT Senate District 28	CT;State Senator;District 28
 CandidateContest	CT Senate District 30	CT;State Senator;District 30
 CandidateContest	CT Senate District 36	CT;State Senator;District 36
 CandidateContest	US House CT District 4	CT;US Representative;District 4
-CandidateContest	CT US Senator	CT;US Senator;statewide
+CandidateContest	US Senate CT	CT;US Senator;statewide
 CandidateContest	CT House District 1	CT;State Representative;District 1
 CandidateContest	CT House District 10	CT;State Representative;District 10
 CandidateContest	CT House District 103	CT;State Representative;District 103
@@ -2055,3 +2056,11 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+ReportingUnit	Connecticut;Fairfield County	Connecticut;Fairfield
+ReportingUnit	Connecticut;Hartford County	Connecticut;Hartford
+ReportingUnit	Connecticut;Litchfield County	Connecticut;Litchfield
+ReportingUnit	Connecticut;Middlesex County	Connecticut;Middlesex
+ReportingUnit	Connecticut;New Haven County	Connecticut;New Haven
+ReportingUnit	Connecticut;New London County	Connecticut;New London
+ReportingUnit	Connecticut;Tolland County	Connecticut;Tolland
+ReportingUnit	Connecticut;Windham County	Connecticut;Windham
