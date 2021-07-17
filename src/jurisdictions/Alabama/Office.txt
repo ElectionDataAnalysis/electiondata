@@ -8,3 +8,161 @@ US House AL District 6	Alabama;US House AL District 6
 US House AL District 7	Alabama;US House AL District 7
 US President (AL)	Alabama
 US Senate AL	Alabama
+AL Associate Justice of the Supreme Court, Place 1	Alabama
+AL Associate Justice of the Supreme Court, Place 2	Alabama
+AL Associate Justice of the Supreme Court, Place 3	Alabama
+AL Associate Justice of the Supreme Court, Place 4	Alabama
+AL Chief Justice of the Supreme Court	Alabama
+AL Commissioner of Agriculture and Industries	Alabama
+AL Governor	Alabama
+AL Attorney General	Alabama
+AL Lieutenant Governor	Alabama
+AL Public Service Commission, Place 1	Alabama
+AL Public Service Commission, Place 2	Alabama
+AL Secretary of State	Alabama
+AL State Auditor	Alabama
+AL House District 42	Alabama;AL House District 42
+AL House District 69	Alabama;AL House District 69
+AL House District 88	Alabama;AL House District 88
+AL Senate District 30	Alabama;AL Senate District 30
+AL State Treasurer	Alabama
+AL House District 64	Alabama;AL House District 64
+AL House District 66	Alabama;AL House District 66
+AL House District 94	Alabama;AL House District 94
+AL House District 95	Alabama;AL House District 95
+AL House District 96	Alabama;AL House District 96
+AL Senate District 22	Alabama;AL Senate District 22
+AL Senate District 32	Alabama;AL Senate District 32
+AL State Board of Education Member District 2	Alabama;AL State Board of Education Member District 2
+AL House District 84	Alabama;AL House District 84
+AL Senate District 28	Alabama;AL Senate District 28
+AL State Board of Education Member District 4	Alabama;AL State Board of Education Member District 4
+AL House District 49	Alabama;AL House District 49
+AL House District 72	Alabama;AL House District 72
+AL Senate District 14	Alabama;AL Senate District 14
+AL State Board of Education Member District 6	Alabama;AL State Board of Education Member District 6
+AL House District 11	Alabama;AL House District 11
+AL House District 13	Alabama;AL House District 13
+AL House District 27	Alabama;AL House District 27
+AL House District 34	Alabama;AL House District 34
+AL Senate District 17	Alabama;AL Senate District 17
+AL Senate District 9	Alabama;AL Senate District 9
+AL House District 90	Alabama;AL House District 90
+AL Senate District 23	Alabama;AL Senate District 23
+AL House District 29	Alabama;AL House District 29
+AL House District 32	Alabama;AL House District 32
+AL House District 35	Alabama;AL House District 35
+AL House District 36	Alabama;AL House District 36
+AL House District 39	Alabama;AL House District 39
+AL House District 40	Alabama;AL House District 40
+AL Senate District 12	Alabama;AL Senate District 12
+AL House District 37	Alabama;AL House District 37
+AL House District 38	Alabama;AL House District 38
+AL Senate District 13	Alabama;AL Senate District 13
+AL Senate District 10	Alabama;AL Senate District 10
+AL House District 81	Alabama;AL House District 81
+AL House District 65	Alabama;AL House District 65
+AL Senate District 24	Alabama;AL Senate District 24
+AL House District 68	Alabama;AL House District 68
+AL House District 33	Alabama;AL House District 33
+AL House District 91	Alabama;AL House District 91
+AL House District 92	Alabama;AL House District 92
+AL Senate District 31	Alabama;AL Senate District 31
+AL House District 18	Alabama;AL House District 18
+AL House District 3	Alabama;AL House District 3
+AL Senate District 6	Alabama;AL Senate District 6
+AL Senate District 25	Alabama;AL Senate District 25
+AL House District 12	Alabama;AL House District 12
+AL House District 9	Alabama;AL House District 9
+AL Senate District 4	Alabama;AL Senate District 4
+AL House District 89	Alabama;AL House District 89
+AL House District 93	Alabama;AL House District 93
+AL Senate District 29	Alabama;AL Senate District 29
+AL House District 67	Alabama;AL House District 67
+AL State Board of Education Member District 8	Alabama;AL State Board of Education Member District 8
+AL House District 23	Alabama;AL House District 23
+AL House District 24	Alabama;AL House District 24
+AL House District 26	Alabama;AL House District 26
+AL Senate District 8	Alabama;AL Senate District 8
+AL House District 31	Alabama;AL House District 31
+AL House District 75	Alabama;AL House District 75
+AL House District 28	Alabama;AL House District 28
+AL House District 30	Alabama;AL House District 30
+AL House District 16	Alabama;AL House District 16
+AL Senate District 5	Alabama;AL Senate District 5
+AL House District 7	Alabama;AL House District 7
+AL House District 87	Alabama;AL House District 87
+AL House District 71	Alabama;AL House District 71
+AL House District 85	Alabama;AL House District 85
+AL House District 86	Alabama;AL House District 86
+AL House District 22	Alabama;AL House District 22
+AL House District 14	Alabama;AL House District 14
+AL House District 15	Alabama;AL House District 15
+AL House District 44	Alabama;AL House District 44
+AL House District 45	Alabama;AL House District 45
+AL House District 46	Alabama;AL House District 46
+AL House District 47	Alabama;AL House District 47
+AL House District 48	Alabama;AL House District 48
+AL House District 51	Alabama;AL House District 51
+AL House District 52	Alabama;AL House District 52
+AL House District 54	Alabama;AL House District 54
+AL House District 55	Alabama;AL House District 55
+AL House District 56	Alabama;AL House District 56
+AL House District 57	Alabama;AL House District 57
+AL House District 58	Alabama;AL House District 58
+AL House District 59	Alabama;AL House District 59
+AL House District 60	Alabama;AL House District 60
+AL Senate District 15	Alabama;AL Senate District 15
+AL Senate District 16	Alabama;AL Senate District 16
+AL Senate District 18	Alabama;AL Senate District 18
+AL Senate District 19	Alabama;AL Senate District 19
+AL Senate District 20	Alabama;AL Senate District 20
+AL House District 17	Alabama;AL House District 17
+AL Senate District 21	Alabama;AL Senate District 21
+AL House District 79	Alabama;AL House District 79
+AL House District 80	Alabama;AL House District 80
+AL House District 82	Alabama;AL House District 82
+AL House District 83	Alabama;AL House District 83
+AL Senate District 27	Alabama;AL Senate District 27
+AL House District 2	Alabama;AL House District 2
+AL Senate District 1	Alabama;AL Senate District 1
+AL House District 25	Alabama;AL House District 25
+AL House District 4	Alabama;AL House District 4
+AL House District 5	Alabama;AL House District 5
+AL House District 6	Alabama;AL House District 6
+AL Senate District 2	Alabama;AL Senate District 2
+AL Senate District 3	Alabama;AL Senate District 3
+AL House District 10	Alabama;AL House District 10
+AL House District 19	Alabama;AL House District 19
+AL House District 20	Alabama;AL House District 20
+AL House District 21	Alabama;AL House District 21
+AL House District 53	Alabama;AL House District 53
+AL Senate District 7	Alabama;AL Senate District 7
+AL House District 100	Alabama;AL House District 100
+AL House District 101	Alabama;AL House District 101
+AL House District 102	Alabama;AL House District 102
+AL House District 103	Alabama;AL House District 103
+AL House District 104	Alabama;AL House District 104
+AL House District 105	Alabama;AL House District 105
+AL House District 97	Alabama;AL House District 97
+AL House District 98	Alabama;AL House District 98
+AL House District 99	Alabama;AL House District 99
+AL Senate District 33	Alabama;AL Senate District 33
+AL Senate District 34	Alabama;AL Senate District 34
+AL Senate District 35	Alabama;AL Senate District 35
+AL House District 74	Alabama;AL House District 74
+AL House District 76	Alabama;AL House District 76
+AL House District 77	Alabama;AL House District 77
+AL House District 78	Alabama;AL House District 78
+AL Senate District 26	Alabama;AL Senate District 26
+AL House District 8	Alabama;AL House District 8
+AL House District 41	Alabama;AL House District 41
+AL House District 43	Alabama;AL House District 43
+AL House District 73	Alabama;AL House District 73
+AL Senate District 11	Alabama;AL Senate District 11
+AL House District 50	Alabama;AL House District 50
+AL House District 61	Alabama;AL House District 61
+AL House District 62	Alabama;AL House District 62
+AL House District 63	Alabama;AL House District 63
+AL House District 70	Alabama;AL House District 70
+AL House District 1	Alabama;AL House District 1

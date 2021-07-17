@@ -2185,7 +2185,7 @@ ReportingUnit	Alabama;Winston County;OLD UNION CHURCH	Winston;OLD UNION CHURCH
 ReportingUnit	Alabama;Winston County;PEBBLE FIRE HOUSE	Winston;PEBBLE FIRE HOUSE
 ReportingUnit	Alabama;Winston County;UPSHAW FIRE DEPT_	Winston;UPSHAW FIRE DEPT_
 ReportingUnit	Alabama;Winston County;WALDROP FREEWILL BAPT_	Winston;WALDROP FREEWILL BAPT_
-CandidateContest	AL Attorney General	AL;Attorney General
+CandidateContest	AL Attorney General	AL;Attorney General;statewide
 CandidateContest	AL Chief Justice of the Supreme Court	AL;Chief Justice of the Supreme Court;statewide
 CandidateContest	AL Commissioner of Agriculture and Industries	AL;Commissioner of Agriculture and Industries;statewide
 CandidateContest	AL Governor	AL;Governor;statewide
@@ -2366,7 +2366,7 @@ Candidate	April Weaver	April Weaver
 Candidate	Arlene Cunningham Easley	Arlene Cunningham Easley
 Candidate	Arnold G. Mooney II	Arnold G. Mooney II
 Candidate	Arthur Orr	Arthur Orr
-Candidate	Artis 'A.J.' McCampbell	"Artis ""A.J."" McCampbell"
+Candidate	Artis 'A.J.' McCampbell	Artis 'A.J.' McCampbell
 Candidate	B. Craig Lipscomb	B. Craig Lipscomb
 Candidate	Barbara Bigsby Boyd	Barbara Bigsby Boyd
 Candidate	Barbara Drummond	Barbara Drummond
@@ -2393,12 +2393,12 @@ Candidate	Chad Young	Chad Young
 Candidate	Charles W. Talbert	Charles W. Talbert
 Candidate	Charlotte A. Clark-Frieson	Charlotte A. Clark-Frieson
 Candidate	Chip Brown	Chip Brown
-Candidate	Chris 'Chip' Beeker Jr.	"Chris ""Chip"" Beeker Jr."
+Candidate	Chris 'Chip' Beeker Jr.	Chris 'Chip' Beeker Jr.
 Candidate	Chris E. Blackshear	Chris E. Blackshear
 Candidate	Chris Elliott	Chris Elliott
 Candidate	Chris Pringle	Chris Pringle
 Candidate	Chris Sells	Chris Sells
-Candidate	Christopher F. 'Apostle' Davis	"Christopher F. ""Apostle"" Davis"
+Candidate	Christopher F. 'Apostle' Davis	Christopher F. 'Apostle' Davis
 Candidate	Christopher John England	Christopher John England
 Candidate	Clay Scofield	Clay Scofield
 Candidate	Clyde Chambliss, Jr.	Clyde Chambliss, Jr.
@@ -2415,7 +2415,7 @@ Candidate	Danner Kline	Danner Kline
 Candidate	Danny F. Crawford	Danny F. Crawford
 Candidate	Danny Garrett	Danny Garrett
 Candidate	Darrell Turner	Darrell Turner
-Candidate	David 'Coach' Burkette	"David ""Coach"" Burkette"
+Candidate	David 'Coach' Burkette	David 'Coach' Burkette
 Candidate	David A. Sadler	David A. Sadler
 Candidate	David Faulkner	David Faulkner
 Candidate	David Sessions	David Sessions
@@ -2445,14 +2445,14 @@ Candidate	Greg J. Reed	Greg J. Reed
 Candidate	Harry Shiver	Harry Shiver
 Candidate	Heather Milam	Heather Milam
 Candidate	Howard Sanderford	Howard Sanderford
-Candidate	J. Matthew 'Matt' Shelby	"J. Matthew ""Matt"" Shelby"
+Candidate	J. Matthew 'Matt' Shelby	J. Matthew 'Matt' Shelby
 Candidate	J. Ron Wilson	J. Ron Wilson
 Candidate	J.B. King	J.B. King
-Candidate	J.T. 'Jabo' Waggoner	"J.T. ""Jabo"" Waggoner"
+Candidate	J.T. 'Jabo' Waggoner	J.T. 'Jabo' Waggoner
 Candidate	Jack Jacobs	Jack Jacobs
 Candidate	Jack Williams	Jack Williams
 Candidate	James Allen Lloyd	James Allen Lloyd
-Candidate	James M. 'Jimmy' Martin	"James M. ""Jimmy"" Martin"
+Candidate	James M. 'Jimmy' Martin	James M. 'Jimmy' Martin
 Candidate	Jamie Kiel	Jamie Kiel
 Candidate	Jared Millican	Jared Millican
 Candidate	Jared Vaughn	Jared Vaughn
@@ -2460,8 +2460,8 @@ Candidate	Jason Fisher	Jason Fisher
 Candidate	Jay Mitchell	Jay Mitchell
 Candidate	Jeff Sorrells	Jeff Sorrells
 Candidate	Jenn Gray	Jenn Gray
-Candidate	Jeremy 'J.J.' Jeffcoat	"Jeremy ""J.J."" Jeffcoat"
-Candidate	Jeremy 'Mr. Eyg' Gray	"Jeremy ""Mr. Eyg"" Gray"
+Candidate	Jeremy 'J.J.' Jeffcoat	Jeremy 'J.J.' Jeffcoat
+Candidate	Jeremy 'Mr. Eyg' Gray	Jeremy 'Mr. Eyg' Gray
 Candidate	Jeremy H. Oden	Jeremy H. Oden
 Candidate	Jerry McDonald	Jerry McDonald
 Candidate	Jessica Fortune Barker	Jessica Fortune Barker
@@ -2490,7 +2490,7 @@ Candidate	Kelvin Jamichael Lawrence	Kelvin Jamichael Lawrence
 Candidate	Kenneth A. Brackins	Kenneth A. Brackins
 Candidate	Kerry Rich	Kerry Rich
 Candidate	Kirk Hatcher	Kirk Hatcher
-Candidate	Koven 'K.L.' Brown	"Koven ""K.L."" Brown"
+Candidate	Koven 'K.L.' Brown	Koven 'K.L.' Brown
 Candidate	Kristy M. Kirkland	Kristy M. Kirkland
 Candidate	Kyle Pierce	Kyle Pierce
 Candidate	Kyle South	Kyle South
@@ -2501,7 +2501,7 @@ Candidate	Linda Coleman-Madison	Linda Coleman-Madison
 Candidate	Linda Meigs	Linda Meigs
 Candidate	Lindsey Deckard	Lindsey Deckard
 Candidate	Lora Kay Morrow	Lora Kay Morrow
-Candidate	Louise 'Lulu' Alexander	"Louise ""Lulu"" Alexander"
+Candidate	Louise 'Lulu' Alexander	Louise 'Lulu' Alexander
 Candidate	Lynn Greer	Lynn Greer
 Candidate	Mac McCutcheon	Mac McCutcheon
 Candidate	Malika Sanders-Fortier	Malika Sanders-Fortier
@@ -2532,7 +2532,7 @@ Candidate	Paul W. Lee	Paul W. Lee
 Candidate	Pebblin Walker Warren	Pebblin Walker Warren
 Candidate	Peter Joffrion	Peter Joffrion
 Candidate	Phillip Pettus	Phillip Pettus
-Candidate	Polan 'Pete' Willis, Jr.	"Polan ""Pete"" Willis, Jr."
+Candidate	Polan 'Pete' Willis, Jr.	Polan 'Pete' Willis, Jr.
 Candidate	Prince Chestnut	Prince Chestnut
 Candidate	Priscilla Dunn	Priscilla Dunn
 Candidate	Proncey Robertson	Proncey Robertson
@@ -2549,7 +2549,7 @@ Candidate	Rick Burnham	Rick Burnham
 Candidate	Rick Pate	Rick Pate
 Candidate	Ritchie Whorton	Ritchie Whorton
 Candidate	Robert Kennedy, Jr.	Robert Kennedy, Jr.
-Candidate	Roderick 'Rod' Hampton Scott	"Roderick ""Rod"" Hampton Scott"
+Candidate	Roderick 'Rod' Hampton Scott	Roderick 'Rod' Hampton Scott
 Candidate	Rodger M. Smitherman	Rodger M. Smitherman
 Candidate	Rodney Sullivan	Rodney Sullivan
 Candidate	Rolanda Hollis	Rolanda Hollis
@@ -2574,8 +2574,8 @@ Candidate	Tashina Morris	Tashina Morris
 Candidate	Terri Collins	Terri Collins
 Candidate	Terry Jones	Terry Jones
 Candidate	Thad McClammy	Thad McClammy
-Candidate	Thomas 'Tommy' Hyche	"Thomas ""Tommy"" Hyche"
-Candidate	Thomas E. 'Action' Jackson	"Thomas E. ""Action"" Jackson"
+Candidate	Thomas 'Tommy' Hyche	Thomas 'Tommy' Hyche
+Candidate	Thomas E. 'Action' Jackson	Thomas E. 'Action' Jackson
 Candidate	Tijuanna Adetunji	Tijuanna Adetunji
 Candidate	Tim Melson	Tim Melson
 Candidate	Tim Wadsworth	Tim Wadsworth
@@ -2606,3 +2606,17 @@ Party	Democratic Party	democrat
 Party	Independent Party	independent
 Party	Libertarian Party	libertarian
 Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional

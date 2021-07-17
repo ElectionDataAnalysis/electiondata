@@ -13,6 +13,7 @@ from typing import Optional, List, Dict, Any
 import re
 import os
 from sqlalchemy.orm.session import Session
+import copy
 
 
 def clean_count_cols(
@@ -1126,7 +1127,7 @@ def get_munge_formulas(
     err = None
     f, new_err = ui.get_parameters(
         required_keys=[],
-        optional_keys=constants.single_ej_munge_elements,
+        optional_keys=constants.single_ej_munge_elements + ["Election", "Jurisdiction"],
         header="munge formulas",
         param_file=munger_path,
     )
@@ -1599,7 +1600,7 @@ def get_string_fields_from_munger(
 ) -> (List[str], Optional[dict]):
     """Finds the field names expected by the munger formulas"""
     err = None
-    optional_keys = constants.single_ej_munge_elements
+    optional_keys = copy.deepcopy(constants.single_ej_munge_elements)
     if extra_formula_keys:
         optional_keys += extra_formula_keys
     formulas, new_err = ui.get_parameters(

@@ -256,3 +256,18 @@ ReportingUnit	District of Columbia;Ward 8;Precinct 126	Ward 8;Precinct 126
 ReportingUnit	District of Columbia;Ward 8;Precinct 133	Ward 8;Precinct 133
 ReportingUnit	District of Columbia;Ward 8;Precinct 134	Ward 8;Precinct 134
 ReportingUnit	District of Columbia;Ward 8;Precinct 140	Ward 8;Precinct 140
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total

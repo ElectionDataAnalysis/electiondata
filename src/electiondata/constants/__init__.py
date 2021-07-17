@@ -467,6 +467,7 @@ if 1:
         "system",
         "database",
         "test",
+        "dictionary",
     }
     warning_keys = {f"warn-{ek}" for ek in error_keys}
     no_param_file_types = {"nist_v2_xml"}

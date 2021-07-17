@@ -141,7 +141,7 @@ def ensure_jurisdiction_dir(
 ) -> Optional[dict]:
     # create directory if it doesn't exist
     juris_path = os.path.join(
-        repository_content_root, "src/jurisdictions", juris_system_name
+        repository_content_root, "jurisdictions", juris_system_name
     )
     try:
         Path(juris_path).mkdir(parents=True)
@@ -292,7 +292,7 @@ def ensure_juris_files(
                     )
 
     # check dependencies
-    for juris_file in [x for x in template_list if x != "remark" and x != "dictionary"]:
+    for juris_file in [x for x in template_list if x != "dictionary"]:
         # check dependencies
         d, new_err = check_dependencies(juris_path, juris_file)
         if new_err:
