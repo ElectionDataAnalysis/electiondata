@@ -18,7 +18,7 @@ CandidateContest=<state_po>;<office>;<district>
 Candidate=<candidate>
 Party=<party>
 CountItemType=<mode>
-ReportingUnit=<county>
+ReportingUnit=<state>;<county>
 Jurisdiction=<state>
 Election=<year>
 
