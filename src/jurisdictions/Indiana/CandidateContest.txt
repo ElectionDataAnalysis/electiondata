@@ -163,9 +163,9 @@ IN Governor	1	IN Governor
 US Senate IN	1	US Senate IN	
 IN Attorney General	1	IN Attorney General	
 IN Lieutenant Governor	1	IN Lieutenant Governor	
-IN Treasurer	1	IN Treasurer	
+IN Treasurer of State	1	IN Treasurer of State
 IN Superintendent of Public Instruction	1	IN Superintendent of Public Instruction	
-IN Auditor	1	IN Auditor	
+IN Auditor of State	1	IN Auditor of State
 IN Secretary of State	1	IN Secretary of State	
 IN House District 1 (Democratic Party)	1	IN House District 1	Democratic Party
 IN House District 2 (Democratic Party)	1	IN House District 2	Democratic Party
@@ -331,9 +331,9 @@ IN Governor (Democratic Party)	1	IN Governor	Democratic Party
 US Senate IN (Democratic Party)	1	US Senate IN	Democratic Party
 IN Attorney General (Democratic Party)	1	IN Attorney General	Democratic Party
 IN Lieutenant Governor (Democratic Party)	1	IN Lieutenant Governor	Democratic Party
-IN Treasurer (Democratic Party)	1	IN Treasurer	Democratic Party
+IN Treasurer of State (Democratic Party)	1	IN Treasurer of State	Democratic Party
 IN Superintendent of Public Instruction (Democratic Party)	1	IN Superintendent of Public Instruction	Democratic Party
-IN Auditor (Democratic Party)	1	IN Auditor	Democratic Party
+IN Auditor of State (Democratic Party)	1	IN Auditor of State	Democratic Party
 IN Secretary of State (Democratic Party)	1	IN Secretary of State	Democratic Party
 IN House District 1 (Republican Party)	1	IN House District 1	Republican Party
 IN House District 2 (Republican Party)	1	IN House District 2	Republican Party
@@ -499,9 +499,9 @@ IN Governor (Republican Party)	1	IN Governor	Republican Party
 US Senate IN (Republican Party)	1	US Senate IN	Republican Party
 IN Attorney General (Republican Party)	1	IN Attorney General	Republican Party
 IN Lieutenant Governor (Republican Party)	1	IN Lieutenant Governor	Republican Party
-IN Treasurer (Republican Party)	1	IN Treasurer	Republican Party
+IN Treasurer of State (Republican Party)	1	IN Treasurer of State	Republican Party
 IN Superintendent of Public Instruction (Republican Party)	1	IN Superintendent of Public Instruction	Republican Party
-IN Auditor (Republican Party)	1	IN Auditor	Republican Party
+IN Auditor of State (Republican Party)	1	IN Auditor of State	Republican Party
 IN Secretary of State (Republican Party)	1	IN Secretary of State	Republican Party
 IN House District 1 (Green Party)	1	IN House District 1	Green Party
 IN House District 2 (Green Party)	1	IN House District 2	Green Party
@@ -667,9 +667,9 @@ IN Governor (Green Party)	1	IN Governor	Green Party
 US Senate IN (Green Party)	1	US Senate IN	Green Party
 IN Attorney General (Green Party)	1	IN Attorney General	Green Party
 IN Lieutenant Governor (Green Party)	1	IN Lieutenant Governor	Green Party
-IN Treasurer (Green Party)	1	IN Treasurer	Green Party
+IN Treasurer of State (Green Party)	1	IN Treasurer of State	Green Party
 IN Superintendent of Public Instruction (Green Party)	1	IN Superintendent of Public Instruction	Green Party
-IN Auditor (Green Party)	1	IN Auditor	Green Party
+IN Auditor of State (Green Party)	1	IN Auditor of State	Green Party
 IN Secretary of State (Green Party)	1	IN Secretary of State	Green Party
 IN House District 1 (Libertarian Party)	1	IN House District 1	Libertarian Party
 IN House District 2 (Libertarian Party)	1	IN House District 2	Libertarian Party
@@ -835,9 +835,9 @@ IN Governor (Libertarian Party)	1	IN Governor	Libertarian Party
 US Senate IN (Libertarian Party)	1	US Senate IN	Libertarian Party
 IN Attorney General (Libertarian Party)	1	IN Attorney General	Libertarian Party
 IN Lieutenant Governor (Libertarian Party)	1	IN Lieutenant Governor	Libertarian Party
-IN Treasurer (Libertarian Party)	1	IN Treasurer	Libertarian Party
+IN Treasurer of State (Libertarian Party)	1	IN Treasurer of State	Libertarian Party
 IN Superintendent of Public Instruction (Libertarian Party)	1	IN Superintendent of Public Instruction	Libertarian Party
-IN Auditor (Libertarian Party)	1	IN Auditor	Libertarian Party
+IN Auditor of State (Libertarian Party)	1	IN Auditor of State	Libertarian Party
 IN Secretary of State (Libertarian Party)	1	IN Secretary of State	Libertarian Party
 IN House District 1 (Constitution Party)	1	IN House District 1	Constitution Party
 IN House District 2 (Constitution Party)	1	IN House District 2	Constitution Party
@@ -1003,9 +1003,9 @@ IN Governor (Constitution Party)	1	IN Governor	Constitution Party
 US Senate IN (Constitution Party)	1	US Senate IN	Constitution Party
 IN Attorney General (Constitution Party)	1	IN Attorney General	Constitution Party
 IN Lieutenant Governor (Constitution Party)	1	IN Lieutenant Governor	Constitution Party
-IN Treasurer (Constitution Party)	1	IN Treasurer	Constitution Party
+IN Treasurer of State (Constitution Party)	1	IN Treasurer of State	Constitution Party
 IN Superintendent of Public Instruction (Constitution Party)	1	IN Superintendent of Public Instruction	Constitution Party
-IN Auditor (Constitution Party)	1	IN Auditor	Constitution Party
+IN Auditor of State (Constitution Party)	1	IN Auditor of State	Constitution Party
 IN Secretary of State (Constitution Party)	1	IN Secretary of State	Constitution Party
 IN House District 1 (Independent Party)	1	IN House District 1	Independent Party
 IN House District 2 (Independent Party)	1	IN House District 2	Independent Party
@@ -1171,9 +1171,9 @@ IN Governor (Independent Party)	1	IN Governor	Independent Party
 US Senate IN (Independent Party)	1	US Senate IN	Independent Party
 IN Attorney General (Independent Party)	1	IN Attorney General	Independent Party
 IN Lieutenant Governor (Independent Party)	1	IN Lieutenant Governor	Independent Party
-IN Treasurer (Independent Party)	1	IN Treasurer	Independent Party
+IN Treasurer of State (Independent Party)	1	IN Treasurer of State	Independent Party
 IN Superintendent of Public Instruction (Independent Party)	1	IN Superintendent of Public Instruction	Independent Party
-IN Auditor (Independent Party)	1	IN Auditor	Independent Party
+IN Auditor of State (Independent Party)	1	IN Auditor of State	Independent Party
 IN Secretary of State (Independent Party)	1	IN Secretary of State	Independent Party
 IN House District 1 (Non Partisan)	1	IN House District 1	Non Partisan
 IN House District 2 (Non Partisan)	1	IN House District 2	Non Partisan
@@ -1339,9 +1339,9 @@ IN Governor (Non Partisan)	1	IN Governor	Non Partisan
 US Senate IN (Non Partisan)	1	US Senate IN	Non Partisan
 IN Attorney General (Non Partisan)	1	IN Attorney General	Non Partisan
 IN Lieutenant Governor (Non Partisan)	1	IN Lieutenant Governor	Non Partisan
-IN Treasurer (Non Partisan)	1	IN Treasurer	Non Partisan
+IN Treasurer of State (Non Partisan)	1	IN Treasurer of State	Non Partisan
 IN Superintendent of Public Instruction (Non Partisan)	1	IN Superintendent of Public Instruction	Non Partisan
-IN Auditor (Non Partisan)	1	IN Auditor	Non Partisan
+IN Auditor of State (Non Partisan)	1	IN Auditor of State	Non Partisan
 IN Secretary of State (Non Partisan)	1	IN Secretary of State	Non Partisan
 IN House District 1 (Other Party)	1	IN House District 1	Other Party
 IN House District 2 (Other Party)	1	IN House District 2	Other Party
@@ -1507,9 +1507,9 @@ IN Governor (Other Party)	1	IN Governor	Other Party
 US Senate IN (Other Party)	1	US Senate IN	Other Party
 IN Attorney General (Other Party)	1	IN Attorney General	Other Party
 IN Lieutenant Governor (Other Party)	1	IN Lieutenant Governor	Other Party
-IN Treasurer (Other Party)	1	IN Treasurer	Other Party
+IN Treasurer of State (Other Party)	1	IN Treasurer of State	Other Party
 IN Superintendent of Public Instruction (Other Party)	1	IN Superintendent of Public Instruction	Other Party
-IN Auditor (Other Party)	1	IN Auditor	Other Party
+IN Auditor of State (Other Party)	1	IN Auditor of State	Other Party
 IN Secretary of State (Other Party)	1	IN Secretary of State	Other Party
 IN House District 1 (Socialist Party)	1	IN House District 1	Socialist Party
 IN House District 2 (Socialist Party)	1	IN House District 2	Socialist Party
@@ -1675,9 +1675,9 @@ IN Governor (Socialist Party)	1	IN Governor	Socialist Party
 US Senate IN (Socialist Party)	1	US Senate IN	Socialist Party
 IN Attorney General (Socialist Party)	1	IN Attorney General	Socialist Party
 IN Lieutenant Governor (Socialist Party)	1	IN Lieutenant Governor	Socialist Party
-IN Treasurer (Socialist Party)	1	IN Treasurer	Socialist Party
+IN Treasurer of State (Socialist Party)	1	IN Treasurer of State	Socialist Party
 IN Superintendent of Public Instruction (Socialist Party)	1	IN Superintendent of Public Instruction	Socialist Party
-IN Auditor (Socialist Party)	1	IN Auditor	Socialist Party
+IN Auditor of State (Socialist Party)	1	IN Auditor of State	Socialist Party
 IN Secretary of State (Socialist Party)	1	IN Secretary of State	Socialist Party
 IN House District 1 (Workers Party)	1	IN House District 1	Workers Party
 IN House District 2 (Workers Party)	1	IN House District 2	Workers Party
@@ -1843,9 +1843,9 @@ IN Governor (Workers Party)	1	IN Governor	Workers Party
 US Senate IN (Workers Party)	1	US Senate IN	Workers Party
 IN Attorney General (Workers Party)	1	IN Attorney General	Workers Party
 IN Lieutenant Governor (Workers Party)	1	IN Lieutenant Governor	Workers Party
-IN Treasurer (Workers Party)	1	IN Treasurer	Workers Party
+IN Treasurer of State (Workers Party)	1	IN Treasurer of State	Workers Party
 IN Superintendent of Public Instruction (Workers Party)	1	IN Superintendent of Public Instruction	Workers Party
-IN Auditor (Workers Party)	1	IN Auditor	Workers Party
+IN Auditor of State (Workers Party)	1	IN Auditor of State	Workers Party
 IN Secretary of State (Workers Party)	1	IN Secretary of State	Workers Party
 IN House District 1 (Pirate Party)	1	IN House District 1	Pirate Party
 IN House District 2 (Pirate Party)	1	IN House District 2	Pirate Party
@@ -2011,7 +2011,7 @@ IN Governor (Pirate Party)	1	IN Governor	Pirate Party
 US Senate IN (Pirate Party)	1	US Senate IN	Pirate Party
 IN Attorney General (Pirate Party)	1	IN Attorney General	Pirate Party
 IN Lieutenant Governor (Pirate Party)	1	IN Lieutenant Governor	Pirate Party
-IN Treasurer (Pirate Party)	1	IN Treasurer	Pirate Party
+IN Treasurer of State (Pirate Party)	1	IN Treasurer of State	Pirate Party
 IN Superintendent of Public Instruction (Pirate Party)	1	IN Superintendent of Public Instruction	Pirate Party
-IN Auditor (Pirate Party)	1	IN Auditor	Pirate Party
+IN Auditor of State (Pirate Party)	1	IN Auditor of State	Pirate Party
 IN Secretary of State (Pirate Party)	1	IN Secretary of State	Pirate Party

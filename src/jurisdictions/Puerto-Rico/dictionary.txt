@@ -540,3 +540,4 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+CandidateContest	PR Attorney General	PR;Attorney General;statewide

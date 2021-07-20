@@ -382,6 +382,14 @@ def clean_and_dedupe(f_path: str, clean_candidates=False):
             df.loc[mask, "cdf_internal_name"] = m.regularize_candidate_names(df.loc[mask, "cdf_internal_name"])
         elif "BallotName" in df.columns:  # for Candidate files
             df["BallotName"] = m.regularize_candidate_names(df["BallotName"])
+
+    if set(df.columns) == {"raw_identifier_value","cdf_internal_name","cdf_element" }:  # for dictionary files
+        # get rid of lines with null information
+        df = df[df["cdf_internal_name"].notnull() | df["raw_identifier_value"].notnull()]
+
+    # remove none or unknown Party in file
+    if Path(f_path).name == "Party.txt":
+        df = df[df.Name != "none or unknown"]
     for c in df.columns:
         if not is_numeric_dtype(df.dtypes[c]):
             df[c].fillna("", inplace=True)
@@ -537,6 +545,8 @@ def load_juris_dframe_into_cdf(
             f"File {element}.txt not found",
         )
         return err
+
+    clean_and_dedupe(element_file, clean_candidates=True)
 
     # read info from <element>.txt, filling null fields with 'none or unknown'
     df = pd.read_csv(

@@ -1743,3 +1743,4 @@ ReportingUnit	Missouri;Wayne County	Missouri;Wayne
 ReportingUnit	Missouri;Webster County	Missouri;Webster
 ReportingUnit	Missouri;Worth County	Missouri;Worth
 ReportingUnit	Missouri;Wright County	Missouri;Wright
+CandidateContest	MO Attorney General	MO;Attorney General;statewide

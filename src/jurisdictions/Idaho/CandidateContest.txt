@@ -115,9 +115,4 @@ ID State Treasurer	1	ID State Treasurer
 ID Secretary of State	1	ID Secretary of State
 ID Superintendent of Public Instruction	1	ID Superintendent of Public Instruction
 ID State Controller	1	ID State Controller
-CO State Board of Education Member District 4	1	CO State Board of Education Member District 4
-CO Regent of the University of Colorado District 3	1	CO Regent of the University of Colorado District 3
-CO State Board of Education Member District 2	1	CO State Board of Education Member District 2
-CO Regent of the University of Colorado District 5	1	CO Regent of the University of Colorado District 5
-
 

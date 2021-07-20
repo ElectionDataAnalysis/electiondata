@@ -555,3 +555,6 @@ ReportingUnit	Idaho;Teton County	Idaho;Teton
 ReportingUnit	Idaho;Twin Falls County	Idaho;Twin Falls
 ReportingUnit	Idaho;Valley County	Idaho;Valley
 ReportingUnit	Idaho;Washington County	Idaho;Washington
+Candidate	Rick Tousley	Rick Tousley
+Candidate	Jon W. Glick	Jon W. Glick
+CandidateContest	ID Attorney General	ID;Attorney General;statewide

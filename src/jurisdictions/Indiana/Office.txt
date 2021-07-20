@@ -163,7 +163,7 @@ IN Governor	Indiana
 US Senate IN	Indiana
 IN Attorney General	Indiana
 IN Lieutenant Governor	Indiana
-IN Treasurer	Indiana
-IN Auditor	Indiana
+IN Treasurer of State	Indiana
+IN Auditor of State	Indiana
 IN Secretary of State	Indiana
 IN Superintendent of Public Instruction	Indiana

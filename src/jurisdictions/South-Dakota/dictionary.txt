@@ -821,3 +821,4 @@ ReportingUnit	South Dakota;Union County	South Dakota;Union
 ReportingUnit	South Dakota;Walworth County	South Dakota;Walworth
 ReportingUnit	South Dakota;Yankton County	South Dakota;Yankton
 ReportingUnit	South Dakota;Ziebach County	South Dakota;Ziebach
+CandidateContest	SD Attorney General	SD;Attorney General;statewide

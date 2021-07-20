@@ -2259,3 +2259,4 @@ ReportingUnit	Kentucky;Webster County	Kentucky;Webster
 ReportingUnit	Kentucky;Whitley County	Kentucky;Whitley
 ReportingUnit	Kentucky;Wolfe County	Kentucky;Wolfe
 ReportingUnit	Kentucky;Woodford County	Kentucky;Woodford
+CandidateContest	KY Attorney General	KY;Attorney General;statewide

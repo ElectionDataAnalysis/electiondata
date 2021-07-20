@@ -5846,3 +5846,138 @@ ReportingUnit	New Hampshire;Merrimack County	New Hampshire;Merrimack
 ReportingUnit	New Hampshire;Rockingham County	New Hampshire;Rockingham
 ReportingUnit	New Hampshire;Strafford County	New Hampshire;Strafford
 ReportingUnit	New Hampshire;Sullivan County	New Hampshire;Sullivan
+CandidateContest	NH Attorney General	NH;Attorney General;statewide
+CandidateContest	NH House District Ward 15	NH;State Representative;District Ward 15 (1)
+CandidateContest	NH House District No.7	NH;State Representative;District No.7 (1)
+CandidateContest	NH House District 9	NH;State Representative;District No. 9 (2)
+CandidateContest	NH House District 9	NH;State Representative;District No. 9 (1)FL
+CandidateContest	NH House District 9	NH;State Representative;District No. 9 (1) F
+CandidateContest	NH House District 9	NH;State Representative;District No. 9 (1)
+CandidateContest	NH House District 8	NH;State Representative;District No. 8 (9)
+CandidateContest	NH House District 8	NH;State Representative;District No. 8 (2)
+CandidateContest	NH House District 8	NH;State Representative;District No. 8 (1) F
+CandidateContest	NH House District 8	NH;State Representative;District No. 8 (1)
+CandidateContest	NH House District 7	NH;State Representative;District No. 7 (6)
+CandidateContest	NH House District 7	NH;State Representative;District No. 7 (4)
+CandidateContest	NH House District 7	NH;State Representative;District No. 7 (1) FL
+CandidateContest	NH House District 7	NH;State Representative;District No. 7 (1) F
+CandidateContest	NH House District 7	NH;State Representative;District No. 7 (1)
+CandidateContest	NH House District 6	NH;State Representative;District No. 6 (5)
+CandidateContest	NH House District 6	NH;State Representative;District No. 6 (2)
+CandidateContest	NH House District 6	NH;State Representative;District No. 6 (10)
+CandidateContest	NH House District 6	NH;State Representative;District No. 6 (1)
+CandidateContest	NH House District 5	NH;State Representative;District No. 5 (7)
+CandidateContest	NH House District 5	NH;State Representative;District No. 5 (3)
+CandidateContest	NH House District 5	NH;State Representative;District No. 5 (2)
+CandidateContest	NH House District 5	NH;State Representative;District No. 5 (1)
+CandidateContest	NH House District 45	NH;State Representative;District No. 45 (2)FL
+CandidateContest	NH House District 44	NH;State Representative;District No. 44 (2)FL
+CandidateContest	NH House District 43	NH;State Representative;District No. 43 (3)FL
+CandidateContest	NH House District 42	NH;State Representative;District No. 42 (2)FL
+CandidateContest	NH House District 41	NH;State Representative;District No. 41 (1)FL
+CandidateContest	NH House District 40	NH;State Representative;District No. 40 (1)FL
+CandidateContest	NH House District 4	NH;State Representative;District No. 4 (5)
+CandidateContest	NH House District 4	NH;State Representative;District No. 4 (2)
+CandidateContest	NH House District 4	NH;State Representative;District No. 4 (1)
+CandidateContest	NH House District 39	NH;State Representative;District No. 39 (1)FL
+CandidateContest	NH House District 38	NH;State Representative;District No. 38 (2)FL
+CandidateContest	NH House District 37	NH;State Representative;District No. 37 (1)FL
+CandidateContest	NH House District 36	NH;State Representative;District No. 36 (3)
+CandidateContest	NH House District 36	NH;State Representative;District No. 36 (1)FL
+CandidateContest	NH House District 35	NH;State Representative;District No. 35 (3)
+CandidateContest	NH House District 35	NH;State Representative;District No. 35 (1)FL
+CandidateContest	NH House District 34	NH;State Representative;District No. 34 (3)
+CandidateContest	NH House District 34	NH;State Representative;District No. 34 (1)FL
+CandidateContest	NH House District 33	NH;State Representative;District No. 33 (3)
+CandidateContest	NH House District 33	NH;State Representative;District No. 33 (1)FL
+CandidateContest	NH House District 32	NH;State Representative;District No. 32 (3)
+CandidateContest	NH House District 32	NH;State Representative;District No. 32 (1)FL
+CandidateContest	NH House District 31	NH;State Representative;District No. 31 (3)
+CandidateContest	NH House District 31	NH;State Representative;District No. 31 (1)FL
+CandidateContest	NH House District 30	NH;State Representative;District No. 30 (3)
+CandidateContest	NH House District 30	NH;State Representative;District No. 30 (1)FL
+CandidateContest	NH House District 3	NH;State Representative;District No. 3 (4)
+CandidateContest	NH House District 3	NH;State Representative;District No. 3 (3)
+CandidateContest	NH House District 3	NH;State Representative;District No. 3 (2)
+CandidateContest	NH House District 3	NH;State Representative;District No. 3 (1)
+CandidateContest	NH House District 29	NH;State Representative;District No. 29 (3)
+CandidateContest	NH House District 29	NH;State Representative;District No. 29 (1)FL
+CandidateContest	NH House District 29	NH;State Representative;District No. 29 (1)
+CandidateContest	NH House District 28	NH;State Representative;District No. 28 (3)
+CandidateContest	NH House District 28	NH;State Representative;District No. 28 (1)FL
+CandidateContest	NH House District 28	NH;State Representative;District No. 28 (1)
+CandidateContest	NH House District 27	NH;State Representative;District No. 27 (2)FL
+CandidateContest	NH House District 27	NH;State Representative;District No. 27 (2)
+CandidateContest	NH House District 27	NH;State Representative;District No. 27 (1)
+CandidateContest	NH House District 26	NH;State Representative;District No. 26 (2)
+CandidateContest	NH House District 26	NH;State Representative;District No. 26 (1)FL
+CandidateContest	NH House District 26	NH;State Representative;District No. 26 (1)
+CandidateContest	NH House District 25	NH;State Representative;District No. 25 (2)
+CandidateContest	NH House District 25	NH;State Representative;District No. 25 (1)FL
+CandidateContest	NH House District 25	NH;State Representative;District No. 25 (1)
+CandidateContest	NH House District 24	NH;State Representative;District No. 24 (4)
+CandidateContest	NH House District 24	NH;State Representative;District No. 24 (2)
+CandidateContest	NH House District 24	NH;State Representative;District No. 24 (1)FL
+CandidateContest	NH House District 23	NH;State Representative;District No. 23 (4)
+CandidateContest	NH House District 23	NH;State Representative;District No. 23 (3)
+CandidateContest	NH House District 23	NH;State Representative;District No. 23 (1)FL
+CandidateContest	NH House District 23	NH;State Representative;District No. 23 (1)
+CandidateContest	NH House District 22	NH;State Representative;District No. 22 (3)
+CandidateContest	NH House District 22	NH;State Representative;District No. 22 (1)FL
+CandidateContest	NH House District 22	NH;State Representative;District No. 22 (1)
+CandidateContest	NH House District 21	NH;State Representative;District No. 21 (8)
+CandidateContest	NH House District 21	NH;State Representative;District No. 21 (4)
+CandidateContest	NH House District 21	NH;State Representative;District No. 21 (2)
+CandidateContest	NH House District 21	NH;State Representative;District No. 21 (1)FL
+CandidateContest	NH House District 20	NH;State Representative;District No. 20 (3)
+CandidateContest	NH House District 20	NH;State Representative;District No. 20 (2)
+CandidateContest	NH House District 20	NH;State Representative;District No. 20 (1)FL
+CandidateContest	NH House District 2	NH;State Representative;District No. 2 (4)
+CandidateContest	NH House District 2	NH;State Representative;District No. 2 (3)
+CandidateContest	NH House District 2	NH;State Representative;District No. 2 (2)
+CandidateContest	NH House District 2	NH;State Representative;District No. 2 (1)
+CandidateContest	NH House District 19	NH;State Representative;District No. 19 (2)
+CandidateContest	NH House District 19	NH;State Representative;District No. 19 (1)FL
+CandidateContest	NH House District 19	NH;State Representative;District No. 19 (1)
+CandidateContest	NH House District 18	NH;State Representative;District No. 18 (4)
+CandidateContest	NH House District 18	NH;State Representative;District No. 18 (3)
+CandidateContest	NH House District 18	NH;State Representative;District No. 18 (2)
+CandidateContest	NH House District 18	NH;State Representative;District No. 18 (1)
+CandidateContest	NH House District 17	NH;State Representative;District No. 17 (3)
+CandidateContest	NH House District 17	NH;State Representative;District No. 17 (1)FL
+CandidateContest	NH House District 17	NH;State Representative;District No. 17 (1)
+CandidateContest	NH House District 16	NH;State Representative;District No. 16 (2) FL
+CandidateContest	NH House District 16	NH;State Representative;District No. 16 (2)
+CandidateContest	NH House District 16	NH;State Representative;District No. 16 (1)FL
+CandidateContest	NH House District 16	NH;State Representative;District No. 16 (1)
+CandidateContest	NH House District 15	NH;State Representative;District No. 15 (2)
+CandidateContest	NH House District 15	NH;State Representative;District No. 15 (1)FL
+CandidateContest	NH House District 15	NH;State Representative;District No. 15 (1) FL
+CandidateContest	NH House District 15	NH;State Representative;District No. 15 (1)
+CandidateContest	NH House District 14	NH;State Representative;District No. 14 (4)
+CandidateContest	NH House District 14	NH;State Representative;District No. 14 (2)
+CandidateContest	NH House District 14	NH;State Representative;District No. 14 (1)FL
+CandidateContest	NH House District 14	NH;State Representative;District No. 14 (1) FL
+CandidateContest	NH House District 14	NH;State Representative;District No. 14 (1)
+CandidateContest	NH House District 13	NH;State Representative;District No. 13 (4)
+CandidateContest	NH House District 13	NH;State Representative;District No. 13 (2)
+CandidateContest	NH House District 13	NH;State Representative;District No. 13 (1)
+CandidateContest	NH House District 12	NH;State Representative;District No. 12 (4)
+CandidateContest	NH House District 12	NH;State Representative;District No. 12 (2)
+CandidateContest	NH House District 12	NH;State Representative;District No. 12 (1)
+CandidateContest	NH House District 11	NH;State Representative;District No. 11 (2)
+CandidateContest	NH House District 11	NH;State Representative;District No. 11 (1)FL
+CandidateContest	NH House District 11	NH;State Representative;District No. 11 (1)
+CandidateContest	NH House District 10	NH;State Representative;District No. 10 (3)
+CandidateContest	NH House District 10	NH;State Representative;District No. 10 (2)
+CandidateContest	NH House District 10	NH;State Representative;District No. 10 (1)FL
+CandidateContest	NH House District 10	NH;State Representative;District No. 10 (1)
+CandidateContest	NH House District 1	NH;State Representative;District No. 1 (4)
+CandidateContest	NH House District 1	NH;State Representative;District No. 1 (2)
+CandidateContest	NH House District 1	NH;State Representative;District No. 1 (1)
+CandidateContest	NH House District 8	NH;State Representative;District No 8 (3)
+CandidateContest	NH House District 4	NH;State Representative;District No 4 (1)
+CandidateContest	NH House District 37	NH;State Representative;District No 37 (11)
+CandidateContest	NH House District 17	NH;State Representative;District No 17 (2)
+CandidateContest	NH House District 11	NH;State Representative;District No 11 (1)
+

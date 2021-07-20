@@ -1168,3 +1168,4 @@ ReportingUnit	Oklahoma;Washington County	Oklahoma;Washington
 ReportingUnit	Oklahoma;Washita County	Oklahoma;Washita
 ReportingUnit	Oklahoma;Woods County	Oklahoma;Woods
 ReportingUnit	Oklahoma;Woodward County	Oklahoma;Woodward
+CandidateContest	OK Attorney General	OK;Attorney General;statewide

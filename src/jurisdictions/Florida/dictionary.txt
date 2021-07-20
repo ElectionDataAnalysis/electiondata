@@ -14686,3 +14686,4 @@ ReportingUnit	Florida;Volusia County	Florida;Volusia
 ReportingUnit	Florida;Wakulla County	Florida;Wakulla
 ReportingUnit	Florida;Walton County	Florida;Walton
 ReportingUnit	Florida;Washington County	Florida;Washington
+CandidateContest	FL Attorney General	FL;Attorney General;statewide

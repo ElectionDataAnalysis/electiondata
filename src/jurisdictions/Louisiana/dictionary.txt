@@ -8523,3 +8523,12 @@ ReportingUnit	Louisiana;West Baton Rouge Parish	Louisiana;West Baton Rouge
 ReportingUnit	Louisiana;West Carroll Parish	Louisiana;West Carroll
 ReportingUnit	Louisiana;West Feliciana Parish	Louisiana;West Feliciana
 ReportingUnit	Louisiana;Winn Parish	Louisiana;Winn
+Candidate	'Rick' Edmonds	'Rick' Edmonds
+Candidate	'Les' Farnum	'Les' Farnum
+Candidate	'Josh' Guillory	'Josh' Guillory
+Candidate	'Jim' Francis	'Jim' Francis
+Candidate	'Gwen' Collins-Greenup	'Gwen' Collins-Greenup
+Candidate	'Bob' Hensgens	'Bob' Hensgens
+Candidate	'Andie' Saizan	'Andie' Saizan
+Candidate	Duplicates were found in Party.txt	Duplicates were found in Party.txt
+CandidateContest	LA Attorney General	LA;Attorney General;statewide

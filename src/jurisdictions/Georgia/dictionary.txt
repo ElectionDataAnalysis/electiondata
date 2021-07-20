@@ -9134,3 +9134,6 @@ ReportingUnit	Georgia;Wilcox County	Georgia;Wilcox
 ReportingUnit	Georgia;Wilkes County	Georgia;Wilkes
 ReportingUnit	Georgia;Wilkinson County	Georgia;Wilkinson
 ReportingUnit	Georgia;Worth County	Georgia;Worth
+Candidate	KarÃ­n Sandiford	KarÃ­n Sandiford
+Candidate	'Able' Mable Thomas	'Able' Mable Thomas
+CandidateContest	GA Attorney General	GA;Attorney General;statewide

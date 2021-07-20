@@ -14884,32 +14884,32 @@ CandidateContest	IN Attorney General (Pirate Party)	Attorney General (Pirate Par
 CandidateContest	IN Attorney General (Republican Party)	Attorney General (Republican)
 CandidateContest	IN Attorney General (Socialist Party)	Attorney General (Socialist Party Usa)
 CandidateContest	IN Attorney General (Workers Party)	Attorney General (Workers)
-CandidateContest	IN Auditor	Auditor
-CandidateContest	IN Auditor	Auditor Of State
-CandidateContest	IN Auditor (Constitution Party)	Auditor (Constitution)
-CandidateContest	IN Auditor (Constitution Party)	Auditor Of State (Constitution)
-CandidateContest	IN Auditor (Democratic Party)	Auditor (Democratic)
-CandidateContest	IN Auditor (Democratic Party)	Auditor Of State (Democratic)
-CandidateContest	IN Auditor (Green Party)	Auditor (Green)
-CandidateContest	IN Auditor (Green Party)	Auditor Of State (Green)
-CandidateContest	IN Auditor (Independent Party)	Auditor (Independent)
-CandidateContest	IN Auditor (Independent Party)	Auditor Of State (Independent)
-CandidateContest	IN Auditor (Libertarian Party)	Auditor (Libertarian Party)
-CandidateContest	IN Auditor (Libertarian Party)	Auditor (Libertarian)
-CandidateContest	IN Auditor (Libertarian Party)	Auditor Of State (Libertarian Party)
-CandidateContest	IN Auditor (Libertarian Party)	Auditor Of State (Libertarian)
-CandidateContest	IN Auditor (Non Partisan)	Auditor (Non Partisan)
-CandidateContest	IN Auditor (Non Partisan)	Auditor Of State (Non Partisan)
-CandidateContest	IN Auditor (Other Party)	Auditor (Other)
-CandidateContest	IN Auditor (Other Party)	Auditor Of State (Other)
-CandidateContest	IN Auditor (Pirate Party)	Auditor (Pirate Party)
-CandidateContest	IN Auditor (Pirate Party)	Auditor Of State (Pirate Party)
-CandidateContest	IN Auditor (Republican Party)	Auditor (Republican)
-CandidateContest	IN Auditor (Republican Party)	Auditor Of State (Republican)
-CandidateContest	IN Auditor (Socialist Party)	Auditor (Socialist Party Usa)
-CandidateContest	IN Auditor (Socialist Party)	Auditor Of State (Socialist Party Usa)
-CandidateContest	IN Auditor (Workers Party)	Auditor (Workers)
-CandidateContest	IN Auditor (Workers Party)	Auditor Of State (Workers)
+CandidateContest	IN Auditor of State	Auditor
+CandidateContest	IN Auditor of State	Auditor Of State
+CandidateContest	IN Auditor of State (Constitution Party)	Auditor (Constitution)
+CandidateContest	IN Auditor of State (Constitution Party)	Auditor Of State (Constitution)
+CandidateContest	IN Auditor of State (Democratic Party)	Auditor (Democratic)
+CandidateContest	IN Auditor of State (Democratic Party)	Auditor Of State (Democratic)
+CandidateContest	IN Auditor of State (Green Party)	Auditor (Green)
+CandidateContest	IN Auditor of State (Green Party)	Auditor Of State (Green)
+CandidateContest	IN Auditor of State (Independent Party)	Auditor (Independent)
+CandidateContest	IN Auditor of State (Independent Party)	Auditor Of State (Independent)
+CandidateContest	IN Auditor of State (Libertarian Party)	Auditor (Libertarian Party)
+CandidateContest	IN Auditor of State (Libertarian Party)	Auditor (Libertarian)
+CandidateContest	IN Auditor of State (Libertarian Party)	Auditor Of State (Libertarian Party)
+CandidateContest	IN Auditor of State (Libertarian Party)	Auditor Of State (Libertarian)
+CandidateContest	IN Auditor of State (Non Partisan)	Auditor (Non Partisan)
+CandidateContest	IN Auditor of State (Non Partisan)	Auditor Of State (Non Partisan)
+CandidateContest	IN Auditor of State (Other Party)	Auditor (Other)
+CandidateContest	IN Auditor of State (Other Party)	Auditor Of State (Other)
+CandidateContest	IN Auditor of State (Pirate Party)	Auditor (Pirate Party)
+CandidateContest	IN Auditor of State (Pirate Party)	Auditor Of State (Pirate Party)
+CandidateContest	IN Auditor of State (Republican Party)	Auditor (Republican)
+CandidateContest	IN Auditor of State (Republican Party)	Auditor Of State (Republican)
+CandidateContest	IN Auditor of State (Socialist Party)	Auditor (Socialist Party Usa)
+CandidateContest	IN Auditor of State (Socialist Party)	Auditor Of State (Socialist Party Usa)
+CandidateContest	IN Auditor of State (Workers Party)	Auditor (Workers)
+CandidateContest	IN Auditor of State (Workers Party)	Auditor Of State (Workers)
 CandidateContest	IN Governor	Governor
 CandidateContest	IN Governor	Governor & Lt. Governor
 CandidateContest	IN Governor (Constitution Party)	Governor & Lt. Governor (Constitution)
@@ -17563,18 +17563,18 @@ CandidateContest	IN Superintendent of Public Instruction (Republican Party)	Supe
 CandidateContest	IN Superintendent of Public Instruction (Socialist Party)	Superintendent Of Public Instruction (Socialist Party Usa)
 CandidateContest	IN Superintendent of Public Instruction (Workers Party)	Superintendent Of Public Instruction (Workers)
 CandidateContest	IN Treasurer	Treasurer Of State
-CandidateContest	IN Treasurer (Constitution Party)	Treasurer Of State (Constitution)
-CandidateContest	IN Treasurer (Democratic Party)	Treasurer Of State (Democratic)
-CandidateContest	IN Treasurer (Green Party)	Treasurer Of State (Green)
-CandidateContest	IN Treasurer (Independent Party)	Treasurer Of State (Independent)
-CandidateContest	IN Treasurer (Libertarian Party)	Treasurer Of State (Libertarian Party)
-CandidateContest	IN Treasurer (Libertarian Party)	Treasurer Of State (Libertarian)
-CandidateContest	IN Treasurer (Non Partisan)	Treasurer Of State (Non Partisan)
-CandidateContest	IN Treasurer (Other Party)	Treasurer Of State (Other)
-CandidateContest	IN Treasurer (Pirate Party)	Treasurer Of State (Pirate Party)
-CandidateContest	IN Treasurer (Republican Party)	Treasurer Of State (Republican)
-CandidateContest	IN Treasurer (Socialist Party)	Treasurer Of State (Socialist Party Usa)
-CandidateContest	IN Treasurer (Workers Party)	Treasurer Of State (Workers)
+CandidateContest	IN Treasurer of State (Constitution Party)	Treasurer Of State (Constitution)
+CandidateContest	IN Treasurer of State (Democratic Party)	Treasurer Of State (Democratic)
+CandidateContest	IN Treasurer of State (Green Party)	Treasurer Of State (Green)
+CandidateContest	IN Treasurer of State (Independent Party)	Treasurer Of State (Independent)
+CandidateContest	IN Treasurer of State (Libertarian Party)	Treasurer Of State (Libertarian Party)
+CandidateContest	IN Treasurer of State (Libertarian Party)	Treasurer Of State (Libertarian)
+CandidateContest	IN Treasurer of State (Non Partisan)	Treasurer Of State (Non Partisan)
+CandidateContest	IN Treasurer of State (Other Party)	Treasurer Of State (Other)
+CandidateContest	IN Treasurer of State (Pirate Party)	Treasurer Of State (Pirate Party)
+CandidateContest	IN Treasurer of State (Republican Party)	Treasurer Of State (Republican)
+CandidateContest	IN Treasurer of State (Socialist Party)	Treasurer Of State (Socialist Party Usa)
+CandidateContest	IN Treasurer of State (Workers Party)	Treasurer Of State (Workers)
 CandidateContest	US House IN District 1	United States Representative, First District
 CandidateContest	US House IN District 1 (Constitution Party)	United States Representative, First District (Constitution)
 CandidateContest	US House IN District 1 (Democratic Party)	United States Representative, First District (Democratic)
@@ -17896,7 +17896,7 @@ Office	IN Senate District 6	IN Senate District 6
 Office	IN Senate District 7	IN Senate District 7
 Office	IN Senate District 8	IN Senate District 8
 Office	IN Senate District 9	IN Senate District 9
-Office	IN Treasurer	IN Treasurer
+Office	IN Treasurer of State	IN Treasurer
 Office	US House IN District 1	US House IN District 1
 Office	US House IN District 2	US House IN District 2
 Office	US House IN District 3	US House IN District 3
@@ -22238,7 +22238,7 @@ ReportingUnit	Indiana;Crawford County	Indiana;Crawford
 ReportingUnit	Indiana;Daviess County	Indiana;Daviess
 ReportingUnit	Indiana;Dearborn County	Indiana;Dearborn
 ReportingUnit	Indiana;Decatur County	Indiana;Decatur
-ReportingUnit	Indiana;Dekalb County	Indiana;Dekalb
+ReportingUnit	Indiana;DeKalb County	Indiana;Dekalb
 ReportingUnit	Indiana;Delaware County	Indiana;Delaware
 ReportingUnit	Indiana;Dubois County	Indiana;Dubois
 ReportingUnit	Indiana;Elkhart County	Indiana;Elkhart
@@ -22265,9 +22265,9 @@ ReportingUnit	Indiana;Jennings County	Indiana;Jennings
 ReportingUnit	Indiana;Johnson County	Indiana;Johnson
 ReportingUnit	Indiana;Knox County	Indiana;Knox
 ReportingUnit	Indiana;Kosciusko County	Indiana;Kosciusko
-ReportingUnit	Indiana;Lagrange County	Indiana;Lagrange
+ReportingUnit	Indiana;LaGrange County	Indiana;Lagrange
 ReportingUnit	Indiana;Lake County	Indiana;Lake
-ReportingUnit	Indiana;Laporte County	Indiana;Laporte
+ReportingUnit	Indiana;LaPorte County	Indiana;Laporte
 ReportingUnit	Indiana;Lawrence County	Indiana;Lawrence
 ReportingUnit	Indiana;Madison County	Indiana;Madison
 ReportingUnit	Indiana;Marion County	Indiana;Marion
@@ -22314,3 +22314,5 @@ ReportingUnit	Indiana;Wayne County	Indiana;Wayne
 ReportingUnit	Indiana;Wells County	Indiana;Wells
 ReportingUnit	Indiana;White County	Indiana;White
 ReportingUnit	Indiana;Whitley County	Indiana;Whitley
+Candidate	AndrÃ© D. Carson	AndrÃ© D. Carson
+CandidateContest	IN Attorney General	IN;Attorney General;statewide

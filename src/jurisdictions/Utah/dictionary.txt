@@ -1,7 +1,7 @@
 cdf_element	cdf_internal_name	raw_identifier_value
 Candidate	Kay J. Christofferson	Kay J. Christofferson
-Candidate	Al Gore	AL GORE
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Al Gore	Al Gore
+Candidate	Barack Obama	Barack Obama
 Candidate	Ben Mcadams	Ben Mcadams
 Candidate	Blake David Moore	Blake David Moore
 Candidate	Brock Pierce	Brock Pierce Karla Ballard
@@ -13,28 +13,28 @@ Candidate	Daniel Rhead Cottam	Daniel Rhead Cottam Barry Evan Short
 Candidate	Darren Parry	Darren Parry
 Candidate	Devin D. Thorpe	Devin D. Thorpe
 Candidate	Don Blankenship	Don Blankenship William Mohr
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Gloria La Riva	Gloria La Riva
 Candidate	Greg Duerden	Greg Duerden Wayne Hill
 Candidate	Greg Skordas	Greg Skordas
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Howie Hawkins	Howie Hawkins Angela Walker
 Candidate	J. Robert Latham	J. Robert Latham
 Candidate	Jo Jorgensen	Jo Jorgensen Jeremy Cohen
 Candidate	Joe Mchugh	Joe Mchugh Elizabeth Storm
 Candidate	John Curtis	John Curtis
-Candidate	John Kerry	JOHN KERRY
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John Kerry	John Kerry
+Candidate	John McCain	John Mccain
 Candidate	John Molnar	John Molnar
 Candidate	Jonia M Broderick	Jonia M Broderick
 Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harris
 Candidate	Kael Weston	Kael Weston
 Candidate	Kanye West	Kanye West Michelle Tidball
 Candidate	Mitt Romney	Mitt Romney
-Candidate	Other	OTHER
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Other	Other
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Rudy J. Bautista	Rudy J. Bautista
 Candidate	Sean D. Reyes	Sean D. Reyes
 Candidate	Spencer J. Cox	Spencer J. Cox Deidre M. Henderson
@@ -573,7 +573,7 @@ Candidate	Kirk A. Cullimore Jr.	Kirk A. Cullimore Jr.
 Candidate	Kirk D Pearson	Kirk D Pearson
 Candidate	Kyle R. Andersen	Kyle R. Andersen
 Candidate	Laura Collier Belnap	Laura Collier Belnap
-Candidate	Lawanna 'Lou' Shurtliff	"Lawanna ""Lou"" Shurtliff"
+Candidate	Lawanna 'Lou' Shurtliff	Lawanna 'Lou' Shurtliff
 Candidate	Lee Anne Walker	Lee Anne Walker
 Candidate	Lee B. Perry	Lee B. Perry
 Candidate	Lee Castillo	Lee Castillo
@@ -720,3 +720,4 @@ ReportingUnit	Utah;Wasatch County	Utah;Wasatch
 ReportingUnit	Utah;Washington County	Utah;Washington
 ReportingUnit	Utah;Wayne County	Utah;Wayne
 ReportingUnit	Utah;Weber County	Utah;Weber
+CandidateContest	UT Attorney General	UT;Attorney General;statewide

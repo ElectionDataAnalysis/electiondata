@@ -1628,4 +1628,7 @@ ReportingUnit	Maine;Waldo County	Maine;Waldo
 ReportingUnit	Maine;Washington County	Maine;Washington
 ReportingUnit	Maine;York County	Maine;York
 ReportingUnit	Maine	Maine;
-
+Candidate	undervote	undervote
+Candidate	overvote	overvote
+Candidate	Duplicates were found in Party.txt	Duplicates were found in Party.txt
+CandidateContest	ME Attorney General	ME;Attorney General;statewide

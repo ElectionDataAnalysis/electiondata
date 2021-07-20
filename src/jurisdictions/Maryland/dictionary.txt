@@ -2386,7 +2386,7 @@ ReportingUnit	Maryland;Worcester County;District 006 Precinct 003	24;District 00
 ReportingUnit	Maryland;Worcester County;District 007 Precinct 001	24;District 007 Precinct 001
 CandidateContest	MD Attorney General	MD;Attorney General
 CandidateContest	MD Comptroller	MD;Comptroller;statewide
-CandidateContest	MD Governor / Lt. Governor	MD;Governor / Lt. Governor;statewide
+CandidateContest	MD Governor	MD;Governor / Lt. Governor;statewide
 CandidateContest	MD House District 1A	MD;House of Delegates Member;District 1A
 CandidateContest	MD House District 1B	MD;House of Delegates Member;District 1B
 CandidateContest	MD House District 1C	MD;House of Delegates Member;District 1C
@@ -2888,7 +2888,7 @@ CountItemType	total	total
 ReportingUnit	Maryland;Allegany County	Maryland;Allegany
 ReportingUnit	Maryland;Anne Arundel County	Maryland;Anne Arundel
 ReportingUnit	Maryland;Baltimore County	Maryland;Baltimore
-ReportingUnit	Maryland;Baltimore City County	Maryland;Baltimore City
+ReportingUnit	Maryland;Baltimore city	Maryland;Baltimore City
 ReportingUnit	Maryland;Calvert County	Maryland;Calvert
 ReportingUnit	Maryland;Caroline County	Maryland;Caroline
 ReportingUnit	Maryland;Carroll County	Maryland;Carroll
@@ -2909,3 +2909,5 @@ ReportingUnit	Maryland;Talbot County	Maryland;Talbot
 ReportingUnit	Maryland;Washington County	Maryland;Washington
 ReportingUnit	Maryland;Wicomico County	Maryland;Wicomico
 ReportingUnit	Maryland;Worcester County	Maryland;Worcester
+Candidate	Joseline Peña-Melnyk	Joseline Peña-Melnyk
+CandidateContest	MD Attorney General	MD;Attorney General;statewide

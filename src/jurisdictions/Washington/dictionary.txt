@@ -3813,3 +3813,4 @@ ReportingUnit	Washington;Walla Walla County	Washington;Walla Walla
 ReportingUnit	Washington;Whatcom County	Washington;Whatcom
 ReportingUnit	Washington;Whitman County	Washington;Whitman
 ReportingUnit	Washington;Yakima County	Washington;Yakima
+CandidateContest	WA Attorney General	WA;Attorney General;statewide

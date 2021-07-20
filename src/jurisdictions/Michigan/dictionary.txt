@@ -12368,3 +12368,4 @@ ReportingUnit	Michigan;Van Buren County	Michigan;Van Buren
 ReportingUnit	Michigan;Washtenaw County	Michigan;Washtenaw
 ReportingUnit	Michigan;Wayne County	Michigan;Wayne
 ReportingUnit	Michigan;Wexford County	Michigan;Wexford
+CandidateContest	MI Attorney General	MI;Attorney General;statewide

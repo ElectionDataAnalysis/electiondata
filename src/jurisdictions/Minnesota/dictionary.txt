@@ -13130,7 +13130,7 @@ ReportingUnit	Minnesota;Kittson County	35
 ReportingUnit	Minnesota;Kittson County	fips27069
 ReportingUnit	Minnesota;Koochiching County	36
 ReportingUnit	Minnesota;Koochiching County	fips27071
-ReportingUnit	Minnesota;Lac Qui Parle County	37
+ReportingUnit	Minnesota;Lac qui Parle County	37
 ReportingUnit	Minnesota;Lac qui Parle County	fips27073
 ReportingUnit	Minnesota;Lake County	38
 ReportingUnit	Minnesota;Lake County	fips27075
@@ -13451,7 +13451,7 @@ CandidateContest	MN Associate Justice - Supreme Court 2	MN;Associate Justice - S
 CandidateContest	MN Associate Justice - Supreme Court 5	MN;Associate Justice - Supreme Court 5;statewide
 CandidateContest	MN Attorney General	MN;Attorney General
 CandidateContest	MN Chief Justice - Supreme Court	MN;Chief Justice - Supreme Court;statewide
-CandidateContest	MN Governor & Lt Governor	MN;Governor & Lt Governor;statewide
+CandidateContest	MN Governor	MN;Governor & Lt Governor;statewide
 CandidateContest	MN Judge - Court of Appeals 2	MN;Judge - Court of Appeals 2;statewide
 CandidateContest	MN Judge - Court of Appeals 4	MN;Judge - Court of Appeals 4;statewide
 CandidateContest	MN Secretary of State	MN;Secretary of State;statewide
@@ -13673,8 +13673,8 @@ ReportingUnit	Minnesota;Kanabec County	Minnesota;Kanabec
 ReportingUnit	Minnesota;Kandiyohi County	Minnesota;Kandiyohi
 ReportingUnit	Minnesota;Kittson County	Minnesota;Kittson
 ReportingUnit	Minnesota;Koochiching County	Minnesota;Koochiching
-ReportingUnit	Minnesota;Lac Qui Parle County	Minnesota;Lac Qui Parle
-ReportingUnit	Minnesota;Lac Qui Parte County	Minnesota;Lac Qui Parte
+ReportingUnit	Minnesota;Lac qui Parle County	Minnesota;Lac Qui Parle
+ReportingUnit	Minnesota;Lac qui Parte County	Minnesota;Lac Qui Parte
 ReportingUnit	Minnesota;Lake County	Minnesota;Lake
 ReportingUnit	Minnesota;Lake of the Woods County	Minnesota;Lake of the Woods
 ReportingUnit	Minnesota;Lake Of the Woods County	Minnesota;Lake Of the Woods
@@ -13686,7 +13686,7 @@ ReportingUnit	Minnesota;Mahnomen County	Minnesota;Mahnomen
 ReportingUnit	Minnesota;Marshall County	Minnesota;Marshall
 ReportingUnit	Minnesota;Martin County	Minnesota;Martin
 ReportingUnit	Minnesota;Mcleod County	Minnesota;Mcleod
-ReportingUnit	Minnesota;Meeer County	Minnesota;Meeer
+ReportingUnit	Minnesota;Meeker County	Minnesota;Meeer
 ReportingUnit	Minnesota;Meeker County	Minnesota;Meeker
 ReportingUnit	Minnesota;Mille Lacs County	Minnesota;Mille Lacs
 ReportingUnit	Minnesota;Morrison County	Minnesota;Morrison
@@ -13728,3 +13728,6 @@ ReportingUnit	Minnesota;Wilkin County	Minnesota;Wilkin
 ReportingUnit	Minnesota;Winona County	Minnesota;Winona
 ReportingUnit	Minnesota;Wright County	Minnesota;Wright
 ReportingUnit	Minnesota;Yellow Medicine County	Minnesota;Yellow Medicine
+Candidate	Joseph PatiÃ±o	Joseph PatiÃ±o
+Candidate	Barbara DrÃ¶her Kline	Barbara DrÃ¶her Kline
+CandidateContest	MN Attorney General	MN;Attorney General;statewide

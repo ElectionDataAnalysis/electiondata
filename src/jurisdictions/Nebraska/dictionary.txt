@@ -225,7 +225,7 @@ ReportingUnit	Nebraska;York County	York
 ReportingUnit	Nebraska;York County	fips31185
 CandidateContest	NE Attorney General	NE;Attorney General
 CandidateContest	NE Auditor of Public Accounts	NE;Auditor of Public Accounts;statewide
-CandidateContest	NE Governor and Lt. Governor	NE;Governor and Lt. Governor;statewide
+CandidateContest	NE Governor	NE;Governor and Lt. Governor;statewide
 CandidateContest	NE Member of the State Board of Education District 6	NE;Member of the State Board of Education;District 6
 CandidateContest	NE Secretary of State	NE;Secretary of State;statewide
 CandidateContest	NE State Treasurer	NE;State Treasurer;statewide
@@ -452,3 +452,4 @@ ReportingUnit	Nebraska;Wayne County	Nebraska;Wayne
 ReportingUnit	Nebraska;Webster County	Nebraska;Webster
 ReportingUnit	Nebraska;Wheeler County	Nebraska;Wheeler
 ReportingUnit	Nebraska;York County	Nebraska;York
+CandidateContest	NE Attorney General	NE;Attorney General;statewide

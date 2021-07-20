@@ -3478,7 +3478,7 @@ ReportingUnit	Iowa;Wright County	Wright
 ReportingUnit	Iowa;Wright County	fips19197
 CandidateContest	IA Attorney General	IA;Attorney General
 CandidateContest	IA Auditor of State	IA;Auditor of State;statewide
-CandidateContest	IA Governor/Lieutenant Governor	IA;Governor/Lieutenant Governor;statewide
+CandidateContest	IA Governor	IA;Governor/Lieutenant Governor;statewide
 CandidateContest	IA Secretary of Agriculture	IA;Secretary of Agriculture;statewide
 CandidateContest	IA Secretary of State	IA;Secretary of State;statewide
 CandidateContest	IA House District 20	IA;State Representative;District 20
@@ -3733,3 +3733,4 @@ ReportingUnit	Iowa;Winneshiek County	Iowa;Winneshiek
 ReportingUnit	Iowa;Woodbury County	Iowa;Woodbury
 ReportingUnit	Iowa;Worth County	Iowa;Worth
 ReportingUnit	Iowa;Wright County	Iowa;Wright
+CandidateContest	IA Attorney General	IA;Attorney General;statewide

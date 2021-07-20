@@ -94,3 +94,4 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+CandidateContest	GU Attorney General	GU;Attorney General;statewide

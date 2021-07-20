@@ -43,7 +43,6 @@ Minnesota;Kanabec County	county
 Minnesota;Kandiyohi County	county
 Minnesota;Kittson County	county
 Minnesota;Koochiching County	county
-Minnesota;Lac Qui Parle County	county
 Minnesota;Lac qui Parle County	county
 Minnesota;Lake County	county
 Minnesota;Lake Of The Woods County	county

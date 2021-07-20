@@ -3016,3 +3016,4 @@ ReportingUnit	Tennessee;Weakley County	Tennessee;Weakley
 ReportingUnit	Tennessee;White County	Tennessee;White
 ReportingUnit	Tennessee;Williamson County	Tennessee;Williamson
 ReportingUnit	Tennessee;Wilson County	Tennessee;Wilson
+CandidateContest	TN Attorney General	TN;Attorney General;statewide

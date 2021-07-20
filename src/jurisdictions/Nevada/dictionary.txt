@@ -5654,7 +5654,7 @@ CandidateContest	NV Attorney General	NV;Attorney General
 CandidateContest	NV Governor	NV;Governor;statewide
 CandidateContest	NV Lieutenant Governor	NV;Lieutenant Governor;statewide
 CandidateContest	NV Secretary of State	NV;Secretary of State;statewide
-CandidateContest	NV State Assembly Member District 40	NV;State Assembly Member;District 40
+CandidateContest	NV House District 40	NV;State Assembly Member;District 40
 CandidateContest	NV State Controller	NV;State Controller;statewide
 CandidateContest	NV Senate District 16	NV;State Senator;District 16
 CandidateContest	NV State Treasurer	NV;State Treasurer;statewide
@@ -5663,39 +5663,39 @@ CandidateContest	NV Supreme Court Justice, Seat F	NV;Supreme Court Justice, Seat
 CandidateContest	NV Supreme Court Justice, Seat G	NV;Supreme Court Justice, Seat G;statewide
 CandidateContest	US House NV District 2	NV;US Representative;District 2
 CandidateContest	US Senate NV	NV;US Senator;statewide
-CandidateContest	NV State Assembly Member District 38	NV;State Assembly Member;District 38
+CandidateContest	NV House District 38	NV;State Assembly Member;District 38
 CandidateContest	NV Senate District 17	NV;State Senator;District 17
-CandidateContest	NV State Assembly Member District 1	NV;State Assembly Member;District 1
-CandidateContest	NV State Assembly Member District 10	NV;State Assembly Member;District 10
-CandidateContest	NV State Assembly Member District 11	NV;State Assembly Member;District 11
-CandidateContest	NV State Assembly Member District 12	NV;State Assembly Member;District 12
-CandidateContest	NV State Assembly Member District 13	NV;State Assembly Member;District 13
-CandidateContest	NV State Assembly Member District 14	NV;State Assembly Member;District 14
-CandidateContest	NV State Assembly Member District 15	NV;State Assembly Member;District 15
-CandidateContest	NV State Assembly Member District 16	NV;State Assembly Member;District 16
-CandidateContest	NV State Assembly Member District 17	NV;State Assembly Member;District 17
-CandidateContest	NV State Assembly Member District 18	NV;State Assembly Member;District 18
-CandidateContest	NV State Assembly Member District 19	NV;State Assembly Member;District 19
-CandidateContest	NV State Assembly Member District 2	NV;State Assembly Member;District 2
-CandidateContest	NV State Assembly Member District 20	NV;State Assembly Member;District 20
-CandidateContest	NV State Assembly Member District 21	NV;State Assembly Member;District 21
-CandidateContest	NV State Assembly Member District 22	NV;State Assembly Member;District 22
-CandidateContest	NV State Assembly Member District 23	NV;State Assembly Member;District 23
-CandidateContest	NV State Assembly Member District 28	NV;State Assembly Member;District 28
-CandidateContest	NV State Assembly Member District 29	NV;State Assembly Member;District 29
-CandidateContest	NV State Assembly Member District 3	NV;State Assembly Member;District 3
-CandidateContest	NV State Assembly Member District 34	NV;State Assembly Member;District 34
-CandidateContest	NV State Assembly Member District 35	NV;State Assembly Member;District 35
-CandidateContest	NV State Assembly Member District 36	NV;State Assembly Member;District 36
-CandidateContest	NV State Assembly Member District 37	NV;State Assembly Member;District 37
-CandidateContest	NV State Assembly Member District 4	NV;State Assembly Member;District 4
-CandidateContest	NV State Assembly Member District 41	NV;State Assembly Member;District 41
-CandidateContest	NV State Assembly Member District 42	NV;State Assembly Member;District 42
-CandidateContest	NV State Assembly Member District 5	NV;State Assembly Member;District 5
-CandidateContest	NV State Assembly Member District 6	NV;State Assembly Member;District 6
-CandidateContest	NV State Assembly Member District 7	NV;State Assembly Member;District 7
-CandidateContest	NV State Assembly Member District 8	NV;State Assembly Member;District 8
-CandidateContest	NV State Assembly Member District 9	NV;State Assembly Member;District 9
+CandidateContest	NV House District 1	NV;State Assembly Member;District 1
+CandidateContest	NV House District 10	NV;State Assembly Member;District 10
+CandidateContest	NV House District 11	NV;State Assembly Member;District 11
+CandidateContest	NV House District 12	NV;State Assembly Member;District 12
+CandidateContest	NV House District 13	NV;State Assembly Member;District 13
+CandidateContest	NV House District 14	NV;State Assembly Member;District 14
+CandidateContest	NV House District 15	NV;State Assembly Member;District 15
+CandidateContest	NV House District 16	NV;State Assembly Member;District 16
+CandidateContest	NV House District 17	NV;State Assembly Member;District 17
+CandidateContest	NV House District 18	NV;State Assembly Member;District 18
+CandidateContest	NV House District 19	NV;State Assembly Member;District 19
+CandidateContest	NV House District 2	NV;State Assembly Member;District 2
+CandidateContest	NV House District 20	NV;State Assembly Member;District 20
+CandidateContest	NV House District 21	NV;State Assembly Member;District 21
+CandidateContest	NV House District 22	NV;State Assembly Member;District 22
+CandidateContest	NV House District 23	NV;State Assembly Member;District 23
+CandidateContest	NV House District 28	NV;State Assembly Member;District 28
+CandidateContest	NV House District 29	NV;State Assembly Member;District 29
+CandidateContest	NV House District 3	NV;State Assembly Member;District 3
+CandidateContest	NV House District 34	NV;State Assembly Member;District 34
+CandidateContest	NV House District 35	NV;State Assembly Member;District 35
+CandidateContest	NV House District 36	NV;State Assembly Member;District 36
+CandidateContest	NV House District 37	NV;State Assembly Member;District 37
+CandidateContest	NV House District 4	NV;State Assembly Member;District 4
+CandidateContest	NV House District 41	NV;State Assembly Member;District 41
+CandidateContest	NV House District 42	NV;State Assembly Member;District 42
+CandidateContest	NV House District 5	NV;State Assembly Member;District 5
+CandidateContest	NV House District 6	NV;State Assembly Member;District 6
+CandidateContest	NV House District 7	NV;State Assembly Member;District 7
+CandidateContest	NV House District 8	NV;State Assembly Member;District 8
+CandidateContest	NV House District 9	NV;State Assembly Member;District 9
 CandidateContest	NV Senate District 10	NV;State Senator;District 10
 CandidateContest	NV Senate District 12	NV;State Senator;District 12
 CandidateContest	NV Senate District 2	NV;State Senator;District 2
@@ -5708,16 +5708,16 @@ CandidateContest	NV University Board of Regents District 12	NV;University Board 
 CandidateContest	US House NV District 1	NV;US Representative;District 1
 CandidateContest	US House NV District 3	NV;US Representative;District 3
 CandidateContest	US House NV District 4	NV;US Representative;District 4
-CandidateContest	NV State Assembly Member District 39	NV;State Assembly Member;District 39
-CandidateContest	NV State Assembly Member District 33	NV;State Assembly Member;District 33
-CandidateContest	NV State Assembly Member District 32	NV;State Assembly Member;District 32
+CandidateContest	NV House District 39	NV;State Assembly Member;District 39
+CandidateContest	NV House District 33	NV;State Assembly Member;District 33
+CandidateContest	NV House District 32	NV;State Assembly Member;District 32
 CandidateContest	NV Senate District 14	NV;State Senator;District 14
-CandidateContest	NV State Assembly Member District 24	NV;State Assembly Member;District 24
-CandidateContest	NV State Assembly Member District 25	NV;State Assembly Member;District 25
-CandidateContest	NV State Assembly Member District 26	NV;State Assembly Member;District 26
-CandidateContest	NV State Assembly Member District 27	NV;State Assembly Member;District 27
-CandidateContest	NV State Assembly Member District 30	NV;State Assembly Member;District 30
-CandidateContest	NV State Assembly Member District 31	NV;State Assembly Member;District 31
+CandidateContest	NV House District 24	NV;State Assembly Member;District 24
+CandidateContest	NV House District 25	NV;State Assembly Member;District 25
+CandidateContest	NV House District 26	NV;State Assembly Member;District 26
+CandidateContest	NV House District 27	NV;State Assembly Member;District 27
+CandidateContest	NV House District 30	NV;State Assembly Member;District 30
+CandidateContest	NV House District 31	NV;State Assembly Member;District 31
 CandidateContest	NV Senate District 13	NV;State Senator;District 13
 Candidate	Aaron Ford	Aaron Ford
 Candidate	Abbi Silver	Abbi Silver
@@ -5892,7 +5892,7 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
-ReportingUnit	Nevada;Carson City County	Nevada;Carson City
+ReportingUnit	Nevada;Carson City	Nevada;Carson City
 ReportingUnit	Nevada;Churchill County	Nevada;Churchill
 ReportingUnit	Nevada;Clark County	Nevada;Clark
 ReportingUnit	Nevada;Douglas County	Nevada;Douglas
@@ -5909,3 +5909,4 @@ ReportingUnit	Nevada;Pershing County	Nevada;Pershing
 ReportingUnit	Nevada;Storey County	Nevada;Storey
 ReportingUnit	Nevada;Washoe County	Nevada;Washoe
 ReportingUnit	Nevada;White Pine County	Nevada;White Pine
+CandidateContest	NV Attorney General	NV;Attorney General;statewide

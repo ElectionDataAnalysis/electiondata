@@ -8,31 +8,31 @@ BallotMeasureContest	PROPOSED STATEWIDE AMENDMENT NUMBER TWO (2)	PROPOSED STATEW
 BallotMeasureSelection	No	No
 BallotMeasureSelection	Yes	Yes
 Candidate	Adia Winfrey	Adia Winfrey
-Candidate	Al Gore	AL GORE
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Al Gore	Al Gore
+Candidate	Barack Obama	Barack Obama
 Candidate	Barry Moore	Barry Moore
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Donald J. Trump Michael R. Penc
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Doug Jones	Doug Jones
 Candidate	Gary Palmer	Gary Palmer
-Candidate	George W. Bush	GEORGE W. BUSH
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	George W. Bush	George W. Bush
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	James Averhart	James Averhart
 Candidate	Jerry Carl	Jerry Carl
 Candidate	Jo Jorgensen	Jo Jorgensen
 Candidate	Jo Jorgensen	Jo Jorgensen Jeremy 'Spike' Cohen
 Candidate	Jo Jorgensen	Jo Jorgensen Jeremy 'Spike' Coh
-Candidate	John Kerry	JOHN KERRY
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John Kerry	John Kerry
+Candidate	John McCain	John Mccain
 Candidate	Joseph R. Biden	Joseph R. Biden
 Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harri
 Candidate	Mike Rogers	Mike Rogers
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Mo Brooks	Mo Brooks
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Phyllis Harvey-Hall	Phyllis Harvey-Hall
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Rick Neighbors	Rick Neighbors
 Candidate	Robert Aderholt	Robert Aderholt
 Candidate	Terri A. Sewell	Terri A. Sewell

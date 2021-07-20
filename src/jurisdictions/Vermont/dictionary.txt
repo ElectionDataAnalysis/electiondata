@@ -2581,3 +2581,4 @@ ReportingUnit	Vermont;Caledonia County	Vermont;Caledonia
 ReportingUnit	Vermont;Lamoille County	Vermont;Lamoille
 ReportingUnit	Vermont;Orleans County	Vermont;Orleans
 ReportingUnit	Vermont;Rutland County	Vermont;Rutland
+CandidateContest	VT Attorney General	VT;Attorney General;statewide

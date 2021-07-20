@@ -1115,3 +1115,4 @@ ReportingUnit	New Mexico;Taos County	New Mexico;Taos
 ReportingUnit	New Mexico;Torrance County	New Mexico;Torrance
 ReportingUnit	New Mexico;Union County	New Mexico;Union
 ReportingUnit	New Mexico;Valencia County	New Mexico;Valencia
+CandidateContest	NM Attorney General	NM;Attorney General;statewide

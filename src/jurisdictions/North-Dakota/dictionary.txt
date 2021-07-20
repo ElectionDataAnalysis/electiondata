@@ -1228,3 +1228,4 @@ ReportingUnit	North Dakota;Walsh County	North Dakota;Walsh
 ReportingUnit	North Dakota;Ward County	North Dakota;Ward
 ReportingUnit	North Dakota;Wells County	North Dakota;Wells
 ReportingUnit	North Dakota;Williams County	North Dakota;Williams
+CandidateContest	ND Attorney General	ND;Attorney General;statewide

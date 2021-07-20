@@ -4593,3 +4593,6 @@ ReportingUnit	Pennsylvania;Wayne County	Pennsylvania;Wayne
 ReportingUnit	Pennsylvania;Westmoreland County	Pennsylvania;Westmoreland
 ReportingUnit	Pennsylvania;Wyoming County	Pennsylvania;Wyoming
 ReportingUnit	Pennsylvania;York County	Pennsylvania;York
+Candidate	NatalieNicole Mihalek Stuck	NatalieNicole Mihalek Stuck
+Candidate	Madeleine Dean Cunnane	Madeleine Dean Cunnane
+CandidateContest	PA Attorney General	PA;Attorney General;statewide

@@ -13,7 +13,7 @@ Candidate	Adam Neylon	Adam Neylon
 Candidate	Adam Nicholas Paul (write-in)	Adam Nicholas Paul (write-in)
 Candidate	Adam Y. Gerol	Adam Y. Gerol
 Candidate	Aisha Moe	Aisha Moe
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alan R. DeYoung	Alan R. DeYoung
 Candidate	Albert Rohland	Albert Rohland
 Candidate	Alberta Darling	Alberta Darling
@@ -35,8 +35,6 @@ Candidate	Andrew McKinney	Andrew McKinney
 Candidate	Andrew P. Naze	Andrew P. Naze
 Candidate	Andrew Yang	Andrew Yang
 Candidate	Andrew Zuelke	Andrew Zuelke
-Candidate	AndrÃ© Jacque	AndrÃ© Jacque
-Candidate	André Jacque	AndrÃÂÃÂ© Jacque
 Candidate	André Jacque	André Jacque
 Candidate	Andy Craig	Andy Craig
 Candidate	Angel C. Sanchez	Angel C. Sanchez
@@ -46,7 +44,7 @@ Candidate	Arnie Enz	Arnie Enz
 Candidate	Arnie Enz	Arnie Enz No Candidate
 Candidate	Arthur L. Shrader	Arthur L. Shrader
 Candidate	August Schutz	August Schutz
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara Dittrich	Barbara Dittrich
 Candidate	Barret Galauner (write-in)	Barret Galauner (write-in)
 Candidate	Barry Hammarback	Barry Hammarback
@@ -154,7 +152,7 @@ Candidate	Don Blankenship	Blankenship/Moore
 Candidate	Don Blankenship	Don Blankenship
 Candidate	Don Blankenship	Don Blankenship / William Mohr
 Candidate	Don Vruwink	Don Vruwink
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Donald J. Trump / Michael R. Pence
 Candidate	Donald J. Trump	Trump/Pence
@@ -203,7 +201,7 @@ Candidate	Gary Alan Hebl	Gary Hebl
 Candidate	Gary Johnson	Gary Johnson
 Candidate	Gary King	Gary King
 Candidate	Gary Tauchen	Gary Tauchen
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Gina Walkington	Gina Walkington
 Candidate	Glenn Grothman	Glenn Grothman
 Candidate	Gloria La Riva	Gloria La Riva
@@ -293,10 +291,10 @@ Candidate	John H. Sacia	John H. Sacia
 Candidate	John Imes	John Imes
 Candidate	John Iver Baldus	John Iver Baldus
 Candidate	John Jagler	John Jagler
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John Lehman	John Lehman
 Candidate	John Macco	John Macco
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John Nygren	John Nygren
 Candidate	John Rocco Calabrese	John Rocco Calabrese
 Candidate	John Schiess (write-in)	John Schiess (write-in)
@@ -451,7 +449,7 @@ Candidate	Mike Kuglitsch	Mike Kuglitsch
 Candidate	Mike Mooney	Mike Mooney
 Candidate	Mike Rohrkaste	Mike Rohrkaste
 Candidate	Mindy Tempelis	Mindy Tempelis
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Monica J. Hall	Monica J. Hall
 Candidate	Monica Moorehead	Monica Moorehead
 Candidate	Nada Elmikashfi	Nada Elmikashfi
@@ -467,7 +465,7 @@ Candidate	Nick Milroy	Nick Milroy
 Candidate	Nicki Vander Meulen	Nicki Vander Meulen
 Candidate	No Candidate	No Candidate
 Candidate	Orlando Owens	Orlando Owens
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Ozell Cox	Ozell Cox
 Candidate	Patrick Hull	Patrick Hull
 Candidate	Patrick Snyder	Patrick Snyder
@@ -491,7 +489,7 @@ Candidate	Phillip N. Anderson	Phillip N. Anderson
 Candidate	President R19 Boddie	President R19 Boddie
 Candidate	President R19 Boddie	President R19 Boddie (write-in)
 Candidate	Rachael Cabral-Guevara	Rachael Cabral-Guevara
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Ramon Garcia (write-in)	Ramon Garcia (write-in)
 Candidate	Randy Bryce	Randy Bryce
 Candidate	Rebecca Clarke	Rebecca Clarke
@@ -6622,4 +6620,3 @@ ReportingUnit	Wisconsin;Waushara County	Wisconsin;Waushara
 ReportingUnit	Wisconsin;Winnebago County	Wisconsin;Winnebago
 ReportingUnit	Wisconsin;Wood County	Wisconsin;Wood
 Candidate	André Jacque	AndrÃ© Jacque
-Candidate	André Jacque	André Jacque

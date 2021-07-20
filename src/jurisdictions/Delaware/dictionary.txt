@@ -1,11 +1,11 @@
 cdf_element	cdf_internal_name	raw_identifier_value
 Candidate	Adewunmi 'Ade' Kuforiji	Adewunmi 'Ade' Kuforiji
 Candidate	Aja Ajavon	Aja Ajavon
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Albert 'Al' Mills	Albert 'Al' Mills
 Candidate	Amy Solomon	Amy Solomon
 Candidate	Arisa White	Arisa White
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Bernie Sanders	Bernie Sanders
 Candidate	Bethany Hall-Long	Bethany Hall-Long
 Candidate	Billy Lane Jr.	Billy Lane Jr.
@@ -33,7 +33,7 @@ Candidate	Dawayne Sims	Dawayne Sims
 Candidate	Denise Bowers	Denise Bowers
 Candidate	Devon Hynson	Devon Hynson
 Candidate	Donald Farrell	Donald Farrell
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Donald J. Trump And Michael R. Pence
 Candidate	Donyale Hall	Donyale Hall
@@ -44,10 +44,10 @@ Candidate	Eric A. Morrison	Eric A. Morrison
 Candidate	Eric Levin	Eric Levin
 Candidate	Evon L. Murray	Evon L. Murray
 Candidate	Gabriel Olawale Adelagunja	Gabriel Olawale Adelagunja
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Gerald L. Brady	Gerald L. Brady
 Candidate	Hanifa Shabazz	Hanifa Shabazz
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Howie Hawkins	Howie Hawkins And Angela Nicole Walker
 Candidate	Ian 'Jahiti' Smith	Ian 'Jahiti' Smith
 Candidate	Irwin 'I.G.' Burton Iii	Irwin 'I.G.' Burton Iii
@@ -59,8 +59,8 @@ Candidate	John C. Carney Jr.	John C. Carney Jr.
 Candidate	John J. Machurek	John J. Machurek
 Candidate	John J. Viola	John J. Viola
 Candidate	John Johnson Jr.	John Johnson Jr.
-Candidate	John Kerry	JOHN KERRY
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John Kerry	John Kerry
+Candidate	John McCain	John Mccain
 Candidate	Joseph Mccole	Joseph Mccole
 Candidate	Joseph R. Biden	Joseph R. Biden
 Candidate	Joseph R. Biden	Joseph R. Biden Jr. And Kamala D. Harris
@@ -95,14 +95,14 @@ Candidate	Matthew Meyer	Matthew Meyer
 Candidate	Matthew W. Powell	Matthew W. Powell
 Candidate	Michael S. Purzycki	Michael S. Purzycki
 Candidate	Michelle Harlee	Michelle Harlee
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Monique Johns	Monique Johns
 Candidate	Morgan Russum	Morgan Russum
 Candidate	Nadine M. Frost	Nadine M. Frost
 Candidate	Nathan Field	Nathan Field
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	R.E. Scott Walker	R.E. Scott Walker
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Ray Seigfried	Ray Seigfried
 Candidate	Robert D. Wilson	Robert D. Wilson
 Candidate	Robert Oliver	Robert Oliver

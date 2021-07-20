@@ -307,7 +307,7 @@ CandidateContest	RI Senate District 6	Senator in General Assembly District 6
 CandidateContest	RI Senate District 7	Senator in General Assembly District 7
 CandidateContest	RI Senate District 8	Senator in General Assembly District 8
 CandidateContest	RI Senate District 9	Senator in General Assembly District 9
-CandidateContest	RI Treasurer	RI Treasurer
+CandidateContest	RI General Treasurer	RI Treasurer
 CandidateContest	US House RI District 1	Representative in Congress District 1
 CandidateContest	US House RI District 2	Representative in Congress District 2
 CandidateContest	US President (RI)	PRESIDENT
@@ -1129,8 +1129,9 @@ CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
 ReportingUnit	Rhode Island;Bristol County	Rhode Island;Bristol
-ReportingUnit	Rhode Island;Federal Precinct County	Rhode Island;Federal Precinct
+ReportingUnit	Rhode Island	Rhode Island;Federal Precinct
 ReportingUnit	Rhode Island;Kent County	Rhode Island;Kent
 ReportingUnit	Rhode Island;Newport County	Rhode Island;Newport
 ReportingUnit	Rhode Island;Providence County	Rhode Island;Providence
 ReportingUnit	Rhode Island;Washington County	Rhode Island;Washington
+CandidateContest	RI Attorney General	RI;Attorney General;statewide

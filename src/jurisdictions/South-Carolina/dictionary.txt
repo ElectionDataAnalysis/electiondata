@@ -6437,7 +6437,7 @@ ReportingUnit	South Carolina;York County	fips45091
 CandidateContest	SC Attorney General	SC;Attorney General
 CandidateContest	SC Commissioner of Agriculture	SC;Commissioner of Agriculture;statewide
 CandidateContest	SC Comptroller General	SC;Comptroller General;statewide
-CandidateContest	SC Governor and Lieutenant Governor	SC;Governor and Lieutenant Governor;statewide
+CandidateContest	SC Governor	SC;Governor and Lieutenant Governor;statewide
 CandidateContest	SC Secretary of State	SC;Secretary of State;statewide
 CandidateContest	SC House District 11	SC;State Representative;District 11
 CandidateContest	SC House District 7	SC;State Representative;District 7
@@ -6593,3 +6593,4 @@ ReportingUnit	South Carolina;Sumter County	South Carolina;Sumter
 ReportingUnit	South Carolina;Union County	South Carolina;Union
 ReportingUnit	South Carolina;Williamsburg County	South Carolina;Williamsburg
 ReportingUnit	South Carolina;York County	South Carolina;York
+CandidateContest	SC Attorney General	SC;Attorney General;statewide

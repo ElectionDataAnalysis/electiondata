@@ -271,3 +271,5 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+CandidateContest	DC Attorney General	DC;Attorney General;statewide
+CandidateContest	DC Attorney General	DC;Attorney General;statewide

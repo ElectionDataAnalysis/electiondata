@@ -148,3 +148,5 @@ ND Attorney General	1	ND Attorney General
 ND Lieutenant Governor	1	ND Lieutenant Governor	
 ND Treasurer	1	ND Treasurer	
 ND Secretary of State	1	ND Secretary of State	
+ND Agriculture Commissioner	1	ND Agriculture Commissioner
+ND Justice of the Supreme Court	1	ND Justice of the Supreme Court

@@ -101,57 +101,56 @@ Candidate	I’aulualo Fa’afetai Talia	I'aulualo/Tapaau
 Candidate	Lemanu Palepoi Mauga	Lemanu/Talauega
 Candidate	Nua Sao	Nua/Satele
 Candidate	ALUMAMALU ALE SEƒÄ FILOIALI'I	ALUMAMALU ALE SEƒÄ FILOIALI'I
-Candidate	FETUI F FETUI JR.	FETUI F FETUI JR.
-Candidate	FILIOALII LE'AAI SAFULU FILIOALII JR	FILIOALII LE'AAI SAFULU FILIOALII JR
-Candidate	MAPU S JAMIAS	MAPU S JAMIAS
-Candidate	VESI TALALELEI FAUTANU JR.	VESI TALALELEI FAUTANU JR.
-Candidate	SUALEVAI NOFOAIGA SUALEVAI	SUALEVAI NOFOAIGA SUALEVAI
-Candidate	TIAOALII FAUAGIGA T SAI	TIAOALII FAUAGIGA T SAI
-Candidate	LAVEA FATULEGAE'E PALEPOI MAUGA	LAVEA FATULEGAE'E PALEPOI MAUGA
-Candidate	TUPUA SHAWN VA'A	TUPUA SHAWN VA'A
-Candidate	"SUAESE ""POOCH"" TA'ASE"	"SUAESE ""POOCH"" TA'ASE"
-Candidate	TITIALI'I KITARA VAIAU	TITIALI'I KITARA VAIAU
-Candidate	VA'ASA SIMANU EdD	VA'ASA SIMANU EdD
-Candidate	FA'ALAE LAUATUA'A KONESETI TUNUPOPO	FA'ALAE LAUATUA'A KONESETI TUNUPOPO
-Candidate	FIALUPE FELILA FIAUI LUTU	FIALUPE FELILA FIAUI LUTU
-Candidate	LUA'ITAUA GENE PAN	LUA'ITAUA GENE PAN
-Candidate	AVAGAFONO TUAVAO VAIMAGA MAIAVA	AVAGAFONO TUAVAO VAIMAGA MAIAVA
-Candidate	LOIA GUTU	LOIA GUTU
-Candidate	TUIKA TUIKA	TUIKA TUIKA
-Candidate	VAILOATA ETEUATI AMITUANA'I	VAILOATA ETEUATI AMITUANA'I
-Candidate	AGALELEI LATU FATUESI	AGALELEI LATU FATUESI
-Candidate	IFOPO MAUGAOALI'I SIPA ANOA'I	IFOPO MAUGAOALI'I SIPA ANOA'I
-Candidate	VAILIUAMA STEVE LEASIOLAGI	VAILIUAMA STEVE LEASIOLAGI
-Candidate	WAYNE MALAETASI AMES	WAYNE MALAETASI AMES
-Candidate	VE'EVALU MEAUTA LAUOI MAGEO	VE'EVALU MEAUTA LAUOI MAGEO
-Candidate	VESIA'I POYER S SAMUELU	VESIA'I POYER S SAMUELU
-Candidate	TAPAI ALAILEPULE BENJAMIN VAIVAO	TAPAI ALAILEPULE BENJAMIN VAIVAO
-Candidate	TINA FAISIOTAMO'I VIVAO IOANE	TINA FAISIOTAMO'I VIVAO IOANE
-Candidate	VAETASI TU'UMOLIMOLI S. MOLIGA	VAETASI TU'UMOLIMOLI S. MOLIGA
-Candidate	FAIMEALELEI ANTHONY FU'E ALLEN	FAIMEALELEI ANTHONY FU'E ALLEN
-Candidate	SAUAFEA SONNY SAUAFEA	SAUAFEA SONNY SAUAFEA
-Candidate	ANDREW EARNEST THOMPSON	ANDREW EARNEST THOMPSON
-Candidate	LOGOITUAU MARK TIMOTEO ATAFUA	LOGOITUAU MARK TIMOTEO ATAFUA
-Candidate	MANUMAUA WAYNE WILSON	MANUMAUA WAYNE WILSON
-Candidate	SALA SATAUA Dr. MATAESE SAMUELU	SALA SATAUA Dr. MATAESE SAMUELU
-Candidate	ANDRA TEREISE SAMOA	ANDRA TEREISE SAMOA
-Candidate	PULETUMALO DICK S. KOKO	PULETUMALO DICK S. KOKO
-Candidate	ANDREW MULIVAI AUTELE	ANDREW MULIVAI AUTELE
-Candidate	ETHAN LAKE	ETHAN LAKE
-Candidate	FALEOMAVAEGA NICHOLAS KING JR	FALEOMAVAEGA NICHOLAS KING JR
-Candidate	SAVALI TALAVOU ALE	SAVALI TALAVOU ALE
-Candidate	ALEX M. SENE. JR	ALEX M. SENE. JR
-Candidate	BARTLEY PAPALI'I SU'A LUCIA	BARTLEY PAPALI'I SU'A LUCIA
-Candidate	LARRY SIMOU SANITOA	LARRY SIMOU SANITOA
-Candidate	SAILI SIONE SAMOA	SAILI SIONE SAMOA
-Candidate	SAMUEL IOKA ALE MELEISEA	SAMUEL IOKA ALE MELEISEA
-Candidate	VUI FLORENCE VAILI SAULO	VUI FLORENCE VAILI SAULO
-Candidate	MANAVAALOFA TUTUILA MANASE	MANAVAALOFA TUTUILA MANASE
-Candidate	RACHAEL MANNING KEY	RACHAEL MANNING KEY
-Candidate	TIMUSƒÄ TINI C. LAM YUEN	TIMUSƒÄ TINI C. LAM YUEN
-Candidate	APE MIKE ASIFOA	APE MIKE ASIFOA
-Candidate	GAFATASI AFALAVA	GAFATASI AFALAVA
+Candidate	Fetui F Fetui Jr.	Fetui F Fetui Jr.
+Candidate	Filioalii Le'Aai Safulu Filioalii Jr	Filioalii Le'Aai Safulu Filioalii Jr
+Candidate	Mapu S Jamias	Mapu S Jamias
+Candidate	Vesi Talalelei Fautanu Jr.	Vesi Talalelei Fautanu Jr.
+Candidate	Sualevai Nofoaiga Sualevai	Sualevai Nofoaiga Sualevai
+Candidate	Tiaoalii Fauagiga T Sai	Tiaoalii Fauagiga T Sai
+Candidate	Lavea Fatulegae'E Palepoi Mauga	Lavea Fatulegae'E Palepoi Mauga
+Candidate	Tupua Shawn Va'A	Tupua Shawn Va'A
 Candidate	Suaese 'Pooch' Ta'Ase	Suaese 'Pooch' Ta'Ase
+Candidate	Titiali'I Kitara Vaiau	Titiali'I Kitara Vaiau
+Candidate	VA'ASA SIMANU EdD	VA'ASA SIMANU EdD
+Candidate	Fa'Alae Lauatua'A Koneseti Tunupopo	Fa'Alae Lauatua'A Koneseti Tunupopo
+Candidate	Fialupe Felila Fiaui Lutu	Fialupe Felila Fiaui Lutu
+Candidate	Lua'Itaua Gene Pan	Lua'Itaua Gene Pan
+Candidate	Avagafono Tuavao Vaimaga Maiava	Avagafono Tuavao Vaimaga Maiava
+Candidate	Loia Gutu	Loia Gutu
+Candidate	Tuika Tuika	Tuika Tuika
+Candidate	Vailoata Eteuati Amituana'I	Vailoata Eteuati Amituana'I
+Candidate	Agalelei Latu Fatuesi	Agalelei Latu Fatuesi
+Candidate	Ifopo Maugaoali'I Sipa Anoa'I	Ifopo Maugaoali'I Sipa Anoa'I
+Candidate	Vailiuama Steve Leasiolagi	Vailiuama Steve Leasiolagi
+Candidate	Wayne Malaetasi Ames	Wayne Malaetasi Ames
+Candidate	Ve'Evalu Meauta Lauoi Mageo	Ve'Evalu Meauta Lauoi Mageo
+Candidate	Vesia'I Poyer S Samuelu	Vesia'I Poyer S Samuelu
+Candidate	Tapai Alailepule Benjamin Vaivao	Tapai Alailepule Benjamin Vaivao
+Candidate	Tina Faisiotamo'I Vivao Ioane	Tina Faisiotamo'I Vivao Ioane
+Candidate	Vaetasi Tu'Umolimoli S. Moliga	Vaetasi Tu'Umolimoli S. Moliga
+Candidate	Faimealelei Anthony Fu'E Allen	Faimealelei Anthony Fu'E Allen
+Candidate	Sauafea Sonny Sauafea	Sauafea Sonny Sauafea
+Candidate	Andrew Earnest Thompson	Andrew Earnest Thompson
+Candidate	Logoituau Mark Timoteo Atafua	Logoituau Mark Timoteo Atafua
+Candidate	Manumaua Wayne Wilson	Manumaua Wayne Wilson
+Candidate	SALA SATAUA Dr. MATAESE SAMUELU	SALA SATAUA Dr. MATAESE SAMUELU
+Candidate	Andra Tereise Samoa	Andra Tereise Samoa
+Candidate	Puletumalo Dick S. Koko	Puletumalo Dick S. Koko
+Candidate	Andrew Mulivai Autele	Andrew Mulivai Autele
+Candidate	Ethan Lake	Ethan Lake
+Candidate	Faleomavaega Nicholas King Jr	Faleomavaega Nicholas King Jr
+Candidate	Savali Talavou Ale	Savali Talavou Ale
+Candidate	Alex M. Sene. Jr	Alex M. Sene. Jr
+Candidate	Bartley Papali'I Su'A Lucia	Bartley Papali'I Su'A Lucia
+Candidate	Larry Simou Sanitoa	Larry Simou Sanitoa
+Candidate	Saili Sione Samoa	Saili Sione Samoa
+Candidate	Samuel Ioka Ale Meleisea	Samuel Ioka Ale Meleisea
+Candidate	Vui Florence Vaili Saulo	Vui Florence Vaili Saulo
+Candidate	Manavaalofa Tutuila Manase	Manavaalofa Tutuila Manase
+Candidate	Rachael Manning Key	Rachael Manning Key
+Candidate	TIMUSƒÄ TINI C. LAM YUEN	TIMUSƒÄ TINI C. LAM YUEN
+Candidate	Ape Mike Asifoa	Ape Mike Asifoa
+Candidate	Gafatasi Afalava	Gafatasi Afalava
 CountItemType	total	TOTAL
 CountItemType	absentee	absentee
 CountItemType	absentee-mail	absentee by mail
@@ -168,3 +167,4 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
+CandidateContest	AS Attorney General	AS;Attorney General;statewide

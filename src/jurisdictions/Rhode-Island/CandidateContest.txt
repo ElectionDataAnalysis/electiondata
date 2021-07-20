@@ -119,5 +119,5 @@ RI Governor	1	RI Governor
 US Senate RI	1	US Senate RI	
 RI Attorney General	1	RI Attorney General	
 RI Lieutenant Governor	1	RI Lieutenant Governor	
-RI Treasurer	1	RI Treasurer	
+RI General Treasurer	1	RI General Treasurer
 RI Secretary of State	1	RI Secretary of State	

@@ -858,7 +858,7 @@ CandidateContest	MA House District 2 Barnstable	MA;State Representative;District
 CandidateContest	MA House District 3 Barnstable	MA;State Representative;District 3 Barnstable
 CandidateContest	MA House District 4 Barnstable	MA;State Representative;District 4 Barnstable
 CandidateContest	MA House District 5 Barnstable	MA;State Representative;District 5 Barnstable
-CandidateContest	MA House District District Barnstable, Dukes a Nantucket	MA;State Representative;District Barnstable, Dukes a Nantucket
+CandidateContest	MA House District Barnstable, Dukes a Nantucket	MA;State Representative;District Barnstable, Dukes a Nantucket
 CandidateContest	MA Senate District Cape a Islands	MA;State Senator;District Cape a Islands
 CandidateContest	MA Senate District Plymou a Barnstable	MA;State Senator;District Plymou a Barnstable
 CandidateContest	MA Treasurer	MA;Treasurer;statewide
@@ -1428,3 +1428,5 @@ ReportingUnit	Massachusetts;Norfolk County	Massachusetts;Norfolk
 ReportingUnit	Massachusetts;Plymouth County	Massachusetts;Plymouth
 ReportingUnit	Massachusetts;Suffolk County	Massachusetts;Suffolk
 ReportingUnit	Massachusetts;Worcester County	Massachusetts;Worcester
+Candidate	Sonia Rosa Chang-DÃ­az	Sonia Rosa Chang-DÃ­az
+CandidateContest	MA Attorney General	MA;Attorney General;statewide

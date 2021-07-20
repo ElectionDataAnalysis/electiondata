@@ -5738,3 +5738,4 @@ ReportingUnit	Virginia;Winchester City	Virginia;Winchester City
 ReportingUnit	Virginia;Wise County	Virginia;Wise County
 ReportingUnit	Virginia;Wythe County	Virginia;Wythe County
 ReportingUnit	Virginia;York County	Virginia;York County
+CandidateContest	VA Attorney General	VA;Attorney General;statewide

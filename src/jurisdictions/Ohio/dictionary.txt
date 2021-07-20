@@ -2582,7 +2582,7 @@ CandidateContest	US House OH District 2	Representative to Congress - District 02
 CandidateContest	US House OH District 1	Representative to Congress - District 01
 CandidateContest	OH Attorney General	OH;Attorney General
 CandidateContest	OH Auditor of State	OH;Auditor of State;statewide
-CandidateContest	OH Governor and Lieutenant Governor	OH;Governor and Lieutenant Governor;statewide
+CandidateContest	OH Governor	OH;Governor and Lieutenant Governor;statewide
 CandidateContest	OH Justice of the Supreme Court	OH;Justice of the Supreme Court;statewide
 CandidateContest	OH Member of the State Board of Education District 2	OH;Member of the State Board of Education;District 2
 CandidateContest	OH Member of the State Board of Education District 3	OH;Member of the State Board of Education;District 3
@@ -2830,3 +2830,4 @@ ReportingUnit	Ohio;Wayne County	Ohio;Wayne
 ReportingUnit	Ohio;Williams County	Ohio;Williams
 ReportingUnit	Ohio;Wood County	Ohio;Wood
 ReportingUnit	Ohio;Wyandot County	Ohio;Wyandot
+CandidateContest	OH Attorney General	OH;Attorney General;statewide

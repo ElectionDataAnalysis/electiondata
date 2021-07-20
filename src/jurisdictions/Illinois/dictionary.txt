@@ -27,7 +27,7 @@ Candidate	Aicha Marie Maccarthy	Aicha Marie Maccarthy - No
 Candidate	Aicha Marie Maccarthy	Aicha Marie Maccarthy - Yes
 Candidate	Aileen Bhandari	Aileen Bhandari
 Candidate	Aisha El-Amin	Aisha El-Amin
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Al Riley	Al Riley
 Candidate	Alan D. Tucker	Alan D. Tucker - No
 Candidate	Alan D. Tucker	Alan D. Tucker - Yes
@@ -165,7 +165,7 @@ Candidate	BONNIE CAROL McGRATH	BONNIE CAROL McGRATH
 Candidate	BRADEN McCULLOUGH	BRADEN McCULLOUGH
 Candidate	BRANDI McGUIRE	BRANDI McGUIRE
 Candidate	BRIAN J. McPARTLIN	BRIAN J. McPARTLIN
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara 'Bobbi' N. Petrungaro	Barbara 'Bobbi' N. Petrungaro - No
 Candidate	Barbara 'Bobbi' N. Petrungaro	Barbara 'Bobbi' N. Petrungaro - Yes
 Candidate	Barbara Bellar	Barbara Bellar
@@ -602,7 +602,7 @@ Candidate	Donald C. Hudson	Donald C. Hudson - No
 Candidate	Donald C. Hudson	Donald C. Hudson - Yes
 Candidate	Donald Ishmael	Donald Ishmael
 Candidate	Donald J Trump	Donald J Trump
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald R Walter	Donald R Walter
 Candidate	Donald R. Brewer	Donald R. Brewer
@@ -736,7 +736,7 @@ Candidate	George J. Kiebala	George J. Kiebala
 Candidate	George Obernagel	George Obernagel
 Candidate	George Pearson	George Pearson
 Candidate	George Petrilli	George Petrilli
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Georgia Dreyer	Georgia Dreyer
 Candidate	Georgina Poole	Georgina Poole
 Candidate	Gerald Stapleton	Gerald Stapleton
@@ -784,7 +784,7 @@ Candidate	Heinz Rudolf	Heinz Rudolf
 Candidate	Helene Miller Walsh	Helene Miller Walsh
 Candidate	Herbert Hebein	Herbert Hebein
 Candidate	Herman Senor	Herman Senor
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hillary Rodham Clinton	Hillary Rodham Clinton
 Candidate	Holly Kim	Holly Kim
 Candidate	Hope R. Green	Hope R. Green
@@ -1034,7 +1034,7 @@ Candidate	John J. O'Gara	John J. O'Gara
 Candidate	John Joseph Pcolinski, Jr.	John Joseph Pcolinski, Jr.
 Candidate	John K. Delaney	John K. Delaney
 Candidate	John Keating	John Keating
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John L. Barger	John L. Barger
 Candidate	John Lee Bingham	John Lee Bingham
 Candidate	John Lowry	John Lowry
@@ -1042,7 +1042,7 @@ Candidate	John M. Bartman	John M. Bartman
 Candidate	John M. Cabello	John M. Cabello
 Candidate	John M. Shimkus	John M. Shimkus
 Candidate	John M. Stassi	John M. Stassi
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John Meixner	John Meixner
 Candidate	John O'Meara	John O'Meara
 Candidate	John P. Callahan, Jr.	John P. Callahan, Jr. - No
@@ -1612,7 +1612,7 @@ Candidate	Mike Zanillo	Mike Zanillo
 Candidate	Miriam Smith	Miriam Smith
 Candidate	Mitchell Esslinger	Mitchell Esslinger
 Candidate	Mitchell L. Hoffman	Mitchell L. Hoffman
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Mohammad 'Mo' Iqbal	Mohammad 'Mo' Iqbal
 Candidate	Mohammed Mortoja	Mohammed Mortoja
 Candidate	Molly Bosi	Molly Bosi
@@ -1673,7 +1673,7 @@ Candidate	Norine K. Hammond	Norine K. Hammond
 Candidate	Ojus Khanolkar	Ojus Khanolkar
 Candidate	Omar Aquino	Omar Aquino
 Candidate	Ora Palmer	Ora Palmer
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Owens 'Joe' Shelby	Owens 'Joe' Shelby
 Candidate	P. Scott Neville, Jr.	P. Scott Neville, Jr.
 Candidate	PAT McGUIRE	PAT McGUIRE
@@ -1782,7 +1782,7 @@ Candidate	Radiance Campbell	Radiance Campbell
 Candidate	Rae Yawer	Rae Yawer
 Candidate	Raheem Uqdah	Raheem Uqdah
 Candidate	Raja Krishnamoorthi	Raja Krishnamoorthi
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Ralph Sides	Ralph Sides
 Candidate	Ram Villivalam	Ram Villivalam
 Candidate	Ramon Ocasio, Iii	Ramon Ocasio, Iii - No
@@ -3454,42 +3454,42 @@ CandidateContest	IL House District 98	IL;State Representative;District 98
 CandidateContest	IL House District 67	IL;State Representative;District 67
 CandidateContest	IL House District 68	IL;State Representative;District 68
 Candidate	Andre Thapedi	Andre Thapedi
-Candidate	Angelique \Angie\ Bodine	Angelique \Angie\ Bodine
+Candidate	Angelique 'Angie' Bodine	Angelique \Angie\ Bodine
 Candidate	Anthony Deluca	Anthony Deluca
-Candidate	Christopher \C.D.\ Davidsmeyer	Christopher \C.D.\ Davidsmeyer
+Candidate	Christopher 'C.D.' Davidsmeyer	Christopher \C.D.\ Davidsmeyer
 Candidate	Curtis J. Tarver II	Curtis J. Tarver II
 Candidate	Dan McConchie	Dan McConchie
 Candidate	Darin Lahood	Darin Lahood
 Candidate	David Mcsweeney	David Mcsweeney
 Candidate	Donald P. Dewitte	Donald P. Dewitte
-Candidate	Elizabeth \Lisa\ Hernandez	Elizabeth \Lisa\ Hernandez
-Candidate	Emanuel \Chris\ Welch	Emanuel \Chris\ Welch
+Candidate	Elizabeth 'Lisa' Hernandez	Elizabeth \Lisa\ Hernandez
+Candidate	Emanuel 'Chris' Welch	Emanuel \Chris\ Welch
 Candidate	Emil Jones, III	Emil Jones, III
-Candidate	Fredric Bryan \Rick\ Lesser	Fredric Bryan \Rick\ Lesser
-Candidate	James M. \Jim\ Caffrey	James M. \Jim\ Caffrey
+Candidate	Fredric Bryan 'Rick' Lesser	Fredric Bryan \Rick\ Lesser
+Candidate	James M. 'Jim' Caffrey	James M. \Jim\ Caffrey
 Candidate	Jennifer Mcmillin	Jennifer Mcmillin
 Candidate	Jerry Costello II	Jerry Costello II
-Candidate	Jesus \Chuy\ Garcia	Jesus \Chuy\ Garcia
+Candidate	Jesus 'Chuy' Garcia	Jesus \Chuy\ Garcia
 Candidate	Jimmy Lee Tillman, II	Jimmy Lee Tillman, II
-Candidate	Jitendra \Jd\ Diganvker	Jitendra \Jd\ Diganvker
+Candidate	Jitendra 'Jd' Diganvker	Jitendra \Jd\ Diganvker
 Candidate	Joan McCarthy Lasonde	Joan McCarthy Lasonde
 Candidate	Latoya N. Greenwood	Latoya N. Greenwood
-Candidate	Lawrence \Larry\ Walsh, Jr.	Lawrence \Larry\ Walsh, Jr.
+Candidate	Lawrence 'Larry' Walsh, Jr.	Lawrence \Larry\ Walsh, Jr.
 Candidate	Linda Chapa Lavia	Linda Chapa Lavia
 Candidate	Margo Mcdermed	Margo Mcdermed
 Candidate	Maurice A. West II	Maurice A. West II
 Candidate	Michael P. Mcauliffe	Michael P. Mcauliffe
 Candidate	Napoleon B. Harris, III	Napoleon B. Harris, III
-Candidate	Nicholas \Nick\ Smith	Nicholas \Nick\ Smith
-Candidate	Randall M. \Randy\ Hultgren	Randall M. \Randy\ Hultgren
-Candidate	Robert \Bob\ Rita	Robert \Bob\ Rita
+Candidate	Nicholas 'Nick' Smith	Nicholas \Nick\ Smith
+Candidate	Randall M. 'Randy' Hultgren	Randall M. \Randy\ Hultgren
+Candidate	Robert 'Bob' Rita	Robert \Bob\ Rita
 Candidate	Seth Mcmillan	Seth Mcmillan
 Candidate	Steve McClure	Steve McClure
-Candidate	Suzanne \Suzy\ Glowiak	Suzanne \Suzy\ Glowiak
+Candidate	Suzanne 'Suzy' Glowiak	Suzanne \Suzy\ Glowiak
 Candidate	Tony M. McCombie	Tony M. McCombie
-Candidate	William \Sam\ McCann	William \Sam\ McCann
-Candidate	William \Will\ Davis	William \Will\ Davis
-Candidate	William W. \Bill\ Fawell	William W. \Bill\ Fawell
+Candidate	William 'Sam' McCann	William \Sam\ McCann
+Candidate	William 'Will' Davis	William \Will\ Davis
+Candidate	William W. 'Bill' Fawell	William W. \Bill\ Fawell
 Party	Conservative Party	conservative
 Party	Democratic Party	democrat
 Party	Downstate United Party	downstate united

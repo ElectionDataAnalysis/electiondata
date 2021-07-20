@@ -148,3 +148,5 @@ ND Attorney General	North Dakota
 ND Lieutenant Governor	North Dakota
 ND Treasurer	North Dakota
 ND Secretary of State	North Dakota
+ND Agriculture Commissioner	North Dakota
+ND Justice of the Supreme Court	North Dakota

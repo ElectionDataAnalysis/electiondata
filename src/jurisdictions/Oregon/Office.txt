@@ -101,3 +101,4 @@ OR Attorney General	Oregon
 OR Lieutenant Governor	Oregon
 OR Treasurer	Oregon
 OR Secretary of State	Oregon
+OR Judge of the Supreme Court Position 5	Oregon

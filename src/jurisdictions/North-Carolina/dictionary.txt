@@ -15150,7 +15150,7 @@ ReportingUnit	North Carolina;Yancey County;10 PEN	YANCEY;10 PEN
 ReportingUnit	North Carolina;Yancey County;10 PEN	YANCEY;10 PEN - Y
 ReportingUnit	North Carolina;Yancey County;11 PRI	YANCEY;11 PRI
 ReportingUnit	North Carolina;Yancey County;11 PRI	YANCEY;11 PRI - Y
-CandidateContest	NC NC Supreme Court Associate Justice Seat 1	NC;NC Supreme Court Associate Justice Seat 1;statewide
+CandidateContest	NC Supreme Court Associate Justice Seat 1	NC;NC Supreme Court Associate Justice Seat 1;statewide
 CandidateContest	NC House District 63	NC;State Representative;District 63
 CandidateContest	NC House District 64	NC;State Representative;District 64
 CandidateContest	NC Senate District 24	NC;State Senate;District 24
@@ -15455,3 +15455,4 @@ ReportingUnit	North Carolina;Wilkes County	North Carolina;Wilkes
 ReportingUnit	North Carolina;Wilson County	North Carolina;Wilson
 ReportingUnit	North Carolina;Yadkin County	North Carolina;Yadkin
 ReportingUnit	North Carolina;Yancey County	North Carolina;Yancey
+CandidateContest	NC Attorney General	NC;Attorney General;statewide

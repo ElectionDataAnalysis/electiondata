@@ -2748,3 +2748,4 @@ ReportingUnit	Montana;Valley County	Montana;Valley
 ReportingUnit	Montana;Wheatland County	Montana;Wheatland
 ReportingUnit	Montana;Wibaux County	Montana;Wibaux
 ReportingUnit	Montana;Yellowstone County	Montana;Yellowstone
+CandidateContest	MT Attorney General	MT;Attorney General;statewide

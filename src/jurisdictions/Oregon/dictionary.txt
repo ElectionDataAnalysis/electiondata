@@ -2498,3 +2498,4 @@ ReportingUnit	Oregon;Wasco County	Oregon;Wasco
 ReportingUnit	Oregon;Washington County	Oregon;Washington
 ReportingUnit	Oregon;Wheeler County	Oregon;Wheeler
 ReportingUnit	Oregon;Yamhill County	Oregon;Yamhill
+CandidateContest	OR Attorney General	OR;Attorney General;statewide

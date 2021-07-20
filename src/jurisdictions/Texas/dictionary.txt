@@ -7389,7 +7389,7 @@ ReportingUnit	Texas;Culberson County	Texas;Culberson
 ReportingUnit	Texas;Dallam County	Texas;Dallam
 ReportingUnit	Texas;Dallas County	Texas;Dallas
 ReportingUnit	Texas;Dawson County	Texas;Dawson
-ReportingUnit	Texas;De Witt County	Texas;De Witt
+ReportingUnit	Texas;DeWitt County	Texas;De Witt
 ReportingUnit	Texas;Deaf Smith County	Texas;Deaf Smith
 ReportingUnit	Texas;Delta County	Texas;Delta
 ReportingUnit	Texas;Denton County	Texas;Denton
@@ -7585,3 +7585,5 @@ ReportingUnit	Texas;Yoakum County	Texas;Yoakum
 ReportingUnit	Texas;Young County	Texas;Young
 ReportingUnit	Texas;Zapata County	Texas;Zapata
 ReportingUnit	Texas;Zavala County	Texas;Zavala
+Candidate	Richard Peï¿½a Raymond	Richard Peï¿½a Raymond
+CandidateContest	TX Attorney General	TX;Attorney General;statewide

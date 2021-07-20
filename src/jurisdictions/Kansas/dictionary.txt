@@ -6303,7 +6303,7 @@ ReportingUnit	Kansas;Wyandotte County;Precinct QC 1-1	WYANDOTTE;QC 1-1
 ReportingUnit	Kansas;Wyandotte County;Precinct QC 1-1	Wyandotte;QC 1-1
 CandidateContest	KS Attorney General	KS;Attorney General
 CandidateContest	KS Commissioner of Insurance	KS;Commissioner of Insurance;statewide
-CandidateContest	KS Governor / Lt. Governor	KS;Governor / Lt. Governor;statewide
+CandidateContest	KS Governor	KS;Governor / Lt. Governor;statewide
 CandidateContest	KS Secretary of State	KS;Secretary of State;statewide
 CandidateContest	KS House District 2	KS;State Representative;District 2
 CandidateContest	KS House District 9	KS;State Representative;District 9
@@ -6713,7 +6713,7 @@ ReportingUnit	Kansas;Logan County	Kansas;Logan
 ReportingUnit	Kansas;Lyon County	Kansas;Lyon
 ReportingUnit	Kansas;Marion County	Kansas;Marion
 ReportingUnit	Kansas;Marshall County	Kansas;Marshall
-ReportingUnit	Kansas;Mcpherson County	Kansas;Mcpherson
+ReportingUnit	Kansas;McPherson County	Kansas;Mcpherson
 ReportingUnit	Kansas;Meade County	Kansas;Meade
 ReportingUnit	Kansas;Miami County	Kansas;Miami
 ReportingUnit	Kansas;Mitchell County	Kansas;Mitchell
@@ -6760,3 +6760,4 @@ ReportingUnit	Kansas;Wichita County	Kansas;Wichita
 ReportingUnit	Kansas;Wilson County	Kansas;Wilson
 ReportingUnit	Kansas;Woodson County	Kansas;Woodson
 ReportingUnit	Kansas;Wyandotte County	Kansas;Wyandotte
+CandidateContest	KS Attorney General	KS;Attorney General;statewide

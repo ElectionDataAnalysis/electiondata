@@ -714,3 +714,4 @@ ReportingUnit	Mississippi;Webster County	Mississippi;Webster
 ReportingUnit	Mississippi;Wilkinson County	Mississippi;Wilkinson
 ReportingUnit	Mississippi;Winston County	Mississippi;Winston
 ReportingUnit	Mississippi;Yalobusha County	Mississippi;Yalobusha
+CandidateContest	MS Attorney General	MS;Attorney General;statewide

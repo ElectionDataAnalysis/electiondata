@@ -2,9 +2,9 @@ cdf_element	cdf_internal_name	raw_identifier_value
 BallotMeasureSelection	No	AGAINST
 BallotMeasureSelection	Yes	FOR
 Candidate	A.J. Anglin	A.J. Anglin
-Candidate	AGAINST	AGAINST
+Candidate	Against	Against
 Candidate	Adrienne Woods	Adrienne Woods
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alan Bruce Hughes	Alan Bruce Hughes
 Candidate	Alderman Andy Hawkins	Alderman Andy Hawkins
 Candidate	Alisa Blaize Dixon	Alisa Blaize Dixon
@@ -26,7 +26,7 @@ Candidate	Attorney General Leslie Rutledge	Attorney General Leslie Rutledge
 Candidate	Auditor Andrea Lea	Auditor Andrea Lea
 Candidate	Austin W. Jones	Austin W. Jones
 Candidate	BIll Luther	BIll Luther
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara Womack Webb	Barbara Womack Webb
 Candidate	Bart Hester	Bart Hester
 Candidate	Ben Gilmore	Ben Gilmore
@@ -127,7 +127,7 @@ Candidate	District Judge Chris Carnahan	District Judge Chris Carnahan
 Candidate	Don Blankenship	Don Blankenship/William Mohr
 Candidate	Don Glover	Don Glover
 Candidate	Don Glover	Representative Don Glover
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Donald J. Trump/Michael R. Pence
 Candidate	Donald R. Hopkins Jr.	Donald R. Hopkins Jr.
@@ -143,7 +143,7 @@ Candidate	Efrem Neely	Efrem Neely
 Candidate	Elizabeth Warren	Elizabeth Warren
 Candidate	Elvis Presley	Elvis Presley
 Candidate	Emily White	Emily White
-Candidate	FOR	FOR
+Candidate	For	For
 Candidate	Fran Cavenaugh	Representative Fran Cavenaugh
 Candidate	Frank Gilbert	Frank Gilbert
 Candidate	Frank Spain	Frank Spain
@@ -159,7 +159,7 @@ Candidate	Gayatri Jane Agnew	Gayatri Jane Agnew
 Candidate	Gayla Hendren McKenzie	Gayla Hendren McKenzie
 Candidate	Gayla Hendren McKenzie	Rep. Gayla Hendren McKenzie
 Candidate	George Calloway, Jr.	George Calloway, Jr.
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Gloria La Riva	Gloria La Riva/Sunil Freeman
 Candidate	Goldie Hilburn	Goldie Hilburn
 Candidate	Governor Asa Hutchinson	Governor Asa Hutchinson
@@ -171,7 +171,7 @@ Candidate	Harlan Breaux	State Representative Harlan Breaux
 Candidate	Hawley Woods	Hawley Woods
 Candidate	Hayden Catherine Shamel	Hayden Catherine Shamel
 Candidate	Herman Curley	Herman Curley
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hollie Wilson	Hollie Wilson
 Candidate	Howard (Jr.) Smith, II	Howard (Jr.) Smith, II
 Candidate	Howard Beaty	Howard Beaty
@@ -219,9 +219,9 @@ Candidate	Joe Jett	State Representative Joe Jett
 Candidate	Joe Ryne Swafford	Joe Ryne Swafford
 Candidate	Joe Sestak	Joe Sestak
 Candidate	John K. Delaney	John K. Delaney
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John Maddox	State Representative John Maddox
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John P. Carr	John P. Carr
 Candidate	John Payton	Representative John Payton
 Candidate	John Richard Myers	John Richard Myers/Tiara Suzanne Lusk
@@ -315,7 +315,7 @@ Candidate	Lou Reed Sharp	Lou Reed Sharp
 Candidate	Lt. Governor Tim Griffin	Lt. Governor Tim Griffin
 Candidate	Luke Pruitt	Luke Pruitt
 Candidate	Mac Norton	Mac Norton
-Candidate	"Margaret ""Peggy"" Egan"	"Margaret ""Peggy"" Egan"
+Candidate	Margaret 'Peggy' Egan	Margaret 'Peggy' Egan
 Candidate	Margaret Dobson	Margaret Dobson
 Candidate	Marianne Williamson	Marianne Williamson
 Candidate	Marietta McClure	Marietta McClure
@@ -357,13 +357,13 @@ Candidate	Mike Lee	Mike Lee
 Candidate	Mike Loftin	Mike Loftin
 Candidate	Milton Nicks, Jr.	Rep. Milton Nicks, Jr.
 Candidate	Mitchell Fenton	Mitchell Fenton
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Monica D. Ball	Monica D. Ball
 Candidate	Mosie Boyd	Mosie Boyd
 Candidate	Nathan George	Nathan George
 Candidate	Nick Jones	Nick Jones
 Candidate	Nicole Clowney	Representative Nicole Clowney
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Paige Dillard Evans	Paige Dillard Evans
 Candidate	Patrick D. Frazier	Patrick D. Frazier
 Candidate	Patrick McDaniel	Patrick McDaniel
@@ -380,7 +380,7 @@ Candidate	Prosecuting Attorney Scott Ellington	Prosecuting Attorney Scott Elling
 Candidate	Prosecuting Attorney Stephanie Potter Barrett	Prosecuting Attorney Stephanie Potter Barrett
 Candidate	R. Kevin Barham	R. Kevin Barham
 Candidate	R. Scott Troutt	R. Scott Troutt
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Randy S. Haun	Randy S. Haun
 Candidate	Reginald (Ray) Prunty	Reginald (Ray) Prunty
 Candidate	Reginald Murdock	Representative Reginald Murdock

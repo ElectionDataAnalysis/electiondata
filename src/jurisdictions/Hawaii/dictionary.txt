@@ -480,7 +480,7 @@ ReportingUnit	Hawaii;Maui County;Precinct 13-06	13-06
 ReportingUnit	Hawaii;Maui County;Precinct 13-07	13-07
 ReportingUnit	Hawaii;Maui County;Precinct 13-08	13-08
 ReportingUnit	Hawaii;Maui County;Precinct 13-09	13-09
-CandidateContest	HI Governor and Lieutenant Governor	HI;Governor and Lieutenant Governor;statewide
+CandidateContest	HI Governor	HI;Governor and Lieutenant Governor;statewide
 CandidateContest	HI House District 2	HI;State Representative;District 2
 CandidateContest	HI House District 3	HI;State Representative;District 3
 CandidateContest	HI House District 7	HI;State Representative;District 7
@@ -602,3 +602,4 @@ ReportingUnit	Hawaii;Hawaii County	Hawaii;Hawaii
 ReportingUnit	Hawaii;Honolulu County	Hawaii;Honolulu
 ReportingUnit	Hawaii;Kauai County	Hawaii;Kauai
 ReportingUnit	Hawaii;Maui County	Hawaii;Maui
+CandidateContest	HI Attorney General	HI;Attorney General;statewide

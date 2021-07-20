@@ -1,7 +1,7 @@
 cdf_element	cdf_internal_name	raw_identifier_value
 Candidate	Aileen Abrams	Aileen Abrams
 Candidate	Aimee Berger-Girvalo	Aimee Berger-Girvalo
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alden Russell	Alden Russell
 Candidate	Alex Kasser	Alex Kasser
 Candidate	Alexander Taubes	Alexander Taubes
@@ -17,7 +17,7 @@ Candidate	Antonio Felipe	Antonio Felipe
 Candidate	April Capone	April Capone
 Candidate	Audrey Lampert	Audrey Lampert
 Candidate	Baird Welch-Collins	Baird Welch-Collins
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara Ruhe	Barbara Ruhe
 Candidate	Barry J. D'Andrea	Barry J. D'Andrea
 Candidate	Ben McGorty	Ben McGorty
@@ -100,7 +100,7 @@ Candidate	Derek Slap	Derek Slap
 Candidate	Devin R. Carney	Devin R. Carney
 Candidate	Devon Brown	Devon Brown
 Candidate	Don Vaniah Alexander	Don Vaniah Alexander
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Trump and Pence
 Candidate	Donna Veach	Donna Veach
 Candidate	Dorinda Borer	Dorinda Borer
@@ -135,7 +135,7 @@ Candidate	Gennaro Bizzarro	Gennaro Bizzarro
 Candidate	Geoff Luxenberg	Geoff Luxenberg
 Candidate	George Hallenbeck	George Hallenbeck
 Candidate	George Logan	George Logan
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Gerald Calnen	Gerald Calnen
 Candidate	Geraldo C. Reyes, Jr.	Geraldo C. Reyes, Jr.
 Candidate	Greg Howard	Greg Howard
@@ -153,7 +153,7 @@ Candidate	Henry Thayer	Henry Thayer
 Candidate	Henry Vasel	Henry Vasel
 Candidate	Hilary Ram	Hilary Ram
 Candidate	Hilda E. Santiago	Hilda E. Santiago
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Holly H. Cheeseman	Holly H. Cheeseman
 Candidate	Howard and Howard	Howard and Howard
 Candidate	Irene M. Haines	Irene M. Haines
@@ -201,11 +201,11 @@ Candidate	John Corky Mazurek	John Corky Mazurek
 Candidate	John Fusco	John Fusco
 Candidate	John J.Flynn	John J.Flynn
 Candidate	John K. Hampton	John K. Hampton
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John L. Hall, III	John L. Hall, III
 Candidate	John M. Traceski	John M. Traceski
 Candidate	John May	John May
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John Piscopo	John Piscopo
 Candidate	John Shaban	John Shaban
 Candidate	John W. Brockelman	John W. Brockelman
@@ -308,13 +308,13 @@ Candidate	Mike France	Mike France
 Candidate	Mike Skelps	Mike Skelps
 Candidate	Minnie Gonzalez	Minnie Gonzalez
 Candidate	Mitch Bolinsky	Mitch Bolinsky
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Myra Rivers	Myra Rivers
 Candidate	Nicole Klarides-Ditria	Nicole Klarides-Ditria
 Candidate	Noel Rodriquez	Noel Rodriquez
 Candidate	Noreen Kokoruda	Noreen Kokoruda
 Candidate	Norm Needleman	Norm Needleman
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Pam Salamone	Pam Salamone
 Candidate	Pat Boyd	Pat Boyd
 Candidate	Pat Wilson Pheanious	Pat Wilson Pheanious
@@ -334,7 +334,7 @@ Candidate	Phillip Chabot	Phillip Chabot
 Candidate	Piotr S. Ceglarz	Piotr S. Ceglarz
 Candidate	Quentin Phipps	Quentin Phipps
 Candidate	Raghib Allie-Brennan	Raghib Allie-Brennan
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Rebekah Harriman-Stites	Rebekah Harriman-Stites
 Candidate	Richard Cordero	Richard Cordero
 Candidate	Richard Ruglio	Richard Ruglio
@@ -1756,7 +1756,7 @@ Candidate	Adam Greenberg	Adam Greenberg
 Candidate	Aili McKeen	Aili McKeen
 Candidate	AJ Kerouac	AJ Kerouac
 Candidate	Alex Larsson	Alex Larsson
-Candidate	Alexandra 'Alex' Bergstein	"Alexandra ""Alex"" Bergstein"
+Candidate	Alexandra 'Alex' Bergstein	Alexandra 'Alex' Bergstein
 Candidate	Alfred P Mayo	Alfred P Mayo
 Candidate	Allen Marko	Allen Marko
 Candidate	Alphonse Paolillo Jr	Alphonse Paolillo Jr
@@ -1830,7 +1830,7 @@ Candidate	Edwin Vargas	Edwin Vargas
 Candidate	Eleni Kavros Degraw	Eleni Kavros Degraw
 Candidate	Elizabeth Schwebel	Elizabeth Schwebel
 Candidate	Ellen Beatty	Ellen Beatty
-Candidate	Emil 'Buddy' Altobello	"Emil ""Buddy"" Altobello"
+Candidate	Emil 'Buddy' Altobello	Emil 'Buddy' Altobello
 Candidate	Emmett D Riley	Emmett D Riley
 Candidate	Eric C Berthel	Eric C Berthel
 Candidate	Eric Michael Mastroianni Sr	Eric Michael Mastroianni Sr

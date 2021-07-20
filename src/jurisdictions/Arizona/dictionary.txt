@@ -1538,3 +1538,4 @@ ReportingUnit	Arizona;Pinal County	Arizona;Pinal
 ReportingUnit	Arizona;Santa Cruz County	Arizona;Santa Cruz
 ReportingUnit	Arizona;Yavapai County	Arizona;Yavapai
 ReportingUnit	Arizona;Yuma County	Arizona;Yuma
+CandidateContest	AZ Attorney General	AZ;Attorney General;statewide
