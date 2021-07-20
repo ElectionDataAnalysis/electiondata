@@ -91,8 +91,9 @@ def recast_options(
 def check_dictionary(dictionary_file: str) -> Optional[dict]:
     err = None
     dictionary_dir = Path(dictionary_file).parent.name
+
     # dedupe the dictionary
-    clean_and_dedupe(dictionary_file)
+    clean_and_dedupe(dictionary_file, clean_candidates=True)
     # check that no entry is null
     df = pd.read_csv(dictionary_file,**constants.standard_juris_csv_reading_kwargs)
     null_mask = df.T.isnull().any()
@@ -261,7 +262,7 @@ def ensure_juris_files(
 
             else:
                 # dedupe the file
-                clean_and_dedupe(cf_path)
+                clean_and_dedupe(cf_path, clean_candidates=True)
 
                 # TODO check for lines that are too long
 
@@ -369,11 +370,18 @@ def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
     return err
 
 
-def clean_and_dedupe(f_path: str):
+def clean_and_dedupe(f_path: str, clean_candidates=False):
     """Dedupe the file, removing any leading or trailing whitespace and compressing any internal whitespace"""
     # TODO allow specification of unique constraints
     df = pd.read_csv(f_path, **constants.standard_juris_csv_reading_kwargs)
 
+    if clean_candidates:
+        if ("cdf_element" in df.columns) and ("raw_identifier_value" in df.columns):  # for dictionary files
+            mask = df["cdf_element"] == "Candidate"
+            df.loc[mask, "raw_identifier_value"] = m.regularize_candidate_names(df.loc[mask, "raw_identifier_value"])
+            df.loc[mask, "cdf_internal_name"] = m.regularize_candidate_names(df.loc[mask, "cdf_internal_name"])
+        elif "BallotName" in df.columns:  # for Candidate files
+            df["BallotName"] = m.regularize_candidate_names(df["BallotName"])
     for c in df.columns:
         if not is_numeric_dtype(df.dtypes[c]):
             df[c].fillna("", inplace=True)
@@ -525,7 +533,7 @@ def load_juris_dframe_into_cdf(
         err = ui.add_new_error(
             err,
             "jurisdiction",
-            Path(all_juris_path).name,
+            juris_system_name,
             f"File {element}.txt not found",
         )
         return err
@@ -545,8 +553,8 @@ def load_juris_dframe_into_cdf(
         err = ui.add_new_error(
             err,
             "warn-jurisdiction",
-            Path(all_juris_path).name,
-            f"Duplicates were found in {element}.txt",
+            juris_system_name,
+            f"\nDuplicates were found in {element}.txt",
         )
 
     # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.

@@ -2915,7 +2915,6 @@ def load_results_df(
             path_to_jurisdiction_dir,
             file_name,
             munger_name,
-            juris_true_name,
             session,
             alternate_dictionary=alt_dictionary,
         )

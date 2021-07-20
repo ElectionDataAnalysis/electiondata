@@ -362,7 +362,7 @@ def replace_raw_with_internal_name(
 
 def replace_internal_names_with_ids(
     df: pd.DataFrame,
-    juris_true_name: str,  # for error reporting
+    juris_system_name: str,  # for error reporting
     munger_name: str,  # for error reporting
     file_name: str,  # for error reporting
     table_df: pd.DataFrame,
@@ -403,7 +403,7 @@ def replace_internal_names_with_ids(
         err = ui.add_new_error(
             err,
             "warn-jurisdiction",
-            juris_true_name,
+            juris_system_name,
             e,
         )
 
@@ -413,7 +413,7 @@ def replace_internal_names_with_ids(
             err = ui.add_new_error(
                 err,
                 "jurisdiction",
-                juris_true_name,
+                juris_system_name,
                 (
                     f"No {element} was matched. Either raw values are not in dictionary.txt, or "
                     f"the corresponding cdf_internal_names are missing from {element}.txt"
@@ -438,7 +438,7 @@ def replace_internal_names_with_ids(
 def replace_raw_with_internal_ids(
     df: pd.DataFrame,
     dictionary_dir: str,
-    juris_true_name: str,  # for error reporting
+    juris_system_name: str,  # for error reporting
     munger_name: str,  # for error reporting
     file_name: str,  # for error reporting
     table_df: pd.DataFrame,
@@ -464,7 +464,7 @@ def replace_raw_with_internal_ids(
         err = new_err
 
     working, new_err = replace_internal_names_with_ids(
-        working,juris_true_name, munger_name,file_name, table_df, element, internal_name_column,
+        working,juris_system_name, munger_name,file_name, table_df, element, internal_name_column,
         drop_unmatched=drop_unmatched, unmatched_id=unmatched_id,
     )
     err = ui.consolidate_errors([err, new_err])
@@ -496,14 +496,19 @@ def regularize_candidate_names(
     # if original is all caps
     if mask.any():
         # change to title case
-        ws[mask] = candidate_column[mask].str.title()
-        # TODO test out NameCleaver from SunlightLabs
-        # respect the Irish
+        ws[mask] = ws[mask].str.title()
+    # TODO test out NameCleaver from SunlightLabs
+    # TODO respect the Irish
+    # replace certain other quote characters with single-quote character
+    ws = ws.str.replace('"',"'").replace("`","'").replace("\\","'")
 
-    # if original is not all upper case
-    else:
-        # do nothing
-        pass
+    # replace pair of single quotes with just one single quote
+    ws = ws.str.replace("''", "'")
+
+    # remove encolosing single-quotes
+    mask =( ws.str[0] == "'") & (ws.str[-1] == "'")
+    if mask.any():
+        ws[mask] = ws[mask].str[1:-1]
     return ws
 
 
@@ -828,7 +833,7 @@ def raw_to_id_simple(
     """Append ids to <df> for all elements given in <element_list>.
 
     """
-
+    juris_system_name = Path(path_to_jurisdiction_dir).name
     err = None
     working = df.copy()
     for element in element_list:
@@ -851,7 +856,7 @@ def raw_to_id_simple(
                     err = ui.add_new_error(
                         err,
                         "warn-jurisdiction",
-                        juris_true_name,
+                        juris_system_name,
                         f"\nSome unmatched CountItemTypes:\n{unmatched}",
                     )
                 # get list of raw CountItemTypes in case they are needed for error reporting
@@ -871,7 +876,7 @@ def raw_to_id_simple(
                     err = ui.add_new_error(
                         err,
                         "jurisdiction",
-                        juris_true_name,
+                        juris_system_name,
                         f"No CountItemTypes from results file found in dictionary.txt, so no data loaded."
                         f"CountItemTypes from file: {all_raw_cit}",
                     )
@@ -889,7 +894,7 @@ def raw_to_id_simple(
                     err = ui.add_new_error(
                         err,
                         "warn-jurisdiction",
-                        juris_true_name,
+                        juris_system_name,
                         f"Some recognized CountItemTypes are not in the NIST standard list:\n\t{ns}",
                     )
                 working.drop("CountItemType_raw", axis=1, inplace=True)
@@ -900,7 +905,7 @@ def raw_to_id_simple(
                 working, new_err = replace_raw_with_internal_ids(
                     working,
                     path_to_jurisdiction_dir,
-                    juris_true_name,
+                    juris_system_name,
                     file_name,
                     munger_name,
                     element_df,
@@ -975,7 +980,6 @@ def munge_raw_to_ids(
     path_to_jurisdiction_dir: str,
     file_name: str,
     munger_name: str,
-    juris_true_name: str,
     session: Session,
     alternate_dictionary: Optional[str] = None   # when given, use this dictionary, not the one in the jurisdiction directory
 ) -> (pd.DataFrame, Optional[dict]):
@@ -983,6 +987,7 @@ def munge_raw_to_ids(
     this will be a text column; for others it will be an Id column """
 
     err = None
+    juris_system_name = Path(path_to_jurisdiction_dir).name
     working = df.copy()
     if alternate_dictionary:
         dictionary_dir = alternate_dictionary
@@ -998,7 +1003,7 @@ def munge_raw_to_ids(
             err = ui.add_new_error(
                 err,
                 "jurisdiction",
-                juris_true_name,
+                juris,
                 f"CandidateContest specified in ini file ({constant_dict['CandidateContest']}) "
                 f"not found. Check CandidateContest.txt.",
             )
@@ -1023,7 +1028,7 @@ def munge_raw_to_ids(
             working, err = add_contest_id(
                 working,
                 dictionary_dir,
-                juris_true_name,
+                juris_system_name,
                 file_name,
                 munger_name,
                 err,
@@ -1082,7 +1087,7 @@ def munge_raw_to_ids(
         session,
         munger_name,
         file_name,
-        juris_true_name,
+        juris_system_name,
     )
     if new_err:
         err = ui.consolidate_errors([err, new_err])
@@ -1095,7 +1100,7 @@ def munge_raw_to_ids(
             working,
             session.bind,
             dictionary_dir,
-            juris_true_name,
+            juris_system_name,
             file_name,
             munger_name,
             err,
@@ -1113,7 +1118,7 @@ def munge_raw_to_ids(
         err = ui.add_new_error(
             err,
             "jurisdiction",
-            juris_true_name,
+            juris_system_name,
             "No contests found, or no selections found for contests.",
         )
         return working, err
