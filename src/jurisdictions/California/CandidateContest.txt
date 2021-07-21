@@ -1462,3 +1462,8 @@ US President (CA) (American Independent Party)	1	US President (CA)	American Inde
 US President (CA) (Green Party)	1	US President (CA)	Green Party
 US President (CA) (Libertarian Party)	1	US President (CA)	Libertarian Party
 US President (CA) (Peace and Freedom Party)	1	US President (CA)	Peace and Freedom Party
+CA Board of Equalization Member District 2	1	CA Board of Equalization Member District 2	
+CA Board of Equalization Member District 1	1	CA Board of Equalization Member District 1	
+CA Board of Equalization Member District 4	1	CA Board of Equalization Member District 4	
+CA Board of Equalization Member District 3	1	CA Board of Equalization Member District 3	
+

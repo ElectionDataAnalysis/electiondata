@@ -174,4 +174,5 @@ US Senate KS	1	US Senate KS
 KS Attorney General	1	KS Attorney General	
 KS Lieutenant Governor	1	KS Lieutenant Governor	
 KS State Treasurer	1	KS State Treasurer
-KS Secretary of State	1	KS Secretary of State	
+KS Secretary of State	1	KS Secretary of State
+KS Commissioner of Insurance	1	KS Commissioner of Insurance

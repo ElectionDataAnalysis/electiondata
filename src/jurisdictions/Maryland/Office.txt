@@ -238,3 +238,4 @@ MD Attorney General	Maryland
 MD Lieutenant Governor	Maryland
 MD Treasurer	Maryland
 MD Secretary of State	Maryland
+MD Comptroller	Maryland

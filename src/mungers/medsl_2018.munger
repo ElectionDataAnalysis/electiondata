@@ -26,4 +26,5 @@ Election=<year>
 CountItemType=Over Votes,Under Votes,Blank Votes,overvote,undervote
 ReportingUnit=California;State Totals County,California;State Totals,New York;Total Votes by Candidate,New York;Total Votes by Party
 Candidate=undervote,overvote
+CandidateContest=HI;State Senator;District 19 Vacancy
 

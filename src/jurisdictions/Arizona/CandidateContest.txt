@@ -1,112 +1,112 @@
 Name	NumberElected	Office	PrimaryParty
-AZ House District 1	1	AZ House District 1
-AZ House District 2	1	AZ House District 2
-AZ House District 3	1	AZ House District 3
-AZ House District 4	1	AZ House District 4
-AZ House District 5	1	AZ House District 5
-AZ House District 6	1	AZ House District 6
-AZ House District 7	1	AZ House District 7
-AZ House District 8	1	AZ House District 8
-AZ House District 9	1	AZ House District 9
-AZ House District 10	1	AZ House District 10
-AZ House District 11	1	AZ House District 11
-AZ House District 12	1	AZ House District 12
-AZ House District 13	1	AZ House District 13
-AZ House District 14	1	AZ House District 14
-AZ House District 15	1	AZ House District 15
-AZ House District 16	1	AZ House District 16
-AZ House District 17	1	AZ House District 17
-AZ House District 18	1	AZ House District 18
-AZ House District 19	1	AZ House District 19
-AZ House District 20	1	AZ House District 20
-AZ House District 21	1	AZ House District 21
-AZ House District 22	1	AZ House District 22
-AZ House District 23	1	AZ House District 23
-AZ House District 24	1	AZ House District 24
-AZ House District 25	1	AZ House District 25
-AZ House District 26	1	AZ House District 26
-AZ House District 27	1	AZ House District 27
-AZ House District 28	1	AZ House District 28
-AZ House District 29	1	AZ House District 29
-AZ House District 30	1	AZ House District 30
-AZ House District 31	1	AZ House District 31
-AZ House District 32	1	AZ House District 32
-AZ House District 33	1	AZ House District 33
-AZ House District 34	1	AZ House District 34
-AZ House District 35	1	AZ House District 35
-AZ House District 36	1	AZ House District 36
-AZ House District 37	1	AZ House District 37
-AZ House District 38	1	AZ House District 38
-AZ House District 39	1	AZ House District 39
-AZ House District 40	1	AZ House District 40
-AZ House District 41	1	AZ House District 41
-AZ House District 42	1	AZ House District 42
-AZ House District 43	1	AZ House District 43
-AZ House District 44	1	AZ House District 44
-AZ House District 45	1	AZ House District 45
-AZ House District 46	1	AZ House District 46
-AZ House District 47	1	AZ House District 47
-AZ House District 48	1	AZ House District 48
-AZ House District 49	1	AZ House District 49
-AZ House District 50	1	AZ House District 50
-AZ House District 51	1	AZ House District 51
-AZ House District 52	1	AZ House District 52
-AZ House District 53	1	AZ House District 53
-AZ House District 54	1	AZ House District 54
-AZ House District 55	1	AZ House District 55
-AZ House District 56	1	AZ House District 56
-AZ House District 57	1	AZ House District 57
-AZ House District 58	1	AZ House District 58
-AZ House District 59	1	AZ House District 59
-AZ House District 60	1	AZ House District 60
-AZ Senate District 1	1	AZ Senate District 1
-AZ Senate District 2	1	AZ Senate District 2
-AZ Senate District 3	1	AZ Senate District 3
-AZ Senate District 4	1	AZ Senate District 4
-AZ Senate District 5	1	AZ Senate District 5
-AZ Senate District 6	1	AZ Senate District 6
-AZ Senate District 7	1	AZ Senate District 7
-AZ Senate District 8	1	AZ Senate District 8
-AZ Senate District 9	1	AZ Senate District 9
-AZ Senate District 10	1	AZ Senate District 10
-AZ Senate District 11	1	AZ Senate District 11
-AZ Senate District 12	1	AZ Senate District 12
-AZ Senate District 13	1	AZ Senate District 13
-AZ Senate District 14	1	AZ Senate District 14
-AZ Senate District 15	1	AZ Senate District 15
-AZ Senate District 16	1	AZ Senate District 16
-AZ Senate District 17	1	AZ Senate District 17
-AZ Senate District 18	1	AZ Senate District 18
-AZ Senate District 19	1	AZ Senate District 19
-AZ Senate District 20	1	AZ Senate District 20
-AZ Senate District 21	1	AZ Senate District 21
-AZ Senate District 22	1	AZ Senate District 22
-AZ Senate District 23	1	AZ Senate District 23
-AZ Senate District 24	1	AZ Senate District 24
-AZ Senate District 25	1	AZ Senate District 25
-AZ Senate District 26	1	AZ Senate District 26
-AZ Senate District 27	1	AZ Senate District 27
-AZ Senate District 28	1	AZ Senate District 28
-AZ Senate District 29	1	AZ Senate District 29
-AZ Senate District 30	1	AZ Senate District 30
-US House AZ District 1	1	US House AZ District 1
-US House AZ District 2	1	US House AZ District 2
-US House AZ District 3	1	US House AZ District 3
-US House AZ District 4	1	US House AZ District 4
-US House AZ District 5	1	US House AZ District 5
-US House AZ District 6	1	US House AZ District 6
-US House AZ District 7	1	US House AZ District 7
-US House AZ District 8	1	US House AZ District 8
-US House AZ District 9	1	US House AZ District 9
-US President (AZ)	1	US President (AZ)
-AZ Governor	1	AZ Governor
-US Senate AZ	1	US Senate AZ
-US Senate AZ (until 2023)	1	US Senate AZ
-AZ Corporation Commissioner	1	AZ Corporation Commissioner
-AZ Attorney General	1	AZ Attorney General
-AZ Lieutenant Governor	1	AZ Lieutenant Governor
-AZ Treasurer	1	AZ Treasurer
-AZ Secretary of State	1	AZ Secretary of State
+AZ House District 1	1	AZ House District 1	
+AZ House District 2	1	AZ House District 2	
+AZ House District 3	1	AZ House District 3	
+AZ House District 4	1	AZ House District 4	
+AZ House District 5	1	AZ House District 5	
+AZ House District 6	1	AZ House District 6	
+AZ House District 7	1	AZ House District 7	
+AZ House District 8	1	AZ House District 8	
+AZ House District 9	1	AZ House District 9	
+AZ House District 10	1	AZ House District 10	
+AZ House District 11	1	AZ House District 11	
+AZ House District 12	1	AZ House District 12	
+AZ House District 13	1	AZ House District 13	
+AZ House District 14	1	AZ House District 14	
+AZ House District 15	1	AZ House District 15	
+AZ House District 16	1	AZ House District 16	
+AZ House District 17	1	AZ House District 17	
+AZ House District 18	1	AZ House District 18	
+AZ House District 19	1	AZ House District 19	
+AZ House District 20	1	AZ House District 20	
+AZ House District 21	1	AZ House District 21	
+AZ House District 22	1	AZ House District 22	
+AZ House District 23	1	AZ House District 23	
+AZ House District 24	1	AZ House District 24	
+AZ House District 25	1	AZ House District 25	
+AZ House District 26	1	AZ House District 26	
+AZ House District 27	1	AZ House District 27	
+AZ House District 28	1	AZ House District 28	
+AZ House District 29	1	AZ House District 29	
+AZ House District 30	1	AZ House District 30	
+AZ House District 31	1	AZ House District 31	
+AZ House District 32	1	AZ House District 32	
+AZ House District 33	1	AZ House District 33	
+AZ House District 34	1	AZ House District 34	
+AZ House District 35	1	AZ House District 35	
+AZ House District 36	1	AZ House District 36	
+AZ House District 37	1	AZ House District 37	
+AZ House District 38	1	AZ House District 38	
+AZ House District 39	1	AZ House District 39	
+AZ House District 40	1	AZ House District 40	
+AZ House District 41	1	AZ House District 41	
+AZ House District 42	1	AZ House District 42	
+AZ House District 43	1	AZ House District 43	
+AZ House District 44	1	AZ House District 44	
+AZ House District 45	1	AZ House District 45	
+AZ House District 46	1	AZ House District 46	
+AZ House District 47	1	AZ House District 47	
+AZ House District 48	1	AZ House District 48	
+AZ House District 49	1	AZ House District 49	
+AZ House District 50	1	AZ House District 50	
+AZ House District 51	1	AZ House District 51	
+AZ House District 52	1	AZ House District 52	
+AZ House District 53	1	AZ House District 53	
+AZ House District 54	1	AZ House District 54	
+AZ House District 55	1	AZ House District 55	
+AZ House District 56	1	AZ House District 56	
+AZ House District 57	1	AZ House District 57	
+AZ House District 58	1	AZ House District 58	
+AZ House District 59	1	AZ House District 59	
+AZ House District 60	1	AZ House District 60	
+AZ Senate District 1	1	AZ Senate District 1	
+AZ Senate District 2	1	AZ Senate District 2	
+AZ Senate District 3	1	AZ Senate District 3	
+AZ Senate District 4	1	AZ Senate District 4	
+AZ Senate District 5	1	AZ Senate District 5	
+AZ Senate District 6	1	AZ Senate District 6	
+AZ Senate District 7	1	AZ Senate District 7	
+AZ Senate District 8	1	AZ Senate District 8	
+AZ Senate District 9	1	AZ Senate District 9	
+AZ Senate District 10	1	AZ Senate District 10	
+AZ Senate District 11	1	AZ Senate District 11	
+AZ Senate District 12	1	AZ Senate District 12	
+AZ Senate District 13	1	AZ Senate District 13	
+AZ Senate District 14	1	AZ Senate District 14	
+AZ Senate District 15	1	AZ Senate District 15	
+AZ Senate District 16	1	AZ Senate District 16	
+AZ Senate District 17	1	AZ Senate District 17	
+AZ Senate District 18	1	AZ Senate District 18	
+AZ Senate District 19	1	AZ Senate District 19	
+AZ Senate District 20	1	AZ Senate District 20	
+AZ Senate District 21	1	AZ Senate District 21	
+AZ Senate District 22	1	AZ Senate District 22	
+AZ Senate District 23	1	AZ Senate District 23	
+AZ Senate District 24	1	AZ Senate District 24	
+AZ Senate District 25	1	AZ Senate District 25	
+AZ Senate District 26	1	AZ Senate District 26	
+AZ Senate District 27	1	AZ Senate District 27	
+AZ Senate District 28	1	AZ Senate District 28	
+AZ Senate District 29	1	AZ Senate District 29	
+AZ Senate District 30	1	AZ Senate District 30	
+US House AZ District 1	1	US House AZ District 1	
+US House AZ District 2	1	US House AZ District 2	
+US House AZ District 3	1	US House AZ District 3	
+US House AZ District 4	1	US House AZ District 4	
+US House AZ District 5	1	US House AZ District 5	
+US House AZ District 6	1	US House AZ District 6	
+US House AZ District 7	1	US House AZ District 7	
+US House AZ District 8	1	US House AZ District 8	
+US House AZ District 9	1	US House AZ District 9	
+US President (AZ)	1	US President (AZ)	
+AZ Governor	1	AZ Governor	
+US Senate AZ	1	US Senate AZ	
+US Senate AZ (until 2023)	1	US Senate AZ	
+AZ Corporation Commissioner	1	AZ Corporation Commissioner	
+AZ Attorney General	1	AZ Attorney General	
+AZ Lieutenant Governor	1	AZ Lieutenant Governor	
+AZ Treasurer	1	AZ Treasurer	
+AZ Secretary of State	1	AZ Secretary of State	
 AZ House District 1 (Democratic Party)	1	AZ House District 1	Democratic Party
 AZ House District 2 (Democratic Party)	1	AZ House District 2	Democratic Party
 AZ House District 3 (Democratic Party)	1	AZ House District 3	Democratic Party
@@ -535,5 +535,5 @@ AZ Attorney General (Libertarian Party)	1	AZ Attorney General	Libertarian Party
 AZ Lieutenant Governor (Libertarian Party)	1	AZ Lieutenant Governor	Libertarian Party
 AZ State Treasurer (Libertarian Party)	1	AZ State Treasurer	Libertarian Party
 AZ Secretary of State (Libertarian Party)	1	AZ Secretary of State	Libertarian Party
-AZ Superintendant of Public Instruction	1	AZ Superintendant of Public Instruction
-AZ State Mine Inspector	Arizona	1	AZ State Mine Inspector
+AZ Superintendant of Public Instruction	1	AZ Superintendant of Public Instruction	
+AZ State Mine Inspector	1	AZ State Mine Inspector	

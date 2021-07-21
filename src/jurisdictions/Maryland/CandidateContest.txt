@@ -201,7 +201,8 @@ US Senate MD	1	US Senate MD
 MD Attorney General	1	MD Attorney General	
 MD Lieutenant Governor	1	MD Lieutenant Governor	
 MD Treasurer	1	MD Treasurer	
-MD Secretary of State	1	MD Secretary of State	
+MD Secretary of State	1	MD Secretary of State
+MD Comptroller	1	MD Comptroller
 MD House District 1A	1	MD House District 1A
 MD House District 1B	1	MD House District 1B	
 MD House District 1C	1	MD House District 1C	

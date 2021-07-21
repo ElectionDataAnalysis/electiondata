@@ -513,7 +513,7 @@ ReportingUnit	South Dakota;Ziebach County	Ziebach
 ReportingUnit	South Dakota;Ziebach County	fips46137
 CandidateContest	SD Attorney General	SD;Attorney General
 CandidateContest	SD Commissioner School Public Lands	SD;Commissioner School Public Lands;statewide
-CandidateContest	SD Governor and Lieutenant Governor	SD;Governor and Lieutenant Governor;statewide
+CandidateContest	SD Governor	SD;Governor and Lieutenant Governor;statewide
 CandidateContest	SD Public Utilities Commissioner	SD;Public Utilities Commissioner;statewide
 CandidateContest	SD Secretary of State	SD;Secretary of State;statewide
 CandidateContest	SD State Auditor	SD;State Auditor;statewide

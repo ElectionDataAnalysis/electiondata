@@ -117,4 +117,4 @@ CO State Board of Education Member District 4	Colorado;CO State Board of Educati
 CO Regent of the University of Colorado District 3	Colorado;CO Regent of the University of Colorado District 3
 CO State Board of Education Member District 2	Colorado;CO State Board of Education Member District 2
 CO Regent of the University of Colorado District 5	Colorado;CO Regent of the University of Colorado District 5
-
+CO Regent of the University of Colorado	Colorado;CO Regent of the University of Colorado

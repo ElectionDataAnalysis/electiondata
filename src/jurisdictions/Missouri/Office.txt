@@ -211,3 +211,4 @@ MO Attorney General	Missouri
 MO Lieutenant Governor	Missouri
 MO State Treasurer	Missouri
 MO Secretary of State	Missouri
+MO State Auditor	Missouri

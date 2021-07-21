@@ -1,4 +1,5 @@
 BallotName
+William 'Sam' McCann
 Christopher 'C.D.' Davidsmeyer
 Christine Law
 Bill Mitchell
