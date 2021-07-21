@@ -56,5 +56,20 @@ NE Governor	1	NE Governor
 US Senate NE	1	US Senate NE	
 NE Attorney General	1	NE Attorney General	
 NE Lieutenant Governor	1	NE Lieutenant Governor	
-NE Treasurer	1	NE Treasurer	
+NE State Treasurer	1	NE State Treasurer	
 NE Secretary of State	1	NE Secretary of State	
+NE Auditor of Public Accounts	1	NE Auditor of Public Accounts	
+NE Member of the State Board of Education District 6	1	NE Member of the State Board of Education District 6	
+NE Member of the State Board of Education District 7	1	NE Member of the State Board of Education District 7	
+NE Member of the Board of Regents University of Nebraska District 3	1	NE Member of the Board of Regents University of Nebraska District 3	
+NE Member of the Board of Regents University of Nebraska District 5	1	NE Member of the Board of Regents University of Nebraska District 5	
+NE Member of the State Board of Education District 5	1	NE Member of the State Board of Education District 5	
+NE Public Service Commissioner District 1	1	NE Public Service Commissioner District 1	
+NE Public Service Commissioner District 3	1	NE Public Service Commissioner District 3	
+NE Member of the Board of Regents University of Nebraska District 4	1	NE Member of the Board of Regents University of Nebraska District 4	
+NE Member of the Board of Regents University of Nebraska District 8	1	NE Member of the Board of Regents University of Nebraska District 8	
+NE Member of the State Board of Education District 8	1	NE Member of the State Board of Education District 8	
+
+
+
+

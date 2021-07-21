@@ -1215,6 +1215,8 @@ class DataLoader:
                                     f"Successful load: {election} {jurisdiction}; "
                                     f"however, see warnings when program finishes"
                                 )
+                        else:
+                            print(f"Successful load: {election} {jurisdiction}")
                     except Exception as exc:
                         err = ui.add_new_error(
                             err,

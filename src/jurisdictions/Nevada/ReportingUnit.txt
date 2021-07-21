@@ -2745,3 +2745,7 @@ Nevada;NV Senate District 6	state-senate
 Nevada;NV Senate District 7	state-senate
 Nevada;NV Senate District 8	state-senate
 Nevada;NV Senate District 9	state-senate
+Nevada;NV University Board of Regents District 1	regents-district
+Nevada;NV University Board of Regents District 12	regents-district
+
+

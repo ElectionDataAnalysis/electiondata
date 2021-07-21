@@ -13678,7 +13678,7 @@ ReportingUnit	Minnesota;Lac qui Parle County	Minnesota;Lac Qui Parte
 ReportingUnit	Minnesota;Lake County	Minnesota;Lake
 ReportingUnit	Minnesota;Lake of the Woods County	Minnesota;Lake of the Woods
 ReportingUnit	Minnesota;Lake of the Woods County	Minnesota;Lake Of the Woods
-ReportingUnit	Minnesota;Lake of The Woods County	Minnesota;Lake Of The Woods
+ReportingUnit	Minnesota;Lake of the Woods County	Minnesota;Lake Of The Woods
 ReportingUnit	Minnesota;Le Sueur County	Minnesota;Le Sueur
 ReportingUnit	Minnesota;Lincoln County	Minnesota;Lincoln
 ReportingUnit	Minnesota;Lyon County	Minnesota;Lyon

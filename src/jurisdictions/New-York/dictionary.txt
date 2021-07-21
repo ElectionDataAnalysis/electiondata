@@ -923,7 +923,7 @@ ReportingUnit	New York;Yates County	Yates County
 ReportingUnit	New York;Yates County	fips36123
 CandidateContest	NY Attorney General	NY;Attorney General
 CandidateContest	NY Comptroller	NY;Comptroller;statewide
-CandidateContest	NY Governor and Lt. Governor	NY;Governor and Lt. Governor;statewide
+CandidateContest	NY Governor	NY;Governor and Lt. Governor;statewide
 CandidateContest	NY House District 102	NY;State Assembly Member;District 102
 CandidateContest	NY House District 108	NY;State Assembly Member;District 108
 CandidateContest	NY House District 109	NY;State Assembly Member;District 109

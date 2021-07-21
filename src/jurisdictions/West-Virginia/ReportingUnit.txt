@@ -192,3 +192,5 @@ West Virginia;WV Senate District 6	state-senate
 West Virginia;WV Senate District 7	state-senate
 West Virginia;WV Senate District 8	state-senate
 West Virginia;WV Senate District 9	state-senate
+West Virginia;WV Justice of The Supreme Court of Appeals - Division 1	judicial-district
+West Virginia;WV Justice of The Supreme Court of Appeals - Division 2	judicial-district

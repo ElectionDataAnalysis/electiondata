@@ -422,4 +422,7 @@ MA Senate District Plymou a Barnstable	1	MA Senate District Plymou a Barnstable
 MA Senate District Plymou a Norfolk	1	MA Senate District Plymou a Norfolk	
 MA Senate District Worcester a Middlesex	1	MA Senate District Worcester a Middlesex	
 MA Senate District Worcester a Norfolk	1	MA Senate District Worcester a Norfolk	
-MA Senate District Worcester, Hampden, Hampshire a Middlesex	1	MA Senate District Worcester, Hampden, Hampshire a Middlesex	
+MA Senate District Worcester, Hampden, Hampshire a Middlesex	1	MA Senate District Worcester, Hampden, Hampshire a Middlesex
+MA Auditor	1	MA Auditor
+MA Secretary of the Commonwealth	1	MA Secretary of the Commonwealth
+

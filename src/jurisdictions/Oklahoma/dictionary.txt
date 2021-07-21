@@ -765,9 +765,9 @@ ReportingUnit	Oklahoma;Woods County	fips40151
 ReportingUnit	Oklahoma;Woodward County	WOODWARD
 ReportingUnit	Oklahoma;Woodward County	fips40153
 CandidateContest	OK Commissioner of Labor	OK;Commissioner of Labor;statewide
-CandidateContest	OK For Attorney General	OK;For Attorney General;statewide
-CandidateContest	OK For Corporation Commissioner	OK;For Corporation Commissioner;statewide
-CandidateContest	OK For Insurance Commissioner	OK;For Insurance Commissioner;statewide
+CandidateContest	OK Attorney General	OK;For Attorney General;statewide
+CandidateContest	OK Corporation Commissioner	OK;For Corporation Commissioner;statewide
+CandidateContest	OK Insurance Commissioner	OK;For Insurance Commissioner;statewide
 CandidateContest	OK Governor	OK;Governor;statewide
 CandidateContest	OK Lieutenant Governor	OK;Lieutenant Governor;statewide
 CandidateContest	OK State Auditor and Inspector	OK;State Auditor and Inspector;statewide

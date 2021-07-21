@@ -628,7 +628,7 @@ NH House Sullivan County District 6	New Hampshire;NH House Sullivan County Distr
 NH House Sullivan County District 7	New Hampshire;NH House Sullivan County District 7
 NH House Sullivan County District 8	New Hampshire;NH House Sullivan County District 8
 NH House Sullivan County District 9	New Hampshire;NH House Sullivan County District 9
-NH House Strafford County District Ward 15	New Hampshire;NH House Strafford County District Ward 15
+NH House Strafford County District 15	New Hampshire;NH House Strafford County District 15
 NH House Grafton County District No 11	New Hampshire;NH House Grafton County District No 11
 NH House Grafton County District No 4	New Hampshire;NH House Grafton County District No 4
 NH House Grafton County District No 8	New Hampshire;NH House Grafton County District No 8
@@ -636,3 +636,8 @@ NH House Grafton County District No.7	New Hampshire;NH House Grafton County Dist
 NH House Hillsborough County District No 17	New Hampshire;NH House Hillsborough County District No 17
 NH House Hillsborough County District No 37	New Hampshire;NH House Hillsborough County District No 37
 NH House Hillsborough County District No. 4	New Hampshire;NH House Hillsborough County District No. 4
+NH Executive Council District 1	New Hampshire;NH Executive Council District 1
+NH Executive Council District 2	New Hampshire;NH Executive Council District 2
+NH Executive Council District 4	New Hampshire;NH Executive Council District 4
+NH Executive Council District 5	New Hampshire;NH Executive Council District 5
+NH Executive Council District 3	New Hampshire;NH Executive Council District 3

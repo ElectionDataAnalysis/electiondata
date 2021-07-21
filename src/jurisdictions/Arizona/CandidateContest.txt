@@ -105,7 +105,7 @@ US Senate AZ (until 2023)	1	US Senate AZ
 AZ Corporation Commissioner	1	AZ Corporation Commissioner	
 AZ Attorney General	1	AZ Attorney General	
 AZ Lieutenant Governor	1	AZ Lieutenant Governor	
-AZ Treasurer	1	AZ Treasurer	
+AZ State Treasurer	1	AZ State Treasurer
 AZ Secretary of State	1	AZ Secretary of State	
 AZ House District 1 (Democratic Party)	1	AZ House District 1	Democratic Party
 AZ House District 2 (Democratic Party)	1	AZ House District 2	Democratic Party
@@ -212,7 +212,7 @@ US Senate AZ (Democratic Party)	1	US Senate AZ	Democratic Party
 AZ Corporation Commissioner (Democratic Party)	1	AZ Corporation Commissioner	Democratic Party
 AZ Attorney General (Democratic Party)	1	AZ Attorney General	Democratic Party
 AZ Lieutenant Governor (Democratic Party)	1	AZ Lieutenant Governor	Democratic Party
-AZ Treasurer (Democratic Party)	1	AZ Treasurer	Democratic Party
+AZ State Treasurer (Democratic Party)	1	AZ State Treasurer	Democratic Party
 AZ Secretary of State (Democratic Party)	1	AZ Secretary of State	Democratic Party
 AZ House District 1 (Republican Party)	1	AZ House District 1	Republican Party
 AZ House District 2 (Republican Party)	1	AZ House District 2	Republican Party
@@ -319,7 +319,7 @@ US Senate AZ (Republican Party)	1	US Senate AZ	Republican Party
 AZ Corporation Commissioner (Republican Party)	1	AZ Corporation Commissioner	Republican Party
 AZ Attorney General (Republican Party)	1	AZ Attorney General	Republican Party
 AZ Lieutenant Governor (Republican Party)	1	AZ Lieutenant Governor	Republican Party
-AZ Treasurer (Republican Party)	1	AZ Treasurer	Republican Party
+AZ State Treasurer (Republican Party)	1	AZ State Treasurer	Republican Party
 AZ Secretary of State (Republican Party)	1	AZ Secretary of State	Republican Party
 AZ House District 1 (Green Party)	1	AZ House District 1	Green Party
 AZ House District 2 (Green Party)	1	AZ House District 2	Green Party
@@ -426,7 +426,7 @@ US Senate AZ (Green Party)	1	US Senate AZ	Green Party
 AZ Corporation Commissioner (Green Party)	1	AZ Corporation Commissioner	Green Party
 AZ Attorney General (Green Party)	1	AZ Attorney General	Green Party
 AZ Lieutenant Governor (Green Party)	1	AZ Lieutenant Governor	Green Party
-AZ Treasurer (Green Party)	1	AZ Treasurer	Green Party
+AZ State Treasurer (Green Party)	1	AZ State Treasurer	Green Party
 AZ Secretary of State (Green Party)	1	AZ Secretary of State	Green Party
 AZ House District 1 (Libertarian Party)	1	AZ House District 1	Libertarian Party
 AZ House District 2 (Libertarian Party)	1	AZ House District 2	Libertarian Party

@@ -4800,7 +4800,7 @@ CandidateContest	NH Senate District 21	NH;State Senator;District 21
 CandidateContest	NH Senate District 23	NH;State Senator;District 23
 CandidateContest	NH Senate District 24	NH;State Senator;District 24
 CandidateContest	NH Senate District 4	NH;State Senator;District 4
-CandidateContest	NH House Strafford County District Ward 15	NH;Strafford County;District Ward 15 (1)
+CandidateContest	NH House Strafford County District 15	NH;Strafford County;District Ward 15 (1)
 CandidateContest	NH House Belknap County District 1	NH;Belknap County;District No. 1 (1)
 CandidateContest	NH House Belknap County District 2	NH;Belknap County;District No. 2 (4)
 CandidateContest	NH House Belknap County District 3	NH;Belknap County;District No. 3 (4)
@@ -5847,8 +5847,8 @@ ReportingUnit	New Hampshire;Rockingham County	New Hampshire;Rockingham
 ReportingUnit	New Hampshire;Strafford County	New Hampshire;Strafford
 ReportingUnit	New Hampshire;Sullivan County	New Hampshire;Sullivan
 CandidateContest	NH Attorney General	NH;Attorney General;statewide
-CandidateContest	NH House District Ward 15	NH;State Representative;District Ward 15 (1)
-CandidateContest	NH House District No.7	NH;State Representative;District No.7 (1)
+CandidateContest	NH House District 15	NH;State Representative;District Ward 15 (1)
+CandidateContest	NH House District 7	NH;State Representative;District No.7 (1)
 CandidateContest	NH House District 9	NH;State Representative;District No. 9 (2)
 CandidateContest	NH House District 9	NH;State Representative;District No. 9 (1)FL
 CandidateContest	NH House District 9	NH;State Representative;District No. 9 (1) F

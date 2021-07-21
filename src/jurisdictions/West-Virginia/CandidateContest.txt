@@ -143,4 +143,7 @@ WV Attorney General	1	WV Attorney General
 WV Auditor	1	WV Auditor
 WV Commissioner of Agriculture	1	WV Commissioner of Agriculture
 WV Treasurer	1	WV Treasurer
-WV Secretary of State	1	WV Secretary of State	
+WV Secretary of State	1	WV Secretary of State
+WV Justice of The Supreme Court of Appeals - Division 1	1	WV Justice of The Supreme Court of Appeals - Division 1
+WV Justice of The Supreme Court of Appeals - Division 2	1	WV Justice of The Supreme Court of Appeals - Division 2
+

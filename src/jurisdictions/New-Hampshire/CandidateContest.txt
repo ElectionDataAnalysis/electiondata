@@ -2367,4 +2367,9 @@ NH House Sullivan County District 6	2	NH House Sullivan County District 6
 NH House Sullivan County District 7	1	NH House Sullivan County District 7	
 NH House Sullivan County District 8	1	NH House Sullivan County District 8	
 NH House Sullivan County District 9	1	NH House Sullivan County District 9
-NH House Strafford County District Ward 15	1	NH House Strafford County District Ward 15
+NH House Strafford County District 15	1	NH House Strafford County District 15
+NH Executive Council District 1	1	NH Executive Council District 1	
+NH Executive Council District 2	1	NH Executive Council District 2	
+NH Executive Council District 4	1	NH Executive Council District 4	
+NH Executive Council District 5	1	NH Executive Council District 5	
+NH Executive Council District 3	1	NH Executive Council District 3	

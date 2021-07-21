@@ -145,3 +145,14 @@ Nebraska;NE Senate District 6	state-senate
 Nebraska;NE Senate District 7	state-senate
 Nebraska;NE Senate District 8	state-senate
 Nebraska;NE Senate District 9	state-senate
+Nebraska;NE Member of the State Board of Education District 6	education-board-district
+Nebraska;NE Member of the State Board of Education District 7	education-board-district
+Nebraska;NE Member of the Board of Regents University of Nebraska District 3	regent-district
+Nebraska;NE Member of the Board of Regents University of Nebraska District 5	regent-district
+Nebraska;NE Member of the State Board of Education District 5	education-board-district
+Nebraska;NE Public Service Commissioner District 1	public-service-district
+Nebraska;NE Public Service Commissioner District 3	public-service-district
+Nebraska;NE Member of the Board of Regents University of Nebraska District 4	regent-district
+Nebraska;NE Member of the Board of Regents University of Nebraska District 8	regent-district
+Nebraska;NE Member of the State Board of Education District 8	education-board-district
+

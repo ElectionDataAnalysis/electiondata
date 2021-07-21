@@ -915,7 +915,7 @@ ReportingUnit	New Mexico;Valencia County	Valencia
 ReportingUnit	New Mexico;Valencia County	fips35061
 CandidateContest	NM Attorney General	NM;Attorney General
 CandidateContest	NM Commissioner of Public Lands	NM;Commissioner of Public Lands;statewide
-CandidateContest	NM Governor and Lieutenant Governor	NM;Governor and Lieutenant Governor;statewide
+CandidateContest	NM Governor	NM;Governor and Lieutenant Governor;statewide
 CandidateContest	NM Justice of the Supreme Court	NM;Justice of the Supreme Court;statewide
 CandidateContest	NM Secretary of State	NM;Secretary of State;statewide
 CandidateContest	NM State Auditor	NM;State Auditor;statewide
