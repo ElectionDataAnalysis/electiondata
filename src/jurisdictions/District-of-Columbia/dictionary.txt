@@ -1,10 +1,10 @@
 cdf_element	cdf_internal_name	raw_identifier_value
 Candidate	A'Shia Howard	A'Shia Howard
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alexander M. 'Alex' Padro	Alexander M. 'Alex' Padro
 Candidate	Amir Lowery	Amir Lowery
 Candidate	Ann C. Wilcox	Ann C. Wilcox
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara Washington Franklin	Barbara Washington Franklin
 Candidate	Brock Pierce	Brock Pierce - Karla Ballard
 Candidate	Brooke Pinto	Brooke Pinto
@@ -15,7 +15,7 @@ Candidate	Christopher Cole	Christopher Cole
 Candidate	Claudia Barragán	Claudia Barragán
 Candidate	Cornelia Weiss	Cornelia Weiss
 Candidate	David Krucoff	David Krucoff
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump - Michael R. Pence
 Candidate	Ed Lazere	Ed Lazere
 Candidate	Eleanor Holmes Norton	Eleanor Holmes Norton
@@ -23,17 +23,17 @@ Candidate	Eleanor Ory (Echo)	Eleanor Ory (Echo)
 Candidate	Eric M. Rogers	Eric M. Rogers
 Candidate	Franklin Garcia	Franklin Garcia
 Candidate	Fred Hill	Fred Hill
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Gloria La Riva	Gloria La Riva - Sunil Freeman
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Howie Hawkins	Howie Hawkins - Angela Walker
 Candidate	Janeese Lewis George	Janeese Lewis George
 Candidate	Jeanné Lewis	Jeanné Lewis
 Candidate	Jo Jorgensen	Jo Jorgensen - Jeremy 'Spike' Cohe
 Candidate	Joe Bishop-Henchman	Joe Bishop-Henchman
 Candidate	John 'Recovery' Cheeks	John 'Recovery' Cheeks
-Candidate	John Kerry	JOHN KERRY
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John Kerry	John Kerry
+Candidate	John McCain	John Mccain
 Candidate	Joseph R. Biden	Joseph R. Biden - Kamala D. Harris
 Candidate	Joyce (Chestnut) Robinson-Paul	Joyce (Chestnut) Robinson-Paul
 Candidate	Kathy Henderson	Kathy Henderson
@@ -44,18 +44,18 @@ Candidate	Markus Batchelor	Markus Batchelor
 Candidate	Martín Miguel Fernandez	Martín Miguel Fernandez
 Candidate	Marya Pickering	Marya Pickering
 Candidate	Michangelo 'DoctorMic' Scruggs	Michangelo 'DoctorMic' Scruggs
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Mónica Palacio	Mónica Palacio
 Candidate	Natale Lino Stracuzzi	Natale Lino Stracuzzi
 Candidate	Nate 'Ward 8' Derenge	Nate 'Ward 8' Derenge
 Candidate	Omari Musa	Omari Musa
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Oye Owolewa	Oye Owolewa
 Candidate	Patrick Hynes	Patrick Hynes
 Candidate	Paul Strauss	Paul Strauss
 Candidate	Perry Redd	Perry Redd
 Candidate	Peter Bolton	Peter Bolton
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Randy Downs	Randy Downs
 Candidate	Rick Murphree	Rick Murphree
 Candidate	Robert White	Robert White
@@ -271,5 +271,4 @@ CountItemType	absentee-mail	mail ballots
 CountItemType	early	one stop
 CountItemType	provisional	provisional
 CountItemType	total	total
-CandidateContest	DC Attorney General	DC;Attorney General;statewide
 CandidateContest	DC Attorney General	DC;Attorney General;statewide

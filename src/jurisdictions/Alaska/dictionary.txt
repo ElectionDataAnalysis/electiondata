@@ -414,7 +414,6 @@ Candidate	Verrall, Bert	Verrall, Bert
 Candidate	Von Imhof, Natasha A	Von Imhof, Natasha A
 Candidate	Von Imhof, Natasha A	von Imhof Natasha A.'
 Candidate	Von Imhof, Natasha A.	Von Imhof Natasha A. - R
-Candidate	Von Imhof, Natasha A.	von Imhof Natasha A.'
 Candidate	Walker	Walker
 Candidate	Walker, David G.	Walker David G. - R
 Candidate	Watkins, Brent L.	Watkins, Brent L.
