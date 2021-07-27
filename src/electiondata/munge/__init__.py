@@ -895,7 +895,7 @@ def raw_to_id_simple(
                         err,
                         "warn-jurisdiction",
                         juris_system_name,
-                        f"Some recognized CountItemTypes are not in the NIST standard list:\n\t{ns}",
+                        f"\nSome recognized CountItemTypes are not in the NIST standard list:\n\t{ns}",
                     )
                 working.drop("CountItemType_raw", axis=1, inplace=True)
             else:

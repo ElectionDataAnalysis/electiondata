@@ -728,7 +728,7 @@ def report(
             remaining[k] = {}
     else:
         remaining = None
-    if not [k for k in remaining.keys() if remaining[k]]:
+    if remaining and (not [k for k in remaining.keys() if remaining[k]]):
         remaining = None
     return remaining
 
