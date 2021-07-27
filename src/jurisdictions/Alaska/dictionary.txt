@@ -34,7 +34,7 @@ Candidate	Christiansen Gavin S.	Christiansen Gavin S.'
 Candidate	Claman Matt	Claman Matt'
 Candidate	Claman, Matt	Claman Matt - D
 Candidate	Claman, Matt	Claman, Matt
-Candidate	Clift Carolyn C. 'Care'	Clift Carolyn C. 'Care''
+Candidate	Clift Carolyn C. 'Care'	Clift Carolyn C. 'Care'
 Candidate	Clinton, Hillary	Clinton, Hillary
 Candidate	Coghill, John B. Jr.	Coghill John B. Jr. - R
 Candidate	Coghill, John B. Jr.	Coghill, John B. Jr.
@@ -84,7 +84,7 @@ Candidate	Faye-Brazel, Patrici	Faye-Brazel, Patrici
 Candidate	Ferguson Elizabeth	Ferguson Elizabeth'
 Candidate	Ferguson, Elizabeth	Ferguson Elizabeth - D
 Candidate	Fetta, Alex	Fetta Alex - R
-Candidate	Fields William Z. 'Zack'	Fields William Z. 'Zack''
+Candidate	Fields William Z. 'Zack'	Fields William Z. 'Zack'
 Candidate	Fields, Duncan	Fields, Duncan
 Candidate	Fields, William Z.	Fields, William Z.
 Candidate	Fields, William Z. 'Zack'	Fields, William Z. 'Zack'
@@ -109,7 +109,7 @@ Candidate	Gianoutsos, Ted	Gianoutsos, Ted
 Candidate	Giessel, Catherine A	Giessel, Catherine A
 Candidate	Giessel, Cathy	Giessel Cathy - R
 Candidate	Gillespie, David M.	Gillespie, David M.
-Candidate	Gillham Ronald D. 'Ron'	Gillham Ronald D. 'Ron''
+Candidate	Gillham Ronald D. 'Ron'	Gillham Ronald D. 'Ron'
 Candidate	Gillham, Ronald D. 'Ron'	Gillham, Ronald D. 'Ron'
 Candidate	Gillis Mel	Gillis Mel'
 Candidate	Gillis, Mel	Gillis Mel - R
@@ -133,7 +133,7 @@ Candidate	Harris, Dennis P.	Harris, Dennis P.
 Candidate	Hartley Alma N.	Hartley Alma N.'
 Candidate	Hartley, Alma N.	Hartley Alma N. - D
 Candidate	Heikes, Gerald L. 'Jer'	Heikes, Gerald L. 'Jer'
-Candidate	Henslee Katherine J. 'Kathy'	Henslee Katherine J. 'Kathy''
+Candidate	Henslee Katherine J. 'Kathy'	Henslee Katherine J. 'Kathy'
 Candidate	Henslee, Katherine J. 'Kathy'	Henslee, Katherine J. 'Kathy'
 Candidate	Hibler, William 'Bill'	Hibler, William 'Bill'
 Candidate	Higgins, Pat	Higgins, Pat
@@ -168,7 +168,7 @@ Candidate	Jackson, Sharon D.	Jackson Sharon D. - R
 Candidate	James G. 'Jesse Ventura' Janos	Janos James G. 'Jesse Ventura' / McKinney Cynthia'
 Candidate	Jeffers, Stephany	Jeffers Stephany - U
 Candidate	Jeffers, Stephany	Jeffers, Stephany
-Candidate	Jo Jorgensen	Jorgensen Jo / Cohen Jeremy 'Spike''
+Candidate	Jo Jorgensen	Jorgensen Jo / Cohen Jeremy 'Spike'
 Candidate	John Kerry	John Kerry
 Candidate	John McCain	John Mccain
 Candidate	Johnson Bill	Johnson Bill'
@@ -186,7 +186,7 @@ Candidate	Johnston, Jennifer B	Johnston, Jennifer B
 Candidate	Johnston, Jennifer B.	Johnston Jennifer B. - R
 Candidate	Jones, Gregory I.	Jones, Gregory I.
 Candidate	Joseph R. Biden	Biden Joseph R. Jr. / Harris Kamala D.'
-Candidate	Josephson Andrew L. 'Andy'	Josephson Andrew L. 'Andy''
+Candidate	Josephson Andrew L. 'Andy'	Josephson Andrew L. 'Andy'
 Candidate	Josephson, Andrew L.	Josephson, Andrew L.
 Candidate	Josephson, Andrew L. 'Andy'	Josephson, Andrew L. 'Andy'
 Candidate	Kastner, Kevin D.	Kastner, Kevin D.
@@ -200,7 +200,7 @@ Candidate	Kelly, Pete	Kelly, Pete
 Candidate	Keppel Willy	Keppel Willy'
 Candidate	Kiehl, Jesse	Kiehl, Jesse
 Candidate	Kimp, Danyelle D.	Kimp, Danyelle D.
-Candidate	King Edward M. 'Ed'	King Edward M. 'Ed''
+Candidate	King Edward M. 'Ed'	King Edward M. 'Ed'
 Candidate	Kito, Sam S. III	Kito, Sam S. III
 Candidate	Knopp, Gary A.	Knopp Gary A. - R
 Candidate	Knopp, Gary A.	Knopp, Gary A.
@@ -225,7 +225,7 @@ Candidate	Lawrence, Van	Lawrence, Van
 Candidate	LeBon, Barton S.	LeBon, Barton S.
 Candidate	LeDoux, Gabrielle	LeDoux, Gabrielle
 Candidate	LeDoux, Gabrielle R. 'Gabby'	LeDoux, Gabrielle R. 'Gabby'
-Candidate	Lebon Barton S. 'Bart'	Lebon Barton S. 'Bart''
+Candidate	Lebon Barton S. 'Bart'	Lebon Barton S. 'Bart'
 Candidate	Lebon, Barton S. 'Bart'	Lebon, Barton S. 'Bart'
 Candidate	Lee, Amber M.	Lee, Amber M.
 Candidate	Lee, Huhnkie	Lee Huhnkie - R
@@ -243,7 +243,7 @@ Candidate	Madden Greg	Madden Greg'
 Candidate	Madden, Greg	Madden Greg - A
 Candidate	Martin, Arthur S.	Martin Arthur S. - R
 Candidate	Martinson, Ceezar X.	Martinson, Ceezar X.
-Candidate	Mayfield James D. 'Dan'	Mayfield James D. 'Dan''
+Candidate	Mayfield James D. 'Dan'	Mayfield James D. 'Dan'
 Candidate	McCabe Kevin J.	McCabe Kevin J.'
 Candidate	McCabe, Kevin J.	McCabe Kevin J. - R
 Candidate	McCain-Finch, Chandra S.	McCain-Finch Chandra S. - R
@@ -253,7 +253,7 @@ Candidate	McCormack, Patrick M	McCormack, Patrick M
 Candidate	McCormack, Patrick M.	McCormack Patrick M. - D
 Candidate	McDermott, Jim C.	McDermott, Jim C.
 Candidate	McDonald, Forrest J.	McDonald, Forrest J.
-Candidate	McKay Thomas W. 'Tom'	McKay Thomas W. 'Tom''
+Candidate	McKay Thomas W. 'Tom'	McKay Thomas W. 'Tom'
 Candidate	McKay, Thomas W. 'Tom'	McKay, Thomas W. 'Tom'
 Candidate	McKinley Kevin M.	McKinley Kevin M.'
 Candidate	McKinley, Kevin	McKinley, Kevin
@@ -285,22 +285,22 @@ Candidate	Nelson, T. 'John'	Nelson, T. 'John'
 Candidate	Neuman, Mark	Neuman, Mark
 Candidate	Neuman, Mark A.	Neuman Mark A. - R
 Candidate	Neuman, Mark A.	Neuman, Mark A.
-Candidate	Olson Donald C. 'Donny'	Olson Donald C. 'Donny''
+Candidate	Olson Donald C. 'Donny'	Olson Donald C. 'Donny'
 Candidate	Olson, Donald C.	Olson, Donald C.
 Candidate	Olson, Donald C. 'Donny'	Olson, Donald C. 'Donny'
 Candidate	Olson, Jeanne L.	Olson, Jeanne L.
 Candidate	Olson, Sherie A.	Olson, Sherie A.
-Candidate	Ortiz Daniel H. 'Dan'	Ortiz Daniel H. 'Dan''
+Candidate	Ortiz Daniel H. 'Dan'	Ortiz Daniel H. 'Dan'
 Candidate	Ortiz, Daniel H.	Ortiz, Daniel H.
 Candidate	Other	Other
 Candidate	Parish, Justin	Parish, Justin
 Candidate	Park, Janice	Park, Janice
 Candidate	Park, Janice Lynn	Park Janice Lynn - D
-Candidate	Patkotak Josiah 'Aullaqsruaq'	Patkotak Josiah 'Aullaqsruaq''
+Candidate	Patkotak Josiah 'Aullaqsruaq'	Patkotak Josiah 'Aullaqsruaq'
 Candidate	Patterson, Eileen E.	Patterson, Eileen E.
 Candidate	Perry, Karen	Perry, Karen
 Candidate	Phillips, Rick	Phillips Rick - D
-Candidate	Prax Glenn M. 'Mike'	Prax Glenn M. 'Mike''
+Candidate	Prax Glenn M. 'Mike'	Prax Glenn M. 'Mike'
 Candidate	Prax, Glenn M. 'Mike'	Prax, Glenn M. 'Mike'
 Candidate	Pruitt Lance D.	Pruitt Lance D.'
 Candidate	Pruitt, Lance	Pruitt, Lance
@@ -320,7 +320,7 @@ Candidate	Revak Joshua C.	Revak Joshua C.'
 Candidate	Revak, Josh C.	Revak, Josh C.
 Candidate	Revak, Joshua C.	Revak Joshua C. - R
 Candidate	Riley Deborah W.	Riley Deborah W.'
-Candidate	Risinger Michael W. 'Mike'	Risinger Michael W. 'Mike''
+Candidate	Risinger Michael W. 'Mike'	Risinger Michael W. 'Mike'
 Candidate	Roque 'Rocky' De La Fuente	De La Fuente Rocque 'Rocky' / Richardson Darcy G.'
 Candidate	Rodriguez, Benjamin	Rodriguez Benjamin - R
 Candidate	Rupright, Bernadette 'Bee'	Rupright, Bernadette 'Bee'
@@ -368,7 +368,7 @@ Candidate	Stevens, Gary	Stevens Gary - R
 Candidate	Stevens, Gary	Stevens, Gary
 Candidate	Stewart, Marilyn	Stewart, Marilyn
 Candidate	Stock, Margaret	Stock, Margaret
-Candidate	Story Andrea 'Andi'	Story Andrea 'Andi''
+Candidate	Story Andrea 'Andi'	Story Andrea 'Andi'
 Candidate	Story, Andrea	Story, Andrea
 Candidate	Story, Andrea 'Andi'	Story, Andrea 'Andi'
 Candidate	Stutes Louise B.	Stutes Louise B.'

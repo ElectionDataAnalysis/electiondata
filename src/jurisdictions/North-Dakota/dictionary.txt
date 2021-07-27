@@ -645,6 +645,7 @@ Candidate	Randy McClaflin	Randy McClaflin
 Candidate	Ransom County Gazette	Ransom County Gazette
 Candidate	Ray Holmberg	Ray Holmberg
 Candidate	Rebecca Ferderer	Rebecca Ferderer
+Candidate	Rebecca Ferderer	Rebecca Ferderer independent
 Candidate	Rebecca Flanders	Rebecca Flanders
 Candidate	Rebecca Forness	Rebecca Forness
 Candidate	Rebecca Phillips	Rebecca Phillips

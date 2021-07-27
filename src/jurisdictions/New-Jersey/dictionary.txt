@@ -323,3 +323,7 @@ ReportingUnit	New Jersey;Sussex County	New Jersey;Sussex
 ReportingUnit	New Jersey;Union County	New Jersey;Union
 ReportingUnit	New Jersey;Warren County	New Jersey;Warren
 CandidateContest	NJ Attorney General	NJ;Attorney General;statewide
+Candidate	Rupande Mehta	Rupande Mehta
+Candidate	Darcy Draeger	Darcy Draeger
+Candidate	Aura K. Dunn	AURA K. DUNN (w) *
+Candidate	Anthony M. Bucco	ANTHONY M. BUCCO (w) *
