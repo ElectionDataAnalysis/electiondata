@@ -2522,7 +2522,8 @@ class Analyzer:
             sub_unit_type: str = constants.default_subdivision_type,
             exclude_redundant_total: bool = True,
     ) -> pd.DataFrame:
-        """if a vote type is given, restricts to that vote type; otherwise returns all vote types;
+        """Returns a dataframe of contest totals.
+        if a vote type is given, restricts to that vote type; otherwise returns all vote types;
         Similarly for sub_unit and contest"""
         # using the analyzer gives us access to DB session
         empty_df_with_good_cols = pd.DataFrame(columns=["contest","count"])
@@ -2713,11 +2714,12 @@ def check_totals_match_vote_types(
     election: str,
     jurisdiction: str,
     sub_unit_type=constants.default_subdivision_type,
-    dbname=None,
+    dbname: Optional[str] =None,
+    param_file: Optional[str] = None
 ) -> bool:
     """Interesting if there are both total and other vote types;
     otherwise trivially true"""
-    an = Analyzer(dbname=dbname)
+    an = Analyzer(dbname=dbname, param_file=param_file)
     active = db.active_vote_types(an.session, election, jurisdiction)
     if len(active) > 1 and "total" in active:
         # pull type 'total' only
@@ -2821,9 +2823,9 @@ def count_type_total(
 
 
 def check_count_types_standard(
-    election: str, jurisdiction: str, dbname: Optional[str] = None
+    election: str, jurisdiction: str, dbname: Optional[str] = None, param_file: Optional[str] = None,
 ) -> bool:
-    an = Analyzer(dbname=dbname)
+    an = Analyzer(dbname=dbname, param_file=param_file)
     election_id = db.name_to_id(an.session, "Election", election)
     reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
     standard_ct_list = list(
@@ -2849,9 +2851,9 @@ def check_count_types_standard(
 
 
 def get_contest_with_unknown_candidates(
-    election: str, jurisdiction: str, dbname: Optional[str] = None
+    election: str, jurisdiction: str, dbname: Optional[str] = None, param_file: Optional[str] = None,
 ) -> List[str]:
-    an = Analyzer(dbname=dbname)
+    an = Analyzer(dbname=dbname, param_file=param_file)
     if not an:
         return [f"Failure to connect to database"]
     election_id = db.name_to_id(an.session, "Election", election)
