@@ -134,7 +134,7 @@ def test_county_subtotal(dbname):
             jurisdiction,
             f"US President ({abbr})",
             dbname=dbname,
-            county=single_county,
+            reporting_unit=single_county,
             sub_unit_type=county_or_other,
         )
         == pres_votes_county
@@ -148,7 +148,7 @@ def test_wyandotte_subtotal_pres(dbname):
             jurisdiction,
             f"US President ({abbr})",
             dbname=dbname,
-            county="Kansas;Wyandotte County",
+            reporting_unit="Kansas;Wyandotte County",
             sub_unit_type=county_or_other,
         )
         == 36788 + 1063 + 18934
@@ -162,7 +162,7 @@ def test_wyandotte_subtotal_cd_3(dbname):
             jurisdiction,
             f"US House KS District 3",
             dbname=dbname,
-            county="Kansas;Wyandotte County",
+            reporting_unit="Kansas;Wyandotte County",
             sub_unit_type=county_or_other,
         )
         == 56254
@@ -192,7 +192,7 @@ def test_johnson_subtotal_cd_3(dbname):
             jurisdiction,
             f"US House KS District 3",
             dbname=dbname,
-            county="Kansas;Johnson County",
+            reporting_unit="Kansas;Johnson County",
             sub_unit_type=county_or_other,
         )
         == 346951

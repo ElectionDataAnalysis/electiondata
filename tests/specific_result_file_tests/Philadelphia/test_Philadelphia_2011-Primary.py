@@ -66,7 +66,7 @@ def test_county_subtotal(dbname):
             jurisdiction,
             f"Mayor of {jurisdiction} ({party1})",
             dbname=dbname,
-            county=single_county,
+            reporting_unit=single_county,
             sub_unit_type=county_or_other,
         )
         == mayor_votes_county_party1

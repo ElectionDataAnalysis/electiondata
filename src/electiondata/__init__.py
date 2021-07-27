@@ -2684,6 +2684,7 @@ def aggregate_results(
     election: str,
     jurisdiction: str,
     dbname: Optional[str] = None,
+    param_file: Optional[str] = None,
     vote_type: Optional[str] = None,
     sub_unit: Optional[str] = None,
     contest: Optional[str] = None,
@@ -2695,7 +2696,7 @@ def aggregate_results(
     Similarly for sub_unit and contest"""
     # using the analyzer gives us access to DB session
     empty_df_with_good_cols = pd.DataFrame(columns=["contest", "count"])
-    an = Analyzer(dbname=dbname)
+    an = Analyzer(dbname=dbname, param_file=param_file)
     if not an:
         return empty_df_with_good_cols
     else:
@@ -2780,7 +2781,7 @@ def check_totals_match_vote_types(
     election: str,
     jurisdiction: str,
     sub_unit_type=constants.default_subdivision_type,
-    dbname: Optional[str] =None,
+    dbname: Optional[str] = None,
     param_file: Optional[str] = None
 ) -> bool:
     """Interesting if there are both total and other vote types;
@@ -2797,6 +2798,7 @@ def check_totals_match_vote_types(
             sub_unit_type=sub_unit_type,
             exclude_redundant_total=False,
             dbname=dbname,
+            param_file=param_file,
         )
         df_ballot = aggregate_results(
             election,
@@ -2806,6 +2808,7 @@ def check_totals_match_vote_types(
             sub_unit_type=sub_unit_type,
             exclude_redundant_total=False,
             dbname=dbname,
+            param_file=param_file,
         )
         df_total_type_only = pd.concat([df_candidate, df_ballot])
 
@@ -2817,6 +2820,7 @@ def check_totals_match_vote_types(
             sub_unit_type=sub_unit_type,
             exclude_redundant_total=True,
             dbname=dbname,
+            param_file=param_file,
         )
         df_ballot = aggregate_results(
             election,
@@ -2825,6 +2829,7 @@ def check_totals_match_vote_types(
             exclude_redundant_total=True,
             sub_unit_type=sub_unit_type,
             dbname=dbname,
+            param_file=param_file,
         )
         df_sum_nontotal_types = pd.concat([df_candidate, df_ballot])
         return df_total_type_only["count"].sum() == df_sum_nontotal_types["count"].sum()
@@ -2837,8 +2842,9 @@ def contest_total(
     jurisdiction: str,
     contest: str,
     dbname: Optional[str] = None,
+    param_file: Optional[str] = None,
     vote_type: Optional[str] = None,
-    county: Optional[str] = None,
+    reporting_unit: Optional[str] = None,
     sub_unit_type: str = constants.default_subdivision_type,
     contest_type: Optional[str] = "Candidate",
 ) -> int:
@@ -2847,10 +2853,11 @@ def contest_total(
         jurisdiction=jurisdiction,
         dbname=dbname,
         vote_type=vote_type,
-        sub_unit=county,
+        sub_unit=reporting_unit,
         sub_unit_type=sub_unit_type,
         contest=contest,
         contest_type=contest_type,
+        param_file=param_file,
     )
     return df["count"].sum()
 
@@ -2862,6 +2869,7 @@ def count_type_total(
     count_item_type: str,
     sub_unit_type: str = constants.default_subdivision_type,
     dbname: Optional[str] = None,
+    param_file: Optional[str] = None,
 ) -> int:
     df_candidate = aggregate_results(
         election=election,
@@ -2871,6 +2879,7 @@ def count_type_total(
         vote_type=count_item_type,
         sub_unit_type=sub_unit_type,
         dbname=dbname,
+        param_file=param_file,
     )
     df_ballot = aggregate_results(
         election=election,
@@ -2880,6 +2889,7 @@ def count_type_total(
         vote_type=count_item_type,
         sub_unit_type=sub_unit_type,
         dbname=dbname,
+        param_file=param_file,
     )
     df = pd.concat([df_candidate, df_ballot])
     if df.empty:

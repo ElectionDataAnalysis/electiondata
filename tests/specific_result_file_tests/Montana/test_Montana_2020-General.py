@@ -127,7 +127,7 @@ def test_one_county_vote_type(dbname):
             jurisdiction,
             f"US President ({abbr})",
             dbname=dbname,
-            county=single_county,
+            reporting_unit=single_county,
             vote_type=single_vote_type,
         )
         == pres_votes_county

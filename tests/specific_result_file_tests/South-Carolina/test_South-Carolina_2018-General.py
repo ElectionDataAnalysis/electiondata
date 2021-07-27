@@ -122,7 +122,7 @@ def test_county_subtotal(dbname):
             jurisdiction,
             f"{abbr} Governor",
             dbname=dbname,
-            county=single_county,
+            reporting_unit=single_county,
             sub_unit_type=county_or_other,
         )
         == gov_votes_county
