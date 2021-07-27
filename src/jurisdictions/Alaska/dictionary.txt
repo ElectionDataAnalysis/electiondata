@@ -56,7 +56,7 @@ Candidate	Dale Paul D.	Dale Paul D.'
 Candidate	Darden, Dustin	Darden Dustin T. - A
 Candidate	Darden, Dustin	Darden, Dustin
 Candidate	Darden, Dustin	Darden, Dustin T.
-Candidate	De La Fuente, Roque	De La Fuente, Roque
+Candidate	Roque 'Rocky' De La Fuente	De La Fuente, Roque
 Candidate	Deacon, Darren M.	Deacon, Darren M.
 Candidate	Dimond, Chris	Dimond, Chris
 Candidate	Dodge, Kathryn E.	Dodge, Kathryn E.
@@ -321,9 +321,8 @@ Candidate	Revak, Josh C.	Revak, Josh C.
 Candidate	Revak, Joshua C.	Revak Joshua C. - R
 Candidate	Riley Deborah W.	Riley Deborah W.'
 Candidate	Risinger Michael W. 'Mike'	Risinger Michael W. 'Mike''
-Candidate	Rocque 'Rocky' De La Fuente	De La Fuente Rocque 'Rocky' / Richardson Darcy G.'
-Candidate	Rodriguez, Benjamin	Rodriguez Benjamin - R
 Candidate	Roque 'Rocky' De La Fuente	De La Fuente Rocque 'Rocky' / Richardson Darcy G.'
+Candidate	Rodriguez, Benjamin	Rodriguez Benjamin - R
 Candidate	Rupright, Bernadette 'Bee'	Rupright, Bernadette 'Bee'
 Candidate	Sackett, Jim	Sackett, Jim
 Candidate	Saddler, Dan	Saddler, Dan
