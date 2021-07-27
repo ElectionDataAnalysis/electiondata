@@ -1041,3 +1041,6 @@ MI Attorney General (No Affiliation)	1	MI Attorney General	No Affiliation
 MI Lieutenant Governor (No Affiliation)	1	MI Lieutenant Governor	No Affiliation
 MI Treasurer (No Affiliation)	1	MI Treasurer	No Affiliation
 MI Secretary of State (No Affiliation)	1	MI Secretary of State	No Affiliation
+MI Member of the State Board of Education	2	MI Member of the State Board of Education
+MI Regent of the University of Michigan	2	MI Regent of the University of Michigan
+MI Justice of Supreme Court	2	MI Justice of Supreme Court

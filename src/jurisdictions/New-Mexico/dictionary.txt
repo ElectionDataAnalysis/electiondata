@@ -3,7 +3,7 @@ Candidate	Aaron Dennis Winter Walker	Aaron Dennis Winter Walker
 Candidate	Adelious De Stith	Adelious De Stith
 Candidate	Adrian Anthony Trujillo	Adrian Anthony Trujillo
 Candidate	Adriann Barboa	Adriann Barboa
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alexandria C Piland	Alexandria C Piland
 Candidate	Alexis M Johnson	Alexis M Johnson
 Candidate	Alfonso Joseph Griego	Alfonso Joseph Griego
@@ -35,7 +35,7 @@ Candidate	Arthur G Malott	Arthur G Malott
 Candidate	Arthur Pierce Allison	Arthur Pierce Allison
 Candidate	Athena Ann Christodoulou	Athena Ann Christodoulou
 Candidate	Aurora Dolores Chavez	Aurora Dolores Chavez
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barb Himmel-Roberts	Barb Himmel-Roberts
 Candidate	Barbara A Romo	Barbara A Romo
 Candidate	Barbara V Johnson	Barbara V Johnson
@@ -207,7 +207,7 @@ Candidate	Dinah Glenda Vargas	Dinah Glenda Vargas
 Candidate	Dona Ana RICHARD M	Dona Ana RICHARD M
 Candidate	Donald Cantrell	Donald Cantrell
 Candidate	Donald J Trump	Donald J Trump And Mike Pence
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Doreen Wonda Johnson	Doreen Wonda Johnson
 Candidate	Doreen Yvonne Gallegos	Doreen Yvonne Gallegos
 Candidate	Edwin J Begay	Edwin J Begay
@@ -230,7 +230,7 @@ Candidate	Gail Missy Armstrong	Gail Missy Armstrong
 Candidate	Gary J Tripp	Gary J Tripp
 Candidate	Gay G Kernan	Gay G Kernan
 Candidate	George K Munoz	George K Munoz
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	George Walton Benson	George Walton Benson
 Candidate	Georgene Louis	Georgene Louis
 Candidate	Gerald Milton Byers	Gerald Milton Byers
@@ -256,7 +256,7 @@ Candidate	Harry Garcia	Harry Garcia
 Candidate	Haydn R Forward	Haydn R Forward
 Candidate	Heather R Benavidez	Heather R Benavidez
 Candidate	Helen M Milenski	Helen M Milenski
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Howie Hawkins	Howie Hawkins And Angela Nicole Walker
 Candidate	Irma Susana Chaparro	Irma Susana Chaparro
 Candidate	Isabella Solis	Isabella Solis
@@ -303,9 +303,9 @@ Candidate	Joe Padilla	Joe Padilla
 Candidate	John C Morton	John C Morton
 Candidate	John Douglas Mc Divitt	John Douglas Mc Divitt
 Candidate	John Foreman	John Foreman
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John L Jones	John L Jones
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John S Sweetser	John S Sweetser
 Candidate	John Stahlman Clark	John Stahlman Clark
 Candidate	John Sugg	John Sugg
@@ -418,7 +418,7 @@ Candidate	Michelle Garcia Holmes	Michelle Garcia Holmes
 Candidate	Miguel P Garcia	Miguel P Garcia
 Candidate	Miles R Tafoya	Miles R Tafoya
 Candidate	Mimi Stewart	Mimi Stewart
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Moises A Morales	Moises A Morales
 Candidate	Nancy Marie Bearce	Nancy Marie Bearce
 Candidate	Nancy Rodriguez	Nancy Rodriguez
@@ -430,7 +430,7 @@ Candidate	Nechama Dina Minkowicz	Nechama Dina Minkowicz
 Candidate	Ned S Fuller	Ned S Fuller
 Candidate	Neomi O Martinez-Parra	Neomi O Martinez-Parra
 Candidate	Oscar C Astorga	Oscar C Astorga
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	P Mark Duncan	P Mark Duncan
 Candidate	Pamela M Cordova	Pamela M Cordova
 Candidate	Pat Sims	Pat Sims
@@ -449,7 +449,7 @@ Candidate	Peter Wirth	Peter Wirth
 Candidate	Phelps Anderson	Phelps Anderson
 Candidate	Phillip D Salazar	Phillip D Salazar
 Candidate	Rachel A Black	Rachel A Black
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Ralph R Miramontes	Ralph R Miramontes
 Candidate	Randal S Crowder	Randal S Crowder
 Candidate	Randal W Brown	Randal W Brown
@@ -471,7 +471,7 @@ Candidate	Richelle A Ponder	Richelle A Ponder
 Candidate	Ricky L Little	Ricky L Little
 Candidate	Robert B Baca	Robert B Baca
 Candidate	Robert Bruce Flora	Robert Bruce Flora
-Candidate	"Robert E ""Bubba"" Serrano"	"Robert E ""Bubba"" Serrano"
+Candidate	"Robert E ""Bubba"" Serrano"	Robert E 'Bubba' Serrano
 Candidate	Robert E Aragon	Robert E Aragon
 Candidate	Robert E Thornton	Robert E Thornton
 Candidate	Robert J Lopez	Robert J Lopez
@@ -913,3 +913,206 @@ ReportingUnit	New Mexico;Union County	Union
 ReportingUnit	New Mexico;Union County	fips35059
 ReportingUnit	New Mexico;Valencia County	Valencia
 ReportingUnit	New Mexico;Valencia County	fips35061
+CandidateContest	NM Attorney General	NM;Attorney General
+CandidateContest	NM Commissioner of Public Lands	NM;Commissioner of Public Lands;statewide
+CandidateContest	NM Governor	NM;Governor and Lieutenant Governor;statewide
+CandidateContest	NM Justice of the Supreme Court	NM;Justice of the Supreme Court;statewide
+CandidateContest	NM Secretary of State	NM;Secretary of State;statewide
+CandidateContest	NM State Auditor	NM;State Auditor;statewide
+CandidateContest	NM House District 10	NM;State Representative;District 10
+CandidateContest	NM House District 11	NM;State Representative;District 11
+CandidateContest	NM House District 12	NM;State Representative;District 12
+CandidateContest	NM House District 13	NM;State Representative;District 13
+CandidateContest	NM House District 14	NM;State Representative;District 14
+CandidateContest	NM House District 15	NM;State Representative;District 15
+CandidateContest	NM House District 16	NM;State Representative;District 16
+CandidateContest	NM House District 17	NM;State Representative;District 17
+CandidateContest	NM House District 18	NM;State Representative;District 18
+CandidateContest	NM House District 19	NM;State Representative;District 19
+CandidateContest	NM House District 20	NM;State Representative;District 20
+CandidateContest	NM House District 21	NM;State Representative;District 21
+CandidateContest	NM House District 22	NM;State Representative;District 22
+CandidateContest	NM House District 23	NM;State Representative;District 23
+CandidateContest	NM House District 24	NM;State Representative;District 24
+CandidateContest	NM House District 25	NM;State Representative;District 25
+CandidateContest	NM House District 26	NM;State Representative;District 26
+CandidateContest	NM House District 27	NM;State Representative;District 27
+CandidateContest	NM House District 28	NM;State Representative;District 28
+CandidateContest	NM House District 29	NM;State Representative;District 29
+CandidateContest	NM House District 30	NM;State Representative;District 30
+CandidateContest	NM House District 31	NM;State Representative;District 31
+CandidateContest	NM House District 50	NM;State Representative;District 50
+CandidateContest	NM House District 68	NM;State Representative;District 68
+CandidateContest	NM House District 69	NM;State Representative;District 69
+CandidateContest	NM State Treasurer	NM;State Treasurer;statewide
+CandidateContest	US House NM District 1	NM;US Representative;District 1
+CandidateContest	US House NM District 2	NM;US Representative;District 2
+CandidateContest	US House NM District 3	NM;US Representative;District 3
+CandidateContest	US Senate NM	NM;US Senator;statewide
+CandidateContest	NM House District 49	NM;State Representative;District 49
+CandidateContest	NM House District 54	NM;State Representative;District 54
+CandidateContest	NM House District 58	NM;State Representative;District 58
+CandidateContest	NM House District 59	NM;State Representative;District 59
+CandidateContest	NM House District 66	NM;State Representative;District 66
+CandidateContest	NM House District 6	NM;State Representative;District 6
+CandidateContest	NM House District 40	NM;State Representative;District 40
+CandidateContest	NM House District 67	NM;State Representative;District 67
+CandidateContest	NM House District 63	NM;State Representative;District 63
+CandidateContest	NM House District 64	NM;State Representative;District 64
+CandidateContest	NM House District 33	NM;State Representative;District 33
+CandidateContest	NM House District 34	NM;State Representative;District 34
+CandidateContest	NM House District 35	NM;State Representative;District 35
+CandidateContest	NM House District 36	NM;State Representative;District 36
+CandidateContest	NM House District 37	NM;State Representative;District 37
+CandidateContest	NM House District 39	NM;State Representative;District 39
+CandidateContest	NM House District 52	NM;State Representative;District 52
+CandidateContest	NM House District 53	NM;State Representative;District 53
+CandidateContest	NM House District 55	NM;State Representative;District 55
+CandidateContest	NM House District 32	NM;State Representative;District 32
+CandidateContest	NM House District 38	NM;State Representative;District 38
+CandidateContest	NM House District 61	NM;State Representative;District 61
+CandidateContest	NM House District 62	NM;State Representative;District 62
+CandidateContest	NM House District 56	NM;State Representative;District 56
+CandidateContest	NM House District 43	NM;State Representative;District 43
+CandidateContest	NM House District 5	NM;State Representative;District 5
+CandidateContest	NM House District 9	NM;State Representative;District 9
+CandidateContest	NM House District 51	NM;State Representative;District 51
+CandidateContest	NM House District 41	NM;State Representative;District 41
+CandidateContest	NM House District 65	NM;State Representative;District 65
+CandidateContest	NM House District 1	NM;State Representative;District 1
+CandidateContest	NM House District 2	NM;State Representative;District 2
+CandidateContest	NM House District 3	NM;State Representative;District 3
+CandidateContest	NM House District 4	NM;State Representative;District 4
+CandidateContest	NM House District 70	NM;State Representative;District 70
+CandidateContest	NM House District 44	NM;State Representative;District 44
+CandidateContest	NM House District 57	NM;State Representative;District 57
+CandidateContest	NM House District 60	NM;State Representative;District 60
+CandidateContest	NM House District 45	NM;State Representative;District 45
+CandidateContest	NM House District 46	NM;State Representative;District 46
+CandidateContest	NM House District 47	NM;State Representative;District 47
+CandidateContest	NM House District 48	NM;State Representative;District 48
+CandidateContest	NM House District 42	NM;State Representative;District 42
+CandidateContest	NM House District 7	NM;State Representative;District 7
+CandidateContest	NM House District 8	NM;State Representative;District 8
+Candidate	A Blair Dunn	A Blair Dunn
+Candidate	Abbas A Akhil	Abbas A Akhil
+Candidate	Alexis Jimenez	Alexis Jimenez
+Candidate	Andrea D Romero	Andrea D Romero
+Candidate	Antonio 'Moe' Maestas	Antonio 'Moe' Maestas
+Candidate	Arthur L Castillo	Arthur L Castillo
+Candidate	Benton Howell	Benton Howell
+Candidate	Bev Courtney	Bev Courtney
+Candidate	Brad Winter	Brad Winter
+Candidate	Brenda Diane Boatman	Brenda Diane Boatman
+Candidate	Brian F Egolf Jr	Brian F Egolf Jr
+Candidate	Brian S Colon	Brian S Colon
+Candidate	Carl M Swinney	Carl M Swinney
+Candidate	Charles R Wendler	Charles R Wendler
+Candidate	Christopher Manning	Christopher Manning
+Candidate	David E Adkins	David E Adkins
+Candidate	David H Tofsted	David H Tofsted
+Candidate	David L Cheek	David L Cheek
+Candidate	Dayan M Hochman	Dayan M Hochman
+Candidate	Debra A Haaland	Debra A Haaland
+Candidate	Doreen W Johnson	Doreen W Johnson
+Candidate	Doreen Ybarra Gallegos	Doreen Ybarra Gallegos
+Candidate	Eliseo Lee Alcon	Eliseo Lee Alcon
+Candidate	Gail 'Missy' Armstrong	Gail 'Missy' Armstrong
+Candidate	Gary E Johnson	Gary E Johnson
+Candidate	Gary L Clingman	Gary L Clingman
+Candidate	Gavin S Clarkson	Gavin S Clarkson
+Candidate	George Dodge Jr	George Dodge Jr
+Candidate	Ginger G Grider	Ginger G Grider
+Candidate	Hector Balderas	Hector Balderas
+Candidate	James RJ Strickler	James RJ Strickler
+Candidate	Jarratt Applewhite	Jarratt Applewhite
+Candidate	Jerald Steve McFall	Jerald Steve McFall
+Candidate	Jim Dines	Jim Dines
+Candidate	Jim R Trujillo	Jim R Trujillo
+Candidate	Jimmie C Hall	Jimmie C Hall
+Candidate	Joan Antoinette Marentes	Joan Antoinette Marentes
+Candidate	Jonathan Kyle Allen	Jonathan Kyle Allen
+Candidate	Joseph L Sanchez	Joseph L Sanchez
+Candidate	Laura C Boyd	Laura C Boyd
+Candidate	Lee S Cotter	Lee S Cotter
+Candidate	Lisa Shin	Lisa Shin
+Candidate	Lloyd J Princeton	Lloyd J Princeton
+Candidate	Maggie Toulouse Oliver	Maggie Toulouse Oliver
+Candidate	Mark D McDonald	Mark D McDonald
+Candidate	Martin T Heinrich	Martin T Heinrich
+Candidate	Mary Jo Jaramillo	Mary Jo Jaramillo
+Candidate	Mary P Schildmeyer	Mary P Schildmeyer
+Candidate	Matthew McQueen	Matthew McQueen
+Candidate	Michael E Vigil	Michael E Vigil
+Candidate	Michael G Lucero	Michael G Lucero
+Candidate	Michelle Lujan Grisham and Howie C Morales	Michelle Lujan Grisham and Howie C Morales
+Candidate	Mick Rich	Mick Rich
+Candidate	Monica C Youngblood	Monica C Youngblood
+Candidate	Patricio R Ruiloba	Patricio R Ruiloba
+Candidate	Patrick H Lyons	Patrick H Lyons
+Candidate	Paul C Bandy	Paul C Bandy
+Candidate	Ray L Gallegos	Ray L Gallegos
+Candidate	Sharon E Clahchischilliage	Sharon E Clahchischilliage
+Candidate	Stephanie Garcia Richard	Stephanie Garcia Richard
+Candidate	Steve Pearce and Michelle Garcia Holmes	Steve Pearce and Michelle Garcia Holmes
+Candidate	T Tweeti Blancett	T Tweeti Blancett
+Candidate	Tim Eichenberg	Tim Eichenberg
+Candidate	Tomas E Salazar	Tomas E Salazar
+Candidate	Trey Stephen Morris	Trey Stephen Morris
+Candidate	Wayne A Johnson	Wayne A Johnson
+Candidate	William Arnold Wiley Jr	William Arnold Wiley Jr
+Candidate	William B Pratt	William B Pratt
+Candidate	Willie A Madrid	Willie A Madrid
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	New Mexico;Bernalillo County	New Mexico;Bernalillo
+ReportingUnit	New Mexico;Catron County	New Mexico;Catron
+ReportingUnit	New Mexico;Chaves County	New Mexico;Chaves
+ReportingUnit	New Mexico;Cibola County	New Mexico;Cibola
+ReportingUnit	New Mexico;Colfax County	New Mexico;Colfax
+ReportingUnit	New Mexico;Curry County	New Mexico;Curry
+ReportingUnit	New Mexico;De Baca County	New Mexico;De Baca
+ReportingUnit	New Mexico;Dona Ana County	New Mexico;Dona Ana
+ReportingUnit	New Mexico;Eddy County	New Mexico;Eddy
+ReportingUnit	New Mexico;Grant County	New Mexico;Grant
+ReportingUnit	New Mexico;Guadalupe County	New Mexico;Guadalupe
+ReportingUnit	New Mexico;Harding County	New Mexico;Harding
+ReportingUnit	New Mexico;Hidalgo County	New Mexico;Hidalgo
+ReportingUnit	New Mexico;Lea County	New Mexico;Lea
+ReportingUnit	New Mexico;Lincoln County	New Mexico;Lincoln
+ReportingUnit	New Mexico;Los Alamos County	New Mexico;Los Alamos
+ReportingUnit	New Mexico;Luna County	New Mexico;Luna
+ReportingUnit	New Mexico;McKinley County	New Mexico;McKinley
+ReportingUnit	New Mexico;Mora County	New Mexico;Mora
+ReportingUnit	New Mexico;Otero County	New Mexico;Otero
+ReportingUnit	New Mexico;Quay County	New Mexico;Quay
+ReportingUnit	New Mexico;Rio Arriba County	New Mexico;Rio Arriba
+ReportingUnit	New Mexico;Roosevelt County	New Mexico;Roosevelt
+ReportingUnit	New Mexico;San Juan County	New Mexico;San Juan
+ReportingUnit	New Mexico;San Miguel County	New Mexico;San Miguel
+ReportingUnit	New Mexico;Sandoval County	New Mexico;Sandoval
+ReportingUnit	New Mexico;Santa Fe County	New Mexico;Santa Fe
+ReportingUnit	New Mexico;Sierra County	New Mexico;Sierra
+ReportingUnit	New Mexico;Socorro County	New Mexico;Socorro
+ReportingUnit	New Mexico;Taos County	New Mexico;Taos
+ReportingUnit	New Mexico;Torrance County	New Mexico;Torrance
+ReportingUnit	New Mexico;Union County	New Mexico;Union
+ReportingUnit	New Mexico;Valencia County	New Mexico;Valencia
+CandidateContest	NM Attorney General	NM;Attorney General;statewide

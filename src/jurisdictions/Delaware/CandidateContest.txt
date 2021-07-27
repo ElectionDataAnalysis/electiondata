@@ -351,6 +351,8 @@ DE Governor (Libertarian Party)	1	DE Governor	Libertarian Party
 US Senate DE (Libertarian Party)	1	US Senate DE	Libertarian Party
 DE Attorney General (Libertarian Party)	1	DE Attorney General	Libertarian Party
 DE Lieutenant Governor (Libertarian Party)	1	DE Lieutenant Governor	Libertarian Party
-DE Treasurer (Libertarian Party)	1	DE Treasurer	Libertarian Party
+DE State Treasurer (Libertarian Party)	1	DE State Treasurer	Libertarian Party
 DE Secretary of State (Libertarian Party)	1	DE Secretary of State	Libertarian Party
 DE Insurance Commissioner (Libertarian Party)	1	DE Insurance Commissioner	Libertarian Party
+DE Auditor of Accounts	1	DE Auditor of Accounts
+DE State Treasurer	1	DE State Treasurer

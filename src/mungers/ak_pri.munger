@@ -12,3 +12,6 @@ Party=<column_5>
 CandidateContest=<Contest Name>
 Candidate=<Candidate Name>
 BallotMeasureSelection=<Candidate Name>
+
+[ignore]
+Candidate=,Number of Precincts,Number of Precincts Reporting,Number of Precincts for Race,Registered Voters,Times Counted

@@ -223,3 +223,233 @@ ReportingUnit	Nebraska;Wheeler County	Wheeler
 ReportingUnit	Nebraska;Wheeler County	fips31183
 ReportingUnit	Nebraska;York County	York
 ReportingUnit	Nebraska;York County	fips31185
+CandidateContest	NE Attorney General	NE;Attorney General
+CandidateContest	NE Auditor of Public Accounts	NE;Auditor of Public Accounts;statewide
+CandidateContest	NE Governor	NE;Governor and Lt. Governor;statewide
+CandidateContest	NE Member of the State Board of Education District 6	NE;Member of the State Board of Education;District 6
+CandidateContest	NE Secretary of State	NE;Secretary of State;statewide
+CandidateContest	NE State Treasurer	NE;State Treasurer;statewide
+CandidateContest	US House NE District 3	NE;US Representative;District 3
+CandidateContest	US Senate NE	NE;US Senator;statewide
+CandidateContest	NE Member of the State Board of Education District 7	NE;Member of the State Board of Education;District 7
+CandidateContest	NE Senate District 40	NE;State Senator;District 40
+CandidateContest	NE Senate District 36	NE;State Senator;District 36
+CandidateContest	NE Senate District 38	NE;State Senator;District 38
+CandidateContest	NE Member of the Board of Regents University of Nebraska District 3	NE;Member of the Board of Regents University of Nebraska;District 3
+CandidateContest	NE Senate District 16	NE;State Senator;District 16
+CandidateContest	US House NE District 1	NE;US Representative;District 1
+CandidateContest	NE Member of the Board of Regents University of Nebraska District 5	NE;Member of the Board of Regents University of Nebraska;District 5
+CandidateContest	NE Member of the State Board of Education District 5	NE;Member of the State Board of Education;District 5
+CandidateContest	NE Public Service Commissioner District 1	NE;Public Service Commissioner;District 1
+CandidateContest	NE Senate District 2	NE;State Senator;District 2
+CandidateContest	NE Senate District 44	NE;State Senator;District 44
+CandidateContest	NE Senate District 22	NE;State Senator;District 22
+CandidateContest	NE Member of the Board of Regents University of Nebraska District 4	NE;Member of the Board of Regents University of Nebraska;District 4
+CandidateContest	NE Member of the Board of Regents University of Nebraska District 8	NE;Member of the Board of Regents University of Nebraska;District 8
+CandidateContest	NE Member of the State Board of Education District 8	NE;Member of the State Board of Education;District 8
+CandidateContest	NE Public Service Commissioner District 3	NE;Public Service Commissioner;District 3
+CandidateContest	NE Senate District 10	NE;State Senator;District 10
+CandidateContest	NE Senate District 12	NE;State Senator;District 12
+CandidateContest	NE Senate District 18	NE;State Senator;District 18
+CandidateContest	NE Senate District 20	NE;State Senator;District 20
+CandidateContest	NE Senate District 4	NE;State Senator;District 4
+CandidateContest	NE Senate District 6	NE;State Senator;District 6
+CandidateContest	NE Senate District 8	NE;State Senator;District 8
+CandidateContest	US House NE District 2	NE;US Representative;District 2
+CandidateContest	NE Senate District 32	NE;State Senator;District 32
+CandidateContest	NE Senate District 30	NE;State Senator;District 30
+CandidateContest	NE Senate District 34	NE;State Senator;District 34
+CandidateContest	NE Senate District 26	NE;State Senator;District 26
+CandidateContest	NE Senate District 28	NE;State Senator;District 28
+CandidateContest	NE Senate District 46	NE;State Senator;District 46
+CandidateContest	NE Senate District 42	NE;State Senator;District 42
+CandidateContest	NE Senate District 24	NE;State Senator;District 24
+CandidateContest	NE Senate District 14	NE;State Senator;District 14
+CandidateContest	NE Senate District 48	NE;State Senator;District 48
+Candidate	Adam Morfeld	Adam Morfeld
+Candidate	Barbara Weitz	Barbara Weitz
+Candidate	Ben Hansen	Ben Hansen
+Candidate	Bob Evnen	Bob Evnen
+Candidate	Bob Krist and Lynne M. Walz	Bob Krist and Lynne M. Walz
+Candidate	Bob Van Valkenburg	Bob Van Valkenburg
+Candidate	Brett Lindstrom	Brett Lindstrom
+Candidate	Charlie Janssen	Charlie Janssen
+Candidate	Christa Yoakum	Christa Yoakum
+Candidate	Chuck Hassebrook	Chuck Hassebrook
+Candidate	Curt Friesen	Curt Friesen
+Candidate	Dan Hughes	Dan Hughes
+Candidate	Dan Watermeier	Dan Watermeier
+Candidate	Dave Murman	Dave Murman
+Candidate	Deb Fischer	Deb Fischer
+Candidate	Deborah Neary	Deborah Neary
+Candidate	Don Bacon	Don Bacon
+Candidate	Don Schuller	Don Schuller
+Candidate	Doug Oertwich	Doug Oertwich
+Candidate	Doug Peterson	Doug Peterson
+Candidate	Elizabeth O'Connor	Elizabeth O'Connor
+Candidate	Hal Daub	Hal Daub
+Candidate	Jackie Collett	Jackie Collett
+Candidate	Jane Raybould	Jane Raybould
+Candidate	Jane Skinner	Jane Skinner
+Candidate	Jeff Parris	Jeff Parris
+Candidate	Jessica McClure	Jessica McClure
+Candidate	Jim Pillen	Jim Pillen
+Candidate	Jim Schultz	Jim Schultz
+Candidate	John Arch	John Arch
+Candidate	John McCollister S.	John McCollister S.
+Candidate	John Murante	John Murante
+Candidate	John Stinner P.	John Stinner P.
+Candidate	Judy Pederson	Judy Pederson
+Candidate	Keith Kube F.	Keith Kube F.
+Candidate	Larry Bradley	Larry Bradley
+Candidate	Laura Ebke	Laura Ebke
+Candidate	Machaela Cavanaugh	Machaela Cavanaugh
+Candidate	Maris Bentley	Maris Bentley
+Candidate	Mark Kolterman A.	Mark Kolterman A.
+Candidate	Marsha Fangmeyer	Marsha Fangmeyer
+Candidate	Matt Deaver	Matt Deaver
+Candidate	Matt Hansen	Matt Hansen
+Candidate	Matt Williams	Matt Williams
+Candidate	Maureen Nickels	Maureen Nickels
+Candidate	Megan Hunt	Megan Hunt
+Candidate	Merv Riepe	Merv Riepe
+Candidate	Mike Forsythe	Mike Forsythe
+Candidate	Mike Groene	Mike Groene
+Candidate	Mike Moser	Mike Moser
+Candidate	Mina Davis	Mina Davis
+Candidate	Myron Dorn	Myron Dorn
+Candidate	Pat McPherson	Pat McPherson
+Candidate	Patricia Timm H.	Patricia Timm H.
+Candidate	Patty Pansing Brooks	Patty Pansing Brooks
+Candidate	Paul Theobald	Paul Theobald
+Candidate	Pete Ricketts and Mike Foley	Pete Ricketts and Mike Foley
+Candidate	Rob Schafer	Rob Schafer
+Candidate	Robert Clements	Robert Clements
+Candidate	Robert Hilkemann Bob	Robert Hilkemann Bob
+Candidate	Robert Prokop J.	Robert Prokop J.
+Candidate	Robin Stevens R.	Robin Stevens R.
+Candidate	Scott Winkler	Scott Winkler
+Candidate	Shannon Coryell	Shannon Coryell
+Candidate	Spencer Danner	Spencer Danner
+Candidate	Stephanie Malcolm L.	Stephanie Malcolm L.
+Candidate	Stephanie Nantkes	Stephanie Nantkes
+Candidate	Steve Lathrop	Steve Lathrop
+Candidate	Susan Lorence D.	Susan Lorence D.
+Candidate	Theresa Thibodeau	Theresa Thibodeau
+Candidate	Tim Gragert	Tim Gragert
+Candidate	Tim Schram	Tim Schram
+Candidate	Tom Brandt	Tom Brandt
+Candidate	Wendy DeBoer	Wendy DeBoer
+Party	Democratic Party	democrat
+Party	Libertarian Party	libertarian
+Party	Nonpartisan Party	nonpartisan
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	Nebraska;Adams County	Nebraska;Adams
+ReportingUnit	Nebraska;Antelope County	Nebraska;Antelope
+ReportingUnit	Nebraska;Arthur County	Nebraska;Arthur
+ReportingUnit	Nebraska;Banner County	Nebraska;Banner
+ReportingUnit	Nebraska;Blaine County	Nebraska;Blaine
+ReportingUnit	Nebraska;Boone County	Nebraska;Boone
+ReportingUnit	Nebraska;Box Butte County	Nebraska;Box Butte
+ReportingUnit	Nebraska;Boyd County	Nebraska;Boyd
+ReportingUnit	Nebraska;Brown County	Nebraska;Brown
+ReportingUnit	Nebraska;Buffalo County	Nebraska;Buffalo
+ReportingUnit	Nebraska;Burt County	Nebraska;Burt
+ReportingUnit	Nebraska;Butler County	Nebraska;Butler
+ReportingUnit	Nebraska;Cass County	Nebraska;Cass
+ReportingUnit	Nebraska;Cedar County	Nebraska;Cedar
+ReportingUnit	Nebraska;Chase County	Nebraska;Chase
+ReportingUnit	Nebraska;Cherry County	Nebraska;Cherry
+ReportingUnit	Nebraska;Cheyenne County	Nebraska;Cheyenne
+ReportingUnit	Nebraska;Clay County	Nebraska;Clay
+ReportingUnit	Nebraska;Colfax County	Nebraska;Colfax
+ReportingUnit	Nebraska;Cuming County	Nebraska;Cuming
+ReportingUnit	Nebraska;Custer County	Nebraska;Custer
+ReportingUnit	Nebraska;Dakota County	Nebraska;Dakota
+ReportingUnit	Nebraska;Dawes County	Nebraska;Dawes
+ReportingUnit	Nebraska;Dawson County	Nebraska;Dawson
+ReportingUnit	Nebraska;Deuel County	Nebraska;Deuel
+ReportingUnit	Nebraska;Dixon County	Nebraska;Dixon
+ReportingUnit	Nebraska;Dodge County	Nebraska;Dodge
+ReportingUnit	Nebraska;Douglas County	Nebraska;Douglas
+ReportingUnit	Nebraska;Dundy County	Nebraska;Dundy
+ReportingUnit	Nebraska;Fillmore County	Nebraska;Fillmore
+ReportingUnit	Nebraska;Franklin County	Nebraska;Franklin
+ReportingUnit	Nebraska;Frontier County	Nebraska;Frontier
+ReportingUnit	Nebraska;Furnas County	Nebraska;Furnas
+ReportingUnit	Nebraska;Gage County	Nebraska;Gage
+ReportingUnit	Nebraska;Garden County	Nebraska;Garden
+ReportingUnit	Nebraska;Garfield County	Nebraska;Garfield
+ReportingUnit	Nebraska;Gosper County	Nebraska;Gosper
+ReportingUnit	Nebraska;Grant County	Nebraska;Grant
+ReportingUnit	Nebraska;Greeley County	Nebraska;Greeley
+ReportingUnit	Nebraska;Hall County	Nebraska;Hall
+ReportingUnit	Nebraska;Hamilton County	Nebraska;Hamilton
+ReportingUnit	Nebraska;Harlan County	Nebraska;Harlan
+ReportingUnit	Nebraska;Hayes County	Nebraska;Hayes
+ReportingUnit	Nebraska;Hitchcock County	Nebraska;Hitchcock
+ReportingUnit	Nebraska;Holt County	Nebraska;Holt
+ReportingUnit	Nebraska;Hooker County	Nebraska;Hooker
+ReportingUnit	Nebraska;Howard County	Nebraska;Howard
+ReportingUnit	Nebraska;Jefferson County	Nebraska;Jefferson
+ReportingUnit	Nebraska;Johnson County	Nebraska;Johnson
+ReportingUnit	Nebraska;Kearney County	Nebraska;Kearney
+ReportingUnit	Nebraska;Keith County	Nebraska;Keith
+ReportingUnit	Nebraska;Keya Paha County	Nebraska;Keya Paha
+ReportingUnit	Nebraska;Kimball County	Nebraska;Kimball
+ReportingUnit	Nebraska;Knox County	Nebraska;Knox
+ReportingUnit	Nebraska;Lancaster County	Nebraska;Lancaster
+ReportingUnit	Nebraska;Lincoln County	Nebraska;Lincoln
+ReportingUnit	Nebraska;Logan County	Nebraska;Logan
+ReportingUnit	Nebraska;Loup County	Nebraska;Loup
+ReportingUnit	Nebraska;Madison County	Nebraska;Madison
+ReportingUnit	Nebraska;McPherson County	Nebraska;McPherson
+ReportingUnit	Nebraska;Merrick County	Nebraska;Merrick
+ReportingUnit	Nebraska;Morrill County	Nebraska;Morrill
+ReportingUnit	Nebraska;Nance County	Nebraska;Nance
+ReportingUnit	Nebraska;Nemaha County	Nebraska;Nemaha
+ReportingUnit	Nebraska;Nuckolls County	Nebraska;Nuckolls
+ReportingUnit	Nebraska;Otoe County	Nebraska;Otoe
+ReportingUnit	Nebraska;Pawnee County	Nebraska;Pawnee
+ReportingUnit	Nebraska;Perkins County	Nebraska;Perkins
+ReportingUnit	Nebraska;Phelps County	Nebraska;Phelps
+ReportingUnit	Nebraska;Pierce County	Nebraska;Pierce
+ReportingUnit	Nebraska;Platte County	Nebraska;Platte
+ReportingUnit	Nebraska;Polk County	Nebraska;Polk
+ReportingUnit	Nebraska;Red Willow County	Nebraska;Red Willow
+ReportingUnit	Nebraska;Richardson County	Nebraska;Richardson
+ReportingUnit	Nebraska;Rock County	Nebraska;Rock
+ReportingUnit	Nebraska;Saline County	Nebraska;Saline
+ReportingUnit	Nebraska;Sarpy County	Nebraska;Sarpy
+ReportingUnit	Nebraska;Saunders County	Nebraska;Saunders
+ReportingUnit	Nebraska;Scotts Bluff County	Nebraska;Scotts Bluff
+ReportingUnit	Nebraska;Seward County	Nebraska;Seward
+ReportingUnit	Nebraska;Sheridan County	Nebraska;Sheridan
+ReportingUnit	Nebraska;Sherman County	Nebraska;Sherman
+ReportingUnit	Nebraska;Sioux County	Nebraska;Sioux
+ReportingUnit	Nebraska;Stanton County	Nebraska;Stanton
+ReportingUnit	Nebraska;Thayer County	Nebraska;Thayer
+ReportingUnit	Nebraska;Thomas County	Nebraska;Thomas
+ReportingUnit	Nebraska;Thurston County	Nebraska;Thurston
+ReportingUnit	Nebraska;Valley County	Nebraska;Valley
+ReportingUnit	Nebraska;Washington County	Nebraska;Washington
+ReportingUnit	Nebraska;Wayne County	Nebraska;Wayne
+ReportingUnit	Nebraska;Webster County	Nebraska;Webster
+ReportingUnit	Nebraska;Wheeler County	Nebraska;Wheeler
+ReportingUnit	Nebraska;York County	Nebraska;York
+CandidateContest	NE Attorney General	NE;Attorney General;statewide

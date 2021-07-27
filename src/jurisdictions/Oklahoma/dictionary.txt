@@ -764,3 +764,408 @@ ReportingUnit	Oklahoma;Woods County	WOODS
 ReportingUnit	Oklahoma;Woods County	fips40151
 ReportingUnit	Oklahoma;Woodward County	WOODWARD
 ReportingUnit	Oklahoma;Woodward County	fips40153
+CandidateContest	OK Commissioner of Labor	OK;Commissioner of Labor;statewide
+CandidateContest	OK Attorney General	OK;For Attorney General;statewide
+CandidateContest	OK Corporation Commissioner	OK;For Corporation Commissioner;statewide
+CandidateContest	OK Insurance Commissioner	OK;For Insurance Commissioner;statewide
+CandidateContest	OK Governor	OK;Governor;statewide
+CandidateContest	OK Lieutenant Governor	OK;Lieutenant Governor;statewide
+CandidateContest	OK State Auditor and Inspector	OK;State Auditor and Inspector;statewide
+CandidateContest	OK House District 86	OK;State Representative;District 86
+CandidateContest	OK Superintendent of Public Instruction	OK;Superintendent of Public Instruction;statewide
+CandidateContest	OK Treasurer	OK;Treasurer;statewide
+CandidateContest	US House OK District 2	OK;US Representative;District 2
+CandidateContest	US House OK District 3	OK;US Representative;District 3
+CandidateContest	OK House District 19	OK;State Representative;District 19
+CandidateContest	OK House District 22	OK;State Representative;District 22
+CandidateContest	OK Senate District 6	OK;State Senator;District 6
+CandidateContest	OK House District 61	OK;State Representative;District 61
+CandidateContest	OK House District 55	OK;State Representative;District 55
+CandidateContest	OK House District 56	OK;State Representative;District 56
+CandidateContest	OK House District 65	OK;State Representative;District 65
+CandidateContest	OK House District 41	OK;State Representative;District 41
+CandidateContest	OK House District 43	OK;State Representative;District 43
+CandidateContest	OK House District 47	OK;State Representative;District 47
+CandidateContest	OK Senate District 22	OK;State Senator;District 22
+CandidateContest	US House OK District 4	OK;US Representative;District 4
+CandidateContest	OK House District 48	OK;State Representative;District 48
+CandidateContest	OK House District 49	OK;State Representative;District 49
+CandidateContest	OK Senate District 14	OK;State Senator;District 14
+CandidateContest	OK House District 14	OK;State Representative;District 14
+CandidateContest	OK Senate District 18	OK;State Senator;District 18
+CandidateContest	OK House District 20	OK;State Representative;District 20
+CandidateContest	OK House District 45	OK;State Representative;District 45
+CandidateContest	OK House District 46	OK;State Representative;District 46
+CandidateContest	OK House District 53	OK;State Representative;District 53
+CandidateContest	OK House District 54	OK;State Representative;District 54
+CandidateContest	OK House District 90	OK;State Representative;District 90
+CandidateContest	OK House District 91	OK;State Representative;District 91
+CandidateContest	OK Senate District 16	OK;State Senator;District 16
+CandidateContest	OK Senate District 24	OK;State Senator;District 24
+CandidateContest	OK House District 18	OK;State Representative;District 18
+CandidateContest	OK House District 62	OK;State Representative;District 62
+CandidateContest	OK House District 63	OK;State Representative;District 63
+CandidateContest	OK House District 64	OK;State Representative;District 64
+CandidateContest	OK Senate District 32	OK;State Senator;District 32
+CandidateContest	OK House District 6	OK;State Representative;District 6
+CandidateContest	OK House District 29	OK;State Representative;District 29
+CandidateContest	OK House District 35	OK;State Representative;District 35
+CandidateContest	OK House District 68	OK;State Representative;District 68
+CandidateContest	OK Senate District 12	OK;State Senator;District 12
+CandidateContest	US House OK District 1	OK;US Representative;District 1
+CandidateContest	OK Senate District 38	OK;State Senator;District 38
+CandidateContest	OK House District 5	OK;State Representative;District 5
+CandidateContest	OK House District 7	OK;State Representative;District 7
+CandidateContest	OK House District 40	OK;State Representative;District 40
+CandidateContest	OK House District 42	OK;State Representative;District 42
+CandidateContest	OK House District 15	OK;State Representative;District 15
+CandidateContest	OK House District 24	OK;State Representative;District 24
+CandidateContest	OK Senate District 20	OK;State Senator;District 20
+CandidateContest	OK House District 17	OK;State Representative;District 17
+CandidateContest	OK House District 3	OK;State Representative;District 3
+CandidateContest	OK Senate District 4	OK;State Senator;District 4
+CandidateContest	OK House District 32	OK;State Representative;District 32
+CandidateContest	OK Senate District 28	OK;State Senator;District 28
+CandidateContest	OK House District 31	OK;State Representative;District 31
+CandidateContest	OK House District 8	OK;State Representative;District 8
+CandidateContest	OK Senate District 2	OK;State Senator;District 2
+CandidateContest	OK House District 13	OK;State Representative;District 13
+CandidateContest	OK Senate District 8	OK;State Senator;District 8
+CandidateContest	OK House District 16	OK;State Representative;District 16
+CandidateContest	OK House District 10	OK;State Representative;District 10
+CandidateContest	OK House District 100	OK;State Representative;District 100
+CandidateContest	OK House District 101	OK;State Representative;District 101
+CandidateContest	OK House District 39	OK;State Representative;District 39
+CandidateContest	OK House District 81	OK;State Representative;District 81
+CandidateContest	OK House District 82	OK;State Representative;District 82
+CandidateContest	OK House District 83	OK;State Representative;District 83
+CandidateContest	OK House District 84	OK;State Representative;District 84
+CandidateContest	OK House District 85	OK;State Representative;District 85
+CandidateContest	OK House District 94	OK;State Representative;District 94
+CandidateContest	OK House District 95	OK;State Representative;District 95
+CandidateContest	OK House District 96	OK;State Representative;District 96
+CandidateContest	OK Senate District 30	OK;State Senator;District 30
+CandidateContest	OK Senate District 40	OK;State Senator;District 40
+CandidateContest	OK Senate District 42	OK;State Senator;District 42
+CandidateContest	OK Senate District 48	OK;State Senator;District 48
+CandidateContest	US House OK District 5	OK;US Representative;District 5
+CandidateContest	OK House District 66	OK;State Representative;District 66
+CandidateContest	OK House District 34	OK;State Representative;District 34
+CandidateContest	OK House District 25	OK;State Representative;District 25
+CandidateContest	OK House District 26	OK;State Representative;District 26
+CandidateContest	OK House District 28	OK;State Representative;District 28
+CandidateContest	OK House District 23	OK;State Representative;District 23
+CandidateContest	OK House District 77	OK;State Representative;District 77
+CandidateContest	OK House District 9	OK;State Representative;District 9
+CandidateContest	OK House District 2	OK;State Representative;District 2
+CandidateContest	OK House District 67	OK;State Representative;District 67
+CandidateContest	OK House District 69	OK;State Representative;District 69
+CandidateContest	OK House District 70	OK;State Representative;District 70
+CandidateContest	OK House District 71	OK;State Representative;District 71
+CandidateContest	OK House District 75	OK;State Representative;District 75
+CandidateContest	OK House District 76	OK;State Representative;District 76
+CandidateContest	OK House District 78	OK;State Representative;District 78
+CandidateContest	OK House District 79	OK;State Representative;District 79
+CandidateContest	OK House District 80	OK;State Representative;District 80
+CandidateContest	OK House District 98	OK;State Representative;District 98
+CandidateContest	OK Senate District 36	OK;State Senator;District 36
+CandidateContest	OK House District 12	OK;State Representative;District 12
+Candidate	Amanda Jeffers	Amanda Jeffers
+Candidate	Anastasia A. Pittman	Anastasia A. Pittman
+Candidate	Andy Richardson	Andy Richardson
+Candidate	Angela Graham	Angela Graham
+Candidate	Arnold Bourne	Arnold Bourne
+Candidate	Ashley Lehnert	Ashley Lehnert
+Candidate	Ashley McCarter	Ashley McCarter
+Candidate	Ashley Nicole McCray	Ashley Nicole McCray
+Candidate	Avery Carl Frix	Avery Carl Frix
+Candidate	Becki Maldonado	Becki Maldonado
+Candidate	Ben Loring	Ben Loring
+Candidate	Bob Anthony	Bob Anthony
+Candidate	Brandon R. Thompson	Brandon R. Thompson
+Candidate	Brandt Dismukes	Brandt Dismukes
+Candidate	Brenda Stanley	Brenda Stanley
+Candidate	Brent Howard	Brent Howard
+Candidate	Brian Hill	Brian Hill
+Candidate	Bryan O'Brien	Bryan O'Brien
+Candidate	Bryan Vinyard	Bryan Vinyard
+Candidate	Carly Hotvedt	Carly Hotvedt
+Candidate	Carol M. Bush	Carol M. Bush
+Candidate	Carri Hicks	Carri Hicks
+Candidate	Chad Caldwell	Chad Caldwell
+Candidate	Chandler Torbett	Chandler Torbett
+Candidate	Chantelle Cory	Chantelle Cory
+Candidate	Charles Arnall	Charles Arnall
+Candidate	Charles McCall	Charles McCall
+Candidate	Charles Wells	Charles Wells
+Candidate	Cheryl Key	Cheryl Key
+Candidate	Chris Kannady	Chris Kannady
+Candidate	Chris Powell	Chris Powell
+Candidate	Chris Sneed	Chris Sneed
+Candidate	Christi Wolff	Christi Wolff
+Candidate	Christopher Hensley	Christopher Hensley
+Candidate	Chuck Hall	Chuck Hall
+Candidate	Cindy Byrd	Cindy Byrd
+Candidate	Clay Layton	Clay Layton
+Candidate	Craig John Hoxie	Craig John Hoxie
+Candidate	Cyndi Ralston	Cyndi Ralston
+Candidate	Cynthia Roe	Cynthia Roe
+Candidate	Dan Hicks	Dan Hicks
+Candidate	Daniel D. Manuel	Daniel D. Manuel
+Candidate	Darrell Moore	Darrell Moore
+Candidate	Darrell Weaver	Darrell Weaver
+Candidate	David Bullard	David Bullard
+Candidate	David Hardin	David Hardin
+Candidate	David Perryman	David Perryman
+Candidate	David Pilon	David Pilon
+Candidate	David Smith	David Smith
+Candidate	Dean F. Davis	Dean F. Davis
+Candidate	Denise Crosswhite Hader	Denise Crosswhite Hader
+Candidate	Dennis Dugger	Dennis Dugger
+Candidate	Devyn Denton	Devyn Denton
+Candidate	Donnie Condit	Donnie Condit
+Candidate	Drew Edmondson	Drew Edmondson
+Candidate	Ed Trumbull	Ed Trumbull
+Candidate	Eddie Martin	Eddie Martin
+Candidate	Forrest Mayer	Forrest Mayer
+Candidate	Frank Simpson	Frank Simpson
+Candidate	Frankie Robbins	Frankie Robbins
+Candidate	Fred Dorrell	Fred Dorrell
+Candidate	Garry Mize	Garry Mize
+Candidate	Gary Rhynes	Gary Rhynes
+Candidate	Gene Bell	Gene Bell
+Candidate	George E. Young	George E. Young
+Candidate	Glen Mulready	Glen Mulready
+Candidate	Heady Coleman	Heady Coleman
+Candidate	Heather Chenoweth	Heather Chenoweth
+Candidate	Ivan Holmes	Ivan Holmes
+Candidate	J. Lee Miller Jr.	J. Lee Miller Jr.
+Candidate	Jack Beall Jr	Jack Beall Jr
+Candidate	Jackie Phillips	Jackie Phillips
+Candidate	Jackie Short	Jackie Short
+Candidate	Jacobi Crowley	Jacobi Crowley
+Candidate	James Delso	James Delso
+Candidate	James Leewright	James Leewright
+Candidate	Janice J. Graham	Janice J. Graham
+Candidate	Jasha Lyons Echo-Hawk	Jasha Lyons Echo-Hawk
+Candidate	Jason N. Smalley	Jason N. Smalley
+Candidate	Jason Nichols	Jason Nichols
+Candidate	Jason Reese	Jason Reese
+Candidate	Jason Sansone	Jason Sansone
+Candidate	Jay W. Steagall	Jay W. Steagall
+Candidate	Jeff Berrong	Jeff Berrong
+Candidate	Jeff Boatman	Jeff Boatman
+Candidate	Jennie Scott	Jennie Scott
+Candidate	Jennifer Esau	Jennifer Esau
+Candidate	Jesse Goodwin	Jesse Goodwin
+Candidate	Jim Grego	Jim Grego
+Candidate	Jim Olsen	Jim Olsen
+Candidate	Jj Burnam	Jj Burnam
+Candidate	Joan E. Gabelmann	Joan E. Gabelmann
+Candidate	Joe Howell	Joe Howell
+Candidate	John Carpenter	John Carpenter
+Candidate	John Cox	John Cox
+Candidate	John Foreman	John Foreman
+Candidate	John Haste	John Haste
+Candidate	John L. Myers	John L. Myers
+Candidate	John Michael Montgomery	John Michael Montgomery
+Candidate	John Symcox	John Symcox
+Candidate	John Waldron	John Waldron
+Candidate	John Yeutter	John Yeutter
+Candidate	Jolene Armstrong	Jolene Armstrong
+Candidate	Josh West	Josh West
+Candidate	Joy Hofmeister	Joy Hofmeister
+Candidate	Judd Strom	Judd Strom
+Candidate	Judy Ross Moore	Judy Ross Moore
+Candidate	Julia Kirt	Julia Kirt
+Candidate	Justin Arledge	Justin Arledge
+Candidate	Justin J.J. Humphrey	Justin J.J. Humphrey
+Candidate	Kara Sawyer	Kara Sawyer
+Candidate	Karen Gaddis	Karen Gaddis
+Candidate	Katelyn Dockery	Katelyn Dockery
+Candidate	Kathy Wallis	Kathy Wallis
+Candidate	Kelli Krebs	Kelli Krebs
+Candidate	Kendra Horn	Kendra Horn
+Candidate	Kenton Patzkowsky	Kenton Patzkowsky
+Candidate	Kevin McDugle	Kevin McDugle
+Candidate	Kevin Stacy	Kevin Stacy
+Candidate	Kevin Stitt	Kevin Stitt
+Candidate	Kevin Wallace	Kevin Wallace
+Candidate	Kevin West	Kevin West
+Candidate	Kilmyn Easley-Graf	Kilmyn Easley-Graf
+Candidate	Kim David	Kim David
+Candidate	Kimberly Fobbs	Kimberly Fobbs
+Candidate	Kyle Webb	Kyle Webb
+Candidate	Larry Huff	Larry Huff
+Candidate	Lauren Morris	Lauren Morris
+Candidate	Lavelle C. Compton	Lavelle C. Compton
+Candidate	Leslie Bonebreak	Leslie Bonebreak
+Candidate	Leslie Osborn	Leslie Osborn
+Candidate	Lewis Collins	Lewis Collins
+Candidate	Lewis H. Moore	Lewis H. Moore
+Candidate	Linda Wade	Linda Wade
+Candidate	Liz George	Liz George
+Candidate	Lundy Kiger	Lundy Kiger
+Candidate	Marc Etters	Marc Etters
+Candidate	Marilyn M Stark	Marilyn M Stark
+Candidate	Mark Dean Allen	Mark Dean Allen
+Candidate	Mark Lepak	Mark Lepak
+Candidate	Mark McBride	Mark McBride
+Candidate	Mark Myles	Mark Myles
+Candidate	Marlena Nobles	Marlena Nobles
+Candidate	Marty Quinn	Marty Quinn
+Candidate	Mary B. Boren	Mary B. Boren
+Candidate	Matt Campbell	Matt Campbell
+Candidate	Matt Jackson	Matt Jackson
+Candidate	Matt Pinnell	Matt Pinnell
+Candidate	Mike Hunter	Mike Hunter
+Candidate	Miranda Shelton	Miranda Shelton
+Candidate	Nicole Miller	Nicole Miller
+Candidate	Norman Grey	Norman Grey
+Candidate	Oraynab Jwayyed	Oraynab Jwayyed
+Candidate	Paul Brewbaker	Paul Brewbaker
+Candidate	Peggy Defrange	Peggy Defrange
+Candidate	Randy McDaniel	Randy McDaniel
+Candidate	Randy Randleman	Randy Randleman
+Candidate	Rashard D Bickham	Rashard D Bickham
+Candidate	Renae Ward	Renae Ward
+Candidate	Renee Jerden	Renee Jerden
+Candidate	Rhonda Cox	Rhonda Cox
+Candidate	Richard Castaldo	Richard Castaldo
+Candidate	Richard Prawdzienski	Richard Prawdzienski
+Candidate	Roger Thompson	Roger Thompson
+Candidate	Ronny Johns	Ronny Johns
+Candidate	Ross Ford	Ross Ford
+Candidate	Ruby Peters	Ruby Peters
+Candidate	Rusty Cornwell	Rusty Cornwell
+Candidate	Ryan Martinez	Ryan Martinez
+Candidate	Sarah Carnes	Sarah Carnes
+Candidate	Scott Fetgatter	Scott Fetgatter
+Candidate	Sean Parrish	Sean Parrish
+Candidate	Shannan Tucker	Shannan Tucker
+Candidate	Sheila Dills	Sheila Dills
+Candidate	Sherrie Conley	Sherrie Conley
+Candidate	Stan May	Stan May
+Candidate	Stephanie R. Sanders	Stephanie R. Sanders
+Candidate	Stephen Paulsen	Stephen Paulsen
+Candidate	Steve Barnes	Steve Barnes
+Candidate	Steve Jarman	Steve Jarman
+Candidate	Steve Russell	Steve Russell
+Candidate	T. J. Marti	T. J. Marti
+Candidate	Tammy Townley	Tammy Townley
+Candidate	Tammy West	Tammy West
+Candidate	Terry S. O'Donnell	Terry S. O'Donnell
+Candidate	Terry W Hopkins	Terry W Hopkins
+Candidate	Tim Gilpin	Tim Gilpin
+Candidate	Todd Blackburn	Todd Blackburn
+Candidate	Tom Gann	Tom Gann
+Candidate	Tom Hackelman	Tom Hackelman
+Candidate	Tom Stites	Tom Stites
+Candidate	Tommy C Hardin	Tommy C Hardin
+Candidate	Trey Caldwell	Trey Caldwell
+Candidate	Troy Dyer	Troy Dyer
+Candidate	Ty Burns	Ty Burns
+Candidate	Wayne Eidson	Wayne Eidson
+Candidate	Willard Linzy	Willard Linzy
+Candidate	William Andrews	William Andrews
+Candidate	William Cagle	William Cagle
+Candidate	William Leonard	William Leonard
+Candidate	Zach Pearson	Zach Pearson
+Candidate	Zack Taylor	Zack Taylor
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	Oklahoma;Adair County	Oklahoma;Adair
+ReportingUnit	Oklahoma;Alfalfa County	Oklahoma;Alfalfa
+ReportingUnit	Oklahoma;Atoka County	Oklahoma;Atoka
+ReportingUnit	Oklahoma;Beaver County	Oklahoma;Beaver
+ReportingUnit	Oklahoma;Beckham County	Oklahoma;Beckham
+ReportingUnit	Oklahoma;Blaine County	Oklahoma;Blaine
+ReportingUnit	Oklahoma;Bryan County	Oklahoma;Bryan
+ReportingUnit	Oklahoma;Caddo County	Oklahoma;Caddo
+ReportingUnit	Oklahoma;Canadian County	Oklahoma;Canadian
+ReportingUnit	Oklahoma;Carter County	Oklahoma;Carter
+ReportingUnit	Oklahoma;Cherokee County	Oklahoma;Cherokee
+ReportingUnit	Oklahoma;Choctaw County	Oklahoma;Choctaw
+ReportingUnit	Oklahoma;Cimarron County	Oklahoma;Cimarron
+ReportingUnit	Oklahoma;Cleveland County	Oklahoma;Cleveland
+ReportingUnit	Oklahoma;Coal County	Oklahoma;Coal
+ReportingUnit	Oklahoma;Comanche County	Oklahoma;Comanche
+ReportingUnit	Oklahoma;Cotton County	Oklahoma;Cotton
+ReportingUnit	Oklahoma;Craig County	Oklahoma;Craig
+ReportingUnit	Oklahoma;Creek County	Oklahoma;Creek
+ReportingUnit	Oklahoma;Custer County	Oklahoma;Custer
+ReportingUnit	Oklahoma;Delaware County	Oklahoma;Delaware
+ReportingUnit	Oklahoma;Dewey County	Oklahoma;Dewey
+ReportingUnit	Oklahoma;Ellis County	Oklahoma;Ellis
+ReportingUnit	Oklahoma;Garfield County	Oklahoma;Garfield
+ReportingUnit	Oklahoma;Garvin County	Oklahoma;Garvin
+ReportingUnit	Oklahoma;Grady County	Oklahoma;Grady
+ReportingUnit	Oklahoma;Grant County	Oklahoma;Grant
+ReportingUnit	Oklahoma;Greer County	Oklahoma;Greer
+ReportingUnit	Oklahoma;Harmon County	Oklahoma;Harmon
+ReportingUnit	Oklahoma;Harper County	Oklahoma;Harper
+ReportingUnit	Oklahoma;Haskell County	Oklahoma;Haskell
+ReportingUnit	Oklahoma;Hughes County	Oklahoma;Hughes
+ReportingUnit	Oklahoma;Jackson County	Oklahoma;Jackson
+ReportingUnit	Oklahoma;Jefferson County	Oklahoma;Jefferson
+ReportingUnit	Oklahoma;Johnston County	Oklahoma;Johnston
+ReportingUnit	Oklahoma;Kay County	Oklahoma;Kay
+ReportingUnit	Oklahoma;Kingfisher County	Oklahoma;Kingfisher
+ReportingUnit	Oklahoma;Kiowa County	Oklahoma;Kiowa
+ReportingUnit	Oklahoma;Latimer County	Oklahoma;Latimer
+ReportingUnit	Oklahoma;Le Flore County	Oklahoma;Le Flore
+ReportingUnit	Oklahoma;Lincoln County	Oklahoma;Lincoln
+ReportingUnit	Oklahoma;Logan County	Oklahoma;Logan
+ReportingUnit	Oklahoma;Love County	Oklahoma;Love
+ReportingUnit	Oklahoma;Major County	Oklahoma;Major
+ReportingUnit	Oklahoma;Marshall County	Oklahoma;Marshall
+ReportingUnit	Oklahoma;Mayes County	Oklahoma;Mayes
+ReportingUnit	Oklahoma;Mcclain County	Oklahoma;Mcclain
+ReportingUnit	Oklahoma;Mccurtain County	Oklahoma;Mccurtain
+ReportingUnit	Oklahoma;Mcintosh County	Oklahoma;Mcintosh
+ReportingUnit	Oklahoma;Murray County	Oklahoma;Murray
+ReportingUnit	Oklahoma;Muskogee County	Oklahoma;Muskogee
+ReportingUnit	Oklahoma;Noble County	Oklahoma;Noble
+ReportingUnit	Oklahoma;Nowata County	Oklahoma;Nowata
+ReportingUnit	Oklahoma;Okfuskee County	Oklahoma;Okfuskee
+ReportingUnit	Oklahoma;Oklahoma County	Oklahoma;Oklahoma
+ReportingUnit	Oklahoma;Okmulgee County	Oklahoma;Okmulgee
+ReportingUnit	Oklahoma;Osage County	Oklahoma;Osage
+ReportingUnit	Oklahoma;Ottawa County	Oklahoma;Ottawa
+ReportingUnit	Oklahoma;Pawnee County	Oklahoma;Pawnee
+ReportingUnit	Oklahoma;Payne County	Oklahoma;Payne
+ReportingUnit	Oklahoma;Pittsburg County	Oklahoma;Pittsburg
+ReportingUnit	Oklahoma;Pontotoc County	Oklahoma;Pontotoc
+ReportingUnit	Oklahoma;Pottawatomie County	Oklahoma;Pottawatomie
+ReportingUnit	Oklahoma;Pushmataha County	Oklahoma;Pushmataha
+ReportingUnit	Oklahoma;Roger Mills County	Oklahoma;Roger Mills
+ReportingUnit	Oklahoma;Rogers County	Oklahoma;Rogers
+ReportingUnit	Oklahoma;Seminole County	Oklahoma;Seminole
+ReportingUnit	Oklahoma;Sequoyah County	Oklahoma;Sequoyah
+ReportingUnit	Oklahoma;Stephens County	Oklahoma;Stephens
+ReportingUnit	Oklahoma;Texas County	Oklahoma;Texas
+ReportingUnit	Oklahoma;Tillman County	Oklahoma;Tillman
+ReportingUnit	Oklahoma;Tulsa County	Oklahoma;Tulsa
+ReportingUnit	Oklahoma;Wagoner County	Oklahoma;Wagoner
+ReportingUnit	Oklahoma;Washington County	Oklahoma;Washington
+ReportingUnit	Oklahoma;Washita County	Oklahoma;Washita
+ReportingUnit	Oklahoma;Woods County	Oklahoma;Woods
+ReportingUnit	Oklahoma;Woodward County	Oklahoma;Woodward
+CandidateContest	OK Attorney General	OK;Attorney General;statewide

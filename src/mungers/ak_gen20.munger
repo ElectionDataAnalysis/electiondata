@@ -15,3 +15,6 @@ BallotMeasureContest=<column_1>
 BallotMeasureSelection=<column_4>
 CountItemType=election-day
 
+[ignore]
+Candidate=,Number of Precincts,Number of Precincts Reporting,Number of Precincts for Race,Registered Voters,Times Counted
+

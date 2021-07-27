@@ -1,4 +1,40 @@
 Name	ElectionDistrict
+MD House District 1A	Maryland;MD House District 1A
+MD House District 1B	Maryland;MD House District 1B
+MD House District 1C	Maryland;MD House District 1C
+MD House District 23A	Maryland;MD House District 23A
+MD House District 23B	Maryland;MD House District 23B
+MD House District 27A	Maryland;MD House District 27A
+MD House District 27B	Maryland;MD House District 27B
+MD House District 27C	Maryland;MD House District 27C
+MD House District 29A	Maryland;MD House District 29A
+MD House District 29B	Maryland;MD House District 29B
+MD House District 29C	Maryland;MD House District 29C
+MD House District 2A	Maryland;MD House District 2A
+MD House District 2B	Maryland;MD House District 2B
+MD House District 30A	Maryland;MD House District 30A
+MD House District 30B	Maryland;MD House District 30B
+MD House District 31A	Maryland;MD House District 31A
+MD House District 31B	Maryland;MD House District 31B
+MD House District 34A	Maryland;MD House District 34A
+MD House District 34B	Maryland;MD House District 34B
+MD House District 35A	Maryland;MD House District 35A
+MD House District 35B	Maryland;MD House District 35B
+MD House District 37A	Maryland;MD House District 37A
+MD House District 37B	Maryland;MD House District 37B
+MD House District 38A	Maryland;MD House District 38A
+MD House District 38B	Maryland;MD House District 38B
+MD House District 38C	Maryland;MD House District 38C
+MD House District 3A	Maryland;MD House District 3A
+MD House District 3B	Maryland;MD House District 3B
+MD House District 42A	Maryland;MD House District 42A
+MD House District 42B	Maryland;MD House District 42B
+MD House District 44A	Maryland;MD House District 44A
+MD House District 44B	Maryland;MD House District 44B
+MD House District 47A	Maryland;MD House District 47A
+MD House District 47B	Maryland;MD House District 47B
+MD House District 9A	Maryland;MD House District 9A
+MD House District 9B	Maryland;MD House District 9B
 MD House District 1	Maryland;MD House District 1
 MD House District 2	Maryland;MD House District 2
 MD House District 3	Maryland;MD House District 3
@@ -202,3 +238,4 @@ MD Attorney General	Maryland
 MD Lieutenant Governor	Maryland
 MD Treasurer	Maryland
 MD Secretary of State	Maryland
+MD Comptroller	Maryland

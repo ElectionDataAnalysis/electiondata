@@ -774,3 +774,11 @@ OH Attorney General (Libertarian Party)	1	OH Attorney General	Libertarian Party
 OH Lieutenant Governor (Libertarian Party)	1	OH Lieutenant Governor	Libertarian Party
 OH Treasurer of State (Libertarian Party)	1	OH Treasurer of State	Libertarian Party
 OH Secretary of State (Libertarian Party)	1	OH Secretary of State	Libertarian Party
+OH Justice of the Supreme Court	1	OH Justice of the Supreme Court	
+OH Member of the State Board of Education District 2	1	OH Member of the State Board of Education District 2	
+OH Member of the State Board of Education District 3	1	OH Member of the State Board of Education District 3	
+OH Member of the State Board of Education District 4	1	OH Member of the State Board of Education District 4	
+OH Member of the State Board of Education District 7	1	OH Member of the State Board of Education District 7	
+OH Member of the State Board of Education District 8	1	OH Member of the State Board of Education District 8	
+OH Auditor of State	1	OH Auditor of State	
+

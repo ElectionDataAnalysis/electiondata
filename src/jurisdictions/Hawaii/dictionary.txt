@@ -480,3 +480,126 @@ ReportingUnit	Hawaii;Maui County;Precinct 13-06	13-06
 ReportingUnit	Hawaii;Maui County;Precinct 13-07	13-07
 ReportingUnit	Hawaii;Maui County;Precinct 13-08	13-08
 ReportingUnit	Hawaii;Maui County;Precinct 13-09	13-09
+CandidateContest	HI Governor	HI;Governor and Lieutenant Governor;statewide
+CandidateContest	HI House District 2	HI;State Representative;District 2
+CandidateContest	HI House District 3	HI;State Representative;District 3
+CandidateContest	HI House District 7	HI;State Representative;District 7
+CandidateContest	HI Senate District 1	HI;State Senator;District 1
+CandidateContest	HI Senate District 3	HI;State Senator;District 3
+CandidateContest	US House HI District 2	HI;US Representative;District 2
+CandidateContest	US Senate HI	HI;US Senator;statewide
+CandidateContest	HI House District 17	HI;State Representative;District 17
+CandidateContest	HI House District 18	HI;State Representative;District 18
+CandidateContest	HI House District 20	HI;State Representative;District 20
+CandidateContest	HI House District 22	HI;State Representative;District 22
+CandidateContest	HI House District 27	HI;State Representative;District 27
+CandidateContest	HI House District 30	HI;State Representative;District 30
+CandidateContest	HI House District 36	HI;State Representative;District 36
+CandidateContest	HI House District 37	HI;State Representative;District 37
+CandidateContest	HI House District 40	HI;State Representative;District 40
+CandidateContest	HI House District 41	HI;State Representative;District 41
+CandidateContest	HI House District 46	HI;State Representative;District 46
+CandidateContest	HI House District 47	HI;State Representative;District 47
+CandidateContest	HI House District 50	HI;State Representative;District 50
+CandidateContest	HI House District 51	HI;State Representative;District 51
+CandidateContest	HI Senate District 12	HI;State Senator;District 12
+CandidateContest	HI Senate District 17	HI;State Senator;District 17
+CandidateContest	HI Senate District 18	HI;State Senator;District 18
+CandidateContest	HI Senate District 21	HI;State Senator;District 21
+CandidateContest	US House HI District 1	HI;US Representative;District 1
+CandidateContest	HI House District 10	HI;State Representative;District 10
+CandidateContest	HI House District 13	HI;State Representative;District 13
+CandidateContest	HI Senate District 6	HI;State Senator;District 6
+Candidate	Alan J.K. Yim	Alan J.K. Yim
+Candidate	Amy A. Perruso	Amy A. Perruso
+Candidate	Angus L.K. McKelvey	Angus L.K. McKelvey
+Candidate	Bob McDermott	Bob McDermott
+Candidate	Brewer / Ing	Brewer / Ing
+Candidate	Brian Evans	Brian Evans
+Candidate	Calvin C. Griffin	Calvin C. Griffin
+Candidate	Calvin K.Y. Say	Calvin K.Y. Say
+Candidate	Cam Cavasso	Cam Cavasso
+Candidate	Chayne M. Marten	Chayne M. Marten
+Candidate	Chris Fidelibus	Chris Fidelibus
+Candidate	Chris Lee	Chris Lee
+Candidate	Christopher L.T. Todd	Christopher L.T. Todd
+Candidate	Clarence Nishihara	Clarence Nishihara
+Candidate	Cynthia Thielen	Cynthia Thielen
+Candidate	David Tarnas	David Tarnas
+Candidate	Diamond D. Garcia	Diamond D. Garcia
+Candidate	Dru Kanuha	Dru Kanuha
+Candidate	Ed Case	Ed Case
+Candidate	Fred F. Fogel	Fred F. Fogel
+Candidate	Gene Ward	Gene Ward
+Candidate	Grace Manipol-Larson	Grace Manipol-Larson
+Candidate	Ige / Green	Ige / Green
+Candidate	Jen Kamaho'i Mather	Jen Kamaho'i Mather
+Candidate	John E. Miller	John E. Miller
+Candidate	Julia E. Allen	Julia E. Allen
+Candidate	Kaialii Kahele	Kaialii Kahele
+Candidate	Kathryn Henski-Stark	Kathryn Henski-Stark
+Candidate	Kimberly A. Arianoff	Kimberly A. Arianoff
+Candidate	Kurt Fevella	Kurt Fevella
+Candidate	Lynn Barry Mariano	Lynn Barry Mariano
+Candidate	Lynn P. Decoite	Lynn P. Decoite
+Candidate	Maile Shimabukuro	Maile Shimabukuro
+Candidate	Mar Velasco	Mar Velasco
+Candidate	Marilyn B. Lee	Marilyn B. Lee
+Candidate	Mark Jun Hashem	Mark Jun Hashem
+Candidate	Mary Smart	Mary Smart
+Candidate	Matthew S. (Matt) Lopresti	Matthew S. (Matt) Lopresti
+Candidate	Mazie K. Hirono	Mazie K. Hirono
+Candidate	Mela Kealoha-Lindsey	Mela Kealoha-Lindsey
+Candidate	Melissah (Mish) Shishido	Melissah (Mish) Shishido
+Candidate	Micah Kalama Pregitzer	Micah Kalama Pregitzer
+Candidate	Michael L. Last	Michael L. Last
+Candidate	Michelle Kidani	Michelle Kidani
+Candidate	Michelle Rose Tippens	Michelle Rose Tippens
+Candidate	Nick Nikhilananda	Nick Nikhilananda
+Candidate	Noe Galea'i	Noe Galea'i
+Candidate	Ola Souza	Ola Souza
+Candidate	Richard H.K. Onishi	Richard H.K. Onishi
+Candidate	Richard Lee Fale	Richard Lee Fale
+Candidate	Rida Cabanilla Arakawa	Rida Cabanilla Arakawa
+Candidate	Roger Clemente	Roger Clemente
+Candidate	Romy M. Cachola	Romy M. Cachola
+Candidate	Ron Curtis	Ron Curtis
+Candidate	Rose Martinez	Rose Martinez
+Candidate	Roz Baker	Roz Baker
+Candidate	Ryan I. Yamane	Ryan I. Yamane
+Candidate	Sean Quinlan	Sean Quinlan
+Candidate	Sharon Y. Moriwaki	Sharon Y. Moriwaki
+Candidate	Takashi Ohno	Takashi Ohno
+Candidate	Teruya / Robotti	Teruya / Robotti
+Candidate	Tom Belekanich	Tom Belekanich
+Candidate	Tom Brower	Tom Brower
+Candidate	Tony Solis	Tony Solis
+Candidate	Tulsi Gabbard	Tulsi Gabbard
+Candidate	Tupola / Kerns	Tupola / Kerns
+Candidate	Val Okimoto	Val Okimoto
+Candidate	Zachary B. Burd	Zachary B. Burd
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	Libertarian Party	libertarian
+Party	Nonpartisan Party	nonpartisan
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	Hawaii;Hawaii County	Hawaii;Hawaii
+ReportingUnit	Hawaii;Honolulu County	Hawaii;Honolulu
+ReportingUnit	Hawaii;Kauai County	Hawaii;Kauai
+ReportingUnit	Hawaii;Maui County	Hawaii;Maui
+CandidateContest	HI Attorney General	HI;Attorney General;statewide

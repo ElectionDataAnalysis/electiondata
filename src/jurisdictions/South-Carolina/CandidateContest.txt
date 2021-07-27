@@ -181,7 +181,7 @@ SC Governor	1	SC Governor
 US Senate SC	1	US Senate SC	
 SC Attorney General	1	SC Attorney General	
 SC Lieutenant Governor	1	SC Lieutenant Governor	
-SC Treasurer	1	SC Treasurer	
+SC State Treasurer	1	SC State Treasurer	
 SC Secretary of State	1	SC Secretary of State	
 SC Adjutant General	1	SC Adjutant General	
 SC Commissioner of Agriculture	1	SC Commissioner of Agriculture	
@@ -369,7 +369,7 @@ SC Governor (Democratic Party)	1	SC Governor	Democratic Party
 US Senate SC (Democratic Party)	1	US Senate SC	Democratic Party
 SC Attorney General (Democratic Party)	1	SC Attorney General	Democratic Party
 SC Lieutenant Governor (Democratic Party)	1	SC Lieutenant Governor	Democratic Party
-SC Treasurer (Democratic Party)	1	SC Treasurer	Democratic Party
+SC State Treasurer (Democratic Party)	1	SC State Treasurer	Democratic Party
 SC Secretary of State (Democratic Party)	1	SC Secretary of State	Democratic Party
 SC Adjutant General (Democratic Party)	1	SC Adjutant General	Democratic Party
 SC Commissioner of Agriculture (Democratic Party)	1	SC Commissioner of Agriculture	Democratic Party
@@ -557,7 +557,7 @@ SC Governor (Republican Party)	1	SC Governor	Republican Party
 US Senate SC (Republican Party)	1	US Senate SC	Republican Party
 SC Attorney General (Republican Party)	1	SC Attorney General	Republican Party
 SC Lieutenant Governor (Republican Party)	1	SC Lieutenant Governor	Republican Party
-SC Treasurer (Republican Party)	1	SC Treasurer	Republican Party
+SC State Treasurer (Republican Party)	1	SC State Treasurer	Republican Party
 SC Secretary of State (Republican Party)	1	SC Secretary of State	Republican Party
 SC Adjutant General (Republican Party)	1	SC Adjutant General	Republican Party
 SC Commissioner of Agriculture (Republican Party)	1	SC Commissioner of Agriculture	Republican Party
@@ -745,7 +745,7 @@ SC Governor (Green Party)	1	SC Governor	Green Party
 US Senate SC (Green Party)	1	US Senate SC	Green Party
 SC Attorney General (Green Party)	1	SC Attorney General	Green Party
 SC Lieutenant Governor (Green Party)	1	SC Lieutenant Governor	Green Party
-SC Treasurer (Green Party)	1	SC Treasurer	Green Party
+SC State Treasurer (Green Party)	1	SC State Treasurer	Green Party
 SC Secretary of State (Green Party)	1	SC Secretary of State	Green Party
 SC Adjutant General (Green Party)	1	SC Adjutant General	Green Party
 SC Commissioner of Agriculture (Green Party)	1	SC Commissioner of Agriculture	Green Party
@@ -933,7 +933,7 @@ SC Governor (Libertarian Party)	1	SC Governor	Libertarian Party
 US Senate SC (Libertarian Party)	1	US Senate SC	Libertarian Party
 SC Attorney General (Libertarian Party)	1	SC Attorney General	Libertarian Party
 SC Lieutenant Governor (Libertarian Party)	1	SC Lieutenant Governor	Libertarian Party
-SC Treasurer (Libertarian Party)	1	SC Treasurer	Libertarian Party
+SC State Treasurer (Libertarian Party)	1	SC State Treasurer	Libertarian Party
 SC Secretary of State (Libertarian Party)	1	SC Secretary of State	Libertarian Party
 SC Adjutant General (Libertarian Party)	1	SC Adjutant General	Libertarian Party
 SC Commissioner of Agriculture (Libertarian Party)	1	SC Commissioner of Agriculture	Libertarian Party
@@ -1121,7 +1121,7 @@ SC Governor (United Citizens Party)	1	SC Governor	United Citizens Party
 US Senate SC (United Citizens Party)	1	US Senate SC	United Citizens Party
 SC Attorney General (United Citizens Party)	1	SC Attorney General	United Citizens Party
 SC Lieutenant Governor (United Citizens Party)	1	SC Lieutenant Governor	United Citizens Party
-SC Treasurer (United Citizens Party)	1	SC Treasurer	United Citizens Party
+SC State Treasurer (United Citizens Party)	1	SC State Treasurer	United Citizens Party
 SC Secretary of State (United Citizens Party)	1	SC Secretary of State	United Citizens Party
 SC Adjutant General (United Citizens Party)	1	SC Adjutant General	United Citizens Party
 SC Commissioner of Agriculture (United Citizens Party)	1	SC Commissioner of Agriculture	United Citizens Party
@@ -1309,7 +1309,7 @@ SC Governor (Independence Party)	1	SC Governor	Independence Party
 US Senate SC (Independence Party)	1	US Senate SC	Independence Party
 SC Attorney General (Independence Party)	1	SC Attorney General	Independence Party
 SC Lieutenant Governor (Independence Party)	1	SC Lieutenant Governor	Independence Party
-SC Treasurer (Independence Party)	1	SC Treasurer	Independence Party
+SC State Treasurer (Independence Party)	1	SC State Treasurer	Independence Party
 SC Secretary of State (Independence Party)	1	SC Secretary of State	Independence Party
 SC Adjutant General (Independence Party)	1	SC Adjutant General	Independence Party
 SC Commissioner of Agriculture (Independence Party)	1	SC Commissioner of Agriculture	Independence Party
@@ -1497,7 +1497,7 @@ SC Governor (Constitution Party)	1	SC Governor	Constitution Party
 US Senate SC (Constitution Party)	1	US Senate SC	Constitution Party
 SC Attorney General (Constitution Party)	1	SC Attorney General	Constitution Party
 SC Lieutenant Governor (Constitution Party)	1	SC Lieutenant Governor	Constitution Party
-SC Treasurer (Constitution Party)	1	SC Treasurer	Constitution Party
+SC State Treasurer (Constitution Party)	1	SC State Treasurer	Constitution Party
 SC Secretary of State (Constitution Party)	1	SC Secretary of State	Constitution Party
 SC Adjutant General (Constitution Party)	1	SC Adjutant General	Constitution Party
 SC Commissioner of Agriculture (Constitution Party)	1	SC Commissioner of Agriculture	Constitution Party
@@ -1685,7 +1685,7 @@ SC Governor (Alliance Party)	1	SC Governor	Alliance Party
 US Senate SC (Alliance Party)	1	US Senate SC	Alliance Party
 SC Attorney General (Alliance Party)	1	SC Attorney General	Alliance Party
 SC Lieutenant Governor (Alliance Party)	1	SC Lieutenant Governor	Alliance Party
-SC Treasurer (Alliance Party)	1	SC Treasurer	Alliance Party
+SC State Treasurer (Alliance Party)	1	SC State Treasurer	Alliance Party
 SC Secretary of State (Alliance Party)	1	SC Secretary of State	Alliance Party
 SC Adjutant General (Alliance Party)	1	SC Adjutant General	Alliance Party
 SC Commissioner of Agriculture (Alliance Party)	1	SC Commissioner of Agriculture	Alliance Party
@@ -1873,7 +1873,7 @@ SC Governor (Labor Party)	1	SC Governor	Labor Party
 US Senate SC (Labor Party)	1	US Senate SC	Labor Party
 SC Attorney General (Labor Party)	1	SC Attorney General	Labor Party
 SC Lieutenant Governor (Labor Party)	1	SC Lieutenant Governor	Labor Party
-SC Treasurer (Labor Party)	1	SC Treasurer	Labor Party
+SC State Treasurer (Labor Party)	1	SC State Treasurer	Labor Party
 SC Secretary of State (Labor Party)	1	SC Secretary of State	Labor Party
 SC Adjutant General (Labor Party)	1	SC Adjutant General	Labor Party
 SC Commissioner of Agriculture (Labor Party)	1	SC Commissioner of Agriculture	Labor Party
@@ -2061,7 +2061,7 @@ SC Governor (Working Families Party)	1	SC Governor	Working Families Party
 US Senate SC (Working Families Party)	1	US Senate SC	Working Families Party
 SC Attorney General (Working Families Party)	1	SC Attorney General	Working Families Party
 SC Lieutenant Governor (Working Families Party)	1	SC Lieutenant Governor	Working Families Party
-SC Treasurer (Working Families Party)	1	SC Treasurer	Working Families Party
+SC State Treasurer (Working Families Party)	1	SC State Treasurer	Working Families Party
 SC Secretary of State (Working Families Party)	1	SC Secretary of State	Working Families Party
 SC Adjutant General (Working Families Party)	1	SC Adjutant General	Working Families Party
 SC Commissioner of Agriculture (Working Families Party)	1	SC Commissioner of Agriculture	Working Families Party

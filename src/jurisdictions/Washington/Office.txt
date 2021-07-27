@@ -163,3 +163,7 @@ WA Attorney General	Washington
 WA Lieutenant Governor	Washington
 WA Treasurer	Washington
 WA Secretary of State	Washington
+WA Supreme Court Justice Position 2	Washington
+WA Supreme Court Justice Position 8	Washington
+WA Supreme Court Justice Position 9	Washington
+

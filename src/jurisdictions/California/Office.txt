@@ -1463,5 +1463,9 @@ CA Controller None Party	California
 CA Secretary of State None Party	California
 CA Insurance Commissioner None Party	California
 CA Superintendent of Public Instruction None Party	California
+CA Board of Equalization Member District 2	California;CA Board of Equalization Member District 2
+CA Board of Equalization Member District 1	California;CA Board of Equalization Member District 1
+CA Board of Equalization Member District 4	California;CA Board of Equalization Member District 4
+CA Board of Equalization Member District 3	California;CA Board of Equalization Member District 3
 
 

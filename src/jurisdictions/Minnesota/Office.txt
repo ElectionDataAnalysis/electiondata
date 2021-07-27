@@ -484,3 +484,9 @@ MN House District 132A	Minnesota;MN House District 132A
 MN House District 132B	Minnesota;MN House District 132B
 MN House District 134A	Minnesota;MN House District 134A
 MN House District 134B	Minnesota;MN House District 134B
+MN Associate Justice - Supreme Court 1	Minnesota
+MN Associate Justice - Supreme Court 2	Minnesota
+MN Associate Justice - Supreme Court 5	Minnesota
+MN Chief Justice - Supreme Court	Minnesota
+MN Judge - Court of Appeals 2	Minnesota
+MN Judge - Court of Appeals 4	Minnesota

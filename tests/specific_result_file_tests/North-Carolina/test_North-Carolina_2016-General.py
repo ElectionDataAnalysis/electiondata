@@ -28,9 +28,7 @@ total_shd_votes = 24646  # total votes in that State House contest
 ssd = 15  # state senate district
 total_ssd_votes = 117985  # total votes in that State Senate contest
 single_vote_type = "early"  # pick any one with corresponding data in your file, but use internal db name
-pres_votes_vote_type = (
-    2929797
-)  # total votes for US President of that vote type
+pres_votes_vote_type = 2929797  # total votes for US President of that vote type
 county_or_other = "county"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
 single_county = "North Carolina;Bertie County"  # pick any one from your file, but use internal db name

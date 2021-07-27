@@ -74,3 +74,9 @@ NV Lieutenant Governor	Nevada
 NV State Treasurer	Nevada
 NV Secretary of State	Nevada
 NV State Controller	Nevada
+NV Supreme Court Justice Seat C	Nevada
+NV Supreme Court Justice Seat F	Nevada
+NV Supreme Court Justice Seat G	Nevada
+NV University Board of Regents District 1	Nevada;NV University Board of Regents District 1
+NV University Board of Regents District 12	Nevada;NV University Board of Regents District 12
+

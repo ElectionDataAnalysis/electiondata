@@ -2103,10 +2103,10 @@ Lee Shelton
 Jeral Hall
 Harold Pickron
 Gene Bailey
-NO
+No
 Times Blank Voted
 Times Over Voted
-YES
+Yes
 Grant Maloy
 Write-in 20
 Bob Dallari
@@ -2348,13 +2348,12 @@ Andrew Yang
 Bill Weld
 Joe Walsh
 David PÃÂÃÂ©rez
-"Eugene Skip"" Carney"
+Eugene Skip' Carney
 Jeanette M. NuÃÂÃÂ±ez
 Jonathan 'J.P.' Parker
 Kevin J. Foley
 Luis CalderÃÂÃÂ³n
 RenÃÂÃÂ© Garcia
-Steve 'Kahuna' Cates
 Greg Merk
 John Mills
 Kat Cammack
@@ -2380,7 +2379,7 @@ Leo Valentin
 Yukong Zhao
 Scott Caine
 Jose Castillo
-"William P. ""Bill"" Olson"
+William P. 'Bill' Olson
 Sergio E. Ortiz
 Christopher Wright
 Vennia Francois
@@ -2545,7 +2544,7 @@ James Davis
 Danny Kushmer
 Michael Owen
 Dawn Douglas
-"Michael R. ""Mike"" Henkel"
+Michael R. 'Mike' Henkel
 Keisha Bell
 Michelle Grimsley
 Mark Oliver
@@ -2601,7 +2600,6 @@ Ulysses Buck Harvard
 Georges Bossous
 Roy Hardemon
 Bruno A. Barreiro
-"Rosa Maria ""Rosy"" Palomino"
 Jean-Pierre Bado
 Sue Susi Loyzelle
 Gabriel Garcia
@@ -2609,7 +2607,7 @@ Daniel A. Perez
 Kevin Chambliss
 Harold Ford
 Jessica Laguerre Hylton
-"James ""Jim"" Vernon Mooney"
+James 'Jim' Vernon Mooney
 Rhonda Rebman Lopez
 Alexandria Suarez
 Tiffany Baker
@@ -2682,9 +2680,6 @@ Sam Bookhardt
 Oscar A. Hotusing
 Victoria L. Griffin
 Louis Lou Larsen
-William P. 'Bill' Olson
-Michael R. 'Mike' Henkel
-James 'Jim' Vernon Mooney
 Lateresa L.A. Jones
 Howard Knepper
 Michael S. Levinson
@@ -2730,8 +2725,6 @@ Jeff Mann
 Valion Joyce
 Mark Gotz
 Delores Hogan Johnson
-Yes
-No
 Andrew D. Basiago
 Richard Duncan
 Cherunda Fox
@@ -2944,7 +2937,6 @@ Anthony 'Tony' Eldon
 Al Gore
 Barack Obama
 George W. Bush
-Hillary Clinton
 John Kerry
 John Mccain
 Mitt Romney
@@ -2952,3 +2944,6 @@ Other
 Ralph Nader
 John MCCain
 John McCain
+Manny Diaz
+Ron DeSantis
+Ronald W. Williams

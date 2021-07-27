@@ -1,11 +1,11 @@
 cdf_element	cdf_internal_name	raw_identifier_value
 Candidate	Adewunmi 'Ade' Kuforiji	Adewunmi 'Ade' Kuforiji
 Candidate	Aja Ajavon	Aja Ajavon
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Albert 'Al' Mills	Albert 'Al' Mills
 Candidate	Amy Solomon	Amy Solomon
 Candidate	Arisa White	Arisa White
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Bernie Sanders	Bernie Sanders
 Candidate	Bethany Hall-Long	Bethany Hall-Long
 Candidate	Billy Lane Jr.	Billy Lane Jr.
@@ -33,7 +33,7 @@ Candidate	Dawayne Sims	Dawayne Sims
 Candidate	Denise Bowers	Denise Bowers
 Candidate	Devon Hynson	Devon Hynson
 Candidate	Donald Farrell	Donald Farrell
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Donald J. Trump And Michael R. Pence
 Candidate	Donyale Hall	Donyale Hall
@@ -44,10 +44,10 @@ Candidate	Eric A. Morrison	Eric A. Morrison
 Candidate	Eric Levin	Eric Levin
 Candidate	Evon L. Murray	Evon L. Murray
 Candidate	Gabriel Olawale Adelagunja	Gabriel Olawale Adelagunja
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Gerald L. Brady	Gerald L. Brady
 Candidate	Hanifa Shabazz	Hanifa Shabazz
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Howie Hawkins	Howie Hawkins And Angela Nicole Walker
 Candidate	Ian 'Jahiti' Smith	Ian 'Jahiti' Smith
 Candidate	Irwin 'I.G.' Burton Iii	Irwin 'I.G.' Burton Iii
@@ -59,8 +59,8 @@ Candidate	John C. Carney Jr.	John C. Carney Jr.
 Candidate	John J. Machurek	John J. Machurek
 Candidate	John J. Viola	John J. Viola
 Candidate	John Johnson Jr.	John Johnson Jr.
-Candidate	John Kerry	JOHN KERRY
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John Kerry	John Kerry
+Candidate	John McCain	John Mccain
 Candidate	Joseph Mccole	Joseph Mccole
 Candidate	Joseph R. Biden	Joseph R. Biden
 Candidate	Joseph R. Biden	Joseph R. Biden Jr. And Kamala D. Harris
@@ -95,14 +95,14 @@ Candidate	Matthew Meyer	Matthew Meyer
 Candidate	Matthew W. Powell	Matthew W. Powell
 Candidate	Michael S. Purzycki	Michael S. Purzycki
 Candidate	Michelle Harlee	Michelle Harlee
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Monique Johns	Monique Johns
 Candidate	Morgan Russum	Morgan Russum
 Candidate	Nadine M. Frost	Nadine M. Frost
 Candidate	Nathan Field	Nathan Field
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	R.E. Scott Walker	R.E. Scott Walker
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Ray Seigfried	Ray Seigfried
 Candidate	Robert D. Wilson	Robert D. Wilson
 Candidate	Robert Oliver	Robert Oliver
@@ -125,6 +125,7 @@ Candidate	William Bell	William Bell
 Candidate	Yolanda Mccoy	Yolanda Mccoy
 Candidate	Yvette Santiago	Yvette Santiago
 Candidate	Zanthia Oliver	Zanthia Oliver
+CandidateContest	DE Attorney General	DE;Attorney General;statewide
 CandidateContest	DE Attorney General	DE Attorney General
 CandidateContest	DE Attorney General (Democratic Party)	DE Attorney General (Democratic)
 CandidateContest	DE Attorney General (Green Party)	DE Attorney General (Green Party)
@@ -1011,3 +1012,181 @@ ReportingUnit	Delaware;Sussex County;41-06	Election District 41-06
 ReportingUnit	Delaware;Sussex County;41-07	Election District 41-07
 ReportingUnit	Delaware;Sussex County;41-08	Election District 41-08
 ReportingUnit	Delaware;Sussex County;41-16	Election District 41-16
+CandidateContest	DE Attorney General	DE;Attorney General
+CandidateContest	DE Auditor of Accounts	DE;Auditor of Accounts;statewide
+CandidateContest	DE House District 11	DE;State Representative;District 11
+CandidateContest	DE House District 28	DE;State Representative;District 28
+CandidateContest	DE House District 29	DE;State Representative;District 29
+CandidateContest	DE House District 30	DE;State Representative;District 30
+CandidateContest	DE House District 31	DE;State Representative;District 31
+CandidateContest	DE House District 32	DE;State Representative;District 32
+CandidateContest	DE House District 33	DE;State Representative;District 33
+CandidateContest	DE House District 34	DE;State Representative;District 34
+CandidateContest	DE Senate District 16	DE;State Senator;District 16
+CandidateContest	DE Senate District 17	DE;State Senator;District 17
+CandidateContest	DE Senate District 18	DE;State Senator;District 18
+CandidateContest	DE State Treasurer	DE;State Treasurer;statewide
+CandidateContest	US House DE District 1	DE;US Representative;District 0
+CandidateContest	US Senate DE	DE;US Senator;statewide
+CandidateContest	DE House District 1	DE;State Representative;District 1
+CandidateContest	DE House District 10	DE;State Representative;District 10
+CandidateContest	DE House District 12	DE;State Representative;District 12
+CandidateContest	DE House District 13	DE;State Representative;District 13
+CandidateContest	DE House District 15	DE;State Representative;District 15
+CandidateContest	DE House District 16	DE;State Representative;District 16
+CandidateContest	DE House District 17	DE;State Representative;District 17
+CandidateContest	DE House District 18	DE;State Representative;District 18
+CandidateContest	DE House District 19	DE;State Representative;District 19
+CandidateContest	DE House District 2	DE;State Representative;District 2
+CandidateContest	DE House District 21	DE;State Representative;District 21
+CandidateContest	DE House District 22	DE;State Representative;District 22
+CandidateContest	DE House District 23	DE;State Representative;District 23
+CandidateContest	DE House District 24	DE;State Representative;District 24
+CandidateContest	DE House District 25	DE;State Representative;District 25
+CandidateContest	DE House District 26	DE;State Representative;District 26
+CandidateContest	DE House District 27	DE;State Representative;District 27
+CandidateContest	DE House District 3	DE;State Representative;District 3
+CandidateContest	DE House District 4	DE;State Representative;District 4
+CandidateContest	DE House District 5	DE;State Representative;District 5
+CandidateContest	DE House District 6	DE;State Representative;District 6
+CandidateContest	DE House District 7	DE;State Representative;District 7
+CandidateContest	DE House District 8	DE;State Representative;District 8
+CandidateContest	DE House District 9	DE;State Representative;District 9
+CandidateContest	DE Senate District 10	DE;State Senator;District 10
+CandidateContest	DE Senate District 11	DE;State Senator;District 11
+CandidateContest	DE Senate District 2	DE;State Senator;District 2
+CandidateContest	DE Senate District 3	DE;State Senator;District 3
+CandidateContest	DE Senate District 4	DE;State Senator;District 4
+CandidateContest	DE House District 14	DE;State Representative;District 14
+CandidateContest	DE House District 20	DE;State Representative;District 20
+CandidateContest	DE House District 35	DE;State Representative;District 35
+CandidateContest	DE House District 36	DE;State Representative;District 36
+CandidateContest	DE House District 37	DE;State Representative;District 37
+CandidateContest	DE House District 38	DE;State Representative;District 38
+CandidateContest	DE House District 39	DE;State Representative;District 39
+CandidateContest	DE House District 40	DE;State Representative;District 40
+CandidateContest	DE House District 41	DE;State Representative;District 41
+CandidateContest	DE Senate District 21	DE;State Senator;District 21
+CandidateContest	DE Senate District 6	DE;State Senator;District 6
+Candidate	Adewunmi Kuforiji	Adewunmi Kuforiji
+Candidate	Albert John Ament	Albert John Ament
+Candidate	Amy Merlino	Amy Merlino
+Candidate	Andria Bennett	Andria Bennett
+Candidate	Bernard V Pepukayi Sr	Bernard V Pepukayi Sr
+Candidate	Bryan K Rash	Bryan K Rash
+Candidate	Bryan Townsend	Bryan Townsend
+Candidate	Bryan W Shupe	Bryan W Shupe
+Candidate	Bryant L Richardson	Bryant L Richardson
+Candidate	Charles Groce	Charles Groce
+Candidate	Charles S Postles Jr	Charles S Postles Jr
+Candidate	Charlotte Middleton	Charlotte Middleton
+Candidate	Cheryl Precourt	Cheryl Precourt
+Candidate	Christine Metzing	Christine Metzing
+Candidate	Cody Mcnutt	Cody Mcnutt
+Candidate	Colleen Davis	Colleen Davis
+Candidate	Daniel B Short	Daniel B Short
+Candidate	Daniel Kapitanic	Daniel Kapitanic
+Candidate	Daniel Zitofsky	Daniel Zitofsky
+Candidate	Darius Brown	Darius Brown
+Candidate	David B Baker	David B Baker
+Candidate	David B Chandler	David B Chandler
+Candidate	David L Wilson	David L Wilson
+Candidate	David Levi Anderson	David Levi Anderson
+Candidate	David S Bentz	David S Bentz
+Candidate	Deborah D Hudson	Deborah D Hudson
+Candidate	Debra Heffernan	Debra Heffernan
+Candidate	Demitri G Theodoropoulos	Demitri G Theodoropoulos
+Candidate	Donald M Allan Jr	Donald M Allan Jr
+Candidate	Earl G Jaques Jr	Earl G Jaques Jr
+Candidate	Edward Osienski	Edward Osienski
+Candidate	Eric Braunstein	Eric Braunstein
+Candidate	Erin L Wienner	Erin L Wienner
+Candidate	Ernesto B Lopez	Ernesto B Lopez
+Candidate	Franklin D Cooke Jr	Franklin D Cooke Jr
+Candidate	Gerald L Brady	Gerald L Brady
+Candidate	Gregory F Lavelle	Gregory F Lavelle
+Candidate	Guillermina Gonzalez	Guillermina Gonzalez
+Candidate	Harry R Smouse Jr	Harry R Smouse Jr
+Candidate	James A Purcell	James A Purcell
+Candidate	James L Demartino	James L Demartino
+Candidate	James R Startzman Jr	James R Startzman Jr
+Candidate	James Spadola	James Spadola
+Candidate	James Todd Webb	James Todd Webb
+Candidate	Jeffrey L Olmstead	Jeffrey L Olmstead
+Candidate	Jeffrey N Spiegelman	Jeffrey N Spiegelman
+Candidate	Jesse R Vanderwende	Jesse R Vanderwende
+Candidate	John A Kowalko Jr	John A Kowalko Jr
+Candidate	John D Bucchioni	John D Bucchioni
+Candidate	John L Mitchell Jr	John L Mitchell Jr
+Candidate	John Viola	John Viola
+Candidate	Justin Cruice	Justin Cruice
+Candidate	Justin King	Justin King
+Candidate	Kathleen Jennings	Kathleen Jennings
+Candidate	Kathleen K Mcguiness	Kathleen K Mcguiness
+Candidate	Kendra Johnson	Kendra Johnson
+Candidate	Kenneth A Simpler	Kenneth A Simpler
+Candidate	Kevin S Hensley	Kevin S Hensley
+Candidate	Kimberly Williams	Kimberly Williams
+Candidate	Krista Griffith	Krista Griffith
+Candidate	Laura Sturgeon	Laura Sturgeon
+Candidate	Louisa Phillips	Louisa Phillips
+Candidate	Lyndon D Yearick	Lyndon D Yearick
+Candidate	Meghan M Kelly	Meghan M Kelly
+Candidate	Melissa Minor-Brown	Melissa Minor-Brown
+Candidate	Michael F Smith	Michael F Smith
+Candidate	Michael Ramone	Michael Ramone
+Candidate	Nadine M Frost	Nadine M Frost
+Candidate	Nnamdi O Chukwuocha	Nnamdi O Chukwuocha
+Candidate	Paul A Thornburg	Paul A Thornburg
+Candidate	Paul S Baumbach	Paul S Baumbach
+Candidate	Peter C Schwartzkopf	Peter C Schwartzkopf
+Candidate	Raymond Seigfried	Raymond Seigfried
+Candidate	Richard G Collins	Richard G Collins
+Candidate	Robert B Arlett	Robert B Arlett
+Candidate	Robert C Wheatley	Robert C Wheatley
+Candidate	Robin R Hayes	Robin R Hayes
+Candidate	Ronald E Gray	Ronald E Gray
+Candidate	Ruth Briggs King	Ruth Briggs King
+Candidate	S Bradley Connor	S Bradley Connor
+Candidate	S Elizabeth Lockman	S Elizabeth Lockman
+Candidate	S Quinton Johnson	S Quinton Johnson
+Candidate	Scott Gesty	Scott Gesty
+Candidate	Scott Walker	Scott Walker
+Candidate	Sean M Lynn	Sean M Lynn
+Candidate	Sherry Dorsey Walker	Sherry Dorsey Walker
+Candidate	Stephanie Barry	Stephanie Barry
+Candidate	Stephanie L Hansen	Stephanie L Hansen
+Candidate	Stephanie T Bolden	Stephanie T Bolden
+Candidate	Stephen T Smyk	Stephen T Smyk
+Candidate	Thomas R Carper	Thomas R Carper
+Candidate	Timothy D Dukes	Timothy D Dukes
+Candidate	Valerie Longhurst	Valerie Longhurst
+Candidate	W Charles Paradee Iii	W Charles Paradee Iii
+Candidate	W Shannon Morris	W Shannon Morris
+Candidate	William Bush	William Bush
+Candidate	William Hinds	William Hinds
+Candidate	William J Carson Jr	William J Carson Jr
+Candidate	William Mcvay	William Mcvay
+Candidate	William W Dilks Sr	William W Dilks Sr
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	Delaware;Kent County	Delaware;Kent
+ReportingUnit	Delaware;New Castle County	Delaware;New Castle
+ReportingUnit	Delaware;Sussex County	Delaware;Sussex

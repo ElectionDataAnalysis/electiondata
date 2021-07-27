@@ -11,7 +11,9 @@ import pytest
 
 # some lists of dictionaries need to be sorted by a particular key
 def dict_sort(
-        list_of_dicts: List[Dict[str, Any]], sort_key: Optional[str] == None, drop_key: bool = True
+    list_of_dicts: List[Dict[str, Any]],
+    sort_key: Optional[str] == None,
+    drop_key: bool = True,
 ) -> List[Dict[str, Any]]:
     """If <key> is given, sort items by value of that key in each dictionary.
     If <key> is not given, return <list_of_dicts>"""
@@ -57,22 +59,32 @@ def test_election_data_exists(runtime):
         ("2018 General", "North Carolina"),
         # ("2020 Primary", "Alaska"),
     ]
-    has_data = [(e,j) for (e,j) in ej_pairs if data_exists(e,j,p_path=runtime, dbname=pytest.test_db)]
+    has_data = [
+        (e, j)
+        for (e, j) in ej_pairs
+        if data_exists(e, j, p_path=runtime, dbname=pytest.test_db)
+    ]
     assert set(has_data) == set(ej_pairs)
 
 
 """def test_census_data_exists(runtime):
     assert external_data_exists("2018 General", "Georgia", p_path=runtime, dbname=pytest.test_db)
 """
+
+
 def test_contest_updatelabels_display(runtime):
     analyzer = Analyzer(param_file=runtime, dbname=pytest.test_db)
-    new = dict_sort(analyzer.display_options(
+    new = dict_sort(
+        analyzer.display_options(
             "contest",
             verbose=True,
             filters=["2018 General", "Georgia", "State Senate"],
-        ), sort_key="order_by"
+        ),
+        sort_key="order_by",
     )
-    correct = dict_sort(results.ga_2018_congressional_contests_state_senate, sort_key="order_by")
+    correct = dict_sort(
+        results.ga_2018_congressional_contests_state_senate, sort_key="order_by"
+    )
     assert new == correct
 
 
@@ -99,10 +111,13 @@ def test_jurisdiction_display_filtered(runtime):
 # ### Test bar chart flow ###
 def test_contest_type_display(runtime):
     analyzer = Analyzer(param_file=runtime, dbname=pytest.test_db)
-    new = dict_sort(analyzer.display_options(
+    new = dict_sort(
+        analyzer.display_options(
             "contest_type", verbose=True, filters=["2018 General", "Georgia"]
-        ),sort_key="order_by")
-    expected = dict_sort(results.ga_2018_contest_types,sort_key="order_by")
+        ),
+        sort_key="order_by",
+    )
+    expected = dict_sort(results.ga_2018_contest_types, sort_key="order_by")
     assert new == expected
 
 
@@ -111,7 +126,7 @@ def test_contest_display(runtime):
     contests = analyzer.display_options(
         "contest",
         verbose=True,
-        filters=["2018 General","Georgia","Congressional"],
+        filters=["2018 General", "Georgia", "Congressional"],
     )
     new = dict_sort(contests, sort_key="order_by")
     expected = dict_sort(results.ga_2018_congressional_contests, sort_key="order_by")
@@ -144,6 +159,7 @@ def test_bar_congressional(runtime):
     )
 """
 
+
 def test_bar_all_state(runtime):
     analyzer = Analyzer(param_file=runtime, dbname=pytest.test_db)
     assert (
@@ -173,22 +189,28 @@ def test_election_display(runtime):
 
 def test_category_display(runtime):
     analyzer = Analyzer(param_file=runtime, dbname=pytest.test_db)
-    new = dict_sort(analyzer.display_options(
+    new = dict_sort(
+        analyzer.display_options(
             "category",
             verbose=True,
             filters=["North Carolina", "county", "2018 General"],
-        ), sort_key="order_by")
+        ),
+        sort_key="order_by",
+    )
     expected = dict_sort(results.nc_2018_category, sort_key="order_by")
     assert new == expected
 
 
 def test_count_display(runtime):
     analyzer = Analyzer(param_file=runtime, dbname=pytest.test_db)
-    new = dict_sort(analyzer.display_options(
+    new = dict_sort(
+        analyzer.display_options(
             "count",
             verbose=True,
             filters=["Georgia", "county", "2018 General", "Candidate total"],
-        ), sort_key="order_by")
+        ),
+        sort_key="order_by",
+    )
     expected = dict_sort(results.ga_2018_count, sort_key="order_by")
     assert new == expected
 
@@ -315,9 +337,9 @@ def test_candidate_search_display(runtime):
             verbose=True,
             filters=["Georgia", "county", "2018 General", "Congressional"],
         ),
-        sort_key="order_by"
+        sort_key="order_by",
     )
-    expected = dict_sort(results.ga_2018_candidate_search_display,sort_key="order_by")
+    expected = dict_sort(results.ga_2018_candidate_search_display, sort_key="order_by")
     assert new == expected
 
 
@@ -327,13 +349,12 @@ def test_count_contest_display(runtime):
         analyzer.display_options(
             "count",
             verbose=True,
-            filters=["Georgia","county","2018 General","Contest total"],
+            filters=["Georgia", "county", "2018 General", "Contest total"],
         ),
-        sort_key="order_by"
+        sort_key="order_by",
     )
-    expected = dict_sort(results.ga_2018_count_contest,sort_key="order_by")
+    expected = dict_sort(results.ga_2018_count_contest, sort_key="order_by")
     assert new == expected
-
 
 
 """def test_census_count_display(runtime):

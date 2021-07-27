@@ -13,7 +13,7 @@ Candidate	Adam Neylon	Adam Neylon
 Candidate	Adam Nicholas Paul (write-in)	Adam Nicholas Paul (write-in)
 Candidate	Adam Y. Gerol	Adam Y. Gerol
 Candidate	Aisha Moe	Aisha Moe
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alan R. DeYoung	Alan R. DeYoung
 Candidate	Albert Rohland	Albert Rohland
 Candidate	Alberta Darling	Alberta Darling
@@ -35,8 +35,6 @@ Candidate	Andrew McKinney	Andrew McKinney
 Candidate	Andrew P. Naze	Andrew P. Naze
 Candidate	Andrew Yang	Andrew Yang
 Candidate	Andrew Zuelke	Andrew Zuelke
-Candidate	AndrÃ© Jacque	AndrÃ© Jacque
-Candidate	André Jacque	AndrÃÂÃÂ© Jacque
 Candidate	André Jacque	André Jacque
 Candidate	Andy Craig	Andy Craig
 Candidate	Angel C. Sanchez	Angel C. Sanchez
@@ -46,7 +44,7 @@ Candidate	Arnie Enz	Arnie Enz
 Candidate	Arnie Enz	Arnie Enz No Candidate
 Candidate	Arthur L. Shrader	Arthur L. Shrader
 Candidate	August Schutz	August Schutz
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara Dittrich	Barbara Dittrich
 Candidate	Barret Galauner (write-in)	Barret Galauner (write-in)
 Candidate	Barry Hammarback	Barry Hammarback
@@ -154,7 +152,7 @@ Candidate	Don Blankenship	Blankenship/Moore
 Candidate	Don Blankenship	Don Blankenship
 Candidate	Don Blankenship	Don Blankenship / William Mohr
 Candidate	Don Vruwink	Don Vruwink
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Donald J. Trump / Michael R. Pence
 Candidate	Donald J. Trump	Trump/Pence
@@ -203,7 +201,7 @@ Candidate	Gary Alan Hebl	Gary Hebl
 Candidate	Gary Johnson	Gary Johnson
 Candidate	Gary King	Gary King
 Candidate	Gary Tauchen	Gary Tauchen
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Gina Walkington	Gina Walkington
 Candidate	Glenn Grothman	Glenn Grothman
 Candidate	Gloria La Riva	Gloria La Riva
@@ -293,10 +291,10 @@ Candidate	John H. Sacia	John H. Sacia
 Candidate	John Imes	John Imes
 Candidate	John Iver Baldus	John Iver Baldus
 Candidate	John Jagler	John Jagler
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John Lehman	John Lehman
 Candidate	John Macco	John Macco
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John Nygren	John Nygren
 Candidate	John Rocco Calabrese	John Rocco Calabrese
 Candidate	John Schiess (write-in)	John Schiess (write-in)
@@ -451,7 +449,7 @@ Candidate	Mike Kuglitsch	Mike Kuglitsch
 Candidate	Mike Mooney	Mike Mooney
 Candidate	Mike Rohrkaste	Mike Rohrkaste
 Candidate	Mindy Tempelis	Mindy Tempelis
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Monica J. Hall	Monica J. Hall
 Candidate	Monica Moorehead	Monica Moorehead
 Candidate	Nada Elmikashfi	Nada Elmikashfi
@@ -467,7 +465,7 @@ Candidate	Nick Milroy	Nick Milroy
 Candidate	Nicki Vander Meulen	Nicki Vander Meulen
 Candidate	No Candidate	No Candidate
 Candidate	Orlando Owens	Orlando Owens
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Ozell Cox	Ozell Cox
 Candidate	Patrick Hull	Patrick Hull
 Candidate	Patrick Snyder	Patrick Snyder
@@ -491,7 +489,7 @@ Candidate	Phillip N. Anderson	Phillip N. Anderson
 Candidate	President R19 Boddie	President R19 Boddie
 Candidate	President R19 Boddie	President R19 Boddie (write-in)
 Candidate	Rachael Cabral-Guevara	Rachael Cabral-Guevara
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Ramon Garcia (write-in)	Ramon Garcia (write-in)
 Candidate	Randy Bryce	Randy Bryce
 Candidate	Rebecca Clarke	Rebecca Clarke
@@ -6400,3 +6398,225 @@ Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
 Candidate	Darrell L. Castle	Darrell L. Castle Scott N. Bradley
 Candidate	Chris Keniston (write-in)	Chris Keniston Deacon Taylor (write-in)
 Candidate	Cherunda Fox (write-in)	Cherunda Fox Roger Kushner (write-in)
+CandidateContest	WI Attorney General	WI;Attorney General
+CandidateContest	WI Attorney General	WI;Attorney General;statewide
+CandidateContest	WI Governor	WI;Governor/Lieutenant Governor;statewide
+CandidateContest	WI Secretary of State	WI;Secretary of State;statewide
+CandidateContest	WI House District 41	WI;State Assembly Representative;District 41
+CandidateContest	WI House District 72	WI;State Assembly Representative;District 72
+CandidateContest	WI State Treasurer	WI;State Treasurer;statewide
+CandidateContest	US House WI District 3	WI;US Representative;District 3
+CandidateContest	US Senate WI	WI;US Senator;statewide
+CandidateContest	WI House District 74	WI;State Assembly Representative;District 74
+CandidateContest	WI Senate District 25	WI;State Senator;District 25
+CandidateContest	US House WI District 7	WI;US Representative;District 7
+CandidateContest	WI House District 67	WI;State Assembly Representative;District 67
+CandidateContest	WI House District 75	WI;State Assembly Representative;District 75
+CandidateContest	WI Senate District 23	WI;State Senator;District 23
+CandidateContest	WI House District 1	WI;State Assembly Representative;District 1
+CandidateContest	WI House District 2	WI;State Assembly Representative;District 2
+CandidateContest	WI House District 4	WI;State Assembly Representative;District 4
+CandidateContest	WI House District 5	WI;State Assembly Representative;District 5
+CandidateContest	WI House District 6	WI;State Assembly Representative;District 6
+CandidateContest	WI House District 88	WI;State Assembly Representative;District 88
+CandidateContest	WI House District 89	WI;State Assembly Representative;District 89
+CandidateContest	WI House District 90	WI;State Assembly Representative;District 90
+CandidateContest	WI Senate District 1	WI;State Senator;District 1
+CandidateContest	US House WI District 8	WI;US Representative;District 8
+CandidateContest	WI House District 92	WI;State Assembly Representative;District 92
+CandidateContest	WI House District 93	WI;State Assembly Representative;District 93
+CandidateContest	WI Senate District 31	WI;State Senator;District 31
+CandidateContest	WI House District 28	WI;State Assembly Representative;District 28
+CandidateContest	WI House District 73	WI;State Assembly Representative;District 73
+CandidateContest	WI House District 25	WI;State Assembly Representative;District 25
+CandidateContest	WI House District 27	WI;State Assembly Representative;District 27
+CandidateContest	WI House District 3	WI;State Assembly Representative;District 3
+CandidateContest	WI House District 59	WI;State Assembly Representative;District 59
+CandidateContest	WI Senate District 9	WI;State Senator;District 9
+CandidateContest	WI House District 68	WI;State Assembly Representative;District 68
+CandidateContest	WI House District 91	WI;State Assembly Representative;District 91
+CandidateContest	WI House District 69	WI;State Assembly Representative;District 69
+CandidateContest	WI House District 87	WI;State Assembly Representative;District 87
+CandidateContest	WI Senate District 29	WI;State Senator;District 29
+CandidateContest	WI House District 37	WI;State Assembly Representative;District 37
+CandidateContest	WI House District 42	WI;State Assembly Representative;District 42
+CandidateContest	WI House District 81	WI;State Assembly Representative;District 81
+CandidateContest	WI Senate District 13	WI;State Senator;District 13
+CandidateContest	WI Senate District 27	WI;State Senator;District 27
+CandidateContest	US House WI District 6	WI;US Representative;District 6
+CandidateContest	WI House District 96	WI;State Assembly Representative;District 96
+CandidateContest	WI House District 38	WI;State Assembly Representative;District 38
+CandidateContest	WI House District 43	WI;State Assembly Representative;District 43
+CandidateContest	WI House District 46	WI;State Assembly Representative;District 46
+CandidateContest	WI House District 47	WI;State Assembly Representative;District 47
+CandidateContest	WI House District 48	WI;State Assembly Representative;District 48
+CandidateContest	WI House District 76	WI;State Assembly Representative;District 76
+CandidateContest	WI House District 77	WI;State Assembly Representative;District 77
+CandidateContest	WI House District 78	WI;State Assembly Representative;District 78
+CandidateContest	WI House District 79	WI;State Assembly Representative;District 79
+CandidateContest	WI House District 80	WI;State Assembly Representative;District 80
+CandidateContest	WI Senate District 15	WI;State Senator;District 15
+CandidateContest	US House WI District 2	WI;US Representative;District 2
+CandidateContest	WI House District 39	WI;State Assembly Representative;District 39
+CandidateContest	WI House District 53	WI;State Assembly Representative;District 53
+CandidateContest	US House WI District 5	WI;US Representative;District 5
+CandidateContest	WI House District 29	WI;State Assembly Representative;District 29
+CandidateContest	WI House District 34	WI;State Assembly Representative;District 34
+CandidateContest	WI House District 52	WI;State Assembly Representative;District 52
+CandidateContest	WI House District 36	WI;State Assembly Representative;District 36
+CandidateContest	WI House District 49	WI;State Assembly Representative;District 49
+CandidateContest	WI Senate District 17	WI;State Senator;District 17
+CandidateContest	WI House District 45	WI;State Assembly Representative;District 45
+CandidateContest	WI House District 51	WI;State Assembly Representative;District 51
+CandidateContest	WI House District 70	WI;State Assembly Representative;District 70
+CandidateContest	WI House District 33	WI;State Assembly Representative;District 33
+CandidateContest	WI Senate District 11	WI;State Senator;District 11
+CandidateContest	WI House District 50	WI;State Assembly Representative;District 50
+CandidateContest	WI House District 32	WI;State Assembly Representative;District 32
+CandidateContest	WI House District 61	WI;State Assembly Representative;District 61
+CandidateContest	WI House District 64	WI;State Assembly Representative;District 64
+CandidateContest	WI House District 65	WI;State Assembly Representative;District 65
+CandidateContest	WI Senate District 21	WI;State Senator;District 21
+CandidateContest	US House WI District 1	WI;US Representative;District 1
+CandidateContest	WI House District 94	WI;State Assembly Representative;District 94
+CandidateContest	WI House District 95	WI;State Assembly Representative;District 95
+CandidateContest	WI House District 35	WI;State Assembly Representative;District 35
+CandidateContest	WI House District 85	WI;State Assembly Representative;District 85
+CandidateContest	WI House District 86	WI;State Assembly Representative;District 86
+CandidateContest	WI House District 10	WI;State Assembly Representative;District 10
+CandidateContest	WI House District 11	WI;State Assembly Representative;District 11
+CandidateContest	WI House District 12	WI;State Assembly Representative;District 12
+CandidateContest	WI House District 13	WI;State Assembly Representative;District 13
+CandidateContest	WI House District 14	WI;State Assembly Representative;District 14
+CandidateContest	WI House District 15	WI;State Assembly Representative;District 15
+CandidateContest	WI House District 16	WI;State Assembly Representative;District 16
+CandidateContest	WI House District 17	WI;State Assembly Representative;District 17
+CandidateContest	WI House District 18	WI;State Assembly Representative;District 18
+CandidateContest	WI House District 19	WI;State Assembly Representative;District 19
+CandidateContest	WI House District 20	WI;State Assembly Representative;District 20
+CandidateContest	WI House District 21	WI;State Assembly Representative;District 21
+CandidateContest	WI House District 22	WI;State Assembly Representative;District 22
+CandidateContest	WI House District 23	WI;State Assembly Representative;District 23
+CandidateContest	WI House District 24	WI;State Assembly Representative;District 24
+CandidateContest	WI House District 7	WI;State Assembly Representative;District 7
+CandidateContest	WI House District 8	WI;State Assembly Representative;District 8
+CandidateContest	WI House District 82	WI;State Assembly Representative;District 82
+CandidateContest	WI House District 83	WI;State Assembly Representative;District 83
+CandidateContest	WI House District 84	WI;State Assembly Representative;District 84
+CandidateContest	WI House District 9	WI;State Assembly Representative;District 9
+CandidateContest	WI Senate District 3	WI;State Senator;District 3
+CandidateContest	WI Senate District 5	WI;State Senator;District 5
+CandidateContest	WI Senate District 7	WI;State Senator;District 7
+CandidateContest	US House WI District 4	WI;US Representative;District 4
+CandidateContest	WI House District 40	WI;State Assembly Representative;District 40
+CandidateContest	WI House District 55	WI;State Assembly Representative;District 55
+CandidateContest	WI House District 56	WI;State Assembly Representative;District 56
+CandidateContest	WI House District 57	WI;State Assembly Representative;District 57
+CandidateContest	WI Senate District 19	WI;State Senator;District 19
+CandidateContest	WI House District 60	WI;State Assembly Representative;District 60
+CandidateContest	WI House District 30	WI;State Assembly Representative;District 30
+CandidateContest	WI House District 71	WI;State Assembly Representative;District 71
+CandidateContest	WI House District 62	WI;State Assembly Representative;District 62
+CandidateContest	WI House District 63	WI;State Assembly Representative;District 63
+CandidateContest	WI House District 66	WI;State Assembly Representative;District 66
+CandidateContest	WI House District 31	WI;State Assembly Representative;District 31
+CandidateContest	WI House District 44	WI;State Assembly Representative;District 44
+CandidateContest	WI House District 26	WI;State Assembly Representative;District 26
+CandidateContest	WI House District 58	WI;State Assembly Representative;District 58
+CandidateContest	WI House District 97	WI;State Assembly Representative;District 97
+CandidateContest	WI House District 98	WI;State Assembly Representative;District 98
+CandidateContest	WI House District 99	WI;State Assembly Representative;District 99
+CandidateContest	WI Senate District 33	WI;State Senator;District 33
+CandidateContest	WI House District 54	WI;State Assembly Representative;District 54
+Party	Constitution Party	constitution
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+ReportingUnit	Wisconsin;Adams County	Wisconsin;Adams
+ReportingUnit	Wisconsin;Ashland County	Wisconsin;Ashland
+ReportingUnit	Wisconsin;Barron County	Wisconsin;Barron
+ReportingUnit	Wisconsin;Bayfield County	Wisconsin;Bayfield
+ReportingUnit	Wisconsin;Brown County	Wisconsin;Brown
+ReportingUnit	Wisconsin;Buffalo County	Wisconsin;Buffalo
+ReportingUnit	Wisconsin;Burnett County	Wisconsin;Burnett
+ReportingUnit	Wisconsin;Calumet County	Wisconsin;Calumet
+ReportingUnit	Wisconsin;Chippewa County	Wisconsin;Chippewa
+ReportingUnit	Wisconsin;Clark County	Wisconsin;Clark
+ReportingUnit	Wisconsin;Columbia County	Wisconsin;Columbia
+ReportingUnit	Wisconsin;Crawford County	Wisconsin;Crawford
+ReportingUnit	Wisconsin;Dane County	Wisconsin;Dane
+ReportingUnit	Wisconsin;Dodge County	Wisconsin;Dodge
+ReportingUnit	Wisconsin;Door County	Wisconsin;Door
+ReportingUnit	Wisconsin;Douglas County	Wisconsin;Douglas
+ReportingUnit	Wisconsin;Dunn County	Wisconsin;Dunn
+ReportingUnit	Wisconsin;Eau Claire County	Wisconsin;Eau Claire
+ReportingUnit	Wisconsin;Florence County	Wisconsin;Florence
+ReportingUnit	Wisconsin;Fond du Lac County	Wisconsin;Fond du Lac
+ReportingUnit	Wisconsin;Forest County	Wisconsin;Forest
+ReportingUnit	Wisconsin;Grant County	Wisconsin;Grant
+ReportingUnit	Wisconsin;Green County	Wisconsin;Green
+ReportingUnit	Wisconsin;Green Lake County	Wisconsin;Green Lake
+ReportingUnit	Wisconsin;Iowa County	Wisconsin;Iowa
+ReportingUnit	Wisconsin;Iron County	Wisconsin;Iron
+ReportingUnit	Wisconsin;Jackson County	Wisconsin;Jackson
+ReportingUnit	Wisconsin;Jefferson County	Wisconsin;Jefferson
+ReportingUnit	Wisconsin;Juneau County	Wisconsin;Juneau
+ReportingUnit	Wisconsin;Kenosha County	Wisconsin;Kenosha
+ReportingUnit	Wisconsin;Kewaunee County	Wisconsin;Kewaunee
+ReportingUnit	Wisconsin;La Crosse County	Wisconsin;La Crosse
+ReportingUnit	Wisconsin;Lafayette County	Wisconsin;Lafayette
+ReportingUnit	Wisconsin;Langlade County	Wisconsin;Langlade
+ReportingUnit	Wisconsin;Lincoln County	Wisconsin;Lincoln
+ReportingUnit	Wisconsin;Manitowoc County	Wisconsin;Manitowoc
+ReportingUnit	Wisconsin;Marathon County	Wisconsin;Marathon
+ReportingUnit	Wisconsin;Marinette County	Wisconsin;Marinette
+ReportingUnit	Wisconsin;Marquette County	Wisconsin;Marquette
+ReportingUnit	Wisconsin;Menominee County	Wisconsin;Menominee
+ReportingUnit	Wisconsin;Milwaukee County	Wisconsin;Milwaukee
+ReportingUnit	Wisconsin;Monroe County	Wisconsin;Monroe
+ReportingUnit	Wisconsin;Oconto County	Wisconsin;Oconto
+ReportingUnit	Wisconsin;Oneida County	Wisconsin;Oneida
+ReportingUnit	Wisconsin;Outagamie County	Wisconsin;Outagamie
+ReportingUnit	Wisconsin;Ozaukee County	Wisconsin;Ozaukee
+ReportingUnit	Wisconsin;Pepin County	Wisconsin;Pepin
+ReportingUnit	Wisconsin;Pierce County	Wisconsin;Pierce
+ReportingUnit	Wisconsin;Polk County	Wisconsin;Polk
+ReportingUnit	Wisconsin;Portage County	Wisconsin;Portage
+ReportingUnit	Wisconsin;Price County	Wisconsin;Price
+ReportingUnit	Wisconsin;Racine County	Wisconsin;Racine
+ReportingUnit	Wisconsin;Richland County	Wisconsin;Richland
+ReportingUnit	Wisconsin;Rock County	Wisconsin;Rock
+ReportingUnit	Wisconsin;Rusk County	Wisconsin;Rusk
+ReportingUnit	Wisconsin;Sauk County	Wisconsin;Sauk
+ReportingUnit	Wisconsin;Sawyer County	Wisconsin;Sawyer
+ReportingUnit	Wisconsin;Shawano County	Wisconsin;Shawano
+ReportingUnit	Wisconsin;Sheboygan County	Wisconsin;Sheboygan
+ReportingUnit	Wisconsin;St. Croix County	Wisconsin;St. Croix
+ReportingUnit	Wisconsin;Taylor County	Wisconsin;Taylor
+ReportingUnit	Wisconsin;Trempealeau County	Wisconsin;Trempealeau
+ReportingUnit	Wisconsin;Vernon County	Wisconsin;Vernon
+ReportingUnit	Wisconsin;Vilas County	Wisconsin;Vilas
+ReportingUnit	Wisconsin;Walworth County	Wisconsin;Walworth
+ReportingUnit	Wisconsin;Washburn County	Wisconsin;Washburn
+ReportingUnit	Wisconsin;Washington County	Wisconsin;Washington
+ReportingUnit	Wisconsin;Waukesha County	Wisconsin;Waukesha
+ReportingUnit	Wisconsin;Waupaca County	Wisconsin;Waupaca
+ReportingUnit	Wisconsin;Waushara County	Wisconsin;Waushara
+ReportingUnit	Wisconsin;Winnebago County	Wisconsin;Winnebago
+ReportingUnit	Wisconsin;Wood County	Wisconsin;Wood
+Candidate	André Jacque	AndrÃ© Jacque

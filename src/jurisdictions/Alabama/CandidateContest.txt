@@ -8,3 +8,162 @@ US House AL District 4	1	US House AL District 4
 US House AL District 5	1	US House AL District 5	
 US House AL District 6	1	US House AL District 6	
 US House AL District 7	1	US House AL District 7	
+AL Associate Justice of the Supreme Court, Place 1	1	AL Associate Justice of the Supreme Court, Place 1	
+AL Associate Justice of the Supreme Court, Place 2	1	AL Associate Justice of the Supreme Court, Place 2	
+AL Associate Justice of the Supreme Court, Place 3	1	AL Associate Justice of the Supreme Court, Place 3	
+AL Associate Justice of the Supreme Court, Place 4	1	AL Associate Justice of the Supreme Court, Place 4	
+AL Chief Justice of the Supreme Court	1	AL Chief Justice of the Supreme Court	
+AL Commissioner of Agriculture and Industries	1	AL Commissioner of Agriculture and Industries	
+AL Governor	1	AL Governor	
+AL Attorney General	1	AL Attorney General
+AL Lieutenant Governor	1	AL Lieutenant Governor
+AL Public Service Commission, Place 1	1	AL Public Service Commission, Place 1	
+AL Public Service Commission, Place 2	1	AL Public Service Commission, Place 2	
+AL Secretary of State	1	AL Secretary of State	
+AL State Auditor	1	AL State Auditor	
+AL House District 42	1	AL House District 42	
+AL House District 69	1	AL House District 69	
+AL House District 88	1	AL House District 88	
+AL Senate District 30	1	AL Senate District 30	
+AL State Treasurer	1	AL State Treasurer	
+AL House District 64	1	AL House District 64	
+AL House District 66	1	AL House District 66	
+AL House District 94	1	AL House District 94	
+AL House District 95	1	AL House District 95	
+AL House District 96	1	AL House District 96	
+AL Senate District 22	1	AL Senate District 22	
+AL Senate District 32	1	AL Senate District 32	
+AL State Board of Education Member District 2	1	AL State Board of Education Member District 2	
+AL House District 84	1	AL House District 84	
+AL Senate District 28	1	AL Senate District 28	
+AL State Board of Education Member District 4	1	AL State Board of Education Member District 4	
+AL House District 49	1	AL House District 49	
+AL House District 72	1	AL House District 72	
+AL Senate District 14	1	AL Senate District 14	
+AL State Board of Education Member District 6	1	AL State Board of Education Member District 6	
+AL House District 11	1	AL House District 11	
+AL House District 13	1	AL House District 13	
+AL House District 27	1	AL House District 27	
+AL House District 34	1	AL House District 34	
+AL Senate District 17	1	AL Senate District 17	
+AL Senate District 9	1	AL Senate District 9	
+AL House District 90	1	AL House District 90	
+AL Senate District 23	1	AL Senate District 23	
+AL House District 29	1	AL House District 29	
+AL House District 32	1	AL House District 32	
+AL House District 35	1	AL House District 35	
+AL House District 36	1	AL House District 36	
+AL House District 39	1	AL House District 39	
+AL House District 40	1	AL House District 40	
+AL Senate District 12	1	AL Senate District 12	
+AL House District 37	1	AL House District 37	
+AL House District 38	1	AL House District 38	
+AL Senate District 13	1	AL Senate District 13	
+AL Senate District 10	1	AL Senate District 10	
+AL House District 81	1	AL House District 81	
+AL House District 65	1	AL House District 65	
+AL Senate District 24	1	AL Senate District 24	
+AL House District 68	1	AL House District 68	
+AL House District 33	1	AL House District 33	
+AL House District 91	1	AL House District 91	
+AL House District 92	1	AL House District 92	
+AL Senate District 31	1	AL Senate District 31	
+AL House District 18	1	AL House District 18	
+AL House District 3	1	AL House District 3	
+AL Senate District 6	1	AL Senate District 6	
+AL Senate District 25	1	AL Senate District 25	
+AL House District 12	1	AL House District 12	
+AL House District 9	1	AL House District 9	
+AL Senate District 4	1	AL Senate District 4	
+AL House District 89	1	AL House District 89	
+AL House District 93	1	AL House District 93	
+AL Senate District 29	1	AL Senate District 29	
+AL House District 67	1	AL House District 67	
+AL State Board of Education Member District 8	1	AL State Board of Education Member District 8	
+AL House District 23	1	AL House District 23	
+AL House District 24	1	AL House District 24	
+AL House District 26	1	AL House District 26	
+AL Senate District 8	1	AL Senate District 8	
+AL House District 31	1	AL House District 31	
+AL House District 75	1	AL House District 75	
+AL House District 28	1	AL House District 28	
+AL House District 30	1	AL House District 30	
+AL House District 16	1	AL House District 16	
+AL Senate District 5	1	AL Senate District 5	
+AL House District 7	1	AL House District 7	
+AL House District 87	1	AL House District 87	
+AL House District 71	1	AL House District 71	
+AL House District 85	1	AL House District 85	
+AL House District 86	1	AL House District 86	
+AL House District 22	1	AL House District 22	
+AL House District 14	1	AL House District 14	
+AL House District 15	1	AL House District 15	
+AL House District 44	1	AL House District 44	
+AL House District 45	1	AL House District 45	
+AL House District 46	1	AL House District 46	
+AL House District 47	1	AL House District 47	
+AL House District 48	1	AL House District 48	
+AL House District 51	1	AL House District 51	
+AL House District 52	1	AL House District 52	
+AL House District 54	1	AL House District 54	
+AL House District 55	1	AL House District 55	
+AL House District 56	1	AL House District 56	
+AL House District 57	1	AL House District 57	
+AL House District 58	1	AL House District 58	
+AL House District 59	1	AL House District 59	
+AL House District 60	1	AL House District 60	
+AL Senate District 15	1	AL Senate District 15	
+AL Senate District 16	1	AL Senate District 16	
+AL Senate District 18	1	AL Senate District 18	
+AL Senate District 19	1	AL Senate District 19	
+AL Senate District 20	1	AL Senate District 20	
+AL House District 17	1	AL House District 17	
+AL Senate District 21	1	AL Senate District 21	
+AL House District 79	1	AL House District 79	
+AL House District 80	1	AL House District 80	
+AL House District 82	1	AL House District 82	
+AL House District 83	1	AL House District 83	
+AL Senate District 27	1	AL Senate District 27	
+AL House District 2	1	AL House District 2	
+AL Senate District 1	1	AL Senate District 1	
+AL House District 25	1	AL House District 25	
+AL House District 4	1	AL House District 4	
+AL House District 5	1	AL House District 5	
+AL House District 6	1	AL House District 6	
+AL Senate District 2	1	AL Senate District 2	
+AL Senate District 3	1	AL Senate District 3	
+AL House District 10	1	AL House District 10	
+AL House District 19	1	AL House District 19	
+AL House District 20	1	AL House District 20	
+AL House District 21	1	AL House District 21	
+AL House District 53	1	AL House District 53	
+AL Senate District 7	1	AL Senate District 7	
+AL House District 100	1	AL House District 100	
+AL House District 101	1	AL House District 101	
+AL House District 102	1	AL House District 102	
+AL House District 103	1	AL House District 103	
+AL House District 104	1	AL House District 104	
+AL House District 105	1	AL House District 105	
+AL House District 97	1	AL House District 97	
+AL House District 98	1	AL House District 98	
+AL House District 99	1	AL House District 99	
+AL Senate District 33	1	AL Senate District 33	
+AL Senate District 34	1	AL Senate District 34	
+AL Senate District 35	1	AL Senate District 35	
+AL House District 74	1	AL House District 74	
+AL House District 76	1	AL House District 76	
+AL House District 77	1	AL House District 77	
+AL House District 78	1	AL House District 78	
+AL Senate District 26	1	AL Senate District 26	
+AL House District 8	1	AL House District 8	
+AL House District 41	1	AL House District 41	
+AL House District 43	1	AL House District 43	
+AL House District 73	1	AL House District 73	
+AL Senate District 11	1	AL Senate District 11	
+AL House District 50	1	AL House District 50	
+AL House District 61	1	AL House District 61	
+AL House District 62	1	AL House District 62	
+AL House District 63	1	AL House District 63	
+AL House District 70	1	AL House District 70	
+AL House District 1	1	AL House District 1	
+

@@ -70,3 +70,5 @@ DE Lieutenant Governor	Delaware
 DE Treasurer	Delaware
 DE Secretary of State	Delaware
 DE Insurance Commissioner	Delaware
+DE State Treasurer	Delaware
+DE Auditor of Accounts	Delaware

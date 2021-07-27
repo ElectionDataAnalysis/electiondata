@@ -16,7 +16,7 @@ Candidate	Aisha Gomez	Aisha Gomez
 Candidate	Al Bauer	Al Bauer
 Candidate	Al Doty	Al Doty
 Candidate	Al Fowler	Al Fowler
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Al Koczur	Al Koczur
 Candidate	Al Kruse	Al Kruse
 Candidate	Al Linder	Al Linder
@@ -114,7 +114,7 @@ Candidate	Athena Hollins	Athena Hollins
 Candidate	Audra Veroeven	Audra Veroeven
 Candidate	Austin Grossenburg	Austin Grossenburg
 Candidate	Bala Chintaginjala	Bala Chintaginjala
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barb Haley	Barb Haley
 Candidate	Barb Olsen	Barb Olsen
 Candidate	Barb Yarusso	Barb Yarusso
@@ -712,7 +712,7 @@ Candidate	Donald Casmey	Donald Casmey
 Candidate	Donald E. Evers	Donald E. Evers
 Candidate	Donald F. Goodell	Donald F. Goodell
 Candidate	Donald F. Ryan	Donald F. Ryan
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump and Michael R. Pence	Donald J. Trump and Michael R. Pence
 Candidate	Donald Jensen	Donald Jensen
@@ -918,7 +918,7 @@ Candidate	George Hanson	George Hanson
 Candidate	George McMahon	George McMahon
 Candidate	George Nyakasi Bass	George Nyakasi Bass
 Candidate	George T. Stephenson	George T. Stephenson
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Georgia Dietz	Georgia Dietz
 Candidate	Gerald Mueller	Gerald Mueller
 Candidate	Gerald Telker	Gerald Telker
@@ -994,7 +994,7 @@ Candidate	Heidi L. Everett	Heidi L. Everett
 Candidate	Heidi M. Chandler	Heidi M. Chandler
 Candidate	Heidi Schellhas	Heidi Schellhas
 Candidate	Hilary Caligiuri	Hilary Caligiuri
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hillary Clinton and Tim Kaine	Hillary Clinton and Tim Kaine
 Candidate	Hoang Murphy	Hoang Murphy
 Candidate	Hodan Hassan	Hodan Hassan
@@ -1259,7 +1259,6 @@ Candidate	Jim Thoreen	Jim Thoreen
 Candidate	Jim Utermarck	Jim Utermarck
 Candidate	Jim Veldkamp	Jim Veldkamp
 Candidate	Jo Anne Kovach	Jo Anne Kovach
-Candidate	Jo Jorgensen	"Jo Jorgensen and Jeremy ""Spike"" Cohen"
 Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy 'Spike' Cohen
 Candidate	JoAnn I. Weaver	JoAnn I. Weaver
 Candidate	JoAnn Ward	JoAnn Ward
@@ -1342,7 +1341,7 @@ Candidate	John J. Moren	John J. Moren
 Candidate	John Jaeger	John Jaeger
 Candidate	John Jasinski	John Jasinski
 Candidate	John K. Delaney	John K. Delaney
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John King	John King
 Candidate	John L Thompson	John L Thompson
 Candidate	John L. Berman	John L. Berman
@@ -1355,7 +1354,7 @@ Candidate	John M. Poston	John M. Poston
 Candidate	John Maatz	John Maatz
 Candidate	John Marty	John Marty
 Candidate	John Mason	John Mason
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John O Cunningham	John O Cunningham
 Candidate	John P Fahey	John P Fahey
 Candidate	John P. Dehen	John P. Dehen
@@ -1994,7 +1993,7 @@ Candidate	Mike Wobbe	Mike Wobbe
 Candidate	Mikki Murray	Mikki Murray
 Candidate	Mitch Bernstein	Mitch Bernstein
 Candidate	Mitch Lentz	Mitch Lentz
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Mohamud Noor	Mohamud Noor
 Candidate	Molly Hicken	Molly Hicken
 Candidate	Mona Henkels	Mona Henkels
@@ -2051,7 +2050,7 @@ Candidate	Oliver (Skip) Swanson	Oliver (Skip) Swanson
 Candidate	Oliver Steinberg	Oliver Steinberg
 Candidate	Omar Fateh	Omar Fateh
 Candidate	Orvin Gronseth	Orvin Gronseth
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Owen Miller	Owen Miller
 Candidate	P. Paul Yang	P. Paul Yang
 Candidate	P.J. LaCroix	P.J. LaCroix
@@ -2184,7 +2183,7 @@ Candidate	Ralph Kaehler	Ralph Kaehler
 Candidate	Ralph Lewis	Ralph Lewis
 Candidate	Ralph Miller	Ralph Miller
 Candidate	Ralph Morris	Ralph Morris
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Randall Carow	Randall Carow
 Candidate	Randall Feist	Randall Feist
 Candidate	Randall Pederson	Randall Pederson
@@ -2310,7 +2309,7 @@ Candidate	Robert Walkes	Robert Walkes
 Candidate	Robyn Ann Millenacker	Robyn Ann Millenacker
 Candidate	Robyn Smith	Robyn Smith
 Candidate	Robyn West	Robyn West
-Candidate	Rocky Roque De La Fuente and Michael Steinberg	Rocky Roque De La Fuente and Michael Steinberg
+Candidate	Rocky Roque De La Fuente	Rocky Roque De La Fuente and Michael Steinberg
 Candidate	Rod Hamilton	Rod Hamilton
 Candidate	Rod Skoe	Rod Skoe
 Candidate	Rod Steele	Rod Steele
@@ -2365,8 +2364,7 @@ Candidate	Ronald Ray Vogel	Ronald Ray Vogel
 Candidate	Ronald Reisdorph	Ronald Reisdorph
 Candidate	Ronald Thorsrud	Ronald Thorsrud
 Candidate	Ronald W. Peterson	Ronald W. Peterson
-Candidate	"Roque ""Rocky"" De La Fuente"	"Roque ""Rocky"" De La Fuente and Darcy Richardson"
-Candidate	Roque 'Rocky' De La Fuente and Darcy Richardson	Roque 'Rocky' De La Fuente and Darcy Richardson
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente and Darcy Richardson
 Candidate	Rory Jensen	Rory Jensen
 Candidate	Rosemary Franzen	Rosemary Franzen
 Candidate	Rosemary Weber	Rosemary Weber
@@ -13132,7 +13130,7 @@ ReportingUnit	Minnesota;Kittson County	35
 ReportingUnit	Minnesota;Kittson County	fips27069
 ReportingUnit	Minnesota;Koochiching County	36
 ReportingUnit	Minnesota;Koochiching County	fips27071
-ReportingUnit	Minnesota;Lac Qui Parle County	37
+ReportingUnit	Minnesota;Lac qui Parle County	37
 ReportingUnit	Minnesota;Lac qui Parle County	fips27073
 ReportingUnit	Minnesota;Lake County	38
 ReportingUnit	Minnesota;Lake County	fips27075
@@ -13448,3 +13446,288 @@ y	IA	IA
 y	IND	IND
 y	SLP	SLP
 y	VPM	VPM
+CandidateContest	MN Associate Justice - Supreme Court 1	MN;Associate Justice - Supreme Court 1;statewide
+CandidateContest	MN Associate Justice - Supreme Court 2	MN;Associate Justice - Supreme Court 2;statewide
+CandidateContest	MN Associate Justice - Supreme Court 5	MN;Associate Justice - Supreme Court 5;statewide
+CandidateContest	MN Attorney General	MN;Attorney General
+CandidateContest	MN Chief Justice - Supreme Court	MN;Chief Justice - Supreme Court;statewide
+CandidateContest	MN Governor	MN;Governor & Lt Governor;statewide
+CandidateContest	MN Judge - Court of Appeals 2	MN;Judge - Court of Appeals 2;statewide
+CandidateContest	MN Judge - Court of Appeals 4	MN;Judge - Court of Appeals 4;statewide
+CandidateContest	MN Secretary of State	MN;Secretary of State;statewide
+CandidateContest	MN State Auditor	MN;State Auditor;statewide
+CandidateContest	MN House District 10B	MN;State Representative;District 10B
+CandidateContest	US House MN District 8	MN;US Representative;District 8
+CandidateContest	US Senate MN	MN;US Senator;statewide
+CandidateContest	MN House District 31A	MN;State Representative;District 31A
+CandidateContest	MN House District 31B	MN;State Representative;District 31B
+CandidateContest	MN House District 35A	MN;State Representative;District 35A
+CandidateContest	MN House District 35B	MN;State Representative;District 35B
+CandidateContest	MN House District 36A	MN;State Representative;District 36A
+CandidateContest	MN House District 36B	MN;State Representative;District 36B
+CandidateContest	MN House District 37A	MN;State Representative;District 37A
+CandidateContest	MN House District 37B	MN;State Representative;District 37B
+CandidateContest	MN House District 38A	MN;State Representative;District 38A
+CandidateContest	MN House District 41A	MN;State Representative;District 41A
+CandidateContest	MN House District 41B	MN;State Representative;District 41B
+CandidateContest	US House MN District 3	MN;US Representative;District 3
+CandidateContest	US House MN District 5	MN;US Representative;District 5
+CandidateContest	US House MN District 6	MN;US Representative;District 6
+CandidateContest	MN House District 2B	MN;State Representative;District 2B
+CandidateContest	MN House District 4B	MN;State Representative;District 4B
+CandidateContest	US House MN District 7	MN;US Representative;District 7
+CandidateContest	MN House District 2A	MN;State Representative;District 2A
+CandidateContest	MN House District 5A	MN;State Representative;District 5A
+CandidateContest	MN House District 13B	MN;State Representative;District 13B
+CandidateContest	MN House District 14B	MN;State Representative;District 14B
+CandidateContest	MN House District 15B	MN;State Representative;District 15B
+CandidateContest	MN Senate District 13	MN;State Senator;District 13
+CandidateContest	MN House District 12A	MN;State Representative;District 12A
+CandidateContest	MN House District 19A	MN;State Representative;District 19A
+CandidateContest	MN House District 19B	MN;State Representative;District 19B
+CandidateContest	MN House District 23A	MN;State Representative;District 23A
+CandidateContest	MN House District 23B	MN;State Representative;District 23B
+CandidateContest	US House MN District 1	MN;US Representative;District 1
+CandidateContest	MN House District 16B	MN;State Representative;District 16B
+CandidateContest	MN House District 11A	MN;State Representative;District 11A
+CandidateContest	MN House District 47B	MN;State Representative;Distrcit 47B
+CandidateContest	MN House District 47B	MN;State Representative;District 47B
+CandidateContest	MN House District 33B	MN;State Representative;District 33B
+CandidateContest	MN House District 47A	MN;State Representative;District 47A
+CandidateContest	MN House District 5B	MN;State Representative;District 5B
+CandidateContest	MN House District 9A	MN;State Representative;District 9A
+CandidateContest	MN House District 16A	MN;State Representative;District 16A
+CandidateContest	MN House District 17A	MN;State Representative;District 17A
+CandidateContest	MN House District 32A	MN;State Representative;District 32A
+CandidateContest	MN House District 32B	MN;State Representative;District 32B
+CandidateContest	MN House District 39A	MN;State Representative;District 39A
+CandidateContest	MN House District 4A	MN;State Representative;District 4A
+CandidateContest	MN House District 3A	MN;State Representative;District 3A
+CandidateContest	MN House District 22B	MN;State Representative;District 22B
+CandidateContest	MN House District 10A	MN;State Representative;District 10A
+CandidateContest	MN House District 51A	MN;State Representative;District 51A
+CandidateContest	MN House District 51B	MN;State Representative;District 51B
+CandidateContest	MN House District 52A	MN;State Representative;District 52A
+CandidateContest	MN House District 52B	MN;State Representative;District 52B
+CandidateContest	MN House District 54A	MN;State Representative;District 54A
+CandidateContest	MN House District 54B	MN;State Representative;District 54B
+CandidateContest	MN House District 56A	MN;State Representative;District 56A
+CandidateContest	MN House District 56B	MN;State Representative;District 56B
+CandidateContest	MN House District 57A	MN;State Representative;District 57A
+CandidateContest	MN House District 57B	MN;State Representative;District 57B
+CandidateContest	MN House District 58A	MN;State Representative;District 58A
+CandidateContest	MN House District 58B	MN;State Representative;District 58B
+CandidateContest	US House MN District 2	MN;US Representative;District 2
+CandidateContest	MN House District 21B	MN;State Representative;District 21B
+CandidateContest	MN House District 24B	MN;State Representative;District 24B
+CandidateContest	MN House District 25A	MN;State Representative;District 25A
+CandidateContest	MN House District 27A	MN;State Representative;District 27A
+CandidateContest	MN House District 27B	MN;State Representative;District 27B
+CandidateContest	MN House District 12B	MN;State Representative;District 12B
+CandidateContest	MN House District 8B	MN;State Representative;District 8B
+CandidateContest	MN House District 28B	MN;State Representative;District 28B
+CandidateContest	MN House District 21A	MN;State Representative;District 21A
+CandidateContest	MN House District 29A	MN;State Representative;District 29A
+CandidateContest	MN House District 30B	MN;State Representative;District 30B
+CandidateContest	MN House District 33A	MN;State Representative;District 33A
+CandidateContest	MN House District 34A	MN;State Representative;District 34A
+CandidateContest	MN House District 34B	MN;State Representative;District 34B
+CandidateContest	MN House District 40A	MN;State Representative;District 40A
+CandidateContest	MN House District 40B	MN;State Representative;District 40B
+CandidateContest	MN House District 44A	MN;State Representative;District 44A
+CandidateContest	MN House District 44B	MN;State Representative;District 44B
+CandidateContest	MN House District 45A	MN;State Representative;District 45A
+CandidateContest	MN House District 45B	MN;State Representative;District 45B
+CandidateContest	MN House District 46A	MN;State Representative;District 46A
+CandidateContest	MN House District 46B	MN;State Representative;District 46B
+CandidateContest	MN House District 48A	MN;State Representative;District 48A
+CandidateContest	MN House District 48B	MN;State Representative;District 48B
+CandidateContest	MN House District 49A	MN;State Representative;District 49A
+CandidateContest	MN House District 49B	MN;State Representative;District 49B
+CandidateContest	MN House District 50A	MN;State Representative;District 50A
+CandidateContest	MN House District 50B	MN;State Representative;District 50B
+CandidateContest	MN House District 59A	MN;State Representative;District 59A
+CandidateContest	MN House District 59B	MN;State Representative;District 59B
+CandidateContest	MN House District 60A	MN;State Representative;District 60A
+CandidateContest	MN House District 60B	MN;State Representative;District 60B
+CandidateContest	MN House District 61A	MN;State Representative;District 61A
+CandidateContest	MN House District 61B	MN;State Representative;District 61B
+CandidateContest	MN House District 62A	MN;State Representative;District 62A
+CandidateContest	MN House District 62B	MN;State Representative;District 62B
+CandidateContest	MN House District 63A	MN;State Representative;District 63A
+CandidateContest	MN House District 63B	MN;State Representative;District 63B
+CandidateContest	MN House District 6A	MN;State Representative;District 6A
+CandidateContest	MN House District 11B	MN;State Representative;District 11B
+CandidateContest	MN House District 15A	MN;State Representative;District 15A
+CandidateContest	MN House District 17B	MN;State Representative;District 17B
+CandidateContest	MN House District 1A	MN;State Representative;District 1A
+CandidateContest	MN House District 3B	MN;State Representative;District 3B
+CandidateContest	MN House District 20A	MN;State Representative;District 20A
+CandidateContest	MN House District 20B	MN;State Representative;District 20B
+CandidateContest	MN House District 22A	MN;State Representative;District 22A
+CandidateContest	MN House District 18A	MN;State Representative;District 18A
+CandidateContest	MN House District 18B	MN;State Representative;District 18B
+CandidateContest	MN House District 9B	MN;State Representative;District 9B
+CandidateContest	MN House District 25B	MN;State Representative;District 25B
+CandidateContest	MN House District 26A	MN;State Representative;District 26A
+CandidateContest	MN House District 26B	MN;State Representative;District 26B
+CandidateContest	MN House District 8A	MN;State Representative;District 8A
+CandidateContest	MN House District 1B	MN;State Representative;District 1B
+CandidateContest	MN House District 38B	MN;State Representative;District 38B
+CandidateContest	MN House District 42A	MN;State Representative;District 42A
+CandidateContest	MN House District 42B	MN;State Representative;District 42B
+CandidateContest	MN House District 43A	MN;State Representative;District 43A
+CandidateContest	MN House District 43B	MN;State Representative;District 43B
+CandidateContest	MN House District 53A	MN;State Representative;District 53A
+CandidateContest	MN House District 64A	MN;State Representative;District 64A
+CandidateContest	MN House District 64B	MN;State Representative;District 64B
+CandidateContest	MN House District 65A	MN;State Representative;District 65A
+CandidateContest	MN House District 65B	MN;State Representative;District 65B
+CandidateContest	MN House District 66A	MN;State Representative;District 66A
+CandidateContest	MN House District 66B	MN;State Representative;District 66B
+CandidateContest	MN House District 67A	MN;State Representative;District 67A
+CandidateContest	MN House District 67B	MN;State Representative;District 67B
+CandidateContest	US House MN District 4	MN;US Representative;District 4
+CandidateContest	MN House District 55A	MN;State Representative;District 55A
+CandidateContest	MN House District 55B	MN;State Representative;District 55B
+CandidateContest	MN House District 30A	MN;State Representative;District 30A
+CandidateContest	MN House District 6B	MN;State Representative;District 6B
+CandidateContest	MN House District 7A	MN;State Representative;District 7A
+CandidateContest	MN House District 7B	MN;State Representative;District 7B
+CandidateContest	MN House District 13A	MN;State Representative;District 13A
+CandidateContest	MN House District 14A	MN;State Representative;District 14A
+CandidateContest	MN House District 24A	MN;State Representative;District 24A
+CandidateContest	MN House District 39B	MN;State Representative;District 39B
+CandidateContest	MN House District 53B	MN;State Representative;District 53B
+CandidateContest	MN House District 28A	MN;State Representative;District 28A
+CandidateContest	MN House District 29B	MN;State Representative;District 29B
+Candidate	Calvin 'Cal' K. Bahr	Calvin 'Cal' K. Bahr
+Candidate	Chris Wright & Judith Schwartzbacker	Chris Wright & Judith Schwartzbacker
+Candidate	Debra 'Deb' Kiel	Debra 'Deb' Kiel
+Candidate	Drew Christenen	Drew Christenen
+Candidate	Jeff Johnson & Donna Bergstrom	Jeff Johnson & Donna Bergstrom
+Candidate	Jennifer Ziellnski	Jennifer Ziellnski
+Candidate	Jermain A. Botsio	Jermain A. Botsio
+Candidate	Jill Galban	Jill Galban
+Candidate	John lesch	John lesch
+Candidate	Josh Welter & Mary O'Connor	Josh Welter & Mary O'Connor
+Candidate	Peter M. Fischer	Peter M. Fischer
+Candidate	Tim Walz & Peggy Flanagan	Tim Walz & Peggy Flanagan
+Party	Democratic-Farmer-Labor Party	democratic-farmer-labor
+Party	Grassroots-Legalize Cannabis Party	grassroots-legalize cannabis
+Party	Independence Party	independence
+Party	Independent Party	independent
+Party	Legal Marijuana Now Party	legal marijuana now
+Party	Libertarian Party	libertarian
+Party	Minnesota Green Party	minnesota green
+Party	Nonpartisan Party	nonpartisan
+Party	Republican Party	republican
+Party	none or unknown	unaffiliated
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+ReportingUnit	Minnesota;Aitkin County	Minnesota;Aitkin
+ReportingUnit	Minnesota;Anoka County	Minnesota;Anoka
+ReportingUnit	Minnesota;Becker County	Minnesota;Becker
+ReportingUnit	Minnesota;Beltrami County	Minnesota;Beltrami
+ReportingUnit	Minnesota;Benton County	Minnesota;Benton
+ReportingUnit	Minnesota;Big Stone County	Minnesota;Big Stone
+ReportingUnit	Minnesota;Blue Earth County	Minnesota;Blue Earth
+ReportingUnit	Minnesota;Brown County	Minnesota;Brown
+ReportingUnit	Minnesota;Carlton County	Minnesota;Carlton
+ReportingUnit	Minnesota;Carver County	Minnesota;Carver
+ReportingUnit	Minnesota;Cass County	Minnesota;Cass
+ReportingUnit	Minnesota;Chippewa County	Minnesota;Chippewa
+ReportingUnit	Minnesota;Chisago County	Minnesota;Chisago
+ReportingUnit	Minnesota;Clay County	Minnesota;Clay
+ReportingUnit	Minnesota;Clearwater County	Minnesota;Clearwater
+ReportingUnit	Minnesota;Cook County	Minnesota;Cook
+ReportingUnit	Minnesota;Cottonwood County	Minnesota;Cottonwood
+ReportingUnit	Minnesota;Crow Wing County	Minnesota;Crow Wing
+ReportingUnit	Minnesota;Dakota County	Minnesota;Dakota
+ReportingUnit	Minnesota;Dodge County	Minnesota;Dodge
+ReportingUnit	Minnesota;Douglas County	Minnesota;Douglas
+ReportingUnit	Minnesota;Faribault County	Minnesota;Faribault
+ReportingUnit	Minnesota;Fillmore County	Minnesota;Fillmore
+ReportingUnit	Minnesota;Freeborn County	Minnesota;Freeborn
+ReportingUnit	Minnesota;Goodhue County	Minnesota;Goodhue
+ReportingUnit	Minnesota;Grant County	Minnesota;Grant
+ReportingUnit	Minnesota;Hennepin County	Minnesota;Hennepin
+ReportingUnit	Minnesota;Houston County	Minnesota;Houston
+ReportingUnit	Minnesota;Hubbard County	Minnesota;Hubbard
+ReportingUnit	Minnesota;Isanti County	Minnesota;Isanti
+ReportingUnit	Minnesota;Itasca County	Minnesota;Itasca
+ReportingUnit	Minnesota;Jackson County	Minnesota;Jackson
+ReportingUnit	Minnesota;Kanabec County	Minnesota;Kanabec
+ReportingUnit	Minnesota;Kandiyohi County	Minnesota;Kandiyohi
+ReportingUnit	Minnesota;Kittson County	Minnesota;Kittson
+ReportingUnit	Minnesota;Koochiching County	Minnesota;Koochiching
+ReportingUnit	Minnesota;Lac qui Parle County	Minnesota;Lac Qui Parle
+ReportingUnit	Minnesota;Lac qui Parle County	Minnesota;Lac Qui Parte
+ReportingUnit	Minnesota;Lake County	Minnesota;Lake
+ReportingUnit	Minnesota;Lake of the Woods County	Minnesota;Lake of the Woods
+ReportingUnit	Minnesota;Lake of the Woods County	Minnesota;Lake Of the Woods
+ReportingUnit	Minnesota;Lake of the Woods County	Minnesota;Lake Of The Woods
+ReportingUnit	Minnesota;Le Sueur County	Minnesota;Le Sueur
+ReportingUnit	Minnesota;Lincoln County	Minnesota;Lincoln
+ReportingUnit	Minnesota;Lyon County	Minnesota;Lyon
+ReportingUnit	Minnesota;Mahnomen County	Minnesota;Mahnomen
+ReportingUnit	Minnesota;Marshall County	Minnesota;Marshall
+ReportingUnit	Minnesota;Martin County	Minnesota;Martin
+ReportingUnit	Minnesota;Mcleod County	Minnesota;Mcleod
+ReportingUnit	Minnesota;Meeker County	Minnesota;Meeer
+ReportingUnit	Minnesota;Meeker County	Minnesota;Meeker
+ReportingUnit	Minnesota;Mille Lacs County	Minnesota;Mille Lacs
+ReportingUnit	Minnesota;Morrison County	Minnesota;Morrison
+ReportingUnit	Minnesota;Mower County	Minnesota;Mower
+ReportingUnit	Minnesota;Murray County	Minnesota;Murray
+ReportingUnit	Minnesota;Nicollet County	Minnesota;Nicollet
+ReportingUnit	Minnesota;Nobles County	Minnesota;Nobles
+ReportingUnit	Minnesota;Norman County	Minnesota;Norman
+ReportingUnit	Minnesota;Olmsted County	Minnesota;Olmsted
+ReportingUnit	Minnesota;Otter Tail County	Minnesota;Otter Tail
+ReportingUnit	Minnesota;Pennington County	Minnesota;Pennington
+ReportingUnit	Minnesota;Pine County	Minnesota;Pine
+ReportingUnit	Minnesota;Pipestone County	Minnesota;Pipestone
+ReportingUnit	Minnesota;Polk County	Minnesota;Polk
+ReportingUnit	Minnesota;Pope County	Minnesota;Pope
+ReportingUnit	Minnesota;Ramsey County	Minnesota;Ramsey
+ReportingUnit	Minnesota;Red Lake County	Minnesota;Red Lake
+ReportingUnit	Minnesota;Redwood County	Minnesota;Redwood
+ReportingUnit	Minnesota;Renville County	Minnesota;Renville
+ReportingUnit	Minnesota;Rice County	Minnesota;Rice
+ReportingUnit	Minnesota;Rock County	Minnesota;Rock
+ReportingUnit	Minnesota;Roseau County	Minnesota;Roseau
+ReportingUnit	Minnesota;Scott County	Minnesota;Scott
+ReportingUnit	Minnesota;Sherburne County	Minnesota;Sherburne
+ReportingUnit	Minnesota;Sibley County	Minnesota;Sibley
+ReportingUnit	Minnesota;St. Louis County	Minnesota;St. Louis
+ReportingUnit	Minnesota;Stearns County	Minnesota;Stearns
+ReportingUnit	Minnesota;Steele County	Minnesota;Steele
+ReportingUnit	Minnesota;Stevens County	Minnesota;Stevens
+ReportingUnit	Minnesota;Swift County	Minnesota;Swift
+ReportingUnit	Minnesota;Todd County	Minnesota;Todd
+ReportingUnit	Minnesota;Traverse County	Minnesota;Traverse
+ReportingUnit	Minnesota;Wabasha County	Minnesota;Wabasha
+ReportingUnit	Minnesota;Wadena County	Minnesota;Wadena
+ReportingUnit	Minnesota;Waseca County	Minnesota;Waseca
+ReportingUnit	Minnesota;Washington County	Minnesota;Washington
+ReportingUnit	Minnesota;Watonwan County	Minnesota;Watonwan
+ReportingUnit	Minnesota;Wilkin County	Minnesota;Wilkin
+ReportingUnit	Minnesota;Winona County	Minnesota;Winona
+ReportingUnit	Minnesota;Wright County	Minnesota;Wright
+ReportingUnit	Minnesota;Yellow Medicine County	Minnesota;Yellow Medicine
+Candidate	Joseph PatiÃ±o	Joseph PatiÃ±o
+Candidate	Barbara DrÃ¶her Kline	Barbara DrÃ¶her Kline
+CandidateContest	MN Attorney General	MN;Attorney General;statewide

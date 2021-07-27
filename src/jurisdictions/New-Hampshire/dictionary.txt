@@ -4769,3 +4769,1215 @@ ReportingUnit	New Hampshire;Sullivan County;Springfield	Springfield
 ReportingUnit	New Hampshire;Sullivan County;Sunapee	Sunapee
 ReportingUnit	New Hampshire;Sullivan County;Unity	Unity
 ReportingUnit	New Hampshire;Sullivan County;Washington	Washington
+CandidateContest	NH Executive Council District 1	NH;Executive Council;District 1
+CandidateContest	NH Executive Council District 2	NH;Executive Council;District 2
+CandidateContest	NH Governor	NH;Governor;statewide
+CandidateContest	NH Senate District 2	NH;State Senator;District 2
+CandidateContest	NH Senate District 6	NH;State Senator;District 6
+CandidateContest	NH Senate District 7	NH;State Senator;District 7
+CandidateContest	US House NH District 1	NH;US Representative;District 1
+CandidateContest	NH Senate District 3	NH;State Senator;District 3
+CandidateContest	NH Executive Council District 5	NH;Executive Council;District 5
+CandidateContest	NH Senate District 10	NH;State Senator;District 10
+CandidateContest	NH Senate District 12	NH;State Senator;District 12
+CandidateContest	NH Senate District 8	NH;State Senator;District 8
+CandidateContest	NH Senate District 9	NH;State Senator;District 9
+CandidateContest	NH Senate District 1	NH;State Senator;District 1
+CandidateContest	NH Senate District 5	NH;State Senator;District 5
+CandidateContest	NH Executive Council District 3	NH;Executive Council;District 3
+CandidateContest	NH Executive Council District 4	NH;Executive Council;District 4
+CandidateContest	NH Senate District 11	NH;State Senator;District 11
+CandidateContest	NH Senate District 13	NH;State Senator;District 13
+CandidateContest	NH Senate District 14	NH;State Senator;District 14
+CandidateContest	NH Senate District 16	NH;State Senator;District 16
+CandidateContest	NH Senate District 18	NH;State Senator;District 18
+CandidateContest	NH Senate District 20	NH;State Senator;District 20
+CandidateContest	NH Senate District 22	NH;State Senator;District 22
+CandidateContest	NH Senate District 15	NH;State Senator;District 15
+CandidateContest	NH Senate District 17	NH;State Senator;District 17
+CandidateContest	NH Senate District 19	NH;State Senator;District 19
+CandidateContest	NH Senate District 21	NH;State Senator;District 21
+CandidateContest	NH Senate District 23	NH;State Senator;District 23
+CandidateContest	NH Senate District 24	NH;State Senator;District 24
+CandidateContest	NH Senate District 4	NH;State Senator;District 4
+CandidateContest	NH House Strafford County District 15	NH;Strafford County;District Ward 15 (1)
+CandidateContest	NH House Belknap County District 1	NH;Belknap County;District No. 1 (1)
+CandidateContest	NH House Belknap County District 2	NH;Belknap County;District No. 2 (4)
+CandidateContest	NH House Belknap County District 3	NH;Belknap County;District No. 3 (4)
+CandidateContest	NH House Belknap County District 4	NH;Belknap County;District No. 4 (2)
+CandidateContest	NH House Belknap County District 5	NH;Belknap County;District No. 5 (2)
+CandidateContest	NH House Belknap County District 6	NH;Belknap County;District No. 6 (2)
+CandidateContest	NH House Belknap County District 7	NH;Belknap County;District No. 7 (1)
+CandidateContest	NH House Belknap County District 8	NH;Belknap County;District No. 8 (1) F
+CandidateContest	NH House Belknap County District 9	NH;Belknap County;District No. 9 (1) F
+CandidateContest	NH House Carroll County District 1	NH;Carroll County;District No. 1 (1)
+CandidateContest	NH House Carroll County District 2	NH;Carroll County;District No. 2 (3)
+CandidateContest	NH House Carroll County District 3	NH;Carroll County;District No. 3 (2)
+CandidateContest	NH House Carroll County District 4	NH;Carroll County;District No. 4 (2)
+CandidateContest	NH House Carroll County District 5	NH;Carroll County;District No. 5 (3)
+CandidateContest	NH House Carroll County District 6	NH;Carroll County;District No. 6 (2)
+CandidateContest	NH House Carroll County District 7	NH;Carroll County;District No. 7 (1) F
+CandidateContest	NH House Carroll County District 8	NH;Carroll County;District No. 8 (1) F
+CandidateContest	NH House Cheshire County District 1	NH;Cheshire County;District No. 1 (4)
+CandidateContest	NH House Cheshire County District 10	NH;Cheshire County;District No. 10 (1)
+CandidateContest	NH House Cheshire County District 11	NH;Cheshire County;District No. 11 (2)
+CandidateContest	NH House Cheshire County District 12	NH;Cheshire County;District No. 12 (2)
+CandidateContest	NH House Cheshire County District 13	NH;Cheshire County;District No. 13 (1)
+CandidateContest	NH House Cheshire County District 14	NH;Cheshire County;District No. 14 (1) FL
+CandidateContest	NH House Cheshire County District 15	NH;Cheshire County;District No. 15 (1) FL
+CandidateContest	NH House Cheshire County District 16	NH;Cheshire County;District No. 16 (2) FL
+CandidateContest	NH House Cheshire County District 2	NH;Cheshire County;District No. 2 (1)
+CandidateContest	NH House Cheshire County District 3	NH;Cheshire County;District No. 3 (1)
+CandidateContest	NH House Cheshire County District 4	NH;Cheshire County;District No. 4 (1)
+CandidateContest	NH House Cheshire County District 5	NH;Cheshire County;District No. 5 (1)
+CandidateContest	NH House Cheshire County District 6	NH;Cheshire County;District No. 6 (1)
+CandidateContest	NH House Cheshire County District 7	NH;Cheshire County;District No. 7 (1)
+CandidateContest	NH House Cheshire County District 8	NH;Cheshire County;District No. 8 (1)
+CandidateContest	NH House Cheshire County District 9	NH;Cheshire County;District No. 9 (2)
+CandidateContest	NH House Coos County District 1	NH;Coos County;District No. 1 (2)
+CandidateContest	NH House Coos County District 2	NH;Coos County;District No. 2 (1)
+CandidateContest	NH House Coos County District 3	NH;Coos County;District No. 3 (3)
+CandidateContest	NH House Coos County District 4	NH;Coos County;District No. 4 (1)
+CandidateContest	NH House Coos County District 5	NH;Coos County;District No. 5 (1)
+CandidateContest	NH House Coos County District 6	NH;Coos County;District No. 6 (1)
+CandidateContest	NH House Coos County District 7	NH;Coos County;District No. 7 (1) FL
+CandidateContest	NH House Grafton County District 1	NH;Grafton County;District No. 1 (2)
+CandidateContest	NH House Grafton County District 10	NH;Grafton County;District No. 10 (1)
+CandidateContest	NH House Grafton County District 12	NH;Grafton County;District No. 12 (4)
+CandidateContest	NH House Grafton County District 13	NH;Grafton County;District No. 13 (4)
+CandidateContest	NH House Grafton County District 14	NH;Grafton County;District No. 14 (1)FL
+CandidateContest	NH House Grafton County District 15	NH;Grafton County;District No. 15 (1)FL
+CandidateContest	NH House Grafton County District 16	NH;Grafton County;District No. 16 (1)FL
+CandidateContest	NH House Grafton County District 17	NH;Grafton County;District No. 17 (1)FL
+CandidateContest	NH House Grafton County District 2	NH;Grafton County;District No. 2 (1)
+CandidateContest	NH House Grafton County District 3	NH;Grafton County;District No. 3 (1)
+CandidateContest	NH House Grafton County District 5	NH;Grafton County;District No. 5 (1)
+CandidateContest	NH House Grafton County District 6	NH;Grafton County;District No. 6 (1)
+CandidateContest	NH House Grafton County District 9	NH;Grafton County;District No. 9 (2)
+CandidateContest	NH House Hillsborough County District 1	NH;Hillsborough County;District No. 1 (2)
+CandidateContest	NH House Hillsborough County District 10	NH;Hillsborough County;District No. 10 (2)
+CandidateContest	NH House Hillsborough County District 11	NH;Hillsborough County;District No. 11 (2)
+CandidateContest	NH House Hillsborough County District 12	NH;Hillsborough County;District No. 12 (2)
+CandidateContest	NH House Hillsborough County District 13	NH;Hillsborough County;District No. 13 (2)
+CandidateContest	NH House Hillsborough County District 14	NH;Hillsborough County;District No. 14 (2)
+CandidateContest	NH House Hillsborough County District 15	NH;Hillsborough County;District No. 15 (2)
+CandidateContest	NH House Hillsborough County District 16	NH;Hillsborough County;District No. 16 (2)
+CandidateContest	NH House Hillsborough County District 18	NH;Hillsborough County;District No. 18 (2)
+CandidateContest	NH House Hillsborough County District 19	NH;Hillsborough County;District No. 19 (2)
+CandidateContest	NH House Hillsborough County District 2	NH;Hillsborough County;District No. 2 (3)
+CandidateContest	NH House Hillsborough County District 20	NH;Hillsborough County;District No. 20 (2)
+CandidateContest	NH House Hillsborough County District 21	NH;Hillsborough County;District No. 21 (8)
+CandidateContest	NH House Hillsborough County District 22	NH;Hillsborough County;District No. 22 (3)
+CandidateContest	NH House Hillsborough County District 23	NH;Hillsborough County;District No. 23 (4)
+CandidateContest	NH House Hillsborough County District 24	NH;Hillsborough County;District No. 24 (2)
+CandidateContest	NH House Hillsborough County District 25	NH;Hillsborough County;District No. 25 (2)
+CandidateContest	NH House Hillsborough County District 26	NH;Hillsborough County;District No. 26 (2)
+CandidateContest	NH House Hillsborough County District 27	NH;Hillsborough County;District No. 27 (2)
+CandidateContest	NH House Hillsborough County District 28	NH;Hillsborough County;District No. 28 (3)
+CandidateContest	NH House Hillsborough County District 29	NH;Hillsborough County;District No. 29 (3)
+CandidateContest	NH House Hillsborough County District 3	NH;Hillsborough County;District No. 3 (1)
+CandidateContest	NH House Hillsborough County District 30	NH;Hillsborough County;District No. 30 (3)
+CandidateContest	NH House Hillsborough County District 31	NH;Hillsborough County;District No. 31 (3)
+CandidateContest	NH House Hillsborough County District 32	NH;Hillsborough County;District No. 32 (3)
+CandidateContest	NH House Hillsborough County District 33	NH;Hillsborough County;District No. 33 (3)
+CandidateContest	NH House Hillsborough County District 34	NH;Hillsborough County;District No. 34 (3)
+CandidateContest	NH House Hillsborough County District 35	NH;Hillsborough County;District No. 35 (3)
+CandidateContest	NH House Hillsborough County District 36	NH;Hillsborough County;District No. 36 (3)
+CandidateContest	NH House Hillsborough County District 38	NH;Hillsborough County;District No. 38 (2)FL
+CandidateContest	NH House Hillsborough County District 39	NH;Hillsborough County;District No. 39 (1)FL
+CandidateContest	NH House Hillsborough County District 40	NH;Hillsborough County;District No. 40 (1)FL
+CandidateContest	NH House Hillsborough County District 41	NH;Hillsborough County;District No. 41 (1)FL
+CandidateContest	NH House Hillsborough County District 42	NH;Hillsborough County;District No. 42 (2)FL
+CandidateContest	NH House Hillsborough County District 43	NH;Hillsborough County;District No. 43 (3)FL
+CandidateContest	NH House Hillsborough County District 44	NH;Hillsborough County;District No. 44 (2)FL
+CandidateContest	NH House Hillsborough County District 45	NH;Hillsborough County;District No. 45 (2)FL
+CandidateContest	NH House Hillsborough County District 5	NH;Hillsborough County;District No. 5 (2)
+CandidateContest	NH House Hillsborough County District 6	NH;Hillsborough County;District No. 6 (5)
+CandidateContest	NH House Hillsborough County District 7	NH;Hillsborough County;District No. 7 (6)
+CandidateContest	NH House Hillsborough County District 8	NH;Hillsborough County;District No. 8 (2)
+CandidateContest	NH House Hillsborough County District 9	NH;Hillsborough County;District No. 9 (2)
+CandidateContest	NH House Merrimack County District 1	NH;Merrimack County;District No. 1 (1)
+CandidateContest	NH House Merrimack County District 10	NH;Merrimack County;District No. 10 (3)
+CandidateContest	NH House Merrimack County District 11	NH;Merrimack County;District No. 11 (1)
+CandidateContest	NH House Merrimack County District 12	NH;Merrimack County;District No. 12 (1)
+CandidateContest	NH House Merrimack County District 13	NH;Merrimack County;District No. 13 (1)
+CandidateContest	NH House Merrimack County District 14	NH;Merrimack County;District No. 14 (1)
+CandidateContest	NH House Merrimack County District 15	NH;Merrimack County;District No. 15 (1)
+CandidateContest	NH House Merrimack County District 16	NH;Merrimack County;District No. 16 (1)
+CandidateContest	NH House Merrimack County District 17	NH;Merrimack County;District No. 17 (1)
+CandidateContest	NH House Merrimack County District 18	NH;Merrimack County;District No. 18 (1)
+CandidateContest	NH House Merrimack County District 19	NH;Merrimack County;District No. 19 (1)
+CandidateContest	NH House Merrimack County District 2	NH;Merrimack County;District No. 2 (2)
+CandidateContest	NH House Merrimack County District 20	NH;Merrimack County;District No. 20 (3)
+CandidateContest	NH House Merrimack County District 21	NH;Merrimack County;District No. 21 (2)
+CandidateContest	NH House Merrimack County District 22	NH;Merrimack County;District No. 22 (1)
+CandidateContest	NH House Merrimack County District 23	NH;Merrimack County;District No. 23 (3)
+CandidateContest	NH House Merrimack County District 24	NH;Merrimack County;District No. 24 (4)
+CandidateContest	NH House Merrimack County District 25	NH;Merrimack County;District No. 25 (1)FL
+CandidateContest	NH House Merrimack County District 26	NH;Merrimack County;District No. 26 (1)FL
+CandidateContest	NH House Merrimack County District 27	NH;Merrimack County;District No. 27 (2)FL
+CandidateContest	NH House Merrimack County District 28	NH;Merrimack County;District No. 28 (1)FL
+CandidateContest	NH House Merrimack County District 29	NH;Merrimack County;District No. 29 (1)FL
+CandidateContest	NH House Merrimack County District 3	NH;Merrimack County;District No. 3 (2)
+CandidateContest	NH House Merrimack County District 4	NH;Merrimack County;District No. 4 (1)
+CandidateContest	NH House Merrimack County District 5	NH;Merrimack County;District No. 5 (2)
+CandidateContest	NH House Merrimack County District 6	NH;Merrimack County;District No. 6 (2)
+CandidateContest	NH House Merrimack County District 7	NH;Merrimack County;District No. 7 (1)
+CandidateContest	NH House Merrimack County District 8	NH;Merrimack County;District No. 8 (1)
+CandidateContest	NH House Merrimack County District 9	NH;Merrimack County;District No. 9 (2)
+CandidateContest	NH House Rockingham County District 1	NH;Rockingham County;District No. 1 (1)
+CandidateContest	NH House Rockingham County District 10	NH;Rockingham County;District No. 10 (1)
+CandidateContest	NH House Rockingham County District 11	NH;Rockingham County;District No. 11 (1)
+CandidateContest	NH House Rockingham County District 12	NH;Rockingham County;District No. 12 (1)
+CandidateContest	NH House Rockingham County District 13	NH;Rockingham County;District No. 13 (4)
+CandidateContest	NH House Rockingham County District 14	NH;Rockingham County;District No. 14 (4)
+CandidateContest	NH House Rockingham County District 15	NH;Rockingham County;District No. 15 (1)
+CandidateContest	NH House Rockingham County District 16	NH;Rockingham County;District No. 16 (1)
+CandidateContest	NH House Rockingham County District 17	NH;Rockingham County;District No. 17 (3)
+CandidateContest	NH House Rockingham County District 18	NH;Rockingham County;District No. 18 (4)
+CandidateContest	NH House Rockingham County District 19	NH;Rockingham County;District No. 19 (2)
+CandidateContest	NH House Rockingham County District 2	NH;Rockingham County;District No. 2 (3)
+CandidateContest	NH House Rockingham County District 20	NH;Rockingham County;District No. 20 (3)
+CandidateContest	NH House Rockingham County District 21	NH;Rockingham County;District No. 21 (4)
+CandidateContest	NH House Rockingham County District 22	NH;Rockingham County;District No. 22 (1)
+CandidateContest	NH House Rockingham County District 23	NH;Rockingham County;District No. 23 (1)
+CandidateContest	NH House Rockingham County District 24	NH;Rockingham County;District No. 24 (2)
+CandidateContest	NH House Rockingham County District 25	NH;Rockingham County;District No. 25 (1)
+CandidateContest	NH House Rockingham County District 26	NH;Rockingham County;District No. 26 (1)
+CandidateContest	NH House Rockingham County District 27	NH;Rockingham County;District No. 27 (1)
+CandidateContest	NH House Rockingham County District 28	NH;Rockingham County;District No. 28 (1)
+CandidateContest	NH House Rockingham County District 29	NH;Rockingham County;District No. 29 (1)
+CandidateContest	NH House Rockingham County District 3	NH;Rockingham County;District No. 3 (3)
+CandidateContest	NH House Rockingham County District 30	NH;Rockingham County;District No. 30 (1)FL
+CandidateContest	NH House Rockingham County District 31	NH;Rockingham County;District No. 31 (1)FL
+CandidateContest	NH House Rockingham County District 32	NH;Rockingham County;District No. 32 (1)FL
+CandidateContest	NH House Rockingham County District 33	NH;Rockingham County;District No. 33 (1)FL
+CandidateContest	NH House Rockingham County District 34	NH;Rockingham County;District No. 34 (1)FL
+CandidateContest	NH House Rockingham County District 35	NH;Rockingham County;District No. 35 (1)FL
+CandidateContest	NH House Rockingham County District 36	NH;Rockingham County;District No. 36 (1)FL
+CandidateContest	NH House Rockingham County District 37	NH;Rockingham County;District No. 37 (1)FL
+CandidateContest	NH House Rockingham County District 4	NH;Rockingham County;District No. 4 (5)
+CandidateContest	NH House Rockingham County District 5	NH;Rockingham County;District No. 5 (7)
+CandidateContest	NH House Rockingham County District 6	NH;Rockingham County;District No. 6 (10)
+CandidateContest	NH House Rockingham County District 7	NH;Rockingham County;District No. 7 (4)
+CandidateContest	NH House Rockingham County District 8	NH;Rockingham County;District No. 8 (9)
+CandidateContest	NH House Rockingham County District 9	NH;Rockingham County;District No. 9 (2)
+CandidateContest	NH House Strafford County District 1	NH;Strafford County;District No. 1 (2)
+CandidateContest	NH House Strafford County District 10	NH;Strafford County;District No. 10 (1)
+CandidateContest	NH House Strafford County District 11	NH;Strafford County;District No. 11 (1)
+CandidateContest	NH House Strafford County District 12	NH;Strafford County;District No. 12 (1)
+CandidateContest	NH House Strafford County District 13	NH;Strafford County;District No. 13 (1)
+CandidateContest	NH House Strafford County District 14	NH;Strafford County;District No. 14 (1)
+CandidateContest	NH House Strafford County District 16	NH;Strafford County;District No. 16 (1)
+CandidateContest	NH House Strafford County District 17	NH;Strafford County;District No. 17 (3)
+CandidateContest	NH House Strafford County District 18	NH;Strafford County;District No. 18 (3)
+CandidateContest	NH House Strafford County District 19	NH;Strafford County;District No. 19 (1)FL
+CandidateContest	NH House Strafford County District 2	NH;Strafford County;District No. 2 (2)
+CandidateContest	NH House Strafford County District 20	NH;Strafford County;District No. 20 (1)FL
+CandidateContest	NH House Strafford County District 21	NH;Strafford County;District No. 21 (1)FL
+CandidateContest	NH House Strafford County District 22	NH;Strafford County;District No. 22 (1)FL
+CandidateContest	NH House Strafford County District 23	NH;Strafford County;District No. 23 (1)FL
+CandidateContest	NH House Strafford County District 24	NH;Strafford County;District No. 24 (1)FL
+CandidateContest	NH House Strafford County District 25	NH;Strafford County;District No. 25 (1)FL
+CandidateContest	NH House Strafford County District 3	NH;Strafford County;District No. 3 (2)
+CandidateContest	NH House Strafford County District 4	NH;Strafford County;District No. 4 (2)
+CandidateContest	NH House Strafford County District 5	NH;Strafford County;District No. 5 (1)
+CandidateContest	NH House Strafford County District 6	NH;Strafford County;District No. 6 (5)
+CandidateContest	NH House Strafford County District 7	NH;Strafford County;District No. 7 (1)
+CandidateContest	NH House Strafford County District 8	NH;Strafford County;District No. 8 (1)
+CandidateContest	NH House Strafford County District 9	NH;Strafford County;District No. 9 (1)
+CandidateContest	NH House Sullivan County District 1	NH;Sullivan County;District No. 1 (2)
+CandidateContest	NH House Sullivan County District 10	NH;Sullivan County;District No. 10 (1)FL
+CandidateContest	NH House Sullivan County District 11	NH;Sullivan County;District No. 11 (1)FL
+CandidateContest	NH House Sullivan County District 2	NH;Sullivan County;District No. 2 (1)
+CandidateContest	NH House Sullivan County District 3	NH;Sullivan County;District No. 3 (1)
+CandidateContest	NH House Sullivan County District 4	NH;Sullivan County;District No. 4 (1)
+CandidateContest	NH House Sullivan County District 5	NH;Sullivan County;District No. 5 (1)
+CandidateContest	NH House Sullivan County District 6	NH;Sullivan County;District No. 6 (2)
+CandidateContest	NH House Sullivan County District 7	NH;Sullivan County;District No. 7 (1)
+CandidateContest	NH House Sullivan County District 8	NH;Sullivan County;District No. 8 (1)
+CandidateContest	NH House Sullivan County District 9	\NH;Sullivan County;District No. 9 (1)FL
+Candidate	Aaron Gill	Aaron Gill
+Candidate	Abigail Rooney	Abigail Rooney
+Candidate	Aboul Khan	Aboul Khan
+Candidate	Alan Bershtein	Alan Bershtein
+Candidate	Alan Turcotte	Alan Turcotte
+Candidate	Alejandro Urrutia	Alejandro Urrutia
+Candidate	Alex Avery	Alex Avery
+Candidate	Alfred Baldasaro	Alfred Baldasaro
+Candidate	Alicia Lekas	Alicia Lekas
+Candidate	Allen Cook	Allen Cook
+Candidate	Allison Nutting-Wong	Allison Nutting-Wong
+Candidate	Amanda Bouldin	Amanda Bouldin
+Candidate	Amanda Gourgue	Amanda Gourgue
+Candidate	Amy Cann	Amy Cann
+Candidate	Andreas Reif	Andreas Reif
+Candidate	Andrew Bouldin	Andrew Bouldin
+Candidate	Andrew Fromuth	Andrew Fromuth
+Candidate	Andrew Georgevits	Andrew Georgevits
+Candidate	Andrew O'Hearne	Andrew O'Hearne
+Candidate	Andrew Prout	Andrew Prout
+Candidate	Andrew Renzullo	Andrew Renzullo
+Candidate	Andru Volinsky	Andru Volinsky
+Candidate	Andy Schmidt	Andy Schmidt
+Candidate	Angel Brisson	Angel Brisson
+Candidate	Anita Burroughs	Anita Burroughs
+Candidate	Anne C. Grassie	Anne C. Grassie
+Candidate	Anne Cartwright	Anne Cartwright
+Candidate	Anne Copp	Anne Copp
+Candidate	Anne Warner	Anne Warner
+Candidate	Anthony Pugh	Anthony Pugh
+Candidate	Art Ellison	Art Ellison
+Candidate	Arthur Barnes III	Arthur Barnes III
+Candidate	Barbara Blue	Barbara Blue
+Candidate	Barbara Comtois	Barbara Comtois
+Candidate	Barbara Shaw	Barbara Shaw
+Candidate	Baronet Harrington	Baronet Harrington
+Candidate	Barrett Faulkner	Barrett Faulkner
+Candidate	Bart Fromuth	Bart Fromuth
+Candidate	Becky Owens	Becky Owens
+Candidate	Ben Hight	Ben Hight
+Candidate	Benjamin Baroody	Benjamin Baroody
+Candidate	Benjamin Geiger	Benjamin Geiger
+Candidate	Beth Cacciotti	Beth Cacciotti
+Candidate	Beth Richards	Beth Richards
+Candidate	Beth Rodd	Beth Rodd
+Candidate	Betsy McKinney	Betsy McKinney
+Candidate	Betty Ann Abbott	Betty Ann Abbott
+Candidate	Betty Gay	Betty Gay
+Candidate	Bill Bolton	Bill Bolton
+Candidate	Bill Gannon	Bill Gannon
+Candidate	Bill Nelson	Bill Nelson
+Candidate	Bill Ohm	Bill Ohm
+Candidate	Bob Backus	Bob Backus
+Candidate	Bob Bertrand	Bob Bertrand
+Candidate	Bob Giuda	Bob Giuda
+Candidate	Bob Greene	Bob Greene
+Candidate	Bob L'Heureux	Bob L'Heureux
+Candidate	Bonnie Ham	Bonnie Ham
+Candidate	Bonnie Wright	Bonnie Wright
+Candidate	Brandon Phinney	Brandon Phinney
+Candidate	Brenda Grady	Brenda Grady
+Candidate	Brett Hall	Brett Hall
+Candidate	Brian Chabot	Brian Chabot
+Candidate	Brian Chirichiello	Brian Chirichiello
+Candidate	Brian Griset	Brian Griset
+Candidate	Brian Rater	Brian Rater
+Candidate	Brian Seaworth	Brian Seaworth
+Candidate	Brian Stisser	Brian Stisser
+Candidate	Brian Sullivan	Brian Sullivan
+Candidate	Brittany Ping	Brittany Ping
+Candidate	Bruce Cohen	Bruce Cohen
+Candidate	Bruce Cragin	Bruce Cragin
+Candidate	Bruce Tatro	Bruce Tatro
+Candidate	Caleb Q. Dyer	Caleb Q. Dyer
+Candidate	Calvin Beaulier	Calvin Beaulier
+Candidate	Cam Iannalfo	Cam Iannalfo
+Candidate	Cam Kenney	Cam Kenney
+Candidate	Candace Moulton	Candace Moulton
+Candidate	Carl Seidel	Carl Seidel
+Candidate	Carla Gericke&l	Carla Gericke&l
+Candidate	Carlos Cardona	Carlos Cardona
+Candidate	Carlos Gonzalez	Carlos Gonzalez
+Candidate	Carol McGuire	Carol McGuire
+Candidate	Caroline Nesbitt	Caroline Nesbitt
+Candidate	Carolyn Halstead	Carolyn Halstead
+Candidate	Casey Conley	Casey Conley
+Candidate	Cassandra Levesque	Cassandra Levesque
+Candidate	Catherine Mulholland	Catherine Mulholland
+Candidate	Catherine Rombeau	Catherine Rombeau
+Candidate	Catherine Sofikitis	Catherine Sofikitis
+Candidate	Cathleen Fountain	Cathleen Fountain
+Candidate	Cathryn A. Harvey	Cathryn A. Harvey
+Candidate	Catt Sandler	Catt Sandler
+Candidate	Cecilia Rich	Cecilia Rich
+Candidate	Chad Rolston	Chad Rolston
+Candidate	Charles McMahon	Charles McMahon
+Candidate	Charles Melvin, Sr.	Charles Melvin, Sr.
+Candidate	Charles Mitchell	Charles Mitchell
+Candidate	Charlie Burns	Charlie Burns
+Candidate	Charlie St. Clair	Charlie St. Clair
+Candidate	Charlotte DiLorenzo	Charlotte DiLorenzo
+Candidate	Chester Lapointe II	Chester Lapointe II
+Candidate	Chris Balch	Chris Balch
+Candidate	Chris True	Chris True
+Candidate	Christopher Herbert	Christopher Herbert
+Candidate	Christopher Mazerall	Christopher Mazerall
+Candidate	Christopher Roundy	Christopher Roundy
+Candidate	Christopher T. Meier	Christopher T. Meier
+Candidate	Christy Bartlett	Christy Bartlett
+Candidate	Chuck Grassie	Chuck Grassie
+Candidate	Chuck Morse	Chuck Morse
+Candidate	Chuck Mower	Chuck Mower
+Candidate	Cindy Rosenwald	Cindy Rosenwald
+Candidate	Claudia Istel	Claudia Istel
+Candidate	Clinton Hanson, Jr.	Clinton Hanson, Jr.
+Candidate	Clyde Carson	Clyde Carson
+Candidate	Cole Riel	Cole Riel
+Candidate	Collin Coppinger	Collin Coppinger
+Candidate	Conlin Smith	Conlin Smith
+Candidate	Connie Lane	Connie Lane
+Candidate	Connie Van Houten	Connie Van Houten
+Candidate	Craig Thompson	Craig Thompson
+Candidate	Cynthia Herman	Cynthia Herman
+Candidate	Dale Sprague	Dale Sprague
+Candidate	Dan Belforti	Dan Belforti
+Candidate	Dan Davis	Dan Davis
+Candidate	Dan Garthwaite	Dan Garthwaite
+Candidate	Dan Hynes	Dan Hynes
+Candidate	Dan Innis	Dan Innis
+Candidate	Dan LeClair	Dan LeClair
+Candidate	Dan Pickering	Dan Pickering
+Candidate	Dan Toomey	Dan Toomey
+Candidate	Dan Wolf	Dan Wolf
+Candidate	Daniel Eaton	Daniel Eaton
+Candidate	Daniel Heck	Daniel Heck
+Candidate	Daniel Shepard	Daniel Shepard
+Candidate	Daniel Veilleux	Daniel Veilleux
+Candidate	Daniel Westervelt	Daniel Westervelt
+Candidate	Darryl Perry	Darryl Perry
+Candidate	Daryl Abbas	Daryl Abbas
+Candidate	Dave Testerman	Dave Testerman
+Candidate	Dave Wheeler	Dave Wheeler
+Candidate	David Bedard	David Bedard
+Candidate	David Boutin	David Boutin
+Candidate	David Cote	David Cote
+Candidate	David Coursin	David Coursin
+Candidate	David Crawford	David Crawford
+Candidate	David Danielson	David Danielson
+Candidate	David Doherty	David Doherty
+Candidate	David H. Watters	David H. Watters
+Candidate	David Hennessey	David Hennessey
+Candidate	David Hickernell	David Hickernell
+Candidate	David Huot	David Huot
+Candidate	David J. Starr	David J. Starr
+Candidate	David Karrick	David Karrick
+Candidate	David Love	David Love
+Candidate	David Lundgren	David Lundgren
+Candidate	David Luneau	David Luneau
+Candidate	David Meader	David Meader
+Candidate	David Meuse	David Meuse
+Candidate	David Milz	David Milz
+Candidate	David Morrill	David Morrill
+Candidate	David Nash	David Nash
+Candidate	David Owen	David Owen
+Candidate	David Pierce	David Pierce
+Candidate	David Schoneman	David Schoneman
+Candidate	David Welch	David Welch
+Candidate	David Woodbury	David Woodbury
+Candidate	Deanna Jurius	Deanna Jurius
+Candidate	Deb Stevens	Deb Stevens
+Candidate	Debora B. Pignatelli	Debora B. Pignatelli
+Candidate	Deborah Hobson	Deborah Hobson
+Candidate	Deborah Kaczynski	Deborah Kaczynski
+Candidate	Deborah Nelson	Deborah Nelson
+Candidate	Debra Altschiller	Debra Altschiller
+Candidate	Debra Childs	Debra Childs
+Candidate	Debra DeSimone	Debra DeSimone
+Candidate	Debra Picucci	Debra Picucci
+Candidate	Dee Hogan	Dee Hogan
+Candidate	Delaney Carrier	Delaney Carrier
+Candidate	Denis Rice	Denis Rice
+Candidate	Dennis Acton	Dennis Acton
+Candidate	Dennis Fields	Dennis Fields
+Candidate	Dennis Green	Dennis Green
+Candidate	Dennis Malloy	Dennis Malloy
+Candidate	Dennis Soucy	Dennis Soucy
+Candidate	Dennis Wagner	Dennis Wagner
+Candidate	Denny Ruprecht	Denny Ruprecht
+Candidate	Di Lothrop	Di Lothrop
+Candidate	Diane Hanley	Diane Hanley
+Candidate	Diane Langley	Diane Langley
+Candidate	Dianne Schuette	Dianne Schuette
+Candidate	Dick Barry	Dick Barry
+Candidate	Dick Hinch	Dick Hinch
+Candidate	Dick Marple	Dick Marple
+Candidate	Dick Marston	Dick Marston
+Candidate	Don Leeman	Don Leeman
+Candidate	Donald Bouchard	Donald Bouchard
+Candidate	Donald Whalen	Donald Whalen
+Candidate	Donna Ellis	Donna Ellis
+Candidate	Donna M. Soucy	Donna M. Soucy
+Candidate	Donna Mombourquette	Donna Mombourquette
+Candidate	Donovan Fenton	Donovan Fenton
+Candidate	Doris Hohensee	Doris Hohensee
+Candidate	Dorothy Piquado	Dorothy Piquado
+Candidate	Doug Thomas	Doug Thomas
+Candidate	Doug Whitfield	Doug Whitfield
+Candidate	Douglas Ley	Douglas Ley
+Candidate	Douglas Long	Douglas Long
+Candidate	E. Elaine Andrews-Ahearn	E. Elaine Andrews-Ahearn
+Candidate	Ed Bryans	Ed Bryans
+Candidate	Ed Butler	Ed Butler
+Candidate	Ed Comeau	Ed Comeau
+Candidate	Ed DeClercq	Ed DeClercq
+Candidate	Eddie Edwards	Eddie Edwards
+Candidate	Edith DesMarais	Edith DesMarais
+Candidate	Edith Tucker	Edith Tucker
+Candidate	Edward Cherian	Edward Cherian
+Candidate	Edward Duncan	Edward Duncan
+Candidate	Elaine French	Elaine French
+Candidate	Elaine Lauterborn	Elaine Lauterborn
+Candidate	Eliza Leadbeater	Eliza Leadbeater
+Candidate	Elizabeth Ferreira	Elizabeth Ferreira
+Candidate	Ellen Phillips	Ellen Phillips
+Candidate	Ellen Read	Ellen Read
+Candidate	Emmanuel Krasner	Emmanuel Krasner
+Candidate	Eric Turer	Eric Turer
+Candidate	Erika Connors	Erika Connors
+Candidate	Erin Canterbury	Erin Canterbury
+Candidate	Erin Hennessey	Erin Hennessey
+Candidate	Everett McBride, Jr.	Everett McBride, Jr.
+Candidate	F. Emmerling	F. Emmerling
+Candidate	Fran Nutter-Upham	Fran Nutter-Upham
+Candidate	Francesca Diggs	Francesca Diggs
+Candidate	Francis Gauthier	Francis Gauthier
+Candidate	Frank Bertone	Frank Bertone
+Candidate	Frank Kotowski	Frank Kotowski
+Candidate	Frank McCarthy	Frank McCarthy
+Candidate	Frank Moore	Frank Moore
+Candidate	Frank Sapareto	Frank Sapareto
+Candidate	Franklin Sterling, Jr.	Franklin Sterling, Jr.
+Candidate	Franklin Tilton	Franklin Tilton
+Candidate	Fred Bates	Fred Bates
+Candidate	Fred Davis, Jr.	Fred Davis, Jr.
+Candidate	Fred Doucette	Fred Doucette
+Candidate	Fred Plett	Fred Plett
+Candidate	Gaby Grossman	Gaby Grossman
+Candidate	Gail Ober	Gail Ober
+Candidate	Gail Sanborn	Gail Sanborn
+Candidate	Garrett Muscatel	Garrett Muscatel
+Candidate	Gary Evans	Gary Evans
+Candidate	Gary Hopper	Gary Hopper
+Candidate	Gary L. Daniels	Gary L. Daniels
+Candidate	Gary Merchant	Gary Merchant
+Candidate	Gary Woods	Gary Woods
+Candidate	Gaston Gingues	Gaston Gingues
+Candidate	Gates Lucas	Gates Lucas
+Candidate	Gene Chandler	Gene Chandler
+Candidate	Geoffrey Westervelt	Geoffrey Westervelt
+Candidate	George Condode-metraky	George Condode-metraky
+Candidate	George Feeney	George Feeney
+Candidate	George Hamblen	George Hamblen
+Candidate	George Lambert, Jr.	George Lambert, Jr.
+Candidate	George Perry	George Perry
+Candidate	George Saunderson	George Saunderson
+Candidate	George Sykes	George Sykes
+Candidate	Gerald Griffin	Gerald Griffin
+Candidate	Gerri Cannon	Gerri Cannon
+Candidate	Gerry Ward	Gerry Ward
+Candidate	Gianfranco Dirienzo	Gianfranco Dirienzo
+Candidate	Glen Aldrich	Glen Aldrich
+Candidate	Glen Dickey	Glen Dickey
+Candidate	Glenn Cordelli	Glenn Cordelli
+Candidate	Grace Kennedy	Grace Kennedy
+Candidate	Gray Chynoweth	Gray Chynoweth
+Candidate	Greg Indruk	Greg Indruk
+Candidate	Greg Marrow	Greg Marrow
+Candidate	Gregory Davis	Gregory Davis
+Candidate	Gregory Hill	Gregory Hill
+Candidate	Gwen Friend	Gwen Friend
+Candidate	Hal Lynde	Hal Lynde
+Candidate	Hank Marquis	Hank Marquis
+Candidate	Hans Larsson	Hans Larsson
+Candidate	Harold F. French	Harold F. French
+Candidate	Harrison deBree	Harrison deBree
+Candidate	Harrison Kanzler	Harrison Kanzler
+Candidate	Harry Bean	Harry Bean
+Candidate	Harry Kozlowski	Harry Kozlowski
+Candidate	Harry Viens	Harry Viens
+Candidate	Heather Ledoux	Heather Ledoux
+Candidate	Heidi Hamer	Heidi Hamer
+Candidate	Henry Marsh	Henry Marsh
+Candidate	Henry Noel	Henry Noel
+Candidate	Henry Parkhurst	Henry Parkhurst
+Candidate	Herb Richardson	Herb Richardson
+Candidate	Hershel Nunez	Hershel Nunez
+Candidate	Holly Seal	Holly Seal
+Candidate	Howard Moffett	Howard Moffett
+Candidate	Howard Pearl	Howard Pearl
+Candidate	Ian Freeman	Ian Freeman
+Candidate	Iang Jeon	Iang Jeon
+Candidate	Ioana Singureanu	Ioana Singureanu
+Candidate	Ivy Vann	Ivy Vann
+Candidate	Iz Piedra	Iz Piedra
+Candidate	J.P. Marzullo	J.P. Marzullo
+Candidate	Jaci Grote	Jaci Grote
+Candidate	Jack Balcom	Jack Balcom
+Candidate	Jack Flanagan	Jack Flanagan
+Candidate	Jacqueline Cali-Pitts	Jacqueline Cali-Pitts
+Candidate	Jacqueline Chretien	Jacqueline Chretien
+Candidate	Jacqueline Muollo	Jacqueline Muollo
+Candidate	James Allard	James Allard
+Candidate	James Bosman	James Bosman
+Candidate	James D. Jarvis	James D. Jarvis
+Candidate	James Horgan	James Horgan
+Candidate	James Kelly	James Kelly
+Candidate	James P. Gray	James P. Gray
+Candidate	James S. Beard	James S. Beard
+Candidate	James Spillane	James Spillane
+Candidate	James Webb	James Webb
+Candidate	James Whittemore	James Whittemore
+Candidate	Jan Edick	Jan Edick
+Candidate	Jan Schmidt	Jan Schmidt
+Candidate	Jane Beaulieu	Jane Beaulieu
+Candidate	Janet Breslin	Janet Breslin
+Candidate	Janet Wall	Janet Wall
+Candidate	Jarec Rondeau	Jarec Rondeau
+Candidate	Jason Hodgdon	Jason Hodgdon
+Candidate	Jason Janvrin	Jason Janvrin
+Candidate	Jason Osborne	Jason Osborne
+Candidate	Jay Kahn	Jay Kahn
+Candidate	Jean Jeudy	Jean Jeudy
+Candidate	Jean Mathieu	Jean Mathieu
+Candidate	Jeanine Notter	Jeanine Notter
+Candidate	Jeanne Dietsch	Jeanne Dietsch
+Candidate	Jeb Bradley	Jeb Bradley
+Candidate	Jeff Woodburn	Jeff Woodburn
+Candidate	Jeffrey Day	Jeffrey Day
+Candidate	Jeffrey Goley	Jeffrey Goley
+Candidate	Jeffrey Salloway	Jeffrey Salloway
+Candidate	Jenn Alford-Teaster	Jenn Alford-Teaster
+Candidate	Jennie Gomarlo	Jennie Gomarlo
+Candidate	Jennifer Bernet	Jennifer Bernet
+Candidate	Jennifer Dube	Jennifer Dube
+Candidate	Jenny Wilson	Jenny Wilson
+Candidate	Jeremiah Minihan	Jeremiah Minihan
+Candidate	Jerry Hanauer	Jerry Hanauer
+Candidate	Jerry Knirk	Jerry Knirk
+Candidate	Jerry Marceau	Jerry Marceau
+Candidate	Jerry Stringham	Jerry Stringham
+Candidate	Jess Edwards	Jess Edwards
+Candidate	Jilletta Jarvis	Jilletta Jarvis
+Candidate	Jim Belanger	Jim Belanger
+Candidate	Jim Fedolfi	Jim Fedolfi
+Candidate	Jim Kofalt	Jim Kofalt
+Candidate	Jim Lintner	Jim Lintner
+Candidate	Jim MacKay	Jim MacKay
+Candidate	Jim Maggiore	Jim Maggiore
+Candidate	Jim McConnell	Jim McConnell
+Candidate	Jodi Carnes	Jodi Carnes
+Candidate	Jody McNally	Jody McNally
+Candidate	Joe Alexander, Jr.	Joe Alexander, Jr.
+Candidate	Joe Gutherie	Joe Gutherie
+Candidate	Joe Hannon	Joe Hannon
+Candidate	Joe Pace	Joe Pace
+Candidate	Joe Schapiro	Joe Schapiro
+Candidate	Joel Desilets	Joel Desilets
+Candidate	Joelle Martin	Joelle Martin
+Candidate	John Bordenet	John Bordenet
+Candidate	John Burt	John Burt
+Candidate	John Callum	John Callum
+Candidate	John Cloutier	John Cloutier
+Candidate	John Fothergill	John Fothergill
+Candidate	John Frazier	John Frazier
+Candidate	John French VI	John French VI
+Candidate	John Graham	John Graham
+Candidate	John Hunt	John Hunt
+Candidate	John J. Babiarz	John J. Babiarz
+Candidate	John J. O'Connor	John J. O'Connor
+Candidate	John Janigian	John Janigian
+Candidate	John Klose	John Klose
+Candidate	John Lewicke	John Lewicke
+Candidate	John MacDonald	John MacDonald
+Candidate	John Mann	John Mann
+Candidate	John Martin	John Martin
+Candidate	John Morrissey	John Morrissey
+Candidate	John O'Connor	John O'Connor
+Candidate	John O'Day	John O'Day
+Candidate	John Plumer	John Plumer
+Candidate	John Potucek	John Potucek
+Candidate	John Reagan	John Reagan
+Candidate	John Streeter	John Streeter
+Candidate	John Sytek	John Sytek
+Candidate	John Therriault	John Therriault
+Candidate	John Valera	John Valera
+Candidate	John Washburn	John Washburn
+Candidate	John Yule	John Yule
+Candidate	Jon Morgan	Jon Morgan
+Candidate	Jonathan Mackie	Jonathan Mackie
+Candidate	Jordan Ulery	Jordan Ulery
+Candidate	Jose Cambrils	Jose Cambrils
+Candidate	Joseph D. Kenney	Joseph D. Kenney
+Candidate	Joseph Lanchance	Joseph Lanchance
+Candidate	Joseph McCaffrey	Joseph McCaffrey
+Candidate	Joseph Mosca	Joseph Mosca
+Candidate	Joseph Pitre	Joseph Pitre
+Candidate	Josh Yokela	Josh Yokela
+Candidate	Joshua Adjutant	Joshua Adjutant
+Candidate	Joshua Holmes	Joshua Holmes
+Candidate	Joshua Query	Joshua Query
+Candidate	Joyce Fulweiler	Joyce Fulweiler
+Candidate	Joyce Weston	Joyce Weston
+Candidate	Judi Lanza	Judi Lanza
+Candidate	Judith Spang	Judith Spang
+Candidate	Judy Aron	Judy Aron
+Candidate	Julie Gilman	Julie Gilman
+Candidate	Julie Radhakrishnan	Julie Radhakrishnan
+Candidate	Julie Tucker	Julie Tucker
+Candidate	Justin Borden	Justin Borden
+Candidate	Kamee Leshner	Kamee Leshner
+Candidate	Karel Crawford	Karel Crawford
+Candidate	Karen Ebel	Karen Ebel
+Candidate	Karen Umberger	Karen Umberger
+Candidate	Kat McGhee	Kat McGhee
+Candidate	Kate Catalano	Kate Catalano
+Candidate	Kate Day	Kate Day
+Candidate	Kate Delfino	Kate Delfino
+Candidate	Kate Harris	Kate Harris
+Candidate	Kate Michaels	Kate Michaels
+Candidate	Kate Murray	Kate Murray
+Candidate	Katherine Preston	Katherine Preston
+Candidate	Katherine Prudhomme-O'Brien	Katherine Prudhomme-O'Brien
+Candidate	Katherine Rogers	Katherine Rogers
+Candidate	Kathleen Hoelzel	Kathleen Hoelzel
+Candidate	Kathleen Lauer-Rago	Kathleen Lauer-Rago
+Candidate	Kathleen Martins	Kathleen Martins
+Candidate	Kathryn Stack	Kathryn Stack
+Candidate	Kathy Desjardin	Kathy Desjardin
+Candidate	Keith Ammon	Keith Ammon
+Candidate	Keith Cobbett	Keith Cobbett
+Candidate	Keith Erf	Keith Erf
+Candidate	Keith Jeffery	Keith Jeffery
+Candidate	Kelly Moss	Kelly Moss
+Candidate	Ken Wells	Ken Wells
+Candidate	Ken Weyler	Ken Weyler
+Candidate	Kendall Snow	Kendall Snow
+Candidate	Kenneth Gidge	Kenneth Gidge
+Candidate	Kenneth Peterson	Kenneth Peterson
+Candidate	Kenneth Vincent	Kenneth Vincent
+Candidate	Kermit Williams	Kermit Williams
+Candidate	Kevin Avard	Kevin Avard
+Candidate	Kevin Craig	Kevin Craig
+Candidate	Kevin J. Cavanaugh	Kevin J. Cavanaugh
+Candidate	Kevin Maes	Kevin Maes
+Candidate	Kevin Miller	Kevin Miller
+Candidate	Kevin Pratt	Kevin Pratt
+Candidate	Kevin Scully	Kevin Scully
+Candidate	Kevin Verville	Kevin Verville
+Candidate	Kim Kojak	Kim Kojak
+Candidate	Kimberly Rice	Kimberly Rice
+Candidate	Kirk McConville	Kirk McConville
+Candidate	Knut Ogren	Knut Ogren
+Candidate	Kris Schultz	Kris Schultz
+Candidate	Kristi St. Lauret	Kristi St. Lauret
+Candidate	Kristina Durocher	Kristina Durocher
+Candidate	Kristina Fargo	Kristina Fargo
+Candidate	Krysten Evans	Krysten Evans
+Candidate	Kurt Wuelper	Kurt Wuelper
+Candidate	Kyle Foden	Kyle Foden
+Candidate	Lana Paliy	Lana Paliy
+Candidate	Larry Brown	Larry Brown
+Candidate	Larry Flint	Larry Flint
+Candidate	Larry Gagne	Larry Gagne
+Candidate	Larry Laflamme	Larry Laflamme
+Candidate	Latha Mangipudi	Latha Mangipudi
+Candidate	Laura Lynch	Laura Lynch
+Candidate	Laura Pantelakos	Laura Pantelakos
+Candidate	Laura Telerski	Laura Telerski
+Candidate	Laurel Stavis	Laurel Stavis
+Candidate	Laurie Sanborn	Laurie Sanborn
+Candidate	Lee Walker Oxenham	Lee Walker Oxenham
+Candidate	Lester Cuff, Jr.	Lester Cuff, Jr.
+Candidate	Lewis Hadley, Jr.	Lewis Hadley, Jr.
+Candidate	Linda Camarota	Linda Camarota
+Candidate	Linda DiSilvestro	Linda DiSilvestro
+Candidate	Linda Gould	Linda Gould
+Candidate	Linda Harriott-Gathright	Linda Harriott-Gathright
+Candidate	Linda Luhtala	Linda Luhtala
+Candidate	Linda Massimilla	Linda Massimilla
+Candidate	Linda Tanner	Linda Tanner
+Candidate	Lindsay Tausch	Lindsay Tausch
+Candidate	Linn Opderbecke	Linn Opderbecke
+Candidate	Lino Avellani	Lino Avellani
+Candidate	Lis Freeman	Lis Freeman
+Candidate	Lisa Beaudoin	Lisa Beaudoin
+Candidate	Lisa Bunker	Lisa Bunker
+Candidate	Lisa Nash	Lisa Nash
+Candidate	Lisa Scontsas	Lisa Scontsas
+Candidate	Lisa Wilber	Lisa Wilber
+Candidate	Liz McConnell	Liz McConnell
+Candidate	Lloyd Carr	Lloyd Carr
+Candidate	Lorrie Carey	Lorrie Carey
+Candidate	Lou D'Allesandro	Lou D'Allesandro
+Candidate	Louis Alciere	Louis Alciere
+Candidate	Louise Andrus	Louise Andrus
+Candidate	Lucy McVitty Weber	Lucy McVitty Weber
+Candidate	Luisa Piette	Luisa Piette
+Candidate	Luke Diamond	Luke Diamond
+Candidate	Lynn Durham	Lynn Durham
+Candidate	Lynne Ober	Lynne Ober
+Candidate	Mac Kittredge	Mac Kittredge
+Candidate	Mack Leathurby	Mack Leathurby
+Candidate	Madalasa Gurung	Madalasa Gurung
+Candidate	Manny Espitia	Manny Espitia
+Candidate	Marcy Rothenberg	Marcy Rothenberg
+Candidate	Margaret Drye	Margaret Drye
+Candidate	Marie Yanish	Marie Yanish
+Candidate	Mariellen MacKay	Mariellen MacKay
+Candidate	Marjorie Porter	Marjorie Porter
+Candidate	Marjorie Smith	Marjorie Smith
+Candidate	Mark King	Mark King
+Candidate	Mark Lindsley	Mark Lindsley
+Candidate	Mark Linn	Mark Linn
+Candidate	Mark McConkey	Mark McConkey
+Candidate	Mark McLean	Mark McLean
+Candidate	Mark Pearson	Mark Pearson
+Candidate	Mark Proulx	Mark Proulx
+Candidate	Mark Racic	Mark Racic
+Candidate	Mark Vallone	Mark Vallone
+Candidate	Mark Warden	Mark Warden
+Candidate	Martha Fuller Clark	Martha Fuller Clark
+Candidate	Martha Hennessey	Martha Hennessey
+Candidate	Martha Smith	Martha Smith
+Candidate	Martin Jack	Martin Jack
+Candidate	Mary Beth Walz	Mary Beth Walz
+Candidate	Mary Donnelly	Mary Donnelly
+Candidate	Mary Eisner	Mary Eisner
+Candidate	Mary Frambach	Mary Frambach
+Candidate	Mary Freitas	Mary Freitas
+Candidate	Mary Griffin	Mary Griffin
+Candidate	Mary Heath	Mary Heath
+Candidate	Mary Jane Mulligan	Mary Jane Mulligan
+Candidate	Mary Jane Wallner	Mary Jane Wallner
+Candidate	Mason Donovan	Mason Donovan
+Candidate	Matt Wilhelm	Matt Wilhelm
+Candidate	Matthew J. Plache	Matthew J. Plache
+Candidate	Matthew Spencer	Matthew Spencer
+Candidate	Matthew Towne	Matthew Towne
+Candidate	Max Abramson	Max Abramson
+Candidate	Megan Murray	Megan Murray
+Candidate	Mel Myler	Mel Myler
+Candidate	Melanie Levesque	Melanie Levesque
+Candidate	Melanie Renfrew-Hebert	Melanie Renfrew-Hebert
+Candidate	Michael Abbott	Michael Abbott
+Candidate	Michael Balboni	Michael Balboni
+Candidate	Michael Balog	Michael Balog
+Candidate	Michael Cahill	Michael Cahill
+Candidate	Michael Castaldo	Michael Castaldo
+Candidate	Michael Costable, Jr.	Michael Costable, Jr.
+Candidate	Michael Drouin	Michael Drouin
+Candidate	Michael Edgar	Michael Edgar
+Candidate	Michael Furbush	Michael Furbush
+Candidate	Michael Garcia	Michael Garcia
+Candidate	Michael Gunski	Michael Gunski
+Candidate	Michael Harrington	Michael Harrington
+Candidate	Michael J. Cryans	Michael J. Cryans
+Candidate	Michael Leviss	Michael Leviss
+Candidate	Michael Mader	Michael Mader
+Candidate	Michael McCarthy	Michael McCarthy
+Candidate	Michael Moffett	Michael Moffett
+Candidate	Michael O'Brien, Sr.	Michael O'Brien, Sr.
+Candidate	Michael Pedersen	Michael Pedersen
+Candidate	Michael Sylvia	Michael Sylvia
+Candidate	Michael Thornton	Michael Thornton
+Candidate	Michael Trento	Michael Trento
+Candidate	Michael Vose	Michael Vose
+Candidate	Michael Yakubovich	Michael Yakubovich
+Candidate	Michelle Carter	Michelle Carter
+Candidate	Michelle Couture	Michelle Couture
+Candidate	Michelle Sawyer-Moge	Michelle Sawyer-Moge
+Candidate	Michelle St. John	Michelle St. John
+Candidate	Michelle Zaino	Michelle Zaino
+Candidate	Mike Visconti	Mike Visconti
+Candidate	Miriam Cahill-Yeaton	Miriam Cahill-Yeaton
+Candidate	Mitch Dyer	Mitch Dyer
+Candidate	Molly Kelly	Molly Kelly
+Candidate	Mona Perreault	Mona Perreault
+Candidate	Nancy Brucker	Nancy Brucker
+Candidate	Nancy Murphy	Nancy Murphy
+Candidate	Natalie Wells	Natalie Wells
+Candidate	Ned Gordon	Ned Gordon
+Candidate	Nicholas Goroff	Nicholas Goroff
+Candidate	Nicole Klein	Nicole Klein
+Candidate	Norman Major	Norman Major
+Candidate	Owen Ingram	Owen Ingram
+Candidate	Padraic O'Hare	Padraic O'Hare
+Candidate	Pamela Ean	Pamela Ean
+Candidate	Pamela Hubbard	Pamela Hubbard
+Candidate	Patricia Bushway	Patricia Bushway
+Candidate	Patricia Cornell	Patricia Cornell
+Candidate	Patricia Klee	Patricia Klee
+Candidate	Patricia Lovejoy	Patricia Lovejoy
+Candidate	Patricia Martin	Patricia Martin
+Candidate	Patricia O'Keefe	Patricia O'Keefe
+Candidate	Patricia Pustell	Patricia Pustell
+Candidate	Patrick Abrami	Patrick Abrami
+Candidate	Patrick Coleman	Patrick Coleman
+Candidate	Patrick Long	Patrick Long
+Candidate	Patrick Lozito	Patrick Lozito
+Candidate	Patrick McLaughlin	Patrick McLaughlin
+Candidate	Patrick Sweeney	Patrick Sweeney
+Candidate	Paul Berch	Paul Berch
+Candidate	Paul Bergeron	Paul Bergeron
+Candidate	Paul Brassard	Paul Brassard
+Candidate	Paul Dargie	Paul Dargie
+Candidate	Paul Doolittle	Paul Doolittle
+Candidate	Paul Hutsteiner	Paul Hutsteiner
+Candidate	Paul Moriarty	Paul Moriarty
+Candidate	Paul Skudlarek	Paul Skudlarek
+Candidate	Paul Somero	Paul Somero
+Candidate	Paula Johnson	Paula Johnson
+Candidate	Paula Moran	Paula Moran
+Candidate	Peg Higgins	Peg Higgins
+Candidate	Peter Bixby	Peter Bixby
+Candidate	Peter Gagyi	Peter Gagyi
+Candidate	Peter Hansen	Peter Hansen
+Candidate	Peter Hayward	Peter Hayward
+Candidate	Peter Leishman	Peter Leishman
+Candidate	Peter Macdonald	Peter Macdonald
+Candidate	Peter Macone	Peter Macone
+Candidate	Peter Mcvay	Peter Mcvay
+Candidate	Peter Oldak	Peter Oldak
+Candidate	Peter Petrigno	Peter Petrigno
+Candidate	Peter Schmidt	Peter Schmidt
+Candidate	Peter Silva	Peter Silva
+Candidate	Peter Somssich	Peter Somssich
+Candidate	Peter Spanos	Peter Spanos
+Candidate	Peter Torosian	Peter Torosian
+Candidate	Peter Varney	Peter Varney
+Candidate	Philip Bean	Philip Bean
+Candidate	Philip Munch	Philip Munch
+Candidate	Philip Spagnuolo, Jr.	Philip Spagnuolo, Jr.
+Candidate	Phillip Harris	Phillip Harris
+Candidate	Phyllis Katsakiores	Phyllis Katsakiores
+Candidate	Polly Campion	Polly Campion
+Candidate	Rachel Cisto	Rachel Cisto
+Candidate	Ralph Boehm	Ralph Boehm
+Candidate	Ray Newman	Ray Newman
+Candidate	Raymond Howard, Jr.	Raymond Howard, Jr.
+Candidate	Rebecca Bailey	Rebecca Bailey
+Candidate	Rebecca Hutchinson	Rebecca Hutchinson
+Candidate	Rebecca McBeath	Rebecca McBeath
+Candidate	Rebecca McWilliams	Rebecca McWilliams
+Candidate	Rebecca Mitchell	Rebecca Mitchell
+Candidate	Reed Panasiti	Reed Panasiti
+Candidate	Regina Birdsell	Regina Birdsell
+Candidate	Reta MacGregor	Reta MacGregor
+Candidate	Richard Abel	Richard Abel
+Candidate	Richard Ames	Richard Ames
+Candidate	Richard Beaudoin	Richard Beaudoin
+Candidate	Richard Bilodeau	Richard Bilodeau
+Candidate	Richard Friedman	Richard Friedman
+Candidate	Richard J. O'Shaughnessy	Richard J. O'Shaughnessy
+Candidate	Richard Johnson	Richard Johnson
+Candidate	Richard Komi	Richard Komi
+Candidate	Richard Lascellas	Richard Lascellas
+Candidate	Richard Manzo	Richard Manzo
+Candidate	Richard McNamara	Richard McNamara
+Candidate	Richard Osborne	Richard Osborne
+Candidate	Richard Stuart	Richard Stuart
+Candidate	Richard Tomasso	Richard Tomasso
+Candidate	Rick Faulconer	Rick Faulconer
+Candidate	Roaslie Babiarz	Roaslie Babiarz
+Candidate	Rob Pimentel	Rob Pimentel
+Candidate	Rob Robertson	Rob Robertson
+Candidate	Roberick Ladd	Roberick Ladd
+Candidate	Robert Call	Robert Call
+Candidate	Robert Cushing	Robert Cushing
+Candidate	Robert D'Arcy	Robert D'Arcy
+Candidate	Robert Drew	Robert Drew
+Candidate	Robert Elliott	Robert Elliott
+Candidate	Robert Forsythe	Robert Forsythe
+Candidate	Robert Goeman	Robert Goeman
+Candidate	Robert Harb	Robert Harb
+Candidate	Robert Peraino	Robert Peraino
+Candidate	Robert Perry	Robert Perry
+Candidate	Robert Sherman	Robert Sherman
+Candidate	Robert Theberge	Robert Theberge
+Candidate	Robin Skudlarek	Robin Skudlarek
+Candidate	Roger Dontonville	Roger Dontonville
+Candidate	Roger Fillio	Roger Fillio
+Candidate	Roland Six	Roland Six
+Candidate	Ron Shattuck	Ron Shattuck
+Candidate	Ronald Cooper III	Ronald Cooper III
+Candidate	Rosemarie Rung	Rosemarie Rung
+Candidate	Rosemary Uicker	Rosemary Uicker
+Candidate	Ross Terrio	Ross Terrio
+Candidate	Roy Russell	Roy Russell
+Candidate	Russell Ober	Russell Ober
+Candidate	Russell Prescott	Russell Prescott
+Candidate	Ruth Gulick	Ruth Gulick
+Candidate	Ruth Larson	Ruth Larson
+Candidate	Ruth Ward	Ruth Ward
+Candidate	Ryan Buchanan	Ryan Buchanan
+Candidate	Ryan Curran	Ryan Curran
+Candidate	Safiya Wazir	Safiya Wazir
+Candidate	Sallie Fellows	Sallie Fellows
+Candidate	Samantha Fox	Samantha Fox
+Candidate	Sandra Keans	Sandra Keans
+Candidate	Sandy Swinburne	Sandy Swinburne
+Candidate	Scott Bugbee	Scott Bugbee
+Candidate	Scott Burns	Scott Burns
+Candidate	Scott Courtemanche	Scott Courtemanche
+Candidate	Scott Eich	Scott Eich
+Candidate	Scott McDonald	Scott McDonald
+Candidate	Scott Wallace	Scott Wallace
+Candidate	Sean Cohen	Sean Cohen
+Candidate	Sean Lewis	Sean Lewis
+Candidate	Sean Morrison	Sean Morrison
+Candidate	Shannon E. Chandley	Shannon E. Chandley
+Candidate	Sharleene Hurst	Sharleene Hurst
+Candidate	Sharon M. Carson	Sharon M. Carson
+Candidate	Sharon Nordgren	Sharon Nordgren
+Candidate	Sharyn Stuart	Sharyn Stuart
+Candidate	Sherman Packard	Sherman Packard
+Candidate	Sherry Dutzy	Sherry Dutzy
+Candidate	Sherry Frost	Sherry Frost
+Candidate	Skip Berrien	Skip Berrien
+Candidate	Skip Cleaver	Skip Cleaver
+Candidate	Skip Rollins	Skip Rollins
+Candidate	Sparky Von Plinsky	Sparky Von Plinsky
+Candidate	Spencer Dias	Spencer Dias
+Candidate	Stanley Robinson	Stanley Robinson
+Candidate	Stephen D'Angelo	Stephen D'Angelo
+Candidate	Stephen Darrow	Stephen Darrow
+Candidate	Stephen Malone	Stephen Malone
+Candidate	Stephen Mavrellis	Stephen Mavrellis
+Candidate	Stephen McBrian	Stephen McBrian
+Candidate	Stephen Pearson	Stephen Pearson
+Candidate	Stephen Shurtleff	Stephen Shurtleff
+Candidate	Stephen Woodcock	Stephen Woodcock
+Candidate	Steven Beaudoin	Steven Beaudoin
+Candidate	Steven Smith	Steven Smith
+Candidate	Steven Whalley	Steven Whalley
+Candidate	Stuart Light	Stuart Light
+Candidate	Sue DeLemus	Sue DeLemus
+Candidate	Sue Gottling	Sue Gottling
+Candidate	Sue Mullen	Sue Mullen
+Candidate	Sue Newman	Sue Newman
+Candidate	Susan Almy	Susan Almy
+Candidate	Susan Ford	Susan Ford
+Candidate	Susan Silverman	Susan Silverman
+Candidate	Susan Ticehurst	Susan Ticehurst
+Candidate	Susan Treleaven	Susan Treleaven
+Candidate	Suzanne Smith	Suzanne Smith
+Candidate	Suzanne Vail	Suzanne Vail
+Candidate	Sylvia Arcouette	Sylvia Arcouette
+Candidate	Tamara Le	Tamara Le
+Candidate	Tammy M. Siekmann	Tammy M. Siekmann
+Candidate	Tammy Simmons	Tammy Simmons
+Candidate	Tania M. Butler	Tania M. Butler
+Candidate	Tanya McIntire	Tanya McIntire
+Candidate	Ted Gatsas	Ted Gatsas
+Candidate	Tejasinha Sivalingam	Tejasinha Sivalingam
+Candidate	Terry Cox	Terry Cox
+Candidate	Terry Roy	Terry Roy
+Candidate	Theresa Swanick	Theresa Swanick
+Candidate	Thomas Dunne, Jr.	Thomas Dunne, Jr.
+Candidate	Thomas Kaczynski, Jr.	Thomas Kaczynski, Jr.
+Candidate	Thomas Laware	Thomas Laware
+Candidate	Thomas Robert	Thomas Robert
+Candidate	Thomas Walsh	Thomas Walsh
+Candidate	Tiffany Johnson	Tiffany Johnson
+Candidate	Tim Lord	Tim Lord
+Candidate	Tim Merlino	Tim Merlino
+Candidate	Timothy Egan	Timothy Egan
+Candidate	Timothy Fontneau	Timothy Fontneau
+Candidate	Timothy Horrigan	Timothy Horrigan
+Candidate	Timothy Josephson	Timothy Josephson
+Candidate	Timothy Lang, Sr.	Timothy Lang, Sr.
+Candidate	Timothy Smith	Timothy Smith
+Candidate	Timothy Soucy	Timothy Soucy
+Candidate	Tobin Menard	Tobin Menard
+Candidate	Todd Bedard	Todd Bedard
+Candidate	Todd Haywood	Todd Haywood
+Candidate	Tom Buco	Tom Buco
+Candidate	Tom Chase	Tom Chase
+Candidate	Tom Dolan	Tom Dolan
+Candidate	Tom Harris	Tom Harris
+Candidate	Tom Lanzara	Tom Lanzara
+Candidate	Tom Loughman	Tom Loughman
+Candidate	Tom Lukacz	Tom Lukacz
+Candidate	Tom Schamberg	Tom Schamberg
+Candidate	Tom Sherman	Tom Sherman
+Candidate	Tom Southworth	Tom Southworth
+Candidate	Tony Lekas	Tony Lekas
+Candidate	Tony Piemonte	Tony Piemonte
+Candidate	Tracy Emerick	Tracy Emerick
+Candidate	Troy Merner	Troy Merner
+Candidate	Victoria Sullivan	Victoria Sullivan
+Candidate	Vincent Migliore	Vincent Migliore
+Candidate	Virginia Drye	Virginia Drye
+Candidate	Virginia Irwin	Virginia Irwin
+Candidate	Walter Kolodziej	Walter Kolodziej
+Candidate	Walter Stapleton	Walter Stapleton
+Candidate	Wayne Goldner	Wayne Goldner
+Candidate	Wayne Moynihan	Wayne Moynihan
+Candidate	Wendy Chase	Wendy Chase
+Candidate	Wendy Thomas	Wendy Thomas
+Candidate	Werner Horn	Werner Horn
+Candidate	William Bordy	William Bordy
+Candidate	William Cuccio	William Cuccio
+Candidate	William Fowler	William Fowler
+Candidate	William Hatch	William Hatch
+Candidate	William Marsh	William Marsh
+Candidate	William Pearson	William Pearson
+Candidate	Willis Griffith	Willis Griffith
+Candidate	Yvonne Thomas	Yvonne Thomas
+Party	Democratic Party	democrat
+Party	Democratic / Republican Party	democrat/republican
+Party	Democratic / Republican Party	democrat&republican
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	New Hampshire;Belknap County	New Hampshire;Belknap
+ReportingUnit	New Hampshire;Carroll County	New Hampshire;Carroll
+ReportingUnit	New Hampshire;Cheshire County	New Hampshire;Cheshire
+ReportingUnit	New Hampshire;Coos County	New Hampshire;Coos
+ReportingUnit	New Hampshire;Grafton County	New Hampshire;Grafton
+ReportingUnit	New Hampshire;Hillsborough County	New Hampshire;Hillsborough
+ReportingUnit	New Hampshire;Merrimack County	New Hampshire;Merrimack
+ReportingUnit	New Hampshire;Rockingham County	New Hampshire;Rockingham
+ReportingUnit	New Hampshire;Strafford County	New Hampshire;Strafford
+ReportingUnit	New Hampshire;Sullivan County	New Hampshire;Sullivan
+CandidateContest	NH Attorney General	NH;Attorney General;statewide
+CandidateContest	NH House District 15	NH;State Representative;District Ward 15 (1)
+CandidateContest	NH House District 7	NH;State Representative;District No.7 (1)
+CandidateContest	NH House District 9	NH;State Representative;District No. 9 (2)
+CandidateContest	NH House District 9	NH;State Representative;District No. 9 (1)FL
+CandidateContest	NH House District 9	NH;State Representative;District No. 9 (1) F
+CandidateContest	NH House District 9	NH;State Representative;District No. 9 (1)
+CandidateContest	NH House District 8	NH;State Representative;District No. 8 (9)
+CandidateContest	NH House District 8	NH;State Representative;District No. 8 (2)
+CandidateContest	NH House District 8	NH;State Representative;District No. 8 (1) F
+CandidateContest	NH House District 8	NH;State Representative;District No. 8 (1)
+CandidateContest	NH House District 7	NH;State Representative;District No. 7 (6)
+CandidateContest	NH House District 7	NH;State Representative;District No. 7 (4)
+CandidateContest	NH House District 7	NH;State Representative;District No. 7 (1) FL
+CandidateContest	NH House District 7	NH;State Representative;District No. 7 (1) F
+CandidateContest	NH House District 7	NH;State Representative;District No. 7 (1)
+CandidateContest	NH House District 6	NH;State Representative;District No. 6 (5)
+CandidateContest	NH House District 6	NH;State Representative;District No. 6 (2)
+CandidateContest	NH House District 6	NH;State Representative;District No. 6 (10)
+CandidateContest	NH House District 6	NH;State Representative;District No. 6 (1)
+CandidateContest	NH House District 5	NH;State Representative;District No. 5 (7)
+CandidateContest	NH House District 5	NH;State Representative;District No. 5 (3)
+CandidateContest	NH House District 5	NH;State Representative;District No. 5 (2)
+CandidateContest	NH House District 5	NH;State Representative;District No. 5 (1)
+CandidateContest	NH House District 45	NH;State Representative;District No. 45 (2)FL
+CandidateContest	NH House District 44	NH;State Representative;District No. 44 (2)FL
+CandidateContest	NH House District 43	NH;State Representative;District No. 43 (3)FL
+CandidateContest	NH House District 42	NH;State Representative;District No. 42 (2)FL
+CandidateContest	NH House District 41	NH;State Representative;District No. 41 (1)FL
+CandidateContest	NH House District 40	NH;State Representative;District No. 40 (1)FL
+CandidateContest	NH House District 4	NH;State Representative;District No. 4 (5)
+CandidateContest	NH House District 4	NH;State Representative;District No. 4 (2)
+CandidateContest	NH House District 4	NH;State Representative;District No. 4 (1)
+CandidateContest	NH House District 39	NH;State Representative;District No. 39 (1)FL
+CandidateContest	NH House District 38	NH;State Representative;District No. 38 (2)FL
+CandidateContest	NH House District 37	NH;State Representative;District No. 37 (1)FL
+CandidateContest	NH House District 36	NH;State Representative;District No. 36 (3)
+CandidateContest	NH House District 36	NH;State Representative;District No. 36 (1)FL
+CandidateContest	NH House District 35	NH;State Representative;District No. 35 (3)
+CandidateContest	NH House District 35	NH;State Representative;District No. 35 (1)FL
+CandidateContest	NH House District 34	NH;State Representative;District No. 34 (3)
+CandidateContest	NH House District 34	NH;State Representative;District No. 34 (1)FL
+CandidateContest	NH House District 33	NH;State Representative;District No. 33 (3)
+CandidateContest	NH House District 33	NH;State Representative;District No. 33 (1)FL
+CandidateContest	NH House District 32	NH;State Representative;District No. 32 (3)
+CandidateContest	NH House District 32	NH;State Representative;District No. 32 (1)FL
+CandidateContest	NH House District 31	NH;State Representative;District No. 31 (3)
+CandidateContest	NH House District 31	NH;State Representative;District No. 31 (1)FL
+CandidateContest	NH House District 30	NH;State Representative;District No. 30 (3)
+CandidateContest	NH House District 30	NH;State Representative;District No. 30 (1)FL
+CandidateContest	NH House District 3	NH;State Representative;District No. 3 (4)
+CandidateContest	NH House District 3	NH;State Representative;District No. 3 (3)
+CandidateContest	NH House District 3	NH;State Representative;District No. 3 (2)
+CandidateContest	NH House District 3	NH;State Representative;District No. 3 (1)
+CandidateContest	NH House District 29	NH;State Representative;District No. 29 (3)
+CandidateContest	NH House District 29	NH;State Representative;District No. 29 (1)FL
+CandidateContest	NH House District 29	NH;State Representative;District No. 29 (1)
+CandidateContest	NH House District 28	NH;State Representative;District No. 28 (3)
+CandidateContest	NH House District 28	NH;State Representative;District No. 28 (1)FL
+CandidateContest	NH House District 28	NH;State Representative;District No. 28 (1)
+CandidateContest	NH House District 27	NH;State Representative;District No. 27 (2)FL
+CandidateContest	NH House District 27	NH;State Representative;District No. 27 (2)
+CandidateContest	NH House District 27	NH;State Representative;District No. 27 (1)
+CandidateContest	NH House District 26	NH;State Representative;District No. 26 (2)
+CandidateContest	NH House District 26	NH;State Representative;District No. 26 (1)FL
+CandidateContest	NH House District 26	NH;State Representative;District No. 26 (1)
+CandidateContest	NH House District 25	NH;State Representative;District No. 25 (2)
+CandidateContest	NH House District 25	NH;State Representative;District No. 25 (1)FL
+CandidateContest	NH House District 25	NH;State Representative;District No. 25 (1)
+CandidateContest	NH House District 24	NH;State Representative;District No. 24 (4)
+CandidateContest	NH House District 24	NH;State Representative;District No. 24 (2)
+CandidateContest	NH House District 24	NH;State Representative;District No. 24 (1)FL
+CandidateContest	NH House District 23	NH;State Representative;District No. 23 (4)
+CandidateContest	NH House District 23	NH;State Representative;District No. 23 (3)
+CandidateContest	NH House District 23	NH;State Representative;District No. 23 (1)FL
+CandidateContest	NH House District 23	NH;State Representative;District No. 23 (1)
+CandidateContest	NH House District 22	NH;State Representative;District No. 22 (3)
+CandidateContest	NH House District 22	NH;State Representative;District No. 22 (1)FL
+CandidateContest	NH House District 22	NH;State Representative;District No. 22 (1)
+CandidateContest	NH House District 21	NH;State Representative;District No. 21 (8)
+CandidateContest	NH House District 21	NH;State Representative;District No. 21 (4)
+CandidateContest	NH House District 21	NH;State Representative;District No. 21 (2)
+CandidateContest	NH House District 21	NH;State Representative;District No. 21 (1)FL
+CandidateContest	NH House District 20	NH;State Representative;District No. 20 (3)
+CandidateContest	NH House District 20	NH;State Representative;District No. 20 (2)
+CandidateContest	NH House District 20	NH;State Representative;District No. 20 (1)FL
+CandidateContest	NH House District 2	NH;State Representative;District No. 2 (4)
+CandidateContest	NH House District 2	NH;State Representative;District No. 2 (3)
+CandidateContest	NH House District 2	NH;State Representative;District No. 2 (2)
+CandidateContest	NH House District 2	NH;State Representative;District No. 2 (1)
+CandidateContest	NH House District 19	NH;State Representative;District No. 19 (2)
+CandidateContest	NH House District 19	NH;State Representative;District No. 19 (1)FL
+CandidateContest	NH House District 19	NH;State Representative;District No. 19 (1)
+CandidateContest	NH House District 18	NH;State Representative;District No. 18 (4)
+CandidateContest	NH House District 18	NH;State Representative;District No. 18 (3)
+CandidateContest	NH House District 18	NH;State Representative;District No. 18 (2)
+CandidateContest	NH House District 18	NH;State Representative;District No. 18 (1)
+CandidateContest	NH House District 17	NH;State Representative;District No. 17 (3)
+CandidateContest	NH House District 17	NH;State Representative;District No. 17 (1)FL
+CandidateContest	NH House District 17	NH;State Representative;District No. 17 (1)
+CandidateContest	NH House District 16	NH;State Representative;District No. 16 (2) FL
+CandidateContest	NH House District 16	NH;State Representative;District No. 16 (2)
+CandidateContest	NH House District 16	NH;State Representative;District No. 16 (1)FL
+CandidateContest	NH House District 16	NH;State Representative;District No. 16 (1)
+CandidateContest	NH House District 15	NH;State Representative;District No. 15 (2)
+CandidateContest	NH House District 15	NH;State Representative;District No. 15 (1)FL
+CandidateContest	NH House District 15	NH;State Representative;District No. 15 (1) FL
+CandidateContest	NH House District 15	NH;State Representative;District No. 15 (1)
+CandidateContest	NH House District 14	NH;State Representative;District No. 14 (4)
+CandidateContest	NH House District 14	NH;State Representative;District No. 14 (2)
+CandidateContest	NH House District 14	NH;State Representative;District No. 14 (1)FL
+CandidateContest	NH House District 14	NH;State Representative;District No. 14 (1) FL
+CandidateContest	NH House District 14	NH;State Representative;District No. 14 (1)
+CandidateContest	NH House District 13	NH;State Representative;District No. 13 (4)
+CandidateContest	NH House District 13	NH;State Representative;District No. 13 (2)
+CandidateContest	NH House District 13	NH;State Representative;District No. 13 (1)
+CandidateContest	NH House District 12	NH;State Representative;District No. 12 (4)
+CandidateContest	NH House District 12	NH;State Representative;District No. 12 (2)
+CandidateContest	NH House District 12	NH;State Representative;District No. 12 (1)
+CandidateContest	NH House District 11	NH;State Representative;District No. 11 (2)
+CandidateContest	NH House District 11	NH;State Representative;District No. 11 (1)FL
+CandidateContest	NH House District 11	NH;State Representative;District No. 11 (1)
+CandidateContest	NH House District 10	NH;State Representative;District No. 10 (3)
+CandidateContest	NH House District 10	NH;State Representative;District No. 10 (2)
+CandidateContest	NH House District 10	NH;State Representative;District No. 10 (1)FL
+CandidateContest	NH House District 10	NH;State Representative;District No. 10 (1)
+CandidateContest	NH House District 1	NH;State Representative;District No. 1 (4)
+CandidateContest	NH House District 1	NH;State Representative;District No. 1 (2)
+CandidateContest	NH House District 1	NH;State Representative;District No. 1 (1)
+CandidateContest	NH House District 8	NH;State Representative;District No 8 (3)
+CandidateContest	NH House District 4	NH;State Representative;District No 4 (1)
+CandidateContest	NH House District 37	NH;State Representative;District No 37 (11)
+CandidateContest	NH House District 17	NH;State Representative;District No 17 (2)
+CandidateContest	NH House District 11	NH;State Representative;District No 11 (1)
+

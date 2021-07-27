@@ -1,7 +1,7 @@
 cdf_element	cdf_internal_name	raw_identifier_value
 Candidate	Aileen Abrams	Aileen Abrams
 Candidate	Aimee Berger-Girvalo	Aimee Berger-Girvalo
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alden Russell	Alden Russell
 Candidate	Alex Kasser	Alex Kasser
 Candidate	Alexander Taubes	Alexander Taubes
@@ -17,7 +17,7 @@ Candidate	Antonio Felipe	Antonio Felipe
 Candidate	April Capone	April Capone
 Candidate	Audrey Lampert	Audrey Lampert
 Candidate	Baird Welch-Collins	Baird Welch-Collins
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara Ruhe	Barbara Ruhe
 Candidate	Barry J. D'Andrea	Barry J. D'Andrea
 Candidate	Ben McGorty	Ben McGorty
@@ -100,7 +100,7 @@ Candidate	Derek Slap	Derek Slap
 Candidate	Devin R. Carney	Devin R. Carney
 Candidate	Devon Brown	Devon Brown
 Candidate	Don Vaniah Alexander	Don Vaniah Alexander
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Trump and Pence
 Candidate	Donna Veach	Donna Veach
 Candidate	Dorinda Borer	Dorinda Borer
@@ -135,7 +135,7 @@ Candidate	Gennaro Bizzarro	Gennaro Bizzarro
 Candidate	Geoff Luxenberg	Geoff Luxenberg
 Candidate	George Hallenbeck	George Hallenbeck
 Candidate	George Logan	George Logan
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Gerald Calnen	Gerald Calnen
 Candidate	Geraldo C. Reyes, Jr.	Geraldo C. Reyes, Jr.
 Candidate	Greg Howard	Greg Howard
@@ -153,7 +153,7 @@ Candidate	Henry Thayer	Henry Thayer
 Candidate	Henry Vasel	Henry Vasel
 Candidate	Hilary Ram	Hilary Ram
 Candidate	Hilda E. Santiago	Hilda E. Santiago
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Holly H. Cheeseman	Holly H. Cheeseman
 Candidate	Howard and Howard	Howard and Howard
 Candidate	Irene M. Haines	Irene M. Haines
@@ -201,11 +201,11 @@ Candidate	John Corky Mazurek	John Corky Mazurek
 Candidate	John Fusco	John Fusco
 Candidate	John J.Flynn	John J.Flynn
 Candidate	John K. Hampton	John K. Hampton
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John L. Hall, III	John L. Hall, III
 Candidate	John M. Traceski	John M. Traceski
 Candidate	John May	John May
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John Piscopo	John Piscopo
 Candidate	John Shaban	John Shaban
 Candidate	John W. Brockelman	John W. Brockelman
@@ -308,13 +308,13 @@ Candidate	Mike France	Mike France
 Candidate	Mike Skelps	Mike Skelps
 Candidate	Minnie Gonzalez	Minnie Gonzalez
 Candidate	Mitch Bolinsky	Mitch Bolinsky
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Myra Rivers	Myra Rivers
 Candidate	Nicole Klarides-Ditria	Nicole Klarides-Ditria
 Candidate	Noel Rodriquez	Noel Rodriquez
 Candidate	Noreen Kokoruda	Noreen Kokoruda
 Candidate	Norm Needleman	Norm Needleman
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Pam Salamone	Pam Salamone
 Candidate	Pat Boyd	Pat Boyd
 Candidate	Pat Wilson Pheanious	Pat Wilson Pheanious
@@ -334,7 +334,7 @@ Candidate	Phillip Chabot	Phillip Chabot
 Candidate	Piotr S. Ceglarz	Piotr S. Ceglarz
 Candidate	Quentin Phipps	Quentin Phipps
 Candidate	Raghib Allie-Brennan	Raghib Allie-Brennan
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Rebekah Harriman-Stites	Rebekah Harriman-Stites
 Candidate	Richard Cordero	Richard Cordero
 Candidate	Richard Ruglio	Richard Ruglio
@@ -409,6 +409,7 @@ Candidate	William J. Buckbee	William J. Buckbee
 Candidate	Wilm Donath	Wilm Donath
 Candidate	Yusheng Peng	Yusheng Peng
 CandidateContest	CT Attorney General	CT Attorney General
+CandidateContest	CT Attorney General	CT;Attorney General;statewide
 CandidateContest	CT Governor	CT Governor
 CandidateContest	CT House District 1	State Representative 01
 CandidateContest	CT House District 10	State Representative 10
@@ -1557,3 +1558,509 @@ Candidate	Stewart 'Chip' Beckett	Stewart Chip' Beckett
 Candidate	Robert 'Bobby' Sanchez	Robert Bobby' Sanchez
 Candidate	Emmanuel 'Manny' Sanchez	Emmanuel Manny' Sanchez
 Candidate	Christopher 'Chris' DeMatteo	Christopher Chris' DeMatteo
+CandidateContest	CT Attorney General	CT;Attorney General
+CandidateContest	CT Comptroller	CT;Comptroller;statewide
+CandidateContest	CT Governor	CT;Governor and Lieutenant Governor;statewide
+CandidateContest	CT Secretary of the State	CT;Secretary of the State;statewide
+CandidateContest	CT House District 106	CT;State Representative;District 106
+CandidateContest	CT House District 107	CT;State Representative;District 107
+CandidateContest	CT House District 108	CT;State Representative;District 108
+CandidateContest	CT House District 109	CT;State Representative;District 109
+CandidateContest	CT House District 110	CT;State Representative;District 110
+CandidateContest	CT House District 111	CT;State Representative;District 111
+CandidateContest	CT House District 112	CT;State Representative;District 112
+CandidateContest	CT House District 113	CT;State Representative;District 113
+CandidateContest	CT House District 120	CT;State Representative;District 120
+CandidateContest	CT House District 121	CT;State Representative;District 121
+CandidateContest	CT House District 122	CT;State Representative;District 122
+CandidateContest	CT House District 123	CT;State Representative;District 123
+CandidateContest	CT House District 124	CT;State Representative;District 124
+CandidateContest	CT House District 125	CT;State Representative;District 125
+CandidateContest	CT House District 126	CT;State Representative;District 126
+CandidateContest	CT House District 127	CT;State Representative;District 127
+CandidateContest	CT House District 128	CT;State Representative;District 128
+CandidateContest	CT House District 129	CT;State Representative;District 129
+CandidateContest	CT House District 130	CT;State Representative;District 130
+CandidateContest	CT House District 132	CT;State Representative;District 132
+CandidateContest	CT House District 133	CT;State Representative;District 133
+CandidateContest	CT House District 134	CT;State Representative;District 134
+CandidateContest	CT House District 135	CT;State Representative;District 135
+CandidateContest	CT House District 136	CT;State Representative;District 136
+CandidateContest	CT House District 137	CT;State Representative;District 137
+CandidateContest	CT House District 138	CT;State Representative;District 138
+CandidateContest	CT House District 140	CT;State Representative;District 140
+CandidateContest	CT House District 141	CT;State Representative;District 141
+CandidateContest	CT House District 142	CT;State Representative;District 142
+CandidateContest	CT House District 143	CT;State Representative;District 143
+CandidateContest	CT House District 144	CT;State Representative;District 144
+CandidateContest	CT House District 145	CT;State Representative;District 145
+CandidateContest	CT House District 146	CT;State Representative;District 146
+CandidateContest	CT House District 147	CT;State Representative;District 147
+CandidateContest	CT House District 148	CT;State Representative;District 148
+CandidateContest	CT House District 149	CT;State Representative;District 149
+CandidateContest	CT House District 150	CT;State Representative;District 150
+CandidateContest	CT House District 151	CT;State Representative;District 151
+CandidateContest	CT House District 2	CT;State Representative;District 2
+CandidateContest	CT Senate District 21	CT;State Senator;District 21
+CandidateContest	CT Senate District 22	CT;State Senator;District 22
+CandidateContest	CT Senate District 23	CT;State Senator;District 23
+CandidateContest	CT Senate District 24	CT;State Senator;District 24
+CandidateContest	CT Senate District 25	CT;State Senator;District 25
+CandidateContest	CT Senate District 26	CT;State Senator;District 26
+CandidateContest	CT Senate District 27	CT;State Senator;District 27
+CandidateContest	CT Senate District 28	CT;State Senator;District 28
+CandidateContest	CT Senate District 30	CT;State Senator;District 30
+CandidateContest	CT Senate District 36	CT;State Senator;District 36
+CandidateContest	US House CT District 4	CT;US Representative;District 4
+CandidateContest	US Senate CT	CT;US Senator;statewide
+CandidateContest	CT House District 1	CT;State Representative;District 1
+CandidateContest	CT House District 10	CT;State Representative;District 10
+CandidateContest	CT House District 103	CT;State Representative;District 103
+CandidateContest	CT House District 11	CT;State Representative;District 11
+CandidateContest	CT House District 12	CT;State Representative;District 12
+CandidateContest	CT House District 13	CT;State Representative;District 13
+CandidateContest	CT House District 14	CT;State Representative;District 14
+CandidateContest	CT House District 15	CT;State Representative;District 15
+CandidateContest	CT House District 16	CT;State Representative;District 16
+CandidateContest	CT House District 17	CT;State Representative;District 17
+CandidateContest	CT House District 18	CT;State Representative;District 18
+CandidateContest	CT House District 19	CT;State Representative;District 19
+CandidateContest	CT House District 20	CT;State Representative;District 20
+CandidateContest	CT House District 21	CT;State Representative;District 21
+CandidateContest	CT House District 22	CT;State Representative;District 22
+CandidateContest	CT House District 24	CT;State Representative;District 24
+CandidateContest	CT House District 25	CT;State Representative;District 25
+CandidateContest	CT House District 26	CT;State Representative;District 26
+CandidateContest	CT House District 27	CT;State Representative;District 27
+CandidateContest	CT House District 28	CT;State Representative;District 28
+CandidateContest	CT House District 29	CT;State Representative;District 29
+CandidateContest	CT House District 3	CT;State Representative;District 3
+CandidateContest	CT House District 30	CT;State Representative;District 30
+CandidateContest	CT House District 31	CT;State Representative;District 31
+CandidateContest	CT House District 4	CT;State Representative;District 4
+CandidateContest	CT House District 5	CT;State Representative;District 5
+CandidateContest	CT House District 55	CT;State Representative;District 55
+CandidateContest	CT House District 57	CT;State Representative;District 57
+CandidateContest	CT House District 58	CT;State Representative;District 58
+CandidateContest	CT House District 59	CT;State Representative;District 59
+CandidateContest	CT House District 6	CT;State Representative;District 6
+CandidateContest	CT House District 60	CT;State Representative;District 60
+CandidateContest	CT House District 61	CT;State Representative;District 61
+CandidateContest	CT House District 62	CT;State Representative;District 62
+CandidateContest	CT House District 7	CT;State Representative;District 7
+CandidateContest	CT House District 76	CT;State Representative;District 76
+CandidateContest	CT House District 77	CT;State Representative;District 77
+CandidateContest	CT House District 78	CT;State Representative;District 78
+CandidateContest	CT House District 79	CT;State Representative;District 79
+CandidateContest	CT House District 80	CT;State Representative;District 80
+CandidateContest	CT House District 81	CT;State Representative;District 81
+CandidateContest	CT House District 83	CT;State Representative;District 83
+CandidateContest	CT House District 9	CT;State Representative;District 9
+CandidateContest	CT Senate District 1	CT;State Senator;District 1
+CandidateContest	CT Senate District 16	CT;State Senator;District 16
+CandidateContest	CT Senate District 19	CT;State Senator;District 19
+CandidateContest	CT Senate District 2	CT;State Senator;District 2
+CandidateContest	CT Senate District 3	CT;State Senator;District 3
+CandidateContest	CT Senate District 31	CT;State Senator;District 31
+CandidateContest	CT Senate District 4	CT;State Senator;District 4
+CandidateContest	CT Senate District 5	CT;State Senator;District 5
+CandidateContest	CT Senate District 6	CT;State Senator;District 6
+CandidateContest	CT Senate District 7	CT;State Senator;District 7
+CandidateContest	CT Senate District 8	CT;State Senator;District 8
+CandidateContest	CT Senate District 9	CT;State Senator;District 9
+CandidateContest	CT House District 63	CT;State Representative;District 63
+CandidateContest	CT House District 64	CT;State Representative;District 64
+CandidateContest	CT House District 65	CT;State Representative;District 65
+CandidateContest	CT House District 66	CT;State Representative;District 66
+CandidateContest	CT House District 67	CT;State Representative;District 67
+CandidateContest	CT House District 68	CT;State Representative;District 68
+CandidateContest	CT House District 69	CT;State Representative;District 69
+CandidateContest	CT Senate District 32	CT;State Senator;District 32
+CandidateContest	CT House District 100	CT;State Representative;District 100
+CandidateContest	CT House District 101	CT;State Representative;District 101
+CandidateContest	CT House District 23	CT;State Representative;District 23
+CandidateContest	CT House District 32	CT;State Representative;District 32
+CandidateContest	CT House District 33	CT;State Representative;District 33
+CandidateContest	CT House District 34	CT;State Representative;District 34
+CandidateContest	CT House District 35	CT;State Representative;District 35
+CandidateContest	CT House District 36	CT;State Representative;District 36
+CandidateContest	CT House District 82	CT;State Representative;District 82
+CandidateContest	CT House District 86	CT;State Representative;District 86
+CandidateContest	CT Senate District 12	CT;State Senator;District 12
+CandidateContest	CT Senate District 13	CT;State Senator;District 13
+CandidateContest	CT Senate District 20	CT;State Senator;District 20
+CandidateContest	CT Senate District 33	CT;State Senator;District 33
+CandidateContest	CT Senate District 34	CT;State Senator;District 34
+CandidateContest	CT House District 102	CT;State Representative;District 102
+CandidateContest	CT House District 104	CT;State Representative;District 104
+CandidateContest	CT House District 105	CT;State Representative;District 105
+CandidateContest	CT House District 114	CT;State Representative;District 114
+CandidateContest	CT House District 115	CT;State Representative;District 115
+CandidateContest	CT House District 116	CT;State Representative;District 116
+CandidateContest	CT House District 117	CT;State Representative;District 117
+CandidateContest	CT House District 118	CT;State Representative;District 118
+CandidateContest	CT House District 119	CT;State Representative;District 119
+CandidateContest	CT House District 131	CT;State Representative;District 131
+CandidateContest	CT House District 70	CT;State Representative;District 70
+CandidateContest	CT House District 71	CT;State Representative;District 71
+CandidateContest	CT House District 72	CT;State Representative;District 72
+CandidateContest	CT House District 73	CT;State Representative;District 73
+CandidateContest	CT House District 74	CT;State Representative;District 74
+CandidateContest	CT House District 75	CT;State Representative;District 75
+CandidateContest	CT House District 84	CT;State Representative;District 84
+CandidateContest	CT House District 85	CT;State Representative;District 85
+CandidateContest	CT House District 87	CT;State Representative;District 87
+CandidateContest	CT House District 88	CT;State Representative;District 88
+CandidateContest	CT House District 89	CT;State Representative;District 89
+CandidateContest	CT House District 90	CT;State Representative;District 90
+CandidateContest	CT House District 91	CT;State Representative;District 91
+CandidateContest	CT House District 92	CT;State Representative;District 92
+CandidateContest	CT House District 93	CT;State Representative;District 93
+CandidateContest	CT House District 94	CT;State Representative;District 94
+CandidateContest	CT House District 95	CT;State Representative;District 95
+CandidateContest	CT House District 96	CT;State Representative;District 96
+CandidateContest	CT House District 97	CT;State Representative;District 97
+CandidateContest	CT House District 98	CT;State Representative;District 98
+CandidateContest	CT House District 99	CT;State Representative;District 99
+CandidateContest	CT Senate District 10	CT;State Senator;District 10
+CandidateContest	CT Senate District 11	CT;State Senator;District 11
+CandidateContest	CT Senate District 14	CT;State Senator;District 14
+CandidateContest	CT Senate District 15	CT;State Senator;District 15
+CandidateContest	CT Senate District 17	CT;State Senator;District 17
+CandidateContest	CT House District 139	CT;State Representative;District 139
+CandidateContest	CT House District 37	CT;State Representative;District 37
+CandidateContest	CT House District 38	CT;State Representative;District 38
+CandidateContest	CT House District 39	CT;State Representative;District 39
+CandidateContest	CT House District 40	CT;State Representative;District 40
+CandidateContest	CT House District 41	CT;State Representative;District 41
+CandidateContest	CT House District 42	CT;State Representative;District 42
+CandidateContest	CT House District 43	CT;State Representative;District 43
+CandidateContest	CT House District 45	CT;State Representative;District 45
+CandidateContest	CT House District 46	CT;State Representative;District 46
+CandidateContest	CT House District 47	CT;State Representative;District 47
+CandidateContest	CT House District 48	CT;State Representative;District 48
+CandidateContest	CT Senate District 18	CT;State Senator;District 18
+CandidateContest	CT House District 50	CT;State Representative;District 50
+CandidateContest	CT House District 52	CT;State Representative;District 52
+CandidateContest	CT House District 53	CT;State Representative;District 53
+CandidateContest	CT House District 54	CT;State Representative;District 54
+CandidateContest	CT House District 56	CT;State Representative;District 56
+CandidateContest	CT House District 8	CT;State Representative;District 8
+CandidateContest	CT Senate District 29	CT;State Senator;District 29
+CandidateContest	CT Senate District 35	CT;State Senator;District 35
+CandidateContest	CT House District 44	CT;State Representative;District 44
+CandidateContest	CT House District 49	CT;State Representative;District 49
+CandidateContest	CT House District 51	CT;State Representative;District 51
+Candidate	Adam Dunsby	Adam Dunsby
+Candidate	Adam Greenberg	Adam Greenberg
+Candidate	Aili McKeen	Aili McKeen
+Candidate	AJ Kerouac	AJ Kerouac
+Candidate	Alex Larsson	Alex Larsson
+Candidate	Alexandra 'Alex' Bergstein	Alexandra 'Alex' Bergstein
+Candidate	Alfred P Mayo	Alfred P Mayo
+Candidate	Allen Marko	Allen Marko
+Candidate	Alphonse Paolillo Jr	Alphonse Paolillo Jr
+Candidate	Althea Candy Perez	Althea Candy Perez
+Candidate	Amanda Webster	Amanda Webster
+Candidate	Andre F Baker Jr	Andre F Baker Jr
+Candidate	Andrew A Lanciotto	Andrew A Lanciotto
+Candidate	Andrew Lockwood	Andrew Lockwood
+Candidate	Angel Cadena	Angel Cadena
+Candidate	Anne Harrigan	Anne Harrigan
+Candidate	Annie Hornish	Annie Hornish
+Candidate	Anthony Armetta	Anthony Armetta
+Candidate	Anthony Gennaro	Anthony Gennaro
+Candidate	Anthony J D'Amelio	Anthony J D'Amelio
+Candidate	Anzelmo Graziosi	Anzelmo Graziosi
+Candidate	Arthur O'Neill	Arthur O'Neill
+Candidate	Ashley Gaudiano	Ashley Gaudiano
+Candidate	Barbara Barry	Barbara Barry
+Candidate	Benjamin Taylor Conroy	Benjamin Taylor Conroy
+Candidate	Beth Bye	Beth Bye
+Candidate	Bill Simanski	Bill Simanski
+Candidate	Bob Stefanowski and Joe Markley	Bob Stefanowski and Joe Markley
+Candidate	Bobby Sanchez	Bobby Sanchez
+Candidate	Brandon McGee	Brandon McGee
+Candidate	Brenda L Kupchick	Brenda L Kupchick
+Candidate	Brian M Ohler	Brian M Ohler
+Candidate	Bryan C Nelson	Bryan C Nelson
+Candidate	Caitlin Clarkson Pereira	Caitlin Clarkson Pereira
+Candidate	Cara C Pavalock-D'Amato	Cara C Pavalock-D'Amato
+Candidate	Catherine A Osten	Catherine A Osten
+Candidate	Catherine F Abercrombie	Catherine F Abercrombie
+Candidate	Catherine P DeCarli	Catherine P DeCarli
+Candidate	Charles J Ferraro	Charles J Ferraro
+Candidate	Chris Forster	Chris Forster
+Candidate	Chris Soto	Chris Soto
+Candidate	Christie M Carpino	Christie M Carpino
+Candidate	Christopher A Wright	Christopher A Wright
+Candidate	Christopher Davis	Christopher Davis
+Candidate	Christopher S Murphy	Christopher S Murphy
+Candidate	Cindy Wolfe Boynton	Cindy Wolfe Boynton
+Candidate	Colin Anthony Hosten	Colin Anthony Hosten
+Candidate	Colin C Souney	Colin C Souney
+Candidate	Connie Jagodzinski	Connie Jagodzinski
+Candidate	Cora M Santaguida	Cora M Santaguida
+Candidate	Craig A Miner	Craig A Miner
+Candidate	Dan Pannone	Dan Pannone
+Candidate	Daniel Fontaine	Daniel Fontaine
+Candidate	Daniel J Fox	Daniel J Fox
+Candidate	Daniel Pearson	Daniel Pearson
+Candidate	Danielle N. Albert	Danielle N. Albert
+Candidate	Danny Postemski Jr	Danny Postemski Jr
+Candidate	David A Lawson	David A Lawson
+Candidate	David Arconti Jr	David Arconti Jr
+Candidate	David Borzellino	David Borzellino
+Candidate	David F Walsh	David F Walsh
+Candidate	David J Rutigliano	David J Rutigliano
+Candidate	David K Labriola	David K Labriola
+Candidate	David T Wilson	David T Wilson
+Candidate	David W Coderre	David W Coderre
+Candidate	David W Yaccarino	David W Yaccarino
+Candidate	Debra Rigney	Debra Rigney
+Candidate	Denise W Merrill	Denise W Merrill
+Candidate	Dennis Milanovich	Dennis Milanovich
+Candidate	Devin R Carney	Devin R Carney
+Candidate	Diane Pagano	Diane Pagano
+Candidate	Don Crouch	Don Crouch
+Candidate	Douglas E Losty	Douglas E Losty
+Candidate	Ed Charamut	Ed Charamut
+Candidate	Edward G Heflin	Edward G Heflin
+Candidate	Edwin Vargas	Edwin Vargas
+Candidate	Eleni Kavros Degraw	Eleni Kavros Degraw
+Candidate	Elizabeth Schwebel	Elizabeth Schwebel
+Candidate	Ellen Beatty	Ellen Beatty
+Candidate	Emil 'Buddy' Altobello	Emil 'Buddy' Altobello
+Candidate	Emmett D Riley	Emmett D Riley
+Candidate	Eric C Berthel	Eric C Berthel
+Candidate	Eric Michael Mastroianni Sr	Eric Michael Mastroianni Sr
+Candidate	Erin M Domenech	Erin M Domenech
+Candidate	Ethan Book	Ethan Book
+Candidate	Ezequiel Santiago	Ezequiel Santiago
+Candidate	Frank Page	Frank Page
+Candidate	Fred Camillo	Fred Camillo
+Candidate	Fritz Blau	Fritz Blau
+Candidate	Gail Lavielle	Gail Lavielle
+Candidate	Gale L Mastrofrancesco	Gale L Mastrofrancesco
+Candidate	Gary Byron	Gary Byron
+Candidate	Gary J Walsh	Gary J Walsh
+Candidate	George S Logan	George S Logan
+Candidate	Geraldo C Reyes Jr	Geraldo C Reyes Jr
+Candidate	Giselle Gigi Jacobs	Giselle Gigi Jacobs
+Candidate	Grant Richardson	Grant Richardson
+Candidate	Greg Cava	Greg Cava
+Candidate	Greg Kraut	Greg Kraut
+Candidate	Greg Stokes	Greg Stokes
+Candidate	Heather Lynn Sylvestre Gwynn	Heather Lynn Sylvestre Gwynn
+Candidate	Henry J Genga	Henry J Genga
+Candidate	Hilda E Santiago	Hilda E Santiago
+Candidate	Holly H Cheeseman	Holly H Cheeseman
+Candidate	Hugh McKenney	Hugh McKenney
+Candidate	Irene Haines	Irene Haines
+Candidate	James J Maroney	James J Maroney
+Candidate	James Kiochko	James Kiochko
+Candidate	James M Albis	James M Albis
+Candidate	James Russell	James Russell
+Candidate	Jane M Garibay	Jane M Garibay
+Candidate	Jason Adler	Jason Adler
+Candidate	Jay M Case	Jay M Case
+Candidate	Jeff Desmarais	Jeff Desmarais
+Candidate	Jeff Russell	Jeff Russell
+Candidate	Jennifer Fiereck	Jennifer Fiereck
+Candidate	Jennifer L Lovett	Jennifer L Lovett
+Candidate	Jennifer T Nye	Jennifer T Nye
+Candidate	Jerry Bosak	Jerry Bosak
+Candidate	Jesse MacLachlan	Jesse MacLachlan
+Candidate	Joan V Hartley	Joan V Hartley
+Candidate	Joe Aresimowicz	Joe Aresimowicz
+Candidate	Joe Polletta	Joe Polletta
+Candidate	Joe Verrengia	Joe Verrengia
+Candidate	John (Jack) F Hennessy	John (Jack) F Hennessy
+Candidate	John A Kissel	John A Kissel
+Candidate	John B Larson	John B Larson
+Candidate	John Carlson	John Carlson
+Candidate	John F Scott	John F Scott
+Candidate	John H Frey	John H Frey
+Candidate	John Hampton	John Hampton
+Candidate	John J Flynn	John J Flynn
+Candidate	John P Pelkey	John P Pelkey
+Candidate	John Perrier	John Perrier
+Candidate	John Rodriguez	John Rodriguez
+Candidate	John W Fonfara	John W Fonfara
+Candidate	Jordan A Grode	Jordan A Grode
+Candidate	Jose F Goncalves	Jose F Goncalves
+Candidate	Jose L Quiroga	Jose L Quiroga
+Candidate	Joseph E Serra	Joseph E Serra
+Candidate	Joseph Jaumann	Joseph Jaumann
+Candidate	Joseph P Gresko	Joseph P Gresko
+Candidate	Joshua Alan Rose	Joshua Alan Rose
+Candidate	Joshua Malik Hall	Joshua Malik Hall
+Candidate	Joshua W Van Hoesen	Joshua W Van Hoesen
+Candidate	Julio A Concepcion	Julio A Concepcion
+Candidate	Kathleen M McCarty	Kathleen M McCarty
+Candidate	Kennard Ray	Kennard Ray
+Candidate	Kenneth W Richards	Kenneth W Richards
+Candidate	Kent Johnson	Kent Johnson
+Candidate	Kevin C Kelly	Kevin C Kelly
+Candidate	Kevin Fuller	Kevin Fuller
+Candidate	Kevin Lembo	Kevin Lembo
+Candidate	Kevin McDuffie	Kevin McDuffie
+Candidate	Kim Rose	Kim Rose
+Candidate	Kurt Miller	Kurt Miller
+Candidate	L Scott Frantz	L Scott Frantz
+Candidate	Larry B Butler	Larry B Butler
+Candidate	Larry Groh Jr	Larry Groh Jr
+Candidate	Laura B Bush	Laura B Bush
+Candidate	Laura Kostin	Laura Kostin
+Candidate	Laura M Devlin	Laura M Devlin
+Candidate	Laurel Steinhauser	Laurel Steinhauser
+Candidate	Len Fasano	Len Fasano
+Candidate	Leslee B Hill	Leslee B Hill
+Candidate	Lezlye W Zupkus	Lezlye W Zupkus
+Candidate	Lillian Tanski	Lillian Tanski
+Candidate	Linda A Orange	Linda A Orange
+Candidate	Linda Louise LaCasse	Linda Louise LaCasse
+Candidate	Livvy Floren	Livvy Floren
+Candidate	Lynne A Schlosser	Lynne A Schlosser
+Candidate	Madeleine Leveille	Madeleine Leveille
+Candidate	Manny Santos	Manny Santos
+Candidate	Manuel Bataguas	Manuel Bataguas
+Candidate	Marc D'Amelio	Marc D'Amelio
+Candidate	Maria P Horn	Maria P Horn
+Candidate	Mark A Lounsbury	Mark A Lounsbury
+Candidate	Mark DeCaprio	Mark DeCaprio
+Candidate	Mark Stewart Greenstein and John Demitrus	Mark Stewart Greenstein and John Demitrus
+Candidate	Mark Tweedie	Mark Tweedie
+Candidate	Martha E Marx	Martha E Marx
+Candidate	Martin M Looney	Martin M Looney
+Candidate	Mary L Sanders	Mary L Sanders
+Candidate	Mary M Fay	Mary M Fay
+Candidate	Mary M Mushinsky	Mary M Mushinsky
+Candidate	Matt Pugliese	Matt Pugliese
+Candidate	Matthew Corey	Matthew Corey
+Candidate	Megan E Cassano	Megan E Cassano
+Candidate	Melissa E Osborne	Melissa E Osborne
+Candidate	Melissa Ziobron	Melissa Ziobron
+Candidate	Michael A Dimassa	Michael A Dimassa
+Candidate	Michael A McLachlan	Michael A McLachlan
+Candidate	Michael D'Agostino	Michael D'Agostino
+Candidate	Michael Gagliardi	Michael Gagliardi
+Candidate	Michael Hurley	Michael Hurley
+Candidate	Michael N Cervellino III	Michael N Cervellino III
+Candidate	Michael P Barlowski	Michael P Barlowski
+Candidate	Michael Pitassi	Michael Pitassi
+Candidate	Michael S Ferguson	Michael S Ferguson
+Candidate	Michelle L Cook	Michelle L Cook
+Candidate	Michelle Lapine McCabe	Michelle Lapine McCabe
+Candidate	Michelle Louise Bicking	Michelle Louise Bicking
+Candidate	Mike Bocchino	Mike Bocchino
+Candidate	Molly Spino	Molly Spino
+Candidate	Monica Tujak Brill	Monica Tujak Brill
+Candidate	Ned Lamont and Susan Bysiewicz	Ned Lamont and Susan Bysiewicz
+Candidate	Nick DeLucia	Nick DeLucia
+Candidate	Norman Needleman	Norman Needleman
+Candidate	Oz Griebel and Monte E Frank	Oz Griebel and Monte E Frank
+Candidate	Pam Staneski	Pam Staneski
+Candidate	Pat Dillon	Pat Dillon
+Candidate	Paul M Formica	Paul M Formica
+Candidate	Paul Passarelli	Paul Passarelli
+Candidate	Peter A Tercyak	Peter A Tercyak
+Candidate	Peter D Goselin	Peter D Goselin
+Candidate	Philip Balestriere	Philip Balestriere
+Candidate	Philip Young	Philip Young
+Candidate	Prez Palmer	Prez Palmer
+Candidate	Quentin W Phipps	Quentin W Phipps
+Candidate	Rich Deecken	Rich Deecken
+Candidate	Richard A Smith	Richard A Smith
+Candidate	Richard D DePalma	Richard D DePalma
+Candidate	Richard Ireland Jr	Richard Ireland Jr
+Candidate	Richard Lion	Richard Lion
+Candidate	Ricky L Hayes	Ricky L Hayes
+Candidate	Robert B Mitchell	Robert B Mitchell
+Candidate	Robert H Kalechman	Robert H Kalechman
+Candidate	Robert Imperato	Robert Imperato
+Candidate	Robert M Parente	Robert M Parente
+Candidate	Robert R Statchen	Robert R Statchen
+Candidate	Robert Smedley	Robert Smedley
+Candidate	Robin E Comey	Robin E Comey
+Candidate	Rodney Hanscomb and Jeffrey Thibeault	Rodney Hanscomb and Jeffrey Thibeault
+Candidate	Roger P Misbach	Roger P Misbach
+Candidate	Ronald A Napoli Jr	Ronald A Napoli Jr
+Candidate	Rosa L DeLauro	Rosa L DeLauro
+Candidate	Rosa Rebimbas	Rosa Rebimbas
+Candidate	Ross Tartell	Ross Tartell
+Candidate	Russell A Morin	Russell A Morin
+Candidate	Ryan Rogers	Ryan Rogers
+Candidate	S Michael DeRosa	S Michael DeRosa
+Candidate	Sally Connolly	Sally Connolly
+Candidate	Samuel P Belsito Jr	Samuel P Belsito Jr
+Candidate	Scott A Storms	Scott A Storms
+Candidate	Sharon Beloin Saavedra	Sharon Beloin Saavedra
+Candidate	Shaun Mastroianni	Shaun Mastroianni
+Candidate	Stephen G Harding	Stephen G Harding
+Candidate	Stephen R Ferrucci III	Stephen R Ferrucci III
+Candidate	Steven Mikutel	Steven Mikutel
+Candidate	Steven R Giacomi	Steven R Giacomi
+Candidate	Sue Hatfield	Sue Hatfield
+Candidate	Ted Derouin	Ted Derouin
+Candidate	Terrie E Wood	Terrie E Wood
+Candidate	Terry A Sullivan	Terry A Sullivan
+Candidate	Terry Bielinski Gerratana	Terry Bielinski Gerratana
+Candidate	Themis Klarides	Themis Klarides
+Candidate	Theresa Govert	Theresa Govert
+Candidate	Theresa Ranciato-Viele	Theresa Ranciato-Viele
+Candidate	Thomas J Tierney	Thomas J Tierney
+Candidate	Thomas McCormick	Thomas McCormick
+Candidate	Thomas P O'Brien	Thomas P O'Brien
+Candidate	Tiffany V Thiele	Tiffany V Thiele
+Candidate	Tim Ackert	Tim Ackert
+Candidate	Tim Larson	Tim Larson
+Candidate	Tim Walczak	Tim Walczak
+Candidate	Tom O'Dea	Tom O'Dea
+Candidate	Toni Boucher	Toni Boucher
+Candidate	Toni Walker	Toni Walker
+Candidate	Tony DiPace	Tony DiPace
+Candidate	Tremell J Collins	Tremell J Collins
+Candidate	Vallorie L Clark	Vallorie L Clark
+Candidate	Veasna Roeun	Veasna Roeun
+Candidate	Vickie Orsini Nardello	Vickie Orsini Nardello
+Candidate	Vincent J Candelora	Vincent J Candelora
+Candidate	Vincent J Mase Sr	Vincent J Mase Sr
+Candidate	Wayne A Jackson	Wayne A Jackson
+Candidate	Wendy M Tyson-Wood	Wendy M Tyson-Wood
+Candidate	William A Petit Jr	William A Petit Jr
+Candidate	William Buckbee	William Buckbee
+Candidate	William Duff	William Duff
+Candidate	William Tong	William Tong
+Party	Amigo Constitution Liberty Party	amigo constitution liberty
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	Griebel Frank For Ct Party	griebel frank for ct
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Petitioning Candidate Party	petitioning candidate
+Party	Republican Party	republican
+Party	Working Families Party	working families
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	Connecticut;Fairfield County	Connecticut;Fairfield
+ReportingUnit	Connecticut;Hartford County	Connecticut;Hartford
+ReportingUnit	Connecticut;Litchfield County	Connecticut;Litchfield
+ReportingUnit	Connecticut;Middlesex County	Connecticut;Middlesex
+ReportingUnit	Connecticut;New Haven County	Connecticut;New Haven
+ReportingUnit	Connecticut;New London County	Connecticut;New London
+ReportingUnit	Connecticut;Tolland County	Connecticut;Tolland
+ReportingUnit	Connecticut;Windham County	Connecticut;Windham

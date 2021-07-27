@@ -212,3 +212,8 @@ US Senate OK	1	US Senate OK
 OK Attorney General	1	OK Attorney General	
 OK Lieutenant Governor	1	OK Lieutenant Governor	
 OK Treasurer	1	OK Treasurer	
+OK Commissioner of Labor	1	OK Commissioner of Labor	
+OK Corporation Commissioner	1	OK Corporation Commissioner	
+OK Insurance Commissioner	1	OK Insurance Commissioner	
+OK State Auditor and Inspector	1	OK State Auditor and Inspector	
+OK Superintendent of Public Instruction	1	OK Superintendent of Public Instruction	

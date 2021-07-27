@@ -160,6 +160,11 @@ OK Attorney General	Oklahoma
 OK Lieutenant Governor	Oklahoma
 OK Treasurer	Oklahoma
 OK Secretary of State	Oklahoma
+OK Commissioner of Labor	Oklahoma
+OK Corporation Commissioner	Oklahoma
+OK Insurance Commissioner	Oklahoma
+OK State Auditor and Inspector	Oklahoma
+OK Superintendent of Public Instruction	Oklahoma
 OK House District 49	Oklahoma;OK House District 49
 OK House District 50	Oklahoma;OK House District 50
 OK House District 51	Oklahoma;OK House District 51

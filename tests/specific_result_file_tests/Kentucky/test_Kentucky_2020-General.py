@@ -35,7 +35,9 @@ single_county = (
     "Kentucky;Adair County"  # pick any one from your file, but use internal db name
 )
 # 5 votes for Howie Hawkins per KY SoS website not in xml file, so not included here
-pres_votes_county = 7276 + 1392 + 60 + 25 + 10  # total votes for US President in that county
+pres_votes_county = (
+    7276 + 1392 + 60 + 25 + 10
+)  # total votes for US President in that county
 
 
 def test_data_exists(dbname):

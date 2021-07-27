@@ -1,6 +1,6 @@
 cdf_element	cdf_internal_name	raw_identifier_value
 Candidate	Aaron James	Aaron James
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alyson Kennedy	Alyson Kennedy
 Candidate	Amber L. Hysell	Amber L. Hysell
 Candidate	Amber Riddle	Amber Riddle
@@ -9,7 +9,7 @@ Candidate	Andrew Ellis Farmer	Andrew Ellis Farmer
 Candidate	Antonio Parkinson	Antonio Parkinson
 Candidate	Art Swann	Art Swann
 Candidate	Arvil Love Jr	Arvil Love Jr
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara Cooper	Barbara Cooper
 Candidate	Becky Duncan Massey	Becky Duncan Massey
 Candidate	Bennett H Lapides	Bennett H Lapides
@@ -63,7 +63,7 @@ Candidate	Dennis Powers	Dennis Powers
 Candidate	Diana Harshbarger	Diana Harshbarger
 Candidate	Diane Michel Canada	Diane Michel Canada
 Candidate	Don Blankenship	Don Blankenship
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donna Tees	Donna Tees
 Candidate	Dwayne Thompson	Dwayne Thompson
@@ -82,7 +82,7 @@ Candidate	G. Dean Hill	G. Dean Hill
 Candidate	G.A. Hardaway	G.A. Hardaway
 Candidate	Gabby Salinas	Gabby Salinas
 Candidate	Gary W Hicks Jr	Gary W Hicks Jr
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Glen Casada	Glen Casada
 Candidate	Glenn Scruggs	Glenn Scruggs
 Candidate	Gloria Johnson	Gloria Johnson
@@ -90,7 +90,7 @@ Candidate	Gloria La Riva	Gloria La Riva
 Candidate	Greg Mills	Greg Mills
 Candidate	Harold M. Love	Harold M. Love
 Candidate	Heidi Campbell	Heidi Campbell
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Holly Spann	Holly Spann
 Candidate	Howie Hawkins	Howie Hawkins
 Candidate	Iris Rudder	Iris Rudder
@@ -126,9 +126,9 @@ Candidate	John D. Stevens	John D. Stevens
 Candidate	John Gillespie	John Gillespie
 Candidate	John J. Deberry Jr.	John J. Deberry Jr.
 Candidate	John K. Crawford	John K. Crawford
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John Mark Windle	John Mark Windle
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John Ray Clemmons	John Ray Clemmons
 Candidate	John Rose	John Rose
 Candidate	John W. Dawson	John W. Dawson
@@ -171,8 +171,8 @@ Candidate	Michele Carringer	Michele Carringer
 Candidate	Mike Carter	Mike Carter
 Candidate	Mike Sparks	Mike Sparks
 Candidate	Mike Stewart	Mike Stewart
-Candidate	Mitt Romney	MITT ROMNEY
-Candidate	Other	OTHER
+Candidate	Mitt Romney	Mitt Romney
+Candidate	Other	Other
 Candidate	Paddy Sizemore	Paddy Sizemore
 Candidate	Page Walley	Page Walley
 Candidate	Pat Marsh	Pat Marsh
@@ -180,7 +180,7 @@ Candidate	Patricia 'Patti' Possel	Patricia 'Patti' Possel
 Candidate	Patsy Hazlewood	Patsy Hazlewood
 Candidate	Paul Sherrell	Paul Sherrell
 Candidate	Paul W. Rose	Paul W. Rose
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Rebecca Keefauver Alexander	Rebecca Keefauver Alexander
 Candidate	Renee Hoyos	Renee Hoyos
 Candidate	Rick Eldridge	Rick Eldridge
@@ -2587,3 +2587,433 @@ ReportingUnit	Tennessee;Wilson County;7-2	Wilson;7-2
 ReportingUnit	Tennessee;Wilson County;8-1	Wilson;8-1
 ReportingUnit	Tennessee;Wilson County;9-1	Wilson;9-1
 ReportingUnit	Tennessee;Wilson County;9-2	Wilson;9-2
+CandidateContest	TN Governor	TN;Governor;statewide
+CandidateContest	TN House District 33	TN;State Representative;District 33
+CandidateContest	TN House District 36	TN;State Representative;District 36
+CandidateContest	TN Senate District 5	TN;State Senator;District 5
+CandidateContest	US House TN District 3	TN;US Representative;District 3
+CandidateContest	US Senate TN	TN;US Senator;statewide
+CandidateContest	TN House District 62	TN;State Representative;District 62
+CandidateContest	US House TN District 4	TN;US Representative;District 4
+CandidateContest	TN House District 75	TN;State Representative;District 75
+CandidateContest	US House TN District 7	TN;US Representative;District 7
+CandidateContest	US House TN District 8	TN;US Representative;District 8
+CandidateContest	TN House District 31	TN;State Representative;District 31
+CandidateContest	TN Senate District 15	TN;State Senator;District 15
+CandidateContest	TN House District 20	TN;State Representative;District 20
+CandidateContest	TN House District 8	TN;State Representative;District 8
+CandidateContest	TN Senate District 2	TN;State Senator;District 2
+CandidateContest	US House TN District 2	TN;US Representative;District 2
+CandidateContest	TN House District 22	TN;State Representative;District 22
+CandidateContest	TN House District 24	TN;State Representative;District 24
+CandidateContest	TN Senate District 9	TN;State Senator;District 9
+CandidateContest	TN House District 46	TN;State Representative;District 46
+CandidateContest	TN Senate District 17	TN;State Senator;District 17
+CandidateContest	US House TN District 6	TN;US Representative;District 6
+CandidateContest	TN House District 76	TN;State Representative;District 76
+CandidateContest	TN House District 79	TN;State Representative;District 79
+CandidateContest	TN House District 3	TN;State Representative;District 3
+CandidateContest	TN House District 4	TN;State Representative;District 4
+CandidateContest	TN Senate District 3	TN;State Senator;District 3
+CandidateContest	US House TN District 1	TN;US Representative;District 1
+CandidateContest	TN House District 78	TN;State Representative;District 78
+CandidateContest	TN Senate District 25	TN;State Senator;District 25
+CandidateContest	US House TN District 5	TN;US Representative;District 5
+CandidateContest	TN House District 72	TN;State Representative;District 72
+CandidateContest	TN House District 35	TN;State Representative;District 35
+CandidateContest	TN House District 38	TN;State Representative;District 38
+CandidateContest	TN House District 11	TN;State Representative;District 11
+CandidateContest	TN Senate District 1	TN;State Senator;District 1
+CandidateContest	TN House District 47	TN;State Representative;District 47
+CandidateContest	TN House District 82	TN;State Representative;District 82
+CandidateContest	TN Senate District 27	TN;State Senator;District 27
+CandidateContest	TN House District 25	TN;State Representative;District 25
+CandidateContest	TN House District 50	TN;State Representative;District 50
+CandidateContest	TN House District 51	TN;State Representative;District 51
+CandidateContest	TN House District 52	TN;State Representative;District 52
+CandidateContest	TN House District 53	TN;State Representative;District 53
+CandidateContest	TN House District 54	TN;State Representative;District 54
+CandidateContest	TN House District 55	TN;State Representative;District 55
+CandidateContest	TN House District 56	TN;State Representative;District 56
+CandidateContest	TN House District 58	TN;State Representative;District 58
+CandidateContest	TN House District 59	TN;State Representative;District 59
+CandidateContest	TN House District 60	TN;State Representative;District 60
+CandidateContest	TN Senate District 19	TN;State Senator;District 19
+CandidateContest	TN Senate District 21	TN;State Senator;District 21
+CandidateContest	TN House District 40	TN;State Representative;District 40
+CandidateContest	TN House District 69	TN;State Representative;District 69
+CandidateContest	TN House District 77	TN;State Representative;District 77
+CandidateContest	TN House District 94	TN;State Representative;District 94
+CandidateContest	TN House District 41	TN;State Representative;District 41
+CandidateContest	TN House District 39	TN;State Representative;District 39
+CandidateContest	TN House District 92	TN;State Representative;District 92
+CandidateContest	TN House District 70	TN;State Representative;District 70
+CandidateContest	TN House District 5	TN;State Representative;District 5
+CandidateContest	TN House District 43	TN;State Representative;District 43
+CandidateContest	TN House District 10	TN;State Representative;District 10
+CandidateContest	TN House District 26	TN;State Representative;District 26
+CandidateContest	TN House District 27	TN;State Representative;District 27
+CandidateContest	TN House District 28	TN;State Representative;District 28
+CandidateContest	TN House District 29	TN;State Representative;District 29
+CandidateContest	TN House District 30	TN;State Representative;District 30
+CandidateContest	TN Senate District 11	TN;State Senator;District 11
+CandidateContest	TN House District 9	TN;State Representative;District 9
+CandidateContest	TN House District 80	TN;State Representative;District 80
+CandidateContest	TN House District 71	TN;State Representative;District 71
+CandidateContest	TN House District 74	TN;State Representative;District 74
+CandidateContest	TN House District 17	TN;State Representative;District 17
+CandidateContest	TN House District 13	TN;State Representative;District 13
+CandidateContest	TN House District 14	TN;State Representative;District 14
+CandidateContest	TN House District 15	TN;State Representative;District 15
+CandidateContest	TN House District 16	TN;State Representative;District 16
+CandidateContest	TN House District 18	TN;State Representative;District 18
+CandidateContest	TN House District 19	TN;State Representative;District 19
+CandidateContest	TN House District 89	TN;State Representative;District 89
+CandidateContest	TN Senate District 7	TN;State Senator;District 7
+CandidateContest	TN House District 21	TN;State Representative;District 21
+CandidateContest	TN House District 32	TN;State Representative;District 32
+CandidateContest	TN House District 73	TN;State Representative;District 73
+CandidateContest	TN House District 64	TN;State Representative;District 64
+CandidateContest	TN House District 23	TN;State Representative;District 23
+CandidateContest	TN House District 67	TN;State Representative;District 67
+CandidateContest	TN House District 68	TN;State Representative;District 68
+CandidateContest	TN House District 42	TN;State Representative;District 42
+CandidateContest	TN House District 66	TN;State Representative;District 66
+CandidateContest	TN House District 34	TN;State Representative;District 34
+CandidateContest	TN House District 37	TN;State Representative;District 37
+CandidateContest	TN House District 48	TN;State Representative;District 48
+CandidateContest	TN House District 49	TN;State Representative;District 49
+CandidateContest	TN Senate District 13	TN;State Senator;District 13
+CandidateContest	TN House District 12	TN;State Representative;District 12
+CandidateContest	TN House District 83	TN;State Representative;District 83
+CandidateContest	TN House District 84	TN;State Representative;District 84
+CandidateContest	TN House District 85	TN;State Representative;District 85
+CandidateContest	TN House District 86	TN;State Representative;District 86
+CandidateContest	TN House District 87	TN;State Representative;District 87
+CandidateContest	TN House District 88	TN;State Representative;District 88
+CandidateContest	TN House District 90	TN;State Representative;District 90
+CandidateContest	TN House District 91	TN;State Representative;District 91
+CandidateContest	TN House District 93	TN;State Representative;District 93
+CandidateContest	TN House District 95	TN;State Representative;District 95
+CandidateContest	TN House District 96	TN;State Representative;District 96
+CandidateContest	TN House District 97	TN;State Representative;District 97
+CandidateContest	TN House District 98	TN;State Representative;District 98
+CandidateContest	TN House District 99	TN;State Representative;District 99
+CandidateContest	TN Senate District 29	TN;State Senator;District 29
+CandidateContest	TN Senate District 31	TN;State Senator;District 31
+CandidateContest	TN Senate District 33	TN;State Senator;District 33
+CandidateContest	US House TN District 9	TN;US Representative;District 9
+CandidateContest	TN House District 1	TN;State Representative;District 1
+CandidateContest	TN House District 2	TN;State Representative;District 2
+CandidateContest	TN House District 44	TN;State Representative;District 44
+CandidateContest	TN House District 45	TN;State Representative;District 45
+CandidateContest	TN House District 81	TN;State Representative;District 81
+CandidateContest	TN House District 6	TN;State Representative;District 6
+CandidateContest	TN House District 7	TN;State Representative;District 7
+CandidateContest	TN House District 61	TN;State Representative;District 61
+CandidateContest	TN House District 63	TN;State Representative;District 63
+CandidateContest	TN House District 65	TN;State Representative;District 65
+CandidateContest	TN Senate District 23	TN;State Senator;District 23
+CandidateContest	TN House District 57	TN;State Representative;District 57
+Candidate	A. J. Holmes	A. J. Holmes
+Candidate	Alfred Shawn Rapoza	Alfred Shawn Rapoza
+Candidate	Allan Creasy	Allan Creasy
+Candidate	Amberlee' Brooks	Amberlee' Brooks
+Candidate	Andrew E. Farmer	Andrew E. Farmer
+Candidate	Andy Holt	Andy Holt
+Candidate	Angela Hedgecough	Angela Hedgecough
+Candidate	Anne F. Quillen	Anne F. Quillen
+Candidate	Arvil Love Jr.	Arvil Love Jr.
+Candidate	Barbara Simmons	Barbara Simmons
+Candidate	Bill Dunn	Bill Dunn
+Candidate	Bill Lee	Bill Lee
+Candidate	Bill Peach	Bill Peach
+Candidate	Bill Sanderson	Bill Sanderson
+Candidate	Billy Borchert	Billy Borchert
+Candidate	Bo Watson	Bo Watson
+Candidate	Brad W. Hartley	Brad W. Hartley
+Candidate	Brenda Gilmore	Brenda Gilmore
+Candidate	Brent Legendre	Brent Legendre
+Candidate	Brent Moody	Brent Moody
+Candidate	Brent S. Morris	Brent S. Morris
+Candidate	Breton Phillips	Breton Phillips
+Candidate	Brian Kelsey	Brian Kelsey
+Candidate	C.S. 'Scott' Coffey	C.S. 'Scott' Coffey
+Candidate	Carl Lansden	Carl Lansden
+Candidate	Carl R. Eggers, Sr.	Carl R. Eggers, Sr.
+Candidate	Carol Venea' Abney	Carol Venea' Abney
+Candidate	Cassandra Mitchell	Cassandra Mitchell
+Candidate	Chad Riden	Chad Riden
+Candidate	Chris Mayor	Chris Mayor
+Candidate	Christina 'Chris' Callaway	Christina 'Chris' Callaway
+Candidate	Coleen Martinez	Coleen Martinez
+Candidate	Cory King	Cory King
+Candidate	Danielle Mitchell	Danielle Mitchell
+Candidate	Danielle Schonbaum	Danielle Schonbaum
+Candidate	David Cambron	David Cambron
+Candidate	David Dennison	David Dennison
+Candidate	David R. Birdsong	David R. Birdsong
+Candidate	David Ross	David Ross
+Candidate	David W Ross	David W Ross
+Candidate	Dawn Barlow	Dawn Barlow
+Candidate	Dawn White	Dawn White
+Candidate	Dean Hill	Dean Hill
+Candidate	Dean M Sparks	Dean M Sparks
+Candidate	Deane Arganbright	Deane Arganbright
+Candidate	DeAnna D. Osborne	DeAnna D. Osborne
+Candidate	Debra Moody	Debra Moody
+Candidate	Dennis H. Powers	Dennis H. Powers
+Candidate	Dennis Potvin	Dennis Potvin
+Candidate	Derek Winkle	Derek Winkle
+Candidate	Ed Butler	Ed Butler
+Candidate	Ed Jackson	Ed Jackson
+Candidate	Eddie Smith	Eddie Smith
+Candidate	Edward Nelson	Edward Nelson
+Candidate	Frankie G. Floied	Frankie G. Floied
+Candidate	G. A. Hardaway, Sr.	G. A. Hardaway, Sr.
+Candidate	Gabriel Fancher	Gabriel Fancher
+Candidate	Gary W. Hicks, Jr.	Gary W. Hicks, Jr.
+Candidate	George Blackwell Smith IV	George Blackwell Smith IV
+Candidate	Ginger Smith	Ginger Smith
+Candidate	Greg Mackay	Greg Mackay
+Candidate	Greg Samples	Greg Samples
+Candidate	Gregory Frye	Gregory Frye
+Candidate	Hana Ali	Hana Ali
+Candidate	Heather Scott	Heather Scott
+Candidate	J. Michael Holloway	J. Michael Holloway
+Candidate	Jack Johnson	Jack Johnson
+Candidate	James A. Baxter	James A. Baxter
+Candidate	James T. Haynes	James T. Haynes
+Candidate	Jamie Ballinger	Jamie Ballinger
+Candidate	Jaron D. Weidner	Jaron D. Weidner
+Candidate	Jason Powell	Jason Powell
+Candidate	Jean-Marie Lawrence	Jean-Marie Lawrence
+Candidate	Jeff Yarbro	Jeff Yarbro
+Candidate	Jeffrey A. Grunau	Jeffrey A. Grunau
+Candidate	Jennifer Vannoy	Jennifer Vannoy
+Candidate	Jeremy Allen Stephenson	Jeremy Allen Stephenson
+Candidate	Jerome Moon	Jerome Moon
+Candidate	Jessica B. Yokley	Jessica B. Yokley
+Candidate	Jessie D. McDonald	Jessie D. McDonald
+Candidate	Jim Coley	Jim Coley
+Candidate	Joda Thongnopnua	Joda Thongnopnua
+Candidate	Jody M. Ball	Jody M. Ball
+Candidate	Joe B. Wilmoth	Joe B. Wilmoth
+Candidate	John 'Big John' Smith	John 'Big John' Smith
+Candidate	John B Holsclaw Jr.	John B Holsclaw Jr.
+Candidate	John Carico	John Carico
+Candidate	John Crawford	John Crawford
+Candidate	John D. Ragan	John D. Ragan
+Candidate	John E. Patrick	John E. Patrick
+Candidate	Johnny C. Garrett	Johnny C. Garrett
+Candidate	Jordan Cole	Jordan Cole
+Candidate	Judd Cowan	Judd Cowan
+Candidate	Justin Cornett	Justin Cornett
+Candidate	Justin Kanew	Justin Kanew
+Candidate	Karl Dean	Karl Dean
+Candidate	Kate Trudell	Kate Trudell
+Candidate	Katrina Robinson	Katrina Robinson
+Candidate	Keith A. LaTorre	Keith A. LaTorre
+Candidate	Kelly Northcutt	Kelly Northcutt
+Candidate	Kerry Roberts	Kerry Roberts
+Candidate	Kevin Lee McCants	Kevin Lee McCants
+Candidate	Kevin Vaughan	Kevin Vaughan
+Candidate	Kris L. Todd	Kris L. Todd
+Candidate	Kristen Grimm	Kristen Grimm
+Candidate	Larry Proffitt	Larry Proffitt
+Candidate	Laura Miller	Laura Miller
+Candidate	Lemon C. Williams, Jr.	Lemon C. Williams, Jr.
+Candidate	Leo AwGoWhat	Leo AwGoWhat
+Candidate	Leonard D. (Lenny) Ladner	Leonard D. (Lenny) Ladner
+Candidate	Les Trotman	Les Trotman
+Candidate	Lloyd Dunn	Lloyd Dunn
+Candidate	London P. Lamar	London P. Lamar
+Candidate	Mallory Pickert	Mallory Pickert
+Candidate	Marc Whitmire	Marc Whitmire
+Candidate	Mariah Phillips	Mariah Phillips
+Candidate	Mark Cagle	Mark Cagle
+Candidate	Mark CoonRippy Brown	Mark CoonRippy Brown
+Candidate	Mark Pody	Mark Pody
+Candidate	Mark Wright	Mark Wright
+Candidate	Marsha Blackburn	Marsha Blackburn
+Candidate	Martin B. Daniel	Martin B. Daniel
+Candidate	Marty Davis	Marty Davis
+Candidate	Marty Olsen	Marty Olsen
+Candidate	Mary Alice Carfi	Mary Alice Carfi
+Candidate	Mary Ellen Blencoe	Mary Ellen Blencoe
+Candidate	Matthew Hill	Matthew Hill
+Candidate	Matthew Koch	Matthew Koch
+Candidate	Micah Van Huss	Micah Van Huss
+Candidate	Michael D. Salyer	Michael D. Salyer
+Candidate	Michael Shupe	Michael Shupe
+Candidate	Michael Stewart	Michael Stewart
+Candidate	Michelle Westover	Michelle Westover
+Candidate	Mike Bell	Mike Bell
+Candidate	Mike Toews	Mike Toews
+Candidate	Mike Winton	Mike Winton
+Candidate	Murphey Johnson	Murphey Johnson
+Candidate	Nathan Farnor	Nathan Farnor
+Candidate	Park Overall	Park Overall
+Candidate	Patrick Whitlock	Patrick Whitlock
+Candidate	Paul Bailey	Paul Bailey
+Candidate	Phil Bredesen	Phil Bredesen
+Candidate	Phil Roe	Phil Roe
+Candidate	Rachel Mackey	Rachel Mackey
+Candidate	Randall 'Randy' Price	Randall 'Randy' Price
+Candidate	Randell Stroud	Randell Stroud
+Candidate	Randy McNally	Randy McNally
+Candidate	Raumesh Akbari	Raumesh Akbari
+Candidate	Rebecca Purington	Rebecca Purington
+Candidate	Richard Briggs	Richard Briggs
+Candidate	Richard Carl	Richard Carl
+Candidate	Richard Dawson	Richard Dawson
+Candidate	Rick Staples	Rick Staples
+Candidate	Rick Tillis	Rick Tillis
+Candidate	Rick Tyler	Rick Tyler
+Candidate	Robert G Williams	Robert G Williams
+Candidate	Robert M. Ellis	Robert M. Ellis
+Candidate	Robert Sawyers Sr.	Robert Sawyers Sr.
+Candidate	Robin Smith	Robin Smith
+Candidate	Roy Donald Waldrop	Roy Donald Waldrop
+Candidate	Rueben Dockery	Rueben Dockery
+Candidate	Rusty Crowe	Rusty Crowe
+Candidate	Sabi 'Doc' Kumar	Sabi 'Doc' Kumar
+Candidate	Sanjeev Memula	Sanjeev Memula
+Candidate	Savannah Williamson	Savannah Williamson
+Candidate	Scott McCormick	Scott McCormick
+Candidate	Sean Bruce Fleming	Sean Bruce Fleming
+Candidate	Sharon 'Layne' Adams	Sharon 'Layne' Adams
+Candidate	Sherry L. Clark	Sherry L. Clark
+Candidate	Steve Southerland	Steve Southerland
+Candidate	Stuart Starr	Stuart Starr
+Candidate	Tammy Magouirk	Tammy Magouirk
+Candidate	Terry S. Saine	Terry S. Saine
+Candidate	Terry Scott	Terry Scott
+Candidate	Timothy Hill	Timothy Hill
+Candidate	Toby Shaffer	Toby Shaffer
+Candidate	Tom Stephens	Tom Stephens
+Candidate	Tommy J. Vallejos	Tommy J. Vallejos
+Candidate	Tommy Ray McAnally	Tommy Ray McAnally
+Candidate	Toney Randall Mitchell	Toney Randall Mitchell
+Candidate	Tracy C. Yaste Tisdale	Tracy C. Yaste Tisdale
+Candidate	Trudy A. Austin	Trudy A. Austin
+Candidate	Vincyl Fitzgerald II	Vincyl Fitzgerald II
+Candidate	Vinnie Vineyard	Vinnie Vineyard
+Candidate	Wade Munday	Wade Munday
+Candidate	William Andrew Helmstetter	William Andrew Helmstetter
+Candidate	Yvonne Neubert	Yvonne Neubert
+Candidate	Zachary Houk	Zachary Houk
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	Tennessee;Anderson County	Tennessee;Anderson
+ReportingUnit	Tennessee;Bedford County	Tennessee;Bedford
+ReportingUnit	Tennessee;Benton County	Tennessee;Benton
+ReportingUnit	Tennessee;Bledsoe County	Tennessee;Bledsoe
+ReportingUnit	Tennessee;Blount County	Tennessee;Blount
+ReportingUnit	Tennessee;Bradley County	Tennessee;Bradley
+ReportingUnit	Tennessee;Campbell County	Tennessee;Campbell
+ReportingUnit	Tennessee;Cannon County	Tennessee;Cannon
+ReportingUnit	Tennessee;Carroll County	Tennessee;Carroll
+ReportingUnit	Tennessee;Carter County	Tennessee;Carter
+ReportingUnit	Tennessee;Cheatham County	Tennessee;Cheatham
+ReportingUnit	Tennessee;Chester County	Tennessee;Chester
+ReportingUnit	Tennessee;Claiborne County	Tennessee;Claiborne
+ReportingUnit	Tennessee;Clay County	Tennessee;Clay
+ReportingUnit	Tennessee;Cocke County	Tennessee;Cocke
+ReportingUnit	Tennessee;Coffee County	Tennessee;Coffee
+ReportingUnit	Tennessee;Crockett County	Tennessee;Crockett
+ReportingUnit	Tennessee;Cumberland County	Tennessee;Cumberland
+ReportingUnit	Tennessee;Davidson County	Tennessee;Davidson
+ReportingUnit	Tennessee;Decatur County	Tennessee;Decatur
+ReportingUnit	Tennessee;DeKalb County	Tennessee;DeKalb
+ReportingUnit	Tennessee;Dickson County	Tennessee;Dickson
+ReportingUnit	Tennessee;Dyer County	Tennessee;Dyer
+ReportingUnit	Tennessee;Fayette County	Tennessee;Fayette
+ReportingUnit	Tennessee;Fentress County	Tennessee;Fentress
+ReportingUnit	Tennessee;Franklin County	Tennessee;Franklin
+ReportingUnit	Tennessee;Gibson County	Tennessee;Gibson
+ReportingUnit	Tennessee;Giles County	Tennessee;Giles
+ReportingUnit	Tennessee;Grainger County	Tennessee;Grainger
+ReportingUnit	Tennessee;Greene County	Tennessee;Greene
+ReportingUnit	Tennessee;Grundy County	Tennessee;Grundy
+ReportingUnit	Tennessee;Hamblen County	Tennessee;Hamblen
+ReportingUnit	Tennessee;Hamilton County	Tennessee;Hamilton
+ReportingUnit	Tennessee;Hancock County	Tennessee;Hancock
+ReportingUnit	Tennessee;Hardeman County	Tennessee;Hardeman
+ReportingUnit	Tennessee;Hardin County	Tennessee;Hardin
+ReportingUnit	Tennessee;Hawkins County	Tennessee;Hawkins
+ReportingUnit	Tennessee;Haywood County	Tennessee;Haywood
+ReportingUnit	Tennessee;Henderson County	Tennessee;Henderson
+ReportingUnit	Tennessee;Henry County	Tennessee;Henry
+ReportingUnit	Tennessee;Hickman County	Tennessee;Hickman
+ReportingUnit	Tennessee;Houston County	Tennessee;Houston
+ReportingUnit	Tennessee;Humphreys County	Tennessee;Humphreys
+ReportingUnit	Tennessee;Jackson County	Tennessee;Jackson
+ReportingUnit	Tennessee;Jefferson County	Tennessee;Jefferson
+ReportingUnit	Tennessee;Johnson County	Tennessee;Johnson
+ReportingUnit	Tennessee;Knox County	Tennessee;Knox
+ReportingUnit	Tennessee;Lake County	Tennessee;Lake
+ReportingUnit	Tennessee;Lauderdale County	Tennessee;Lauderdale
+ReportingUnit	Tennessee;Lawrence County	Tennessee;Lawrence
+ReportingUnit	Tennessee;Lewis County	Tennessee;Lewis
+ReportingUnit	Tennessee;Lincoln County	Tennessee;Lincoln
+ReportingUnit	Tennessee;Loudon County	Tennessee;Loudon
+ReportingUnit	Tennessee;Macon County	Tennessee;Macon
+ReportingUnit	Tennessee;Madison County	Tennessee;Madison
+ReportingUnit	Tennessee;Marion County	Tennessee;Marion
+ReportingUnit	Tennessee;Marshall County	Tennessee;Marshall
+ReportingUnit	Tennessee;Maury County	Tennessee;Maury
+ReportingUnit	Tennessee;McMinn County	Tennessee;McMinn
+ReportingUnit	Tennessee;McNairy County	Tennessee;McNairy
+ReportingUnit	Tennessee;Meigs County	Tennessee;Meigs
+ReportingUnit	Tennessee;Monroe County	Tennessee;Monroe
+ReportingUnit	Tennessee;Montgomery County	Tennessee;Montgomery
+ReportingUnit	Tennessee;Moore County	Tennessee;Moore
+ReportingUnit	Tennessee;Morgan County	Tennessee;Morgan
+ReportingUnit	Tennessee;Obion County	Tennessee;Obion
+ReportingUnit	Tennessee;Overton County	Tennessee;Overton
+ReportingUnit	Tennessee;Perry County	Tennessee;Perry
+ReportingUnit	Tennessee;Pickett County	Tennessee;Pickett
+ReportingUnit	Tennessee;Polk County	Tennessee;Polk
+ReportingUnit	Tennessee;Putnam County	Tennessee;Putnam
+ReportingUnit	Tennessee;Rhea County	Tennessee;Rhea
+ReportingUnit	Tennessee;Roane County	Tennessee;Roane
+ReportingUnit	Tennessee;Robertson County	Tennessee;Robertson
+ReportingUnit	Tennessee;Rutherford County	Tennessee;Rutherford
+ReportingUnit	Tennessee;Scott County	Tennessee;Scott
+ReportingUnit	Tennessee;Sequatchie County	Tennessee;Sequatchie
+ReportingUnit	Tennessee;Sevier County	Tennessee;Sevier
+ReportingUnit	Tennessee;Shelby County	Tennessee;Shelby
+ReportingUnit	Tennessee;Smith County	Tennessee;Smith
+ReportingUnit	Tennessee;Stewart County	Tennessee;Stewart
+ReportingUnit	Tennessee;Sullivan County	Tennessee;Sullivan
+ReportingUnit	Tennessee;Sumner County	Tennessee;Sumner
+ReportingUnit	Tennessee;Tipton County	Tennessee;Tipton
+ReportingUnit	Tennessee;Trousdale County	Tennessee;Trousdale
+ReportingUnit	Tennessee;Unicoi County	Tennessee;Unicoi
+ReportingUnit	Tennessee;Union County	Tennessee;Union
+ReportingUnit	Tennessee;Van Buren County	Tennessee;Van Buren
+ReportingUnit	Tennessee;Warren County	Tennessee;Warren
+ReportingUnit	Tennessee;Washington County	Tennessee;Washington
+ReportingUnit	Tennessee;Wayne County	Tennessee;Wayne
+ReportingUnit	Tennessee;Weakley County	Tennessee;Weakley
+ReportingUnit	Tennessee;White County	Tennessee;White
+ReportingUnit	Tennessee;Williamson County	Tennessee;Williamson
+ReportingUnit	Tennessee;Wilson County	Tennessee;Wilson
+CandidateContest	TN Attorney General	TN;Attorney General;statewide

@@ -4,43 +4,43 @@ Vermont;Caledonia County	county
 Vermont;Lamoille County	county
 Vermont;Orleans County	county
 Vermont;Rutland County	county
-Vermont;Addison County;ADD-3	precinct
+Vermont;Addison County;ADD 3	precinct
 Vermont;Albany;ORL-CAL	precinct
 Vermont;Alburgh;GI-CHI	precinct
 Vermont;Andover;WDR-3-1	precinct
-Vermont;Arlington;BEN-4	precinct
-Vermont;Athens;WDH-3	precinct
-Vermont;Bakersfield;FRA-6	precinct
+Vermont;Arlington;BEN 4	precinct
+Vermont;Athens;WDH 3	precinct
+Vermont;Bakersfield;FRA 6	precinct
 Vermont;Baltimore;WDR-3-1	precinct
 Vermont;Barnard;WDR-4-1	precinct
-Vermont;Barnet;CAL-1	precinct
-Vermont;Barre City;WAS-3	precinct
-Vermont;Barre Town;WAS-2	precinct
+Vermont;Barnet;CAL 1	precinct
+Vermont;Barre City;WAS 3	precinct
+Vermont;Barre Town;WAS 2	precinct
 Vermont;Barton;ORL-CAL	precinct
-Vermont;Belvidere;LAM-2	precinct
+Vermont;Belvidere;LAM 2	precinct
 Vermont;Bennington County;BEN-2-1	precinct
 Vermont;Bennington County;BEN-2-2	precinct
 Vermont;Benson;ADD-RUT	precinct
-Vermont;Berkshire;FRA-5	precinct
-Vermont;Berlin;WAS-1	precinct
+Vermont;Berkshire;FRA 5	precinct
+Vermont;Berlin;WAS 1	precinct
 Vermont;Bethel;WDR-RUT	precinct
 Vermont;Bloomfield;ESX-CAL-ORL	precinct
 Vermont;Bolton;WAS-CHI	precinct
-Vermont;Bradford;ORA-2	precinct
+Vermont;Bradford;ORA 2	precinct
 Vermont;Braintree;ORA-WAS-ADD	precinct
-Vermont;Brandon;RUT-6	precinct
+Vermont;Brandon;RUT 6	precinct
 Vermont;Brattleboro;WDH-2-1	precinct
 Vermont;Brattleboro;WDH-2-2	precinct
 Vermont;Brattleboro;WDH-2-3	precinct
-Vermont;Bridgewater;RUT-WDR-1	precinct
-Vermont;Bridport;ADD-5	precinct
+Vermont;Bridgewater;RUT-WDR 1	precinct
+Vermont;Bridport;ADD 5	precinct
 Vermont;Brighton;ESX-CAL-ORL	precinct
-Vermont;Bristol;ADD-4	precinct
+Vermont;Bristol;ADD 4	precinct
 Vermont;Brookfield;ORA-WAS-ADD	precinct
-Vermont;Brookline;WDH-3	precinct
-Vermont;Brownington;ORL-1	precinct
+Vermont;Brookline;WDH 3	precinct
+Vermont;Brownington;ORL 1	precinct
 Vermont;Brunswick;ESX-CAL	precinct
-Vermont;Burke;CAL-4	precinct
+Vermont;Burke;CAL 4	precinct
 Vermont;Burlington;CHI-6-1	precinct
 Vermont;Burlington;CHI-6-2	precinct
 Vermont;Burlington;CHI-6-3	precinct
@@ -49,165 +49,165 @@ Vermont;Burlington;CHI-6-5	precinct
 Vermont;Burlington;CHI-6-6	precinct
 Vermont;Burlington;CHI-6-7	precinct
 Vermont;Cabot;CAL-WAS	precinct
-Vermont;Calais;WAS-6	precinct
-Vermont;Cambridge;LAM-3	precinct
+Vermont;Calais;WAS 6	precinct
+Vermont;Cambridge;LAM 3	precinct
 Vermont;Canaan;ESX-CAL-ORL	precinct
-Vermont;Castleton;RUT-3	precinct
-Vermont;Cavendish;WDR-2	precinct
-Vermont;Charleston;ORL-1	precinct
+Vermont;Castleton;RUT 3	precinct
+Vermont;Cavendish;WDR 2	precinct
+Vermont;Charleston;ORL 1	precinct
 Vermont;Charlotte;CHI-4-1	precinct
-Vermont;Chelsea;ORA-1	precinct
+Vermont;Chelsea;ORA 1	precinct
 Vermont;Chester;WDR-3-1	precinct
-Vermont;Chittenden County;RUT-WDR-1	precinct
-Vermont;Clarendon;RUT-2	precinct
+Vermont;Chittenden County;RUT-WDR 1	precinct
+Vermont;Clarendon;RUT 2	precinct
 Vermont;Colchester;CHI-9-1	precinct
 Vermont;Colchester;CHI-9-2	precinct
 Vermont;Concord;ESX-CAL	precinct
-Vermont;Corinth;ORA-1	precinct
-Vermont;Cornwall;ADD-2	precinct
-Vermont;Coventry;ORL-2	precinct
+Vermont;Corinth;ORA 1	precinct
+Vermont;Cornwall;ADD 2	precinct
+Vermont;Coventry;ORL 2	precinct
 Vermont;Craftsbury;ORL-CAL	precinct
 Vermont;Danby;BEN-RUT	precinct
 Vermont;Danville;CAL-WAS	precinct
-Vermont;Derby;ORL-1	precinct
+Vermont;Derby;ORL 1	precinct
 Vermont;Dorset;BEN-RUT	precinct
 Vermont;Dover;WDH-BEN	precinct
-Vermont;Dummerston;WDH-4	precinct
-Vermont;Duxbury;WAS-7	precinct
+Vermont;Dummerston;WDH 4	precinct
+Vermont;Duxbury;WAS 7	precinct
 Vermont;East Haven;ESX-CAL-ORL	precinct
-Vermont;East Montpelier;WAS-5	precinct
+Vermont;East Montpelier;WAS 5	precinct
 Vermont;Eden;ORL-LAM	precinct
 Vermont;Elmore;LAM-WAS	precinct
-Vermont;Enosburgh;FRA-7	precinct
+Vermont;Enosburgh;FRA 7	precinct
 Vermont;Essex County;CHI-8-1	precinct
 Vermont;Essex County;CHI-8-2	precinct
 Vermont;Essex County;CHI-8-3	precinct
-Vermont;Fair Haven;RUT-3	precinct
-Vermont;Fairfax;FRA-2	precinct
-Vermont;Fairfield;FRA-6	precinct
-Vermont;Fairlee;ORA-2	precinct
-Vermont;Fayston;WAS-7	precinct
-Vermont;Ferrisburgh;ADD-3	precinct
-Vermont;Fletcher;FRA-6	precinct
-Vermont;Franklin County;FRA-5	precinct
-Vermont;Georgia;FRA-1	precinct
+Vermont;Fair Haven;RUT 3	precinct
+Vermont;Fairfax;FRA 2	precinct
+Vermont;Fairfield;FRA 6	precinct
+Vermont;Fairlee;ORA 2	precinct
+Vermont;Fayston;WAS 7	precinct
+Vermont;Ferrisburgh;ADD 3	precinct
+Vermont;Fletcher;FRA 6	precinct
+Vermont;Franklin County;FRA 5	precinct
+Vermont;Georgia;FRA 1	precinct
 Vermont;Glover;ORL-CAL	precinct
-Vermont;Goshen;ADD-2	precinct
-Vermont;Grafton;WDH-3	precinct
+Vermont;Goshen;ADD 2	precinct
+Vermont;Grafton;WDH 3	precinct
 Vermont;Granby;ESX-CAL	precinct
 Vermont;Grand Isle County;GI-CHI	precinct
 Vermont;Granville;ORA-WAS-ADD	precinct
 Vermont;Greensboro;ORL-CAL	precinct
 Vermont;Groton;ORA-CAL	precinct
 Vermont;Guildhall;ESX-CAL	precinct
-Vermont;Guilford;WDH-1	precinct
-Vermont;Halifax;WDH-6	precinct
-Vermont;Hancock;ADD-2	precinct
-Vermont;Hardwick;CAL-2	precinct
+Vermont;Guilford;WDH 1	precinct
+Vermont;Halifax;WDH 6	precinct
+Vermont;Hancock;ADD 2	precinct
+Vermont;Hardwick;CAL 2	precinct
 Vermont;Hartford;WDR-4-1	precinct
 Vermont;Hartford;WDR-4-2	precinct
-Vermont;Hartland;WDR-1	precinct
-Vermont;Highgate;FRA-5	precinct
+Vermont;Hartland;WDR 1	precinct
+Vermont;Highgate;FRA 5	precinct
 Vermont;Hinesburg;CHI-4-1	precinct
 Vermont;Hinesburg;CHI-4-2	precinct
-Vermont;Holland;ORL-1	precinct
-Vermont;Hubbardton;RUT-3	precinct
+Vermont;Holland;ORL 1	precinct
+Vermont;Hubbardton;RUT 3	precinct
 Vermont;Huntington;WAS-CHI	precinct
-Vermont;Hyde Park;LAM-2	precinct
-Vermont;Ira;RUT-1	precinct
-Vermont;Irasburg;ORL-2	precinct
+Vermont;Hyde Park;LAM 2	precinct
+Vermont;Ira;RUT 1	precinct
+Vermont;Irasburg;ORL 2	precinct
 Vermont;Isle La Motte;GI-CHI	precinct
 Vermont;Jamaica;WDH-BEN-WDR	precinct
 Vermont;Jay;ORL-LAM	precinct
-Vermont;Jericho;CHI-3	precinct
-Vermont;Johnson;LAM-2	precinct
-Vermont;Killington;RUT-WDR-1	precinct
+Vermont;Jericho;CHI 3	precinct
+Vermont;Johnson;LAM 2	precinct
+Vermont;Killington;RUT-WDR 1	precinct
 Vermont;Kirby;ESX-CAL	precinct
 Vermont;Landgrove;BEN-RUT	precinct
-Vermont;Leicester;ADD-2	precinct
+Vermont;Leicester;ADD 2	precinct
 Vermont;Lemington;ESX-CAL-ORL	precinct
-Vermont;Lincoln;ADD-4	precinct
+Vermont;Lincoln;ADD 4	precinct
 Vermont;Londonderry;WDH-BEN-WDR	precinct
 Vermont;Lowell;ORL-LAM	precinct
-Vermont;Ludlow;RUT-WDR-2	precinct
+Vermont;Ludlow;RUT-WDR 2	precinct
 Vermont;Lunenburg;ESX-CAL	precinct
-Vermont;Lyndon;CAL-4	precinct
+Vermont;Lyndon;CAL 4	precinct
 Vermont;Maidstone;ESX-CAL	precinct
-Vermont;Manchester;BEN-4	precinct
-Vermont;Marlboro;WDH-5	precinct
-Vermont;Marshfield;WAS-6	precinct
-Vermont;Mendon;RUT-WDR-1	precinct
-Vermont;Middlebury;ADD-1	precinct
-Vermont;Middlesex;WAS-5	precinct
+Vermont;Manchester;BEN 4	precinct
+Vermont;Marlboro;WDH 5	precinct
+Vermont;Marshfield;WAS 6	precinct
+Vermont;Mendon;RUT-WDR 1	precinct
+Vermont;Middlebury;ADD 1	precinct
+Vermont;Middlesex;WAS 5	precinct
 Vermont;Middletown Springs;RUT-BEN	precinct
 Vermont;Milton;CHI-10	precinct
 Vermont;Milton;GI-CHI	precinct
-Vermont;Monkton;ADD-4	precinct
-Vermont;Montgomery;FRA-7	precinct
-Vermont;Montpelier;WAS-4	precinct
-Vermont;Moretown;WAS-7	precinct
-Vermont;Morgan;ORL-1	precinct
+Vermont;Monkton;ADD 4	precinct
+Vermont;Montgomery;FRA 7	precinct
+Vermont;Montpelier;WAS 4	precinct
+Vermont;Moretown;WAS 7	precinct
+Vermont;Morgan;ORL 1	precinct
 Vermont;Morristown;LAM-WAS	precinct
-Vermont;Mount Holly;RUT-WDR-2	precinct
+Vermont;Mount Holly;RUT-WDR 2	precinct
 Vermont;Mount Tabor;BEN-RUT	precinct
-Vermont;New Haven;ADD-5	precinct
+Vermont;New Haven;ADD 5	precinct
 Vermont;Newark;ESX-CAL-ORL	precinct
 Vermont;Newbury;ORA-CAL	precinct
-Vermont;Newfane;WDH-5	precinct
-Vermont;Newport City;ORL-2	precinct
-Vermont;Newport Town;ORL-2	precinct
+Vermont;Newfane;WDH 5	precinct
+Vermont;Newport City;ORL 2	precinct
+Vermont;Newport Town;ORL 2	precinct
 Vermont;North Hero;GI-CHI	precinct
-Vermont;Northfield;WAS-1	precinct
+Vermont;Northfield;WAS 1	precinct
 Vermont;Norton;ESX-CAL-ORL	precinct
-Vermont;Norwich;WDR-ORA-2	precinct
-Vermont;Orange County;ORA-1	precinct
+Vermont;Norwich;WDR-ORA 2	precinct
+Vermont;Orange County;ORA 1	precinct
 Vermont;Orwell;ADD-RUT	precinct
-Vermont;Panton;ADD-3	precinct
+Vermont;Panton;ADD 3	precinct
 Vermont;Pawlet;RUT-BEN	precinct
 Vermont;Peacham;CAL-WAS	precinct
 Vermont;Peru;BEN-RUT	precinct
 Vermont;Pittsfield;WDR-RUT	precinct
-Vermont;Pittsford;RUT-6	precinct
-Vermont;Plainfield;WAS-6	precinct
-Vermont;Plymouth;WDR-5	precinct
+Vermont;Pittsford;RUT 6	precinct
+Vermont;Plainfield;WAS 6	precinct
+Vermont;Plymouth;WDR 5	precinct
 Vermont;Pomfret;WDR-4-1	precinct
-Vermont;Poultney;RUT-1	precinct
-Vermont;Pownal;BEN-1	precinct
-Vermont;Proctor;RUT-2	precinct
-Vermont;Putney;WDH-4	precinct
+Vermont;Poultney;RUT 1	precinct
+Vermont;Pownal;BEN 1	precinct
+Vermont;Proctor;RUT 2	precinct
+Vermont;Putney;WDH 4	precinct
 Vermont;Randolph;ORA-WAS-ADD	precinct
-Vermont;Reading;WDR-5	precinct
+Vermont;Reading;WDR 5	precinct
 Vermont;Readsboro;WDH-BEN	precinct
-Vermont;Richford;FRA-5	precinct
-Vermont;Richmond;CHI-1	precinct
-Vermont;Ripton;ADD-2	precinct
+Vermont;Richford;FRA 5	precinct
+Vermont;Richmond;CHI 1	precinct
+Vermont;Ripton;ADD 2	precinct
 Vermont;Rochester;WDR-RUT	precinct
-Vermont;Rockingham;WDH-3	precinct
+Vermont;Rockingham;WDH 3	precinct
 Vermont;Roxbury;ORA-WAS-ADD	precinct
-Vermont;Royalton;WDR-ORA-1	precinct
+Vermont;Royalton;WDR-ORA 1	precinct
 Vermont;Rupert;RUT-BEN	precinct
 Vermont;Rutland City;RUT-5-1	precinct
 Vermont;Rutland City;RUT-5-2	precinct
 Vermont;Rutland City;RUT-5-3	precinct
 Vermont;Rutland City;RUT-5-4	precinct
-Vermont;Rutland Town;RUT-4	precinct
-Vermont;Ryegate;CAL-1	precinct
+Vermont;Rutland Town;RUT 4	precinct
+Vermont;Ryegate;CAL 1	precinct
 Vermont;Saint Albans City;FRA-3-1	precinct
 Vermont;Saint Albans Town;FRA-3-1	precinct
 Vermont;Saint Albans Town;FRA-3-2	precinct
 Vermont;Saint George;CHI-5-2	precinct
-Vermont;Saint Johnsbury;CAL-3	precinct
-Vermont;Salisbury;ADD-2	precinct
-Vermont;Sandgate;BEN-4	precinct
+Vermont;Saint Johnsbury;CAL 3	precinct
+Vermont;Salisbury;ADD 2	precinct
+Vermont;Sandgate;BEN 4	precinct
 Vermont;Searsburg;WDH-BEN	precinct
-Vermont;Shaftsbury;BEN-3	precinct
-Vermont;Sharon;WDR-ORA-2	precinct
+Vermont;Shaftsbury;BEN 3	precinct
+Vermont;Sharon;WDR-ORA 2	precinct
 Vermont;Sheffield;ORL-CAL	precinct
 Vermont;Shelburne;CHI-5-1	precinct
 Vermont;Shelburne;CHI-5-2	precinct
-Vermont;Sheldon;FRA-4	precinct
+Vermont;Sheldon;FRA 4	precinct
 Vermont;Shoreham;ADD-RUT	precinct
-Vermont;Shrewsbury;RUT-WDR-2	precinct
+Vermont;Shrewsbury;RUT-WDR 2	precinct
 Vermont;South Burlington;CHI-7-1	precinct
 Vermont;South Burlington;CHI-7-2	precinct
 Vermont;South Burlington;CHI-7-3	precinct
@@ -216,68 +216,68 @@ Vermont;South Hero;GI-CHI	precinct
 Vermont;Springfield;WDR-3-1	precinct
 Vermont;Springfield;WDR-3-2	precinct
 Vermont;Stamford;WDH-BEN	precinct
-Vermont;Stannard;CAL-2	precinct
-Vermont;Starksboro;ADD-4	precinct
+Vermont;Stannard;CAL 2	precinct
+Vermont;Starksboro;ADD 4	precinct
 Vermont;Stockbridge;WDR-RUT	precinct
-Vermont;Stowe;LAM-1	precinct
-Vermont;Strafford;WDR-ORA-2	precinct
+Vermont;Stowe;LAM 1	precinct
+Vermont;Strafford;WDR-ORA 2	precinct
 Vermont;Stratton;WDH-BEN-WDR	precinct
-Vermont;Sudbury;RUT-6	precinct
-Vermont;Sunderland;BEN-3	precinct
-Vermont;Sunderland;BEN-4	precinct
-Vermont;Sutton;CAL-4	precinct
-Vermont;Swanton;FRA-4	precinct
-Vermont;Thetford;WDR-ORA-2	precinct
-Vermont;Tinmouth;RUT-2	precinct
+Vermont;Sudbury;RUT 6	precinct
+Vermont;Sunderland;BEN 3	precinct
+Vermont;Sunderland;BEN 4	precinct
+Vermont;Sutton;CAL 4	precinct
+Vermont;Swanton;FRA 4	precinct
+Vermont;Thetford;WDR-ORA 2	precinct
+Vermont;Tinmouth;RUT 2	precinct
 Vermont;Tinmouth;RUT-BEN	precinct
 Vermont;Topsham;ORA-CAL	precinct
-Vermont;Townshend;WDH-5	precinct
-Vermont;Troy;ORL-2	precinct
+Vermont;Townshend;WDH 5	precinct
+Vermont;Troy;ORL 2	precinct
 Vermont;Troy;ORL-LAM	precinct
-Vermont;Tunbridge;WDR-ORA-1	precinct
-Vermont;Underhill;CHI-3	precinct
-Vermont;Vergennes;ADD-3	precinct
-Vermont;Vernon;WDH-1	precinct
-Vermont;Vershire;ORA-1	precinct
+Vermont;Tunbridge;WDR-ORA 1	precinct
+Vermont;Underhill;CHI 3	precinct
+Vermont;Vergennes;ADD 3	precinct
+Vermont;Vernon;WDH 1	precinct
+Vermont;Vershire;ORA 1	precinct
 Vermont;Victory;ESX-CAL	precinct
-Vermont;Waitsfield;WAS-7	precinct
-Vermont;Walden;CAL-2	precinct
-Vermont;Wallingford;RUT-2	precinct
-Vermont;Waltham;ADD-3	precinct
+Vermont;Waitsfield;WAS 7	precinct
+Vermont;Walden;CAL 2	precinct
+Vermont;Wallingford;RUT 2	precinct
+Vermont;Waltham;ADD 3	precinct
 Vermont;Wardsboro;WDH-BEN	precinct
-Vermont;Warren;WAS-7	precinct
-Vermont;Washington County;ORA-1	precinct
+Vermont;Warren;WAS 7	precinct
+Vermont;Washington County;ORA 1	precinct
 Vermont;Waterbury;WAS-CHI	precinct
-Vermont;Waterford;CAL-1	precinct
-Vermont;Waterville;LAM-3	precinct
-Vermont;Weathersfield;WDR-2	precinct
+Vermont;Waterford;CAL 1	precinct
+Vermont;Waterville;LAM 3	precinct
+Vermont;Weathersfield;WDR 2	precinct
 Vermont;Wells;RUT-BEN	precinct
-Vermont;West Fairlee;ORA-2	precinct
-Vermont;West Haven;RUT-3	precinct
-Vermont;West Rutland;RUT-2	precinct
-Vermont;West Windsor;WDR-1	precinct
+Vermont;West Fairlee;ORA 2	precinct
+Vermont;West Haven;RUT 3	precinct
+Vermont;West Rutland;RUT 2	precinct
+Vermont;West Windsor;WDR 1	precinct
 Vermont;Westfield;ORL-LAM	precinct
 Vermont;Westford;CHI-8-3	precinct
-Vermont;Westminster;WDH-3	precinct
-Vermont;Westminster;WDH-4	precinct
+Vermont;Westminster;WDH 3	precinct
+Vermont;Westminster;WDH 4	precinct
 Vermont;Westmore;ESX-CAL-ORL	precinct
 Vermont;Weston;WDH-BEN-WDR	precinct
-Vermont;Weybridge;ADD-5	precinct
+Vermont;Weybridge;ADD 5	precinct
 Vermont;Wheelock;ORL-CAL	precinct
 Vermont;Whiting;ADD-RUT	precinct
-Vermont;Whitingham;WDH-6	precinct
+Vermont;Whitingham;WDH 6	precinct
 Vermont;Whitingham;WDH-BEN	precinct
-Vermont;Williamstown;ORA-1	precinct
-Vermont;Williston;CHI-2	precinct
-Vermont;Wilmington;WDH-6	precinct
-Vermont;Windham County;WDH-3	precinct
-Vermont;Windsor County;WDR-1	precinct
+Vermont;Williamstown;ORA 1	precinct
+Vermont;Williston;CHI 2	precinct
+Vermont;Wilmington;WDH 6	precinct
+Vermont;Windham County;WDH 3	precinct
+Vermont;Windsor County;WDR 1	precinct
 Vermont;Winhall;WDH-BEN-WDR	precinct
 Vermont;Winooski;CHI-6-7	precinct
-Vermont;Wolcott;LAM-2	precinct
+Vermont;Wolcott;LAM 2	precinct
 Vermont;Woodbury;LAM-WAS	precinct
-Vermont;Woodford;BEN-1	precinct
-Vermont;Woodstock;WDR-5	precinct
+Vermont;Woodford;BEN 1	precinct
+Vermont;Woodstock;WDR 5	precinct
 Vermont;Worcester;LAM-WAS	precinct
 Vermont	state
 Vermont;VT House District 1	state-house
@@ -450,10 +450,10 @@ Vermont;VT House District Bennington 2-2	state-house
 Vermont;VT House District Bennington 3	state-house
 Vermont;VT House District Bennington 4	state-house
 Vermont;VT House District Bennington-Rutland	state-house
-Vermont;VT House District Caledonia-1	state-house
-Vermont;VT House District Caledonia-2	state-house
-Vermont;VT House District Caledonia-3	state-house
-Vermont;VT House District Caledonia-4	state-house
+Vermont;VT House District Caledonia 1	state-house
+Vermont;VT House District Caledonia 2	state-house
+Vermont;VT House District Caledonia 3	state-house
+Vermont;VT House District Caledonia 4	state-house
 Vermont;VT House District Caledonia-Washington	state-house
 Vermont;VT House District Chittenden 10	state-house
 Vermont;VT House District Chittenden 4-1	state-house
@@ -476,9 +476,9 @@ Vermont;VT House District Chittenden 8-2	state-house
 Vermont;VT House District Chittenden 8-3	state-house
 Vermont;VT House District Chittenden 9-1	state-house
 Vermont;VT House District Chittenden 9-2	state-house
-Vermont;VT House District Chittenden-1	state-house
-Vermont;VT House District Chittenden-2	state-house
-Vermont;VT House District Chittenden-3	state-house
+Vermont;VT House District Chittenden 1	state-house
+Vermont;VT House District Chittenden 2	state-house
+Vermont;VT House District Chittenden 3	state-house
 Vermont;VT House District Essex-Caledonia	state-house
 Vermont;VT House District Essex-Caledonia-Orleans	state-house
 Vermont;VT House District Franklin 1	state-house
@@ -554,10 +554,10 @@ Vermont;VT Senate District Bennington 2-2	state-house
 Vermont;VT Senate District Bennington 3	state-house
 Vermont;VT Senate District Bennington 4	state-house
 Vermont;VT Senate District Bennington-Rutland	state-house
-Vermont;VT Senate District Caledonia-1	state-house
-Vermont;VT Senate District Caledonia-2	state-house
-Vermont;VT Senate District Caledonia-3	state-house
-Vermont;VT Senate District Caledonia-4	state-house
+Vermont;VT Senate District Caledonia 1	state-house
+Vermont;VT Senate District Caledonia 2	state-house
+Vermont;VT Senate District Caledonia 3	state-house
+Vermont;VT Senate District Caledonia 4	state-house
 Vermont;VT Senate District Caledonia-Washington	state-house
 Vermont;VT Senate District Chittenden 10	state-house
 Vermont;VT Senate District Chittenden 4-1	state-house
@@ -580,9 +580,9 @@ Vermont;VT Senate District Chittenden 8-2	state-house
 Vermont;VT Senate District Chittenden 8-3	state-house
 Vermont;VT Senate District Chittenden 9-1	state-house
 Vermont;VT Senate District Chittenden 9-2	state-house
-Vermont;VT Senate District Chittenden-1	state-house
-Vermont;VT Senate District Chittenden-2	state-house
-Vermont;VT Senate District Chittenden-3	state-house
+Vermont;VT Senate District Chittenden 1	state-house
+Vermont;VT Senate District Chittenden 2	state-house
+Vermont;VT Senate District Chittenden 3	state-house
 Vermont;VT Senate District Essex-Caledonia	state-house
 Vermont;VT Senate District Essex-Caledonia-Orleans	state-house
 Vermont;VT Senate District Franklin 1	state-house

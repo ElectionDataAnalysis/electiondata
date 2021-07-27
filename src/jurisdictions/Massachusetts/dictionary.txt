@@ -848,3 +848,585 @@ ReportingUnit	Massachusetts;Worcester County;Westborough	Westborough
 ReportingUnit	Massachusetts;Worcester County;Westminster	Westminster
 ReportingUnit	Massachusetts;Worcester County;Winchendon	Winchendon
 ReportingUnit	Massachusetts;Worcester County;Worcester	Worcester
+CandidateContest	MA Attorney General	MA;Attorney General
+CandidateContest	MA Auditor	MA;Auditor;statewide
+CandidateContest	MA Governor	MA;Governor;statewide
+CandidateContest	MA Governor's Council District 1	MA;Governor's Council;District 1
+CandidateContest	MA Secretary of the Commonwealth	MA;Secretary of the Commonwealth;statewide
+CandidateContest	MA House District 1 Barnstable	MA;State Representative;District 1 Barnstable
+CandidateContest	MA House District 2 Barnstable	MA;State Representative;District 2 Barnstable
+CandidateContest	MA House District 3 Barnstable	MA;State Representative;District 3 Barnstable
+CandidateContest	MA House District 4 Barnstable	MA;State Representative;District 4 Barnstable
+CandidateContest	MA House District 5 Barnstable	MA;State Representative;District 5 Barnstable
+CandidateContest	MA House District Barnstable, Dukes a Nantucket	MA;State Representative;District Barnstable, Dukes a Nantucket
+CandidateContest	MA Senate District Cape a Islands	MA;State Senator;District Cape a Islands
+CandidateContest	MA Senate District Plymou a Barnstable	MA;State Senator;District Plymou a Barnstable
+CandidateContest	MA Treasurer	MA;Treasurer;statewide
+CandidateContest	US House MA District 9	MA;US Representative;District 9
+CandidateContest	US Senate MA	MA;US Senator;statewide
+CandidateContest	MA Governor's Council District 8	MA;Governor's Council;District 8
+CandidateContest	MA House District 1 Berkshire	MA;State Representative;District 1 Berkshire
+CandidateContest	MA House District 2 Berkshire	MA;State Representative;District 2 Berkshire
+CandidateContest	MA House District 3 Berkshire	MA;State Representative;District 3 Berkshire
+CandidateContest	MA House District 4 Berkshire	MA;State Representative;District 4 Berkshire
+CandidateContest	MA Senate District Berkshire, Hampshire a Franklin	MA;State Senator;District Berkshire, Hampshire a Franklin
+CandidateContest	US House MA District 1	MA;US Representative;District 1
+CandidateContest	MA Governor's Council District 2	MA;Governor's Council;District 2
+CandidateContest	MA Governor's Council District 4	MA;Governor's Council;District 4
+CandidateContest	MA House District 1 Bristol	MA;State Representative;District 1 Bristol
+CandidateContest	MA House District 10 Bristol	MA;State Representative;District 10 Bristol
+CandidateContest	MA House District 11 Bristol	MA;State Representative;District 11 Bristol
+CandidateContest	MA House District 11 Plymouth	MA;State Representative;District 11 Plymouth
+CandidateContest	MA House District 12 Bristol	MA;State Representative;District 12 Bristol
+CandidateContest	MA House District 13 Bristol	MA;State Representative;District 13 Bristol
+CandidateContest	MA House District 14 Bristol	MA;State Representative;District 14 Bristol
+CandidateContest	MA House District 2 Bristol	MA;State Representative;District 2 Bristol
+CandidateContest	MA House District 3 Bristol	MA;State Representative;District 3 Bristol
+CandidateContest	MA House District 4 Bristol	MA;State Representative;District 4 Bristol
+CandidateContest	MA House District 5 Bristol	MA;State Representative;District 5 Bristol
+CandidateContest	MA House District 6 Bristol	MA;State Representative;District 6 Bristol
+CandidateContest	MA House District 7 Bristol	MA;State Representative;District 7 Bristol
+CandidateContest	MA House District 8 Bristol	MA;State Representative;District 8 Bristol
+CandidateContest	MA House District 8 Norfolk	MA;State Representative;District 8 Norfolk
+CandidateContest	MA House District 8 Plymouth	MA;State Representative;District 8 Plymouth
+CandidateContest	MA House District 9 Bristol	MA;State Representative;District 9 Bristol
+CandidateContest	MA Senate District 1 Bristol a Plymouth	MA;State Senator;District 1 Bristol a Plymouth
+CandidateContest	MA Senate District 1 Plymou a Bristol	MA;State Senator;District 1 Plymou a Bristol
+CandidateContest	MA Senate District 2 Bristol a Plymouth	MA;State Senator;District 2 Bristol a Plymouth
+CandidateContest	MA Senate District 2 Plymou a Bristol	MA;State Senator;District 2 Plymou a Bristol
+CandidateContest	MA Senate District Bristol a Norfolk	MA;State Senator;District Bristol a Norfolk
+CandidateContest	MA Senate District Norfolk, Bristol a Middlesex	MA;State Senator;District Norfolk, Bristol a Middlesex
+CandidateContest	MA Senate District Norfolk, Bristol a Plymouth	MA;State Senator;District Norfolk, Bristol a Plymouth
+CandidateContest	US House MA District 4	MA;US Representative;District 4
+CandidateContest	US House MA District 8	MA;US Representative;District 8
+CandidateContest	MA Governor's Council District 5	MA;Governor's Council;District 5
+CandidateContest	MA Governor's Council District 6	MA;Governor's Council;District 6
+CandidateContest	MA House District 1 Essex	MA;State Representative;District 1 Essex
+CandidateContest	MA House District 10 Essex	MA;State Representative;District 10 Essex
+CandidateContest	MA House District 11 Essex	MA;State Representative;District 11 Essex
+CandidateContest	MA House District 12 Essex	MA;State Representative;District 12 Essex
+CandidateContest	MA House District 13 Essex	MA;State Representative;District 13 Essex
+CandidateContest	MA House District 14 Essex	MA;State Representative;District 14 Essex
+CandidateContest	MA House District 15 Essex	MA;State Representative;District 15 Essex
+CandidateContest	MA House District 16 Essex	MA;State Representative;District 16 Essex
+CandidateContest	MA House District 16 Suffolk	MA;State Representative;District 16 Suffolk
+CandidateContest	MA House District 17 Essex	MA;State Representative;District 17 Essex
+CandidateContest	MA House District 18 Essex	MA;State Representative;District 18 Essex
+CandidateContest	MA House District 2 Essex	MA;State Representative;District 2 Essex
+CandidateContest	MA House District 20 Middlesex	MA;State Representative;District 20 Middlesex
+CandidateContest	MA House District 3 Essex	MA;State Representative;District 3 Essex
+CandidateContest	MA House District 4 Essex	MA;State Representative;District 4 Essex
+CandidateContest	MA House District 5 Essex	MA;State Representative;District 5 Essex
+CandidateContest	MA House District 6 Essex	MA;State Representative;District 6 Essex
+CandidateContest	MA House District 7 Essex	MA;State Representative;District 7 Essex
+CandidateContest	MA House District 8 Essex	MA;State Representative;District 8 Essex
+CandidateContest	MA House District 9 Essex	MA;State Representative;District 9 Essex
+CandidateContest	MA Senate District 1 Essex	MA;State Senator;District 1 Essex
+CandidateContest	MA Senate District 1 Essex a Middlesex	MA;State Senator;District 1 Essex a Middlesex
+CandidateContest	MA Senate District 2 Essex	MA;State Senator;District 2 Essex
+CandidateContest	MA Senate District 2 Essex a Middlesex	MA;State Senator;District 2 Essex a Middlesex
+CandidateContest	MA Senate District 3 Essex	MA;State Senator;District 3 Essex
+CandidateContest	US House MA District 3	MA;US Representative;District 3
+CandidateContest	US House MA District 6	MA;US Representative;District 6
+CandidateContest	MA House District 1 Franklin	MA;State Representative;District 1 Franklin
+CandidateContest	MA House District 2 Franklin	MA;State Representative;District 2 Franklin
+CandidateContest	MA Senate District Hampshire, Franklin a Worcester	MA;State Senator;District Hampshire, Franklin a Worcester
+CandidateContest	US House MA District 2	MA;US Representative;District 2
+CandidateContest	MA Governor's Council District 7	MA;Governor's Council;District 7
+CandidateContest	MA House District 1 Hampden	MA;State Representative;District 1 Hampden
+CandidateContest	MA House District 1 Hampshire	MA;State Representative;District 1 Hampshire
+CandidateContest	MA House District 10 Hampden	MA;State Representative;District 10 Hampden
+CandidateContest	MA House District 11 Hampden	MA;State Representative;District 11 Hampden
+CandidateContest	MA House District 12 Hampden	MA;State Representative;District 12 Hampden
+CandidateContest	MA House District 2 Hampden	MA;State Representative;District 2 Hampden
+CandidateContest	MA House District 3 Hampden	MA;State Representative;District 3 Hampden
+CandidateContest	MA House District 4 Hampden	MA;State Representative;District 4 Hampden
+CandidateContest	MA House District 5 Hampden	MA;State Representative;District 5 Hampden
+CandidateContest	MA House District 6 Hampden	MA;State Representative;District 6 Hampden
+CandidateContest	MA House District 7 Hampden	MA;State Representative;District 7 Hampden
+CandidateContest	MA House District 8 Hampden	MA;State Representative;District 8 Hampden
+CandidateContest	MA House District 9 Hampden	MA;State Representative;District 9 Hampden
+CandidateContest	MA Senate District 1 Hampden a Hampshire	MA;State Senator;District 1 Hampden a Hampshire
+CandidateContest	MA Senate District 2 Hampden a Hampshire	MA;State Senator;District 2 Hampden a Hampshire
+CandidateContest	MA Senate District Hampden	MA;State Senator;District Hampden
+CandidateContest	MA Senate District Worcester, Hampden, Hampshire a Middlesex	MA;State Senator;District Worcester, Hampden, Hampshire a Middlesex
+CandidateContest	MA House District 2 Hampshire	MA;State Representative;District 2 Hampshire
+CandidateContest	MA House District 3 Hampshire	MA;State Representative;District 3 Hampshire
+CandidateContest	MA House District 5 Worcester	MA;State Representative;District 5 Worcester
+CandidateContest	MA Governor's Council District 3	MA;Governor's Council;District 3
+CandidateContest	MA House District 1 Middlesex	MA;State Representative;District 1 Middlesex
+CandidateContest	MA House District 10 Middlesex	MA;State Representative;District 10 Middlesex
+CandidateContest	MA House District 11 Middlesex	MA;State Representative;District 11 Middlesex
+CandidateContest	MA House District 12 Middlesex	MA;State Representative;District 12 Middlesex
+CandidateContest	MA House District 13 Middlesex	MA;State Representative;District 13 Middlesex
+CandidateContest	MA House District 14 Middlesex	MA;State Representative;District 14 Middlesex
+CandidateContest	MA House District 14 Norfolk	MA;State Representative;District 14 Norfolk
+CandidateContest	MA House District 15 Middlesex	MA;State Representative;District 15 Middlesex
+CandidateContest	MA House District 16 Middlesex	MA;State Representative;District 16 Middlesex
+CandidateContest	MA House District 17 Middlesex	MA;State Representative;District 17 Middlesex
+CandidateContest	MA House District 18 Middlesex	MA;State Representative;District 18 Middlesex
+CandidateContest	MA House District 19 Middlesex	MA;State Representative;District 19 Middlesex
+CandidateContest	MA House District 2 Middlesex	MA;State Representative;District 2 Middlesex
+CandidateContest	MA House District 21 Middlesex	MA;State Representative;District 21 Middlesex
+CandidateContest	MA House District 22 Middlesex	MA;State Representative;District 22 Middlesex
+CandidateContest	MA House District 23 Middlesex	MA;State Representative;District 23 Middlesex
+CandidateContest	MA House District 24 Middlesex	MA;State Representative;District 24 Middlesex
+CandidateContest	MA House District 25 Middlesex	MA;State Representative;District 25 Middlesex
+CandidateContest	MA House District 26 Middlesex	MA;State Representative;District 26 Middlesex
+CandidateContest	MA House District 27 Middlesex	MA;State Representative;District 27 Middlesex
+CandidateContest	MA House District 28 Middlesex	MA;State Representative;District 28 Middlesex
+CandidateContest	MA House District 29 Middlesex	MA;State Representative;District 29 Middlesex
+CandidateContest	MA House District 3 Middlesex	MA;State Representative;District 3 Middlesex
+CandidateContest	MA House District 30 Middlesex	MA;State Representative;District 30 Middlesex
+CandidateContest	MA House District 31 Middlesex	MA;State Representative;District 31 Middlesex
+CandidateContest	MA House District 32 Middlesex	MA;State Representative;District 32 Middlesex
+CandidateContest	MA House District 33 Middlesex	MA;State Representative;District 33 Middlesex
+CandidateContest	MA House District 34 Middlesex	MA;State Representative;District 34 Middlesex
+CandidateContest	MA House District 35 Middlesex	MA;State Representative;District 35 Middlesex
+CandidateContest	MA House District 36 Middlesex	MA;State Representative;District 36 Middlesex
+CandidateContest	MA House District 37 Middlesex	MA;State Representative;District 37 Middlesex
+CandidateContest	MA House District 4 Middlesex	MA;State Representative;District 4 Middlesex
+CandidateContest	MA House District 5 Middlesex	MA;State Representative;District 5 Middlesex
+CandidateContest	MA House District 6 Middlesex	MA;State Representative;District 6 Middlesex
+CandidateContest	MA House District 7 Middlesex	MA;State Representative;District 7 Middlesex
+CandidateContest	MA House District 8 Middlesex	MA;State Representative;District 8 Middlesex
+CandidateContest	MA House District 8 Suffolk	MA;State Representative;District 8 Suffolk
+CandidateContest	MA House District 9 Middlesex	MA;State Representative;District 9 Middlesex
+CandidateContest	MA Senate District 1 Middlesex	MA;State Senator;District 1 Middlesex
+CandidateContest	MA Senate District 1 Middlesex a Norfolk	MA;State Senator;District 1 Middlesex a Norfolk
+CandidateContest	MA Senate District 1 Suffolk a Middlesex	MA;State Senator;District 1 Suffolk a Middlesex
+CandidateContest	MA Senate District 2 Middlesex	MA;State Senator;District 2 Middlesex
+CandidateContest	MA Senate District 2 Middlesex a Norfolk	MA;State Senator;District 2 Middlesex a Norfolk
+CandidateContest	MA Senate District 2 Suffolk a Middlesex	MA;State Senator;District 2 Suffolk a Middlesex
+CandidateContest	MA Senate District 3 Middlesex	MA;State Senator;District 3 Middlesex
+CandidateContest	MA Senate District 4 Middlesex	MA;State Senator;District 4 Middlesex
+CandidateContest	MA Senate District 5 Middlesex	MA;State Senator;District 5 Middlesex
+CandidateContest	MA Senate District Middlesex a Suffolk	MA;State Senator;District Middlesex a Suffolk
+CandidateContest	MA Senate District Middlesex a Worcester	MA;State Senator;District Middlesex a Worcester
+CandidateContest	MA Senate District Worcester a Middlesex	MA;State Senator;District Worcester a Middlesex
+CandidateContest	US House MA District 5	MA;US Representative;District 5
+CandidateContest	US House MA District 7	MA;US Representative;District 7
+CandidateContest	MA House District 1 Norfolk	MA;State Representative;District 1 Norfolk
+CandidateContest	MA House District 10 Norfolk	MA;State Representative;District 10 Norfolk
+CandidateContest	MA House District 10 Suffolk	MA;State Representative;District 10 Suffolk
+CandidateContest	MA House District 10 Worcester	MA;State Representative;District 10 Worcester
+CandidateContest	MA House District 11 Norfolk	MA;State Representative;District 11 Norfolk
+CandidateContest	MA House District 12 Norfolk	MA;State Representative;District 12 Norfolk
+CandidateContest	MA House District 12 Suffolk	MA;State Representative;District 12 Suffolk
+CandidateContest	MA House District 13 Norfolk	MA;State Representative;District 13 Norfolk
+CandidateContest	MA House District 13 Suffolk	MA;State Representative;District 13 Suffolk
+CandidateContest	MA House District 15 Norfolk	MA;State Representative;District 15 Norfolk
+CandidateContest	MA House District 15 Suffolk	MA;State Representative;District 15 Suffolk
+CandidateContest	MA House District 18 Suffolk	MA;State Representative;District 18 Suffolk
+CandidateContest	MA House District 2 Norfolk	MA;State Representative;District 2 Norfolk
+CandidateContest	MA House District 3 Norfolk	MA;State Representative;District 3 Norfolk
+CandidateContest	MA House District 3 Plymouth	MA;State Representative;District 3 Plymouth
+CandidateContest	MA House District 4 Norfolk	MA;State Representative;District 4 Norfolk
+CandidateContest	MA House District 5 Norfolk	MA;State Representative;District 5 Norfolk
+CandidateContest	MA House District 6 Norfolk	MA;State Representative;District 6 Norfolk
+CandidateContest	MA House District 7 Norfolk	MA;State Representative;District 7 Norfolk
+CandidateContest	MA House District 8 Worcester	MA;State Representative;District 8 Worcester
+CandidateContest	MA House District 9 Norfolk	MA;State Representative;District 9 Norfolk
+CandidateContest	MA Senate District Norfolk a Plymouth	MA;State Senator;District Norfolk a Plymouth
+CandidateContest	MA Senate District Norfolk a Suffolk	MA;State Senator;District Norfolk a Suffolk
+CandidateContest	MA Senate District Plymou a Norfolk	MA;State Senator;District Plymou a Norfolk
+CandidateContest	MA Senate District Worcester a Norfolk	MA;State Senator;District Worcester a Norfolk
+CandidateContest	MA House District 1 Plymouth	MA;State Representative;District 1 Plymouth
+CandidateContest	MA House District 10 Plymouth	MA;State Representative;District 10 Plymouth
+CandidateContest	MA House District 12 Plymouth	MA;State Representative;District 12 Plymouth
+CandidateContest	MA House District 2 Plymouth	MA;State Representative;District 2 Plymouth
+CandidateContest	MA House District 4 Plymouth	MA;State Representative;District 4 Plymouth
+CandidateContest	MA House District 5 Plymouth	MA;State Representative;District 5 Plymouth
+CandidateContest	MA House District 6 Plymouth	MA;State Representative;District 6 Plymouth
+CandidateContest	MA House District 7 Plymouth	MA;State Representative;District 7 Plymouth
+CandidateContest	MA House District 9 Plymouth	MA;State Representative;District 9 Plymouth
+CandidateContest	MA House District 1 Suffolk	MA;State Representative;District 1 Suffolk
+CandidateContest	MA House District 11 Suffolk	MA;State Representative;District 11 Suffolk
+CandidateContest	MA House District 14 Suffolk	MA;State Representative;District 14 Suffolk
+CandidateContest	MA House District 17 Suffolk	MA;State Representative;District 17 Suffolk
+CandidateContest	MA House District 19 Suffolk	MA;State Representative;District 19 Suffolk
+CandidateContest	MA House District 2 Suffolk	MA;State Representative;District 2 Suffolk
+CandidateContest	MA House District 3 Suffolk	MA;State Representative;District 3 Suffolk
+CandidateContest	MA House District 4 Suffolk	MA;State Representative;District 4 Suffolk
+CandidateContest	MA House District 5 Suffolk	MA;State Representative;District 5 Suffolk
+CandidateContest	MA House District 6 Suffolk	MA;State Representative;District 6 Suffolk
+CandidateContest	MA House District 7 Suffolk	MA;State Representative;District 7 Suffolk
+CandidateContest	MA House District 9 Suffolk	MA;State Representative;District 9 Suffolk
+CandidateContest	MA Senate District 1 Suffolk	MA;State Senator;District 1 Suffolk
+CandidateContest	MA Senate District 2 Suffolk	MA;State Senator;District 2 Suffolk
+CandidateContest	MA House District 1 Worcester	MA;State Representative;District 1 Worcester
+CandidateContest	MA House District 11 Worcester	MA;State Representative;District 11 Worcester
+CandidateContest	MA House District 12 Worcester	MA;State Representative;District 12 Worcester
+CandidateContest	MA House District 13 Worcester	MA;State Representative;District 13 Worcester
+CandidateContest	MA House District 14 Worcester	MA;State Representative;District 14 Worcester
+CandidateContest	MA House District 15 Worcester	MA;State Representative;District 15 Worcester
+CandidateContest	MA House District 16 Worcester	MA;State Representative;District 16 Worcester
+CandidateContest	MA House District 17 Worcester	MA;State Representative;District 17 Worcester
+CandidateContest	MA House District 18 Worcester	MA;State Representative;District 18 Worcester
+CandidateContest	MA House District 2 Worcester	MA;State Representative;District 2 Worcester
+CandidateContest	MA House District 3 Worcester	MA;State Representative;District 3 Worcester
+CandidateContest	MA House District 4 Worcester	MA;State Representative;District 4 Worcester
+CandidateContest	MA House District 6 Worcester	MA;State Representative;District 6 Worcester
+CandidateContest	MA House District 7 Worcester	MA;State Representative;District 7 Worcester
+CandidateContest	MA House District 9 Worcester	MA;State Representative;District 9 Worcester
+CandidateContest	MA Senate District 1 Worcester	MA;State Senator;District 1 Worcester
+CandidateContest	MA Senate District 2 Worcester	MA;State Senator;District 2 Worcester
+Candidate	Aaron M. Michlewitz	Aaron M. Michlewitz
+Candidate	Aaron Vega	Aaron Vega
+Candidate	Adam G. Hinds	Adam G. Hinds
+Candidate	Adrian C. Madaro	Adrian C. Madaro
+Candidate	Alan Silvia	Alan Silvia
+Candidate	Alex A. Bezanson	Alex A. Bezanson
+Candidate	Alexander Leighton Williams	Alexander Leighton Williams
+Candidate	Alexander N. Mendez	Alexander N. Mendez
+Candidate	Alice Hanlon Peisch	Alice Hanlon Peisch
+Candidate	Alison M. Demong	Alison M. Demong
+Candidate	Allin John Frawley	Allin John Frawley
+Candidate	Allison M. Gustavson	Allison M. Gustavson
+Candidate	Allison P. Werder	Allison P. Werder
+Candidate	Althea Garrison	Althea Garrison
+Candidate	Alyson M. Sullivan	Alyson M. Sullivan
+Candidate	Anand Gonsalves	Anand Gonsalves
+Candidate	Andres X. Vargas	Andres X. Vargas
+Candidate	Angelo J. Puppolo, Jr.	Angelo J. Puppolo, Jr.
+Candidate	Angelo L. D'emilia	Angelo L. D'emilia
+Candidate	Angelo M. Scaccia	Angelo M. Scaccia
+Candidate	Ann-Margaret Ferrante	Ann-Margaret Ferrante
+Candidate	Anne M. Gobi	Anne M. Gobi
+Candidate	Anthony M. Amore	Anthony M. Amore
+Candidate	Antonio D. F. Cabral	Antonio D. F. Cabral
+Candidate	Baker And Polito	Baker And Polito
+Candidate	Barry R. Finegold	Barry R. Finegold
+Candidate	Blank Votes	Blank Votes
+Candidate	Bradford R. Hill	Bradford R. Hill
+Candidate	Bradley H. Jones, Jr	Bradley H. Jones, Jr
+Candidate	Brendan P. Crighton	Brendan P. Crighton
+Candidate	Brian M. Ashe	Brian M. Ashe
+Candidate	Brian P. Hamlin	Brian P. Hamlin
+Candidate	Brian W. Murray	Brian W. Murray
+Candidate	Bruce E. Tarr	Bruce E. Tarr
+Candidate	Bruce J. Ayers	Bruce J. Ayers
+Candidate	Bud L. Williams	Bud L. Williams
+Candidate	Carlos Gonzalez	Carlos Gonzalez
+Candidate	Carmine Lawrence Gentile	Carmine Lawrence Gentile
+Candidate	Carole A. Fiola	Carole A. Fiola
+Candidate	Carolyn C. Dykema	Carolyn C. Dykema
+Candidate	Christina A. Minicucci	Christina A. Minicucci
+Candidate	Christina Eckert	Christina Eckert
+Candidate	Christine P. Barber	Christine P. Barber
+Candidate	Christopher A. Iannella, Jr.	Christopher A. Iannella, Jr.
+Candidate	Christopher Hendricks	Christopher Hendricks
+Candidate	Christopher J. Tribou	Christopher J. Tribou
+Candidate	Christopher M. Markey	Christopher M. Markey
+Candidate	Chynah Tyler	Chynah Tyler
+Candidate	Cindy F. Friedman	Cindy F. Friedman
+Candidate	Claire D. Cronin	Claire D. Cronin
+Candidate	Claire M. Malaguti	Claire M. Malaguti
+Candidate	Colleen M. Garry	Colleen M. Garry
+Candidate	Cynthia Stone Creem	Cynthia Stone Creem
+Candidate	Dan Cullinane	Dan Cullinane
+Candidate	Daniel Fishman	Daniel Fishman
+Candidate	Daniel H. Cahill	Daniel H. Cahill
+Candidate	Daniel J. Hunt	Daniel J. Hunt
+Candidate	Daniel Joseph Ryan	Daniel Joseph Ryan
+Candidate	Daniel L. Factor	Daniel L. Factor
+Candidate	Daniel M. Donahue	Daniel M. Donahue
+Candidate	Daniel R. Carey	Daniel R. Carey
+Candidate	Danielle W. Gregoire	Danielle W. Gregoire
+Candidate	David Allen Robertson	David Allen Robertson
+Candidate	David Biele	David Biele
+Candidate	David F. Decoste	David F. Decoste
+Candidate	David Henry Argosky Leboeuf	David Henry Argosky Leboeuf
+Candidate	David K. Muradian, Jr	David K. Muradian, Jr
+Candidate	David L. Steinhof	David L. Steinhof
+Candidate	David M. Nangle	David M. Nangle
+Candidate	David M. Rogers	David M. Rogers
+Candidate	David Paul Linsky	David Paul Linsky
+Candidate	David T. Vieira	David T. Vieira
+Candidate	Dean Tran	Dean Tran
+Candidate	Deborah A. Rudolf	Deborah A. Rudolf
+Candidate	Deborah B. Goldberg	Deborah B. Goldberg
+Candidate	Denise C. Garlick	Denise C. Garlick
+Candidate	Denise Provost	Denise Provost
+Candidate	Diana Dizoglio	Diana Dizoglio
+Candidate	Donald F. Humason, Jr	Donald F. Humason, Jr
+Candidate	Donald H. Wong	Donald H. Wong
+Candidate	Donald J. Flannery	Donald J. Flannery
+Candidate	Donald Osgood, Sr	Donald Osgood, Sr
+Candidate	Donald Peltier	Donald Peltier
+Candidate	Donald R. Berthiaume, Jr	Donald R. Berthiaume, Jr
+Candidate	Donato H. Paglia	Donato H. Paglia
+Candidate	Dylan A. Fernandes	Dylan A. Fernandes
+Candidate	Edward A. Gravel	Edward A. Gravel
+Candidate	Edward F. Coppinger	Edward F. Coppinger
+Candidate	Edward J. Kennedy	Edward J. Kennedy
+Candidate	Edward J. O'Connell	Edward J. O'Connell
+Candidate	Edward J. Stamas	Edward J. Stamas
+Candidate	Eileen R. Duff	Eileen R. Duff
+Candidate	Elizabeth A. Malia	Elizabeth A. Malia
+Candidate	Elizabeth A. Poirier	Elizabeth A. Poirier
+Candidate	Elizabeth A. Warren	Elizabeth A. Warren
+Candidate	Elmer Eubanks-Archbold	Elmer Eubanks-Archbold
+Candidate	Emily Jm Farrer	Emily Jm Farrer
+Candidate	Eric P. Lesser	Eric P. Lesser
+Candidate	Erin K. Calvo-Bacci	Erin K. Calvo-Bacci
+Candidate	Forrest W. Bradford	Forrest W. Bradford
+Candidate	Frank A. Moran	Frank A. Moran
+Candidate	Fred Jay Barrows	Fred Jay Barrows
+Candidate	Geoff Diehl	Geoff Diehl
+Candidate	Gerard J. Cassidy	Gerard J. Cassidy
+Candidate	Gonzalez And Palfrey	Gonzalez And Palfrey
+Candidate	Hannah E. Kane	Hannah E. Kane
+Candidate	Harold P. Naughton, Jr.	Harold P. Naughton, Jr.
+Candidate	Harriette L. Chandler	Harriette L. Chandler
+Candidate	Jack Patrick Lewis	Jack Patrick Lewis
+Candidate	Jack Stanton	Jack Stanton
+Candidate	Jacob J. Ventura	Jacob J. Ventura
+Candidate	James Arciero	James Arciero
+Candidate	James B. Eldridge	James B. Eldridge
+Candidate	James J. Lyons, Jr.	James J. Lyons, Jr.
+Candidate	James J. O'Day	James J. O'Day
+Candidate	James K. Gardner	James K. Gardner
+Candidate	James K. Hawkins	James K. Hawkins
+Candidate	James M. Kelcourse	James M. Kelcourse
+Candidate	James Michael Murphy	James Michael Murphy
+Candidate	James R. McMahon, III	James R. McMahon, III
+Candidate	James T. Welch	James T. Welch
+Candidate	Jamie M. Guerin	Jamie M. Guerin
+Candidate	Jason M. Lewis	Jason M. Lewis
+Candidate	Jay D. Livingstone	Jay D. Livingstone
+Candidate	Jean Anne Strauss	Jean Anne Strauss
+Candidate	Jeffrey N. Roy	Jeffrey N. Roy
+Candidate	Jennie L. Caissie	Jennie L. Caissie
+Candidate	Jennifer A. Rocco-Runnion	Jennifer A. Rocco-Runnion
+Candidate	Jennifer E. Benson	Jennifer E. Benson
+Candidate	Jerald A. Parisella	Jerald A. Parisella
+Candidate	Joan B. Lovely	Joan B. Lovely
+Candidate	Joan Meschino	Joan Meschino
+Candidate	Joanne M. Comerford	Joanne M. Comerford
+Candidate	John A. Macdonald	John A. Macdonald
+Candidate	John C. Velis	John C. Velis
+Candidate	John F. Cruz	John F. Cruz
+Candidate	John F. Keenan	John F. Keenan
+Candidate	John G. Flores	John G. Flores
+Candidate	John G. McDonald	John G. McDonald
+Candidate	John H. Rogers	John H. Rogers
+Candidate	John Hugo	John Hugo
+Candidate	John J. Lawn, Jr.	John J. Lawn, Jr.
+Candidate	John J. Mahoney, Jr.	John J. Mahoney, Jr.
+Candidate	John P. Barrett, III	John P. Barrett, III
+Candidate	John T. Mahoney, Jr	John T. Mahoney, Jr
+Candidate	John William Arena	John William Arena
+Candidate	Jon Santiago	Jon Santiago
+Candidate	Jonathan D. Zlotnik	Jonathan D. Zlotnik
+Candidate	Jonathan Hecht	Jonathan Hecht
+Candidate	Jose F. Tosado	Jose F. Tosado
+Candidate	Joseph A. Boncore	Joseph A. Boncore
+Candidate	Joseph C. Ferreira	Joseph C. Ferreira
+Candidate	Joseph D. McKenna	Joseph D. McKenna
+Candidate	Joseph F. Wagner	Joseph F. Wagner
+Candidate	Joseph M. Armstrong	Joseph M. Armstrong
+Candidate	Joseph M. Espinola, III	Joseph M. Espinola, III
+Candidate	Joseph M. Truschelli	Joseph M. Truschelli
+Candidate	Joseph P. Kennedy, III	Joseph P. Kennedy, III
+Candidate	Joseph S. Schneider	Joseph S. Schneider
+Candidate	Joseph W. McGonagle, Jr	Joseph W. McGonagle, Jr
+Candidate	Josh S. Cutler	Josh S. Cutler
+Candidate	Juan G. Sanchez, Jr	Juan G. Sanchez, Jr
+Candidate	Julian Andre Cyr	Julian Andre Cyr
+Candidate	Karen E. Spilka	Karen E. Spilka
+Candidate	Kate Hogan	Kate Hogan
+Candidate	Kateen R. Kumar	Kateen R. Kumar
+Candidate	Kathleen Lynch	Kathleen Lynch
+Candidate	Kathleen R. Lanatra	Kathleen R. Lanatra
+Candidate	Katie L. McBrine	Katie L. McBrine
+Candidate	Kay S. Khan	Kay S. Khan
+Candidate	Keiko M. Orrall	Keiko M. Orrall
+Candidate	Kenneth I. Gordon	Kenneth I. Gordon
+Candidate	Kevin G. Honan	Kevin G. Honan
+Candidate	Kimberly N. Ferguson	Kimberly N. Ferguson
+Candidate	Kristen G. Arute	Kristen G. Arute
+Candidate	Leonard Mirra	Leonard Mirra
+Candidate	Linda Dean Campbell	Linda Dean Campbell
+Candidate	Lindsay N. Sabadosa	Lindsay N. Sabadosa
+Candidate	Liz Miranda	Liz Miranda
+Candidate	Lori A. Ehrlich	Lori A. Ehrlich
+Candidate	Louis L. Kafka	Louis L. Kafka
+Candidate	Marc C. Mercier	Marc C. Mercier
+Candidate	Marc R. Pacheco	Marc R. Pacheco
+Candidate	Marc T. Lombardo	Marc T. Lombardo
+Candidate	Marcos A. Devers	Marcos A. Devers
+Candidate	Margaret W. Busse	Margaret W. Busse
+Candidate	Maria D. Robinson	Maria D. Robinson
+Candidate	Marilyn Petitto Devaney	Marilyn Petitto Devaney
+Candidate	Marjorie C. Decker	Marjorie C. Decker
+Candidate	Mark B. Mezzina	Mark B. Mezzina
+Candidate	Mark C. Montigny	Mark C. Montigny
+Candidate	Mark J. Cusack	Mark J. Cusack
+Candidate	Mary E. Hurley	Mary E. Hurley
+Candidate	Mary Jean Charbonneau	Mary Jean Charbonneau
+Candidate	Mary S. Keefe	Mary S. Keefe
+Candidate	Mathew J. Muratore	Mathew J. Muratore
+Candidate	Matthew Crescenzo	Matthew Crescenzo
+Candidate	Matthew Murphy Mixon	Matthew Murphy Mixon
+Candidate	Matthew O. Moncreaff	Matthew O. Moncreaff
+Candidate	Maura Healey	Maura Healey
+Candidate	Michael Coller	Michael Coller
+Candidate	Michael D. Brady	Michael D. Brady
+Candidate	Michael F. Rush	Michael F. Rush
+Candidate	Michael J. Barrett	Michael J. Barrett
+Candidate	Michael J. Finn	Michael J. Finn
+Candidate	Michael J. Moran	Michael J. Moran
+Candidate	Michael J. Rodrigues	Michael J. Rodrigues
+Candidate	Michael J. Soter	Michael J. Soter
+Candidate	Michael Janson	Michael Janson
+Candidate	Michael O. Moore	Michael O. Moore
+Candidate	Michael P. Mullen	Michael P. Mullen
+Candidate	Michael Seamus Day	Michael Seamus Day
+Candidate	Michelle Ciccolo	Michelle Ciccolo
+Candidate	Michelle M. Dubois	Michelle M. Dubois
+Candidate	Mike Connolly	Mike Connolly
+Candidate	Mike Franco	Mike Franco
+Candidate	Mindy Domb	Mindy Domb
+Candidate	Natalie Higgins	Natalie Higgins
+Candidate	Natalie M. Blais	Natalie M. Blais
+Candidate	Nathaniel K. Powell	Nathaniel K. Powell
+Candidate	Nicholas A. Boldyga	Nicholas A. Boldyga
+Candidate	Nick Collins	Nick Collins
+Candidate	Nika Elugardo	Nika Elugardo
+Candidate	Norman J. Orrall	Norman J. Orrall
+Candidate	Patricia A. Haddad	Patricia A. Haddad
+Candidate	Patricia D. Jehlen	Patricia D. Jehlen
+Candidate	Patricia W M. Meuse	Patricia W M. Meuse
+Candidate	Patrick J. Malone	Patrick J. Malone
+Candidate	Patrick Joseph Kearney	Patrick Joseph Kearney
+Candidate	Patrick M. O'Connor	Patrick M. O'Connor
+Candidate	Patrick R. Casey	Patrick R. Casey
+Candidate	Paul A. Brodeur	Paul A. Brodeur
+Candidate	Paul F. Tucker	Paul F. Tucker
+Candidate	Paul J. Cusack	Paul J. Cusack
+Candidate	Paul J. Donato, Sr.	Paul J. Donato, Sr.
+Candidate	Paul J. Fullen	Paul J. Fullen
+Candidate	Paul K. Frost	Paul K. Frost
+Candidate	Paul M. Depalo	Paul M. Depalo
+Candidate	Paul McMurtry	Paul McMurtry
+Candidate	Paul R. Feeney	Paul R. Feeney
+Candidate	Paul R. Ferro	Paul R. Ferro
+Candidate	Paul Schmid, III	Paul Schmid, III
+Candidate	Paul W. Mark	Paul W. Mark
+Candidate	Peter D. Tedeschi	Peter D. Tedeschi
+Candidate	Peter J. Durant	Peter J. Durant
+Candidate	Peter L. Capano	Peter L. Capano
+Candidate	Pina Prinzivalli	Pina Prinzivalli
+Candidate	Rady Mom	Rady Mom
+Candidate	Randy Hunt	Randy Hunt
+Candidate	Raymond G. Leczynski	Raymond G. Leczynski
+Candidate	Rebecca L. Rausch	Rebecca L. Rausch
+Candidate	Richard A. Baker, Jr.	Richard A. Baker, Jr.
+Candidate	Richard E. Palmieri	Richard E. Palmieri
+Candidate	Richard J. Ross	Richard J. Ross
+Candidate	Richard M. Haggerty	Richard M. Haggerty
+Candidate	Rick Green	Rick Green
+Candidate	Robert A. Deleo	Robert A. Deleo
+Candidate	Robert L. Jubinville	Robert L. Jubinville
+Candidate	Ronald Mariano	Ronald Mariano
+Candidate	Roselee Vincent	Roselee Vincent
+Candidate	Russell E. Holmes	Russell E. Holmes
+Candidate	Ruth B. Balser	Ruth B. Balser
+Candidate	Ryan C. Fattman	Ryan C. Fattman
+Candidate	Ryan R. Losco	Ryan R. Losco
+Candidate	Sal N. Didomenico	Sal N. Didomenico
+Candidate	Sandra Slattery E. Biagetti	Sandra Slattery E. Biagetti
+Candidate	Sarah G. Hewins	Sarah G. Hewins
+Candidate	Sarah K. Peake	Sarah K. Peake
+Candidate	Scott Hall	Scott Hall
+Candidate	Sean Garballey	Sean Garballey
+Candidate	Shaunna L. O'Connell	Shaunna L. O'Connell
+Candidate	Shawn C. Dooley	Shawn C. Dooley
+Candidate	Sheila C. Harrington	Sheila C. Harrington
+Candidate	Solomon Israel Goldstein-Rose	Solomon Israel Goldstein-Rose
+Candidate	Stanley P. Marcinczyk, Jr	Stanley P. Marcinczyk, Jr
+Candidate	Stephan Hay	Stephan Hay
+Candidate	Stephen D. Gill	Stephen D. Gill
+Candidate	Stephen F. Tougas	Stephen F. Tougas
+Candidate	Steven Leibowitz	Steven Leibowitz
+Candidate	Steven R. Hall	Steven R. Hall
+Candidate	Steven S. Howitt	Steven S. Howitt
+Candidate	Steven Ultrino	Steven Ultrino
+Candidate	Susan A. Chalifoux Zephir	Susan A. Chalifoux Zephir
+Candidate	Susan Williams Gifford	Susan Williams Gifford
+Candidate	Susannah Whipps M. Lee	Susannah Whipps M. Lee
+Candidate	Suzanne M. Bump	Suzanne M. Bump
+Candidate	Tackey Chan	Tackey Chan
+Candidate	Tami L. Gouveia	Tami L. Gouveia
+Candidate	Tanya V. Neslusan	Tanya V. Neslusan
+Candidate	Terra Friedrichs	Terra Friedrichs
+Candidate	Terrence W. Kennedy	Terrence W. Kennedy
+Candidate	Terry Burke Dotson	Terry Burke Dotson
+Candidate	Theodore C. Speliotis	Theodore C. Speliotis
+Candidate	Thomas A. Golden, Jr.	Thomas A. Golden, Jr.
+Candidate	Thomas F. Keyes	Thomas F. Keyes
+Candidate	Thomas M. Merolli	Thomas M. Merolli
+Candidate	Thomas M. Petrolati	Thomas M. Petrolati
+Candidate	Thomas M. Stanley	Thomas M. Stanley
+Candidate	Thomas P. Walsh	Thomas P. Walsh
+Candidate	Timothy R. Whelan	Timothy R. Whelan
+Candidate	Todd M. Smola	Todd M. Smola
+Candidate	Tommy Vitolo	Tommy Vitolo
+Candidate	Tram T. Nguyen	Tram T. Nguyen
+Candidate	Tricia Farley-Bouvier	Tricia Farley-Bouvier
+Candidate	Vincent Lawrence Dixon	Vincent Lawrence Dixon
+Candidate	Vinny M. Demacedo	Vinny M. Demacedo
+Candidate	Walter F. Timilty, Jr.	Walter F. Timilty, Jr.
+Candidate	"William """"Smitty'' Pignatelli"	"William """"Smitty"""" Pignatelli"
+Candidate	William Burke	William Burke
+Candidate	William C. Galvin	William C. Galvin
+Candidate	William Francis Galvin	William Francis Galvin
+Candidate	William J. Driscoll, Jr	William J. Driscoll, Jr
+Candidate	William L. Crocker, Jr.	William L. Crocker, Jr.
+Candidate	William M. Straus	William M. Straus
+Candidate	William N. Brownsberger	William N. Brownsberger
+Candidate	Yasmine Khdeer	Yasmine Khdeer
+Party	Cooperative Green Economy Party	cooperative green economy
+Party	Democratic Party	democrat
+Party	Green-Rainbow Party	green-rainbow
+Party	Independent Party	independent
+Party	Independent And Veteran Party	independent and veteran
+Party	Independent Progressive Party	independent progressive
+Party	Libertarian Party	libertarian
+Party	Massachusetts Independent Party	massachusetts independent
+Party	Republican Party	republican
+Party	Second American Revolution Party	second american revolution
+Party	none or unknown	unaffiliated
+Party	none or unknown	unenrolled
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	Massachusetts;Barnstable County	Massachusetts;Barnstable
+ReportingUnit	Massachusetts;Berkshire County	Massachusetts;Berkshire
+ReportingUnit	Massachusetts;Bristol County	Massachusetts;Bristol
+ReportingUnit	Massachusetts;Dukes County	Massachusetts;Dukes
+ReportingUnit	Massachusetts;Essex County	Massachusetts;Essex
+ReportingUnit	Massachusetts;Franklin County	Massachusetts;Franklin
+ReportingUnit	Massachusetts;Hampden County	Massachusetts;Hampden
+ReportingUnit	Massachusetts;Hampshire County	Massachusetts;Hampshire
+ReportingUnit	Massachusetts;Middlesex County	Massachusetts;Middlesex
+ReportingUnit	Massachusetts;Nantucket County	Massachusetts;Nantucket
+ReportingUnit	Massachusetts;Norfolk County	Massachusetts;Norfolk
+ReportingUnit	Massachusetts;Plymouth County	Massachusetts;Plymouth
+ReportingUnit	Massachusetts;Suffolk County	Massachusetts;Suffolk
+ReportingUnit	Massachusetts;Worcester County	Massachusetts;Worcester
+Candidate	Sonia Rosa Chang-DÃ­az	Sonia Rosa Chang-DÃ­az
+CandidateContest	MA Attorney General	MA;Attorney General;statewide

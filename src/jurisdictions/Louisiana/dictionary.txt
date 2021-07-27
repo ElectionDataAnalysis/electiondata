@@ -6,15 +6,14 @@ Candidate	'Mike' Johnson	'Mike' Johnson
 Candidate	'Rob' Anderson	'Rob' Anderson
 Candidate	'Scotty' Robinson	'Scotty' Robinson
 Candidate	'Xan' John	'Xan' John
-Candidate	'Xan' John	"Xan"""" John"
+Candidate	'Xan' John	Xan' John
 Candidate	Aaron C. Sigler	Aaron C. Sigler
 Candidate	Adrian Perkins	Adrian Perkins
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Allen Guillory, Sr.	Allen Guillory, Sr.
 Candidate	Alyson Kennedy	Alyson Kennedy,Malcolm Jarrett Socialist Workers Party
 Candidate	Antoine Pierce	Antoine Pierce
-Candidate	Barack Obama	BARACK OBAMA
-Candidate	Belden 'Noonie Man' Batiste	"Belden ""Noonie Man"" Batiste"
+Candidate	Barack Obama	Barack Obama
 Candidate	Belden 'Noonie Man' Batiste	Belden 'Noonie Man' Batiste
 Candidate	Ben Gibson	Ben Gibson
 Candidate	Beryl Billiot	Beryl Billiot
@@ -26,28 +25,26 @@ Candidate	Brock Pierce	Brock Pierce, Karla Ballard Freedom and Prosperity
 Candidate	Cedric L. Richmond	Cedric L. Richmond
 Candidate	Clay Higgins	Clay Higgins
 Candidate	Colby James	Colby James
-Candidate	Dartanyon 'DAW' Williams	"Dartanyon ""DAW"" Williams"
 Candidate	Dartanyon 'DAW' Williams	Dartanyon 'DAW' Williams
 Candidate	David Drew Knight	David Drew Knight
 Candidate	David M. Schilling	David M. Schilling
-Candidate	Derrick 'Champ' Edwards	"Derrick ""Champ"" Edwards"
 Candidate	Derrick 'Champ' Edwards	Derrick 'Champ' Edwards
 Candidate	Don Blankenship	Don Blankenship, William Mohr Constitution Party
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump, Michael Pence Republican
 Candidate	Dustin Murphy	Dustin Murphy
 Candidate	Garret Graves	Garret Graves
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Glenn Adrain Harris	Glenn Adrain Harris
 Candidate	Gloria La Riva	Gloria La Riva, Sunil Freeman Socialism and Liberation
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Howard Kearney	Howard Kearney
 Candidate	Jade Simmons	Jade Simmons, Claudeliah Roze Becoming One Nation
 Candidate	Jamar Montgomery	Jamar Montgomery
 Candidate	Jesse P. Lagarde	Jesse P. Lagarde
 Candidate	Jo Jorgensen	Jo Jorgensen, Jeremy Cohen Libertarian
-Candidate	John Kerry	JOHN KERRY
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John Kerry	John Kerry
+Candidate	John McCain	John Mccain
 Candidate	John Paul Bourgeois	John Paul Bourgeois
 Candidate	Joseph R. Biden	Joseph R. Biden, Kamala Harris Democratic
 Candidate	Kanye West	Kanye West, Michelle Tidball The Birthday Party
@@ -55,24 +52,21 @@ Candidate	Kenny Houston	Kenny Houston
 Candidate	Lance Harris	Lance Harris
 Candidate	Lee Ann Dugas	Lee Ann Dugas
 Candidate	Luke J. Letlow	Luke J. Letlow
-Candidate	M.V. 'Vinny' Mendoza	"M.V. ""Vinny"" Mendoza"
 Candidate	M.V. 'Vinny' Mendoza	M.V. 'Vinny' Mendoza
 Candidate	Martin Lemelle, Jr.	Martin Lemelle, Jr.
 Candidate	Matt Hasty	Matt Hasty
 Candidate	Melinda Mary Price	Melinda Mary Price
 Candidate	Mike Johnson	Mike Johnson
-Candidate	Mitt Romney	MITT ROMNEY
-Candidate	Other	OTHER
+Candidate	Mitt Romney	Mitt Romney
+Candidate	Other	Other
 Candidate	Peter Wenstrup	Peter Wenstrup
 Candidate	Phillip Snowden	Phillip Snowden
 Candidate	President Boddie	President Boddie,Eric Stoneham C.U.P.
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Reno Jean Daret III	Reno Jean Daret III
-Candidate	Richard 'RPT' Torregano	"Richard ""RPT"" Torregano"
 Candidate	Richard 'RPT' Torregano	Richard 'RPT' Torregano
 Candidate	Rob Anderson	Rob Anderson
 Candidate	Ryan Trundle	Ryan Trundle
-Candidate	Sandra 'Candy' Christophe	"Sandra ""Candy"" Christophe"
 Candidate	Sandra 'Candy' Christophe	Sandra 'Candy' Christophe
 Candidate	Scotty Robinson	Scotty Robinson
 Candidate	Shannon Sloan	Shannon Sloan
@@ -8405,3 +8399,136 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Winn;4
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Winn;5
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Winn;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Winn;7
+CandidateContest	LA Secretary of State	LA;Secretary of State;statewide
+CandidateContest	LA Senate District 26	LA;State Senator;District 26
+CandidateContest	US House LA District 3	LA;US Representative;District 3
+CandidateContest	US House LA District 4	LA;US Representative;District 4
+CandidateContest	US House LA District 2	LA;US Representative;District 2
+CandidateContest	US House LA District 6	LA;US Representative;District 6
+CandidateContest	US House LA District 5	LA;US Representative;District 5
+CandidateContest	LA House District 33	LA;State Representative;District 33
+CandidateContest	US House LA District 1	LA;US Representative;District 1
+CandidateContest	LA House District 90	LA;State Representative;District 90
+Candidate	A.G. Crowe	A.G. Crowe
+Candidate	Aaron J. Andrus	Aaron J. Andrus
+Candidate	Billy Burkette	Billy Burkette
+Candidate	Brian Glorioso	Brian Glorioso
+Candidate	Cedric Richmond	Cedric Richmond
+Candidate	Devin Lance Graham	Devin Lance Graham
+Candidate	Frederick 'Ferd' Jones	Frederick 'Ferd' Jones
+Candidate	Heather Cloud	Heather Cloud
+Candidate	Jean Menard	Jean Menard
+Candidate	Jerry Gaspard	Jerry Gaspard
+Candidate	Jesse Schmidt	Jesse Schmidt
+Candidate	Jessee Carlton Fleenor	Jessee Carlton Fleenor
+Candidate	John Raymond	John Raymond
+Candidate	Julie Stokes	Julie Stokes
+Candidate	Justin Dewitt	Justin Dewitt
+Candidate	Kyle Ardoin	Kyle Ardoin
+Candidate	Kyle Randol	Kyle Randol
+Candidate	Larry Rader	Larry Rader
+Candidate	Mark David Halverson	Mark David Halverson
+Candidate	Mary DuBuisson	Mary DuBuisson
+Candidate	Matthew Paul 'Matt' Moreau	Matthew Paul 'Matt' Moreau
+Candidate	Mildred 'Mimi' Methvin	Mildred 'Mimi' Methvin
+Candidate	Ralph Abraham	Ralph Abraham
+Candidate	Renee Fontenot Free	Renee Fontenot Free
+Candidate	Sean Morrison	Sean Morrison
+Candidate	Shawndra Rodriguez	Shawndra Rodriguez
+Candidate	Stuart Moss	Stuart Moss
+Candidate	Tammy M. Savoie	Tammy M. Savoie
+Candidate	Teri A. Johnson	Teri A. Johnson
+Candidate	Thomas J. Kennedy III	Thomas J. Kennedy III
+Candidate	Verone Thomas	Verone Thomas
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	none or unknown	no party
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+ReportingUnit	Louisiana;Acadia Parish	Louisiana;Acadia
+ReportingUnit	Louisiana;Allen Parish	Louisiana;Allen
+ReportingUnit	Louisiana;Ascension Parish	Louisiana;Ascension
+ReportingUnit	Louisiana;Assumption Parish	Louisiana;Assumption
+ReportingUnit	Louisiana;Avoyelles Parish	Louisiana;Avoyelles
+ReportingUnit	Louisiana;Beauregard Parish	Louisiana;Beauregard
+ReportingUnit	Louisiana;Bienville Parish	Louisiana;Bienville
+ReportingUnit	Louisiana;Bossier Parish	Louisiana;Bossier
+ReportingUnit	Louisiana;Caddo Parish	Louisiana;Caddo
+ReportingUnit	Louisiana;Calcasieu Parish	Louisiana;Calcasieu
+ReportingUnit	Louisiana;Caldwell Parish	Louisiana;Caldwell
+ReportingUnit	Louisiana;Cameron Parish	Louisiana;Cameron
+ReportingUnit	Louisiana;Catahoula Parish	Louisiana;Catahoula
+ReportingUnit	Louisiana;Claiborne Parish	Louisiana;Claiborne
+ReportingUnit	Louisiana;Concordia Parish	Louisiana;Concordia
+ReportingUnit	Louisiana;De Soto Parish	Louisiana;De Soto
+ReportingUnit	Louisiana;East Baton Rouge Parish	Louisiana;East Baton Rouge
+ReportingUnit	Louisiana;East Carroll Parish	Louisiana;East Carroll
+ReportingUnit	Louisiana;East Feliciana Parish	Louisiana;East Feliciana
+ReportingUnit	Louisiana;Evangeline Parish	Louisiana;Evangeline
+ReportingUnit	Louisiana;Franklin Parish	Louisiana;Franklin
+ReportingUnit	Louisiana;Grant Parish	Louisiana;Grant
+ReportingUnit	Louisiana;Iberia Parish	Louisiana;Iberia
+ReportingUnit	Louisiana;Iberville Parish	Louisiana;Iberville
+ReportingUnit	Louisiana;Jackson Parish	Louisiana;Jackson
+ReportingUnit	Louisiana;Jefferson Parish	Louisiana;Jefferson
+ReportingUnit	Louisiana;Jefferson Davis Parish	Louisiana;Jefferson Davis
+ReportingUnit	Louisiana;Lafayette Parish	Louisiana;Lafayette
+ReportingUnit	Louisiana;Lafourche Parish	Louisiana;Lafourche
+ReportingUnit	Louisiana;LaSalle Parish	Louisiana;Lasalle
+ReportingUnit	Louisiana;Lincoln Parish	Louisiana;Lincoln
+ReportingUnit	Louisiana;Livingston Parish	Louisiana;Livingston
+ReportingUnit	Louisiana;Madison Parish	Louisiana;Madison
+ReportingUnit	Louisiana;Morehouse Parish	Louisiana;Morehouse
+ReportingUnit	Louisiana;Natchitoches Parish	Louisiana;Natchitoches
+ReportingUnit	Louisiana;Orleans Parish	Louisiana;Orleans
+ReportingUnit	Louisiana;Ouachita Parish	Louisiana;Ouachita
+ReportingUnit	Louisiana;Plaquemines Parish	Louisiana;Plaquemines
+ReportingUnit	Louisiana;Pointe Coupee Parish	Louisiana;Pointe Coupee
+ReportingUnit	Louisiana;Rapides Parish	Louisiana;Rapides
+ReportingUnit	Louisiana;Red River Parish	Louisiana;Red River
+ReportingUnit	Louisiana;Richland Parish	Louisiana;Richland
+ReportingUnit	Louisiana;Sabine Parish	Louisiana;Sabine
+ReportingUnit	Louisiana;St. Bernard Parish	Louisiana;St. Bernard
+ReportingUnit	Louisiana;St. Charles Parish	Louisiana;St. Charles
+ReportingUnit	Louisiana;St. Helena Parish	Louisiana;St. Helena
+ReportingUnit	Louisiana;St. James Parish	Louisiana;St. James
+ReportingUnit	Louisiana;St. John the Baptist Parish	Louisiana;St. John The Baptist
+ReportingUnit	Louisiana;St. Landry Parish	Louisiana;St. Landry
+ReportingUnit	Louisiana;St. Martin Parish	Louisiana;St. Martin
+ReportingUnit	Louisiana;St. Mary Parish	Louisiana;St. Mary
+ReportingUnit	Louisiana;St. Tammany Parish	Louisiana;St. Tammany
+ReportingUnit	Louisiana;Tangipahoa Parish	Louisiana;Tangipahoa
+ReportingUnit	Louisiana;Tensas Parish	Louisiana;Tensas
+ReportingUnit	Louisiana;Terrebonne Parish	Louisiana;Terrebonne
+ReportingUnit	Louisiana;Union Parish	Louisiana;Union
+ReportingUnit	Louisiana;Vermilion Parish	Louisiana;Vermilion
+ReportingUnit	Louisiana;Vernon Parish	Louisiana;Vernon
+ReportingUnit	Louisiana;Washington Parish	Louisiana;Washington
+ReportingUnit	Louisiana;Webster Parish	Louisiana;Webster
+ReportingUnit	Louisiana;West Baton Rouge Parish	Louisiana;West Baton Rouge
+ReportingUnit	Louisiana;West Carroll Parish	Louisiana;West Carroll
+ReportingUnit	Louisiana;West Feliciana Parish	Louisiana;West Feliciana
+ReportingUnit	Louisiana;Winn Parish	Louisiana;Winn
+Candidate	'Rick' Edmonds	'Rick' Edmonds
+Candidate	'Les' Farnum	'Les' Farnum
+Candidate	'Josh' Guillory	'Josh' Guillory
+Candidate	'Jim' Francis	'Jim' Francis
+Candidate	'Gwen' Collins-Greenup	'Gwen' Collins-Greenup
+Candidate	'Bob' Hensgens	'Bob' Hensgens
+Candidate	'Andie' Saizan	'Andie' Saizan
+Candidate	Duplicates were found in Party.txt	Duplicates were found in Party.txt
+CandidateContest	LA Attorney General	LA;Attorney General;statewide

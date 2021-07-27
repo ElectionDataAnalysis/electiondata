@@ -353,7 +353,7 @@ def create_db_if_not_ok(
     dbname: Optional[str] = None, db_param_file: str = "run_time.ini"
 ) -> Optional[dict]:
     # create db if it does not already exist and have right tables
-    ok, err = test_connection_and_tables(dbname=dbname,db_param_file=db_param_file)
+    ok, err = test_connection_and_tables(dbname=dbname, db_param_file=db_param_file)
     if not ok:
         create_or_reset_db(dbname=dbname, db_param_file=db_param_file)
     return err
@@ -623,6 +623,7 @@ def insert_to_cdf_db(
             error_name,
             f"Exception inserting element {element}: {exc}",
         )
+        q_insert = "<unknown query>"
 
     # remove temp table
     try:
@@ -985,7 +986,11 @@ def get_relevant_contests(
         ]
     ].drop_duplicates()
     result_df = working.rename(
-        columns={"ElectionDistrict": "parent", "Contest": "name", "contest_district_type": "type"}
+        columns={
+            "ElectionDistrict": "parent",
+            "Contest": "name",
+            "contest_district_type": "type",
+        }
     )
 
     # sort by contest name
@@ -994,7 +999,10 @@ def get_relevant_contests(
 
 
 def get_major_subdiv_type(
-    session: Session, jurisdiction: str, file_path: Optional[str] = None, repo_content_root: Optional[str] = None
+    session: Session,
+    jurisdiction: str,
+    file_path: Optional[str] = None,
+    repo_content_root: Optional[str] = None,
 ) -> Optional[str]:
     """Returns the type of the major subdivision, if found. Tries first from <file_path> (if given);
     if that fails, or no file_path given, tries from database. If nothing found, returns None"""
@@ -1007,7 +1015,11 @@ def get_major_subdiv_type(
     elif repo_content_root:
         # try from file in repo
         subdiv_from_repo = get_major_subdiv_from_file(
-            os.path.join(repo_content_root, "jurisdictions","000_major_subjurisdiction_types.txt"),
+            os.path.join(
+                repo_content_root,
+                "jurisdictions",
+                "000_major_subjurisdiction_types.txt",
+            ),
             jurisdiction,
         )
         if subdiv_from_repo:
@@ -1034,9 +1046,7 @@ def get_major_subdiv_from_file(f_path: str, jurisdiction: str) -> Optional[str]:
     return subdiv_type
 
 
-def get_jurisdiction_hierarchy(
-    session: Session, jurisdiction_id: int
-) -> Optional[str]:
+def get_jurisdiction_hierarchy(session: Session, jurisdiction_id: int) -> Optional[str]:
     """get reporting unit type id of reporting unit one level down from jurisdiction.
     Omit particular types that are contest types, not true reporting unit types
     """
@@ -1337,12 +1347,14 @@ def export_rollup_from_db(
         group_and_order_by = sql.Composed(
             [
                 group_and_order_by,
-                sql.SQL(", vc.{countitemtype}").format(countitemtype=sql.Identifier("CountItemType")),
+                sql.SQL(", vc.{countitemtype}").format(
+                    countitemtype=sql.Identifier("CountItemType")
+                ),
             ]
         )
-        count_item_type_sql = sql.SQL(
-            "vc.{countitemtype}"
-        ).format(countitemtype=sql.Identifier("CountItemType"))
+        count_item_type_sql = sql.SQL("vc.{countitemtype}").format(
+            countitemtype=sql.Identifier("CountItemType")
+        )
     else:
         count_item_type_sql = sql.Literal("total")
 
@@ -1357,7 +1369,8 @@ def export_rollup_from_db(
                 [
                     restrict,
                     sql.SQL(" AND vc.{countitemtype} != {total}").format(
-                        countitemtype=sql.Identifier("CountItemType"), total=sql.Literal("total")
+                        countitemtype=sql.Identifier("CountItemType"),
+                        total=sql.Literal("total"),
                     ),
                 ]
             )
@@ -1682,9 +1695,7 @@ def vote_types_by_juris(session: Session, election: str) -> Dict[str, List[str]]
     cursor = connection.cursor()
     cursor.execute(q)
     result = cursor.fetchall()
-    result_df = pd.DataFrame(
-            result, columns=["jurisdiction", "CountItemType"]
-        )
+    result_df = pd.DataFrame(result, columns=["jurisdiction", "CountItemType"])
 
     cursor.close()
     vote_types = dict(result_df.groupby("jurisdiction")["CountItemType"].apply(list))
@@ -1720,13 +1731,13 @@ def contest_families_by_juris(
     cursor.execute(q)
     result = cursor.fetchall()
     result_df = pd.DataFrame(
-            result,
-            columns=[
-                "jurisdiction",
-                "contest",
-                "ReportingUnitType",
-            ],
-        )
+        result,
+        columns=[
+            "jurisdiction",
+            "contest",
+            "ReportingUnitType",
+        ],
+    )
 
     cursor.close()
     return result_df
@@ -2063,9 +2074,7 @@ def create_table(
         ]
 
         # require uniqueness for entire record (except `Id` and `timestamp`)
-        all_content_fields = (
-            field_col_names + foreign_ish_keys
-        )
+        all_content_fields = field_col_names + foreign_ish_keys
         unique_constraint_list.append(
             UniqueConstraint(*all_content_fields, name=f"{short_name}_no_dupes")
         )

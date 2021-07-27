@@ -112,7 +112,7 @@ def nist_v2_xml_export_tree(
         if ru_type in constants.nist_standard["ReportingUnitType"]:
             ET.SubElement(gpu_elt, "Type").text = ru_type
         else:
-            ET.SubElement(gpu_elt,"Type").text = "other"
+            ET.SubElement(gpu_elt, "Type").text = "other"
             ET.SubElement(gpu_elt, "OtherType").text = ru_type
 
     # other sub-elements of ElectionReport
@@ -195,7 +195,7 @@ def nist_v2_xml_export_tree(
                 if vc["CountItemType"] in constants.nist_standard["CountItemType"]:
                     ET.SubElement(vote_counts_elt, "Type").text = vc["CountItemType"]
                 else:
-                    ET.SubElement(vote_counts_elt,"Type").text = "other"
+                    ET.SubElement(vote_counts_elt, "Type").text = "other"
                     ET.SubElement(vote_counts_elt, "OtherType").text = vc[
                         "CountItemType"
                     ]

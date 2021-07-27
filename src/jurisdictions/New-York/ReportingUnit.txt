@@ -389,3 +389,15 @@ New York;NY Senate District 96	state-senate
 New York;NY Senate District 97	state-senate
 New York;NY Senate District 98	state-senate
 New York;NY Senate District 99	state-senate
+New York;NY Supreme Court Justice District 3	New York;NY Supreme Court Justice District 3
+New York;NY Supreme Court Justice District 8	New York;NY Supreme Court Justice District 8
+New York;NY Supreme Court Justice District 12	New York;NY Supreme Court Justice District 12
+New York;NY Supreme Court Justice District 6	New York;NY Supreme Court Justice District 6
+New York;NY Supreme Court Justice District 7	New York;NY Supreme Court Justice District 7
+New York;NY Supreme Court Justice District 9	New York;NY Supreme Court Justice District 9
+New York;NY Supreme Court Justice District 5	New York;NY Supreme Court Justice District 5
+New York;NY Supreme Court Justice District 2	New York;NY Supreme Court Justice District 2
+New York;NY Supreme Court Justice District 10	New York;NY Supreme Court Justice District 10
+New York;NY Supreme Court Justice District 1	New York;NY Supreme Court Justice District 1
+New York;NY Supreme Court Justice District 11	New York;NY Supreme Court Justice District 11
+New York;NY Supreme Court Justice District 13	New York;NY Supreme Court Justice District 13

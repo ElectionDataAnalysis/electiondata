@@ -13,7 +13,7 @@ NJ House District 11	1	NJ House District 11
 NJ House District 12	1	NJ House District 12	
 NJ House District 13	1	NJ House District 13	
 NJ House District 14	1	NJ House District 14	
-NJ House District 15	1	NJ House District 15	
+NJ House District 15	2	NJ House District 15
 NJ House District 16	1	NJ House District 16	
 NJ House District 17	1	NJ House District 17	
 NJ House District 18	1	NJ House District 18	
@@ -36,7 +36,7 @@ NJ House District 34	1	NJ House District 34
 NJ House District 35	1	NJ House District 35	
 NJ House District 36	1	NJ House District 36	
 NJ House District 37	1	NJ House District 37	
-NJ House District 38	1	NJ House District 38	
+NJ House District 38	2	NJ House District 38
 NJ House District 39	1	NJ House District 39	
 NJ House District 40	1	NJ House District 40	
 NJ House District 41	1	NJ House District 41	
@@ -136,5 +136,5 @@ NJ Governor	1	NJ Governor
 US Senate NJ	1	US Senate NJ	
 NJ Attorney General	1	NJ Attorney General	
 NJ Lieutenant Governor	1	NJ Lieutenant Governor	
-NJ Treasurer	1	NJ Treasurer	
+NJ General Treasurer	1	NJ General Treasurer
 NJ Secretary of State	1	NJ Secretary of State	

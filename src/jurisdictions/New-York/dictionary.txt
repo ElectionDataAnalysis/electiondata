@@ -921,3 +921,696 @@ ReportingUnit	New York;Wyoming County	Wyoming County
 ReportingUnit	New York;Wyoming County	fips36121
 ReportingUnit	New York;Yates County	Yates County
 ReportingUnit	New York;Yates County	fips36123
+CandidateContest	NY Attorney General	NY;Attorney General
+CandidateContest	NY Comptroller	NY;Comptroller;statewide
+CandidateContest	NY Governor	NY;Governor and Lt. Governor;statewide
+CandidateContest	NY House District 102	NY;State Assembly Member;District 102
+CandidateContest	NY House District 108	NY;State Assembly Member;District 108
+CandidateContest	NY House District 109	NY;State Assembly Member;District 109
+CandidateContest	NY House District 110	NY;State Assembly Member;District 110
+CandidateContest	NY House District 111	NY;State Assembly Member;District 111
+CandidateContest	NY Senate District 44	NY;State Senator;District 44
+CandidateContest	NY Senate District 46	NY;State Senator;District 46
+CandidateContest	NY Supreme Court Justice District 3	NY;Supreme Court Justice;District 3
+CandidateContest	US House NY District 20	NY;US Representative;District 20
+CandidateContest	US Senate NY	NY;US Senator;statewide
+CandidateContest	NY House District 148	NY;State Assembly Member;District 148
+CandidateContest	NY Senate District 57	NY;State Senator;District 57
+CandidateContest	NY Supreme Court Justice District 8	NY;Supreme Court Justice;District 8
+CandidateContest	US House NY District 23	NY;US Representative;District 23
+CandidateContest	NY House District 77	NY;State Assembly Member;District 77
+CandidateContest	NY House District 78	NY;State Assembly Member;District 78
+CandidateContest	NY House District 79	NY;State Assembly Member;District 79
+CandidateContest	NY House District 80	NY;State Assembly Member;District 80
+CandidateContest	NY House District 81	NY;State Assembly Member;District 81
+CandidateContest	NY House District 82	NY;State Assembly Member;District 82
+CandidateContest	NY House District 83	NY;State Assembly Member;District 83
+CandidateContest	NY House District 84	NY;State Assembly Member;District 84
+CandidateContest	NY House District 85	NY;State Assembly Member;District 85
+CandidateContest	NY House District 86	NY;State Assembly Member;District 86
+CandidateContest	NY House District 87	NY;State Assembly Member;District 87
+CandidateContest	NY Senate District 29	NY;State Senator;District 29
+CandidateContest	NY Senate District 32	NY;State Senator;District 32
+CandidateContest	NY Senate District 33	NY;State Senator;District 33
+CandidateContest	NY Senate District 34	NY;State Senator;District 34
+CandidateContest	NY Senate District 36	NY;State Senator;District 36
+CandidateContest	NY Supreme Court Justice District 12	NY;Supreme Court Justice;District 12
+CandidateContest	US House NY District 13	NY;US Representative;District 13
+CandidateContest	US House NY District 14	NY;US Representative;District 14
+CandidateContest	US House NY District 15	NY;US Representative;District 15
+CandidateContest	US House NY District 16	NY;US Representative;District 16
+CandidateContest	NY House District 122	NY;State Assembly Member;District 122
+CandidateContest	NY House District 123	NY;State Assembly Member;District 123
+CandidateContest	NY House District 124	NY;State Assembly Member;District 124
+CandidateContest	NY Senate District 52	NY;State Senator;District 52
+CandidateContest	NY Supreme Court Justice District 6	NY;Supreme Court Justice;District 6
+CandidateContest	US House NY District 19	NY;US Representative;District 19
+CandidateContest	US House NY District 22	NY;US Representative;District 22
+CandidateContest	NY House District 126	NY;State Assembly Member;District 126
+CandidateContest	NY House District 130	NY;State Assembly Member;District 130
+CandidateContest	NY Senate District 50	NY;State Senator;District 50
+CandidateContest	NY Senate District 51	NY;State Senator;District 51
+CandidateContest	NY Senate District 54	NY;State Senator;District 54
+CandidateContest	NY Supreme Court Justice District 7	NY;Supreme Court Justice;District 7
+CandidateContest	US House NY District 24	NY;US Representative;District 24
+CandidateContest	NY House District 150	NY;State Assembly Member;District 150
+CandidateContest	NY House District 132	NY;State Assembly Member;District 132
+CandidateContest	NY Senate District 58	NY;State Senator;District 58
+CandidateContest	NY House District 115	NY;State Assembly Member;District 115
+CandidateContest	NY Senate District 45	NY;State Senator;District 45
+CandidateContest	US House NY District 21	NY;US Representative;District 21
+CandidateContest	NY House District 106	NY;State Assembly Member;District 106
+CandidateContest	NY House District 107	NY;State Assembly Member;District 107
+CandidateContest	NY Senate District 43	NY;State Senator;District 43
+CandidateContest	NY House District 125	NY;State Assembly Member;District 125
+CandidateContest	NY House District 101	NY;State Assembly Member;District 101
+CandidateContest	NY Senate District 42	NY;State Senator;District 42
+CandidateContest	NY House District 103	NY;State Assembly Member;District 103
+CandidateContest	NY House District 104	NY;State Assembly Member;District 104
+CandidateContest	NY House District 105	NY;State Assembly Member;District 105
+CandidateContest	NY Senate District 40	NY;State Senator;District 40
+CandidateContest	NY Senate District 41	NY;State Senator;District 41
+CandidateContest	NY Supreme Court Justice District 9	NY;Supreme Court Justice;District 9
+CandidateContest	US House NY District 18	NY;US Representative;District 18
+CandidateContest	NY House District 140	NY;State Assembly Member;District 140
+CandidateContest	NY House District 141	NY;State Assembly Member;District 141
+CandidateContest	NY House District 142	NY;State Assembly Member;District 142
+CandidateContest	NY House District 143	NY;State Assembly Member;District 143
+CandidateContest	NY House District 144	NY;State Assembly Member;District 144
+CandidateContest	NY House District 145	NY;State Assembly Member;District 145
+CandidateContest	NY House District 146	NY;State Assembly Member;District 146
+CandidateContest	NY House District 147	NY;State Assembly Member;District 147
+CandidateContest	NY House District 149	NY;State Assembly Member;District 149
+CandidateContest	NY Senate District 59	NY;State Senator;District 59
+CandidateContest	NY Senate District 60	NY;State Senator;District 60
+CandidateContest	NY Senate District 61	NY;State Senator;District 61
+CandidateContest	NY Senate District 63	NY;State Senator;District 63
+CandidateContest	US House NY District 26	NY;US Representative;District 26
+CandidateContest	US House NY District 27	NY;US Representative;District 27
+CandidateContest	NY House District 114	NY;State Assembly Member;District 114
+CandidateContest	NY House District 118	NY;State Assembly Member;District 118
+CandidateContest	NY Senate District 49	NY;State Senator;District 49
+CandidateContest	NY House District 139	NY;State Assembly Member;District 139
+CandidateContest	NY House District 119	NY;State Assembly Member;District 119
+CandidateContest	NY Supreme Court Justice District 5	NY;Supreme Court Justice;District 5
+CandidateContest	NY House District 116	NY;State Assembly Member;District 116
+CandidateContest	NY House District 117	NY;State Assembly Member;District 117
+CandidateContest	NY House District 120	NY;State Assembly Member;District 120
+CandidateContest	NY Senate District 48	NY;State Senator;District 48
+CandidateContest	NY House District 41	NY;State Assembly Member;District 41
+CandidateContest	NY House District 42	NY;State Assembly Member;District 42
+CandidateContest	NY House District 43	NY;State Assembly Member;District 43
+CandidateContest	NY House District 44	NY;State Assembly Member;District 44
+CandidateContest	NY House District 45	NY;State Assembly Member;District 45
+CandidateContest	NY House District 46	NY;State Assembly Member;District 46
+CandidateContest	NY House District 47	NY;State Assembly Member;District 47
+CandidateContest	NY House District 48	NY;State Assembly Member;District 48
+CandidateContest	NY House District 49	NY;State Assembly Member;District 49
+CandidateContest	NY House District 50	NY;State Assembly Member;District 50
+CandidateContest	NY House District 51	NY;State Assembly Member;District 51
+CandidateContest	NY House District 52	NY;State Assembly Member;District 52
+CandidateContest	NY House District 53	NY;State Assembly Member;District 53
+CandidateContest	NY House District 54	NY;State Assembly Member;District 54
+CandidateContest	NY House District 55	NY;State Assembly Member;District 55
+CandidateContest	NY House District 56	NY;State Assembly Member;District 56
+CandidateContest	NY House District 57	NY;State Assembly Member;District 57
+CandidateContest	NY House District 58	NY;State Assembly Member;District 58
+CandidateContest	NY House District 59	NY;State Assembly Member;District 59
+CandidateContest	NY House District 60	NY;State Assembly Member;District 60
+CandidateContest	NY House District 64	NY;State Assembly Member;District 64
+CandidateContest	NY Senate District 17	NY;State Senator;District 17
+CandidateContest	NY Senate District 18	NY;State Senator;District 18
+CandidateContest	NY Senate District 19	NY;State Senator;District 19
+CandidateContest	NY Senate District 20	NY;State Senator;District 20
+CandidateContest	NY Senate District 21	NY;State Senator;District 21
+CandidateContest	NY Senate District 22	NY;State Senator;District 22
+CandidateContest	NY Senate District 23	NY;State Senator;District 23
+CandidateContest	NY Senate District 25	NY;State Senator;District 25
+CandidateContest	NY Senate District 26	NY;State Senator;District 26
+CandidateContest	NY Supreme Court Justice District 2	NY;Supreme Court Justice;District 2
+CandidateContest	US House NY District 10	NY;US Representative;District 10
+CandidateContest	US House NY District 11	NY;US Representative;District 11
+CandidateContest	US House NY District 12	NY;US Representative;District 12
+CandidateContest	US House NY District 7	NY;US Representative;District 7
+CandidateContest	US House NY District 8	NY;US Representative;District 8
+CandidateContest	US House NY District 9	NY;US Representative;District 9
+CandidateContest	NY Senate District 47	NY;State Senator;District 47
+CandidateContest	NY House District 133	NY;State Assembly Member;District 133
+CandidateContest	NY House District 121	NY;State Assembly Member;District 121
+CandidateContest	NY Senate District 53	NY;State Senator;District 53
+CandidateContest	NY House District 134	NY;State Assembly Member;District 134
+CandidateContest	NY House District 135	NY;State Assembly Member;District 135
+CandidateContest	NY House District 136	NY;State Assembly Member;District 136
+CandidateContest	NY House District 137	NY;State Assembly Member;District 137
+CandidateContest	NY House District 138	NY;State Assembly Member;District 138
+CandidateContest	NY Senate District 55	NY;State Senator;District 55
+CandidateContest	NY Senate District 56	NY;State Senator;District 56
+CandidateContest	NY Senate District 62	NY;State Senator;District 62
+CandidateContest	US House NY District 25	NY;US Representative;District 25
+CandidateContest	NY House District 13	NY;State Assembly Member;District 13
+CandidateContest	NY House District 14	NY;State Assembly Member;District 14
+CandidateContest	NY House District 15	NY;State Assembly Member;District 15
+CandidateContest	NY House District 16	NY;State Assembly Member;District 16
+CandidateContest	NY House District 17	NY;State Assembly Member;District 17
+CandidateContest	NY House District 18	NY;State Assembly Member;District 18
+CandidateContest	NY House District 19	NY;State Assembly Member;District 19
+CandidateContest	NY House District 20	NY;State Assembly Member;District 20
+CandidateContest	NY House District 21	NY;State Assembly Member;District 21
+CandidateContest	NY House District 22	NY;State Assembly Member;District 22
+CandidateContest	NY House District 9	NY;State Assembly Member;District 9
+CandidateContest	NY Senate District 5	NY;State Senator;District 5
+CandidateContest	NY Senate District 6	NY;State Senator;District 6
+CandidateContest	NY Senate District 7	NY;State Senator;District 7
+CandidateContest	NY Senate District 8	NY;State Senator;District 8
+CandidateContest	NY Senate District 9	NY;State Senator;District 9
+CandidateContest	NY Supreme Court Justice District 10	NY;Supreme Court Justice;District 10
+CandidateContest	US House NY District 2	NY;US Representative;District 2
+CandidateContest	US House NY District 3	NY;US Representative;District 3
+CandidateContest	US House NY District 4	NY;US Representative;District 4
+CandidateContest	US House NY District 5	NY;US Representative;District 5
+CandidateContest	NY House District 65	NY;State Assembly Member;District 65
+CandidateContest	NY House District 66	NY;State Assembly Member;District 66
+CandidateContest	NY House District 67	NY;State Assembly Member;District 67
+CandidateContest	NY House District 68	NY;State Assembly Member;District 68
+CandidateContest	NY House District 69	NY;State Assembly Member;District 69
+CandidateContest	NY House District 70	NY;State Assembly Member;District 70
+CandidateContest	NY House District 71	NY;State Assembly Member;District 71
+CandidateContest	NY House District 72	NY;State Assembly Member;District 72
+CandidateContest	NY House District 73	NY;State Assembly Member;District 73
+CandidateContest	NY House District 74	NY;State Assembly Member;District 74
+CandidateContest	NY House District 75	NY;State Assembly Member;District 75
+CandidateContest	NY House District 76	NY;State Assembly Member;District 76
+CandidateContest	NY Senate District 27	NY;State Senator;District 27
+CandidateContest	NY Senate District 28	NY;State Senator;District 28
+CandidateContest	NY Senate District 30	NY;State Senator;District 30
+CandidateContest	NY Senate District 31	NY;State Senator;District 31
+CandidateContest	NY Supreme Court Justice District 1	NY;Supreme Court Justice;District 1
+CandidateContest	NY House District 127	NY;State Assembly Member;District 127
+CandidateContest	NY House District 128	NY;State Assembly Member;District 128
+CandidateContest	NY House District 129	NY;State Assembly Member;District 129
+CandidateContest	NY House District 131	NY;State Assembly Member;District 131
+CandidateContest	NY House District 100	NY;State Assembly Member;District 100
+CandidateContest	NY House District 98	NY;State Assembly Member;District 98
+CandidateContest	NY House District 99	NY;State Assembly Member;District 99
+CandidateContest	NY Senate District 39	NY;State Senator;District 39
+CandidateContest	NY House District 94	NY;State Assembly Member;District 94
+CandidateContest	NY House District 95	NY;State Assembly Member;District 95
+CandidateContest	NY House District 23	NY;State Assembly Member;District 23
+CandidateContest	NY House District 24	NY;State Assembly Member;District 24
+CandidateContest	NY House District 25	NY;State Assembly Member;District 25
+CandidateContest	NY House District 26	NY;State Assembly Member;District 26
+CandidateContest	NY House District 27	NY;State Assembly Member;District 27
+CandidateContest	NY House District 28	NY;State Assembly Member;District 28
+CandidateContest	NY House District 29	NY;State Assembly Member;District 29
+CandidateContest	NY House District 30	NY;State Assembly Member;District 30
+CandidateContest	NY House District 31	NY;State Assembly Member;District 31
+CandidateContest	NY House District 32	NY;State Assembly Member;District 32
+CandidateContest	NY House District 33	NY;State Assembly Member;District 33
+CandidateContest	NY House District 34	NY;State Assembly Member;District 34
+CandidateContest	NY House District 35	NY;State Assembly Member;District 35
+CandidateContest	NY House District 36	NY;State Assembly Member;District 36
+CandidateContest	NY House District 37	NY;State Assembly Member;District 37
+CandidateContest	NY House District 38	NY;State Assembly Member;District 38
+CandidateContest	NY House District 39	NY;State Assembly Member;District 39
+CandidateContest	NY House District 40	NY;State Assembly Member;District 40
+CandidateContest	NY Senate District 10	NY;State Senator;District 10
+CandidateContest	NY Senate District 11	NY;State Senator;District 11
+CandidateContest	NY Senate District 12	NY;State Senator;District 12
+CandidateContest	NY Senate District 13	NY;State Senator;District 13
+CandidateContest	NY Senate District 14	NY;State Senator;District 14
+CandidateContest	NY Senate District 15	NY;State Senator;District 15
+CandidateContest	NY Senate District 16	NY;State Senator;District 16
+CandidateContest	NY Supreme Court Justice District 11	NY;Supreme Court Justice;District 11
+CandidateContest	US House NY District 6	NY;US Representative;District 6
+CandidateContest	NY House District 61	NY;State Assembly Member;District 61
+CandidateContest	NY House District 62	NY;State Assembly Member;District 62
+CandidateContest	NY House District 63	NY;State Assembly Member;District 63
+CandidateContest	NY Senate District 24	NY;State Senator;District 24
+CandidateContest	NY Supreme Court Justice District 13	NY;Supreme Court Justice;District 13
+CandidateContest	NY House District 96	NY;State Assembly Member;District 96
+CandidateContest	NY House District 97	NY;State Assembly Member;District 97
+CandidateContest	NY Senate District 38	NY;State Senator;District 38
+CandidateContest	US House NY District 17	NY;US Representative;District 17
+CandidateContest	NY House District 112	NY;State Assembly Member;District 112
+CandidateContest	NY House District 113	NY;State Assembly Member;District 113
+CandidateContest	NY House District 1	NY;State Assembly Member;District 1
+CandidateContest	NY House District 10	NY;State Assembly Member;District 10
+CandidateContest	NY House District 11	NY;State Assembly Member;District 11
+CandidateContest	NY House District 12	NY;State Assembly Member;District 12
+CandidateContest	NY House District 2	NY;State Assembly Member;District 2
+CandidateContest	NY House District 3	NY;State Assembly Member;District 3
+CandidateContest	NY House District 4	NY;State Assembly Member;District 4
+CandidateContest	NY House District 5	NY;State Assembly Member;District 5
+CandidateContest	NY House District 6	NY;State Assembly Member;District 6
+CandidateContest	NY House District 7	NY;State Assembly Member;District 7
+CandidateContest	NY House District 8	NY;State Assembly Member;District 8
+CandidateContest	NY Senate District 1	NY;State Senator;District 1
+CandidateContest	NY Senate District 2	NY;State Senator;District 2
+CandidateContest	NY Senate District 3	NY;State Senator;District 3
+CandidateContest	NY Senate District 4	NY;State Senator;District 4
+CandidateContest	US House NY District 1	NY;US Representative;District 1
+CandidateContest	NY House District 88	NY;State Assembly Member;District 88
+CandidateContest	NY House District 89	NY;State Assembly Member;District 89
+CandidateContest	NY House District 90	NY;State Assembly Member;District 90
+CandidateContest	NY House District 91	NY;State Assembly Member;District 91
+CandidateContest	NY House District 92	NY;State Assembly Member;District 92
+CandidateContest	NY House District 93	NY;State Assembly Member;District 93
+CandidateContest	NY Senate District 35	NY;State Senator;District 35
+CandidateContest	NY Senate District 37	NY;State Senator;District 37
+Candidate	Aaron W. Gladd	Aaron W. Gladd
+Candidate	Adam Baumel	Adam Baumel
+Candidate	Adam P. Ohar	Adam P. Ohar
+Candidate	Addie A. E. Jenne	Addie A. E. Jenne
+Candidate	Aidan S. O'Connor, Jr.	Aidan S. O'Connor, Jr.
+Candidate	Alexander M. Tisch	Alexander M. Tisch
+Candidate	Allen F. Foley	Allen F. Foley
+Candidate	Alpheaus E. Marcus	Alpheaus E. Marcus
+Candidate	Amanda Kirchgessner	Amanda Kirchgessner
+Candidate	Amanda Septimo	Amanda Septimo
+Candidate	Ameer N. Benno	Ameer N. Benno
+Candidate	Andrew G. Gilchrist	Andrew G. Gilchrist
+Candidate	Andrew M. Cuomo and Kathy C. Hochul	Andrew M. Cuomo and Kathy C. Hochul
+Candidate	Andrew P. Raia	Andrew P. Raia
+Candidate	Angharad Vaughan	Angharad Vaughan
+Candidate	Ann G. Rabbitt	Ann G. Rabbitt
+Candidate	Ann Marie Taddeo	Ann Marie Taddeo
+Candidate	Anthony Arias	Anthony Arias
+Candidate	Anthony Beckford	Anthony Beckford
+Candidate	Anthony Durso	Anthony Durso
+Candidate	Anthony Pappas	Anthony Pappas
+Candidate	Anthony R. Caccamo	Anthony R. Caccamo
+Candidate	Aravella Simotas	Aravella Simotas
+Candidate	Ari Espinal	Ari Espinal
+Candidate	Ariel A. Rivera-Diaz	Ariel A. Rivera-Diaz
+Candidate	Aston G. Lee	Aston G. Lee
+Candidate	Avrum J. Rosen	Avrum J. Rosen
+Candidate	Barbara A. Baer	Barbara A. Baer
+Candidate	Barbara S. Lifton	Barbara S. Lifton
+Candidate	Barry E. Warhit	Barry E. Warhit
+Candidate	Benison DeFunis	Benison DeFunis
+Candidate	Benjamin R. Barbato	Benjamin R. Barbato
+Candidate	Bill Batrowny	Bill Batrowny
+Candidate	Bill Magee	Bill Magee
+Candidate	Billy Carr	Billy Carr
+Candidate	Blank	Blank
+Candidate	Bob Cohen	Bob Cohen
+Candidate	Bobby K. Kalotee	Bobby K. Kalotee
+Candidate	Brandon S. Washington	Brandon S. Washington
+Candidate	Brian F. Curran	Brian F. Curran
+Candidate	Brian M. Kolb	Brian M. Kolb
+Candidate	Brian McGarry	Brian McGarry
+Candidate	Brian T. Barnwell	Brian T. Barnwell
+Candidate	Brian V. Phillips	Brian V. Phillips
+Candidate	Bryan Cooper	Bryan Cooper
+Candidate	Byron A. Divins, Jr.	Byron A. Divins, Jr.
+Candidate	C. Scott Vanderhoef	C. Scott Vanderhoef
+Candidate	Carima C. El Behairy	Carima C. El Behairy
+Candidate	Carl E. Heastie	Carl E. Heastie
+Candidate	Carl L. Marcellino	Carl L. Marcellino
+Candidate	Carmen N. De La Rosa	Carmen N. De La Rosa
+Candidate	Catharine M. Young	Catharine M. Young
+Candidate	Catherine T. Nolan	Catherine T. Nolan
+Candidate	Chele Chiavacci Farley	Chele Chiavacci Farley
+Candidate	Chris Collins	Chris Collins
+Candidate	Christian W. Kalinowski	Christian W. Kalinowski
+Candidate	Christina Cagnina	Christina Cagnina
+Candidate	Christopher B. Garvey	Christopher B. Garvey
+Candidate	Christopher F. Davis	Christopher F. Davis
+Candidate	Christopher J. Carey	Christopher J. Carey
+Candidate	Christopher L. Grayson	Christopher L. Grayson
+Candidate	Christopher L. Jacobs	Christopher L. Jacobs
+Candidate	Christopher S. Ciaccio	Christopher S. Ciaccio
+Candidate	Clifford W. Crouch	Clifford W. Crouch
+Candidate	Clyde E. Parker	Clyde E. Parker
+Candidate	Corina Cotenescu	Corina Cotenescu
+Candidate	Cruger E. Gallaudet	Cruger E. Gallaudet
+Candidate	Cynthia E. Nixon	Cynthia E. Nixon
+Candidate	Daby Carreras	Daby Carreras
+Candidate	Dan Donovan	Dan Donovan
+Candidate	Dan P. DeBono	Dan P. DeBono
+Candidate	Daniel A. Rosenthal	Daniel A. Rosenthal
+Candidate	Daniel Falcone	Daniel Falcone
+Candidate	Daniel R. Centinello, Sr.	Daniel R. Centinello, Sr.
+Candidate	Daniel Ramos	Daniel Ramos
+Candidate	Daniel T. Driscoll	Daniel T. Driscoll
+Candidate	Danilo Lawvere	Danilo Lawvere
+Candidate	David A. Bellon	David A. Bellon
+Candidate	David A. Morris	David A. Morris
+Candidate	David Buchwald	David Buchwald
+Candidate	David Carlucci	David Carlucci
+Candidate	David F. Everett	David F. Everett
+Candidate	David F. Gantt	David F. Gantt
+Candidate	David J. Morrissey	David J. Morrissey
+Candidate	David J. Valesky	David J. Valesky
+Candidate	David Krainert	David Krainert
+Candidate	David L. Bressler	David L. Bressler
+Candidate	Dean Murray	Dean Murray
+Candidate	Deborah Poulos	Deborah Poulos
+Candidate	Debra Brown	Debra Brown
+Candidate	Dennis B. Bova, Jr.	Dennis B. Bova, Jr.
+Candidate	Devin P. Cohen	Devin P. Cohen
+Candidate	Diane Neal (FRI)	Diane Neal (FRI)
+Candidate	Donald A. Greenwood	Donald A. Greenwood
+Candidate	Douglass Seidman	Douglass Seidman
+Candidate	Eddie J. McShan	Eddie J. McShan
+Candidate	Edward L. Ott	Edward L. Ott
+Candidate	Elaine R. Phillips	Elaine R. Phillips
+Candidate	Eliot L. Engel	Eliot L. Engel
+Candidate	Eliot Rabin	Eliot Rabin
+Candidate	Elizabeth A. Burns	Elizabeth A. Burns
+Candidate	Elizabeth A. English	Elizabeth A. English
+Candidate	Elizabeth A. Taylor	Elizabeth A. Taylor
+Candidate	Elizabeth O'C. Little	Elizabeth O'C. Little
+Candidate	Emily L. Martz	Emily L. Martz
+Candidate	Eric I. Prus	Eric I. Prus
+Candidate	Eric J. Butkiewicz	Eric J. Butkiewicz
+Candidate	Erik T. Bohen	Erik T. Bohen
+Candidate	Ernest C. Johnson	Ernest C. Johnson
+Candidate	Ethan Lustig-Elgrably	Ethan Lustig-Elgrably
+Candidate	Felix W. Ortiz	Felix W. Ortiz
+Candidate	Florence A. LaSalle	Florence A. LaSalle
+Candidate	Francis X. Becker, Jr.	Francis X. Becker, Jr.
+Candidate	Gary D. Finch	Gary D. Finch
+Candidate	George A. Amedore, Jr.	George A. Amedore, Jr.
+Candidate	George Nolan	George Nolan
+Candidate	Gerry Neri	Gerry Neri
+Candidate	Gino A. Marmorato	Gino A. Marmorato
+Candidate	Glenn A. Yost	Glenn A. Yost
+Candidate	Gonald Moncion	Gonald Moncion
+Candidate	Gregory M. Torres	Gregory M. Torres
+Candidate	Gregory-John Fischer	Gregory-John Fischer
+Candidate	Hal B. Greenwald	Hal B. Greenwald
+Candidate	Harvey D. Epstein	Harvey D. Epstein
+Candidate	Helen Voutsinas	Helen Voutsinas
+Candidate	Henry J. Bardel	Henry J. Bardel
+Candidate	Horrie J. Johnson	Horrie J. Johnson
+Candidate	Howie Hawkins and Jia Lee	Howie Hawkins and Jia Lee
+Candidate	Ingrid Joseph	Ingrid Joseph
+Candidate	Jack Vobis	Jack Vobis
+Candidate	James F. Reitz	James F. Reitz
+Candidate	James L. Seward	James L. Seward
+Candidate	James Lamarre	James Lamarre
+Candidate	James O'Donnell	James O'Donnell
+Candidate	James P. Murphy	James P. Murphy
+Candidate	Jamie L. Romeo	Jamie L. Romeo
+Candidate	Janet Berl Burman	Janet Berl Burman
+Candidate	Jasmine L. Robinson	Jasmine L. Robinson
+Candidate	Jason D. Gonzalez	Jason D. Gonzalez
+Candidate	Jeff Ascherman	Jeff Ascherman
+Candidate	Jeffrey D. Klein	Jeffrey D. Klein
+Candidate	Jeffrey J. Ferretti	Jeffrey J. Ferretti
+Candidate	Jeffrey M. Kurzon	Jeffrey M. Kurzon
+Candidate	Jeffrey P. Pravato	Jeffrey P. Pravato
+Candidate	Jen Lunsford	Jen Lunsford
+Candidate	Jeremy G. Williams	Jeremy G. Williams
+Candidate	Jesse E. Hamilton	Jesse E. Hamilton
+Candidate	Jessica L. White	Jessica L. White
+Candidate	Jim Maxwell	Jim Maxwell
+Candidate	Jineea Butler	Jineea Butler
+Candidate	Jo Anna Simon	Jo Anna Simon
+Candidate	Joan B. Lefkowitz	Joan B. Lefkowitz
+Candidate	Joan Elizabeth Seamans	Joan Elizabeth Seamans
+Candidate	Joe Errigo	Joe Errigo
+Candidate	Joe McBride	Joe McBride
+Candidate	Joe Pinion	Joe Pinion
+Candidate	Joe Vitollo	Joe Vitollo
+Candidate	Joel Anabilah-Azumah	Joel Anabilah-Azumah
+Candidate	John B. Zollo	John B. Zollo
+Candidate	John Dennie	John Dennie
+Candidate	John J. Faso	John J. Faso
+Candidate	John J. Flanagan	John J. Flanagan
+Candidate	John Liu	John Liu
+Candidate	John M. Curran	John M. Curran
+Candidate	John N. Scandalios	John N. Scandalios
+Candidate	Jonathan Trichter	Jonathan Trichter
+Candidate	Jose E. Serrano	Jose E. Serrano
+Candidate	Jose Marte	Jose Marte
+Candidate	Jose R. Peralta	Jose R. Peralta
+Candidate	Joseph Bogdany	Joseph Bogdany
+Candidate	Joseph Cote	Joseph Cote
+Candidate	Joseph Crowley	Joseph Crowley
+Candidate	Joseph DiPasquale	Joseph DiPasquale
+Candidate	Joseph E. Robach	Joseph E. Robach
+Candidate	Joseph F. Kasper	Joseph F. Kasper
+Candidate	Joseph J. Ciardullo	Joseph J. Ciardullo
+Candidate	Joseph Lieberman	Joseph Lieberman
+Candidate	Joseph P. Sullivan	Joseph P. Sullivan
+Candidate	Joseph R. Lentol	Joseph R. Lentol
+Candidate	Joyce St. George	Joyce St. George
+Candidate	Juan C. Vides	Juan C. Vides
+Candidate	Juan Pagan	Juan Pagan
+Candidate	Judith S. Einach	Judith S. Einach
+Candidate	Julio Rodriguez	Julio Rodriguez
+Candidate	Jumaane D. Williams	Jumaane D. Williams
+Candidate	Karen M. Brandt	Karen M. Brandt
+Candidate	Kate M. Browning	Kate M. Browning
+Candidate	Kathie E. Davidson	Kathie E. Davidson
+Candidate	Kathleen Bradbury Cleary	Kathleen Bradbury Cleary
+Candidate	Kathryn K. Wilson	Kathryn K. Wilson
+Candidate	Keith A. Rubino	Keith A. Rubino
+Candidate	Keith Batman	Keith Batman
+Candidate	Keith Wofford	Keith Wofford
+Candidate	Kemp Hannon	Kemp Hannon
+Candidate	Kenan S. Baldridge	Kenan S. Baldridge
+Candidate	Kenneth D. Schaeffer	Kenneth D. Schaeffer
+Candidate	Kenneth P. La Valle	Kenneth P. La Valle
+Candidate	Kevin Cahill	Kevin Cahill
+Candidate	Kevin M. Byrne	Kevin M. Byrne
+Candidate	Kevin V. Sabella	Kevin V. Sabella
+Candidate	Kieran M. Lalor	Kieran M. Lalor
+Candidate	Kimberly L. Snow	Kimberly L. Snow
+Candidate	Kirsten E. Gillibrand	Kirsten E. Gillibrand
+Candidate	Lalita L. Etwaroo	Lalita L. Etwaroo
+Candidate	Larry Kelly	Larry Kelly
+Candidate	Larry Piegza	Larry Piegza
+Candidate	Larry Sharpe and Andrew C. Hollister	Larry Sharpe and Andrew C. Hollister
+Candidate	Latrice M. Walker	Latrice M. Walker
+Candidate	Laurence L. Love	Laurence L. Love
+Candidate	Leroy R. Bates	Leroy R. Bates
+Candidate	Letitia A. James	Letitia A. James
+Candidate	Lisa S. Ottley	Lisa S. Ottley
+Candidate	Liuba Grechen Shirley	Liuba Grechen Shirley
+Candidate	Llinet Rosado	Llinet Rosado
+Candidate	Lou Puliafito	Lou Puliafito
+Candidate	Louis D'Amaro	Louis D'Amaro
+Candidate	Louis Perri	Louis Perri
+Candidate	Luis Rivera	Luis Rivera
+Candidate	Luis Sepulveda	Luis Sepulveda
+Candidate	Luke E. Wochensky	Luke E. Wochensky
+Candidate	Lutchi Gayot	Lutchi Gayot
+Candidate	Lynn Kahn	Lynn Kahn
+Candidate	Lynn R. Kotler	Lynn R. Kotler
+Candidate	Marc Molinaro and Julie Killian	Marc Molinaro and Julie Killian
+Candidate	Marcos A. Crespo	Marcos A. Crespo
+Candidate	Margaret Fasano	Margaret Fasano
+Candidate	Margaret T. Walsh	Margaret T. Walsh
+Candidate	Marian R. Tinari	Marian R. Tinari
+Candidate	Marina Cora Mundy	Marina Cora Mundy
+Candidate	Marisol Alcantara	Marisol Alcantara
+Candidate	Mark Dunlea	Mark Dunlea
+Candidate	Mark Schneider	Mark Schneider
+Candidate	Marsha D. Michael	Marsha D. Michael
+Candidate	Martin J. Golden	Martin J. Golden
+Candidate	Mary Ann Brigantti	Mary Ann Brigantti
+Candidate	Mary V. Rosado	Mary V. Rosado
+Candidate	Matthew A. Rettig	Matthew A. Rettig
+Candidate	Matthew G. Pecorino	Matthew G. Pecorino
+Candidate	Matthew Williams	Matthew Williams
+Candidate	Maureen A. Healy	Maureen A. Healy
+Candidate	Michael A. Blake	Michael A. Blake
+Candidate	Michael A. Gajdos, Jr.	Michael A. Gajdos, Jr.
+Candidate	Michael Dennis	Michael Dennis
+Candidate	Michael E. Walters	Michael E. Walters
+Candidate	Michael F. Reid	Michael F. Reid
+Candidate	Michael G. DenDekker	Michael G. DenDekker
+Candidate	Michael G. Miller	Michael G. Miller
+Candidate	Michael H. Ranzenhofer	Michael H. Ranzenhofer
+Candidate	Michael Lausell	Michael Lausell
+Candidate	Michael R. Hunter	Michael R. Hunter
+Candidate	Michael Sussman	Michael Sussman
+Candidate	Michele R. Titus	Michele R. Titus
+Candidate	Michelle G. Weston	Michelle G. Weston
+Candidate	Michelle M. Kennedy	Michelle M. Kennedy
+Candidate	Michelle Ostrelich	Michelle Ostrelich
+Candidate	Migdalia Denis	Migdalia Denis
+Candidate	Mike LiPetri	Mike LiPetri
+Candidate	Monica Piga Wallace	Monica Piga Wallace
+Candidate	Morgan Zegers	Morgan Zegers
+Candidate	Nader Sayegh	Nader Sayegh
+Candidate	Nancy B. Sliwa	Nancy B. Sliwa
+Candidate	Naomi Levin	Naomi Levin
+Candidate	Nicholas R. Libous	Nicholas R. Libous
+Candidate	Nicholas R. Paro	Nicholas R. Paro
+Candidate	Nita M. Lowey	Nita M. Lowey
+Candidate	Norman St. George	Norman St. George
+Candidate	Opportunity To Ballot	Opportunity To Ballot
+Candidate	Orlando Marrazzo, Jr.	Orlando Marrazzo, Jr.
+Candidate	Oswald Denis	Oswald Denis
+Candidate	Pamela Stewart-Martinez	Pamela Stewart-Martinez
+Candidate	Pat Courtney Strong	Pat Courtney Strong
+Candidate	Patricia E. Gallaher	Patricia E. Gallaher
+Candidate	Patricia Kane	Patricia Kane
+Candidate	Patricia Latzman	Patricia Latzman
+Candidate	Patrick Dwyer	Patrick Dwyer
+Candidate	Patrick M. O'Connor	Patrick M. O'Connor
+Candidate	Patsy A. Iacovangelo	Patsy A. Iacovangelo
+Candidate	Paula L. Feroleto	Paula L. Feroleto
+Candidate	Perry Gershon	Perry Gershon
+Candidate	Peter A. Diachun	Peter A. Diachun
+Candidate	Peter A. Lawrence	Peter A. Lawrence
+Candidate	Peter A. Lynch	Peter A. Lynch
+Candidate	Peter Holmberg	Peter Holmberg
+Candidate	Peter Holmberg (SDB)	Peter Holmberg (SDB)
+Candidate	Peter T. King	Peter T. King
+Candidate	Phillip A. Grimaldi, Jr.	Phillip A. Grimaldi, Jr.
+Candidate	Ralph J. Porzio	Ralph J. Porzio
+Candidate	Raymond W. Walter	Raymond W. Walter
+Candidate	Renee M. Zeno	Renee M. Zeno
+Candidate	Rich Funke	Rich Funke
+Candidate	Richard A. Ribustello	Richard A. Ribustello
+Candidate	Robert E. Antonacci, II	Robert E. Antonacci, II
+Candidate	Robert E. Antonacci, II (UPS)	Robert E. Antonacci, II (UPS)
+Candidate	Robert E. Torres	Robert E. Torres
+Candidate	Robert H. Freehill	Robert H. Freehill
+Candidate	Robert I. Caloras	Robert I. Caloras
+Candidate	Robert L. Diamond	Robert L. Diamond
+Candidate	Robert M. Nigro	Robert M. Nigro
+Candidate	Robin Schimminger	Robin Schimminger
+Candidate	Rona Smith	Rona Smith
+Candidate	Ronald J. Kim	Ronald J. Kim
+Candidate	Ronny Goodman	Ronny Goodman
+Candidate	Rosario Presti, Jr.	Rosario Presti, Jr.
+Candidate	Rosemary Mangino	Rosemary Mangino
+Candidate	Ross M. Kostecky	Ross M. Kostecky
+Candidate	Ruth C. Balkin	Ruth C. Balkin
+Candidate	Scattering	Scattering
+Candidate	Scott J. DelConte	Scott J. DelConte
+Candidate	Scott M. Manley	Scott M. Manley
+Candidate	Scott Martens	Scott Martens
+Candidate	Shonde M. Lennon	Shonde M. Lennon
+Candidate	Simon H. Minching	Simon H. Minching
+Candidate	Stephanie A. Miner and Michael J. Volpe (SAM)	Stephanie A. Miner and Michael J. Volpe (SAM)
+Candidate	Stephen F. Kiely	Stephen F. Kiely
+Candidate	Stephen J. Lynch	Stephen J. Lynch
+Candidate	Steven Saperstein	Steven Saperstein
+Candidate	Stuart J. Avrick	Stuart J. Avrick
+Candidate	Sylvia O. Hinds-Radix	Sylvia O. Hinds-Radix
+Candidate	Taylor R. Raynor	Taylor R. Raynor
+Candidate	Ted Limpert	Ted Limpert
+Candidate	Terrence P. Murphy	Terrence P. Murphy
+Candidate	Thomas E. Murray, III	Thomas E. Murray, III
+Candidate	Thomas F. O'Mara	Thomas F. O'Mara
+Candidate	Thomas J. Hillgardner	Thomas J. Hillgardner
+Candidate	Thomas P. DiNapoli	Thomas P. DiNapoli
+Candidate	Thomas P. Zugibe	Thomas P. Zugibe
+Candidate	Thomas Rademaker	Thomas Rademaker
+Candidate	Thomas W. Reed, II	Thomas W. Reed, II
+Candidate	Timothy L. Hall	Timothy L. Hall
+Candidate	Tistrya G. Houghtling	Tistrya G. Houghtling
+Candidate	Tom Basile	Tom Basile
+Candidate	Tony Avella	Tony Avella
+Candidate	Tremaine S. Wright	Tremaine S. Wright
+Candidate	Ushir Pandit-Durant	Ushir Pandit-Durant
+Candidate	Valerie Brathwaite Nelson	Valerie Brathwaite Nelson
+Candidate	Vedat Gashi	Vedat Gashi
+Candidate	Velmanette Montgomery	Velmanette Montgomery
+Candidate	Vicki Argento	Vicki Argento
+Candidate	Vickie Paladino	Vickie Paladino
+Candidate	Vincent J. Messina, Jr.	Vincent J. Messina, Jr.
+Candidate	Vincent J. Pazienza	Vincent J. Pazienza
+Candidate	Void	Void
+Candidate	Wayne Saitta	Wayne Saitta
+Candidate	William E. McCarthy	William E. McCarthy
+Candidate	William G. Truitt	William G. Truitt
+Candidate	William J. Giacomo	William J. Giacomo
+Candidate	Yevgeny G. Goldberg	Yevgeny G. Goldberg
+Party	Conservative Party	conservative
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	In Maio We Trust Party	in maio we trust
+Party	Independence Party	independence
+Party	Libertarian Party	libertarian
+Party	Reform Party	reform
+Party	Republican Party	republican
+Party	Tax Revolt Party	tax revolt
+Party	Women's Equality Party	women's equality
+Party	Working Families Party	working families
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	New York;Albany County	New York;Albany County
+ReportingUnit	New York;Allegany County	New York;Allegany County
+ReportingUnit	New York;Bronx County	New York;Bronx County
+ReportingUnit	New York;Broome County	New York;Broome County
+ReportingUnit	New York;Cattaraugus County	New York;Cattaraugus County
+ReportingUnit	New York;Cayuga County	New York;Cayuga County
+ReportingUnit	New York;Chautauqua County	New York;Chautauqua County
+ReportingUnit	New York;Chemung County	New York;Chemung County
+ReportingUnit	New York;Chenango County	New York;Chenago County
+ReportingUnit	New York;Chenango County	New York;Chenango County
+ReportingUnit	New York;Clinton County	New York;Clinton County
+ReportingUnit	New York;Columbia County	New York;Columbia County
+ReportingUnit	New York;Cortland County	New York;Cortland County
+ReportingUnit	New York;Delaware County	New York;Delaware County
+ReportingUnit	New York;Dutchess County	New York;Dutchess County
+ReportingUnit	New York;Erie County	New York;Erie County
+ReportingUnit	New York;Essex County	New York;Essex County
+ReportingUnit	New York;Franklin County	New York;Franklin County
+ReportingUnit	New York;Fulton County	New York;Fulton County
+ReportingUnit	New York;Genesee County	New York;Genesee County
+ReportingUnit	New York;Greene County	New York;Greene County
+ReportingUnit	New York;Hamilton County	New York;Hamilton County
+ReportingUnit	New York;Herkimer County	New York;Herkimer County
+ReportingUnit	New York;Jefferson County	New York;Jefferson County
+ReportingUnit	New York;Kings County	New York;Kings County
+ReportingUnit	New York;Lewis County	New York;Lewis County
+ReportingUnit	New York;Livingston County	New York;Livingston County
+ReportingUnit	New York;Madison County	New York;Madison County
+ReportingUnit	New York;Monroe County	New York;Monroe County
+ReportingUnit	New York;Montgomery County	New York;Montgomery County
+ReportingUnit	New York;Nassau County	New York;Nassau County
+ReportingUnit	New York;New York County	New York;New York County
+ReportingUnit	New York;Niagara County	New York;Niagara County
+ReportingUnit	New York;Oneida County	New York;Oneida County
+ReportingUnit	New York;Onondaga County	New York;Onondaga County
+ReportingUnit	New York;Ontario County	New York;Ontario County
+ReportingUnit	New York;Orange County	New York;Orange County
+ReportingUnit	New York;Orleans County	New York;Orleans County
+ReportingUnit	New York;Oswego County	New York;Oswego County
+ReportingUnit	New York;Otsego County	New York;Otsego County
+ReportingUnit	New York;Putnam County	New York;Putnam County
+ReportingUnit	New York;Queens County	New York;Queens County
+ReportingUnit	New York;Rensselaer County	New York;Rensselaer County
+ReportingUnit	New York;Richmond County	New York;Richmond County
+ReportingUnit	New York;Rockland County	New York;Rockland County
+ReportingUnit	New York;Saratoga County	New York;Saratoga County
+ReportingUnit	New York;Schenectady County	New York;Schenectady County
+ReportingUnit	New York;Schoharie County	New York;Schoharie County
+ReportingUnit	New York;Schuyler County	New York;Schuyler County
+ReportingUnit	New York;Seneca County	New York;Seneca County
+ReportingUnit	New York;St. Lawrence County	New York;St. Lawrence County
+ReportingUnit	New York;Steuben County	New York;Steuben County
+ReportingUnit	New York;Suffolk County	New York;Suffolk County
+ReportingUnit	New York;Sullivan County	New York;Sullivan County
+ReportingUnit	New York;Tioga County	New York;Tioga County
+ReportingUnit	New York;Tompkins County	New York;Tompkins County
+ReportingUnit	New York;Ulster County	New York;Ulster County
+ReportingUnit	New York;Warren County	New York;Warren County
+ReportingUnit	New York;Washington County	New York;Washington County
+ReportingUnit	New York;Wayne County	New York;Wayne County
+ReportingUnit	New York;Westchester County	New York;Westchester County
+ReportingUnit	New York;Wyoming County	New York;Wyoming County
+ReportingUnit	New York;Yates County	New York;Yates County
+CandidateContest	NY Attorney General	NY;Attorney General;statewide

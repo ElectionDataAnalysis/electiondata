@@ -155,3 +155,11 @@ OH Lieutenant Governor	Ohio
 OH Treasurer of State	Ohio
 OH Auditor of State	Ohio
 OH Secretary of State	Ohio
+OH Justice of the Supreme Court	Ohio
+OH Member of the State Board of Education District 2	Ohio;OH Member of the State Board of Education District 2
+OH Member of the State Board of Education District 3	Ohio;OH Member of the State Board of Education District 3
+OH Member of the State Board of Education District 4	Ohio;OH Member of the State Board of Education District 4
+OH Member of the State Board of Education District 7	Ohio;OH Member of the State Board of Education District 7
+OH Member of the State Board of Education District 8	Ohio;OH Member of the State Board of Education District 8
+
+

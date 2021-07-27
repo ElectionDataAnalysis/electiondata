@@ -2,7 +2,7 @@ cdf_element	cdf_internal_name	raw_identifier_value
 Candidate	Aaron Coleman	Aaron Coleman
 Candidate	Adam Smith	Smith, Adam
 Candidate	Adam T. Thomas	Thomas, Adam T.
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alana Cloutier	Cloutier, Alana
 Candidate	Alicia (Schartz) Straub	Straub, Alicia (Schartz)
 Candidate	Amanda L. Adkins	Adkins, Amanda L.
@@ -11,7 +11,7 @@ Candidate	Angela Justus Schweller	Angela Justus Schweller
 Candidate	Anthony Hensley	Anthony Hensley
 Candidate	Anthony Hensley	Hensley, Anthony
 Candidate	Avery Anderson	Anderson, Avery
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barb Wasinger	Wasinger, Barb
 Candidate	Barbara Bollier	Bollier, Barbara
 Candidate	Barbara W. Ballard	Ballard, Barbara W.
@@ -49,7 +49,7 @@ Candidate	David W. French	French, David W.
 Candidate	Dennis 'Boog' Highberger	Highberger, Dennis 'Boog'
 Candidate	Dennis Pyle	Pyle, Dennis
 Candidate	Diana Whittington	Diana Whittington
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Donald J. Trump / Michael R. Pence
 Candidate	Donald J. Trump	Trump and Pence
@@ -67,9 +67,9 @@ Candidate	Ethan D. Caylor	Caylor, Ethan D.
 Candidate	Francis Awerkamp	Awerkamp, Francis
 Candidate	Fred C. Patton	Fred C. Patton
 Candidate	Garth Strand	Strand, Garth
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Henry Helgerson	Henry Helgerson
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	J. Russell 'Russ' Jennings	Jennings, J. Russell 'Russ'
 Candidate	J.R. Claeys	Claeys, J.R.
 Candidate	Jake LaTurner	Jake LaTurner
@@ -90,7 +90,6 @@ Candidate	Jim Kelly	Kelly, Jim
 Candidate	Jim Minnix	Minnix, Jim
 Candidate	Jim Vathauer	Vathauer, Jim
 Candidate	Jo Jorgensen	Jo Jorgensen
-Candidate	Jo Jorgensen	"Jo Jorgensen / Jeremy ""Spike"" Cohen"
 Candidate	Jo Jorgensen	Jo Jorgensen / Jeremy 'Spike' Cohen
 Candidate	Jo Jorgensen	Jorgensen and Cohen
 Candidate	Jo Jorgensen	Jorgensen and Cohen.1
@@ -101,8 +100,8 @@ Candidate	Joe Seiwert	Seiwert, Joe
 Candidate	John Brosz	Brosz, John
 Candidate	John Doll	Doll, John
 Candidate	John E Barker	Barker, John E
-Candidate	John Kerry	JOHN KERRY
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John Kerry	John Kerry
+Candidate	John McCain	John Mccain
 Candidate	John P. Wheeler Jr.	Wheeler Jr., John P.
 Candidate	John R. Eplee	Eplee, John R.
 Candidate	John Toplikar	John Toplikar
@@ -163,11 +162,11 @@ Candidate	Mike Bruner	Bruner, Mike
 Candidate	Mike Dodson	Dodson, Mike
 Candidate	Mike Griswold	Griswold, Mike
 Candidate	Mike Thompson	Mike Thompson
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Molly Baumgardner	Baumgardner, Molly
 Candidate	Monica Murnan	Murnan, Monica
 Candidate	Nancy J. Ingle	Ingle, Nancy J.
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Over Votes	Over Votes
 Candidate	Pat Pettey	Pat Pettey
 Candidate	Pat Proctor	Proctor, Pat
@@ -176,7 +175,7 @@ Candidate	Paul M. Waggoner	Waggoner, Paul M.
 Candidate	Phil Hodson	Hodson, Phil
 Candidate	Rachel Willis	Rachel Willis
 Candidate	Rachel Willis	Willis, Rachel
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Randy Garber	Garber, Randy
 Candidate	Richard (Rick) Billinger	Billinger, Richard (Rick)
 Candidate	Richard Hilderbrand	Hilderbrand, Richard
@@ -6302,3 +6301,463 @@ ReportingUnit	Kansas;Wyandotte County;Precinct KC 9-9	WYANDOTTE;KC 9-9
 ReportingUnit	Kansas;Wyandotte County;Precinct KC 9-9	Wyandotte;KC 9-9
 ReportingUnit	Kansas;Wyandotte County;Precinct QC 1-1	WYANDOTTE;QC 1-1
 ReportingUnit	Kansas;Wyandotte County;Precinct QC 1-1	Wyandotte;QC 1-1
+CandidateContest	KS Attorney General	KS;Attorney General
+CandidateContest	KS Commissioner of Insurance	KS;Commissioner of Insurance;statewide
+CandidateContest	KS Governor	KS;Governor / Lt. Governor;statewide
+CandidateContest	KS Secretary of State	KS;Secretary of State;statewide
+CandidateContest	KS House District 2	KS;State Representative;District 2
+CandidateContest	KS House District 9	KS;State Representative;District 9
+CandidateContest	KS State Treasurer	KS;State Treasurer;statewide
+CandidateContest	US House KS District 2	KS;US Representative;District 2
+CandidateContest	KS House District 4	KS;State Representative;District 4
+CandidateContest	KS House District 5	KS;State Representative;District 5
+CandidateContest	KS House District 62	KS;State Representative;District 62
+CandidateContest	KS House District 63	KS;State Representative;District 63
+CandidateContest	KS House District 116	KS;State Representative;District 116
+CandidateContest	US House KS District 4	KS;US Representative;District 4
+CandidateContest	KS House District 109	KS;State Representative;District 109
+CandidateContest	KS House District 112	KS;State Representative;District 112
+CandidateContest	KS House District 113	KS;State Representative;District 113
+CandidateContest	US House KS District 1	KS;US Representative;District 1
+CandidateContest	KS Senate District 13	KS;State Senator;District 13
+CandidateContest	KS House District 12	KS;State Representative;District 12
+CandidateContest	KS House District 72	KS;State Representative;District 72
+CandidateContest	KS House District 75	KS;State Representative;District 75
+CandidateContest	KS House District 77	KS;State Representative;District 77
+CandidateContest	KS House District 85	KS;State Representative;District 85
+CandidateContest	KS House District 99	KS;State Representative;District 99
+CandidateContest	KS House District 68	KS;State Representative;District 68
+CandidateContest	KS House District 1	KS;State Representative;District 1
+CandidateContest	KS House District 120	KS;State Representative;District 120
+CandidateContest	KS House District 115	KS;State Representative;District 115
+CandidateContest	KS House District 64	KS;State Representative;District 64
+CandidateContest	KS House District 70	KS;State Representative;District 70
+CandidateContest	KS House District 107	KS;State Representative;District 107
+CandidateContest	KS House District 76	KS;State Representative;District 76
+CandidateContest	KS House District 79	KS;State Representative;District 79
+CandidateContest	KS House District 80	KS;State Representative;District 80
+CandidateContest	KS House District 3	KS;State Representative;District 3
+CandidateContest	KS House District 10	KS;State Representative;District 10
+CandidateContest	KS House District 42	KS;State Representative;District 42
+CandidateContest	KS House District 44	KS;State Representative;District 44
+CandidateContest	KS House District 45	KS;State Representative;District 45
+CandidateContest	KS House District 46	KS;State Representative;District 46
+CandidateContest	KS House District 54	KS;State Representative;District 54
+CandidateContest	KS House District 117	KS;State Representative;District 117
+CandidateContest	KS House District 13	KS;State Representative;District 13
+CandidateContest	KS House District 110	KS;State Representative;District 110
+CandidateContest	KS House District 111	KS;State Representative;District 111
+CandidateContest	KS House District 108	KS;State Representative;District 108
+CandidateContest	KS House District 122	KS;State Representative;District 122
+CandidateContest	KS House District 123	KS;State Representative;District 123
+CandidateContest	KS House District 119	KS;State Representative;District 119
+CandidateContest	KS House District 59	KS;State Representative;District 59
+CandidateContest	KS House District 65	KS;State Representative;District 65
+CandidateContest	KS House District 118	KS;State Representative;District 118
+CandidateContest	KS House District 124	KS;State Representative;District 124
+CandidateContest	KS House District 74	KS;State Representative;District 74
+CandidateContest	KS House District 61	KS;State Representative;District 61
+CandidateContest	KS House District 47	KS;State Representative;District 47
+CandidateContest	KS House District 106	KS;State Representative;District 106
+CandidateContest	KS House District 121	KS;State Representative;District 121
+CandidateContest	KS House District 14	KS;State Representative;District 14
+CandidateContest	KS House District 15	KS;State Representative;District 15
+CandidateContest	KS House District 16	KS;State Representative;District 16
+CandidateContest	KS House District 17	KS;State Representative;District 17
+CandidateContest	KS House District 18	KS;State Representative;District 18
+CandidateContest	KS House District 19	KS;State Representative;District 19
+CandidateContest	KS House District 20	KS;State Representative;District 20
+CandidateContest	KS House District 21	KS;State Representative;District 21
+CandidateContest	KS House District 22	KS;State Representative;District 22
+CandidateContest	KS House District 23	KS;State Representative;District 23
+CandidateContest	KS House District 24	KS;State Representative;District 24
+CandidateContest	KS House District 25	KS;State Representative;District 25
+CandidateContest	KS House District 26	KS;State Representative;District 26
+CandidateContest	KS House District 27	KS;State Representative;District 27
+CandidateContest	KS House District 28	KS;State Representative;District 28
+CandidateContest	KS House District 29	KS;State Representative;District 29
+CandidateContest	KS House District 30	KS;State Representative;District 30
+CandidateContest	KS House District 38	KS;State Representative;District 38
+CandidateContest	KS House District 39	KS;State Representative;District 39
+CandidateContest	KS House District 43	KS;State Representative;District 43
+CandidateContest	KS House District 48	KS;State Representative;District 48
+CandidateContest	KS House District 49	KS;State Representative;District 49
+CandidateContest	KS House District 78	KS;State Representative;District 78
+CandidateContest	KS House District 8	KS;State Representative;District 8
+CandidateContest	US House KS District 3	KS;US Representative;District 3
+CandidateContest	KS House District 114	KS;State Representative;District 114
+CandidateContest	KS House District 7	KS;State Representative;District 7
+CandidateContest	KS House District 40	KS;State Representative;District 40
+CandidateContest	KS House District 41	KS;State Representative;District 41
+CandidateContest	KS House District 51	KS;State Representative;District 51
+CandidateContest	KS House District 60	KS;State Representative;District 60
+CandidateContest	KS House District 73	KS;State Representative;District 73
+CandidateContest	KS House District 6	KS;State Representative;District 6
+CandidateContest	KS House District 11	KS;State Representative;District 11
+CandidateContest	KS House District 66	KS;State Representative;District 66
+CandidateContest	KS House District 101	KS;State Representative;District 101
+CandidateContest	KS House District 102	KS;State Representative;District 102
+CandidateContest	KS House District 104	KS;State Representative;District 104
+CandidateContest	KS House District 67	KS;State Representative;District 67
+CandidateContest	KS House District 69	KS;State Representative;District 69
+CandidateContest	KS House District 71	KS;State Representative;District 71
+CandidateContest	KS House District 100	KS;State Representative;District 100
+CandidateContest	KS House District 103	KS;State Representative;District 103
+CandidateContest	KS House District 105	KS;State Representative;District 105
+CandidateContest	KS House District 81	KS;State Representative;District 81
+CandidateContest	KS House District 82	KS;State Representative;District 82
+CandidateContest	KS House District 83	KS;State Representative;District 83
+CandidateContest	KS House District 84	KS;State Representative;District 84
+CandidateContest	KS House District 86	KS;State Representative;District 86
+CandidateContest	KS House District 87	KS;State Representative;District 87
+CandidateContest	KS House District 88	KS;State Representative;District 88
+CandidateContest	KS House District 89	KS;State Representative;District 89
+CandidateContest	KS House District 90	KS;State Representative;District 90
+CandidateContest	KS House District 91	KS;State Representative;District 91
+CandidateContest	KS House District 92	KS;State Representative;District 92
+CandidateContest	KS House District 93	KS;State Representative;District 93
+CandidateContest	KS House District 94	KS;State Representative;District 94
+CandidateContest	KS House District 95	KS;State Representative;District 95
+CandidateContest	KS House District 96	KS;State Representative;District 96
+CandidateContest	KS House District 97	KS;State Representative;District 97
+CandidateContest	KS House District 98	KS;State Representative;District 98
+CandidateContest	KS House District 125	KS;State Representative;District 125
+CandidateContest	KS House District 50	KS;State Representative;District 50
+CandidateContest	KS House District 52	KS;State Representative;District 52
+CandidateContest	KS House District 53	KS;State Representative;District 53
+CandidateContest	KS House District 55	KS;State Representative;District 55
+CandidateContest	KS House District 56	KS;State Representative;District 56
+CandidateContest	KS House District 57	KS;State Representative;District 57
+CandidateContest	KS House District 58	KS;State Representative;District 58
+CandidateContest	KS House District 31	KS;State Representative;District 31
+CandidateContest	KS House District 32	KS;State Representative;District 32
+CandidateContest	KS House District 33	KS;State Representative;District 33
+CandidateContest	KS House District 34	KS;State Representative;District 34
+CandidateContest	KS House District 35	KS;State Representative;District 35
+CandidateContest	KS House District 36	KS;State Representative;District 36
+CandidateContest	KS House District 37	KS;State Representative;District 37
+Candidate	Abraham Rafie	Abraham Rafie
+Candidate	Adam J. Sr. Lusker	Adam J. Sr. Lusker
+Candidate	Adam Smith	Adam Smith
+Candidate	Adam Thomas	Adam Thomas
+Candidate	Alan LaPolice	Alan LaPolice
+Candidate	Alex Van Dyke	Alex Van Dyke
+Candidate	Annie Kuether	Annie Kuether
+Candidate	Barbara K. Wasinger	Barbara K. Wasinger
+Candidate	Barbara W. Ballard	Barbara W. Ballard
+Candidate	Becky Barber	Becky Barber
+Candidate	Bill Pannbacker	Bill Pannbacker
+Candidate	Bill Rhiley	Bill Rhiley
+Candidate	Bill Sutton	Bill Sutton
+Candidate	Blaine Finch	Blaine Finch
+Candidate	Boyd Orr	Boyd Orr
+Candidate	Bradley Ralph	Bradley Ralph
+Candidate	Brandon J. Whipple	Brandon J. Whipple
+Candidate	Brandon Woodard	Brandon Woodard
+Candidate	Brenda K. Landwehr	Brenda K. Landwehr
+Candidate	Brett Parker	Brett Parker
+Candidate	Brian 'BAM' McClendon	Brian 'BAM' McClendon
+Candidate	Brian Clausen	Brian Clausen
+Candidate	Bryan Bombardier	Bryan Bombardier
+Candidate	Bryan Hoffman	Bryan Hoffman
+Candidate	Cheryl Helmer	Cheryl Helmer
+Candidate	Chiquita C. Coggs	Chiquita C. Coggs
+Candidate	Chris Clemmons	Chris Clemmons
+Candidate	Chris Haulmark	Chris Haulmark
+Candidate	Cindy Neighbor	Cindy Neighbor
+Candidate	Clifton Beck	Clifton Beck
+Candidate	Cynthia Smith	Cynthia Smith
+Candidate	Dan Stiffler	Dan Stiffler
+Candidate	Danette Harris	Danette Harris
+Candidate	Daniel Hawkins	Daniel Hawkins
+Candidate	Darnell W. Hunt	Darnell W. Hunt
+Candidate	Dave Baker	Dave Baker
+Candidate	David J. Robbins	David J. Robbins
+Candidate	David L. Benson	David L. Benson
+Candidate	David Loomis	David Loomis
+Candidate	David W. Curtis	David W. Curtis
+Candidate	David W. French	David W. French
+Candidate	Deann Mitchell	Deann Mitchell
+Candidate	Debbie Deere	Debbie Deere
+Candidate	Dennis 'Boog' Highberger	Dennis 'Boog' Highberger
+Candidate	Derek Schmidt	Derek Schmidt
+Candidate	Diana Dierks	Diana Dierks
+Candidate	Don Hineman	Don Hineman
+Candidate	Doug Blex	Doug Blex
+Candidate	Down River Dan Brennan	Down River Dan Brennan
+Candidate	Eber Phelps	Eber Phelps
+Candidate	Ed Trimmer	Ed Trimmer
+Candidate	Edgar Chambers	Edgar Chambers
+Candidate	Eileen Horn	Eileen Horn
+Candidate	Elizabeth Bishop	Elizabeth Bishop
+Candidate	Emil M. Bergquist	Emil M. Bergquist
+Candidate	Eric Jenkins	Eric Jenkins
+Candidate	Eric L. Smith	Eric L. Smith
+Candidate	Francis Awerkamp	Francis Awerkamp
+Candidate	Gail Finney	Gail Finney
+Candidate	George D. Hanna	George D. Hanna
+Candidate	Gerrett Morris	Gerrett Morris
+Candidate	Greg Lewis	Greg Lewis
+Candidate	Greg Orman	Greg Orman
+Candidate	J. Russell 'Russ' Jennings	J. Russell 'Russ' Jennings
+Candidate	J.C. Moore	J.C. Moore
+Candidate	J.R. Claeys	J.R. Claeys
+Candidate	Jack Thimesch	Jack Thimesch
+Candidate	James A. Thompson	James A. Thompson
+Candidate	James Todd	James Todd
+Candidate	Jan H. Kessinger	Jan H. Kessinger
+Candidate	Jarrod Ousley	Jarrod Ousley
+Candidate	Jason Conley	Jason Conley
+Candidate	Jason K. Darby	Jason K. Darby
+Candidate	Jason Probst	Jason Probst
+Candidate	Jeff Caldwell	Jeff Caldwell
+Candidate	Jene Vickrey	Jene Vickrey
+Candidate	Jennifer Winn	Jennifer Winn
+Candidate	Jerry Hill	Jerry Hill
+Candidate	Jerry Stogsdill	Jerry Stogsdill
+Candidate	Jim Gartner	Jim Gartner
+Candidate	Jim Karleskint	Jim Karleskint
+Candidate	Jim Kelly	Jim Kelly
+Candidate	Jim Price	Jim Price
+Candidate	Jim Ward	Jim Ward
+Candidate	Jo Schwartz	Jo Schwartz
+Candidate	Joe Seiwert	Joe Seiwert
+Candidate	John Alcala	John Alcala
+Candidate	John Carmichael	John Carmichael
+Candidate	John E Barker	John E Barker
+Candidate	John Hall	John Hall
+Candidate	John P. Jr. Wheeler	John P. Jr. Wheeler
+Candidate	John R. Eplee	John R. Eplee
+Candidate	John Resman	John Resman
+Candidate	KC Ohaebosim	KC Ohaebosim
+Candidate	Kellie Warren	Kellie Warren
+Candidate	Kelly Standley	Kelly Standley
+Candidate	Ken Corbet	Ken Corbet
+Candidate	Ken Rahjes	Ken Rahjes
+Candidate	Kenneth Collins	Kenneth Collins
+Candidate	Kent L. Thompson	Kent L. Thompson
+Candidate	Kevin Yoder	Kevin Yoder
+Candidate	Kim Thomas	Kim Thomas
+Candidate	Kris Kobach	Kris Kobach
+Candidate	Kristey S. Williams	Kristey S. Williams
+Candidate	Kristi Kirk	Kristi Kirk
+Candidate	Kyle D. Hoffman	Kyle D. Hoffman
+Candidate	Larry P. Hibbard	Larry P. Hibbard
+Candidate	Lassey Murphy	Lassey Murphy
+Candidate	Laura Kelly	Laura Kelly
+Candidate	Laura Smith-Everett	Laura Smith-Everett
+Candidate	Lawrence Forbach	Lawrence Forbach
+Candidate	Leo G. Delperdang	Leo G. Delperdang
+Candidate	Leonard A. Mastroni	Leonard A. Mastroni
+Candidate	Les Mason	Les Mason
+Candidate	Linda Gallagher	Linda Gallagher
+Candidate	Lonnie Clark	Lonnie Clark
+Candidate	Marci Francisco	Marci Francisco
+Candidate	Mark Samsel	Mark Samsel
+Candidate	Mark Schreiber	Mark Schreiber
+Candidate	Martin (Marty) Long	Martin (Marty) Long
+Candidate	Megan Lynn	Megan Lynn
+Candidate	Melissa A. Rooker	Melissa A. Rooker
+Candidate	Melvin L. Baker	Melvin L. Baker
+Candidate	Michael Bolton	Michael Bolton
+Candidate	Michael Capps	Michael Capps
+Candidate	Michael Houser	Michael Houser
+Candidate	Michael J. Snowden	Michael J. Snowden
+Candidate	Michael Kerner	Michael Kerner
+Candidate	Michele Lobitz	Michele Lobitz
+Candidate	Mike Amyx	Mike Amyx
+Candidate	Monica Marks	Monica Marks
+Candidate	Monica Murnan	Monica Murnan
+Candidate	Nancy Lusk	Nancy Lusk
+Candidate	Nathaniel McLaughlin	Nathaniel McLaughlin
+Candidate	Nick Gill	Nick Gill
+Candidate	Nick J. Hoheisel	Nick J. Hoheisel
+Candidate	Nicole Rome	Nicole Rome
+Candidate	Noah L. Wright	Noah L. Wright
+Candidate	Owen Donohoe	Owen Donohoe
+Candidate	Pam Curtis	Pam Curtis
+Candidate	Pamela Finley	Pamela Finley
+Candidate	Paul Davis	Paul Davis
+Candidate	Paul Waggoner	Paul Waggoner
+Candidate	Pedro Rodriguez	Pedro Rodriguez
+Candidate	Ponka-We Victors	Ponka-We Victors
+Candidate	Randy Garber	Randy Garber
+Candidate	Rebecca Jenek	Rebecca Jenek
+Candidate	Renee Erickson	Renee Erickson
+Candidate	Richard Hilderbrand	Richard Hilderbrand
+Candidate	Richard J. Proehl	Richard J. Proehl
+Candidate	Rob Hodgkinson	Rob Hodgkinson
+Candidate	Robert Firestone	Robert Firestone
+Candidate	Roger Marshall	Roger Marshall
+Candidate	Ron Howard	Ron Howard
+Candidate	Ron Ryckman	Ron Ryckman
+Candidate	Rui Xu	Rui Xu
+Candidate	Sam Habjan	Sam Habjan
+Candidate	Sarah Coats	Sarah Coats
+Candidate	Sarah G. Swain	Sarah G. Swain
+Candidate	Scott Schwab	Scott Schwab
+Candidate	Sean E. Tarwater Sr.	Sean E. Tarwater Sr.
+Candidate	Shala Perez	Shala Perez
+Candidate	Shanna Henry	Shanna Henry
+Candidate	Shannon Francis	Shannon Francis
+Candidate	Sharice Davids	Sharice Davids
+Candidate	Stan Frownfelter	Stan Frownfelter
+Candidate	Stephanie S. Clayton	Stephanie S. Clayton
+Candidate	Stephen Owens	Stephen Owens
+Candidate	Stephen Wyatt	Stephen Wyatt
+Candidate	Steve Huebert	Steve Huebert
+Candidate	Steve Watkins	Steve Watkins
+Candidate	Steven G. Crum	Steven G. Crum
+Candidate	Steven G. Kelly	Steven G. Kelly
+Candidate	Steven Johnson	Steven Johnson
+Candidate	Stuart W. Sweeney	Stuart W. Sweeney
+Candidate	Susan 'Sue' Huff	Susan 'Sue' Huff
+Candidate	Susan 'Suzi' L. Carlson	Susan 'Suzi' L. Carlson
+Candidate	Susan Humphries	Susan Humphries
+Candidate	Susan L Concannon	Susan L Concannon
+Candidate	Susan Ruiz	Susan Ruiz
+Candidate	Sydney Carlin	Sydney Carlin
+Candidate	Terry Calloway	Terry Calloway
+Candidate	Thea Perry	Thea Perry
+Candidate	Tim Hodge	Tim Hodge
+Candidate	Tom Burroughs	Tom Burroughs
+Candidate	Tom Cox	Tom Cox
+Candidate	Tom Phillips	Tom Phillips
+Candidate	Tom Sawyer	Tom Sawyer
+Candidate	Toni Scalia	Toni Scalia
+Candidate	Tony Barton	Tony Barton
+Candidate	Tory Marie Arnberger	Tory Marie Arnberger
+Candidate	Trevor Jacobs	Trevor Jacobs
+Candidate	Troy L. Waymaster	Troy L. Waymaster
+Candidate	Valdenia C. Winn	Valdenia C. Winn
+Candidate	Vic (T-Bone) Miller	Vic (T-Bone) Miller
+Candidate	Vicki Schmidt	Vicki Schmidt
+Candidate	Virgil Weigel	Virgil Weigel
+Candidate	Wendy Bingesser	Wendy Bingesser
+Candidate	Will Carpenter	Will Carpenter
+Candidate	Willie Dove	Willie Dove
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	Kansas;Allen County	Kansas;Allen
+ReportingUnit	Kansas;Anderson County	Kansas;Anderson
+ReportingUnit	Kansas;Atchison County	Kansas;Atchison
+ReportingUnit	Kansas;Barber County	Kansas;Barber
+ReportingUnit	Kansas;Barton County	Kansas;Barton
+ReportingUnit	Kansas;Bourbon County	Kansas;Bourbon
+ReportingUnit	Kansas;Brown County	Kansas;Brown
+ReportingUnit	Kansas;Butler County	Kansas;Butler
+ReportingUnit	Kansas;Chase County	Kansas;Chase
+ReportingUnit	Kansas;Chautauqua County	Kansas;Chautauqua
+ReportingUnit	Kansas;Cherokee County	Kansas;Cherokee
+ReportingUnit	Kansas;Cheyenne County	Kansas;Cheyenne
+ReportingUnit	Kansas;Clark County	Kansas;Clark
+ReportingUnit	Kansas;Clay County	Kansas;Clay
+ReportingUnit	Kansas;Cloud County	Kansas;Cloud
+ReportingUnit	Kansas;Coffey County	Kansas;Coffey
+ReportingUnit	Kansas;Comanche County	Kansas;Comanche
+ReportingUnit	Kansas;Cowley County	Kansas;Cowley
+ReportingUnit	Kansas;Crawford County	Kansas;Crawford
+ReportingUnit	Kansas;Decatur County	Kansas;Decatur
+ReportingUnit	Kansas;Dickinson County	Kansas;Dickinson
+ReportingUnit	Kansas;Doniphan County	Kansas;Doniphan
+ReportingUnit	Kansas;Douglas County	Kansas;Douglas
+ReportingUnit	Kansas;Edwards County	Kansas;Edwards
+ReportingUnit	Kansas;Elk County	Kansas;Elk
+ReportingUnit	Kansas;Ellis County	Kansas;Ellis
+ReportingUnit	Kansas;Ellsworth County	Kansas;Ellsworth
+ReportingUnit	Kansas;Finney County	Kansas;Finney
+ReportingUnit	Kansas;Ford County	Kansas;Ford
+ReportingUnit	Kansas;Franklin County	Kansas;Franklin
+ReportingUnit	Kansas;Geary County	Kansas;Geary
+ReportingUnit	Kansas;Gove County	Kansas;Gove
+ReportingUnit	Kansas;Graham County	Kansas;Graham
+ReportingUnit	Kansas;Grant County	Kansas;Grant
+ReportingUnit	Kansas;Gray County	Kansas;Gray
+ReportingUnit	Kansas;Greeley County	Kansas;Greeley
+ReportingUnit	Kansas;Greenwood County	Kansas;Greenwood
+ReportingUnit	Kansas;Hamilton County	Kansas;Hamilton
+ReportingUnit	Kansas;Harper County	Kansas;Harper
+ReportingUnit	Kansas;Harvey County	Kansas;Harvey
+ReportingUnit	Kansas;Haskell County	Kansas;Haskell
+ReportingUnit	Kansas;Hodgeman County	Kansas;Hodgeman
+ReportingUnit	Kansas;Jackson County	Kansas;Jackson
+ReportingUnit	Kansas;Jefferson County	Kansas;Jefferson
+ReportingUnit	Kansas;Jewell County	Kansas;Jewell
+ReportingUnit	Kansas;Johnson County	Kansas;Johnson
+ReportingUnit	Kansas;Kearny County	Kansas;Kearny
+ReportingUnit	Kansas;Kingman County	Kansas;Kingman
+ReportingUnit	Kansas;Kiowa County	Kansas;Kiowa
+ReportingUnit	Kansas;Labette County	Kansas;Labette
+ReportingUnit	Kansas;Lane County	Kansas;Lane
+ReportingUnit	Kansas;Leavenworth County	Kansas;Leavenworth
+ReportingUnit	Kansas;Lincoln County	Kansas;Lincoln
+ReportingUnit	Kansas;Linn County	Kansas;Linn
+ReportingUnit	Kansas;Logan County	Kansas;Logan
+ReportingUnit	Kansas;Lyon County	Kansas;Lyon
+ReportingUnit	Kansas;Marion County	Kansas;Marion
+ReportingUnit	Kansas;Marshall County	Kansas;Marshall
+ReportingUnit	Kansas;McPherson County	Kansas;Mcpherson
+ReportingUnit	Kansas;Meade County	Kansas;Meade
+ReportingUnit	Kansas;Miami County	Kansas;Miami
+ReportingUnit	Kansas;Mitchell County	Kansas;Mitchell
+ReportingUnit	Kansas;Montgomery County	Kansas;Montgomery
+ReportingUnit	Kansas;Morris County	Kansas;Morris
+ReportingUnit	Kansas;Morton County	Kansas;Morton
+ReportingUnit	Kansas;Nemaha County	Kansas;Nemaha
+ReportingUnit	Kansas;Neosho County	Kansas;Neosho
+ReportingUnit	Kansas;Ness County	Kansas;Ness
+ReportingUnit	Kansas;Norton County	Kansas;Norton
+ReportingUnit	Kansas;Osage County	Kansas;Osage
+ReportingUnit	Kansas;Osborne County	Kansas;Osborne
+ReportingUnit	Kansas;Ottawa County	Kansas;Ottawa
+ReportingUnit	Kansas;Pawnee County	Kansas;Pawnee
+ReportingUnit	Kansas;Phillips County	Kansas;Phillips
+ReportingUnit	Kansas;Pottawatomie County	Kansas;Pottawatomie
+ReportingUnit	Kansas;Pratt County	Kansas;Pratt
+ReportingUnit	Kansas;Rawlins County	Kansas;Rawlins
+ReportingUnit	Kansas;Reno County	Kansas;Reno
+ReportingUnit	Kansas;Republic County	Kansas;Republic
+ReportingUnit	Kansas;Rice County	Kansas;Rice
+ReportingUnit	Kansas;Riley County	Kansas;Riley
+ReportingUnit	Kansas;Rooks County	Kansas;Rooks
+ReportingUnit	Kansas;Rush County	Kansas;Rush
+ReportingUnit	Kansas;Russell County	Kansas;Russell
+ReportingUnit	Kansas;Saline County	Kansas;Saline
+ReportingUnit	Kansas;Scott County	Kansas;Scott
+ReportingUnit	Kansas;Sedgwick County	Kansas;Sedgwick
+ReportingUnit	Kansas;Seward County	Kansas;Seward
+ReportingUnit	Kansas;Shawnee County	Kansas;Shawnee
+ReportingUnit	Kansas;Sheridan County	Kansas;Sheridan
+ReportingUnit	Kansas;Sherman County	Kansas;Sherman
+ReportingUnit	Kansas;Smith County	Kansas;Smith
+ReportingUnit	Kansas;Stafford County	Kansas;Stafford
+ReportingUnit	Kansas;Stanton County	Kansas;Stanton
+ReportingUnit	Kansas;Stevens County	Kansas;Stevens
+ReportingUnit	Kansas;Sumner County	Kansas;Sumner
+ReportingUnit	Kansas;Thomas County	Kansas;Thomas
+ReportingUnit	Kansas;Trego County	Kansas;Trego
+ReportingUnit	Kansas;Wabaunsee County	Kansas;Wabaunsee
+ReportingUnit	Kansas;Wallace County	Kansas;Wallace
+ReportingUnit	Kansas;Washington County	Kansas;Washington
+ReportingUnit	Kansas;Wichita County	Kansas;Wichita
+ReportingUnit	Kansas;Wilson County	Kansas;Wilson
+ReportingUnit	Kansas;Woodson County	Kansas;Woodson
+ReportingUnit	Kansas;Wyandotte County	Kansas;Wyandotte
+CandidateContest	KS Attorney General	KS;Attorney General;statewide

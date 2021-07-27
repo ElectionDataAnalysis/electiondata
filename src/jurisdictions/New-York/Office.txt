@@ -333,3 +333,16 @@ NY Senate District 147	New York;NY Senate District 147
 NY Senate District 148	New York;NY Senate District 148
 NY Senate District 149	New York;NY Senate District 149
 NY Senate District 150	New York;NY Senate District 150
+NY Comptroller	New York
+NY Supreme Court Justice District 3	New York;NY Supreme Court Justice District 3
+NY Supreme Court Justice District 8	New York;NY Supreme Court Justice District 8
+NY Supreme Court Justice District 12	New York;NY Supreme Court Justice District 12
+NY Supreme Court Justice District 6	New York;NY Supreme Court Justice District 6
+NY Supreme Court Justice District 7	New York;NY Supreme Court Justice District 7
+NY Supreme Court Justice District 9	New York;NY Supreme Court Justice District 9
+NY Supreme Court Justice District 5	New York;NY Supreme Court Justice District 5
+NY Supreme Court Justice District 2	New York;NY Supreme Court Justice District 2
+NY Supreme Court Justice District 10	New York;NY Supreme Court Justice District 10
+NY Supreme Court Justice District 1	New York;NY Supreme Court Justice District 1
+NY Supreme Court Justice District 11	New York;NY Supreme Court Justice District 11
+NY Supreme Court Justice District 13	New York;NY Supreme Court Justice District 13
