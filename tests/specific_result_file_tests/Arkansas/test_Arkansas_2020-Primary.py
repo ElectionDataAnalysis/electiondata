@@ -63,7 +63,7 @@ def test_county_subtotal(dbname):
             jurisdiction,
             f"US President ({abbr}) ({party1})",
             dbname=dbname,
-            county=single_county,
+            reporting_unit=single_county,
             sub_unit_type=county_or_other,
         )
         == pres_votes_county_party1

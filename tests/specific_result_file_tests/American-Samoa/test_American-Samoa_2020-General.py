@@ -129,7 +129,7 @@ def test_county_subtotal(dbname):
             jurisdiction,
             f"US House {abbr} Delegate",
             dbname=dbname,
-            county=single_county,
+            reporting_unit=single_county,
             sub_unit_type=county_or_other,
         )
         == con_votes_county
