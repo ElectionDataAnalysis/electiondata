@@ -17,7 +17,9 @@ import electiondata as e
 election = "2020 General"
 jurisdiction = "Connecticut"
 abbr = "CT"
-total_pres_votes = 1824280  # total of all votes for US President per official results file
+total_pres_votes = (
+    1824280  # total of all votes for US President per official results file
+)
 cd = 1  # US House congressional district
 total_cd_votes = 349237  # total votes in that US House contest in the chosen cd
 shd = 1  # state house district
@@ -28,9 +30,7 @@ single_vote_type = "absentee"  # pick any one with corresponding data in your fi
 pres_votes_vote_type = 657147  # total votes for US President of that vote type
 county_or_other = "county"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = (
-    "Connecticut;New Haven County"  # pick any one from your file, but use internal db name
-)
+single_county = "Connecticut;New Haven County"  # pick any one from your file, but use internal db name
 pres_votes_county = 417980  # total votes for US President in that county
 
 

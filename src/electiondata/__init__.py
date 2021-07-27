@@ -990,34 +990,50 @@ class DataLoader:
         return update_err
 
     def load_multielection_from_ini(
-            self,
-            ini: str,
-            overwrite_existing: bool = False,
-            load_jurisdictions: bool = True,
-    ) -> (Dict[str,List[str]],Optional[dict]):
+        self,
+        ini: str,
+        overwrite_existing: bool = False,
+        load_jurisdictions: bool = True,
+    ) -> (Dict[str, List[str]], Optional[dict]):
         """Returns a dictionary of successful mungers (for each election-jurisdiction pair)
         and errors"""
         err = None
         success = dict()
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         ini_params, new_err = ui.get_parameters(
-            required_keys=["results_file","munger_list","results_download_date","results_source","results_note","secondary_source","results_short_name"],
+            required_keys=[
+                "results_file",
+                "munger_list",
+                "results_download_date",
+                "results_source",
+                "results_note",
+                "secondary_source",
+                "results_short_name",
+            ],
             param_file=ini,
             header="election_results",
         )
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
-            err = ui.report(err, os.path.join(self.d["reports_and_plots_dir"], f"multi_{ts}"), file_prefix="multi_dictionary")
+            err = ui.report(
+                err,
+                os.path.join(self.d["reports_and_plots_dir"], f"multi_{ts}"),
+                file_prefix="multi_dictionary",
+            )
             return success, err
 
         results_path = os.path.join(self.d["results_dir"], ini_params["results_file"])
         multi_file_name = Path(ini_params["results_file"]).name
         ini_file = Path(ini).name
         dictionary_directory = os.path.join(
-            self.d["repository_content_root"], "secondary_sources", ini_params["secondary_source"]
+            self.d["repository_content_root"],
+            "secondary_sources",
+            ini_params["secondary_source"],
         )
         # check that secondary_source directory has necessary files without flaws
-        new_err = juris.check_dictionary(os.path.join(dictionary_directory, "dictionary.txt"))
+        new_err = juris.check_dictionary(
+            os.path.join(dictionary_directory, "dictionary.txt")
+        )
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
             return success, err
@@ -1029,7 +1045,13 @@ class DataLoader:
             ("Jurisdiction", "ReportingUnit"),
         ]:
             new_err = multi.load_to_db(
-                self.session, table, os.path.join(self.d["repository_content_root"], "secondary_sources", f"{element}.txt")
+                self.session,
+                table,
+                os.path.join(
+                    self.d["repository_content_root"],
+                    "secondary_sources",
+                    f"{element}.txt",
+                ),
             )
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
@@ -1039,7 +1061,9 @@ class DataLoader:
         mungers = [x.strip() for x in ini_params["munger_list"].split(",")]
         for munger in mungers:
             # read file format parameters from munger
-            munger_path = os.path.join(self.d["repository_content_root"], "mungers", f"{munger}.munger")
+            munger_path = os.path.join(
+                self.d["repository_content_root"], "mungers", f"{munger}.munger"
+            )
             p, new_err = m.get_and_check_munger_params(munger_path)
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
@@ -1047,7 +1071,12 @@ class DataLoader:
 
             # read file to dict of dataframes, one for each ej-pair
             working, new_err = m.file_to_raw_df(
-                munger_path,p,results_path,self.d["results_dir"], extra_formula_keys=["Election", "Jurisdiction"])
+                munger_path,
+                p,
+                results_path,
+                self.d["results_dir"],
+                extra_formula_keys=["Election", "Jurisdiction"],
+            )
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
                 continue  # go to next munger
@@ -1062,31 +1091,37 @@ class DataLoader:
                     element,
                     drop_unmatched=True,
                 )
-            err = ui.consolidate_errors([err, new_err["Election"], new_err["Jurisdiction"]])
-            if ui.fatal_error(new_err["Election"]) or ui.fatal_error(new_err["Jurisdiction"]):
+            err = ui.consolidate_errors(
+                [err, new_err["Election"], new_err["Jurisdiction"]]
+            )
+            if ui.fatal_error(new_err["Election"]) or ui.fatal_error(
+                new_err["Jurisdiction"]
+            ):
                 continue  # go to next munger
             working.set_index(["Election", "Jurisdiction"], inplace=True)
             ej_pairs = sorted(list(set(working.index)))
             # split into dictionary of dataframes, one for each ej_pair
-            df_dict = {
-                pair: working[working.index == pair] for pair in ej_pairs
-            }
+            df_dict = {pair: working[working.index == pair] for pair in ej_pairs}
 
             # get juris system names:
             system_name = dict()
-            jurisdictions = sorted(list({j for (e,j) in ej_pairs}))
-            
+            jurisdictions = sorted(list({j for (e, j) in ej_pairs}))
+
             for jurisdiction in jurisdictions:
-                system_name[jurisdiction] = juris.system_name_from_true_name(jurisdiction)
-                
+                system_name[jurisdiction] = juris.system_name_from_true_name(
+                    jurisdiction
+                )
+
             # track which jurisdictions have been loaded
             loaded = {j: False for j in jurisdictions}
 
             # get db indices for elections and jurisdictions
             e_id = j_id = dict()
             for (election, jurisdiction) in ej_pairs:
-                e_id[election] = db.name_to_id(self.session,"Election",election)
-                j_id[jurisdiction] = db.name_to_id(self.session,"ReportingUnit",jurisdiction)
+                e_id[election] = db.name_to_id(self.session, "Election", election)
+                j_id[jurisdiction] = db.name_to_id(
+                    self.session, "ReportingUnit", jurisdiction
+                )
 
             for (election, jurisdiction) in ej_pairs:
                 success[(election, jurisdiction)] = list()
@@ -1210,7 +1245,7 @@ class DataLoader:
                                     print("Error removing datafile record")
                                 continue
                             else:
-                                success[(election,jurisdiction)].append(munger)
+                                success[(election, jurisdiction)].append(munger)
                                 print(
                                     f"Successful load: {election} {jurisdiction}; "
                                     f"however, see warnings when program finishes"
@@ -2127,9 +2162,7 @@ class Analyzer:
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         # for now, bar charts can only handle jurisdictions where county is one level
         # down from the jurisdiction
-        subdivision_type = db.get_jurisdiction_hierarchy(
-            self.session, jurisdiction_id
-        )
+        subdivision_type = db.get_jurisdiction_hierarchy(self.session, jurisdiction_id)
         # bar chart always at one level below top reporting unit
         agg_results = a.create_bar(
             self.session,
@@ -2168,9 +2201,7 @@ class Analyzer:
         """contest_type is one of state, congressional, state-senate, state-house"""
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type = db.get_jurisdiction_hierarchy(
-            self.session, jurisdiction_id
-        )
+        subdivision_type = db.get_jurisdiction_hierarchy(self.session, jurisdiction_id)
         # bar chart always at one level below top reporting unit
         agg_results = a.create_bar(
             self.session,
@@ -2186,7 +2217,7 @@ class Analyzer:
     def top_counts(
         self, election: str, jurisdiction: str, sub_unit: str, by_vote_type: bool
     ) -> Optional[str]:
-        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit",jurisdiction)
+        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
         sub_rutype_othertext = ""
         if sub_unit_id is None:
@@ -2540,28 +2571,28 @@ class Analyzer:
         return vc_dict
 
     def aggregate(
-            self,
-            election: str,
-            jurisdiction: str,
-            vote_type: Optional[str] = None,
-            sub_unit: Optional[str] = None,
-            contest: Optional[str] = None,
-            contest_type: str = "Candidate",
-            sub_unit_type: str = constants.default_subdivision_type,
-            exclude_redundant_total: bool = True,
+        self,
+        election: str,
+        jurisdiction: str,
+        vote_type: Optional[str] = None,
+        sub_unit: Optional[str] = None,
+        contest: Optional[str] = None,
+        contest_type: str = "Candidate",
+        sub_unit_type: str = constants.default_subdivision_type,
+        exclude_redundant_total: bool = True,
     ) -> pd.DataFrame:
         """if a vote type is given, restricts to that vote type; otherwise returns all vote types;
         Similarly for sub_unit and contest"""
         # using the analyzer gives us access to DB session
-        empty_df_with_good_cols = pd.DataFrame(columns=["contest","count"])
-        election_id = db.name_to_id(self.session,"Election",election)
-        jurisdiction_id = db.name_to_id(self.session,"ReportingUnit",jurisdiction)
+        empty_df_with_good_cols = pd.DataFrame(columns=["contest", "count"])
+        election_id = db.name_to_id(self.session, "Election", election)
+        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         if not election_id:
             return empty_df_with_good_cols
         connection = self.session.bind.raw_connection()
         cursor = connection.cursor()
 
-        datafile_list,err_str1 = db.data_file_list_cursor(
+        datafile_list, err_str1 = db.data_file_list_cursor(
             cursor,
             election_id,
             reporting_unit_id=jurisdiction_id,
@@ -2598,20 +2629,28 @@ class Analyzer:
             df = df[df.reporting_unit == sub_unit]
         return df
 
-    def pres_counts_by_vote_type_and_major_subdiv(self, jurisdiction: str) -> pd.DataFrame:
+    def pres_counts_by_vote_type_and_major_subdiv(
+        self, jurisdiction: str
+    ) -> pd.DataFrame:
         # TODO return dataframe with columns jurisdiction, subdivision, year, CountItemType,
         #  total votes for pres in general election
         group_cols = [
-            "reporting_unit", "count_item_type",
+            "reporting_unit",
+            "count_item_type",
         ]
         p_year = re.compile(r"\d{4}")
         major_subdiv = db.get_major_subdiv_type(
             self.session, jurisdiction, repo_content_root=self.repository_content_root
         )
-        elections = list(pd.read_sql_table("Election", self.session.bind)["Name"].unique())
+        elections = list(
+            pd.read_sql_table("Election", self.session.bind)["Name"].unique()
+        )
         df_pres = pd.DataFrame()
         pres_gen_elections = [
-            el for el in elections if el.endswith(" General") and p_year.match(el[:4]) and int(el[:4]) % 4 == 0]
+            el
+            for el in elections
+            if el.endswith(" General") and p_year.match(el[:4]) and int(el[:4]) % 4 == 0
+        ]
         for el in pres_gen_elections:
             df = self.aggregate(
                 el,
@@ -2625,9 +2664,9 @@ class Analyzer:
                 df = df[group_cols + ["count"]].groupby(group_cols).sum().reset_index()
                 df = m.add_constant_column(df, "Election", el)
                 df_pres = pd.concat([df_pres, df])
-        df_pres = m.add_constant_column(
-            df_pres, "Jurisdiction", jurisdiction
-        ).rename(columns={"count":"votes_for_president"})
+        df_pres = m.add_constant_column(df_pres, "Jurisdiction", jurisdiction).rename(
+            columns={"count": "votes_for_president"}
+        )
         return df_pres
 
     def pres_counts_by_vote_type_and_major_subdiv_all(self) -> pd.DataFrame:
@@ -2638,7 +2677,6 @@ class Analyzer:
             all_df = pd.concat([all_df, df])
 
         return all_df
-
 
 
 def aggregate_results(
@@ -2905,7 +2943,9 @@ def load_results_df(
     election_id: int,
     rollup: bool = False,
     rollup_rut: str = constants.default_subdivision_type,
-    alt_dictionary: Optional[str] = None   # when given, use this dictionary, not the one in the jurisdiction directory
+    alt_dictionary: Optional[
+        str
+    ] = None,  # when given, use this dictionary, not the one in the jurisdiction directory
 ) -> Optional[dict]:
     err = None
     df = df_original.copy()
@@ -3208,7 +3248,7 @@ def reload_juris_election(
                 report_dir=report_dir,
                 rollup=rollup,
                 election_jurisdiction_list=[(election_name, juris_name)],
-                move_files=move_files
+                move_files=move_files,
             )
             if success:
                 # run tests on live db

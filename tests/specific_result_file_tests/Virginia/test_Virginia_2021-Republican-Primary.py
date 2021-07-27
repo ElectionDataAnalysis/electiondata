@@ -23,16 +23,22 @@ total_top_contest = 307367 + 58213 + 98052 + 13694 + 17606  # total of all votes
 district_contest_1 = "VA House District 22"
 total_district_contest_1 = 739 + 3200
 single_vote_type = "provisional"  # pick any one with corresponding data in your file, but use internal db name
-top_contest_vote_type = 912 # total votes for top contest of that vote type
+top_contest_vote_type = 912  # total votes for top contest of that vote type
 county_or_other = "locality"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = "Virginia;Fairfax County"  # pick any one from your file, but use internal db name
-top_contest_votes_county =  53783 + 8792 + 16220 + 2712 + 2168 # total votes for US President in that county
+single_county = (
+    "Virginia;Fairfax County"  # pick any one from your file, but use internal db name
+)
+top_contest_votes_county = (
+    53783 + 8792 + 16220 + 2712 + 2168
+)  # total votes for US President in that county
 
 abbr = constants.abbr[jurisdiction]
 
+
 def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
+
 
 """
 def test_top_contest(dbname):
@@ -47,6 +53,7 @@ def test_top_contest(dbname):
         == total_top_contest
     )
 """
+
 
 def test_district_1(dbname):
     assert (
@@ -74,6 +81,7 @@ def test_all_candidates_known(dbname):
         e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
         == []
     )
+
 
 """
 def test_count_type_subtotal(dbname):

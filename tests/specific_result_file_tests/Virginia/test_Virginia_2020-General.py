@@ -23,6 +23,7 @@ ssd = 15  # state senate district
 total_ssd_votes = -1
 single_vote_type = "total"  # pick any one from your file
 pres_votes_vote_type = 2413568 + 1962430 + 64761 + 19765
+county_or_other = "locality"
 single_county = "Virginia;Bath County"  # pick any one from your file
 pres_votes_county = 646 + 1834 + 16 + 5  # total votes for pres in that county
 
@@ -37,6 +38,7 @@ def test_presidential(dbname):
             election,
             jurisdiction,
             f"US President ({abbr})",
+            sub_unit_type=county_or_other,
             dbname=dbname,
         )
         == total_pres_votes
@@ -49,6 +51,7 @@ def test_us_senate(dbname):
             election,
             jurisdiction,
             f"US Senate {abbr}",
+            sub_unit_type=county_or_other,
             dbname=dbname,
         )
         == total_ussen_votes
@@ -61,6 +64,7 @@ def test_congressional_totals(dbname):
             election,
             jurisdiction,
             f"US House {abbr} District {cd}",
+            sub_unit_type=county_or_other,
             dbname=dbname,
         )
         == total_cd_votes
@@ -105,6 +109,7 @@ def test_count_type_subtotal(dbname):
             election,
             jurisdiction,
             f"US President ({abbr})",
+            sub_unit_type=county_or_other,
             dbname=dbname,
             vote_type=single_vote_type,
         )
@@ -118,6 +123,7 @@ def test_county_subtotal(dbname):
             election,
             jurisdiction,
             f"US President ({abbr})",
+            sub_unit_type=county_or_other,
             dbname=dbname,
             county=single_county,
         )

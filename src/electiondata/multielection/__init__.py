@@ -11,7 +11,7 @@ import re
 from typing import Optional, List, Dict, Any
 
 
-def load_to_db(session,element: str,element_file: str) -> Optional[Dict[str,Any]]:
+def load_to_db(session, element: str, element_file: str) -> Optional[Dict[str, Any]]:
     err = None
     try:
         e_df = pd.read_csv(element_file, sep="\t")
@@ -21,7 +21,10 @@ def load_to_db(session,element: str,element_file: str) -> Optional[Dict[str,Any]
 
     except Exception as exc:
         err = ui.add_new_error(
-            err, "file", element_file, f"Error adding {element}s to database {session.bind.url.database}: {exc}"
+            err,
+            "file",
+            element_file,
+            f"Error adding {element}s to database {session.bind.url.database}: {exc}",
         )
     return err
 

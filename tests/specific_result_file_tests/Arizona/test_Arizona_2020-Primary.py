@@ -28,8 +28,8 @@ sd = f"{abbr} Senate District 10 (Republican Party)"  # state senate contest
 total_ssd_votes = 19891  # total votes in that State Senate contest
 single_vote_type = "total"  # pick any one with corresponding data in your file, but use internal db name
 statewide_votes_vote_type = (
-    536509
-)  # total votes for the statewide contest of that vote type
+    536509  # total votes for the statewide contest of that vote type
+)
 county_or_other = "county"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
 single_county = "Arizona;Santa Cruz County"  # pick any one from your file
@@ -38,6 +38,7 @@ statewide_votes_county = 3848  # total votes for the statewide contest in that c
 
 def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
+
 
 # NB: Because one primary result file has vote types but the other does not, can't test both at once.
 # see github issue #358
@@ -54,6 +55,7 @@ def test_statewide(dbname):
         == total_statewide_votes
     )
 """
+
 
 def test_congressional_totals(dbname):
     assert (
@@ -106,11 +108,14 @@ def test_standard_vote_types(dbname):
     assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
 
 """
+
+
 def test_all_candidates_known(dbname):
     assert (
         e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
         == []
     )
+
 
 # NB: Because one primary result file has vote types but the other does not, can't test both at once.
 # see github issue #358

@@ -19,7 +19,7 @@ from scipy import stats
 import json
 
 
-def child_rus_by_id(session, parents, ru_type: str =None):
+def child_rus_by_id(session, parents, ru_type: str = None):
     """Given a list <parents> of parent ids (or just a single parent_id), return
     list containing all children of those parents.
     (By convention, a ReportingUnit counts as one of its own 'parents',)
@@ -32,9 +32,7 @@ def child_rus_by_id(session, parents, ru_type: str =None):
     if ru_type:
         assert len(ru_type) == 2, f"argument {ru_type} does not have exactly 2 elements"
         ru = pd.read_sql_table("ReportingUnit", session.bind, index_col="Id")
-        right_type_ru = ru[
-            (ru.ReportingUnitType == ru_type)
-        ]
+        right_type_ru = ru[(ru.ReportingUnitType == ru_type)]
         children = [x for x in children if x in right_type_ru.index]
     return children
 
@@ -82,7 +80,7 @@ def create_rollup(
         exclude_redundant_total = False
 
     # get names from ids (and sub_rutype othertext if appropriate)
-    top_ru = db.name_from_id_cursor(cursor, "ReportingUnit",jurisdiction_id)
+    top_ru = db.name_from_id_cursor(cursor, "ReportingUnit", jurisdiction_id)
     election = db.name_from_id_cursor(cursor, "Election", election_id)
     sub_rutype = db.name_from_id_cursor(cursor, "ReportingUnitType", sub_rutype_id)
     if sub_rutype == "other" and sub_rutype_othertext != "":

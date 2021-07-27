@@ -46,4 +46,6 @@ def test_nist_v2_and_v1(runtime):
     }
     err = db.remove_database(db_params)
 
-    assert len(correct_str_v2) == len(new_str_v2) # and len(correct_str_v1) == len(new_str_v1)
+    assert len(correct_str_v2) == len(
+        new_str_v2
+    )  # and len(correct_str_v1) == len(new_str_v1)

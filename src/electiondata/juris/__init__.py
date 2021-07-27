@@ -95,7 +95,7 @@ def check_dictionary(dictionary_file: str) -> Optional[dict]:
     # dedupe the dictionary
     clean_and_dedupe(dictionary_file, clean_candidates=True)
     # check that no entry is null
-    df = pd.read_csv(dictionary_file,**constants.standard_juris_csv_reading_kwargs)
+    df = pd.read_csv(dictionary_file, **constants.standard_juris_csv_reading_kwargs)
     null_mask = df.T.isnull().any()
     if null_mask.any():
         # drop null rows and report error
@@ -108,8 +108,8 @@ def check_dictionary(dictionary_file: str) -> Optional[dict]:
         df = df[~null_mask]
 
     # check that cdf_element-raw_identifier_value pairs are unique
-    two_column_df = df[["cdf_element","raw_identifier_value"]]
-    dupes_df,_ = ui.find_dupes(two_column_df)
+    two_column_df = df[["cdf_element", "raw_identifier_value"]]
+    dupes_df, _ = ui.find_dupes(two_column_df)
     if not dupes_df.empty:
         err = ui.add_new_error(
             err,
@@ -124,7 +124,9 @@ def check_dictionary(dictionary_file: str) -> Optional[dict]:
     for reg in cands.regular.unique():
         all_match = cands[cands.regular == reg].copy()
         if all_match.shape[0] > 1:
-            dupe_reg.append(f"{reg} is regular version of: {list(all_match.raw_identifier_value.unique())}")
+            dupe_reg.append(
+                f"{reg} is regular version of: {list(all_match.raw_identifier_value.unique())}"
+            )
     if dupe_reg:
         dupe_str = "\n".join(dupe_reg)
         err = ui.add_new_error(
@@ -132,7 +134,7 @@ def check_dictionary(dictionary_file: str) -> Optional[dict]:
             "jurisdiction",
             dictionary_dir,
             f"Some raw candidate names match after regularization, "
-            f"so are effectively dupes and should be deduped.:\n{dupe_str}"
+            f"so are effectively dupes and should be deduped.:\n{dupe_str}",
         )
     return err
 
@@ -376,16 +378,28 @@ def clean_and_dedupe(f_path: str, clean_candidates=False):
     df = pd.read_csv(f_path, **constants.standard_juris_csv_reading_kwargs)
 
     if clean_candidates:
-        if ("cdf_element" in df.columns) and ("raw_identifier_value" in df.columns):  # for dictionary files
+        if ("cdf_element" in df.columns) and (
+            "raw_identifier_value" in df.columns
+        ):  # for dictionary files
             mask = df["cdf_element"] == "Candidate"
-            df.loc[mask, "raw_identifier_value"] = m.regularize_candidate_names(df.loc[mask, "raw_identifier_value"])
-            df.loc[mask, "cdf_internal_name"] = m.regularize_candidate_names(df.loc[mask, "cdf_internal_name"])
+            df.loc[mask, "raw_identifier_value"] = m.regularize_candidate_names(
+                df.loc[mask, "raw_identifier_value"]
+            )
+            df.loc[mask, "cdf_internal_name"] = m.regularize_candidate_names(
+                df.loc[mask, "cdf_internal_name"]
+            )
         elif "BallotName" in df.columns:  # for Candidate files
             df["BallotName"] = m.regularize_candidate_names(df["BallotName"])
 
-    if set(df.columns) == {"raw_identifier_value","cdf_internal_name","cdf_element" }:  # for dictionary files
+    if set(df.columns) == {
+        "raw_identifier_value",
+        "cdf_internal_name",
+        "cdf_element",
+    }:  # for dictionary files
         # get rid of lines with null information
-        df = df[df["cdf_internal_name"].notnull() | df["raw_identifier_value"].notnull()]
+        df = df[
+            df["cdf_internal_name"].notnull() | df["raw_identifier_value"].notnull()
+        ]
 
     # remove none or unknown Party in file
     if Path(f_path).name == "Party.txt":

@@ -1,4 +1,3 @@
-
 import electiondata as e
 
 # Instructions:
