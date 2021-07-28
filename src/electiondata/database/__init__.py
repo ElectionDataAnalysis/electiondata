@@ -453,6 +453,25 @@ def get_name_field(element: str) -> str:
     return field
 
 
+def get_reporting_unit_type(session: Session, reporting_unit: str) -> Optional[str]:
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    q = sql.SQL("""
+    SELECT "ReportingUnitType" FROM "ReportingUnit" WHERE "Name" = {name}
+    """).format(name=sql.Literal(reporting_unit))
+    cursor.execute(q)
+    results = cursor.fetchone()
+    if results:
+        rut = results[0]
+    else:
+        rut = None
+    if cursor:
+        cursor.close()
+    if connection:
+        connection.close()
+    return rut
+
+
 def insert_to_cdf_db(
     engine: sqlalchemy.engine,
     df: pd.DataFrame,

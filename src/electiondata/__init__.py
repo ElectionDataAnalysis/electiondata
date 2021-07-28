@@ -2077,6 +2077,151 @@ class Analyzer:
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
+    # testing methods
+    def data_exists(
+            self,
+            election: str,
+            jurisdiction: str,
+    ) -> bool:
+        if not self:
+            return False
+
+        election_id = db.name_to_id(self.session,"Election",election)
+        reporting_unit_id = db.name_to_id(self.session,"ReportingUnit",jurisdiction)
+
+        # if the database doesn't have the election or the reporting unit
+        if not election_id or not reporting_unit_id:
+            # data doesn't exist
+            return False
+
+        # read all contests with records in the VoteCount table
+        df = db.read_vote_count(
+            self.session,election_id,reporting_unit_id,["ContestName"],["contest_name"]
+        )
+        # if no contest found
+        if df.empty:
+            # no data exists.
+            return False
+        # otherwise
+        else:
+            # then data exists!
+            return True
+
+    def check_totals_match_vote_types(self,
+                                      election: str,
+                                      jurisdiction: str,
+                                      sub_unit_type=constants.default_subdivision_type,
+                                      ) -> bool:
+        """Interesting if there are both total and other vote types;
+        otherwise trivially true"""
+        active = db.active_vote_types(self.session,election,jurisdiction)
+        if len(active) > 1 and "total" in active:
+            # pull type 'total' only
+            df_candidate = self.aggregate(
+                election,
+                jurisdiction,
+                contest_type="Candidate",
+                vote_type="total",
+                sub_unit_type=sub_unit_type,
+                exclude_redundant_total=False,
+            )
+            df_ballot = self.aggregate(
+                election,
+                jurisdiction,
+                contest_type="BallotMeasure",
+                vote_type="total",
+                sub_unit_type=sub_unit_type,
+                exclude_redundant_total=False,
+            )
+            df_total_type_only = pd.concat([df_candidate,df_ballot])
+
+            # pull all types but total
+            df_candidate = self.aggregate(
+                election,
+                jurisdiction,
+                contest_type="Candidate",
+                sub_unit_type=sub_unit_type,
+                exclude_redundant_total=True,
+            )
+            df_ballot = self.aggregate(
+                election,
+                jurisdiction,
+                contest_type="BallotMeasure",
+                exclude_redundant_total=True,
+                sub_unit_type=sub_unit_type,
+            )
+            df_sum_nontotal_types = pd.concat([df_candidate,df_ballot])
+            return df_total_type_only["count"].sum() == df_sum_nontotal_types["count"].sum()
+        else:
+            return True
+
+    def contest_total(self,
+            election: str,
+            jurisdiction: str,
+            contest: str,
+            reporting_unit: str,
+            vote_type: Optional[str] = None,
+            contest_type: Optional[str] = "Candidate",
+    ) -> int:
+        """Returns total number of votes in the contest within the given
+        reporting unit. If vote type is given, restricts to that vote type"""
+        sub_unit_type = db.get_reporting_unit_type(self.session, reporting_unit)
+        if vote_type == "total":
+            exclude_redundant_total = False
+        else:
+            exclude_redundant_total = True
+        df = self.aggregate(
+            election=election,
+            jurisdiction=jurisdiction,
+            vote_type=vote_type,
+            sub_unit=reporting_unit,
+            sub_unit_type=sub_unit_type,
+            contest=contest,
+            contest_type=contest_type,
+            exclude_redundant_total=exclude_redundant_total,
+        )
+        return df["count"].sum()
+
+    def check_count_types_standard(self,
+                                election: str,jurisdiction: str,
+                                   ) -> bool:
+        election_id = db.name_to_id(self.session,"Election",election)
+        reporting_unit_id = db.name_to_id(self.session,"ReportingUnit",jurisdiction)
+        standard_ct_list = list(
+            db.read_vote_count(
+                self.session,
+                election_id,
+                reporting_unit_id,
+                ["CountItemType"],
+                ["CountItemType"],
+            )["CountItemType"].unique()
+        )
+
+        # don't want type "other"
+        if "other" in standard_ct_list:
+            standard_ct_list.remove("other")
+        active = db.active_vote_types(self.session,election,jurisdiction)
+        for vt in active:
+            # if even one fails, count types are not standard
+            if vt not in standard_ct_list:
+                return False
+        # if nothing failed, count types are standard
+        return True
+
+    def get_contest_with_unknown_candidates(self,
+                                            election: str,jurisdiction: str
+                                            ) -> List[str]:
+        election_id = db.name_to_id(self.session,"Election",election)
+        if not election_id:
+            return [f"Election {election} not found"]
+        jurisdiction_id = db.name_to_id(self.session,"ReportingUnit",jurisdiction)
+        if not jurisdiction_id:
+            return [f"Jurisdiction {jurisdiction} not found"]
+
+        contests = db.get_contest_with_unknown(self.session,election_id,jurisdiction_id)
+        return contests
+
+    # visualization methods
     # `verbose` param is not used but may be necessary. See github issue #524 for details
     def display_options(
         self, input_str: str, verbose: bool = True, filters: list = None
@@ -2719,29 +2864,7 @@ def data_exists(
     dbname: Optional[str] = None,
 ) -> bool:
     an = Analyzer(param_file=p_path, dbname=dbname)
-    if not an:
-        return False
-
-    election_id = db.name_to_id(an.session, "Election", election)
-    reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
-
-    # if the database doesn't have the election or the reporting unit
-    if not election_id or not reporting_unit_id:
-        # data doesn't exist
-        return False
-
-    # read all contests with records in the VoteCount table
-    df = db.read_vote_count(
-        an.session, election_id, reporting_unit_id, ["ContestName"], ["contest_name"]
-    )
-    # if no contest found
-    if df.empty:
-        # no data exists.
-        return False
-    # otherwise
-    else:
-        # then data exists!
-        return True
+    return an.data_exists(election, jurisdiction)
 
 
 def external_data_exists(
@@ -2787,55 +2910,7 @@ def check_totals_match_vote_types(
     """Interesting if there are both total and other vote types;
     otherwise trivially true"""
     an = Analyzer(dbname=dbname, param_file=param_file)
-    active = db.active_vote_types(an.session, election, jurisdiction)
-    if len(active) > 1 and "total" in active:
-        # pull type 'total' only
-        df_candidate = aggregate_results(
-            election,
-            jurisdiction,
-            contest_type="Candidate",
-            vote_type="total",
-            sub_unit_type=sub_unit_type,
-            exclude_redundant_total=False,
-            dbname=dbname,
-            param_file=param_file,
-        )
-        df_ballot = aggregate_results(
-            election,
-            jurisdiction,
-            contest_type="BallotMeasure",
-            vote_type="total",
-            sub_unit_type=sub_unit_type,
-            exclude_redundant_total=False,
-            dbname=dbname,
-            param_file=param_file,
-        )
-        df_total_type_only = pd.concat([df_candidate, df_ballot])
-
-        # pull all types but total
-        df_candidate = aggregate_results(
-            election,
-            jurisdiction,
-            contest_type="Candidate",
-            sub_unit_type=sub_unit_type,
-            exclude_redundant_total=True,
-            dbname=dbname,
-            param_file=param_file,
-        )
-        df_ballot = aggregate_results(
-            election,
-            jurisdiction,
-            contest_type="BallotMeasure",
-            exclude_redundant_total=True,
-            sub_unit_type=sub_unit_type,
-            dbname=dbname,
-            param_file=param_file,
-        )
-        df_sum_nontotal_types = pd.concat([df_candidate, df_ballot])
-        return df_total_type_only["count"].sum() == df_sum_nontotal_types["count"].sum()
-    else:
-        return True
-
+    return an.check_count_types_standard(election, jurisdiction)
 
 def contest_total(
     election: str,
@@ -2902,28 +2977,7 @@ def check_count_types_standard(
     election: str, jurisdiction: str, dbname: Optional[str] = None, param_file: Optional[str] = None,
 ) -> bool:
     an = Analyzer(dbname=dbname, param_file=param_file)
-    election_id = db.name_to_id(an.session, "Election", election)
-    reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
-    standard_ct_list = list(
-        db.read_vote_count(
-            an.session,
-            election_id,
-            reporting_unit_id,
-            ["CountItemType"],
-            ["CountItemType"],
-        )["CountItemType"].unique()
-    )
-
-    # don't want type "other"
-    if "other" in standard_ct_list:
-        standard_ct_list.remove("other")
-    active = db.active_vote_types(an.session, election, jurisdiction)
-    for vt in active:
-        # if even one fails, count types are not standard
-        if vt not in standard_ct_list:
-            return False
-    # if nothing failed, count types are standard
-    return True
+    return an.check_count_types_standard(election, jurisdiction)
 
 
 def get_contest_with_unknown_candidates(
@@ -2932,15 +2986,7 @@ def get_contest_with_unknown_candidates(
     an = Analyzer(dbname=dbname, param_file=param_file)
     if not an:
         return [f"Failure to connect to database"]
-    election_id = db.name_to_id(an.session, "Election", election)
-    if not election_id:
-        return [f"Election {election} not found"]
-    jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
-    if not jurisdiction_id:
-        return [f"Jurisdiction {jurisdiction} not found"]
-
-    contests = db.get_contest_with_unknown(an.session, election_id, jurisdiction_id)
-    return contests
+    return an.get_contest_with_unknown_candidates(election, jurisdiction)
 
 
 def load_results_df(

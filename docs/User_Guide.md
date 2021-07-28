@@ -473,6 +473,7 @@ The jurisdiction files in this repository follow certain conventions. Many of th
         * `Constitution Party` (regardless of state or other jurisdiction)
         
 ### Beware of:
+ - hyphens in formal names of jurisdictions or elections 
  - Different names for same contest in different counties (if munging from a batch of county-level files)
  - Different names for candidates, especially candidates with name suffixes or middle/maiden names
  - Different "party" names for candidates without a party affiliation 
