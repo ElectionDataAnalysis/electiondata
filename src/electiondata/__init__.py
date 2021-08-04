@@ -3280,6 +3280,7 @@ def reload_juris_election(
             election_jurisdiction_list=[(election_name, juris_name)],
             report_dir=report_dir,
             file_prefix="temp_db_",
+            param_file=param_file
         )
         if failed_tests:
             print(
@@ -3316,6 +3317,7 @@ def reload_juris_election(
                     election_jurisdiction_list=[(election_name, juris_name)],
                     report_dir=report_dir,
                     file_prefix="live_db_",
+                    param_file=param_file
                 )
 
                 if live_failed_tests:

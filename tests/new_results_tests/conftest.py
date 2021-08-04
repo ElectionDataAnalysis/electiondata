@@ -1,7 +1,5 @@
 import pytest
-from _pytest.fixtures import FixtureRequest
 import electiondata as ed
-import pandas as pd
 from electiondata import database as db
 
 
@@ -16,25 +14,31 @@ def pytest_addoption(parser):
 
 # set up fixtures so tests can call them as arguments
 @pytest.fixture(scope="session")
-def analyzer(request):
-    an = ed.Analyzer(
-        dbname=request.config.getoption("--dbname"),param_file=request.config.getoption("--param_file")
-    )
-    yield an
-    # code after yield statement runs during post-testing clean-up
-    an.session.bind.dispose()
+def dbname(request):
+    return request.config.getoption("--dbname")
+
+
+@pytest.fixture(scope="session")
+def param_file(request):
+    return request.config.getoption("--param_file")
 
 
 @pytest.fixture(scope="session")
 def election(request):
+    el = request.config.getoption("--election")
     # change any hyphens in election name to spaces
-    return request.config.getoption("--election").replace("-"," ")
+    if el:
+        el = el.replace("-"," ")
+    return el
 
 
 @pytest.fixture(scope="session")
 def jurisdiction(request):
+    ju = request.config.getoption("--jurisdiction")
     # change any hyphens in jurisdiction name to spaces
-    return request.config.getoption("--jurisdiction").replace("-"," ")
+    if ju:
+        ju = ju.replace("-"," ")
+    return ju
 
 
 @pytest.fixture(scope="session")
@@ -43,12 +47,12 @@ def major_subdiv_type(analyzer, jurisdiction):
 
 
 @pytest.fixture(scope="session")
-def load_data(request):
-    df = pd.read_csv(request.config.getoption("--reference"), sep="\t")
-    # TODO check format of data read from reference file
-    # TODO check contest names, reporting unit and warn user if not found
-    # run tests only on official-final lines
-    # TODO handle Status = 'preliminary' with as-of date (by adding status parameter to test?)
-    return [dic for dic in df.to_dict("records") if dic["Status"] == "official-final"]
-
+def analyzer(dbname, param_file):
+    print(f"dbname: {dbname}, param_file: {param_file}")  # TODO remove diagnostic print
+    an = ed.Analyzer(
+        dbname=dbname, param_file=param_file
+    )
+    yield an
+    # code after yield statement runs during post-testing clean-up
+    an.session.bind.dispose()
 

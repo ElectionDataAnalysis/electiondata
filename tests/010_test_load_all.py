@@ -92,7 +92,7 @@ def get_testing_data(
 
     else:
         print(
-            f"Tests will use data in existing directory: {Path(results_dir).absolute()}"
+            f"Tests will load data from existing directory: {Path(results_dir).absolute()}"
         )
     return
 
@@ -100,7 +100,7 @@ def get_testing_data(
 def run2(
     load_data: bool = True,
     dbname: Optional[str] = None,
-    param_file: Optional[str] = None,
+    param_file: str = "run_time.ini",
     test_dir: Optional[str] = None,
     election_jurisdiction_list: Optional[list] = None,
     rollup: bool = False,
@@ -111,7 +111,7 @@ def run2(
     if not test_dir:
         # set the test_dir to the results-testing subdirectory of the directory containing this file
         test_dir = os.path.join(
-            Path(__file__).parent.absolute(), "specific_result_file_tests"
+            Path(__file__).parent.absolute(), "new_results_tests"
         )
 
     # name the db
@@ -162,7 +162,7 @@ def run2(
             if failure:
                 print(f"Files failing to load:\n{failure}")
             else:
-                print("All files loaded.")
+                print("All files loaded to test db.")
 
         except Exception as exc:
             print(f"Exception occurred: {exc}")
@@ -186,6 +186,7 @@ def run2(
         dbname,
         election_jurisdiction_list=loaded_ej_list,
         report_dir=report_dir,
+        param_file=param_file,
     )
     if failures:
         print("At least one test failed")

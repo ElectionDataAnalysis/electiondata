@@ -812,6 +812,7 @@ def run_tests(
     election_jurisdiction_list: list,
     report_dir: Optional[str] = None,
     file_prefix: str = "",
+    param_file: str = "run_time.ini",
 ) -> Dict[str, Any]:
     """run tests from test_dir
     db_params must have host, user, pass, db_name.
@@ -820,16 +821,25 @@ def run_tests(
 
     failures = dict()  # initialize result report
     # run pytest
+    if not os.path.isdir(test_dir):
+        failures[f"all elections; all jurisdiction"] = f"Test directory not found: {test_dir}"
+        return failures
+    test_file = os.path.join(test_dir, "test_results.py")
+    if not os.path.isfile(test_file):
+        failures[f"all elections; all jurisdiction"] = f"Test file not found: {test_file}"
 
     for (election, juris) in election_jurisdiction_list:
         # run tests
         e_system = jm.system_name_from_true_name(election)
         j_system = jm.system_name_from_true_name(juris)
-        test_file = os.path.join(test_dir, f"{j_system}/test_{j_system}_{e_system}.py")
-        if not os.path.isfile(test_file):
-            failures[f"{juris};{election}"] = f"No test file found: {test_file}"
+        reference_file = os.path.join(test_dir, "reference_results", f"{j_system}.tsv")
+        if not os.path.isfile(reference_file):
+            failures[f"{juris};{election}"] = f"Results reference file not found: {reference_file}"
             continue
-        cmd = f"pytest --dbname {dbname} {test_file}"
+        cmd = f"pytest " \
+              f"--param_file='{param_file}' --dbname={dbname} --reference='{reference_file}'" \
+              f" --election='{election}' --jurisdiction='{juris}'" \
+              f" {test_file}"
         if report_dir:
             Path(report_dir).mkdir(exist_ok=True, parents=True)
             report_file = os.path.join(
