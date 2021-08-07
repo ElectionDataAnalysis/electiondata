@@ -14,7 +14,7 @@ from electiondata import (
 )
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
-from typing import List, Dict, Optional, Any, Tuple, Union
+from typing import List, Dict, Optional, Any, Tuple, Union, Iterable
 import datetime
 import os
 import re
@@ -2162,7 +2162,7 @@ class Analyzer:
             reporting_unit: str,
             vote_type: Optional[str] = None,
             contest_type: Optional[str] = "Candidate",
-    ) -> int:
+    ) -> Optional[int]:
         """Returns total number of votes in the contest within the given
         reporting unit. If vote type is given, restricts to that vote type"""
         sub_unit_type = db.get_reporting_unit_type(self.session, reporting_unit)
@@ -2180,7 +2180,10 @@ class Analyzer:
             contest_type=contest_type,
             exclude_redundant_total=exclude_redundant_total,
         )
-        return df["count"].sum()
+        if df.empty:
+            return None
+        else:
+            return df["count"].sum()
 
     def check_count_types_standard(self,
                                 election: str,jurisdiction: str,
@@ -2823,6 +2826,104 @@ class Analyzer:
             all_df = pd.concat([all_df, df])
 
         return all_df
+
+    def compare_to_results_file(
+            self,
+            reference: str,
+            jurisdictions: Optional[Iterable[str]] = None,
+            single_election: Optional[str] = None,
+            single_jurisdiction: Optional[str] = None,
+            report_dir: Optional[str] = None,
+            significance: Optional[float] = None,
+    ) -> (pd.DataFrame,pd.DataFrame,pd.DataFrame,Optional[pd.DataFrame],Optional[dict]):
+        """session: Session, db session
+        reference: str, path to tab-separated file with reference results
+        report_dir: Optional[str] = None, path to directory for reports
+        jurisdictions: Optional[Iterable[str]] = None, if given, restrict to jurisdictions in iterable
+        single_election: Optional[str], if given, all results assumed to be for this election;
+            if not given, reference file must have Election column
+        single_jurisdiction: Optional[str] = None, if given, all results assumed to be for this jurisdiction;
+            if not given, reference file must have Jurisdiction column
+        report_dir: Optional[str] = None, reports will be exported to this directory (if given)
+        significance: Optional[float] = None, cut-off value for "significantly" wrong counts
+
+        Returns:
+        pd.DataFrame, reference results not found
+        pd.DataFrame, reference results matched in db
+        pd.DataFrame, reference results found but not matched in db, with reference and db totals
+        Optional[pd.DataFrame], found-but-unmatched results that are off by more than the <significance>
+        Optional[dict], error dictionary
+        """
+        err = None
+        ref = pd.read_csv(reference,sep="\t")
+
+        # restrict to jurisdictions in list (if given)
+        if jurisdictions:
+            ref = ref[ref.Jurisdiction.isin(jurisdictions)]
+
+        # if no VoteType column, use "total"; otherwise replace any null "VoteType" entries by "total"
+        if not "VoteType" in ref.columns:
+            ref = m.add_constant_column(ref,"VoteType","total")
+        else:
+            ref["VoteType"].fillna("total",inplace=True)
+
+        # if no Election column, add it from single_election given
+        if "Election" not in ref.columns:
+            if single_election:
+                ref = m.add_constant_column(ref, "Election", single_election)
+            else:
+                err = ui.add_new_error(err, "file", reference, "No Election column, and no single election specified")
+
+        # if no Jurisdiction column, add it from single_jurisdiction given
+        if "Jurisdiction" not in ref.columns:
+            if single_jurisdiction:
+                ref = m.add_constant_column(ref, "Jurisdiction", single_jurisdiction)
+            else:
+                err = ui.add_new_error(
+                    err, "file", reference, "No Jurisdiction column, and no single jurisdiction specified"
+                )
+        # initialize dataframes to be returned
+        not_found = ok = pd.DataFrame(columns=ref.columns)
+        wrong = pd.DataFrame(columns=list(ref.columns) + ["Count_from_db"])
+
+        for idx,row in ref.iterrows():
+            db = self.contest_total(
+                election=row["Election"],
+                jurisdiction=row["Jurisdiction"],
+                contest=row["CandidateContest"],
+                reporting_unit=row["ReportingUnit"],
+                vote_type=row["VoteType"],
+            )
+            if db is None:
+                # contest not found
+                not_found = not_found.append(row, ignore_index=True)
+            elif db == row["Count"]:
+                ok = ok.append(row, ignore_index=True)
+            else:
+                wrong = wrong.append({**row, **{"Count_from_db": db}}, ignore_index=True)
+        # revise column order
+        first = ["Count_from_db", "Count"]
+        new_order = first + [c for c in wrong.columns if c not in first]
+        wrong = wrong[new_order]
+
+        # create report of only significantly wrong values
+        if significance:
+            mask = abs((wrong.Count_from_db - wrong.Count) / wrong.Count) > significance
+            significantly_wrong = wrong[mask]
+
+        # report
+        if report_dir:
+            ts = datetime.datetime.now().strftime("%m%d_%H%M")
+            sub_dir = os.path.join(report_dir, f"compare_to_{Path(reference).stem}_{ts}")
+            Path(sub_dir).mkdir(exist_ok=True, parents=True)
+            names = ["not_found", "ok", "wrong"]
+            if significance:
+                names.append("significantly_wrong")
+            for df_name in names:
+                eval(df_name).to_csv(os.path.join(sub_dir, f"{df_name}.tsv"), sep="\t", index=None)
+
+        # Jurisdiction	County	Contest	District	ReportingUnit	CandidateContest	VoteType	Count	Note
+        return not_found, ok, wrong, significantly_wrong, err
 
 
 def aggregate_results(
