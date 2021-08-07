@@ -2831,35 +2831,83 @@ class Analyzer:
             self,
             reference: str,
             jurisdictions: Optional[Iterable[str]] = None,
+            elections: Optional[Iterable[str]] = None,
             single_election: Optional[str] = None,
             single_jurisdiction: Optional[str] = None,
             report_dir: Optional[str] = None,
             significance: Optional[float] = None,
-    ) -> (pd.DataFrame,pd.DataFrame,pd.DataFrame,Optional[pd.DataFrame],Optional[dict]):
+            status: Optional[str] = None,
+    ) -> (pd.DataFrame,pd.DataFrame,pd.DataFrame,Optional[pd.DataFrame],str, Optional[dict]):
         """session: Session, db session
         reference: str, path to tab-separated file with reference results
         report_dir: Optional[str] = None, path to directory for reports
         jurisdictions: Optional[Iterable[str]] = None, if given, restrict to jurisdictions in iterable
+        elections: Optional[Iterable[str]] = None, if given, restrict to elections in iterable
         single_election: Optional[str], if given, all results assumed to be for this election;
             if not given, reference file must have Election column
         single_jurisdiction: Optional[str] = None, if given, all results assumed to be for this jurisdiction;
             if not given, reference file must have Jurisdiction column
         report_dir: Optional[str] = None, reports will be exported to this directory (if given)
         significance: Optional[float] = None, cut-off value for "significantly" wrong counts
+        status: Optional[str] = None, if specified, restrict results to those with
+            specified status in Status column of reference file
 
         Returns:
         pd.DataFrame, reference results not found
         pd.DataFrame, reference results matched in db
         pd.DataFrame, reference results found but not matched in db, with reference and db totals
         Optional[pd.DataFrame], found-but-unmatched results that are off by more than the <significance>
+        str, subdirectory to which reports were written
         Optional[dict], error dictionary
         """
         err = None
+        sub_dir = "No reports created"
         ref = pd.read_csv(reference,sep="\t")
 
-        # restrict to jurisdictions in list (if given)
-        if jurisdictions:
-            ref = ref[ref.Jurisdiction.isin(jurisdictions)]
+        # restrict to single jurisdiction (if specified) or else to jurisdictions in list (if given)
+        #  and ensure there is a Jurisdiction column
+        if "Jurisdiction" in ref.columns:
+            if single_jurisdiction:
+                ref = ref[ref.Jurisdiction == single_jurisdiction]
+            elif jurisdictions:
+                ref = ref[ref.Jurisdiction.isin(jurisdictions)]
+        else:
+            if single_jurisdiction:
+                ref = m.add_constant_column(ref, "Jurisdiction", single_jurisdiction) 
+            else:
+                err = ui.add_new_error(err,"file",Path(reference).name,
+                                       "No Jurisdiction column, and no single jurisdiction specified"
+                                       )
+
+        # restrict to single election (if specified) or else to elections in list (if given)
+        #  and ensure there is a Election column
+        if "Election" in ref.columns:
+            if single_election:
+                ref = ref[ref.Election == single_election]
+            elif elections:
+                ref = ref[ref.Election.isin(elections)]
+        else:
+            if single_election:
+                ref = m.add_constant_column(ref, "Election", single_election) 
+            else:
+                err = ui.add_new_error(err,"file",Path(reference).name,
+                                       "No Election column, and no single election specified"
+                                       )
+
+        # restrict to specific status if given
+        if status:
+            if "Status" in ref.columns:
+                ref = ref[ref.Status == status]
+            else:
+                err = ui.add_new_error(err, "file", Path(reference).name,
+                                       f"Status {status} was specified, but there is no 'Status' column"
+                                       )
+        if ref.empty:
+            err = ui.add_new_error(err, "file", Path(reference).name,
+                                   f"No relevant results found in file.\n"
+                                   )
+        if err:
+            return pd.DataFrame(), pd.DataFrame(), pd.DataFrame(), None, sub_dir, err
 
         # if no VoteType column, use "total"; otherwise replace any null "VoteType" entries by "total"
         if not "VoteType" in ref.columns:
@@ -2867,63 +2915,73 @@ class Analyzer:
         else:
             ref["VoteType"].fillna("total",inplace=True)
 
-        # if no Election column, add it from single_election given
-        if "Election" not in ref.columns:
-            if single_election:
-                ref = m.add_constant_column(ref, "Election", single_election)
-            else:
-                err = ui.add_new_error(err, "file", reference, "No Election column, and no single election specified")
+        # change Count column to integer
+        ref, clean_err_df = m.clean_count_cols(ref,["Count"])
+        if not clean_err_df.empty:
+            err = ui.add_new_error(err, "file", Path(reference).name,
+                                   f"Some counts could not be interpreted as integers:\n{clean_err_df}",
+                                   )
 
-        # if no Jurisdiction column, add it from single_jurisdiction given
-        if "Jurisdiction" not in ref.columns:
-            if single_jurisdiction:
-                ref = m.add_constant_column(ref, "Jurisdiction", single_jurisdiction)
-            else:
-                err = ui.add_new_error(
-                    err, "file", reference, "No Jurisdiction column, and no single jurisdiction specified"
-                )
         # initialize dataframes to be returned
-        not_found = ok = pd.DataFrame(columns=ref.columns)
-        wrong = pd.DataFrame(columns=list(ref.columns) + ["Count_from_db"])
+        not_found_in_db = ok = pd.DataFrame(columns=ref.columns)
+        wrong = pd.DataFrame(columns=list(ref.columns) + ["Database_Count"])
 
         for idx,row in ref.iterrows():
-            db = self.contest_total(
+            db_total = self.contest_total(
                 election=row["Election"],
                 jurisdiction=row["Jurisdiction"],
-                contest=row["CandidateContest"],
+                contest=row["Contest"],
                 reporting_unit=row["ReportingUnit"],
                 vote_type=row["VoteType"],
             )
-            if db is None:
+
+            if db_total is None:
                 # contest not found
-                not_found = not_found.append(row, ignore_index=True)
-            elif db == row["Count"]:
+                not_found_in_db = not_found_in_db.append(row, ignore_index=True)
+            elif int(db_total) == int(row["Count"]):
                 ok = ok.append(row, ignore_index=True)
             else:
-                wrong = wrong.append({**row, **{"Count_from_db": db}}, ignore_index=True)
-        # revise column order
-        first = ["Count_from_db", "Count"]
+                wrong = wrong.append({**row, **{"Database_Count": int(db_total)}}, ignore_index=True)
+
+        # rename Count to Reference Count and revise column order
+        wrong.rename(columns={"Count":"Reference_Count"}, inplace=True)
+        first = ["Database_Count", "Reference_Count"]
         new_order = first + [c for c in wrong.columns if c not in first]
         wrong = wrong[new_order]
 
         # create report of only significantly wrong values
         if significance:
-            mask = abs((wrong.Count_from_db - wrong.Count) / wrong.Count) > significance
+            mask = abs((wrong.Database_Count - wrong.Reference_Count) / wrong.Reference_Count) > significance
             significantly_wrong = wrong[mask]
+        else:
+            significantly_wrong = None
 
         # report
         if report_dir:
             ts = datetime.datetime.now().strftime("%m%d_%H%M")
             sub_dir = os.path.join(report_dir, f"compare_to_{Path(reference).stem}_{ts}")
             Path(sub_dir).mkdir(exist_ok=True, parents=True)
-            names = ["not_found", "ok", "wrong"]
-            if significance:
-                names.append("significantly_wrong")
+            names = ["not_found_in_db", "ok", "wrong"]
             for df_name in names:
-                eval(df_name).to_csv(os.path.join(sub_dir, f"{df_name}.tsv"), sep="\t", index=None)
+                eval(df_name).to_csv(os.path.join(
+                    sub_dir, f"{df_name}.tsv"
+                ), sep="\t", index=None)
+            if significantly_wrong is not None:  # nb: if nothing is significantly wrong, df will be empty but not None.
+                significantly_wrong.to_csv(os.path.join(
+                    sub_dir, f"wrong_by_at_least_{significance}.tsv"
+                ), sep="\t", index=None)
 
-        # Jurisdiction	County	Contest	District	ReportingUnit	CandidateContest	VoteType	Count	Note
-        return not_found, ok, wrong, significantly_wrong, err
+            # report parameters
+            # 'database' variable used even though syntax-checker doesn't see it
+            database = self.session.bind.url
+            report_str = f"database: {database}\nreference file: {reference}"
+            optional_params = ["single_election", "single_jurisdiction", "elections", "jurisdictions", "status"]
+            for op in optional_params:
+                if eval(op):
+                    report_str = f"{report_str}\n{op}: {eval(op)}"
+            open(os.path.join(sub_dir, "_parameters.txt"), "w").write(report_str)
+
+        return not_found_in_db, ok, wrong, significantly_wrong, sub_dir, err
 
 
 def aggregate_results(

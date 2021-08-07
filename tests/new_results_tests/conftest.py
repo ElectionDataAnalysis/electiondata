@@ -10,6 +10,7 @@ def pytest_addoption(parser):
     parser.addoption("--election", action="store", default=None)
     parser.addoption("--jurisdiction", action="store", default=None)
     parser.addoption("--reference", action="store", default=None)  # file with results known to be correct
+    parser.addoption("--significance", action="store", default=0.05)  # cut-off for insignificant error percentage
 
 
 # set up fixtures so tests can call them as arguments

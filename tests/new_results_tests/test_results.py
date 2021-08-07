@@ -2,50 +2,14 @@ import pytest
 import pandas as pd
 import os
 
-# per suggestion found on stackabuse
-# https://stackoverflow.com/questions/55413277/can-pytest-hooks-use-fixtures
-# to allow dynamic definition of fixture from data in file
-@pytest.fixture(scope="session")
-def load_data(request, election, jurisdiction):
-    data_file = request.config.getoption("--reference")
-    if os.path.isfile(data_file):
-        df = pd.read_csv(data_file, sep="\t")
-    else:
-        print(f"No such file: {data_file}")
-        return None
-    # TODO check format of data read from reference file
-    # TODO check contest names, reporting unit and warn user if not found
-    # run tests only on official-final lines
-    # TODO handle Status = 'preliminary' with as-of date (by adding status parameter to test?)
-    return [
-        dic for dic in df.to_dict("records") if (
-                dic["Status"] == "official-final" and
-                dic["Election"] == election and
-                dic["ReportingUnit"].split(";")[0] == jurisdiction
-        )
-    ]
-
-
-REFERENCE_RESULT_LIST = []
-
-
-@pytest.fixture(autouse=True)
-def set_global_loaded_test_data(request):
-    global REFERENCE_RESULT_LIST
-    data_loader = request.getfixturevalue('load_data')
-    orig,REFERENCE_RESULT_LIST = REFERENCE_RESULT_LIST, data_loader
-    yield
-    REFERENCE_RESULT_LIST = orig
-# end code from stackabuase
-
-
-
 
 def test_analyzer_exists(analyzer):
-    assert analyzer is not None
+    assert analyzer is not None, "Specify analyzer parameter file path with --param_file option to pytest"
 
 
 def test_data_exists(analyzer, election, jurisdiction):
+    assert election is not None, "Specify election with --election option to pytest"
+    assert jurisdiction is not None, "Specify jurisdiction with --jurisdiction option to pytest"
     assert analyzer.data_exists(election, jurisdiction)
 
 
@@ -65,23 +29,20 @@ def test_all_candidates_known(analyzer, election, jurisdiction,  major_subdiv_ty
         print(f"\nContests with unknown candidates:\n{bad}\n")
     assert contest_with_unknowns == []
 
-def test_contest(analyzer,election,jurisdiction,major_subdiv_type):
-    wrong_results = list()
-    correct_results = list()
-    for reference_result in REFERENCE_RESULT_LIST:
-        count_from_db = analyzer.contest_total(
-                    election,
-                    jurisdiction,
-                    reference_result["Contest"],
-                    reporting_unit=reference_result["ReportingUnit"],
-                    vote_type=reference_result["VoteType"],
-                )
-        if not count_from_db == int(reference_result["Count"]):
-            wrong_results.append({**reference_result, **{"count_from_db":count_from_db}})
-        else:
-            correct_results.append(reference_result)
-    if wrong_results:
-        print(f"\nwrong results:\n{wrong_results}\n\ncorrect results:\n{correct_results}")
-    assert wrong_results == list()
+
+def test_contests(request,analyzer,election,jurisdiction):
+    reference_file = request.config.getoption("--reference")
+    significance = request.config.getoption("--significance")
+    assert reference_file, "Specify reference results file path with --reference option to pytest"
+    assert os.path.isfile(reference_file)
+    not_found,ok,wrong,significantly_wrong,sub_dir, err = analyzer.compare_to_results_file(
+        reference_file,
+        single_election=election,
+        single_jurisdiction=jurisdiction,
+        report_dir=analyzer.reports_and_plots_dir,
+        significance=significance,
+    )
+    assert err is None, f"Errors during comparison: {err}"
+    assert wrong.empty, f"See {sub_dir}, for failed comparisons"
 
 

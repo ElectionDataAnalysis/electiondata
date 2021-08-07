@@ -1,18 +1,18 @@
-Election	Contest	ReportingUnit	VoteType	Count	Status	Date	Note
-2021 Democratic Primary	VA Governor	Virginia	total	494932	official-final
-2021 Democratic Primary	VA House District 66	Virginia	total	4758	official-final
-2021 Democratic Primary	VA Governor	Virginia;Fairfax County	total	83675	official-final
-2021 Democratic Primary	VA Governor	Virginia	provisional	912	official-final
-2021 Republican Primary	VA House District 22	Virginia	total	3939	official-final
-2016 General	US President (VA)	Virginia	total	3984631	official-final
-2016 General	US House VA District 2	Virginia	total	309915	official-final
-2018 General	US Senator VA	Virginia	total	3351757	official-final
-2018 General	US House VA District 1	Virginia	total	273029	official-final
-2020 General	US President (VA)	Virginia	total	4460524	official-final
-2020 General	US Senate VA	Virginia	total	4405087	official-final
-2020 General	US House VA District 3	Virginia	total	341361	official-final
-2020 General	US President (VA)	Virginia;Bath County	2501	official-final
-2020 Democratic Primary	US President (VA)	Virginia	total	1323693	official-final
-2020 Democratic Primary	US House VA District 5	Virginia	total	54037	official-final
-2020 Republican Primary	US Senator	Virginia	total	309804	official-final
-2020 Republican Primary	US House VA District 2	Virginia	total	52514	official-final
+Jurisdiction	Election	Contest	ReportingUnit	VoteType	Count	Status
+Virginia	2021 Democratic Primary	VA Governor	Virginia	total	494932	official-final
+Virginia	2021 Democratic Primary	VA House District 66	Virginia	total	4758	official-final
+Virginia	2021 Democratic Primary	VA Governor	Virginia;Fairfax County	total	83675	official-final
+Virginia	2021 Democratic Primary	VA Governor	Virginia	provisional	912	official-final
+Virginia	2021 Republican Primary	VA House District 22	Virginia	total	3939	official-final
+Virginia	2016 General	US President (VA)	Virginia	total	3984631	official-final
+Virginia	2016 General	US House VA District 2	Virginia	total	309915	official-final
+Virginia	2018 General	US Senator VA	Virginia	total	3351757	official-final
+Virginia	2018 General	US House VA District 1	Virginia	total	273029	official-final
+Virginia	2020 General	US President (VA)	Virginia	total	4460524	official-final
+Virginia	2020 General	US Senate VA	Virginia	total	4405087	official-final
+Virginia	2020 General	US House VA District 3	Virginia	total	341361	official-final
+Virginia	2020 General	US President (VA)	Virginia;Bath County	total	2501	official-final
+Virginia	2020 Democratic Primary	US President (VA)	Virginia	total	1323693	official-final
+Virginia	2020 Democratic Primary	US House VA District 5	Virginia	total	54037	official-final
+Virginia	2020 Republican Primary	US Senator	Virginia	total	309804	official-final
+Virginia	2020 Republican Primary	US House VA District 2	Virginia	total	52514	official-final
