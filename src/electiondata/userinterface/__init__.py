@@ -814,10 +814,17 @@ def run_tests(
     file_prefix: str = "",
     param_file: str = "run_time.ini",
 ) -> Dict[str, Any]:
-    """run tests from test_dir
-    db_params must have host, user, pass, db_name.
-    test_param_file is a reference run_time.ini file.
-    Returns dictionary of failures (keys are jurisdiction;election strings)"""
+    """
+    test_dir: str, directory containing pytest results tests to be run
+    dbname: str, database on which to run the results tests
+    election_jurisdiction_list: list, list of the election-jurisdiction pairs to test
+    report_dir: Optional[str] = None, directory to store files with reports from testing
+    file_prefix: str = "", prefix for files containing reports from testing
+    param_file: str = "run_time.ini", parameter file for Analyzer used for testing
+
+    Returns:
+         dictionary of failures (keys are jurisdiction;election strings)
+         """
 
     failures = dict()  # initialize result report
     # run pytest
@@ -909,13 +916,13 @@ def confirm_essential_info(
 
 def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> list:
     """Return list of all election-jurisdiction pairs in .ini files in the ini_path directory
-    or in any of its subdirectories. Ignores 'template.ini' If results_path is given, filters
+    or in any of its subdirectories. Ignores any '*template.ini' If results_path is given, filters
     for ini files whose results files are in the results_path directory
     """
     ej_set = set()
     for subdir, dirs, files in os.walk(ini_path):
         for f in files:
-            if (f[-4:] == ".ini") and (f != "template.ini"):
+            if (f.endswith(".ini")) and (not f.endswith("template.ini")):
                 full_path = os.path.join(subdir, f)
                 d, err = get_parameters(
                     param_file=full_path,

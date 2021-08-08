@@ -449,6 +449,15 @@ if 1:
     optional_mdl_pars = [
         "unloaded_dir",
     ]
+    req_for_combined_file_loading = [
+                "results_file",
+                "munger_list",
+                "results_download_date",
+                "results_source",
+                "results_note",
+                "secondary_source",
+                "results_short_name",
+            ]
     prep_pars = [
         "name",
         "abbreviated_name",

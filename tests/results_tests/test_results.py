@@ -1,6 +1,9 @@
 import pytest
 import pandas as pd
 import os
+from pathlib import Path
+from electiondata import munge as m
+from electiondata import juris as ju
 
 
 def test_analyzer_exists(analyzer):
@@ -31,12 +34,15 @@ def test_all_candidates_known(analyzer, election, jurisdiction,  major_subdiv_ty
 
 
 def test_contests(request,analyzer,election,jurisdiction):
-    reference_file = request.config.getoption("--reference")
     significance = request.config.getoption("--significance")
-    assert reference_file, "Specify reference results file path with --reference option to pytest"
-    assert os.path.isfile(reference_file)
+    ref = os.path.join(
+        Path(__file__).absolute().parents[0],
+        "reference_results",
+        f"{ju.system_name_from_true_name(jurisdiction)}.tsv"
+    )
+    assert os.path.isfile(ref)
     not_found,ok,wrong,significantly_wrong,sub_dir, err = analyzer.compare_to_results_file(
-        reference_file,
+        reference=ref,
         single_election=election,
         single_jurisdiction=jurisdiction,
         report_dir=analyzer.reports_and_plots_dir,

@@ -41,6 +41,12 @@ def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool)
     err = None
     db_removed = False
     # give user option to remove db
+    if dl is None:
+        err = ui.add_new_error(
+            err, "system",f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"DataLoader parameter is None"
+        )
+        return err, db_removed
     remove_db = input(f"Remove test db {dl.d['dbname']} (y/n)?\n")
 
     if remove_db == "y":
@@ -51,13 +57,6 @@ def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool)
         else:
             print(f"db not removed due to error: {err['system']}")
         # define parameters to connect to postgres db
-
-    """    # give user option to remove directory
-        remove_dir = input(f"Remove {dir_path} directory and all its contents (y/n)?\n")
-        if remove_dir == "y":
-            # remove testing data
-            os.system(f"rm -rf {dir_path}")
-    """
     return err, db_removed
 
 
@@ -111,7 +110,7 @@ def run2(
     if not test_dir:
         # set the test_dir to the results-testing subdirectory of the directory containing this file
         test_dir = os.path.join(
-            Path(__file__).parent.absolute(), "new_results_tests"
+            Path(__file__).parent.absolute(),"results_tests"
         )
 
     # name the db
@@ -119,12 +118,6 @@ def run2(
         # create unique name for test database
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         dbname = f"test_{ts}"
-
-    if load_data:
-        get_testing_data(
-            url="https://github.com/ElectionDataAnalysis/TestingData.git",
-            results_dir="TestingData",
-        )
 
     if load_data:
         try:

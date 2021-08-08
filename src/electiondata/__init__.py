@@ -995,21 +995,24 @@ class DataLoader:
         overwrite_existing: bool = False,
         load_jurisdictions: bool = True,
     ) -> (Dict[str, List[str]], Optional[dict]):
-        """Returns a dictionary of successful mungers (for each election-jurisdiction pair)
-        and errors"""
+        """
+        ini: str, path to file with initialization parameters for dataloader and secondary source
+        overwrite_existing: bool = False, if true, existing data will be deleted for each election-jurisdiction pair
+            represented in the file indicated in <ini>
+        load_jurisdictions: bool = True, if true, jurisdiction information will be loaded to database before processing
+            results data
+
+        Loads results from the file indicated in <ini> to the database
+
+        Returns:
+            Dict[str, List[str]], a dictionary of successful mungers (for each election-jurisdiction pair)
+            Optional[dict], error dictionary
+        """
         err = None
         success = dict()
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         ini_params, new_err = ui.get_parameters(
-            required_keys=[
-                "results_file",
-                "munger_list",
-                "results_download_date",
-                "results_source",
-                "results_note",
-                "secondary_source",
-                "results_short_name",
-            ],
+            required_keys=constants.req_for_combined_file_loading,
             param_file=ini,
             header="election_results",
         )
@@ -1873,7 +1876,7 @@ class JurisdictionPrepper:
         tests_dir = os.path.join(
             Path(self.d["mungers_dir"]).parents[1],
             "tests",
-            "specific_result_file_tests",
+            "obsolete_results_test_files",
         )
         juris_test_dir = os.path.join(tests_dir, self.d["system_name"])
         sample_test_dir = os.path.join(tests_dir, "20xx_test_templates")
@@ -1922,7 +1925,7 @@ class JurisdictionPrepper:
             if is_preliminary:
                 ini_replace.update({"is_preliminary=False": "is_preliminary=True"})
             create_from_template(
-                os.path.join(inis_dir, "template.ini"),
+                os.path.join(inis_dir, "single_election_jurisdiction_template.ini"),
                 new_ini_file,
                 ini_replace,
             )
@@ -3324,7 +3327,7 @@ def load_or_reload_all(
             test_dir = os.path.join(
                 Path(dataloader.d["repository_content_root"]).parent,
                 "tests",
-                "specific_result_file_tests",
+                "obsolete_results_test_files",
             )
         # get relevant election-jurisdiction pairs
         ej_pairs = ui.election_juris_list(

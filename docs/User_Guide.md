@@ -440,12 +440,29 @@ Results of the test will be reported in a file with extension `test_results`
 
 Warning: this routine tests the new data before unloading the existing data. The convention is that the test is in the `tests` subdirectory of the code repository, named for the election and jurisdiction separated by underscore (e.g. `test_Georgia_2020-General.py`). Spaces in the name of the jurisdiction or election are replaced by hyphens (e.g. `test_North-Carolina_2018-Primary.py`). If there is no appropriately test named test file, or if any of the tests fails, the unloading and reloading will fail.
 
+## Loading a file with multiple elections or jurisdictions
+Sometimes it is useful to load a single file with results from several elections or jurisdictions. For example, a secondary source may have combined results information into one file. The method `DataLoader.load_multielection_from_ini()` method allows this kind of upload. This method requires an initialization file, with all the usual required parameters except `election` and `jurisdiction`, and with the additional parameter `secondary_source`. The value of `secondary-source` should be the name of a subfolder of `src/secondary_sources` in the repository, containing files listing the elections and jurisdictions. E.g., 
+```
+[election_results]
+results_file=MEDSL/county_2018.csv
+munger_list=medsl_2018
+secondary_source=MIT-Election-Data-Science-Lab
+results_short_name=medsl_2018_county
+results_download_date=2021-07-10
+results_source=https://github.com/MEDSL/2018-elections-official/blob/master/county_2018.csv
+results_note=county-level
+```
+The method `DataLoader.load_multielection_from_ini()` takes two optional parameters: 
+ * `overwrite_existing` (default `False`): if True, will delete from database any existing results for each election-jurisdiction pair represented in the results file
+ * `load_jurisdictions` (default `False`): if True, will load or update database with the jurisdiction information (from `src/jurisdictions`) for each jurisdiction represented in the results file
+
+
 ## Testing
 Tests to ascertain that data loaded correctly are in the [tests](../tests) file tree. The repository has a full set of tests for the 2020 General Election. There are also test templates, in the [tests/20xx_test_templates](../tests/20xx_test_templates) folder. Naming and location of the tests matter, so if you are loading new data you will want to create a new test. Put the test in a directory named for the jurisdiction, and name the test `test_<jurisdiction>_<election>.py` (replacing any spaces with hyphens). For example, the test for South Carolina's 2020 General election results is [tests/South-Carolina/test_South-Carolina_2020-General.py](../tests/South-Carolina/test_South-Carolina_2020-General.py). The test template files contain instructions for customizing to a particular jurisdiction and election.
 
-The script [tests/load_and_test_all.py](../tests/load_and_test_all.py) can be used to run tests. If the directory `tests/TestingData` does not exist, the script will download files from `github.com/ElectionDataAnalysis/TestingData` before running. If `tests/TestingData` exists, the script will use the data in that directory. Data for a particular jurisdiction should be in a folder named for that jurisdiction, with hyphens replacing spaces (e.g. "District-of-Columbia")
+The script [tests/010_test_load_all.py](../tests/010_test_load_all.py) can be used to run tests. It requires a parameter file `tests/run_time.ini`.  The script will use the results files in the `results_dir` indicated in the parameter file. 
 
-For each jurisdiction subfolder of TestingData, and for each results file in that subfolder, the system will load data to a temporary database and run any properly-named tests in `tests` file tree.
+The system will create a temporary database and load all the results files from the given directory corresponding to any `*.ini` file in any subdirectory of [src/ini_files_for_results](../src/ini_files_for_results). In the process, for each election-jurisdiction pair, it will run some consistency tests, as well as comparing results in the database with reference results in a tab-separated file in [tests/results_tests/reference_results](../tests/results_tests/reference_results) named for the jurisdiction (e.g., `North-Carolina.tsv`)
 Or, the Election-jurisdiction pairs can be specified with the -e and -j flags, e.g. `load_all_from_repo.py -e '2018 General' -j 'Arkansas'` to restrict the loading and testing to just that pair.
 
 
