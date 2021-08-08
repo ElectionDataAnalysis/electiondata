@@ -839,13 +839,9 @@ def run_tests(
         # run tests
         e_system = jm.system_name_from_true_name(election)
         j_system = jm.system_name_from_true_name(juris)
-        reference_file = os.path.join(test_dir, "reference_results", f"{j_system}.tsv")
-        if not os.path.isfile(reference_file):
-            failures[f"{juris};{election}"] = f"Results reference file not found: {reference_file}"
-            continue
         cmd = f"pytest " \
-              f"--param_file='{param_file}' --dbname={dbname} --reference='{reference_file}'" \
-              f" --election='{election}' --jurisdiction='{juris}'" \
+              f" --jurisdiction='{j_system}'  --dbname={dbname} " \
+              f" --election='{e_system}' param_file='{param_file}'" \
               f" {test_file}"
         if report_dir:
             Path(report_dir).mkdir(exist_ok=True, parents=True)

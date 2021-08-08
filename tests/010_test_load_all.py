@@ -8,7 +8,8 @@ from typing import Optional
 import electiondata as eda
 from electiondata import database as db
 from electiondata import userinterface as ui
-from distutils.dir_util import copy_tree
+import inspect
+
 
 
 def io(argv) -> Optional[list]:
@@ -99,7 +100,7 @@ def get_testing_data(
 def run2(
     load_data: bool = True,
     dbname: Optional[str] = None,
-    param_file: str = "run_time.ini",
+    param_file: Optional[str] = None,
     test_dir: Optional[str] = None,
     election_jurisdiction_list: Optional[list] = None,
     rollup: bool = False,
@@ -118,6 +119,10 @@ def run2(
         # create unique name for test database
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         dbname = f"test_{ts}"
+
+    # get absolute path for run_time.ini if no param_file is given
+    if param_file is None:
+        param_file = Path("run_time.ini").absolute()
 
     if load_data:
         try:
@@ -140,8 +145,8 @@ def run2(
                     results_path="TestingData",
                 )
 
+            # load data for each election-jurisdiction pair in the list
             dl.change_db(dbname)
-
             dl.change_dir("results_dir", "TestingData")
             success, failure, err = dl.load_all(
                 move_files=False,

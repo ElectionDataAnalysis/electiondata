@@ -2,7 +2,6 @@ import pytest
 import pandas as pd
 import os
 from pathlib import Path
-from electiondata import munge as m
 from electiondata import juris as ju
 
 

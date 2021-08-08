@@ -3416,7 +3416,7 @@ def reload_juris_election(
     db.create_or_reset_db(dbname=temp_db)
 
     # load all data into temp db
-    dl.change_db(temp_db)
+    dl.change_db(temp_db, db_param_file=param_file)
     success, failure, load_err = dl.load_all(
         report_dir=report_dir,
         move_files=False,
@@ -3450,7 +3450,7 @@ def reload_juris_election(
             )
         else:
             # switch to live db
-            dl.change_db(live_db)
+            dl.change_db(live_db, db_param_file=param_file)
             # Remove existing data for juris-election pair from live db
             election_id = db.name_to_id(dl.session, "Election", election_name)
             juris_id = db.name_to_id(dl.session, "ReportingUnit", juris_name)
