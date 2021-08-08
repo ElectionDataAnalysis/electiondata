@@ -462,7 +462,7 @@ Tests to ascertain that data loaded correctly are in the [tests](../tests) file 
 
 The script [tests/010_test_load_all.py](../tests/010_test_load_all.py) can be used to run tests. It requires a parameter file `tests/run_time.ini`.  The script will use the results files in the `results_dir` indicated in the parameter file. 
 
-The system will create a temporary database and load all the results files from the given directory corresponding to any `*.ini` file in any subdirectory of [src/ini_files_for_results](../src/ini_files_for_results). In the process, for each election-jurisdiction pair, it will run some consistency tests, as well as comparing results in the database with reference results in a tab-separated file in [tests/results_tests/reference_results](../tests/results_tests/reference_results) named for the jurisdiction (e.g., `North-Carolina.tsv`)
+The system will create a temporary database and load all the results files from the given directory corresponding to any `*.ini` file in any subdirectory of [src/ini_files_for_results](../src/ini_files_for_results). In the process, for each election-jurisdiction pair, it will run some consistency tests, as well as comparing results in the database with reference results in a tab-separated file in [src/reference_results](../src/reference_results) named for the jurisdiction (e.g., `North-Carolina.tsv`)
 Or, the Election-jurisdiction pairs can be specified with the -e and -j flags, e.g. `load_all_from_repo.py -e '2018 General' -j 'Arkansas'` to restrict the loading and testing to just that pair.
 
 
