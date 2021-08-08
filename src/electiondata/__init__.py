@@ -5,7 +5,7 @@ from electiondata import (
     juris as jm,
     userinterface as ui,
     munge as m,
-    analyze as a,
+    analyze as an,
     nist,
     visualize as viz,
     otherdata as exd,
@@ -275,6 +275,9 @@ class DataLoader:
         self.session = None  # will be set in connect_to_db
         self.connect_to_db(err=err, dbname=dbname, db_param_file=param_file)
 
+        # create analyzer with same db
+        self.analyzer = Analyzer(dbname=dbname, param_file=param_file)
+
     def connect_to_db(
         self,
         dbname: Optional[str] = None,
@@ -301,11 +304,25 @@ class DataLoader:
             return
 
     def change_db(self, new_db_name: str, db_param_file: str = "run_time.ini"):
-        """Changes the database into which the data is loaded, including reconnecting"""
+        """
+        Input:
+            new_db_name: str, name for new database
+            db_param_file: str = "run_time.ini", file with parameters for connecting to db
+
+        Changes self.session to connect to a different results database (which is created if necessary)
+        Changes self.analyzer.session to connect to the new database
+        """
         self.d["dbname"] = new_db_name
         self.session.close()
         self.connect_to_db(dbname=new_db_name, db_param_file=db_param_file)
         db.create_db_if_not_ok(dbname=new_db_name)
+
+        # create new session for analyzer
+        self.analyzer.session.close()
+        # create session
+        eng, _ = db.sql_alchemy_connect(db_param_file,dbname=new_db_name)
+        Session = sessionmaker(bind=eng)
+        self.session = Session()
         return
 
     def close_and_erase(self) -> Optional[dict]:
@@ -379,10 +396,23 @@ class DataLoader:
         juris_true_name: str,
         rollup: bool = False,
         report_missing_files: bool = False,
+        status: Optional[str] = None,
     ) -> (List[str], List[str], str, Optional[dict]):
-        """Looks within ini_files_for_results/<jurisdiction> for
+        """
+        Inputs:
+            election: str,
+            juris_true_name: str,
+            rollup: bool = False, if true, roll up results to major subdivisions before loading to db
+            report_missing_files: bool = False, if true, report any files referenced by .ini files but not found in
+                results directory
+            status: Optional[str] = None, if given, use only reference results of that particular status for testing
+
+
+        Looks within ini_files_for_results/<jurisdiction> for
         all ini files matching  given election and jurisdiction.
         For each, attempts to load file if it exists; reports missing data files.
+        If files load successfully without fatal error, runs tests on the loaded results
+            and reports any failures to error report
         Returns
         * list of successfully-loaded files,
         * list of files that failed to load
@@ -454,6 +484,10 @@ class DataLoader:
                             ini,
                             f"Ini in subdirectory {ini_subdir} has non-matching jurisdiction: {params['jurisdiction']}",
                         )
+        # if load is successful, test the db's data for this ej-pair and add any failures to err
+        if not ui.fatal_error(err):
+            new_err = self.analyzer.test_loaded_results(election, juris_true_name, juris_system_name, status=status)
+            err = ui.consolidate_errors([err, new_err])
         return success_by_ini, failure_by_ini, latest_download_date, err
 
     def load_all(
@@ -466,7 +500,19 @@ class DataLoader:
         rollup: bool = False,
         report_missing_files: bool = False,
     ) -> (Dict[str, List[str]], Dict[str, List[str]], Optional[dict]):
-        """Processes all results (or all results corresponding to pairs in
+        """
+        Inputs:
+            report_dir: Optional[str] = None, directory for reports
+            load_jurisdictions: bool = True, if true, load jurisdiction info to db before loading results
+            move_files: bool = True, if true, move files to self.d["archive_dir"] after successful loading
+            election_jurisdiction_list: Optional[List[Tuple[str, str]]] = None, if given, processes only files for
+                ej_pairs in the list
+            election_list: Optional[List[str]] = None,
+            rollup: bool = False, if True, loads results rolled up to major subdivision
+            report_missing_files: bool = False, if True, reports files referenced in .ini files
+                but not found in results directory
+
+        Processes all results (or all results corresponding to pairs in
         ej_list if given) in DataLoader's results directory using
         .ini files from repository.
         If load is successful for all files for a single election-jurisdicction pair,
@@ -477,7 +523,13 @@ class DataLoader:
         successfully-loaded files (by election-jurisdiction pair).
         (Note: errors initializing loading process (e.g., results file not found) do *not* generate
         <success> = False, though those errors are reported in <err>
-        If <archive> is true, archive the files"""
+        If <archive> is true, archive the files
+
+        Returns:
+            Dict[str, List[str]], for each e-j pair, a list of files loading successfully
+            Dict[str, List[str]], for each e-j pair, a list of files that were attempted but failed to load
+            Optional[dict], error dictionary
+            """
         # initialize
         err = None
         success = dict()
@@ -2081,6 +2133,59 @@ class Analyzer:
         self.session = Session()
 
     # testing methods
+    def test_loaded_results(
+            self, election: str,
+            juris_true_name: str,
+            juris_system_name: str,
+            status: Optional[str] = None,
+    ) -> Optional[dict]:
+        """
+        election: str,
+        juris_true_name: str,
+        juris_system_name: str,
+        status: Optional[str] = None, if given, checks only the reference results with that same status
+
+        Reports information from tests to self.reports_and_plots.
+        Returns:
+            Optional[dict], error dictionary with only "warn-test" and no "test" keys (since calling function may or
+                may not view failing tests as fatal
+            """
+        err = None
+        major_subdiv_type = db.get_major_subdiv_type(
+            self.session,juris_true_name, repo_content_root=self.repository_content_root
+        )
+
+        # consistency tests
+        if not self.data_exists(self,election,juris_true_name):
+            err = ui.add_new_error(
+                err, "warn-test", f"Election: {election}; Jurisdiction: {juris_true_name}",
+                f"\nNo data found"
+            )
+        if not self.check_totals_match_vote_types(election,juris_true_name,sub_unit_type=major_subdiv_type):
+            err = ui.add_new_error(
+                err, "warn-test", f"Election: {election}; Jurisdiction: {juris_true_name}",
+                f"\nSum of other vote types does not always match total by {major_subdiv_type}"
+            )
+        # report contests with unknown candidates
+        bad_contests = self.get_contest_with_unknown_candidates(election,juris_true_name, report_dir=self.reports_and_plots_dir)
+        if bad_contests:
+            bad_str = "\n".join(bad_contests)
+            err = ui.add_new_error(
+                err, "warn-test", f"Election: {election}; Jurisdiction: {juris_true_name}",
+                f"\nSome contests have at least one unknown candidate:\n{bad_str}"
+            )
+
+        # test against reference result totals
+        reference = os.path.join(self.repository_content_root, "reference_results", f"{juris_system_name}.tsv")
+        not_found,ok,wrong,significantly_wrong,sub_dir,new_err = self.compare_to_results_file(
+            reference,
+            single_election=election, single_jurisdiction=juris_true_name,
+            report_dir=self.reports_and_plots_dir,status=status,
+        )
+        err = ui.consolidate_errors([err, new_err])
+
+        return err
+
     def data_exists(
             self,
             election: str,
@@ -2215,8 +2320,15 @@ class Analyzer:
         return True
 
     def get_contest_with_unknown_candidates(self,
-                                            election: str,jurisdiction: str
+                                            election: str,jurisdiction: str,report_dir: Optional[str] = None,
                                             ) -> List[str]:
+        """
+        election: str,
+        jurisdiction: str,
+        report_dir: Optional[str] = None, if given, reports bad contests to a file
+
+        Returns list of contests with unknown candidates
+        """
         election_id = db.name_to_id(self.session,"Election",election)
         if not election_id:
             return [f"Election {election} not found"]
@@ -2225,6 +2337,16 @@ class Analyzer:
             return [f"Jurisdiction {jurisdiction} not found"]
 
         contests = db.get_contest_with_unknown(self.session,election_id,jurisdiction_id)
+        if report_dir:
+            ts = datetime.datetime.now().strftime("%m%d_%H%M")
+            subdir = os.path.join(report_dir,f"bad_contests_{ts}")
+            Path(subdir).mkdir(exist_ok=True,parents=True)
+            election_system_name = jm.system_name_from_true_name(election)
+            juris_system_name = jm.system_name_from_true_name(jurisdiction)
+            open(os.path.join(
+                subdir, f"{election_system_name}_{juris_system_name}.tsv"), "w"
+            ).write("\n".join(contests))
+
         return contests
 
     # visualization methods
@@ -2279,7 +2401,7 @@ class Analyzer:
         h_count = h_count.split(" - ")[0].strip()
         v_count = v_count.split(" - ")[0].strip()
 
-        agg_results = a.create_scatter(
+        agg_results = an.create_scatter(
             self.session,
             jurisdiction_id,
             subdivision_type,
@@ -2315,7 +2437,7 @@ class Analyzer:
         # down from the jurisdiction
         subdivision_type = db.get_jurisdiction_hierarchy(self.session, jurisdiction_id)
         # bar chart always at one level below top reporting unit
-        agg_results = a.create_bar(
+        agg_results = an.create_bar(
             self.session,
             jurisdiction_id,
             subdivision_type,
@@ -2354,7 +2476,7 @@ class Analyzer:
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         subdivision_type = db.get_jurisdiction_hierarchy(self.session, jurisdiction_id)
         # bar chart always at one level below top reporting unit
-        agg_results = a.create_bar(
+        agg_results = an.create_bar(
             self.session,
             jurisdiction_id,
             subdivision_type,
@@ -2374,7 +2496,7 @@ class Analyzer:
         if sub_unit_id is None:
             sub_rutype_othertext = sub_unit
         election_id = db.name_to_id(self.session, "Election", election)
-        err = a.create_rollup(
+        err = an.create_rollup(
             self.session,
             self.reports_and_plots_dir,
             jurisdiction_id=jurisdiction_id,
@@ -2402,22 +2524,22 @@ class Analyzer:
 
         election_report = dict()
 
-        election_report["Contest"] = a.nist_candidate_contest(
+        election_report["Contest"] = an.nist_candidate_contest(
             self.session, election_id, jurisdiction_id
         )
-        election_report["GpUnit"] = a.nist_reporting_unit(
+        election_report["GpUnit"] = an.nist_reporting_unit(
             self.session, election_id, jurisdiction_id
         )
-        election_report["Party"] = a.nist_party(
+        election_report["Party"] = an.nist_party(
             self.session, election_id, jurisdiction_id
         )
-        election_report["Election"] = a.nist_election(
+        election_report["Election"] = an.nist_election(
             self.session, election_id, jurisdiction_id
         )
-        election_report["Office"] = a.nist_office(
+        election_report["Office"] = an.nist_office(
             self.session, election_id, jurisdiction_id
         )
-        election_report["Candidate"] = a.nist_candidate(
+        election_report["Candidate"] = an.nist_candidate(
             self.session, election_id, jurisdiction_id
         )
 
@@ -2855,6 +2977,8 @@ class Analyzer:
         status: Optional[str] = None, if specified, restrict results to those with
             specified status in Status column of reference file
 
+        if report_dir given, exports results to that directory
+
         Returns:
         pd.DataFrame, reference results not found
         pd.DataFrame, reference results matched in db
@@ -2878,7 +3002,7 @@ class Analyzer:
             if single_jurisdiction:
                 ref = m.add_constant_column(ref, "Jurisdiction", single_jurisdiction) 
             else:
-                err = ui.add_new_error(err,"file",Path(reference).name,
+                err = ui.add_new_error(err,"warn-test",Path(reference).name,
                                        "No Jurisdiction column, and no single jurisdiction specified"
                                        )
 
@@ -2893,7 +3017,7 @@ class Analyzer:
             if single_election:
                 ref = m.add_constant_column(ref, "Election", single_election) 
             else:
-                err = ui.add_new_error(err,"file",Path(reference).name,
+                err = ui.add_new_error(err,"warn-test",Path(reference).name,
                                        "No Election column, and no single election specified"
                                        )
 
@@ -2902,12 +3026,12 @@ class Analyzer:
             if "Status" in ref.columns:
                 ref = ref[ref.Status == status]
             else:
-                err = ui.add_new_error(err, "file", Path(reference).name,
+                err = ui.add_new_error(err, "warn-test", Path(reference).name,
                                        f"Status {status} was specified, but there is no 'Status' column"
                                        )
         if ref.empty:
-            err = ui.add_new_error(err, "file", Path(reference).name,
-                                   f"No relevant results found in file.\n"
+            err = ui.add_new_error(err, "warn-test", Path(reference).name,
+                                   f"No relevant results found in reference results file.\n"
                                    )
         if err:
             return pd.DataFrame(), pd.DataFrame(), pd.DataFrame(), None, sub_dir, err
@@ -2921,7 +3045,7 @@ class Analyzer:
         # change Count column to integer
         ref, clean_err_df = m.clean_count_cols(ref,["Count"])
         if not clean_err_df.empty:
-            err = ui.add_new_error(err, "file", Path(reference).name,
+            err = ui.add_new_error(err, "warn-test", Path(reference).name,
                                    f"Some counts could not be interpreted as integers:\n{clean_err_df}",
                                    )
 
@@ -3148,7 +3272,7 @@ def get_contest_with_unknown_candidates(
     an = Analyzer(dbname=dbname, param_file=param_file)
     if not an:
         return [f"Failure to connect to database"]
-    return an.get_contest_with_unknown_candidates(election, jurisdiction)
+    return an.get_contest_with_unknown_candidates(election, jurisdiction, report_dir=an.reports_and_plots_dir)
 
 
 def load_results_df(
@@ -3216,7 +3340,7 @@ def load_results_df(
 
     # rollup_dataframe results if requested
     if rollup:
-        df, new_err = a.rollup_dataframe(
+        df, new_err = an.rollup_dataframe(
             session, df, "Count", "ReportingUnit_Id", "ReportingUnit_Id", rollup_rut
         )
         if new_err:

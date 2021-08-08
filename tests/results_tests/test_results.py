@@ -36,7 +36,7 @@ def test_contests(request,analyzer,election,jurisdiction):
     significance = request.config.getoption("--significance")
     ref = os.path.join(
         Path(__file__).absolute().parents[0],
-        "reference_results",
+        "../../src/reference_results",
         f"{ju.system_name_from_true_name(jurisdiction)}.tsv"
     )
     assert os.path.isfile(ref)
