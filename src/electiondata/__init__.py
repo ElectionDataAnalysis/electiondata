@@ -321,9 +321,7 @@ class DataLoader:
 
         # create new session for analyzer
         self.analyzer.session.close()
-        eng, _ = db.sql_alchemy_connect(db_param_file,dbname=new_db_name)
-        Session = sessionmaker(bind=eng)
-        self.session = Session()
+        self.analyzer.session = self.session
         return
 
     def close_and_erase(self) -> Optional[dict]:
@@ -2339,7 +2337,7 @@ class Analyzer:
             return [f"Jurisdiction {jurisdiction} not found"]
 
         contests = db.get_contest_with_unknown(self.session,election_id,jurisdiction_id)
-        if report_dir:
+        if contests and report_dir:
             ts = datetime.datetime.now().strftime("%m%d_%H%M")
             subdir = os.path.join(report_dir,f"bad_contests_{ts}")
             Path(subdir).mkdir(exist_ok=True,parents=True)
@@ -3559,9 +3557,9 @@ def reload_juris_election(
         return err
 
     # if any tests failed
-    elif err["warn-test"]:
+    elif err and ("warn-test" in err.keys()) and err["warn-test"]:
         print(
-            f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests:\n{failed_tests}"
+            f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests."
         )
     else:
         # switch to live db
@@ -3587,7 +3585,7 @@ def reload_juris_election(
             move_files=move_files,
         )
         if success:
-          if "warn-test" in err.keys():
+          if err and ("warn-test" in err.keys()) and err["warn-test"]:
                 err = ui.add_new_error(
                     err,
                     "database",
