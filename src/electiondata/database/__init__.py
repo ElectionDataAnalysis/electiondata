@@ -325,9 +325,11 @@ def create_or_reset_db(
 
 
 def sql_alchemy_connect(
-    param_file: str = "run_time.ini", dbname: Optional[str] = None
+    param_file: Optional[str] = None, dbname: Optional[str] = None
 ) -> (sqlalchemy.engine, Optional[dict]):
     """Returns an engine and a metadata object"""
+    if param_file is None:
+        param_file = "run_time.ini"
     params, err = ui.get_parameters(
         required_keys=db_pars, param_file=param_file, header="postgresql"
     )

@@ -282,8 +282,10 @@ class DataLoader:
         self,
         dbname: Optional[str] = None,
         err: Optional[dict] = None,
-        db_param_file: str = "run_time.ini",
+        db_param_file: Optional[str] = None,
     ):
+        if not db_param_file:
+            db_param_file = "run_time.ini"
         new_err = None
         try:
             self.engine, new_err = db.sql_alchemy_connect(
@@ -315,11 +317,10 @@ class DataLoader:
         self.d["dbname"] = new_db_name
         self.session.close()
         self.connect_to_db(dbname=new_db_name, db_param_file=db_param_file)
-        db.create_db_if_not_ok(dbname=new_db_name)
+        db.create_db_if_not_ok(dbname=new_db_name, db_param_file=db_param_file)
 
         # create new session for analyzer
         self.analyzer.session.close()
-        # create session
         eng, _ = db.sql_alchemy_connect(db_param_file,dbname=new_db_name)
         Session = sessionmaker(bind=eng)
         self.session = Session()
@@ -484,7 +485,12 @@ class DataLoader:
                             ini,
                             f"Ini in subdirectory {ini_subdir} has non-matching jurisdiction: {params['jurisdiction']}",
                         )
-        # if load is successful, test the db's data for this ej-pair and add any failures to err
+        # add totals if necessary
+        add_err = self.add_totals_if_missing(election,juris_true_name)
+        if add_err:
+            err = ui.consolidate_errors([err,add_err])
+
+        # if load successful to this point, test the db's data for this ej-pair and add any failures to err
         if not ui.fatal_error(err):
             new_err = self.analyzer.test_loaded_results(election, juris_true_name, juris_system_name, status=status)
             err = ui.consolidate_errors([err, new_err])
@@ -633,10 +639,6 @@ class DataLoader:
                 success[f"{election};{jurisdiction}"] = success_list
                 failure[f"{election};{jurisdiction}"] = failure_list
 
-                # if all files loaded successfully
-                if not failure_list:
-                    # add totals
-                    self.add_totals_if_missing(election, jurisdiction)
 
             if move_files:
                 # if all existing files referenced in any results.ini
@@ -2156,7 +2158,7 @@ class Analyzer:
         )
 
         # consistency tests
-        if not self.data_exists(self,election,juris_true_name):
+        if not self.data_exists(election,juris_true_name):
             err = ui.add_new_error(
                 err, "warn-test", f"Election: {election}; Jurisdiction: {juris_true_name}",
                 f"\nNo data found"
@@ -3549,73 +3551,52 @@ def reload_juris_election(
     )
     if load_err:
         err = ui.consolidate_errors([err, load_err])
+    # if any of the data failed to loade
     if failure:
         # cleanup temp database
         if db_params["dbname"] == temp_db:
             db.remove_database(db_params)
         return err
 
-    add_err = dl.add_totals_if_missing(election_name, juris_name)
-    if add_err:
-        err = ui.consolidate_errors([err, add_err])
-    else:
-        # run test files on temp db
-        failed_tests = ui.run_tests(
-            test_dir,
-            dl.d["dbname"],
-            election_jurisdiction_list=[(election_name, juris_name)],
-            report_dir=report_dir,
-            file_prefix="temp_db_",
-            param_file=param_file
+    # if any tests failed
+    elif err["warn-test"]:
+        print(
+            f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests:\n{failed_tests}"
         )
-        if failed_tests:
-            print(
-                f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests:\n{failed_tests}"
-            )
-        else:
-            # switch to live db
-            dl.change_db(live_db, db_param_file=param_file)
-            # Remove existing data for juris-election pair from live db
-            election_id = db.name_to_id(dl.session, "Election", election_name)
-            juris_id = db.name_to_id(dl.session, "ReportingUnit", juris_name)
-            if election_id and juris_id:
-                err_str = dl.remove_data(election_id, juris_id)
-                if err_str:
-                    err = ui.add_new_error(
-                        err,
-                        "warn-database",
-                        f"{dl.session.bind.url.database}",
-                        f"Error removing data: {err_str}",
-                    )
-
-            # Load new data into live db (and move successful to archive)
-            success, failure, new_err = dl.load_all(
-                report_dir=report_dir,
-                rollup=rollup,
-                election_jurisdiction_list=[(election_name, juris_name)],
-                move_files=move_files,
-            )
-            if success:
-                # run tests on live db
-                live_failed_tests = ui.run_tests(
-                    test_dir,
-                    dl.d["dbname"],
-                    election_jurisdiction_list=[(election_name, juris_name)],
-                    report_dir=report_dir,
-                    file_prefix="live_db_",
-                    param_file=param_file
+    else:
+        # switch to live db
+        dl.change_db(live_db, db_param_file=param_file)
+        # Remove existing data for juris-election pair from live db
+        election_id = db.name_to_id(dl.session, "Election", election_name)
+        juris_id = db.name_to_id(dl.session, "ReportingUnit", juris_name)
+        if election_id and juris_id:
+            err_str = dl.remove_data(election_id, juris_id)
+            if err_str:
+                err = ui.add_new_error(
+                    err,
+                    "warn-database",
+                    f"{dl.session.bind.url.database}",
+                    f"Error removing data: {err_str}",
                 )
 
-                if live_failed_tests:
-                    err = ui.add_new_error(
-                        err,
-                        "database",
-                        f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                        f"Data loaded successfully to test db, so old data was removed from live db.\n"
-                        f"But new data loaded to live db failed some tests:\n{live_failed_tests}",
-                    )
-            else:
-                err = ui.consolidate_errors([err, new_err])
+        # Load new data into live db (and move successful to archive)
+        success, failure, new_err = dl.load_all(
+            report_dir=report_dir,
+            rollup=rollup,
+            election_jurisdiction_list=[(election_name, juris_name)],
+            move_files=move_files,
+        )
+        if success:
+          if "warn-test" in err.keys():
+                err = ui.add_new_error(
+                    err,
+                    "database",
+                    f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                    f"Data loaded successfully to test db and passed tests, so old data was removed from live db.\n"
+                    f"But new data loaded to live db failed some tests.",
+                )
+        else:
+            err = ui.consolidate_errors([err, new_err])
 
     # cleanup temp database
     if db_params["dbname"] == temp_db:
