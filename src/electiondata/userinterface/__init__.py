@@ -692,7 +692,7 @@ def report(
 
                     # write info to a .errors or .errors file named for the name_key <nk>
                     out_path = os.path.join(
-                        output_location, f"{file_prefix}_{nk_name}.errors"
+                        output_location, f"{file_prefix}_{et}_{nk_name}.errors"
                     )
                     with open(out_path, "a") as f:
                         f.write(out_str)
@@ -712,11 +712,9 @@ def report(
                 )
 
                 # write output
-                # get timestamp
-                ts = datetime.datetime.now().strftime("%m%d_%H%M")
                 # write info to a .errors or .errors file named for the name_key <nk>
                 out_path = os.path.join(
-                    output_location, f"{file_prefix}{nk_name}.warnings"
+                    output_location, f"{file_prefix}_{et}_{nk_name}.warnings"
                 )
                 with open(out_path, "a") as f:
                     f.write(out_str)

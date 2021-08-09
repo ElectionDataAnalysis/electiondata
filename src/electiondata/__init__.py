@@ -503,7 +503,7 @@ class DataLoader:
         election_list: Optional[List[str]] = None,
         rollup: bool = False,
         report_missing_files: bool = False,
-    ) -> (Dict[str, List[str]], Dict[str, List[str]], Optional[dict]):
+    ) -> (Dict[str, List[str]], Dict[str, List[str]], Dict[str, bool], Optional[dict]):
         """
         Inputs:
             report_dir: Optional[str] = None, directory for reports
@@ -532,12 +532,14 @@ class DataLoader:
         Returns:
             Dict[str, List[str]], for each e-j pair, a list of files loading successfully
             Dict[str, List[str]], for each e-j pair, a list of files that were attempted but failed to load
+            Dict[str, bool], for each e-j pair, a boolean (True if all tests passed; otherwise False)
             Optional[dict], error dictionary
             """
         # initialize
         err = None
-        success = dict()
-        failure = dict()
+        successfully_loaded = dict()
+        failed_to_load = dict()
+        all_tests_passed = dict()
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         if not report_dir:
             report_dir = os.path.join(self.d["reports_and_plots_dir"], f"load_all_{ts}")
@@ -587,7 +589,7 @@ class DataLoader:
                             if j != juris
                         ]
                         # add juris to failure list
-                        failure[juris] = "Jurisdiction files did not load. See .errors"
+                        failed_to_load[juris] = "Jurisdiction files did not load. See .errors"
                         err = ui.report(
                             err,
                             report_dir,
@@ -632,11 +634,13 @@ class DataLoader:
                     rollup=rollup,
                     report_missing_files=report_missing_files,
                 )
+                all_tests_passed[f"{election};{jurisdiction}"] = True
                 if new_err:
                     juris_err = ui.consolidate_errors([juris_err, new_err])
-                success[f"{election};{jurisdiction}"] = success_list
-                failure[f"{election};{jurisdiction}"] = failure_list
-
+                    if ("warn-test" in new_err.keys()) and new_err["warn-test"]:
+                        all_tests_passed[f"{election};{jurisdiction}"] = False
+                successfully_loaded[f"{election};{jurisdiction}"] = success_list
+                failed_to_load[f"{election};{jurisdiction}"] = failure_list
 
             if move_files:
                 # if all existing files referenced in any results.ini
@@ -677,12 +681,12 @@ class DataLoader:
             )
 
         # report remaining errors
-        ui.report(err, report_dir, file_prefix="system")
+        ui.report(err, report_dir, file_prefix="system_")
 
         # keep all election-juris pairs in success report, but remove empty failure reports
-        failure = {k: v for k, v in failure.items() if v}
+        failed_to_load = {k: v for k, v in failed_to_load.items() if v}
 
-        return success, failure, err
+        return successfully_loaded, failed_to_load, all_tests_passed, err
 
     def strip_dates_from_results_folders(self) -> Dict[str, str]:
         """some loading routines add date suffixes to folders after loading.
@@ -3108,6 +3112,20 @@ class Analyzer:
                     report_str = f"{report_str}\n{op}: {eval(op)}"
             open(os.path.join(sub_dir, "_parameters.txt"), "w").write(report_str)
 
+            if not wrong.empty:
+                wrong_str = f"\nSome database contest results did not match reference results. " \
+                            f"For details see {sub_dir}"
+                err = ui.add_new_error(
+                    err,"warn-test",Path(reference).name,
+                    wrong_str,
+                )
+        # if no report_dir, but some results are wrong
+        elif not wrong.empty:
+            wrong_str = f"\nSome database contest results did not match reference results.\n{wrong.to_string()}"
+            err = ui.add_new_error(
+                err,"warn-test",Path(reference).name,
+                wrong_str,
+            )
         return not_found_in_db, ok, wrong, significantly_wrong, sub_dir, err
 
 
@@ -3433,7 +3451,6 @@ def create_from_template(
 
 
 def load_or_reload_all(
-    test_dir: Optional[str] = None,
     rollup: bool = False,
     dbname: Optional[str] = None,
     param_file: Optional[str] = None,
@@ -3446,13 +3463,6 @@ def load_or_reload_all(
         error_and_warning_dir = os.path.join(
             dataloader.d["reports_and_plots_dir"], f"load_or_reload_all_{ts}"
         )
-        # if no test directory given, use tests from repo
-        if not test_dir:
-            test_dir = os.path.join(
-                Path(dataloader.d["repository_content_root"]).parent,
-                "tests",
-                "obsolete_results_test_files",
-            )
         # get relevant election-jurisdiction pairs
         ej_pairs = ui.election_juris_list(
             dataloader.d["ini_dir"], results_path=dataloader.d["results_dir"]
@@ -3465,7 +3475,6 @@ def load_or_reload_all(
                 new_err = reload_juris_election(
                     jurisdiction,
                     election,
-                    test_dir,
                     error_and_warning_dir,
                     rollup=rollup,
                     dbname=dbname,
@@ -3482,7 +3491,7 @@ def load_or_reload_all(
                 "No results had corresponding file in ini_files_for_results",
             )
         # report errors to file
-        err = ui.report(err, error_and_warning_dir, file_prefix="loading")
+        err = ui.report(err, error_and_warning_dir, file_prefix="loading_")
     else:
         current_directory = os.getcwd()
         print(
@@ -3506,7 +3515,6 @@ def test_and_load_multifile(
 def reload_juris_election(
     juris_name: str,
     election_name: str,
-    test_dir: str,
     report_dir,
     rollup: bool = False,
     dbname: Optional[str] = None,
@@ -3541,7 +3549,7 @@ def reload_juris_election(
 
     # load all data into temp db
     dl.change_db(temp_db, db_param_file=param_file)
-    success, failure, load_err = dl.load_all(
+    success, failure, all_tests_passed, load_err = dl.load_all(
         report_dir=report_dir,
         move_files=False,
         rollup=rollup,
@@ -3557,7 +3565,7 @@ def reload_juris_election(
         return err
 
     # if any tests failed
-    elif err and ("warn-test" in err.keys()) and err["warn-test"]:
+    elif not all_tests_passed[f"{election_name};{juris_name}"]:
         print(
             f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests."
         )
@@ -3578,14 +3586,15 @@ def reload_juris_election(
                 )
 
         # Load new data into live db (and move successful to archive)
-        success, failure, new_err = dl.load_all(
+        success, failure, all_tests_passed, new_err = dl.load_all(
             report_dir=report_dir,
             rollup=rollup,
             election_jurisdiction_list=[(election_name, juris_name)],
             move_files=move_files,
         )
         if success:
-          if err and ("warn-test" in err.keys()) and err["warn-test"]:
+          if not all_tests_passed[f"{election_name};{juris_name}"]:
+              # this should never happen, since upload was just tested. Still...
                 err = ui.add_new_error(
                     err,
                     "database",

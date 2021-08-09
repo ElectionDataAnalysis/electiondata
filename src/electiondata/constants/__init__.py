@@ -551,20 +551,7 @@ if 1:
 
 # reporting
 if 1:
-    juris_load_report_keys = [
-        "munger",
-        "warn-munger",
-        "jurisdiction",
-        "warn-jurisdiction",
-        "file",
-        "warn-file",
-        "ini",
-        "warn-ini",
-        "warn-database",
-        "database",
-        "warn-dictionary",
-        "dictionary",
-    ]
+    juris_load_report_keys = ['database', 'dictionary', 'file', 'ini', 'jurisdiction', 'munger', 'warn-database', 'warn-dictionary', 'warn-file', 'warn-ini', 'warn-jurisdiction', 'warn-munger', 'warn-test']
 # regex patterns
 if 1:
     brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")
