@@ -457,15 +457,6 @@ The method `DataLoader.load_multielection_from_ini()` takes two optional paramet
  * `load_jurisdictions` (default `False`): if True, will load or update database with the jurisdiction information (from `src/jurisdictions`) for each jurisdiction represented in the results file
 
 
-## Testing
-Tests to ascertain that data loaded correctly are in the [tests](../tests) file tree. The repository has a full set of tests for the 2020 General Election. There are also test templates, in the [tests/20xx_test_templates](../tests/20xx_test_templates) folder. Naming and location of the tests matter, so if you are loading new data you will want to create a new test. Put the test in a directory named for the jurisdiction, and name the test `test_<jurisdiction>_<election>.py` (replacing any spaces with hyphens). For example, the test for South Carolina's 2020 General election results is [tests/South-Carolina/test_South-Carolina_2020-General.py](../tests/South-Carolina/test_South-Carolina_2020-General.py). The test template files contain instructions for customizing to a particular jurisdiction and election.
-
-The script [tests/010_test_load_all.py](../tests/010_test_load_all.py) can be used to run tests. It requires a parameter file `tests/run_time.ini`.  The script will use the results files in the `results_dir` indicated in the parameter file. 
-
-The system will create a temporary database and load all the results files from the given directory corresponding to any `*.ini` file in any subdirectory of [src/ini_files_for_results](../src/ini_files_for_results). In the process, for each election-jurisdiction pair, it will run some consistency tests, as well as comparing results in the database with reference results in a tab-separated file in [src/reference_results](../src/reference_results) named for the jurisdiction (e.g., `North-Carolina.tsv`)
-Or, the Election-jurisdiction pairs can be specified with the -e and -j flags, e.g. `load_all_from_repo.py -e '2018 General' -j 'Arkansas'` to restrict the loading and testing to just that pair.
-
-
 ## Miscellaneous helpful hints
 ### Required Conventions
 For ReportingUnits, the naming convention is to list as much of the composing information as possible in the name of the element, using `;` as a separator. E.g., 

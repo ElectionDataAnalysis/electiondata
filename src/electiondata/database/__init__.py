@@ -52,12 +52,29 @@ def get_database_names(con: psycopg2.extensions.connection):
     return names
 
 
-def remove_database(params: dict) -> Optional[dict]:
+def remove_database(
+        db_params: Optional[Dict[str,str]] = None,
+        db_param_file: Optional[str] = None,
+        dbname: Optional[str] = None
+) -> Optional[dict]:
     # initialize error dictionary
     db_err = None
 
+    # if no db_params are given, use those in the param_file;
+    if not db_params:
+        # if no param_file given,try "run_time.ini"
+        if not db_param_file:
+            db_param_file = "run_time.ini"
+        db_params, param_err = ui.get_parameters(
+            required_keys=db_pars, param_file=db_param_file, header="postgresql"
+        )
+        if param_err:
+            db_err = ui.consolidate_errors([db_err, param_err])
+
+    if dbname:
+        db_params["dbname"] = dbname
     # connect to postgres, not to the target database
-    postgres_params = params.copy()
+    postgres_params = db_params.copy()
     postgres_params["dbname"] = "postgres"
     try:
         with psycopg2.connect(**postgres_params) as conn:
@@ -71,11 +88,11 @@ def remove_database(params: dict) -> Optional[dict]:
                     WHERE pg_stat_activity.datname = %s 
                     AND pid <> pg_backend_pid();"""
                 )
-                cur.execute(q, (params["dbname"],))
+                cur.execute(q,(db_params["dbname"],))
 
                 # drop database
                 q = sql.SQL("DROP DATABASE IF EXISTS {dbname}").format(
-                    dbname=sql.Identifier(params["dbname"])
+                    dbname=sql.Identifier(db_params["dbname"])
                 )
                 cur.execute(q)
     except Exception as e:
@@ -83,7 +100,7 @@ def remove_database(params: dict) -> Optional[dict]:
             db_err,
             "system",
             "database.remove_database",
-            f"Error dropping database {params}:\n{e}",
+            f"Error dropping database {db_params}:\n{e}",
         )
 
     return db_err
@@ -200,7 +217,9 @@ def append_to_composing_reporting_unit_join(
 
 
 def test_connection_and_tables(
-    db_param_file: str = "run_time.ini", dbname: str = None
+        db_params: Optional[Dict[str,str]] = None,
+        db_param_file: Optional[str] = None,
+        dbname: Optional[str] = None,
 ) -> (bool, Optional[dict]):
     """Check for DB and relevant tables; if they don't exist, return
     error message"""
@@ -234,7 +253,7 @@ def test_connection_and_tables(
 
     # Look for tables
     try:
-        engine, new_err = sql_alchemy_connect(param_file=db_param_file, dbname=dbname)
+        engine, new_err = sql_alchemy_connect(db_params=db_params,db_param_file=db_param_file,dbname=dbname)
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             engine.dispose()
@@ -263,13 +282,79 @@ def test_connection_and_tables(
         return False, err
     # if no errors found, return True
     return True, err
+# TODO move to more appropriate module?
+
+
+def append_to_composing_reporting_unit_join(
+    engine: sqlalchemy.engine, ru: pd.DataFrame, error_type, error_name
+) -> Optional[dict]:
+    """<ru> is a dframe of reporting units, with cdf internal name in column 'Name'.
+    cdf internal name indicates nesting via semicolons `;`.
+    This routine calculates the nesting relationships from the Names and uploads to db.
+    Returns the *all* composing-reporting-unit-join data from the db.
+    By convention, a ReportingUnit is its own ancestor (ancestor_0).
+    NB: name Child/Parent is misleading. It's really Descendent/Ancestor"""
+    working = ru.copy()
+    err = None
+    if not working.empty:
+        working["split"] = working["Name"].apply(lambda x: x.split(";"))
+        working["length"] = working["split"].apply(len)
+
+        # pull ReportingUnit to get ids matched to names
+        ru_cdf = pd.read_sql_table("ReportingUnit", engine, index_col=None)
+        ru_static = working.copy()
+
+        # add db Id column to ru_static, if it's not already there
+        if "Id" not in working.columns:
+            ru_static = ru_static.merge(ru_cdf[["Name", "Id"]], on="Name", how="left")
+
+        # create a list of rows to append to the ComposingReportingUnitJoin element
+        cruj_dframe_list = []
+        for i in range(working["length"].max()):
+            # check that all components of all Reporting Units are themselves ReportingUnits
+            ru_for_cruj = (
+                ru_static.copy()
+            )  # start fresh, without detritus from previous i
+
+            # get name of ith ancestor
+            #  E.g., ancestor_0 is largest ancestor (i.e., shortest string, often the state);
+            #  ancestor_1 is the second-largest parent, etc.
+            ru_for_cruj[f"ancestor_{i}"] = ru_static["split"].apply(
+                lambda x: ";".join(x[: i + 1])
+            )
+            # get Id of ith ancestor
+            ru_for_cruj = ru_for_cruj.merge(
+                ru_cdf, left_on=f"ancestor_{i}", right_on="Name", suffixes=["", f"_{i}"]
+            )
+
+            # Add parent-child pair for ith ancestor.
+            cruj_dframe_list.append(
+                ru_for_cruj[["Id", f"Id_{i}"]].rename(
+                    columns={
+                        "Id": "ChildReportingUnit_Id",
+                        f"Id_{i}": "ParentReportingUnit_Id",
+                    }
+                )
+            )
+        if cruj_dframe_list:
+            cruj_dframe = pd.concat(cruj_dframe_list)
+            insert_err = insert_to_cdf_db(
+                engine,
+                cruj_dframe,
+                "ComposingReportingUnitJoin",
+                error_type,
+                error_name,
+            )
+            err = ui.consolidate_errors([err, insert_err])
+    return err
 
 
 def create_or_reset_db(
-    db_param_file: str = "run_time.ini",
+    db_param_file: Optional[str] = None,
+    db_params: Optional[Dict[str,str]] = None,
     dbname: Optional[str] = None,
 ) -> Optional[dict]:
-    """if no dbname is given, name will be taken from param_file"""
+    """if no dbname is given, name will be taken from db_param_file or db_params"""
 
     project_root = Path(__file__).absolute().parents[1]
     params, err = ui.get_parameters(
@@ -300,7 +385,7 @@ def create_or_reset_db(
     # if dbname already exists.
     if dbname in db_df.datname.unique():
         # reset DB to blank
-        eng_new, err = sql_alchemy_connect(db_param_file, dbname=dbname)
+        eng_new, err = sql_alchemy_connect(db_params=db_params,db_param_file=db_param_file,dbname=dbname)
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
         reset_db(
@@ -309,7 +394,7 @@ def create_or_reset_db(
         )
     else:
         create_database(con, cur, dbname)
-        eng_new, err = sql_alchemy_connect(db_param_file, dbname=dbname)
+        eng_new, err = sql_alchemy_connect(db_params=db_params,db_param_file=db_param_file,dbname=dbname)
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
 
@@ -325,16 +410,34 @@ def create_or_reset_db(
 
 
 def sql_alchemy_connect(
-    param_file: Optional[str] = None, dbname: Optional[str] = None
+    db_params: Optional[Dict[str, str]] = None,
+        db_param_file: Optional[str] = None,
+        dbname: Optional[str] = None
 ) -> (sqlalchemy.engine, Optional[dict]):
-    """Returns an engine and a metadata object"""
-    if param_file is None:
-        param_file = "run_time.ini"
-    params, err = ui.get_parameters(
-        required_keys=db_pars, param_file=param_file, header="postgresql"
-    )
-    if err:
-        return None, err
+    """
+    Inputs:
+        db_params: Optional[Dict[str, str]],
+        db_param_file: Optional[str] = None,
+        dbname: Optional[str] = None,
+
+    Returns:
+        sqlalchemy.engine, uses parameters in <db_params> if given, otherwise uses <db_param_file>,
+            otherwise defaults to run_time.ini parameter file
+        Optional[dict], error dictionary
+    """
+    # use explicit db params if given
+    if db_params:
+        params = db_params
+        err = None
+    # otherwise look in given file, or in default parameter file
+    else:
+        if db_param_file is None:
+            db_param_file = "run_time.ini"
+        params, err = ui.get_parameters(
+            required_keys=db_pars, param_file=db_param_file, header="postgresql"
+        )
+        if err:
+            return None, err
 
     # if dbname was given, use it instead of name in paramfile
     if dbname:
@@ -352,12 +455,14 @@ def sql_alchemy_connect(
 
 
 def create_db_if_not_ok(
-    dbname: Optional[str] = None, db_param_file: str = "run_time.ini"
+    dbname: Optional[str] = None,
+        db_param_file: Optional[str] = None,
+        db_params: Optional[Dict[str,str]] = None,
 ) -> Optional[dict]:
     # create db if it does not already exist and have right tables
-    ok, err = test_connection_and_tables(dbname=dbname, db_param_file=db_param_file)
+    ok, err = test_connection_and_tables(dbname=dbname, db_params=db_params, db_param_file=db_param_file)
     if not ok:
-        create_or_reset_db(dbname=dbname, db_param_file=db_param_file)
+        create_or_reset_db(dbname=dbname, db_params=db_params, db_param_file=db_param_file)
     return err
 
 

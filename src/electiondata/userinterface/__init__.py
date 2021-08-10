@@ -804,56 +804,6 @@ def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
     return False
 
 
-def run_tests(
-    test_dir: str,
-    dbname: str,
-    election_jurisdiction_list: list,
-    report_dir: Optional[str] = None,
-    file_prefix: str = "",
-    param_file: str = "run_time.ini",
-) -> Dict[str, Any]:
-    """
-    test_dir: str, directory containing pytest results tests to be run
-    dbname: str, database on which to run the results tests
-    election_jurisdiction_list: list, list of the election-jurisdiction pairs to test
-    report_dir: Optional[str] = None, directory to store files with reports from testing
-    file_prefix: str = "", prefix for files containing reports from testing
-    param_file: str = "run_time.ini", parameter file for Analyzer used for testing
-
-    Returns:
-         dictionary of failures (keys are jurisdiction;election strings)
-         """
-
-    failures = dict()  # initialize result report
-    # run pytest
-    if not os.path.isdir(test_dir):
-        failures[f"all elections; all jurisdiction"] = f"Test directory not found: {test_dir}"
-        return failures
-    test_file = os.path.join(test_dir, "test_dataloading.py")
-    if not os.path.isfile(test_file):
-        failures[f"all elections; all jurisdiction"] = f"Test file not found: {test_file}"
-
-    for (election, juris) in election_jurisdiction_list:
-        # run tests
-        e_system = jm.system_name_from_true_name(election)
-        j_system = jm.system_name_from_true_name(juris)
-        cmd = f"pytest " \
-              f" --jurisdiction='{j_system}'  --dbname={dbname} " \
-              f" --election='{e_system}' param_file='{param_file}'" \
-              f" {test_file}"
-        if report_dir:
-            Path(report_dir).mkdir(exist_ok=True, parents=True)
-            report_file = os.path.join(
-                report_dir, f"{file_prefix}{j_system}_{e_system}.test_results"
-            )
-            cmd = f"{cmd} > {report_file}"
-        r = os.system(cmd)
-        if r != 0:
-            failures[f"{juris};{election}"] = "At least one test failed"
-
-    return failures
-
-
 def confirm_essential_info(
     directory: str,
     header: str,

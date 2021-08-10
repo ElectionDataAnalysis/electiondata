@@ -244,6 +244,9 @@ class DataLoader:
             print(f"DataLoader object not created. Error:\n{err}")
             return None
 
+        elif not os.path.isdir(d["results_dir"]):
+            print(f"Warning: DataLoader results directory does not exist.")
+
         return super().__new__(cls)
 
     def __init__(self, param_file: Optional[str] = None, dbname: Optional[str] = None):
@@ -283,13 +286,13 @@ class DataLoader:
         dbname: Optional[str] = None,
         err: Optional[dict] = None,
         db_param_file: Optional[str] = None,
+        db_params: Optional[Dict[str, str]] = None
     ):
-        if not db_param_file:
-            db_param_file = "run_time.ini"
+
         new_err = None
         try:
             self.engine, new_err = db.sql_alchemy_connect(
-                param_file=db_param_file, dbname=dbname
+                db_param_file=db_param_file, dbname=dbname, db_params=db_params
             )
             Session = sessionmaker(bind=self.engine)
             self.session = Session()
@@ -305,19 +308,25 @@ class DataLoader:
         else:
             return
 
-    def change_db(self, new_db_name: str, db_param_file: str = "run_time.ini"):
+    def change_db(self,
+                  new_db_name: str,
+                  db_param_file: Optional[str] = None,
+                  db_params: Optional[Dict[str,str]] = None,
+                  ):
         """
         Input:
             new_db_name: str, name for new database
-            db_param_file: str = "run_time.ini", file with parameters for connecting to db
+            db_param_file: Optional[str], file with parameters for connecting to db
+            db_params: Optional[Dict[str,str]], set of parameters for connecting to db
 
+        If both db_param_file and db_params are given, uses db_params
         Changes self.session to connect to a different results database (which is created if necessary)
         Changes self.analyzer.session to connect to the new database
         """
         self.d["dbname"] = new_db_name
         self.session.close()
-        self.connect_to_db(dbname=new_db_name, db_param_file=db_param_file)
-        db.create_db_if_not_ok(dbname=new_db_name, db_param_file=db_param_file)
+        self.connect_to_db(dbname=new_db_name, db_param_file=db_param_file,db_params=db_params)
+        db.create_db_if_not_ok(dbname=new_db_name, db_param_file=db_param_file,db_params=db_params)
 
         # create new session for analyzer
         self.analyzer.session.close()
@@ -333,7 +342,7 @@ class DataLoader:
             "dbname": self.engine.url.database,
         }
         # point dataloader to default database
-        self.change_db("postgres")
+        self.change_db("postgres", db_params=db_params)
         # remove the db
         err = db.remove_database(db_params)
         return err
@@ -2157,7 +2166,7 @@ class Analyzer:
         self.repository_content_root = d["repository_content_root"]
 
         # create session
-        eng, err = db.sql_alchemy_connect(param_file, dbname=dbname)
+        eng, err = db.sql_alchemy_connect(db_param_file=param_file, dbname=dbname)
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
@@ -3553,24 +3562,12 @@ def reload_juris_election(
     # initialize dataloader
     err = None
     dl = DataLoader(dbname=dbname, param_file=param_file)
-    db_params, _ = ui.get_parameters(
-        [
-            "host",
-            "port",
-            "dbname",
-            "user",
-            "password",
-        ],
-        "run_time.ini",
-        "postgresql",
-    )
 
-    # create temp_db (preserving live db name)
+    # create temp_db (preserving live db name) and point dataloader to it
     live_db = dl.session.bind.url.database
     ts = datetime.datetime.now().strftime("%m%d_%H%M")
     temp_db = f"{live_db}_test_{ts}"
-    db_params["dbname"] = temp_db
-    db.create_or_reset_db(dbname=temp_db)
+    dl.change_db(new_db_name=temp_db, db_param_file=param_file)
 
     # load all data into temp db
     dl.change_db(temp_db, db_param_file=param_file)
@@ -3582,11 +3579,10 @@ def reload_juris_election(
     )
     if load_err:
         err = ui.consolidate_errors([err, load_err])
-    # if any of the data failed to loade
+    # if any of the data failed to load
     if failure:
         # cleanup temp database
-        if db_params["dbname"] == temp_db:
-            db.remove_database(db_params)
+        db.remove_database(db_param_file=param_file, dbname=temp_db)
         return err
 
     # if any tests failed
@@ -3631,8 +3627,7 @@ def reload_juris_election(
             err = ui.consolidate_errors([err, new_err])
 
     # cleanup temp database
-    if db_params["dbname"] == temp_db:
-        db.remove_database(db_params)
+    db.remove_database(db_param_file=param_file, dbname=temp_db)
     return err
 
 
