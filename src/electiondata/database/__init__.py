@@ -227,27 +227,33 @@ def test_connection_and_tables(
     # initialize error dictionary
     err = None
 
-    try:
-        params = ui.get_parameters(
-            required_keys=db_pars, param_file=db_param_file, header="postgresql"
-        )[0]
-    except MissingSectionHeaderError:
-        return {"message": f"db_param_file not found suggested location."}
+    # use db_params if given; otherwise get them from db_param_file if given, otherwise from "run_time.ini"
+    if not db_params:
+        if not db_param_file:
+            db_param_file="run_time.ini"
+        try:
+            db_params = ui.get_parameters(
+                required_keys=db_pars, param_file=db_param_file, header="postgresql"
+            )[0]
+        except MissingSectionHeaderError:
+            return {"message": f"db_param_file not found in suggested location."}
 
     # use dbname from paramfile, unless dbname is passed
     if dbname:
-        params["dbname"] = dbname
+        db_params["dbname"] = dbname
 
     # check connection before proceeding
+    postgres_params = db_params.copy()
+    postgres_params["dbname"] = "postgres"
     try:
-        con = psycopg2.connect(**params)
+        con = psycopg2.connect(**postgres_params)
         con.close()
     except psycopg2.OperationalError as e:
         err = ui.add_new_error(
             err,
             "system",
             "database.test_connection_and_tables",
-            f"Error connecting to database: {e}",
+            f"Error connecting to postgresql: {e}",
         )
         return False, err
 

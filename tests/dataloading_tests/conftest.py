@@ -8,7 +8,7 @@ import datetime
 # add options to pytest
 def pytest_addoption(parser):
     parser.addoption("--param_file",
-                     action="store", default=os.path.join(Path(__file__).parents[1].absolute(), "run_time.ini"),
+                     action="store",default=os.path.join(Path(__file__).parents[1].absolute(),"run_time.ini"),
                      )
     parser.addoption("--test_data_url",
                      action="store", default="https://github.com/ElectionDataAnalysis/TestingData.git"

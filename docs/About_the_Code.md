@@ -28,6 +28,13 @@ The [dataloader test](../tests/dataloading_tests/test_dataloading.py) depends on
     - if the results directory does not exist, the test will create it and pull files from [`https://github.com/ElectionDataAnalysis/TestingData.git`](https://github.com/ElectionDataAnalysis/TestingData.git). You can specify a different url with the custom pytest option `--test_data_url`
  - reference files in the [`reference_results` folder](../src/reference_results). By convention, these are tabs-separated and named for the jurisdiction, e.g., `Virgina.tsv` or `American-Samoa.tsv`. Note the hyphens. If there are no reference results for a given election-jurisdiction pair, the test will fail. The reference files must have columns `Jurisdiction,Election,Contest,ReportingUnit,VoteType,Count`. 
 
+Note that the `analyzer_tests` and `dataloader_tests` directories each have a `conftest.py` file. This may cause a problem if you try to run them simultaneously via `pytest` from the `test` directory. Running them separately works:
+```
+tests % pytest analyzer_tests
+tests % pytest dataloader_tests
+```
+
+
 
 
   
