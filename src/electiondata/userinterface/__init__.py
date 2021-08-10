@@ -829,7 +829,7 @@ def run_tests(
     if not os.path.isdir(test_dir):
         failures[f"all elections; all jurisdiction"] = f"Test directory not found: {test_dir}"
         return failures
-    test_file = os.path.join(test_dir, "test_results.py")
+    test_file = os.path.join(test_dir, "test_dataloading.py")
     if not os.path.isfile(test_file):
         failures[f"all elections; all jurisdiction"] = f"Test file not found: {test_file}"
 

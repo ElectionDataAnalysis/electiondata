@@ -490,7 +490,7 @@ The jurisdiction files in this repository follow certain conventions. Many of th
         * `Constitution Party` (regardless of state or other jurisdiction)
         
 ### Beware of:
- - hyphens in formal names of jurisdictions or elections -- this may break the testing (since pytest options with spaces are problematic, all hypens are replaced by spaces in [test_results.py](../tests/results_tests/test_results.py)))
+ - hyphens in formal names of jurisdictions or elections -- this may break the testing (since pytest options with spaces are problematic, all hypens are replaced by spaces in [test_results.py](../tests/dataloading_tests/test_results.py)))
  - Different names for same contest in different counties (if munging from a batch of county-level files)
  - Different names for candidates, especially candidates with name suffixes or middle/maiden names
  - Different "party" names for candidates without a party affiliation 

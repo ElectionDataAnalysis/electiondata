@@ -343,6 +343,28 @@ class DataLoader:
         self.d[dir_param] = new_dir
         return
 
+    def get_testing_data(self, url: Optional[str] = None):
+        # if the dataloader's results directory doesn't exist, create it
+        results_dir = self.d["results_dir"]
+        if not os.path.isdir(results_dir):
+            # create the results_dir
+            Path(results_dir).mkdir(parents=True, exist_ok=True)
+            # create a shallow copy of the git directory in the results_directory
+            cmd = f"git clone --depth 1 -b main {url} {Path(results_dir).absolute()}"
+            os.system(cmd)
+            # remove the git information
+            shutil.rmtree(os.path.join(results_dir,".git"),ignore_errors=True)
+            os.remove(os.path.join(results_dir,".gitignore"))
+            print(f"Files downloaded from {url} into {Path(results_dir).absolute()}")
+
+        else:
+            print(
+                f"Tests will load data from existing directory: {Path(results_dir).absolute()}"
+            )
+        return
+
+
+
     def load_one_from_ini(
         self,
         ini_path: str,
@@ -530,9 +552,12 @@ class DataLoader:
         If <archive> is true, archive the files
 
         Returns:
-            Dict[str, List[str]], for each e-j pair, a list of files loading successfully
-            Dict[str, List[str]], for each e-j pair, a list of files that were attempted but failed to load
-            Dict[str, bool], for each e-j pair, a boolean (True if all tests passed; otherwise False)
+            Dict[str, List[str]], for each e-j pair attempted,
+                a list of files loading successfully
+            Dict[str, List[str]], for each e-j pair attempted,
+                a list of files that were attempted but failed to load
+            Dict[str, bool], for each e-j pair attempted,
+                a boolean (True if all tests passed; otherwise False)
             Optional[dict], error dictionary
             """
         # initialize

@@ -11,7 +11,7 @@ from electiondata import userinterface as ui
 import inspect
 
 
-
+## https://github.com/ElectionDataAnalysis/TestingData.git
 def io(argv) -> Optional[list]:
     election = None
     jurisdiction = None
@@ -61,42 +61,6 @@ def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool)
     return err, db_removed
 
 
-def close_and_erase(dl: eda.DataLoader) -> Optional[dict]:
-    db_params = {
-        "host": dl.engine.url.host,
-        "port": dl.engine.url.port,
-        "user": dl.engine.url.username,
-        "password": dl.engine.url.password,
-        "dbname": dl.engine.url.database,
-    }
-    # point dataloader to default database
-    dl.change_db("postgres")
-    # remove the db
-    err = db.remove_database(db_params)
-    return err
-
-
-def get_testing_data(
-    url: Optional[str] = None,
-    results_dir: Optional[str] = "TestingData",
-):
-    # if there is no target directory
-    if not os.path.isdir(results_dir):
-        # create a shallow copy of the git directory in current directory
-        cmd = f"git clone --depth 1 -b main {url}"
-        os.system(cmd)
-        # remove the git information
-        shutil.rmtree(os.path.join(results_dir, ".git"), ignore_errors=True)
-        os.remove(os.path.join(results_dir, ".gitignore"))
-        print(f"Files downloaded from {url} into {Path(results_dir).absolute()}")
-
-    else:
-        print(
-            f"Tests will load data from existing directory: {Path(results_dir).absolute()}"
-        )
-    return
-
-
 def run2(
     load_data: bool = True,
     dbname: Optional[str] = None,
@@ -111,7 +75,7 @@ def run2(
     if not test_dir:
         # set the test_dir to the results-testing subdirectory of the directory containing this file
         test_dir = os.path.join(
-            Path(__file__).parent.absolute(),"results_tests"
+            Path(__file__).parent.absolute(),"dataloading_tests"
         )
 
     # name the db
