@@ -3275,42 +3275,6 @@ def contest_total(
     return df["count"].sum()
 
 
-def count_type_total(
-    election: str,
-    jurisdiction: str,
-    contest: str,
-    count_item_type: str,
-    sub_unit_type: str = constants.default_subdivision_type,
-    dbname: Optional[str] = None,
-    param_file: Optional[str] = None,
-) -> int:
-    df_candidate = aggregate_results(
-        election=election,
-        jurisdiction=jurisdiction,
-        contest=contest,
-        contest_type="Candidate",
-        vote_type=count_item_type,
-        sub_unit_type=sub_unit_type,
-        dbname=dbname,
-        param_file=param_file,
-    )
-    df_ballot = aggregate_results(
-        election=election,
-        jurisdiction=jurisdiction,
-        contest=contest,
-        contest_type="BallotMeasure",
-        vote_type=count_item_type,
-        sub_unit_type=sub_unit_type,
-        dbname=dbname,
-        param_file=param_file,
-    )
-    df = pd.concat([df_candidate, df_ballot])
-    if df.empty:
-        return 0
-    else:
-        return df["count"].sum()
-
-
 def check_count_types_standard(
     election: str, jurisdiction: str, dbname: Optional[str] = None, param_file: Optional[str] = None,
 ) -> bool:

@@ -291,10 +291,15 @@ def read_single_datafile(
                 if new_err:
                     err = consolidate_errors([err, new_err])
 
-        # rename any columns from header-less tables to column_0, column_1, etc.
+        # regularize column names
         if p["all_rows"] == "data":
+            # rename any columns from header-less tables to column_0, column_1, etc.
             for k in df_dict.keys():
                 df_dict[k].columns = [f"column_{j}" for j in range(df_dict[k].shape[1])]
+        else:
+            # strip whitespace from any column names
+            for k in df_dict.keys():
+                df_dict[k].columns = [c.strip() for c in df_dict[k].columns]
 
     except FileNotFoundError:
         err_str = f"File not found: {f_path}"
