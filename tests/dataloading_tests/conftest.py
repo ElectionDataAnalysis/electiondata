@@ -7,12 +7,16 @@ import datetime
 
 # add options to pytest
 def pytest_addoption(parser):
-    parser.addoption("--param_file",
-                     action="store",default=os.path.join(Path(__file__).parents[1].absolute(),"run_time.ini"),
-                     )
-    parser.addoption("--test_data_url",
-                     action="store", default="https://github.com/ElectionDataAnalysis/TestingData.git"
-                     )
+    parser.addoption(
+        "--param_file",
+        action="store",
+        default=os.path.join(Path(__file__).parents[1].absolute(), "run_time.ini"),
+    )
+    parser.addoption(
+        "--test_data_url",
+        action="store",
+        default="https://github.com/ElectionDataAnalysis/TestingData.git",
+    )
 
 
 # set up fixtures so tests can call them as arguments
@@ -30,10 +34,7 @@ def test_data_url(request):
 def dataloader(param_file):
     ts = datetime.datetime.now().strftime("%m%d_%H%M")
     dbname = f"test_{ts}"
-    dl = ed.DataLoader(
-        dbname=dbname, param_file=param_file
-    )
+    dl = ed.DataLoader(dbname=dbname, param_file=param_file)
     yield dl
     # code after yield statement runs during post-testing clean-up
     dl.close_and_erase()
-

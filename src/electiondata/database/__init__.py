@@ -53,9 +53,9 @@ def get_database_names(con: psycopg2.extensions.connection):
 
 
 def remove_database(
-        db_params: Optional[Dict[str,str]] = None,
-        db_param_file: Optional[str] = None,
-        dbname: Optional[str] = None
+    db_params: Optional[Dict[str, str]] = None,
+    db_param_file: Optional[str] = None,
+    dbname: Optional[str] = None,
 ) -> Optional[dict]:
     # initialize error dictionary
     db_err = None
@@ -88,7 +88,7 @@ def remove_database(
                     WHERE pg_stat_activity.datname = %s 
                     AND pid <> pg_backend_pid();"""
                 )
-                cur.execute(q,(db_params["dbname"],))
+                cur.execute(q, (db_params["dbname"],))
 
                 # drop database
                 q = sql.SQL("DROP DATABASE IF EXISTS {dbname}").format(
@@ -217,9 +217,9 @@ def append_to_composing_reporting_unit_join(
 
 
 def test_connection_and_tables(
-        db_params: Optional[Dict[str,str]] = None,
-        db_param_file: Optional[str] = None,
-        dbname: Optional[str] = None,
+    db_params: Optional[Dict[str, str]] = None,
+    db_param_file: Optional[str] = None,
+    dbname: Optional[str] = None,
 ) -> (bool, Optional[dict]):
     """Check for DB and relevant tables; if they don't exist, return
     error message"""
@@ -230,7 +230,7 @@ def test_connection_and_tables(
     # use db_params if given; otherwise get them from db_param_file if given, otherwise from "run_time.ini"
     if not db_params:
         if not db_param_file:
-            db_param_file="run_time.ini"
+            db_param_file = "run_time.ini"
         try:
             db_params = ui.get_parameters(
                 required_keys=db_pars, param_file=db_param_file, header="postgresql"
@@ -259,7 +259,9 @@ def test_connection_and_tables(
 
     # Look for tables
     try:
-        engine, new_err = sql_alchemy_connect(db_params=db_params,db_param_file=db_param_file,dbname=dbname)
+        engine, new_err = sql_alchemy_connect(
+            db_params=db_params, db_param_file=db_param_file, dbname=dbname
+        )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             engine.dispose()
@@ -288,6 +290,8 @@ def test_connection_and_tables(
         return False, err
     # if no errors found, return True
     return True, err
+
+
 # TODO move to more appropriate module?
 
 
@@ -357,7 +361,7 @@ def append_to_composing_reporting_unit_join(
 
 def create_or_reset_db(
     db_param_file: Optional[str] = None,
-    db_params: Optional[Dict[str,str]] = None,
+    db_params: Optional[Dict[str, str]] = None,
     dbname: Optional[str] = None,
 ) -> Optional[dict]:
     """if no dbname is given, name will be taken from db_param_file or db_params"""
@@ -391,7 +395,9 @@ def create_or_reset_db(
     # if dbname already exists.
     if dbname in db_df.datname.unique():
         # reset DB to blank
-        eng_new, err = sql_alchemy_connect(db_params=db_params,db_param_file=db_param_file,dbname=dbname)
+        eng_new, err = sql_alchemy_connect(
+            db_params=db_params, db_param_file=db_param_file, dbname=dbname
+        )
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
         reset_db(
@@ -400,7 +406,9 @@ def create_or_reset_db(
         )
     else:
         create_database(con, cur, dbname)
-        eng_new, err = sql_alchemy_connect(db_params=db_params,db_param_file=db_param_file,dbname=dbname)
+        eng_new, err = sql_alchemy_connect(
+            db_params=db_params, db_param_file=db_param_file, dbname=dbname
+        )
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
 
@@ -417,8 +425,8 @@ def create_or_reset_db(
 
 def sql_alchemy_connect(
     db_params: Optional[Dict[str, str]] = None,
-        db_param_file: Optional[str] = None,
-        dbname: Optional[str] = None
+    db_param_file: Optional[str] = None,
+    dbname: Optional[str] = None,
 ) -> (sqlalchemy.engine, Optional[dict]):
     """
     Inputs:
@@ -462,13 +470,17 @@ def sql_alchemy_connect(
 
 def create_db_if_not_ok(
     dbname: Optional[str] = None,
-        db_param_file: Optional[str] = None,
-        db_params: Optional[Dict[str,str]] = None,
+    db_param_file: Optional[str] = None,
+    db_params: Optional[Dict[str, str]] = None,
 ) -> Optional[dict]:
     # create db if it does not already exist and have right tables
-    ok, err = test_connection_and_tables(dbname=dbname, db_params=db_params, db_param_file=db_param_file)
+    ok, err = test_connection_and_tables(
+        dbname=dbname, db_params=db_params, db_param_file=db_param_file
+    )
     if not ok:
-        create_or_reset_db(dbname=dbname, db_params=db_params, db_param_file=db_param_file)
+        create_or_reset_db(
+            dbname=dbname, db_params=db_params, db_param_file=db_param_file
+        )
     return err
 
 
@@ -569,9 +581,11 @@ def get_name_field(element: str) -> str:
 def get_reporting_unit_type(session: Session, reporting_unit: str) -> Optional[str]:
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
-    q = sql.SQL("""
+    q = sql.SQL(
+        """
     SELECT "ReportingUnitType" FROM "ReportingUnit" WHERE "Name" = {name}
-    """).format(name=sql.Literal(reporting_unit))
+    """
+    ).format(name=sql.Literal(reporting_unit))
     cursor.execute(q)
     results = cursor.fetchone()
     if results:

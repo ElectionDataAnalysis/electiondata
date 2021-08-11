@@ -44,8 +44,10 @@ def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool)
     # give user option to remove db
     if dl is None:
         err = ui.add_new_error(
-            err, "system",f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"DataLoader parameter is None"
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"DataLoader parameter is None",
         )
         return err, db_removed
     remove_db = input(f"Remove test db {dl.d['dbname']} (y/n)?\n")
@@ -74,9 +76,7 @@ def run2(
     err = None
     if not test_dir:
         # set the test_dir to the results-testing subdirectory of the directory containing this file
-        test_dir = os.path.join(
-            Path(__file__).parent.absolute(),"dataloading_tests"
-        )
+        test_dir = os.path.join(Path(__file__).parent.absolute(), "dataloading_tests")
 
     # name the db
     if dbname is None:

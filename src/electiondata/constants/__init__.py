@@ -450,14 +450,14 @@ if 1:
         "unloaded_dir",
     ]
     req_for_combined_file_loading = [
-                "results_file",
-                "munger_list",
-                "results_download_date",
-                "results_source",
-                "results_note",
-                "secondary_source",
-                "results_short_name",
-            ]
+        "results_file",
+        "munger_list",
+        "results_download_date",
+        "results_source",
+        "results_note",
+        "secondary_source",
+        "results_short_name",
+    ]
     prep_pars = [
         "name",
         "abbreviated_name",
@@ -551,7 +551,21 @@ if 1:
 
 # reporting
 if 1:
-    juris_load_report_keys = ['database', 'dictionary', 'file', 'ini', 'jurisdiction', 'munger', 'warn-database', 'warn-dictionary', 'warn-file', 'warn-ini', 'warn-jurisdiction', 'warn-munger', 'warn-test']
+    juris_load_report_keys = [
+        "database",
+        "dictionary",
+        "file",
+        "ini",
+        "jurisdiction",
+        "munger",
+        "warn-database",
+        "warn-dictionary",
+        "warn-file",
+        "warn-ini",
+        "warn-jurisdiction",
+        "warn-munger",
+        "warn-test",
+    ]
 # regex patterns
 if 1:
     brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")

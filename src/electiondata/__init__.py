@@ -286,7 +286,7 @@ class DataLoader:
         dbname: Optional[str] = None,
         err: Optional[dict] = None,
         db_param_file: Optional[str] = None,
-        db_params: Optional[Dict[str, str]] = None
+        db_params: Optional[Dict[str, str]] = None,
     ):
 
         new_err = None
@@ -308,11 +308,12 @@ class DataLoader:
         else:
             return
 
-    def change_db(self,
-                  new_db_name: str,
-                  db_param_file: Optional[str] = None,
-                  db_params: Optional[Dict[str,str]] = None,
-                  ):
+    def change_db(
+        self,
+        new_db_name: str,
+        db_param_file: Optional[str] = None,
+        db_params: Optional[Dict[str, str]] = None,
+    ):
         """
         Input:
             new_db_name: str, name for new database
@@ -325,8 +326,12 @@ class DataLoader:
         """
         self.d["dbname"] = new_db_name
         self.session.close()
-        self.connect_to_db(dbname=new_db_name, db_param_file=db_param_file,db_params=db_params)
-        db.create_db_if_not_ok(dbname=new_db_name, db_param_file=db_param_file,db_params=db_params)
+        self.connect_to_db(
+            dbname=new_db_name, db_param_file=db_param_file, db_params=db_params
+        )
+        db.create_db_if_not_ok(
+            dbname=new_db_name, db_param_file=db_param_file, db_params=db_params
+        )
 
         # create new session for analyzer
         self.analyzer.session.close()
@@ -362,8 +367,8 @@ class DataLoader:
             cmd = f"git clone --depth 1 -b main {url} {Path(results_dir).absolute()}"
             os.system(cmd)
             # remove the git information
-            shutil.rmtree(os.path.join(results_dir,".git"),ignore_errors=True)
-            os.remove(os.path.join(results_dir,".gitignore"))
+            shutil.rmtree(os.path.join(results_dir, ".git"), ignore_errors=True)
+            os.remove(os.path.join(results_dir, ".gitignore"))
             print(f"Files downloaded from {url} into {Path(results_dir).absolute()}")
 
         else:
@@ -371,8 +376,6 @@ class DataLoader:
                 f"Tests will load data from existing directory: {Path(results_dir).absolute()}"
             )
         return
-
-
 
     def load_one_from_ini(
         self,
@@ -515,13 +518,15 @@ class DataLoader:
                             f"Ini in subdirectory {ini_subdir} has non-matching jurisdiction: {params['jurisdiction']}",
                         )
         # add totals if necessary
-        add_err = self.add_totals_if_missing(election,juris_true_name)
+        add_err = self.add_totals_if_missing(election, juris_true_name)
         if add_err:
-            err = ui.consolidate_errors([err,add_err])
+            err = ui.consolidate_errors([err, add_err])
 
         # if load successful to this point, test the db's data for this ej-pair and add any failures to err
         if not ui.fatal_error(err):
-            new_err = self.analyzer.test_loaded_results(election, juris_true_name, juris_system_name, status=status)
+            new_err = self.analyzer.test_loaded_results(
+                election, juris_true_name, juris_system_name, status=status
+            )
             err = ui.consolidate_errors([err, new_err])
         return success_by_ini, failure_by_ini, latest_download_date, err
 
@@ -568,7 +573,7 @@ class DataLoader:
             Dict[str, bool], for each e-j pair attempted,
                 a boolean (True if all tests passed; otherwise False)
             Optional[dict], error dictionary
-            """
+        """
         # initialize
         err = None
         successfully_loaded = dict()
@@ -623,7 +628,9 @@ class DataLoader:
                             if j != juris
                         ]
                         # add juris to failure list
-                        failed_to_load[juris] = "Jurisdiction files did not load. See .errors"
+                        failed_to_load[
+                            juris
+                        ] = "Jurisdiction files did not load. See .errors"
                         err = ui.report(
                             err,
                             report_dir,
@@ -2172,10 +2179,11 @@ class Analyzer:
 
     # testing methods
     def test_loaded_results(
-            self, election: str,
-            juris_true_name: str,
-            juris_system_name: str,
-            status: Optional[str] = None,
+        self,
+        election: str,
+        juris_true_name: str,
+        juris_system_name: str,
+        status: Optional[str] = None,
     ) -> Optional[dict]:
         """
         election: str,
@@ -2187,53 +2195,78 @@ class Analyzer:
         Returns:
             Optional[dict], error dictionary with only "warn-test" and no "test" keys (since calling function may or
                 may not view failing tests as fatal
-            """
+        """
         err = None
         major_subdiv_type = db.get_major_subdiv_type(
-            self.session,juris_true_name, repo_content_root=self.repository_content_root
+            self.session,
+            juris_true_name,
+            repo_content_root=self.repository_content_root,
         )
 
         # consistency tests
-        if not self.data_exists(election,juris_true_name):
+        if not self.data_exists(election, juris_true_name):
             err = ui.add_new_error(
-                err, "warn-test", f"Election: {election}; Jurisdiction: {juris_true_name}",
-                f"\nNo data found"
+                err,
+                "warn-test",
+                f"Election: {election}; Jurisdiction: {juris_true_name}",
+                f"\nNo data found",
             )
-        if not self.check_totals_match_vote_types(election,juris_true_name,sub_unit_type=major_subdiv_type):
+        if not self.check_totals_match_vote_types(
+            election, juris_true_name, sub_unit_type=major_subdiv_type
+        ):
             err = ui.add_new_error(
-                err, "warn-test", f"Election: {election}; Jurisdiction: {juris_true_name}",
-                f"\nSum of other vote types does not always match total by {major_subdiv_type}"
+                err,
+                "warn-test",
+                f"Election: {election}; Jurisdiction: {juris_true_name}",
+                f"\nSum of other vote types does not always match total by {major_subdiv_type}",
             )
         # report contests with unknown candidates
-        bad_contests = self.get_contest_with_unknown_candidates(election,juris_true_name, report_dir=self.reports_and_plots_dir)
+        bad_contests = self.get_contest_with_unknown_candidates(
+            election, juris_true_name, report_dir=self.reports_and_plots_dir
+        )
         if bad_contests:
             bad_str = "\n".join(bad_contests)
             err = ui.add_new_error(
-                err, "warn-test", f"Election: {election}; Jurisdiction: {juris_true_name}",
-                f"\nSome contests have at least one unknown candidate:\n{bad_str}"
+                err,
+                "warn-test",
+                f"Election: {election}; Jurisdiction: {juris_true_name}",
+                f"\nSome contests have at least one unknown candidate:\n{bad_str}",
             )
 
         # test against reference result totals
-        reference = os.path.join(self.repository_content_root, "reference_results", f"{juris_system_name}.tsv")
-        not_found,ok,wrong,significantly_wrong,sub_dir,new_err = self.compare_to_results_file(
+        reference = os.path.join(
+            self.repository_content_root,
+            "reference_results",
+            f"{juris_system_name}.tsv",
+        )
+        (
+            not_found,
+            ok,
+            wrong,
+            significantly_wrong,
+            sub_dir,
+            new_err,
+        ) = self.compare_to_results_file(
             reference,
-            single_election=election, single_jurisdiction=juris_true_name,
-            report_dir=self.reports_and_plots_dir,status=status,
+            single_election=election,
+            single_jurisdiction=juris_true_name,
+            report_dir=self.reports_and_plots_dir,
+            status=status,
         )
         err = ui.consolidate_errors([err, new_err])
 
         return err
 
     def data_exists(
-            self,
-            election: str,
-            jurisdiction: str,
+        self,
+        election: str,
+        jurisdiction: str,
     ) -> bool:
         if not self:
             return False
 
-        election_id = db.name_to_id(self.session,"Election",election)
-        reporting_unit_id = db.name_to_id(self.session,"ReportingUnit",jurisdiction)
+        election_id = db.name_to_id(self.session, "Election", election)
+        reporting_unit_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
 
         # if the database doesn't have the election or the reporting unit
         if not election_id or not reporting_unit_id:
@@ -2242,7 +2275,11 @@ class Analyzer:
 
         # read all contests with records in the VoteCount table
         df = db.read_vote_count(
-            self.session,election_id,reporting_unit_id,["ContestName"],["contest_name"]
+            self.session,
+            election_id,
+            reporting_unit_id,
+            ["ContestName"],
+            ["contest_name"],
         )
         # if no contest found
         if df.empty:
@@ -2253,14 +2290,15 @@ class Analyzer:
             # then data exists!
             return True
 
-    def check_totals_match_vote_types(self,
-                                      election: str,
-                                      jurisdiction: str,
-                                      sub_unit_type=constants.default_subdivision_type,
-                                      ) -> bool:
+    def check_totals_match_vote_types(
+        self,
+        election: str,
+        jurisdiction: str,
+        sub_unit_type=constants.default_subdivision_type,
+    ) -> bool:
         """Interesting if there are both total and other vote types;
         otherwise trivially true"""
-        active = db.active_vote_types(self.session,election,jurisdiction)
+        active = db.active_vote_types(self.session, election, jurisdiction)
         if len(active) > 1 and "total" in active:
             # pull type 'total' only
             df_candidate = self.aggregate(
@@ -2279,7 +2317,7 @@ class Analyzer:
                 sub_unit_type=sub_unit_type,
                 exclude_redundant_total=False,
             )
-            df_total_type_only = pd.concat([df_candidate,df_ballot])
+            df_total_type_only = pd.concat([df_candidate, df_ballot])
 
             # pull all types but total
             df_candidate = self.aggregate(
@@ -2296,18 +2334,22 @@ class Analyzer:
                 exclude_redundant_total=True,
                 sub_unit_type=sub_unit_type,
             )
-            df_sum_nontotal_types = pd.concat([df_candidate,df_ballot])
-            return df_total_type_only["count"].sum() == df_sum_nontotal_types["count"].sum()
+            df_sum_nontotal_types = pd.concat([df_candidate, df_ballot])
+            return (
+                df_total_type_only["count"].sum()
+                == df_sum_nontotal_types["count"].sum()
+            )
         else:
             return True
 
-    def contest_total(self,
-            election: str,
-            jurisdiction: str,
-            contest: str,
-            reporting_unit: str,
-            vote_type: Optional[str] = None,
-            contest_type: Optional[str] = "Candidate",
+    def contest_total(
+        self,
+        election: str,
+        jurisdiction: str,
+        contest: str,
+        reporting_unit: str,
+        vote_type: Optional[str] = None,
+        contest_type: Optional[str] = "Candidate",
     ) -> Optional[int]:
         """Returns total number of votes in the contest within the given
         reporting unit. If vote type is given, restricts to that vote type"""
@@ -2331,11 +2373,13 @@ class Analyzer:
         else:
             return df["count"].sum()
 
-    def check_count_types_standard(self,
-                                election: str,jurisdiction: str,
-                                   ) -> bool:
-        election_id = db.name_to_id(self.session,"Election",election)
-        reporting_unit_id = db.name_to_id(self.session,"ReportingUnit",jurisdiction)
+    def check_count_types_standard(
+        self,
+        election: str,
+        jurisdiction: str,
+    ) -> bool:
+        election_id = db.name_to_id(self.session, "Election", election)
+        reporting_unit_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         standard_ct_list = list(
             db.read_vote_count(
                 self.session,
@@ -2349,7 +2393,7 @@ class Analyzer:
         # don't want type "other"
         if "other" in standard_ct_list:
             standard_ct_list.remove("other")
-        active = db.active_vote_types(self.session,election,jurisdiction)
+        active = db.active_vote_types(self.session, election, jurisdiction)
         for vt in active:
             # if even one fails, count types are not standard
             if vt not in standard_ct_list:
@@ -2357,9 +2401,12 @@ class Analyzer:
         # if nothing failed, count types are standard
         return True
 
-    def get_contest_with_unknown_candidates(self,
-                                            election: str,jurisdiction: str,report_dir: Optional[str] = None,
-                                            ) -> List[str]:
+    def get_contest_with_unknown_candidates(
+        self,
+        election: str,
+        jurisdiction: str,
+        report_dir: Optional[str] = None,
+    ) -> List[str]:
         """
         election: str,
         jurisdiction: str,
@@ -2367,22 +2414,25 @@ class Analyzer:
 
         Returns list of contests with unknown candidates
         """
-        election_id = db.name_to_id(self.session,"Election",election)
+        election_id = db.name_to_id(self.session, "Election", election)
         if not election_id:
             return [f"Election {election} not found"]
-        jurisdiction_id = db.name_to_id(self.session,"ReportingUnit",jurisdiction)
+        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         if not jurisdiction_id:
             return [f"Jurisdiction {jurisdiction} not found"]
 
-        contests = db.get_contest_with_unknown(self.session,election_id,jurisdiction_id)
+        contests = db.get_contest_with_unknown(
+            self.session, election_id, jurisdiction_id
+        )
         if contests and report_dir:
             ts = datetime.datetime.now().strftime("%m%d_%H%M")
-            subdir = os.path.join(report_dir,f"bad_contests_{ts}")
-            Path(subdir).mkdir(exist_ok=True,parents=True)
+            subdir = os.path.join(report_dir, f"bad_contests_{ts}")
+            Path(subdir).mkdir(exist_ok=True, parents=True)
             election_system_name = jm.system_name_from_true_name(election)
             juris_system_name = jm.system_name_from_true_name(jurisdiction)
-            open(os.path.join(
-                subdir, f"{election_system_name}_{juris_system_name}.tsv"), "w"
+            open(
+                os.path.join(subdir, f"{election_system_name}_{juris_system_name}.tsv"),
+                "w",
             ).write("\n".join(contests))
 
         return contests
@@ -2991,16 +3041,23 @@ class Analyzer:
         return all_df
 
     def compare_to_results_file(
-            self,
-            reference: str,
-            jurisdictions: Optional[Iterable[str]] = None,
-            elections: Optional[Iterable[str]] = None,
-            single_election: Optional[str] = None,
-            single_jurisdiction: Optional[str] = None,
-            report_dir: Optional[str] = None,
-            significance: Optional[float] = None,
-            status: Optional[str] = None,
-    ) -> (pd.DataFrame,pd.DataFrame,pd.DataFrame,Optional[pd.DataFrame],str, Optional[dict]):
+        self,
+        reference: str,
+        jurisdictions: Optional[Iterable[str]] = None,
+        elections: Optional[Iterable[str]] = None,
+        single_election: Optional[str] = None,
+        single_jurisdiction: Optional[str] = None,
+        report_dir: Optional[str] = None,
+        significance: Optional[float] = None,
+        status: Optional[str] = None,
+    ) -> (
+        pd.DataFrame,
+        pd.DataFrame,
+        pd.DataFrame,
+        Optional[pd.DataFrame],
+        str,
+        Optional[dict],
+    ):
         """session: Session, db session
         reference: str, path to tab-separated file with reference results
         report_dir: Optional[str] = None, path to directory for reports
@@ -3027,7 +3084,7 @@ class Analyzer:
         """
         err = None
         sub_dir = "No reports created"
-        ref = pd.read_csv(reference,sep="\t")
+        ref = pd.read_csv(reference, sep="\t")
 
         # restrict to single jurisdiction (if specified) or else to jurisdictions in list (if given)
         #  and ensure there is a Jurisdiction column
@@ -3038,11 +3095,14 @@ class Analyzer:
                 ref = ref[ref.Jurisdiction.isin(jurisdictions)]
         else:
             if single_jurisdiction:
-                ref = m.add_constant_column(ref, "Jurisdiction", single_jurisdiction) 
+                ref = m.add_constant_column(ref, "Jurisdiction", single_jurisdiction)
             else:
-                err = ui.add_new_error(err,"warn-test",Path(reference).name,
-                                       "No Jurisdiction column, and no single jurisdiction specified"
-                                       )
+                err = ui.add_new_error(
+                    err,
+                    "warn-test",
+                    Path(reference).name,
+                    "No Jurisdiction column, and no single jurisdiction specified",
+                )
 
         # restrict to single election (if specified) or else to elections in list (if given)
         #  and ensure there is a Election column
@@ -3053,45 +3113,57 @@ class Analyzer:
                 ref = ref[ref.Election.isin(elections)]
         else:
             if single_election:
-                ref = m.add_constant_column(ref, "Election", single_election) 
+                ref = m.add_constant_column(ref, "Election", single_election)
             else:
-                err = ui.add_new_error(err,"warn-test",Path(reference).name,
-                                       "No Election column, and no single election specified"
-                                       )
+                err = ui.add_new_error(
+                    err,
+                    "warn-test",
+                    Path(reference).name,
+                    "No Election column, and no single election specified",
+                )
 
         # restrict to specific status if given
         if status:
             if "Status" in ref.columns:
                 ref = ref[ref.Status == status]
             else:
-                err = ui.add_new_error(err, "warn-test", Path(reference).name,
-                                       f"Status {status} was specified, but there is no 'Status' column"
-                                       )
+                err = ui.add_new_error(
+                    err,
+                    "warn-test",
+                    Path(reference).name,
+                    f"Status {status} was specified, but there is no 'Status' column",
+                )
         if ref.empty:
-            err = ui.add_new_error(err, "warn-test", Path(reference).name,
-                                   f"No relevant results found in reference results file.\n"
-                                   )
+            err = ui.add_new_error(
+                err,
+                "warn-test",
+                Path(reference).name,
+                f"No relevant results found in reference results file.\n",
+            )
         if err:
             return pd.DataFrame(), pd.DataFrame(), pd.DataFrame(), None, sub_dir, err
 
         # if no VoteType column, use "total"; otherwise replace any null "VoteType" entries by "total"
         if not "VoteType" in ref.columns:
-            ref = m.add_constant_column(ref,"VoteType","total")
+            ref = m.add_constant_column(ref, "VoteType", "total")
         else:
-            ref["VoteType"].fillna("total",inplace=True)
+            ref["VoteType"].fillna("total", inplace=True)
 
         # change Count column to integer
-        ref, clean_err_df = m.clean_count_cols(ref,["Count"])
+        ref, clean_err_df = m.clean_count_cols(ref, ["Count"])
         if not clean_err_df.empty:
-            err = ui.add_new_error(err, "warn-test", Path(reference).name,
-                                   f"Some counts could not be interpreted as integers:\n{clean_err_df}",
-                                   )
+            err = ui.add_new_error(
+                err,
+                "warn-test",
+                Path(reference).name,
+                f"Some counts could not be interpreted as integers:\n{clean_err_df}",
+            )
 
         # initialize dataframes to be returned
         not_found_in_db = ok = pd.DataFrame(columns=ref.columns)
         wrong = pd.DataFrame(columns=list(ref.columns) + ["Database_Count"])
 
-        for idx,row in ref.iterrows():
+        for idx, row in ref.iterrows():
             db_total = self.contest_total(
                 election=row["Election"],
                 jurisdiction=row["Jurisdiction"],
@@ -3106,17 +3178,25 @@ class Analyzer:
             elif int(db_total) == int(row["Count"]):
                 ok = ok.append(row, ignore_index=True)
             else:
-                wrong = wrong.append({**row, **{"Database_Count": int(db_total)}}, ignore_index=True)
+                wrong = wrong.append(
+                    {**row, **{"Database_Count": int(db_total)}}, ignore_index=True
+                )
 
         # rename Count to Reference Count and revise column order
-        wrong.rename(columns={"Count":"Reference_Count"}, inplace=True)
+        wrong.rename(columns={"Count": "Reference_Count"}, inplace=True)
         first = ["Database_Count", "Reference_Count"]
         new_order = first + [c for c in wrong.columns if c not in first]
         wrong = wrong[new_order]
 
         # create report of only significantly wrong values
         if significance:
-            mask = abs((wrong.Database_Count - wrong.Reference_Count) / wrong.Reference_Count) > significance
+            mask = (
+                abs(
+                    (wrong.Database_Count - wrong.Reference_Count)
+                    / wrong.Reference_Count
+                )
+                > significance
+            )
             significantly_wrong = wrong[mask]
         else:
             significantly_wrong = None
@@ -3124,40 +3204,58 @@ class Analyzer:
         # report
         if report_dir:
             ts = datetime.datetime.now().strftime("%m%d_%H%M")
-            sub_dir = os.path.join(report_dir, f"compare_to_{Path(reference).stem}_{ts}")
+            sub_dir = os.path.join(
+                report_dir, f"compare_to_{Path(reference).stem}_{ts}"
+            )
             Path(sub_dir).mkdir(exist_ok=True, parents=True)
             names = ["not_found_in_db", "ok", "wrong"]
             for df_name in names:
-                eval(df_name).to_csv(os.path.join(
-                    sub_dir, f"{df_name}.tsv"
-                ), sep="\t", index=None)
-            if significantly_wrong is not None:  # nb: if nothing is significantly wrong, df will be empty but not None.
-                significantly_wrong.to_csv(os.path.join(
-                    sub_dir, f"wrong_by_at_least_{significance}.tsv"
-                ), sep="\t", index=None)
+                eval(df_name).to_csv(
+                    os.path.join(sub_dir, f"{df_name}.tsv"), sep="\t", index=None
+                )
+            if (
+                significantly_wrong is not None
+            ):  # nb: if nothing is significantly wrong, df will be empty but not None.
+                significantly_wrong.to_csv(
+                    os.path.join(sub_dir, f"wrong_by_at_least_{significance}.tsv"),
+                    sep="\t",
+                    index=None,
+                )
 
             # report parameters
             # 'database' variable used even though syntax-checker doesn't see it
             database = self.session.bind.url
             report_str = f"database: {database}\nreference file: {reference}"
-            optional_params = ["single_election", "single_jurisdiction", "elections", "jurisdictions", "status"]
+            optional_params = [
+                "single_election",
+                "single_jurisdiction",
+                "elections",
+                "jurisdictions",
+                "status",
+            ]
             for op in optional_params:
                 if eval(op):
                     report_str = f"{report_str}\n{op}: {eval(op)}"
             open(os.path.join(sub_dir, "_parameters.txt"), "w").write(report_str)
 
             if not wrong.empty:
-                wrong_str = f"\nSome database contest results did not match reference results. " \
-                            f"For details see {sub_dir}"
+                wrong_str = (
+                    f"\nSome database contest results did not match reference results. "
+                    f"For details see {sub_dir}"
+                )
                 err = ui.add_new_error(
-                    err,"warn-test",Path(reference).name,
+                    err,
+                    "warn-test",
+                    Path(reference).name,
                     wrong_str,
                 )
         # if no report_dir, but some results are wrong
         elif not wrong.empty:
             wrong_str = f"\nSome database contest results did not match reference results.\n{wrong.to_string()}"
             err = ui.add_new_error(
-                err,"warn-test",Path(reference).name,
+                err,
+                "warn-test",
+                Path(reference).name,
                 wrong_str,
             )
         return not_found_in_db, ok, wrong, significantly_wrong, sub_dir, err
@@ -3243,12 +3341,13 @@ def check_totals_match_vote_types(
     jurisdiction: str,
     sub_unit_type=constants.default_subdivision_type,
     dbname: Optional[str] = None,
-    param_file: Optional[str] = None
+    param_file: Optional[str] = None,
 ) -> bool:
     """Interesting if there are both total and other vote types;
     otherwise trivially true"""
     an = Analyzer(dbname=dbname, param_file=param_file)
     return an.check_count_types_standard(election, jurisdiction)
+
 
 def contest_total(
     election: str,
@@ -3276,19 +3375,27 @@ def contest_total(
 
 
 def check_count_types_standard(
-    election: str, jurisdiction: str, dbname: Optional[str] = None, param_file: Optional[str] = None,
+    election: str,
+    jurisdiction: str,
+    dbname: Optional[str] = None,
+    param_file: Optional[str] = None,
 ) -> bool:
     an = Analyzer(dbname=dbname, param_file=param_file)
     return an.check_count_types_standard(election, jurisdiction)
 
 
 def get_contest_with_unknown_candidates(
-    election: str, jurisdiction: str, dbname: Optional[str] = None, param_file: Optional[str] = None,
+    election: str,
+    jurisdiction: str,
+    dbname: Optional[str] = None,
+    param_file: Optional[str] = None,
 ) -> List[str]:
     an = Analyzer(dbname=dbname, param_file=param_file)
     if not an:
         return [f"Failure to connect to database"]
-    return an.get_contest_with_unknown_candidates(election, jurisdiction, report_dir=an.reports_and_plots_dir)
+    return an.get_contest_with_unknown_candidates(
+        election, jurisdiction, report_dir=an.reports_and_plots_dir
+    )
 
 
 def load_results_df(
@@ -3578,8 +3685,8 @@ def reload_juris_election(
             move_files=move_files,
         )
         if success:
-          if not all_tests_passed[f"{election_name};{juris_name}"]:
-              # this should never happen, since upload was just tested. Still...
+            if not all_tests_passed[f"{election_name};{juris_name}"]:
+                # this should never happen, since upload was just tested. Still...
                 err = ui.add_new_error(
                     err,
                     "database",
