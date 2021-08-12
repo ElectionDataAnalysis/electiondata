@@ -802,7 +802,11 @@ class DataLoader:
             "Count",
         ]
         df = db.read_vote_count(
-            self.session, election_id, jurisdiction_id, fields, aliases
+            self.session,
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=fields,
+            aliases=aliases,
         )
         if df.empty:
             err = ui.add_new_error(
@@ -2266,20 +2270,20 @@ class Analyzer:
             return False
 
         election_id = db.name_to_id(self.session, "Election", election)
-        reporting_unit_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
+        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
 
         # if the database doesn't have the election or the reporting unit
-        if not election_id or not reporting_unit_id:
+        if not election_id or not jurisdiction_id:
             # data doesn't exist
             return False
 
         # read all contests with records in the VoteCount table
         df = db.read_vote_count(
             self.session,
-            election_id,
-            reporting_unit_id,
-            ["ContestName"],
-            ["contest_name"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["ContestName"],
+            aliases=["contest_name"],
         )
         # if no contest found
         if df.empty:
@@ -2379,14 +2383,14 @@ class Analyzer:
         jurisdiction: str,
     ) -> bool:
         election_id = db.name_to_id(self.session, "Election", election)
-        reporting_unit_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
+        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         standard_ct_list = list(
             db.read_vote_count(
                 self.session,
-                election_id,
-                reporting_unit_id,
-                ["CountItemType"],
-                ["CountItemType"],
+                election_id=election_id,
+                jurisdiction_id=jurisdiction_id,
+                fields=["CountItemType"],
+                aliases=["CountItemType"],
             )["CountItemType"].unique()
         )
 
@@ -2666,6 +2670,26 @@ class Analyzer:
         )
         return xml_string
 
+    def export_election_to_tsv(
+            self,
+            target_file: str,
+            election: str,
+    ):
+        # TODO get counts
+        election_id = db.name_to_id(self.session, "Election", election)
+        df = db.read_vote_count(
+                self.session,
+            election_id=election_id,
+            fields=["ElectionName","ContestName","BallotName","PartyName","GPReportingUnitName",
+                    "CountItemType","Count","is_preliminary"],
+            aliases=["Election","Contest","Selection","Party","ReportingUnit",
+                     "VoteType","Count","Preliminary"],
+        )
+        #  export to file
+        df.sort_values(by=["Election", "Contest", "Selection", "ReportingUnit", "VoteType"], inplace=True)
+        df.to_csv(target_file, sep="\t", index=False)
+        return
+
     def diff_in_diff_dem_vs_rep(
         self,
         election: str,
@@ -2905,7 +2929,7 @@ class Analyzer:
         self,
         element: str,
         election_id: int,
-        reportingunit_id: int,
+        jurisdiction_id: int,
     ) -> dict:
         """Returns dictionary of vote counts by element (summing over everything else
         within the given election and reporting unit)"""
@@ -2920,10 +2944,10 @@ class Analyzer:
             fields = aliases = [name_field, "CountItemType", "Count"]
         vc_df = db.read_vote_count(
             self.session,
-            election_id,
-            reportingunit_id,
-            fields,
-            aliases,
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=fields,
+            aliases=aliases,
         )
         # exclude any redundant total vote types
         if len(vc_df.CountItemType.unique()) > 1:
@@ -3787,10 +3811,10 @@ def bad_multi_presidentials(
         jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", r["Jurisdiction"])
         db_counts = db.read_vote_count(
             an.session,
-            election_id,
-            jurisdiction_id,
-            ["ContestName", "Count"],
-            ["ContestName", "Count"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["ContestName", "Count"],
+            aliases=["ContestName", "Count"],
         )
         if db_counts[db_counts.ContestName.str.contains("US President")].empty:
             bad_list.append(f"{r['Election']} {r['Jurisdiction']}: no results found")

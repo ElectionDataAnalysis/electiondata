@@ -1591,15 +1591,38 @@ def export_rollup_from_db(
 
 def read_vote_count(
     session: Session,
-    election_id: int,
-    jurisdiction_id: int,
-    fields: List[str],
-    aliases: List[str],
+    election_id: Optional[int] = None,
+    jurisdiction_id: Optional[int] = None,
+    fields: Optional[List[str]] = None,
+    aliases: Optional[List[str]] = None,
 ) -> pd.DataFrame:
     """The VoteCount table is the only place that maps contests to a specific
     election. But this table is the largest one, so we don't want to use pandas methods
     to read into a DF and then filter. Data returns is determined by <fields> (column names from SQL query);
     the columns in the returned database can be renamed as <aliases>"""
+
+    # create the WHERE clause if necessary
+    if not election_id and not jurisdiction_id:
+        where = ""
+    else:
+        where_list = list()
+        if election_id:
+            where_list.append(""" "Election_Id" = {election_id} """)
+
+        if jurisdiction_id:
+            where_list.append(f"""ParentReportingUnit_Id = {jurisdiction_id}""")
+
+        where_str = " WHERE" + " AND ".join(where_list)
+
+        if where_list:
+            where = sql.SQL(where_str).format(
+                election_id=sql.Literal(election_id),
+                jurisdiction_id=sql.Literal(jurisdiction_id),
+            )
+
+        else:
+            where = sql.SQL("")
+
     q = sql.SQL(
         """
         SELECT  DISTINCT {fields}
@@ -1609,6 +1632,7 @@ def read_vote_count(
                             "CountItemType", "Count"
                     FROM    "VoteCount"
                 ) vc
+                JOIN (SELECT "Id", "is_preliminary" from "_datafile") df on df."Id" = vc."_datafile_Id"
                 JOIN (SELECT "Id", "Name" as "ContestName" , contest_type as "ContestType" FROM "Contest") con on vc."Contest_Id" = con."Id"
                 JOIN "ComposingReportingUnitJoin" cruj ON vc."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
                 JOIN "CandidateSelection" cs ON vc."Selection_Id" = cs."Id"
@@ -1627,15 +1651,15 @@ def read_vote_count(
                 -- this reporting unit info refers to the geopolitical divisions (county, state, etc)
                 JOIN (SELECT "Id" as "GP_Id", "Name" AS "GPReportingUnitName", "ReportingUnitType" AS "GPType" FROM "ReportingUnit") gpru on vc."ReportingUnit_Id" = gpru."GP_Id"
                 JOIN (SELECT "Id", "Name" as "ElectionName", "ElectionType" FROM "Election") e on vc."Election_Id" = e."Id"
-        WHERE   "Election_Id" = %s
-                AND "ParentReportingUnit_Id" = %s
+        {where}
         """
     ).format(
         fields=sql.SQL(",").join(sql.Identifier(field) for field in fields),
+        where=where,
     )
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
-    cursor.execute(q, [election_id, jurisdiction_id])
+    cursor.execute(q)
     results = cursor.fetchall()
     results_df = pd.DataFrame(results, columns=aliases)
     return results_df

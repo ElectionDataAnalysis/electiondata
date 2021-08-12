@@ -1010,10 +1010,10 @@ def get_filtered_input_options(
         # get the vote count categories
         type_df = db.read_vote_count(
             session,
-            election_id,
-            jurisdiction_id,
-            ["CountItemType"],
-            ["CountItemType"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["CountItemType"],
+            aliases=["CountItemType"],
         )
         count_types = list(type_df["CountItemType"].unique())
         count_types.sort()
@@ -1038,10 +1038,10 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df = db.read_vote_count(
             session,
-            election_id,
-            jurisdiction_id,
-            ["ElectionDistrict", "ContestName", "unit_type"],
-            ["parent", "name", "type"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["ElectionDistrict", "ContestName", "unit_type"],
+            aliases=["parent", "name", "type"],
         )
         df = df.sort_values(["parent", "name"]).reset_index(drop=True)
     # check if it's looking for a count of candidates
@@ -1052,10 +1052,10 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df_unordered = db.read_vote_count(
             session,
-            election_id,
-            jurisdiction_id,
-            ["ContestName", "BallotName", "PartyName", "unit_type"],
-            ["parent", "name", "type", "unit_type"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["ContestName", "BallotName", "PartyName", "unit_type"],
+            aliases=["parent", "name", "type", "unit_type"],
         )
         df = clean_candidate_names(df_unordered)
         df = df[["parent", "name", "unit_type"]].rename(columns={"unit_type": "type"})
@@ -1082,10 +1082,10 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df = db.read_vote_count(
             session,
-            election_id,
-            jurisdiction_id,
-            ["PartyName", "unit_type"],
-            ["parent", "type"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["PartyName", "unit_type"],
+            aliases=["parent", "type"],
         )
         df["name"] = df["parent"].str.replace(" Party", "") + " " + df["type"]
         df = df[df_cols].sort_values(["parent", "type"])
@@ -1095,10 +1095,10 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df_unordered = db.read_vote_count(
             session,
-            election_id,
-            jurisdiction_id,
-            ["ContestName", "BallotName", "PartyName", "unit_type"],
-            ["parent", "name", "type", "unit_type"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["ContestName", "BallotName", "PartyName", "unit_type"],
+            aliases=["parent", "name", "type", "unit_type"],
         )
         df_unordered = df_unordered[df_unordered["unit_type"].isin(filters)].copy()
         df_filtered = df_unordered[
