@@ -1,0 +1,28 @@
+Jurisdiction	Election	Contest	ReportingUnit	VoteType	Count	Status	Source	Note
+Georgia	2016 General	US President (GA)	Georgia	total	4092373	official-final		
+Georgia	2016 General	US House GA District 9	Georgia	total	256535	official-final		
+Georgia	2016 General	GA Senate District 13	Georgia	total	60387	official-final		
+Georgia	2016 General	GA House District 7	Georgia	total	21666	official-final		
+Georgia	2016 General	US President (GA)	Georgia	absentee-mail	207716	official-final		
+Georgia	2016 General	US President (GA)	Georgia;Bacon County	total	4019	official-final		
+Georgia	2018 General	GA Governor	Georgia	total	3939328	official-final		
+Georgia	2018 General	GA Senate District 5	Georgia	total	34429	official-final		
+Georgia	2018 General	US House GA District 2	Georgia	total	229171	official-final		
+Georgia	2018 General	GA Senate District 5	Georgia	absentee-mail	2335	official-final		
+Georgia	2020 General	US President (GA)	Georgia	total	4998482	official-final		
+Georgia	2020 General	US House GA District 9	Georgia	total	372547	official-final		
+Georgia	2020 General	GA Senate District 10	Georgia	total	84994	official-final		
+Georgia	2020 General	GA House District 3	Georgia	total	23054	official-final		
+Georgia	2020 General	US President (GA)	Georgia;Bacon County	total	4668	official-final		
+Georgia	2020 General	US President (GA)	Georgia	election-day	975540	official-final		
+Georgia	2020 Republican Primary	US President (GA)	Georgia	total	947352	official-final		
+Georgia	2020 Republican Primary	US Senate GA	Georgia	total	992555	official-final		
+Georgia	2020 Democratic Primary	GA Senate District 8	Georgia	total	9103	official-final		
+Georgia	2020 Democratic Primary	GA House District 7	Georgia	total	2193	official-final		
+Georgia	2020 Democratic Primary	GA House District 7	Georgia	absentee-mail	1655	official-final		
+Georgia	2020 General Runoff	US Senate GA	Georgia	total	1316240	official-final		
+Georgia	2020 General Runoff	US Senate GA	Georgia	absentee-mail	1084021	official-final		
+Georgia	2000 General	US President (GA)	Georgia	total	2596804	official-final	https://doi.org/10.7910/DVN/VOQCHQ	
+Georgia	2004 General	US President (GA)	Georgia	total	3298790	official-final	https://doi.org/10.7910/DVN/VOQCHQ	
+Georgia	2008 General	US President (GA)	Georgia	total	3925278	official-final	https://doi.org/10.7910/DVN/VOQCHQ	
+Georgia	2012 General	US President (GA)	Georgia	total	3900050	official-final	https://doi.org/10.7910/DVN/VOQCHQ	
