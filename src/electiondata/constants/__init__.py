@@ -449,6 +449,15 @@ if 1:
     optional_mdl_pars = [
         "unloaded_dir",
     ]
+    req_for_combined_file_loading = [
+        "results_file",
+        "munger_list",
+        "results_download_date",
+        "results_source",
+        "results_note",
+        "secondary_source",
+        "results_short_name",
+    ]
     prep_pars = [
         "name",
         "abbreviated_name",
@@ -543,18 +552,19 @@ if 1:
 # reporting
 if 1:
     juris_load_report_keys = [
-        "munger",
-        "warn-munger",
-        "jurisdiction",
-        "warn-jurisdiction",
-        "file",
-        "warn-file",
-        "ini",
-        "warn-ini",
-        "warn-database",
         "database",
-        "warn-dictionary",
         "dictionary",
+        "file",
+        "ini",
+        "jurisdiction",
+        "munger",
+        "warn-database",
+        "warn-dictionary",
+        "warn-file",
+        "warn-ini",
+        "warn-jurisdiction",
+        "warn-munger",
+        "warn-test",
     ]
 # regex patterns
 if 1:

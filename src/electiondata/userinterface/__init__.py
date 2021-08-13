@@ -291,10 +291,16 @@ def read_single_datafile(
                 if new_err:
                     err = consolidate_errors([err, new_err])
 
-        # rename any columns from header-less tables to column_0, column_1, etc.
+        # regularize column names
         if p["all_rows"] == "data":
+            # rename any columns from header-less tables to column_0, column_1, etc.
             for k in df_dict.keys():
                 df_dict[k].columns = [f"column_{j}" for j in range(df_dict[k].shape[1])]
+        else:
+            # strip whitespace from column names # TODO handle same for multi-index columns
+            for k in df_dict.keys():
+                if not isinstance(df_dict[k].columns, pd.MultiIndex):
+                   df_dict[k].columns = [(c.strip() if isinstance(c, str) else c) for c in df_dict[k].columns]
 
     except FileNotFoundError:
         err_str = f"File not found: {f_path}"
@@ -692,7 +698,7 @@ def report(
 
                     # write info to a .errors or .errors file named for the name_key <nk>
                     out_path = os.path.join(
-                        output_location, f"{file_prefix}_{nk_name}.errors"
+                        output_location, f"{file_prefix}_{et}_{nk_name}.errors"
                     )
                     with open(out_path, "a") as f:
                         f.write(out_str)
@@ -712,11 +718,9 @@ def report(
                 )
 
                 # write output
-                # get timestamp
-                ts = datetime.datetime.now().strftime("%m%d_%H%M")
                 # write info to a .errors or .errors file named for the name_key <nk>
                 out_path = os.path.join(
-                    output_location, f"{file_prefix}{nk_name}.warnings"
+                    output_location, f"{file_prefix}_{et}_{nk_name}.warnings"
                 )
                 with open(out_path, "a") as f:
                     f.write(out_str)
@@ -806,43 +810,6 @@ def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
     return False
 
 
-def run_tests(
-    test_dir: str,
-    dbname: str,
-    election_jurisdiction_list: list,
-    report_dir: Optional[str] = None,
-    file_prefix: str = "",
-) -> Dict[str, Any]:
-    """run tests from test_dir
-    db_params must have host, user, pass, db_name.
-    test_param_file is a reference run_time.ini file.
-    Returns dictionary of failures (keys are jurisdiction;election strings)"""
-
-    failures = dict()  # initialize result report
-    # run pytest
-
-    for (election, juris) in election_jurisdiction_list:
-        # run tests
-        e_system = jm.system_name_from_true_name(election)
-        j_system = jm.system_name_from_true_name(juris)
-        test_file = os.path.join(test_dir, f"{j_system}/test_{j_system}_{e_system}.py")
-        if not os.path.isfile(test_file):
-            failures[f"{juris};{election}"] = f"No test file found: {test_file}"
-            continue
-        cmd = f"pytest --dbname {dbname} {test_file}"
-        if report_dir:
-            Path(report_dir).mkdir(exist_ok=True, parents=True)
-            report_file = os.path.join(
-                report_dir, f"{file_prefix}{j_system}_{e_system}.test_results"
-            )
-            cmd = f"{cmd} > {report_file}"
-        r = os.system(cmd)
-        if r != 0:
-            failures[f"{juris};{election}"] = "At least one test failed"
-
-    return failures
-
-
 def confirm_essential_info(
     directory: str,
     header: str,
@@ -899,13 +866,13 @@ def confirm_essential_info(
 
 def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> list:
     """Return list of all election-jurisdiction pairs in .ini files in the ini_path directory
-    or in any of its subdirectories. Ignores 'template.ini' If results_path is given, filters
+    or in any of its subdirectories. Ignores any '*template.ini' If results_path is given, filters
     for ini files whose results files are in the results_path directory
     """
     ej_set = set()
     for subdir, dirs, files in os.walk(ini_path):
         for f in files:
-            if (f[-4:] == ".ini") and (f != "template.ini"):
+            if (f.endswith(".ini")) and (not f.endswith("template.ini")):
                 full_path = os.path.join(subdir, f)
                 d, err = get_parameters(
                     param_file=full_path,
@@ -1044,10 +1011,10 @@ def get_filtered_input_options(
         # get the vote count categories
         type_df = db.read_vote_count(
             session,
-            election_id,
-            jurisdiction_id,
-            ["CountItemType"],
-            ["CountItemType"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["CountItemType"],
+            aliases=["CountItemType"],
         )
         count_types = list(type_df["CountItemType"].unique())
         count_types.sort()
@@ -1072,10 +1039,10 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df = db.read_vote_count(
             session,
-            election_id,
-            jurisdiction_id,
-            ["ElectionDistrict", "ContestName", "unit_type"],
-            ["parent", "name", "type"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["ElectionDistrict", "ContestName", "unit_type"],
+            aliases=["parent", "name", "type"],
         )
         df = df.sort_values(["parent", "name"]).reset_index(drop=True)
     # check if it's looking for a count of candidates
@@ -1086,10 +1053,10 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df_unordered = db.read_vote_count(
             session,
-            election_id,
-            jurisdiction_id,
-            ["ContestName", "BallotName", "PartyName", "unit_type"],
-            ["parent", "name", "type", "unit_type"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["ContestName", "BallotName", "PartyName", "unit_type"],
+            aliases=["parent", "name", "type", "unit_type"],
         )
         df = clean_candidate_names(df_unordered)
         df = df[["parent", "name", "unit_type"]].rename(columns={"unit_type": "type"})
@@ -1116,10 +1083,10 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df = db.read_vote_count(
             session,
-            election_id,
-            jurisdiction_id,
-            ["PartyName", "unit_type"],
-            ["parent", "type"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["PartyName", "unit_type"],
+            aliases=["parent", "type"],
         )
         df["name"] = df["parent"].str.replace(" Party", "") + " " + df["type"]
         df = df[df_cols].sort_values(["parent", "type"])
@@ -1129,10 +1096,10 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df_unordered = db.read_vote_count(
             session,
-            election_id,
-            jurisdiction_id,
-            ["ContestName", "BallotName", "PartyName", "unit_type"],
-            ["parent", "name", "type", "unit_type"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["ContestName", "BallotName", "PartyName", "unit_type"],
+            aliases=["parent", "name", "type", "unit_type"],
         )
         df_unordered = df_unordered[df_unordered["unit_type"].isin(filters)].copy()
         df_filtered = df_unordered[

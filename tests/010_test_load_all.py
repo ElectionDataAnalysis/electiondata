@@ -8,9 +8,10 @@ from typing import Optional
 import electiondata as eda
 from electiondata import database as db
 from electiondata import userinterface as ui
-from distutils.dir_util import copy_tree
+import inspect
 
 
+## https://github.com/ElectionDataAnalysis/TestingData.git
 def io(argv) -> Optional[list]:
     election = None
     jurisdiction = None
@@ -41,6 +42,14 @@ def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool)
     err = None
     db_removed = False
     # give user option to remove db
+    if dl is None:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"DataLoader parameter is None",
+        )
+        return err, db_removed
     remove_db = input(f"Remove test db {dl.d['dbname']} (y/n)?\n")
 
     if remove_db == "y":
@@ -51,50 +60,7 @@ def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool)
         else:
             print(f"db not removed due to error: {err['system']}")
         # define parameters to connect to postgres db
-
-    """    # give user option to remove directory
-        remove_dir = input(f"Remove {dir_path} directory and all its contents (y/n)?\n")
-        if remove_dir == "y":
-            # remove testing data
-            os.system(f"rm -rf {dir_path}")
-    """
     return err, db_removed
-
-
-def close_and_erase(dl: eda.DataLoader) -> Optional[dict]:
-    db_params = {
-        "host": dl.engine.url.host,
-        "port": dl.engine.url.port,
-        "user": dl.engine.url.username,
-        "password": dl.engine.url.password,
-        "dbname": dl.engine.url.database,
-    }
-    # point dataloader to default database
-    dl.change_db("postgres")
-    # remove the db
-    err = db.remove_database(db_params)
-    return err
-
-
-def get_testing_data(
-    url: Optional[str] = None,
-    results_dir: Optional[str] = "TestingData",
-):
-    # if there is no target directory
-    if not os.path.isdir(results_dir):
-        # create a shallow copy of the git directory in current directory
-        cmd = f"git clone --depth 1 -b main {url}"
-        os.system(cmd)
-        # remove the git information
-        shutil.rmtree(os.path.join(results_dir, ".git"), ignore_errors=True)
-        os.remove(os.path.join(results_dir, ".gitignore"))
-        print(f"Files downloaded from {url} into {Path(results_dir).absolute()}")
-
-    else:
-        print(
-            f"Tests will use data in existing directory: {Path(results_dir).absolute()}"
-        )
-    return
 
 
 def run2(
@@ -110,9 +76,7 @@ def run2(
     err = None
     if not test_dir:
         # set the test_dir to the results-testing subdirectory of the directory containing this file
-        test_dir = os.path.join(
-            Path(__file__).parent.absolute(), "specific_result_file_tests"
-        )
+        test_dir = os.path.join(Path(__file__).parent.absolute(), "dataloading_tests")
 
     # name the db
     if dbname is None:
@@ -120,11 +84,9 @@ def run2(
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         dbname = f"test_{ts}"
 
-    if load_data:
-        get_testing_data(
-            url="https://github.com/ElectionDataAnalysis/TestingData.git",
-            results_dir="TestingData",
-        )
+    # get absolute path for run_time.ini if no param_file is given
+    if param_file is None:
+        param_file = Path("run_time.ini").absolute()
 
     if load_data:
         try:
@@ -147,8 +109,8 @@ def run2(
                     results_path="TestingData",
                 )
 
+            # load data for each election-jurisdiction pair in the list
             dl.change_db(dbname)
-
             dl.change_dir("results_dir", "TestingData")
             success, failure, err = dl.load_all(
                 move_files=False,
@@ -162,7 +124,7 @@ def run2(
             if failure:
                 print(f"Files failing to load:\n{failure}")
             else:
-                print("All files loaded.")
+                print("All files loaded to test db.")
 
         except Exception as exc:
             print(f"Exception occurred: {exc}")
@@ -186,6 +148,7 @@ def run2(
         dbname,
         election_jurisdiction_list=loaded_ej_list,
         report_dir=report_dir,
+        param_file=param_file,
     )
     if failures:
         print("At least one test failed")

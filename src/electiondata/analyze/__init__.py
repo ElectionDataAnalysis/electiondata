@@ -1062,32 +1062,32 @@ def nist_candidate_contest(session, election_id, jurisdiction_id):
     the contest, the selection, and the actual vote counts themselves"""
     vote_count_df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        ["VoteCount_Id", "ReportingUnit_Id", "CountItemType", "Count", "Selection_Id"],
-        ["Id", "GpUnitId", "CountItemType", "Count", "Selection_Id"],
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=["VoteCount_Id", "ReportingUnit_Id", "CountItemType", "Count", "Selection_Id"],
+        aliases=["Id", "GpUnitId", "CountItemType", "Count", "Selection_Id"],
     )
 
     selection_df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        ["Selection_Id", "Party_Id", "Candidate_Id", "Contest_Id"],
-        ["Id", "PartyId", "CandidateId", "ContestId"],
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=["Selection_Id", "Party_Id", "Candidate_Id", "Contest_Id"],
+        aliases=["Id", "PartyId", "CandidateId", "ContestId"],
     )
 
     contest_df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        [
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=[
             "Contest_Id",
             "ContestName",
             "ContestType",
             "Office_Id",
             "ElectionDistrict_Id",
         ],
-        ["Id", "ContestName", "ContestType", "OfficeId", "ElectionDistrictId"],
+        aliases=["Id", "ContestName", "ContestType", "OfficeId", "ElectionDistrictId"],
     )
     contest_df = contest_df[contest_df["ContestType"] == "Candidate"]
     contest_df["Type"] = "CandidateContest"
@@ -1128,10 +1128,10 @@ def nist_reporting_unit(session, election_id, jurisdiction_id):
     """A ReportingUnit is a GPUnit"""
     df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        ["GP_Id", "GPReportingUnitName", "GPType"],
-        ["Id", "Name", "ReportingUnitType"],
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=["GP_Id", "GPReportingUnitName", "GPType"],
+        aliases=["Id", "Name", "ReportingUnitType"],
     )
     df["Type"] = "ReportingUnit"
     result = df.to_json(orient="records")
@@ -1141,10 +1141,10 @@ def nist_reporting_unit(session, election_id, jurisdiction_id):
 def nist_party(session, election_id, jurisdiction_id):
     df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        ["Party_Id", "PartyName"],
-        ["Id", "Name"],
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=["Party_Id", "PartyName"],
+        aliases=["Id", "Name"],
     )
     result = df.to_json(orient="records")
     return json.loads(result)
@@ -1153,10 +1153,10 @@ def nist_party(session, election_id, jurisdiction_id):
 def nist_election(session, election_id, jurisdiction_id):
     df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        ["Election_Id", "ElectionName", "ElectionType"],
-        ["Id", "Name", "Type"],
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=["Election_Id", "ElectionName", "ElectionType"],
+        aliases=["Id", "Name", "Type"],
     )
     # Currently all our elections are at the state level.
     # Once we start handling local elections, this might need to be updated.
@@ -1171,10 +1171,10 @@ def nist_election(session, election_id, jurisdiction_id):
 def nist_office(session, election_id, jurisdiction_id):
     df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        ["Office_Id", "OfficeName", "ElectionDistrict_Id", "NumberElected"],
-        ["Id", "Name", "ElectoralDistrictId", "NumberElected"],
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=["Office_Id", "OfficeName", "ElectionDistrict_Id", "NumberElected"],
+        aliases=["Id", "Name", "ElectoralDistrictId", "NumberElected"],
     )
     result = df.to_json(orient="records")
     return json.loads(result)
@@ -1183,10 +1183,10 @@ def nist_office(session, election_id, jurisdiction_id):
 def nist_candidate(session, election_id, jurisdiction_id):
     df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        ["Candidate_Id", "BallotName", "Party_Id"],
-        ["Id", "BallotName", "PartyId"],
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=["Candidate_Id", "BallotName", "Party_Id"],
+        aliases=["Id", "BallotName", "PartyId"],
     )
     result = df.to_json(orient="records")
     return json.loads(result)
