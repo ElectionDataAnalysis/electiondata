@@ -1610,11 +1610,11 @@ def read_vote_count(
             where_list.append(""" "Election_Id" = {election_id} """)
 
         if jurisdiction_id:
-            where_list.append(f"""ParentReportingUnit_Id = {jurisdiction_id}""")
+            where_list.append(""" "ParentReportingUnit_Id" = {jurisdiction_id}""")
 
-        where_str = " WHERE" + " AND ".join(where_list)
 
         if where_list:
+            where_str = " WHERE" + " AND ".join(where_list)
             where = sql.SQL(where_str).format(
                 election_id=sql.Literal(election_id),
                 jurisdiction_id=sql.Literal(jurisdiction_id),

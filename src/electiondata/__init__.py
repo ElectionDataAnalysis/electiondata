@@ -571,7 +571,7 @@ class DataLoader:
             Dict[str, List[str]], for each e-j pair attempted,
                 a list of files that were attempted but failed to load
             Dict[str, bool], for each e-j pair attempted,
-                a boolean (True if all tests passed; otherwise False)
+                a boolean (True if no files failed and all tests passed; otherwise False)
             Optional[dict], error dictionary
         """
         # initialize
@@ -675,11 +675,15 @@ class DataLoader:
                     rollup=rollup,
                     report_missing_files=report_missing_files,
                 )
-                all_tests_passed[f"{election};{jurisdiction}"] = True
                 if new_err:
                     juris_err = ui.consolidate_errors([juris_err, new_err])
-                    if ("warn-test" in new_err.keys()) and new_err["warn-test"]:
-                        all_tests_passed[f"{election};{jurisdiction}"] = False
+
+                # set all_test_passed boolean for this e-j pair
+                if failure_list or (new_err and ("warn-test" in new_err.keys()) and new_err["warn-test"]):
+                    all_tests_passed[f"{election};{jurisdiction}"] = False
+                else:
+                    all_tests_passed[f"{election};{jurisdiction}"] = True
+
                 successfully_loaded[f"{election};{jurisdiction}"] = success_list
                 failed_to_load[f"{election};{jurisdiction}"] = failure_list
 
