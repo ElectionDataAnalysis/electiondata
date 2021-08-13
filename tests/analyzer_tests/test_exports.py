@@ -5,12 +5,12 @@ from pathlib import Path
 import datetime
 
 
-def test_nist_v2_and_v1(runtime):
+def test_nist_v2_and_v1(param_file):
     """Tests whether length of nist v2 export string matches the standard.
     (Would be better to test that xml is equivalent, but that's harder.)"""
     # TODO restore test of nist v1 export
     # load test data to the test db
-    dl = DataLoader(param_file=runtime)  # test db will be created later
+    dl = DataLoader(param_file=param_file)  # test db will be created later
     tests_path = os.path.join(Path(dl.d["repository_content_root"]).parent, "tests")
     db_dump = os.path.join(
         tests_path, "000_data_for_pytest", "postgres_test_db_dump.tar"
@@ -27,7 +27,7 @@ def test_nist_v2_and_v1(runtime):
     err_str = dl.load_data_from_db_dump(dbname=test_db_name, dump_file=db_dump)
 
     # create Analyzer object
-    an = Analyzer(dbname=test_db_name, param_file=runtime)
+    an = Analyzer(dbname=test_db_name, param_file=param_file)
 
     # test nist v2 export against sample file
     new_str_v2 = an.export_nist_v2("2020 General", "Wyoming")
