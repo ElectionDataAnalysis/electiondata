@@ -1,7 +1,12 @@
 Jurisdiction	Election	Contest	ReportingUnit	VoteType	Count	Status	Source	Note
-Connecticut	2020 General	US President (CT)	Connecticut	total	1824280	official-final	https://ctemspublic.pcctg.net/#/reports	actual is 1823857, per website, but file with vote types has 1824280
+Connecticut	2020 General	US President (CT)	Connecticut	total	1823857	official-final		
 Connecticut	2020 General	US House CT District 1	Connecticut	total	349237	official-final		
 Connecticut	2020 General	CT Senate District 2	Connecticut	total	33840	official-final		
 Connecticut	2020 General	CT House District 1	Connecticut	total	5659	official-final		
 Connecticut	2020 General	US President (CT)	Connecticut;Andover	total	2091	official-final		
 Connecticut	2020 General	US President (CT)	Connecticut	absentee	657147	official-final		
+Connecticut	2000 General	US President (CT)	Connecticut	total	1459525	official-final	https://doi.org/10.7910/DVN/VOQCHQ	
+Connecticut	2004 General	US President (CT)	Connecticut	total	1578769	official-final	https://doi.org/10.7910/DVN/VOQCHQ	
+Connecticut	2008 General	US President (CT)	Connecticut	total	1647085	official-final	https://doi.org/10.7910/DVN/VOQCHQ	
+Connecticut	2012 General	US President (CT)	Connecticut	total	1604536	official-final	https://doi.org/10.7910/DVN/VOQCHQ	
+Connecticut	2016 General	US President (CT)	Connecticut	total	1644920	official-final	https://doi.org/10.7910/DVN/VOQCHQ	
