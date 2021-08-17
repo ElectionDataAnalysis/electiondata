@@ -1148,23 +1148,23 @@ def get_major_subdiv_type(
     session: Session,
     jurisdiction: str,
     file_path: Optional[str] = None,
-    repo_content_root: Optional[str] = None,
+    content_root: Optional[str] = None,
 ) -> Optional[str]:
     """Returns the type of the major subdivision, if found. Tries first from <file_path> (if given);
-    if that fails, or no file_path given, tries from database. If nothing found, returns None"""
+    if that fails, or no file_path given, tries from a particular file in the repository
+    if the content root is given; if
+     that fails, tries to deduce from database. If nothing found, returns None"""
     # if file is given,
     if file_path:
         # try to get the major subdivision type from the file
         subdiv_from_file = get_major_subdiv_from_file(file_path, jurisdiction)
         if subdiv_from_file:
             return subdiv_from_file
-    elif repo_content_root:
+    elif content_root:
         # try from file in repo
         subdiv_from_repo = get_major_subdiv_from_file(
             os.path.join(
-                repo_content_root,
-                "jurisdictions",
-                "000_major_subjurisdiction_types.txt",
+                content_root, constants.subdivision_reference_file_path,
             ),
             jurisdiction,
         )

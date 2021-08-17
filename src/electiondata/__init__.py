@@ -2208,7 +2208,7 @@ class Analyzer:
         major_subdiv_type = db.get_major_subdiv_type(
             self.session,
             juris_true_name,
-            repo_content_root=self.repository_content_root,
+            content_root=self.repository_content_root,
         )
 
         # consistency tests
@@ -2679,16 +2679,16 @@ class Analyzer:
             target_file: str,
             election: str,
     ):
-        # TODO get counts
+        # get counts
         election_id = db.name_to_id(self.session, "Election", election)
         df = db.read_vote_count(
                 self.session,
-            election_id=election_id,
-            fields=["ElectionName","ContestName","BallotName","PartyName","GPReportingUnitName",
-                    "CountItemType","Count","is_preliminary"],
-            aliases=["Election","Contest","Selection","Party","ReportingUnit",
-                     "VoteType","Count","Preliminary"],
-        )
+                election_id=election_id,
+                fields=["ElectionName","ContestName","BallotName","PartyName","GPReportingUnitName",
+                        "CountItemType","Count","is_preliminary"],
+                aliases=["Election","Contest","Selection","Party","ReportingUnit",
+                         "VoteType","Count","Preliminary"],
+            )
         #  export to file
         df.sort_values(by=["Election", "Contest", "Selection", "ReportingUnit", "VoteType"], inplace=True)
         df.to_csv(target_file, sep="\t", index=False)
@@ -3030,7 +3030,7 @@ class Analyzer:
         ]
         p_year = re.compile(r"\d{4}")
         major_subdiv = db.get_major_subdiv_type(
-            self.session, jurisdiction, repo_content_root=self.repository_content_root
+            self.session, jurisdiction, content_root=self.repository_content_root
         )
         elections = list(
             pd.read_sql_table("Election", self.session.bind)["Name"].unique()
@@ -3833,3 +3833,47 @@ def bad_multi_presidentials(
             else:
                 good_list.append(f"{r['Election']} {r['Jurisdiction']}: {total}")
     return good_list, bad_list
+
+
+def export_notes_from_ini_files(
+        directory: str, target_file: str,
+        election: Optional[str] = None, jurisdiction: Optional[str] = None
+):
+    df = pd.DataFrame(columns=["election", "jurisdiction", "results_note"])
+    # collect notes
+    try:
+        paths = set()
+        for root,dirs,files in os.walk(directory):
+            for file in files:
+                if file[-4:] == ".ini":
+                    paths.update({os.path.join(root,file)})
+        for p in paths:
+            params, err = ui.get_parameters(
+                required_keys=["election", "jurisdiction","results_note"],
+                header="election_results",
+                param_file=p,
+            )
+            if err:
+                print(f"Error reading parameters from file {p}:\n{err}")
+            elif (election is None or params["election"] == election) and (jurisdiction is None or params["jurisdiction"] == jurisdiction):
+                df = df.append(
+                    {k: params[k] for k in ["election", "jurisdiction", "results_note"]},
+                    ignore_index=True
+                )
+    except Exception as exc:
+        print(f"Exception occurred while exporting notes:\n{exc}")
+
+    # print to file
+    df = df[df["results_note"] != ""]
+    df.sort_values(["election", "jurisdiction"], inplace=True)
+
+    with open(target_file, "a") as f:
+        for el in df["election"].unique():
+            f.write(f"{el}\n")
+            for idx, r in df[df.election == el].iterrows():
+                f.write(f"{r['jurisdiction']}: {r['results_note']}\n\n")
+    return
+
+
+
+

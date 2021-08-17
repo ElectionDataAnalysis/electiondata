@@ -1,8 +1,10 @@
 import csv
 import re
+import os
 from typing import Dict, List, Any
-
 import pandas as pd
+
+# NB: "if 1:" statements are cosmetic, to allow code folding by topic
 
 # jurisdiction info
 if 1:
@@ -123,6 +125,7 @@ if 1:
         "Virgin Islands": "VI",
     }
     default_subdivision_type = "county"
+    subdivision_reference_file_path = os.path.join("jurisdictions",  "000_major_subjurisdiction_types.txt",)
 
 # display information
 if 1:
