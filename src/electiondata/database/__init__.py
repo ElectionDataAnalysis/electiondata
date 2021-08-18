@@ -364,12 +364,12 @@ def create_or_reset_db(
     db_params: Optional[Dict[str, str]] = None,
     dbname: Optional[str] = None,
 ) -> Optional[dict]:
-    """if no dbname is given, name will be taken from db_param_file or db_params"""
+    """if no dbname is given, name will be taken from db_params, db_param_file or db_params.
+    """
 
     project_root = Path(__file__).absolute().parents[1]
-    params, err = ui.get_parameters(
-        required_keys=db_pars, param_file=db_param_file, header="postgresql"
-    )
+    params, err = get_params_from_various(db_params=db_params, db_param_file=db_param_file, dbname=dbname)
+
     if err:
         return err
 
@@ -423,22 +423,11 @@ def create_or_reset_db(
     return err
 
 
-def sql_alchemy_connect(
-    db_params: Optional[Dict[str, str]] = None,
-    db_param_file: Optional[str] = None,
-    dbname: Optional[str] = None,
-) -> (sqlalchemy.engine, Optional[dict]):
-    """
-    Inputs:
-        db_params: Optional[Dict[str, str]],
+def get_params_from_various(
+        db_params: Optional[Dict[str,str]] = None,
         db_param_file: Optional[str] = None,
-        dbname: Optional[str] = None,
-
-    Returns:
-        sqlalchemy.engine, uses parameters in <db_params> if given, otherwise uses <db_param_file>,
-            otherwise defaults to run_time.ini parameter file
-        Optional[dict], error dictionary
-    """
+        dbname: Optional[str] = None
+) -> (Optional[dict], Optional[dict]):
     # use explicit db params if given
     if db_params:
         params = db_params
@@ -456,6 +445,28 @@ def sql_alchemy_connect(
     # if dbname was given, use it instead of name in paramfile
     if dbname:
         params["dbname"] = dbname
+    return params, err
+
+
+def sql_alchemy_connect(
+    db_params: Optional[Dict[str, str]] = None,
+    db_param_file: Optional[str] = None,
+    dbname: Optional[str] = None,
+) -> (sqlalchemy.engine, Optional[dict]):
+    """
+    Inputs:
+        db_params: Optional[Dict[str, str]],
+        db_param_file: Optional[str] = None,
+        dbname: Optional[str] = None,
+
+    Returns:
+        sqlalchemy.engine, uses parameters in <db_params> if given, otherwise uses <db_param_file>,
+            otherwise defaults to run_time.ini parameter file
+        Optional[dict], error dictionary
+    """
+    params, err = get_params_from_various(db_params=db_params, db_param_file=db_param_file, dbname=dbname)
+    if params is None:
+        return None, err
 
     # We connect with the help of the PostgreSQL URL
     url = "postgresql://{user}:{password}@{host}:{port}/{dbname}"
