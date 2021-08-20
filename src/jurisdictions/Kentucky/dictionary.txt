@@ -2260,3 +2260,159 @@ ReportingUnit	Kentucky;Whitley County	Kentucky;Whitley
 ReportingUnit	Kentucky;Wolfe County	Kentucky;Wolfe
 ReportingUnit	Kentucky;Woodford County	Kentucky;Woodford
 CandidateContest	KY Attorney General	KY;Attorney General;statewide
+CandidateContest	US Senate KY	US Senate KY
+CandidateContest	US President (KY)	US President (KY)
+CandidateContest	US House KY District 6	US House KY District 6
+CandidateContest	US House KY District 5	US House KY District 5
+CandidateContest	US House KY District 4	US House KY District 4
+CandidateContest	US House KY District 3	US House KY District 3
+CandidateContest	US House KY District 2	US House KY District 2
+CandidateContest	US House KY District 1	US House KY District 1
+Candidate	Tom HOEFLING	Tom HOEFLING / Andy PRIOR
+Candidate	Timothy Allen STEVENS	Timothy Allen STEVENS / Susan Congleton FLETCHER
+Candidate	Shawn HOWARD	Shawn HOWARD / Alyssa HOWARD
+Candidate	Randall Lee TEEGARDEN	Randall Lee TEEGARDEN
+Candidate	President R19 BODDIE	President R19 BODDIE / Eric C. STONEHAM
+Candidate	Poet J. TRIBBLE	Poet J. TRIBBLE
+Candidate	Paul John FRANGEDAKIS	Paul John FRANGEDAKIS
+Candidate	Mary Ruth Caro SIMMONS	Mary Ruth Caro SIMMONS / Sherri DOW
+Candidate	Mark CHARLES	Mark CHARLES / Adrian WALLACE
+Candidate	Kasey W ELLS	Kasey W ELLS / Rachel WELLS
+Candidate	Jade SIMMONS	Jade SIMMONS / Claudeliah J. ROZE
+Candidate	Howie HAWKINS	Howie HAWKINS / Angela WALKER
+Candidate	Harold H. FITZPATRICK	Harold H. FITZPATRICK
+Candidate	Gloria LA RIVA	Gloria LA RIVA / Sunil FREEMAN
+Candidate	Demetra WYSINGER	Demetra WYSINGER
+Candidate	Daniel COBBLE	Daniel COBBLE
+Candidate	Brian CARROLL	Brian CARROLL / Amar PATEL
+Party	Populist Party	Populist Party
+CandidateContest	KY House District 99	KY House District 99
+CandidateContest	KY House District 98	KY House District 98
+CandidateContest	KY House District 97	KY House District 97
+CandidateContest	KY House District 96	KY House District 96
+CandidateContest	KY House District 95	KY House District 95
+CandidateContest	KY House District 94	KY House District 94
+CandidateContest	KY House District 93	KY House District 93
+CandidateContest	KY House District 92	KY House District 92
+CandidateContest	KY House District 91	KY House District 91
+CandidateContest	KY House District 90	KY House District 90
+CandidateContest	KY House District 9	KY House District 9
+CandidateContest	KY House District 89	KY House District 89
+CandidateContest	KY House District 88	KY House District 88
+CandidateContest	KY House District 87	KY House District 87
+CandidateContest	KY House District 86	KY House District 86
+CandidateContest	KY House District 85	KY House District 85
+CandidateContest	KY House District 84	KY House District 84
+CandidateContest	KY House District 83	KY House District 83
+CandidateContest	KY House District 82	KY House District 82
+CandidateContest	KY House District 81	KY House District 81
+CandidateContest	KY House District 80	KY House District 80
+CandidateContest	KY House District 8	KY House District 8
+CandidateContest	KY House District 79	KY House District 79
+CandidateContest	KY House District 78	KY House District 78
+CandidateContest	KY House District 77	KY House District 77
+CandidateContest	KY House District 76	KY House District 76
+CandidateContest	KY House District 75	KY House District 75
+CandidateContest	KY House District 74	KY House District 74
+CandidateContest	KY House District 73	KY House District 73
+CandidateContest	KY House District 72	KY House District 72
+CandidateContest	KY House District 71	KY House District 71
+CandidateContest	KY House District 70	KY House District 70
+CandidateContest	KY House District 7	KY House District 7
+CandidateContest	KY House District 69	KY House District 69
+CandidateContest	KY House District 68	KY House District 68
+CandidateContest	KY House District 67	KY House District 67
+CandidateContest	KY House District 66	KY House District 66
+CandidateContest	KY House District 65	KY House District 65
+CandidateContest	KY House District 64	KY House District 64
+CandidateContest	KY House District 63	KY House District 63
+CandidateContest	KY House District 62	KY House District 62
+CandidateContest	KY House District 61	KY House District 61
+CandidateContest	KY House District 60	KY House District 60
+CandidateContest	KY House District 6	KY House District 6
+CandidateContest	KY House District 59	KY House District 59
+CandidateContest	KY House District 58	KY House District 58
+CandidateContest	KY House District 57	KY House District 57
+CandidateContest	KY House District 56	KY House District 56
+CandidateContest	KY House District 55	KY House District 55
+CandidateContest	KY House District 54	KY House District 54
+CandidateContest	KY House District 53	KY House District 53
+CandidateContest	KY House District 52	KY House District 52
+CandidateContest	KY House District 51	KY House District 51
+CandidateContest	KY House District 50	KY House District 50
+CandidateContest	KY House District 5	KY House District 5
+CandidateContest	KY House District 49	KY House District 49
+CandidateContest	KY House District 48	KY House District 48
+CandidateContest	KY House District 47	KY House District 47
+CandidateContest	KY House District 46	KY House District 46
+CandidateContest	KY House District 45	KY House District 45
+CandidateContest	KY House District 44	KY House District 44
+CandidateContest	KY House District 43	KY House District 43
+CandidateContest	KY House District 42	KY House District 42
+CandidateContest	KY House District 41	KY House District 41
+CandidateContest	KY House District 40	KY House District 40
+CandidateContest	KY House District 4	KY House District 4
+CandidateContest	KY House District 39	KY House District 39
+CandidateContest	KY House District 38	KY House District 38
+CandidateContest	KY House District 37	KY House District 37
+CandidateContest	KY House District 36	KY House District 36
+CandidateContest	KY House District 35	KY House District 35
+CandidateContest	KY House District 34	KY House District 34
+CandidateContest	KY House District 33	KY House District 33
+CandidateContest	KY House District 32	KY House District 32
+CandidateContest	KY House District 31	KY House District 31
+CandidateContest	KY House District 30	KY House District 30
+CandidateContest	KY House District 3	KY House District 3
+CandidateContest	KY House District 29	KY House District 29
+CandidateContest	KY House District 28	KY House District 28
+CandidateContest	KY House District 27	KY House District 27
+CandidateContest	KY House District 26	KY House District 26
+CandidateContest	KY House District 25	KY House District 25
+CandidateContest	KY House District 24	KY House District 24
+CandidateContest	KY House District 23	KY House District 23
+CandidateContest	KY House District 22	KY House District 22
+CandidateContest	KY House District 21	KY House District 21
+CandidateContest	KY House District 20	KY House District 20
+CandidateContest	KY House District 2	KY House District 2
+CandidateContest	KY House District 19	KY House District 19
+CandidateContest	KY House District 18	KY House District 18
+CandidateContest	KY House District 17	KY House District 17
+CandidateContest	KY House District 16	KY House District 16
+CandidateContest	KY House District 15	KY House District 15
+CandidateContest	KY House District 14	KY House District 14
+CandidateContest	KY House District 13	KY House District 13
+CandidateContest	KY House District 12	KY House District 12
+CandidateContest	KY House District 11	KY House District 11
+CandidateContest	KY House District 100	KY House District 100
+CandidateContest	KY House District 10	KY House District 10
+CandidateContest	KY House District 1	KY House District 1
+CandidateContest	KY Senate District 9	KY Senate District 9
+CandidateContest	KY Senate District 7	KY Senate District 7
+CandidateContest	KY Senate District 5	KY Senate District 5
+CandidateContest	KY Senate District 37	KY Senate District 37
+CandidateContest	KY Senate District 35	KY Senate District 35
+CandidateContest	KY Senate District 33	KY Senate District 33
+CandidateContest	KY Senate District 31	KY Senate District 31
+CandidateContest	KY Senate District 3	KY Senate District 3
+CandidateContest	KY Senate District 29	KY Senate District 29
+CandidateContest	KY Senate District 27	KY Senate District 27
+CandidateContest	KY Senate District 25	KY Senate District 25
+CandidateContest	KY Senate District 23	KY Senate District 23
+CandidateContest	KY Senate District 21	KY Senate District 21
+CandidateContest	KY Senate District 19	KY Senate District 19
+CandidateContest	KY Senate District 17	KY Senate District 17
+CandidateContest	KY Senate District 15	KY Senate District 15
+CandidateContest	KY Senate District 13	KY Senate District 13
+CandidateContest	KY Senate District 11	KY Senate District 11
+CandidateContest	KY Senate District 1	KY Senate District 1
+Candidate	Stacy C. ABNER	Stacy C. ABNER
+Candidate	Philip Eric ROBINSON	Philip Eric ROBINSON
+Candidate	Mark SCHROER	Mark SCHROER
+Candidate	Jada BRADY	Jada BRADY
+Candidate	Dylan FRANZ	Dylan FRANZ
+Candidate	Debby Lucas ANGEL	Debby Lucas ANGEL
+Candidate	Yvonne BALDWIN	Yvonne BALDWIN
+Candidate	Walter TREBOLO III	Walter TREBOLO III
+Candidate	Matt E. MINIARD	Matt E. MINIARD
+Candidate	Gene Barry DETHERAGE JR.	Gene Barry DETHERAGE JR.
+Candidate	Brian PEDIGO	Brian PEDIGO
