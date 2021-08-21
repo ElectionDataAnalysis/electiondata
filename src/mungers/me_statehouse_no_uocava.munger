@@ -1,0 +1,27 @@
+# Format parameters (required) #
+[format]
+file_type=excel
+count_location=by_number:3,4,5,6,7,8,9,10,11,12
+
+## Sometimes required format parameters:
+#### if 'in_count_headers' is in munge_strings:
+count_header_row_numbers=0,1,2
+#### if file type is flat_text or excel and not all rows are data:
+noncount_header_row=0
+#### if 'constant_over_file' is in munge_strings:
+multi_block=yes
+
+# Munge formula sections (required if in munge_strings list) #
+[munge formulas]
+ReportingUnit=<CTY>;<TOWN>
+CandidateContest=ME House District <DIST>
+CountItemType=not-uocava
+
+
+Candidate=<count_header_0>
+Party=<count_header_2>
+
+# Values to ignore (optional) #
+[ignore]
+Candidate=BLANK,TBC
+ReportingUnit=AND,ARD,CUM,FRA,HAN,KEN,KNO,LIN,OXF,PEN,PIS,SAG,SOM,WAL,WAS,YOR

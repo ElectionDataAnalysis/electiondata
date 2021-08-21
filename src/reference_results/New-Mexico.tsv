@@ -1,9 +1,7 @@
 Jurisdiction	Election	Contest	ReportingUnit	VoteType	Count	Status	Source	Note
 New Mexico	2020 General	US President (NM)	New Mexico	total	923965	official-final		
 New Mexico	2020 General	US House NM District 1	New Mexico	total	321290	official-final		
-New Mexico	2020 General	NM Senate District 30	New Mexico	total	830	official-final		
-New Mexico	2020 General	NM House District 5	New Mexico	total	6908	official-final		
-New Mexico	2020 General	US President (NM)	New Mexico;Eddy County	total	23222	official-final		
+New Mexico	2020 General	US President (NM)	New Mexico;Eddy County	total	23222	official-final
 New Mexico	2020 General	US President (NM)	New Mexico	early	455093	official-final		
 New Mexico	2000 General	US President (NM)	New Mexico	total	598605	official-final	https://doi.org/10.7910/DVN/VOQCHQ	
 New Mexico	2004 General	US President (NM)	New Mexico	total	756304	official-final	https://doi.org/10.7910/DVN/VOQCHQ	

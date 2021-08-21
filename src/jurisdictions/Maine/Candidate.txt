@@ -62,7 +62,7 @@ April Dawn Turner
 Arthur C. Verow
 Arthur L. Carter
 Barbara A. Cardone
-Benjamin B. III Twitchell
+Benjamin B. Twitchell III
 Benjamin M. Chipman
 Benjamin S. McCollister
 Benjamin T. Collings
@@ -164,9 +164,9 @@ Gina M. Melaragno
 Gregory Earl Foster
 Gregory Lewis Swallow
 Guy M. Lebida
-H. Sawin Jr. Millett
-H. Scott Jr. Landry
-Harold L. III Stewart
+H. Sawin Millett Jr.
+H. Scott Landry Jr.
+Harold L. Stewart III
 Heather B. Sanborn
 Heidi E. Brooks
 Heidi H. Sampson
@@ -205,8 +205,8 @@ John C. Schneck
 John D. Reeder
 John DeVeau
 John E. Andrews
-John E. Jr. Madigan
-John L. Jr. Tuttle
+John E. Madigan Jr.
+John L. Tuttle Jr.
 John L. Martin
 John M. Nutting
 John R. Clark
@@ -260,8 +260,8 @@ Louis Joseph Luchini
 Luke Dylan Jensen
 Lydia Blume
 Maia R. Dendinger
-Maitland David Jr. Lord
-Manley C. Sr. Gove
+Maitland David Lord Jr.
+Manley C. Gove Sr.
 Margaret M. Craven
 Margaret M. O'Neil
 Marianne Moore
@@ -281,7 +281,7 @@ Matthew W. Moonen
 Matthew William Stone
 Maureen Fitzgerald Terry
 Maurice Joseph Marshall
-Maynard L. Jr. Stanley
+Maynard L. Stanley Jr.
 Michael A. McKinney
 Michael C. Travers
 Michael D. Perkins
@@ -303,7 +303,7 @@ Nathalie J. Arruda
 Nathan J. Wadsworth
 Nathan L. Libby
 Ned Claxton
-Nelson M. J. Jr. Peters
+Nelson M. J. Peters Jr.
 Nicole Grohoski
 Noah Arthur Cobb
 Norman E. Higgins
@@ -317,12 +317,12 @@ Paul A. Stearns
 Paul B. Chace
 Paul Benjamin Schulz
 Paul R. Brown
-Paul T. Sr. Davis
+Paul T. Davis Sr.
 Paula G. Sutton
 Peter A. Lyford
 Peter I. Doyle
 Philip A. Curtis
-Philip Jr. Brady
+Philip Brady Jr.
 Rachel Talbot Ross
 Ralph L. Tucker
 Randall Adam Greenwood
@@ -345,10 +345,10 @@ Robert F. Faunce
 Robert J. Saucier
 Robert M. Currier
 Robert P. II Staples
-Robert W. Sr. Alley
+Robert W. Alley Sr.
 Robin M. Downs
 Roger Alan Seavey
-Roger E. III Densmore
+Roger E. Densmore III
 Roger E. Reed
 Roland Daniel Martin
 Russell Black
@@ -373,7 +373,7 @@ Shelley J. Rudnicki
 Shenna Bellows
 Sherman H. Hutchins
 Stacey K. Guerin
-Stanley Byron Jr. Short
+Stanley Byron Short Jr.
 Stanley Paige Zeigler
 Stavros J. Mendros
 Stephanie Hawke
@@ -392,9 +392,9 @@ Ted L. Sussman
 Teresa S. Pierce
 Teresea M. Hayes
 Terri Jane Casavant
-Theodore J. Jr. Kryzak
+Theodore J. Kryzak Jr.
 Thomas A. Harnett
-Thomas H. Jr. Martin
+Thomas H. Martin Jr.
 Thomas H. Skolfield
 Thomas J. Wright
 Thomas M. Tyler
@@ -405,7 +405,6 @@ Timothy S. Theriault
 Tony W. Lorrain
 Troy Dale Jackson
 Tyler Jay Adkins
-undervote
 Victoria E. Morales
 Victoria Foley
 Victoria P. Kornfield
@@ -420,4 +419,211 @@ William R. Faulkingham
 William R. Tuell
 William R.S. Hoar
 Zak Ringelstein
-Duplicates were found in Party.txt
+Brian Vincent Schaefer
+Kristi Michele Mathieson
+Stanley Paige Zeigler Jr.
+Samuel Lewis Zager
+Robert Alvah Zabierek
+Joshua Charles Woodburn
+Barbara A. Wood
+Lynne A. Williams
+Nathaniel J. White
+Dustin M. White
+Sophia B. Warren
+Charlotte M. Warren
+Lowell B. Wallace
+George L. Vercelli
+Joseph F. Underwood
+April D. Turner
+Adam F. Turner
+Michael J. Timmons
+James E. Thorne
+Timothy Lee Thompson
+Maureen F. Terry
+Scott B. Taylor
+Laura D. Supica
+Peggy Jo Stanley
+Megan L. Smith
+Katrina J. Smith
+Theodore L. Sirois
+Carolyn Anne Silvius
+Erin R. Sheehan
+Bettyann Watson Sheats
+Savannah Leah Sessions
+H. Stedman Seavey
+Patrick J. Scully
+Chelsea Ellary Sanders
+Suzanne M. Salisbury
+Melanie F. Sachs
+Robin S. Russel
+Annalee Z. Rosenblatt
+Amy J. Roeder
+Timothy M. Roche
+Kimberley Florence Robinson
+Tiffany Danielle Roberts
+Morgan J. Rielly
+Brian J. Redmond
+Tracy L. Quint
+Charles Patrick Pray
+Jennifer L. Poirier
+William D. Pluecker
+Joseph J. Pietroski
+Joseph C. Perry Sr.
+Michael Dana Perkins
+Chad Richard Perkins
+Carroll E. Payne
+Sean C. Paulhus
+John L. Patrick
+Wayne R. Parry
+Merle James Parise Jr.
+Edward L. Paradis
+Laurie Osher
+Timothy Oh
+Kevin J.M. O'Connell
+Daniel J. Newman
+Cathy R. Nadeau
+Michael J. Mullins
+Kenneth Morse
+Erika Morse
+John H. Morrison
+Stephen W. Moriarty
+Victoria Morales
+John M. Michael
+Marion Suzanne Menair
+Benjamin J. Meiklejohn
+David Harold McCrea
+Ann Matlack
+Timothy I. Marks
+Veronica Garvey Magnan
+Sheila A. Lyman
+Molly P. Luce
+Grayson B. Lookner
+Laurel D. Libby
+Peter A. Lewis
+John J. II Leifheit
+Michael Dean Lawson
+Lillie N. Lavado
+Clifford T. Krolick
+Gregory M. Kimber
+Patricia E. Kidder
+Timothy S. Keenan
+Michelle Renee Kaplan
+Kathy Javner
+Sherman Hutchins
+Christina Hughes
+K. Frederick Horch
+Tavis Rock Hasenfus
+Lindsey Danielle Harwath
+Matthew Allen Harrington
+Kathryn Burke Harnish
+Jeffrey P. Hanley
+Christopher C. Hamilton
+Gregory Richard Hallee
+Noah James Hall
+David Haggan
+Mark D. Grover
+Nicole C. Grohoski
+Patricia A. Godin
+Jeffery A. Gifford
+Traci Gere
+Valli D. Geiger
+Scott N. Gaiason
+Gregory E. Foster
+Richard Andrew Foss Jr.
+Patricia A. Fogg
+Anne Chalmers Fleming
+Richard Jude Fitzgerald
+James J. Finegan Jr.
+Ryan M. Fecteau
+Justin Jacob Fecteau
+William Robert Faulkingham
+Deborah Foss Emery
+William C. Elliott Jr.
+Michelle A. Dunphy
+John E. Ducharme III
+Kathy L. Downes
+Josanne Dolloff
+Christopher K. Dilts
+Kathleen Jackson Dillingham
+Natalie D. DiPentino
+Todd V. DiFede
+Nicolas Delli Paoli
+Stephen Warner Davis
+Michael J. Davis
+Scott William Cuddy
+Garrel R. Craig
+Lydia V. Crafts
+Lynn H. Copeland
+Maxwell G. Coolidge
+Margarita L. Contreni
+Jonathan M. Connor
+Jessica T. Connor
+Amanda Noelle Collamore
+Kristen Sarah Cloutier
+William L. Clardy
+Marc Chappell
+Raymond R. Caron
+Meldon H. Carmichael
+Nathan Michael Carlow
+Nathan Robert Leigh Burnett
+Stephan M. Bunker
+Pamela D. Buck
+Ethan S. Brownell
+Heidi Eileen Brooks
+Richard T. Bradstreet
+Cameron S. Bowie
+Peter M. Bourgelais
+Jennifer Rebecca Blastow
+Antonio Blasi
+Christopher S. Berryment
+Susan Bernard
+Arthur L. Bell
+Toni Jo Bashinsky
+Michael Thomas Barden III
+Kyle R. Bailey
+Burnell W. Bailey
+Poppy Arford
+Dan L. Ammons
+Kent F. Ackley
+Susan Ann Accardi
+David F. Ziemer
+David C. Woodsome
+Jennifer L. White
+Mark L. Walker
+Daniel S. Swain
+Heather Sanborn
+Sara L. Rivard
+Joseph E. Rafferty Jr.
+Matthew Gary Pouliot
+Martha M.S. Poliquin
+Gabriel M. Perkins
+Craig A. Pendleton
+Bradford Alan Pattershall
+Michael Pardue
+Gordon V. Sr. Page
+Teresa Montague
+Kristie L. Miner
+Duncan Scott Milne
+Louis Luchini
+Jeffrey Lovit
+Karen L. Lockwood
+Matthew Joseph Leonard
+Brian D. Langley
+Holly J.P. Kopp
+Hilary D. Koch
+Christian Forrest Ireland
+Sean P. Hinkley
+Kalie A. Hess
+Timothy Joseph Gallant
+Paul T. Sr. Davis
+Matthea Elisabeth Daughtry
+Robert A. Daigle
+Scott Wynn Cyrway
+Glenn Chip Curry
+Stacy Fielding Brenner
+Katherine S. Branch
+Russell J. Black
+Richard A. Bennett
+Joseph M. Baldacci
+Frederick Harold Austin
+Stephanie Anderson
