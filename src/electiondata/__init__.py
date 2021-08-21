@@ -3277,15 +3277,32 @@ class Analyzer:
                     Path(reference).name,
                     wrong_str,
                 )
+            if not not_found_in_db.empty:
+                nfid_str = f"\nSome expected constests not found. For details, see {sub_dir}"
+                err = ui.add_new_error(
+                    err,
+                    "warn-test",
+                    Path(reference).name,
+                    nfid_str,
+                )
         # if no report_dir, but some results are wrong
-        elif not wrong.empty:
-            wrong_str = f"\nSome database contest results did not match reference results.\n{wrong.to_string()}"
-            err = ui.add_new_error(
-                err,
-                "warn-test",
-                Path(reference).name,
-                wrong_str,
-            )
+        else:
+            if not wrong.empty:
+                wrong_str = f"\nSome database contest results did not match reference results.\n{wrong.to_string()}"
+                err = ui.add_new_error(
+                    err,
+                    "warn-test",
+                    Path(reference).name,
+                    wrong_str,
+                )
+            if not not_found_in_db.empty:
+                nfid_str = f"\nSome expected contests not found.\n{not_found_in_db.to_string()}"
+                err = ui.add_new_error(
+                    err,
+                    "warn-test",
+                    Path(reference).name,
+                    nfid_str,
+                )
         return not_found_in_db, ok, wrong, significantly_wrong, sub_dir, err
 
 
