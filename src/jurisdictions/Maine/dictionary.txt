@@ -1229,7 +1229,7 @@ Candidate	April Dawn Turner	April Dawn Turner
 Candidate	Arthur C. Verow	Arthur C. Verow
 Candidate	Arthur L. Carter	Arthur L. Carter
 Candidate	Barbara A. Cardone	Barbara A. Cardone
-Candidate	Benjamin B. III Twitchell	Benjamin B. III Twitchell
+Candidate	Benjamin B. Twitchell III	Benjamin B. III Twitchell
 Candidate	Benjamin M. Chipman	Benjamin M. Chipman
 Candidate	Benjamin S. McCollister	Benjamin S. McCollister
 Candidate	Benjamin T. Collings	Benjamin T. Collings
@@ -1331,9 +1331,9 @@ Candidate	Gina M. Melaragno	Gina M. Melaragno
 Candidate	Gregory Earl Foster	Gregory Earl Foster
 Candidate	Gregory Lewis Swallow	Gregory Lewis Swallow
 Candidate	Guy M. Lebida	Guy M. Lebida
-Candidate	H. Sawin Jr. Millett	H. Sawin Jr. Millett
-Candidate	H. Scott Jr. Landry	H. Scott Jr. Landry
-Candidate	Harold L. III Stewart	Harold L. III Stewart
+Candidate	H. Sawin Millett Jr.	H. Sawin Jr. Millett
+Candidate	H. Scott Landry Jr.	H. Scott Jr. Landry
+Candidate	Harold L. Stewart III	Harold L. III Stewart
 Candidate	Heather B. Sanborn	Heather B. Sanborn
 Candidate	Heidi E. Brooks	Heidi E. Brooks
 Candidate	Heidi H. Sampson	Heidi H. Sampson
@@ -1372,8 +1372,8 @@ Candidate	John C. Schneck	John C. Schneck
 Candidate	John D. Reeder	John D. Reeder
 Candidate	John DeVeau	John DeVeau
 Candidate	John E. Andrews	John E. Andrews
-Candidate	John E. Jr. Madigan	John E. Jr. Madigan
-Candidate	John L. Jr. Tuttle	John L. Jr. Tuttle
+Candidate	John E. Madigan Jr.	John E. Jr. Madigan
+Candidate	John L. Tuttle Jr.	John L. Jr. Tuttle
 Candidate	John L. Martin	John L. Martin
 Candidate	John M. Nutting	John M. Nutting
 Candidate	John R. Clark	John R. Clark
@@ -1427,8 +1427,8 @@ Candidate	Louis Joseph Luchini	Louis Joseph Luchini
 Candidate	Luke Dylan Jensen	Luke Dylan Jensen
 Candidate	Lydia Blume	Lydia Blume
 Candidate	Maia R. Dendinger	Maia R. Dendinger
-Candidate	Maitland David Jr. Lord	Maitland David Jr. Lord
-Candidate	Manley C. Sr. Gove	Manley C. Sr. Gove
+Candidate	Maitland David Lord Jr.	Maitland David Jr. Lord
+Candidate	Manley C. Gove Sr.	Manley C. Sr. Gove
 Candidate	Margaret M. Craven	Margaret M. Craven
 Candidate	Margaret M. O'Neil	Margaret M. O'Neil
 Candidate	Marianne Moore	Marianne Moore
@@ -1448,7 +1448,7 @@ Candidate	Matthew W. Moonen	Matthew W. Moonen
 Candidate	Matthew William Stone	Matthew William Stone
 Candidate	Maureen Fitzgerald Terry	Maureen Fitzgerald Terry
 Candidate	Maurice Joseph Marshall	Maurice Joseph Marshall
-Candidate	Maynard L. Jr. Stanley	Maynard L. Jr. Stanley
+Candidate	Maynard L. Stanley Jr.	Maynard L. Jr. Stanley
 Candidate	Michael A. McKinney	Michael A. McKinney
 Candidate	Michael C. Travers	Michael C. Travers
 Candidate	Michael D. Perkins	Michael D. Perkins
@@ -1463,6 +1463,7 @@ Candidate	Michael R. Lachance	Michael R. Lachance
 Candidate	Michael R. Stevens	Michael R. Stevens
 Candidate	Michael Sylvester	Michael Sylvester
 Candidate	Michele Meyer	Michele Meyer
+Candidate	Michele Meyer	Meyer, Michele
 Candidate	Michelle Dunphy	Michelle Dunphy
 Candidate	Misty L. Coolidge	Misty L. Coolidge
 Candidate	Nancy Colwell	Nancy Colwell
@@ -1470,7 +1471,7 @@ Candidate	Nathalie J. Arruda	Nathalie J. Arruda
 Candidate	Nathan J. Wadsworth	Nathan J. Wadsworth
 Candidate	Nathan L. Libby	Nathan L. Libby
 Candidate	Ned Claxton	Ned Claxton
-Candidate	Nelson M. J. Jr. Peters	Nelson M. J. Jr. Peters
+Candidate	Nelson M. J. Peters Jr.	Nelson M. J. Jr. Peters
 Candidate	Nicole Grohoski	Nicole Grohoski
 Candidate	Noah Arthur Cobb	Noah Arthur Cobb
 Candidate	Norman E. Higgins	Norman E. Higgins
@@ -1483,12 +1484,12 @@ Candidate	Paul A. Stearns	Paul A. Stearns
 Candidate	Paul B. Chace	Paul B. Chace
 Candidate	Paul Benjamin Schulz	Paul Benjamin Schulz
 Candidate	Paul R. Brown	Paul R. Brown
-Candidate	Paul T. Sr. Davis	Paul T. Sr. Davis
+Candidate	Paul T. Davis Sr.	Paul T. Sr. Davis
 Candidate	Paula G. Sutton	Paula G. Sutton
 Candidate	Peter A. Lyford	Peter A. Lyford
 Candidate	Peter I. Doyle	Peter I. Doyle
 Candidate	Philip A. Curtis	Philip A. Curtis
-Candidate	Philip Jr. Brady	Philip Jr. Brady
+Candidate	Philip Brady Jr.	Philip Jr. Brady
 Candidate	Rachel Talbot Ross	Rachel Talbot Ross
 Candidate	Ralph L. Tucker	Ralph L. Tucker
 Candidate	Randall Adam Greenwood	Randall Adam Greenwood
@@ -1511,10 +1512,10 @@ Candidate	Robert F. Faunce	Robert F. Faunce
 Candidate	Robert J. Saucier	Robert J. Saucier
 Candidate	Robert M. Currier	Robert M. Currier
 Candidate	Robert P. II Staples	Robert P. II Staples
-Candidate	Robert W. Sr. Alley	Robert W. Sr. Alley
+Candidate	Robert W. Alley Sr.	Robert W. Sr. Alley
 Candidate	Robin M. Downs	Robin M. Downs
 Candidate	Roger Alan Seavey	Roger Alan Seavey
-Candidate	Roger E. III Densmore	Roger E. III Densmore
+Candidate	Roger E. Densmore III	Roger E. III Densmore
 Candidate	Roger E. Reed	Roger E. Reed
 Candidate	Roland Daniel Martin	Roland Daniel Martin
 Candidate	Russell Black	Russell Black
@@ -1539,7 +1540,7 @@ Candidate	Shelley J. Rudnicki	Shelley J. Rudnicki
 Candidate	Shenna Bellows	Shenna Bellows
 Candidate	Sherman H. Hutchins	Sherman H. Hutchins
 Candidate	Stacey K. Guerin	Stacey K. Guerin
-Candidate	Stanley Byron Jr. Short	Stanley Byron Jr. Short
+Candidate	Stanley Byron Short Jr.	Stanley Byron Jr. Short
 Candidate	Stanley Paige Zeigler	Stanley Paige Zeigler
 Candidate	Stavros J. Mendros	Stavros J. Mendros
 Candidate	Stephanie Hawke	Stephanie Hawke
@@ -1558,9 +1559,9 @@ Candidate	Ted L. Sussman	Ted L. Sussman
 Candidate	Teresa S. Pierce	Teresa S. Pierce
 Candidate	Teresea M. Hayes	Teresea M. Hayes
 Candidate	Terri Jane Casavant	Terri Jane Casavant
-Candidate	Theodore J. Jr. Kryzak	Theodore J. Jr. Kryzak
+Candidate	Theodore J. Kryzak Jr.	Theodore J. Jr. Kryzak
 Candidate	Thomas A. Harnett	Thomas A. Harnett
-Candidate	Thomas H. Jr. Martin	Thomas H. Jr. Martin
+Candidate	Thomas H. Martin Jr.	Thomas H. Jr. Martin
 Candidate	Thomas H. Skolfield	Thomas H. Skolfield
 Candidate	Thomas J. Wright	Thomas J. Wright
 Candidate	Thomas M. Tyler	Thomas M. Tyler
@@ -1628,7 +1629,351 @@ ReportingUnit	Maine;Waldo County	Maine;Waldo
 ReportingUnit	Maine;Washington County	Maine;Washington
 ReportingUnit	Maine;York County	Maine;York
 ReportingUnit	Maine	Maine;
-Candidate	undervote	undervote
-Candidate	overvote	overvote
-Candidate	Duplicates were found in Party.txt	Duplicates were found in Party.txt
 CandidateContest	ME Attorney General	ME;Attorney General;statewide
+Candidate	Brian Vincent Schaefer	Schaefer, Brian Vincent
+Candidate	Troy Dale Jackson	Jackson, Troy Dale
+Candidate	Kristi Michele Mathieson	Mathieson, Kristi Michele
+Candidate	Stanley Paige Zeigler Jr.	Zeigler, Stanley Paige Jr.
+Candidate	Samuel Lewis Zager	Zager, Samuel Lewis
+Candidate	Robert Alvah Zabierek	Zabierek, Robert Alvah
+Candidate	Joshua Charles Woodburn	Woodburn, Joshua Charles
+Candidate	Barbara A. Wood	Wood, Barbara A.
+Candidate	Lynne A. Williams	Williams, Lynne A.
+Candidate	Nathaniel J. White	White, Nathaniel J.
+Candidate	Dustin M. White	White, Dustin M.
+Candidate	Bruce A. White	White, Bruce A.
+Candidate	Sophia B. Warren	Warren, Sophia B.
+Candidate	Charlotte M. Warren	Warren, Charlotte M.
+Candidate	Tammy B. Walter	Walter, Tammy B.
+Candidate	Lowell B. Wallace	Wallace, Lowell B.
+Candidate	Nathan J. Wadsworth	Wadsworth, Nathan J.
+Candidate	George L. Vercelli	Vercelli, George L.
+Candidate	Joseph F. Underwood	Underwood, Joseph F.
+Candidate	John L. Tuttle Jr.	Tuttle, John L. Jr.
+Candidate	April D. Turner	Turner, April D.
+Candidate	Adam F. Turner	Turner, Adam F.
+Candidate	William R. Tuell	Tuell, William R.
+Candidate	Ralph L. Tucker	Tucker, Ralph L.
+Candidate	Michael J. Timmons	Timmons, Michael J.
+Candidate	James E. Thorne	Thorne, James E.
+Candidate	Timothy Lee Thompson	Thompson, Timothy Lee
+Candidate	Timothy S. Theriault	Theriault, Timothy S.
+Candidate	Maureen F. Terry	Terry, Maureen F.
+Candidate	Denise A. Tepler	Tepler, Denise A.
+Candidate	Scott B. Taylor	Taylor, Scott B.
+Candidate	Michael Sylvester	Sylvester, Michael
+Candidate	Laura D. Supica	Supica, Laura D.
+Candidate	Holly B. Stover	Stover, Holly B.
+Candidate	Joel R. Stetkis	Stetkis, Joel R.
+Candidate	Paul A. Stearns	Stearns, Paul A.
+Candidate	Peggy Jo Stanley	Stanley, Peggy Jo
+Candidate	Megan L. Smith	Smith, Megan L.
+Candidate	Katrina J. Smith	Smith, Katrina J.
+Candidate	Thomas H. Skolfield	Skolfield, Thomas H.
+Candidate	Theodore L. Sirois	Sirois, Theodore L.
+Candidate	Carolyn Anne Silvius	Silvius, Carolyn Anne
+Candidate	Erin R. Sheehan	Sheehan, Erin R.
+Candidate	Bettyann Watson Sheats	Sheats, Bettyann Watson
+Candidate	Braden K. Sharpe	Sharpe, Braden K.
+Candidate	Savannah Leah Sessions	Sessions, Savannah Leah
+Candidate	H. Stedman Seavey	Seavey, H. Stedman
+Candidate	Patrick J. Scully	Scully, Patrick J.
+Candidate	Chelsea Ellary Sanders	Sanders, Chelsea Ellary
+Candidate	Heidi H. Sampson	Sampson, Heidi H.
+Candidate	Suzanne M. Salisbury	Salisbury, Suzanne M.
+Candidate	Melanie F. Sachs	Sachs, Melanie F.
+Candidate	Robin S. Russel	Russel, Robin S.
+Candidate	Shelley J. Rudnicki	Rudnicki, Shelley J.
+Candidate	Rachel Talbot Ross	Ross, Rachel Talbot
+Candidate	Annalee Z. Rosenblatt	Rosenblatt, Annalee Z.
+Candidate	Amy J. Roeder	Roeder, Amy J.
+Candidate	Timothy M. Roche	Roche, Timothy M.
+Candidate	Kimberley Florence Robinson	Robinson, Kimberley Florence
+Candidate	Tiffany Danielle Roberts	Roberts, Tiffany Danielle
+Candidate	Walter N. Riseman	Riseman, Walter N.
+Candidate	Christina Riley	Riley, Christina
+Candidate	Morgan J. Rielly	Rielly, Morgan J.
+Candidate	John D. Reeder	Reeder, John D.
+Candidate	Brian J. Redmond	Redmond, Brian J.
+Candidate	Lois Galgay Reckitt	Reckitt, Lois Galgay
+Candidate	Tracy L. Quint	Quint, Tracy L.
+Candidate	Dwayne W. Prescott	Prescott, Dwayne W.
+Candidate	Charles Patrick Pray	Pray, Charles Patrick
+Candidate	Jennifer L. Poirier	Poirier, Jennifer L.
+Candidate	William D. Pluecker	Pluecker, William D.
+Candidate	Joseph J. Pietroski	Pietroski, Joseph J.
+Candidate	Teresa S. Pierce	Pierce, Teresa S.
+Candidate	Jeffrey K. Pierce	Pierce, Jeffrey K.
+Candidate	Richard A. Pickett	Pickett, Richard A.
+Candidate	Joseph C. Perry Sr.	Perry, Joseph C. Sr.
+Candidate	Anne C. Perry	Perry, Anne C.
+Candidate	Michael Dana Perkins	Perkins, Michael Dana
+Candidate	Chad Richard Perkins	Perkins, Chad Richard
+Candidate	Sarah A. Pebworth	Pebworth, Sarah A.
+Candidate	Carroll E. Payne	Payne, Carroll E.
+Candidate	Sean C. Paulhus	Paulhus, Sean C.
+Candidate	John L. Patrick	Patrick, John L.
+Candidate	Wayne R. Parry	Parry, Wayne R.
+Candidate	Merle James Parise Jr.	Parise, Merle James Jr.
+Candidate	Edward L. Paradis	Paradis, Edward L.
+Candidate	Laurie Osher	Osher, Laurie
+Candidate	Lester S. Ordway	Ordway, Lester S.
+Candidate	Timothy Oh	Oh, Timothy
+Candidate	Margaret M. O'Neil	O'Neil, Margaret M.
+Candidate	Beth A. O'Connor	O'Connor, Beth A.
+Candidate	Kevin J.M. O'Connell	O'Connell, Kevin J.M.
+Candidate	John M. Nutting	Nutting, John M.
+Candidate	Daniel J. Newman	Newman, Daniel J.
+Candidate	Cathy R. Nadeau	Nadeau, Cathy R.
+Candidate	Michael J. Mullins	Mullins, Michael J.
+Candidate	Kenneth Morse	Morse, Kenneth
+Candidate	Erika Morse	Morse, Erika
+Candidate	John H. Morrison	Morrison, John H.
+Candidate	Joshua K. Morris	Morris, Joshua K.
+Candidate	Stephen W. Moriarty	Moriarty, Stephen W.
+Candidate	Victoria Morales	Morales, Victoria
+Candidate	Rebecca J. Millett	Millett, Rebecca J.
+Candidate	H. Sawin Millett Jr.	Millett, H. Sawin Jr.
+Candidate	John M. Michael	Michael, John M.
+Candidate	Marion Suzanne Menair	Menair, Marion Suzanne
+Candidate	Gina M. Melaragno	Melaragno, Gina M.
+Candidate	Benjamin J. Meiklejohn	Meiklejohn, Benjamin J.
+Candidate	Genevieve L. McDonald	McDonald, Genevieve L.
+Candidate	Joyce McCreight	McCreight, Joyce
+Candidate	David Harold McCrea	McCrea, David Harold
+Candidate	Ann Matlack	Matlack, Ann
+Candidate	Richard G. Mason	Mason, Richard G.
+Candidate	Thomas H. Martin Jr.	Martin, Thomas H. Jr.
+Candidate	Roland Daniel Martin	Martin, Roland Daniel
+Candidate	John L. Martin	Martin, John L.
+Candidate	Timothy I. Marks	Marks, Timothy I.
+Candidate	Veronica Garvey Magnan	Magnan, Veronica Garvey
+Candidate	Colleen M. Madigan	Madigan, Colleen M.
+Candidate	Sharri K. MacDonald	MacDonald, Sharri K.
+Candidate	Sheila A. Lyman	Lyman, Sheila A.
+Candidate	Peter A. Lyford	Lyford, Peter A.
+Candidate	Molly P. Luce	Luce, Molly P.
+Candidate	Grayson B. Lookner	Lookner, Grayson B.
+Candidate	William J. Lippincott	Lippincott, William J.
+Candidate	Laurel D. Libby	Libby, Laurel D.
+Candidate	Peter A. Lewis	Lewis, Peter A.
+Candidate	Michael H. Lemelin	Lemelin, Michael H.
+Candidate	John J. II Leifheit	Leifheit, John J. II
+Candidate	Michael Dean Lawson	Lawson, Michael Dean
+Candidate	Michael J. Lawler	Lawler, Michael J.
+Candidate	Lillie N. Lavado	Lavado, Lillie N.
+Candidate	Daniel J. Lauzon	Lauzon, Daniel J.
+Candidate	H. Scott Landry Jr.	Landry, H. Scott Jr.
+Candidate	Daniel R. LaPointe	LaPointe, Daniel R.
+Candidate	Theodore J. Kryzak Jr.	Kryzak, Theodore J. Jr.
+Candidate	Clifford T. Krolick	Krolick, Clifford T.
+Candidate	MaryAnne Kinney	Kinney, MaryAnne
+Candidate	Gregory M. Kimber	Kimber, Gregory M.
+Candidate	Patricia E. Kidder	Kidder, Patricia E.
+Candidate	Christopher J. Kessler	Kessler, Christopher J.
+Candidate	Timothy S. Keenan	Keenan, Timothy S.
+Candidate	Michelle Renee Kaplan	Kaplan, Michelle Renee
+Candidate	Chris A. Johansen	Johansen, Chris A.
+Candidate	Kathy Javner	Javner, Kathy
+Candidate	Henry L. Ingwersen	Ingwersen, Henry L.
+Candidate	Patricia Hymanson	Hymanson, Patricia
+Candidate	Sherman Hutchins	Hutchins, Sherman
+Candidate	Christina Hughes	Hughes, Christina
+Candidate	K. Frederick Horch	Horch, K. Frederick
+Candidate	Daniel J. Hobbs	Hobbs, Daniel J.
+Candidate	Norman E. Higgins	Higgins, Norman E.
+Candidate	Joshua Timothy Hiatt	Hiatt, Joshua Timothy
+Candidate	Allison L. Hepler	Hepler, Allison L.
+Candidate	Frances M. Head	Head, Frances M.
+Candidate	Stephanie Hawke	Hawke, Stephanie
+Candidate	Tavis Rock Hasenfus	Hasenfus, Tavis Rock
+Candidate	Lindsey Danielle Harwath	Harwath, Lindsey Danielle
+Candidate	Matthew Allen Harrington	Harrington, Matthew Allen
+Candidate	Kathryn Burke Harnish	Harnish, Kathryn Burke
+Candidate	Thomas A. Harnett	Harnett, Thomas A.
+Candidate	Jeffrey P. Hanley	Hanley, Jeffrey P.
+Candidate	James R. Handy	Handy, James R.
+Candidate	Christopher C. Hamilton	Hamilton, Christopher C.
+Candidate	Gregory Richard Hallee	Hallee, Gregory Richard
+Candidate	Randall C. Hall	Hall, Randall C.
+Candidate	Noah James Hall	Hall, Noah James
+Candidate	David Haggan	Haggan, David
+Candidate	Mark D. Grover	Grover, Mark D.
+Candidate	Nicole C. Grohoski	Grohoski, Nicole C.
+Candidate	Chad Wayne Grignon	Grignon, Chad Wayne
+Candidate	Abigail W. Griffin	Griffin, Abigail W.
+Candidate	Randall Adam Greenwood	Greenwood, Randall Adam
+Candidate	Donald M. Green	Green, Donald M.
+Candidate	Lori Kathryn Gramlich	Gramlich, Lori Kathryn
+Candidate	Timothy H. Goodwin	Goodwin, Timothy H.
+Candidate	Patricia A. Godin	Godin, Patricia A.
+Candidate	Jeffery A. Gifford	Gifford, Jeffery A.
+Candidate	Traci Gere	Gere, Traci
+Candidate	Valli D. Geiger	Geiger, Valli D.
+Candidate	Charles Galemmo	Galemmo, Charles
+Candidate	Scott N. Gaiason	Gaiason, Scott N.
+Candidate	Steven D. Foster	Foster, Steven D.
+Candidate	Gregory E. Foster	Foster, Gregory E.
+Candidate	Richard Andrew Foss Jr.	Foss, Richard Andrew Jr.
+Candidate	Patricia A. Fogg	Fogg, Patricia A.
+Candidate	Anne Chalmers Fleming	Fleming, Anne Chalmers
+Candidate	Richard Jude Fitzgerald	Fitzgerald, Richard Jude
+Candidate	James J. Finegan Jr.	Finegan, James J. Jr.
+Candidate	Ryan M. Fecteau	Fecteau, Ryan M.
+Candidate	Justin Jacob Fecteau	Fecteau, Justin Jacob
+Candidate	Jessica L. Fay	Fay, Jessica L.
+Candidate	William Robert Faulkingham	Faulkingham, William Robert
+Candidate	Richard A. Evans	Evans, Richard A.
+Candidate	Jeffrey Evangelos	Evangelos, Jeffrey
+Candidate	Deborah Foss Emery	Emery, Deborah Foss
+Candidate	William C. Elliott Jr.	Elliott, William C. Jr.
+Candidate	David P. Durrell	Durrell, David P.
+Candidate	Michelle A. Dunphy	Dunphy, Michelle A.
+Candidate	John E. Ducharme III	Ducharme, John E. III
+Candidate	Gary A. Drinkwater	Drinkwater, Gary A.
+Candidate	Kathy L. Downes	Downes, Kathy L.
+Candidate	Victoria W. Doudera	Doudera, Victoria W.
+Candidate	Donna R. Doore	Doore, Donna R.
+Candidate	Josanne Dolloff	Dolloff, Josanne
+Candidate	Janice S. Dodge	Dodge, Janice S.
+Candidate	Christopher K. Dilts	Dilts, Christopher K.
+Candidate	Kathleen Jackson Dillingham	Dillingham, Kathleen Jackson
+Candidate	Natalie D. DiPentino	DiPentino, Natalie D.
+Candidate	Todd V. DiFede	DiFede, Todd V.
+Candidate	Roger E. Densmore III	Densmore, Roger E. III
+Candidate	Nicolas Delli Paoli	Delli Paoli, Nicolas
+Candidate	Stephen Warner Davis	Davis, Stephen Warner
+Candidate	Michael J. Davis	Davis, Michael J.
+Candidate	Aaron Cyr	Cyr, Aaron
+Candidate	Scott William Cuddy	Cuddy, Scott William
+Candidate	W. Edward Crockett	Crockett, W. Edward
+Candidate	Margaret M. Craven	Craven, Margaret M.
+Candidate	Garrel R. Craig	Craig, Garrel R.
+Candidate	Lydia V. Crafts	Crafts, Lydia V.
+Candidate	Danny E. Costain	Costain, Danny E.
+Candidate	Patrick W. Corey	Corey, Patrick W.
+Candidate	Lynn H. Copeland	Copeland, Lynn H.
+Candidate	Misty L. Coolidge	Coolidge, Misty L.
+Candidate	Maxwell G. Coolidge	Coolidge, Maxwell G.
+Candidate	Margarita L. Contreni	Contreni, Margarita L.
+Candidate	Jonathan M. Connor	Connor, Jonathan M.
+Candidate	Jessica T. Connor	Connor, Jessica T.
+Candidate	Benjamin T. Collings	Collings, Benjamin T.
+Candidate	Amanda Noelle Collamore	Collamore, Amanda Noelle
+Candidate	Kristen Sarah Cloutier	Cloutier, Kristen Sarah
+Candidate	William L. Clardy	Clardy, William L.
+Candidate	Marc Chappell	Chappell, Marc
+Candidate	Richard M. Cebra	Cebra, Richard M.
+Candidate	Raymond R. Caron	Caron, Raymond R.
+Candidate	Meldon H. Carmichael	Carmichael, Meldon H.
+Candidate	Nathan Michael Carlow	Carlow, Nathan Michael
+Candidate	Barbara A. Cardone	Cardone, Barbara A.
+Candidate	Christopher J. Caiazzo	Caiazzo, Christopher J.
+Candidate	Kevin A. Bushey	Bushey, Kevin A.
+Candidate	Nathan Robert Leigh Burnett	Burnett, Nathan Robert Leigh
+Candidate	Stephan M. Bunker	Bunker, Stephan M.
+Candidate	Pamela D. Buck	Buck, Pamela D.
+Candidate	Mark E. Bryant	Bryant, Mark E.
+Candidate	Ethan S. Brownell	Brownell, Ethan S.
+Candidate	Heidi Eileen Brooks	Brooks, Heidi Eileen
+Candidate	Michael F. Brennan	Brennan, Michael F.
+Candidate	Richard T. Bradstreet	Bradstreet, Richard T.
+Candidate	Cameron S. Bowie	Bowie, Cameron S.
+Candidate	Peter M. Bourgelais	Bourgelais, Peter M.
+Candidate	Lydia Blume	Blume, Lydia
+Candidate	Mark John Blier	Blier, Mark John
+Candidate	Jennifer Rebecca Blastow	Blastow, Jennifer Rebecca
+Candidate	Antonio Blasi	Blasi, Antonio
+Candidate	Bruce A. Bickford	Bickford, Bruce A.
+Candidate	Christopher S. Berryment	Berryment, Christopher S.
+Candidate	Seth A. Berry	Berry, Seth A.
+Candidate	Susan Bernard	Bernard, Susan
+Candidate	Arthur L. Bell	Bell, Arthur L.
+Candidate	Toni Jo Bashinsky	Bashinsky, Toni Jo
+Candidate	Michael Thomas Barden III	Barden, Michael Thomas III
+Candidate	Kyle R. Bailey	Bailey, Kyle R.
+Candidate	Burnell W. Bailey	Bailey, Burnell W.
+Candidate	Shawn A. Babine	Babine, Shawn A.
+Candidate	Christopher W. Babbidge	Babbidge, Christopher W.
+Candidate	Susan M. Austin	Austin, Susan M.
+Candidate	Betty A. Austin	Austin, Betty A.
+Candidate	Poppy Arford	Arford, Poppy
+Candidate	Amy B. Arata	Arata, Amy B.
+Candidate	John E. Andrews	Andrews, John E.
+Candidate	Mark R. Andre	Andre, Mark R.
+Candidate	Dan L. Ammons	Ammons, Dan L.
+Candidate	Robert W. Alley Sr.	Alley, Robert W. Sr.
+Candidate	Kent F. Ackley	Ackley, Kent F.
+Candidate	Susan Ann Accardi	Accardi, Susan Ann
+Candidate	Susan M. Abercrombie	Abercrombie, Susan M.
+Candidate	David F. Ziemer	Ziemer, David F.
+Candidate	David C. Woodsome	Woodsome, David C.
+Candidate	Jennifer L. White	White, Jennifer L.
+Candidate	Mark L. Walker	Walker, Mark L.
+Candidate	Eloise A. Vitelli	Vitelli, Eloise A.
+Candidate	Beverly B. Uhlenhake	Uhlenhake, Beverly B.
+Candidate	Jeffrey L. Timberlake	Timberlake, Jeffrey L.
+Candidate	Daniel S. Swain	Swain, Daniel S.
+Candidate	Harold L. Stewart III	Stewart, Harold L. III
+Candidate	Heather Sanborn	Sanborn, Heather
+Candidate	Kimberley C. Rosen	Rosen, Kimberley C.
+Candidate	Sara L. Rivard	Rivard, Sara L.
+Candidate	Joseph E. Rafferty Jr.	Rafferty, Joseph E. Jr.
+Candidate	Matthew Gary Pouliot	Pouliot, Matthew Gary
+Candidate	Martha M.S. Poliquin	Poliquin, Martha M.S.
+Candidate	Gabriel M. Perkins	Perkins, Gabriel M.
+Candidate	Craig A. Pendleton	Pendleton, Craig A.
+Candidate	Bradford Alan Pattershall	Pattershall, Bradford Alan
+Candidate	Michael Pardue	Pardue, Michael
+Candidate	Gordon V. Sr. Page	Page, Gordon V. Sr.
+Candidate	Bradley S. Moulton	Moulton, Bradley S.
+Candidate	Marianne Moore	Moore, Marianne
+Candidate	Teresa Montague	Montague, Teresa
+Candidate	David R. Miramant	Miramant, David R.
+Candidate	Kristie L. Miner	Miner, Kristie L.
+Candidate	Duncan Scott Milne	Milne, Duncan Scott
+Candidate	Michael A. McKinney	McKinney, Michael A.
+Candidate	Chloe S. Maxmin	Maxmin, Chloe S.
+Candidate	Louis Luchini	Luchini, Louis
+Candidate	Jeffrey Lovit	Lovit, Jeffrey
+Candidate	Karen L. Lockwood	Lockwood, Karen L.
+Candidate	Nathan L. Libby	Libby, Nathan L.
+Candidate	Matthew Joseph Leonard	Leonard, Matthew Joseph
+Candidate	Mark W. Lawrence	Lawrence, Mark W.
+Candidate	Brian D. Langley	Langley, Brian D.
+Candidate	Holly J.P. Kopp	Kopp, Holly J.P.
+Candidate	Hilary D. Koch	Koch, Hilary D.
+Candidate	Lisa M. Keim	Keim, Lisa M.
+Candidate	Christian Forrest Ireland	Ireland, Christian Forrest
+Candidate	Sean P. Hinkley	Hinkley, Sean P.
+Candidate	Kalie A. Hess	Hess, Kalie A.
+Candidate	Stacey K. Guerin	Guerin, Stacey K.
+Candidate	Timothy Joseph Gallant	Gallant, Timothy Joseph
+Candidate	Bradlee Thomas Farrin	Farrin, Bradlee Thomas
+Candidate	Dana L. Dow	Dow, Dana L.
+Candidate	James F. Dill	Dill, James F.
+Candidate	G. William Diamond	Diamond, G. William
+Candidate	Susan A. Deschambault	Deschambault, Susan A.
+Candidate	Paul T. Sr. Davis	Davis, Paul T. Sr.
+Candidate	Matthea Elisabeth Daughtry	Daughtry, Matthea Elisabeth
+Candidate	Robert A. Daigle	Daigle, Robert A.
+Candidate	Scott Wynn Cyrway	Cyrway, Scott Wynn
+Candidate	Glenn Chip Curry	Curry, Glenn Chip
+Candidate	Jan M. Collins	Collins, Jan M.
+Candidate	Ned Claxton	Claxton, Ned
+Candidate	Benjamin M. Chipman	Chipman, Benjamin M.
+Candidate	Michael E. Carpenter	Carpenter, Michael E.
+Candidate	Anne M. Carney	Carney, Anne M.
+Candidate	Stacy Fielding Brenner	Brenner, Stacy Fielding
+Candidate	Catherine E. Breen	Breen, Catherine E.
+Candidate	Katherine S. Branch	Branch, Katherine S.
+Candidate	Russell J. Black	Black, Russell J.
+Candidate	Richard A. Bennett	Bennett, Richard A.
+Candidate	Shenna Bellows	Bellows, Shenna
+Candidate	Joseph M. Baldacci	Baldacci, Joseph M.
+Candidate	Donna Bailey	Bailey, Donna
+Candidate	Frederick Harold Austin	Austin, Frederick Harold
+Candidate	Stephanie Anderson	Anderson, Stephanie
+Party	Independent for Maine Party	Independent for Maine
+Party	For the People Party	For the People
+Party	Common Sense Independent Party	Common Sense Independent

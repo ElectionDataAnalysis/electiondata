@@ -2410,6 +2410,7 @@ def remove_ignored_rows(df: pd.DataFrame, munger_path: str) -> pd.DataFrame:
             "BallotMeasureContest",
             "Party",
             "ReportingUnit",
+            "CountItemType",
         ],
         param_file=munger_path,
     )

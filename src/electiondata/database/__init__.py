@@ -364,12 +364,12 @@ def create_or_reset_db(
     db_params: Optional[Dict[str, str]] = None,
     dbname: Optional[str] = None,
 ) -> Optional[dict]:
-    """if no dbname is given, name will be taken from db_param_file or db_params"""
+    """if no dbname is given, name will be taken from db_params, db_param_file or db_params.
+    """
 
     project_root = Path(__file__).absolute().parents[1]
-    params, err = ui.get_parameters(
-        required_keys=db_pars, param_file=db_param_file, header="postgresql"
-    )
+    params, err = get_params_from_various(db_params=db_params, db_param_file=db_param_file, dbname=dbname)
+
     if err:
         return err
 
@@ -423,22 +423,11 @@ def create_or_reset_db(
     return err
 
 
-def sql_alchemy_connect(
-    db_params: Optional[Dict[str, str]] = None,
-    db_param_file: Optional[str] = None,
-    dbname: Optional[str] = None,
-) -> (sqlalchemy.engine, Optional[dict]):
-    """
-    Inputs:
-        db_params: Optional[Dict[str, str]],
+def get_params_from_various(
+        db_params: Optional[Dict[str,str]] = None,
         db_param_file: Optional[str] = None,
-        dbname: Optional[str] = None,
-
-    Returns:
-        sqlalchemy.engine, uses parameters in <db_params> if given, otherwise uses <db_param_file>,
-            otherwise defaults to run_time.ini parameter file
-        Optional[dict], error dictionary
-    """
+        dbname: Optional[str] = None
+) -> (Optional[dict], Optional[dict]):
     # use explicit db params if given
     if db_params:
         params = db_params
@@ -456,6 +445,28 @@ def sql_alchemy_connect(
     # if dbname was given, use it instead of name in paramfile
     if dbname:
         params["dbname"] = dbname
+    return params, err
+
+
+def sql_alchemy_connect(
+    db_params: Optional[Dict[str, str]] = None,
+    db_param_file: Optional[str] = None,
+    dbname: Optional[str] = None,
+) -> (sqlalchemy.engine, Optional[dict]):
+    """
+    Inputs:
+        db_params: Optional[Dict[str, str]],
+        db_param_file: Optional[str] = None,
+        dbname: Optional[str] = None,
+
+    Returns:
+        sqlalchemy.engine, uses parameters in <db_params> if given, otherwise uses <db_param_file>,
+            otherwise defaults to run_time.ini parameter file
+        Optional[dict], error dictionary
+    """
+    params, err = get_params_from_various(db_params=db_params, db_param_file=db_param_file, dbname=dbname)
+    if params is None:
+        return None, err
 
     # We connect with the help of the PostgreSQL URL
     url = "postgresql://{user}:{password}@{host}:{port}/{dbname}"
@@ -1148,23 +1159,23 @@ def get_major_subdiv_type(
     session: Session,
     jurisdiction: str,
     file_path: Optional[str] = None,
-    repo_content_root: Optional[str] = None,
+    content_root: Optional[str] = None,
 ) -> Optional[str]:
     """Returns the type of the major subdivision, if found. Tries first from <file_path> (if given);
-    if that fails, or no file_path given, tries from database. If nothing found, returns None"""
+    if that fails, or no file_path given, tries from a particular file in the repository
+    if the content root is given; if
+     that fails, tries to deduce from database. If nothing found, returns None"""
     # if file is given,
     if file_path:
         # try to get the major subdivision type from the file
         subdiv_from_file = get_major_subdiv_from_file(file_path, jurisdiction)
         if subdiv_from_file:
             return subdiv_from_file
-    elif repo_content_root:
+    elif content_root:
         # try from file in repo
         subdiv_from_repo = get_major_subdiv_from_file(
             os.path.join(
-                repo_content_root,
-                "jurisdictions",
-                "000_major_subjurisdiction_types.txt",
+                content_root, constants.subdivision_reference_file_path,
             ),
             jurisdiction,
         )

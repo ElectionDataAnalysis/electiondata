@@ -59,7 +59,7 @@ Put each formula for parsing information from the results file into the `[munge 
  * as a constant formula in the `[munge formulas]` section, in which case a corresponding entry must be made in the jurisdiction's `dictionary.txt`.
 
 For many results files, it is enough to create concatenation formulas, referencing field names from your file by putting them in angle brackets (<>. The available fields are:
-  * `<header_0>`, `<header_1>`, etc. to denote information from the headers of the columns containing the counts.
+  * `<count_header_0>`, `<count_header_1>`, etc. to denote information from the headers of the columns containing the counts.
   * `<row_0>`, `<row_1>`, etc., to read information constant over a sheet or block from one of the header rows. The system recognizes the leftmost non-blank cell as the content to be read.
   * `<sheetname>` to denote the name of an Excel spreadsheet within a (possibly multi-sheet) workbook.
   * any field name from the file itself, e.g., `<SELECTION>`
