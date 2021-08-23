@@ -430,6 +430,7 @@ class DataLoader:
         rollup: bool = False,
         report_missing_files: bool = False,
         status: Optional[str] = None,
+        run_tests: bool = True,
     ) -> (List[str], List[str], str, Optional[dict]):
         """
         Inputs:
@@ -439,12 +440,12 @@ class DataLoader:
             report_missing_files: bool = False, if true, report any files referenced by .ini files but not found in
                 results directory
             status: Optional[str] = None, if given, use only reference results of that particular status for testing
-
+            run_tests: bool = True, controls whether tests are run
 
         Looks within ini_files_for_results/<jurisdiction> for
         all ini files matching  given election and jurisdiction.
         For each, attempts to load file if it exists; reports missing data files.
-        If files load successfully without fatal error, runs tests on the loaded results
+        If files load successfully without fatal error and <run_tests> is True, runs tests on the loaded results
             and reports any failures to error report
         Returns
         * list of successfully-loaded files,
@@ -522,12 +523,13 @@ class DataLoader:
         if add_err:
             err = ui.consolidate_errors([err, add_err])
 
-        # if load successful to this point, test the db's data for this ej-pair and add any failures to err
-        if not ui.fatal_error(err):
-            new_err = self.analyzer.test_loaded_results(
-                election, juris_true_name, juris_system_name, status=status
-            )
-            err = ui.consolidate_errors([err, new_err])
+        if run_tests:
+            # if load successful to this point, test the db's data for this ej-pair and add any failures to err
+            if not ui.fatal_error(err):
+                new_err = self.analyzer.test_loaded_results(
+                    election, juris_true_name, juris_system_name, status=status
+                )
+                err = ui.consolidate_errors([err, new_err])
         return success_by_ini, failure_by_ini, latest_download_date, err
 
     def load_all(
@@ -539,6 +541,7 @@ class DataLoader:
         election_list: Optional[List[str]] = None,
         rollup: bool = False,
         report_missing_files: bool = False,
+        run_tests: bool = True,
     ) -> (Dict[str, List[str]], Dict[str, List[str]], Dict[str, bool], Optional[dict]):
         """
         Inputs:
@@ -551,18 +554,20 @@ class DataLoader:
             rollup: bool = False, if True, loads results rolled up to major subdivision
             report_missing_files: bool = False, if True, reports files referenced in .ini files
                 but not found in results directory
+            run_tests: bool = True, if false, do not run tests on loaded data
 
         Processes all results (or all results corresponding to pairs in
         ej_list if given) in DataLoader's results directory using
-        .ini files from repository.
+            .ini files from repository.
         If load is successful for all files for a single election-jurisdicction pair,
-        then add records for total vote counts whereever necessary.
+            then add records for total vote counts whereever necessary.
         By default, loads (or updates) the info from the jurisdiction files
-        into the db first. By default, moves files to the DataLoader's archive directory.
-        Returns a post-reporting error dictionary, and a dictionary of
-        successfully-loaded files (by election-jurisdiction pair).
-        (Note: errors initializing loading process (e.g., results file not found) do *not* generate
-        <success> = False, though those errors are reported in <err>
+            into the db first. By default, moves files to the DataLoader's archive directory.
+        Returns a post-reporting error dictionary (including errors from post-load testing, if
+            <run_tests> is True, and a dictionary of
+            successfully-loaded files (by election-jurisdiction pair).
+        Note: errors initializing loading process (e.g., results file not found) do *not* generate
+            <success> = False, though those errors are reported in <err>
         If <archive> is true, archive the files
 
         Returns:
@@ -674,6 +679,7 @@ class DataLoader:
                     jurisdiction,
                     rollup=rollup,
                     report_missing_files=report_missing_files,
+                    run_tests=run_tests,
                 )
                 if new_err:
                     juris_err = ui.consolidate_errors([juris_err, new_err])
@@ -3546,7 +3552,27 @@ def load_results_file(
     rollup: bool = False,
     rollup_rut: str = constants.default_subdivision_type,
 ) -> Optional[dict]:
+    """
+    inputs:
+        session: Session, database session
+        munger_path: str, path to file with munging parameters
+        f_path: str, path to results file
+        juris_true_name: str, name of jurisdiction (without hyphens, e.g., "American Samoa")
+        datafile_id: int, Id of the file in the _datafile table in the db
+        election_id: int, Id of the election in the Election table in the db
+        constants: Dict[str, str], values of any elements (e.g., CountItemType) constant over the results file
+        results_directory_path: str, path to root directory for results files (relative to which file paths
+            are specified in the result file's .ini file)
+        path_to_jurisdiction_dir: str, path to directory whose subdirectories, named for jurisdictions, contain the
+            jurisdiction information and dictionary necessary for munging
+        rollup: bool = False, if True, roll up results to the subdivisions specified by <rollup_rut>
+        rollup_rut: str = constants.default_subdivision_type, ReportingUnitType used for rollup (typically 'county')
 
+    Attempts to load results from results file to the database. (Does *not* require results to pass tests.)
+
+    returns:
+        Optional[dict], error dictionary
+    """
     # TODO tech debt: redundant to pass results_directory_path and f_path
     munger_name = Path(munger_path).name
     file_name = Path(f_path).name
@@ -3605,7 +3631,26 @@ def load_or_reload_all(
     dbname: Optional[str] = None,
     param_file: Optional[str] = None,
     move_files: bool = True,
+    run_tests: bool = True,
 ) -> Optional[dict]:
+    """
+    required inputs: (none)
+    optional inputs:
+        rollup: bool = False, if True, roll up results to major subdivision before storing in database
+        dbname: Optional[str] = None, name of database
+        param_file: Optional[str] = None, path to file with parameters for data loading
+        move_files: bool = True, if True, archive files after successful load (& test, if done)
+        run_tests: bool = True, if True, run tests on results in database after loading.
+
+    For each election-jurisdiction pair from a <results>.ini file corresponding to a file in
+        the results directory specified in the data loading parameter file, loads all result data to
+        a temporary database (and, if <run_tests> is True, runs tests on loaded data). If the
+        set of files in the election-jurisdiction pair all load without fatal error or failed test,
+        remove any data for that election-jurisdiction pair from the database and load the new data.
+
+    returns:
+        Optional[dict], error dictionary
+    """
     err = None
     dataloader = DataLoader(dbname=dbname, param_file=param_file)
     if dataloader:
@@ -3630,6 +3675,7 @@ def load_or_reload_all(
                     dbname=dbname,
                     param_file=param_file,
                     move_files=move_files,
+                    run_tests=run_tests,
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
@@ -3670,10 +3716,27 @@ def reload_juris_election(
     dbname: Optional[str] = None,
     param_file: Optional[str] = None,
     move_files: bool = True,
+    run_tests: bool = True,
 ) -> Optional[dict]:
-    """Loads and archives each results file in each direct subfolder of the results_dir
+    """
+    inputs:
+        juris_name: str, name of jurisdiction (without hyphens, e.g., 'District of Columbia')
+        election_name: str, name of election (without hyphens, e.g., '2020 General')
+        report_dir, path to directory for reporting errors, warnings and test results
+        rollup: bool = False, if true, rolls up results within the to the major subdivision
+        dbname: Optional[str] = None, name of database if given; otherwise database name taken from parameter file
+        param_file: Optional[str] = None, path to parameter file for dataloading if given; otherwise parameter file
+            path assumed to be 'run_time.ini'
+        move_files: bool = True, if true, move all files to archive directory if loading (& testing, if done)
+            are successful
+        run_tests: bool = True, if true, run tests on loaded data
+
+    Loads and archives each results file in each direct subfolder of the results_dir
     named in ./run_time.ini -- provided there the results file is specified in a *.ini file in the
     corresponding subfolder of <content_root>/ini_files_for_results. <contest_root> is read from ./run_time.ini.
+
+    returns:
+        Optional[dict], error dictionary
     """
     # initialize dataloader
     err = None
@@ -3728,6 +3791,7 @@ def reload_juris_election(
             rollup=rollup,
             election_jurisdiction_list=[(election_name, juris_name)],
             move_files=move_files,
+            run_tests=run_tests,
         )
         if success:
             if not all_tests_passed[f"{election_name};{juris_name}"]:
