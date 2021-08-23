@@ -80,10 +80,18 @@ class SingleDataLoader:
         self.munger_err = dict()
 
     def track_results(self) -> (List[int], Optional[dict]):
-        """insert a record for the _datafile, recording any error string <e>.
-        Return _datafile.Id and Election_Id"""
+        """
+        Looks up Ids for jurisdiction in the ReportingUnit table of the database and election in the
+            Election table.
+            Inserts a record for the results file into the _database table.
+        Returns:
+            List[int], contains two integer Ids: _datafile.Id and Election.Id
+            Optional[dict], error dictionary
+            """
         err = None
         filename = self.d["results_file"]
+
+        # find id for jurisdiction in ReportingUnit table (or return fatal error)
         jurisdiction_id = db.name_to_id(
             self.session, "ReportingUnit", self.d["jurisdiction"]
         )
@@ -95,6 +103,8 @@ class SingleDataLoader:
                 f"No ReportingUnit named {self.d['jurisdiction']} found in database",
             )
             return [0, 0], err
+
+        # find id for election in Election table (or return fatal error)
         election_id = db.name_to_id(self.session, "Election", self.d["election"])
         if election_id is None:
             err = ui.add_new_error(
@@ -104,6 +114,8 @@ class SingleDataLoader:
                 f"No election named {self.d['election']} found in database",
             )
             return [0, 0], err
+
+        # insert record into _datafile table
         datafile_id, err = datafile_info(
             self.session.bind,
             self.param_file,
@@ -121,7 +133,16 @@ class SingleDataLoader:
     def load_results(
         self, rollup: bool = False, rollup_rut: Optional[str] = None
     ) -> dict:
-        """Load results, returning error (or None, if load successful)"""
+        """
+        Optional inputs:
+            rollup: bool = False, if True, roll results up to subdivision before inserting in db
+            rollup_rut: Optional[str] = None, subdivision type to roll up to (typically 'county')
+
+        Load results, returning error (or None, if load successful)
+
+        Returns:
+
+            """
         err = None
         print(f'\n\nProcessing {self.d["results_file"]}')
 
@@ -685,7 +706,9 @@ class DataLoader:
                     juris_err = ui.consolidate_errors([juris_err, new_err])
 
                 # set all_test_passed boolean for this e-j pair
-                if failure_list or (new_err and ("warn-test" in new_err.keys()) and new_err["warn-test"]):
+                if not run_tests:
+                    all_tests_passed[f"{election};{jurisdiction}"] = True
+                elif failure_list or (new_err and ("warn-test" in new_err.keys()) and new_err["warn-test"]):
                     all_tests_passed[f"{election};{jurisdiction}"] = False
                 else:
                     all_tests_passed[f"{election};{jurisdiction}"] = True
@@ -2684,12 +2707,20 @@ class Analyzer:
             self,
             target_file: str,
             election: str,
+            jurisdiction: Optional[str] = None
     ):
-        # get counts
+        # get internal ids for election (and maybe jurisdiction too)
         election_id = db.name_to_id(self.session, "Election", election)
+        if jurisdiction is not None:
+            jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
+        else:
+            jurisdiction_id = None
+
+        # get counts
         df = db.read_vote_count(
                 self.session,
                 election_id=election_id,
+                jurisdiction_id=jurisdiction_id,
                 fields=["ElectionName","ContestName","BallotName","PartyName","GPReportingUnitName",
                         "CountItemType","Count","is_preliminary"],
                 aliases=["Election","Contest","Selection","Party","ReportingUnit",
@@ -3553,7 +3584,7 @@ def load_results_file(
     rollup_rut: str = constants.default_subdivision_type,
 ) -> Optional[dict]:
     """
-    inputs:
+    required inputs:
         session: Session, database session
         munger_path: str, path to file with munging parameters
         f_path: str, path to results file
@@ -3565,6 +3596,7 @@ def load_results_file(
             are specified in the result file's .ini file)
         path_to_jurisdiction_dir: str, path to directory whose subdirectories, named for jurisdictions, contain the
             jurisdiction information and dictionary necessary for munging
+    optional inputs:
         rollup: bool = False, if True, roll up results to the subdivisions specified by <rollup_rut>
         rollup_rut: str = constants.default_subdivision_type, ReportingUnitType used for rollup (typically 'county')
 
@@ -3719,10 +3751,11 @@ def reload_juris_election(
     run_tests: bool = True,
 ) -> Optional[dict]:
     """
-    inputs:
+    required inputs:
         juris_name: str, name of jurisdiction (without hyphens, e.g., 'District of Columbia')
         election_name: str, name of election (without hyphens, e.g., '2020 General')
         report_dir, path to directory for reporting errors, warnings and test results
+    optional inputs:
         rollup: bool = False, if true, rolls up results within the to the major subdivision
         dbname: Optional[str] = None, name of database if given; otherwise database name taken from parameter file
         param_file: Optional[str] = None, path to parameter file for dataloading if given; otherwise parameter file
@@ -3742,36 +3775,45 @@ def reload_juris_election(
     err = None
     dl = DataLoader(dbname=dbname, param_file=param_file)
 
-    # create temp_db (preserving live db name) and point dataloader to it
-    live_db = dl.session.bind.url.database
-    ts = datetime.datetime.now().strftime("%m%d_%H%M")
-    temp_db = f"{live_db}_test_{ts}"
-    dl.change_db(new_db_name=temp_db, db_param_file=param_file)
+    if run_tests:
+        # create temp_db (preserving live db name) and point dataloader to it
+        live_db = dl.session.bind.url.database
+        ts = datetime.datetime.now().strftime("%m%d_%H%M")
+        temp_db = f"{live_db}_test_{ts}"
+        dl.change_db(new_db_name=temp_db, db_param_file=param_file)
 
-    # load all data into temp db
-    dl.change_db(temp_db, db_param_file=param_file)
-    success, failure, all_tests_passed, load_err = dl.load_all(
-        report_dir=report_dir,
-        move_files=False,
-        rollup=rollup,
-        election_jurisdiction_list=[(election_name, juris_name)],
-    )
-    if load_err:
-        err = ui.consolidate_errors([err, load_err])
-    # if any of the data failed to load
-    if failure:
-        # cleanup temp database
-        db.remove_database(db_param_file=param_file, dbname=temp_db)
-        return err
-
-    # if any tests failed
-    elif not all_tests_passed[f"{election_name};{juris_name}"]:
-        print(
-            f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests."
+        # load all data into temp db
+        dl.change_db(temp_db, db_param_file=param_file)
+        success, failure, all_tests_passed, load_err = dl.load_all(
+            report_dir=report_dir,
+            move_files=False,
+            rollup=rollup,
+            election_jurisdiction_list=[(election_name, juris_name)],
         )
+        if load_err:
+            err = ui.consolidate_errors([err, load_err])
+        # if any of the data failed to load
+        if failure:
+            # cleanup temp database
+            db.remove_database(db_param_file=param_file, dbname=temp_db)
+            return err
+
+        # if any tests failed
+        elif not all_tests_passed[f"{election_name};{juris_name}"]:
+            print(
+                f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests."
+            )
+        else:
+            # switch to live db
+            dl.change_db(live_db, db_param_file=param_file)
     else:
-        # switch to live db
-        dl.change_db(live_db, db_param_file=param_file)
+        temp_db = None # for syntax-checker
+        all_tests_passed = dict()
+    if (not run_tests) or (
+        (f"{election_name};{juris_name}" in all_tests_passed.keys()) and (
+            all_tests_passed[f"{election_name};{juris_name}"]
+        )
+    ):
         # Remove existing data for juris-election pair from live db
         election_id = db.name_to_id(dl.session, "Election", election_name)
         juris_id = db.name_to_id(dl.session, "ReportingUnit", juris_name)
@@ -3805,9 +3847,9 @@ def reload_juris_election(
                 )
         else:
             err = ui.consolidate_errors([err, new_err])
-
-    # cleanup temp database
-    db.remove_database(db_param_file=param_file, dbname=temp_db)
+    if run_tests:
+        # cleanup temp database
+        db.remove_database(db_param_file=param_file, dbname=temp_db)
     return err
 
 

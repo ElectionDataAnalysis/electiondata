@@ -1614,7 +1614,7 @@ def read_vote_count(
 
     # create the WHERE clause if necessary
     if not election_id and not jurisdiction_id:
-        where = ""
+        where = sql.SQL("")
     else:
         where_list = list()
         if election_id:
