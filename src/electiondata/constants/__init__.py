@@ -120,9 +120,9 @@ if 1:
         "District Of Columbia": "DC",
         "Guam": "GU",
         "Marshall Islands": "MH",
-        "Northern Mariana Island": "MP",
+        "Northern Mariana Islands": "MP",
         "Puerto Rico": "PR",
-        "Virgin Islands": "VI",
+        "US Virgin Islands": "VI",
     }
     default_subdivision_type = "county"
     subdivision_reference_file_path = os.path.join("jurisdictions",  "000_major_subjurisdiction_types.txt",)

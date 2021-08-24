@@ -2696,11 +2696,14 @@ class Analyzer:
             status=electiondata.constants.default_status,
             vendor_application_id=electiondata.constants.default_vendor_application_id,
         )
-        xml_string = ET.tostring(
-            xml_tree.getroot(),
-            encoding=electiondata.constants.default_encoding,
-            method="xml",
-        )
+        if (xml_tree.getroot() is None) or ui.fatal_error(err):
+            xml_string = ""
+        else:
+            xml_string = ET.tostring(
+                xml_tree.getroot(),
+                encoding="unicode",  # to ensure string is returned, per ET docs
+                method="xml",
+            )
         return xml_string
 
     def export_election_to_tsv(
