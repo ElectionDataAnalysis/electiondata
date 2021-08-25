@@ -87,7 +87,7 @@ class SingleDataLoader:
         Returns:
             List[int], contains two integer Ids: _datafile.Id and Election.Id
             Optional[dict], error dictionary
-            """
+        """
         err = None
         filename = self.d["results_file"]
 
@@ -142,7 +142,7 @@ class SingleDataLoader:
 
         Returns:
 
-            """
+        """
         err = None
         print(f'\n\nProcessing {self.d["results_file"]}')
 
@@ -708,7 +708,9 @@ class DataLoader:
                 # set all_test_passed boolean for this e-j pair
                 if not run_tests:
                     all_tests_passed[f"{election};{jurisdiction}"] = True
-                elif failure_list or (new_err and ("warn-test" in new_err.keys()) and new_err["warn-test"]):
+                elif failure_list or (
+                    new_err and ("warn-test" in new_err.keys()) and new_err["warn-test"]
+                ):
                     all_tests_passed[f"{election};{jurisdiction}"] = False
                 else:
                     all_tests_passed[f"{election};{jurisdiction}"] = True
@@ -2707,10 +2709,7 @@ class Analyzer:
         return xml_string
 
     def export_election_to_tsv(
-            self,
-            target_file: str,
-            election: str,
-            jurisdiction: Optional[str] = None
+        self, target_file: str, election: str, jurisdiction: Optional[str] = None
     ):
         # get internal ids for election (and maybe jurisdiction too)
         election_id = db.name_to_id(self.session, "Election", election)
@@ -2721,16 +2720,35 @@ class Analyzer:
 
         # get counts
         df = db.read_vote_count(
-                self.session,
-                election_id=election_id,
-                jurisdiction_id=jurisdiction_id,
-                fields=["ElectionName","ContestName","BallotName","PartyName","GPReportingUnitName",
-                        "CountItemType","Count","is_preliminary"],
-                aliases=["Election","Contest","Selection","Party","ReportingUnit",
-                         "VoteType","Count","Preliminary"],
-            )
+            self.session,
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=[
+                "ElectionName",
+                "ContestName",
+                "BallotName",
+                "PartyName",
+                "GPReportingUnitName",
+                "CountItemType",
+                "Count",
+                "is_preliminary",
+            ],
+            aliases=[
+                "Election",
+                "Contest",
+                "Selection",
+                "Party",
+                "ReportingUnit",
+                "VoteType",
+                "Count",
+                "Preliminary",
+            ],
+        )
         #  export to file
-        df.sort_values(by=["Election", "Contest", "Selection", "ReportingUnit", "VoteType"], inplace=True)
+        df.sort_values(
+            by=["Election", "Contest", "Selection", "ReportingUnit", "VoteType"],
+            inplace=True,
+        )
         df.to_csv(target_file, sep="\t", index=False)
         return
 
@@ -3318,7 +3336,9 @@ class Analyzer:
                     wrong_str,
                 )
             if not not_found_in_db.empty:
-                nfid_str = f"\nSome expected constests not found. For details, see {sub_dir}"
+                nfid_str = (
+                    f"\nSome expected constests not found. For details, see {sub_dir}"
+                )
                 err = ui.add_new_error(
                     err,
                     "warn-test",
@@ -3810,12 +3830,11 @@ def reload_juris_election(
             # switch to live db
             dl.change_db(live_db, db_param_file=param_file)
     else:
-        temp_db = None # for syntax-checker
+        temp_db = None  # for syntax-checker
         all_tests_passed = dict()
     if (not run_tests) or (
-        (f"{election_name};{juris_name}" in all_tests_passed.keys()) and (
-            all_tests_passed[f"{election_name};{juris_name}"]
-        )
+        (f"{election_name};{juris_name}" in all_tests_passed.keys())
+        and (all_tests_passed[f"{election_name};{juris_name}"])
     ):
         # Remove existing data for juris-election pair from live db
         election_id = db.name_to_id(dl.session, "Election", election_name)
@@ -3962,29 +3981,36 @@ def bad_multi_presidentials(
 
 
 def export_notes_from_ini_files(
-        directory: str, target_file: str,
-        election: Optional[str] = None, jurisdiction: Optional[str] = None
+    directory: str,
+    target_file: str,
+    election: Optional[str] = None,
+    jurisdiction: Optional[str] = None,
 ):
     df = pd.DataFrame(columns=["election", "jurisdiction", "results_note"])
     # collect notes
     try:
         paths = set()
-        for root,dirs,files in os.walk(directory):
+        for root, dirs, files in os.walk(directory):
             for file in files:
                 if file[-4:] == ".ini":
-                    paths.update({os.path.join(root,file)})
+                    paths.update({os.path.join(root, file)})
         for p in paths:
             params, err = ui.get_parameters(
-                required_keys=["election", "jurisdiction","results_note"],
+                required_keys=["election", "jurisdiction", "results_note"],
                 header="election_results",
                 param_file=p,
             )
             if err:
                 print(f"Error reading parameters from file {p}:\n{err}")
-            elif (election is None or params["election"] == election) and (jurisdiction is None or params["jurisdiction"] == jurisdiction):
+            elif (election is None or params["election"] == election) and (
+                jurisdiction is None or params["jurisdiction"] == jurisdiction
+            ):
                 df = df.append(
-                    {k: params[k] for k in ["election", "jurisdiction", "results_note"]},
-                    ignore_index=True
+                    {
+                        k: params[k]
+                        for k in ["election", "jurisdiction", "results_note"]
+                    },
+                    ignore_index=True,
                 )
     except Exception as exc:
         print(f"Exception occurred while exporting notes:\n{exc}")
@@ -3999,7 +4025,3 @@ def export_notes_from_ini_files(
             for idx, r in df[df.election == el].iterrows():
                 f.write(f"{r['jurisdiction']}: {r['results_note']}\n\n")
     return
-
-
-
-

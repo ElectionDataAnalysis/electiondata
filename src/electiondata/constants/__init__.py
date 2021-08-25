@@ -125,7 +125,10 @@ if 1:
         "US Virgin Islands": "VI",
     }
     default_subdivision_type = "county"
-    subdivision_reference_file_path = os.path.join("jurisdictions",  "000_major_subjurisdiction_types.txt",)
+    subdivision_reference_file_path = os.path.join(
+        "jurisdictions",
+        "000_major_subjurisdiction_types.txt",
+    )
 
 # display information
 if 1:

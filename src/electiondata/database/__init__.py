@@ -364,11 +364,12 @@ def create_or_reset_db(
     db_params: Optional[Dict[str, str]] = None,
     dbname: Optional[str] = None,
 ) -> Optional[dict]:
-    """if no dbname is given, name will be taken from db_params, db_param_file or db_params.
-    """
+    """if no dbname is given, name will be taken from db_params, db_param_file or db_params."""
 
     project_root = Path(__file__).absolute().parents[1]
-    params, err = get_params_from_various(db_params=db_params, db_param_file=db_param_file, dbname=dbname)
+    params, err = get_params_from_various(
+        db_params=db_params, db_param_file=db_param_file, dbname=dbname
+    )
 
     if err:
         return err
@@ -424,9 +425,9 @@ def create_or_reset_db(
 
 
 def get_params_from_various(
-        db_params: Optional[Dict[str,str]] = None,
-        db_param_file: Optional[str] = None,
-        dbname: Optional[str] = None
+    db_params: Optional[Dict[str, str]] = None,
+    db_param_file: Optional[str] = None,
+    dbname: Optional[str] = None,
 ) -> (Optional[dict], Optional[dict]):
     # use explicit db params if given
     if db_params:
@@ -464,7 +465,9 @@ def sql_alchemy_connect(
             otherwise defaults to run_time.ini parameter file
         Optional[dict], error dictionary
     """
-    params, err = get_params_from_various(db_params=db_params, db_param_file=db_param_file, dbname=dbname)
+    params, err = get_params_from_various(
+        db_params=db_params, db_param_file=db_param_file, dbname=dbname
+    )
     if params is None:
         return None, err
 
@@ -1175,7 +1178,8 @@ def get_major_subdiv_type(
         # try from file in repo
         subdiv_from_repo = get_major_subdiv_from_file(
             os.path.join(
-                content_root, constants.subdivision_reference_file_path,
+                content_root,
+                constants.subdivision_reference_file_path,
             ),
             jurisdiction,
         )
@@ -1622,7 +1626,6 @@ def read_vote_count(
 
         if jurisdiction_id:
             where_list.append(""" "ParentReportingUnit_Id" = {jurisdiction_id}""")
-
 
         if where_list:
             where_str = " WHERE" + " AND ".join(where_list)
