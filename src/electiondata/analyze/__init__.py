@@ -1064,7 +1064,13 @@ def nist_candidate_contest(session, election_id, jurisdiction_id):
         session,
         election_id=election_id,
         jurisdiction_id=jurisdiction_id,
-        fields=["VoteCount_Id", "ReportingUnit_Id", "CountItemType", "Count", "Selection_Id"],
+        fields=[
+            "VoteCount_Id",
+            "ReportingUnit_Id",
+            "CountItemType",
+            "Count",
+            "Selection_Id",
+        ],
         aliases=["Id", "GpUnitId", "CountItemType", "Count", "Selection_Id"],
     )
 

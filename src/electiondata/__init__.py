@@ -80,10 +80,18 @@ class SingleDataLoader:
         self.munger_err = dict()
 
     def track_results(self) -> (List[int], Optional[dict]):
-        """insert a record for the _datafile, recording any error string <e>.
-        Return _datafile.Id and Election_Id"""
+        """
+        Looks up Ids for jurisdiction in the ReportingUnit table of the database and election in the
+            Election table.
+            Inserts a record for the results file into the _database table.
+        Returns:
+            List[int], contains two integer Ids: _datafile.Id and Election.Id
+            Optional[dict], error dictionary
+        """
         err = None
         filename = self.d["results_file"]
+
+        # find id for jurisdiction in ReportingUnit table (or return fatal error)
         jurisdiction_id = db.name_to_id(
             self.session, "ReportingUnit", self.d["jurisdiction"]
         )
@@ -95,6 +103,8 @@ class SingleDataLoader:
                 f"No ReportingUnit named {self.d['jurisdiction']} found in database",
             )
             return [0, 0], err
+
+        # find id for election in Election table (or return fatal error)
         election_id = db.name_to_id(self.session, "Election", self.d["election"])
         if election_id is None:
             err = ui.add_new_error(
@@ -104,6 +114,8 @@ class SingleDataLoader:
                 f"No election named {self.d['election']} found in database",
             )
             return [0, 0], err
+
+        # insert record into _datafile table
         datafile_id, err = datafile_info(
             self.session.bind,
             self.param_file,
@@ -121,7 +133,16 @@ class SingleDataLoader:
     def load_results(
         self, rollup: bool = False, rollup_rut: Optional[str] = None
     ) -> dict:
-        """Load results, returning error (or None, if load successful)"""
+        """
+        Optional inputs:
+            rollup: bool = False, if True, roll results up to subdivision before inserting in db
+            rollup_rut: Optional[str] = None, subdivision type to roll up to (typically 'county')
+
+        Load results, returning error (or None, if load successful)
+
+        Returns:
+
+        """
         err = None
         print(f'\n\nProcessing {self.d["results_file"]}')
 
@@ -430,6 +451,7 @@ class DataLoader:
         rollup: bool = False,
         report_missing_files: bool = False,
         status: Optional[str] = None,
+        run_tests: bool = True,
     ) -> (List[str], List[str], str, Optional[dict]):
         """
         Inputs:
@@ -439,12 +461,12 @@ class DataLoader:
             report_missing_files: bool = False, if true, report any files referenced by .ini files but not found in
                 results directory
             status: Optional[str] = None, if given, use only reference results of that particular status for testing
-
+            run_tests: bool = True, controls whether tests are run
 
         Looks within ini_files_for_results/<jurisdiction> for
         all ini files matching  given election and jurisdiction.
         For each, attempts to load file if it exists; reports missing data files.
-        If files load successfully without fatal error, runs tests on the loaded results
+        If files load successfully without fatal error and <run_tests> is True, runs tests on the loaded results
             and reports any failures to error report
         Returns
         * list of successfully-loaded files,
@@ -522,12 +544,13 @@ class DataLoader:
         if add_err:
             err = ui.consolidate_errors([err, add_err])
 
-        # if load successful to this point, test the db's data for this ej-pair and add any failures to err
-        if not ui.fatal_error(err):
-            new_err = self.analyzer.test_loaded_results(
-                election, juris_true_name, juris_system_name, status=status
-            )
-            err = ui.consolidate_errors([err, new_err])
+        if run_tests:
+            # if load successful to this point, test the db's data for this ej-pair and add any failures to err
+            if not ui.fatal_error(err):
+                new_err = self.analyzer.test_loaded_results(
+                    election, juris_true_name, juris_system_name, status=status
+                )
+                err = ui.consolidate_errors([err, new_err])
         return success_by_ini, failure_by_ini, latest_download_date, err
 
     def load_all(
@@ -539,6 +562,7 @@ class DataLoader:
         election_list: Optional[List[str]] = None,
         rollup: bool = False,
         report_missing_files: bool = False,
+        run_tests: bool = True,
     ) -> (Dict[str, List[str]], Dict[str, List[str]], Dict[str, bool], Optional[dict]):
         """
         Inputs:
@@ -551,18 +575,20 @@ class DataLoader:
             rollup: bool = False, if True, loads results rolled up to major subdivision
             report_missing_files: bool = False, if True, reports files referenced in .ini files
                 but not found in results directory
+            run_tests: bool = True, if false, do not run tests on loaded data
 
         Processes all results (or all results corresponding to pairs in
         ej_list if given) in DataLoader's results directory using
-        .ini files from repository.
+            .ini files from repository.
         If load is successful for all files for a single election-jurisdicction pair,
-        then add records for total vote counts whereever necessary.
+            then add records for total vote counts whereever necessary.
         By default, loads (or updates) the info from the jurisdiction files
-        into the db first. By default, moves files to the DataLoader's archive directory.
-        Returns a post-reporting error dictionary, and a dictionary of
-        successfully-loaded files (by election-jurisdiction pair).
-        (Note: errors initializing loading process (e.g., results file not found) do *not* generate
-        <success> = False, though those errors are reported in <err>
+            into the db first. By default, moves files to the DataLoader's archive directory.
+        Returns a post-reporting error dictionary (including errors from post-load testing, if
+            <run_tests> is True, and a dictionary of
+            successfully-loaded files (by election-jurisdiction pair).
+        Note: errors initializing loading process (e.g., results file not found) do *not* generate
+            <success> = False, though those errors are reported in <err>
         If <archive> is true, archive the files
 
         Returns:
@@ -674,12 +700,17 @@ class DataLoader:
                     jurisdiction,
                     rollup=rollup,
                     report_missing_files=report_missing_files,
+                    run_tests=run_tests,
                 )
                 if new_err:
                     juris_err = ui.consolidate_errors([juris_err, new_err])
 
                 # set all_test_passed boolean for this e-j pair
-                if failure_list or (new_err and ("warn-test" in new_err.keys()) and new_err["warn-test"]):
+                if not run_tests:
+                    all_tests_passed[f"{election};{jurisdiction}"] = True
+                elif failure_list or (
+                    new_err and ("warn-test" in new_err.keys()) and new_err["warn-test"]
+                ):
                     all_tests_passed[f"{election};{jurisdiction}"] = False
                 else:
                     all_tests_passed[f"{election};{jurisdiction}"] = True
@@ -2667,30 +2698,57 @@ class Analyzer:
             status=electiondata.constants.default_status,
             vendor_application_id=electiondata.constants.default_vendor_application_id,
         )
-        xml_string = ET.tostring(
-            xml_tree.getroot(),
-            encoding=electiondata.constants.default_encoding,
-            method="xml",
-        )
+        if (xml_tree.getroot() is None) or ui.fatal_error(err):
+            xml_string = ""
+        else:
+            xml_string = ET.tostring(
+                xml_tree.getroot(),
+                encoding="unicode",  # to ensure string is returned, per ET docs
+                method="xml",
+            )
         return xml_string
 
     def export_election_to_tsv(
-            self,
-            target_file: str,
-            election: str,
+        self, target_file: str, election: str, jurisdiction: Optional[str] = None
     ):
-        # get counts
+        # get internal ids for election (and maybe jurisdiction too)
         election_id = db.name_to_id(self.session, "Election", election)
+        if jurisdiction is not None:
+            jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
+        else:
+            jurisdiction_id = None
+
+        # get counts
         df = db.read_vote_count(
-                self.session,
-                election_id=election_id,
-                fields=["ElectionName","ContestName","BallotName","PartyName","GPReportingUnitName",
-                        "CountItemType","Count","is_preliminary"],
-                aliases=["Election","Contest","Selection","Party","ReportingUnit",
-                         "VoteType","Count","Preliminary"],
-            )
+            self.session,
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=[
+                "ElectionName",
+                "ContestName",
+                "BallotName",
+                "PartyName",
+                "GPReportingUnitName",
+                "CountItemType",
+                "Count",
+                "is_preliminary",
+            ],
+            aliases=[
+                "Election",
+                "Contest",
+                "Selection",
+                "Party",
+                "ReportingUnit",
+                "VoteType",
+                "Count",
+                "Preliminary",
+            ],
+        )
         #  export to file
-        df.sort_values(by=["Election", "Contest", "Selection", "ReportingUnit", "VoteType"], inplace=True)
+        df.sort_values(
+            by=["Election", "Contest", "Selection", "ReportingUnit", "VoteType"],
+            inplace=True,
+        )
         df.to_csv(target_file, sep="\t", index=False)
         return
 
@@ -3278,7 +3336,9 @@ class Analyzer:
                     wrong_str,
                 )
             if not not_found_in_db.empty:
-                nfid_str = f"\nSome expected constests not found. For details, see {sub_dir}"
+                nfid_str = (
+                    f"\nSome expected constests not found. For details, see {sub_dir}"
+                )
                 err = ui.add_new_error(
                     err,
                     "warn-test",
@@ -3546,7 +3606,28 @@ def load_results_file(
     rollup: bool = False,
     rollup_rut: str = constants.default_subdivision_type,
 ) -> Optional[dict]:
+    """
+    required inputs:
+        session: Session, database session
+        munger_path: str, path to file with munging parameters
+        f_path: str, path to results file
+        juris_true_name: str, name of jurisdiction (without hyphens, e.g., "American Samoa")
+        datafile_id: int, Id of the file in the _datafile table in the db
+        election_id: int, Id of the election in the Election table in the db
+        constants: Dict[str, str], values of any elements (e.g., CountItemType) constant over the results file
+        results_directory_path: str, path to root directory for results files (relative to which file paths
+            are specified in the result file's .ini file)
+        path_to_jurisdiction_dir: str, path to directory whose subdirectories, named for jurisdictions, contain the
+            jurisdiction information and dictionary necessary for munging
+    optional inputs:
+        rollup: bool = False, if True, roll up results to the subdivisions specified by <rollup_rut>
+        rollup_rut: str = constants.default_subdivision_type, ReportingUnitType used for rollup (typically 'county')
 
+    Attempts to load results from results file to the database. (Does *not* require results to pass tests.)
+
+    returns:
+        Optional[dict], error dictionary
+    """
     # TODO tech debt: redundant to pass results_directory_path and f_path
     munger_name = Path(munger_path).name
     file_name = Path(f_path).name
@@ -3605,7 +3686,26 @@ def load_or_reload_all(
     dbname: Optional[str] = None,
     param_file: Optional[str] = None,
     move_files: bool = True,
+    run_tests: bool = True,
 ) -> Optional[dict]:
+    """
+    required inputs: (none)
+    optional inputs:
+        rollup: bool = False, if True, roll up results to major subdivision before storing in database
+        dbname: Optional[str] = None, name of database
+        param_file: Optional[str] = None, path to file with parameters for data loading
+        move_files: bool = True, if True, archive files after successful load (& test, if done)
+        run_tests: bool = True, if True, run tests on results in database after loading.
+
+    For each election-jurisdiction pair from a <results>.ini file corresponding to a file in
+        the results directory specified in the data loading parameter file, loads all result data to
+        a temporary database (and, if <run_tests> is True, runs tests on loaded data). If the
+        set of files in the election-jurisdiction pair all load without fatal error or failed test,
+        remove any data for that election-jurisdiction pair from the database and load the new data.
+
+    returns:
+        Optional[dict], error dictionary
+    """
     err = None
     dataloader = DataLoader(dbname=dbname, param_file=param_file)
     if dataloader:
@@ -3630,6 +3730,7 @@ def load_or_reload_all(
                     dbname=dbname,
                     param_file=param_file,
                     move_files=move_files,
+                    run_tests=run_tests,
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
@@ -3670,45 +3771,71 @@ def reload_juris_election(
     dbname: Optional[str] = None,
     param_file: Optional[str] = None,
     move_files: bool = True,
+    run_tests: bool = True,
 ) -> Optional[dict]:
-    """Loads and archives each results file in each direct subfolder of the results_dir
+    """
+    required inputs:
+        juris_name: str, name of jurisdiction (without hyphens, e.g., 'District of Columbia')
+        election_name: str, name of election (without hyphens, e.g., '2020 General')
+        report_dir, path to directory for reporting errors, warnings and test results
+    optional inputs:
+        rollup: bool = False, if true, rolls up results within the to the major subdivision
+        dbname: Optional[str] = None, name of database if given; otherwise database name taken from parameter file
+        param_file: Optional[str] = None, path to parameter file for dataloading if given; otherwise parameter file
+            path assumed to be 'run_time.ini'
+        move_files: bool = True, if true, move all files to archive directory if loading (& testing, if done)
+            are successful
+        run_tests: bool = True, if true, run tests on loaded data
+
+    Loads and archives each results file in each direct subfolder of the results_dir
     named in ./run_time.ini -- provided there the results file is specified in a *.ini file in the
     corresponding subfolder of <content_root>/ini_files_for_results. <contest_root> is read from ./run_time.ini.
+
+    returns:
+        Optional[dict], error dictionary
     """
     # initialize dataloader
     err = None
     dl = DataLoader(dbname=dbname, param_file=param_file)
 
-    # create temp_db (preserving live db name) and point dataloader to it
-    live_db = dl.session.bind.url.database
-    ts = datetime.datetime.now().strftime("%m%d_%H%M")
-    temp_db = f"{live_db}_test_{ts}"
-    dl.change_db(new_db_name=temp_db, db_param_file=param_file)
+    if run_tests:
+        # create temp_db (preserving live db name) and point dataloader to it
+        live_db = dl.session.bind.url.database
+        ts = datetime.datetime.now().strftime("%m%d_%H%M")
+        temp_db = f"{live_db}_test_{ts}"
+        dl.change_db(new_db_name=temp_db, db_param_file=param_file)
 
-    # load all data into temp db
-    dl.change_db(temp_db, db_param_file=param_file)
-    success, failure, all_tests_passed, load_err = dl.load_all(
-        report_dir=report_dir,
-        move_files=False,
-        rollup=rollup,
-        election_jurisdiction_list=[(election_name, juris_name)],
-    )
-    if load_err:
-        err = ui.consolidate_errors([err, load_err])
-    # if any of the data failed to load
-    if failure:
-        # cleanup temp database
-        db.remove_database(db_param_file=param_file, dbname=temp_db)
-        return err
-
-    # if any tests failed
-    elif not all_tests_passed[f"{election_name};{juris_name}"]:
-        print(
-            f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests."
+        # load all data into temp db
+        dl.change_db(temp_db, db_param_file=param_file)
+        success, failure, all_tests_passed, load_err = dl.load_all(
+            report_dir=report_dir,
+            move_files=False,
+            rollup=rollup,
+            election_jurisdiction_list=[(election_name, juris_name)],
         )
+        if load_err:
+            err = ui.consolidate_errors([err, load_err])
+        # if any of the data failed to load
+        if failure:
+            # cleanup temp database
+            db.remove_database(db_param_file=param_file, dbname=temp_db)
+            return err
+
+        # if any tests failed
+        elif not all_tests_passed[f"{election_name};{juris_name}"]:
+            print(
+                f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests."
+            )
+        else:
+            # switch to live db
+            dl.change_db(live_db, db_param_file=param_file)
     else:
-        # switch to live db
-        dl.change_db(live_db, db_param_file=param_file)
+        temp_db = None  # for syntax-checker
+        all_tests_passed = dict()
+    if (not run_tests) or (
+        (f"{election_name};{juris_name}" in all_tests_passed.keys())
+        and (all_tests_passed[f"{election_name};{juris_name}"])
+    ):
         # Remove existing data for juris-election pair from live db
         election_id = db.name_to_id(dl.session, "Election", election_name)
         juris_id = db.name_to_id(dl.session, "ReportingUnit", juris_name)
@@ -3728,6 +3855,7 @@ def reload_juris_election(
             rollup=rollup,
             election_jurisdiction_list=[(election_name, juris_name)],
             move_files=move_files,
+            run_tests=run_tests,
         )
         if success:
             if not all_tests_passed[f"{election_name};{juris_name}"]:
@@ -3741,9 +3869,9 @@ def reload_juris_election(
                 )
         else:
             err = ui.consolidate_errors([err, new_err])
-
-    # cleanup temp database
-    db.remove_database(db_param_file=param_file, dbname=temp_db)
+    if run_tests:
+        # cleanup temp database
+        db.remove_database(db_param_file=param_file, dbname=temp_db)
     return err
 
 
@@ -3853,29 +3981,36 @@ def bad_multi_presidentials(
 
 
 def export_notes_from_ini_files(
-        directory: str, target_file: str,
-        election: Optional[str] = None, jurisdiction: Optional[str] = None
+    directory: str,
+    target_file: str,
+    election: Optional[str] = None,
+    jurisdiction: Optional[str] = None,
 ):
     df = pd.DataFrame(columns=["election", "jurisdiction", "results_note"])
     # collect notes
     try:
         paths = set()
-        for root,dirs,files in os.walk(directory):
+        for root, dirs, files in os.walk(directory):
             for file in files:
                 if file[-4:] == ".ini":
-                    paths.update({os.path.join(root,file)})
+                    paths.update({os.path.join(root, file)})
         for p in paths:
             params, err = ui.get_parameters(
-                required_keys=["election", "jurisdiction","results_note"],
+                required_keys=["election", "jurisdiction", "results_note"],
                 header="election_results",
                 param_file=p,
             )
             if err:
                 print(f"Error reading parameters from file {p}:\n{err}")
-            elif (election is None or params["election"] == election) and (jurisdiction is None or params["jurisdiction"] == jurisdiction):
+            elif (election is None or params["election"] == election) and (
+                jurisdiction is None or params["jurisdiction"] == jurisdiction
+            ):
                 df = df.append(
-                    {k: params[k] for k in ["election", "jurisdiction", "results_note"]},
-                    ignore_index=True
+                    {
+                        k: params[k]
+                        for k in ["election", "jurisdiction", "results_note"]
+                    },
+                    ignore_index=True,
                 )
     except Exception as exc:
         print(f"Exception occurred while exporting notes:\n{exc}")
@@ -3890,7 +4025,3 @@ def export_notes_from_ini_files(
             for idx, r in df[df.election == el].iterrows():
                 f.write(f"{r['jurisdiction']}: {r['results_note']}\n\n")
     return
-
-
-
-

@@ -300,7 +300,10 @@ def read_single_datafile(
             # strip whitespace from column names # TODO handle same for multi-index columns
             for k in df_dict.keys():
                 if not isinstance(df_dict[k].columns, pd.MultiIndex):
-                   df_dict[k].columns = [(c.strip() if isinstance(c, str) else c) for c in df_dict[k].columns]
+                    df_dict[k].columns = [
+                        (c.strip() if isinstance(c, str) else c)
+                        for c in df_dict[k].columns
+                    ]
 
     except FileNotFoundError:
         err_str = f"File not found: {f_path}"
