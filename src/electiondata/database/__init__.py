@@ -2314,7 +2314,6 @@ def create_table(
         fk = pd.read_csv(os.path.join(t_path, "foreign_keys.txt"), sep="\t")
 
         # define table
-        col_list = [Column(r["fieldname"], Integer) for i, r in fk.iterrows()]
         null_constraint_list = [
             CheckConstraint(
                 f'"{r["fieldname"]}" IS NOT NULL',
@@ -2340,7 +2339,6 @@ def create_table(
                 server_default=id_seq.next_value(),
                 primary_key=True,
             ),
-            *col_list,
             *true_foreign_key_list,
             *null_constraint_list,
         )
