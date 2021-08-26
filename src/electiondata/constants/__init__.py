@@ -552,7 +552,7 @@ if 1:
         "keep_default_na": False,
         "na_values": "",
     }
-    bmselections = ["Yes", "No", "none or unknown"]
+    bmselections = ["Yes", "No"]
 
 
 # reporting

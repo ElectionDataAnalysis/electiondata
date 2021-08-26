@@ -419,7 +419,7 @@ def create_or_reset_db(
         sess_new,
         dirpath=os.path.join(project_root, "CDF_schema_def_info"),
     )
-    fill_standard_tables(sess_new)
+    add_standard_records(sess_new)
     con.close()
     return err
 
@@ -2352,24 +2352,41 @@ def create_table(
     return
 
 
-def fill_standard_tables(session):
-    """Fill BallotMeasureSelection tables"""
-    # fill BallotMeasureSelection table
-    load_bms(session.bind, constants.bmselections)
+def add_standard_records(session):
+    """Add standard records to database"""
+    # TODO add none or unknown to all tables?
+
+    # Add none or unknown to Party table
+    party_df = pd.DataFrame(
+            [["none or unknown", "none"]], columns=["Name", "Abbreviation"],
+        )
+    insert_to_cdf_db(
+        session.bind,
+        party_df,
+        "Party", "database", "none or unknown insertion",
+    )
+    nou_id = name_to_id(session, "Party", "none or unknown")
+
+    # Add standard BallotMeasureSelections to Candidate table
+    selection_df = pd.DataFrame([[sel] for sel in constants.bmselections],columns=["Candidate"])
+    err = insert_to_cdf_db(session.bind, selection_df, "Candidate", "database", "add standard records")
+    if ui.fatal_error(err):
+        return err
+
+    # get ids from that insertion
+    selection_df = append_id_to_dframe(session.bind, selection_df, "Candidate")
+
+    # insert into CandidateSelection table with none-or-unknown Party
+    selection_df = m.add_constant_column(selection_df, "Party_Id", nou_id)
+    new_err = insert_to_cdf_db(session.bind, selection_df,"CandidateSelection","database", "add standard records")
+    err = ui.consolidate_errors([err, new_err])
+    if ui.fatal_error(err):
+        return err
+
     session.flush()
     return
 
 
-def load_bms(engine, bms_list: list):
-    bms_df = pd.DataFrame([[s] for s in bms_list], columns=["Name"])
-
-    # Create 3 entries in Selection table
-    id_list = add_records_to_selection_table(engine, len(bms_list))
-
-    # Create entries in BallotMeasureSelection table
-    bms_df["Id"] = pd.Series(id_list, index=bms_df.index)
-    temp = pd.concat([pd.read_sql_table("Selection", engine), bms_df], axis=1)
-    temp.to_sql("BallotMeasureSelection", engine, if_exists="append", index=False)
 
     return
 
