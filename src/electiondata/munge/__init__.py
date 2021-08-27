@@ -255,18 +255,14 @@ def compress_whitespace(s: Optional[str]) -> str:
 
 
 def raw_to_internal_dictionary_df(
-    path_to_jurisdiction_dir: str,
+    dictionary_df: pd.DataFrame,
     element: str,
 ):
     """creates two-column dictionary dataframe labeled
     <element>, <element>_raw
     """
-    dictionary = pd.read_csv(
-        os.path.join(path_to_jurisdiction_dir, "dictionary.txt"),
-        sep="\t",
-        encoding=constants.default_encoding,
-        dtype=str,
-    )
+
+    dictionary = dictionary_df.copy()
     # restrict to the element at hand, drop column naming element
     dictionary = (
         dictionary[dictionary["cdf_element"] == element]
@@ -297,9 +293,10 @@ def raw_to_internal_dictionary_df(
 
 def replace_raw_with_internal_name(
     df: pd.DataFrame,
-    dictionary_directory: str,
     munger_name: str,  # for error reporting
     element: str,
+        dictionary_df: pd.DataFrame,
+        dictionary_path: str,
     drop_unmatched: bool = False,
     drop_all_ok: bool = False,
 ) -> (pd.DataFrame, Optional[dict]):
@@ -307,8 +304,7 @@ def replace_raw_with_internal_name(
     matching internal db standard."""
     err = None
     working = df.copy()
-    dictionary = raw_to_internal_dictionary_df(dictionary_directory, element)
-    dictionary_dir_name = Path(dictionary_directory).name
+    dictionary = raw_to_internal_dictionary_df(dictionary_df, element)
 
     if element == "Candidate":
         # Regularize candidate names from results file and from dictionary.txt
@@ -332,7 +328,7 @@ def replace_raw_with_internal_name(
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
         unmatched_str = "\n".join(unmatched_raw)
         e = f"\n{element}s (found with munger {munger_name}) not found in dictionary.txt :\n{unmatched_str}"
-        err = ui.add_new_error(err, "warn-jurisdiction", dictionary_dir_name, e)
+        err = ui.add_new_error(err, "warn-jurisdiction",dictionary_path,e)
 
     if drop_unmatched:
         working = working[working[element].notnull()]
@@ -348,11 +344,11 @@ def replace_raw_with_internal_name(
             err = ui.add_new_error(
                 err,
                 "dictionary",
-                dictionary_dir_name,
+                dictionary_path,
                 e,
             )
         else:
-            err = ui.add_new_error(err, "warn-jurisdiction", dictionary_dir_name, e)
+            err = ui.add_new_error(err, "warn-jurisdiction",dictionary_path,e)
         # give working the proper columns and return
         working.drop(f"{element}_raw", axis=1, inplace=True)
         return working, err
@@ -442,13 +438,14 @@ def replace_internal_names_with_ids(
 
 def replace_raw_with_internal_ids(
     df: pd.DataFrame,
-    dictionary_dir: str,
     juris_system_name: str,  # for error reporting
     munger_name: str,  # for error reporting
     file_name: str,  # for error reporting
     table_df: pd.DataFrame,
     element: str,
     internal_name_column: str,
+        dictionary_df: pd.DataFrame,
+        dictionary_path: str,
     drop_unmatched: bool = False,
     unmatched_id: int = 0,
     drop_all_ok: bool = False,
@@ -461,9 +458,10 @@ def replace_raw_with_internal_ids(
     """
     working, new_err = replace_raw_with_internal_name(
         df,
-        dictionary_dir,
         munger_name,
         element,
+        dictionary_df,
+        dictionary_path,
         drop_unmatched=drop_unmatched,
         drop_all_ok=drop_all_ok,
     )
@@ -625,12 +623,13 @@ def add_constant_column(
 
 def add_contest_id(
     df: pd.DataFrame,
-    dictionary_dir: str,
     juris_true_name: str,
     file_name: str,
     munger_name: str,
     err: Optional[dict],
     session: Session,
+    dictionary_df: pd.DataFrame,
+        dictionary_path: str,
 ) -> (pd.DataFrame, dict):
     working = df.copy()
     """Append Contest_Id and contest_type. Add contest_type column and fill it correctly.
@@ -649,13 +648,14 @@ def add_contest_id(
             )
             working, new_err = replace_raw_with_internal_ids(
                 working,
-                dictionary_dir,
                 juris_true_name,
                 file_name,
                 munger_name,
                 df_for_type[c_type],
                 f"{c_type}Contest",
                 "Name",
+                dictionary_df,
+                dictionary_path,
                 unmatched_id=none_or_unknown_id,
                 drop_all_ok=True,
             )
@@ -712,10 +712,11 @@ def add_contest_id(
 def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
     df: pd.DataFrame,
     engine,
-    path_to_jurisdiction_dir: str,
     juris_true_name: str,
     munger_name: str,
     file_name: str,
+    dictionary_df: pd.DataFrame,
+        dictionary_path: str,
     err: dict,
 ) -> (pd.DataFrame, dict):
     """Assumes <df> has contest_type, BallotMeasureSelection_raw, Candidate_Id column.
@@ -732,13 +733,14 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
         bms = pd.read_sql_table(f"BallotMeasureSelection", engine)
         w["BallotMeasure"], new_err = replace_raw_with_internal_ids(
             w["BallotMeasure"],
-            path_to_jurisdiction_dir,
             juris_true_name,
             file_name,
             munger_name,
             bms,
             "BallotMeasureSelection",
             "Name",
+            dictionary_df,
+            dictionary_path,
             drop_all_ok=True,
         )
         err = ui.consolidate_errors([err, new_err])
@@ -839,15 +841,15 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
 
 def raw_to_id_simple(
     df: pd.DataFrame,
-    path_to_jurisdiction_dir,
     element_list: list,
     session: Session,
     file_name: str,
     munger_name: str,
-    juris_true_name,
+    juris_system_name,
+        dictionary_df: pd.DataFrame,
+        dictionary_path: str,
 ) -> (pd.DataFrame, Optional[dict]):
     """Append ids to <df> for all elements given in <element_list>."""
-    juris_system_name = Path(path_to_jurisdiction_dir).name
     err = None
     working = df.copy()
     for element in element_list:
@@ -861,7 +863,7 @@ def raw_to_id_simple(
             if element == "CountItemType":
                 # munge raw to internal CountItemType
                 r_i = raw_to_internal_dictionary_df(
-                    path_to_jurisdiction_dir, "CountItemType"
+                    dictionary_df, "CountItemType"
                 )
                 recognized = r_i.CountItemType_raw.unique()
                 matched = working.CountItemType_raw.isin(recognized)
@@ -915,14 +917,15 @@ def raw_to_id_simple(
                 none_or_unknown_id = db.name_to_id(session, element, "none or unknown")
                 working, new_err = replace_raw_with_internal_ids(
                     working,
-                    path_to_jurisdiction_dir,
                     juris_system_name,
                     file_name,
                     munger_name,
                     element_df,
                     element,
                     name_field,
-                    drop_unmatched=drop,
+                    dictionary_df,
+                    dictionary_path,
+                    drop_unmatched=True,
                     unmatched_id=none_or_unknown_id,
                 )
                 err = ui.consolidate_errors([err, new_err])
@@ -999,10 +1002,13 @@ def munge_raw_to_ids(
     err = None
     juris_system_name = Path(path_to_jurisdiction_dir).name
     working = df.copy()
+
+    # create dictionary dataframe
     if alternate_dictionary:
-        dictionary_dir = alternate_dictionary
+        dictionary_path = alternate_dictionary
     else:
-        dictionary_dir = path_to_jurisdiction_dir
+        dictionary_path = os.path.join(path_to_jurisdiction_dir,"dictionary.txt")
+    dictionary_df = pd.read_csv(dictionary_path,sep="\t")
 
     # add Contest_Id column and contest_type column
     if "CandidateContest" in constant_dict.keys():
@@ -1013,7 +1019,7 @@ def munge_raw_to_ids(
             err = ui.add_new_error(
                 err,
                 "jurisdiction",
-                juris,
+                juris_system_name,
                 f"CandidateContest specified in ini file ({constant_dict['CandidateContest']}) "
                 f"not found. Check CandidateContest.txt.",
             )
@@ -1037,12 +1043,13 @@ def munge_raw_to_ids(
         try:
             working, err = add_contest_id(
                 working,
-                dictionary_dir,
                 juris_system_name,
                 file_name,
                 munger_name,
                 err,
                 session,
+                dictionary_df,
+                dictionary_path,
             )
         except Exception as exc:
             err = ui.add_new_error(
@@ -1094,12 +1101,13 @@ def munge_raw_to_ids(
     ]
     working, new_err = raw_to_id_simple(
         working,
-        dictionary_dir,
         other_elements,
         session,
         munger_name,
         file_name,
         juris_system_name,
+        dictionary_df,
+        dictionary_path,
     )
     if new_err:
         err = ui.consolidate_errors([err, new_err])
@@ -1111,10 +1119,11 @@ def munge_raw_to_ids(
         working, err = add_selection_id(  # TODO this is where FutureWarning occurs
             working,
             session.bind,
-            dictionary_dir,
             juris_system_name,
             file_name,
             munger_name,
+            dictionary_df,
+            dictionary_path,
             err,
         )
         working, err_df = clean_ids(working, ["Selection_Id"])

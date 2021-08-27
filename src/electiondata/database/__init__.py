@@ -2368,17 +2368,19 @@ def add_standard_records(session):
     nou_id = name_to_id(session, "Party", "none or unknown")
 
     # Add standard BallotMeasureSelections to Candidate table
-    selection_df = pd.DataFrame([[sel] for sel in constants.bmselections],columns=["Candidate"])
+    selection_df = pd.DataFrame([[sel] for sel in constants.bmselections],columns=["BallotName"])
     err = insert_to_cdf_db(session.bind, selection_df, "Candidate", "database", "add standard records")
     if ui.fatal_error(err):
         return err
 
     # get ids from that insertion
-    selection_df = append_id_to_dframe(session.bind, selection_df, "Candidate")
+    col_map = {"BallotName":"BallotName"}
+    selection_df = append_id_to_dframe(session.bind, selection_df, "Candidate",col_map=col_map)
 
     # insert into CandidateSelection table with none-or-unknown Party
     selection_df = m.add_constant_column(selection_df, "Party_Id", nou_id)
-    new_err = insert_to_cdf_db(session.bind, selection_df,"CandidateSelection","database", "add standard records")
+
+    new_err = insert_to_cdf_db(session.bind, selection_df[["Candidate_Id","Party_Id"]],"CandidateSelection","database", "add standard records")
     err = ui.consolidate_errors([err, new_err])
     if ui.fatal_error(err):
         return err

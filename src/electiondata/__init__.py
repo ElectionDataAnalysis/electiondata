@@ -3521,6 +3521,13 @@ def load_results_df(
 ) -> Optional[dict]:
     err = None
     df = df_original.copy()
+    # read dictionary information into a dataframe
+    if alt_dictionary:
+        dict_path = alt_dictionary
+    else:
+        dict_path = os.path.join(path_to_jurisdiction_dir, "dictionary.txt")
+
+    dictionary_df = pd.read_csv(dict_path, sep="\t")
     # add text column for internal CountItemType name, Id columns for all but Count, removing raw-munged
     try:
         df, new_err = m.munge_raw_to_ids(
