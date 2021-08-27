@@ -906,7 +906,7 @@ def raw_to_id_simple(
                     name_field,
                     dictionary_df,
                     dictionary_path,
-                    drop_unmatched=True,
+                    drop_unmatched=drop,
                     unmatched_id=none_or_unknown_id,
                 )
                 err = ui.consolidate_errors([err, new_err])

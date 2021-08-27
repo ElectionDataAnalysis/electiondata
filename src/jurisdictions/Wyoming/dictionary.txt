@@ -484,9 +484,7 @@ CandidateContest	WY House District 19	WY;State Representative;District 19
 CandidateContest	WY House District 49	WY;State Representative;District 49
 CandidateContest	WY Senate District 15	WY;State Senator;District 15
 Candidate	Lawrence Gerard Struempf	Lawrence Gerard Struempf
-Candidate	Over Votes	Over Votes
 Candidate	Sergio A. Maldonado, Sr.	Sergio A. Maldonado, Sr.
-Candidate	Under Votes	Under Votes
 Party	Constitution Party	constitution
 Party	Democratic Party	democrat
 Party	Independent Party	independent

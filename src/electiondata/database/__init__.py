@@ -2354,23 +2354,21 @@ def create_table(
 
 def add_standard_records(session):
     """Add standard records to database"""
-    # TODO add none or unknown to all tables?
-
     err = None
 
-    # Add none or unknown to Party table
+    # Add 'ballot measure selection' to Party table
     party_df = pd.DataFrame(
-            [["none or unknown", "none"]], columns=["Name", "Abbreviation"],
+            [["ballot measure selection", "none"]], columns=["Name", "Abbreviation"],
         )
     new_err = insert_to_cdf_db(
         session.bind,
         party_df,
-        "Party", "database", "none or unknown insertion",
+        "Party", "database", "ballot measure selection insertion",
     )
     err = ui.consolidate_errors([err, new_err])
     if ui.fatal_error(new_err):
         return err
-    nou_id = name_to_id(session, "Party", "none or unknown")
+    bms_id = name_to_id(session, "Party", "ballot measure selection")
 
     # Add standard BallotMeasureSelections to Candidate table
     selection_df = pd.DataFrame([[sel] for sel in constants.bmselections],columns=["BallotName"])
@@ -2379,9 +2377,9 @@ def add_standard_records(session):
     if ui.fatal_error(new_err):
         return err
 
-    # Create dataframe with Candidate_Id and Party_Id columns ("none or unknown" party)
+    # Create dataframe with Candidate_Id and Party_Id columns ("ballot measure selection" party)
     # add Party_Id column
-    selection_df = m.add_constant_column(selection_df, "Party_Id", nou_id)
+    selection_df = m.add_constant_column(selection_df, "Party_Id", bms_id)
     # add Candidate_Id column
     selection_df.rename(columns={"BallotName":"Candidate"}, inplace=True)
     candidate_df = pd.read_sql_table("Candidate", session.bind)
