@@ -2358,12 +2358,15 @@ def add_standard_records(session):
 
     # Add 'ballot measure selection' to Party table
     party_df = pd.DataFrame(
-            [["ballot measure selection", "none"]], columns=["Name", "Abbreviation"],
-        )
+        [["ballot measure selection", "none"]],
+        columns=["Name", "Abbreviation"],
+    )
     new_err = insert_to_cdf_db(
         session.bind,
         party_df,
-        "Party", "database", "ballot measure selection insertion",
+        "Party",
+        "database",
+        "ballot measure selection insertion",
     )
     err = ui.consolidate_errors([err, new_err])
     if ui.fatal_error(new_err):
@@ -2371,8 +2374,12 @@ def add_standard_records(session):
     bms_id = name_to_id(session, "Party", "ballot measure selection")
 
     # Add standard BallotMeasureSelections to Candidate table
-    selection_df = pd.DataFrame([[sel] for sel in constants.bmselections],columns=["BallotName"])
-    new_err = insert_to_cdf_db(session.bind, selection_df, "Candidate", "database", "add standard records")
+    selection_df = pd.DataFrame(
+        [[sel] for sel in constants.bmselections], columns=["BallotName"]
+    )
+    new_err = insert_to_cdf_db(
+        session.bind, selection_df, "Candidate", "database", "add standard records"
+    )
     err = ui.consolidate_errors([err, new_err])
     if ui.fatal_error(new_err):
         return err
@@ -2381,7 +2388,7 @@ def add_standard_records(session):
     # add Party_Id column
     selection_df = m.add_constant_column(selection_df, "Party_Id", bms_id)
     # add Candidate_Id column
-    selection_df.rename(columns={"BallotName":"Candidate"}, inplace=True)
+    selection_df.rename(columns={"BallotName": "Candidate"}, inplace=True)
     candidate_df = pd.read_sql_table("Candidate", session.bind)
     selection_df, new_err = m.replace_internal_names_with_ids(
         selection_df,
@@ -2393,7 +2400,7 @@ def add_standard_records(session):
         "BallotName",
     )
 
-    _, new_err = m.add_selection_id(selection_df,session.bind,None)
+    _, new_err = m.add_selection_id(selection_df, session.bind, None)
     err = ui.consolidate_errors([err, new_err])
     if ui.fatal_error(new_err):
         return err

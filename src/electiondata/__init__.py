@@ -3570,7 +3570,12 @@ def load_results_df(
     # rollup_dataframe results if requested
     if rollup:
         working, new_err = an.rollup_dataframe(
-            session, working, "Count", "ReportingUnit_Id", "ReportingUnit_Id", rollup_rut
+            session,
+            working,
+            "Count",
+            "ReportingUnit_Id",
+            "ReportingUnit_Id",
+            rollup_rut,
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])

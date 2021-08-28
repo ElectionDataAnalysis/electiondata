@@ -295,8 +295,8 @@ def replace_raw_with_internal_name(
     df: pd.DataFrame,
     munger_name: str,  # for error reporting
     element: str,
-        dictionary_df: pd.DataFrame,
-        dictionary_path: str,
+    dictionary_df: pd.DataFrame,
+    dictionary_path: str,
     drop_unmatched: bool = False,
     drop_all_ok: bool = False,
 ) -> (pd.DataFrame, Optional[dict]):
@@ -328,7 +328,7 @@ def replace_raw_with_internal_name(
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
         unmatched_str = "\n".join(unmatched_raw)
         e = f"\n{element}s (found with munger {munger_name}) not found in dictionary.txt :\n{unmatched_str}"
-        err = ui.add_new_error(err, "warn-jurisdiction",dictionary_path,e)
+        err = ui.add_new_error(err, "warn-jurisdiction", dictionary_path, e)
 
     if drop_unmatched:
         working = working[working[element].notnull()]
@@ -348,7 +348,7 @@ def replace_raw_with_internal_name(
                 e,
             )
         else:
-            err = ui.add_new_error(err, "warn-jurisdiction",dictionary_path,e)
+            err = ui.add_new_error(err, "warn-jurisdiction", dictionary_path, e)
         # give working the proper columns and return
         working.drop(f"{element}_raw", axis=1, inplace=True)
         return working, err
@@ -378,7 +378,7 @@ def replace_internal_names_with_ids(
     # whose names will be <element> (from above)
     # and either internal_name_column or internal_name_column_table_name
     working = working.merge(
-        element_df[["Id",internal_name_column]],
+        element_df[["Id", internal_name_column]],
         how="left",
         left_on=element,
         right_on=internal_name_column,
@@ -431,7 +431,9 @@ def replace_internal_names_with_ids(
         working.loc[working.Id.isnull(), internal_name_column] = "none or unknown"
         working["Id"].fillna(unmatched_id, inplace=True)
 
-    working = working.drop([internal_name_column, f"{element}_raw"], axis=1, errors="ignore")
+    working = working.drop(
+        [internal_name_column, f"{element}_raw"], axis=1, errors="ignore"
+    )
     working.rename(columns={"Id": f"{element}_Id"}, inplace=True)
 
     return working, err
@@ -445,8 +447,8 @@ def replace_raw_with_internal_ids(
     table_df: pd.DataFrame,
     element: str,
     internal_name_column: str,
-        dictionary_df: pd.DataFrame,
-        dictionary_path: str,
+    dictionary_df: pd.DataFrame,
+    dictionary_path: str,
     drop_unmatched: bool = False,
     unmatched_id: int = 0,
     drop_all_ok: bool = False,
@@ -630,7 +632,7 @@ def add_contest_id(
     err: Optional[dict],
     session: Session,
     dictionary_df: pd.DataFrame,
-        dictionary_path: str,
+    dictionary_path: str,
 ) -> (pd.DataFrame, dict):
     working = df.copy()
     """Append Contest_Id and contest_type. Add contest_type column and fill it correctly.
@@ -721,7 +723,7 @@ def add_selection_id(
         engine: sqlalchemy engine connected to db
         munger_name: str, for error reporting
         err: dict,
-    
+
     Adds new records to Selection and CandidateSelection db tables as needed.
 
     Returns:
@@ -751,13 +753,15 @@ def add_selection_id(
         #  replacing any nulls or blank strings with 0
         col_map = {c: c for c in ["Party_Id", "Candidate_Id"]}
         selection_df = db.append_id_to_dframe(
-            engine, selection_df, "CandidateSelection", col_map=col_map, null_ids_to_zero=True
+            engine,
+            selection_df,
+            "CandidateSelection",
+            col_map=col_map,
+            null_ids_to_zero=True,
         )
 
         # find unmatched records
-        c_df_unmatched = selection_df[
-            selection_df.CandidateSelection_Id == 0
-        ].copy()
+        c_df_unmatched = selection_df[selection_df.CandidateSelection_Id == 0].copy()
 
         if not c_df_unmatched.empty:
             #  Load CandidateSelections to Selection table (for unmatched)
@@ -766,7 +770,8 @@ def add_selection_id(
             # Load unmatched records into CandidateSelection table
             c_df_unmatched["Id"] = pd.Series(id_list, index=c_df_unmatched.index)
             new_err = db.insert_to_cdf_db(
-                engine, c_df_unmatched,
+                engine,
+                c_df_unmatched,
                 "CandidateSelection",
                 "database",
                 f"{Path(__file__).absolute().parents[0].name}"
@@ -779,9 +784,9 @@ def add_selection_id(
                     return pd.DataFrame(), err
 
             # update CandidateSelection_Id column for previously unmatched, merging on Candidate_Id and Party_Id
-            selection_df.loc[c_df_unmatched.index, "CandidateSelection_Id"] = c_df_unmatched[
-                "Id"
-            ]
+            selection_df.loc[
+                c_df_unmatched.index, "CandidateSelection_Id"
+            ] = c_df_unmatched["Id"]
         # recast Candidate_Id and Party_Id to int in w['Candidate'];
         # Note that neither should have nulls, but rather the 'none or unknown' Id
         #  NB: c_df had this recasting done in the append_id_to_dframe routine
@@ -803,9 +808,7 @@ def add_selection_id(
         )
 
         # rename to Selection_Id
-        working = working.rename(
-            columns={"CandidateSelection_Id": "Selection_Id"}
-        )
+        working = working.rename(columns={"CandidateSelection_Id": "Selection_Id"})
         # and drop extraneous
         to_drop = [
             x
@@ -827,8 +830,8 @@ def raw_to_id_simple(
     file_name: str,
     munger_name: str,
     juris_system_name,
-        dictionary_df: pd.DataFrame,
-        dictionary_path: str,
+    dictionary_df: pd.DataFrame,
+    dictionary_path: str,
 ) -> (pd.DataFrame, Optional[dict]):
     """Append ids to <df> for all elements given in <element_list>."""
     err = None
@@ -843,9 +846,7 @@ def raw_to_id_simple(
                 drop = False
             if element == "CountItemType":
                 # munge raw to internal CountItemType
-                r_i = raw_to_internal_dictionary_df(
-                    dictionary_df, "CountItemType"
-                )
+                r_i = raw_to_internal_dictionary_df(dictionary_df, "CountItemType")
                 recognized = r_i.CountItemType_raw.unique()
                 matched = working.CountItemType_raw.isin(recognized)
                 if not matched.all():
@@ -988,8 +989,8 @@ def munge_raw_to_ids(
     if alternate_dictionary:
         dictionary_path = alternate_dictionary
     else:
-        dictionary_path = os.path.join(path_to_jurisdiction_dir,"dictionary.txt")
-    dictionary_df = pd.read_csv(dictionary_path,sep="\t")
+        dictionary_path = os.path.join(path_to_jurisdiction_dir, "dictionary.txt")
+    dictionary_df = pd.read_csv(dictionary_path, sep="\t")
 
     # add Contest_Id column and contest_type column
     if "CandidateContest" in constant_dict.keys():
@@ -1799,10 +1800,11 @@ def to_standard_count_frame(
     # # NB: sheet names are the keys
     try:
         raw_dict, row_constants_by_sheet, new_err = ui.read_single_datafile(
-            file_path, p, munger_path,
+            file_path,
+            p,
+            munger_path,
         )
         err = ui.consolidate_errors([err, new_err])
-
 
         if len(raw_dict) == 0:  # no dfs at all returned
             err = ui.add_new_error(
