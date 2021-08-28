@@ -99,7 +99,7 @@ def remove_database(
         db_err = ui.add_new_error(
             db_err,
             "system",
-            "database.remove_database",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Error dropping database {db_params}:\n{e}",
         )
 
@@ -419,7 +419,7 @@ def create_or_reset_db(
         sess_new,
         dirpath=os.path.join(project_root, "CDF_schema_def_info"),
     )
-    fill_standard_tables(sess_new)
+    add_standard_records(sess_new)
     con.close()
     return err
 
@@ -902,7 +902,7 @@ def get_column_names(
     return col_list, type_map
 
 
-def add_records_to_selection_table(engine: sqlalchemy.engine, n: int) -> list:
+def add_records_to_selection_table(engine: sqlalchemy.engine, n: int) -> List[int]:
     "Returns a list of the Ids of the inserted records"
     id_list = []
     connection = engine.raw_connection()
@@ -2314,7 +2314,6 @@ def create_table(
         fk = pd.read_csv(os.path.join(t_path, "foreign_keys.txt"), sep="\t")
 
         # define table
-        col_list = [Column(r["fieldname"], Integer) for i, r in fk.iterrows()]
         null_constraint_list = [
             CheckConstraint(
                 f'"{r["fieldname"]}" IS NOT NULL',
@@ -2340,7 +2339,6 @@ def create_table(
                 server_default=id_seq.next_value(),
                 primary_key=True,
             ),
-            *col_list,
             *true_foreign_key_list,
             *null_constraint_list,
         )
@@ -2354,25 +2352,59 @@ def create_table(
     return
 
 
-def fill_standard_tables(session):
-    """Fill BallotMeasureSelection tables"""
-    # fill BallotMeasureSelection table
-    load_bms(session.bind, constants.bmselections)
+def add_standard_records(session):
+    """Add standard records to database"""
+    err = None
+
+    # Add 'ballot measure selection' to Party table
+    party_df = pd.DataFrame(
+        [["ballot measure selection", "none"]],
+        columns=["Name", "Abbreviation"],
+    )
+    new_err = insert_to_cdf_db(
+        session.bind,
+        party_df,
+        "Party",
+        "database",
+        "ballot measure selection insertion",
+    )
+    err = ui.consolidate_errors([err, new_err])
+    if ui.fatal_error(new_err):
+        return err
+    bms_id = name_to_id(session, "Party", "ballot measure selection")
+
+    # Add standard BallotMeasureSelections to Candidate table
+    selection_df = pd.DataFrame(
+        [[sel] for sel in constants.bmselections], columns=["BallotName"]
+    )
+    new_err = insert_to_cdf_db(
+        session.bind, selection_df, "Candidate", "database", "add standard records"
+    )
+    err = ui.consolidate_errors([err, new_err])
+    if ui.fatal_error(new_err):
+        return err
+
+    # Create dataframe with Candidate_Id and Party_Id columns ("ballot measure selection" party)
+    # add Party_Id column
+    selection_df = m.add_constant_column(selection_df, "Party_Id", bms_id)
+    # add Candidate_Id column
+    selection_df.rename(columns={"BallotName": "Candidate"}, inplace=True)
+    candidate_df = pd.read_sql_table("Candidate", session.bind)
+    selection_df, new_err = m.replace_internal_names_with_ids(
+        selection_df,
+        "add standard records",
+        "add standard records",
+        "add standard records",
+        candidate_df,
+        "Candidate",
+        "BallotName",
+    )
+
+    _, new_err = m.add_selection_id(selection_df, session.bind, None)
+    err = ui.consolidate_errors([err, new_err])
+    if ui.fatal_error(new_err):
+        return err
     session.flush()
-    return
-
-
-def load_bms(engine, bms_list: list):
-    bms_df = pd.DataFrame([[s] for s in bms_list], columns=["Name"])
-
-    # Create 3 entries in Selection table
-    id_list = add_records_to_selection_table(engine, len(bms_list))
-
-    # Create entries in BallotMeasureSelection table
-    bms_df["Id"] = pd.Series(id_list, index=bms_df.index)
-    temp = pd.concat([pd.read_sql_table("Selection", engine), bms_df], axis=1)
-    temp.to_sql("BallotMeasureSelection", engine, if_exists="append", index=False)
-
     return
 
 

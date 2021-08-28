@@ -754,6 +754,7 @@ class DataLoader:
                 err,
                 report_dir,
                 key_list=constants.juris_load_report_keys,
+                file_prefix=juris_system_name,
             )
 
         # report remaining errors
@@ -3505,7 +3506,7 @@ def get_contest_with_unknown_candidates(
 
 def load_results_df(
     session: Session,
-    df_original: pd.DataFrame,
+    df: pd.DataFrame,
     necessary_constants: dict,
     juris_true_name: str,
     file_name: str,
@@ -3520,11 +3521,11 @@ def load_results_df(
     ] = None,  # when given, use this dictionary, not the one in the jurisdiction directory
 ) -> Optional[dict]:
     err = None
-    df = df_original.copy()
+    working = df.copy()
     # add text column for internal CountItemType name, Id columns for all but Count, removing raw-munged
     try:
-        df, new_err = m.munge_raw_to_ids(
-            df,
+        working, new_err = m.munge_raw_to_ids(
+            working,
             necessary_constants,
             path_to_jurisdiction_dir,
             file_name,
@@ -3549,15 +3550,15 @@ def load_results_df(
     nou_candidate_id = db.name_to_id(session, "Candidate", "none or unknown")
     nou_selection_ids = db.selection_ids_from_candidate_id(session, nou_candidate_id)
     unknown = (
-        df[df.Selection_Id.isin(nou_selection_ids)]
+        working[working.Selection_Id.isin(nou_selection_ids)]
         .groupby(["Contest_Id", "Selection_Id"])
         .sum()
     )
     for (contest_id, selection_id) in unknown.index:
-        mask = df[["Contest_Id", "Selection_Id"]] == (contest_id, selection_id)
-        df = df[~mask.all(axis=1)]
+        mask = working[["Contest_Id", "Selection_Id"]] == (contest_id, selection_id)
+        working = working[~mask.all(axis=1)]
 
-    if df.empty:
+    if working.empty:
         err = ui.add_new_error(
             err,
             "jurisdiction",
@@ -3568,8 +3569,13 @@ def load_results_df(
 
     # rollup_dataframe results if requested
     if rollup:
-        df, new_err = an.rollup_dataframe(
-            session, df, "Count", "ReportingUnit_Id", "ReportingUnit_Id", rollup_rut
+        working, new_err = an.rollup_dataframe(
+            session,
+            working,
+            "Count",
+            "ReportingUnit_Id",
+            "ReportingUnit_Id",
+            rollup_rut,
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
@@ -3577,11 +3583,11 @@ def load_results_df(
                 return err
 
     # add_datafile_Id and Election_Id columns
-    df = m.add_constant_column(df, "_datafile_Id", datafile_id)
-    df = m.add_constant_column(df, "Election_Id", election_id)
+    working = m.add_constant_column(working, "_datafile_Id", datafile_id)
+    working = m.add_constant_column(working, "Election_Id", election_id)
     # load counts to db
     try:
-        err = m.fill_vote_count(df, session, munger_name, err)
+        err = m.fill_vote_count(working, session, munger_name, err)
     except Exception as exc:
         err = ui.add_new_error(
             err,
@@ -3651,6 +3657,7 @@ def load_results_file(
         df = m.add_constants_to_df(df, necessary_constants)
     else:
         necessary_constants = dict()
+
     # # delete any rows with items to be ignored
     df = m.remove_ignored_rows(df, munger_path)
 

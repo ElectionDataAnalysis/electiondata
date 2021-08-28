@@ -166,7 +166,6 @@ def read_single_datafile(
     f_path: str,
     p: Dict[str, Any],
     munger_path: str,
-    err: Optional[Dict],
     aux: bool = False,
     driving_path: Optional[str] = None,
     lookup_id: Optional[str] = None,
