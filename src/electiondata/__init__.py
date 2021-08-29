@@ -1233,7 +1233,7 @@ class DataLoader:
                 if report_err_to_file:
                     err = ui.report(
                         err,
-                        os.path.join(self.d["reports_and_plots_dir"],f"multi_{ts}"),
+                        os.path.join(self.d["reports_and_plots_dir"], f"multi_{ts}"),
                         file_prefix="multi_dictionary",
                     )
                 return success, err
@@ -1265,7 +1265,7 @@ class DataLoader:
             new_err = dict()
             dictionary_df = pd.read_csv(
                 dictionary_path,
-                sep = "\t",
+                sep="\t",
             )
             for element in ["Jurisdiction", "Election"]:
                 working, new_err[element] = m.replace_raw_with_internal_name(
@@ -1281,7 +1281,7 @@ class DataLoader:
                 [err, new_err["Election"], new_err["Jurisdiction"]]
             )
             if ui.fatal_error(new_err["Election"]) or ui.fatal_error(
-                    new_err["Jurisdiction"]
+                new_err["Jurisdiction"]
             ):
                 continue  # go to next munger
             working.set_index(["Election", "Jurisdiction"], inplace=True)
@@ -2060,7 +2060,10 @@ class JurisdictionPrepper:
             )
         return
 
-    def add_contests_from_file(self, file_path: str,) -> Optional[dict]:
+    def add_contests_from_file(
+        self,
+        file_path: str,
+    ) -> Optional[dict]:
         err = None
         try:
             df = pd.read_csv(file_path, sep="\t")
@@ -2068,7 +2071,9 @@ class JurisdictionPrepper:
             err = ui.add_new_error(err, "file", file_path, f"File not found")
             return err
         except Exception as e:
-            err = ui.add_new_error(err,"file",file_path,f"Exception while reading file: {e}")
+            err = ui.add_new_error(
+                err, "file", file_path, f"Exception while reading file: {e}"
+            )
             return err
         err = juris.add_candidate_contests(self.d[""], df, file_path)
         return err
@@ -2221,18 +2226,18 @@ class Analyzer:
         status: Optional[str] = None,
     ) -> Optional[dict]:
         """
-        election: str,
-        juris_true_name: str,
-        juris_system_name: str,
-        reference: Optional[str] = None, if given, use this path to file of reference results. If not
-            given, reference results are taken from file
-            <repository_content_root>/reference_results/<juris_system_name>.tsv
-       status: Optional[str] = None, if given, checks only the reference results with that same status
+         election: str,
+         juris_true_name: str,
+         juris_system_name: str,
+         reference: Optional[str] = None, if given, use this path to file of reference results. If not
+             given, reference results are taken from file
+             <repository_content_root>/reference_results/<juris_system_name>.tsv
+        status: Optional[str] = None, if given, checks only the reference results with that same status
 
-        Reports information from tests to self.reports_and_plots.
-        Returns:
-            Optional[dict], error dictionary with only "warn-test" and no "test" keys (since calling function may or
-                may not view failing tests as fatal
+         Reports information from tests to self.reports_and_plots.
+         Returns:
+             Optional[dict], error dictionary with only "warn-test" and no "test" keys (since calling function may or
+                 may not view failing tests as fatal
         """
         err = None
         major_subdiv_type = db.get_major_subdiv_type(

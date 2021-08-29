@@ -53,7 +53,7 @@ def test_multielection_loading(dataloader):
         tests_dir,
         "dataloading_tests",
         "multielection_loading",
-        "county_2018_AL_AZ_only.ini"
+        "county_2018_AL_AZ_only.ini",
     )
 
     # ensure results_dir points to testing data
@@ -72,12 +72,15 @@ def test_multielection_loading(dataloader):
     dataloader.d["results_dir"] = old_results_dir
 
     # test successful load
-    assert success == {('2018 General', 'Alabama'): [], ('2018 General', 'Arizona'): []}
+    assert success == {("2018 General", "Alabama"): [], ("2018 General", "Arizona"): []}
     assert err is None
 
     # test results
     for jurisdiction in ["Alabama", "Arizona"]:
         test_err = dataloader.analyzer.test_loaded_results(
-            "2018 General", jurisdiction, jurisdiction.replace(" ","-"), reference_results=reference_results)
+            "2018 General",
+            jurisdiction,
+            jurisdiction.replace(" ", "-"),
+            reference_results=reference_results,
+        )
         assert test_err["test"] == dict()
-
