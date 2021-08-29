@@ -1245,20 +1245,28 @@ class DataLoader:
                 continue  # go to next munger
             # collect election-jurisdiction pairs
             new_err = dict()
-            for element in ["Election", "Jurisdiction"]:
-                # use multi-file's dictionary to get internal names of election and jurisdiction
+            dictionary_path = os.path.join(
+                self.d["repository_content_root"],"secondary_sources",ini_params["secondary_source"], "dictionary.txt"
+            )
+            dictionary_df = pd.read_csv(
+                dictionary_path,
+                sep = "\t",
+            )
+            for element in ["Jurisdiction", "Election"]:
                 working, new_err[element] = m.replace_raw_with_internal_name(
                     working,
-                    dictionary_directory,
                     munger,
                     element,
+                    dictionary_df,
+                    dictionary_path,
                     drop_unmatched=True,
                 )
+            # use multi-file's dictionary to get internal names of election and jurisdiction
             err = ui.consolidate_errors(
                 [err, new_err["Election"], new_err["Jurisdiction"]]
             )
             if ui.fatal_error(new_err["Election"]) or ui.fatal_error(
-                new_err["Jurisdiction"]
+                    new_err["Jurisdiction"]
             ):
                 continue  # go to next munger
             working.set_index(["Election", "Jurisdiction"], inplace=True)
