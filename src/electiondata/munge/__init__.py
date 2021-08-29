@@ -300,8 +300,8 @@ def replace_raw_with_internal_name(
     drop_unmatched: bool = False,
     drop_all_ok: bool = False,
 ) -> (pd.DataFrame, Optional[dict]):
-    """Uses dictionary.txt file in dictionary_directory to replace raw names  with names
-    matching internal db standard."""
+    """Uses dictionary_df to replace raw names with names
+    matching internal db standard. dictionary_path is for error reporting"""
     err = None
     working = df.copy()
     dictionary = raw_to_internal_dictionary_df(dictionary_df, element)
