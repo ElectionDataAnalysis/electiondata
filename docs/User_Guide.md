@@ -140,7 +140,7 @@ NB: the system assumes that blocks are separated by blank lines. This means that
 
 #### Regular Expressions
 Sometimes it is necessary to use regular expressions to extract information from fields in the results file.  For example, in a primary both the Party and the Candidate may be in the same string (e.g., "Robin Perez (DEM)"). Braces ({}) indicate that regex analysis is needed. Inside the curly brackets there are two parts, separated by a comma. The first part is the field name to pull a string from the file. The second is a python regex formula whose first group (enclosed by parentheses) marks the desired substring.
-```Party	{<count_header_1>,^.*\(([a-zA-Z]{3})\)$}	row```
+```Candidate	{<count_header_1>,^(.*) \([a-zA-Z]{3}\)$}	row```
 
 The system will report (in the `.warnings` files) any strings that did not match the regex. 
 
@@ -352,20 +352,14 @@ Candidate	Rosa Maria 'Rosy' Palomino	Rosa Maria "Rosy" Palomino
    * CandidateContest: Look at the new `CandidateContest.txt` file. Many may be contests you do *not* want to add -- the contests you already have (such as congressional contests) that will have been added with the raw identifier name. Some may be BallotMeasureContests that do not belong in `CandidateContest.txt`. For any new CandidateContest you do want to keep you will need to add the corresponding line to `Office.txt` (and the ElectionDistrict to `ReportingUnit.txt` if it is not already there). 
     * You may want to remove from `dictionary.txt` any lines corresponding to items removed in the bullet points above.
 
- (13) Finally, if you will be munging primary elections, and if you are confident that your `CandidateContest.txt`, `Party.txt` and associated lines in `dictionary.txt` are correct, use the `jp.add_primaries_to_candidate_contest()` and `jp.add_primaries_to_dict()` methods
-```
->>> jp.add_primaries_to_candidate_contest()
->>> jp.add_primaries_to_dict()
-```
+ (13) Finally, if you will be munging primary elections, we recommend making each primary a separate election (e.g., "2021 Democratic Primary", "2021 Republican Primary")
 
 ### The JurisdictionPrepper class details
 There are routines in the `JurisdictionPrepper()` class to help prepare a jurisdiction.
  * `JurisdictionPrepper()` reads parameters from the file (`jurisdiction_prep.ini`) to create the directories and basic necessary files. 
  * `new_juris_files()` builds a directory for the jurisdiction, including starter files with the standard contests. It calls some methods that may be independently useful:
    * `add_standard_contests()` creates records in `CandidateContest.txt` corresponding to contests that appear in many or most jurisdictions, including all federal offices as well as state house and senate offices. 
-   * `add_primaries_to_candidate_contest()` creates a record in `CandidateContest.txt` for every CandidateContest-Party pair that can be created from `CandidateContest.txt` entries with no assigned PrimaryParty and `Party.txt` entries. (Note: records for non-existent primary contests will not break anything.) 
    * `starter_dictionary()` creates a `starter_dictionary.txt` file in the current directory. Lines in this starter dictionary will *not* have the correct `raw_identifier_value` entries. Assigning the correct raw identifier values must be done by hand before proceeding.
- * `add_primaries_to_dict()` creates an entry in `dictionary.txt` for every CandidateContest-Party pair that can be created from the CandidateContests and Parties already in `dictioary.txt`. (Note: entries in `dictionary.txt` that never occur in your results file won't break anything.)
  * Adding precincts automatically:
      *`add_sub_county_rus_from_results_file()` is useful when:
          * county names can be munged from the rows
@@ -421,14 +415,35 @@ Even when the upload has worked, there may be warnings about lines not loaded. T
 
 If there are no errors, the results files will be moved to a subdirectory of the `archive_dir` directory specified in `run_time.ini`. 
 
-## Pull Data
-The Analyzer class uses parameters in the file `run_time.ini`, which should be in the directory from which you are running the program. This class has a number of functions that allow you to aggregate the data for analysis purposes. For example, running the `.top_counts()` function exports files into your rollup_dataframe directory which with counts summed up at a particular reporting unit level. This function expects 4 arguments: the election, the jurisdiction, the reporting unit level at which the aggregation will occur, and a boolean variable indicating whether you would like the data aggregated by vote count type. For example:
+## Exporting Data
+The Analyzer class takes two optional parameters:
+ * `param_file`: path to the parameter file for defining the Analyzer directories, database connection, etc. if not specified, the default is the `run_time.ini` file in the directory from which the call to Analyzer() is made
+ * `dbname`: name of database to use. If not specified, the default is the database specified in the `param_file`
+
+This class has a number of functions that allow you to aggregate the data for analysis purposes. For example, running the `.top_counts()` function exports files into your rollup_dataframe directory which with counts summed up at a particular reporting unit level. This function expects 4 arguments: the election, the jurisdiction, the reporting unit level at which the aggregation will occur, and a boolean variable indicating whether you would like the data aggregated by vote count type. For example:
 ```
 from elections import Analyzer
 analyzer = Analyzer()
 analyzer.top_counts('2018 General', 'North Carolina', 'county', True)
 ```
 This code will produce all North Carolina data from the 2018 general election, grouped by contest, county, and vote type (total, early, absentee, etc).
+
+### NIST Common Data Format
+This package also provides functionality to export the data to xml according to the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd). This is as simple as identifying an election and jurisdiction of interest:
+```
+from elections import Analyzer
+analyzer = Analyzer()
+election_report = analyzer.export_nist_v2("2020 General", "Georgia")
+```
+The output is a string, the contents of the xml file.
+
+There is also an export in the NIST V1 json format:
+```
+analyzer = Analyzer()
+export_nist_v1_json("2020 General","Georgia")
+```
+The output is a string, the contents of the json file.
+
 
 ## Unload and reload data with `reload_juris_election()`
 To unload existing data for a given jurisdiction and a given election -- or more exactly, to remove data from any datafiles with that election and that jurisdiction as "top ReportingUnit" -- you can use the routine 
@@ -524,25 +539,10 @@ If not all rows are data, and some string fields to be munged have blank headers
 
 If there are hidden columns in an Excel file, you may need to omit the hidden columns from various counts.
 
-### NIST Common Data Format imports and exports
+### NIST Common Data Format imports
 To import results from a file that is valid NIST V2 xml -- that can be formally validated against the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd) -- use the file_type 'nist_v2_xml'
 
 Some xml files (e.g., Ohio 2020 General) use the older Version 1 common data format. Our convention is that if the munger name contains "nist" and the file_type is xml, then the system will look for a namespace declaration.
-
-This package also provides functionality to export the data to xml according to the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd). This is as simple as identifying an election and jurisdiction of interest:
-```
-from elections import Analyzer
-analyzer = Analyzer()
-election_report = analyzer.export_nist_v2("2020 General", "Georgia")
-```
-The output is a string, the contents of the xml file.
-
-There is also an export in the NIST V1 json format:
-```
-analyzer = Analyzer()
-export_nist_v1_json("2020 General","Georgia")
-```
-The output is a string, the contents of the json file.
 
 ### Difference-in-Difference calculations
 The system provides a way to calculate difference-in-difference statistics. For any particular election, `Analyzer.diff_in_diff_dem_vs_rep` produces a dataframe of values for any county with results by vote type, with Democratic or Republican candidates, and any comparable pair of contests both on some ballots in the county. Contests are considered "comparable" if their districts are of the same geographical district type -- e.g., both statewide, or both state-house, etc. The method also returns a list of jurisdictions for which vote counts were zero or missing.

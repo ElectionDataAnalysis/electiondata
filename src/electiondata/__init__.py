@@ -1152,15 +1152,20 @@ class DataLoader:
     def load_multielection_from_ini(
         self,
         ini: str,
+        dictionary_path: Optional[str] = None,
         overwrite_existing: bool = False,
         load_jurisdictions: bool = True,
+        report_err_to_file: bool = True,
     ) -> (Dict[str, List[str]], Optional[dict]):
         """
         ini: str, path to file with initialization parameters for dataloader and secondary source
+        dictionary_path: Optional[str] = None, if given, path to dictionary. If not given, path assumed
+            to be <repository_content_root>/secondary_sources/<ini_params["secondary_source"]
         overwrite_existing: bool = False, if true, existing data will be deleted for each election-jurisdiction pair
             represented in the file indicated in <ini>
         load_jurisdictions: bool = True, if true, jurisdiction information will be loaded to database before processing
             results data
+        report_err_to_file: bool = True, if true, errors reported to file; otherwise errors returned
 
         Loads results from the file indicated in <ini> to the database
 
@@ -1178,27 +1183,34 @@ class DataLoader:
         )
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
-            err = ui.report(
-                err,
-                os.path.join(self.d["reports_and_plots_dir"], f"multi_{ts}"),
-                file_prefix="multi_dictionary",
-            )
+            if report_err_to_file:
+                err = ui.report(
+                    err,
+                    os.path.join(self.d["reports_and_plots_dir"], f"multi_{ts}"),
+                    file_prefix="multi_dictionary",
+                )
             return success, err
 
         results_path = os.path.join(self.d["results_dir"], ini_params["results_file"])
         multi_file_name = Path(ini_params["results_file"]).name
         ini_file = Path(ini).name
-        dictionary_directory = os.path.join(
-            self.d["repository_content_root"],
-            "secondary_sources",
-            ini_params["secondary_source"],
-        )
+        if dictionary_path is None:
+            dictionary_path = os.path.join(
+                self.d["repository_content_root"],
+                "secondary_sources",
+                ini_params["secondary_source"],
+                "dictionary.txt",
+            )
         # check that secondary_source directory has necessary files without flaws
-        new_err = juris.check_dictionary(
-            os.path.join(dictionary_directory, "dictionary.txt")
-        )
+        new_err = juris.check_dictionary(dictionary_path)
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
+            if report_err_to_file:
+                err = ui.report(
+                    err,
+                    os.path.join(self.d["reports_and_plots_dir"], f"multi_{ts}"),
+                    file_prefix="multi_dictionary",
+                )
             return success, err
 
         # load items from the secondary source tables to the db
@@ -1218,6 +1230,12 @@ class DataLoader:
             )
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
+                if report_err_to_file:
+                    err = ui.report(
+                        err,
+                        os.path.join(self.d["reports_and_plots_dir"],f"multi_{ts}"),
+                        file_prefix="multi_dictionary",
+                    )
                 return success, err
 
         # get list of mungers to apply
@@ -1245,9 +1263,6 @@ class DataLoader:
                 continue  # go to next munger
             # collect election-jurisdiction pairs
             new_err = dict()
-            dictionary_path = os.path.join(
-                self.d["repository_content_root"],"secondary_sources",ini_params["secondary_source"], "dictionary.txt"
-            )
             dictionary_df = pd.read_csv(
                 dictionary_path,
                 sep = "\t",
@@ -1457,7 +1472,8 @@ class DataLoader:
             self.d["reports_and_plots_dir"],
             f"multielection_{self.session.bind.url.database}_{ts}",
         )
-        err = ui.report(err, report_dir)
+        if report_err_to_file:
+            err = ui.report(err, report_dir)
 
         return success, err
 
@@ -1619,71 +1635,6 @@ class JurisdictionPrepper:
         dict_err = self.starter_dictionary(target_dir=target_dir)
 
         error = ui.consolidate_errors([error, asc_err, dict_err])
-        ui.report(
-            error, self.d["reports_and_plots_dir"], file_prefix=f"prep_{self.d['name']}"
-        )
-        return error
-
-    def add_primaries_to_dict(self) -> Optional[dict]:
-        """Return error dictionary"""
-        print("\nStarting add_primaries_to_dict")
-        error = None
-
-        primaries = {}
-        # read CandidateContest.txt, Party.txt and dictionary.txt
-        cc = electiondata.juris.get_element(
-            self.d["jurisdiction_path"], "CandidateContest"
-        )
-        p = electiondata.juris.get_element(self.d["jurisdiction_path"], "Party")
-        d = electiondata.juris.get_element(self.d["jurisdiction_path"], "dictionary")
-        # for each CandidateContest line in dictionary.txt with cdf_identifier in CandidateContest.txt
-        # and for each Party line in dictionary.txt with cdf_identifier in Party.txt
-        # append corresponding line in dictionary.txt
-        party_d = d[
-            (d["cdf_element"] == "Party")
-            & (d["cdf_internal_name"].isin(p["Name"].tolist()))
-        ]
-        contest_d = d[
-            (d["cdf_element"] == "CandidateContest")
-            & (d["cdf_internal_name"].isin(cc["Name"].tolist()))
-        ]
-        for i, p in party_d.iterrows():
-            primaries[p["raw_identifier_value"]] = contest_d.copy().rename(
-                columns={
-                    "cdf_internal_name": "contest_internal",
-                    "raw_identifier_value": "contest_raw",
-                }
-            )
-            primaries[p["raw_identifier_value"]]["cdf_internal_name"] = primaries[
-                p["raw_identifier_value"]
-            ].apply(
-                lambda row: electiondata.juris.primary(
-                    row, p["cdf_internal_name"], "contest_internal"
-                ),
-                axis=1,
-            )
-            primaries[p["raw_identifier_value"]]["raw_identifier_value"] = primaries[
-                p["raw_identifier_value"]
-            ].apply(
-                lambda row: electiondata.juris.primary(
-                    row, p["raw_identifier_value"], "contest_raw"
-                ),
-                axis=1,
-            )
-
-        if primaries:
-            df_list = [
-                df[["cdf_element", "cdf_internal_name", "raw_identifier_value"]]
-                for df in primaries.values()
-            ]
-            df_list.append(d)
-            new_dictionary = pd.concat(df_list)
-        else:
-            new_dictionary = d
-        new_err = electiondata.juris.write_element(
-            self.d["jurisdiction_path"], "dictionary", new_dictionary
-        )
-        ui.consolidate_errors([error, new_err])
         ui.report(
             error, self.d["reports_and_plots_dir"], file_prefix=f"prep_{self.d['name']}"
         )
@@ -2109,6 +2060,19 @@ class JurisdictionPrepper:
             )
         return
 
+    def add_contests_from_file(self, file_path: str,) -> Optional[dict]:
+        err = None
+        try:
+            df = pd.read_csv(file_path, sep="\t")
+        except FileNotFoundError:
+            err = ui.add_new_error(err, "file", file_path, f"File not found")
+            return err
+        except Exception as e:
+            err = ui.add_new_error(err,"file",file_path,f"Exception while reading file: {e}")
+            return err
+        err = juris.add_candidate_contests(self.d[""], df, file_path)
+        return err
+
     def __init__(
         self,
         prep_param_file: str = "jurisdiction_prep.ini",
@@ -2253,13 +2217,17 @@ class Analyzer:
         election: str,
         juris_true_name: str,
         juris_system_name: str,
+        reference_results: Optional[str] = None,
         status: Optional[str] = None,
     ) -> Optional[dict]:
         """
         election: str,
         juris_true_name: str,
         juris_system_name: str,
-        status: Optional[str] = None, if given, checks only the reference results with that same status
+        reference: Optional[str] = None, if given, use this path to file of reference results. If not
+            given, reference results are taken from file
+            <repository_content_root>/reference_results/<juris_system_name>.tsv
+       status: Optional[str] = None, if given, checks only the reference results with that same status
 
         Reports information from tests to self.reports_and_plots.
         Returns:
@@ -2304,11 +2272,12 @@ class Analyzer:
             )
 
         # test against reference result totals
-        reference = os.path.join(
-            self.repository_content_root,
-            "reference_results",
-            f"{juris_system_name}.tsv",
-        )
+        if reference_results is None:
+            reference_results = os.path.join(
+                self.repository_content_root,
+                "reference_results",
+                f"{juris_system_name}.tsv",
+            )
         (
             not_found,
             ok,
@@ -2317,7 +2286,7 @@ class Analyzer:
             sub_dir,
             new_err,
         ) = self.compare_to_results_file(
-            reference,
+            reference_results,
             single_election=election,
             single_jurisdiction=juris_true_name,
             report_dir=self.reports_and_plots_dir,
@@ -2450,19 +2419,8 @@ class Analyzer:
     ) -> bool:
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        standard_ct_list = list(
-            db.read_vote_count(
-                self.session,
-                election_id=election_id,
-                jurisdiction_id=jurisdiction_id,
-                fields=["CountItemType"],
-                aliases=["CountItemType"],
-            )["CountItemType"].unique()
-        )
+        standard_ct_list = constants.nist_standard["CountItemType"]
 
-        # don't want type "other"
-        if "other" in standard_ct_list:
-            standard_ct_list.remove("other")
         active = db.active_vote_types(self.session, election, jurisdiction)
         for vt in active:
             # if even one fails, count types are not standard
@@ -2646,22 +2604,27 @@ class Analyzer:
         return agg_results
 
     def top_counts(
-        self, election: str, jurisdiction: str, sub_unit: str, by_vote_type: bool
+        self, election: str, jurisdiction: str, sub_rutype: str, by_vote_type: bool
     ) -> Optional[str]:
+        """
+        Inputs:
+            election: str,
+            jurisdiction: str,
+            sub_rutype: str, ReportingUnitType (e.g., 'county') to which the results should be rolled up
+            by_vote_type: bool, if true, results will be reported by vote type. If false, only totals will be reported
+
+        Puts file with results into a subdirectory (labeled by election and jurisdiction name)
+            of the reports_and_plots_dir specified in the Analyzer's param_file.
+        """
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
-        sub_rutype_othertext = ""
-        if sub_unit_id is None:
-            sub_rutype_othertext = sub_unit
         election_id = db.name_to_id(self.session, "Election", election)
-        err = an.create_rollup(
+        err = an.export_rollup(
             self.session,
             self.reports_and_plots_dir,
             jurisdiction_id=jurisdiction_id,
-            sub_rutype_id=sub_unit_id,
+            sub_rutype=sub_rutype,
             election_id=election_id,
             by_vote_type=by_vote_type,
-            sub_rutype_othertext=sub_rutype_othertext,
         )
         return err
 
