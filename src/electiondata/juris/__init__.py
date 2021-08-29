@@ -88,14 +88,14 @@ def recast_options(
     return options, err
 
 
-def check_dictionary(dictionary_file: str) -> Optional[dict]:
+def check_dictionary(dictionary_pah: str) -> Optional[dict]:
     err = None
-    dictionary_dir = Path(dictionary_file).parent.name
+    dictionary_dir = Path(dictionary_pah).parent.name
 
     # dedupe the dictionary
-    clean_and_dedupe(dictionary_file, clean_candidates=True)
+    clean_and_dedupe(dictionary_pah, clean_candidates=True)
     # check that no entry is null
-    df = pd.read_csv(dictionary_file, **constants.standard_juris_csv_reading_kwargs)
+    df = pd.read_csv(dictionary_pah, **constants.standard_juris_csv_reading_kwargs)
     null_mask = df.T.isnull().any()
     if null_mask.any():
         # drop null rows and report error
@@ -859,4 +859,95 @@ def add_defaults(juris_path: str, juris_template_dir: str, element: str) -> dict
     old = get_element(juris_path, element)
     new = get_element(juris_template_dir, element)
     err = write_element(juris_path, element, pd.concat([old, new]).drop_duplicates())
+    return err
+
+
+def add_candidate_contests(
+    juris_path: str,
+    df: pd.DataFrame,
+    file_path: str,
+) -> Optional[dict]:
+    """
+    Inputs:
+        juris_path: str, path to directory containing info for jurisdiction
+        df: pd.DataFrame, dataframe with info for candidate contests
+            (ContestName,NumberElected,OfficeName,PrimaryParty,ElectionDistrict, ReportingUnitType)
+        file_path: str, for error reporting, the path of the file from which the dataframe was taken
+
+    Adds any contests in <df> to the CandidateContest file in <juris_path>, along with dependent info
+
+    Returns:
+        Optional[dict], error dictionary
+    """
+    err = None
+    necessary_columns = {
+        "ContestName",
+        "NumberElected",
+        "OfficeName",
+        "PrimaryParty",
+        "ElectionDistrict",
+        "ReportingUnitType",
+    }
+    if necessary_columns.issubset(set(df.columns)):
+        # read files (or return errors)
+        df_dict = dict()
+        path_dict = dict()
+        for element in ["ReportingUnit", "Office", "CandidateContest"]:
+            path_dict[element] = os.path.join(juris_path, f"{element}.txt")
+            try:
+                df_dict[element] = pd.read_csv(path_dict[element], sep="\t")
+            except FileNotFoundError:
+                err = ui.add_new_error(
+                    err, "jurisdiction", juris_path, f"{element}.txt file not found"
+                )
+            except Exception as e:
+                err = ui.add_new_error(
+                    err, "jurisdiction", juris_path, f"Error reading {element}.txt: {e}"
+                )
+        if ui.fatal_error(err):
+            return err
+
+        # add to ReportingUnit if necessary
+        mask = df.ElectionDistrict.notin(df_dict["ReportingUnit"].Name.unique())
+        if mask.any():
+            new = pd.concat(
+                [
+                    df[["ElectionDistrict", "ReportingUnitType"]].rename(
+                        column={"ElectionDistrict": "Name"}
+                    ),
+                    df_dict["ReportingUnit"],
+                ]
+            )
+            new.to_csv(path_dict["ReportingUnit"], sep="\t", index=False)
+
+        # add to Office
+        mask = df.OfficeName.notin(df_dict["Office"].Name.unique())
+        if mask.any():
+            new = pd.concat(
+                [
+                    df[["OfficeName", "ElectionDistrict"]].rename(
+                        column={"OfficeName": "Name"}
+                    )
+                ]
+            )
+            new.to_csv(path_dict["Office"], sep="\t", index=False)
+
+        # add to CandidateContest
+        mask = df.ContestName.notin(cc.Name.unique())
+        if mask.any():
+            new = pd.concat(
+                [
+                    df[
+                        ["ContestName", "NumberElected", "OfficeName", "PrimaryParty"]
+                    ].rename(column={"OfficeName": "Office", "ContestName": "Name"})
+                ]
+            )
+            new.to_csv(path_dict["CandidateContest"], sep="\t", index=False)
+    else:
+        err = ui.add_new_error(
+            err,
+            "file",
+            file_path,
+            f"Missing columns: {[col for col in necessary_columns if col not in df.columns]}",
+        )
     return err
