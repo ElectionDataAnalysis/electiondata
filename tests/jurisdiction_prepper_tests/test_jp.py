@@ -15,7 +15,7 @@ def test_new_files():
     )
     templates = os.path.join(tests_dir, "000_data_for_pytest", "jurisdiction_templates")
 
-    file_list = [f for f in os.listdir(ref_dir) if f[-4:] == ".txt"]
+    file_list = [f for f in os.listdir(ref_dir) if f.endswith(".txt")]
 
     # remove all temp files
     for f in file_list:

@@ -297,7 +297,7 @@ def ensure_juris_files(
     # check dependencies
     for juris_file in [x for x in template_list if x != "dictionary"]:
         # check dependencies
-        d, new_err = check_dependencies(juris_path, juris_file)
+        d, new_err = check_dependencies(juris_path, juris_file, repository_content_root)
         if new_err:
             err = ui.consolidate_errors([err, new_err])
 
@@ -447,11 +447,12 @@ def check_nulls(element, f_path, project_root):
     return problem_columns
 
 
-def check_dependencies(juris_dir, element) -> (list, dict):
+def check_dependencies(juris_dir, element, repository_content_root) -> (list, dict):
     """Looks in <juris_dir> to check that every dependent column in <element>.txt
     is listed in the corresponding jurisdiction file. Note: <juris_dir> assumed to exist.
     """
     err = None
+    changed_elements = list()
     juris_name = Path(juris_dir).name
     d = juris_dependency_dictionary()
     f_path = os.path.join(juris_dir, f"{element}.txt")
@@ -464,7 +465,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"file doesn't exist: {f_path}",
         )
-        return list(), err
+        return changed_elements, err
 
     # Find all dependent columns
     dependent = [c for c in element_df.columns if c in d.keys()]
@@ -487,8 +488,20 @@ def check_dependencies(juris_dir, element) -> (list, dict):
             target_path = os.path.join(juris_dir, f"{target}.txt")
         else:
             target_path = os.path.join(
-                Path(juris_dir).parent, "000_for_all_jurisdictions", f"{target}.txt"
+                repository_content_root,
+                "jurisdictions",
+                "000_for_all_jurisdictions",
+                f"{target}.txt",
             )
+            if not os.path.isfile(target_path):
+                err = ui.add_new_error(
+                    err,
+                    "jurisdiction",
+                    "all jurisdictions",
+                    f"{target}.txt file missing from both {juris_dir} and "
+                    f"{os.path.join(repository_content_root, 'electiondata', '000_for_all_jurisdictions')}",
+                )
+                return changed_elements, err
         ru = list(
             pd.read_csv(
                 target_path,

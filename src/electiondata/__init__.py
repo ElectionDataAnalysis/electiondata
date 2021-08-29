@@ -1596,7 +1596,7 @@ class JurisdictionPrepper:
                 self.d["repository_content_root"],
                 "jurisdictions/000_jurisdiction_templates",
             )
-        for element in ["Party", "Election"]:
+        for element in ["Party"]:
             new_err = electiondata.juris.add_defaults(
                 self.d["jurisdiction_path"], templates, element
             )
@@ -1860,7 +1860,6 @@ class JurisdictionPrepper:
             "BallotMeasureContest",
             "Candidate",
             "CandidateContest",
-            "Election",
             "Party",
             "ReportingUnit",
         ]
