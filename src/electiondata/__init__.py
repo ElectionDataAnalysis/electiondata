@@ -265,9 +265,15 @@ class DataLoader:
             print(f"DataLoader object not created. Error:\n{err}")
             return None
 
-        elif not os.path.isdir(d["results_dir"]):
+        # create db if it does not already exist and have right tables
+        err = db.create_db_if_not_ok(
+            d["repository_content_root"], db_param_file=param_file, dbname=dbname
+        )
+        if err:
+            print(f"DataLoader object not created. Error:\n{err}")
+            return None
+        if not os.path.isdir(d["results_dir"]):
             print(f"Warning: DataLoader results directory does not exist.")
-
         return super().__new__(cls)
 
     def __init__(self, param_file: Optional[str] = None, dbname: Optional[str] = None):
@@ -291,13 +297,10 @@ class DataLoader:
             self.d["repository_content_root"], "mungers"
         )
 
-        # create db if it does not already exist and have right tables
-        err = db.create_db_if_not_ok(db_param_file=param_file, dbname=dbname)
-
         # connect to db
         self.engine = None  # will be set in connect_to_db
         self.session = None  # will be set in connect_to_db
-        self.connect_to_db(err=err, dbname=dbname, db_param_file=param_file)
+        self.connect_to_db(dbname=dbname, db_param_file=param_file)
 
         # create analyzer with same db
         self.analyzer = Analyzer(dbname=dbname, param_file=param_file)
@@ -334,7 +337,7 @@ class DataLoader:
         new_db_name: str,
         db_param_file: Optional[str] = None,
         db_params: Optional[Dict[str, str]] = None,
-    ):
+    ) -> Optional[dict]:
         """
         Input:
             new_db_name: str, name for new database
@@ -345,21 +348,37 @@ class DataLoader:
         Changes self.session to connect to a different results database (which is created if necessary)
         Changes self.analyzer.session to connect to the new database
         """
-        self.d["dbname"] = new_db_name
+        err = None
+
+        # disconnect from current db and connect to new db, updating self.session and self.dbname
         self.session.close()
-        self.connect_to_db(
+        # # nb: next command updates self.session
+        new_err = self.connect_to_db(
             dbname=new_db_name, db_param_file=db_param_file, db_params=db_params
         )
-        db.create_db_if_not_ok(
-            dbname=new_db_name, db_param_file=db_param_file, db_params=db_params
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return err
+        self.d["dbname"] = new_db_name
+
+        # create new electiondata database if necessary
+        new_err = db.create_db_if_not_ok(
+            self.d["repository_content_root"],
+            dbname=new_db_name,
+            db_param_file=db_param_file,
+            db_params=db_params,
         )
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return err
 
         # create new session for analyzer
         self.analyzer.session.close()
         self.analyzer.session = self.session
-        return
+        return err
 
     def close_and_erase(self) -> Optional[dict]:
+        err = None
         db_params = {
             "host": self.engine.url.host,
             "port": self.engine.url.port,
@@ -368,9 +387,13 @@ class DataLoader:
             "dbname": self.engine.url.database,
         }
         # point dataloader to default database
-        self.change_db("postgres", db_params=db_params)
+        new_err = self.change_db("postgres", db_params=db_params)
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return err
         # remove the db
-        err = db.remove_database(db_params)
+        new_err = db.remove_database(db_params)
+        err = ui.consolidate_errors([err, new_err])
         return err
 
     def change_dir(self, dir_param: str, new_dir: str):
@@ -687,6 +710,7 @@ class DataLoader:
 
         latest_download_date = dict()
         for jurisdiction in ok_jurisdictions:
+            juris_system_name = jm.system_name_from_true_name(jurisdiction)
             juris_err = None
             for election in elections[jurisdiction]:
                 # load the relevant files
@@ -723,7 +747,6 @@ class DataLoader:
                 # for the jurisdiction
                 # -- for any election -- loaded correctly
                 if not ui.fatal_error(juris_err):
-                    juris_system_name = jm.system_name_from_true_name(jurisdiction)
                     juris_results_path = os.path.join(
                         self.d["results_dir"], juris_system_name
                     )
@@ -3750,12 +3773,6 @@ def load_or_reload_all(
             )
         # report errors to file
         err = ui.report(err, error_and_warning_dir, file_prefix="loading_")
-    else:
-        current_directory = os.getcwd()
-        print(
-            f"No dataloader created; check that {current_directory}/run_time.ini exists "
-            f"and has all necessary parameters."
-        )
     return err
 
 
@@ -3810,10 +3827,12 @@ def reload_juris_election(
         live_db = dl.session.bind.url.database
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         temp_db = f"{live_db}_test_{ts}"
-        dl.change_db(new_db_name=temp_db, db_param_file=param_file)
 
         # load all data into temp db
-        dl.change_db(temp_db, db_param_file=param_file)
+        new_err = dl.change_db(temp_db, db_param_file=param_file)
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return err
         success, failure, all_tests_passed, load_err = dl.load_all(
             report_dir=report_dir,
             move_files=False,
@@ -3823,7 +3842,7 @@ def reload_juris_election(
         if load_err:
             err = ui.consolidate_errors([err, load_err])
         # if any of the data failed to load
-        if failure:
+        if failure or ui.fatal_error(load_err):
             # cleanup temp database
             db.remove_database(db_param_file=param_file, dbname=temp_db)
             return err
@@ -3835,7 +3854,10 @@ def reload_juris_election(
             )
         else:
             # switch to live db
-            dl.change_db(live_db, db_param_file=param_file)
+            new_err = dl.change_db(live_db, db_param_file=param_file)
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return err
     else:
         temp_db = None  # for syntax-checker
         all_tests_passed = dict()

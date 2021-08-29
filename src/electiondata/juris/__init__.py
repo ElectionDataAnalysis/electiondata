@@ -482,9 +482,16 @@ def check_dependencies(juris_dir, element) -> (list, dict):
         )
 
         # create list of elements, removing any nulls
+        # # look for required other element in the jurisdiction's directory; if not there, use global
+        if os.path.isfile(os.path.join(juris_dir, f"{target}.txt")):
+            target_path = os.path.join(juris_dir, f"{target}.txt")
+        else:
+            target_path = os.path.join(
+                Path(juris_dir).parent, "000_for_all_jurisdictions", f"{target}.txt"
+            )
         ru = list(
             pd.read_csv(
-                os.path.join(juris_dir, f"{target}.txt"),
+                target_path,
                 **constants.standard_juris_csv_reading_kwargs,
             )
             .fillna("")
@@ -638,7 +645,7 @@ def load_or_update_juris_to_db(
     """Load info from each element in the Jurisdiction's directory into the db.
     On conflict, update the db to match the files in the Jurisdiction's directory"""
     # load all from Jurisdiction directory (except Contests, dictionary, remark)
-    juris_elements = ["ReportingUnit", "Office", "Party", "Candidate", "Election"]
+    juris_elements = ["ReportingUnit", "Office", "Party", "Candidate"]
 
     err = None
     for element in juris_elements:

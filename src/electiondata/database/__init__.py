@@ -228,26 +228,18 @@ def test_connection_and_tables(
     err = None
 
     # use db_params if given; otherwise get them from db_param_file if given, otherwise from "run_time.ini"
-    if not db_params:
-        if not db_param_file:
-            db_param_file = "run_time.ini"
-        try:
-            db_params = ui.get_parameters(
-                required_keys=db_pars, param_file=db_param_file, header="postgresql"
-            )[0]
-        except MissingSectionHeaderError:
-            return {"message": f"db_param_file not found in suggested location."}
+    db_params, new_err = get_params_from_various(
+        db_params=db_params, db_param_file=db_param_file, dbname=dbname
+    )
+    err = ui.consolidate_errors([err, new_err])
+    if ui.fatal_error(new_err):
+        return False, err
 
-    # use dbname from paramfile, unless dbname is passed
-    if dbname:
-        db_params["dbname"] = dbname
-
-    # check connection before proceeding
+    # check connection to postgres
     postgres_params = db_params.copy()
     postgres_params["dbname"] = "postgres"
     try:
         con = psycopg2.connect(**postgres_params)
-        con.close()
     except psycopg2.OperationalError as e:
         err = ui.add_new_error(
             err,
@@ -256,6 +248,15 @@ def test_connection_and_tables(
             f"Error connecting to postgresql: {e}",
         )
         return False, err
+
+    # look for database
+    db_df = get_database_names(con)
+    if not db_params["dbname"] in db_df.datname:
+        # NB: this is not really an error, just leads to returning False.
+        return False, err
+
+    if con:
+        con.close()
 
     # Look for tables
     try:
@@ -267,15 +268,8 @@ def test_connection_and_tables(
             engine.dispose()
             return False, err
         elems, joins, o = get_cdf_db_table_names(engine)
-        # Essentially looks for
-        # a "complete" database.
+        # if there aren't any element tables or join tables, the db isn't what it needs to be.
         if not elems or not joins:
-            err = ui.add_new_error(
-                err,
-                "system",
-                "database.test_connection_and_tables",
-                "Required tables not found in database",
-            )
             engine.dispose()
             return False, err
         engine.dispose()
@@ -287,8 +281,12 @@ def test_connection_and_tables(
             "database.test_connection_and_tables",
             f"Unexpected exception while connecting to database: {e}",
         )
+        if engine:
+            engine.dispose()
         return False, err
     # if no errors found, return True
+    if engine:
+        engine.dispose()
     return True, err
 
 
@@ -360,13 +358,13 @@ def append_to_composing_reporting_unit_join(
 
 
 def create_or_reset_db(
+    content_root: str,
     db_param_file: Optional[str] = None,
     db_params: Optional[Dict[str, str]] = None,
     dbname: Optional[str] = None,
 ) -> Optional[dict]:
     """if no dbname is given, name will be taken from db_params, db_param_file or db_params."""
 
-    project_root = Path(__file__).absolute().parents[1]
     params, err = get_params_from_various(
         db_params=db_params, db_param_file=db_param_file, dbname=dbname
     )
@@ -403,7 +401,7 @@ def create_or_reset_db(
         sess_new = Session_new()
         reset_db(
             sess_new,
-            os.path.join(project_root, "CDF_schema_def_info"),
+            os.path.join(content_root, "electiondata", "CDF_schema_def_info"),
         )
     else:
         create_database(con, cur, dbname)
@@ -417,9 +415,10 @@ def create_or_reset_db(
     # load cdf tables
     create_common_data_format_tables(
         sess_new,
-        dirpath=os.path.join(project_root, "CDF_schema_def_info"),
+        dirpath=os.path.join(content_root, "electiondata", "CDF_schema_def_info"),
     )
-    add_standard_records(sess_new)
+    new_err = add_standard_records(content_root, sess_new)
+    err = ui.consolidate_errors([err, new_err])
     con.close()
     return err
 
@@ -483,6 +482,7 @@ def sql_alchemy_connect(
 
 
 def create_db_if_not_ok(
+    content_root: str,
     dbname: Optional[str] = None,
     db_param_file: Optional[str] = None,
     db_params: Optional[Dict[str, str]] = None,
@@ -492,9 +492,13 @@ def create_db_if_not_ok(
         dbname=dbname, db_params=db_params, db_param_file=db_param_file
     )
     if not ok:
-        create_or_reset_db(
-            dbname=dbname, db_params=db_params, db_param_file=db_param_file
+        new_err = create_or_reset_db(
+            content_root,
+            dbname=dbname,
+            db_params=db_params,
+            db_param_file=db_param_file,
         )
+        err = ui.consolidate_errors([err, new_err])
     return err
 
 
@@ -2352,9 +2356,63 @@ def create_table(
     return
 
 
-def add_standard_records(session):
+def add_standard_records(
+    content_root: str,
+    session: Session,
+) -> Optional[dict]:
     """Add standard records to database"""
     err = None
+
+    # add Elections
+    e_path = os.path.join(
+        content_root, "jurisdictions", "000_for_all_jurisdictions", "Election.txt"
+    )
+    if not os.path.isfile(e_path):
+        err = ui.add_new_error(
+            err, "file", "e_path", f"File necessary but not found: {e_path}"
+        )
+        return err
+    try:
+        e_df = pd.read_csv(e_path, sep="\t")
+    except Exception as exc:
+        err = ui.add_new_error(
+            err, "file", "e_path", f"File cannot be read, check format: {exc}"
+        )
+        return err
+    if not list(e_df.columns) == ["Name", "ElectionType"]:
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            "all_jurisdictions",
+            f"Election.txt should have columns 'Name' and 'ElectionType' but instead has {list(e_df.columns)}.\n"
+            f"Check file {e_path}",
+        )
+        return err
+    if e_df.isnull().any().any():
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            "all_jurisdictions",
+            f"Election.txt has format errors or null entires.\n" f"Check file {e_path}",
+        )
+        return err
+
+    # append none or unknown
+    e_df = pd.concat(
+        [
+            e_df,
+            pd.DataFrame(
+                [["none or unknown", "none or unknown"]],
+                columns=["Name", "ElectionType"],
+            ),
+        ]
+    )
+    new_err = insert_to_cdf_db(
+        session.bind, e_df, "Election", "database", "Election insertion"
+    )
+    err = ui.consolidate_errors([err, new_err])
+    if ui.fatal_error(new_err):
+        return err
 
     # Add 'ballot measure selection' to Party table
     party_df = pd.DataFrame(
@@ -2405,7 +2463,7 @@ def add_standard_records(session):
     if ui.fatal_error(new_err):
         return err
     session.flush()
-    return
+    return err
 
 
 def reset_db(session, dirpath):
