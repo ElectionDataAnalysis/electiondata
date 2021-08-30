@@ -88,14 +88,14 @@ def recast_options(
     return options, err
 
 
-def check_dictionary(dictionary_pah: str) -> Optional[dict]:
+def check_dictionary(dictionary_path: str) -> Optional[dict]:
     err = None
-    dictionary_dir = Path(dictionary_pah).parent.name
+    dictionary_dir = Path(dictionary_path).parent.name
 
     # dedupe the dictionary
-    clean_and_dedupe(dictionary_pah, clean_candidates=True)
+    clean_and_dedupe(dictionary_path,clean_candidates=True)
     # check that no entry is null
-    df = pd.read_csv(dictionary_pah, **constants.standard_juris_csv_reading_kwargs)
+    df = pd.read_csv(dictionary_path,**constants.standard_juris_csv_reading_kwargs)
     null_mask = df.T.isnull().any()
     if null_mask.any():
         # drop null rows and report error
