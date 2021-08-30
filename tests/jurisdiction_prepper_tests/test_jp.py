@@ -37,8 +37,8 @@ def test_new_files():
         != open(os.path.join(ref_dir, f), "r").read()
     ]
 
-    # remove all temp files
+    assert not bad, f"See test files in temporary directory {temp_dir}"
+
+    # if all tests pass, remove all temp files
     for f in file_list:
         os.remove(os.path.join(temp_dir, f))
-
-    assert not bad

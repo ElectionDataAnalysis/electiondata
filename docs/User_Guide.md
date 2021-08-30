@@ -1,6 +1,6 @@
 # How to Use the System
 ## Environment
-You will need `python3`. If you use the alias `python`, make sure it points to `python3`.
+You will need `python3.9`. If you use the alias `python`, make sure it points to `python3.9`.
 
 The system runs out of the box with a postgresql database; to use other varieties of SQL, you will need to modify the routines in the `database` module. 
 
@@ -8,10 +8,11 @@ The system runs out of the box with a postgresql database; to use other varietie
 From the root folder of your repository run `python3 setup.py install` (or if `python` is an alias for `python3` on your system, `python setup.py install`).
 
 ## Setting up
-In the directory from which you will run the system -- which can be outside your local repository-- create the main parameter files you will need to specify paths and database connection information specific to your local computing environment:
-* `run_time.ini` for preparing jurisdictions (JurisdictionPrepper class) loading data (DataLoader class); for pulling and analyzing results (the Analyzer class).
-  
-See the template file (`src/parameter_file_templates/run_time.ini.template`). 
+You will need a parameter file to specify paths and database connection information specific to your local computing environment. This file is necessary for the three main classes:
+ * `JurisdictionPrepper` for preparing jurisdiction files
+ * `DataLoader` for loading data
+ *  `Analyzer` for exporting and analyzing results
+See the [template file](../src/parameter_file_templates/run_time.ini.template) for required parameters. 
    
 ## Determining a Munger
 Election result data comes in a variety of file formats. Even when the basic format is the same, file columns may have different interpretations. The code is built to ease -- as much as possible -- the chore of processing and interpreting each format. Following the [Jargon File](http://catb.org/jargon/html/M/munge.html), which gives one meaning of "munge" as "modify data in some way the speaker doesn't need to go into right now or cannot describe succinctly," we call each set of basic information about interpreting an election result file a "munger". 
@@ -195,7 +196,7 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
 
 
 ## Create or Improve a Jurisdiction
-Because each original raw results file comes from a particular election agency, and each election agency has a fixed jurisdiction, we organize information by jurisdiction. 
+Because each original raw results file comes from a particular election agency, and each election agency has a fixed jurisdiction, we organize information by jurisdiction. The  [`000_for_all_jurisdictions` folder](../src/jurisdictions/000_for_all_jurisdictions) holds information pertinent to all jurisdictions: the list of elections in [`Election.txt](../src/jurisdictions/000_for_all_jurisdictions/Election.txt)
 
 It's easiest to use the JurisdictionPrepper() object to create or update jurisdiction files.
 
@@ -288,20 +289,13 @@ CandidateContest	US House FL District 2	Representative in Congress District 2
  (5) Make any necessary additions or changes to the more straightforward elements. It's often easier to add these in bulk later directly from the results files (see below) -- unless you want to use internal names that differ from the names in the results file.
   * `Party.txt`. You may be able to find a list of officially recognized parties on the Board of Election's website.
   * `BallotMeasure.txt`. If the ElectionDistrict is not the whole jurisdiction, you may need to add these by hand. A BallotMeasure is any yes/no question on the ballot, including judicial retention. Each BallotMeasure must have an ElectionDistrict and an Election matching an entry in the `ReportingUnit.txt` or `Election.txt` file.
-  * `Election.txt`.
 
  (6) Revise `XX_starter_dictionary.txt` so that it has entries for any of the items created in the steps above (except that there is no need to add Elections to the dictionary, as they are never munged from the contents of the results file). The 'cdf_internal_name' column should match the names in the jurisdiction files. The 'raw_identifier_value' column should hold the corresponding names that will be created from the results file via the munger. 
     * It is helpful to edit the starter dictionary in an application where you can use formulas, or to manipulate the file with regular expression replacement. If you are not fluent in manipulating text some other way, you may want to use Excel and its various text manipulation formulas (such as =CONCAT()). However, beware of Excel's tendency to revise formats on the sly. You may want to check `.txt` and `.csv` files manipulated by Excel in a plain text editor if you run into problems. (If you've been curious to learn regex replacement, now's a good time!)
  
- (7) Add entries to the starter dictionary for CountItemType and BallotMeasureSelection. 
-    * Internal database names for the BallotMeasure Selections are 'Yes' and 'No'. There are no alternatives.
-    * Some common standard internal database names for CountItemTypes are 'absentee', 'early', 'election-day', 'provisional' and 'total'. You can look at the CountItemType table in the database to see the full list, and you can use any other name you like.
+ (7) Revise the 'CountItemType' entries in the starter dictionary to match any words or phrases used in the results files. E.g., for North Carolina
 ```
 cdf_element	cdf_internal_name	raw_identifier_value
-BallotMeasureSelection	No	No
-BallotMeasureSelection	No	Against
-BallotMeasureSelection	Yes	Yes
-BallotMeasureSelection	Yes	For
 CountItemType	election-day	Election Day
 CountItemType	early	One Stop
 CountItemType	absentee-mail	Absentee by Mail

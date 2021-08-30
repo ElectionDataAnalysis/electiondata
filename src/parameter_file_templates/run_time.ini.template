@@ -1,7 +1,7 @@
 [electiondata]
 results_dir=</path/to/folder/containing/result/files/for/batch/upload>
 archive_dir=</path/to/folder/for/archiving/uploaded/files>
-repository_content_root=
+repository_content_root=<path/to/folder/containing/code/and/mungers/and/jurisdictions/and/ini_files_for_results>
 reports_and_plots_dir=</path/to/folder/for/analysis/output>
 
 [postgresql]
@@ -10,3 +10,5 @@ port=<port for your postgresql server>
 dbname=<name of your election data database>
 user=<your user name>
 password=<your password>
+
+# Note: all these parameters are required

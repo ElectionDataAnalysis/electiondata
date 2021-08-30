@@ -1834,11 +1834,17 @@ class JurisdictionPrepper:
             w[element].rename(columns={name_field: "cdf_internal_name"}, inplace=True)
             w[element]["raw_identifier_value"] = w[element]["cdf_internal_name"]
 
+        # add lines for CountItemTypes to dictionary
+        w["CountItemType"] = pd.DataFrame(
+            [["CountItemType", cit, cit] for cit in constants.nist_standard["CountItemType"]],
+            columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
+        )
+
         starter_file_name = f'{self.d["abbreviated_name"]}_starter_dictionary.txt'
         starter = pd.concat(
             [
                 w[element][["cdf_element", "cdf_internal_name", "raw_identifier_value"]]
-                for element in elements
+                for element in (elements + ["CountItemType"])
             ]
         ).drop_duplicates()
         if target_dir:
