@@ -2363,13 +2363,14 @@ class Analyzer:
         status: Optional[str] = None,
     ) -> Optional[dict]:
         """
-         election: str,
-         juris_true_name: str,
-         juris_system_name: str,
-         reference: Optional[str] = None, if given, use this path to file of reference results. If not
-             given, reference results are taken from file
-             <repository_content_root>/reference_results/<juris_system_name>.tsv
-        status: Optional[str] = None, if given, checks only the reference results with that same status
+        Inputs:
+             election: str,
+             juris_true_name: str,
+             juris_system_name: str,
+             reference: Optional[str] = None, if given, use this path to file of reference results. If not
+                 given, reference results are taken from file
+                 <repository_content_root>/reference_results/<juris_system_name>.tsv
+            status: Optional[str] = None, if given, checks only the reference results with that same status
 
          Reports information from tests to self.reports_and_plots.
          Returns:
