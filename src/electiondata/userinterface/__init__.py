@@ -636,6 +636,7 @@ def report(
     output_location: str,
     key_list: list = None,
     file_prefix: str = "",
+    suppress_warnings: bool = False,
 ) -> Optional[dict]:
     """unpacks error dictionary <err_warn> for reporting.
     <output_location> is directory for writing error files.
@@ -677,7 +678,7 @@ def report(
         # map each tuple to its message (sorting the warnings)
         msg = {(et, nk): "\n".join(sorted(err_warn[et][nk])) for et, nk in tuples}
 
-        # write errors/warns to error files
+        # write errors/warns to error/warn files
         while ets_to_process:
             et = ets_to_process.pop()
             # et is an error type. <et> might be a key of err_warn,
@@ -706,29 +707,31 @@ def report(
                         f.write(out_str)
                     print(f"{et.title()} errors{and_warns} written to {out_path}")
 
-            # process name keys with only warnings
-            only_warns = [
-                nk
-                for nk in err_warn[f"warn-{et}"].keys()
-                if (et not in err_warn.keys()) or (nk not in err_warn[et].keys())
-            ]
-            for nk in only_warns:
-                # prepare output string
-                nk_name = Path(nk).name
-                out_str = (
-                    f"{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n"
-                )
+            # process name keys with only warnings (unless warnings suppressed)
+            if not suppress_warnings:
+                only_warns = [
+                    nk
+                    for nk in err_warn[f"warn-{et}"].keys()
+                    if (et not in err_warn.keys()) or (nk not in err_warn[et].keys())
+                ]
+                for nk in only_warns:
+                    # prepare output string
+                    nk_name = Path(nk).name
+                    out_str = (
+                        f"{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n"
+                    )
 
-                # write output
-                # write info to a .errors or .errors file named for the name_key <nk>
-                out_path = os.path.join(
-                    output_location, f"{file_prefix}_{et}_{nk_name}.warnings"
-                )
-                with open(out_path, "a") as f:
-                    f.write(out_str)
-                print(f"{et.title()} warnings written to {out_path}")
+                    # write output
+                    # write info to a .warnings file named for the error-type and name_key
 
-        # define return dictionary with reported keys set to {} and othe keys preserved
+                    out_path = os.path.join(
+                        output_location, f"{file_prefix}_{et}_{nk_name}.warnings"
+                    )
+                    with open(out_path, "a") as f:
+                        f.write(out_str)
+                    print(f"{et.title()} warnings written to {out_path}")
+
+        # define return dictionary with reported keys set to {} and other keys preserved
         remaining = {k: v for k, v in err_warn.items() if k not in key_list}
         for k in key_list:
             remaining[k] = {}

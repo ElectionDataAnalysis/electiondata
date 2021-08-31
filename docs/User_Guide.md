@@ -8,11 +8,11 @@ The system runs out of the box with a postgresql database; to use other varietie
 From the root folder of your repository run `python3 setup.py install` (or if `python` is an alias for `python3` on your system, `python setup.py install`).
 
 ## Setting up
-You will need a parameter file to specify paths and database connection information specific to your local computing environment. This file is necessary for the three main classes:
+You will need a main parameter file to specify paths and database connection information specific to your local computing environment. This file is necessary for the three main classes:
  * `JurisdictionPrepper` for preparing jurisdiction files
  * `DataLoader` for loading data
  *  `Analyzer` for exporting and analyzing results
-See the [template file](../src/parameter_file_templates/run_time.ini.template) for required parameters. 
+See the [template file](../src/parameter_file_templates/run_time.ini.template) for required parameters. Avoid percent signs and line breaks in the parameter values.
    
 ## Determining a Munger
 Election result data comes in a variety of file formats. Even when the basic format is the same, file columns may have different interpretations. The code is built to ease -- as much as possible -- the chore of processing and interpreting each format. Following the [Jargon File](http://catb.org/jargon/html/M/munge.html), which gives one meaning of "munge" as "modify data in some way the speaker doesn't need to go into right now or cannot describe succinctly," we call each set of basic information about interpreting an election result file a "munger". 
@@ -472,7 +472,8 @@ The jurisdiction files in this repository follow certain conventions. Many of th
  - Different "party" names for candidates without a party affiliation 
  - Any item with an internal comma (e.g., 'John Sawyer, III')
  - A county that uses all caps (e.g., Seminole County FL)
- - % signs in .ini files, particularly as web addresses for results_source (e.g.,https://elections.wi.gov/sites/elections.wi.gov/files/2020-11/UNOFFICIAL%20WI%20Election%20Results%202020%20by%20County%2011-5-2020.xlsx)
+ - % signs in parameter files, particularly as web addresses for results_source (e.g.,https://elections.wi.gov/sites/elections.wi.gov/files/2020-11/UNOFFICIAL%20WI%20Election%20Results%202020%20by%20County%2011-5-2020.xlsx) -- system cannot read ini files with % signs
+ - Line breaks in parameter files may interfere with software parsing the following lines
  - Files that total over all candidates (e.g., Nebraska 2020 General). Make sure not to include the totals in the counts as a nominal "candidate".
  - Excel files that show a thousands separator when you view them (2,931) but don't have a thousands separator under the hood (2931). If all your count are zero, try adding or removing the 'thousands-separator' parameter in `format.config`.
  - the parser for multi-block flat files assumes that any line without counts separates blocks. Beware of stray count-less lines (e.g., can be created by utilities pulling tables from pdfs).

@@ -58,6 +58,7 @@ class SingleDataLoader:
             d, dictionary of other parameters read from the param_file
             mungers_path, path to directory containing munger files
             munger_list, list of mungers to apply
+            munger_err, error dictionary
         """
         # adopt passed variables needed in future as attributes
         self.session = session
@@ -652,6 +653,7 @@ class DataLoader:
         rollup: bool = False,
         report_missing_files: bool = False,
         run_tests: bool = True,
+        suppress_warnings: bool = False,
     ) -> (Dict[str, List[str]], Dict[str, List[str]], Dict[str, bool], Optional[dict]):
         """
         Inputs:
@@ -665,6 +667,8 @@ class DataLoader:
             report_missing_files: bool = False, if True, reports files referenced in .ini files
                 but not found in results directory
             run_tests: bool = True, if false, do not run tests on loaded data
+            suppress_warnings: bool = False, if True, report only errors
+                to directory specified by self.d["reports_and_plots_dir"]
 
         Processes all results (or all results corresponding to pairs in
         ej_list if given) in DataLoader's results directory using
@@ -750,6 +754,7 @@ class DataLoader:
                             err,
                             report_dir,
                             key_list=constants.juris_load_report_keys,
+                            suppress_warnings=suppress_warnings,
                         )
                         continue
                 print(f"Loading/updating jurisdiction {juris} to {self.session.bind}")
@@ -844,10 +849,11 @@ class DataLoader:
                 report_dir,
                 key_list=constants.juris_load_report_keys,
                 file_prefix=juris_system_name,
+                suppress_warnings=suppress_warnings,
             )
 
         # report remaining errors
-        ui.report(err, report_dir, file_prefix="system_")
+        ui.report(err, report_dir, file_prefix="system_", suppress_warnings=suppress_warnings)
 
         # keep all election-juris pairs in success report, but remove empty failure reports
         failed_to_load = {k: v for k, v in failed_to_load.items() if v}
@@ -857,6 +863,7 @@ class DataLoader:
     def strip_dates_from_results_folders(self) -> Dict[str, str]:
         """
         Remove any date-suffixes from sub-folders of self.d["results_dir"]
+
         Returns:
             Dict[str, str], dictionary mapping old names to new
         """
@@ -920,7 +927,7 @@ class DataLoader:
             election: str, name of election
             jurisdiction: str, name of jurisdiction
 
-        For each contest, adds records for 'total' vote type wherever it's missing,
+        For each contest, adds records for 'total' vote type to VoteCount table in database wherever it's missing,
             calculated from other vote types
 
         Returns:
@@ -1294,10 +1301,12 @@ class DataLoader:
         overwrite_existing: bool = False,
         load_jurisdictions: bool = True,
         report_err_to_file: bool = True,
+            suppress_warnings: bool = False,
     ) -> (Dict[str, List[str]], Optional[dict]):
         """
-        Inputs:
+        Required inputs:
             ini: str, path to file with initialization parameters for dataloader and secondary source
+        Optional inputs:
             dictionary_path: Optional[str] = None, if given, path to dictionary. If not given, path assumed
                 to be <repository_content_root>/secondary_sources/<ini_params["secondary_source"]
             overwrite_existing: bool = False, if true, existing data will be deleted for each election-jurisdiction pair
@@ -1305,6 +1314,7 @@ class DataLoader:
             load_jurisdictions: bool = True, if true, jurisdiction information will be loaded to database before processing
                 results data
             report_err_to_file: bool = True, if true, errors reported to file; otherwise errors returned
+            suppress_warnings: bool = False, if true, only errors (not warnings) reported to file
 
         Loads results from the file indicated in <ini> to the database specified by self.session
 
@@ -1327,6 +1337,7 @@ class DataLoader:
                     err,
                     os.path.join(self.d["reports_and_plots_dir"], f"multi_{ts}"),
                     file_prefix="multi_dictionary",
+                    suppress_warnings=suppress_warnings,
                 )
             return success, err
 
@@ -1349,6 +1360,7 @@ class DataLoader:
                     err,
                     os.path.join(self.d["reports_and_plots_dir"], f"multi_{ts}"),
                     file_prefix="multi_dictionary",
+                    suppress_warnings=suppress_warnings,
                 )
             return success, err
 
@@ -1374,6 +1386,7 @@ class DataLoader:
                         err,
                         os.path.join(self.d["reports_and_plots_dir"], f"multi_{ts}"),
                         file_prefix="multi_dictionary",
+                        suppress_warnings=suppress_warnings,
                     )
                 return success, err
 
@@ -1612,7 +1625,7 @@ class DataLoader:
             f"multielection_{self.session.bind.url.database}_{ts}",
         )
         if report_err_to_file:
-            err = ui.report(err, report_dir)
+            err = ui.report(err, report_dir, suppress_warnings=suppress_warnings)
 
         return success, err
 
@@ -1712,7 +1725,12 @@ def check_and_init_singledataloader(
             juris_true_name,
             path_to_jurisdiction_dir,
         )
-        err = ui.consolidate_errors([err, sdl.munger_err])
+        if sdl is None:
+            err = ui.add_new_error(
+                err, "ini", results_param_file,
+                f"Error creating SingleDataLoader instance. Required header is [election_results]. "
+                f"Required parameters are: {constants.sdl_pars_req}"
+            )
     # check download date
     try:
         datetime.datetime.strptime(d["results_download_date"], "%Y-%m-%d")
@@ -1806,7 +1824,8 @@ class JurisdictionPrepper:
 
         error = ui.consolidate_errors([error, asc_err, dict_err])
         ui.report(
-            error, self.d["reports_and_plots_dir"], file_prefix=f"prep_{self.d['name']}"
+            error, self.d["reports_and_plots_dir"],
+            file_prefix=f"prep_{self.d['name']}",
         )
         return error
 
@@ -3830,6 +3849,7 @@ def load_or_reload_all(
     param_file: Optional[str] = None,
     move_files: bool = True,
     run_tests: bool = True,
+    suppress_warnings: bool = False,
 ) -> Optional[dict]:
     """
     required inputs: (none)
@@ -3839,6 +3859,7 @@ def load_or_reload_all(
         param_file: Optional[str] = None, path to file with parameters for data loading
         move_files: bool = True, if True, archive files after successful load (& test, if done)
         run_tests: bool = True, if True, run tests on results in database after loading.
+        suppress_warnings: bool = False, if True, do not create warnings-only files in reports_and_plots_dir
 
     For each election-jurisdiction pair from a <results>.ini file corresponding to a file in
         the results directory specified in the data loading parameter file, loads all result data to
@@ -3885,7 +3906,7 @@ def load_or_reload_all(
                 "No results had corresponding file in ini_files_for_results",
             )
         # report errors to file
-        err = ui.report(err, error_and_warning_dir, file_prefix="loading_")
+        err = ui.report(err, error_and_warning_dir, file_prefix="loading_", suppress_warnings=suppress_warnings)
     return err
 
 
@@ -3909,6 +3930,7 @@ def reload_juris_election(
     param_file: Optional[str] = None,
     move_files: bool = True,
     run_tests: bool = True,
+    suppress_warnings: bool = False,
 ) -> Optional[dict]:
     """
     required inputs:
@@ -3923,6 +3945,7 @@ def reload_juris_election(
         move_files: bool = True, if true, move all files to archive directory if loading (& testing, if done)
             are successful
         run_tests: bool = True, if true, run tests on loaded data
+        suppress_warnings: bool = False, if true, report only errors, not warnings
 
     Loads and archives each results file in each direct subfolder of the results_dir
     named in ./run_time.ini -- provided there the results file is specified in a *.ini file in the
@@ -3950,7 +3973,8 @@ def reload_juris_election(
             report_dir=report_dir,
             move_files=False,
             rollup=rollup,
-            election_jurisdiction_list=[(election_name, juris_name)],
+            election_jurisdiction_list=[(election_name, juris_name)], \
+            suppress_warnings=suppress_warnings,
         )
         if load_err:
             err = ui.consolidate_errors([err, load_err])
@@ -3998,6 +4022,7 @@ def reload_juris_election(
             election_jurisdiction_list=[(election_name, juris_name)],
             move_files=move_files,
             run_tests=run_tests,
+            suppress_warnings=suppress_warnings,
         )
         if success:
             if not all_tests_passed[f"{election_name};{juris_name}"]:
