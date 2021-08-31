@@ -433,9 +433,9 @@ if 1:
         "results_note",
         "jurisdiction",
         "election",
+        "is_preliminary",
     ]
     sdl_pars_opt = [
-        "jurisdiction_path",
         "CandidateContest",
         "BallotMeasureContest",
         "BallotMeasureSelection",
@@ -444,7 +444,6 @@ if 1:
         "CountItemType",
         "ReportingUnit",
         "Contest",
-        "is_preliminary",
     ]
     multi_data_loader_pars = [
         "results_dir",

@@ -33,39 +33,49 @@ class SingleDataLoader:
     def __init__(
         self,
         results_dir: str,
-        param_file: str,
+        results_param_file: str,
         session: Session,
         mungers_path: str,
         juris_true_name: str,
         path_to_jurisdiction_dir: str,
     ):
+        """
+        Inputs:
+            results_dir: str, path to directory containing election result files
+            results_param_file: str, path to file containing basic parameters for reading result file (*.ini)
+            session: Session,
+            mungers_path: str, path to directory containing munger parameter files with extension .munger
+            juris_true_name: str, name of jurisdiction (with spaces, not hyphens)
+            path_to_jurisdiction_dir: str, path to directory containing subdirectories labeled by jurisdiction
+
+        Returns SingleDataLoader instance with attributes:
+            session
+            results_dir
+            juris_true_name
+            juris_system_name, name of jurisdiction with hyphens, not spaces
+            param_file (for results file)
+            path_to_jurisdiction_dir, path to directory containing the particular jurisdiction's files
+            d, dictionary of other parameters read from the param_file
+            mungers_path, path to directory containing munger files
+            munger_list, list of mungers to apply
+        """
         # adopt passed variables needed in future as attributes
         self.session = session
         self.results_dir = results_dir
         self.juris_true_name = juris_true_name
-        self.param_file = param_file
+        self.param_file = results_param_file
 
         # calculate useful parameters
         self.juris_system_name = jm.system_name_from_true_name(self.juris_true_name)
         self.path_to_jurisdiction_dir = path_to_jurisdiction_dir
 
         # grab parameters (known to exist from __new__, so can ignore error variable)
-        par_file = os.path.join(results_dir, param_file)
         self.d, _ = ui.get_parameters(
             required_keys=constants.sdl_pars_req,
             optional_keys=constants.sdl_pars_opt,
-            param_file=par_file,
+            param_file=results_param_file,
             header="election_results",
         )
-
-        # assign True to is_preliminary if necessary
-        if "is_preliminary" not in self.d.keys() or self.d["is_preliminary"] in [
-            "",
-            "True",
-            "true",
-            None,
-        ]:
-            self.d["is_preliminary"] = True
 
         # change any blank parameters describing the results file to 'none'
         for k in self.d.keys():
@@ -73,19 +83,17 @@ class SingleDataLoader:
                 self.d[k] = "none"
 
         # pick mungers (Note: munger_list is comma-separated list of munger names)
-        self.munger = dict()
-        self.mungers_dir = mungers_path
+        self.mungers_path = mungers_path
         self.munger_list = [x.strip() for x in self.d["munger_list"].split(",")]
-        # can't return error, so we pass it as an attribute.
-        self.munger_err = dict()
 
-    def track_results(self) -> (List[int], Optional[dict]):
+    def track_results(self) -> (int, int, Optional[dict]):
         """
-        Looks up Ids for jurisdiction in the ReportingUnit table of the database and election in the
-            Election table.
+        Looks up Ids for jurisdiction in the ReportingUnit table and election in the
+            Election table of the session database.
             Inserts a record for the results file into the _database table.
         Returns:
-            List[int], contains two integer Ids: _datafile.Id and Election.Id
+            int,  _datafile.Id (or 0 if none found)
+            int, Election.Id (or 0 if none found)
             Optional[dict], error dictionary
         """
         err = None
@@ -102,7 +110,7 @@ class SingleDataLoader:
                 self.param_file,
                 f"No ReportingUnit named {self.d['jurisdiction']} found in database",
             )
-            return [0, 0], err
+            return 0, 0, err
 
         # find id for election in Election table (or return fatal error)
         election_id = db.name_to_id(self.session, "Election", self.d["election"])
@@ -113,7 +121,7 @@ class SingleDataLoader:
                 self.param_file,
                 f"No election named {self.d['election']} found in database",
             )
-            return [0, 0], err
+            return 0, 0, err
 
         # insert record into _datafile table
         datafile_id, err = datafile_info(
@@ -128,26 +136,26 @@ class SingleDataLoader:
             election_id,
             self.d["is_preliminary"],
         )
-        return [datafile_id, election_id], err
+        return datafile_id, election_id, err
 
     def load_results(
         self, rollup: bool = False, rollup_rut: Optional[str] = None
-    ) -> dict:
+    ) -> Optional[dict]:
         """
         Optional inputs:
             rollup: bool = False, if True, roll results up to subdivision before inserting in db
             rollup_rut: Optional[str] = None, subdivision type to roll up to (typically 'county')
 
-        Load results, returning error (or None, if load successful)
+        Load results from the file referenced in self.param_file
 
         Returns:
-
+            Optional[dict], error dictionary
         """
         err = None
         print(f'\n\nProcessing {self.d["results_file"]}')
 
         # Enter datafile info to db and collect _datafile_Id and Election_Id
-        [datafile_id, election_id], new_err = self.track_results()
+        datafile_id, election_id, new_err = self.track_results()
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             return err
@@ -159,7 +167,7 @@ class SingleDataLoader:
             for mu in self.munger_list:
                 print(f"\twith munger {mu}")
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
-                mu_path = os.path.join(self.mungers_dir, f"{mu}.munger")
+                mu_path = os.path.join(self.mungers_path,f"{mu}.munger")
                 new_err = load_results_file(
                     self.session,
                     mu_path,
@@ -178,8 +186,10 @@ class SingleDataLoader:
         return err
 
     def collect_constants_from_ini(self) -> dict:
-        """collect constant elements from .ini file.
-        Omits constants that have no content"""
+        """
+        Returns:
+             dict, dictionary of constant elements from .ini file, omitting constants that have no content
+        """
         constants = dict()
         for k in [
             "Party",
@@ -196,7 +206,13 @@ class SingleDataLoader:
         return constants
 
     def list_values(self, element: str) -> (list, Optional[dict]):
-        """lists all values for the element found in the file"""
+        """
+        Inputs:
+            element: str, name of database table
+        Returns:
+            list, list of values for the given <element> found in the results file referenced in self.param_file
+            Optional[dict], error dictionary
+            lists all values for the element found in the file"""
         err = None
         values = list()
         constants = self.collect_constants_from_ini()
@@ -207,7 +223,7 @@ class SingleDataLoader:
                 for mu in self.munger_list:
                     print(f"\twith munger {mu}")
                     f_path = os.path.join(self.results_dir, self.d["results_file"])
-                    munger_path = os.path.join(self.mungers_dir, f"{mu}.munger")
+                    munger_path = os.path.join(self.mungers_path,f"{mu}.munger")
                     p, err = m.get_and_check_munger_params(munger_path)
                     if ui.fatal_error(err):
                         return values, err
@@ -277,6 +293,17 @@ class DataLoader:
         return super().__new__(cls)
 
     def __init__(self, param_file: Optional[str] = None, dbname: Optional[str] = None):
+        """
+        Inputs:
+            param_file: Optional[str] = None, path to file of necessary parameters (defaults to `run_time.ini`)
+            dbname: Optional[str] = None, name of database (defaults to name specified in param_file)
+
+        Returns DataLoader instance with attributes:
+            d, dictionary of parameters from param_file
+            engine, sqlalchemy engine connecting to postgres database specified in param_file
+            session, sqlalchemy session for interacting with the database
+            analyzer, Analyzer instance for exporting or analyzing data in the database
+        """
         # default param_file is run_time.ini in current directory
         if not param_file:
             param_file = "run_time.ini"
@@ -308,26 +335,39 @@ class DataLoader:
     def connect_to_db(
         self,
         dbname: Optional[str] = None,
-        err: Optional[dict] = None,
         db_param_file: Optional[str] = None,
         db_params: Optional[Dict[str, str]] = None,
     ):
+        """
+        Inputs:
+            dbname: Optional[str] = None,
+            db_param_file: Optional[str] = None,
+            db_params: Optional[Dict[str, str]] = None,
 
-        new_err = None
+            Sets engine attribute to an open connection with the database specified by
+                dname and/or db_params and/or db_param_file, and sets session attribute
+                to a newly-opened session on that engine
+        """
         try:
-            self.engine, new_err = db.sql_alchemy_connect(
+            self.engine, err = db.sql_alchemy_connect(
                 db_param_file=db_param_file, dbname=dbname, db_params=db_params
             )
             Session = sessionmaker(bind=self.engine)
             self.session = Session()
-        except Exception as e:
-            print(f"Cannot connect to database. Exiting. Exception:\n{e}")
-            quit()
-        if new_err:
+        except Exception as exc:
+            if dbname:
+                label = dbname
+            elif db_params and dbname in db_params.keys():
+                label = db_params["dbname"]
+            elif db_param_file:
+                label = db_param_file
+            else:
+                label = "connection"
+            err = ui.add_new_error(None, "database", label, f"Connection failed due to exception: {exc}")
+        if err:
             print("Unexpected error connecting to database.")
-            err = ui.consolidate_errors([err, new_err])
             ui.report(err, self.d["reports_and_plots_dir"], file_prefix="dataloading_")
-            print("Exiting")
+            print(f"Exiting. See {self.d['reports_and_plots_dir']} for details")
             quit()
         else:
             return
@@ -345,8 +385,12 @@ class DataLoader:
             db_params: Optional[Dict[str,str]], set of parameters for connecting to db
 
         If both db_param_file and db_params are given, uses db_params
-        Changes self.session to connect to a different results database (which is created if necessary)
+        Closes self.session, then redefines self.engine and self.session to connect to a different results database
+            (which is created if necessary)
         Changes self.analyzer.session to connect to the new database
+
+        Returns:
+            Optional[dict], error dictionary
         """
         err = None
 
@@ -378,6 +422,12 @@ class DataLoader:
         return err
 
     def close_and_erase(self) -> Optional[dict]:
+        """
+        Closes and removes the database specified by self.engine. Creates new engine and session
+        attributes pointing to the postgres database instead
+        Returns:
+            Optional[dict], error dictionary
+        """
         err = None
         db_params = {
             "host": self.engine.url.host,
@@ -396,24 +446,28 @@ class DataLoader:
         err = ui.consolidate_errors([err, new_err])
         return err
 
-    def change_dir(self, dir_param: str, new_dir: str):
-        # TODO technical debt: error handling
-        self.d[dir_param] = new_dir
-        return
+    def get_testing_data_from_git_repo(self, git_repo_url: str):
+        """
+        Inputs:
+            git_repo_url: str, url of git repository with test results
 
-    def get_testing_data(self, url: Optional[str] = None):
+        Puts shallow copy of git repository contents in to the directory whose path is
+            self.d["results_dir"] (creating that directory if necessary)
+
+            """
+
         # if the dataloader's results directory doesn't exist, create it
         results_dir = self.d["results_dir"]
         if not os.path.isdir(results_dir):
             # create the results_dir
             Path(results_dir).mkdir(parents=True, exist_ok=True)
             # create a shallow copy of the git directory in the results_directory
-            cmd = f"git clone --depth 1 -b main {url} {Path(results_dir).absolute()}"
+            cmd = f"git clone --depth 1 -b main {git_repo_url} {Path(results_dir).absolute()}"
             os.system(cmd)
             # remove the git information
             shutil.rmtree(os.path.join(results_dir, ".git"), ignore_errors=True)
             os.remove(os.path.join(results_dir, ".gitignore"))
-            print(f"Files downloaded from {url} into {Path(results_dir).absolute()}")
+            print(f"Files downloaded from {git_repo_url} into {Path(results_dir).absolute()}")
 
         else:
             print(
@@ -428,8 +482,20 @@ class DataLoader:
         juris_true_name: str,
         rollup: bool = False,
     ) -> (Optional[SingleDataLoader], Optional[dict]):
-        """Load a single results file specified by the parameters in <ini_path>.
-        Returns SingleDataLoader object (and error)"""
+        """
+        Inputs:
+            ini_path: str, path to file with parameters describing single results file
+            path_to_jurisdiction_dir: str, path to directory holding the jurisdiction's files
+            juris_true_name: str, name of jurisdiction (with spaces, not strings)
+            rollup: bool = False, if True, finds and rolls up to major subdivision level;
+                otherwise, loads results at level given in results file
+
+        Loads results from the single results file specified by the parameters in <ini_path>.
+        Returns:
+             Optional[SingleDataLoader], SingleDataLoader object for the results file
+                (or None if fatal error occurred)
+             Optional[dict], error dictionary
+        """
         sdl, err = check_and_init_singledataloader(
             self.d["results_dir"],
             ini_path,
@@ -482,7 +548,7 @@ class DataLoader:
             juris_true_name: str,
             rollup: bool = False, if true, roll up results to major subdivisions before loading to db
             report_missing_files: bool = False, if true, report any files referenced by .ini files but not found in
-                results directory
+                results directory as a warning in the error dictionary
             status: Optional[str] = None, if given, use only reference results of that particular status for testing
             run_tests: bool = True, controls whether tests are run
 
@@ -492,11 +558,11 @@ class DataLoader:
         If files load successfully without fatal error and <run_tests> is True, runs tests on the loaded results
             and reports any failures to error report
         Returns
-        * list of successfully-loaded files,
-        * list of files that failed to load
-        * latest download date for successfully-loaded files
-        * error report with outright error for results files whose loading failed.
-        If <report_missing_files> is True, includes warning for missing files"""
+            List[str], list of successfully-loaded files,
+            List[str], list of files that failed to load
+            str, latest download date for successfully-loaded files
+            Optional[dict], error report with outright error for results files whose loading failed.
+        """
         err = None
         success_by_ini = list()
         failure_by_ini = list()
@@ -789,8 +855,11 @@ class DataLoader:
         return successfully_loaded, failed_to_load, all_tests_passed, err
 
     def strip_dates_from_results_folders(self) -> Dict[str, str]:
-        """some loading routines add date suffixes to folders after loading.
-        This routine removes the suffixes."""
+        """
+        Remove any date-suffixes from sub-folders of self.d["results_dir"]
+        Returns:
+            Dict[str, str], dictionary mapping old names to new
+        """
         rename: Dict[str, str] = dict()
         p = re.compile(r"^(.*)_\d\d\d\d-\d\d-\d\d$")
         for folder in os.listdir(self.d["results_dir"]):
@@ -808,8 +877,18 @@ class DataLoader:
         election_id: int,
         juris_id: int,
     ) -> Optional[str]:
-        """Remove from the db all data for the given <election_id> in the given <juris>"""
-        err_str = None
+        """
+        Inputs:
+            election_id: int, an Id value to be looked up in Election table
+            juris_id: int, an Id value to be looked up in ReportingUnit table
+
+        Remove from the db all data in datafiles associated (in _datafile table) to
+            the Election designated by <election_id> and the jurisdiction
+            designated in the ReportingUnit table by <juris_id>
+
+        Returns:
+            Optional[str], error string (or None if no errors)
+        """
         # get connection & cursor
         connection = self.session.bind.raw_connection()
         cursor = connection.cursor()
@@ -835,9 +914,18 @@ class DataLoader:
         else:
             return None
 
-    def add_totals_if_missing(self, election, jurisdiction) -> Optional[dict]:
-        """for each contest, add 'total' vote type wherever it's missing
-        returning any error"""
+    def add_totals_if_missing(self, election: str, jurisdiction: str) -> Optional[dict]:
+        """
+        Inputs:
+            election: str, name of election
+            jurisdiction: str, name of jurisdiction
+
+        For each contest, adds records for 'total' vote type wherever it's missing,
+            calculated from other vote types
+
+        Returns:
+            Optional[dict], error dictionary
+        """
         err = None
         # pull results from db
         election_id = db.name_to_id(self.session, "Election", election)
@@ -879,13 +967,14 @@ class DataLoader:
             m_df = m.missing_total_counts(df, self.session)
             # load new total records to db
             try:
-                err = db.insert_to_cdf_db(
+                new_err = db.insert_to_cdf_db(
                     self.session.bind,
                     m_df,
                     "VoteCount",
                     "system",
                     f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 )
+                err = ui.consolidate_errors([err, new_err])
             except Exception as exc:
                 err = ui.add_new_error(
                     err,
@@ -895,9 +984,18 @@ class DataLoader:
                 )
         return err
 
-    def load_data_from_db_dump(self, dbname, dump_file: str) -> Optional[str]:
-        """Create a database from a file dumped from another database (but only if db does not
-        already exist). Return error string"""
+    def load_data_from_db_dump(self, dbname: str, dump_file: str) -> Optional[str]:
+        """
+        Inputs:
+            dbname: str, name for database to be created and loaded with data
+            dump_file: str, path to file with data to be loaded to the new database
+
+        If <dbname> does not already exists, creates a database from a file dumped from another
+            database (but only if db does not already exist).
+
+        Returns:
+             Optional[str], error (or None if no error)
+        """
         connection = self.session.bind.raw_connection()
         cursor = connection.cursor()
         err_str = db.create_database(
@@ -912,40 +1010,34 @@ class DataLoader:
             err_str = db.restore_to_db(dbname, dump_file, self.engine.url)
         return err_str
 
-    def load_single_external_data_file(
-        self,
-        data_file: str,
-        source: str,
-        year: str,
-        note: str,
-        order_within_category: Optional[Dict[str, int]] = None,
-        replace_existing: bool = False,  # TODO
-    ) -> Optional[dict]:
-        df = pd.read_csv(data_file)
-        err = self.load_single_external_data_set(
-            df,
-            source,
-            year,
-            note,
-            replace_existing=replace_existing,
-        )
-        return err
-
     def load_single_external_data_set(
         self,
         df: pd.DataFrame,
         source: str,
         year: str,
         note: str,
-        replace_existing: bool = False,  # TODO
+        # TODO add optional parameter replace_existing: bool = False,
     ) -> Optional[dict]:
-        """<data_file> has to be in particular form:
-        csv
-        columns: Category, Label, OrderWithinCategory, ReportingUnit, Value.
-        Choices of "Category and "Label"
-        will show up in analyze.display_options text.
-        ReportingUnit assumed to follow name convention internal to db.
-        order_within_category dictionary determines order within analyze.display_options"""
+        """
+        Inputs:
+            df: pd.DataFrame, results dataframe with columns
+                Category, Label, OrderWithinCategory, ReportingUnit, Value,
+                where:
+                    ReportingUnit values match values in database specified by self.session,
+                    Category choice will be used to present user with a set of labels
+                    ReportingUnit-Category-Label choice will be used to identify a count (Value)
+                    OrderWithinCategory is an integer (should be a function of Category-Pair) to determine
+                        in what order Labels will be presented to user
+            source: str, source of data
+            year: str, year of data
+            note: str, note about data
+
+        Loads data description records into ExternalDataSet table, and loads data records into ExternalData table,
+            linked to correct ExternalDataset record
+
+        Returns:
+            Optional[dict], error dictionary
+        """
         err = None
         # TODO check columns of df
         # TODO error handling
@@ -1006,10 +1098,21 @@ class DataLoader:
 
     # TODO
     def load_acs5_data(self, census_year: int, election: str) -> Optional[dict]:
-        """Download census.gov American Community Survey data by county
-        for the given year;
-        upload data to db; associate all datasets for the year to election-juris
-        pairs for any juris that has nontrivial join."""
+        """
+        Incomplete!
+        Inputs:
+            census_year: int, year for which American Community Survey data is available from census.gov
+            election: str, name matching an election in the Election table of the database specified in self.session
+
+        Downloads census.gov American Community Survey data by county
+        for <census_year>;
+        uploads data to database specified in self.session; associates all datasets for <census_year> to
+        election-jurisdiction
+        pairs for any jurisdiction that has nontrivial join.
+
+        Returns:
+            Optional[dict], error dictionary
+        """
         err = None
         df = pd.DataFrame()
         for category in electiondata.constants.acs5_columns.keys():
@@ -1034,7 +1137,16 @@ class DataLoader:
 
     def temp_reload_existing_acs5_data(self, census_file: str) -> Optional[dict]:
         """Transitional function for taking data from Version 1.0 system to later version (June 2021)
-        load data from census file exported from old db (e.g. census_no_ids.csv)"""
+        load data from census file exported from old db (e.g. census_no_ids.csv)
+
+        Inputs:
+            census_file: str, path to a file containing census data exported from Version 1.0 database
+
+        Loads data from census_file for years 2016 and 2018 to database specified in self.session
+
+        Returns:
+            Optional[dict], error dictionary
+        """
         cdf = pd.read_csv(census_file, index_col=None)
 
         els = pd.read_sql_table("Election", self.session.bind)
@@ -1071,19 +1183,45 @@ class DataLoader:
         return err
 
     def update_juris_from_multifile(
-        self, working: pd.DataFrame, juris_true, juris_system
+        self, df: pd.DataFrame, juris_true: str, juris_system: str
     ) -> Optional[dict]:
+        """
+        This has not been generalized past the MIT multi-election file format.
+
+        Inputs:
+            df: pd.DataFrame, data read from MIT multi-election/jurisdiction results file, assumed to have columns
+                Candidate_raw,
+            juris_true: str, name of jurisdiction (with spaces, not hyphens)
+            juris_system: str, name of jurisdiction (with hyphens, not spaces)
+
+        Adds any new elections from electiondata.constants.mit_elections to 000_for_all_jurisdictions/Election.txt file
+        Adds any candidates in Candidate_raw column to the jurisdiction's Candidate.txt and dictionary.txt files
+        Adds lines to jurisdiction's dictionary.txt to map 'US PRESIDENT' and 'PRESIDENT' to 'US President (XX)',
+            where XX is the abbreviation for the jurisdiction
+        Adds parties in electiondata.constants.mit_party to dictionary.txt
+        Adds vote counts in electiondata.constants.mit_cit to dictionary.txt
+        Loads jurisdiction info into the database specified by self.session
+
+        Returns:
+            Optional[dict], error dictionary
+        """
         update_err = None
 
-        # add elections to Election.txt
+        # add elections to 000_for_all_jurisdictions/Election.txt
         election_df = pd.DataFrame(
             [[f"{e} General", "general"] for e in electiondata.constants.mit_elections],
             columns=["Name", "ElectionType"],
         )
+        path_to_election_dir = os.path.join(
+            self.d["repository_content_root"],"/jurisdictions/000_for_all_jurisdictions"
+        )
+        old = jm.get_element(path_to_election_dir, "Election")
+        new = pd.concat([old, election_df]).drop_duplicates()
+        jm.write_element(path_to_election_dir, "Election", new)
 
         # add candidates to Candidate.txt
         candidate_col = "Candidate_raw"
-        candidates = sorted(working[candidate_col].unique())
+        candidates = sorted(df[candidate_col].unique())
 
         # add candidates to dictionary
         candidate_map = {
@@ -1158,16 +1296,17 @@ class DataLoader:
         report_err_to_file: bool = True,
     ) -> (Dict[str, List[str]], Optional[dict]):
         """
-        ini: str, path to file with initialization parameters for dataloader and secondary source
-        dictionary_path: Optional[str] = None, if given, path to dictionary. If not given, path assumed
-            to be <repository_content_root>/secondary_sources/<ini_params["secondary_source"]
-        overwrite_existing: bool = False, if true, existing data will be deleted for each election-jurisdiction pair
-            represented in the file indicated in <ini>
-        load_jurisdictions: bool = True, if true, jurisdiction information will be loaded to database before processing
-            results data
-        report_err_to_file: bool = True, if true, errors reported to file; otherwise errors returned
+        Inputs:
+            ini: str, path to file with initialization parameters for dataloader and secondary source
+            dictionary_path: Optional[str] = None, if given, path to dictionary. If not given, path assumed
+                to be <repository_content_root>/secondary_sources/<ini_params["secondary_source"]
+            overwrite_existing: bool = False, if true, existing data will be deleted for each election-jurisdiction pair
+                represented in the file indicated in <ini>
+            load_jurisdictions: bool = True, if true, jurisdiction information will be loaded to database before processing
+                results data
+            report_err_to_file: bool = True, if true, errors reported to file; otherwise errors returned
 
-        Loads results from the file indicated in <ini> to the database
+        Loads results from the file indicated in <ini> to the database specified by self.session
 
         Returns:
             Dict[str, List[str]], a dictionary of successful mungers (for each election-jurisdiction pair)
@@ -1478,14 +1617,24 @@ class DataLoader:
         return success, err
 
 
-def check_par_file_elements(
+def check_param_file_elements(
     ini_d: dict,
     mungers_path: str,
     ini_file_name: str,
 ) -> Optional[dict]:
-    """<d> is the dictionary of parameters pulled from the ini file"""
-    err = None
+    """
+    Inputs:
+        ini_d: dict, dictionary of parameters (presumably taken from parameter file for a particular results file)
+        mungers_path: str, path to directory containing mungers
+        ini_file_name: str, name of the parameter file (for error reporting)
 
+    Checks consistency of mungers from ini_d["munger_list"] with other parameters in ini_d:
+        For each munger:
+            All constant_over_file elements from munger are specified in <ini_d>
+    Returns:
+        Optional[dict], error dictionary
+    """
+    err = None
     # for each munger,
     for mu in ini_d["munger_list"].split(","):
         # check any constant_over_file elements are defined in .ini file
@@ -1510,7 +1659,6 @@ def check_par_file_elements(
                     ini_file_name,
                     f"Munger {mu} requires constants to be defined:\n{bad_constants}",
                 )
-
     return err
 
 
@@ -1538,7 +1686,7 @@ def check_and_init_singledataloader(
         return sdl, err
 
     # check consistency of munger and .ini file regarding elements to be read from ini file
-    new_err_2 = check_par_file_elements(d, mungers_path, par_file_name)
+    new_err_2 = check_param_file_elements(d,mungers_path,par_file_name)
     if new_err_2:
         err = ui.consolidate_errors([err, new_err_2])
         sdl = None
@@ -1884,7 +2032,7 @@ class JurisdictionPrepper:
 
         for mu in sdl.munger_list:
             # get parameters
-            m_path = os.path.join(sdl.mungers_dir, f"{mu}.munger")
+            m_path = os.path.join(sdl.mungers_path,f"{mu}.munger")
             mu_d, new_err = m.get_and_check_munger_params(m_path)
             # get ReportingUnit formula
             ru_formula = ""

@@ -11,7 +11,7 @@ def test_dataloader_exists(dataloader):
 
 
 def test_loading(dataloader, test_data_url, param_file):
-    dataloader.get_testing_data(url=test_data_url)
+    dataloader.get_testing_data_from_git_repo(test_data_url)
     successfully_loaded, failed_to_load, all_tests_passed, err = dataloader.load_all(
         move_files=False,
         rollup=True,
