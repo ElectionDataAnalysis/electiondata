@@ -1761,15 +1761,24 @@ class JurisdictionPrepper:
 
     def new_juris_files(
         self,
-        target_dir: Optional[str] = None,
+        target_dir_for_starter_dictionary: Optional[str] = None,
         templates: Optional[str] = None,
-    ):
-        """Create starter files in <target_dir>. If no <target_dir> is given, put the standard
-        jurisdiction files into a subdirectory of the jurisdictions directory in the repo, and put
-        the starter dictionary in the current directory.
+    ) -> Optional[dict]:
+        """
+        Inputs:
+            target_dir_for_starter_dictionary: Optional[str] = None, path to directory where starter dictionary
+                should be placed. Default is to put the starter dictionary in the current directory.
+            templates: Optional[str] = None, path to directory with templates. Default is
+                jurisdictions/000_jurisdiction_templates
+
+        Creates jurisdiction files in the directory self.d["jurisdiction_path"], creating that directory if necessary.
+        Creates starter dictionary (to keep new dictionary entries separate from existing entries)
+
+        Returns:
+            Optional[dict], error dictionary
         """
         # create and fill jurisdiction directory
-        # TODO Feature: allow other districts to be set in paramfile
+        # TODO Feature: allow other districts to be set in param_file
         print(f"\nStarting {inspect.currentframe().f_code.co_name}")
         error = jm.ensure_jurisdiction_dir(
             self.d["repository_content_root"], self.d["jurisdiction_path"]
@@ -1793,7 +1802,7 @@ class JurisdictionPrepper:
 
         # Feature create starter dictionary.txt with cdf_internal name
         #  used as placeholder for raw_identifier_value
-        dict_err = self.starter_dictionary(target_dir=target_dir)
+        dict_err = self.starter_dictionary(target_dir_for_starter_dictionary=target_dir_for_starter_dictionary)
 
         error = ui.consolidate_errors([error, asc_err, dict_err])
         ui.report(
@@ -1803,9 +1812,20 @@ class JurisdictionPrepper:
 
     def add_standard_contests(
         self, juriswide_contests: list = None, other_districts: dict = None
-    ) -> dict:
-        """If <juriswide_contest> is None, use standard list hard-coded.
-        Returns error dictionary"""
+    ) ->Optional[dict]:
+        """
+        Inputs:
+            juriswide_contests: list = None, list of jurisdiction-wide contests (default is calculated from
+                self.d["abbreviated_name"] via constants.jurisdiction_wide_contests())
+            other_districts: dict = None, optional dictionary mapping other district contest types to the
+            number of districts
+
+        Adds lines as necessary to jurisdiction files and starter dictionary for contests derived from the
+            jurisdiction prep parameter file and the function arguments
+
+        Returns:
+             Optional[dict], error dictionary
+        """
         # initialize error dictionary
         err = None
 
@@ -1880,15 +1900,8 @@ class JurisdictionPrepper:
 
         # add standard jurisdiction-wide offices
         if not juriswide_contests:
-            juriswide_contests = [
-                f"US President ({abbr})",
-                f"{abbr} Governor",
-                f"US Senate {abbr}",
-                f"{abbr} Attorney General",
-                f"{abbr} Lieutenant Governor",
-                f"{abbr} Treasurer",
-                f"{abbr} Secretary of State",
-            ]
+            juriswide_contests = constants.jurisdiction_wide_contests(abbr)
+
         # append jurisdiction-wide offices to the office df
         jw_off = pd.DataFrame(
             [[x, self.d["name"]] for x in juriswide_contests], columns=cols_off
@@ -1926,55 +1939,21 @@ class JurisdictionPrepper:
                 return err
         return err
 
-    def add_primaries_to_candidate_contest(self) -> Optional[str]:
-        print(f"\nStarting {inspect.currentframe().f_code.co_name}")
-
-        primaries = {}
-        err_str = None
-
-        # get contests that are not already primaries
-        contests = electiondata.juris.get_element(
-            self.d["jurisdiction_path"], "CandidateContest"
-        )
-        # TODO might have to check for '' as well as nulls
-        non_p_contests = contests[contests["PrimaryParty"].isnull()]
-        if non_p_contests.empty:
-            err_str = "CandidateContest.txt is missing or has no non-primary contests. No primary contests added."
-            return err_str
-
-        # get parties
-        parties = electiondata.juris.get_element(self.d["jurisdiction_path"], "Party")
-        if parties.empty:
-            if err_str:
-                err_str += (
-                    "\n Party.txt is missing or empty. No primary contests added."
-                )
-            else:
-                err_str = "\n Party.txt is missing or empty. No primary contests added."
-            return err_str
-
-        for i, party in parties.iterrows():
-            p = party["Name"]
-            primaries[p] = non_p_contests.copy()
-            primaries[p]["Name"] = non_p_contests.apply(
-                lambda row: electiondata.juris.primary(row, p, "Name"), axis=1
-            )
-            primaries[p]["PrimaryParty"] = p
-
-        all_primaries = [primaries[p] for p in parties.Name.unique()]
-        new_err = electiondata.juris.write_element(
-            self.d["jurisdiction_path"],
-            "CandidateContest",
-            pd.concat([contests] + all_primaries),
-        )
-        err_str = ui.consolidate_errors([err_str, new_err])
-        return err_str
-
     def starter_dictionary(
-        self, include_existing=True, target_dir: Optional[str] = None
-    ) -> dict:
-        """Creates a starter file for dictionary.txt, assuming raw_identifiers are the same as cdf_internal names.
-        Puts file in the current directory. Returns error dictionary"""
+        self, include_existing=True, target_dir_for_starter_dictionary: Optional[str] = None
+    ) -> Optional[dict]:
+        """
+        Inputs:
+            include_existing=True, if True, includes lines from dicionary.txt in self.d["jurisdiction_path"] into
+                the starter dictionary
+            target_dir_for_starter_dictionary: Optional[str] = None, path to directory for starter dictionary
+                (default is current directory)
+
+        Creates a starter dictionary.txt wtih raw_identifiers the same as cdf_internal names.
+
+        Returns:
+             Optional[dict], error dictionary
+        """
         w = dict()
         elements = [
             "BallotMeasureContest",
@@ -2008,8 +1987,8 @@ class JurisdictionPrepper:
                 for element in (elements + ["CountItemType"])
             ]
         ).drop_duplicates()
-        if target_dir:
-            ssd_str = starter_dict_dir = target_dir
+        if target_dir_for_starter_dictionary:
+            ssd_str = starter_dict_dir = target_dir_for_starter_dictionary
         else:
             ssd_str = "current directory (not in jurisdiction directory)"
             starter_dict_dir = "."
@@ -2027,6 +2006,7 @@ class JurisdictionPrepper:
         dbname: Optional[str] = None,
         paraam_file: Optional[str] = None,
     ) -> Optional[dict]:
+        """Do not use! May be obsolete, may be broken"""
         err_list = list()
         dl = DataLoader(dbname=dbname, param_file=paraam_file)
         path_to_jurisdiction_dir = os.path.join(
@@ -2155,40 +2135,13 @@ class JurisdictionPrepper:
         err = ui.consolidate_errors(err_list)
         return err
 
-    def make_test_file(self, election: str):
-        juris_true_name = self.d["name"]
-        juris_abbr = self.d["abbreviated_name"]
-        tests_dir = os.path.join(
-            Path(self.d["mungers_dir"]).parents[1],
-            "tests",
-            "obsolete_results_test_files",
-        )
-        juris_test_dir = os.path.join(tests_dir, self.d["system_name"])
-        sample_test_dir = os.path.join(tests_dir, "20xx_test_templates")
-        election_str = jm.system_name_from_true_name(election)
-        test_file_name = f"test_{self.d['system_name']}_{election_str}.py"
-        new_test_file = os.path.join(juris_test_dir, test_file_name)
-        if not os.path.isdir(juris_test_dir):
-            os.mkdir(juris_test_dir)
-
-        if not os.path.isfile(new_test_file):
-            test_replace = {
-                f'jurisdiction = "North Carolina"\nabbr = "NC"': f'jurisdiction = "{juris_true_name}"\nabbr = "{juris_abbr}"',
-                f'single_county = "North Carolina;Bertie County"': f'single_county = "{juris_true_name}; "',
-            }
-            create_from_template(
-                os.path.join(sample_test_dir, f"donttest_template_{election_str}.py"),
-                new_test_file,
-                test_replace,
-            )
-            return
-
     def make_ini_file(
         self,
         ini_name: str,
         munger_name_list: str,
         is_preliminary: bool = False,
     ):
+        """Do not use! May be broken"""
         juris_true_name = self.d["name"]
         juris_system_name = self.d["system_name"]
 
@@ -2217,6 +2170,7 @@ class JurisdictionPrepper:
         return
 
     def make_munger_file(self, munger_name: str):
+        """Do not use! May be broken"""
         new_munger_file = os.path.join(self.d["mungers_dir"], f"{munger_name}.munger")
         if not os.path.isfile(new_munger_file):
             munger_replace = dict()
@@ -2231,6 +2185,7 @@ class JurisdictionPrepper:
         self,
         file_path: str,
     ) -> Optional[dict]:
+        """Do not use! May be broken!"""
         err = None
         try:
             df = pd.read_csv(file_path, sep="\t")
@@ -2251,6 +2206,21 @@ class JurisdictionPrepper:
         run_time_param_file: str = "run_time.ini",
         target_dir: Optional[str] = None,
     ):
+        """
+        Inputs:
+            prep_param_file: str = "jurisdiction_prep.ini", path to file with parameters for the new jurisdiction
+            run_time_param_file: str = "run_time.ini", path to main parameter file
+            target_dir: Optional[str] = None, path to directory where new files should be placed. Default is a
+                subdirectory named for the jurisdiction specified in <prep_param_file> in the src/jurisdictions
+                directory in the repository.
+
+        Returns a JurisdictionPrepper instance with attributes:
+            d, dictionary of parameters from the main system parameter file and the parameters in the jurisdiction prep
+                parameter file
+            state_house, integer number of state house districts (per jurisdiction prep parameter file)
+            state_senate, integer number of state senate districts (per jurisdiction prep parameter file)
+            congressional , integer number of congressional districts (per jurisdiction prep parameter file)
+        """
         self.d = dict()
         # get parameters from jurisdiction_prep.ini and run_time.ini
         for param_file, required in [

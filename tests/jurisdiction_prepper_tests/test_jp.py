@@ -28,7 +28,7 @@ def test_new_files():
         run_time_param_file=run_time_file,
         target_dir=temp_dir,
     )
-    jp.new_juris_files(target_dir=temp_dir, templates=templates)
+    jp.new_juris_files(target_dir_for_starter_dictionary=temp_dir,templates=templates)
 
     bad = [
         f
