@@ -1664,17 +1664,30 @@ def check_param_file_elements(
 
 def check_and_init_singledataloader(
     results_dir: str,
-    par_file_name: str,
+    results_param_file: str,
     session: Session,
     mungers_path: str,
     juris_true_name: str,
     path_to_jurisdiction_dir: str,
 ) -> (Optional[SingleDataLoader], Optional[dict]):
-    """Return SDL if it could be successfully initialized, and
-    error dictionary (including munger errors noted in SDL initialization)"""
+    """
+    Inputs:
+        results_dir: str, path to directory containing election result files
+        results_param_file: str, path to file containing basic parameters for reading result file (*.ini)
+        session: Session,
+        mungers_path: str, path to directory containing munger parameter files with extension .munger
+        juris_true_name: str, name of jurisdiction (with spaces, not hyphens)
+        path_to_jurisdiction_dir: str, path to directory containing subdirectories labeled by jurisdiction
+
+    Checks results_param_file parameters
+
+    Returns:
+        Optional[SingleDataLoader], SingleDataLoader instance if it could be successfully initialized (or None if not),
+        error dictionary (including munger errors noted in SDL initialization)
+    """
 
     # test parameters
-    par_file = os.path.join(results_dir, par_file_name)
+    par_file = os.path.join(results_dir,results_param_file)
     sdl = None
     d, err = ui.get_parameters(
         required_keys=constants.sdl_pars_req,
@@ -1686,14 +1699,14 @@ def check_and_init_singledataloader(
         return sdl, err
 
     # check consistency of munger and .ini file regarding elements to be read from ini file
-    new_err_2 = check_param_file_elements(d,mungers_path,par_file_name)
+    new_err_2 = check_param_file_elements(d,mungers_path,results_param_file)
     if new_err_2:
         err = ui.consolidate_errors([err, new_err_2])
         sdl = None
     if not ui.fatal_error(new_err_2):
         sdl = SingleDataLoader(
             results_dir,
-            par_file_name,
+            results_param_file,
             session,
             mungers_path,
             juris_true_name,
@@ -1709,7 +1722,7 @@ def check_and_init_singledataloader(
     except ValueError:
         err_str = f"Date could not be parsed. Expected format is 'YYYY-MM-DD', actual is {d['results_download_date']}"
     if err_str:
-        err = ui.add_new_error(err, "ini", par_file_name, err_str)
+        err = ui.add_new_error(err, "ini",results_param_file,err_str)
     return sdl, err
 
 
