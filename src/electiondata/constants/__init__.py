@@ -150,6 +150,8 @@ def jurisdiction_wide_contests(abbr: str) -> List[str]:
 
 # display information
 if 1:
+    """maps ReportingUnitType of election district of contest to the user-facing label for that type of contest
+    for use in Analyzer.display_options()"""
     contest_type_mappings = {
         "congressional": "Congressional",
         "state": "Statewide",
@@ -589,6 +591,7 @@ if 1:
         "warn-munger",
         "warn-test",
     ]
+    regex_failure_string = " <- Does not match regular expression"
 # regex patterns
 if 1:
     brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")

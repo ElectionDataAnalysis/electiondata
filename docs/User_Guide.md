@@ -8,12 +8,17 @@ The system runs out of the box with a postgresql database; to use other varietie
 From the root folder of your repository run `python3 setup.py install` (or if `python` is an alias for `python3` on your system, `python setup.py install`).
 
 ## Setting up
+
+### Main parameter file
 You will need a main parameter file to specify paths and database connection information specific to your local computing environment. This file is necessary for the three main classes:
  * `JurisdictionPrepper` for preparing jurisdiction files
  * `DataLoader` for loading data
  *  `Analyzer` for exporting and analyzing results
 See the [template file](../src/parameter_file_templates/run_time.ini.template) for required parameters. Avoid percent signs and line breaks in the parameter values.
    
+### Other recommended files
+To avoid the overhead of deriving the major subdivision type for each jurisdiction from the database, make sure that your repository has a [000_major_subjurisdiction_types.txt](../src/jurisdictions/000_major_subjurisdiction_types.txt) in the [jurisdictions directory](../src/jurisdictions/). This file allows the user to specify other major subdivisions. For example, it may make sense to consider towns as the major subdivisions in Connecticut rather than counties. Or a user may wish to use congressional districts as the major subdivision -- though such a user should not assume that the nesting relationships (say, of precincts within congressional districts) have been coded in the [`ReportingUnit.txt` file](../src/jurisdictions/Connecticut/ReportingUnit.txt) or the database.
+
 ## Determining a Munger
 Election result data comes in a variety of file formats. Even when the basic format is the same, file columns may have different interpretations. The code is built to ease -- as much as possible -- the chore of processing and interpreting each format. Following the [Jargon File](http://catb.org/jargon/html/M/munge.html), which gives one meaning of "munge" as "modify data in some way the speaker doesn't need to go into right now or cannot describe succinctly," we call each set of basic information about interpreting an election result file a "munger". 
 

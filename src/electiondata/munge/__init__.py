@@ -112,9 +112,23 @@ def add_regex_column(
     new_col: str,
     pattern_str: str,
     munger_name: str,
-) -> (pd.DataFrame, [dict, None]):
-    """Return <df> with <new_col> appended, where <new_col> is pulled from <old_col> by the <pattern>.
-    Note that only the first group (per <pattern>) is returned"""
+) -> (pd.DataFrame, Optional[dict]):
+    """
+    Required inputs:
+        df: pd.DataFrame, a dataframe
+        old_col: str, name of a column from the dataframe
+        new_col: str, name for new column to be created
+        pattern_str: str, regular expression with at least one capturing group
+            (NB: only the first capturing group will matter)
+        munger_name: str, for error reporting
+
+    Returns:
+        pd.DataFrame, <df> with one column named <new_col> appended. The <new_col> column value for each row is
+            either the first group captured from the <old_col> value for that row via <pattern_str> or, if <pattern_str>
+            is not matched, the value from <old_col> with the string
+            "<constants.regex_failure_string> <pattern_str>"
+        Optional[dict], error dictionary
+    """
     err = None
     working = df.copy()
     try:
@@ -122,9 +136,8 @@ def add_regex_column(
         # replace via regex if possible; otherwise msg
         # # put informative error message in new_col (to be overwritten if no error)
         old = working[old_col].copy()
-        working[new_col] = working[old_col].str.cat(
-            old, f"Does not match regex {pattern_str}: "
-        )
+        working[new_col] = working[old_col] + f"{constants.regex_failure_string} {pattern_str}"
+
         # # where regex succeeds, replace error message with good value
         mask = working[old_col].str.match(p)
         working.loc[mask, new_col] = working[mask][old_col].str.extract(
@@ -164,7 +177,7 @@ def text_fragments_and_fields(formula: str) -> (List[List[str]], str):
 
 
 def add_column_from_formula(
-    working: pd.DataFrame,
+    df: pd.DataFrame,
     formula: str,
     new_col: str,
     err: Optional[dict],
@@ -175,7 +188,7 @@ def add_column_from_formula(
     If formula is enclosed in braces, parse first entry as formula, second as a
     regex (with one parenthesized group) as a recipe for pulling the value via regex analysis
     """
-    w = working.copy()
+    working = df.copy()
     #  for each {} pair in the formula, create a new column
     # (assuming formula is well-formed)
     try:
@@ -184,15 +197,15 @@ def add_column_from_formula(
             # create a new column with the extracted info
             old_col, pattern_str = x.groups()
             temp_col = f"extracted_from_{old_col}"
-            w, new_err = add_regex_column(
-                w, old_col, temp_col, pattern_str, munger_name
+            working, new_err = add_regex_column(
+                working, old_col, temp_col, pattern_str, munger_name
             )
             # change the formula to use the temp column
             formula = formula.replace(f"{{<{old_col}>,{pattern_str}}}", f"<{temp_col}>")
             if new_err:
                 err = ui.consolidate_errors([err, new_err])
                 if ui.fatal_error(new_err):
-                    return w, err
+                    return working, err
             temp_cols.append(temp_col)
         # once all {} pairs are gone, use concatenation to build the column to be returned
         text_field_list, last_text = text_fragments_and_fields(formula)
@@ -203,7 +216,7 @@ def add_column_from_formula(
 
         # add column to <working> dataframe via the concatenation formula
         if last_text:
-            w = add_constant_column(w, new_col, last_text[0], dtype="string")
+            working = add_constant_column(working, new_col, last_text[0], dtype="string")
         else:
             err = ui.add_new_error(
                 err,
@@ -211,11 +224,11 @@ def add_column_from_formula(
                 f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"No last_text found by text_fragments_and_fields for {formula}",
             )
-            return w, err
+            return working, err
         text_field_list.reverse()
         for t, f in text_field_list:
             try:
-                w[new_col] = t + w[f].map(str) + w[new_col].map(str)
+                working[new_col] = t + working[f].map(str) + working[new_col].map(str)
             except KeyError as ke:
                 err = ui.add_new_error(
                     err,
@@ -224,7 +237,7 @@ def add_column_from_formula(
                     f"Expected transformed column '{f}' not found, "
                     f"perhaps because of mismatch between munger and results file. KeyError: {ke}",
                 )
-                return w, err
+                return working, err
 
     except Exception as e:
         err = ui.add_new_error(
@@ -233,11 +246,11 @@ def add_column_from_formula(
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unexpected error: {e}",
         )
-        return w, err
+        return working, err
 
     # delete temporary columns
-    w.drop(temp_cols, axis=1, inplace=True)
-    return w, err
+    working.drop(temp_cols, axis=1, inplace=True)
+    return working, err
 
 
 def compress_whitespace(s: Optional[str]) -> str:
@@ -294,6 +307,7 @@ def raw_to_internal_dictionary_df(
 def replace_raw_with_internal_name(
     df: pd.DataFrame,
     munger_name: str,  # for error reporting
+    file_name: str,  # for error reporting
     element: str,
     dictionary_df: pd.DataFrame,
     dictionary_path: str,
@@ -306,11 +320,21 @@ def replace_raw_with_internal_name(
     working = df.copy()
     dictionary = raw_to_internal_dictionary_df(dictionary_df, element)
 
+    # report values not matched by regex
+    regex_fail_mask = working[f"{element}_raw"].str.contains(constants.regex_failure_string)
+    if regex_fail_mask.any():
+        failed = "\n".join(sorted(working[regex_fail_mask][f"{element}_raw"].unique()))
+        err = ui.add_new_error(
+            err, "warn-munger", munger_name, f"\nSome raw {element} values in {file_name} not matched by regular expression:\n{failed}"
+        )
+        if drop_unmatched:
+            working = working[~regex_fail_mask]
+
     if element == "Candidate":
         # Regularize candidate names from results file and from dictionary.txt
         working.Candidate_raw = regularize_candidate_names(working.Candidate_raw)
-        dictionary[f"{element}_raw"] = regularize_candidate_names(
-            dictionary[f"{element}_raw"]
+        dictionary[f"Candidate_raw"] = regularize_candidate_names(
+            dictionary[f"Candidate_raw"]
         )
         # NB: regularizing can create duplicates (e.g., HILLARY CLINTON and Hillary Clinton regularize to the same)
         dictionary.drop_duplicates(inplace=True)
@@ -321,13 +345,18 @@ def replace_raw_with_internal_name(
         on=f"{element}_raw",
     )
 
-    # identify unmatched
+    # identify where regex succeeded but result unmatched in dictionary
     unmatched = working[working[element].isnull() & working[f"{element}_raw"].notnull()]
     unmatched_raw = sorted(unmatched[f"{element}_raw"].unique(), reverse=True)
-    unmatched_raw = [x for x in unmatched_raw if x != ""]
+    unmatched_raw = [x for x in unmatched_raw if (x != "")]
+    if not drop_unmatched:
+        # lines where regex failed don't count as dictionary failures
+        unmatched_raw = [
+            x for x in unmatched_raw if constants.regex_failure_string.strip() not in x
+        ] # TODO redundant with calculation above
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
         unmatched_str = "\n".join(unmatched_raw)
-        e = f"\n{element}s (found with munger {munger_name}) not found in dictionary.txt :\n{unmatched_str}"
+        e = f"\n{element}s (found with munger {munger_name}) not found in dictionary.txt :\n{unmatched_str}\n\n"
         err = ui.add_new_error(err, "warn-jurisdiction", dictionary_path, e)
 
     if drop_unmatched:
@@ -336,8 +365,8 @@ def replace_raw_with_internal_name(
     if working.empty:
         raws = "\n".join(list(df[f"{element}_raw"].unique()))
         e = (
-            f"No true raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file.\n"
-            f"true raw {element}s:\n{raws}"
+            f"No true raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file.\n\n"
+            f"true raw {element}s:\n{raws}\n"
         )
         if drop_unmatched and not drop_all_ok:
 
@@ -462,6 +491,7 @@ def replace_raw_with_internal_ids(
     working, new_err = replace_raw_with_internal_name(
         df,
         munger_name,
+        file_name,
         element,
         dictionary_df,
         dictionary_path,

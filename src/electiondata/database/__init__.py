@@ -1103,8 +1103,19 @@ def remove_vote_counts(session: Session, id: int) -> Optional[str]:
 
 
 def get_relevant_election(session: Session, filters: List[str]) -> pd.DataFrame:
-    """Returns dataframe of all records from Election table
-    corresponding to a reporting unit in the list <filters>"""
+    """
+    Required inputs:
+        session: Session, sqlalchemy database session
+        filters: List[str], list containing names of jurisdictions (and possibly other strings as well)
+
+    Returns:
+         pd.DataFrame, dataframe of all records from Election table in database
+            for which at least one record in the _datafile table pertains to that election and
+            to a jurisdiction in the list <filters>. Dataframe is indexed by the "Id" column from the Election
+            table in the database; the other columns from the Election table are the columns of dataframe
+
+    Note that if there are no jurisdictions in <filter>, an empty dataframe will be returned.
+    """
     unit_df = pd.read_sql_table("ReportingUnit", session.bind, index_col="Id")
     unit_df = unit_df[unit_df["Name"].isin(filters)]
     election_ids = pd.read_sql_table("_datafile", session.bind, index_col="Id").merge(
@@ -1118,16 +1129,31 @@ def get_relevant_election(session: Session, filters: List[str]) -> pd.DataFrame:
 def get_relevant_contests(
     session: Session, filters: List[str], repository_content_root: str
 ) -> pd.DataFrame:
-    """expects the filters list to have an election and jurisdiction.
-    finds all contests for that combination. Returns a dataframe sorted by contest name.
-    Omits any counts that don't
-    roll up to the major subdivision. E.g., Puerto Rico 2020g, have legislative results by district, but these don't
-    roll up to municipality (which is the PR major subdivision)"""
+    """
+    Required inputs:
+        session: Session, sqlalchemy database session
+        filters: List[str], list containing one jurisdiction name and one election name
+            (and possibly other strings as well)
+        repository_content_root: str, path to repository content root directory (so that major subdivision can
+        be found)
+
+    Returns:
+        pd.DataFrame, dataframe of all contests that have results for the first election and first jurisdiction
+            specified in  <filters>. Columns of dataframe are "parent" (the election district of the contest),
+            "name" (the name of the contest), "type" (the ReportingUnitType of the contest district)
+
+    Notes:
+        <filters> is expected to have exactly one election and exactly one jurisdiction. If there are more than
+    one, only the first of each will be used.
+        counts for ReportingUnits that don't roll up to a major subdivision (e.g., PR legislative results by district
+        when major subdivision is municipality) will not be included.
+    """
+
     election_id = list_to_id(session, "Election", filters)
     jurisdiction_id = list_to_id(session, "ReportingUnit", filters)
     jurisdiction = name_from_id(
         session, "ReportingUnit", jurisdiction_id
-    )  # TODO tech debt
+    )
     subdivision_type = get_major_subdiv_type(
         session,
         jurisdiction,
@@ -1685,7 +1711,7 @@ def read_vote_count(
 
 def list_to_id(session: Session, element: str, names: List[str]) -> Optional[int]:
     """takes a list of names of various element types and returns a single ID
-    ID returned is for the name in the <names> list that corresponds to an actual
+    ID returned is for the first name in the <names> list that corresponds to an actual
      <element>"""
     for name in names:
         id = name_to_id(session, element, name)

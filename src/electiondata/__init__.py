@@ -1423,6 +1423,7 @@ class DataLoader:
                 working, new_err[element] = m.replace_raw_with_internal_name(
                     working,
                     munger,
+                    multi_file_name,
                     element,
                     dictionary_df,
                     dictionary_path,
@@ -2277,7 +2278,7 @@ class JurisdictionPrepper:
 
 def make_ini_file_batch(
     results_directory: str,
-    output_directory: str,
+    target_directory: str,
     munger_list: str,
     jurisdiction: str,
     election: str,
@@ -2286,11 +2287,26 @@ def make_ini_file_batch(
     results_note: str = "none",
     extension: Optional[str] = None,
 ):
-    """Utility to create parameter files for multiple files.
-    Makes a parameter file for each (non-.ini,non .*) file in <dir>,
-    once all other necessary parameters are specified.
-    If <extension> is given, makes parameter file for each file with the given extension.
-    Writes .ini files to <output_directory"""
+    """
+    Required inputs:
+        results_directory: str, directory holding results files to be described in *.ini files
+            created by this routine
+        output_directory: str, directory to receive files created by this routine
+        munger_list: str, value of munger_list parameter in files created
+        jurisdiction: str, value of jurisdiction parameter in files created
+        election: str, value of election parameter in files created
+
+    Optional inputs:
+        download_date: str = "1900-01-01", value of download_date parameter in files created
+        source: str = "unknown", value of source parameter in files created
+        results_note: str = "none", value of results_note parameter in files created
+        extension: Optional[str] = None, if given, restrict to results files with the given extenstion
+
+    Creates a SingleDataLoader parameter file in the <target_directory> for each result file
+        in the <results_directory> (or each whose extension matches <extension>, if given).
+        Files in the <results_directory> whose names start with ".", or whose extensions are ".ini",
+        are ignored.
+    """
     if extension:
         data_file_list = [
             f
@@ -2312,7 +2328,7 @@ def make_ini_file_batch(
             f"results_source={source}\nresults_note={results_note}\n"
         )
         ini_file_name = ".".join(f.split(".")[:-1]) + ".ini"
-        with open(os.path.join(output_directory, ini_file_name), "w") as p:
+        with open(os.path.join(target_directory,ini_file_name),"w") as p:
             p.write(par_text)
     return
 
@@ -2355,6 +2371,20 @@ class Analyzer:
         return super().__new__(cls)
 
     def __init__(self, param_file=None, dbname=None):
+        """
+        Optional inputs:
+            param_file=None, if given, path to file with parameters necessary for creating an Analyzer
+                instance. Default is "run_time.ini"
+            dbname=None, if given, name of database from which to export & analyze data. Default
+                is the value of the dbname parameter in the [postgres] section of the param_file
+
+        Creates instance of Analyzer with attributes:
+            d, dictionary of parameters from param_file
+            reports_and_plots_dir, path to directory for plots and reports created by the Analyzer
+            repository_content_root, path to repository content root (for access to, e.g., the
+                file 000_major_subdivision_types.txt
+            session, sqlalchemy session connected to database
+        """
         if not param_file:
             param_file = "run_time.ini"
 
@@ -2382,14 +2412,15 @@ class Analyzer:
         status: Optional[str] = None,
     ) -> Optional[dict]:
         """
-        Inputs:
+        Required inputs:
              election: str,
              juris_true_name: str,
              juris_system_name: str,
+        Optional inputs:
              reference: Optional[str] = None, if given, use this path to file of reference results. If not
                  given, reference results are taken from file
                  <repository_content_root>/reference_results/<juris_system_name>.tsv
-            status: Optional[str] = None, if given, checks only the reference results with that same status
+             status: Optional[str] = None, if given, checks only the reference results with that same status
 
          Reports information from tests to self.reports_and_plots.
          Returns:
@@ -2463,6 +2494,14 @@ class Analyzer:
         election: str,
         jurisdiction: str,
     ) -> bool:
+        """
+        Inputs:
+            election: str, name of election (e.g., "2020 General")
+            jurisdiction: str, name of jurisdiction (e.g., "New Mexico")
+
+        Returns:
+            bool, True if the database of self.session has data for this election-jurisdiction pair
+        """
         if not self:
             return False
 
@@ -2495,10 +2534,24 @@ class Analyzer:
         self,
         election: str,
         jurisdiction: str,
-        sub_unit_type=constants.default_subdivision_type,
+        sub_unit_type: Optional[str] = None,
     ) -> bool:
-        """Interesting if there are both total and other vote types;
-        otherwise trivially true"""
+        """
+        Required inputs:
+            election: str, name of election
+            jurisdiction: str, name of jurisdiction
+
+        Optional inputs:
+            sub_unit_type: str = None, the subdivision type (e.g., 'county') to which results should be rolled up.
+                Default is constants.default_subdivision_type
+
+        Returns:
+            bool, True if only count type is 'total' or if sum of rolled-up counts for other vote types matches
+                value of 'total' for each subdivision of the given type
+        """
+
+        if sub_unit_type is None:
+            sub_unit_type = constants.default_subdivision_type
         active = db.active_vote_types(self.session, election, jurisdiction)
         if len(active) > 1 and "total" in active:
             # pull type 'total' only
@@ -2552,8 +2605,22 @@ class Analyzer:
         vote_type: Optional[str] = None,
         contest_type: Optional[str] = "Candidate",
     ) -> Optional[int]:
-        """Returns total number of votes in the contest within the given
-        reporting unit. If vote type is given, restricts to that vote type"""
+        """
+        Required inputs:
+            election: str, name of election for contest
+            jurisdiction: str, name of jurisdiction for contest
+            contest: str, name of contest
+            reporting_unit: str, reporting unit over which total should be taken
+
+        Optional inputs:
+            vote_type: Optional[str] = None, if given, give total for that vote type only
+            contest_type: Optional[str] = "Candidate", type of contest (other option is "BallotMeasure") since
+                CandidateContests and BallotMeasureContests are handled differently in database
+
+        Returns:
+            Optional[int], total number of votes in the contest in the given election and jurisdiction within the given
+        reporting unit. If vote type is given, restricts to that vote type. If no data is found, returns None.
+        """
         sub_unit_type = db.get_reporting_unit_type(self.session, reporting_unit)
         if vote_type == "total":
             exclude_redundant_total = False
@@ -2579,8 +2646,15 @@ class Analyzer:
         election: str,
         jurisdiction: str,
     ) -> bool:
-        election_id = db.name_to_id(self.session, "Election", election)
-        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
+        """
+        Required inputs:
+            election: str,
+            jurisdiction: str,
+
+        Returns:
+            bool, True if CountItemType for all vote counts for the given election and jurisdiction
+                are on the standard list given in the NIST Election Results Reporting common data format
+        """
         standard_ct_list = constants.nist_standard["CountItemType"]
 
         active = db.active_vote_types(self.session, election, jurisdiction)
@@ -2598,11 +2672,15 @@ class Analyzer:
         report_dir: Optional[str] = None,
     ) -> List[str]:
         """
-        election: str,
-        jurisdiction: str,
-        report_dir: Optional[str] = None, if given, reports bad contests to a file
+        Required inputs:
+            election: str,
+            jurisdiction: str,
+        Optional inputs:
+            report_dir: Optional[str] = None, if given, path to directory for file reporting bad contests;
+                if not given, no report created.
 
-        Returns list of contests with unknown candidates
+        Returns:
+             List[str], list of contests with unknown candidates
         """
         election_id = db.name_to_id(self.session, "Election", election)
         if not election_id:
@@ -2628,12 +2706,22 @@ class Analyzer:
         return contests
 
     # visualization methods
-    # `verbose` param is not used but may be necessary. See github issue #524 for details
+    # May need to add back 'verbose' option for compatibility with VoteVisualizer front end.
+    #    See github issue #524 for details
     def display_options(
-        self, input_str: str, verbose: bool = True, filters: list = None
-    ):
-        """<input_str> is one of: 'election', 'jurisdiction', 'contest_type', 'contest',
-        'category' or 'count'"""
+        self, input_str: str, filters: List[str] = None
+    ) -> Optional[List[Dict[str, Any]]]:
+        """
+        Required Inputs:
+            input_str: str, one of: 'election', 'jurisdiction', 'contest_type', 'contest',
+                'category' or 'count'
+        Optional Inputs:
+            filters: List[str] = None, if given, these strings will be used to filter the results
+
+        Returns:
+            Optional[List[Dict[str, Any]]], on exception, returns None. Otherwise, # TODO
+
+        """
         try:
             filters_mapped = ui.get_contest_type_mappings(filters)
             results = ui.get_filtered_input_options(
