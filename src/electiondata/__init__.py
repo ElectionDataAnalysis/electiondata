@@ -13,7 +13,7 @@ from electiondata import (
     constants,
 )
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.orm.session import Session
+from sqlalchemy.orm.session import Session, engine
 from typing import List, Dict, Optional, Any, Tuple, Union, Iterable
 import datetime
 import os
@@ -168,7 +168,7 @@ class SingleDataLoader:
             for mu in self.munger_list:
                 print(f"\twith munger {mu}")
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
-                mu_path = os.path.join(self.mungers_path,f"{mu}.munger")
+                mu_path = os.path.join(self.mungers_path, f"{mu}.munger")
                 new_err = load_results_file(
                     self.session,
                     mu_path,
@@ -224,7 +224,7 @@ class SingleDataLoader:
                 for mu in self.munger_list:
                     print(f"\twith munger {mu}")
                     f_path = os.path.join(self.results_dir, self.d["results_file"])
-                    munger_path = os.path.join(self.mungers_path,f"{mu}.munger")
+                    munger_path = os.path.join(self.mungers_path, f"{mu}.munger")
                     p, err = m.get_and_check_munger_params(munger_path)
                     if ui.fatal_error(err):
                         return values, err
@@ -293,17 +293,25 @@ class DataLoader:
             print(f"Warning: DataLoader results directory does not exist.")
         return super().__new__(cls)
 
-    def __init__(self, param_file: Optional[str] = None, dbname: Optional[str] = None):
+    def __init__(
+            self,
+            param_file: Optional[str] = None,
+            dbname: Optional[str] = None,
+            major_subdivision_file: Optional[str] = None,
+    ):
         """
         Inputs:
             param_file: Optional[str] = None, path to file of necessary parameters (defaults to `run_time.ini`)
             dbname: Optional[str] = None, name of database (defaults to name specified in param_file)
+            major_subdivision_file: str = None, path to file with columns
+                'jurisdiction', 'major_subjurisdiction_type'
 
         Returns DataLoader instance with attributes:
             d, dictionary of parameters from param_file
-            engine, sqlalchemy engine connecting to postgres database specified in param_file
+            db_engine, sqlalchemy engine connecting to postgres database specified in param_file
             session, sqlalchemy session for interacting with the database
-            analyzer, Analyzer instance for exporting or analyzing data in the database
+            analyzer, Analyzer instance for exporting or analyzing data in the database,
+                using subdivisions from <major_subdivision_file>, if given
         """
         # default param_file is run_time.ini in current directory
         if not param_file:
@@ -326,12 +334,14 @@ class DataLoader:
         )
 
         # connect to db
-        self.engine = None  # will be set in connect_to_db
+        self.db_engine = None  # will be set in connect_to_db
         self.session = None  # will be set in connect_to_db
         self.connect_to_db(dbname=dbname, db_param_file=param_file)
 
         # create analyzer with same db
-        self.analyzer = Analyzer(dbname=dbname, param_file=param_file)
+        self.analyzer = Analyzer(
+            dbname=dbname, param_file=param_file, major_subdivision_file=major_subdivision_file
+        )
 
     def connect_to_db(
         self,
@@ -350,10 +360,10 @@ class DataLoader:
                 to a newly-opened session on that engine
         """
         try:
-            self.engine, err = db.sql_alchemy_connect(
+            self.db_engine, err = db.sql_alchemy_connect(
                 db_param_file=db_param_file, dbname=dbname, db_params=db_params
             )
-            Session = sessionmaker(bind=self.engine)
+            Session = sessionmaker(bind=self.db_engine)
             self.session = Session()
         except Exception as exc:
             if dbname:
@@ -364,7 +374,9 @@ class DataLoader:
                 label = db_param_file
             else:
                 label = "connection"
-            err = ui.add_new_error(None, "database", label, f"Connection failed due to exception: {exc}")
+            err = ui.add_new_error(
+                None, "database", label, f"Connection failed due to exception: {exc}"
+            )
         if err:
             print("Unexpected error connecting to database.")
             ui.report(err, self.d["reports_and_plots_dir"], file_prefix="dataloading_")
@@ -431,11 +443,11 @@ class DataLoader:
         """
         err = None
         db_params = {
-            "host": self.engine.url.host,
-            "port": self.engine.url.port,
-            "user": self.engine.url.username,
-            "password": self.engine.url.password,
-            "dbname": self.engine.url.database,
+            "host": self.db_engine.url.host,
+            "port": self.db_engine.url.port,
+            "user": self.db_engine.url.username,
+            "password": self.db_engine.url.password,
+            "dbname": self.db_engine.url.database,
         }
         # point dataloader to default database
         new_err = self.change_db("postgres", db_params=db_params)
@@ -455,7 +467,7 @@ class DataLoader:
         Puts shallow copy of git repository contents in to the directory whose path is
             self.d["results_dir"] (creating that directory if necessary)
 
-            """
+        """
 
         # if the dataloader's results directory doesn't exist, create it
         results_dir = self.d["results_dir"]
@@ -468,7 +480,9 @@ class DataLoader:
             # remove the git information
             shutil.rmtree(os.path.join(results_dir, ".git"), ignore_errors=True)
             os.remove(os.path.join(results_dir, ".gitignore"))
-            print(f"Files downloaded from {git_repo_url} into {Path(results_dir).absolute()}")
+            print(
+                f"Files downloaded from {git_repo_url} into {Path(results_dir).absolute()}"
+            )
 
         else:
             print(
@@ -519,15 +533,17 @@ class DataLoader:
 
         # get rollup unit if required
         if rollup:
-            rollup_rut = db.get_major_subdiv_type(
-                self.session,
-                sdl.d["jurisdiction"],
-                file_path=os.path.join(
-                    self.d["repository_content_root"],
-                    "jurisdictions",
-                    "000_major_subjurisdiction_types.txt",
-                ),
-            )
+            if sdl.d["jurisdiction"] in self.analyzer.major_subdivision_type.keys():
+                rollup_rut = self.analyzer.major_subdivision_type[sdl.d["jurisdiction"]]
+            else:
+                rollup_rut = None
+                err = ui.add_new_error(
+                    err,
+                    "warn-file",
+                    "major_subjurisdiction_types.txt",
+                    f"Rollup cannot be done because no major subdivision found for {sdl.d['jurisdiction']}"
+                )
+
         else:
             rollup_rut = None
         load_error = sdl.load_results(rollup=rollup, rollup_rut=rollup_rut)
@@ -853,7 +869,9 @@ class DataLoader:
             )
 
         # report remaining errors
-        ui.report(err, report_dir, file_prefix="system_", suppress_warnings=suppress_warnings)
+        ui.report(
+            err, report_dir, file_prefix="system_", suppress_warnings=suppress_warnings
+        )
 
         # keep all election-juris pairs in success report, but remove empty failure reports
         failed_to_load = {k: v for k, v in failed_to_load.items() if v}
@@ -1014,7 +1032,7 @@ class DataLoader:
 
         if not err_str:
             # read contents of dump into db
-            err_str = db.restore_to_db(dbname, dump_file, self.engine.url)
+            err_str = db.restore_to_db(dbname, dump_file, self.db_engine.url)
         return err_str
 
     def load_single_external_data_set(
@@ -1220,7 +1238,8 @@ class DataLoader:
             columns=["Name", "ElectionType"],
         )
         path_to_election_dir = os.path.join(
-            self.d["repository_content_root"],"/jurisdictions/000_for_all_jurisdictions"
+            self.d["repository_content_root"],
+            "/jurisdictions/000_for_all_jurisdictions",
         )
         old = jm.get_element(path_to_election_dir, "Election")
         new = pd.concat([old, election_df]).drop_duplicates()
@@ -1301,7 +1320,7 @@ class DataLoader:
         overwrite_existing: bool = False,
         load_jurisdictions: bool = True,
         report_err_to_file: bool = True,
-            suppress_warnings: bool = False,
+        suppress_warnings: bool = False,
     ) -> (Dict[str, List[str]], Optional[dict]):
         """
         Required inputs:
@@ -1701,7 +1720,7 @@ def check_and_init_singledataloader(
     """
 
     # test parameters
-    par_file = os.path.join(results_dir,results_param_file)
+    par_file = os.path.join(results_dir, results_param_file)
     sdl = None
     d, err = ui.get_parameters(
         required_keys=constants.sdl_pars_req,
@@ -1713,7 +1732,7 @@ def check_and_init_singledataloader(
         return sdl, err
 
     # check consistency of munger and .ini file regarding elements to be read from ini file
-    new_err_2 = check_param_file_elements(d,mungers_path,results_param_file)
+    new_err_2 = check_param_file_elements(d, mungers_path, results_param_file)
     if new_err_2:
         err = ui.consolidate_errors([err, new_err_2])
         sdl = None
@@ -1728,9 +1747,11 @@ def check_and_init_singledataloader(
         )
         if sdl is None:
             err = ui.add_new_error(
-                err, "ini", results_param_file,
+                err,
+                "ini",
+                results_param_file,
                 f"Error creating SingleDataLoader instance. Required header is [election_results]. "
-                f"Required parameters are: {constants.sdl_pars_req}"
+                f"Required parameters are: {constants.sdl_pars_req}",
             )
     # check download date
     try:
@@ -1741,7 +1762,7 @@ def check_and_init_singledataloader(
     except ValueError:
         err_str = f"Date could not be parsed. Expected format is 'YYYY-MM-DD', actual is {d['results_download_date']}"
     if err_str:
-        err = ui.add_new_error(err, "ini",results_param_file,err_str)
+        err = ui.add_new_error(err, "ini", results_param_file, err_str)
     return sdl, err
 
 
@@ -1821,18 +1842,21 @@ class JurisdictionPrepper:
 
         # Feature create starter dictionary.txt with cdf_internal name
         #  used as placeholder for raw_identifier_value
-        dict_err = self.starter_dictionary(target_dir_for_starter_dictionary=target_dir_for_starter_dictionary)
+        dict_err = self.starter_dictionary(
+            target_dir_for_starter_dictionary=target_dir_for_starter_dictionary
+        )
 
         error = ui.consolidate_errors([error, asc_err, dict_err])
         ui.report(
-            error, self.d["reports_and_plots_dir"],
+            error,
+            self.d["reports_and_plots_dir"],
             file_prefix=f"prep_{self.d['name']}",
         )
         return error
 
     def add_standard_contests(
         self, juriswide_contests: list = None, other_districts: dict = None
-    ) ->Optional[dict]:
+    ) -> Optional[dict]:
         """
         Inputs:
             juriswide_contests: list = None, list of jurisdiction-wide contests (default is calculated from
@@ -1960,7 +1984,9 @@ class JurisdictionPrepper:
         return err
 
     def starter_dictionary(
-        self, include_existing=True, target_dir_for_starter_dictionary: Optional[str] = None
+        self,
+        include_existing=True,
+        target_dir_for_starter_dictionary: Optional[str] = None,
     ) -> Optional[dict]:
         """
         Inputs:
@@ -1996,7 +2022,10 @@ class JurisdictionPrepper:
 
         # add lines for CountItemTypes to dictionary
         w["CountItemType"] = pd.DataFrame(
-            [["CountItemType", cit, cit] for cit in constants.nist_standard["CountItemType"]],
+            [
+                ["CountItemType", cit, cit]
+                for cit in constants.nist_standard["CountItemType"]
+            ],
             columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
         )
 
@@ -2045,7 +2074,7 @@ class JurisdictionPrepper:
 
         for mu in sdl.munger_list:
             # get parameters
-            m_path = os.path.join(sdl.mungers_path,f"{mu}.munger")
+            m_path = os.path.join(sdl.mungers_path, f"{mu}.munger")
             mu_d, new_err = m.get_and_check_munger_params(m_path)
             # get ReportingUnit formula
             ru_formula = ""
@@ -2328,25 +2357,40 @@ def make_ini_file_batch(
             f"results_source={source}\nresults_note={results_note}\n"
         )
         ini_file_name = ".".join(f.split(".")[:-1]) + ".ini"
-        with open(os.path.join(target_directory,ini_file_name),"w") as p:
+        with open(os.path.join(target_directory, ini_file_name), "w") as p:
             p.write(par_text)
     return
 
 
 class Analyzer:
-    def __new__(cls, param_file=None, dbname=None):
-        """Checks if parameter file exists and is correct. If not, does
-        not create DataLoader object."""
+    def __new__(
+        cls,
+        param_file: str = None,
+        dbname: str = None,
+        major_subdivision_file: str = None,
+    ):
+        """
+        Optional inputs:
+            param_file: str = None, path to file with main parameters for [electiondata] and [postgres].
+                Default is "run_time.ini"
+            dbname: str = None, name of database. Default is name in <param_file>
+            major_subdivision_file: str = None, path to file with columns
+                'jurisdiction', 'major_subjurisdiction_type'
+        Checks:
+            parameter file exists and is has necessary parameters
+            connection to database
+            Major subdivision type available for each jurisdiction with data in the database
+        """
         try:
             if not param_file:
                 param_file = "run_time.ini"
-            d, postgres_param_err = ui.get_parameters(
-                required_keys=["dbname"],
+            db_params, postgres_param_err = ui.get_parameters(
+                required_keys=["dbname", "host", "port", "user", "password"],
                 param_file=param_file,
                 header="postgresql",
             )
             d, eda_err = ui.get_parameters(
-                required_keys=["reports_and_plots_dir"],
+                required_keys=["reports_and_plots_dir", "repository_content_root"],
                 param_file=param_file,
                 header="electiondata",
             )
@@ -2356,34 +2400,76 @@ class Analyzer:
                     return None
         except FileNotFoundError:
             print(
-                f"Parameter file '{param_file}' not found. Ensure that it is located"
-                f" in the current directory ({os.getcwd()}).\nAnalyzer object not created."
+                f"Parameter file '{param_file}' not found. .\nAnalyzer object not created."
             )
             return None
 
         if postgres_param_err or eda_err:
-            print("Parameter file missing requirements.")
+            print(f"Parameter file {param_file} missing requirements.")
             print(f"postgres: {postgres_param_err}")
             print(f"elections: {eda_err}")
             print("Analyzer object not created.")
             return None
 
+        # test connection to db
+        try:
+            db_engine, err = db.sql_alchemy_connect(db_params=db_params, dbname=dbname)
+            Session = sessionmaker(bind=db_engine)
+            session = Session()
+            # if error is fatal
+            if ui.fatal_error(err):
+                print(
+                    f"No Analyzer created, because connection not established to database with these parameters: \n"
+                    f"dbname={dbname}\ndb_params={db_params}"
+                )
+                return None
+            # if err contains warning (but no fatal error)
+            elif err:
+                print(f"Warning: {err}")
+        except Exception as exc:
+            print(
+                f"No Analyzer created, because connection not established to database with these parameters: \n"
+                f"dbname={dbname}\ndb_params={db_params}\n\n"
+                f"Exception raised: {exc}"
+            )
+            return None
+
+        # test major subdivision dictionary:
+        ok, err_str = check_major_subdivisions(
+            session=session,
+            content_root=d["repository_content_root"],
+            major_subdivision_file=major_subdivision_file,
+        )
+        if not ok:
+            print(err_str)
+            return None
+
+        if db_engine:
+            db_engine.dispose()
         return super().__new__(cls)
 
-    def __init__(self, param_file=None, dbname=None):
+    def __init__(
+        self,
+        param_file: str = None,
+        dbname: str = None,
+        major_subdivision_file: str = None,
+    ):
         """
         Optional inputs:
             param_file=None, if given, path to file with parameters necessary for creating an Analyzer
                 instance. Default is "run_time.ini"
             dbname=None, if given, name of database from which to export & analyze data. Default
                 is the value of the dbname parameter in the [postgres] section of the param_file
+            major_subdivision_file: str = None, path to file with columns
+                'jurisdiction', 'major_subjurisdiction_type'
 
         Creates instance of Analyzer with attributes:
             d, dictionary of parameters from param_file
             reports_and_plots_dir, path to directory for plots and reports created by the Analyzer
             repository_content_root, path to repository content root (for access to, e.g., the
-                file 000_major_subdivision_types.txt
+                file major_subdivision_types.txt
             session, sqlalchemy session connected to database
+            major_subdivision_type, dictionary mapping jurisdiction names to ReportingUnitType of major subdivision
         """
         if not param_file:
             param_file = "run_time.ini"
@@ -2401,6 +2487,13 @@ class Analyzer:
         eng, err = db.sql_alchemy_connect(db_param_file=param_file, dbname=dbname)
         Session = sessionmaker(bind=eng)
         self.session = Session()
+
+        # get dictionary of major subdivision types
+        self.major_subdivision_type, new_err = get_major_subdivisions(
+            session=self.session,
+            content_root=self.repository_content_root,
+            major_subdivision_file=major_subdivision_file,
+        )
 
     # testing methods
     def test_loaded_results(
@@ -2428,11 +2521,6 @@ class Analyzer:
                  may not view failing tests as fatal
         """
         err = None
-        major_subdiv_type = db.get_major_subdiv_type(
-            self.session,
-            juris_true_name,
-            content_root=self.repository_content_root,
-        )
 
         # consistency tests
         if not self.data_exists(election, juris_true_name):
@@ -2443,13 +2531,14 @@ class Analyzer:
                 f"\nNo data found",
             )
         if not self.check_totals_match_vote_types(
-            election, juris_true_name, sub_unit_type=major_subdiv_type
+            election, juris_true_name, sub_unit_type=self.major_subdivision_type[juris_true_name]
         ):
             err = ui.add_new_error(
                 err,
                 "warn-test",
                 f"Election: {election}; Jurisdiction: {juris_true_name}",
-                f"\nSum of other vote types does not always match total by {major_subdiv_type}",
+                f"\nSum of other vote types does not match total "
+                f"for every {self.major_subdivision_type[juris_true_name]}",
             )
         # report contests with unknown candidates
         bad_contests = self.get_contest_with_unknown_candidates(
@@ -2748,15 +2837,7 @@ class Analyzer:
         html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
         installed as well."""
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type = db.get_major_subdiv_type(
-            self.session,
-            jurisdiction,
-            file_path=os.path.join(
-                self.repository_content_root,
-                "jurisdictions",
-                "000_major_subjurisdiction_types.txt",
-            ),
-        )
+        subdivision_type = self.major_subdivision_type[jurisdiction]
         h_election_id = db.name_to_id(self.session, "Election", h_election)
         v_election_id = db.name_to_id(self.session, "Election", v_election)
         # *_type is either candidates or contests or parties
@@ -2879,13 +2960,13 @@ class Analyzer:
         return err
 
     def export_nist(
-        self, election: str, jurisdiction, major_subdivision: Optional[str] = None
+        self, election: str, jurisdiction,
     ) -> Union[str, Dict[str, Any]]:
         """picks either version 1.0 (json) or version 2.0 (xml) based on value of constants.nist_version"""
         if electiondata.constants.nist_version == "1.0":
             return self.export_nist_v1_json(election, jurisdiction)
         elif electiondata.constants.nist_version == "2.0":
-            return self.export_nist_v2(election, jurisdiction, major_subdivision)
+            return self.export_nist_v2(election, jurisdiction)
         else:
             return ""
 
@@ -2929,14 +3010,13 @@ class Analyzer:
         self,
         election: str,
         jurisdiction: str,
-        major_subdivision: Optional[str] = None,
     ) -> str:
         """exports NIST v2 xml string"""
         xml_tree, err = nist.nist_v2_xml_export_tree(
             self.session,
             election,
             jurisdiction,
-            major_subdivision=major_subdivision,
+            rollup_subdivision_type=self.major_subdivision_type[jurisdiction],
             issuer=electiondata.constants.default_issuer,
             issuer_abbreviation=electiondata.constants.default_issuer_abbreviation,
             status=electiondata.constants.default_status,
@@ -3034,27 +3114,19 @@ class Analyzer:
             election,
         )
         # loop through states, etc.
-        for state in vts.keys():
+        for jurisdiction in vts.keys():
             state_rows = list()
             # get vote-types, contest roll-up by vote type and contest-by-election-district types
             data_file_list, _ = db.data_file_list(self.session, election_id)
-            vote_types = {x for x in vts[state] if x != "total"}
-            district_types = contests_df[contests_df["jurisdiction"] == state]
-            state_id = db.name_to_id(self.session, "ReportingUnit", state)
-
-            # find major subdivision
-            major_sub_ru_type_name = db.get_major_subdiv_type(
-                self.session,
-                state,
-                file_path=os.path.join(self.repository_content_root),
-            )
+            vote_types = {x for x in vts[jurisdiction] if x != "total"}
+            district_types = contests_df[contests_df["jurisdiction"] == jurisdiction]
 
             # get dataframe of results, adding column for political party
             res, _ = db.export_rollup_from_db(
                 self.session,
-                state,
+                jurisdiction,
                 election,
-                major_sub_ru_type_name,
+                self.major_subdivision_type[jurisdiction],
                 "Candidate",
                 data_file_list,
                 exclude_redundant_total=True,
@@ -3077,7 +3149,7 @@ class Analyzer:
                     # find set of "good" contests of that type in that county --
                     # contests with candidates from all parties on party_list
                     good_dt_contests = contests_df[
-                        (contests_df.jurisdiction == state)
+                        (contests_df.jurisdiction == jurisdiction)
                         & (contests_df.ReportingUnitType == cdt)
                     ]["contest"].unique()
                     good_dt_contests_results = res[
@@ -3191,7 +3263,7 @@ class Analyzer:
                                         )
                                         state_rows.append(
                                             [
-                                                state,
+                                                jurisdiction,
                                                 county,
                                                 cdt,
                                                 party,
@@ -3202,7 +3274,7 @@ class Analyzer:
                                             ]
                                         )
             rows += state_rows
-            state_with_hyphens = jm.system_name_from_true_name(state)
+            state_with_hyphens = jm.system_name_from_true_name(jurisdiction)
             pd.DataFrame(state_rows, columns=cols).to_csv(
                 f"{state_with_hyphens}_state_export.csv", index=False
             )
@@ -3331,9 +3403,6 @@ class Analyzer:
             "count_item_type",
         ]
         p_year = re.compile(r"\d{4}")
-        major_subdiv = db.get_major_subdiv_type(
-            self.session, jurisdiction, content_root=self.repository_content_root
-        )
         elections = list(
             pd.read_sql_table("Election", self.session.bind)["Name"].unique()
         )
@@ -3348,7 +3417,7 @@ class Analyzer:
                 el,
                 jurisdiction,
                 contest=f"US President ({constants.abbr[jurisdiction]})",
-                sub_unit_type=major_subdiv,
+                sub_unit_type=self.major_subdivision_type[jurisdiction],
                 exclude_redundant_total=False,
             )
             missing = [c for c in (group_cols + ["count"]) if c not in df.columns]
@@ -3994,7 +4063,12 @@ def load_or_reload_all(
                 "No results had corresponding file in ini_files_for_results",
             )
         # report errors to file
-        err = ui.report(err, error_and_warning_dir, file_prefix="loading_", suppress_warnings=suppress_warnings)
+        err = ui.report(
+            err,
+            error_and_warning_dir,
+            file_prefix="loading_",
+            suppress_warnings=suppress_warnings,
+        )
     return err
 
 
@@ -4061,7 +4135,7 @@ def reload_juris_election(
             report_dir=report_dir,
             move_files=False,
             rollup=rollup,
-            election_jurisdiction_list=[(election_name, juris_name)], \
+            election_jurisdiction_list=[(election_name, juris_name)],
             suppress_warnings=suppress_warnings,
         )
         if load_err:
@@ -4280,3 +4354,116 @@ def export_notes_from_ini_files(
             for idx, r in df[df.election == el].iterrows():
                 f.write(f"{r['jurisdiction']}: {r['results_note']}\n\n")
     return
+
+
+def get_major_subdivisions(
+    session: Session = None,
+    content_root: Optional[str] = None,
+    major_subdivision_file: Optional[str] = None,
+) -> (Dict[str, str], Optional[dict]):
+    """
+    Optional inputs:
+        session: Session = None, sqlalchemy session
+        content_root: Optional[str] = None, path to repository content root
+        major_subdivision_file: Optional[str] = None, path to alternate file with columns 'jurisdiction',
+            'major_sub_jurisdiction_type'
+
+    Returns:
+        Dict[str, str], map whose keys are all jurisdictions for which major subdivision type was found
+        Optional[dict], error dictionary
+    """
+    err = None
+    subdiv_dict = dict()
+    # if file is given,
+    if major_subdivision_file:
+        # try to get the major subdivision type from the file
+        subdiv_dict = get_major_subdiv_dict_from_file(major_subdivision_file)
+        if subdiv_dict:
+            return subdiv_dict, err
+    elif content_root:
+        # try from file in repo
+        subdiv_dict = get_major_subdiv_dict_from_file(
+            os.path.join(
+                content_root,
+                constants.subdivision_reference_file_path,
+            ),
+        )
+        if subdiv_dict:
+            return subdiv_dict, err
+
+    # if not found in file or repo
+    elif session:
+        # find all jurisdiction_ids with data in db and look in db for their major subdivisions
+        jurisdiction_id_list = db.jurisdiction_id_list(session)
+        for jurisdiction_id in jurisdiction_id_list:
+            jurisdiction = db.name_from_id(session, "ReportingUnit", jurisdiction_id)
+            subdiv_dict[jurisdiction] = db.get_jurisdiction_hierarchy(
+                session, jurisdiction_id
+            )
+
+    return subdiv_dict, err
+
+
+def get_major_subdiv_dict_from_file(file_path: str) -> Optional[Dict[str, str]]:
+    """
+    Required inputs:
+        file_path: str, path to file with columns 'jurisdiction', 'major_sub_jurisdiction_type'
+
+    Returns:
+        Optional[Dict[str,str]], dictionary mapping jurisdictions to subdivision types
+            or, if any kind of error, None
+    """
+    try:
+        df = pd.read_csv(file_path, sep="\t", index_col="jurisdiction")
+        subdiv_dict = df["major_sub_jurisdiction_type"].to_dict()
+    except Exception as exc:
+        return None
+    return subdiv_dict
+
+
+def check_major_subdivisions(
+    session: Optional[Session] = None,
+    content_root: Optional[str] = None,
+    major_subdivision_file: Optional[str] = None,
+) -> (bool, Optional[str]):
+
+    """
+    Optional inputs:
+        session: Optional[Session] = None, sqlalchemy session
+        content_root: Optional[str] = None, path to repository content root
+        major_subdivision_file: Optional[str] = None, path to file with columns
+                'jurisdiction', 'major_sub_jurisdiction_type'
+
+    Returns:
+        bool, True if necessary major subdivisions can be found
+            from <major_subdivision_file> if given,
+            else from content_root if given,
+            else from database session, if given
+        Optional[str], error description, if there is an error
+    """
+    err_string = None
+    ok = True
+    major_subdiv_dict, err = get_major_subdivisions(
+        session=session,
+        content_root=content_root,
+        major_subdivision_file=major_subdivision_file,
+    )
+    if err:
+        err_string = f"No Analyzer created, because major subdivisions dictionary generated error: {err}"
+        ok = False
+
+    bad_jurisdictions = set()
+    if session:
+        for jurisdiction_id in db.jurisdiction_id_list(session):
+            # make sure jurisdiction has subdivision type
+            juris_name = db.name_from_id(session, "ReportingUnit", jurisdiction_id)
+        if (
+            juris_name not in major_subdiv_dict.keys()
+            or major_subdiv_dict[juris_name] is None
+        ):
+            bad_jurisdictions.update({juris_name})
+    if bad_jurisdictions:
+        err_string = f"No Analyzer created, because no major subdivisions were found for these jurisdictions:\n"
+        f"{sorted(list(bad_jurisdictions))}"
+        ok = False
+    return ok, err_string

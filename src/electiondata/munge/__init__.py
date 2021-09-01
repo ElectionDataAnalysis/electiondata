@@ -136,7 +136,9 @@ def add_regex_column(
         # replace via regex if possible; otherwise msg
         # # put informative error message in new_col (to be overwritten if no error)
         old = working[old_col].copy()
-        working[new_col] = working[old_col] + f"{constants.regex_failure_string} {pattern_str}"
+        working[new_col] = (
+            working[old_col] + f"{constants.regex_failure_string} {pattern_str}"
+        )
 
         # # where regex succeeds, replace error message with good value
         mask = working[old_col].str.match(p)
@@ -216,7 +218,9 @@ def add_column_from_formula(
 
         # add column to <working> dataframe via the concatenation formula
         if last_text:
-            working = add_constant_column(working, new_col, last_text[0], dtype="string")
+            working = add_constant_column(
+                working, new_col, last_text[0], dtype="string"
+            )
         else:
             err = ui.add_new_error(
                 err,
@@ -321,11 +325,16 @@ def replace_raw_with_internal_name(
     dictionary = raw_to_internal_dictionary_df(dictionary_df, element)
 
     # report values not matched by regex
-    regex_fail_mask = working[f"{element}_raw"].str.contains(constants.regex_failure_string)
+    regex_fail_mask = working[f"{element}_raw"].str.contains(
+        constants.regex_failure_string
+    )
     if regex_fail_mask.any():
         failed = "\n".join(sorted(working[regex_fail_mask][f"{element}_raw"].unique()))
         err = ui.add_new_error(
-            err, "warn-munger", munger_name, f"\nSome raw {element} values in {file_name} not matched by regular expression:\n{failed}"
+            err,
+            "warn-munger",
+            munger_name,
+            f"\nSome raw {element} values in {file_name} not matched by regular expression:\n{failed}",
         )
         if drop_unmatched:
             working = working[~regex_fail_mask]
@@ -353,7 +362,7 @@ def replace_raw_with_internal_name(
         # lines where regex failed don't count as dictionary failures
         unmatched_raw = [
             x for x in unmatched_raw if constants.regex_failure_string.strip() not in x
-        ] # TODO redundant with calculation above
+        ]  # TODO redundant with calculation above
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
         unmatched_str = "\n".join(unmatched_raw)
         e = f"\n{element}s (found with munger {munger_name}) not found in dictionary.txt :\n{unmatched_str}\n\n"

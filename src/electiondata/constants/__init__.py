@@ -127,8 +127,10 @@ if 1:
     default_subdivision_type = "county"
     subdivision_reference_file_path = os.path.join(
         "jurisdictions",
-        "000_major_subjurisdiction_types.txt",
+        "000_for_all_jurisdictions",
+        "major_subjurisdiction_types.txt",
     )
+
 
 def jurisdiction_wide_contests(abbr: str) -> List[str]:
     """
@@ -147,6 +149,7 @@ def jurisdiction_wide_contests(abbr: str) -> List[str]:
         f"{abbr} Treasurer",
         f"{abbr} Secretary of State",
     ]
+
 
 # display information
 if 1:

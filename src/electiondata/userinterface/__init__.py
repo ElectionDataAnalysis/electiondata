@@ -717,9 +717,7 @@ def report(
                 for nk in only_warns:
                     # prepare output string
                     nk_name = Path(nk).name
-                    out_str = (
-                        f"{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n"
-                    )
+                    out_str = f"{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n"
 
                     # write output
                     # write info to a .warnings file named for the error-type and name_key

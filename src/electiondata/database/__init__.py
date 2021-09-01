@@ -5,6 +5,7 @@ import psycopg2
 import sqlalchemy
 import sqlalchemy as sa
 import sqlalchemy.orm
+from sqlalchemy.orm import Session
 from sqlalchemy import (
     MetaData,
     Table,
@@ -21,7 +22,6 @@ from sqlalchemy import (
     TIMESTAMP,
     Boolean,
 )  # these are used, even if syntax-checker can't tell
-from sqlalchemy.orm import Session
 import io
 import csv
 import inspect
@@ -947,6 +947,30 @@ def vote_type_list(
     return vt_list, err_str
 
 
+def jurisdiction_id_list(session: Session) -> List[int]:
+    """
+    Required inputs:
+        session: Session,
+
+    Returns:
+        List[int], list of jurisdiction ids for jurisdictions with data in db
+            referenced by <session>
+    """
+    q = """
+    SELECT DISTINCT "ReportingUnit_Id" FROM _datafile;
+    """
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    cursor.execute(q)
+    results = cursor.fetchall()
+    juris_id_list = [x[0] for x in results]
+    if cursor:
+        cursor.close()
+    if connection:
+        connection.close()
+    return juris_id_list
+
+
 def data_file_list_cursor(
     cursor: psycopg2.extensions.cursor,
     election_id: int,
@@ -1127,15 +1151,14 @@ def get_relevant_election(session: Session, filters: List[str]) -> pd.DataFrame:
 
 
 def get_relevant_contests(
-    session: Session, filters: List[str], repository_content_root: str
+    session: Session, filters: List[str], major_subdivision_dictionary: Dict[str, str]
 ) -> pd.DataFrame:
     """
     Required inputs:
         session: Session, sqlalchemy database session
         filters: List[str], list containing one jurisdiction name and one election name
             (and possibly other strings as well)
-        repository_content_root: str, path to repository content root directory (so that major subdivision can
-        be found)
+        major_subdivision_dictionary: Dict[str, str], for finding major subdivision by jurisdiction
 
     Returns:
         pd.DataFrame, dataframe of all contests that have results for the first election and first jurisdiction
@@ -1144,25 +1167,16 @@ def get_relevant_contests(
 
     Notes:
         <filters> is expected to have exactly one election and exactly one jurisdiction. If there are more than
-    one, only the first of each will be used.
-        counts for ReportingUnits that don't roll up to a major subdivision (e.g., PR legislative results by district
+            one, only the first of each will be used.
+        Counts for ReportingUnits that don't roll up to a major subdivision (e.g., PR legislative results by district
         when major subdivision is municipality) will not be included.
     """
 
     election_id = list_to_id(session, "Election", filters)
     jurisdiction_id = list_to_id(session, "ReportingUnit", filters)
-    jurisdiction = name_from_id(
-        session, "ReportingUnit", jurisdiction_id
-    )
-    subdivision_type = get_major_subdiv_type(
-        session,
-        jurisdiction,
-        file_path=os.path.join(
-            repository_content_root,
-            "jurisdictions",
-            "000_major_subjurisdiction_types.txt",
-        ),
-    )
+    jurisdiction = name_from_id(session, "ReportingUnit", jurisdiction_id)
+    subdivision_type = major_subdivision_dictionary[jurisdiction]
+
     working = unsummed_vote_counts_with_rollup_subdivision_id(
         session,
         election_id,
@@ -1186,55 +1200,6 @@ def get_relevant_contests(
     # sort by contest name
     result_df.sort_values(by="name", inplace=True)
     return result_df
-
-
-def get_major_subdiv_type(
-    session: Session,
-    jurisdiction: str,
-    file_path: Optional[str] = None,
-    content_root: Optional[str] = None,
-) -> Optional[str]:
-    """Returns the type of the major subdivision, if found. Tries first from <file_path> (if given);
-    if that fails, or no file_path given, tries from a particular file in the repository
-    if the content root is given; if
-     that fails, tries to deduce from database. If nothing found, returns None"""
-    # if file is given,
-    if file_path:
-        # try to get the major subdivision type from the file
-        subdiv_from_file = get_major_subdiv_from_file(file_path, jurisdiction)
-        if subdiv_from_file:
-            return subdiv_from_file
-    elif content_root:
-        # try from file in repo
-        subdiv_from_repo = get_major_subdiv_from_file(
-            os.path.join(
-                content_root,
-                constants.subdivision_reference_file_path,
-            ),
-            jurisdiction,
-        )
-        if subdiv_from_repo:
-            return subdiv_from_repo
-    # if not found in file or repo, calculate major subdivision type from the db
-    jurisdiction_id = name_to_id(session, "ReportingUnit", jurisdiction)
-    subdiv_type = get_jurisdiction_hierarchy(session, jurisdiction_id)
-    return subdiv_type
-
-
-def get_major_subdiv_from_file(f_path: str, jurisdiction: str) -> Optional[str]:
-    """return major subdivision of <jurisdiction> from file <f_path> with columns
-    jurisdiction, major_sub_jurisdiction_type.
-     If anything goes wrong, return None"""
-    try:
-        df = pd.read_csv(f_path, sep="\t")
-        mask = df.jurisdiction == jurisdiction
-        if mask.any():
-            subdiv_type = df.loc[mask, "major_sub_jurisdiction_type"].unique()[0]
-        else:
-            subdiv_type = None
-    except:
-        subdiv_type = None
-    return subdiv_type
 
 
 def get_jurisdiction_hierarchy(session: Session, jurisdiction_id: int) -> Optional[str]:
@@ -1776,7 +1741,7 @@ def read_external(
 ) -> pd.DataFrame:
     """returns a dataframe with columns <fields>,
     where each field is in the ExternalDataSet table.
-    If <major_subdivisions_only> is True, returns only major sub-divisions
+    If <subdivision_type> is given, returns only reporting units of that subdivision_type
     (typically counties)"""
     if restrict_by_label:
         label_restriction = f""" AND "Label" = '{restrict_by_label}'"""
