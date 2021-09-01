@@ -145,7 +145,7 @@ def create_scatter(
     v_count,
     v_type,
     v_runoff,
-):
+) -> Optional[dict]:
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
 
@@ -259,7 +259,7 @@ def create_scatter(
     return results
 
 
-def package_results(data, jurisdiction, x, y, restrict=None):
+def package_results(data, jurisdiction, x, y, restrict=None) -> dict:
     results = {"jurisdiction": jurisdiction, "x": x, "y": y, "counts": []}
     if restrict and len(data.index) > restrict:
         data = get_remaining_averages(data, restrict)
@@ -452,7 +452,7 @@ def create_bar(
     contest: Optional[str],
     election_id: int,
     for_export: bool,
-):
+) -> List[dict]:
 
     connection = session.bind.raw_connection()
     cursor = connection.cursor()

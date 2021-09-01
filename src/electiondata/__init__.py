@@ -2830,12 +2830,29 @@ class Analyzer:
         v_category: str,
         v_count: str,  # vertical axis params
         fig_type: str = None,
-    ) -> Optional[list]:
-        """Used to create a scatter plot based on selected inputs. The fig_type parameter
-        is used when the user wants to actually create the visualization; this uses plotly
-        so any image extension that is supported by plotly is usable here. Currently supports
-        html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
-        installed as well."""
+    ) -> Optional[dict]:
+        """
+        Required inputs:
+            jurisdiction: str,
+            for horizontal axis of scatter plot:
+                h_election: str, election parameter 
+                h_category: str, category parameter (e.g., Population by Race or Candidate total)
+                h_count: str,  count label parameter (e.g., "Black" or "Joseph R. Biden", depending on category) 
+            for vertical axis of scatter plot (same definitions as for horizontal):
+                v_election: str,
+                v_category: str,
+                v_count: str,
+        Optional input:
+            fig_type: str = None, an image format string from plotly - as of 8/2021, includes
+                html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need
+                plotly-orca installed as well.
+
+        If <fig_type> is given and points for scatter are found, creates a scatter plot
+            in the self.reports_and_plots_dir directory with file extension and format determined by fig_type.
+
+        Returns:
+            dict, dictionary of data for creating the scatter plot (including title, axis titles, etc.)
+        """
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         subdivision_type = self.major_subdivision_type[jurisdiction]
         h_election_id = db.name_to_id(self.session, "Election", h_election)
@@ -2874,7 +2891,7 @@ class Analyzer:
         contest_type: str = None,
         contest: str = None,
         fig_type: str = None,
-    ) -> list:
+    ) -> List[dict]:
         """contest_type is an election district type, e.g.,
         state, congressional, state-senate, state-house, territory, etc.
         Complete list is given by the keys of <db.contest_type_mapping>"""
@@ -2917,7 +2934,7 @@ class Analyzer:
         election: str,
         jurisdiction: str,
         contest: str = None,
-    ) -> list:
+    ) -> List[dict]:
         """contest_type is one of state, congressional, state-senate, state-house"""
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
