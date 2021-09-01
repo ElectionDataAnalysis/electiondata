@@ -2541,7 +2541,7 @@ class Analyzer:
                 f"for every {self.major_subdivision_type[juris_true_name]}",
             )
         # report contests with unknown candidates
-        bad_contests = self.get_contest_with_unknown_candidates(
+        bad_contests = self.get_contests_with_unknown_candidates(
             election, juris_true_name, report_dir=self.reports_and_plots_dir
         )
         if bad_contests:
@@ -2754,7 +2754,7 @@ class Analyzer:
         # if nothing failed, count types are standard
         return True
 
-    def get_contest_with_unknown_candidates(
+    def get_contests_with_unknown_candidates(
         self,
         election: str,
         jurisdiction: str,
@@ -2950,7 +2950,8 @@ class Analyzer:
         jurisdiction: str,
         contest: str = None,
     ) -> Optional[List[dict]]:
-        """contest_type is one of state, congressional, state-senate, state-house"""
+        """Not ready for prime time
+        contest_type is one of state, congressional, state-senate, state-house"""
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         # bar chart always at one level below top reporting unit
@@ -3065,6 +3066,17 @@ class Analyzer:
     def export_election_to_tsv(
         self, target_file: str, election: str, jurisdiction: Optional[str] = None
     ):
+        """
+        Required inputs:
+            target_file: str, path to file
+            election: str, 
+        Optional inputs:
+            jurisdiction: Optional[str] = None, 
+            
+        Exports all election results from <self.session>'s database for the election <election> (and the jurisdiction
+            <jurisdiction>, if given) to the <target_file>. Columns exported are:  "Election",
+            "Contest", "Selection", "Party", "ReportingUnit", "VoteType", "Count", "Preliminary"
+        """
         # get internal ids for election (and maybe jurisdiction too)
         election_id = db.name_to_id(self.session, "Election", election)
         if jurisdiction is not None:
@@ -3110,7 +3122,9 @@ class Analyzer:
         self,
         election: str,
     ) -> (pd.DataFrame, list):
-        """for each jurisdiction in the election that has more than just 'total',
+        """
+        Not ready for prime time
+        for each jurisdiction in the election that has more than just 'total',
         Calculate all possible diff-in-diff values per Herron
         http://doi.org/10.1089/elj.2019.0544.
         Return df with columns election, overall jurisdiction, county-type jurisdiction,
@@ -3320,7 +3334,9 @@ class Analyzer:
         election_id: int,
         reportingunit_id: int,
     ) -> Dict[str, Dict[str, Any]]:
-        """given an election, a reporting unit -- not necessarily a whole jurisdiction--
+        """
+        Not ready for prime time
+        given an election, a reporting unit -- not necessarily a whole jurisdiction--
         and an element for pairing (e.g., "Contest"), return a dictionary mapping pairs of elements
         to pairs of vote shares (summing over everything else)"""
         vote_share = dict()
@@ -3339,7 +3355,8 @@ class Analyzer:
         election_id: int,
         jurisdiction_id: int,
     ) -> dict:
-        """Returns dictionary of vote counts by element (summing over everything else
+        """Not ready for prime time
+        Returns dictionary of vote counts by element (summing over everything else
         within the given election and reporting unit)"""
         if element == "CountItemType":
             name_field = "CountItemType"
@@ -3426,6 +3443,7 @@ class Analyzer:
     def pres_counts_by_vote_type_and_major_subdiv(
         self, jurisdiction: str
     ) -> pd.DataFrame:
+        """Not ready for prime time """
         # TODO return dataframe with columns jurisdiction, subdivision, year, CountItemType,
         #  total votes for pres in general election
         group_cols = [
@@ -3461,6 +3479,7 @@ class Analyzer:
         return df_pres
 
     def pres_counts_by_vote_type_and_major_subdiv_all(self) -> pd.DataFrame:
+        """Not ready for prime time"""
         all_df = pd.DataFrame()
         for jurisdiction in constants.abbr.keys():
             df = self.pres_counts_by_vote_type_and_major_subdiv(jurisdiction)
@@ -3744,28 +3763,52 @@ def aggregate_results(
 def data_exists(
     election: str,
     jurisdiction: str,
-    p_path: Optional[str] = None,
+    param_file: Optional[str] = None,
     dbname: Optional[str] = None,
 ) -> bool:
-    an = Analyzer(param_file=p_path, dbname=dbname)
-    return an.data_exists(election, jurisdiction)
+    """
+    Required inputs:
+        election: str,
+        jurisdiction: str,
+    Optional inputs:
+        param_file: Optional[str] = None,
+        dbname: Optional[str] = None,
+
+    Returns:
+        bool, True if database specified by parameters in <param_file> (or database named <dbname>, if given) has
+            any election results data for the given <election> and <jurisdiction>. Otherwise false.
+    """
+    analyzer = Analyzer(param_file=param_file,dbname=dbname)
+    return analyzer.data_exists(election, jurisdiction)
 
 
 def external_data_exists(
     election: str,
     jurisdiction: str,
-    p_path: Optional[str] = None,
+    param_file: Optional[str] = None,
     dbname: Optional[str] = None,
 ) -> bool:
-    an = Analyzer(param_file=p_path, dbname=dbname)
+    """
+    Required inputs:
+        election: str,
+        jurisdiction: str,
+    Optional inputs:
+        param_file: Optional[str] = None,
+        dbname: Optional[str] = None,
+
+    Returns:
+        bool, True if database specified by parameters in <param_file> (or database named <dbname>, if given) has
+            any external dataset content for the given election and jurisdiction. Otherwise false.
+    """
+    an = Analyzer(param_file=param_file,dbname=dbname)
     if not an:
         return False
 
     jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
     election_id = db.name_to_id(an.session, "Election", election)
 
-    # if the database doesn't have the reporting unit
-    if not jurisdiction_id:
+    # if the database doesn't have both the jurisdiction and the election
+    if (not jurisdiction_id) or (not election_id):
         # data doesn't exist
         return False
 
@@ -3784,68 +3827,6 @@ def external_data_exists(
         return True
 
 
-def check_totals_match_vote_types(
-    election: str,
-    jurisdiction: str,
-    sub_unit_type=constants.default_subdivision_type,
-    dbname: Optional[str] = None,
-    param_file: Optional[str] = None,
-) -> bool:
-    """Interesting if there are both total and other vote types;
-    otherwise trivially true"""
-    an = Analyzer(dbname=dbname, param_file=param_file)
-    return an.check_count_types_standard(election, jurisdiction)
-
-
-def contest_total(
-    election: str,
-    jurisdiction: str,
-    contest: str,
-    dbname: Optional[str] = None,
-    param_file: Optional[str] = None,
-    vote_type: Optional[str] = None,
-    reporting_unit: Optional[str] = None,
-    sub_unit_type: str = constants.default_subdivision_type,
-    contest_type: Optional[str] = "Candidate",
-) -> int:
-    df = aggregate_results(
-        election=election,
-        jurisdiction=jurisdiction,
-        dbname=dbname,
-        vote_type=vote_type,
-        sub_unit=reporting_unit,
-        sub_unit_type=sub_unit_type,
-        contest=contest,
-        contest_type=contest_type,
-        param_file=param_file,
-    )
-    return df["count"].sum()
-
-
-def check_count_types_standard(
-    election: str,
-    jurisdiction: str,
-    dbname: Optional[str] = None,
-    param_file: Optional[str] = None,
-) -> bool:
-    an = Analyzer(dbname=dbname, param_file=param_file)
-    return an.check_count_types_standard(election, jurisdiction)
-
-
-def get_contest_with_unknown_candidates(
-    election: str,
-    jurisdiction: str,
-    dbname: Optional[str] = None,
-    param_file: Optional[str] = None,
-) -> List[str]:
-    an = Analyzer(dbname=dbname, param_file=param_file)
-    if not an:
-        return [f"Failure to connect to database"]
-    return an.get_contest_with_unknown_candidates(
-        election, jurisdiction, report_dir=an.reports_and_plots_dir
-    )
-
-
 def load_results_df(
     session: Session,
     df: pd.DataFrame,
@@ -3858,10 +3839,32 @@ def load_results_df(
     election_id: int,
     rollup: bool = False,
     rollup_rut: str = constants.default_subdivision_type,
-    alt_dictionary: Optional[
-        str
-    ] = None,  # when given, use this dictionary, not the one in the jurisdiction directory
+    alt_dictionary: Optional[str] = None,
 ) -> Optional[dict]:
+    """
+    Required inputs:
+        session: Session,
+        df: pd.DataFrame, dataframe with columns 'Count', 'Candidate_raw', 'Party_raw', etc.
+        necessary_constants: dict, dictionary of constant values (e.g., if all rows of <df> are for a single Contest)
+        juris_true_name: str, for error reporting
+        file_name: str, for error reporting
+        munger_name: str, for error reporting
+        path_to_jurisdiction_dir: str, path to directory
+        datafile_id: int,
+        election_id: int,
+    Optional inputs:
+        rollup: bool = False,
+        rollup_rut: str = constants.default_subdivision_type,
+        alt_dictionary: Optional[str] = None,  path to file
+
+    Munges vote counts in dataframe into the <session>'s database, using the dictionary.txt file in the
+        <path_to_jurisdiction_dir> directory or, if given, the file specified by <alt_dictionary>. If
+        <rollup> then results are rolled up to the ReportingUnitType <rollup_rut> if given; the default is
+         <constants.default_subdivision_type>.
+
+    Returns:
+         Optional[dict], error dictionary
+    """
     err = None
     working = df.copy()
     # add text column for internal CountItemType name, Id columns for all but Count, removing raw-munged

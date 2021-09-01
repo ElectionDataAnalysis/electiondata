@@ -62,7 +62,7 @@ def test_election_data_exists(param_file):
     has_data = [
         (e, j)
         for (e, j) in ej_pairs
-        if data_exists(e, j, p_path=param_file, dbname=pytest.test_db)
+        if data_exists(e,j,param_file=param_file,dbname=pytest.test_db)
     ]
     assert set(has_data) == set(ej_pairs)
 
