@@ -2891,24 +2891,39 @@ class Analyzer:
         contest_type: str = None,
         contest: str = None,
         fig_type: str = None,
-    ) -> List[dict]:
-        """contest_type is an election district type, e.g.,
-        state, congressional, state-senate, state-house, territory, etc.
-        Complete list is given by the keys of <db.contest_type_mapping>"""
+    ) -> Optional[List[dict]]:
+        """
+        Required inputs:
+            election: str,
+            jurisdiction: str,
+        Optional input:
+            contest_type: str = None, an election district type, e.g.,
+                state, congressional, state-senate, state-house, territory, etc.
+                Complete list is given by the keys of <constants.contest_type_mapping>
+            contest: str = None,
+            fig_type: str = None, an image format string from plotly - as of 8/2021, includes
+                html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need
+                plotly-orca installed as well.
+
+        If <fig_type> is given and points for scatter are found, creates a scatter plot
+            in the self.reports_and_plots_dir directory with file extension and format determined by fig_type.
+
+        Returns:
+            List[dict],
+        """
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        # for now, bar charts can only handle jurisdictions where county is one level
+        # for now, bar charts can only handle jurisdictions where major subdivision type is one level
         # down from the jurisdiction
-        subdivision_type = db.get_jurisdiction_hierarchy(self.session, jurisdiction_id)
-        # bar chart always at one level below top reporting unit
+        # TODO is this still true? ^^
         agg_results = an.create_bar(
             self.session,
-            jurisdiction_id,
-            subdivision_type,
-            contest_type,
-            contest,
             election_id,
-            False,
+            jurisdiction_id,
+            self.major_subdivision_type[jurisdiction],
+            contest_district_type=contest_type,
+            contest_or_contest_group=contest,
+            for_export = False,
         )
         if fig_type and agg_results:
             for agg_result in agg_results:
@@ -2934,20 +2949,18 @@ class Analyzer:
         election: str,
         jurisdiction: str,
         contest: str = None,
-    ) -> List[dict]:
+    ) -> Optional[List[dict]]:
         """contest_type is one of state, congressional, state-senate, state-house"""
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type = db.get_jurisdiction_hierarchy(self.session, jurisdiction_id)
         # bar chart always at one level below top reporting unit
         agg_results = an.create_bar(
             self.session,
-            jurisdiction_id,
-            subdivision_type,
-            None,
-            contest,
             election_id,
-            True,
+            jurisdiction_id,
+            self.major_subdivision_type[jurisdiction],
+            contest_or_contest_group=contest,
+            for_export=True,
         )
         return agg_results
 
@@ -4223,9 +4236,9 @@ def reload_juris_election(
 
 def datafile_info(
     connection,
-    ini_filename,
-    results_short_name,
-    file_name,
+    ini_filename: str,
+    results_short_name: str,
+    file_name: str,
     download_date: str,
     source: str,
     note: str,
@@ -4332,6 +4345,20 @@ def export_notes_from_ini_files(
     election: Optional[str] = None,
     jurisdiction: Optional[str] = None,
 ):
+    """
+    Required inputs:
+        directory: str, path to directory
+        target_file: str, path to file
+
+    Optional inputs:
+        election: Optional[str] = None,
+        jurisdiction: Optional[str] = None,
+
+    Creates <target_file> containing a summary of all results_notes parameter values from the .ini
+        files in <directory> or its subdirectories. If <election> (resp. <jurisdiction>) is given,
+        ignores all .ini files whose election (resp. jurisdiction) parameter value matches
+        <election> (resp. <jurisdiction>).
+    """
     df = pd.DataFrame(columns=["election", "jurisdiction", "results_note"])
     # collect notes
     try:
