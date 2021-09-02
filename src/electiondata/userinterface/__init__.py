@@ -928,7 +928,7 @@ def get_contest_type_display(item: str) -> str:
 
 
 def get_filtered_input_options(
-    session: Session, menu_type: str, filters: List[str], repository_content_root: str
+    session: Session, menu_type: str, filters: List[str], major_subdivision_type: Dict[str, str]
 ) -> List[Dict[str, Any]]:
     """Display dropdown menu options for menu <menu_type>, limited to any strings in <filters>
     (unless <filters> is None, in which case all are displayed. Sort as necessary"""
@@ -957,7 +957,7 @@ def get_filtered_input_options(
         if filters:
             df = df[df["parent"].isin(filters)]
     elif menu_type == "contest_type":
-        contest_df = db.get_relevant_contests(session, filters, repository_content_root)
+        contest_df = db.get_relevant_contests(session, filters, major_subdivision_type)
         contest_types = contest_df["type"].unique()
         contest_types.sort()
         dropdown_options = {
@@ -988,7 +988,7 @@ def get_filtered_input_options(
             ]
         ).sort_values(by=["parent", "type", "name"])
         # define input options for each particular contest
-        contest_df = db.get_relevant_contests(session, filters, repository_content_root)
+        contest_df = db.get_relevant_contests(session, filters, major_subdivision_type)
         contest_df = contest_df[contest_df["type"].isin(filters)].sort_values(
             by=["parent", "type", "name"]
         )

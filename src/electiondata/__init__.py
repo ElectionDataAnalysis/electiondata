@@ -2829,7 +2829,7 @@ class Analyzer:
         try:
             filters_mapped = ui.get_contest_type_mappings(filters)
             results = ui.get_filtered_input_options(
-                self.session, input_str, filters_mapped, self.repository_content_root
+                self.session, input_str, filters_mapped, self.major_subdivision_type
             )
         except Exception as exc:
             results = None
