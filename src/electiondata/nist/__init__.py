@@ -17,9 +17,7 @@ def nist_v2_xml_export_tree(
     session: Session,
     election: str,
     jurisdiction: str,
-    rollup: bool = False,
-    major_subdivision: Optional[str] = None,
-    sub_div_type_file: Optional[str] = None,
+    rollup_subdivision_type: Optional[str] = None,
     issuer: str = constants.default_issuer,
     issuer_abbreviation: str = constants.default_issuer_abbreviation,
     status: str = constants.default_status,
@@ -29,9 +27,7 @@ def nist_v2_xml_export_tree(
     from the given election and jurisdiction. Note that all available results will
     be exported. I.e., if database has precinct-level results, the tree will
     contain precinct-level results.
-    Major subdivision for rollup is <major_subdivision> if that's given;
-    otherwise major subdivision is read from <sub_div_type_file> if given;
-    otherwise pulled from db.
+    Major subdivision for rollup is <rollup_subdivision_type> ;
     """
     err = None
     # set up
@@ -50,16 +46,9 @@ def nist_v2_xml_export_tree(
     # include jurisdiction id in gp unit ids
     gpu_idxs = {jurisdiction_id}
 
-    if rollup:
-        # get major subdivision type if not provided
-        if not major_subdivision:
-            major_subdivision = db.get_major_subdiv_type(
-                session, jurisdiction, file_path=sub_div_type_file
-            )
-
-    # get vote count data
+    # get vote count data (if rollup_subdivision_type is None, no rollup will happen)
     results_df = db.read_vote_count_nist(
-        session, election_id, jurisdiction_id, rollup_ru_type=major_subdivision
+        session, election_id, jurisdiction_id, rollup_ru_type=rollup_subdivision_type
     )
 
     # collect ids for gp units that have vote counts, gp units that are election districts

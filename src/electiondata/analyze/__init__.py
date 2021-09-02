@@ -145,7 +145,7 @@ def create_scatter(
     v_count,
     v_type,
     v_runoff,
-):
+) -> Optional[dict]:
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
 
@@ -259,7 +259,7 @@ def create_scatter(
     return results
 
 
-def package_results(data, jurisdiction, x, y, restrict=None):
+def package_results(data, jurisdiction, x, y, restrict=None) -> dict:
     results = {"jurisdiction": jurisdiction, "x": x, "y": y, "counts": []}
     if restrict and len(data.index) > restrict:
         data = get_remaining_averages(data, restrict)
@@ -446,30 +446,50 @@ def get_votecount_data(
 
 def create_bar(
     session: Session,
-    top_ru_id: int,
-    subdivision_type: str,
-    contest_type: Optional[str],
-    contest: Optional[str],
     election_id: int,
-    for_export: bool,
-):
+    jurisdiction_id: int,
+    subdivision_type: str,
+    contest_district_type: Optional[str] = None,
+    contest_or_contest_group: Optional[str] = None,
+    for_export: bool = True,
+) -> Optional[List[dict]]:
+    """
+    Required inputs:
+        session: Session, sqlalchemy session
+        election_id: int,
+        jurisdiction_id: int,
+        subdivision_type: str,
+    Optional inputs:
+        contest_district_type: Optional[str] = None,
+        contest_or_contest_group: Optional[str] = None, from user-facing menu, either the name of a contest or of a
+            group of contests, e.g., "All congressional"
+        for_export: bool = True,
 
+    Returns:
+        List[dict], list of dictionaries, where each dictionary contains information to create a bar
+            chart. The bar charts in the list are chosen via an algorithm favoring charts with a single outlier
+            county whose impact on the margin is large.
+            # TODO document algorithm details in assign_anomaly_score(unsummed)
+            Bar charts are restricted to results for the <contest_or_contest_group> , if given,and also
+            from the contests with districts of type <contest_district_type>, if given
+    """
+    # connect to db via psycopg2
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
 
     unsummed = db.unsummed_vote_counts_with_rollup_subdivision_id(
-        session, election_id, top_ru_id, subdivision_type
+        session, election_id, jurisdiction_id, subdivision_type
     )
 
-    if contest_type:
-        contest_type = ui.get_contest_type_mapping(contest_type)
-        unsummed = unsummed[unsummed["contest_district_type"] == contest_type]
+    if contest_district_type:
+        contest_district_type = ui.get_contest_type_mapping(contest_district_type)
+        unsummed = unsummed[unsummed["contest_district_type"] == contest_district_type]
 
-    # through front end, contest_type must be truthy if contest is truthy
+    # through VoteVisualizer front end, contest_type must be truthy if contest is truthy
     # Only filter when there is an actual contest passed through, as opposed to
     # "All congressional" as an example
-    if contest and not contest.startswith("All "):
-        unsummed = unsummed[unsummed["Contest"] == contest]
+    if contest_or_contest_group and not contest_or_contest_group.startswith("All "):
+        unsummed = unsummed[unsummed["Contest"] == contest_or_contest_group]
 
     multiple_ballot_types = len(unsummed["CountItemType"].unique()) > 1
     groupby_cols = [
@@ -541,7 +561,7 @@ def create_bar(
             0
         ]
         y_party_abbr = create_party_abbreviation(y_party)
-        jurisdiction = db.name_from_id_cursor(cursor, "ReportingUnit", top_ru_id)
+        jurisdiction = db.name_from_id_cursor(cursor, "ReportingUnit", jurisdiction_id)
 
         pivot_df = pd.pivot_table(
             temp_df, values="Count", index=["Name"], columns="Selection", fill_value=0
@@ -577,7 +597,7 @@ def create_bar(
             acted = "widened"
         results["votes_at_stake"] = f"Outlier {acted} margin by ~ {votes_at_stake}"
         results["margin"] = human_readable_numbers(results["margin_raw"])
-        results["preliminary"] = db.is_preliminary(cursor, election_id, top_ru_id)
+        results["preliminary"] = db.is_preliminary(cursor, election_id, jurisdiction_id)
 
         # display ballot info
         if multiple_ballot_types:
@@ -595,8 +615,8 @@ def create_bar(
         results[
             "title"
         ] = f"""{results["count_item_type"].replace("-", " ").title()} Ballots Reported"""
-        download_date = db.data_file_download(cursor, election_id, top_ru_id)
-        if db.is_preliminary(cursor, election_id, top_ru_id) and download_date:
+        download_date = db.data_file_download(cursor, election_id, jurisdiction_id)
+        if db.is_preliminary(cursor, election_id, jurisdiction_id) and download_date:
             results[
                 "title"
             ] = f"""{results["title"]} as of {download_date} (preliminary)"""
@@ -606,7 +626,7 @@ def create_bar(
     return result_list
 
 
-def assign_anomaly_score(data):
+def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
     """adds a new column called score between 0 and 1; 1 is more anomalous.
     Also adds a `unit_id` column which assigns a score to each unit of analysis
     that is considered. For example, we may decide to look at anomalies across each
@@ -742,7 +762,7 @@ def assign_anomaly_score(data):
     return df
 
 
-def get_most_anomalous(data, n):
+def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
     """Gets n contest, with 2 from largest votes at stake ratio
     and 1 with largest score. If 2 from votes at stake cannot be found
     (bc of threshold for score) then we fill in the top n from scores"""
@@ -801,7 +821,7 @@ def get_most_anomalous(data, n):
     return df
 
 
-def euclidean_zscore(li):
+def euclidean_zscore(li: List[List[float]]) -> List[float]:
     """Take a list of vectors -- all in the same R^k,
     returns a list of the z-scores of the vectors -- each relative to the ensemble"""
     distance_list = [sum([dist.euclidean(item, y) for y in li]) for item in li]
@@ -812,7 +832,7 @@ def euclidean_zscore(li):
         return list(stats.zscore(distance_list))
 
 
-def calculate_votes_at_stake(data) -> pd.DataFrame:
+def calculate_votes_at_stake(data: pd.DataFrame) -> pd.DataFrame:
     """Move the most anomalous pairing to the equivalent of the second-most anomalous
     and calculate the differences in votes that would be returned"""
     df = pd.DataFrame()
@@ -900,7 +920,7 @@ def calculate_votes_at_stake(data) -> pd.DataFrame:
     return df
 
 
-def create_candidate_contests(df, columns):
+def create_candidate_contests(df: pd.DataFrame, columns: List[str]) -> pd.DataFrame:
     contest_df = (
         df["VoteCount"]
         .merge(df["Contest"], how="left", left_on="Contest_Id", right_index=True)
@@ -926,7 +946,9 @@ def create_candidate_contests(df, columns):
     return contest_df
 
 
-def create_ballot_measure_contests(df, columns):
+def create_ballot_measure_contests(
+    df: pd.DataFrame, columns: List[str]
+) -> pd.DataFrame:
     ballotmeasure_df = (
         df["ContestSelectionJoin"]
         .merge(
@@ -953,7 +975,7 @@ def create_ballot_measure_contests(df, columns):
     return ballotmeasure_df
 
 
-def get_unit_by_column(data, column):
+def get_unit_by_column(data: pd.DataFrame, column: str) -> List[int]:
     """Given a dataframe of results, return a list of unique unit_ids
     that are sorted in desc order by the column's value"""
     data = data[["unit_id", column]]
@@ -962,7 +984,7 @@ def get_unit_by_column(data, column):
     return list(data["unit_id"].unique())
 
 
-def human_readable_numbers(value):
+def human_readable_numbers(value: float) -> str:
     abs_value = abs(value)
     if abs_value < 10:
         return str(value)
@@ -974,7 +996,7 @@ def human_readable_numbers(value):
         return "{:,}".format(round(value, -3))
 
 
-def sort_pivot_by_margins(df):
+def sort_pivot_by_margins(df: pd.DataFrame) -> pd.DataFrame:
     """grab the row with the highest anomaly score, then sort the remainder by
     margin. The sorting order depends on whether the anomalous row is >50% or <50%"""
 

@@ -33,3 +33,14 @@ ReportingUnit	Northern Mariana Islands;MP Senate District 2	Northern Mariana Isl
 ReportingUnit	Northern Mariana Islands;MP Senate District 3	Northern Mariana Islands;MP Senate District 3
 ReportingUnit	Northern Mariana Islands;US House MP District 1	Northern Mariana Islands;US House MP District 1
 ReportingUnit	Northern Mariana Islands	Northern Mariana Islands
+CountItemType	absentee	absentee
+CountItemType	absentee-fwab	absentee-fwab
+CountItemType	absentee-in-person	absentee-in-person
+CountItemType	absentee-mail	absentee-mail
+CountItemType	early	early
+CountItemType	election-day	election-day
+CountItemType	provisional	provisional
+CountItemType	seats	seats
+CountItemType	total	total
+CountItemType	uocava	uocava
+CountItemType	write-in	write-in

@@ -127,11 +127,34 @@ if 1:
     default_subdivision_type = "county"
     subdivision_reference_file_path = os.path.join(
         "jurisdictions",
-        "000_major_subjurisdiction_types.txt",
+        "000_for_all_jurisdictions",
+        "major_subjurisdiction_types.txt",
     )
+
+
+def jurisdiction_wide_contests(abbr: str) -> List[str]:
+    """
+    Inputs:
+        abbr: str, abbreviation for jurisdiction (e.g., TX)
+
+    Returns:
+        List[str], standard list of jurisdiction-wide contets
+    """
+    return [
+        f"US President ({abbr})",
+        f"{abbr} Governor",
+        f"US Senate {abbr}",
+        f"{abbr} Attorney General",
+        f"{abbr} Lieutenant Governor",
+        f"{abbr} Treasurer",
+        f"{abbr} Secretary of State",
+    ]
+
 
 # display information
 if 1:
+    """maps ReportingUnitType of election district of contest to the user-facing label for that type of contest
+    for use in Analyzer.display_options()"""
     contest_type_mappings = {
         "congressional": "Congressional",
         "state": "Statewide",
@@ -433,9 +456,9 @@ if 1:
         "results_note",
         "jurisdiction",
         "election",
+        "is_preliminary",
     ]
     sdl_pars_opt = [
-        "jurisdiction_path",
         "CandidateContest",
         "BallotMeasureContest",
         "BallotMeasureSelection",
@@ -444,7 +467,6 @@ if 1:
         "CountItemType",
         "ReportingUnit",
         "Contest",
-        "is_preliminary",
     ]
     multi_data_loader_pars = [
         "results_dir",
@@ -572,6 +594,7 @@ if 1:
         "warn-munger",
         "warn-test",
     ]
+    regex_failure_string = " <- Does not match regular expression"
 # regex patterns
 if 1:
     brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")

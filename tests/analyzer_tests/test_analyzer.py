@@ -1,18 +1,11 @@
 import results
-from electiondata import Analyzer, DataLoader
-from electiondata import data_exists
-from electiondata import external_data_exists
 from typing import Dict, Any, List, Optional
-import os
-import datetime
-from pathlib import Path
-import pytest
 
 
 # some lists of dictionaries need to be sorted by a particular key
 def dict_sort(
     list_of_dicts: List[Dict[str, Any]],
-    sort_key: Optional[str] == None,
+    sort_key: Optional[str] = None,
     drop_key: bool = True,
 ) -> List[Dict[str, Any]]:
     """If <key> is given, sort items by value of that key in each dictionary.
@@ -29,28 +22,7 @@ def dict_sort(
     return new
 
 
-@pytest.fixture
-def name_test_db():
-    ts = datetime.datetime.now().strftime("%m%d_%H%M")
-    pytest.test_db = f"pytest_{ts}"
-
-
-# Required to initialize the pytest.* variables
-def test_config(name_test_db):
-    return pytest.test_db
-
-
-# load test data to the test db
-def test_load_test_data(param_file):
-    dl = DataLoader(param_file=param_file)  # test db will be created later
-    tests_path = os.path.join(Path(dl.d["repository_content_root"]).parent, "tests")
-    db_dump = os.path.join(
-        tests_path, "000_data_for_pytest", "postgres_test_db_dump.tar"
-    )
-    err_str = dl.load_data_from_db_dump(dbname=pytest.test_db, dump_file=db_dump)
-
-
-def test_election_data_exists(param_file):
+def test_election_data_exists(analyzer):
     ej_pairs = [
         ("2016 General", "Georgia"),
         ("2018 General", "Georgia"),
@@ -59,25 +31,14 @@ def test_election_data_exists(param_file):
         ("2018 General", "North Carolina"),
         # ("2020 Primary", "Alaska"),
     ]
-    has_data = [
-        (e, j)
-        for (e, j) in ej_pairs
-        if data_exists(e, j, p_path=param_file, dbname=pytest.test_db)
-    ]
+    has_data = [(e, j) for (e, j) in ej_pairs if analyzer.data_exists(e, j)]
     assert set(has_data) == set(ej_pairs)
 
 
-"""def test_census_data_exists(param_file):
-    assert external_data_exists("2018 General", "Georgia", p_path=param_file, dbname=pytest.test_db)
-"""
-
-
-def test_contest_updatelabels_display(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_contest_updatelabels_display(analyzer):
     new = dict_sort(
         analyzer.display_options(
             "contest",
-            verbose=True,
             filters=["2018 General", "Georgia", "State Senate"],
         ),
         sort_key="order_by",
@@ -89,43 +50,33 @@ def test_contest_updatelabels_display(param_file):
 
 
 # should be non-null on DB with any data
-def test_election_display(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
-    assert analyzer.display_options("election", verbose=True)
+def test_election_display(analyzer):
+    assert analyzer.display_options("election")
 
 
 # should be non-null on DB with any data
-def test_jurisdiction_display(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
-    assert analyzer.display_options("jurisdiction", verbose=True)
+def test_jurisdiction_display(analyzer):
+    assert analyzer.display_options("jurisdiction")
 
 
 # should be non-null on DB with data from 2018 General
-def test_jurisdiction_display_filtered(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
-    assert analyzer.display_options(
-        "jurisdiction", verbose=True, filters=["2018 General"]
-    )
+def test_jurisdiction_display_filtered(analyzer):
+    assert analyzer.display_options("jurisdiction", filters=["2018 General"])
 
 
 # ### Test bar chart flow ###
-def test_contest_type_display(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_contest_type_display(analyzer):
     new = dict_sort(
-        analyzer.display_options(
-            "contest_type", verbose=True, filters=["2018 General", "Georgia"]
-        ),
+        analyzer.display_options("contest_type", filters=["2018 General", "Georgia"]),
         sort_key="order_by",
     )
     expected = dict_sort(results.ga_2018_contest_types, sort_key="order_by")
     assert new == expected
 
 
-def test_contest_display(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_contest_display(analyzer):
     contests = analyzer.display_options(
         "contest",
-        verbose=True,
         filters=["2018 General", "Georgia", "Congressional"],
     )
     new = dict_sort(contests, sort_key="order_by")
@@ -133,8 +84,7 @@ def test_contest_display(param_file):
     assert new == expected
 
 
-def test_bar_congressional(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_bar_congressional(analyzer):
     assert (
         analyzer.bar(
             "2018 General", "Georgia", "Congressional", "US House GA District 3"
@@ -144,7 +94,6 @@ def test_bar_congressional(param_file):
 
 
 """def test_alaska_non_county_hierarchy(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
     assert (
         analyzer.scatter(
             "Alaska",
@@ -160,16 +109,14 @@ def test_bar_congressional(param_file):
 """
 
 
-def test_bar_all_state(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_bar_all_state(analyzer):
     assert (
         analyzer.bar("2018 General", "North Carolina", "State House", "All State House")
         == results.nc_2018_bar_statehouse
     )
 
 
-def test_bar_all_congressional(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_bar_all_congressional(analyzer):
     assert (
         analyzer.bar(
             "2018 General", "North Carolina", "Congressional", "All Congressional"
@@ -178,21 +125,10 @@ def test_bar_all_congressional(param_file):
     )
 
 
-### check scatter flow ###
-# should be non-null if there is any georgia data in the DB
-def test_election_display(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
-    assert analyzer.display_options(
-        "election", verbose=True, filters=["Georgia", "county"]
-    )
-
-
-def test_category_display(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_category_display(analyzer):
     new = dict_sort(
         analyzer.display_options(
             "category",
-            verbose=True,
             filters=["North Carolina", "county", "2018 General"],
         ),
         sort_key="order_by",
@@ -201,12 +137,10 @@ def test_category_display(param_file):
     assert new == expected
 
 
-def test_count_display(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_count_display(analyzer):
     new = dict_sort(
         analyzer.display_options(
             "count",
-            verbose=True,
             filters=["Georgia", "county", "2018 General", "Candidate total"],
         ),
         sort_key="order_by",
@@ -215,8 +149,7 @@ def test_count_display(param_file):
     assert new == expected
 
 
-def test_scatter_candidates(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_scatter_candidates(analyzer):
     assert (
         analyzer.scatter(
             "Georgia",
@@ -231,8 +164,7 @@ def test_scatter_candidates(param_file):
     )
 
 
-def test_scatter_candidates_longname(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_scatter_candidates_longname(analyzer):
     assert (
         analyzer.scatter(
             "Georgia",
@@ -247,8 +179,7 @@ def test_scatter_candidates_longname(param_file):
     )
 
 
-def test_scatter_candidates_votetype(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_scatter_candidates_votetype(analyzer):
     assert (
         analyzer.scatter(
             "Georgia",
@@ -263,8 +194,7 @@ def test_scatter_candidates_votetype(param_file):
     )
 
 
-def test_scatter_multi_election(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_scatter_multi_election(analyzer):
     assert (
         analyzer.scatter(
             "Georgia",
@@ -279,8 +209,7 @@ def test_scatter_multi_election(param_file):
     )
 
 
-def test_scatter_party(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_scatter_party(analyzer):
     assert (
         analyzer.scatter(
             "Georgia",
@@ -295,8 +224,7 @@ def test_scatter_party(param_file):
     )
 
 
-def test_scatter_party_votetype(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_scatter_party_votetype(analyzer):
     assert (
         analyzer.scatter(
             "Georgia",
@@ -312,8 +240,7 @@ def test_scatter_party_votetype(param_file):
 
 
 # check that rollup_dataframe to county level works correctly
-def test_scatter_county_rollup(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_scatter_county_rollup(analyzer):
     assert (
         analyzer.scatter(
             "North Carolina",
@@ -329,12 +256,10 @@ def test_scatter_county_rollup(param_file):
 
 
 # check that search works correctly
-def test_candidate_search_display(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_candidate_search_display(analyzer):
     new = dict_sort(
         analyzer.display_options(
             "bishop",
-            verbose=True,
             filters=["Georgia", "county", "2018 General", "Congressional"],
         ),
         sort_key="order_by",
@@ -343,12 +268,10 @@ def test_candidate_search_display(param_file):
     assert new == expected
 
 
-def test_count_contest_display(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_count_contest_display(analyzer):
     new = dict_sort(
         analyzer.display_options(
             "count",
-            verbose=True,
             filters=["Georgia", "county", "2018 General", "Contest total"],
         ),
         sort_key="order_by",
@@ -358,10 +281,9 @@ def test_count_contest_display(param_file):
 
 
 """def test_census_count_display(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
     new = dict_sort(
         analyzer.display_options(
-            "count",verbose=True,filters=["Georgia","2018 General","Census data"]
+            "count",filters=["Georgia","2018 General","Census data"]
         ),
         sort_key="order_by"
     )
@@ -370,11 +292,10 @@ def test_count_contest_display(param_file):
 
 
 
-def test_census_category_display(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_census_category_display(analyzer):
     new = dict_sort(
         analyzer.display_options(
-            "category",verbose=True,filters=["Georgia","county","2018 General"]
+            "category",filters=["Georgia","county","2018 General"]
         ),
         sort_key="order_by"
     )
@@ -383,8 +304,7 @@ def test_census_category_display(param_file):
 
 
 
-def test_census_scatter(param_file):
-    analyzer = Analyzer(param_file=param_file, dbname=pytest.test_db)
+def test_census_scatter(analyzer):
     assert (
         analyzer.scatter(
             "Georgia",
@@ -398,7 +318,6 @@ def test_census_scatter(param_file):
         == results.ga_2018_census_scatter
     )
 """
+
+
 # delete test database
-def delete_test_db(param_file):
-    dl = DataLoader(param_file=param_file, dbname=pytest.test_db)
-    dl.close_and_erase()
