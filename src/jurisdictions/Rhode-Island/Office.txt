@@ -119,5 +119,5 @@ RI Governor	Rhode Island
 US Senate RI	Rhode Island
 RI Attorney General	Rhode Island
 RI Lieutenant Governor	Rhode Island
-RI Treasurer	Rhode Island
+RI General Treasurer	Rhode Island
 RI Secretary of State	Rhode Island

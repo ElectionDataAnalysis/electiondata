@@ -88,11 +88,64 @@ def recast_options(
     return options, err
 
 
+def check_dictionary(dictionary_path: str) -> Optional[dict]:
+    err = None
+    dictionary_dir = Path(dictionary_path).parent.name
+
+    # dedupe the dictionary
+    clean_and_dedupe(dictionary_path, clean_candidates=True)
+    # check that no entry is null
+    df = pd.read_csv(dictionary_path, **constants.standard_juris_csv_reading_kwargs)
+    null_mask = df.T.isnull().any()
+    if null_mask.any():
+        # drop null rows and report error
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            dictionary_dir,
+            f"dictionary.txt has some null entries:\n{df[null_mask]}",
+        )
+        df = df[~null_mask]
+
+    # check that cdf_element-raw_identifier_value pairs are unique
+    two_column_df = df[["cdf_element", "raw_identifier_value"]]
+    dupes_df, _ = ui.find_dupes(two_column_df)
+    if not dupes_df.empty:
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            dictionary_dir,
+            f"dictionary.txt has more than one entry for each of these:\n {dupes_df}",
+        )
+    # check that there are no candidate dupes after regularization
+    cands = two_column_df[two_column_df.cdf_element == "Candidate"].copy()
+    cands["regular"] = m.regularize_candidate_names(cands.raw_identifier_value)
+    dupe_reg = list()
+    for reg in cands.regular.unique():
+        all_match = cands[cands.regular == reg].copy()
+        if all_match.shape[0] > 1:
+            dupe_reg.append(
+                f"{reg} is regular version of: {list(all_match.raw_identifier_value.unique())}"
+            )
+    if dupe_reg:
+        dupe_str = "\n".join(dupe_reg)
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            dictionary_dir,
+            f"Some raw candidate names match after regularization, "
+            f"so are effectively dupes and should be deduped.:\n{dupe_str}",
+        )
+    return err
+
+
 def ensure_jurisdiction_dir(
     repository_content_root, juris_system_name: str, ignore_empty: bool = False
 ) -> Optional[dict]:
     # create directory if it doesn't exist
-    juris_path = os.path.join(repository_content_root, "src/jurisdictions", juris_system_name)
+    juris_path = os.path.join(
+        repository_content_root, "jurisdictions", juris_system_name
+    )
     try:
         Path(juris_path).mkdir(parents=True)
     except FileExistsError:
@@ -101,11 +154,15 @@ def ensure_jurisdiction_dir(
         print(f"Directory created: {juris_path}")
 
     # ensure the contents of the jurisdiction directory are correct
-    err = ensure_juris_files(repository_content_root, juris_path, ignore_empty=ignore_empty)
+    err = ensure_juris_files(
+        repository_content_root, juris_path, ignore_empty=ignore_empty
+    )
     return err
 
 
-def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: bool = False) -> Optional[dict]:
+def ensure_juris_files(
+    repository_content_root, juris_path: str, ignore_empty: bool = False
+) -> Optional[dict]:
     """Check that the jurisdiction files are complete and consistent with one another.
     Check for extraneous files in Jurisdiction directory.
     Assumes Jurisdiction directory exists. Assumes dictionary.txt is in the template file"""
@@ -116,7 +173,7 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
     juris_true_name = juris_name.replace("-", " ")
 
     templates_dir = os.path.join(
-        repository_content_root,"jurisdictions/000_jurisdiction_templates"
+        repository_content_root, "jurisdictions/000_jurisdiction_templates"
     )
     # notify user of any extraneous files
     extraneous = [
@@ -146,7 +203,9 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
         template_path = os.path.join(templates_dir, f"{juris_file}.txt")
         try:
             if os.path.isfile(template_path):
-                temp = pd.read_csv(template_path,**constants.standard_juris_csv_reading_kwargs)
+                temp = pd.read_csv(
+                    template_path, **constants.standard_juris_csv_reading_kwargs
+                )
             else:
                 err = ui.add_new_error(
                     err,
@@ -168,7 +227,9 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
         # if file does not exist
         if not os.path.isfile(cf_path):
             # create the file
-            temp.to_csv(cf_path,sep="\t",index=False,encoding=constants.default_encoding)
+            temp.to_csv(
+                cf_path, sep="\t", index=False, encoding=constants.default_encoding
+            )
             created = True
 
         # if file exists, check format against template
@@ -198,37 +259,20 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
                 )
 
             if juris_file == "dictionary":
-                # dedupe the dictionary
-                clean_and_dedupe(cf_path)
-                # check that no entry is null
-                df = pd.read_csv(cf_path,**constants.standard_juris_csv_reading_kwargs)
-                null_mask = df.T.isnull().any()
-                if null_mask.any():
-                    err = ui.add_new_error(
-                        err,
-                        "jurisdiction",
-                        juris_name,
-                        f"dictionary.txt has some null entries:\n{df[null_mask]}",
-                    )
-                # check that cdf_element-raw_identifier_value pairs are unique
-                two_column_df = df[["cdf_element", "raw_identifier_value"]]
-                dupes_df, _ = ui.find_dupes(two_column_df)
-                if not dupes_df.empty:
-                    err = ui.add_new_error(
-                        err,
-                        "jurisdiction",
-                        juris_name,
-                        f"dictionary.txt has more than one entry for each of these:\n {dupes_df}",
-                    )
+                new_err = check_dictionary(cf_path)
+                err = ui.consolidate_errors([err, new_err])
+
             else:
                 # dedupe the file
-                clean_and_dedupe(cf_path)
+                clean_and_dedupe(cf_path, clean_candidates=True)
 
-                # TODO check for lines that are too lone
+                # TODO check for lines that are too long
 
                 # check for problematic null entries
                 null_columns = check_nulls(
-                    juris_file, cf_path, os.path.join(repository_content_root, "electiondata")
+                    juris_file,
+                    cf_path,
+                    os.path.join(repository_content_root, "electiondata"),
                 )
                 if null_columns:
                     err = ui.add_new_error(
@@ -251,9 +295,9 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
                     )
 
     # check dependencies
-    for juris_file in [x for x in template_list if x != "remark" and x != "dictionary"]:
+    for juris_file in [x for x in template_list if x != "dictionary"]:
         # check dependencies
-        d, new_err = check_dependencies(juris_path, juris_file)
+        d, new_err = check_dependencies(juris_path, juris_file, repository_content_root)
         if new_err:
             err = ui.consolidate_errors([err, new_err])
 
@@ -266,7 +310,7 @@ def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: b
 
 def find_ambiguous_names(element: str, cf_path: str) -> List[str]:
     name_field = db.get_name_field(element)
-    df = pd.read_csv(cf_path,**constants.standard_juris_csv_reading_kwargs)
+    df = pd.read_csv(cf_path, **constants.standard_juris_csv_reading_kwargs)
     ambiguous_names = [
         name
         for name in df[name_field].unique()
@@ -277,7 +321,7 @@ def find_ambiguous_names(element: str, cf_path: str) -> List[str]:
 
 def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
     err = None
-    ru = get_element(juris_path,"ReportingUnit")
+    ru = get_element(juris_path, "ReportingUnit")
 
     # create set of all parents, all lead rus
     parents = set()
@@ -322,18 +366,44 @@ def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
             err,
             "jurisdiction",
             Path(juris_path).name,
-            f"\nReportingUnit Names must be unique. These are listed on more than one row:\n{dupe_str}"
+            f"\nReportingUnit Names must be unique. These are listed on more than one row:\n{dupe_str}",
         )
-
 
     return err
 
 
-def clean_and_dedupe(f_path: str):
+def clean_and_dedupe(f_path: str, clean_candidates=False):
     """Dedupe the file, removing any leading or trailing whitespace and compressing any internal whitespace"""
     # TODO allow specification of unique constraints
-    df = pd.read_csv(f_path,**constants.standard_juris_csv_reading_kwargs)
+    df = pd.read_csv(f_path, **constants.standard_juris_csv_reading_kwargs)
 
+    if clean_candidates:
+        if ("cdf_element" in df.columns) and (
+            "raw_identifier_value" in df.columns
+        ):  # for dictionary files
+            mask = df["cdf_element"] == "Candidate"
+            df.loc[mask, "raw_identifier_value"] = m.regularize_candidate_names(
+                df.loc[mask, "raw_identifier_value"]
+            )
+            df.loc[mask, "cdf_internal_name"] = m.regularize_candidate_names(
+                df.loc[mask, "cdf_internal_name"]
+            )
+        elif "BallotName" in df.columns:  # for Candidate files
+            df["BallotName"] = m.regularize_candidate_names(df["BallotName"])
+
+    if set(df.columns) == {
+        "raw_identifier_value",
+        "cdf_internal_name",
+        "cdf_element",
+    }:  # for dictionary files
+        # get rid of lines with null information
+        df = df[
+            df["cdf_internal_name"].notnull() | df["raw_identifier_value"].notnull()
+        ]
+
+    # remove none or unknown Party in file
+    if Path(f_path).name == "Party.txt":
+        df = df[df.Name != "none or unknown"]
     for c in df.columns:
         if not is_numeric_dtype(df.dtypes[c]):
             df[c].fillna("", inplace=True)
@@ -345,7 +415,7 @@ def clean_and_dedupe(f_path: str):
                 pass
     dupes_df, df = ui.find_dupes(df)
     if not dupes_df.empty:
-        df.to_csv(f_path,sep="\t",index=False,encoding=constants.default_encoding)
+        df.to_csv(f_path, sep="\t", index=False, encoding=constants.default_encoding)
     return
 
 
@@ -359,8 +429,8 @@ def check_nulls(element, f_path, project_root):
         element,
         "not_null_fields.txt",
     )
-    not_nulls = pd.read_csv(nn_path,sep="\t",encoding=constants.default_encoding)
-    df = pd.read_csv(f_path,**constants.standard_juris_csv_reading_kwargs)
+    not_nulls = pd.read_csv(nn_path, sep="\t", encoding=constants.default_encoding)
+    df = pd.read_csv(f_path, **constants.standard_juris_csv_reading_kwargs)
 
     problem_columns = []
 
@@ -377,16 +447,17 @@ def check_nulls(element, f_path, project_root):
     return problem_columns
 
 
-def check_dependencies(juris_dir, element) -> (list, dict):
+def check_dependencies(juris_dir, element, repository_content_root) -> (list, dict):
     """Looks in <juris_dir> to check that every dependent column in <element>.txt
     is listed in the corresponding jurisdiction file. Note: <juris_dir> assumed to exist.
     """
     err = None
+    changed_elements = list()
     juris_name = Path(juris_dir).name
     d = juris_dependency_dictionary()
     f_path = os.path.join(juris_dir, f"{element}.txt")
     try:
-        element_df = pd.read_csv(f_path,**constants.standard_juris_csv_reading_kwargs)
+        element_df = pd.read_csv(f_path, **constants.standard_juris_csv_reading_kwargs)
     except FileNotFoundError:
         err = ui.add_new_error(
             err,
@@ -394,7 +465,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"file doesn't exist: {f_path}",
         )
-        return list(), err
+        return changed_elements, err
 
     # Find all dependent columns
     dependent = [c for c in element_df.columns if c in d.keys()]
@@ -412,9 +483,28 @@ def check_dependencies(juris_dir, element) -> (list, dict):
         )
 
         # create list of elements, removing any nulls
+        # # look for required other element in the jurisdiction's directory; if not there, use global
+        if os.path.isfile(os.path.join(juris_dir, f"{target}.txt")):
+            target_path = os.path.join(juris_dir, f"{target}.txt")
+        else:
+            target_path = os.path.join(
+                repository_content_root,
+                "jurisdictions",
+                "000_for_all_jurisdictions",
+                f"{target}.txt",
+            )
+            if not os.path.isfile(target_path):
+                err = ui.add_new_error(
+                    err,
+                    "jurisdiction",
+                    "all jurisdictions",
+                    f"{target}.txt file missing from both {juris_dir} and "
+                    f"{os.path.join(repository_content_root, 'electiondata', '000_for_all_jurisdictions')}",
+                )
+                return changed_elements, err
         ru = list(
             pd.read_csv(
-                os.path.join(juris_dir, f"{target}.txt"),
+                target_path,
                 **constants.standard_juris_csv_reading_kwargs,
             )
             .fillna("")
@@ -478,9 +568,6 @@ def load_juris_dframe_into_cdf(
         "CDF_schema_def_info",
     )
     element_file = os.path.join(all_juris_path, juris_system_name, f"{element}.txt")
-    enum_file = os.path.join(
-        cdf_schema_def_dir, "elements", element, "enumerations.txt"
-    )
     fk_file = os.path.join(cdf_schema_def_dir, "elements", element, "foreign_keys.txt")
 
     # fail if <element>.txt does not exist
@@ -488,15 +575,17 @@ def load_juris_dframe_into_cdf(
         err = ui.add_new_error(
             err,
             "jurisdiction",
-            Path(all_juris_path).name,
+            juris_system_name,
             f"File {element}.txt not found",
         )
         return err
 
+    clean_and_dedupe(element_file, clean_candidates=True)
+
     # read info from <element>.txt, filling null fields with 'none or unknown'
-    df = pd.read_csv(element_file,**constants.standard_juris_csv_reading_kwargs).fillna(
-        "none or unknown"
-    )
+    df = pd.read_csv(
+        element_file, **constants.standard_juris_csv_reading_kwargs
+    ).fillna("none or unknown")
     # TODO check that df has the right format
 
     # add 'none or unknown' record
@@ -508,27 +597,9 @@ def load_juris_dframe_into_cdf(
         err = ui.add_new_error(
             err,
             "warn-jurisdiction",
-            Path(all_juris_path).name,
-            f"Duplicates were found in {element}.txt",
+            juris_system_name,
+            f"\nDuplicates were found in {element}.txt",
         )
-
-    # replace plain text enumerations from file system with id/othertext from db
-    if os.path.isfile(enum_file):  # (if not, there are no enums for this element)
-        enums = pd.read_csv(enum_file, sep="\t")
-        # get all relevant enumeration tables
-        for e in enums["enumeration"]:  # e.g., e = "ReportingUnitType"
-            cdf_e = pd.read_sql_table(e, session.bind)
-            # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
-            if e in df.columns:
-                df, non_standard = m.enum_col_to_id_othertext(df, e, cdf_e)
-                if non_standard:
-                    ns = "\n\t".join(non_standard)
-                    err = ui.add_new_error(
-                        err,
-                        "warn-jurisdiction",
-                        juris_true_name,
-                        f"Some {e}s are non-standard:\n\t{ns}",
-                    )
 
     # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.
     if os.path.isfile(fk_file):
@@ -579,12 +650,15 @@ def add_none_or_unknown(df: pd.DataFrame, contest_type: str = None) -> pd.DataFr
 
 
 def load_or_update_juris_to_db(
-    session: Session, repository_content_root: str, juris_true_name: str, juris_system_name: str
+    session: Session,
+    repository_content_root: str,
+    juris_true_name: str,
+    juris_system_name: str,
 ) -> Optional[dict]:
     """Load info from each element in the Jurisdiction's directory into the db.
     On conflict, update the db to match the files in the Jurisdiction's directory"""
     # load all from Jurisdiction directory (except Contests, dictionary, remark)
-    juris_elements = ["ReportingUnit", "Office", "Party", "Candidate", "Election"]
+    juris_elements = ["ReportingUnit", "Office", "Party", "Candidate"]
 
     err = None
     for element in juris_elements:
@@ -605,11 +679,13 @@ def load_or_update_juris_to_db(
     # Load CandidateContests and BallotMeasureContests
     for contest_type in ["BallotMeasure", "Candidate"]:
         new_err = load_or_update_contests(
-            session.bind, os.path.join(
-                repository_content_root, "jurisdictions", juris_system_name
-            ), juris_true_name, contest_type, err
+            session.bind,
+            os.path.join(repository_content_root, "jurisdictions", juris_system_name),
+            juris_true_name,
+            contest_type,
+            err,
         )
-        err = ui.consolidate_errors([err,new_err])
+        err = ui.consolidate_errors([err, new_err])
     return err
 
 
@@ -630,9 +706,9 @@ def load_or_update_contests(
             f"file not found: {contest_type}Contest.txt",
         )
         return err
-    df = pd.read_csv(element_fpath,**constants.standard_juris_csv_reading_kwargs).fillna(
-        "none or unknown"
-    )
+    df = pd.read_csv(
+        element_fpath, **constants.standard_juris_csv_reading_kwargs
+    ).fillna("none or unknown")
 
     # add contest_type column
     df = m.add_constant_column(df, "contest_type", contest_type)
@@ -783,4 +859,95 @@ def add_defaults(juris_path: str, juris_template_dir: str, element: str) -> dict
     old = get_element(juris_path, element)
     new = get_element(juris_template_dir, element)
     err = write_element(juris_path, element, pd.concat([old, new]).drop_duplicates())
+    return err
+
+
+def add_candidate_contests(
+    juris_path: str,
+    df: pd.DataFrame,
+    file_path: str,
+) -> Optional[dict]:
+    """
+    Inputs:
+        juris_path: str, path to directory containing info for jurisdiction
+        df: pd.DataFrame, dataframe with info for candidate contests
+            (ContestName,NumberElected,OfficeName,PrimaryParty,ElectionDistrict, ReportingUnitType)
+        file_path: str, for error reporting, the path of the file from which the dataframe was taken
+
+    Adds any contests in <df> to the CandidateContest file in <juris_path>, along with dependent info
+
+    Returns:
+        Optional[dict], error dictionary
+    """
+    err = None
+    necessary_columns = {
+        "ContestName",
+        "NumberElected",
+        "OfficeName",
+        "PrimaryParty",
+        "ElectionDistrict",
+        "ReportingUnitType",
+    }
+    if necessary_columns.issubset(set(df.columns)):
+        # read files (or return errors)
+        df_dict = dict()
+        path_dict = dict()
+        for element in ["ReportingUnit", "Office", "CandidateContest"]:
+            path_dict[element] = os.path.join(juris_path, f"{element}.txt")
+            try:
+                df_dict[element] = pd.read_csv(path_dict[element], sep="\t")
+            except FileNotFoundError:
+                err = ui.add_new_error(
+                    err, "jurisdiction", juris_path, f"{element}.txt file not found"
+                )
+            except Exception as e:
+                err = ui.add_new_error(
+                    err, "jurisdiction", juris_path, f"Error reading {element}.txt: {e}"
+                )
+        if ui.fatal_error(err):
+            return err
+
+        # add to ReportingUnit if necessary
+        mask = df.ElectionDistrict.notin(df_dict["ReportingUnit"].Name.unique())
+        if mask.any():
+            new = pd.concat(
+                [
+                    df[["ElectionDistrict", "ReportingUnitType"]].rename(
+                        column={"ElectionDistrict": "Name"}
+                    ),
+                    df_dict["ReportingUnit"],
+                ]
+            )
+            new.to_csv(path_dict["ReportingUnit"], sep="\t", index=False)
+
+        # add to Office
+        mask = df.OfficeName.notin(df_dict["Office"].Name.unique())
+        if mask.any():
+            new = pd.concat(
+                [
+                    df[["OfficeName", "ElectionDistrict"]].rename(
+                        column={"OfficeName": "Name"}
+                    )
+                ]
+            )
+            new.to_csv(path_dict["Office"], sep="\t", index=False)
+
+        # add to CandidateContest
+        mask = df.ContestName.notin(cc.Name.unique())
+        if mask.any():
+            new = pd.concat(
+                [
+                    df[
+                        ["ContestName", "NumberElected", "OfficeName", "PrimaryParty"]
+                    ].rename(column={"OfficeName": "Office", "ContestName": "Name"})
+                ]
+            )
+            new.to_csv(path_dict["CandidateContest"], sep="\t", index=False)
+    else:
+        err = ui.add_new_error(
+            err,
+            "file",
+            file_path,
+            f"Missing columns: {[col for col in necessary_columns if col not in df.columns]}",
+        )
     return err

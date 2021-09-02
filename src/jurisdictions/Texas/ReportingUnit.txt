@@ -476,3 +476,8 @@ Texas;TX Senate District 6	state-senate
 Texas;TX Senate District 7	state-senate
 Texas;TX Senate District 8	state-senate
 Texas;TX Senate District 9	state-senate
+Texas;TX Member State Board of Education District 12	education-district
+Texas;TX Member State Board of Education District 11	education-district
+Texas;TX Member State Board of Education District 13	education-district
+Texas;TX Member State Board of Education District 7	education-district
+Texas;TX Member State Board of Education District 2	education-district

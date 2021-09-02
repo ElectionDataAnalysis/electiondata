@@ -5,7 +5,7 @@ from electiondata import (
     juris as jm,
     userinterface as ui,
     munge as m,
-    analyze as a,
+    analyze as an,
     nist,
     visualize as viz,
     otherdata as exd,
@@ -13,8 +13,8 @@ from electiondata import (
     constants,
 )
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.orm.session import Session
-from typing import List, Dict, Optional, Any, Tuple, Union
+from sqlalchemy.orm.session import Session, engine
+from typing import List, Dict, Optional, Any, Tuple, Union, Iterable
 import datetime
 import os
 import re
@@ -33,39 +33,50 @@ class SingleDataLoader:
     def __init__(
         self,
         results_dir: str,
-        param_file: str,
+        results_param_file: str,
         session: Session,
         mungers_path: str,
         juris_true_name: str,
         path_to_jurisdiction_dir: str,
     ):
+        """
+        Inputs:
+            results_dir: str, path to directory containing election result files
+            results_param_file: str, path to file containing basic parameters for reading result file (*.ini)
+            session: Session,
+            mungers_path: str, path to directory containing munger parameter files with extension .munger
+            juris_true_name: str, name of jurisdiction (with spaces, not hyphens)
+            path_to_jurisdiction_dir: str, path to directory containing subdirectories labeled by jurisdiction
+
+        Returns SingleDataLoader instance with attributes:
+            session
+            results_dir
+            juris_true_name
+            juris_system_name, name of jurisdiction with hyphens, not spaces
+            param_file (for results file)
+            path_to_jurisdiction_dir, path to directory containing the particular jurisdiction's files
+            d, dictionary of other parameters read from the param_file
+            mungers_path, path to directory containing munger files
+            munger_list, list of mungers to apply
+            munger_err, error dictionary
+        """
         # adopt passed variables needed in future as attributes
         self.session = session
         self.results_dir = results_dir
         self.juris_true_name = juris_true_name
-        self.param_file = param_file
+        self.param_file = results_param_file
 
         # calculate useful parameters
         self.juris_system_name = jm.system_name_from_true_name(self.juris_true_name)
         self.path_to_jurisdiction_dir = path_to_jurisdiction_dir
 
         # grab parameters (known to exist from __new__, so can ignore error variable)
-        par_file = os.path.join(results_dir,param_file)
         self.d, _ = ui.get_parameters(
             required_keys=constants.sdl_pars_req,
             optional_keys=constants.sdl_pars_opt,
-            param_file=par_file,
+            param_file=results_param_file,
             header="election_results",
         )
-
-        # assign True to is_preliminary if necessary
-        if "is_preliminary" not in self.d.keys() or self.d["is_preliminary"] in [
-            "",
-            "True",
-            "true",
-            None,
-        ]:
-            self.d["is_preliminary"] = True
 
         # change any blank parameters describing the results file to 'none'
         for k in self.d.keys():
@@ -73,17 +84,23 @@ class SingleDataLoader:
                 self.d[k] = "none"
 
         # pick mungers (Note: munger_list is comma-separated list of munger names)
-        self.munger = dict()
-        self.munger_err = dict()
-        # TODO document
-        self.mungers_dir = mungers_path
+        self.mungers_path = mungers_path
         self.munger_list = [x.strip() for x in self.d["munger_list"].split(",")]
 
-    def track_results(self) -> (List[int], Optional[dict]):
-        """insert a record for the _datafile, recording any error string <e>.
-        Return _datafile.Id and Election_Id"""
+    def track_results(self) -> (int, int, Optional[dict]):
+        """
+        Looks up Ids for jurisdiction in the ReportingUnit table and election in the
+            Election table of the session database.
+            Inserts a record for the results file into the _database table.
+        Returns:
+            int,  _datafile.Id (or 0 if none found)
+            int, Election.Id (or 0 if none found)
+            Optional[dict], error dictionary
+        """
         err = None
         filename = self.d["results_file"]
+
+        # find id for jurisdiction in ReportingUnit table (or return fatal error)
         jurisdiction_id = db.name_to_id(
             self.session, "ReportingUnit", self.d["jurisdiction"]
         )
@@ -94,7 +111,9 @@ class SingleDataLoader:
                 self.param_file,
                 f"No ReportingUnit named {self.d['jurisdiction']} found in database",
             )
-            return [0, 0], err
+            return 0, 0, err
+
+        # find id for election in Election table (or return fatal error)
         election_id = db.name_to_id(self.session, "Election", self.d["election"])
         if election_id is None:
             err = ui.add_new_error(
@@ -103,7 +122,9 @@ class SingleDataLoader:
                 self.param_file,
                 f"No election named {self.d['election']} found in database",
             )
-            return [0, 0], err
+            return 0, 0, err
+
+        # insert record into _datafile table
         datafile_id, err = datafile_info(
             self.session.bind,
             self.param_file,
@@ -116,18 +137,26 @@ class SingleDataLoader:
             election_id,
             self.d["is_preliminary"],
         )
-        return [datafile_id, election_id], err
-
+        return datafile_id, election_id, err
 
     def load_results(
         self, rollup: bool = False, rollup_rut: Optional[str] = None
-    ) -> dict:
-        """Load results, returning error (or None, if load successful)"""
+    ) -> Optional[dict]:
+        """
+        Optional inputs:
+            rollup: bool = False, if True, roll results up to subdivision before inserting in db
+            rollup_rut: Optional[str] = None, subdivision type to roll up to (typically 'county')
+
+        Load results from the file referenced in self.param_file
+
+        Returns:
+            Optional[dict], error dictionary
+        """
         err = None
         print(f'\n\nProcessing {self.d["results_file"]}')
 
         # Enter datafile info to db and collect _datafile_Id and Election_Id
-        [datafile_id, election_id], new_err = self.track_results()
+        datafile_id, election_id, new_err = self.track_results()
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             return err
@@ -139,7 +168,7 @@ class SingleDataLoader:
             for mu in self.munger_list:
                 print(f"\twith munger {mu}")
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
-                mu_path = os.path.join(self.mungers_dir, f"{mu}.munger")
+                mu_path = os.path.join(self.mungers_path, f"{mu}.munger")
                 new_err = load_results_file(
                     self.session,
                     mu_path,
@@ -158,8 +187,10 @@ class SingleDataLoader:
         return err
 
     def collect_constants_from_ini(self) -> dict:
-        """collect constant elements from .ini file.
-        Omits constants that have no content"""
+        """
+        Returns:
+             dict, dictionary of constant elements from .ini file, omitting constants that have no content
+        """
         constants = dict()
         for k in [
             "Party",
@@ -176,7 +207,13 @@ class SingleDataLoader:
         return constants
 
     def list_values(self, element: str) -> (list, Optional[dict]):
-        """lists all values for the element found in the file"""
+        """
+        Inputs:
+            element: str, name of database table
+        Returns:
+            list, list of values for the given <element> found in the results file referenced in self.param_file
+            Optional[dict], error dictionary
+            lists all values for the element found in the file"""
         err = None
         values = list()
         constants = self.collect_constants_from_ini()
@@ -187,7 +224,7 @@ class SingleDataLoader:
                 for mu in self.munger_list:
                     print(f"\twith munger {mu}")
                     f_path = os.path.join(self.results_dir, self.d["results_file"])
-                    munger_path = os.path.join(self.mungers_dir, f"{mu}.munger")
+                    munger_path = os.path.join(self.mungers_path, f"{mu}.munger")
                     p, err = m.get_and_check_munger_params(munger_path)
                     if ui.fatal_error(err):
                         return values, err
@@ -245,9 +282,37 @@ class DataLoader:
             print(f"DataLoader object not created. Error:\n{err}")
             return None
 
+        # create db if it does not already exist and have right tables
+        err = db.create_db_if_not_ok(
+            d["repository_content_root"], db_param_file=param_file, dbname=dbname
+        )
+        if err:
+            print(f"DataLoader object not created. Error:\n{err}")
+            return None
+        if not os.path.isdir(d["results_dir"]):
+            print(f"Warning: DataLoader results directory does not exist.")
         return super().__new__(cls)
 
-    def __init__(self, param_file: Optional[str] = None, dbname: Optional[str] = None):
+    def __init__(
+        self,
+        param_file: Optional[str] = None,
+        dbname: Optional[str] = None,
+        major_subdivision_file: Optional[str] = None,
+    ):
+        """
+        Inputs:
+            param_file: Optional[str] = None, path to file of necessary parameters (defaults to `run_time.ini`)
+            dbname: Optional[str] = None, name of database (defaults to name specified in param_file)
+            major_subdivision_file: str = None, path to file with columns
+                'jurisdiction', 'major_subjurisdiction_type'
+
+        Returns DataLoader instance with attributes:
+            d, dictionary of parameters from param_file
+            db_engine, sqlalchemy engine connecting to postgres database specified in param_file
+            session, sqlalchemy session for interacting with the database
+            analyzer, Analyzer instance for exporting or analyzing data in the database,
+                using subdivisions from <major_subdivision_file>, if given
+        """
         # default param_file is run_time.ini in current directory
         if not param_file:
             param_file = "run_time.ini"
@@ -268,64 +333,172 @@ class DataLoader:
             self.d["repository_content_root"], "mungers"
         )
 
-        # create db if it does not already exist and have right tables
-        err = db.create_db_if_not_ok(db_param_file=param_file, dbname=dbname)
-
         # connect to db
-        self.engine = None  # will be set in connect_to_db
+        self.db_engine = None  # will be set in connect_to_db
         self.session = None  # will be set in connect_to_db
-        self.connect_to_db(err=err, dbname=dbname, db_param_file=param_file)
+        self.connect_to_db(dbname=dbname, db_param_file=param_file)
+
+        # create analyzer with same db
+        self.analyzer = Analyzer(
+            dbname=dbname,
+            param_file=param_file,
+            major_subdivision_file=major_subdivision_file,
+        )
 
     def connect_to_db(
         self,
         dbname: Optional[str] = None,
-        err: Optional[dict] = None,
-        db_param_file: str = "run_time.ini",
+        db_param_file: Optional[str] = None,
+        db_params: Optional[Dict[str, str]] = None,
     ):
-        new_err = None
+        """
+        Inputs:
+            dbname: Optional[str] = None,
+            db_param_file: Optional[str] = None,
+            db_params: Optional[Dict[str, str]] = None,
+
+            Sets engine attribute to an open connection with the database specified by
+                dname and/or db_params and/or db_param_file, and sets session attribute
+                to a newly-opened session on that engine
+        """
         try:
-            self.engine, new_err = db.sql_alchemy_connect(
-                param_file=db_param_file, dbname=dbname
+            self.db_engine, err = db.sql_alchemy_connect(
+                db_param_file=db_param_file, dbname=dbname, db_params=db_params
             )
-            Session = sessionmaker(bind=self.engine)
+            Session = sessionmaker(bind=self.db_engine)
             self.session = Session()
-        except Exception as e:
-            print(f"Cannot connect to database. Exiting. Exception:\n{e}")
-            quit()
-        if new_err:
+        except Exception as exc:
+            if dbname:
+                label = dbname
+            elif db_params and dbname in db_params.keys():
+                label = db_params["dbname"]
+            elif db_param_file:
+                label = db_param_file
+            else:
+                label = "connection"
+            err = ui.add_new_error(
+                None, "database", label, f"Connection failed due to exception: {exc}"
+            )
+        if err:
             print("Unexpected error connecting to database.")
-            err = ui.consolidate_errors([err, new_err])
             ui.report(err, self.d["reports_and_plots_dir"], file_prefix="dataloading_")
-            print("Exiting")
+            print(f"Exiting. See {self.d['reports_and_plots_dir']} for details")
             quit()
         else:
             return
 
-    def change_db(self, new_db_name: str, db_param_file: str = "run_time.ini"):
-        """Changes the database into which the data is loaded, including reconnecting"""
-        self.d["dbname"] = new_db_name
-        self.session.close()
-        self.connect_to_db(dbname=new_db_name, db_param_file=db_param_file)
-        db.create_db_if_not_ok(dbname=new_db_name)
-        return
+    def change_db(
+        self,
+        new_db_name: str,
+        db_param_file: Optional[str] = None,
+        db_params: Optional[Dict[str, str]] = None,
+    ) -> Optional[dict]:
+        """
+        Input:
+            new_db_name: str, name for new database
+            db_param_file: Optional[str], file with parameters for connecting to db
+            db_params: Optional[Dict[str,str]], set of parameters for connecting to db
 
-    def close_and_erase(self) -> Optional[dict]:
-        db_params = {
-            "host":self.engine.url.host,
-            "port":self.engine.url.port,
-            "user":self.engine.url.username,
-            "password":self.engine.url.password,
-            "dbname":self.engine.url.database,
-        }
-        # point dataloader to default database
-        self.change_db("postgres")
-        # remove the db
-        err = db.remove_database(db_params)
+        If both db_param_file and db_params are given, uses db_params
+        Closes self.session, then redefines self.engine and self.session to connect to a different results database
+            (which is created if necessary)
+        Changes self.analyzer.session to connect to the new database
+
+        Returns:
+            Optional[dict], error dictionary
+        """
+        err = None
+        if not db_params:
+            # get db_params from current session, but with new database name
+            db_params = {
+                "host": self.db_engine.url.host,
+                "port": self.db_engine.url.port,
+                "user": self.db_engine.url.username,
+                "password": self.db_engine.url.password,
+                "dbname": new_db_name,
+            }
+
+        # disconnect from current db and connect to new db, updating self.session and self.dbname
+        self.session.close()
+        # # nb: next command updates self.session
+        new_err = self.connect_to_db(
+            db_params=db_params,
+        )
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return err
+        self.d["dbname"] = new_db_name
+
+        # create new electiondata database if necessary
+        new_err = db.create_db_if_not_ok(
+            self.d["repository_content_root"],
+            dbname=new_db_name,
+            db_param_file=db_param_file,
+            db_params=db_params,
+        )
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return err
+
+        # create new session for analyzer
+        self.analyzer.session.close()
+        self.analyzer.session = self.session
         return err
 
-    def change_dir(self, dir_param: str, new_dir: str):
-        # TODO technical debt: error handling
-        self.d[dir_param] = new_dir
+    def close_and_erase(self) -> Optional[dict]:
+        """
+        Closes and removes the database specified by self.engine. Creates new engine and session
+        attributes pointing to the postgres database instead
+        Returns:
+            Optional[dict], error dictionary
+        """
+        err = None
+        db_params = {
+            "host": self.db_engine.url.host,
+            "port": self.db_engine.url.port,
+            "user": self.db_engine.url.username,
+            "password": self.db_engine.url.password,
+            "dbname": self.db_engine.url.database,
+        }
+        # point dataloader to default database
+        new_err = self.change_db("postgres", db_params=db_params)
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return err
+        # remove the db
+        new_err = db.remove_database(db_params)
+        err = ui.consolidate_errors([err, new_err])
+        return err
+
+    def get_testing_data_from_git_repo(self, git_repo_url: str):
+        """
+        Inputs:
+            git_repo_url: str, url of git repository with test results
+
+        Puts shallow copy of git repository contents in to the directory whose path is
+            self.d["results_dir"] (creating that directory if necessary)
+
+        """
+
+        # if the dataloader's results directory doesn't exist, create it
+        results_dir = self.d["results_dir"]
+        if not os.path.isdir(results_dir):
+            # create the results_dir
+            Path(results_dir).mkdir(parents=True, exist_ok=True)
+            # create a shallow copy of the git directory in the results_directory
+            cmd = f"git clone --depth 1 -b main {git_repo_url} {Path(results_dir).absolute()}"
+            os.system(cmd)
+            # remove the git information
+            shutil.rmtree(os.path.join(results_dir, ".git"), ignore_errors=True)
+            os.remove(os.path.join(results_dir, ".gitignore"))
+            print(
+                f"Files downloaded from {git_repo_url} into {Path(results_dir).absolute()}"
+            )
+
+        else:
+            print(
+                f"Tests will load data from existing directory: {Path(results_dir).absolute()}"
+            )
         return
 
     def load_one_from_ini(
@@ -335,8 +508,20 @@ class DataLoader:
         juris_true_name: str,
         rollup: bool = False,
     ) -> (Optional[SingleDataLoader], Optional[dict]):
-        """Load a single results file specified by the parameters in <ini_path>.
-        Returns SingleDataLoader object (and error)"""
+        """
+        Inputs:
+            ini_path: str, path to file with parameters describing single results file
+            path_to_jurisdiction_dir: str, path to directory holding the jurisdiction's files
+            juris_true_name: str, name of jurisdiction (with spaces, not strings)
+            rollup: bool = False, if True, finds and rolls up to major subdivision level;
+                otherwise, loads results at level given in results file
+
+        Loads results from the single results file specified by the parameters in <ini_path>.
+        Returns:
+             Optional[SingleDataLoader], SingleDataLoader object for the results file
+                (or None if fatal error occurred)
+             Optional[dict], error dictionary
+        """
         sdl, err = check_and_init_singledataloader(
             self.d["results_dir"],
             ini_path,
@@ -359,15 +544,17 @@ class DataLoader:
 
         # get rollup unit if required
         if rollup:
-            rollup_rut = db.get_major_subdiv_type(
-                self.session,
-                sdl.d["jurisdiction"],
-                file_path=os.path.join(
-                    self.d["repository_content_root"],
-                    "jurisdictions",
-                    "000_major_subjurisdiction_types.txt",
-                ),
-            )
+            if sdl.d["jurisdiction"] in self.analyzer.major_subdivision_type.keys():
+                rollup_rut = self.analyzer.major_subdivision_type[sdl.d["jurisdiction"]]
+            else:
+                rollup_rut = None
+                err = ui.add_new_error(
+                    err,
+                    "warn-file",
+                    "major_subjurisdiction_types.txt",
+                    f"Rollup cannot be done because no major subdivision found for {sdl.d['jurisdiction']}",
+                )
+
         else:
             rollup_rut = None
         load_error = sdl.load_results(rollup=rollup, rollup_rut=rollup_rut)
@@ -380,16 +567,30 @@ class DataLoader:
         juris_true_name: str,
         rollup: bool = False,
         report_missing_files: bool = False,
+        status: Optional[str] = None,
+        run_tests: bool = True,
     ) -> (List[str], List[str], str, Optional[dict]):
-        """Looks within ini_files_for_results/<jurisdiction> for
+        """
+        Inputs:
+            election: str,
+            juris_true_name: str,
+            rollup: bool = False, if true, roll up results to major subdivisions before loading to db
+            report_missing_files: bool = False, if true, report any files referenced by .ini files but not found in
+                results directory as a warning in the error dictionary
+            status: Optional[str] = None, if given, use only reference results of that particular status for testing
+            run_tests: bool = True, controls whether tests are run
+
+        Looks within ini_files_for_results/<jurisdiction> for
         all ini files matching  given election and jurisdiction.
         For each, attempts to load file if it exists; reports missing data files.
+        If files load successfully without fatal error and <run_tests> is True, runs tests on the loaded results
+            and reports any failures to error report
         Returns
-        * list of successfully-loaded files,
-        * list of files that failed to load
-        * latest download date for successfully-loaded files
-        * error report with outright error for results files whose loading failed.
-        If <report_missing_files> is True, includes warning for missing files"""
+            List[str], list of successfully-loaded files,
+            List[str], list of files that failed to load
+            str, latest download date for successfully-loaded files
+            Optional[dict], error report with outright error for results files whose loading failed.
+        """
         err = None
         success_by_ini = list()
         failure_by_ini = list()
@@ -455,6 +656,18 @@ class DataLoader:
                             ini,
                             f"Ini in subdirectory {ini_subdir} has non-matching jurisdiction: {params['jurisdiction']}",
                         )
+        # add totals if necessary
+        add_err = self.add_totals_if_missing(election, juris_true_name)
+        if add_err:
+            err = ui.consolidate_errors([err, add_err])
+
+        if run_tests:
+            # if load successful to this point, test the db's data for this ej-pair and add any failures to err
+            if not ui.fatal_error(err):
+                new_err = self.analyzer.test_loaded_results(
+                    election, juris_true_name, juris_system_name, status=status
+                )
+                err = ui.consolidate_errors([err, new_err])
         return success_by_ini, failure_by_ini, latest_download_date, err
 
     def load_all(
@@ -466,22 +679,52 @@ class DataLoader:
         election_list: Optional[List[str]] = None,
         rollup: bool = False,
         report_missing_files: bool = False,
-    ) -> (Dict[str, List[str]], Dict[str, List[str]], Optional[dict]):
-        """Processes all results (or all results corresponding to pairs in
+        run_tests: bool = True,
+        suppress_warnings: bool = False,
+    ) -> (Dict[str, List[str]], Dict[str, List[str]], Dict[str, bool], Optional[dict]):
+        """
+        Inputs:
+            report_dir: Optional[str] = None, directory for reports
+            load_jurisdictions: bool = True, if true, load jurisdiction info to db before loading results
+            move_files: bool = True, if true, move files to self.d["archive_dir"] after successful loading
+            election_jurisdiction_list: Optional[List[Tuple[str, str]]] = None, if given, processes only files for
+                ej_pairs in the list
+            election_list: Optional[List[str]] = None,
+            rollup: bool = False, if True, loads results rolled up to major subdivision
+            report_missing_files: bool = False, if True, reports files referenced in .ini files
+                but not found in results directory
+            run_tests: bool = True, if false, do not run tests on loaded data
+            suppress_warnings: bool = False, if True, report only errors
+                to directory specified by self.d["reports_and_plots_dir"]
+
+        Processes all results (or all results corresponding to pairs in
         ej_list if given) in DataLoader's results directory using
-        .ini files from repository.
+            .ini files from repository.
         If load is successful for all files for a single election-jurisdicction pair,
-        then add records for total vote counts whereever necessary.
+            then add records for total vote counts whereever necessary.
         By default, loads (or updates) the info from the jurisdiction files
-        into the db first. By default, moves files to the DataLoader's archive directory.
-        Returns a post-reporting error dictionary, and a dictionary of
-        successfully-loaded files (by election-jurisdiction pair).
-        (Note: errors initializing loading process (e.g., results file not found) do *not* generate
-        <success> = False, though those errors are reported in <err>"""
+            into the db first. By default, moves files to the DataLoader's archive directory.
+        Returns a post-reporting error dictionary (including errors from post-load testing, if
+            <run_tests> is True, and a dictionary of
+            successfully-loaded files (by election-jurisdiction pair).
+        Note: errors initializing loading process (e.g., results file not found) do *not* generate
+            <success> = False, though those errors are reported in <err>
+        If <archive> is true, archive the files
+
+        Returns:
+            Dict[str, List[str]], for each e-j pair attempted,
+                a list of files loading successfully
+            Dict[str, List[str]], for each e-j pair attempted,
+                a list of files that were attempted but failed to load
+            Dict[str, bool], for each e-j pair attempted,
+                a boolean (True if no files failed and all tests passed; otherwise False)
+            Optional[dict], error dictionary
+        """
         # initialize
         err = None
-        success = dict()
-        failure = dict()
+        successfully_loaded = dict()
+        failed_to_load = dict()
+        all_tests_passed = dict()
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         if not report_dir:
             report_dir = os.path.join(self.d["reports_and_plots_dir"], f"load_all_{ts}")
@@ -517,7 +760,9 @@ class DataLoader:
                     "jurisdictions",
                     juris_system_name,
                 )
-                new_err = jm.ensure_jurisdiction_dir(self.d["repository_content_root"], juris_path)
+                new_err = jm.ensure_jurisdiction_dir(
+                    self.d["repository_content_root"], juris_path
+                )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
                     if ui.fatal_error(new_err):
@@ -529,11 +774,14 @@ class DataLoader:
                             if j != juris
                         ]
                         # add juris to failure list
-                        failure[juris] = "Jurisdiction files did not load. See .errors"
+                        failed_to_load[
+                            juris
+                        ] = "Jurisdiction files did not load. See .errors"
                         err = ui.report(
                             err,
                             report_dir,
                             key_list=constants.juris_load_report_keys,
+                            suppress_warnings=suppress_warnings,
                         )
                         continue
                 print(f"Loading/updating jurisdiction {juris} to {self.session.bind}")
@@ -553,11 +801,14 @@ class DataLoader:
                         err, "jurisdiction", juris, f"Exception during loading: {exc}"
                     )
         else:
-            print("No jurisdictions loaded because load_jurisdictions==False. All jurisdictions assumed to be OK")
+            print(
+                "No jurisdictions loaded because load_jurisdictions==False. All jurisdictions assumed to be OK"
+            )
             ok_jurisdictions = jurisdictions
 
         latest_download_date = dict()
         for jurisdiction in ok_jurisdictions:
+            juris_system_name = jm.system_name_from_true_name(jurisdiction)
             juris_err = None
             for election in elections[jurisdiction]:
                 # load the relevant files
@@ -571,23 +822,29 @@ class DataLoader:
                     jurisdiction,
                     rollup=rollup,
                     report_missing_files=report_missing_files,
+                    run_tests=run_tests,
                 )
                 if new_err:
                     juris_err = ui.consolidate_errors([juris_err, new_err])
-                success[f"{election};{jurisdiction}"] = success_list
-                failure[f"{election};{jurisdiction}"] = failure_list
 
-                # if all files loaded successfully
-                if not failure_list:
-                    # add totals
-                    self.add_totals_if_missing(election, jurisdiction)
+                # set all_test_passed boolean for this e-j pair
+                if not run_tests:
+                    all_tests_passed[f"{election};{jurisdiction}"] = True
+                elif failure_list or (
+                    new_err and ("warn-test" in new_err.keys()) and new_err["warn-test"]
+                ):
+                    all_tests_passed[f"{election};{jurisdiction}"] = False
+                else:
+                    all_tests_passed[f"{election};{jurisdiction}"] = True
+
+                successfully_loaded[f"{election};{jurisdiction}"] = success_list
+                failed_to_load[f"{election};{jurisdiction}"] = failure_list
 
             if move_files:
                 # if all existing files referenced in any results.ini
                 # for the jurisdiction
                 # -- for any election -- loaded correctly
                 if not ui.fatal_error(juris_err):
-                    juris_system_name = jm.system_name_from_true_name(jurisdiction)
                     juris_results_path = os.path.join(
                         self.d["results_dir"], juris_system_name
                     )
@@ -618,19 +875,27 @@ class DataLoader:
                 err,
                 report_dir,
                 key_list=constants.juris_load_report_keys,
+                file_prefix=juris_system_name,
+                suppress_warnings=suppress_warnings,
             )
 
         # report remaining errors
-        ui.report(err, report_dir, file_prefix="system")
+        ui.report(
+            err, report_dir, file_prefix="system_", suppress_warnings=suppress_warnings
+        )
 
         # keep all election-juris pairs in success report, but remove empty failure reports
-        failure = {k: v for k, v in failure.items() if v}
+        failed_to_load = {k: v for k, v in failed_to_load.items() if v}
 
-        return success, failure, err
+        return successfully_loaded, failed_to_load, all_tests_passed, err
 
     def strip_dates_from_results_folders(self) -> Dict[str, str]:
-        """some loading routines add date suffixes to folders after loading.
-        This routine removes the suffixes."""
+        """
+        Remove any date-suffixes from sub-folders of self.d["results_dir"]
+
+        Returns:
+            Dict[str, str], dictionary mapping old names to new
+        """
         rename: Dict[str, str] = dict()
         p = re.compile(r"^(.*)_\d\d\d\d-\d\d-\d\d$")
         for folder in os.listdir(self.d["results_dir"]):
@@ -648,8 +913,18 @@ class DataLoader:
         election_id: int,
         juris_id: int,
     ) -> Optional[str]:
-        """Remove from the db all data for the given <election_id> in the given <juris>"""
-        err_str = None
+        """
+        Inputs:
+            election_id: int, an Id value to be looked up in Election table
+            juris_id: int, an Id value to be looked up in ReportingUnit table
+
+        Remove from the db all data in datafiles associated (in _datafile table) to
+            the Election designated by <election_id> and the jurisdiction
+            designated in the ReportingUnit table by <juris_id>
+
+        Returns:
+            Optional[str], error string (or None if no errors)
+        """
         # get connection & cursor
         connection = self.session.bind.raw_connection()
         cursor = connection.cursor()
@@ -675,9 +950,18 @@ class DataLoader:
         else:
             return None
 
-    def add_totals_if_missing(self, election, jurisdiction) -> Optional[dict]:
-        """for each contest, add 'total' vote type wherever it's missing
-        returning any error"""
+    def add_totals_if_missing(self, election: str, jurisdiction: str) -> Optional[dict]:
+        """
+        Inputs:
+            election: str, name of election
+            jurisdiction: str, name of jurisdiction
+
+        For each contest, adds records for 'total' vote type to VoteCount table in database wherever it's missing,
+            calculated from other vote types
+
+        Returns:
+            Optional[dict], error dictionary
+        """
         err = None
         # pull results from db
         election_id = db.name_to_id(self.session, "Election", election)
@@ -688,8 +972,7 @@ class DataLoader:
             "ReportingUnit_Id",
             "Election_Id",
             "_datafile_Id",
-            "CountItemType_Id",
-            "OtherCountItemType",
+            "CountItemType",
             "Count",
         ]
         aliases = [
@@ -698,12 +981,15 @@ class DataLoader:
             "ReportingUnit_Id",
             "Election_Id",
             "_datafile_Id",
-            "CountItemType_Id",
-            "OtherCountItemType",
+            "CountItemType",
             "Count",
         ]
         df = db.read_vote_count(
-            self.session, election_id, jurisdiction_id, fields, aliases
+            self.session,
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=fields,
+            aliases=aliases,
         )
         if df.empty:
             err = ui.add_new_error(
@@ -717,13 +1003,14 @@ class DataLoader:
             m_df = m.missing_total_counts(df, self.session)
             # load new total records to db
             try:
-                err = db.insert_to_cdf_db(
+                new_err = db.insert_to_cdf_db(
                     self.session.bind,
                     m_df,
                     "VoteCount",
                     "system",
                     f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 )
+                err = ui.consolidate_errors([err, new_err])
             except Exception as exc:
                 err = ui.add_new_error(
                     err,
@@ -733,13 +1020,24 @@ class DataLoader:
                 )
         return err
 
-    def load_data_from_db_dump(self, dbname, dump_file: str) -> Optional[str]:
-        """Create a database from a file dumped from another database (but only if db does not
-        already exist). Return error string"""
+    def load_data_from_db_dump(
+        self, dbname: str, dump_file: str, delete_existing: bool = False
+    ) -> Optional[str]:
+        """
+        Inputs:
+            dbname: str, name for database to be created and loaded with data
+            dump_file: str, path to file with data to be loaded to the new database
+
+        If <dbname> does not already exists, creates a database from a file dumped from another
+            database (but only if db does not already exist).
+
+        Returns:
+             Optional[str], error (or None if no error)
+        """
         connection = self.session.bind.raw_connection()
         cursor = connection.cursor()
         err_str = db.create_database(
-            connection, cursor, dbname=dbname, delete_existing=False
+            connection, cursor, dbname=dbname, delete_existing=delete_existing
         )
 
         cursor.close()
@@ -747,27 +1045,8 @@ class DataLoader:
 
         if not err_str:
             # read contents of dump into db
-            err_str = db.restore_to_db(dbname, dump_file, self.engine.url)
+            err_str = db.restore_to_db(dbname, dump_file, self.db_engine.url)
         return err_str
-
-    def load_single_external_data_file(
-        self,
-        data_file: str,
-        source: str,
-        year: str,
-        note: str,
-        order_within_category: Optional[Dict[str, int]] = None,
-        replace_existing: bool = False,  # TODO
-    ) -> Optional[dict]:
-        df = pd.read_csv(data_file)
-        err = self.load_single_external_data_set(
-            df,
-            source,
-            year,
-            note,
-            replace_existing=replace_existing,
-        )
-        return err
 
     def load_single_external_data_set(
         self,
@@ -775,15 +1054,28 @@ class DataLoader:
         source: str,
         year: str,
         note: str,
-        replace_existing: bool = False,  # TODO
+        # TODO add optional parameter replace_existing: bool = False,
     ) -> Optional[dict]:
-        """<data_file> has to be in particular form:
-        csv
-        columns: Category, Label, OrderWithinCategory, ReportingUnit, Value.
-        Choices of "Category and "Label"
-        will show up in analyze.display_options text.
-        ReportingUnit assumed to follow name convention internal to db.
-        order_within_category dictionary determines order within analyze.display_options"""
+        """
+        Inputs:
+            df: pd.DataFrame, results dataframe with columns
+                Category, Label, OrderWithinCategory, ReportingUnit, Value,
+                where:
+                    ReportingUnit values match values in database specified by self.session,
+                    Category choice will be used to present user with a set of labels
+                    ReportingUnit-Category-Label choice will be used to identify a count (Value)
+                    OrderWithinCategory is an integer (should be a function of Category-Pair) to determine
+                        in what order Labels will be presented to user
+            source: str, source of data
+            year: str, year of data
+            note: str, note about data
+
+        Loads data description records into ExternalDataSet table, and loads data records into ExternalData table,
+            linked to correct ExternalDataset record
+
+        Returns:
+            Optional[dict], error dictionary
+        """
         err = None
         # TODO check columns of df
         # TODO error handling
@@ -844,20 +1136,37 @@ class DataLoader:
 
     # TODO
     def load_acs5_data(self, census_year: int, election: str) -> Optional[dict]:
-        """Download census.gov American Community Survey data by county
-        for the given year;
-        upload data to db; associate all datasets for the year to election-juris
-        pairs for any juris that has nontrivial join."""
+        """
+        Incomplete!
+        Inputs:
+            census_year: int, year for which American Community Survey data is available from census.gov
+            election: str, name matching an election in the Election table of the database specified in self.session
+
+        Downloads census.gov American Community Survey data by county
+        for <census_year>;
+        uploads data to database specified in self.session; associates all datasets for <census_year> to
+        election-jurisdiction
+        pairs for any jurisdiction that has nontrivial join.
+
+        Returns:
+            Optional[dict], error dictionary
+        """
         err = None
         df = pd.DataFrame()
         for category in electiondata.constants.acs5_columns.keys():
             columns_to_get = electiondata.constants.acs5_columns[category].keys()
             working = exd.get_raw_acs5_data(columns_to_get, census_year)
             if working.empty:
-                err = ui.add_new_error(err, "census", census_year, "No data found at census.gov")
+                err = ui.add_new_error(
+                    err, "census", census_year, "No data found at census.gov"
+                )
                 continue
-            working = exd.combine_and_rename_columns(working,electiondata.constants.acs_5_label_summands)
-            working = exd.normalize(working,electiondata.constants.acs_5_label_summands.keys())
+            working = exd.combine_and_rename_columns(
+                working, electiondata.constants.acs_5_label_summands
+            )
+            working = exd.normalize(
+                working, electiondata.constants.acs_5_label_summands.keys()
+            )
             working["Category"] = category
             df = pd.concat(df, working)
         self.load_single_external_data_set()
@@ -866,7 +1175,16 @@ class DataLoader:
 
     def temp_reload_existing_acs5_data(self, census_file: str) -> Optional[dict]:
         """Transitional function for taking data from Version 1.0 system to later version (June 2021)
-        load data from census file exported from old db (e.g. census_no_ids.csv)"""
+        load data from census file exported from old db (e.g. census_no_ids.csv)
+
+        Inputs:
+            census_file: str, path to a file containing census data exported from Version 1.0 database
+
+        Loads data from census_file for years 2016 and 2018 to database specified in self.session
+
+        Returns:
+            Optional[dict], error dictionary
+        """
         cdf = pd.read_csv(census_file, index_col=None)
 
         els = pd.read_sql_table("Election", self.session.bind)
@@ -902,143 +1220,285 @@ class DataLoader:
         )
         return err
 
-    def update_juris_from_multifile(self, working: pd.DataFrame,juris_true,juris_system) -> Optional[dict]:
+    def update_juris_from_multifile(
+        self, df: pd.DataFrame, juris_true: str, juris_system: str
+    ) -> Optional[dict]:
+        """
+        This has not been generalized past the MIT multi-election file format.
+
+        Inputs:
+            df: pd.DataFrame, data read from MIT multi-election/jurisdiction results file, assumed to have columns
+                Candidate_raw,
+            juris_true: str, name of jurisdiction (with spaces, not hyphens)
+            juris_system: str, name of jurisdiction (with hyphens, not spaces)
+
+        Adds any new elections from electiondata.constants.mit_elections to 000_for_all_jurisdictions/Election.txt file
+        Adds any candidates in Candidate_raw column to the jurisdiction's Candidate.txt and dictionary.txt files
+        Adds lines to jurisdiction's dictionary.txt to map 'US PRESIDENT' and 'PRESIDENT' to 'US President (XX)',
+            where XX is the abbreviation for the jurisdiction
+        Adds parties in electiondata.constants.mit_party to dictionary.txt
+        Adds vote counts in electiondata.constants.mit_cit to dictionary.txt
+        Loads jurisdiction info into the database specified by self.session
+
+        Returns:
+            Optional[dict], error dictionary
+        """
         update_err = None
 
-        # add elections to Election.txt
+        # add elections to 000_for_all_jurisdictions/Election.txt
         election_df = pd.DataFrame(
-            [[f"{e} General","general"] for e in electiondata.constants.mit_elections],columns=["Name","ElectionType"]
+            [[f"{e} General", "general"] for e in electiondata.constants.mit_elections],
+            columns=["Name", "ElectionType"],
         )
+        path_to_election_dir = os.path.join(
+            self.d["repository_content_root"],
+            "/jurisdictions/000_for_all_jurisdictions",
+        )
+        old = jm.get_element(path_to_election_dir, "Election")
+        new = pd.concat([old, election_df]).drop_duplicates()
+        jm.write_element(path_to_election_dir, "Election", new)
 
         # add candidates to Candidate.txt
         candidate_col = "Candidate_raw"
-        candidates = sorted(working[candidate_col].unique())
+        candidates = sorted(df[candidate_col].unique())
 
         # add candidates to dictionary
-        candidate_map = {x:multi.correct(x.title()) for x in electiondata.constants.mit_candidates}
+        candidate_map = {
+            x: multi.correct(x.title()) for x in electiondata.constants.mit_candidates
+        }
         update_err = ui.consolidate_errors(
-            [update_err,multi.add_candidates(
-                juris_system,self.d["repository_content_root"],candidates,candidate_map
-            )]
+            [
+                update_err,
+                multi.add_candidates(
+                    juris_system,
+                    self.d["repository_content_root"],
+                    candidates,
+                    candidate_map,
+                ),
+            ]
         )
 
         # add contests to dictionary  # TODO this belongs with constants, but depends on jurisdiction...
         contest_d = {
-            "PRESIDENT":f"US President ({electiondata.constants.abbr[juris_true]})",
-            "US PRESIDENT":f"US President ({electiondata.constants.abbr[juris_true]})",
+            "PRESIDENT": f"US President ({electiondata.constants.abbr[juris_true]})",
+            "US PRESIDENT": f"US President ({electiondata.constants.abbr[juris_true]})",
         }
         update_err = ui.consolidate_errors(
-            [update_err,
-             multi.add_dictionary_entries(juris_system,self.d["repository_content_root"],"CandidateContest",contest_d)]
+            [
+                update_err,
+                multi.add_dictionary_entries(
+                    juris_system,
+                    self.d["repository_content_root"],
+                    "CandidateContest",
+                    contest_d,
+                ),
+            ]
         )
         # add parties to dictionary
         update_err = ui.consolidate_errors(
-            [update_err,multi.add_dictionary_entries(
-                juris_system,self.d["repository_content_root"],"Party",electiondata.constants.mit_party
-            )]
+            [
+                update_err,
+                multi.add_dictionary_entries(
+                    juris_system,
+                    self.d["repository_content_root"],
+                    "Party",
+                    electiondata.constants.mit_party,
+                ),
+            ]
         )
 
         # add vote_count_types to dictionary
         update_err = ui.consolidate_errors(
-            [update_err,multi.add_dictionary_entries(
-                juris_system, self.d["repository_content_root"], "CountItemType",electiondata.constants.mit_cit
-            )]
+            [
+                update_err,
+                multi.add_dictionary_entries(
+                    juris_system,
+                    self.d["repository_content_root"],
+                    "CountItemType",
+                    electiondata.constants.mit_cit,
+                ),
+            ]
         )
         ## load jurisdiction info to db
-        juris.load_or_update_juris_to_db(self.session,self.d["repository_content_root"],juris_true,juris_system)
+        juris.load_or_update_juris_to_db(
+            self.session, self.d["repository_content_root"], juris_true, juris_system
+        )
 
         return update_err
 
-    def load_multielection(
-            self, multi_file: str, overwrite_existing: bool = False, load_jurisdictions: bool = True,
+    def load_multielection_from_ini(
+        self,
+        ini: str,
+        dictionary_path: Optional[str] = None,
+        overwrite_existing: bool = False,
+        load_jurisdictions: bool = True,
+        report_err_to_file: bool = True,
+        suppress_warnings: bool = False,
     ) -> (Dict[str, List[str]], Optional[dict]):
-        """load multi-election data from <multi_file> 
-        (as of 6/2021, this works just for the MIT presidential file)
-        If override_existing is True, unload any jurisdictions already there;
-        otherwise do *not* overwrite"""
-        err = None
-        success: Dict[str,List[str]] = dict()
-        file_name = Path(multi_file).name
+        """
+        Required inputs:
+            ini: str, path to file with initialization parameters for dataloader and secondary source
+        Optional inputs:
+            dictionary_path: Optional[str] = None, if given, path to dictionary. If not given, path assumed
+                to be <repository_content_root>/secondary_sources/<ini_params["secondary_source"]
+            overwrite_existing: bool = False, if true, existing data will be deleted for each election-jurisdiction pair
+                represented in the file indicated in <ini>
+            load_jurisdictions: bool = True, if true, jurisdiction information will be loaded to database before processing
+                results data
+            report_err_to_file: bool = True, if true, errors reported to file; otherwise errors returned
+            suppress_warnings: bool = False, if true, only errors (not warnings) reported to file
 
-        # add elections to db
-        multi.add_elections_to_db(self.session)
-        # read data
-        try:
-            df = pd.read_csv(multi_file,sep="\t",dtype=str, index_col=None)
-            if df.empty:
-                err = ui.add_new_error(
+        Loads results from the file indicated in <ini> to the database specified by self.session
+
+        Returns:
+            Dict[str, List[str]], a dictionary of successful mungers (for each election-jurisdiction pair)
+            Optional[dict], error dictionary
+        """
+        err = None
+        success = dict()
+        ts = datetime.datetime.now().strftime("%m%d_%H%M")
+        ini_params, new_err = ui.get_parameters(
+            required_keys=constants.req_for_combined_file_loading,
+            param_file=ini,
+            header="election_results",
+        )
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            if report_err_to_file:
+                err = ui.report(
                     err,
-                    "file",
-                    file_name,
-                    f"No data read",
+                    os.path.join(self.d["reports_and_plots_dir"], f"multi_{ts}"),
+                    file_prefix="multi_dictionary",
+                    suppress_warnings=suppress_warnings,
                 )
-                return list(), err
-        except FileNotFoundError:
-            err = ui.add_new_error(
-                err,
-                "file",
-                file_name,
-                f"file not found",
-            )
             return success, err
 
-        # rename columns to match internal db elements
-        df.rename(columns={v:k for k,v in electiondata.constants.mit_cols.items()},inplace=True)
-        # retype count column to int
-        df["Count"] = df["Count"].fillna(0).astype(int,errors="ignore")
-
-        df = df[df["Election"].isin(electiondata.constants.mit_elections.keys())]
-
-        # regularize fips to match standard in jurisdiction/dictionary.txt files
-        df["ReportingUnit_raw"] = "fips"+ df["ReportingUnit_raw"]
-        
-        # treat jurisdictions one by one
-        jurisdictions = sorted(list(df["Jurisdiction"].unique()))
-
-        for j in jurisdictions:
-            juris_true_name = multi.correct(j.title())
-            success[juris_true_name]: List[str] = list()
-            print(f"Starting {juris_true_name}")
-            juris_system_name = juris.system_name_from_true_name(juris_true_name)
-
-            if load_jurisdictions:
-                # update juris in db
-                juris.load_or_update_juris_to_db(
-                    self.session,self.d["repository_content_root"],juris_true_name,juris_system_name
-                )
-
-            jurisdiction_id = db.name_to_id(self.session,"ReportingUnit",juris_true_name)
-            if not jurisdiction_id:
-                err = ui.add_new_error(
+        results_path = os.path.join(self.d["results_dir"], ini_params["results_file"])
+        multi_file_name = Path(ini_params["results_file"]).name
+        ini_file = Path(ini).name
+        if dictionary_path is None:
+            dictionary_path = os.path.join(
+                self.d["repository_content_root"],
+                "secondary_sources",
+                ini_params["secondary_source"],
+                "dictionary.txt",
+            )
+        # check that secondary_source directory has necessary files without flaws
+        new_err = juris.check_dictionary(dictionary_path)
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            if report_err_to_file:
+                err = ui.report(
                     err,
-                    "jurisdiction",
-                    juris_system_name,
-                    f"No ReportingUnit in database matches the jurisdiction itself."
+                    os.path.join(self.d["reports_and_plots_dir"], f"multi_{ts}"),
+                    file_prefix="multi_dictionary",
+                    suppress_warnings=suppress_warnings,
                 )
-                continue
-            j_df = df[(df["Jurisdiction"] == j)]
-            # proceed only if data exists for this jurisdiction
-            if j_df.empty:
-                continue
+            return success, err
 
-
-            ## load results to db
-            for election in j_df["Election"].unique():
-                election_true_name = electiondata.constants.mit_elections[election]
-
-                print(f"\t{election_true_name}")
-                election_id = db.name_to_id(self.session,"Election", election_true_name)
-                if not election_id:
-                    err = ui.add_new_error(
+        # load items from the secondary source tables to the db
+        # NB: Office, CandidateContest and sub-jurisdiction ReportingUnits are specific to the various jurisdictions
+        for (element, table) in [
+            ("Election", "Election"),
+            ("Jurisdiction", "ReportingUnit"),
+        ]:
+            new_err = multi.load_to_db(
+                self.session,
+                table,
+                os.path.join(
+                    self.d["repository_content_root"],
+                    "secondary_sources",
+                    f"{element}.txt",
+                ),
+            )
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                if report_err_to_file:
+                    err = ui.report(
                         err,
-                        "warn-database",
-                        f"{self.session.bind.url.database}",
-                        f"Election {election_true_name} not found"
+                        os.path.join(self.d["reports_and_plots_dir"], f"multi_{ts}"),
+                        file_prefix="multi_dictionary",
+                        suppress_warnings=suppress_warnings,
                     )
-                    print(f"\t\tElection not found")
+                return success, err
+
+        # get list of mungers to apply
+        mungers = [x.strip() for x in ini_params["munger_list"].split(",")]
+        for munger in mungers:
+            # read file format parameters from munger
+            munger_path = os.path.join(
+                self.d["repository_content_root"], "mungers", f"{munger}.munger"
+            )
+            p, new_err = m.get_and_check_munger_params(munger_path)
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                continue  # go to next munger
+
+            # read file to dict of dataframes, one for each ej-pair
+            working, new_err = m.file_to_raw_df(
+                munger_path,
+                p,
+                results_path,
+                self.d["results_dir"],
+                extra_formula_keys=["Election", "Jurisdiction"],
+            )
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                continue  # go to next munger
+            # collect election-jurisdiction pairs
+            new_err = dict()
+            dictionary_df = pd.read_csv(
+                dictionary_path,
+                sep="\t",
+            )
+            for element in ["Jurisdiction", "Election"]:
+                working, new_err[element] = m.replace_raw_with_internal_name(
+                    working,
+                    munger,
+                    multi_file_name,
+                    element,
+                    dictionary_df,
+                    dictionary_path,
+                    drop_unmatched=True,
+                )
+            # use multi-file's dictionary to get internal names of election and jurisdiction
+            err = ui.consolidate_errors(
+                [err, new_err["Election"], new_err["Jurisdiction"]]
+            )
+            if ui.fatal_error(new_err["Election"]) or ui.fatal_error(
+                new_err["Jurisdiction"]
+            ):
+                continue  # go to next munger
+            working.set_index(["Election", "Jurisdiction"], inplace=True)
+            ej_pairs = sorted(list(set(working.index)))
+            # split into dictionary of dataframes, one for each ej_pair
+            df_dict = {pair: working[working.index == pair] for pair in ej_pairs}
+
+            # get juris system names:
+            system_name = dict()
+            jurisdictions = sorted(list({j for (e, j) in ej_pairs}))
+
+            for jurisdiction in jurisdictions:
+                system_name[jurisdiction] = juris.system_name_from_true_name(
+                    jurisdiction
+                )
+
+            # track which jurisdictions have been loaded
+            loaded = {j: False for j in jurisdictions}
+
+            # get db indices for elections and jurisdictions
+            e_id = j_id = dict()
+            for (election, jurisdiction) in ej_pairs:
+                e_id[election] = db.name_to_id(self.session, "Election", election)
+                j_id[jurisdiction] = db.name_to_id(
+                    self.session, "ReportingUnit", jurisdiction
+                )
+
+            for (election, jurisdiction) in ej_pairs:
+                success[(election, jurisdiction)] = list()
                 # get list of datafiles in db with the election and jurisdiction
                 df_list, err_str = db.data_file_list(
-                    self.session,election_id,reporting_unit_id=jurisdiction_id
+                    self.session, e_id[election], reporting_unit_id=j_id[jurisdiction]
                 )
                 if err_str:
                     err = ui.add_new_error(
@@ -1053,13 +1513,13 @@ class DataLoader:
                 # remove existing data if overwriting
                 if df_list and overwrite_existing:
                     # remove old data
-                    err_str = self.remove_data(election_id,jurisdiction_id)
+                    err_str = self.remove_data(e_id[election], j_id[jurisdiction])
                     if err_str:
                         err = ui.add_new_error(
                             err,
                             "database",
                             f"{self.session.bind.url.database}",
-                            f"Error removing existing data for {election} {juris_true_name}:\n{err}",
+                            f"Error removing existing data for {election} {jurisdiction}:\n{err}",
                         )
                         print(f"\t\tError removing data: {err_str}")
                     # warn that data was removed:
@@ -1067,7 +1527,7 @@ class DataLoader:
                         err,
                         "warn-database",
                         f"{self.session.bind.url.database}",
-                        f"data removed for {election} {juris_true_name}"
+                        f"data removed for {election} {jurisdiction}",
                     )
                 # skip, with warning if not overwriting
                 elif df_list and not overwrite_existing:
@@ -1075,22 +1535,23 @@ class DataLoader:
                         err,
                         "warn-database",
                         f"{self.session.bind.url.database}",
-                        f"Data in db for {election} {juris_true_name} exists; will not be replaced with new data."
+                        f"Data in db for {election} {jurisdiction} exists; will not be replaced with new data.",
                     )
                     print(f"\t\tData exists in db; will not be replaced with new data.")
                     continue
 
+                # # If we reach this point, we'll be uploading the data for this e-j pair
                 # create record in _datafile table
                 datafile_id, new_err = datafile_info(
                     self.session.bind,
-                    multi_file,
-                    f"MIT_pres_gen_Y2K_{juris_system_name}_{election}",
-                    file_name,
-                    electiondata.constants.mit_datafile_info["download_date"],
-                    electiondata.constants.mit_datafile_info["source"],
-                    electiondata.constants.mit_datafile_info["note"],
-                    jurisdiction_id,
-                    election_id,
+                    ini_file,
+                    f"{ini_params['results_short_name']}_{system_name[jurisdiction]}_{election}",
+                    multi_file_name,
+                    ini_params["results_download_date"],
+                    ini_params["results_source"],
+                    ini_params["results_note"],
+                    j_id[jurisdiction],
+                    e_id[election],
                     False,
                 )
                 if new_err:
@@ -1099,78 +1560,127 @@ class DataLoader:
                         print(f"\t\tNot loaded due to error creating datafile record")
                         continue
 
-                # rename datafile columns
-                je_df = j_df[j_df["Election"] == election]
-                try:
-                    # load data
-                    new_err = load_results_df(self.session, je_df, dict(),juris_true_name, file_name,
-                                              "load_multi_ej_file",
-                                              os.path.join(self.d["repository_content_root"],"jurisdictions",
-                                                           juris_system_name),
-                                              datafile_id, election_id, "flat_text"
-                                              )
-                    if new_err:
-                        err = ui.consolidate_errors([err,new_err])
-                        if ui.fatal_error(new_err):
-                            print(f"\t\tError during data loading: {new_err}")
-                            err_str = db.remove_record_from_datafile_table(self.session, datafile_id)
-                            if err_str:
-                                ui.add_new_error(
-                                    err,
-                                    "database",
-                                    self.session.bind.url.database,
-                                    f"Error removing record with id {datafile_id}: {err_str}"
+                if load_jurisdictions:
+                    if not loaded[jurisdiction]:
+                        # update juris in db
+                        juris_err = juris.ensure_jurisdiction_dir(
+                            self.d["repository_content_root"],
+                            system_name[jurisdiction],
+                        )
+                        err = ui.consolidate_errors([err, juris_err])
+                        if not ui.fatal_error(juris_err):
+                            load_err = juris.load_or_update_juris_to_db(
+                                self.session,
+                                self.d["repository_content_root"],
+                                jurisdiction,
+                                system_name[jurisdiction],
+                            )
+                            # track loading
+                            err = ui.consolidate_errors([err, load_err])
+                            if not ui.fatal_error(load_err):
+                                loaded[jurisdiction] = True
+
+                if (not load_jurisdictions) or (loaded[jurisdiction]):
+                    # load results
+                    try:
+                        # load data
+                        new_err = load_results_df(
+                            self.session,
+                            df_dict[(election, jurisdiction)],
+                            dict(),
+                            jurisdiction,
+                            multi_file_name,
+                            munger,
+                            os.path.join(
+                                self.d["repository_content_root"],
+                                "jurisdictions",
+                                system_name[jurisdiction],
+                            ),
+                            datafile_id,
+                            e_id[election],
+                        )
+                        if new_err:
+                            err = ui.consolidate_errors([err, new_err])
+                            if ui.fatal_error(new_err):
+                                print(f"\t\tError during data loading: {new_err}")
+                                err_str = db.remove_record_from_datafile_table(
+                                    self.session, datafile_id
                                 )
-                                print("Error removing datafile record")
-                            continue
+                                if err_str:
+                                    ui.add_new_error(
+                                        err,
+                                        "database",
+                                        self.session.bind.url.database,
+                                        f"Error removing record with id {datafile_id}: {err_str}",
+                                    )
+                                    print("Error removing datafile record")
+                                continue
+                            else:
+                                success[(election, jurisdiction)].append(munger)
+                                print(
+                                    f"Successful load: {election} {jurisdiction}; "
+                                    f"however, see warnings when program finishes"
+                                )
                         else:
-                            success[juris_true_name].append(election_true_name)
-                            print(f"Successful load: {election} {juris_true_name}")
-                except Exception as exc:
-                    err = ui.add_new_error(
-                        err,
-                        "munge",
-                        "load_multi_ej_file",
-                        f"Unexpected error while loading results dataframe "
-                        f"for {election_true_name} {juris_true_name}: {exc}"
-                    )
-                    err_str = db.remove_vote_counts(self.session, datafile_id)
-                    if err_str:
+                            print(f"Successful load: {election} {jurisdiction}")
+                    except Exception as exc:
                         err = ui.add_new_error(
                             err,
-                            "warn-database",
-                            f"{self.session.bind.url.database}",
-                            f"Vote counts not removed for datafile id {datafile_id} because of error: {err_str}"
+                            "munger",
+                            "load_multi_ej_file",
+                            f"Unexpected error while loading results dataframe "
+                            f"for {election} {jurisdiction}: {exc}",
                         )
-                    else:
-                        err_str = db.remove_record_from_datafile_table(self.session,datafile_id)
+                        err_str = db.remove_vote_counts(self.session, datafile_id)
                         if err_str:
                             err = ui.add_new_error(
                                 err,
                                 "warn-database",
                                 f"{self.session.bind.url.database}",
-                                f"Vote counts removed but datafile record not removed for datafile id {datafile_id} "
-                                f"because of error: {err_str}",
+                                f"Vote counts not removed for datafile id {datafile_id} because of error: {err_str}",
                             )
-                    continue
+                        else:
+                            err_str = db.remove_record_from_datafile_table(
+                                self.session, datafile_id
+                            )
+                            if err_str:
+                                err = ui.add_new_error(
+                                    err,
+                                    "warn-database",
+                                    f"{self.session.bind.url.database}",
+                                    f"Vote counts removed but datafile record not removed for datafile id {datafile_id} "
+                                    f"because of error: {err_str}",
+                                )
+                        continue
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         report_dir = os.path.join(
-            self.d["reports_and_plots_dir"], f"multielection_{self.session.bind.url.database}_{ts}"
+            self.d["reports_and_plots_dir"],
+            f"multielection_{self.session.bind.url.database}_{ts}",
         )
-        err = ui.report(
-            err,
-            report_dir
-        )
+        if report_err_to_file:
+            err = ui.report(err, report_dir, suppress_warnings=suppress_warnings)
+
         return success, err
 
-def check_par_file_elements(
+
+def check_param_file_elements(
     ini_d: dict,
     mungers_path: str,
     ini_file_name: str,
 ) -> Optional[dict]:
-    """<d> is the dictionary of parameters pulled from the ini file"""
-    err = None
+    """
+    Inputs:
+        ini_d: dict, dictionary of parameters (presumably taken from parameter file for a particular results file)
+        mungers_path: str, path to directory containing mungers
+        ini_file_name: str, name of the parameter file (for error reporting)
 
+    Checks consistency of mungers from ini_d["munger_list"] with other parameters in ini_d:
+        For each munger:
+            All constant_over_file elements from munger are specified in <ini_d>
+    Returns:
+        Optional[dict], error dictionary
+    """
+    err = None
     # for each munger,
     for mu in ini_d["munger_list"].split(","):
         # check any constant_over_file elements are defined in .ini file
@@ -1195,23 +1705,35 @@ def check_par_file_elements(
                     ini_file_name,
                     f"Munger {mu} requires constants to be defined:\n{bad_constants}",
                 )
-
     return err
 
 
 def check_and_init_singledataloader(
     results_dir: str,
-    par_file_name: str,
+    results_param_file: str,
     session: Session,
     mungers_path: str,
     juris_true_name: str,
     path_to_jurisdiction_dir: str,
 ) -> (Optional[SingleDataLoader], Optional[dict]):
-    """Return SDL if it could be successfully initialized, and
-    error dictionary (including munger errors noted in SDL initialization)"""
+    """
+    Inputs:
+        results_dir: str, path to directory containing election result files
+        results_param_file: str, path to file containing basic parameters for reading result file (*.ini)
+        session: Session,
+        mungers_path: str, path to directory containing munger parameter files with extension .munger
+        juris_true_name: str, name of jurisdiction (with spaces, not hyphens)
+        path_to_jurisdiction_dir: str, path to directory containing subdirectories labeled by jurisdiction
+
+    Checks results_param_file parameters
+
+    Returns:
+        Optional[SingleDataLoader], SingleDataLoader instance if it could be successfully initialized (or None if not),
+        error dictionary (including munger errors noted in SDL initialization)
+    """
 
     # test parameters
-    par_file = os.path.join(results_dir, par_file_name)
+    par_file = os.path.join(results_dir, results_param_file)
     sdl = None
     d, err = ui.get_parameters(
         required_keys=constants.sdl_pars_req,
@@ -1223,20 +1745,27 @@ def check_and_init_singledataloader(
         return sdl, err
 
     # check consistency of munger and .ini file regarding elements to be read from ini file
-    new_err_2 = check_par_file_elements(d, mungers_path, par_file_name)
+    new_err_2 = check_param_file_elements(d, mungers_path, results_param_file)
     if new_err_2:
         err = ui.consolidate_errors([err, new_err_2])
         sdl = None
     if not ui.fatal_error(new_err_2):
         sdl = SingleDataLoader(
             results_dir,
-            par_file_name,
+            results_param_file,
             session,
             mungers_path,
             juris_true_name,
             path_to_jurisdiction_dir,
         )
-        err = ui.consolidate_errors([err, sdl.munger_err])
+        if sdl is None:
+            err = ui.add_new_error(
+                err,
+                "ini",
+                results_param_file,
+                f"Error creating SingleDataLoader instance. Required header is [election_results]. "
+                f"Required parameters are: {constants.sdl_pars_req}",
+            )
     # check download date
     try:
         datetime.datetime.strptime(d["results_download_date"], "%Y-%m-%d")
@@ -1246,7 +1775,7 @@ def check_and_init_singledataloader(
     except ValueError:
         err_str = f"Date could not be parsed. Expected format is 'YYYY-MM-DD', actual is {d['results_download_date']}"
     if err_str:
-        err = ui.add_new_error(err, "ini", par_file_name, err_str)
+        err = ui.add_new_error(err, "ini", results_param_file, err_str)
     return sdl, err
 
 
@@ -1260,7 +1789,7 @@ class JurisdictionPrepper:
         """Checks if parameter file exists and is correct. If not, does
         not create JurisdictionPrepper object."""
         for param_file, required in [
-            (prep_param_file,constants.prep_pars),
+            (prep_param_file, constants.prep_pars),
             (run_time_param_file, ["repository_content_root", "reports_and_plots_dir"]),
         ]:
             try:
@@ -1285,17 +1814,28 @@ class JurisdictionPrepper:
 
     def new_juris_files(
         self,
-        target_dir: Optional[str] = None,
+        target_dir_for_starter_dictionary: Optional[str] = None,
         templates: Optional[str] = None,
-    ):
-        """Create starter files in <target_dir>. If no <target_dir> is given, put the standard
-        jurisdiction files into a subdirectory of the jurisdictions directory in the repo, and put
-        the starter dictionary in the current directory.
+    ) -> Optional[dict]:
+        """
+        Inputs:
+            target_dir_for_starter_dictionary: Optional[str] = None, path to directory where starter dictionary
+                should be placed. Default is to put the starter dictionary in the current directory.
+            templates: Optional[str] = None, path to directory with templates. Default is
+                jurisdictions/000_jurisdiction_templates
+
+        Creates jurisdiction files in the directory self.d["jurisdiction_path"], creating that directory if necessary.
+        Creates starter dictionary (to keep new dictionary entries separate from existing entries)
+
+        Returns:
+            Optional[dict], error dictionary
         """
         # create and fill jurisdiction directory
-        # TODO Feature: allow other districts to be set in paramfile
+        # TODO Feature: allow other districts to be set in param_file
         print(f"\nStarting {inspect.currentframe().f_code.co_name}")
-        error = jm.ensure_jurisdiction_dir(self.d["repository_content_root"], self.d["jurisdiction_path"])
+        error = jm.ensure_jurisdiction_dir(
+            self.d["repository_content_root"], self.d["jurisdiction_path"]
+        )
         # add default entries
         # default templates are from repo
         if not templates:
@@ -1303,8 +1843,10 @@ class JurisdictionPrepper:
                 self.d["repository_content_root"],
                 "jurisdictions/000_jurisdiction_templates",
             )
-        for element in ["Party", "Election"]:
-            new_err = electiondata.juris.add_defaults(self.d["jurisdiction_path"],templates,element)
+        for element in ["Party"]:
+            new_err = electiondata.juris.add_defaults(
+                self.d["jurisdiction_path"], templates, element
+            )
             if new_err:
                 error = ui.consolidate_errors([error, new_err])
 
@@ -1313,80 +1855,34 @@ class JurisdictionPrepper:
 
         # Feature create starter dictionary.txt with cdf_internal name
         #  used as placeholder for raw_identifier_value
-        dict_err = self.starter_dictionary(target_dir=target_dir)
+        dict_err = self.starter_dictionary(
+            target_dir_for_starter_dictionary=target_dir_for_starter_dictionary
+        )
 
         error = ui.consolidate_errors([error, asc_err, dict_err])
         ui.report(
-            error, self.d["reports_and_plots_dir"], file_prefix=f"prep_{self.d['name']}"
-        )
-        return error
-
-    def add_primaries_to_dict(self) -> Optional[dict]:
-        """Return error dictionary"""
-        print("\nStarting add_primaries_to_dict")
-        error = None
-
-        primaries = {}
-        # read CandidateContest.txt, Party.txt and dictionary.txt
-        cc = electiondata.juris.get_element(self.d["jurisdiction_path"],"CandidateContest")
-        p = electiondata.juris.get_element(self.d["jurisdiction_path"],"Party")
-        d = electiondata.juris.get_element(self.d["jurisdiction_path"],"dictionary")
-        # for each CandidateContest line in dictionary.txt with cdf_identifier in CandidateContest.txt
-        # and for each Party line in dictionary.txt with cdf_identifier in Party.txt
-        # append corresponding line in dictionary.txt
-        party_d = d[
-            (d["cdf_element"] == "Party")
-            & (d["cdf_internal_name"].isin(p["Name"].tolist()))
-        ]
-        contest_d = d[
-            (d["cdf_element"] == "CandidateContest")
-            & (d["cdf_internal_name"].isin(cc["Name"].tolist()))
-        ]
-        for i, p in party_d.iterrows():
-            primaries[p["raw_identifier_value"]] = contest_d.copy().rename(
-                columns={
-                    "cdf_internal_name": "contest_internal",
-                    "raw_identifier_value": "contest_raw",
-                }
-            )
-            primaries[p["raw_identifier_value"]]["cdf_internal_name"] = primaries[
-                p["raw_identifier_value"]
-            ].apply(
-                lambda row: electiondata.juris.primary(
-                    row, p["cdf_internal_name"], "contest_internal"
-                ),
-                axis=1,
-            )
-            primaries[p["raw_identifier_value"]]["raw_identifier_value"] = primaries[
-                p["raw_identifier_value"]
-            ].apply(
-                lambda row: electiondata.juris.primary(row,p["raw_identifier_value"],"contest_raw"),
-                axis=1,
-            )
-
-        if primaries:
-            df_list = [
-                df[["cdf_element", "cdf_internal_name", "raw_identifier_value"]]
-                for df in primaries.values()
-            ]
-            df_list.append(d)
-            new_dictionary = pd.concat(df_list)
-        else:
-            new_dictionary = d
-        new_err = electiondata.juris.write_element(
-            self.d["jurisdiction_path"], "dictionary", new_dictionary
-        )
-        ui.consolidate_errors([error, new_err])
-        ui.report(
-            error, self.d["reports_and_plots_dir"], file_prefix=f"prep_{self.d['name']}"
+            error,
+            self.d["reports_and_plots_dir"],
+            file_prefix=f"prep_{self.d['name']}",
         )
         return error
 
     def add_standard_contests(
         self, juriswide_contests: list = None, other_districts: dict = None
-    ) -> dict:
-        """If <juriswide_contest> is None, use standard list hard-coded.
-        Returns error dictionary"""
+    ) -> Optional[dict]:
+        """
+        Inputs:
+            juriswide_contests: list = None, list of jurisdiction-wide contests (default is calculated from
+                self.d["abbreviated_name"] via constants.jurisdiction_wide_contests())
+            other_districts: dict = None, optional dictionary mapping other district contest types to the
+            number of districts
+
+        Adds lines as necessary to jurisdiction files and starter dictionary for contests derived from the
+            jurisdiction prep parameter file and the function arguments
+
+        Returns:
+             Optional[dict], error dictionary
+        """
         # initialize error dictionary
         err = None
 
@@ -1407,9 +1903,13 @@ class JurisdictionPrepper:
                 count[k] = other_districts[k]["count"]
                 ru_type[k] = other_districts[k]["ReportingUnitType"]
 
-        w_office = electiondata.juris.get_element(self.d["jurisdiction_path"],"Office")
-        w_ru = electiondata.juris.get_element(self.d["jurisdiction_path"],"ReportingUnit")
-        w_cc = electiondata.juris.get_element(self.d["jurisdiction_path"],"CandidateContest")
+        w_office = electiondata.juris.get_element(self.d["jurisdiction_path"], "Office")
+        w_ru = electiondata.juris.get_element(
+            self.d["jurisdiction_path"], "ReportingUnit"
+        )
+        w_cc = electiondata.juris.get_element(
+            self.d["jurisdiction_path"], "CandidateContest"
+        )
         cols_off = ["Name", "ElectionDistrict"]
         cols_ru = ["Name", "ReportingUnitType"]
         cols_cc = ["Name", "NumberElected", "Office", "PrimaryParty"]
@@ -1457,15 +1957,8 @@ class JurisdictionPrepper:
 
         # add standard jurisdiction-wide offices
         if not juriswide_contests:
-            juriswide_contests = [
-                f"US President ({abbr})",
-                f"{abbr} Governor",
-                f"US Senate {abbr}",
-                f"{abbr} Attorney General",
-                f"{abbr} Lieutenant Governor",
-                f"{abbr} Treasurer",
-                f"{abbr} Secretary of State",
-            ]
+            juriswide_contests = constants.jurisdiction_wide_contests(abbr)
+
         # append jurisdiction-wide offices to the office df
         jw_off = pd.DataFrame(
             [[x, self.d["name"]] for x in juriswide_contests], columns=cols_off
@@ -1503,81 +1996,61 @@ class JurisdictionPrepper:
                 return err
         return err
 
-    def add_primaries_to_candidate_contest(self) -> Optional[str]:
-        print(f"\nStarting {inspect.currentframe().f_code.co_name}")
-
-        primaries = {}
-        err_str = None
-
-        # get contests that are not already primaries
-        contests = electiondata.juris.get_element(self.d["jurisdiction_path"],"CandidateContest")
-        # TODO might have to check for '' as well as nulls
-        non_p_contests = contests[contests["PrimaryParty"].isnull()]
-        if non_p_contests.empty:
-            err_str = "CandidateContest.txt is missing or has no non-primary contests. No primary contests added."
-            return err_str
-
-        # get parties
-        parties = electiondata.juris.get_element(self.d["jurisdiction_path"],"Party")
-        if parties.empty:
-            if err_str:
-                err_str += (
-                    "\n Party.txt is missing or empty. No primary contests added."
-                )
-            else:
-                err_str = "\n Party.txt is missing or empty. No primary contests added."
-            return err_str
-
-        for i, party in parties.iterrows():
-            p = party["Name"]
-            primaries[p] = non_p_contests.copy()
-            primaries[p]["Name"] = non_p_contests.apply(
-                lambda row: electiondata.juris.primary(row,p,"Name"), axis=1
-            )
-            primaries[p]["PrimaryParty"] = p
-
-        all_primaries = [primaries[p] for p in parties.Name.unique()]
-        new_err = electiondata.juris.write_element(
-            self.d["jurisdiction_path"],
-            "CandidateContest",
-            pd.concat([contests] + all_primaries),
-        )
-        err_str = ui.consolidate_errors([err_str, new_err])
-        return err_str
-
     def starter_dictionary(
-        self, include_existing=True, target_dir: Optional[str] = None
-    ) -> dict:
-        """Creates a starter file for dictionary.txt, assuming raw_identifiers are the same as cdf_internal names.
-        Puts file in the current directory. Returns error dictionary"""
+        self,
+        include_existing=True,
+        target_dir_for_starter_dictionary: Optional[str] = None,
+    ) -> Optional[dict]:
+        """
+        Inputs:
+            include_existing=True, if True, includes lines from dicionary.txt in self.d["jurisdiction_path"] into
+                the starter dictionary
+            target_dir_for_starter_dictionary: Optional[str] = None, path to directory for starter dictionary
+                (default is current directory)
+
+        Creates a starter dictionary.txt wtih raw_identifiers the same as cdf_internal names.
+
+        Returns:
+             Optional[dict], error dictionary
+        """
         w = dict()
         elements = [
             "BallotMeasureContest",
             "Candidate",
             "CandidateContest",
-            "Election",
             "Party",
             "ReportingUnit",
         ]
-        old = electiondata.juris.get_element(self.d["jurisdiction_path"],"dictionary")
+        old = electiondata.juris.get_element(self.d["jurisdiction_path"], "dictionary")
         if not include_existing:
             old.drop()
         for element in elements:
-            w[element] = electiondata.juris.get_element(self.d["jurisdiction_path"],element)
+            w[element] = electiondata.juris.get_element(
+                self.d["jurisdiction_path"], element
+            )
             name_field = db.get_name_field(element)
             w[element] = m.add_constant_column(w[element], "cdf_element", element)
             w[element].rename(columns={name_field: "cdf_internal_name"}, inplace=True)
             w[element]["raw_identifier_value"] = w[element]["cdf_internal_name"]
 
+        # add lines for CountItemTypes to dictionary
+        w["CountItemType"] = pd.DataFrame(
+            [
+                ["CountItemType", cit, cit]
+                for cit in constants.nist_standard["CountItemType"]
+            ],
+            columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
+        )
+
         starter_file_name = f'{self.d["abbreviated_name"]}_starter_dictionary.txt'
         starter = pd.concat(
             [
                 w[element][["cdf_element", "cdf_internal_name", "raw_identifier_value"]]
-                for element in elements
+                for element in (elements + ["CountItemType"])
             ]
         ).drop_duplicates()
-        if target_dir:
-            ssd_str = starter_dict_dir = target_dir
+        if target_dir_for_starter_dictionary:
+            ssd_str = starter_dict_dir = target_dir_for_starter_dictionary
         else:
             ssd_str = "current directory (not in jurisdiction directory)"
             starter_dict_dir = "."
@@ -1593,8 +2066,9 @@ class JurisdictionPrepper:
         sub_ru_type: str = "precinct",
         county_type=constants.default_subdivision_type,
         dbname: Optional[str] = None,
-        paraam_file: Optional[str] = None
+        paraam_file: Optional[str] = None,
     ) -> Optional[dict]:
+        """Do not use! May be obsolete, may be broken"""
         err_list = list()
         dl = DataLoader(dbname=dbname, param_file=paraam_file)
         path_to_jurisdiction_dir = os.path.join(
@@ -1613,13 +2087,15 @@ class JurisdictionPrepper:
 
         for mu in sdl.munger_list:
             # get parameters
-            m_path = os.path.join(sdl.mungers_dir, f"{mu}.munger")
+            m_path = os.path.join(sdl.mungers_path, f"{mu}.munger")
             mu_d, new_err = m.get_and_check_munger_params(m_path)
             # get ReportingUnit formula
             ru_formula = ""
             headers = [
                 x
-                for x in electiondata.constants.req_munger_parameters["munge_field_types"]
+                for x in electiondata.constants.req_munger_parameters[
+                    "munge_field_types"
+                ]
                 if x != "constant_over_file"
             ]
             for header in headers:
@@ -1645,8 +2121,12 @@ class JurisdictionPrepper:
                     err_list.append(new_err)
             else:
                 # create raw -> internal dictionary of county_type names
-                jd_df = electiondata.juris.get_element(self.d["jurisdiction_path"],"dictionary")
-                ru_df = electiondata.juris.get_element(self.d["jurisdiction_path"],"ReportingUnit")
+                jd_df = electiondata.juris.get_element(
+                    self.d["jurisdiction_path"], "dictionary"
+                )
+                ru_df = electiondata.juris.get_element(
+                    self.d["jurisdiction_path"], "ReportingUnit"
+                )
                 internal = (
                     jd_df[jd_df["cdf_element"] == "ReportingUnit"]
                     .merge(
@@ -1717,40 +2197,13 @@ class JurisdictionPrepper:
         err = ui.consolidate_errors(err_list)
         return err
 
-    def make_test_file(self, election: str):
-        juris_true_name = self.d["name"]
-        juris_abbr = self.d["abbreviated_name"]
-        tests_dir = os.path.join(
-            Path(self.d["mungers_dir"]).parents[1],
-            "tests",
-            "specific_result_file_tests",
-        )
-        juris_test_dir = os.path.join(tests_dir, self.d["system_name"])
-        sample_test_dir = os.path.join(tests_dir, "20xx_test_templates")
-        election_str = jm.system_name_from_true_name(election)
-        test_file_name = f"test_{self.d['system_name']}_{election_str}.py"
-        new_test_file = os.path.join(juris_test_dir, test_file_name)
-        if not os.path.isdir(juris_test_dir):
-            os.mkdir(juris_test_dir)
-
-        if not os.path.isfile(new_test_file):
-            test_replace = {
-                f'jurisdiction = "North Carolina"\nabbr = "NC"': f'jurisdiction = "{juris_true_name}"\nabbr = "{juris_abbr}"',
-                f'single_county = "North Carolina;Bertie County"': f'single_county = "{juris_true_name}; "',
-            }
-            create_from_template(
-                os.path.join(sample_test_dir, f"donttest_template_{election_str}.py"),
-                new_test_file,
-                test_replace,
-            )
-            return
-
     def make_ini_file(
         self,
         ini_name: str,
         munger_name_list: str,
         is_preliminary: bool = False,
     ):
+        """Do not use! May be broken"""
         juris_true_name = self.d["name"]
         juris_system_name = self.d["system_name"]
 
@@ -1772,13 +2225,14 @@ class JurisdictionPrepper:
             if is_preliminary:
                 ini_replace.update({"is_preliminary=False": "is_preliminary=True"})
             create_from_template(
-                os.path.join(inis_dir, "template.ini"),
+                os.path.join(inis_dir, "single_election_jurisdiction_template.ini"),
                 new_ini_file,
                 ini_replace,
             )
         return
 
     def make_munger_file(self, munger_name: str):
+        """Do not use! May be broken"""
         new_munger_file = os.path.join(self.d["mungers_dir"], f"{munger_name}.munger")
         if not os.path.isfile(new_munger_file):
             munger_replace = dict()
@@ -1789,16 +2243,50 @@ class JurisdictionPrepper:
             )
         return
 
+    def add_contests_from_file(
+        self,
+        file_path: str,
+    ) -> Optional[dict]:
+        """Do not use! May be broken!"""
+        err = None
+        try:
+            df = pd.read_csv(file_path, sep="\t")
+        except FileNotFoundError:
+            err = ui.add_new_error(err, "file", file_path, f"File not found")
+            return err
+        except Exception as e:
+            err = ui.add_new_error(
+                err, "file", file_path, f"Exception while reading file: {e}"
+            )
+            return err
+        err = juris.add_candidate_contests(self.d[""], df, file_path)
+        return err
+
     def __init__(
         self,
         prep_param_file: str = "jurisdiction_prep.ini",
         run_time_param_file: str = "run_time.ini",
         target_dir: Optional[str] = None,
     ):
+        """
+        Inputs:
+            prep_param_file: str = "jurisdiction_prep.ini", path to file with parameters for the new jurisdiction
+            run_time_param_file: str = "run_time.ini", path to main parameter file
+            target_dir: Optional[str] = None, path to directory where new files should be placed. Default is a
+                subdirectory named for the jurisdiction specified in <prep_param_file> in the src/jurisdictions
+                directory in the repository.
+
+        Returns a JurisdictionPrepper instance with attributes:
+            d, dictionary of parameters from the main system parameter file and the parameters in the jurisdiction prep
+                parameter file
+            state_house, integer number of state house districts (per jurisdiction prep parameter file)
+            state_senate, integer number of state senate districts (per jurisdiction prep parameter file)
+            congressional , integer number of congressional districts (per jurisdiction prep parameter file)
+        """
         self.d = dict()
         # get parameters from jurisdiction_prep.ini and run_time.ini
         for param_file, required in [
-            (prep_param_file,constants.prep_pars),
+            (prep_param_file, constants.prep_pars),
             (run_time_param_file, ["repository_content_root", "reports_and_plots_dir"]),
         ]:
             d, parameter_err = ui.get_parameters(
@@ -1832,7 +2320,7 @@ class JurisdictionPrepper:
 
 def make_ini_file_batch(
     results_directory: str,
-    output_directory: str,
+    target_directory: str,
     munger_list: str,
     jurisdiction: str,
     election: str,
@@ -1841,11 +2329,26 @@ def make_ini_file_batch(
     results_note: str = "none",
     extension: Optional[str] = None,
 ):
-    """Utility to create parameter files for multiple files.
-    Makes a parameter file for each (non-.ini,non .*) file in <dir>,
-    once all other necessary parameters are specified.
-    If <extension> is given, makes parameter file for each file with the given extension.
-    Writes .ini files to <output_directory"""
+    """
+    Required inputs:
+        results_directory: str, directory holding results files to be described in *.ini files
+            created by this routine
+        output_directory: str, directory to receive files created by this routine
+        munger_list: str, value of munger_list parameter in files created
+        jurisdiction: str, value of jurisdiction parameter in files created
+        election: str, value of election parameter in files created
+
+    Optional inputs:
+        download_date: str = "1900-01-01", value of download_date parameter in files created
+        source: str = "unknown", value of source parameter in files created
+        results_note: str = "none", value of results_note parameter in files created
+        extension: Optional[str] = None, if given, restrict to results files with the given extenstion
+
+    Creates a SingleDataLoader parameter file in the <target_directory> for each result file
+        in the <results_directory> (or each whose extension matches <extension>, if given).
+        Files in the <results_directory> whose names start with ".", or whose extensions are ".ini",
+        are ignored.
+    """
     if extension:
         data_file_list = [
             f
@@ -1867,25 +2370,40 @@ def make_ini_file_batch(
             f"results_source={source}\nresults_note={results_note}\n"
         )
         ini_file_name = ".".join(f.split(".")[:-1]) + ".ini"
-        with open(os.path.join(output_directory, ini_file_name), "w") as p:
+        with open(os.path.join(target_directory, ini_file_name), "w") as p:
             p.write(par_text)
     return
 
 
 class Analyzer:
-    def __new__(cls, param_file=None, dbname=None):
-        """Checks if parameter file exists and is correct. If not, does
-        not create DataLoader object."""
+    def __new__(
+        cls,
+        param_file: str = None,
+        dbname: str = None,
+        major_subdivision_file: str = None,
+    ):
+        """
+        Optional inputs:
+            param_file: str = None, path to file with main parameters for [electiondata] and [postgres].
+                Default is "run_time.ini"
+            dbname: str = None, name of database. Default is name in <param_file>
+            major_subdivision_file: str = None, path to file with columns
+                'jurisdiction', 'major_subjurisdiction_type'
+        Checks:
+            parameter file exists and is has necessary parameters
+            connection to database
+            Major subdivision type available for each jurisdiction with data in the database
+        """
         try:
             if not param_file:
                 param_file = "run_time.ini"
-            d, postgres_param_err = ui.get_parameters(
-                required_keys=["dbname"],
+            db_params, postgres_param_err = ui.get_parameters(
+                required_keys=["dbname", "host", "port", "user", "password"],
                 param_file=param_file,
                 header="postgresql",
             )
             d, eda_err = ui.get_parameters(
-                required_keys=["reports_and_plots_dir"],
+                required_keys=["reports_and_plots_dir", "repository_content_root"],
                 param_file=param_file,
                 header="electiondata",
             )
@@ -1895,21 +2413,77 @@ class Analyzer:
                     return None
         except FileNotFoundError:
             print(
-                f"Parameter file '{param_file}' not found. Ensure that it is located"
-                f" in the current directory ({os.getcwd()}).\nAnalyzer object not created."
+                f"Parameter file '{param_file}' not found. .\nAnalyzer object not created."
             )
             return None
 
         if postgres_param_err or eda_err:
-            print("Parameter file missing requirements.")
+            print(f"Parameter file {param_file} missing requirements.")
             print(f"postgres: {postgres_param_err}")
             print(f"elections: {eda_err}")
             print("Analyzer object not created.")
             return None
 
+        # test connection to db
+        try:
+            db_engine, err = db.sql_alchemy_connect(db_params=db_params, dbname=dbname)
+            Session = sessionmaker(bind=db_engine)
+            session = Session()
+            # if error is fatal
+            if ui.fatal_error(err):
+                print(
+                    f"No Analyzer created, because connection not established to database with these parameters: \n"
+                    f"dbname={dbname}\ndb_params={db_params}"
+                )
+                return None
+            # if err contains warning (but no fatal error)
+            elif err:
+                print(f"Warning: {err}")
+        except Exception as exc:
+            print(
+                f"No Analyzer created, because connection not established to database with these parameters: \n"
+                f"dbname={dbname}\ndb_params={db_params}\n\n"
+                f"Exception raised: {exc}"
+            )
+            return None
+
+        # test major subdivision dictionary:
+        ok, err_str = check_major_subdivisions(
+            session=session,
+            content_root=d["repository_content_root"],
+            major_subdivision_file=major_subdivision_file,
+        )
+        if not ok:
+            print(err_str)
+            return None
+
+        if db_engine:
+            db_engine.dispose()
         return super().__new__(cls)
 
-    def __init__(self, param_file=None, dbname=None):
+    def __init__(
+        self,
+        param_file: str = None,
+        dbname: str = None,
+        major_subdivision_file: str = None,
+    ):
+        """
+        Optional inputs:
+            param_file=None, if given, path to file with parameters necessary for creating an Analyzer
+                instance. Default is "run_time.ini"
+            dbname=None, if given, name of database from which to export & analyze data. Default
+                is the value of the dbname parameter in the [postgres] section of the param_file
+            major_subdivision_file: str = None, path to file with columns
+                'jurisdiction', 'major_subjurisdiction_type'
+
+        Creates instance of Analyzer with attributes:
+            d, dictionary of parameters from param_file
+            reports_and_plots_dir, path to directory for plots and reports created by the Analyzer
+            repository_content_root, path to repository content root (for access to, e.g., the
+                file major_subdivision_types.txt
+            session, sqlalchemy session connected to database
+            major_subdivision_type, dictionary mapping jurisdiction names to ReportingUnitType of major subdivision
+        """
         if not param_file:
             param_file = "run_time.ini"
 
@@ -1923,20 +2497,339 @@ class Analyzer:
         self.repository_content_root = d["repository_content_root"]
 
         # create session
-        eng, err = db.sql_alchemy_connect(param_file, dbname=dbname)
+        eng, err = db.sql_alchemy_connect(db_param_file=param_file, dbname=dbname)
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
-    # `verbose` param is not used but may be necessary. See github issue #524 for details
+        # get dictionary of major subdivision types
+        self.major_subdivision_type, new_err = get_major_subdivisions(
+            session=self.session,
+            content_root=self.repository_content_root,
+            major_subdivision_file=major_subdivision_file,
+        )
+
+    # testing methods
+    def test_loaded_results(
+        self,
+        election: str,
+        juris_true_name: str,
+        juris_system_name: str,
+        reference_results: Optional[str] = None,
+        status: Optional[str] = None,
+    ) -> Optional[dict]:
+        """
+        Required inputs:
+             election: str,
+             juris_true_name: str,
+             juris_system_name: str,
+        Optional inputs:
+             reference: Optional[str] = None, if given, use this path to file of reference results. If not
+                 given, reference results are taken from file
+                 <repository_content_root>/reference_results/<juris_system_name>.tsv
+             status: Optional[str] = None, if given, checks only the reference results with that same status
+
+         Reports information from tests to self.reports_and_plots.
+         Returns:
+             Optional[dict], error dictionary with only "warn-test" and no "test" keys (since calling function may or
+                 may not view failing tests as fatal
+        """
+        err = None
+
+        # consistency tests
+        if not self.data_exists(election, juris_true_name):
+            err = ui.add_new_error(
+                err,
+                "warn-test",
+                f"Election: {election}; Jurisdiction: {juris_true_name}",
+                f"\nNo data found",
+            )
+        if not self.check_totals_match_vote_types(
+            election,
+            juris_true_name,
+            sub_unit_type=self.major_subdivision_type[juris_true_name],
+        ):
+            err = ui.add_new_error(
+                err,
+                "warn-test",
+                f"Election: {election}; Jurisdiction: {juris_true_name}",
+                f"\nSum of other vote types does not match total "
+                f"for every {self.major_subdivision_type[juris_true_name]}",
+            )
+        # report contests with unknown candidates
+        bad_contests = self.get_contests_with_unknown_candidates(
+            election, juris_true_name, report_dir=self.reports_and_plots_dir
+        )
+        if bad_contests:
+            bad_str = "\n".join(bad_contests)
+            err = ui.add_new_error(
+                err,
+                "warn-test",
+                f"Election: {election}; Jurisdiction: {juris_true_name}",
+                f"\nSome contests have at least one unknown candidate:\n{bad_str}",
+            )
+
+        # test against reference result totals
+        if reference_results is None:
+            reference_results = os.path.join(
+                self.repository_content_root,
+                "reference_results",
+                f"{juris_system_name}.tsv",
+            )
+        (
+            not_found,
+            ok,
+            wrong,
+            significantly_wrong,
+            sub_dir,
+            new_err,
+        ) = self.compare_to_results_file(
+            reference_results,
+            single_election=election,
+            single_jurisdiction=juris_true_name,
+            report_dir=self.reports_and_plots_dir,
+            status=status,
+        )
+        err = ui.consolidate_errors([err, new_err])
+
+        return err
+
+    def data_exists(
+        self,
+        election: str,
+        jurisdiction: str,
+    ) -> bool:
+        """
+        Inputs:
+            election: str, name of election (e.g., "2020 General")
+            jurisdiction: str, name of jurisdiction (e.g., "New Mexico")
+
+        Returns:
+            bool, True if the database of self.session has data for this election-jurisdiction pair
+        """
+        if not self:
+            return False
+
+        election_id = db.name_to_id(self.session, "Election", election)
+        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
+
+        # if the database doesn't have the election or the reporting unit
+        if not election_id or not jurisdiction_id:
+            # data doesn't exist
+            return False
+
+        # read all contests with records in the VoteCount table
+        df = db.read_vote_count(
+            self.session,
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["ContestName"],
+            aliases=["contest_name"],
+        )
+        # if no contest found
+        if df.empty:
+            # no data exists.
+            return False
+        # otherwise
+        else:
+            # then data exists!
+            return True
+
+    def check_totals_match_vote_types(
+        self,
+        election: str,
+        jurisdiction: str,
+        sub_unit_type: Optional[str] = None,
+    ) -> bool:
+        """
+        Required inputs:
+            election: str, name of election
+            jurisdiction: str, name of jurisdiction
+
+        Optional inputs:
+            sub_unit_type: str = None, the subdivision type (e.g., 'county') to which results should be rolled up.
+                Default is constants.default_subdivision_type
+
+        Returns:
+            bool, True if only count type is 'total' or if sum of rolled-up counts for other vote types matches
+                value of 'total' for each subdivision of the given type
+        """
+
+        if sub_unit_type is None:
+            sub_unit_type = constants.default_subdivision_type
+        active = db.active_vote_types(self.session, election, jurisdiction)
+        if len(active) > 1 and "total" in active:
+            # pull type 'total' only
+            df_candidate = self.aggregate(
+                election,
+                jurisdiction,
+                contest_type="Candidate",
+                vote_type="total",
+                sub_unit_type=sub_unit_type,
+                exclude_redundant_total=False,
+            )
+            df_ballot = self.aggregate(
+                election,
+                jurisdiction,
+                contest_type="BallotMeasure",
+                vote_type="total",
+                sub_unit_type=sub_unit_type,
+                exclude_redundant_total=False,
+            )
+            df_total_type_only = pd.concat([df_candidate, df_ballot])
+
+            # pull all types but total
+            df_candidate = self.aggregate(
+                election,
+                jurisdiction,
+                contest_type="Candidate",
+                sub_unit_type=sub_unit_type,
+                exclude_redundant_total=True,
+            )
+            df_ballot = self.aggregate(
+                election,
+                jurisdiction,
+                contest_type="BallotMeasure",
+                exclude_redundant_total=True,
+                sub_unit_type=sub_unit_type,
+            )
+            df_sum_nontotal_types = pd.concat([df_candidate, df_ballot])
+            return (
+                df_total_type_only["count"].sum()
+                == df_sum_nontotal_types["count"].sum()
+            )
+        else:
+            return True
+
+    def contest_total(
+        self,
+        election: str,
+        jurisdiction: str,
+        contest: str,
+        reporting_unit: str,
+        vote_type: Optional[str] = None,
+        contest_type: Optional[str] = "Candidate",
+    ) -> Optional[int]:
+        """
+        Required inputs:
+            election: str, name of election for contest
+            jurisdiction: str, name of jurisdiction for contest
+            contest: str, name of contest
+            reporting_unit: str, reporting unit over which total should be taken
+
+        Optional inputs:
+            vote_type: Optional[str] = None, if given, give total for that vote type only
+            contest_type: Optional[str] = "Candidate", type of contest (other option is "BallotMeasure") since
+                CandidateContests and BallotMeasureContests are handled differently in database
+
+        Returns:
+            Optional[int], total number of votes in the contest in the given election and jurisdiction within the given
+        reporting unit. If vote type is given, restricts to that vote type. If no data is found, returns None.
+        """
+        sub_unit_type = db.get_reporting_unit_type(self.session, reporting_unit)
+        if vote_type == "total":
+            exclude_redundant_total = False
+        else:
+            exclude_redundant_total = True
+        df = self.aggregate(
+            election=election,
+            jurisdiction=jurisdiction,
+            vote_type=vote_type,
+            sub_unit=reporting_unit,
+            sub_unit_type=sub_unit_type,
+            contest=contest,
+            contest_type=contest_type,
+            exclude_redundant_total=exclude_redundant_total,
+        )
+        if df.empty:
+            return None
+        else:
+            return df["count"].sum()
+
+    def check_count_types_standard(
+        self,
+        election: str,
+        jurisdiction: str,
+    ) -> bool:
+        """
+        Required inputs:
+            election: str,
+            jurisdiction: str,
+
+        Returns:
+            bool, True if CountItemType for all vote counts for the given election and jurisdiction
+                are on the standard list given in the NIST Election Results Reporting common data format
+        """
+        standard_ct_list = constants.nist_standard["CountItemType"]
+
+        active = db.active_vote_types(self.session, election, jurisdiction)
+        for vt in active:
+            # if even one fails, count types are not standard
+            if vt not in standard_ct_list:
+                return False
+        # if nothing failed, count types are standard
+        return True
+
+    def get_contests_with_unknown_candidates(
+        self,
+        election: str,
+        jurisdiction: str,
+        report_dir: Optional[str] = None,
+    ) -> List[str]:
+        """
+        Required inputs:
+            election: str,
+            jurisdiction: str,
+        Optional inputs:
+            report_dir: Optional[str] = None, if given, path to directory for file reporting bad contests;
+                if not given, no report created.
+
+        Returns:
+             List[str], list of contests with unknown candidates
+        """
+        election_id = db.name_to_id(self.session, "Election", election)
+        if not election_id:
+            return [f"Election {election} not found"]
+        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
+        if not jurisdiction_id:
+            return [f"Jurisdiction {jurisdiction} not found"]
+
+        contests = db.get_contest_with_unknown(
+            self.session, election_id, jurisdiction_id
+        )
+        if contests and report_dir:
+            ts = datetime.datetime.now().strftime("%m%d_%H%M")
+            subdir = os.path.join(report_dir, f"bad_contests_{ts}")
+            Path(subdir).mkdir(exist_ok=True, parents=True)
+            election_system_name = jm.system_name_from_true_name(election)
+            juris_system_name = jm.system_name_from_true_name(jurisdiction)
+            open(
+                os.path.join(subdir, f"{election_system_name}_{juris_system_name}.tsv"),
+                "w",
+            ).write("\n".join(contests))
+
+        return contests
+
+    # visualization methods
+    # May need to add back 'verbose' option for compatibility with VoteVisualizer front end.
+    #    See github issue #524 for details
     def display_options(
-        self, input_str: str, verbose: bool = True, filters: list = None
-    ):
-        """<input_str> is one of: 'election', 'jurisdiction', 'contest_type', 'contest',
-        'category' or 'count'"""
+        self, input_str: str, filters: List[str] = None
+    ) -> Optional[List[Dict[str, Any]]]:
+        """
+        Required Inputs:
+            input_str: str, one of: 'election', 'jurisdiction', 'contest_type', 'contest',
+                'category' or 'count'
+        Optional Inputs:
+            filters: List[str] = None, if given, these strings will be used to filter the results
+
+        Returns:
+            Optional[List[Dict[str, Any]]], on exception, returns None. Otherwise, # TODO
+
+        """
         try:
             filters_mapped = ui.get_contest_type_mappings(filters)
             results = ui.get_filtered_input_options(
-                self.session, input_str, filters_mapped, self.repository_content_root
+                self.session, input_str, filters_mapped, self.major_subdivision_type
             )
         except Exception as exc:
             results = None
@@ -1952,21 +2845,31 @@ class Analyzer:
         v_category: str,
         v_count: str,  # vertical axis params
         fig_type: str = None,
-    ) -> Optional[list]:
-        """Used to create a scatter plot based on selected inputs. The fig_type parameter
-        is used when the user wants to actually create the visualization; this uses plotly
-        so any image extension that is supported by plotly is usable here. Currently supports
-        html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
-        installed as well."""
+    ) -> Optional[dict]:
+        """
+        Required inputs:
+            jurisdiction: str,
+            for horizontal axis of scatter plot:
+                h_election: str, election parameter
+                h_category: str, category parameter (e.g., Population by Race or Candidate total)
+                h_count: str,  count label parameter (e.g., "Black" or "Joseph R. Biden", depending on category)
+            for vertical axis of scatter plot (same definitions as for horizontal):
+                v_election: str,
+                v_category: str,
+                v_count: str,
+        Optional input:
+            fig_type: str = None, an image format string from plotly - as of 8/2021, includes
+                html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need
+                plotly-orca installed as well.
+
+        If <fig_type> is given and points for scatter are found, creates a scatter plot
+            in the self.reports_and_plots_dir directory with file extension and format determined by fig_type.
+
+        Returns:
+            dict, dictionary of data for creating the scatter plot (including title, axis titles, etc.)
+        """
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        (
-            subdivision_type_id,
-            other_subdivision_type,
-        ) = db.get_major_subdiv_id_and_othertext(
-            self.session, jurisdiction, file_path=os.path.join(
-                self.repository_content_root,"jurisdictions","000_major_subjurisdiction_types.txt"
-            )
-        )
+        subdivision_type = self.major_subdivision_type[jurisdiction]
         h_election_id = db.name_to_id(self.session, "Election", h_election)
         v_election_id = db.name_to_id(self.session, "Election", v_election)
         # *_type is either candidates or contests or parties
@@ -1977,11 +2880,10 @@ class Analyzer:
         h_count = h_count.split(" - ")[0].strip()
         v_count = v_count.split(" - ")[0].strip()
 
-        agg_results = a.create_scatter(
+        agg_results = an.create_scatter(
             self.session,
             jurisdiction_id,
-            subdivision_type_id,
-            other_subdivision_type,
+            subdivision_type,
             h_election_id,
             h_count_item_type,
             h_count,
@@ -2004,27 +2906,39 @@ class Analyzer:
         contest_type: str = None,
         contest: str = None,
         fig_type: str = None,
-    ) -> list:
-        """contest_type is an election district type, e.g.,
-        state, congressional, state-senate, state-house, territory, etc.
-        Complete list is given by the keys of <db.contest_type_mapping>"""
+    ) -> Optional[List[dict]]:
+        """
+        Required inputs:
+            election: str,
+            jurisdiction: str,
+        Optional input:
+            contest_type: str = None, an election district type, e.g.,
+                state, congressional, state-senate, state-house, territory, etc.
+                Complete list is given by the keys of <constants.contest_type_mapping>
+            contest: str = None,
+            fig_type: str = None, an image format string from plotly - as of 8/2021, includes
+                html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need
+                plotly-orca installed as well.
+
+        If <fig_type> is given and points for scatter are found, creates a scatter plot
+            in the self.reports_and_plots_dir directory with file extension and format determined by fig_type.
+
+        Returns:
+            List[dict],
+        """
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        # for now, bar charts can only handle jurisdictions where county is one level
+        # for now, bar charts can only handle jurisdictions where major subdivision type is one level
         # down from the jurisdiction
-        subdivision_type_id, other_subdivision_type = db.get_jurisdiction_hierarchy(
-            self.session, jurisdiction_id
-        )
-        # bar chart always at one level below top reporting unit
-        agg_results = a.create_bar(
+        # TODO is this still true? ^^
+        agg_results = an.create_bar(
             self.session,
-            jurisdiction_id,
-            subdivision_type_id,
-            other_subdivision_type,
-            contest_type,
-            contest,
             election_id,
-            False,
+            jurisdiction_id,
+            self.major_subdivision_type[jurisdiction],
+            contest_district_type=contest_type,
+            contest_or_contest_group=contest,
+            for_export=False,
         )
         if fig_type and agg_results:
             for agg_result in agg_results:
@@ -2050,54 +2964,57 @@ class Analyzer:
         election: str,
         jurisdiction: str,
         contest: str = None,
-    ) -> list:
-        """contest_type is one of state, congressional, state-senate, state-house"""
+    ) -> Optional[List[dict]]:
+        """Not ready for prime time
+        contest_type is one of state, congressional, state-senate, state-house"""
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type_id, other_subdivision_type = db.get_jurisdiction_hierarchy(
-            self.session, jurisdiction_id
-        )
         # bar chart always at one level below top reporting unit
-        agg_results = a.create_bar(
+        agg_results = an.create_bar(
             self.session,
-            jurisdiction_id,
-            subdivision_type_id,
-            other_subdivision_type,
-            None,
-            contest,
             election_id,
-            True,
+            jurisdiction_id,
+            self.major_subdivision_type[jurisdiction],
+            contest_or_contest_group=contest,
+            for_export=True,
         )
         return agg_results
 
     def top_counts(
-        self, election: str, rollup_unit: str, sub_unit: str, by_vote_type: bool
+        self, election: str, jurisdiction: str, sub_rutype: str, by_vote_type: bool
     ) -> Optional[str]:
-        rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
-        sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
-        sub_rutype_othertext = ""
-        if sub_unit_id is None:
-            sub_rutype_othertext = sub_unit
+        """
+        Inputs:
+            election: str,
+            jurisdiction: str,
+            sub_rutype: str, ReportingUnitType (e.g., 'county') to which the results should be rolled up
+            by_vote_type: bool, if true, results will be reported by vote type. If false, only totals will be reported
+
+        Puts file with results into a subdirectory (labeled by election and jurisdiction name)
+            of the reports_and_plots_dir specified in the Analyzer's param_file.
+        """
+        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         election_id = db.name_to_id(self.session, "Election", election)
-        err = a.create_rollup(
+        err = an.export_rollup(
             self.session,
             self.reports_and_plots_dir,
-            top_ru_id=rollup_unit_id,
-            sub_rutype_id=sub_unit_id,
+            jurisdiction_id=jurisdiction_id,
+            sub_rutype=sub_rutype,
             election_id=election_id,
             by_vote_type=by_vote_type,
-            sub_rutype_othertext=sub_rutype_othertext,
         )
         return err
 
     def export_nist(
-            self, election: str, jurisdiction, major_subdivision: Optional[str] = None
+        self,
+        election: str,
+        jurisdiction,
     ) -> Union[str, Dict[str, Any]]:
         """picks either version 1.0 (json) or version 2.0 (xml) based on value of constants.nist_version"""
         if electiondata.constants.nist_version == "1.0":
             return self.export_nist_v1_json(election, jurisdiction)
         elif electiondata.constants.nist_version == "2.0":
-            return self.export_nist_v2(election, jurisdiction, major_subdivision)
+            return self.export_nist_v2(election, jurisdiction)
         else:
             return ""
 
@@ -2107,22 +3024,22 @@ class Analyzer:
 
         election_report = dict()
 
-        election_report["Contest"] = a.nist_candidate_contest(
+        election_report["Contest"] = an.nist_candidate_contest(
             self.session, election_id, jurisdiction_id
         )
-        election_report["GpUnit"] = a.nist_reporting_unit(
+        election_report["GpUnit"] = an.nist_reporting_unit(
             self.session, election_id, jurisdiction_id
         )
-        election_report["Party"] = a.nist_party(
+        election_report["Party"] = an.nist_party(
             self.session, election_id, jurisdiction_id
         )
-        election_report["Election"] = a.nist_election(
+        election_report["Election"] = an.nist_election(
             self.session, election_id, jurisdiction_id
         )
-        election_report["Office"] = a.nist_office(
+        election_report["Office"] = an.nist_office(
             self.session, election_id, jurisdiction_id
         )
-        election_report["Candidate"] = a.nist_candidate(
+        election_report["Candidate"] = an.nist_candidate(
             self.session, election_id, jurisdiction_id
         )
 
@@ -2141,30 +3058,90 @@ class Analyzer:
         self,
         election: str,
         jurisdiction: str,
-        major_subdivision: Optional[str] = None,
     ) -> str:
         """exports NIST v2 xml string"""
         xml_tree, err = nist.nist_v2_xml_export_tree(
-                self.session,
-                election,
-                jurisdiction,
-                major_subdivision=major_subdivision,
-                issuer=electiondata.constants.default_issuer,
-                issuer_abbreviation=electiondata.constants.default_issuer_abbreviation,
-                status=electiondata.constants.default_status,
-                vendor_application_id=electiondata.constants.default_vendor_application_id,
+            self.session,
+            election,
+            jurisdiction,
+            rollup_subdivision_type=self.major_subdivision_type[jurisdiction],
+            issuer=electiondata.constants.default_issuer,
+            issuer_abbreviation=electiondata.constants.default_issuer_abbreviation,
+            status=electiondata.constants.default_status,
+            vendor_application_id=electiondata.constants.default_vendor_application_id,
+        )
+        if (xml_tree.getroot() is None) or ui.fatal_error(err):
+            xml_string = ""
+        else:
+            xml_string = ET.tostring(
+                xml_tree.getroot(),
+                encoding="unicode",  # to ensure string is returned, per ET docs
+                method="xml",
             )
-        xml_string = ET.tostring(xml_tree.getroot(),
-                                 encoding=electiondata.constants.default_encoding,
-                                 method="xml",
-                                 )
         return xml_string
 
-    def diff_in_diff(
+    def export_election_to_tsv(
+        self, target_file: str, election: str, jurisdiction: Optional[str] = None
+    ):
+        """
+        Required inputs:
+            target_file: str, path to file
+            election: str,
+        Optional inputs:
+            jurisdiction: Optional[str] = None,
+
+        Exports all election results from <self.session>'s database for the election <election> (and the jurisdiction
+            <jurisdiction>, if given) to the <target_file>. Columns exported are:  "Election",
+            "Contest", "Selection", "Party", "ReportingUnit", "VoteType", "Count", "Preliminary"
+        """
+        # get internal ids for election (and maybe jurisdiction too)
+        election_id = db.name_to_id(self.session, "Election", election)
+        if jurisdiction is not None:
+            jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
+        else:
+            jurisdiction_id = None
+
+        # get counts
+        df = db.read_vote_count(
+            self.session,
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=[
+                "ElectionName",
+                "ContestName",
+                "BallotName",
+                "PartyName",
+                "GPReportingUnitName",
+                "CountItemType",
+                "Count",
+                "is_preliminary",
+            ],
+            aliases=[
+                "Election",
+                "Contest",
+                "Selection",
+                "Party",
+                "ReportingUnit",
+                "VoteType",
+                "Count",
+                "Preliminary",
+            ],
+        )
+        #  export to file
+        df.sort_values(
+            by=["Election", "Contest", "Selection", "ReportingUnit", "VoteType"],
+            inplace=True,
+        )
+        df.to_csv(target_file, sep="\t", index=False)
+        return
+
+    def diff_in_diff_dem_vs_rep(
         self,
         election: str,
     ) -> (pd.DataFrame, list):
-        """for each jurisdiction in the election that has more than just 'total',
+        """
+        Not ready for prime time
+        for each jurisdiction in the election that has more than just 'total',
         Calculate all possible diff-in-diff values per Herron
         http://doi.org/10.1089/elj.2019.0544.
         Return df with columns election, overall jurisdiction, county-type jurisdiction,
@@ -2188,11 +3165,6 @@ class Analyzer:
             "vote_type_pair",
             "abs_diff_in_diff",
         ]
-        # TODO tech debt works for candidate contests only
-
-        # TODO: tech debt code treats 'other' like county or any county-like ru-type,
-        #  which might cause trouble if there is a non-standard major subdivision type
-
         election_id = db.name_to_id(self.session, "Election", election)
 
         # loop through state-like jurisdictions with multiple vote types
@@ -2203,28 +3175,20 @@ class Analyzer:
             election,
         )
         # loop through states, etc.
-        for state in vts.keys():
+        for jurisdiction in vts.keys():
             state_rows = list()
             # get vote-types, contest roll-up by vote type and contest-by-election-district types
             data_file_list, _ = db.data_file_list(self.session, election_id)
-            vote_types = {x for x in vts[state] if x != "total"}
-            district_types = contests_df[contests_df["jurisdiction"] == state]
-            state_id = db.name_to_id(self.session, "ReportingUnit", state)
-
-            # find major subdivision
-            major_sub_ru_type_name = db.get_major_subdiv_type(
-                self.session,
-                state,
-                file_path=os.path.join(self.repository_content_root),
-            )
+            vote_types = {x for x in vts[jurisdiction] if x != "total"}
+            district_types = contests_df[contests_df["jurisdiction"] == jurisdiction]
 
             # get dataframe of results, adding column for political party
             res, _ = db.export_rollup_from_db(
                 self.session,
-                state,
+                jurisdiction,
                 election,
-                major_sub_ru_type_name,
-                "Candidate",  # TODO extend to ballotmeasure contests too
+                self.major_subdivision_type[jurisdiction],
+                "Candidate",
                 data_file_list,
                 exclude_redundant_total=True,
                 by_vote_type=True,
@@ -2246,7 +3210,7 @@ class Analyzer:
                     # find set of "good" contests of that type in that county --
                     # contests with candidates from all parties on party_list
                     good_dt_contests = contests_df[
-                        (contests_df.jurisdiction == state)
+                        (contests_df.jurisdiction == jurisdiction)
                         & (contests_df.ReportingUnitType == cdt)
                     ]["contest"].unique()
                     good_dt_contests_results = res[
@@ -2360,7 +3324,7 @@ class Analyzer:
                                         )
                                         state_rows.append(
                                             [
-                                                state,
+                                                jurisdiction,
                                                 county,
                                                 cdt,
                                                 party,
@@ -2371,7 +3335,7 @@ class Analyzer:
                                             ]
                                         )
             rows += state_rows
-            state_with_hyphens = jm.system_name_from_true_name(state)
+            state_with_hyphens = jm.system_name_from_true_name(jurisdiction)
             pd.DataFrame(state_rows, columns=cols).to_csv(
                 f"{state_with_hyphens}_state_export.csv", index=False
             )
@@ -2387,7 +3351,9 @@ class Analyzer:
         election_id: int,
         reportingunit_id: int,
     ) -> Dict[str, Dict[str, Any]]:
-        """given an election, a reporting unit -- not necessarily a whole jurisdiction--
+        """
+        Not ready for prime time
+        given an election, a reporting unit -- not necessarily a whole jurisdiction--
         and an element for pairing (e.g., "Contest"), return a dictionary mapping pairs of elements
         to pairs of vote shares (summing over everything else)"""
         vote_share = dict()
@@ -2404,9 +3370,10 @@ class Analyzer:
         self,
         element: str,
         election_id: int,
-        reportingunit_id: int,
+        jurisdiction_id: int,
     ) -> dict:
-        """Returns dictionary of vote counts by element (summing over everything else
+        """Not ready for prime time
+        Returns dictionary of vote counts by element (summing over everything else
         within the given election and reporting unit)"""
         if element == "CountItemType":
             name_field = "CountItemType"
@@ -2419,10 +3386,10 @@ class Analyzer:
             fields = aliases = [name_field, "CountItemType", "Count"]
         vc_df = db.read_vote_count(
             self.session,
-            election_id,
-            reportingunit_id,
-            fields,
-            aliases,
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=fields,
+            aliases=aliases,
         )
         # exclude any redundant total vote types
         if len(vc_df.CountItemType.unique()) > 1:
@@ -2430,11 +3397,359 @@ class Analyzer:
         vc_dict = vc_df.groupby(name_field).sum().to_dict()["Count"]
         return vc_dict
 
+    def aggregate(
+        self,
+        election: str,
+        jurisdiction: str,
+        vote_type: Optional[str] = None,
+        sub_unit: Optional[str] = None,
+        contest: Optional[str] = None,
+        contest_type: str = "Candidate",
+        sub_unit_type: str = constants.default_subdivision_type,
+        exclude_redundant_total: bool = True,
+    ) -> pd.DataFrame:
+        """Returns a dataframe of contest totals.
+        if a vote type is given, restricts to that vote type; otherwise returns all vote types;
+        Similarly for sub_unit and contest"""
+        # using the analyzer gives us access to DB session
+        empty_df_with_good_cols = pd.DataFrame(columns=["contest", "count"])
+        election_id = db.name_to_id(self.session, "Election", election)
+        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
+        if not election_id:
+            return empty_df_with_good_cols
+        connection = self.session.bind.raw_connection()
+        cursor = connection.cursor()
+
+        datafile_list, err_str1 = db.data_file_list_cursor(
+            cursor,
+            election_id,
+            reporting_unit_id=jurisdiction_id,
+            by="Id",
+        )
+        if err_str1:
+            print(err_str1)
+            return empty_df_with_good_cols
+        if len(datafile_list) == 0:
+            print(
+                f"No datafiles found for election {election} and jurisdiction {jurisdiction}"
+                f"(election_id={election_id} and jurisdiction_id={jurisdiction_id})"
+            )
+            return empty_df_with_good_cols
+
+        df, err_str = db.export_rollup_from_db(
+            # cursor=cursor,
+            session=self.session,
+            top_ru=jurisdiction,
+            election=election,
+            sub_unit_type=sub_unit_type,
+            contest_type=contest_type,
+            datafile_list=datafile_list,
+            by="Id",
+            exclude_redundant_total=exclude_redundant_total,
+            by_vote_type=True,
+            contest=contest,
+        )
+        if err_str or df.empty:
+            return empty_df_with_good_cols
+        if vote_type:
+            df = df[df.count_item_type == vote_type]
+        if sub_unit:
+            df = df[df.reporting_unit == sub_unit]
+        return df
+
+    def pres_counts_by_vote_type_and_major_subdiv(
+        self, jurisdiction: str
+    ) -> pd.DataFrame:
+        """Not ready for prime time"""
+        # TODO return dataframe with columns jurisdiction, subdivision, year, CountItemType,
+        #  total votes for pres in general election
+        group_cols = [
+            "reporting_unit",
+            "count_item_type",
+        ]
+        p_year = re.compile(r"\d{4}")
+        elections = list(
+            pd.read_sql_table("Election", self.session.bind)["Name"].unique()
+        )
+        df_pres = pd.DataFrame()
+        pres_gen_elections = [
+            el
+            for el in elections
+            if el.endswith(" General") and p_year.match(el[:4]) and int(el[:4]) % 4 == 0
+        ]
+        for el in pres_gen_elections:
+            df = self.aggregate(
+                el,
+                jurisdiction,
+                contest=f"US President ({constants.abbr[jurisdiction]})",
+                sub_unit_type=self.major_subdivision_type[jurisdiction],
+                exclude_redundant_total=False,
+            )
+            missing = [c for c in (group_cols + ["count"]) if c not in df.columns]
+            if not missing:
+                df = df[group_cols + ["count"]].groupby(group_cols).sum().reset_index()
+                df = m.add_constant_column(df, "Election", el)
+                df_pres = pd.concat([df_pres, df])
+        df_pres = m.add_constant_column(df_pres, "Jurisdiction", jurisdiction).rename(
+            columns={"count": "votes_for_president"}
+        )
+        return df_pres
+
+    def pres_counts_by_vote_type_and_major_subdiv_all(self) -> pd.DataFrame:
+        """Not ready for prime time"""
+        all_df = pd.DataFrame()
+        for jurisdiction in constants.abbr.keys():
+            df = self.pres_counts_by_vote_type_and_major_subdiv(jurisdiction)
+            df = m.add_constant_column(df, "abbr", constants.abbr[jurisdiction])
+            all_df = pd.concat([all_df, df])
+
+        return all_df
+
+    def compare_to_results_file(
+        self,
+        reference: str,
+        jurisdictions: Optional[Iterable[str]] = None,
+        elections: Optional[Iterable[str]] = None,
+        single_election: Optional[str] = None,
+        single_jurisdiction: Optional[str] = None,
+        report_dir: Optional[str] = None,
+        significance: Optional[float] = None,
+        status: Optional[str] = None,
+    ) -> (
+        pd.DataFrame,
+        pd.DataFrame,
+        pd.DataFrame,
+        Optional[pd.DataFrame],
+        str,
+        Optional[dict],
+    ):
+        """session: Session, db session
+        reference: str, path to tab-separated file with reference results
+        report_dir: Optional[str] = None, path to directory for reports
+        jurisdictions: Optional[Iterable[str]] = None, if given, restrict to jurisdictions in iterable
+        elections: Optional[Iterable[str]] = None, if given, restrict to elections in iterable
+        single_election: Optional[str], if given, all results assumed to be for this election;
+            if not given, reference file must have Election column
+        single_jurisdiction: Optional[str] = None, if given, all results assumed to be for this jurisdiction;
+            if not given, reference file must have Jurisdiction column
+        report_dir: Optional[str] = None, reports will be exported to this directory (if given)
+        significance: Optional[float] = None, cut-off value for "significantly" wrong counts
+        status: Optional[str] = None, if specified, restrict results to those with
+            specified status in Status column of reference file
+
+        if report_dir given, exports results to that directory
+
+        Returns:
+        pd.DataFrame, reference results not found
+        pd.DataFrame, reference results matched in db
+        pd.DataFrame, reference results found but not matched in db, with reference and db totals
+        Optional[pd.DataFrame], found-but-unmatched results that are off by more than the <significance>
+        str, subdirectory to which reports were written
+        Optional[dict], error dictionary
+        """
+        err = None
+        sub_dir = "No reports created"
+        ref = pd.read_csv(reference, sep="\t")
+
+        # restrict to single jurisdiction (if specified) or else to jurisdictions in list (if given)
+        #  and ensure there is a Jurisdiction column
+        if "Jurisdiction" in ref.columns:
+            if single_jurisdiction:
+                ref = ref[ref.Jurisdiction == single_jurisdiction]
+            elif jurisdictions:
+                ref = ref[ref.Jurisdiction.isin(jurisdictions)]
+        else:
+            if single_jurisdiction:
+                ref = m.add_constant_column(ref, "Jurisdiction", single_jurisdiction)
+            else:
+                err = ui.add_new_error(
+                    err,
+                    "warn-test",
+                    Path(reference).name,
+                    "No Jurisdiction column, and no single jurisdiction specified",
+                )
+
+        # restrict to single election (if specified) or else to elections in list (if given)
+        #  and ensure there is a Election column
+        if "Election" in ref.columns:
+            if single_election:
+                ref = ref[ref.Election == single_election]
+            elif elections:
+                ref = ref[ref.Election.isin(elections)]
+        else:
+            if single_election:
+                ref = m.add_constant_column(ref, "Election", single_election)
+            else:
+                err = ui.add_new_error(
+                    err,
+                    "warn-test",
+                    Path(reference).name,
+                    "No Election column, and no single election specified",
+                )
+
+        # restrict to specific status if given
+        if status:
+            if "Status" in ref.columns:
+                ref = ref[ref.Status == status]
+            else:
+                err = ui.add_new_error(
+                    err,
+                    "warn-test",
+                    Path(reference).name,
+                    f"Status {status} was specified, but there is no 'Status' column",
+                )
+        if ref.empty:
+            err = ui.add_new_error(
+                err,
+                "warn-test",
+                Path(reference).name,
+                f"No relevant results found in reference results file.\n",
+            )
+        if err:
+            return pd.DataFrame(), pd.DataFrame(), pd.DataFrame(), None, sub_dir, err
+
+        # if no VoteType column, use "total"; otherwise replace any null "VoteType" entries by "total"
+        if not "VoteType" in ref.columns:
+            ref = m.add_constant_column(ref, "VoteType", "total")
+        else:
+            ref["VoteType"].fillna("total", inplace=True)
+
+        # change Count column to integer
+        ref, clean_err_df = m.clean_count_cols(ref, ["Count"])
+        if not clean_err_df.empty:
+            err = ui.add_new_error(
+                err,
+                "warn-test",
+                Path(reference).name,
+                f"Some counts could not be interpreted as integers:\n{clean_err_df}",
+            )
+
+        # initialize dataframes to be returned
+        not_found_in_db = ok = pd.DataFrame(columns=ref.columns)
+        wrong = pd.DataFrame(columns=list(ref.columns) + ["Database_Count"])
+
+        for idx, row in ref.iterrows():
+            db_total = self.contest_total(
+                election=row["Election"],
+                jurisdiction=row["Jurisdiction"],
+                contest=row["Contest"],
+                reporting_unit=row["ReportingUnit"],
+                vote_type=row["VoteType"],
+            )
+
+            if db_total is None:
+                # contest not found
+                not_found_in_db = not_found_in_db.append(row, ignore_index=True)
+            elif int(db_total) == int(row["Count"]):
+                ok = ok.append(row, ignore_index=True)
+            else:
+                wrong = wrong.append(
+                    {**row, **{"Database_Count": int(db_total)}}, ignore_index=True
+                )
+
+        # rename Count to Reference Count and revise column order
+        wrong.rename(columns={"Count": "Reference_Count"}, inplace=True)
+        first = ["Database_Count", "Reference_Count"]
+        new_order = first + [c for c in wrong.columns if c not in first]
+        wrong = wrong[new_order]
+
+        # create report of only significantly wrong values
+        if significance:
+            mask = (
+                abs(
+                    (wrong.Database_Count - wrong.Reference_Count)
+                    / wrong.Reference_Count
+                )
+                > significance
+            )
+            significantly_wrong = wrong[mask]
+        else:
+            significantly_wrong = None
+
+        # report
+        if report_dir:
+            ts = datetime.datetime.now().strftime("%m%d_%H%M")
+            sub_dir = os.path.join(
+                report_dir, f"compare_to_{Path(reference).stem}_{ts}"
+            )
+            Path(sub_dir).mkdir(exist_ok=True, parents=True)
+            names = ["not_found_in_db", "ok", "wrong"]
+            for df_name in names:
+                eval(df_name).to_csv(
+                    os.path.join(sub_dir, f"{df_name}.tsv"), sep="\t", index=None
+                )
+            if (
+                significantly_wrong is not None
+            ):  # nb: if nothing is significantly wrong, df will be empty but not None.
+                significantly_wrong.to_csv(
+                    os.path.join(sub_dir, f"wrong_by_at_least_{significance}.tsv"),
+                    sep="\t",
+                    index=None,
+                )
+
+            # report parameters
+            # 'database' variable used even though syntax-checker doesn't see it
+            database = self.session.bind.url
+            report_str = f"database: {database}\nreference file: {reference}"
+            optional_params = [
+                "single_election",
+                "single_jurisdiction",
+                "elections",
+                "jurisdictions",
+                "status",
+            ]
+            for op in optional_params:
+                if eval(op):
+                    report_str = f"{report_str}\n{op}: {eval(op)}"
+            open(os.path.join(sub_dir, "_parameters.txt"), "w").write(report_str)
+
+            if not wrong.empty:
+                wrong_str = (
+                    f"\nSome database contest results did not match reference results. "
+                    f"For details see {sub_dir}"
+                )
+                err = ui.add_new_error(
+                    err,
+                    "warn-test",
+                    Path(reference).name,
+                    wrong_str,
+                )
+            if not not_found_in_db.empty:
+                nfid_str = (
+                    f"\nSome expected constests not found. For details, see {sub_dir}"
+                )
+                err = ui.add_new_error(
+                    err,
+                    "warn-test",
+                    Path(reference).name,
+                    nfid_str,
+                )
+        # if no report_dir, but some results are wrong
+        else:
+            if not wrong.empty:
+                wrong_str = f"\nSome database contest results did not match reference results.\n{wrong.to_string()}"
+                err = ui.add_new_error(
+                    err,
+                    "warn-test",
+                    Path(reference).name,
+                    wrong_str,
+                )
+            if not not_found_in_db.empty:
+                nfid_str = f"\nSome expected contests not found.\n{not_found_in_db.to_string()}"
+                err = ui.add_new_error(
+                    err,
+                    "warn-test",
+                    Path(reference).name,
+                    nfid_str,
+                )
+        return not_found_in_db, ok, wrong, significantly_wrong, sub_dir, err
+
 
 def aggregate_results(
     election: str,
     jurisdiction: str,
     dbname: Optional[str] = None,
+    param_file: Optional[str] = None,
     vote_type: Optional[str] = None,
     sub_unit: Optional[str] = None,
     contest: Optional[str] = None,
@@ -2446,101 +3761,71 @@ def aggregate_results(
     Similarly for sub_unit and contest"""
     # using the analyzer gives us access to DB session
     empty_df_with_good_cols = pd.DataFrame(columns=["contest", "count"])
-    an = Analyzer(dbname=dbname)
+    an = Analyzer(dbname=dbname, param_file=param_file)
     if not an:
         return empty_df_with_good_cols
-    election_id = db.name_to_id(an.session, "Election", election)
-    jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
-    if not election_id:
-        return empty_df_with_good_cols
-    connection = an.session.bind.raw_connection()
-    cursor = connection.cursor()
-
-    datafile_list, err_str1 = db.data_file_list_cursor(
-        cursor,
-        election_id,
-        reporting_unit_id=jurisdiction_id,
-        by="Id",
-    )
-    if err_str1:
-        print(err_str1)
-        return empty_df_with_good_cols
-    if len(datafile_list) == 0:
-        print(
-            f"No datafiles found for election {election} and jurisdiction {jurisdiction}"
-            f"(election_id={election_id} and jurisdiction_id={jurisdiction_id})"
+    else:
+        return an.aggregate(
+            election,
+            jurisdiction,
+            vote_type=vote_type,
+            sub_unit=sub_unit,
+            contest=contest,
+            contest_type=contest_type,
+            sub_unit_type=sub_unit_type,
+            exclude_redundant_total=exclude_redundant_total,
         )
-        return empty_df_with_good_cols
-
-    df, err_str = db.export_rollup_from_db(
-        # cursor=cursor,
-        session=an.session,
-        top_ru=jurisdiction,
-        election=election,
-        sub_unit_type=sub_unit_type,
-        contest_type=contest_type,
-        datafile_list=datafile_list,
-        by="Id",
-        exclude_redundant_total=exclude_redundant_total,
-        by_vote_type=True,
-        contest=contest,
-    )
-    if err_str or df.empty:
-        return empty_df_with_good_cols
-    if vote_type:
-        df = df[df.count_item_type == vote_type]
-    if sub_unit:
-        df = df[df.reporting_unit == sub_unit]
-    return df
 
 
 def data_exists(
     election: str,
     jurisdiction: str,
-    p_path: Optional[str] = None,
+    param_file: Optional[str] = None,
     dbname: Optional[str] = None,
 ) -> bool:
-    an = Analyzer(param_file=p_path, dbname=dbname)
-    if not an:
-        return False
+    """
+    Required inputs:
+        election: str,
+        jurisdiction: str,
+    Optional inputs:
+        param_file: Optional[str] = None,
+        dbname: Optional[str] = None,
 
-    election_id = db.name_to_id(an.session, "Election", election)
-    reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
-
-    # if the database doesn't have the election or the reporting unit
-    if not election_id or not reporting_unit_id:
-        # data doesn't exist
-        return False
-
-    # read all contests with records in the VoteCount table
-    df = db.read_vote_count(
-        an.session, election_id, reporting_unit_id, ["ContestName"], ["contest_name"]
-    )
-    # if no contest found
-    if df.empty:
-        # no data exists.
-        return False
-    # otherwise
-    else:
-        # then data exists!
-        return True
+    Returns:
+        bool, True if database specified by parameters in <param_file> (or database named <dbname>, if given) has
+            any election results data for the given <election> and <jurisdiction>. Otherwise false.
+    """
+    analyzer = Analyzer(param_file=param_file, dbname=dbname)
+    return analyzer.data_exists(election, jurisdiction)
 
 
 def external_data_exists(
     election: str,
     jurisdiction: str,
-    p_path: Optional[str] = None,
+    param_file: Optional[str] = None,
     dbname: Optional[str] = None,
 ) -> bool:
-    an = Analyzer(param_file=p_path, dbname=dbname)
+    """
+    Required inputs:
+        election: str,
+        jurisdiction: str,
+    Optional inputs:
+        param_file: Optional[str] = None,
+        dbname: Optional[str] = None,
+
+    Returns:
+        bool, True if database specified by parameters in <param_file> (or database named <dbname>, if given) has
+            any external dataset content for the given election and jurisdiction. Otherwise false.
+    """
+    an = Analyzer(param_file=param_file, dbname=dbname)
     if not an:
         return False
 
     jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
     election_id = db.name_to_id(an.session, "Election", election)
 
-    # if the database doesn't have the reporting unit
-    if not jurisdiction_id:
+    # if the database doesn't have both the jurisdiction and the election
+    if (not jurisdiction_id) or (not election_id):
         # data doesn't exist
         return False
 
@@ -2559,189 +3844,56 @@ def external_data_exists(
         return True
 
 
-def check_totals_match_vote_types(
-    election: str,
-    jurisdiction: str,
-    sub_unit_type=constants.default_subdivision_type,
-    dbname=None,
-) -> bool:
-    """Interesting if there are both total and other vote types;
-    otherwise trivially true"""
-    an = Analyzer(dbname=dbname)
-    active = db.active_vote_types(an.session, election, jurisdiction)
-    if len(active) > 1 and "total" in active:
-        # pull type 'total' only
-        df_candidate = aggregate_results(
-            election,
-            jurisdiction,
-            contest_type="Candidate",
-            vote_type="total",
-            sub_unit_type=sub_unit_type,
-            exclude_redundant_total=False,
-            dbname=dbname,
-        )
-        df_ballot = aggregate_results(
-            election,
-            jurisdiction,
-            contest_type="BallotMeasure",
-            vote_type="total",
-            sub_unit_type=sub_unit_type,
-            exclude_redundant_total=False,
-            dbname=dbname,
-        )
-        df_total_type_only = pd.concat([df_candidate, df_ballot])
-
-        # pull all types but total
-        df_candidate = aggregate_results(
-            election,
-            jurisdiction,
-            contest_type="Candidate",
-            sub_unit_type=sub_unit_type,
-            exclude_redundant_total=True,
-            dbname=dbname,
-        )
-        df_ballot = aggregate_results(
-            election,
-            jurisdiction,
-            contest_type="BallotMeasure",
-            exclude_redundant_total=True,
-            sub_unit_type=sub_unit_type,
-            dbname=dbname,
-        )
-        df_sum_nontotal_types = pd.concat([df_candidate, df_ballot])
-        return df_total_type_only["count"].sum() == df_sum_nontotal_types["count"].sum()
-    else:
-        return True
-
-
-def contest_total(
-    election: str,
-    jurisdiction: str,
-    contest: str,
-    dbname: Optional[str] = None,
-    vote_type: Optional[str] = None,
-    county: Optional[str] = None,
-    sub_unit_type: str = constants.default_subdivision_type,
-    contest_type: Optional[str] = "Candidate",
-) -> int:
-    df = aggregate_results(
-        election=election,
-        jurisdiction=jurisdiction,
-        dbname=dbname,
-        vote_type=vote_type,
-        sub_unit=county,
-        sub_unit_type=sub_unit_type,
-        contest=contest,
-        contest_type=contest_type,
-    )
-    return df["count"].sum()
-
-
-def count_type_total(
-    election: str,
-    jurisdiction: str,
-    contest: str,
-    count_item_type: str,
-    sub_unit_type: str = constants.default_subdivision_type,
-    dbname: Optional[str] = None,
-) -> int:
-    df_candidate = aggregate_results(
-        election=election,
-        jurisdiction=jurisdiction,
-        contest=contest,
-        contest_type="Candidate",
-        vote_type=count_item_type,
-        sub_unit_type=sub_unit_type,
-        dbname=dbname,
-    )
-    df_ballot = aggregate_results(
-        election=election,
-        jurisdiction=jurisdiction,
-        contest=contest,
-        contest_type="BallotMeasure",
-        vote_type=count_item_type,
-        sub_unit_type=sub_unit_type,
-        dbname=dbname,
-    )
-    df = pd.concat([df_candidate, df_ballot])
-    if df.empty:
-        return 0
-    else:
-        return df["count"].sum()
-
-
-def check_count_types_standard(
-    election: str, jurisdiction: str, dbname: Optional[str] = None
-) -> bool:
-    an = Analyzer(dbname=dbname)
-    election_id = db.name_to_id(an.session, "Election", election)
-    reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
-    standard_ct_list = list(
-        db.read_vote_count(
-            an.session,
-            election_id,
-            reporting_unit_id,
-            ["CountItemType"],
-            ["CountItemType"],
-        )["CountItemType"].unique()
-    )
-
-    # don't want type "other"
-    if "other" in standard_ct_list:
-        standard_ct_list.remove("other")
-    active = db.active_vote_types(an.session, election, jurisdiction)
-    for vt in active:
-        # if even one fails, count types are not standard
-        if vt not in standard_ct_list:
-            return False
-    # if nothing failed, count types are standard
-    return True
-
-
-def get_contest_with_unknown_candidates(
-    election: str, jurisdiction: str, dbname: Optional[str] = None
-) -> List[str]:
-    an = Analyzer(dbname=dbname)
-    if not an:
-        return [f"Failure to connect to database"]
-    election_id = db.name_to_id(an.session, "Election", election)
-    if not election_id:
-        return [f"Election {election} not found"]
-    jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
-    if not jurisdiction_id:
-        return [f"Jurisdiction {jurisdiction} not found"]
-
-    contests = db.get_contest_with_unknown(an.session, election_id, jurisdiction_id)
-    return contests
-
-
 def load_results_df(
+    session: Session,
+    df: pd.DataFrame,
+    necessary_constants: dict,
+    juris_true_name: str,
+    file_name: str,
+    munger_name: str,
+    path_to_jurisdiction_dir: str,
+    datafile_id: int,
+    election_id: int,
+    rollup: bool = False,
+    rollup_rut: str = constants.default_subdivision_type,
+    alt_dictionary: Optional[str] = None,
+) -> Optional[dict]:
+    """
+    Required inputs:
         session: Session,
-        df_original: pd.DataFrame,
-        necessary_constants: dict,
-        juris_true_name: str,
-        file_name: str,
-        munger_name: str,
-        path_to_jurisdiction_dir: str,
+        df: pd.DataFrame, dataframe with columns 'Count', 'Candidate_raw', 'Party_raw', etc.
+        necessary_constants: dict, dictionary of constant values (e.g., if all rows of <df> are for a single Contest)
+        juris_true_name: str, for error reporting
+        file_name: str, for error reporting
+        munger_name: str, for error reporting
+        path_to_jurisdiction_dir: str, path to directory
         datafile_id: int,
         election_id: int,
-        file_type: str,
+    Optional inputs:
         rollup: bool = False,
         rollup_rut: str = constants.default_subdivision_type,
-) -> Optional[dict]:
+        alt_dictionary: Optional[str] = None,  path to file
+
+    Munges vote counts in dataframe into the <session>'s database, using the dictionary.txt file in the
+        <path_to_jurisdiction_dir> directory or, if given, the file specified by <alt_dictionary>. If
+        <rollup> then results are rolled up to the ReportingUnitType <rollup_rut> if given; the default is
+         <constants.default_subdivision_type>.
+
+    Returns:
+         Optional[dict], error dictionary
+    """
     err = None
-    df = df_original.copy()
-    # # add Id columns for all but Count, removing raw-munged
+    working = df.copy()
+    # add text column for internal CountItemType name, Id columns for all but Count, removing raw-munged
     try:
-        df, new_err = m.munge_raw_to_ids(
-            df,
+        working, new_err = m.munge_raw_to_ids(
+            working,
             necessary_constants,
             path_to_jurisdiction_dir,
             file_name,
             munger_name,
-            juris_true_name,
             session,
-            file_type,
+            alternate_dictionary=alt_dictionary,
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
@@ -2760,15 +3912,15 @@ def load_results_df(
     nou_candidate_id = db.name_to_id(session, "Candidate", "none or unknown")
     nou_selection_ids = db.selection_ids_from_candidate_id(session, nou_candidate_id)
     unknown = (
-        df[df.Selection_Id.isin(nou_selection_ids)]
+        working[working.Selection_Id.isin(nou_selection_ids)]
         .groupby(["Contest_Id", "Selection_Id"])
         .sum()
     )
     for (contest_id, selection_id) in unknown.index:
-        mask = df[["Contest_Id", "Selection_Id"]] == (contest_id, selection_id)
-        df = df[~mask.all(axis=1)]
+        mask = working[["Contest_Id", "Selection_Id"]] == (contest_id, selection_id)
+        working = working[~mask.all(axis=1)]
 
-    if df.empty:
+    if working.empty:
         err = ui.add_new_error(
             err,
             "jurisdiction",
@@ -2779,8 +3931,13 @@ def load_results_df(
 
     # rollup_dataframe results if requested
     if rollup:
-        df, new_err = a.rollup_dataframe(
-            session, df, "Count", "ReportingUnit_Id", "ReportingUnit_Id", rollup_rut
+        working, new_err = an.rollup_dataframe(
+            session,
+            working,
+            "Count",
+            "ReportingUnit_Id",
+            "ReportingUnit_Id",
+            rollup_rut,
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
@@ -2788,11 +3945,11 @@ def load_results_df(
                 return err
 
     # add_datafile_Id and Election_Id columns
-    df = m.add_constant_column(df, "_datafile_Id", datafile_id)
-    df = m.add_constant_column(df, "Election_Id", election_id)
+    working = m.add_constant_column(working, "_datafile_Id", datafile_id)
+    working = m.add_constant_column(working, "Election_Id", election_id)
     # load counts to db
     try:
-        err = m.fill_vote_count(df, session, munger_name, err)
+        err = m.fill_vote_count(working, session, munger_name, err)
     except Exception as exc:
         err = ui.add_new_error(
             err,
@@ -2817,7 +3974,28 @@ def load_results_file(
     rollup: bool = False,
     rollup_rut: str = constants.default_subdivision_type,
 ) -> Optional[dict]:
+    """
+    required inputs:
+        session: Session, database session
+        munger_path: str, path to file with munging parameters
+        f_path: str, path to results file
+        juris_true_name: str, name of jurisdiction (without hyphens, e.g., "American Samoa")
+        datafile_id: int, Id of the file in the _datafile table in the db
+        election_id: int, Id of the election in the Election table in the db
+        constants: Dict[str, str], values of any elements (e.g., CountItemType) constant over the results file
+        results_directory_path: str, path to root directory for results files (relative to which file paths
+            are specified in the result file's .ini file)
+        path_to_jurisdiction_dir: str, path to directory whose subdirectories, named for jurisdictions, contain the
+            jurisdiction information and dictionary necessary for munging
+    optional inputs:
+        rollup: bool = False, if True, roll up results to the subdivisions specified by <rollup_rut>
+        rollup_rut: str = constants.default_subdivision_type, ReportingUnitType used for rollup (typically 'county')
 
+    Attempts to load results from results file to the database. (Does *not* require results to pass tests.)
+
+    returns:
+        Optional[dict], error dictionary
+    """
     # TODO tech debt: redundant to pass results_directory_path and f_path
     munger_name = Path(munger_path).name
     file_name = Path(f_path).name
@@ -2841,14 +4019,25 @@ def load_results_file(
         df = m.add_constants_to_df(df, necessary_constants)
     else:
         necessary_constants = dict()
+
     # # delete any rows with items to be ignored
     df = m.remove_ignored_rows(df, munger_path)
 
     new_err = load_results_df(
-        session,df,necessary_constants, juris_true_name, file_name, munger_name,path_to_jurisdiction_dir,datafile_id, election_id,
-        p["file_type"], rollup=rollup, rollup_rut=rollup_rut
+        session,
+        df,
+        necessary_constants,
+        juris_true_name,
+        file_name,
+        munger_name,
+        path_to_jurisdiction_dir,
+        datafile_id,
+        election_id,
+        rollup=rollup,
+        rollup_rut=rollup_rut,
     )
     return ui.consolidate_errors([err, new_err])
+
 
 def create_from_template(
     template_file: str, target_file: str, replace_dict: Dict[str, str]
@@ -2862,8 +4051,32 @@ def create_from_template(
 
 
 def load_or_reload_all(
-    test_dir: Optional[str] = None, rollup: bool = False, dbname: Optional[str] = None, param_file: Optional[str] = None
+    rollup: bool = False,
+    dbname: Optional[str] = None,
+    param_file: Optional[str] = None,
+    move_files: bool = True,
+    run_tests: bool = True,
+    suppress_warnings: bool = False,
 ) -> Optional[dict]:
+    """
+    required inputs: (none)
+    optional inputs:
+        rollup: bool = False, if True, roll up results to major subdivision before storing in database
+        dbname: Optional[str] = None, name of database
+        param_file: Optional[str] = None, path to file with parameters for data loading
+        move_files: bool = True, if True, archive files after successful load (& test, if done)
+        run_tests: bool = True, if True, run tests on results in database after loading.
+        suppress_warnings: bool = False, if True, do not create warnings-only files in reports_and_plots_dir
+
+    For each election-jurisdiction pair from a <results>.ini file corresponding to a file in
+        the results directory specified in the data loading parameter file, loads all result data to
+        a temporary database (and, if <run_tests> is True, runs tests on loaded data). If the
+        set of files in the election-jurisdiction pair all load without fatal error or failed test,
+        remove any data for that election-jurisdiction pair from the database and load the new data.
+
+    returns:
+        Optional[dict], error dictionary
+    """
     err = None
     dataloader = DataLoader(dbname=dbname, param_file=param_file)
     if dataloader:
@@ -2871,13 +4084,6 @@ def load_or_reload_all(
         error_and_warning_dir = os.path.join(
             dataloader.d["reports_and_plots_dir"], f"load_or_reload_all_{ts}"
         )
-        # if no test directory given, use tests from repo
-        if not test_dir:
-            test_dir = os.path.join(
-                Path(dataloader.d["repository_content_root"]).parent,
-                "tests",
-                "specific_result_file_tests",
-            )
         # get relevant election-jurisdiction pairs
         ej_pairs = ui.election_juris_list(
             dataloader.d["ini_dir"], results_path=dataloader.d["results_dir"]
@@ -2890,11 +4096,12 @@ def load_or_reload_all(
                 new_err = reload_juris_election(
                     jurisdiction,
                     election,
-                    test_dir,
                     error_and_warning_dir,
                     rollup=rollup,
                     dbname=dbname,
                     param_file=param_file,
+                    move_files=move_files,
+                    run_tests=run_tests,
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
@@ -2906,18 +4113,20 @@ def load_or_reload_all(
                 "No results had corresponding file in ini_files_for_results",
             )
         # report errors to file
-        err = ui.report(err, error_and_warning_dir, file_prefix="loading")
-    else:
-        current_directory = os.getcwd()
-        print(
-            f"No dataloader created; check that {current_directory}/run_time.ini exists "
-            f"and has all necessary parameters."
+        err = ui.report(
+            err,
+            error_and_warning_dir,
+            file_prefix="loading_",
+            suppress_warnings=suppress_warnings,
         )
     return err
 
 
 def test_and_load_multifile(
-        multi_file: str, test_dir: Optional[str], dbname: Optional[str] = None, param_file: Optional[str] = None
+    multi_file: str,
+    test_dir: Optional[str],
+    dbname: Optional[str] = None,
+    param_file: Optional[str] = None,
 ) -> Optional[dict]:
     err = None
     # TODO
@@ -2927,123 +4136,136 @@ def test_and_load_multifile(
 def reload_juris_election(
     juris_name: str,
     election_name: str,
-    test_dir: str,
     report_dir,
     rollup: bool = False,
     dbname: Optional[str] = None,
     param_file: Optional[str] = None,
+    move_files: bool = True,
+    run_tests: bool = True,
+    suppress_warnings: bool = False,
 ) -> Optional[dict]:
-    """Loads and archives each results file in each direct subfolder of the results_dir
+    """
+    required inputs:
+        juris_name: str, name of jurisdiction (without hyphens, e.g., 'District of Columbia')
+        election_name: str, name of election (without hyphens, e.g., '2020 General')
+        report_dir, path to directory for reporting errors, warnings and test results
+    optional inputs:
+        rollup: bool = False, if true, rolls up results within the to the major subdivision
+        dbname: Optional[str] = None, name of database if given; otherwise database name taken from parameter file
+        param_file: Optional[str] = None, path to parameter file for dataloading if given; otherwise parameter file
+            path assumed to be 'run_time.ini'
+        move_files: bool = True, if true, move all files to archive directory if loading (& testing, if done)
+            are successful
+        run_tests: bool = True, if true, run tests on loaded data
+        suppress_warnings: bool = False, if true, report only errors, not warnings
+
+    Loads and archives each results file in each direct subfolder of the results_dir
     named in ./run_time.ini -- provided there the results file is specified in a *.ini file in the
     corresponding subfolder of <content_root>/ini_files_for_results. <contest_root> is read from ./run_time.ini.
+
+    returns:
+        Optional[dict], error dictionary
     """
     # initialize dataloader
     err = None
     dl = DataLoader(dbname=dbname, param_file=param_file)
-    db_params, _ = ui.get_parameters(
-        [
-            "host",
-            "port",
-            "dbname",
-            "user",
-            "password",
-        ],
-        "run_time.ini",
-        "postgresql",
-    )
 
-    # create temp_db (preserving live db name)
-    live_db = dl.session.bind.url.database
-    ts = datetime.datetime.now().strftime("%m%d_%H%M")
-    temp_db = f"{live_db}_test_{ts}"
-    db_params["dbname"] = temp_db
-    db.create_or_reset_db(dbname=temp_db)
+    if run_tests:
+        # create temp_db (preserving live db name) and point dataloader to it
+        live_db = dl.session.bind.url.database
+        ts = datetime.datetime.now().strftime("%m%d_%H%M")
+        temp_db = f"{live_db}_test_{ts}"
 
-    # load all data into temp db
-    dl.change_db(temp_db)
-    success, failure, load_err = dl.load_all(
-        report_dir=report_dir,
-        move_files=False,
-        rollup=rollup,
-        election_jurisdiction_list=[(election_name, juris_name)],
-    )
-    if load_err:
-        err = ui.consolidate_errors([err, load_err])
-    if failure:
-        # cleanup temp database
-        if db_params["dbname"] == temp_db:
-            db.remove_database(db_params)
-        return err
-
-    add_err = dl.add_totals_if_missing(election_name, juris_name)
-    if add_err:
-        err = ui.consolidate_errors([err, add_err])
-    else:
-        # run test files on temp db
-        failed_tests = ui.run_tests(
-            test_dir,
-            dl.d["dbname"],
-            election_jurisdiction_list=[(election_name, juris_name)],
+        # load all data into temp db
+        new_err = dl.change_db(temp_db, db_param_file=param_file)
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return err
+        success, failure, all_tests_passed, load_err = dl.load_all(
             report_dir=report_dir,
-            file_prefix="temp_db_",
+            move_files=False,
+            rollup=rollup,
+            election_jurisdiction_list=[(election_name, juris_name)],
+            suppress_warnings=suppress_warnings,
         )
-        if failed_tests:
+        if load_err:
+            err = ui.consolidate_errors([err, load_err])
+        # if any of the data failed to load
+        if failure or ui.fatal_error(load_err):
+            # cleanup temp database
+            db.remove_database(db_param_file=param_file, dbname=temp_db)
+            return err
+
+        # if any tests failed
+        elif not all_tests_passed[f"{election_name};{juris_name}"]:
             print(
-                f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests:\n{failed_tests}"
+                f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests."
             )
         else:
             # switch to live db
-            dl.change_db(live_db)
-            # Remove existing data for juris-election pair from live db
-            election_id = db.name_to_id(dl.session, "Election", election_name)
-            juris_id = db.name_to_id(dl.session, "ReportingUnit", juris_name)
-            if election_id and juris_id:
-                err_str = dl.remove_data(election_id, juris_id)
-                if err_str:
-                    err = ui.add_new_error(
-                        err,
-                        "warn-database",
-                        f"{dl.session.bind.url.database}",
-                        f"Error removing data: {err_str}",
-                    )
-
-            # Load new data into live db (and move successful to archive)
-            success, failure, new_err = dl.load_all(
-                report_dir=report_dir,
-                rollup=rollup,
-                election_jurisdiction_list=[(election_name, juris_name)],
-            )
-            if success:
-                # run tests on live db
-                live_failed_tests = ui.run_tests(
-                    test_dir,
-                    dl.d["dbname"],
-                    election_jurisdiction_list=[(election_name, juris_name)],
-                    report_dir=report_dir,
-                    file_prefix="live_db_",
+            new_err = dl.change_db(live_db, db_param_file=param_file)
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return err
+    else:
+        temp_db = None  # for syntax-checker
+        all_tests_passed = dict()
+    if (not run_tests) or (
+        (f"{election_name};{juris_name}" in all_tests_passed.keys())
+        and (all_tests_passed[f"{election_name};{juris_name}"])
+    ):
+        # Remove existing data for juris-election pair from live db
+        election_id = db.name_to_id(dl.session, "Election", election_name)
+        juris_id = db.name_to_id(dl.session, "ReportingUnit", juris_name)
+        if election_id and juris_id:
+            err_str = dl.remove_data(election_id, juris_id)
+            if err_str:
+                err = ui.add_new_error(
+                    err,
+                    "warn-database",
+                    f"{dl.session.bind.url.database}",
+                    f"Error removing data: {err_str}",
                 )
 
-                if live_failed_tests:
-                    err = ui.add_new_error(
-                        err,
-                        "database",
-                        f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                        f"Data loaded successfully to test db, so old data was removed from live db.\n"
-                        f"But new data loaded to live db failed some tests:\n{live_failed_tests}",
-                    )
-            else:
-                err = ui.consolidate_errors([err, new_err])
-
-    # cleanup temp database
-    if db_params["dbname"] == temp_db:
-        db.remove_database(db_params)
+        # Load new data into live db (and move successful to archive)
+        success, failure, all_tests_passed, new_err = dl.load_all(
+            report_dir=report_dir,
+            rollup=rollup,
+            election_jurisdiction_list=[(election_name, juris_name)],
+            move_files=move_files,
+            run_tests=run_tests,
+            suppress_warnings=suppress_warnings,
+        )
+        if success:
+            if not all_tests_passed[f"{election_name};{juris_name}"]:
+                # this should never happen, since upload was just tested. Still...
+                err = ui.add_new_error(
+                    err,
+                    "database",
+                    f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                    f"Data loaded successfully to test db and passed tests, so old data was removed from live db.\n"
+                    f"But new data loaded to live db failed some tests.",
+                )
+        else:
+            err = ui.consolidate_errors([err, new_err])
+    if run_tests:
+        # cleanup temp database
+        db.remove_database(db_param_file=param_file, dbname=temp_db)
     return err
 
 
-def datafile_info(connection,results_filename_for_error_reporting,
-                  results_short_name,file_name,download_date: str,source: str,note: str,
-                  jurisdiction_id: int,election_id: int,is_preliminary: bool
-                  ) -> (int, Optional[dict]):
+def datafile_info(
+    connection,
+    ini_filename: str,
+    results_short_name: str,
+    file_name: str,
+    download_date: str,
+    source: str,
+    note: str,
+    jurisdiction_id: int,
+    election_id: int,
+    is_preliminary: bool,
+) -> (int, Optional[dict]):
     """Inserts record into _datafile table. Returns id of datafile record"""
     err = None
     data = pd.DataFrame(
@@ -3072,19 +4294,23 @@ def datafile_info(connection,results_filename_for_error_reporting,
             "is_preliminary",
         ],
     )
-    data = m.clean_strings(data,["short_name"])
+    data = m.clean_strings(data, ["short_name"])
     try:
         err = db.insert_to_cdf_db(
-            connection, data,"_datafile","ini", results_filename_for_error_reporting,
+            connection,
+            data,
+            "_datafile",
+            "ini",
+            ini_filename,
         )
         if ui.fatal_error(err):
             return 0, err
         else:
             # TODO tech debt not sure why we need to rename here but not elsewhere, has to do with col_map
             data.rename(columns={"short_name": "_datafile"}, inplace=True)
-            datafile_id = db.append_id_to_dframe(
-                connection,data,"_datafile",
-            ).iloc[0]["_datafile_Id"]
+            datafile_id = db.append_id_to_dframe(connection, data, "_datafile",).iloc[
+                0
+            ]["_datafile_Id"]
     except Exception as exc:
         err = ui.add_new_error(
             err,
@@ -3098,28 +4324,210 @@ def datafile_info(connection,results_filename_for_error_reporting,
 
 
 def bad_multi_presidentials(
-        dbname: str, param_file: str, compare_file: str
+    dbname: str, param_file: str, compare_file: str
 ) -> (List[str], List[str]):
     """Compares presidential results for elections and jurisdictions listed
     in <compare_file>. Assumes <compare_file> has columns
     Election, Jurisdiction, Total Presidential"""
 
-    results = pd.read_csv(compare_file,sep="\t")
+    results = pd.read_csv(compare_file, sep="\t")
     bad_list: List[str] = list()
     good_list: List[str] = list()
     an = Analyzer(dbname=dbname, param_file=param_file)
     for idx, r in results.iterrows():
-        election_id = db.name_to_id(an.session,"Election", r["Election"])
+        election_id = db.name_to_id(an.session, "Election", r["Election"])
         jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", r["Jurisdiction"])
         db_counts = db.read_vote_count(
-            an.session, election_id, jurisdiction_id, ["ContestName", "Count"], ["ContestName", "Count"]
+            an.session,
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["ContestName", "Count"],
+            aliases=["ContestName", "Count"],
         )
         if db_counts[db_counts.ContestName.str.contains("US President")].empty:
             bad_list.append(f"{r['Election']} {r['Jurisdiction']}: no results found")
         else:
-            total = db_counts[db_counts.ContestName.str.contains("US President")].sum()["Count"]
+            total = db_counts[db_counts.ContestName.str.contains("US President")].sum()[
+                "Count"
+            ]
             if total != r["Total_Presidential"]:
-                bad_list.append(f"{r['Election']} {r['Jurisdiction']}:\n\t{total}\tfrom db \n\t{r['Total_Presidential']}\t from compare file")
+                bad_list.append(
+                    f"{r['Election']} {r['Jurisdiction']}:\n\t{total}\tfrom db \n\t{r['Total_Presidential']}\t from compare file"
+                )
             else:
                 good_list.append(f"{r['Election']} {r['Jurisdiction']}: {total}")
     return good_list, bad_list
+
+
+def export_notes_from_ini_files(
+    directory: str,
+    target_file: str,
+    election: Optional[str] = None,
+    jurisdiction: Optional[str] = None,
+):
+    """
+    Required inputs:
+        directory: str, path to directory
+        target_file: str, path to file
+
+    Optional inputs:
+        election: Optional[str] = None,
+        jurisdiction: Optional[str] = None,
+
+    Creates <target_file> containing a summary of all results_notes parameter values from the .ini
+        files in <directory> or its subdirectories. If <election> (resp. <jurisdiction>) is given,
+        ignores all .ini files whose election (resp. jurisdiction) parameter value matches
+        <election> (resp. <jurisdiction>).
+    """
+    df = pd.DataFrame(columns=["election", "jurisdiction", "results_note"])
+    # collect notes
+    try:
+        paths = set()
+        for root, dirs, files in os.walk(directory):
+            for file in files:
+                if file[-4:] == ".ini":
+                    paths.update({os.path.join(root, file)})
+        for p in paths:
+            params, err = ui.get_parameters(
+                required_keys=["election", "jurisdiction", "results_note"],
+                header="election_results",
+                param_file=p,
+            )
+            if err:
+                print(f"Error reading parameters from file {p}:\n{err}")
+            elif (election is None or params["election"] == election) and (
+                jurisdiction is None or params["jurisdiction"] == jurisdiction
+            ):
+                df = df.append(
+                    {
+                        k: params[k]
+                        for k in ["election", "jurisdiction", "results_note"]
+                    },
+                    ignore_index=True,
+                )
+    except Exception as exc:
+        print(f"Exception occurred while exporting notes:\n{exc}")
+
+    # print to file
+    df = df[df["results_note"] != ""]
+    df.sort_values(["election", "jurisdiction"], inplace=True)
+
+    with open(target_file, "a") as f:
+        for el in df["election"].unique():
+            f.write(f"{el}\n")
+            for idx, r in df[df.election == el].iterrows():
+                f.write(f"{r['jurisdiction']}: {r['results_note']}\n\n")
+    return
+
+
+def get_major_subdivisions(
+    session: Session = None,
+    content_root: Optional[str] = None,
+    major_subdivision_file: Optional[str] = None,
+) -> (Dict[str, str], Optional[dict]):
+    """
+    Optional inputs:
+        session: Session = None, sqlalchemy session
+        content_root: Optional[str] = None, path to repository content root
+        major_subdivision_file: Optional[str] = None, path to alternate file with columns 'jurisdiction',
+            'major_sub_jurisdiction_type'
+
+    Returns:
+        Dict[str, str], map whose keys are all jurisdictions for which major subdivision type was found
+        Optional[dict], error dictionary
+    """
+    err = None
+    subdiv_dict = dict()
+    # if file is given,
+    if major_subdivision_file:
+        # try to get the major subdivision type from the file
+        subdiv_dict = get_major_subdiv_dict_from_file(major_subdivision_file)
+        if subdiv_dict:
+            return subdiv_dict, err
+    elif content_root:
+        # try from file in repo
+        subdiv_dict = get_major_subdiv_dict_from_file(
+            os.path.join(
+                content_root,
+                constants.subdivision_reference_file_path,
+            ),
+        )
+        if subdiv_dict:
+            return subdiv_dict, err
+
+    # if not found in file or repo
+    elif session:
+        # find all jurisdiction_ids with data in db and look in db for their major subdivisions
+        jurisdiction_id_list = db.jurisdiction_id_list(session)
+        for jurisdiction_id in jurisdiction_id_list:
+            jurisdiction = db.name_from_id(session, "ReportingUnit", jurisdiction_id)
+            subdiv_dict[jurisdiction] = db.get_jurisdiction_hierarchy(
+                session, jurisdiction_id
+            )
+
+    return subdiv_dict, err
+
+
+def get_major_subdiv_dict_from_file(file_path: str) -> Optional[Dict[str, str]]:
+    """
+    Required inputs:
+        file_path: str, path to file with columns 'jurisdiction', 'major_sub_jurisdiction_type'
+
+    Returns:
+        Optional[Dict[str,str]], dictionary mapping jurisdictions to subdivision types
+            or, if any kind of error, None
+    """
+    try:
+        df = pd.read_csv(file_path, sep="\t", index_col="jurisdiction")
+        subdiv_dict = df["major_sub_jurisdiction_type"].to_dict()
+    except Exception as exc:
+        return None
+    return subdiv_dict
+
+
+def check_major_subdivisions(
+    session: Optional[Session] = None,
+    content_root: Optional[str] = None,
+    major_subdivision_file: Optional[str] = None,
+) -> (bool, Optional[str]):
+
+    """
+    Optional inputs:
+        session: Optional[Session] = None, sqlalchemy session
+        content_root: Optional[str] = None, path to repository content root
+        major_subdivision_file: Optional[str] = None, path to file with columns
+                'jurisdiction', 'major_sub_jurisdiction_type'
+
+    Returns:
+        bool, True if necessary major subdivisions can be found
+            from <major_subdivision_file> if given,
+            else from content_root if given,
+            else from database session, if given
+        Optional[str], error description, if there is an error
+    """
+    err_string = None
+    ok = True
+    major_subdiv_dict, err = get_major_subdivisions(
+        session=session,
+        content_root=content_root,
+        major_subdivision_file=major_subdivision_file,
+    )
+    if err:
+        err_string = f"No Analyzer created, because major subdivisions dictionary generated error: {err}"
+        ok = False
+
+    bad_jurisdictions = set()
+    if session:
+        for jurisdiction_id in db.jurisdiction_id_list(session):
+            # make sure jurisdiction has subdivision type
+            juris_name = db.name_from_id(session, "ReportingUnit", jurisdiction_id)
+            if (
+                juris_name not in major_subdiv_dict.keys()
+                or major_subdiv_dict[juris_name] is None
+            ):
+                bad_jurisdictions.update({juris_name})
+    if bad_jurisdictions:
+        err_string = f"No Analyzer created, because no major subdivisions were found for these jurisdictions:\n"
+        f"{sorted(list(bad_jurisdictions))}"
+        ok = False
+    return ok, err_string

@@ -15,7 +15,7 @@ def test_new_files():
     )
     templates = os.path.join(tests_dir, "000_data_for_pytest", "jurisdiction_templates")
 
-    file_list = [f for f in os.listdir(ref_dir) if f[-4:] == ".txt"]
+    file_list = [f for f in os.listdir(ref_dir) if f.endswith(".txt")]
 
     # remove all temp files
     for f in file_list:
@@ -28,7 +28,7 @@ def test_new_files():
         run_time_param_file=run_time_file,
         target_dir=temp_dir,
     )
-    jp.new_juris_files(target_dir=temp_dir, templates=templates)
+    jp.new_juris_files(target_dir_for_starter_dictionary=temp_dir, templates=templates)
 
     bad = [
         f
@@ -37,8 +37,8 @@ def test_new_files():
         != open(os.path.join(ref_dir, f), "r").read()
     ]
 
-    # remove all temp files
+    assert not bad, f"See test files in temporary directory {temp_dir}"
+
+    # if all tests pass, remove all temp files
     for f in file_list:
         os.remove(os.path.join(temp_dir, f))
-
-    assert not bad

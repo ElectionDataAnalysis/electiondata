@@ -95,5 +95,7 @@ WY Governor	1	WY Governor
 US Senate WY	1	US Senate WY	
 WY Attorney General	1	WY Attorney General	
 WY Lieutenant Governor	1	WY Lieutenant Governor	
-WY Treasurer	1	WY Treasurer	
+WY State Treasurer	1	WY State Treasurer
 WY Secretary of State	1	WY Secretary of State	
+WY State Auditor	1	WY State Auditor
+WY Superintendent of Public Instruction	1	WY Superintendent of Public Instruction

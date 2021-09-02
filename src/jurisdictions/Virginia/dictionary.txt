@@ -6,7 +6,7 @@ Candidate	Abigail A. Spanberger	Abigail A. Spanberger
 Candidate	Abigail Anne Davis Spanberger	Abigail Anne Davis Spanberger
 Candidate	Abigail Tanquary-Downs Wacek	Abigail Tanquary-Downs Wacek
 Candidate	Adrian Theodore Dance Sr.	ADRIAN THEODORE DANCE Sr.
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alanna Marie Mensing	Alanna Marie Mensing
 Candidate	Albert Mcdonald Weeks	Albert Mcdonald Weeks
 Candidate	Albert Steven Diradour	Albert Steven Diradour
@@ -51,9 +51,8 @@ Candidate	Arden Fontaine Canada	Arden Fontaine Canada
 Candidate	Arlene Holloway	Arlene Holloway
 Candidate	Arthur Clifton Bredemeyer	Arthur Clifton Bredemeyer
 Candidate	Arthur Dale Moore	Arthur Dale Moore
-Candidate	Aston Donald Mceachin	A. Donald McEachin
-Candidate	Aston Donald Mceachin	Aston Donald McEachin
-Candidate	Aston Donald Mceachin	Aston Donald Mceachin
+Candidate	Aston Donald McEachin	Aston Donald McEachin
+Candidate	Aston Donald McEachin	Aston Donald Mceachin
 Candidate	Athene Cooper Bell	Athene Cooper Bell
 Candidate	Atiba Hakeem Muse	Atiba Hakeem Muse
 Candidate	Aubrey Walker Bogert	Aubrey Walker Bogert
@@ -62,7 +61,7 @@ Candidate	Audrey Rose Clement	Audrey Rose Clement
 Candidate	B Kay Lawson	B Kay Lawson
 Candidate	B. Cameron Webb	B. Cameron Webb
 Candidate	Babur Bari Lateef	Babur Bari Lateef
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara Jean Comstock	Barbara Jean Comstock
 Candidate	Barbara Joan Kanninen	Barbara Joan Kanninen
 Candidate	Barbara M Henley	Barbara M Henley
@@ -296,7 +295,7 @@ Candidate	Dominic David Swayne	dominic david swayne
 Candidate	Donald Earle Cates Ii	Donald Earle Cates Ii
 Candidate	Donald Elwood Shuemaker Jr.	DONALD ELWOOD SHUEMAKER Jr.
 Candidate	Donald Gene Poteet Ii	Donald Gene Poteet Ii
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald Joseph Lambert	Donald Joseph Lambert
 Candidate	Donald Langston Moss Iii	Donald Langston Moss Iii
@@ -409,7 +408,7 @@ Candidate	George Latham Stubbs Jr.	GEORGE LATHAM STUBBS Jr.
 Candidate	George Lee Dowdy Iii	George Lee Dowdy Iii
 Candidate	George Michael Yacus	George Michael Yacus
 Candidate	George Thomas Sandridge	George Thomas Sandridge
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	George Wesley Friday	George Wesley Friday
 Candidate	George Woodson Sydnor Jr.	GEORGE WOODSON SYDNOR Jr.
 Candidate	Geral Defrance Staten	Geral Defrance Staten
@@ -453,7 +452,6 @@ Candidate	Henry John Cook Jr.	HENRY JOHN COOK Jr.
 Candidate	Henry Richard Gorfein	Henry Richard Gorfein
 Candidate	Herbert Anthony Thom Jr.	HERBERT ANTHONY THOM Jr.
 Candidate	Herbert Roberts Green Jr.	HERBERT ROBERTS GREEN Jr.
-Candidate	Hillary Clinton	HILLARY CLINTON
 Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hollis Lyle Tharpe	Hollis Lyle Tharpe
 Candidate	Horace Cliff Page Jr.	HORACE CLIFF PAGE Jr.
@@ -611,14 +609,14 @@ Candidate	John Harrison Madison Downs	John Harrison Madison Downs
 Candidate	John Henderson Hilton	John Henderson Hilton
 Candidate	John Joseph Funk	John Joseph Funk
 Candidate	John Joseph Meaney	John Joseph Meaney
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John Lennon	John Lennon
 Candidate	John Leonard Lumpkins Jr.	JOHN LEONARD LUMPKINS Jr.
 Candidate	John Lewis Dennis Sr.	JOHN LEWIS DENNIS Sr.
 Candidate	John Louis Rowe Jr.	JOHN LOUIS ROWE Jr.
 Candidate	John Mackenzie Deekens	John Mackenzie Deekens
 Candidate	John Marcus Dyer	John Marcus Dyer
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John Richard Henry Alexander Ii	John Richard Henry Alexander Ii
 Candidate	John Sinclair Walker	John Sinclair Walker
 Candidate	John Sterling Roberts	John Sterling Roberts
@@ -873,7 +871,7 @@ Candidate	Milondra Beth Coleman	Milondra Beth Coleman
 Candidate	Milton Floyd Mcinturff	Milton Floyd Mcinturff
 Candidate	Miriam Paula Machado	Miriam Paula Machado
 Candidate	Misty Carrico Boardwine	misty carrico boardwine
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Mohamed Seifeldein	Mohamed Seifeldein
 Candidate	Mollie Whitcraft Fox	Mollie Whitcraft Fox
 Candidate	Molly Nomiddlename Mccluer	Molly Nomiddlename Mccluer
@@ -902,7 +900,7 @@ Candidate	Norman Brent Talley	Norman Brent Talley
 Candidate	Norman Hampton Bivens	Norman Hampton Bivens
 Candidate	Obie Paris Hill	Obie Paris Hill
 Candidate	Oris Roger Christian	Oris Roger Christian
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Otis Lee Wright	Otis Lee Wright
 Candidate	Paige Wright Ware	Paige Wright Ware
 Candidate	Paloma Saucedo De La Pena	paloma saucedo de la pena
@@ -952,7 +950,7 @@ Candidate	Qasim Rashid	Qasim Rashid
 Candidate	Qasim Rashid	qasim rashid
 Candidate	Rachel Ann Carton	Rachel Ann Carton
 Candidate	Rachel Hamlett Canada	Rachel Hamlett Canada
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Ralph Owen Murray Jr.	RALPH OWEN MURRAY Jr.
 Candidate	Ramee Ann Gentry	Ramee Ann Gentry
 Candidate	Randell Lynwood Snow	Randell Lynwood Snow
@@ -5418,3 +5416,326 @@ ReportingUnit	Virginia;York County;402 - Dare	YORK COUNTY;402 - DARE
 ReportingUnit	Virginia;York County;403 - Grafton	YORK COUNTY;403 - GRAFTON
 ReportingUnit	Virginia;York County;501 - Tabb	YORK COUNTY;501 - TABB
 ReportingUnit	Virginia;York County;502 - Bethel	YORK COUNTY;502 - BETHEL
+CandidateContest	VA Treasurer	Treasurer District
+CandidateContest	VA Lieutenant Governor	Lieutenant Governor District 11
+CandidateContest	VA Lieutenant Governor	Lieutenant Governor District 10
+CandidateContest	VA Lieutenant Governor	Lieutenant Governor District 09
+CandidateContest	VA Lieutenant Governor	Lieutenant Governor District 08
+CandidateContest	VA Lieutenant Governor	Lieutenant Governor District 07
+CandidateContest	VA Lieutenant Governor	Lieutenant Governor District 06
+CandidateContest	VA Lieutenant Governor	Lieutenant Governor District 05
+CandidateContest	VA Lieutenant Governor	Lieutenant Governor District 04
+CandidateContest	VA Lieutenant Governor	Lieutenant Governor District 03
+CandidateContest	VA Lieutenant Governor	Lieutenant Governor District 02
+CandidateContest	VA Lieutenant Governor	Lieutenant Governor District 01
+CandidateContest	VA Governor	Governor District 11
+CandidateContest	VA Governor	Governor District 10
+CandidateContest	VA Governor	Governor District 09
+CandidateContest	VA Governor	Governor District 08
+CandidateContest	VA Governor	Governor District 07
+CandidateContest	VA Governor	Governor District 06
+CandidateContest	VA Governor	Governor District 05
+CandidateContest	VA Governor	Governor District 04
+CandidateContest	VA Governor	Governor District 03
+CandidateContest	VA Governor	Governor District 02
+CandidateContest	VA Governor	Governor District 01
+CandidateContest	VA Commonwealth's Attorney	Commonwealth's Attorney District
+CandidateContest	VA Attorney General	Attorney General District 11
+CandidateContest	VA Attorney General	Attorney General District 10
+CandidateContest	VA Attorney General	Attorney General District 09
+CandidateContest	VA Attorney General	Attorney General District 08
+CandidateContest	VA Attorney General	Attorney General District 07
+CandidateContest	VA Attorney General	Attorney General District 06
+CandidateContest	VA Attorney General	Attorney General District 05
+CandidateContest	VA Attorney General	Attorney General District 04
+CandidateContest	VA Attorney General	Attorney General District 03
+CandidateContest	VA Attorney General	Attorney General District 02
+CandidateContest	VA Attorney General	Attorney General District 01
+CountItemType	election-day	election-day
+CountItemType	provisional	## Provisional
+CountItemType	absentee	# AB - Central Absentee Precinct
+Candidate	Zachary Wayne Filtz	Zachary Wayne Filtz
+Candidate	Xavier Jamar Warren	Xavier Jamar Warren
+Candidate	William James Burnett	William James Burnett
+Candidate	William Craig Rossello	William Craig Rossello
+Candidate	Tracie Usares Liguid	Tracie Usares Liguid
+Candidate	Terence Richard Mcauliffe	Terence Richard Mcauliffe
+Candidate	Tara P. Orlando	Tara P. Orlando
+Candidate	Tammy Bland Ishmael	Tammy Bland Ishmael
+Candidate	Takis Panagiotis Karantonis	Takis Panagiotis Karantonis
+Candidate	THOMAS PERRY BARBOUR Jr.	THOMAS PERRY BARBOUR Jr.
+Candidate	Stephen Edward Heretick	Stephen Edward Heretick
+Candidate	Sean Alva Perryman	Sean Alva Perryman
+Candidate	Sarah Rebecca Bagley	Sarah Rebecca Bagley
+Candidate	Sara Reals Bohn	Sara Reals Bohn
+Candidate	Salam Rasoul	Salam Rasoul
+Candidate	Roderick Dewayne Hall	Roderick Dewayne Hall
+Candidate	Richard Wayne Walker	Richard Wayne Walker
+Candidate	Richard Kirk Mcpike	Richard Kirk Mcpike
+Candidate	Raymond Stanley Szwabowski Iii	Raymond Stanley Szwabowski Iii
+Candidate	Ramin Fatehi	Ramin Fatehi
+Candidate	Patrick Brian Moran	Patrick Brian Moran
+Candidate	Pamela Gordon Montgomery	Pamela Gordon Montgomery
+Candidate	Nadarius Emmanuel Clark	Nadarius Emmanuel Clark
+Candidate	Michelle-Ann E Lopes-Maldonado	Michelle-Ann E Lopes-Maldonado
+Candidate	Meronne Eskinder Teklu	Meronne Eskinder Teklu
+Candidate	Megan Caitlin Zwisohn	Megan Caitlin Zwisohn
+Candidate	Mary Katherine Barthelson	Mary Katherine Barthelson
+Candidate	Mark Rankin Herring	Mark Rankin Herring
+Candidate	Mark Herbert Levine	Mark Herbert Levine
+Candidate	Linwood Thomas Blizzard Ii	Linwood Thomas Blizzard Ii
+Candidate	Linnard Keith Harris	Linnard Keith Harris
+Candidate	Liam JOSEPH Watson	Liam JOSEPH Watson
+Candidate	Lemajors Theodore Hill	Lemajors Theodore Hill
+Candidate	Lee Jin Carter	Lee Jin Carter
+Candidate	Laura Hedeen Kory	Laura Hedeen Kory
+Candidate	Lamont Bagby	Lamont Bagby
+Candidate	Kyle Reese Elliott	Kyle Reese Elliott
+Candidate	Kimberly A. Melnyk	Kimberly A. Melnyk
+Candidate	Kevin James Harris	Kevin James Harris
+Candidate	Kenneth Ray Plum	Kenneth Ray Plum
+Candidate	Katie Ann Sponsler	Katie Ann Sponsler
+Candidate	Kathleen Johnson Murphy	Kathleen Johnson Murphy
+Candidate	Karishma Nilesh Mehta	Karishma Nilesh Mehta
+Candidate	Karen Edwards Bowden	Karen Edwards Bowden
+Candidate	Kara Alice Pitek	Kara Alice Pitek
+Candidate	Justin Edward Fairfax	Justin Edward Fairfax
+Candidate	Juandiego Riccardo Wade	Juandiego Riccardo Wade
+Candidate	Joseph Daniel Platania	Joseph Daniel Platania
+Candidate	Jolicia Aline Ward	Jolicia Aline Ward
+Candidate	John Reginald Dantzler Ii	John Reginald Dantzler Ii
+Candidate	John Anthony Perkins	John Anthony Perkins
+Candidate	Jerrauld Charles Corey Jones	Jerrauld Charles Corey Jones
+Candidate	Jennifer Michelle Adeli	Jennifer Michelle Adeli
+Candidate	Jennifer Leigh Mcclellan	Jennifer Leigh Mcclellan
+Candidate	Jennifer Denise Carroll Foy	Jennifer Denise Carroll Foy
+Candidate	James Calvin Lewis Jr.	James Calvin Lewis Jr.
+Candidate	Irene Shin	Irene Shin
+Candidate	Idris Ajani Jibowu-O'Connor	Idris Ajani Jibowu-O'Connor
+Candidate	Ibraheem Sabri Samirah	Ibraheem Sabri Samirah
+Candidate	Holly Elisabeth Hazard	Holly Elisabeth Hazard
+Candidate	Hannah Blair Kinder	Hannah Blair Kinder
+Candidate	Hala Sophia Ayala	Hala Sophia Ayala
+Candidate	Elizabeth Rosalina Guzman	Elizabeth Rosalina Guzman
+Candidate	Dawn Marie Adams	Dawn Marie Adams
+Candidate	Dante' Marcus Walston	Dante' Marcus Walston
+Candidate	Curtis Collins Cooper	Curtis Collins Cooper
+Candidate	Colette Wallace Mceachin	Colette Wallace Mceachin
+Candidate	Christine Snead	Christine Snead
+Candidate	Chanda Choun	Chanda Choun
+Candidate	Candi Patrice Mundon King	Candi Patrice Mundon King
+Candidate	CARL EVERETTE BROWN Sr.	CARL EVERETTE BROWN Sr.
+Candidate	Brian Russell Pinkston	Brian Russell Pinkston
+Candidate	Antonio Dwayne Hash	Antonio Dwayne Hash
+Candidate	Antionette Vanessa Irving	Antionette Vanessa Irving
+Candidate	Andria Padgett Mcclellan	Andria Padgett Mcclellan
+Candidate	Amina Matheny-Willard	Amina Matheny-Willard
+Candidate	Alyia Smith-Parker Gaskins	Alyia Smith-Parker Gaskins
+Candidate	Allison Silberberg	Allison Silberberg
+Candidate	Alfonso Hoffman Lopez	Alfonso Hoffman Lopez
+ReportingUnit	Virginia;Spotsylvania County;203 - NI RIVER ELYS FORD	SPOTSYLVANIA COUNTY;203 - NI RIVER ELYS FORD
+ReportingUnit	Virginia;Prince William County;405 - UNITY BRAXTON	PRINCE WILLIAM COUNTY;405 - UNITY BRAXTON
+ReportingUnit	Virginia;Portsmouth City;036 - CHURCHLAND HIGH SCHOOL	PORTSMOUTH CITY;036 - CHURCHLAND HIGH SCHOOL
+ReportingUnit	Virginia;Portsmouth City;029 - MANOR HIGH SCHOOL	PORTSMOUTH CITY;029 - MANOR HIGH SCHOOL
+ReportingUnit	Virginia;Portsmouth City;025 - WATERVIEW ELEMENTARY SCHOOL	PORTSMOUTH CITY;025 - WATERVIEW ELEMENTARY SCHOOL
+ReportingUnit	Virginia;Portsmouth City;011 - JOSEPH E. PARKER RECREATION CENTER	PORTSMOUTH CITY;011 - JOSEPH E. PARKER RECREATION CENTER
+ReportingUnit	Virginia;Newport News city;204 - MARINERS' MUSEUM	NEWPORT NEWS CITY;204 - MARINERS' MUSEUM
+ReportingUnit	Virginia;Goochland County;502 - BLAIR	GOOCHLAND COUNTY;502 - BLAIR
+ReportingUnit	Virginia;Galax city;005 - WEST	GALAX CITY;005 - WEST
+Candidate	Wren Montgomery Williams	Wren Montgomery Williams
+Candidate	Timothy Vitow Anderson	Timothy Vitow Anderson
+Candidate	Timothy David Cox	Timothy David Cox
+Candidate	Thomas Charles Gardner	Thomas Charles Gardner
+Candidate	Ronnie Ray Campbell	Ronnie Ray Campbell
+Candidate	Philip Mark Kazmierczak Jr.	PHILIP MARK KAZMIERCZAK Jr.
+Candidate	Michael Robert Dickinson	Michael Robert Dickinson
+Candidate	Mark Hudson Reed	Mark Hudson Reed
+Candidate	Mark Lawrence Earley Jr.	MARK LAWRENCE EARLEY Jr.
+Candidate	Kathy Jayne Byron	Kathy Jayne Byron
+Candidate	Isaiah Joseph Knight	Isaiah Joseph Knight
+Candidate	Christopher Thomas Holmes	Christopher Thomas Holmes
+Candidate	Christopher Patrick Stolle	Christopher Patrick Stolle
+Candidate	Charles Douglas Poindexter	Charles Douglas Poindexter
+CandidateContest	US House VA District 2	VA;US Representative;District 2
+CandidateContest	US Senate VA	VA;US Senator;statewide
+CandidateContest	US House VA District 5	VA;US Representative;District 5
+CandidateContest	US House VA District 8	VA;US Representative;District 8
+CandidateContest	US House VA District 9	VA;US Representative;District 9
+CandidateContest	US House VA District 7	VA;US Representative;District 7
+CandidateContest	US House VA District 6	VA;US Representative;District 6
+CandidateContest	US House VA District 1	VA;US Representative;District 1
+CandidateContest	US House VA District 4	VA;US Representative;District 4
+CandidateContest	US House VA District 3	VA;US Representative;District 3
+CandidateContest	US House VA District 1	VA;US Representative;District 0
+CandidateContest	VA House District 8	VA;State Representative;District 8
+Candidate	A. Donald McEachin	A. Donald McEachin
+Candidate	Anthony J. Flaccavento	Anthony J. Flaccavento
+Candidate	Barbara J. Comstock	Barbara J. Comstock
+Candidate	Corey A. Stewart	Corey A. Stewart
+Candidate	Dave A. Brat	Dave A. Brat
+Candidate	Denver L. Riggleman, III	Denver L. Riggleman, III
+Candidate	Donald S. Beyer, Jr.	Donald S. Beyer, Jr.
+Candidate	E. Carter Turner III	E. Carter Turner III
+Candidate	Jeff A. Dove Jr.	Jeff A. Dove Jr.
+Candidate	Joseph B. Walton	Joseph B. Walton
+Candidate	Joseph P. 'Joe' McNamara	Joseph P. 'Joe' McNamara
+Candidate	Leslie C. Cockburn	Leslie C. Cockburn
+Candidate	Matt J. Waters	Matt J. Waters
+Candidate	Peter J. 'Pete' Wells	Peter J. 'Pete' Wells
+Candidate	Robert J. 'Rob' Wittman	Robert J. 'Rob' Wittman
+Candidate	Ryan A. McAdams	Ryan A. McAdams
+Candidate	Stevan M. Porter	Stevan M. Porter
+Candidate	Thomas S. Oh	Thomas S. Oh
+Candidate	Timothy M. Kaine	Timothy M. Kaine
+Candidate	Vangie A. Williams	Vangie A. Williams
+Party	Democratic Party	democrat
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+ReportingUnit	Virginia;Accomack County	Virginia;Accomack County
+ReportingUnit	Virginia;Albemarle County	Virginia;Albemarle County
+ReportingUnit	Virginia;Alexandria City	Virginia;Alexandria City
+ReportingUnit	Virginia;Alleghany County	Virginia;Alleghany County
+ReportingUnit	Virginia;Amelia County	Virginia;Amelia County
+ReportingUnit	Virginia;Amherst County	Virginia;Amherst County
+ReportingUnit	Virginia;Appomattox County	Virginia;Appomattox County
+ReportingUnit	Virginia;Arlington County	Virginia;Arlington County
+ReportingUnit	Virginia;Augusta County	Virginia;Augusta County
+ReportingUnit	Virginia;Bath County	Virginia;Bath County
+ReportingUnit	Virginia;Bedford County	Virginia;Bedford County
+ReportingUnit	Virginia;Bland County	Virginia;Bland County
+ReportingUnit	Virginia;Botetourt County	Virginia;Botetourt County
+ReportingUnit	Virginia;Bristol City	Virginia;Bristol City
+ReportingUnit	Virginia;Brunswick County	Virginia;Brunswick County
+ReportingUnit	Virginia;Buchanan County	Virginia;Buchanan County
+ReportingUnit	Virginia;Buckingham County	Virginia;Buckingham County
+ReportingUnit	Virginia;Buena Vista City	Virginia;Buena Vista City
+ReportingUnit	Virginia;Campbell County	Virginia;Campbell County
+ReportingUnit	Virginia;Caroline County	Virginia;Caroline County
+ReportingUnit	Virginia;Carroll County	Virginia;Carroll County
+ReportingUnit	Virginia;Charles City County	Virginia;Charles City
+ReportingUnit	Virginia;Charlotte County	Virginia;Charlotte County
+ReportingUnit	Virginia;Charlottesville City	Virginia;Charlottesville City
+ReportingUnit	Virginia;Chesapeake City	Virginia;Chesapeake City
+ReportingUnit	Virginia;Chesterfield County	Virginia;Chesterfield County
+ReportingUnit	Virginia;Clarke County	Virginia;Clarke County
+ReportingUnit	Virginia;Colonial Heights City	Virginia;Colonial Heights City
+ReportingUnit	Virginia;Covington City	Virginia;Covington City
+ReportingUnit	Virginia;Craig County	Virginia;Craig County
+ReportingUnit	Virginia;Culpeper County	Virginia;Culpeper County
+ReportingUnit	Virginia;Cumberland County	Virginia;Cumberland County
+ReportingUnit	Virginia;Danville City	Virginia;Danville City
+ReportingUnit	Virginia;Dickenson County	Virginia;Dickenson County
+ReportingUnit	Virginia;Dinwiddie County	Virginia;Dinwiddie County
+ReportingUnit	Virginia;Emporia City	Virginia;Emporia City
+ReportingUnit	Virginia;Essex County	Virginia;Essex County
+ReportingUnit	Virginia;Fairfax City	Virginia;Fairfax City
+ReportingUnit	Virginia;Fairfax County	Virginia;Fairfax County
+ReportingUnit	Virginia;Falls Church City	Virginia;Falls Church City
+ReportingUnit	Virginia;Fauquier County	Virginia;Fauquier County
+ReportingUnit	Virginia;Floyd County	Virginia;Floyd County
+ReportingUnit	Virginia;Fluvanna County	Virginia;Fluvanna County
+ReportingUnit	Virginia;Franklin City	Virginia;Franklin City
+ReportingUnit	Virginia;Franklin County	Virginia;Franklin County
+ReportingUnit	Virginia;Frederick County	Virginia;Frederick County
+ReportingUnit	Virginia;Fredericksburg City	Virginia;Fredericksburg City
+ReportingUnit	Virginia;Galax City	Virginia;Galax City
+ReportingUnit	Virginia;Giles County	Virginia;Giles County
+ReportingUnit	Virginia;Gloucester County	Virginia;Gloucester County
+ReportingUnit	Virginia;Goochland County	Virginia;Goochland County
+ReportingUnit	Virginia;Grayson County	Virginia;Grayson County
+ReportingUnit	Virginia;Greene County	Virginia;Greene County
+ReportingUnit	Virginia;Greensville County	Virginia;Greensville County
+ReportingUnit	Virginia;Halifax County	Virginia;Halifax County
+ReportingUnit	Virginia;Hampton City	Virginia;Hampton City
+ReportingUnit	Virginia;Hanover County	Virginia;Hanover County
+ReportingUnit	Virginia;Harrisonburg City	Virginia;Harrisonburg City
+ReportingUnit	Virginia;Henrico County	Virginia;Henrico County
+ReportingUnit	Virginia;Henry County	Virginia;Henry County
+ReportingUnit	Virginia;Highland County	Virginia;Highland County
+ReportingUnit	Virginia;Hopewell City	Virginia;Hopewell City
+ReportingUnit	Virginia;Isle Of Wight County	Virginia;Isle Of Wight County
+ReportingUnit	Virginia;James City County	Virginia;James City
+ReportingUnit	Virginia;King & Queen County	Virginia;King & Queen County
+ReportingUnit	Virginia;King George County	Virginia;King George County
+ReportingUnit	Virginia;King William County	Virginia;King William County
+ReportingUnit	Virginia;Lancaster County	Virginia;Lancaster County
+ReportingUnit	Virginia;Lee County	Virginia;Lee County
+ReportingUnit	Virginia;Lexington City	Virginia;Lexington City
+ReportingUnit	Virginia;Loudoun County	Virginia;Loudoun County
+ReportingUnit	Virginia;Louisa County	Virginia;Louisa County
+ReportingUnit	Virginia;Lunenburg County	Virginia;Lunenburg County
+ReportingUnit	Virginia;Lynchburg City	Virginia;Lynchburg City
+ReportingUnit	Virginia;Madison County	Virginia;Madison County
+ReportingUnit	Virginia;Manassas City	Virginia;Manassas City
+ReportingUnit	Virginia;Manassas Park City	Virginia;Manassas Park City
+ReportingUnit	Virginia;Martinsville City	Virginia;Martinsville City
+ReportingUnit	Virginia;Mathews County	Virginia;Mathews County
+ReportingUnit	Virginia;Mecklenburg County	Virginia;Mecklenburg County
+ReportingUnit	Virginia;Middlesex County	Virginia;Middlesex County
+ReportingUnit	Virginia;Montgomery County	Virginia;Montgomery County
+ReportingUnit	Virginia;Nelson County	Virginia;Nelson County
+ReportingUnit	Virginia;New Kent County	Virginia;New Kent County
+ReportingUnit	Virginia;Newport News City	Virginia;Newport News City
+ReportingUnit	Virginia;Norfolk City	Virginia;Norfolk City
+ReportingUnit	Virginia;Northampton County	Virginia;Northampton County
+ReportingUnit	Virginia;Northumberland County	Virginia;Northumberland County
+ReportingUnit	Virginia;Norton City	Virginia;Norton City
+ReportingUnit	Virginia;Nottoway County	Virginia;Nottoway County
+ReportingUnit	Virginia;Orange County	Virginia;Orange County
+ReportingUnit	Virginia;Page County	Virginia;Page County
+ReportingUnit	Virginia;Patrick County	Virginia;Patrick County
+ReportingUnit	Virginia;Petersburg City	Virginia;Petersburg City
+ReportingUnit	Virginia;Pittsylvania County	Virginia;Pittsylvania County
+ReportingUnit	Virginia;Poquoson City	Virginia;Poquoson City
+ReportingUnit	Virginia;Portsmouth City	Virginia;Portsmouth City
+ReportingUnit	Virginia;Powhatan County	Virginia;Powhatan County
+ReportingUnit	Virginia;Prince Edward County	Virginia;Prince Edward County
+ReportingUnit	Virginia;Prince George County	Virginia;Prince George County
+ReportingUnit	Virginia;Prince William County	Virginia;Prince William County
+ReportingUnit	Virginia;Pulaski County	Virginia;Pulaski County
+ReportingUnit	Virginia;Radford City	Virginia;Radford City
+ReportingUnit	Virginia;Rappahannock County	Virginia;Rappahannock County
+ReportingUnit	Virginia;Richmond City	Virginia;Richmond City
+ReportingUnit	Virginia;Richmond County	Virginia;Richmond County
+ReportingUnit	Virginia;Roanoke City	Virginia;Roanoke City
+ReportingUnit	Virginia;Roanoke County	Virginia;Roanoke County
+ReportingUnit	Virginia;Rockbridge County	Virginia;Rockbridge County
+ReportingUnit	Virginia;Rockingham County	Virginia;Rockingham County
+ReportingUnit	Virginia;Russell County	Virginia;Russell County
+ReportingUnit	Virginia;Salem City	Virginia;Salem City
+ReportingUnit	Virginia;Scott County	Virginia;Scott County
+ReportingUnit	Virginia;Shenandoah County	Virginia;Shenandoah County
+ReportingUnit	Virginia;Smyth County	Virginia;Smyth County
+ReportingUnit	Virginia;Southampton County	Virginia;Southampton County
+ReportingUnit	Virginia;Spotsylvania County	Virginia;Spotsylvania County
+ReportingUnit	Virginia;Stafford County	Virginia;Stafford County
+ReportingUnit	Virginia;Staunton City	Virginia;Staunton City
+ReportingUnit	Virginia;Suffolk City	Virginia;Suffolk City
+ReportingUnit	Virginia;Surry County	Virginia;Surry County
+ReportingUnit	Virginia;Sussex County	Virginia;Sussex County
+ReportingUnit	Virginia;Tazewell County	Virginia;Tazewell County
+ReportingUnit	Virginia;Virginia Beach City	Virginia;Virginia Beach City
+ReportingUnit	Virginia;Warren County	Virginia;Warren County
+ReportingUnit	Virginia;Washington County	Virginia;Washington County
+ReportingUnit	Virginia;Waynesboro City	Virginia;Waynesboro City
+ReportingUnit	Virginia;Westmoreland County	Virginia;Westmoreland County
+ReportingUnit	Virginia;Williamsburg City	Virginia;Williamsburg City
+ReportingUnit	Virginia;Winchester City	Virginia;Winchester City
+ReportingUnit	Virginia;Wise County	Virginia;Wise County
+ReportingUnit	Virginia;Wythe County	Virginia;Wythe County
+ReportingUnit	Virginia;York County	Virginia;York County
+CandidateContest	VA Attorney General	VA;Attorney General;statewide

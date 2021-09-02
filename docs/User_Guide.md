@@ -1,6 +1,6 @@
 # How to Use the System
 ## Environment
-You will need `python3`. If you use the alias `python`, make sure it points to `python3`.
+You will need `python3.9`. If you use the alias `python`, make sure it points to `python3.9`.
 
 The system runs out of the box with a postgresql database; to use other varieties of SQL, you will need to modify the routines in the `database` module. 
 
@@ -8,11 +8,17 @@ The system runs out of the box with a postgresql database; to use other varietie
 From the root folder of your repository run `python3 setup.py install` (or if `python` is an alias for `python3` on your system, `python setup.py install`).
 
 ## Setting up
-In the directory from which you will run the system -- which can be outside your local repository-- create the main parameter files you will need to specify paths and database connection information specific to your local computing environment:
-* `run_time.ini` for preparing jurisdictions (JurisdictionPrepper class) loading data (DataLoader class); for pulling and analyzing results (the Analyzer class).
-  
-See the template file (`src/parameter_file_templates/run_time.ini.template`). 
+
+### Main parameter file
+You will need a main parameter file to specify paths and database connection information specific to your local computing environment. This file is necessary for the three main classes:
+ * `JurisdictionPrepper` for preparing jurisdiction files
+ * `DataLoader` for loading data
+ *  `Analyzer` for exporting and analyzing results
+See the [template file](../src/parameter_file_templates/run_time.ini.template) for required parameters. Avoid percent signs and line breaks in the parameter values.
    
+### Other recommended files
+To avoid the overhead of deriving the major subdivision type for each jurisdiction from the database, make sure that your repository has a [000_major_subjurisdiction_types.txt](../src/jurisdictions/000_for_all_jurisdictions/000_major_subjurisdiction_types.txt) in the [jurisdictions directory](../src/jurisdictions/). This file allows the user to specify other major subdivisions. For example, it may make sense to consider towns as the major subdivisions in Connecticut rather than counties. Or a user may wish to use congressional districts as the major subdivision -- though such a user should not assume that the nesting relationships (say, of precincts within congressional districts) have been coded in the [`ReportingUnit.txt` file](../src/jurisdictions/Connecticut/ReportingUnit.txt) or the database.
+
 ## Determining a Munger
 Election result data comes in a variety of file formats. Even when the basic format is the same, file columns may have different interpretations. The code is built to ease -- as much as possible -- the chore of processing and interpreting each format. Following the [Jargon File](http://catb.org/jargon/html/M/munge.html), which gives one meaning of "munge" as "modify data in some way the speaker doesn't need to go into right now or cannot describe succinctly," we call each set of basic information about interpreting an election result file a "munger". 
 
@@ -59,7 +65,7 @@ Put each formula for parsing information from the results file into the `[munge 
  * as a constant formula in the `[munge formulas]` section, in which case a corresponding entry must be made in the jurisdiction's `dictionary.txt`.
 
 For many results files, it is enough to create concatenation formulas, referencing field names from your file by putting them in angle brackets (<>. The available fields are:
-  * `<header_0>`, `<header_1>`, etc. to denote information from the headers of the columns containing the counts.
+  * `<count_header_0>`, `<count_header_1>`, etc. to denote information from the headers of the columns containing the counts.
   * `<row_0>`, `<row_1>`, etc., to read information constant over a sheet or block from one of the header rows. The system recognizes the leftmost non-blank cell as the content to be read.
   * `<sheetname>` to denote the name of an Excel spreadsheet within a (possibly multi-sheet) workbook.
   * any field name from the file itself, e.g., `<SELECTION>`
@@ -140,7 +146,7 @@ NB: the system assumes that blocks are separated by blank lines. This means that
 
 #### Regular Expressions
 Sometimes it is necessary to use regular expressions to extract information from fields in the results file.  For example, in a primary both the Party and the Candidate may be in the same string (e.g., "Robin Perez (DEM)"). Braces ({}) indicate that regex analysis is needed. Inside the curly brackets there are two parts, separated by a comma. The first part is the field name to pull a string from the file. The second is a python regex formula whose first group (enclosed by parentheses) marks the desired substring.
-```Party	{<count_header_1>,^.*\(([a-zA-Z]{3})\)$}	row```
+```Candidate	{<count_header_1>,^(.*) \([a-zA-Z]{3}\)$}	row```
 
 The system will report (in the `.warnings` files) any strings that did not match the regex. 
 
@@ -195,7 +201,7 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
 
 
 ## Create or Improve a Jurisdiction
-Because each original raw results file comes from a particular election agency, and each election agency has a fixed jurisdiction, we organize information by jurisdiction. 
+Because each original raw results file comes from a particular election agency, and each election agency has a fixed jurisdiction, we organize information by jurisdiction. The  [`000_for_all_jurisdictions` folder](../src/jurisdictions/000_for_all_jurisdictions) holds information pertinent to all jurisdictions: the list of elections in [`Election.txt](../src/jurisdictions/000_for_all_jurisdictions/Election.txt)
 
 It's easiest to use the JurisdictionPrepper() object to create or update jurisdiction files.
 
@@ -203,7 +209,7 @@ It's easiest to use the JurisdictionPrepper() object to create or update jurisdi
 
  (1) From the directory containing `jurisdiction_prep.ini`, open a python interpreter. Import the package and initialize a JurisdictionPrepper(), e.g.:
 ```
->>> import elections as ea
+>>> import electiondata as ea
 >>> jp = ea.JurisdictionPrepper()
 ```
  (2) Call new_juris_files(), which will create the necessary files in the jurisdiction directory, as well as a starter dictionary file (`XX_starter_dictionary.txt`) in the current directory.
@@ -225,7 +231,7 @@ Texas;Harrison County	county
 ```
 Counties must be added by hand. 
 
-NB: in some jurisdictions, the major subdivision type is not 'county. For instance, Louisiana's major subdivisions are called 'parish'. In the `elections.analyze` module, several routines roll up results to the major subdivision -- usually counties. The ReportingUnitType of the major subdivision is read from the file `src/jurisdictions/000_major_subjurisdiction_types.txt` if possible; if that file is missing, or does not provide a subdivision type for the particular jurisdiction in question, the system will try to deduce the major subdivision type from the database.
+NB: in some jurisdictions, the major subdivision type is not 'county. For instance, Louisiana's major subdivisions are called 'parish'. In the `elections.analyze` module, several routines roll up results to the major subdivision -- usually counties. By default, the ReportingUnitType of the major subdivision is read from the file [major_subjurisdiction_types.txt](../src/jurisdictions/000_for_all_jurisdictions/major_subjurisdiction_types.txt) if possible; if that file is missing, or does not provide a subdivision type for the particular jurisdiction in question, the system will try to deduce the major subdivision type from the database. A different file of subdivision types can be specified with the optional `major_subdivision_file` parameter in `Analyzer()` or `DataLoader()`
 
 The system assumes that internal database names of ReportingUnits carry information about the nesting of the basic ReportingUnits (e.g., counties, towns, wards, etc., but not congressional districts) via semicolons. For example: `
  * `Pennsylvania;Philadelphia;Ward 8;Division 6` is a precinct in 
@@ -288,20 +294,13 @@ CandidateContest	US House FL District 2	Representative in Congress District 2
  (5) Make any necessary additions or changes to the more straightforward elements. It's often easier to add these in bulk later directly from the results files (see below) -- unless you want to use internal names that differ from the names in the results file.
   * `Party.txt`. You may be able to find a list of officially recognized parties on the Board of Election's website.
   * `BallotMeasure.txt`. If the ElectionDistrict is not the whole jurisdiction, you may need to add these by hand. A BallotMeasure is any yes/no question on the ballot, including judicial retention. Each BallotMeasure must have an ElectionDistrict and an Election matching an entry in the `ReportingUnit.txt` or `Election.txt` file.
-  * `Election.txt`.
 
  (6) Revise `XX_starter_dictionary.txt` so that it has entries for any of the items created in the steps above (except that there is no need to add Elections to the dictionary, as they are never munged from the contents of the results file). The 'cdf_internal_name' column should match the names in the jurisdiction files. The 'raw_identifier_value' column should hold the corresponding names that will be created from the results file via the munger. 
     * It is helpful to edit the starter dictionary in an application where you can use formulas, or to manipulate the file with regular expression replacement. If you are not fluent in manipulating text some other way, you may want to use Excel and its various text manipulation formulas (such as =CONCAT()). However, beware of Excel's tendency to revise formats on the sly. You may want to check `.txt` and `.csv` files manipulated by Excel in a plain text editor if you run into problems. (If you've been curious to learn regex replacement, now's a good time!)
  
- (7) Add entries to the starter dictionary for CountItemType and BallotMeasureSelection. 
-    * Internal database names for the BallotMeasure Selections are 'Yes' and 'No'. There are no alternatives.
-    * Some common standard internal database names for CountItemTypes are 'absentee', 'early', 'election-day', 'provisional' and 'total'. You can look at the CountItemType table in the database to see the full list, and you can use any other name you like.
+ (7) Revise the 'CountItemType' entries in the starter dictionary to match any words or phrases used in the results files. E.g., for North Carolina
 ```
 cdf_element	cdf_internal_name	raw_identifier_value
-BallotMeasureSelection	No	No
-BallotMeasureSelection	No	Against
-BallotMeasureSelection	Yes	Yes
-BallotMeasureSelection	Yes	For
 CountItemType	election-day	Election Day
 CountItemType	early	One Stop
 CountItemType	absentee-mail	Absentee by Mail
@@ -330,82 +329,29 @@ If the jurisdiction's major subdivision is not county but something else (e.g., 
 
  (11) Look at the newly added items in `ReportingUnit.txt` and `dictionary.txt`, and remove or revise as appropriate.
 
- (12) If you want to add elements (other than ReportingUnits) in bulk from all results files in a directory (with `.ini` files in that same directory -- see Load Data below), use  `add_elements_from_multi_results_file(<list of elements>,<directory>, <error>)`. For example:
-```
->>> jp.add_elements_from_multi_results_file(['Candidate'],'/Users/singer3/Documents/Temp/000_to-be-loaded',err)
-```
-Corresponding entries will be made in `dictionary.txt`, using the munged name for both the `cdf_internal_name` and the `raw_identifier_value`. Note:
-
-   * Candidate
-      * In every file enhanced this way, look for possible variant names (e.g., 'Fred S. Martin' and 'Fred Martin' for the same candidate in two different counties. If you find variations, pick an internal database name and put a line for each raw_identifier_value variation into `dictionary.txt`.
+### Miscellaneous Notes
+  * Candidate
+      * Look for possible variant names (e.g., 'Fred S. Martin' and 'Fred Martin' for the same candidate in two different counties. If you find variations, pick an internal database name and put a line for each raw_identifier_value variation into `dictionary.txt`.
       * Look for non-candidate lines in the file. Take a look at `Candidate.txt` to see if there are lines (such as undervotes) that you may not want included in your final results. 
-      * Look in `Candidate.txt` for BallotMeasureSelections you might not have noticed before. Remove these from `Candidate.txt` and revise their lines in `dictionary.txt`.   
-      * Our convention for internal names for candidates with quoted nicknames is to use single quotes. Make sure there are no double-quotes in the Name column in `Candidate.txt` and none in the cdf_internal_name column of `dictionary.txt`. E.g., use `Rosa Maria 'Rosy' Palomino`, not `Rosa Maria "Rosy" Palomino`. However, if your results file has `Rosa Maria "Rosy" Palomino`, you will need double-quotes in the raw_identifier column in `dictionary.txt`:
-      * Our convention for internal names for multiple-candidate tickets (e.g., 'Biden/Harris' is to use the full name of the top candidate, e.g., 'Joseph R. Biden'). There should be a line in `dictionary.txt` for each variation used in the results files.
+      * Our convention for internal names for candidates with quoted nicknames is to use single quotes. Make sure there are no double-quotes in the Name column in `Candidate.txt` and none in the cdf_internal_name column of `dictionary.txt`. E.g., use `Rosa Maria 'Rosy' Palomino`, not `Rosa Maria "Rosy" Palomino`. Note that if your results file has `Rosa Maria "Rosy" Palomino`, the system will read the double-quotes as single-quotes, so the dictionary.txt line `Candidate	Rosa Maria 'Rosy' Palomino	Rosa Maria "Rosy" Palomino` will munge both `Rosa Maria 'Rosy' Palomino` and `Rosa Maria "Rosy" Palomino` correctly.
+     * Our convention for internal names for multiple-candidate tickets (e.g., 'Biden/Harris' is to use the full name of the top candidate, e.g., 'Joseph R. Biden'). There should be a line in `dictionary.txt` for each variation used in the results files, e.g.:
 ```
 cdf_element	cdf_internal_name	raw_identifier_value
 Candidate	Joseph R. Biden	Biden / Harris
 Candidate	Joseph R. Biden	Joseph R. Biden
-Candidate	Rosa Maria 'Rosy' Palomino	Rosa Maria "Rosy" Palomino
 ```
 
-   * CandidateContest: Look at the new `CandidateContest.txt` file. Many may be contests you do *not* want to add -- the contests you already have (such as congressional contests) that will have been added with the raw identifier name. Some may be BallotMeasureContests that do not belong in `CandidateContest.txt`. For any new CandidateContest you do want to keep you will need to add the corresponding line to `Office.txt` (and the ElectionDistrict to `ReportingUnit.txt` if it is not already there). 
-    * You may want to remove from `dictionary.txt` any lines corresponding to items removed in the bullet points above.
+  * CandidateContest: For any new CandidateContest you do want to keep you will need to add the corresponding line to `Office.txt` (and the ElectionDistrict to `ReportingUnit.txt` if it is not already there). 
+  * Primary Elections: if you will be munging primary elections, we recommend making each primary a separate election (e.g., "2021 Democratic Primary", "2021 Republican Primary")
 
- (13) Finally, if you will be munging primary elections, and if you are confident that your `CandidateContest.txt`, `Party.txt` and associated lines in `dictionary.txt` are correct, use the `jp.add_primaries_to_candidate_contest()` and `jp.add_primaries_to_dict()` methods
-```
->>> jp.add_primaries_to_candidate_contest()
->>> jp.add_primaries_to_dict()
-```
-
-### The JurisdictionPrepper class details
-There are routines in the `JurisdictionPrepper()` class to help prepare a jurisdiction.
- * `JurisdictionPrepper()` reads parameters from the file (`jurisdiction_prep.ini`) to create the directories and basic necessary files. 
- * `new_juris_files()` builds a directory for the jurisdiction, including starter files with the standard contests. It calls some methods that may be independently useful:
-   * `add_standard_contests()` creates records in `CandidateContest.txt` corresponding to contests that appear in many or most jurisdictions, including all federal offices as well as state house and senate offices. 
-   * `add_primaries_to_candidate_contest()` creates a record in `CandidateContest.txt` for every CandidateContest-Party pair that can be created from `CandidateContest.txt` entries with no assigned PrimaryParty and `Party.txt` entries. (Note: records for non-existent primary contests will not break anything.) 
-   * `starter_dictionary()` creates a `starter_dictionary.txt` file in the current directory. Lines in this starter dictionary will *not* have the correct `raw_identifier_value` entries. Assigning the correct raw identifier values must be done by hand before proceeding.
- * `add_primaries_to_dict()` creates an entry in `dictionary.txt` for every CandidateContest-Party pair that can be created from the CandidateContests and Parties already in `dictioary.txt`. (Note: entries in `dictionary.txt` that never occur in your results file won't break anything.)
- * Adding precincts automatically:
-     *`add_sub_county_rus_from_results_file()` is useful when:
-         * county names can be munged from the rows
-         * precinct (or other sub-county reporting unit) names can be munged from the rows
-         * all counties are already in `dictionary.txt`
-   
-       can be read from _rows_ of the datafile. The method adds a record for each precinct to `ReportingUnit.txt` and `dictionary.txt`, with internal db name obeying the semicolon convention. For instance, if:
-         * `ReportingUnit\tFlorida;Alachua County\tAlachua` is in `dictionary.txt
-         * County name `Alachua` and precinct name `Precinct 1` can both be munged from the same row of the results file
-     
-         then:
-         * `Florida;Alachua County;Precinct 1\tprecinct` will be added to `ReportingUnit.txt`
-         * `ReportingUnit\tFlorida;Alachua County;Precinct 1\tAlachua;Precinct 1` will be added to `dictionary.txt`
-     * `add_sub_county_rus_from_multi_results_file(directory)` does the same for every results file/munger in the directory named in a `.ini` file in the directory.
- * adding other elements automatically:
-     * `add_elements_from_results_file(result_file,munger)` pulls raw identifiers for all instances of the element from the datafile and inserts corresponding rows in `<element>.txt` and `dictionary.txt`. These rows may have to be edited by hand to make sure the internal database names match any conventions (e.g., for ReportingUnits or CandidateContests, but maybe not for Candidates or BallotMeasureContests.)
-     * `add_elements_from_multi_results_file(directory)` does the same for every file/munger in the directory named in a `.ini` file in the directory
  
 ## Load Data
-Each results file to be loaded must be designated in a `*.ini` file inside the corresponding jurisdiction's subfolder of `ini_files_for_results` in the repository. The `*.ini` files currrently in this repository correspond to data files available from the [TestingData repository](https://github.com/ElectionDataAnalysis/TestingData). These should load directly with the munger and jurisdiction files from the elections repository.
+Each results file to be loaded must be designated in a `*.ini` file inside its jurisdiction's corresponding subfolder of `ini_files_for_results` in the repository. The `*.ini` files currrently in this repository correspond to [official raw data files for the US 2020 General Election](https://doi.org/10.7910/DVN/0GKBGT). These should load directly with the munger and jurisdiction files from the `electiondata` repository. (Note, however, that due to Excel corruption issues, Vermont and Wisconsin files may fail to load; Connecticut, Maryland and Pennsylvania will load but may fail some of the tests because of inconsistencies within their official agencies' materials.)
+ 
+The DataLoader class allows batch uploading of all data in the directory indicated by the `results_dir` parameter in the main parameter file. The subdirectories of this file should be named for the jurisdictions (with hyphens replacing spaces, as in 'US-Virgin-Islands'. The `DataLoader.load_all()` method will upload every result file that appears, as long as its path (relative to the `results_dir`) is the `results_file` parameter for some `*.ini` file in `ini_files_for_results`. 
 
-If all the `.ini` files in a single directory will use the same munger, jurisdiction and election, you can use `make_ini_file_batch` to create these `.ini` files in batches. For example, 
 ```
->>> dir = '/Users/singer3/Documents/Data/Florida/Precinct-Level Election Results/precinctlevelelectionresults2016gen'
->>> munger = 'fl_gen_by_precinct'
->>> jurisdiction_path = '/Users/singer3/Documents/Data_Loading/Florida'
->>> top_ru='Florida'
->>> election = '2016 General'
->>> date = '2020-08-09'
->>> source = 'Florida Board of Elections: https://dos.myflorida.com/elections/data-statistics/elections-data/precinct-level-election-results/'
->>> note = 'These statewide compiled files are derived from county-specific data submitted by supervisors of elections after each primary election, general election, special primary, and special general election and presidential preference primary election'
->>> ea.make_ini_file_batch(results_dir, output_dir, munger, jurisdiction, election, date, source=source, results_note=note)
->>> 
-```
-  
-The DataLoader class allows batch uploading of all data in a given directory. That directory should contain the files to be uploaded
-The `load_all()` method will read each `.ini` file and make the corresponding upload.
-From a directory containing a `run_time.ini` parameter file, run
-```
-import elections as ea
+import electiondata as ea
 dl = ea.DataLoader()
 dl.load_all()
 ```
@@ -413,40 +359,92 @@ dl.load_all()
 Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.ini` file for that results file has `munger_list` set to a comma-separated list of mungers, then all those mungers will be run on that one file.
 
 ### Error reporting
-All errors will be reported to the a subdirectory named by the database and timestamp within the directory specified in `run_time.ini` as the `reports_and_plots_dir`.
+All errors will be reported to the a subdirectory named by the database and timestamp within the directory specified by the `reports_and_plots_dir` parameter in the main parameter file.
 
 Fatal errors will be noted in a file `*.errors`. 
 
 Even when the upload has worked, there may be warnings about lines not loaded. The system will ignore lines that cannot be munged. For example, the only contests whose results are uploaded will be those in the `CandidateContest.txt` or `BallotMeasureContest.txt` files that are correctly described in `dictionary.txt`.
 
-If there are no errors, the results files will be moved to a subdirectory of the `archive_dir` directory specified in `run_time.ini`. 
+If there are no errors, the results files will be moved to a subdirectory of the directory specified by the `archive_dir` parameter in the main parameter file. 
 
-## Pull Data
-The Analyzer class uses parameters in the file `run_time.ini`, which should be in the directory from which you are running the program. This class has a number of functions that allow you to aggregate the data for analysis purposes. For example, running the `.top_counts()` function exports files into your rollup_dataframe directory which with counts summed up at a particular reporting unit level. This function expects 4 arguments: the election, the jurisdiction, the reporting unit level at which the aggregation will occur, and a boolean variable indicating whether you would like the data aggregated by vote count type. For example:
+## Exporting Data
+
+### Initiating the Analyzer
+The Analyzer class takes two optional parameters:
+ * `param_file`: path to the parameter file for defining the Analyzer directories, database connection, etc. if not specified, the default is the `run_time.ini` file in the directory from which the call to Analyzer() is made
+ * `dbname`: name of database to use. If not specified, the default is the database specified in the `param_file`
+
+To get an instance of an analyzer, you can call the Analyzer class directly:
 ```
-from elections import Analyzer
-analyzer = Analyzer()
-analyzer.top_counts('2018 General', 'North Carolina', 'county', True)
+import electiondata as ea
+analyzer = ea.Analyzer(param_file=param_file, dbname=dbname)
 ```
-This code will produce all North Carolina data from the 2018 general election, grouped by contest, county, and vote type (total, early, absentee, etc).
+or, since every instance of the DataLoader class creates its own analyzer:
+```
+import electiondata as ea
+dl = ea.DataLoader(param_file=param_file, dbname=dbname)
+analyzer = dl.analyzer
+```
+
+### Exporting tabular data
+The Analyzer class has a number of functions that allow you to aggregate the data for analysis purposes. For example, running the `.top_counts()` function exports files into your rollup_dataframe directory which with counts summed up at a particular reporting unit level. This function expects 4 arguments: the election, the jurisdiction, the reporting unit level at which the aggregation will occur, and a boolean variable indicating whether you would like the data aggregated by vote count type. For example, to export all 2020 General results in your database to a tab-separated file `tabular_results.tsv`:
+```
+analyzer.export_election_to_tsv("tabular_results.tsv", "2020 General")
+```
+To export results for a single jurisdiction, use, e.g.:
+```
+analyzer.export_election_to_tsv("tabular_results.tsv", "2020 General", "South Carolina")
+```
+
+This code will produce all South Carolina data from the 2018 general election, grouped by contest, county, and vote type (total, early, absentee, etc).
+
+### NIST Common Data Format
+This package also provides functionality to export the data to xml according to the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd). This is as simple as identifying an election and jurisdiction of interest:
+```
+import electiondata as ea
+analyzer = ea.Analyzer()
+election_report = analyzer.export_nist_v2("2020 General", "Georgia")
+```
+The output is a string, the contents of the xml file.
+
+There is also an export in the NIST V1 json format:
+```
+analyzer = ea.Analyzer()
+analyzer.export_nist_v1_json("2020 General","Georgia")
+```
+The output is a string, the contents of the json file.
+Both of these can take an optional `major_subdivision` parameter to control the level to which results are rolled up. The default is to roll up to the subdivision type indicated in the [`000_major_subjurisdiction_type.txt file](../jurisdictions/000_major_subjurisdiction_types.txt).
+
 
 ## Unload and reload data with `reload_juris_election()`
-To unload existing data for a given jurisdiction and a given election -- or more exactly, to remove data from any datafiles with that election and that jurisdiction as "top ReportingUnit" -- you can use the routine 
-```user_interface.reload_juris_election(juris_name, election_name, test_dir, report_dir)```
+To unload existing data for a given jurisdiction and a given election you can use the routine 
+```ea.reload_juris_election(jurisdiction, election, report_dir)```
+This function takes optional arguments:
+ * rollup (defaults to  false), if true, rolls up results within the to the major subdivision
+ * dbname, name of database if given; otherwise database name taken from parameter file
+ * param_file, path to parameter file for dataloading if given; otherwise parameter file
+            path assumed to be 'run_time.ini'
+ * move_files (defaults to True), if true, move all files to archive directory if loading (& testing, if done)
+            are successful
+ * run_tests (default to True), if true, run tests on data to be loaded, and load only if the tests are passed.
 
-where `test_dir` is the directory holding the tests to perform on the data before upload. For example, `test_dir` might be the repository's `tests` directory. This routine will move any files associated with unloaded data to the directory specified in the optional `unloaded_dir` in `run_time.ini`.
+Results of the test will be reported in a the directory specified by the `reports_and_plots_dir` parameter in the parameter file.
 
-Results of the test will be reported in a file with extension `test_results`
-
-Warning: this routine tests the new data before unloading the existing data. The convention is that the test is in the `tests` subdirectory of the code repository, named for the election and jurisdiction separated by underscore (e.g. `test_Georgia_2020-General.py`). Spaces in the name of the jurisdiction or election are replaced by hyphens (e.g. `test_North-Carolina_2018-Primary.py`). If there is no appropriately test named test file, or if any of the tests fails, the unloading and reloading will fail.
-
-## Testing
-Tests to ascertain that data loaded correctly are in the [tests](../tests) file tree. The repository has a full set of tests for the 2020 General Election. There are also test templates, in the [tests/20xx_test_templates](../tests/20xx_test_templates) folder. Naming and location of the tests matter, so if you are loading new data you will want to create a new test. Put the test in a directory named for the jurisdiction, and name the test `test_<jurisdiction>_<election>.py` (replacing any spaces with hyphens). For example, the test for South Carolina's 2020 General election results is [tests/South-Carolina/test_South-Carolina_2020-General.py](../tests/South-Carolina/test_South-Carolina_2020-General.py). The test template files contain instructions for customizing to a particular jurisdiction and election.
-
-The script [tests/load_and_test_all.py](../tests/load_and_test_all.py) can be used to run tests. If the directory `tests/TestingData` does not exist, the script will download files from `github.com/ElectionDataAnalysis/TestingData` before running. If `tests/TestingData` exists, the script will use the data in that directory. Data for a particular jurisdiction should be in a folder named for that jurisdiction, with hyphens replacing spaces (e.g. "District-of-Columbia")
-
-For each jurisdiction subfolder of TestingData, and for each results file in that subfolder, the system will load data to a temporary database and run any properly-named tests in `tests` file tree.
-Or, the Election-jurisdiction pairs can be specified with the -e and -j flags, e.g. `load_all_from_repo.py -e '2018 General' -j 'Arkansas'` to restrict the loading and testing to just that pair.
+## Loading a file with multiple elections or jurisdictions
+Sometimes it is useful to load a single file with results from several elections or jurisdictions. For example, a secondary source may have combined results information into one file. The method `DataLoader.load_multielection_from_ini()` method allows this kind of upload. This method requires an initialization file, with all the usual required parameters except `election` and `jurisdiction`, and with the additional parameter `secondary_source`. The value of `secondary-source` should be the name of a subfolder of `src/secondary_sources` in the repository, containing files listing the elections and jurisdictions. E.g., 
+```
+[election_results]
+results_file=MEDSL/county_2018.csv
+munger_list=medsl_2018
+secondary_source=MIT-Election-Data-Science-Lab
+results_short_name=medsl_2018_county
+results_download_date=2021-07-10
+results_source=https://github.com/MEDSL/2018-elections-official/blob/master/county_2018.csv
+results_note=county-level
+```
+The method `DataLoader.load_multielection_from_ini()` takes two optional parameters: 
+ * `overwrite_existing` (default `False`): if True, will delete from database any existing results for each election-jurisdiction pair represented in the results file
+ * `load_jurisdictions` (default `False`): if True, will load or update database with the jurisdiction information (from `src/jurisdictions`) for each jurisdiction represented in the results file
 
 
 ## Miscellaneous helpful hints
@@ -473,12 +471,14 @@ The jurisdiction files in this repository follow certain conventions. Many of th
         * `Constitution Party` (regardless of state or other jurisdiction)
         
 ### Beware of:
+ - hyphens in formal names of jurisdictions or elections -- this may break the testing (since pytest options with spaces are problematic, all hypens are replaced by spaces in [test_results.py](../tests/dataloading_tests/test_results.py)))
  - Different names for same contest in different counties (if munging from a batch of county-level files)
  - Different names for candidates, especially candidates with name suffixes or middle/maiden names
  - Different "party" names for candidates without a party affiliation 
  - Any item with an internal comma (e.g., 'John Sawyer, III')
  - A county that uses all caps (e.g., Seminole County FL)
- - % signs in .ini files, particularly as web addresses for results_source (e.g.,https://elections.wi.gov/sites/elections.wi.gov/files/2020-11/UNOFFICIAL%20WI%20Election%20Results%202020%20by%20County%2011-5-2020.xlsx)
+ - % signs in parameter files, particularly as web addresses for results_source (e.g.,https://elections.wi.gov/sites/elections.wi.gov/files/2020-11/UNOFFICIAL%20WI%20Election%20Results%202020%20by%20County%2011-5-2020.xlsx) -- system cannot read ini files with % signs
+ - Line breaks in parameter files may interfere with software parsing the following lines
  - Files that total over all candidates (e.g., Nebraska 2020 General). Make sure not to include the totals in the counts as a nominal "candidate".
  - Excel files that show a thousands separator when you view them (2,931) but don't have a thousands separator under the hood (2931). If all your count are zero, try adding or removing the 'thousands-separator' parameter in `format.config`.
  - the parser for multi-block flat files assumes that any line without counts separates blocks. Beware of stray count-less lines (e.g., can be created by utilities pulling tables from pdfs).
@@ -515,33 +515,18 @@ If not all rows are data, and some string fields to be munged have blank headers
 
 If there are hidden columns in an Excel file, you may need to omit the hidden columns from various counts.
 
-### NIST Common Data Format imports and exports
+### NIST Common Data Format imports
 To import results from a file that is valid NIST V2 xml -- that can be formally validated against the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd) -- use the file_type 'nist_v2_xml'
 
 Some xml files (e.g., Ohio 2020 General) use the older Version 1 common data format. Our convention is that if the munger name contains "nist" and the file_type is xml, then the system will look for a namespace declaration.
 
-This package also provides functionality to export the data to xml according to the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd). This is as simple as identifying an election and jurisdiction of interest:
-```
-from elections import Analyzer
-analyzer = Analyzer()
-election_report = analyzer.export_nist_v2("2020 General", "Georgia")
-```
-The output is a string, the contents of the xml file.
-
-There is also an export in the NIST V1 json format:
-```
-analyzer = Analyzer()
-export_nist_v1_json("2020 General","Georgia")
-```
-The output is a string, the contents of the json file.
-
 ### Difference-in-Difference calculations
-The system provides a way to calculate difference-in-difference statistics. For any particular election, `Analyzer.diff_in_diff` produces a dataframe of values for any county with results by vote type, with Democratic or Republican candidates, and any comparable pair of contests both on some ballots in the county. Contests are considered "comparable" if their districts are of the same geographical district type -- e.g., both statewide, or both state-house, etc. The method also returns a list of jurisdictions for which vote counts were zero or missing.
+The system provides a way to calculate difference-in-difference statistics. For any particular election, `Analyzer.diff_in_diff_dem_vs_rep` produces a dataframe of values for any county with results by vote type, with Democratic or Republican candidates, and any comparable pair of contests both on some ballots in the county. Contests are considered "comparable" if their districts are of the same geographical district type -- e.g., both statewide, or both state-house, etc. The method also returns a list of jurisdictions for which vote counts were zero or missing.
 ```
 dbname = "test_0314_1836"
 election = "2020 General"
 an = eda.Analyzer(dbname=dbname)
-diff_in_diff, missing = an.diff_in_diff(election)
+diff_in_diff_dem_vs_rep, missing = an.diff_in_diff_dem_vs_rep(election)
 ```
 
 Specifically, for a fixed county and party, for a fixed pair of vote types and for a fixed pair of contests, we calculate the difference-in-difference value to be

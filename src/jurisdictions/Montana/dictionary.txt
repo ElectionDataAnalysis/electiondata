@@ -9,7 +9,7 @@ BallotMeasureSelection	Yes	Yes
 Candidate	Aaron Meaders	Aaron Meaders
 Candidate	Adrienne S. Dube	Adrienne S. Dube
 Candidate	Al 'Doc' Olszewski	Al 'Doc' Olszewski And Ken Bogner
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Alan H. George	Alan H. George
 Candidate	Albert- Mary Sparklin	Albert- Mary Sparklin
 Candidate	Alex Gray	Alex Gray
@@ -31,7 +31,7 @@ Candidate	Arthur Weatherwax	Arthur Weatherwax
 Candidate	Athina Collins	Athina Collins
 Candidate	August Scalpcane	August Scalpcane
 Candidate	Austin Knudsen	Austin Knudsen
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara Bessette	Barbara Bessette
 Candidate	Barbara T. Hoven	Barbara T. Hoven
 Candidate	Barnett G. Sporkin-Morrison	Barnett G. Sporkin-Morrison
@@ -143,7 +143,7 @@ Candidate	Diana Youngquist	Diana Youngquist
 Candidate	Diane L. Magone	Diane L. Magone
 Candidate	Don Seifert	Don Seifert
 Candidate	Donald J Trump	Donald J Trump
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump And Michael R. Pence
 Candidate	Donald Seifert	Donald Seifert
 Candidate	Donald St. Peter	Donald St. Peter
@@ -186,7 +186,7 @@ Candidate	Gary Marbut	Gary Marbut
 Candidate	Gary Perry	Gary Perry
 Candidate	George Anthony Schultz	George Anthony Schultz
 Candidate	George Mollander	George Mollander
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Gerald J Cuvillier	Gerald J Cuvillier
 Candidate	Geraldine Custer	Geraldine Custer
 Candidate	Gerry Browning	Gerry Browning
@@ -205,7 +205,7 @@ Candidate	Heather Blom	Heather Blom
 Candidate	Heidi Haymaker	Heidi Haymaker
 Candidate	Helena Lovick	Helena Lovick
 Candidate	Henry Curtis	Henry Curtis
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hollis Poe	Hollis Poe
 Candidate	Howard F. Recht	Howard F. Recht
 Candidate	Ian Root	Ian Root
@@ -270,9 +270,9 @@ Candidate	John Dallas Teini	John Dallas Teini
 Candidate	John Evankovich	John Evankovich
 Candidate	John Fuller	John Fuller
 Candidate	John Gibney	John Gibney
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John Lamb	John Lamb
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John Mues	John Mues
 Candidate	John R Mercer	John R Mercer
 Candidate	John W. Parker	John W. Parker
@@ -401,7 +401,7 @@ Candidate	Mike Knoles	Mike Knoles
 Candidate	Mike Lang	Mike Lang
 Candidate	Mike Warner	Mike Warner
 Candidate	Mike Winsor	Mike Winsor
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Moffie Funk	Moffie Funk
 Candidate	Monica Tranel	Monica Tranel
 Candidate	Nadiya Stough	Nadiya Stough
@@ -418,7 +418,7 @@ Candidate	Niki Sardot	Niki Sardot
 Candidate	No Preference	No Preference
 Candidate	Nolen W Skime	Nolen W Skime
 Candidate	Norm Nunnally	Norm Nunnally
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Pat Mischel	Pat Mischel
 Candidate	Paul C. Fielder	Paul C. Fielder
 Candidate	Paul J. Longfield	Paul J. Longfield
@@ -427,7 +427,7 @@ Candidate	Philip Olson	Philip Olson
 Candidate	Rachel Stansberry	Rachel Stansberry
 Candidate	Rae Peppers	Rae Peppers
 Candidate	Ralph Foster	Ralph Foster
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Randy C Boling	Randy C Boling
 Candidate	Randy Chamberlin	Randy Chamberlin
 Candidate	Randy Pinocci	Randy Pinocci
@@ -2407,3 +2407,345 @@ ReportingUnit	Montana;Wibaux County	Wibaux
 ReportingUnit	Montana;Wibaux County	fips30109
 ReportingUnit	Montana;Yellowstone County	Yellowstone
 ReportingUnit	Montana;Yellowstone County	fips30111
+CandidateContest	MT House District 72	MT;State Representative;District 72
+CandidateContest	US House MT District 1	MT;US Representative;District 0
+CandidateContest	US Senate MT	MT;US Senator;statewide
+CandidateContest	MT House District 41	MT;State Representative;District 41
+CandidateContest	MT House District 42	MT;State Representative;District 42
+CandidateContest	MT House District 32	MT;State Representative;District 32
+CandidateContest	MT House District 33	MT;State Representative;District 33
+CandidateContest	MT House District 70	MT;State Representative;District 70
+CandidateContest	MT House District 58	MT;State Representative;District 58
+CandidateContest	MT Senate District 29	MT;State Senator;District 29
+CandidateContest	MT House District 37	MT;State Representative;District 37
+CandidateContest	MT Senate District 19	MT;State Senator;District 19
+CandidateContest	MT House District 19	MT;State Representative;District 19
+CandidateContest	MT House District 20	MT;State Representative;District 20
+CandidateContest	MT House District 21	MT;State Representative;District 21
+CandidateContest	MT House District 22	MT;State Representative;District 22
+CandidateContest	MT House District 23	MT;State Representative;District 23
+CandidateContest	MT House District 24	MT;State Representative;District 24
+CandidateContest	MT House District 25	MT;State Representative;District 25
+CandidateContest	MT House District 26	MT;State Representative;District 26
+CandidateContest	MT House District 27	MT;State Representative;District 27
+CandidateContest	MT House District 30	MT;State Representative;District 30
+CandidateContest	MT Senate District 11	MT;State Senator;District 11
+CandidateContest	MT Senate District 12	MT;State Senator;District 12
+CandidateContest	MT Senate District 13	MT;State Senator;District 13
+CandidateContest	MT Senate District 14	MT;State Senator;District 14
+CandidateContest	MT House District 38	MT;State Representative;District 38
+CandidateContest	MT House District 39	MT;State Representative;District 39
+CandidateContest	MT Senate District 20	MT;State Senator;District 20
+CandidateContest	MT House District 34	MT;State Representative;District 34
+CandidateContest	MT House District 36	MT;State Representative;District 36
+CandidateContest	MT House District 77	MT;State Representative;District 77
+CandidateContest	MT House District 78	MT;State Representative;District 78
+CandidateContest	MT House District 29	MT;State Representative;District 29
+CandidateContest	MT House District 10	MT;State Representative;District 10
+CandidateContest	MT House District 11	MT;State Representative;District 11
+CandidateContest	MT House District 13	MT;State Representative;District 13
+CandidateContest	MT House District 3	MT;State Representative;District 3
+CandidateContest	MT House District 4	MT;State Representative;District 4
+CandidateContest	MT House District 5	MT;State Representative;District 5
+CandidateContest	MT House District 6	MT;State Representative;District 6
+CandidateContest	MT House District 7	MT;State Representative;District 7
+CandidateContest	MT House District 8	MT;State Representative;District 8
+CandidateContest	MT House District 9	MT;State Representative;District 9
+CandidateContest	MT Senate District 4	MT;State Senator;District 4
+CandidateContest	MT Senate District 5	MT;State Senator;District 5
+CandidateContest	MT House District 59	MT;State Representative;District 59
+CandidateContest	MT House District 61	MT;State Representative;District 61
+CandidateContest	MT House District 62	MT;State Representative;District 62
+CandidateContest	MT House District 63	MT;State Representative;District 63
+CandidateContest	MT House District 64	MT;State Representative;District 64
+CandidateContest	MT House District 65	MT;State Representative;District 65
+CandidateContest	MT House District 66	MT;State Representative;District 66
+CandidateContest	MT House District 67	MT;State Representative;District 67
+CandidateContest	MT House District 68	MT;State Representative;District 68
+CandidateContest	MT House District 69	MT;State Representative;District 69
+CandidateContest	MT Senate District 30	MT;State Senator;District 30
+CandidateContest	MT Senate District 32	MT;State Senator;District 32
+CandidateContest	MT Senate District 33	MT;State Senator;District 33
+CandidateContest	MT Senate District 34	MT;State Senator;District 34
+CandidateContest	MT House District 15	MT;State Representative;District 15
+CandidateContest	MT House District 16	MT;State Representative;District 16
+CandidateContest	MT House District 18	MT;State Representative;District 18
+CandidateContest	MT Senate District 8	MT;State Senator;District 8
+CandidateContest	MT Senate District 9	MT;State Senator;District 9
+CandidateContest	MT House District 28	MT;State Representative;District 28
+CandidateContest	MT House District 71	MT;State Representative;District 71
+CandidateContest	MT House District 75	MT;State Representative;District 75
+CandidateContest	MT House District 12	MT;State Representative;District 12
+CandidateContest	MT House District 93	MT;State Representative;District 93
+CandidateContest	MT House District 17	MT;State Representative;District 17
+CandidateContest	MT House District 79	MT;State Representative;District 79
+CandidateContest	MT House District 80	MT;State Representative;District 80
+CandidateContest	MT House District 81	MT;State Representative;District 81
+CandidateContest	MT House District 82	MT;State Representative;District 82
+CandidateContest	MT House District 83	MT;State Representative;District 83
+CandidateContest	MT House District 84	MT;State Representative;District 84
+CandidateContest	MT Senate District 41	MT;State Senator;District 41
+CandidateContest	MT Senate District 42	MT;State Senator;District 42
+CandidateContest	MT House District 1	MT;State Representative;District 1
+CandidateContest	MT House District 2	MT;State Representative;District 2
+CandidateContest	MT Senate District 1	MT;State Senator;District 1
+CandidateContest	MT House District 14	MT;State Representative;District 14
+CandidateContest	MT House District 100	MT;State Representative;District 100
+CandidateContest	MT House District 89	MT;State Representative;District 89
+CandidateContest	MT House District 90	MT;State Representative;District 90
+CandidateContest	MT House District 91	MT;State Representative;District 91
+CandidateContest	MT House District 92	MT;State Representative;District 92
+CandidateContest	MT House District 94	MT;State Representative;District 94
+CandidateContest	MT House District 95	MT;State Representative;District 95
+CandidateContest	MT House District 96	MT;State Representative;District 96
+CandidateContest	MT House District 97	MT;State Representative;District 97
+CandidateContest	MT House District 98	MT;State Representative;District 98
+CandidateContest	MT House District 99	MT;State Representative;District 99
+CandidateContest	MT Senate District 48	MT;State Senator;District 48
+CandidateContest	MT Senate District 49	MT;State Senator;District 49
+CandidateContest	MT Senate District 50	MT;State Senator;District 50
+CandidateContest	MT House District 40	MT;State Representative;District 40
+CandidateContest	MT House District 60	MT;State Representative;District 60
+CandidateContest	MT House District 85	MT;State Representative;District 85
+CandidateContest	MT House District 86	MT;State Representative;District 86
+CandidateContest	MT House District 87	MT;State Representative;District 87
+CandidateContest	MT House District 88	MT;State Representative;District 88
+CandidateContest	MT Senate District 43	MT;State Senator;District 43
+CandidateContest	MT House District 35	MT;State Representative;District 35
+CandidateContest	MT House District 31	MT;State Representative;District 31
+CandidateContest	MT House District 73	MT;State Representative;District 73
+CandidateContest	MT House District 74	MT;State Representative;District 74
+CandidateContest	MT House District 76	MT;State Representative;District 76
+CandidateContest	MT House District 57	MT;State Representative;District 57
+CandidateContest	MT House District 43	MT;State Representative;District 43
+CandidateContest	MT House District 44	MT;State Representative;District 44
+CandidateContest	MT House District 45	MT;State Representative;District 45
+CandidateContest	MT House District 46	MT;State Representative;District 46
+CandidateContest	MT House District 47	MT;State Representative;District 47
+CandidateContest	MT House District 48	MT;State Representative;District 48
+CandidateContest	MT House District 49	MT;State Representative;District 49
+CandidateContest	MT House District 50	MT;State Representative;District 50
+CandidateContest	MT House District 51	MT;State Representative;District 51
+CandidateContest	MT House District 52	MT;State Representative;District 52
+CandidateContest	MT House District 53	MT;State Representative;District 53
+CandidateContest	MT House District 54	MT;State Representative;District 54
+CandidateContest	MT House District 55	MT;State Representative;District 55
+CandidateContest	MT House District 56	MT;State Representative;District 56
+CandidateContest	MT Senate District 22	MT;State Senator;District 22
+CandidateContest	MT Senate District 24	MT;State Senator;District 24
+CandidateContest	MT Senate District 27	MT;State Senator;District 27
+Candidate	A. Alexander Fetto	A. Alexander Fetto
+Candidate	Adam Hertz	Adam Hertz
+Candidate	Adam Rosendale	Adam Rosendale
+Candidate	Adam S. Pummill	Adam S. Pummill
+Candidate	Alan Doane	Alan Doane
+Candidate	Alan Redfield	Alan Redfield
+Candidate	Aldo Sardot	Aldo Sardot
+Candidate	Amelia Marquez	Amelia Marquez
+Candidate	Anna Drew	Anna Drew
+Candidate	Austen Lee Nelson	Austen Lee Nelson
+Candidate	Ben Mckee	Ben Mckee
+Candidate	Bert Pezzarossi	Bert Pezzarossi
+Candidate	Bill Dwyer	Bill Dwyer
+Candidate	Bill Jones	Bill Jones
+Candidate	Blair Koch	Blair Koch
+Candidate	Bob Keenan	Bob Keenan
+Candidate	Bob Moretti	Bob Moretti
+Candidate	Bob Petersen	Bob Petersen
+Candidate	Bradley E. Tschida	Bradley E. Tschida
+Candidate	Brian Hoven	Brian Hoven
+Candidate	Bruce (Butch) Gillespie	Bruce (Butch) Gillespie
+Candidate	Bryan Stafford	Bryan Stafford
+Candidate	Carlie Boland	Carlie Boland
+Candidate	Cary L. Smith	Cary L. Smith
+Candidate	Casey Schreiner	Casey Schreiner
+Candidate	Chase Reynolds	Chase Reynolds
+Candidate	Chris Gross	Chris Gross
+Candidate	Chris Richards	Chris Richards
+Candidate	Cindy Dyson	Cindy Dyson
+Candidate	Clementine Lindley	Clementine Lindley
+Candidate	Colin Nygaard	Colin Nygaard
+Candidate	Colton Zaugg	Colton Zaugg
+Candidate	Conor Burns	Conor Burns
+Candidate	Dale Mortensen	Dale Mortensen
+Candidate	Dan Nelsen	Dan Nelsen
+Candidate	Dan Skattum	Dan Skattum
+Candidate	Danny Choriki	Danny Choriki
+Candidate	Darryl S Wilson	Darryl S Wilson
+Candidate	David Doc Moore	David Doc Moore
+Candidate	David Howard	David Howard
+Candidate	Dean Rehbein	Dean Rehbein
+Candidate	Denise Albrecht	Denise Albrecht
+Candidate	Denise Johnson	Denise Johnson
+Candidate	Diane Sands	Diane Sands
+Candidate	Diane Taylor-Mahnke	Diane Taylor-Mahnke
+Candidate	Donald Coats	Donald Coats
+Candidate	Donald Kenck	Donald Kenck
+Candidate	Douglas 'Doug' Kary	Douglas 'Doug' Kary
+Candidate	Duane Ankney	Duane Ankney
+Candidate	Eldena N. Bear Don't Walk	Eldena N. Bear Don't Walk
+Candidate	Elinor Swanson	Elinor Swanson
+Candidate	Frank McLain	Frank McLain
+Candidate	Frederick (Eric) Moore	Frederick (Eric) Moore
+Candidate	Gilbert Bruce Meyers	Gilbert Bruce Meyers
+Candidate	Gordon 'Gordy' Vance	Gordon 'Gordy' Vance
+Candidate	Gordon Pierson Jr	Gordon Pierson Jr
+Candidate	Greg Gianforte	Greg Gianforte
+Candidate	J. Bryher Herak	J. Bryher Herak
+Candidate	Jacob D. Bachmeier	Jacob D. Bachmeier
+Candidate	James H Cossitt	James H Cossitt
+Candidate	Janet Ellis	Janet Ellis
+Candidate	Janna J. Lind	Janna J. Lind
+Candidate	Jason F. Nickisch	Jason F. Nickisch
+Candidate	Jason W. Ellsworth	Jason W. Ellsworth
+Candidate	Jay A. Frederick	Jay A. Frederick
+Candidate	Jennifer 'Jp' Pomnichowski	Jennifer 'Jp' Pomnichowski
+Candidate	Jennifer Merecki	Jennifer Merecki
+Candidate	Jerry O'neil	Jerry O'neil
+Candidate	Jessica L. Karjala	Jessica L. Karjala
+Candidate	Jessuah Bardgett	Jessuah Bardgett
+Candidate	Jill Cohenour	Jill Cohenour
+Candidate	Jim Sadler	Jim Sadler
+Candidate	Jobeth Blair	Jobeth Blair
+Candidate	Joey Chester	Joey Chester
+Candidate	John Esp	John Esp
+Candidate	John Schmidt	John Schmidt
+Candidate	Jon Tester	Jon Tester
+Candidate	Joshua J Kassmier	Joshua J Kassmier
+Candidate	Joshua-Luke O'connor	Joshua-Luke O'connor
+Candidate	K. Webb Galbreath	K. Webb Galbreath
+Candidate	Kathleen O'donnell	Kathleen O'donnell
+Candidate	Kathryn G.h. Nicholes	Kathryn G.h. Nicholes
+Candidate	Keaton Sunchild	Keaton Sunchild
+Candidate	Kenneth Bogner	Kenneth Bogner
+Candidate	Kerry E. White	Kerry E. White
+Candidate	Kevin Vincent Leatherbarrow	Kevin Vincent Leatherbarrow
+Candidate	Kristine Menicucci	Kristine Menicucci
+Candidate	Kurt J. Dyer	Kurt J. Dyer
+Candidate	Kwen Shirley	Kwen Shirley
+Candidate	Laura Dever	Laura Dever
+Candidate	Laura Garber	Laura Garber
+Candidate	Lee Bridges	Lee Bridges
+Candidate	Leesha Ford	Leesha Ford
+Candidate	Lisa Barton	Lisa Barton
+Candidate	Lynelle Melton	Lynelle Melton
+Candidate	Marilyn Ryan	Marilyn Ryan
+Candidate	Mark W. Blasdel	Mark W. Blasdel
+Candidate	Mary Custer	Mary Custer
+Candidate	Mary M. Caferro	Mary M. Caferro
+Candidate	Mary McNally	Mary McNally
+Candidate	Mary Zeiss Stange	Mary Zeiss Stange
+Candidate	Michael K. Cooper Sr	Michael K. Cooper Sr
+Candidate	Michael White	Michael White
+Candidate	Mike 'Mac' McNamara	Mike 'Mac' McNamara
+Candidate	Mike Cuffe	Mike Cuffe
+Candidate	Ming Cabrera	Ming Cabrera
+Candidate	Nate McConnell	Nate McConnell
+Candidate	Nathan Mckenty	Nathan Mckenty
+Candidate	Nick Knowles	Nick Knowles
+Candidate	Pat Flowers	Pat Flowers
+Candidate	Patrick Maloney	Patrick Maloney
+Candidate	Paul Tuss	Paul Tuss
+Candidate	Peggy Webb	Peggy Webb
+Candidate	Quenby Iandiorio	Quenby Iandiorio
+Candidate	Quentin Eggart	Quentin Eggart
+Candidate	Raney Tschida	Raney Tschida
+Candidate	Ray L. Shaw	Ray L. Shaw
+Candidate	Richard 'Dick' Motta	Richard 'Dick' Motta
+Candidate	Richard (Rick) Kerr	Richard (Rick) Kerr
+Candidate	Rick Breckenridge	Rick Breckenridge
+Candidate	Robert Farris-Olsen	Robert Farris-Olsen
+Candidate	Robert Sivertsen	Robert Sivertsen
+Candidate	Ross H. Fitzgerald	Ross H. Fitzgerald
+Candidate	Russel E Tempel	Russel E Tempel
+Candidate	Sam Newville	Sam Newville
+Candidate	Seth Mangini	Seth Mangini
+Candidate	Shane A. Morigeau	Shane A. Morigeau
+Candidate	Shawn Leslie Guymon	Shawn Leslie Guymon
+Candidate	Sid Daoud	Sid Daoud
+Candidate	Steven E Galloway	Steven E Galloway
+Candidate	Susan A. Webber	Susan A. Webber
+Candidate	Susan T. Evans	Susan T. Evans
+Candidate	Thomas Winter	Thomas Winter
+Candidate	Tom Burnett	Tom Burnett
+Candidate	Tom Jacobson	Tom Jacobson
+Candidate	Tom McGillvray	Tom McGillvray
+Candidate	Tyson T Runningwolf	Tyson T Runningwolf
+Candidate	William Smith	William Smith
+Candidate	Zac Perry	Zac Perry
+Candidate	Zach Brown	Zach Brown
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+ReportingUnit	Montana;Beaverhead County	Montana;Beaverhead
+ReportingUnit	Montana;Big Horn County	Montana;Big Horn
+ReportingUnit	Montana;Blaine County	Montana;Blaine
+ReportingUnit	Montana;Broadwater County	Montana;Broadwater
+ReportingUnit	Montana;Carbon County	Montana;Carbon
+ReportingUnit	Montana;Carter County	Montana;Carter
+ReportingUnit	Montana;Cascade County	Montana;Cascade
+ReportingUnit	Montana;Chouteau County	Montana;Chouteau
+ReportingUnit	Montana;Custer County	Montana;Custer
+ReportingUnit	Montana;Daniels County	Montana;Daniels
+ReportingUnit	Montana;Dawson County	Montana;Dawson
+ReportingUnit	Montana;Deer Lodge County	Montana;Deer Lodge
+ReportingUnit	Montana;Fallon County	Montana;Fallon
+ReportingUnit	Montana;Fergus County	Montana;Fergus
+ReportingUnit	Montana;Flathead County	Montana;Flathead
+ReportingUnit	Montana;Gallatin County	Montana;Gallatin
+ReportingUnit	Montana;Garfield County	Montana;Garfield
+ReportingUnit	Montana;Glacier County	Montana;Glacier
+ReportingUnit	Montana;Golden Valley County	Montana;Golden Valley
+ReportingUnit	Montana;Granite County	Montana;Granite
+ReportingUnit	Montana;Hill County	Montana;Hill
+ReportingUnit	Montana;Jefferson County	Montana;Jefferson
+ReportingUnit	Montana;Judith Basin County	Montana;Judith Basin
+ReportingUnit	Montana;Lake County	Montana;Lake
+ReportingUnit	Montana;Lewis & Clark County	Montana;Lewis & Clark
+ReportingUnit	Montana;Liberty County	Montana;Liberty
+ReportingUnit	Montana;Lincoln County	Montana;Lincoln
+ReportingUnit	Montana;Madison County	Montana;Madison
+ReportingUnit	Montana;McCone County	Montana;McCone
+ReportingUnit	Montana;Meagher County	Montana;Meagher
+ReportingUnit	Montana;Mineral County	Montana;Mineral
+ReportingUnit	Montana;Missoula County	Montana;Missoula
+ReportingUnit	Montana;Musselshell County	Montana;Musselshell
+ReportingUnit	Montana;Park County	Montana;Park
+ReportingUnit	Montana;Petroleum County	Montana;Petroleum
+ReportingUnit	Montana;Phillips County	Montana;Phillips
+ReportingUnit	Montana;Pondera County	Montana;Pondera
+ReportingUnit	Montana;Powder River County	Montana;Powder River
+ReportingUnit	Montana;Powell County	Montana;Powell
+ReportingUnit	Montana;Prairie County	Montana;Prairie
+ReportingUnit	Montana;Ravalli County	Montana;Ravalli
+ReportingUnit	Montana;Richland County	Montana;Richland
+ReportingUnit	Montana;Roosevelt County	Montana;Roosevelt
+ReportingUnit	Montana;Rosebud County	Montana;Rosebud
+ReportingUnit	Montana;Sanders County	Montana;Sanders
+ReportingUnit	Montana;Sheridan County	Montana;Sheridan
+ReportingUnit	Montana;Silver Bow County	Montana;Silver Bow
+ReportingUnit	Montana;Stillwater County	Montana;Stillwater
+ReportingUnit	Montana;Sweet Grass County	Montana;Sweet Grass
+ReportingUnit	Montana;Teton County	Montana;Teton
+ReportingUnit	Montana;Toole County	Montana;Toole
+ReportingUnit	Montana;Treasure County	Montana;Treasure
+ReportingUnit	Montana;Valley County	Montana;Valley
+ReportingUnit	Montana;Wheatland County	Montana;Wheatland
+ReportingUnit	Montana;Wibaux County	Montana;Wibaux
+ReportingUnit	Montana;Yellowstone County	Montana;Yellowstone
+CandidateContest	MT Attorney General	MT;Attorney General;statewide

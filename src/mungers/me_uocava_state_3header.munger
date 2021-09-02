@@ -14,3 +14,6 @@ CountItemType={<TOWN>,^STATE (.*)$}
 
 
 Candidate=<count_header_0>
+
+[ignore]
+ReportingUnit=AND,ARD,CUM,FRA,HAN,KEN,KNO,LIN,OXF,PEN,PIS,SAG,SOM,WAL,WAS,YOR

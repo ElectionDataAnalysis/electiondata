@@ -26,7 +26,7 @@ rows_to_skip=2
 [munge formulas]
 ReportingUnit=<TownName>;<Polling_Place_Name>
 CandidateContest=<OfficeName>
-Candidate={<CandidateName>,^(.+)Machine/Polling Place/EDRAbsenteeTotal$}
+Candidate={<CandidateName>,^(.+)Machine/Polling Place/EDRAbsenteeTotal(?:'|")?$}
 Party=<PartyName>
 
 

@@ -360,7 +360,6 @@ Candidate	Donald J. Trump	DONALD TRUMP
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald P. Larson	Donald P. Larson
 Candidate	Donald Truex	Donald Truex
-Candidate	Donald Trump	Donald Trump
 Candidate	Donna Beheydt	Donna Beheydt
 Candidate	Donna J. Carr	Donna J. Carr
 Candidate	Dontavius Jarrells	Dontavius Jarrells
@@ -469,7 +468,6 @@ Candidate	Heather A. Freese	Heather A. Freese
 Candidate	Heather Bishoff	Heather Bishoff
 Candidate	Heidi Rosales	Heidi Rosales
 Candidate	Henry Todd	Henry Todd
-Candidate	Hillary Clinton	HILLARY CLINTON
 Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hillary Mueri	Hillary Mueri
 Candidate	Hillary O'Connor Mueri	Hillary O'Connor Mueri
@@ -569,7 +567,7 @@ Candidate	Jeremiah M. Johnson	Jeremiah M. Johnson
 Candidate	Jeremiah S. Ray	Jeremiah S. Ray
 Candidate	Jeremy Eugene Blake	Jeremy Eugene Blake
 Candidate	Jerod L. Weber	Jerod L. Weber
-Candidate	Jerry  Powell	Jerry  Powell
+Candidate	Jerry Powell	Jerry Powell
 Candidate	Jerry Cirino	Jerry Cirino
 Candidate	Jerry E. Feeman	Jerry E. Feeman
 Candidate	Jerry Greene	Jerry Greene
@@ -637,12 +635,13 @@ Candidate	John J. Carlisle	John J. Carlisle
 Candidate	John J. Eklund	John J. Eklund
 Candidate	John K. Hartman (WI)*	John K. Hartman (WI)*
 Candidate	John Kennedy	John Kennedy
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John Kolesar	John Kolesar
 Candidate	John L. Juergensen	John L. Juergensen
 Candidate	John M. Durkin	John M. Durkin
 Candidate	John M. Rogers	John M. Rogers
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John McCain
+Candidate	John McCain	John Mccain
 Candidate	John McManus	John McManus
 Candidate	John Mchenry	John Mchenry
 Candidate	John Mullins	John Mullins
@@ -675,13 +674,13 @@ Candidate	Jonathan Dever	Jonathan Dever
 Candidate	Jonathan Schulz	Jonathan Schulz
 Candidate	Jordan Garcea	Jordan Garcea
 Candidate	Joseph A. Monbeck	Joseph A. Monbeck
-Candidate	Joseph Biden	Joseph Biden
+Candidate	Joseph R. Biden	Joseph Biden
 Candidate	Joseph F. Russo	Joseph F. Russo
 Candidate	Joseph J. Bruzzese Jr	Joseph J. Bruzzese Jr
 Candidate	Joseph L. Jerger	Joseph L. Jerger
 Candidate	Joseph Maldonado	Joseph Maldonado
 Candidate	Joseph Monbeck	Joseph Monbeck
-Candidate	Joseph R. Biden Jr	Joseph R. Biden Jr
+Candidate	Joseph R. Biden	Joseph R. Biden Jr
 Candidate	Joseph R. DeMare	Joseph R. DeMare
 Candidate	Joseph S. Begeny	Joseph S. Begeny
 Candidate	Josh Sines	Josh Sines
@@ -2221,6 +2220,7 @@ Party	Republican Party	REPUBLICAN
 Party	Republican Party	Republican
 Party	Write-in	Not Applicable - WI
 Party	Write-in	Write-in
+Party	Write-in	WI
 Party	none or unknown	OTHER
 ReportingUnit	Ohio	Ohio
 ReportingUnit	Ohio;Adams County	Adams
@@ -2547,3 +2547,287 @@ ReportingUnit	Ohio;Wood County	Wood
 ReportingUnit	Ohio;Wood County	fips39173
 ReportingUnit	Ohio;Wyandot County	Wyandot
 ReportingUnit	Ohio;Wyandot County	fips39175
+Candidate	Tom Hoefling	Tom Hoefling and Andy Prior
+Candidate	Todd E. Beegle	Todd E. Beegle
+Candidate	President R19 Boddie	President R19 Boddie and Eric Stoneham
+Candidate	Kasey Wells	Kasey Wells and Rachel Wells
+Candidate	Joseph R. Biden	Joseph R. Biden and Kamala D. Harris
+Candidate	Jo Jorgensen	Jo Jorgensen and Spike Cohen
+Candidate	Jerry V. Powell	Jerry V. Powell
+Candidate	Jay A. Conrad	Jay A. Conrad
+Candidate	Jade Simmons	Jade Simmons and Claudeliah J. Roze
+Candidate	Harrison T. Stanley	Harrison T. Stanley
+Candidate	Donald J. Trump	Donald J. Trump and Michael R. Pence
+Candidate	Dario Hunter	Dario Hunter and Dawn Neptune Adams
+Candidate	Brian S. Stewart	Brian S. Stewart
+Candidate	Brian Carroll	Brian Carroll and Amar Patel
+Candidate	Howie Hawkins	Howie Hawkins and Angela Walker
+Candidate	Nicholas D. Moss	Nicholas D. Moss
+Candidate	John S. Stewart	John S. Stewart
+CandidateContest	US House OH District 16	Representative to Congress - District 16
+CandidateContest	US House OH District 15	Representative to Congress - District 15
+CandidateContest	US House OH District 14	Representative to Congress - District 14
+CandidateContest	US House OH District 13	Representative to Congress - District 13
+CandidateContest	US House OH District 12	Representative to Congress - District 12
+CandidateContest	US House OH District 11	Representative to Congress - District 11
+CandidateContest	US House OH District 10	Representative to Congress - District 10
+CandidateContest	US House OH District 9	Representative to Congress - District 09
+CandidateContest	US House OH District 8	Representative to Congress - District 08
+CandidateContest	US House OH District 7	Representative to Congress - District 07
+CandidateContest	US House OH District 6	Representative to Congress - District 06
+CandidateContest	US House OH District 5	Representative to Congress - District 05
+CandidateContest	US House OH District 4	Representative to Congress - District 04
+CandidateContest	US House OH District 3	Representative to Congress - District 03
+CandidateContest	US House OH District 2	Representative to Congress - District 02
+CandidateContest	US House OH District 1	Representative to Congress - District 01
+CandidateContest	OH Attorney General	OH;Attorney General
+CandidateContest	OH Auditor of State	OH;Auditor of State;statewide
+CandidateContest	OH Governor	OH;Governor and Lieutenant Governor;statewide
+CandidateContest	OH Justice of the Supreme Court	OH;Justice of the Supreme Court;statewide
+CandidateContest	OH Member of the State Board of Education District 2	OH;Member of the State Board of Education;District 2
+CandidateContest	OH Member of the State Board of Education District 3	OH;Member of the State Board of Education;District 3
+CandidateContest	OH Member of the State Board of Education District 4	OH;Member of the State Board of Education;District 4
+CandidateContest	OH Member of the State Board of Education District 7	OH;Member of the State Board of Education;District 7
+CandidateContest	OH Member of the State Board of Education District 8	OH;Member of the State Board of Education;District 8
+CandidateContest	OH Secretary of State	OH;Secretary of State;statewide
+CandidateContest	OH House District 1	OH;State Representative;District 1
+CandidateContest	OH House District 10	OH;State Representative;District 10
+CandidateContest	OH House District 11	OH;State Representative;District 11
+CandidateContest	OH House District 12	OH;State Representative;District 12
+CandidateContest	OH House District 13	OH;State Representative;District 13
+CandidateContest	OH House District 14	OH;State Representative;District 14
+CandidateContest	OH House District 15	OH;State Representative;District 15
+CandidateContest	OH House District 16	OH;State Representative;District 16
+CandidateContest	OH House District 17	OH;State Representative;District 17
+CandidateContest	OH House District 18	OH;State Representative;District 18
+CandidateContest	OH House District 19	OH;State Representative;District 19
+CandidateContest	OH House District 2	OH;State Representative;District 2
+CandidateContest	OH House District 20	OH;State Representative;District 20
+CandidateContest	OH House District 21	OH;State Representative;District 21
+CandidateContest	OH House District 22	OH;State Representative;District 22
+CandidateContest	OH House District 23	OH;State Representative;District 23
+CandidateContest	OH House District 24	OH;State Representative;District 24
+CandidateContest	OH House District 25	OH;State Representative;District 25
+CandidateContest	OH House District 26	OH;State Representative;District 26
+CandidateContest	OH House District 27	OH;State Representative;District 27
+CandidateContest	OH House District 28	OH;State Representative;District 28
+CandidateContest	OH House District 29	OH;State Representative;District 29
+CandidateContest	OH House District 3	OH;State Representative;District 3
+CandidateContest	OH House District 30	OH;State Representative;District 30
+CandidateContest	OH House District 31	OH;State Representative;District 31
+CandidateContest	OH House District 32	OH;State Representative;District 32
+CandidateContest	OH House District 33	OH;State Representative;District 33
+CandidateContest	OH House District 34	OH;State Representative;District 34
+CandidateContest	OH House District 35	OH;State Representative;District 35
+CandidateContest	OH House District 36	OH;State Representative;District 36
+CandidateContest	OH House District 37	OH;State Representative;District 37
+CandidateContest	OH House District 38	OH;State Representative;District 38
+CandidateContest	OH House District 39	OH;State Representative;District 39
+CandidateContest	OH House District 4	OH;State Representative;District 4
+CandidateContest	OH House District 40	OH;State Representative;District 40
+CandidateContest	OH House District 41	OH;State Representative;District 41
+CandidateContest	OH House District 42	OH;State Representative;District 42
+CandidateContest	OH House District 43	OH;State Representative;District 43
+CandidateContest	OH House District 44	OH;State Representative;District 44
+CandidateContest	OH House District 45	OH;State Representative;District 45
+CandidateContest	OH House District 46	OH;State Representative;District 46
+CandidateContest	OH House District 47	OH;State Representative;District 47
+CandidateContest	OH House District 48	OH;State Representative;District 48
+CandidateContest	OH House District 49	OH;State Representative;District 49
+CandidateContest	OH House District 5	OH;State Representative;District 5
+CandidateContest	OH House District 50	OH;State Representative;District 50
+CandidateContest	OH House District 51	OH;State Representative;District 51
+CandidateContest	OH House District 52	OH;State Representative;District 52
+CandidateContest	OH House District 53	OH;State Representative;District 53
+CandidateContest	OH House District 54	OH;State Representative;District 54
+CandidateContest	OH House District 55	OH;State Representative;District 55
+CandidateContest	OH House District 56	OH;State Representative;District 56
+CandidateContest	OH House District 57	OH;State Representative;District 57
+CandidateContest	OH House District 58	OH;State Representative;District 58
+CandidateContest	OH House District 59	OH;State Representative;District 59
+CandidateContest	OH House District 6	OH;State Representative;District 6
+CandidateContest	OH House District 60	OH;State Representative;District 60
+CandidateContest	OH House District 61	OH;State Representative;District 61
+CandidateContest	OH House District 62	OH;State Representative;District 62
+CandidateContest	OH House District 63	OH;State Representative;District 63
+CandidateContest	OH House District 64	OH;State Representative;District 64
+CandidateContest	OH House District 65	OH;State Representative;District 65
+CandidateContest	OH House District 66	OH;State Representative;District 66
+CandidateContest	OH House District 67	OH;State Representative;District 67
+CandidateContest	OH House District 68	OH;State Representative;District 68
+CandidateContest	OH House District 69	OH;State Representative;District 69
+CandidateContest	OH House District 7	OH;State Representative;District 7
+CandidateContest	OH House District 70	OH;State Representative;District 70
+CandidateContest	OH House District 71	OH;State Representative;District 71
+CandidateContest	OH House District 72	OH;State Representative;District 72
+CandidateContest	OH House District 73	OH;State Representative;District 73
+CandidateContest	OH House District 74	OH;State Representative;District 74
+CandidateContest	OH House District 75	OH;State Representative;District 75
+CandidateContest	OH House District 76	OH;State Representative;District 76
+CandidateContest	OH House District 77	OH;State Representative;District 77
+CandidateContest	OH House District 78	OH;State Representative;District 78
+CandidateContest	OH House District 79	OH;State Representative;District 79
+CandidateContest	OH House District 8	OH;State Representative;District 8
+CandidateContest	OH House District 80	OH;State Representative;District 80
+CandidateContest	OH House District 81	OH;State Representative;District 81
+CandidateContest	OH House District 82	OH;State Representative;District 82
+CandidateContest	OH House District 83	OH;State Representative;District 83
+CandidateContest	OH House District 84	OH;State Representative;District 84
+CandidateContest	OH House District 85	OH;State Representative;District 85
+CandidateContest	OH House District 86	OH;State Representative;District 86
+CandidateContest	OH House District 87	OH;State Representative;District 87
+CandidateContest	OH House District 88	OH;State Representative;District 88
+CandidateContest	OH House District 89	OH;State Representative;District 89
+CandidateContest	OH House District 9	OH;State Representative;District 9
+CandidateContest	OH House District 90	OH;State Representative;District 90
+CandidateContest	OH House District 91	OH;State Representative;District 91
+CandidateContest	OH House District 92	OH;State Representative;District 92
+CandidateContest	OH House District 93	OH;State Representative;District 93
+CandidateContest	OH House District 94	OH;State Representative;District 94
+CandidateContest	OH House District 95	OH;State Representative;District 95
+CandidateContest	OH House District 96	OH;State Representative;District 96
+CandidateContest	OH House District 97	OH;State Representative;District 97
+CandidateContest	OH House District 98	OH;State Representative;District 98
+CandidateContest	OH House District 99	OH;State Representative;District 99
+CandidateContest	OH Senate District 1	OH;State Senator;District 1
+CandidateContest	OH Senate District 11	OH;State Senator;District 11
+CandidateContest	OH Senate District 13	OH;State Senator;District 13
+CandidateContest	OH Senate District 15	OH;State Senator;District 15
+CandidateContest	OH Senate District 17	OH;State Senator;District 17
+CandidateContest	OH Senate District 19	OH;State Senator;District 19
+CandidateContest	OH Senate District 21	OH;State Senator;District 21
+CandidateContest	OH Senate District 23	OH;State Senator;District 23
+CandidateContest	OH Senate District 25	OH;State Senator;District 25
+CandidateContest	OH Senate District 27	OH;State Senator;District 27
+CandidateContest	OH Senate District 29	OH;State Senator;District 29
+CandidateContest	OH Senate District 3	OH;State Senator;District 3
+CandidateContest	OH Senate District 31	OH;State Senator;District 31
+CandidateContest	OH Senate District 33	OH;State Senator;District 33
+CandidateContest	OH Senate District 5	OH;State Senator;District 5
+CandidateContest	OH Senate District 7	OH;State Senator;District 7
+CandidateContest	OH Senate District 9	OH;State Senator;District 9
+CandidateContest	OH Treasurer of State	OH;Treasurer of State;statewide
+CandidateContest	US House OH District 1	OH;US Representative;District 1
+CandidateContest	US House OH District 10	OH;US Representative;District 10
+CandidateContest	US House OH District 11	OH;US Representative;District 11
+CandidateContest	US House OH District 12	OH;US Representative;District 12
+CandidateContest	US House OH District 13	OH;US Representative;District 13
+CandidateContest	US House OH District 14	OH;US Representative;District 14
+CandidateContest	US House OH District 15	OH;US Representative;District 15
+CandidateContest	US House OH District 16	OH;US Representative;District 16
+CandidateContest	US House OH District 2	OH;US Representative;District 2
+CandidateContest	US House OH District 3	OH;US Representative;District 3
+CandidateContest	US House OH District 4	OH;US Representative;District 4
+CandidateContest	US House OH District 5	OH;US Representative;District 5
+CandidateContest	US House OH District 6	OH;US Representative;District 6
+CandidateContest	US House OH District 7	OH;US Representative;District 7
+CandidateContest	US House OH District 8	OH;US Representative;District 8
+CandidateContest	US House OH District 9	OH;US Representative;District 9
+CandidateContest	US Senate OH	OH;US Senator;statewide
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+ReportingUnit	Ohio;Adams County	Ohio;Adams
+ReportingUnit	Ohio;Allen County	Ohio;Allen
+ReportingUnit	Ohio;Ashland County	Ohio;Ashland
+ReportingUnit	Ohio;Ashtabula County	Ohio;Ashtabula
+ReportingUnit	Ohio;Athens County	Ohio;Athens
+ReportingUnit	Ohio;Auglaize County	Ohio;Auglaize
+ReportingUnit	Ohio;Belmont County	Ohio;Belmont
+ReportingUnit	Ohio;Brown County	Ohio;Brown
+ReportingUnit	Ohio;Butler County	Ohio;Butler
+ReportingUnit	Ohio;Carroll County	Ohio;Carroll
+ReportingUnit	Ohio;Champaign County	Ohio;Champaign
+ReportingUnit	Ohio;Clark County	Ohio;Clark
+ReportingUnit	Ohio;Clermont County	Ohio;Clermont
+ReportingUnit	Ohio;Clinton County	Ohio;Clinton
+ReportingUnit	Ohio;Columbiana County	Ohio;Columbiana
+ReportingUnit	Ohio;Coshocton County	Ohio;Coshocton
+ReportingUnit	Ohio;Crawford County	Ohio;Crawford
+ReportingUnit	Ohio;Cuyahoga County	Ohio;Cuyahoga
+ReportingUnit	Ohio;Darke County	Ohio;Darke
+ReportingUnit	Ohio;Defiance County	Ohio;Defiance
+ReportingUnit	Ohio;Delaware County	Ohio;Delaware
+ReportingUnit	Ohio;Erie County	Ohio;Erie
+ReportingUnit	Ohio;Fairfield County	Ohio;Fairfield
+ReportingUnit	Ohio;Fayette County	Ohio;Fayette
+ReportingUnit	Ohio;Franklin County	Ohio;Franklin
+ReportingUnit	Ohio;Fulton County	Ohio;Fulton
+ReportingUnit	Ohio;Gallia County	Ohio;Gallia
+ReportingUnit	Ohio;Geauga County	Ohio;Geauga
+ReportingUnit	Ohio;Greene County	Ohio;Greene
+ReportingUnit	Ohio;Guernsey County	Ohio;Guernsey
+ReportingUnit	Ohio;Hamilton County	Ohio;Hamilton
+ReportingUnit	Ohio;Hancock County	Ohio;Hancock
+ReportingUnit	Ohio;Hardin County	Ohio;Hardin
+ReportingUnit	Ohio;Harrison County	Ohio;Harrison
+ReportingUnit	Ohio;Henry County	Ohio;Henry
+ReportingUnit	Ohio;Highland County	Ohio;Highland
+ReportingUnit	Ohio;Hocking County	Ohio;Hocking
+ReportingUnit	Ohio;Holmes County	Ohio;Holmes
+ReportingUnit	Ohio;Huron County	Ohio;Huron
+ReportingUnit	Ohio;Jackson County	Ohio;Jackson
+ReportingUnit	Ohio;Jefferson County	Ohio;Jefferson
+ReportingUnit	Ohio;Knox County	Ohio;Knox
+ReportingUnit	Ohio;Lake County	Ohio;Lake
+ReportingUnit	Ohio;Lawrence County	Ohio;Lawrence
+ReportingUnit	Ohio;Licking County	Ohio;Licking
+ReportingUnit	Ohio;Logan County	Ohio;Logan
+ReportingUnit	Ohio;Lorain County	Ohio;Lorain
+ReportingUnit	Ohio;Lucas County	Ohio;Lucas
+ReportingUnit	Ohio;Madison County	Ohio;Madison
+ReportingUnit	Ohio;Mahoning County	Ohio;Mahoning
+ReportingUnit	Ohio;Marion County	Ohio;Marion
+ReportingUnit	Ohio;Medina County	Ohio;Medina
+ReportingUnit	Ohio;Meigs County	Ohio;Meigs
+ReportingUnit	Ohio;Mercer County	Ohio;Mercer
+ReportingUnit	Ohio;Miami County	Ohio;Miami
+ReportingUnit	Ohio;Monroe County	Ohio;Monroe
+ReportingUnit	Ohio;Montgomery County	Ohio;Montgomery
+ReportingUnit	Ohio;Morgan County	Ohio;Morgan
+ReportingUnit	Ohio;Morrow County	Ohio;Morrow
+ReportingUnit	Ohio;Muskingum County	Ohio;Muskingum
+ReportingUnit	Ohio;Noble County	Ohio;Noble
+ReportingUnit	Ohio;Ottawa County	Ohio;Ottawa
+ReportingUnit	Ohio;Paulding County	Ohio;Paulding
+ReportingUnit	Ohio;Perry County	Ohio;Perry
+ReportingUnit	Ohio;Pickaway County	Ohio;Pickaway
+ReportingUnit	Ohio;Pike County	Ohio;Pike
+ReportingUnit	Ohio;Portage County	Ohio;Portage
+ReportingUnit	Ohio;Preble County	Ohio;Preble
+ReportingUnit	Ohio;Putnam County	Ohio;Putnam
+ReportingUnit	Ohio;Richland County	Ohio;Richland
+ReportingUnit	Ohio;Ross County	Ohio;Ross
+ReportingUnit	Ohio;Sandusky County	Ohio;Sandusky
+ReportingUnit	Ohio;Scioto County	Ohio;Scioto
+ReportingUnit	Ohio;Seneca County	Ohio;Seneca
+ReportingUnit	Ohio;Shelby County	Ohio;Shelby
+ReportingUnit	Ohio;Stark County	Ohio;Stark
+ReportingUnit	Ohio;Summit County	Ohio;Summit
+ReportingUnit	Ohio;Trumbull County	Ohio;Trumbull
+ReportingUnit	Ohio;Tuscarawas County	Ohio;Tuscarawas
+ReportingUnit	Ohio;Union County	Ohio;Union
+ReportingUnit	Ohio;Van Wert County	Ohio;Van Wert
+ReportingUnit	Ohio;Vinton County	Ohio;Vinton
+ReportingUnit	Ohio;Warren County	Ohio;Warren
+ReportingUnit	Ohio;Washington County	Ohio;Washington
+ReportingUnit	Ohio;Wayne County	Ohio;Wayne
+ReportingUnit	Ohio;Williams County	Ohio;Williams
+ReportingUnit	Ohio;Wood County	Ohio;Wood
+ReportingUnit	Ohio;Wyandot County	Ohio;Wyandot
+CandidateContest	OH Attorney General	OH;Attorney General;statewide

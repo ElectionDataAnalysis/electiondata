@@ -12,3 +12,7 @@ CountItemType={<column_0>,^.*(Absentee|Early Voting|Question).*$}
 Party=<column_3>
 CandidateContest=<column_1>
 Candidate=<column_2>
+
+[ignore]
+Candidate=,Number of Precincts,Number of Precincts Reporting,Number of Precincts for Race,Registered Voters,Times Counted
+

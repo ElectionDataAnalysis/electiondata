@@ -1,4 +1,11 @@
 Name	NumberElected	Office	PrimaryParty
+UT State Board of Education District 14	1	UT State Board of Education District 14	
+UT State Board of Education District 1	1	UT State Board of Education District 1	
+UT State Board of Education District 5	1	UT State Board of Education District 5	
+UT State Board of Education District 3	1	UT State Board of Education District 3	
+UT State Board of Education District 6	1	UT State Board of Education District 6	
+UT State Board of Education District 9	1	UT State Board of Education District 9	
+UT State Board of Education District 2	1	UT State Board of Education District 2	
 UT House District 1	1	UT House District 1	
 UT House District 2	1	UT House District 2	
 UT House District 3	1	UT House District 3	

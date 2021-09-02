@@ -100,4 +100,5 @@ US Senate OR	1	US Senate OR
 OR Attorney General	1	OR Attorney General	
 OR Lieutenant Governor	1	OR Lieutenant Governor	
 OR Treasurer	1	OR Treasurer	
-OR Secretary of State	1	OR Secretary of State	
+OR Secretary of State	1	OR Secretary of State
+OR Judge of the Supreme Court Position 5	1	OR Judge of the Supreme Court Position 5

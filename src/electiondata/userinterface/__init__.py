@@ -25,6 +25,7 @@ import xml.etree.ElementTree as et
 import json
 import shutil
 import xlrd
+
 # may need for certain excel imports: import openpyxl
 from sqlalchemy.orm import Session
 
@@ -165,7 +166,6 @@ def read_single_datafile(
     f_path: str,
     p: Dict[str, Any],
     munger_path: str,
-    err: Optional[Dict],
     aux: bool = False,
     driving_path: Optional[str] = None,
     lookup_id: Optional[str] = None,
@@ -202,11 +202,11 @@ def read_single_datafile(
     try:
         if p["file_type"] in ["xml"]:
             if driving_path:
-                temp_d = nist.tree_parse_info(driving_path,None)
+                temp_d = nist.tree_parse_info(driving_path, None)
                 driver = {"main_path": temp_d["path"], "main_attrib": temp_d["attrib"]}
             else:
-                driver = nist.xml_count_parse_info(p,ignore_namespace=True)
-            xml_path_info = nist.xml_string_path_info(p["munge_fields"],p["namespace"])
+                driver = nist.xml_count_parse_info(p, ignore_namespace=True)
+            xml_path_info = nist.xml_string_path_info(p["munge_fields"], p["namespace"])
             tree = et.parse(f_path)
             df, err = nist.df_from_tree(
                 tree,
@@ -290,10 +290,19 @@ def read_single_datafile(
                 if new_err:
                     err = consolidate_errors([err, new_err])
 
-        # rename any columns from header-less tables to column_0, column_1, etc.
+        # regularize column names
         if p["all_rows"] == "data":
+            # rename any columns from header-less tables to column_0, column_1, etc.
             for k in df_dict.keys():
                 df_dict[k].columns = [f"column_{j}" for j in range(df_dict[k].shape[1])]
+        else:
+            # strip whitespace from column names # TODO handle same for multi-index columns
+            for k in df_dict.keys():
+                if not isinstance(df_dict[k].columns, pd.MultiIndex):
+                    df_dict[k].columns = [
+                        (c.strip() if isinstance(c, str) else c)
+                        for c in df_dict[k].columns
+                    ]
 
     except FileNotFoundError:
         err_str = f"File not found: {f_path}"
@@ -324,7 +333,12 @@ def read_single_datafile(
         empties = [k for k in df_dict.keys() if df_dict[k].empty]
         if empties:
             empty_str = ", ".join(empties)
-            err = add_new_error(err, "warn-munger", munger_name, f"Nothing read from {file_name} sheets {empty_str}")
+            err = add_new_error(
+                err,
+                "warn-munger",
+                munger_name,
+                f"Nothing read from {file_name} sheets {empty_str}",
+            )
         df_dict = {k: v for k, v in df_dict.items() if not v.empty}
     return df_dict, row_constants, err
 
@@ -440,13 +454,13 @@ def copy_directory_with_backup(
     <copy_path> exists, move it to a backup file whose name gets the suffix
     <backup_suffix>"""
     err = None
-    # TODO
     # if the original to be copied is actually a directory
     if os.path.isdir(original_path):
         if backup_suffix:
             # make backup of anything with existing name
             if os.path.isdir(copy_path):
                 shutil.move(copy_path, f"{copy_path}{backup_suffix}")
+                print(f"Moved {copy_path} to {copy_path}{backup_suffix}")
             elif os.path.isfile(copy_path):
                 old_stem = Path(copy_path).stem
                 backup_path = os.path.join(
@@ -487,6 +501,7 @@ def copy_with_err_handling(
             new = os.path.join(new_root, f)
             try:
                 shutil.copy(old, new)
+                print(f"Copied {old} to {new}")
             except Exception as she:
                 if report_error:
                     err = add_new_error(
@@ -529,7 +544,7 @@ def get_parameters(
         err = add_new_error(
             err, "ini", param_file, f"Something is defined twice: {doe}"
         )
-        return d,err
+        return d, err
     except ParsingError as pe:
         err = add_new_error(
             err,
@@ -537,7 +552,7 @@ def get_parameters(
             param_file,
             f"{pe}",
         )
-        return d,err
+        return d, err
     except Exception as exc:
         err = add_new_error(
             err,
@@ -545,7 +560,7 @@ def get_parameters(
             param_file,
             f"{exc}",
         )
-        return d,err
+        return d, err
 
     # read required info
     missing_required_params = list()
@@ -621,6 +636,7 @@ def report(
     output_location: str,
     key_list: list = None,
     file_prefix: str = "",
+    suppress_warnings: bool = False,
 ) -> Optional[dict]:
     """unpacks error dictionary <err_warn> for reporting.
     <output_location> is directory for writing error files.
@@ -662,7 +678,7 @@ def report(
         # map each tuple to its message (sorting the warnings)
         msg = {(et, nk): "\n".join(sorted(err_warn[et][nk])) for et, nk in tuples}
 
-        # write errors/warns to error files
+        # write errors/warns to error/warn files
         while ets_to_process:
             et = ets_to_process.pop()
             # et is an error type. <et> might be a key of err_warn,
@@ -685,43 +701,42 @@ def report(
 
                     # write info to a .errors or .errors file named for the name_key <nk>
                     out_path = os.path.join(
-                        output_location, f"{file_prefix}_{nk_name}.errors"
+                        output_location, f"{file_prefix}_{et}_{nk_name}.errors"
                     )
                     with open(out_path, "a") as f:
                         f.write(out_str)
                     print(f"{et.title()} errors{and_warns} written to {out_path}")
 
-            # process name keys with only warnings
-            only_warns = [
-                nk
-                for nk in err_warn[f"warn-{et}"].keys()
-                if (et not in err_warn.keys()) or (nk not in err_warn[et].keys())
-            ]
-            for nk in only_warns:
-                # prepare output string
-                nk_name = Path(nk).name
-                out_str = (
-                    f"{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n"
-                )
+            # process name keys with only warnings (unless warnings suppressed)
+            if not suppress_warnings:
+                only_warns = [
+                    nk
+                    for nk in err_warn[f"warn-{et}"].keys()
+                    if (et not in err_warn.keys()) or (nk not in err_warn[et].keys())
+                ]
+                for nk in only_warns:
+                    # prepare output string
+                    nk_name = Path(nk).name
+                    out_str = f"{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n"
 
-                # write output
-                # get timestamp
-                ts = datetime.datetime.now().strftime("%m%d_%H%M")
-                # write info to a .errors or .errors file named for the name_key <nk>
-                out_path = os.path.join(
-                    output_location, f"{file_prefix}{nk_name}.warnings"
-                )
-                with open(out_path, "a") as f:
-                    f.write(out_str)
-                print(f"{et.title()} warnings written to {out_path}")
+                    # write output
+                    # write info to a .warnings file named for the error-type and name_key
 
-        # define return dictionary with reported keys set to {} and othe keys preserved
+                    out_path = os.path.join(
+                        output_location, f"{file_prefix}_{et}_{nk_name}.warnings"
+                    )
+                    with open(out_path, "a") as f:
+                        f.write(out_str)
+                    print(f"{et.title()} warnings written to {out_path}")
+
+        # define return dictionary with reported keys set to {} and other keys preserved
         remaining = {k: v for k, v in err_warn.items() if k not in key_list}
         for k in key_list:
             remaining[k] = {}
     else:
         remaining = None
-
+    if remaining and (not [k for k in remaining.keys() if remaining[k]]):
+        remaining = None
     return remaining
 
 
@@ -798,43 +813,6 @@ def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
     return False
 
 
-def run_tests(
-    test_dir: str,
-    dbname: str,
-    election_jurisdiction_list: list,
-    report_dir: Optional[str] = None,
-    file_prefix: str = "",
-) -> Dict[str, Any]:
-    """run tests from test_dir
-    db_params must have host, user, pass, db_name.
-    test_param_file is a reference run_time.ini file.
-    Returns dictionary of failures (keys are jurisdiction;election strings)"""
-
-    failures = dict()  # initialize result report
-    # run pytest
-
-    for (election, juris) in election_jurisdiction_list:
-        # run tests
-        e_system = jm.system_name_from_true_name(election)
-        j_system = jm.system_name_from_true_name(juris)
-        test_file = os.path.join(test_dir, f"{j_system}/test_{j_system}_{e_system}.py")
-        if not os.path.isfile(test_file):
-            failures[f"{juris};{election}"] = f"No test file found: {test_file}"
-            continue
-        cmd = f"pytest --dbname {dbname} {test_file}"
-        if report_dir:
-            Path(report_dir).mkdir(exist_ok=True, parents=True)
-            report_file = os.path.join(
-                report_dir, f"{file_prefix}{j_system}_{e_system}.test_results"
-            )
-            cmd = f"{cmd} > {report_file}"
-        r = os.system(cmd)
-        if r != 0:
-            failures[f"{juris};{election}"] = "At least one test failed"
-
-    return failures
-
-
 def confirm_essential_info(
     directory: str,
     header: str,
@@ -891,13 +869,13 @@ def confirm_essential_info(
 
 def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> list:
     """Return list of all election-jurisdiction pairs in .ini files in the ini_path directory
-    or in any of its subdirectories. Ignores 'template.ini' If results_path is given, filters
+    or in any of its subdirectories. Ignores any '*template.ini' If results_path is given, filters
     for ini files whose results files are in the results_path directory
     """
     ej_set = set()
     for subdir, dirs, files in os.walk(ini_path):
         for f in files:
-            if (f[-4:] == ".ini") and (f != "template.ini"):
+            if (f.endswith(".ini")) and (not f.endswith("template.ini")):
                 full_path = os.path.join(subdir, f)
                 d, err = get_parameters(
                     param_file=full_path,
@@ -950,7 +928,10 @@ def get_contest_type_display(item: str) -> str:
 
 
 def get_filtered_input_options(
-    session: Session, menu_type: str, filters: List[str], repository_content_root: str
+    session: Session,
+    menu_type: str,
+    filters: List[str],
+    major_subdivision_type: Dict[str, str],
 ) -> List[Dict[str, Any]]:
     """Display dropdown menu options for menu <menu_type>, limited to any strings in <filters>
     (unless <filters> is None, in which case all are displayed. Sort as necessary"""
@@ -979,7 +960,7 @@ def get_filtered_input_options(
         if filters:
             df = df[df["parent"].isin(filters)]
     elif menu_type == "contest_type":
-        contest_df = db.get_relevant_contests(session, filters, repository_content_root)
+        contest_df = db.get_relevant_contests(session, filters, major_subdivision_type)
         contest_types = contest_df["type"].unique()
         contest_types.sort()
         dropdown_options = {
@@ -1010,8 +991,10 @@ def get_filtered_input_options(
             ]
         ).sort_values(by=["parent", "type", "name"])
         # define input options for each particular contest
-        contest_df = db.get_relevant_contests(session, filters, repository_content_root)
-        contest_df = contest_df[contest_df["type"].isin(filters)].sort_values(by=["parent", "type", "name"])
+        contest_df = db.get_relevant_contests(session, filters, major_subdivision_type)
+        contest_df = contest_df[contest_df["type"].isin(filters)].sort_values(
+            by=["parent", "type", "name"]
+        )
         df = pd.concat([contest_type_df, contest_df])
     elif menu_type == "category":
         election_id = db.list_to_id(session, "Election", filters)
@@ -1034,10 +1017,10 @@ def get_filtered_input_options(
         # get the vote count categories
         type_df = db.read_vote_count(
             session,
-            election_id,
-            jurisdiction_id,
-            ["CountItemType"],
-            ["CountItemType"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["CountItemType"],
+            aliases=["CountItemType"],
         )
         count_types = list(type_df["CountItemType"].unique())
         count_types.sort()
@@ -1062,10 +1045,10 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df = db.read_vote_count(
             session,
-            election_id,
-            jurisdiction_id,
-            ["ElectionDistrict", "ContestName", "unit_type"],
-            ["parent", "name", "type"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["ElectionDistrict", "ContestName", "unit_type"],
+            aliases=["parent", "name", "type"],
         )
         df = df.sort_values(["parent", "name"]).reset_index(drop=True)
     # check if it's looking for a count of candidates
@@ -1076,10 +1059,10 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df_unordered = db.read_vote_count(
             session,
-            election_id,
-            jurisdiction_id,
-            ["ContestName", "BallotName", "PartyName", "unit_type"],
-            ["parent", "name", "type", "unit_type"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["ContestName", "BallotName", "PartyName", "unit_type"],
+            aliases=["parent", "name", "type", "unit_type"],
         )
         df = clean_candidate_names(df_unordered)
         df = df[["parent", "name", "unit_type"]].rename(columns={"unit_type": "type"})
@@ -1106,10 +1089,10 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df = db.read_vote_count(
             session,
-            election_id,
-            jurisdiction_id,
-            ["PartyName", "unit_type"],
-            ["parent", "type"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["PartyName", "unit_type"],
+            aliases=["parent", "type"],
         )
         df["name"] = df["parent"].str.replace(" Party", "") + " " + df["type"]
         df = df[df_cols].sort_values(["parent", "type"])
@@ -1119,10 +1102,10 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df_unordered = db.read_vote_count(
             session,
-            election_id,
-            jurisdiction_id,
-            ["ContestName", "BallotName", "PartyName", "unit_type"],
-            ["parent", "name", "type", "unit_type"],
+            election_id=election_id,
+            jurisdiction_id=jurisdiction_id,
+            fields=["ContestName", "BallotName", "PartyName", "unit_type"],
+            aliases=["parent", "name", "type", "unit_type"],
         )
         df_unordered = df_unordered[df_unordered["unit_type"].isin(filters)].copy()
         df_filtered = df_unordered[

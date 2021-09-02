@@ -1367,3 +1367,17 @@ TX Commissioner of the General Land Office (Independent Party)	1	TX Commissioner
 TX Commissioner of Agriculture (Independent Party)	1	TX Commissioner of Agriculture	Independent Party
 TX Treasurer (Independent Party)	1	TX Treasurer	Independent Party
 TX Secretary of State (Independent Party)	1	TX Secretary of State	Independent Party
+TX Commissioner of the General Land office	1	TX Commissioner of the General Land office
+TX Judge Court of Criminal Appeals Place 7	1	TX Judge Court of Criminal Appeals Place 7	
+TX Judge Court of Criminal Appeals Place 8	1	TX Judge Court of Criminal Appeals Place 8	
+TX Justice Supreme Court Place 2	1	TX Justice Supreme Court Place 2	
+TX Justice Supreme Court Place 4	1	TX Justice Supreme Court Place 4	
+TX Justice Supreme Court Place 6	1	TX Justice Supreme Court Place 6	
+TX Presiding Judge Court of Criminal Appeals	1	TX Presiding Judge Court of Criminal Appeals
+TX Railroad Commissioner	1	TX Railroad Commissioner	
+TX Member State Board of Education District 12	1	TX Member State Board of Education District 12	
+TX Member State Board of Education District 11	1	TX Member State Board of Education District 11	
+TX Member State Board of Education District 13	1	TX Member State Board of Education District 13	
+TX Member State Board of Education District 7	1	TX Member State Board of Education District 7	
+TX Member State Board of Education District 2	1	TX Member State Board of Education District 2	
+

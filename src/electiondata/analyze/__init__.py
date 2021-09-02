@@ -19,11 +19,11 @@ from scipy import stats
 import json
 
 
-def child_rus_by_id(session, parents, ru_type=None):
+def child_rus_by_id(session, parents, ru_type: str = None):
     """Given a list <parents> of parent ids (or just a single parent_id), return
     list containing all children of those parents.
     (By convention, a ReportingUnit counts as one of its own 'parents',)
-    If (ReportingUnitType_Id,OtherReportingUnit) pair <rutype> is given,
+    If  <rutype> is given,
     restrict children to that ReportingUnitType"""
     cruj = pd.read_sql_table("ComposingReportingUnitJoin", session.bind)
     children = list(
@@ -32,29 +32,25 @@ def child_rus_by_id(session, parents, ru_type=None):
     if ru_type:
         assert len(ru_type) == 2, f"argument {ru_type} does not have exactly 2 elements"
         ru = pd.read_sql_table("ReportingUnit", session.bind, index_col="Id")
-        right_type_ru = ru[
-            (ru.ReportingUnitType_Id == ru_type[0])
-            & (ru.OtherReportingUnitType == ru_type[1])
-        ]
+        right_type_ru = ru[(ru.ReportingUnitType == ru_type)]
         children = [x for x in children if x in right_type_ru.index]
     return children
 
 
-def create_rollup(
+def export_rollup(
     session,
     target_dir: str,
-    top_ru_id: int,
-    sub_rutype_id: int,
+    jurisdiction_id: int,
+    sub_rutype: str,
     election_id: int,
     datafile_list: list = None,
     by: str = "Id",
     by_vote_type: bool = False,
-    sub_rutype_othertext: str = "",
 ) -> str:
     """<target_dir> is the directory where the resulting rollup_dataframe will be stored.
     <election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
     <top_ru_id> is the internal cdf name of the ReportingUnit whose results will be reported
-    <sub_rutype_id> and <sub_rutype_othertext> identify the ReportingUnitType
+    <sub_rutype> identifies the ReportingUnitType
     of the ReportingUnits used in each line of the results file
     created by the routine. (E.g., county or ward)
     <datafile_list> is a list of files, with entries from field <by> in _datafile table.
@@ -83,11 +79,8 @@ def create_rollup(
         exclude_redundant_total = False
 
     # get names from ids (and sub_rutype othertext if appropriate)
-    top_ru = db.name_from_id_cursor(cursor, "ReportingUnit", top_ru_id)
+    top_ru = db.name_from_id_cursor(cursor, "ReportingUnit", jurisdiction_id)
     election = db.name_from_id_cursor(cursor, "Election", election_id)
-    sub_rutype = db.name_from_id_cursor(cursor, "ReportingUnitType", sub_rutype_id)
-    if sub_rutype == "other" and sub_rutype_othertext != "":
-        sub_rutype = sub_rutype_othertext
 
     # create path to export directory
     leaf_dir = os.path.join(target_dir, election, top_ru, f"by_{sub_rutype}")
@@ -141,8 +134,7 @@ def create_rollup(
 def create_scatter(
     session,
     jurisdiction_id,
-    subdivision_type_id,
-    other_subdivision_type,
+    subdivision_type,
     h_election_id,
     h_category,
     h_count,
@@ -153,7 +145,7 @@ def create_scatter(
     v_count,
     v_type,
     v_runoff,
-):
+) -> Optional[dict]:
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
 
@@ -164,8 +156,7 @@ def create_scatter(
     dfh = get_data_for_scatter(
         session,
         jurisdiction_id,
-        subdivision_type_id,
-        other_subdivision_type,
+        subdivision_type,
         h_election_id,
         h_category,
         h_count,
@@ -175,8 +166,7 @@ def create_scatter(
     dfv = get_data_for_scatter(
         session,
         jurisdiction_id,
-        subdivision_type_id,
-        other_subdivision_type,
+        subdivision_type,
         v_election_id,
         v_category,
         v_count,
@@ -201,7 +191,7 @@ def create_scatter(
         pivot_col = "CountItemType"
     elif single_selection and single_count_type:
         pivot_col = "Election_Id"
-    else: # no runoffs, not single_selection
+    else:  # no runoffs, not single_selection
         pivot_col = "Selection"
     pivot_df = pd.pivot_table(
         unsummed, values="Count", index=["Name"], columns=pivot_col, aggfunc=np.sum
@@ -232,12 +222,7 @@ def create_scatter(
         results = package_results(pivot_df, jurisdiction, h_count, v_count)
     results["x-election"] = db.name_from_id_cursor(cursor, "Election", h_election_id)
     results["y-election"] = db.name_from_id_cursor(cursor, "Election", v_election_id)
-    if other_subdivision_type == "":
-        results["subdivision_type"] = db.name_from_id_cursor(
-            cursor, "ReportingUnitType", subdivision_type_id
-        )
-    else:
-        results["subdivision_type"] = other_subdivision_type
+    results["subdivision_type"] = subdivision_type
     results["x-count_item_type"] = h_category
     results["y-count_item_type"] = v_category
     results["x-title"] = scatter_axis_title(
@@ -274,7 +259,7 @@ def create_scatter(
     return results
 
 
-def package_results(data, jurisdiction, x, y, restrict=None):
+def package_results(data, jurisdiction, x, y, restrict=None) -> dict:
     results = {"jurisdiction": jurisdiction, "x": x, "y": y, "counts": []}
     if restrict and len(data.index) > restrict:
         data = get_remaining_averages(data, restrict)
@@ -300,8 +285,7 @@ def package_results(data, jurisdiction, x, y, restrict=None):
 def get_data_for_scatter(
     session,
     jurisdiction_id,
-    subdivision_type_id,
-    other_subdivision_type,
+    subdivision_type,
     election_id,
     count_item_type,
     filter_str,
@@ -315,15 +299,13 @@ def get_data_for_scatter(
             election_id,
             f"{count_type} {count_item_type}".strip(),  # category
             filter_str,  # Label
-            subdivision_type_id=subdivision_type_id,
-            other_subdivision_type=other_subdivision_type,
+            subdivision_type=subdivision_type,
         )
     else:
         return get_votecount_data(
             session,
             jurisdiction_id,
-            subdivision_type_id,
-            other_subdivision_type,
+            subdivision_type,
             election_id,
             count_item_type,
             filter_str,
@@ -338,8 +320,7 @@ def get_external_data(
     election_id,
     category,
     label,
-    subdivision_type_id,
-    other_subdivision_type,
+    subdivision_type,
 ):
     # get the census data
     connection = session.bind.raw_connection()
@@ -351,8 +332,7 @@ def get_external_data(
         ["Name", "Category", "Label", "Value", "Source"],
         restrict_by_label=label,
         restrict_by_category=category,
-        subdivision_type_id=subdivision_type_id,
-        other_subdivision_type=other_subdivision_type,
+        subdivision_type=subdivision_type,
     )
     cursor.close()
 
@@ -386,8 +366,7 @@ def get_external_data(
 def get_votecount_data(
     session: Session,
     jurisdiction_id: int,
-    subdivision_type_id: int,
-    other_subdivision_type: str,
+    subdivision_type: str,
     election_id: int,
     count_item_type: str,
     filter_str: str,
@@ -398,8 +377,7 @@ def get_votecount_data(
         session,
         election_id,
         jurisdiction_id,
-        subdivision_type_id,
-        other_subdivision_type,
+        subdivision_type,
     )
 
     # limit to relevant data - runoff
@@ -468,43 +446,57 @@ def get_votecount_data(
 
 def create_bar(
     session: Session,
-    top_ru_id: int,
-    subdivision_type_id: int,
-    other_subdivision_type: str,
-    contest_type: Optional[str],
-    contest: Optional[str],
     election_id: int,
-    for_export: bool,
-):
+    jurisdiction_id: int,
+    subdivision_type: str,
+    contest_district_type: Optional[str] = None,
+    contest_or_contest_group: Optional[str] = None,
+    for_export: bool = True,
+) -> Optional[List[dict]]:
+    """
+    Required inputs:
+        session: Session, sqlalchemy session
+        election_id: int,
+        jurisdiction_id: int,
+        subdivision_type: str,
+    Optional inputs:
+        contest_district_type: Optional[str] = None,
+        contest_or_contest_group: Optional[str] = None, from user-facing menu, either the name of a contest or of a
+            group of contests, e.g., "All congressional"
+        for_export: bool = True,
 
+    Returns:
+        List[dict], list of dictionaries, where each dictionary contains information to create a bar
+            chart. The bar charts in the list are chosen via an algorithm favoring charts with a single outlier
+            county whose impact on the margin is large.
+            # TODO document algorithm details in assign_anomaly_score(unsummed)
+            Bar charts are restricted to results for the <contest_or_contest_group> , if given,and also
+            from the contests with districts of type <contest_district_type>, if given
+    """
+    # connect to db via psycopg2
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
 
     unsummed = db.unsummed_vote_counts_with_rollup_subdivision_id(
-        session, election_id, top_ru_id, subdivision_type_id, other_subdivision_type
+        session, election_id, jurisdiction_id, subdivision_type
     )
 
-    if contest_type:
-        contest_type = ui.get_contest_type_mapping(contest_type)
-        unsummed = unsummed[
-            (unsummed["contest_district_type"] == contest_type) |
-            (unsummed["contest_district_othertype"] == contest_type)
-        ]
+    if contest_district_type:
+        contest_district_type = ui.get_contest_type_mapping(contest_district_type)
+        unsummed = unsummed[unsummed["contest_district_type"] == contest_district_type]
 
-    # through front end, contest_type must be truthy if contest is truthy
+    # through VoteVisualizer front end, contest_type must be truthy if contest is truthy
     # Only filter when there is an actual contest passed through, as opposed to
     # "All congressional" as an example
-    if contest and not contest.startswith("All "):
-        unsummed = unsummed[unsummed["Contest"] == contest]
+    if contest_or_contest_group and not contest_or_contest_group.startswith("All "):
+        unsummed = unsummed[unsummed["Contest"] == contest_or_contest_group]
 
     multiple_ballot_types = len(unsummed["CountItemType"].unique()) > 1
     groupby_cols = [
-        "ParentReportingUnit_Id",
-        "ReportingUnitOtherType",
+        "ReportingUnitType",
         "ParentName",
-        "ParentReportingUnitType_Id",
+        "ParentReportingUnitType",
         "Candidate_Id",
-        "CountItemType_Id",
         "CountItemType",
         "Contest_Id",
         "Contest",
@@ -512,7 +504,6 @@ def create_bar(
         "Selection_Id",
         "contest_type",
         "contest_district_type",
-        "contest_district_othertype",
         "Party",
     ]
     unsummed = unsummed.groupby(groupby_cols).sum().reset_index()
@@ -570,7 +561,7 @@ def create_bar(
             0
         ]
         y_party_abbr = create_party_abbreviation(y_party)
-        jurisdiction = db.name_from_id_cursor(cursor, "ReportingUnit", top_ru_id)
+        jurisdiction = db.name_from_id_cursor(cursor, "ReportingUnit", jurisdiction_id)
 
         pivot_df = pd.pivot_table(
             temp_df, values="Count", index=["Name"], columns="Selection", fill_value=0
@@ -589,10 +580,7 @@ def create_bar(
         results["contest"] = db.name_from_id_cursor(
             cursor, "Contest", int(temp_df.iloc[0]["Contest_Id"])
         )
-        if other_subdivision_type == "":
-            results["subdivision_type"] = db.name_from_id(session, "ReportingUnitType", subdivision_type_id)
-        else:
-            results["subdivision_type"] = other_subdivision_type
+        results["subdivision_type"] = subdivision_type
         results["count_item_type"] = temp_df.iloc[0]["CountItemType"]
 
         # display votes at stake, margin info
@@ -609,7 +597,7 @@ def create_bar(
             acted = "widened"
         results["votes_at_stake"] = f"Outlier {acted} margin by ~ {votes_at_stake}"
         results["margin"] = human_readable_numbers(results["margin_raw"])
-        results["preliminary"] = db.is_preliminary(cursor, election_id, top_ru_id)
+        results["preliminary"] = db.is_preliminary(cursor, election_id, jurisdiction_id)
 
         # display ballot info
         if multiple_ballot_types:
@@ -627,8 +615,8 @@ def create_bar(
         results[
             "title"
         ] = f"""{results["count_item_type"].replace("-", " ").title()} Ballots Reported"""
-        download_date = db.data_file_download(cursor, election_id, top_ru_id)
-        if db.is_preliminary(cursor, election_id, top_ru_id) and download_date:
+        download_date = db.data_file_download(cursor, election_id, jurisdiction_id)
+        if db.is_preliminary(cursor, election_id, jurisdiction_id) and download_date:
             results[
                 "title"
             ] = f"""{results["title"]} as of {download_date} (preliminary)"""
@@ -638,7 +626,7 @@ def create_bar(
     return result_list
 
 
-def assign_anomaly_score(data):
+def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
     """adds a new column called score between 0 and 1; 1 is more anomalous.
     Also adds a `unit_id` column which assigns a score to each unit of analysis
     that is considered. For example, we may decide to look at anomalies across each
@@ -678,9 +666,8 @@ def assign_anomaly_score(data):
             [
                 "ParentReportingUnit_Id",
                 "ParentName",
-                "ParentReportingUnitType_Id",
+                "ParentReportingUnitType",
                 "Candidate_Id",
-                "CountItemType_Id",
                 "CountItemType",
                 "Contest_Id",
                 "Contest",
@@ -698,7 +685,7 @@ def assign_anomaly_score(data):
         columns={
             "ParentReportingUnit_Id": "ReportingUnit_Id",
             "ParentName": "Name",
-            "ParentReportingUnitType_Id": "ReportingUnitType_Id",
+            "ParentReportingUnitType": "ReportingUnitType",
         },
         inplace=True,
     )
@@ -710,12 +697,12 @@ def assign_anomaly_score(data):
     # ru_type, and count type. These will be updated later to account
     # for 2 candidate pairings
     df_unit = grouped_df[
-        ["Contest_Id", "ReportingUnitType_Id", "CountItemType"]
+        ["Contest_Id", "ReportingUnitType", "CountItemType"]
     ].drop_duplicates()
     df_unit = df_unit.reset_index()
     df_unit["unit_id_tmp"] = df_unit.index
     df_with_units = grouped_df.merge(
-        df_unit, how="left", on=["Contest_Id", "ReportingUnitType_Id", "CountItemType"]
+        df_unit, how="left", on=["Contest_Id", "ReportingUnitType", "CountItemType"]
     )
 
     # loop through each unit ID and assign anomaly scores
@@ -775,7 +762,7 @@ def assign_anomaly_score(data):
     return df
 
 
-def get_most_anomalous(data, n):
+def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
     """Gets n contest, with 2 from largest votes at stake ratio
     and 1 with largest score. If 2 from votes at stake cannot be found
     (bc of threshold for score) then we fill in the top n from scores"""
@@ -796,21 +783,21 @@ def get_most_anomalous(data, n):
     zeros_df = data[
         [
             "Contest_Id",
-            "ReportingUnitType_Id",
+            "ReportingUnitType",
             "CountItemType",
             "ReportingUnit_Id",
             "Count",
         ]
     ]
     zeros_df = zeros_df.groupby(
-        ["Contest_Id", "ReportingUnitType_Id", "ReportingUnit_Id", "CountItemType"]
+        ["Contest_Id", "ReportingUnitType", "ReportingUnit_Id", "CountItemType"]
     ).sum()
     zeros_df = zeros_df.reset_index()
     no_zeros = zeros_df[zeros_df["Count"] != 0]
     data = data.merge(
         no_zeros,
         how="inner",
-        on=["Contest_Id", "ReportingUnitType_Id", "ReportingUnit_Id", "CountItemType"],
+        on=["Contest_Id", "ReportingUnitType", "ReportingUnit_Id", "CountItemType"],
     )
     data.rename(columns={"Count_x": "Count"}, inplace=True)
     data.drop(columns=["Count_y"], inplace=True)
@@ -834,7 +821,7 @@ def get_most_anomalous(data, n):
     return df
 
 
-def euclidean_zscore(li):
+def euclidean_zscore(li: List[List[float]]) -> List[float]:
     """Take a list of vectors -- all in the same R^k,
     returns a list of the z-scores of the vectors -- each relative to the ensemble"""
     distance_list = [sum([dist.euclidean(item, y) for y in li]) for item in li]
@@ -845,7 +832,7 @@ def euclidean_zscore(li):
         return list(stats.zscore(distance_list))
 
 
-def calculate_votes_at_stake(data) -> pd.DataFrame:
+def calculate_votes_at_stake(data: pd.DataFrame) -> pd.DataFrame:
     """Move the most anomalous pairing to the equivalent of the second-most anomalous
     and calculate the differences in votes that would be returned"""
     df = pd.DataFrame()
@@ -933,7 +920,7 @@ def calculate_votes_at_stake(data) -> pd.DataFrame:
     return df
 
 
-def create_candidate_contests(df, columns):
+def create_candidate_contests(df: pd.DataFrame, columns: List[str]) -> pd.DataFrame:
     contest_df = (
         df["VoteCount"]
         .merge(df["Contest"], how="left", left_on="Contest_Id", right_index=True)
@@ -959,7 +946,9 @@ def create_candidate_contests(df, columns):
     return contest_df
 
 
-def create_ballot_measure_contests(df, columns):
+def create_ballot_measure_contests(
+    df: pd.DataFrame, columns: List[str]
+) -> pd.DataFrame:
     ballotmeasure_df = (
         df["ContestSelectionJoin"]
         .merge(
@@ -986,7 +975,7 @@ def create_ballot_measure_contests(df, columns):
     return ballotmeasure_df
 
 
-def get_unit_by_column(data, column):
+def get_unit_by_column(data: pd.DataFrame, column: str) -> List[int]:
     """Given a dataframe of results, return a list of unique unit_ids
     that are sorted in desc order by the column's value"""
     data = data[["unit_id", column]]
@@ -995,7 +984,7 @@ def get_unit_by_column(data, column):
     return list(data["unit_id"].unique())
 
 
-def human_readable_numbers(value):
+def human_readable_numbers(value: float) -> str:
     abs_value = abs(value)
     if abs_value < 10:
         return str(value)
@@ -1007,7 +996,7 @@ def human_readable_numbers(value):
         return "{:,}".format(round(value, -3))
 
 
-def sort_pivot_by_margins(df):
+def sort_pivot_by_margins(df: pd.DataFrame) -> pd.DataFrame:
     """grab the row with the highest anomaly score, then sort the remainder by
     margin. The sorting order depends on whether the anomalous row is >50% or <50%"""
 
@@ -1091,32 +1080,38 @@ def nist_candidate_contest(session, election_id, jurisdiction_id):
     the contest, the selection, and the actual vote counts themselves"""
     vote_count_df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        ["VoteCount_Id", "ReportingUnit_Id", "CountItemType", "Count", "Selection_Id"],
-        ["Id", "GpUnitId", "CountItemType", "Count", "Selection_Id"],
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=[
+            "VoteCount_Id",
+            "ReportingUnit_Id",
+            "CountItemType",
+            "Count",
+            "Selection_Id",
+        ],
+        aliases=["Id", "GpUnitId", "CountItemType", "Count", "Selection_Id"],
     )
 
     selection_df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        ["Selection_Id", "Party_Id", "Candidate_Id", "Contest_Id"],
-        ["Id", "PartyId", "CandidateId", "ContestId"],
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=["Selection_Id", "Party_Id", "Candidate_Id", "Contest_Id"],
+        aliases=["Id", "PartyId", "CandidateId", "ContestId"],
     )
 
     contest_df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        [
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=[
             "Contest_Id",
             "ContestName",
             "ContestType",
             "Office_Id",
             "ElectionDistrict_Id",
         ],
-        ["Id", "ContestName", "ContestType", "OfficeId", "ElectionDistrictId"],
+        aliases=["Id", "ContestName", "ContestType", "OfficeId", "ElectionDistrictId"],
     )
     contest_df = contest_df[contest_df["ContestType"] == "Candidate"]
     contest_df["Type"] = "CandidateContest"
@@ -1157,10 +1152,10 @@ def nist_reporting_unit(session, election_id, jurisdiction_id):
     """A ReportingUnit is a GPUnit"""
     df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        ["GP_Id", "GPReportingUnitName", "GPType"],
-        ["Id", "Name", "ReportingUnitType"],
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=["GP_Id", "GPReportingUnitName", "GPType"],
+        aliases=["Id", "Name", "ReportingUnitType"],
     )
     df["Type"] = "ReportingUnit"
     result = df.to_json(orient="records")
@@ -1170,10 +1165,10 @@ def nist_reporting_unit(session, election_id, jurisdiction_id):
 def nist_party(session, election_id, jurisdiction_id):
     df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        ["Party_Id", "PartyName"],
-        ["Id", "Name"],
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=["Party_Id", "PartyName"],
+        aliases=["Id", "Name"],
     )
     result = df.to_json(orient="records")
     return json.loads(result)
@@ -1182,10 +1177,10 @@ def nist_party(session, election_id, jurisdiction_id):
 def nist_election(session, election_id, jurisdiction_id):
     df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        ["Election_Id", "ElectionName", "ElectionType"],
-        ["Id", "Name", "Type"],
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=["Election_Id", "ElectionName", "ElectionType"],
+        aliases=["Id", "Name", "Type"],
     )
     # Currently all our elections are at the state level.
     # Once we start handling local elections, this might need to be updated.
@@ -1200,10 +1195,10 @@ def nist_election(session, election_id, jurisdiction_id):
 def nist_office(session, election_id, jurisdiction_id):
     df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        ["Office_Id", "OfficeName", "ElectionDistrict_Id", "NumberElected"],
-        ["Id", "Name", "ElectoralDistrictId", "NumberElected"],
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=["Office_Id", "OfficeName", "ElectionDistrict_Id", "NumberElected"],
+        aliases=["Id", "Name", "ElectoralDistrictId", "NumberElected"],
     )
     result = df.to_json(orient="records")
     return json.loads(result)
@@ -1212,10 +1207,10 @@ def nist_office(session, election_id, jurisdiction_id):
 def nist_candidate(session, election_id, jurisdiction_id):
     df = db.read_vote_count(
         session,
-        election_id,
-        jurisdiction_id,
-        ["Candidate_Id", "BallotName", "Party_Id"],
-        ["Id", "BallotName", "PartyId"],
+        election_id=election_id,
+        jurisdiction_id=jurisdiction_id,
+        fields=["Candidate_Id", "BallotName", "Party_Id"],
+        aliases=["Id", "BallotName", "PartyId"],
     )
     result = df.to_json(orient="records")
     return json.loads(result)

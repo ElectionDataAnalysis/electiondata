@@ -575,3 +575,143 @@ ReportingUnit	Mississippi;Yalobusha County	Yalobusha
 ReportingUnit	Mississippi;Yalobusha County	fips28161
 ReportingUnit	Mississippi;Yazoo County	Yazoo
 ReportingUnit	Mississippi;Yazoo County	fips28163
+CandidateContest	MS District 2 (Southern) Position 1	MS;District 2 (Southern) Position 1;statewide
+CandidateContest	US House MS District 3	MS;US Representative;District 3
+CandidateContest	US Senate MS	MS;US Senator;statewide
+CandidateContest	US House MS District 1	MS;US Representative;District 1
+CandidateContest	US House MS District 2	MS;US Representative;District 2
+CandidateContest	MS House District 85	MS;State Representative;District 85
+CandidateContest	US House MS District 4	MS;US Representative;District 4
+CandidateContest	MS House District 31	MS;State Representative;District 31
+Candidate	Ada M. Lindsey	Ada M. Lindsey
+Candidate	B.C. Hammond	B.C. Hammond
+Candidate	Barbara Rose Brooks	Barbara Rose Brooks
+Candidate	Carolyn Steele Johnson	Carolyn Steele Johnson
+Candidate	Charles Modley	Charles Modley
+Candidate	Chris McDaniel	Chris McDaniel
+Candidate	Danny Bedwell	Danny Bedwell
+Candidate	David Baria	David Baria
+Candidate	David M. Ishee	David M. Ishee
+Candidate	Irving Harris	Irving Harris
+Candidate	Jeanette Knighten-Washington	Jeanette Knighten-Washington
+Candidate	Jeffery Harness	Jeffery Harness
+Candidate	Jeramey Anderson	Jeramey Anderson
+Candidate	Jo Ann Collins-Smith	Jo Ann Collins-Smith
+Candidate	Lajena Sheets	Lajena Sheets
+Candidate	Matthew Holland	Matthew Holland
+Candidate	Maurice Hudson	Maurice Hudson
+Candidate	Michael Ted Evans	Michael Ted Evans
+Candidate	Mike Epsy	Mike Epsy
+Candidate	Otis L. Anthony	Otis L. Anthony
+Candidate	Randy Mack Wadkins	Randy Mack Wadkins
+Candidate	Roger F. Wicker	Roger F. Wicker
+Candidate	Shannon D. Brown	Shannon D. Brown
+Candidate	Shawn O'Hara	Shawn O'Hara
+Candidate	Steven Palazzo	Steven Palazzo
+Candidate	Tobey Bernard Bartee	Tobey Bernard Bartee
+Candidate	Tracella Lou O'Hara Hill	Tracella Lou O'Hara Hill
+Candidate	Troy Ray	Troy Ray
+Candidate	Tyler K. Doss	Tyler K. Doss
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Nonpartisan Party	nonpartisan
+Party	Reform Party	reform
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	Mississippi;Adams County	Mississippi;Adams
+ReportingUnit	Mississippi;Alcorn County	Mississippi;Alcorn
+ReportingUnit	Mississippi;Amite County	Mississippi;Amite
+ReportingUnit	Mississippi;Attala County	Mississippi;Attala
+ReportingUnit	Mississippi;Benton County	Mississippi;Benton
+ReportingUnit	Mississippi;Bolivar County	Mississippi;Bolivar
+ReportingUnit	Mississippi;Calhoun County	Mississippi;Calhoun
+ReportingUnit	Mississippi;Carroll County	Mississippi;Carroll
+ReportingUnit	Mississippi;Chickasaw County	Mississippi;Chickasaw
+ReportingUnit	Mississippi;Choctaw County	Mississippi;Choctaw
+ReportingUnit	Mississippi;Claiborne County	Mississippi;Claiborne
+ReportingUnit	Mississippi;Clarke County	Mississippi;Clarke
+ReportingUnit	Mississippi;Clay County	Mississippi;Clay
+ReportingUnit	Mississippi;Coahoma County	Mississippi;Coahoma
+ReportingUnit	Mississippi;Copiah County	Mississippi;Copiah
+ReportingUnit	Mississippi;Covington County	Mississippi;Covington
+ReportingUnit	Mississippi;DeSoto County	Mississippi;DeSoto
+ReportingUnit	Mississippi;Forrest County	Mississippi;Forrest
+ReportingUnit	Mississippi;Franklin County	Mississippi;Franklin
+ReportingUnit	Mississippi;George County	Mississippi;George
+ReportingUnit	Mississippi;Greene County	Mississippi;Greene
+ReportingUnit	Mississippi;Grenada County	Mississippi;Grenada
+ReportingUnit	Mississippi;Hancock County	Mississippi;Hancock
+ReportingUnit	Mississippi;Harrison County	Mississippi;Harrison
+ReportingUnit	Mississippi;Hinds County	Mississippi;Hinds
+ReportingUnit	Mississippi;Holmes County	Mississippi;Holmes
+ReportingUnit	Mississippi;Humphreys County	Mississippi;Humphreys
+ReportingUnit	Mississippi;Issaquena County	Mississippi;Issaquena
+ReportingUnit	Mississippi;Itawamba County	Mississippi;Itawamba
+ReportingUnit	Mississippi;Jackson County	Mississippi;Jackson
+ReportingUnit	Mississippi;Jasper County	Mississippi;Jasper
+ReportingUnit	Mississippi;Jefferson County	Mississippi;Jefferson
+ReportingUnit	Mississippi;Jefferson Davis County	Mississippi;Jefferson Davis
+ReportingUnit	Mississippi;Jones County	Mississippi;Jones
+ReportingUnit	Mississippi;Kemper County	Mississippi;Kemper
+ReportingUnit	Mississippi;Lafayette County	Mississippi;Lafayette
+ReportingUnit	Mississippi;Lamar County	Mississippi;Lamar
+ReportingUnit	Mississippi;Lauderdale County	Mississippi;Lauderdale
+ReportingUnit	Mississippi;Lawrence County	Mississippi;Lawrence
+ReportingUnit	Mississippi;Leake County	Mississippi;Leake
+ReportingUnit	Mississippi;Lee County	Mississippi;Lee
+ReportingUnit	Mississippi;Leflore County	Mississippi;Leflore
+ReportingUnit	Mississippi;Lincoln County	Mississippi;Lincoln
+ReportingUnit	Mississippi;Lowndes County	Mississippi;Lowndes
+ReportingUnit	Mississippi;Madison County	Mississippi;Madison
+ReportingUnit	Mississippi;Marion County	Mississippi;Marion
+ReportingUnit	Mississippi;Marshall County	Mississippi;Marshall
+ReportingUnit	Mississippi;Monroe County	Mississippi;Monroe
+ReportingUnit	Mississippi;Montgomery County	Mississippi;Montgomery
+ReportingUnit	Mississippi;Neshoba County	Mississippi;Neshoba
+ReportingUnit	Mississippi;Newton County	Mississippi;Newton
+ReportingUnit	Mississippi;Noxubee County	Mississippi;Noxubee
+ReportingUnit	Mississippi;Oktibbeha County	Mississippi;Oktibbeha
+ReportingUnit	Mississippi;Panola County	Mississippi;Panola
+ReportingUnit	Mississippi;Pearl River County	Mississippi;Pearl River
+ReportingUnit	Mississippi;Perry County	Mississippi;Perry
+ReportingUnit	Mississippi;Pike County	Mississippi;Pike
+ReportingUnit	Mississippi;Pontotoc County	Mississippi;Pontotoc
+ReportingUnit	Mississippi;Prentiss County	Mississippi;Prentiss
+ReportingUnit	Mississippi;Quitman County	Mississippi;Quitman
+ReportingUnit	Mississippi;Rankin County	Mississippi;Rankin
+ReportingUnit	Mississippi;Scott County	Mississippi;Scott
+ReportingUnit	Mississippi;Sharkey County	Mississippi;Sharkey
+ReportingUnit	Mississippi;Simpson County	Mississippi;Simpson
+ReportingUnit	Mississippi;Smith County	Mississippi;Smith
+ReportingUnit	Mississippi;Stone County	Mississippi;Stone
+ReportingUnit	Mississippi;Sunflower County	Mississippi;Sunflower
+ReportingUnit	Mississippi;Tallahatchie County	Mississippi;Tallahatchie
+ReportingUnit	Mississippi;Tate County	Mississippi;Tate
+ReportingUnit	Mississippi;Tippah County	Mississippi;Tippah
+ReportingUnit	Mississippi;Tishomingo County	Mississippi;Tishomingo
+ReportingUnit	Mississippi;Tunica County	Mississippi;Tunica
+ReportingUnit	Mississippi;Union County	Mississippi;Union
+ReportingUnit	Mississippi;Walthall County	Mississippi;Walthall
+ReportingUnit	Mississippi;Warren County	Mississippi;Warren
+ReportingUnit	Mississippi;Washington County	Mississippi;Washington
+ReportingUnit	Mississippi;Wayne County	Mississippi;Wayne
+ReportingUnit	Mississippi;Webster County	Mississippi;Webster
+ReportingUnit	Mississippi;Wilkinson County	Mississippi;Wilkinson
+ReportingUnit	Mississippi;Winston County	Mississippi;Winston
+ReportingUnit	Mississippi;Yalobusha County	Mississippi;Yalobusha
+CandidateContest	MS Attorney General	MS;Attorney General;statewide

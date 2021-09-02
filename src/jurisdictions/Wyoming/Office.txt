@@ -95,5 +95,7 @@ WY Governor	Wyoming
 US Senate WY	Wyoming
 WY Attorney General	Wyoming
 WY Lieutenant Governor	Wyoming
-WY Treasurer	Wyoming
+WY State Treasurer	Wyoming
 WY Secretary of State	Wyoming
+WY State Auditor	Wyoming
+WY Superintendent of Public Instruction	Wyoming

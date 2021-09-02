@@ -6367,3 +6367,4 @@ Florida;FL Senate District 6	state-senate
 Florida;FL Senate District 7	state-senate
 Florida;FL Senate District 8	state-senate
 Florida;FL Senate District 9	state-senate
+Florida;FL State Attorney District 20	state-attorney-district

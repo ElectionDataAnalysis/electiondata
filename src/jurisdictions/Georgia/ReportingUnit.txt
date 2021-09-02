@@ -409,3 +409,6 @@ Georgia;GA Senate District 6	state-senate
 Georgia;GA Senate District 7	state-senate
 Georgia;GA Senate District 8	state-senate
 Georgia;GA Senate District 9	state-senate
+Georgia;GA Public Service Commission, District 3 - Metro-Atlanta	public-service-district
+Georgia;GA Public Service Commission, District 5 - Western	public-service-district
+

@@ -1,0 +1,59 @@
+jurisdiction	major_sub_jurisdiction_type
+Alabama	county
+Alaska	state-house
+American Samoa	district
+Arizona	county
+Arkansas	county
+California	county
+Colorado	county
+Connecticut	county
+Delaware	county
+District of Columbia	ward
+Florida	county
+Georgia	county
+Guam	village
+Hawaii	county
+Idaho	county
+Illinois	county
+Indiana	county
+Iowa	county
+Kansas	county
+Kentucky	county
+Louisiana	parish
+Maine	county
+Maricopa County	county
+Maryland	county
+Massachusetts	county
+Michigan	county
+Minnesota	county
+Mississippi	county
+Missouri	county
+Montana	county
+Nebraska	county
+Nevada	county
+New Hampshire	county
+New Jersey	county
+New Mexico	county
+New York	county
+North Carolina	county
+North Dakota	county
+Northern Mariana Islands	district
+Ohio	county
+Oklahoma	county
+Oregon	county
+Pennsylvania	county
+Philadelphia	county
+Puerto Rico	municipality
+Rhode Island	city-or-town
+South Carolina	county
+South Dakota	county
+Tennessee	county
+Texas	county
+US Virgin Islands	district
+Utah	county
+Vermont	town
+Virginia	locality
+Washington	county
+West Virginia	county
+Wisconsin	county
+Wyoming	county

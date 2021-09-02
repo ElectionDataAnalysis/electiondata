@@ -113,5 +113,7 @@ SD Public Utilities Commissioner	1	SD Public Utilities Commissioner
 US Senate SD	1	US Senate SD
 SD Attorney General	1	SD Attorney General	
 SD Lieutenant Governor	1	SD Lieutenant Governor	
-SD Treasurer	1	SD Treasurer	
-SD Secretary of State	1	SD Secretary of State	
+SD Secretary of State	1	SD Secretary of State
+SD Commissioner School Public Lands	1	SD Commissioner School Public Lands	
+SD State Auditor	1	SD State Auditor	
+SD State Treasurer	1	SD State Treasurer	

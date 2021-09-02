@@ -785,3 +785,6 @@ GA State School Superintendent (Republican Party)	1	GA State School Superintende
 GA Commissioner of Agriculture (Republican Party)	1	GA Commissioner of Agriculture	Republican Party
 GA Commissioner of Labor (Republican Party)	1	GA Commissioner of Labor	Republican Party
 GA Commissioner of Insurance (Republican Party)	1	GA Commissioner of Insurance	Republican Party
+GA Public Service Commission, District 3 - Metro-Atlanta	1	GA Public Service Commission, District 3 - Metro-Atlanta
+GA Public Service Commission, District 5 - Western	1	GA Public Service Commission, District 5 - Western
+

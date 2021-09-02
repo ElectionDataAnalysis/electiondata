@@ -1,4 +1,5 @@
 BallotName
+William 'Sam' McCann
 Christopher 'C.D.' Davidsmeyer
 Christine Law
 Bill Mitchell
@@ -2004,3 +2005,40 @@ Other
 Ralph Nader
 John MCCain
 John McCain
+Andre Thapedi
+Angelique \Angie\ Bodine
+Anthony Deluca
+Christopher \C.D.\ Davidsmeyer
+Curtis J. Tarver II
+Dan McConchie
+Darin Lahood
+David Mcsweeney
+Donald P. Dewitte
+Elizabeth \Lisa\ Hernandez
+Emanuel \Chris\ Welch
+Emil Jones, III
+Fredric Bryan \Rick\ Lesser
+James M. \Jim\ Caffrey
+Jennifer Mcmillin
+Jerry Costello II
+Jesus \Chuy\ Garcia
+Jimmy Lee Tillman, II
+Jitendra \Jd\ Diganvker
+Joan McCarthy Lasonde
+Latoya N. Greenwood
+Lawrence \Larry\ Walsh, Jr.
+Linda Chapa Lavia
+Margo Mcdermed
+Maurice A. West II
+Michael P. Mcauliffe
+Napoleon B. Harris, III
+Nicholas \Nick\ Smith
+Randall M. \Randy\ Hultgren
+Robert \Bob\ Rita
+Seth Mcmillan
+Steve McClure
+Suzanne \Suzy\ Glowiak
+Tony M. McCombie
+William \Sam\ McCann
+William \Will\ Davis
+William W. \Bill\ Fawell

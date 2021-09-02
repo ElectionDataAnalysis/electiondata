@@ -1386,8 +1386,8 @@ Candidate	Penelope (Penny) Cheek	Penelope (Penny) Cheek
 Candidate	Pete Siragusa	Pete Siragusa
 Candidate	Pete Wall	Pete Wall
 Candidate	Peter Case	Peter Case
-Candidate	Peter Defazio	Peter DeFazio
-Candidate	Peter Defazio	Peter Defazio
+Candidate	Peter DeFazio	Peter DeFazio
+Candidate	Peter DeFazio	Peter Defazio
 Candidate	Peter Edison	Peter Edison
 Candidate	Peter Hall	Peter Hall
 Candidate	Peter Mc Hugh	Peter Mc Hugh
@@ -2253,3 +2253,249 @@ ReportingUnit	Oregon;Wheeler County	Wheeler
 ReportingUnit	Oregon;Wheeler County	fips41069
 ReportingUnit	Oregon;Yamhill County	Yamhill
 ReportingUnit	Oregon;Yamhill County	fips41071
+CandidateContest	OR Governor	OR;Governor;statewide
+CandidateContest	OR Judge of the Supreme Court Position 5	OR;Judge of the Supreme Court Position 5;statewide
+CandidateContest	OR House District 60	OR;State Representative;District 60
+CandidateContest	OR Senate District 30	OR;State Senator;District 30
+CandidateContest	US House OR District 2	OR;US Representative;District 2
+CandidateContest	OR House District 15	OR;State Representative;District 15
+CandidateContest	OR House District 16	OR;State Representative;District 16
+CandidateContest	OR House District 23	OR;State Representative;District 23
+CandidateContest	OR Senate District 8	OR;State Senator;District 8
+CandidateContest	US House OR District 4	OR;US Representative;District 4
+CandidateContest	US House OR District 5	OR;US Representative;District 5
+CandidateContest	OR House District 18	OR;State Representative;District 18
+CandidateContest	OR House District 26	OR;State Representative;District 26
+CandidateContest	OR House District 35	OR;State Representative;District 35
+CandidateContest	OR House District 37	OR;State Representative;District 37
+CandidateContest	OR House District 38	OR;State Representative;District 38
+CandidateContest	OR House District 39	OR;State Representative;District 39
+CandidateContest	OR House District 40	OR;State Representative;District 40
+CandidateContest	OR House District 41	OR;State Representative;District 41
+CandidateContest	OR House District 48	OR;State Representative;District 48
+CandidateContest	OR House District 51	OR;State Representative;District 51
+CandidateContest	OR House District 52	OR;State Representative;District 52
+CandidateContest	OR House District 59	OR;State Representative;District 59
+CandidateContest	OR Senate District 13	OR;State Senator;District 13
+CandidateContest	OR Senate District 19	OR;State Senator;District 19
+CandidateContest	OR Senate District 20	OR;State Senator;District 20
+CandidateContest	OR Senate District 24	OR;State Senator;District 24
+CandidateContest	OR Senate District 26	OR;State Senator;District 26
+CandidateContest	US House OR District 3	OR;US Representative;District 3
+CandidateContest	OR House District 32	OR;State Representative;District 32
+CandidateContest	OR Senate District 16	OR;State Senator;District 16
+CandidateContest	US House OR District 1	OR;US Representative;District 1
+CandidateContest	OR House District 31	OR;State Representative;District 31
+CandidateContest	OR House District 1	OR;State Representative;District 1
+CandidateContest	OR House District 9	OR;State Representative;District 9
+CandidateContest	OR Senate District 1	OR;State Senator;District 1
+CandidateContest	OR House District 55	OR;State Representative;District 55
+CandidateContest	OR House District 53	OR;State Representative;District 53
+CandidateContest	OR House District 54	OR;State Representative;District 54
+CandidateContest	OR House District 2	OR;State Representative;District 2
+CandidateContest	OR House District 7	OR;State Representative;District 7
+CandidateContest	OR Senate District 4	OR;State Senator;District 4
+CandidateContest	OR House District 57	OR;State Representative;District 57
+CandidateContest	OR House District 4	OR;State Representative;District 4
+CandidateContest	OR House District 5	OR;State Representative;District 5
+CandidateContest	OR House District 6	OR;State Representative;District 6
+CandidateContest	OR Senate District 3	OR;State Senator;District 3
+CandidateContest	OR House District 3	OR;State Representative;District 3
+CandidateContest	OR House District 56	OR;State Representative;District 56
+CandidateContest	OR House District 11	OR;State Representative;District 11
+CandidateContest	OR House District 12	OR;State Representative;District 12
+CandidateContest	OR House District 13	OR;State Representative;District 13
+CandidateContest	OR House District 14	OR;State Representative;District 14
+CandidateContest	OR House District 8	OR;State Representative;District 8
+CandidateContest	OR Senate District 6	OR;State Senator;District 6
+CandidateContest	OR Senate District 7	OR;State Senator;District 7
+CandidateContest	OR House District 10	OR;State Representative;District 10
+CandidateContest	OR House District 17	OR;State Representative;District 17
+CandidateContest	OR House District 19	OR;State Representative;District 19
+CandidateContest	OR House District 20	OR;State Representative;District 20
+CandidateContest	OR House District 21	OR;State Representative;District 21
+CandidateContest	OR House District 22	OR;State Representative;District 22
+CandidateContest	OR House District 25	OR;State Representative;District 25
+CandidateContest	OR Senate District 10	OR;State Senator;District 10
+CandidateContest	OR Senate District 11	OR;State Senator;District 11
+CandidateContest	OR House District 27	OR;State Representative;District 27
+CandidateContest	OR House District 33	OR;State Representative;District 33
+CandidateContest	OR House District 36	OR;State Representative;District 36
+CandidateContest	OR House District 42	OR;State Representative;District 42
+CandidateContest	OR House District 43	OR;State Representative;District 43
+CandidateContest	OR House District 44	OR;State Representative;District 44
+CandidateContest	OR House District 45	OR;State Representative;District 45
+CandidateContest	OR House District 46	OR;State Representative;District 46
+CandidateContest	OR House District 47	OR;State Representative;District 47
+CandidateContest	OR House District 49	OR;State Representative;District 49
+CandidateContest	OR House District 50	OR;State Representative;District 50
+CandidateContest	OR Senate District 17	OR;State Senator;District 17
+CandidateContest	OR House District 58	OR;State Representative;District 58
+CandidateContest	OR House District 24	OR;State Representative;District 24
+CandidateContest	OR House District 28	OR;State Representative;District 28
+CandidateContest	OR House District 29	OR;State Representative;District 29
+CandidateContest	OR House District 30	OR;State Representative;District 30
+CandidateContest	OR House District 34	OR;State Representative;District 34
+CandidateContest	OR Senate District 15	OR;State Senator;District 15
+Candidate	Aaron Auer	Aaron Auer
+Candidate	Adrienne Nelson	Adrienne Nelson
+Candidate	Alan R Olsen	Alan R Olsen
+Candidate	Alissa Keny-Guyer	Alissa Keny-Guyer
+Candidate	Amanda La Bell	Amanda La Bell
+Candidate	Barry Shapiro	Barry Shapiro
+Candidate	Betsy Johnson	Betsy Johnson
+Candidate	Brian P Halvorsen	Brian P Halvorsen
+Candidate	Brian Pierson	Brian Pierson
+Candidate	Bruce Alexander Knight	Bruce Alexander Knight
+Candidate	Bryan Eggiman	Bryan Eggiman
+Candidate	Caddy McKeown	Caddy McKeown
+Candidate	Carl Wilson	Carl Wilson
+Candidate	Carla C Piluso	Carla C Piluso
+Candidate	Charles Gallia	Charles Gallia
+Candidate	Chrissy Reitz	Chrissy Reitz
+Candidate	Christy Inskip	Christy Inskip
+Candidate	Chuck Riley	Chuck Riley
+Candidate	Chuck Thomsen	Chuck Thomsen
+Candidate	Cynthia Hyatt	Cynthia Hyatt
+Candidate	Dan Souza	Dan Souza
+Candidate	Dave McCall	Dave McCall
+Candidate	David C Poulson	David C Poulson
+Candidate	David Molina	David Molina
+Candidate	Denyc Nicole Boles	Denyc Nicole Boles
+Candidate	Dorothy Merritt	Dorothy Merritt
+Candidate	Drew A Layda	Drew A Layda
+Candidate	Eldon Rollins	Eldon Rollins
+Candidate	Elizabeth Graser-Lindsey	Elizabeth Graser-Lindsey
+Candidate	Elizabeth Reye	Elizabeth Reye
+Candidate	Elizabeth Steiner Hayward	Elizabeth Steiner Hayward
+Candidate	Erik S Parks	Erik S Parks
+Candidate	Floyd Prozanski	Floyd Prozanski
+Candidate	Frank L Lengele Jr	Frank L Lengele Jr
+Candidate	Gary Lyndon Dye	Gary Lyndon Dye
+Candidate	Greg Barreto	Greg Barreto
+Candidate	Greg Walden	Greg Walden
+Candidate	Greg Warnock	Greg Warnock
+Candidate	Heather Ricks	Heather Ricks
+Candidate	Jackie F Winters	Jackie F Winters
+Candidate	James I Manning Jr	James I Manning Jr
+Candidate	Jamie McLeod-Skinner	Jamie McLeod-Skinner
+Candidate	Jeff Barker	Jeff Barker
+Candidate	Jeff Golden	Jeff Golden
+Candidate	Jennifer Williamson	Jennifer Williamson
+Candidate	Jerred Taylor	Jerred Taylor
+Candidate	Jessica Gomez	Jessica Gomez
+Candidate	John Verbeek	John Verbeek
+Candidate	Josh Hill	Josh Hill
+Candidate	Joshua Ryan Johnston	Joshua Ryan Johnston
+Candidate	Julie Parrish	Julie Parrish
+Candidate	Karen Rippberger	Karen Rippberger
+Candidate	Kate Brown	Kate Brown
+Candidate	Katy Brumbelow	Katy Brumbelow
+Candidate	Knute Buehler	Knute Buehler
+Candidate	Lee L Beyer	Lee L Beyer
+Candidate	Lori Chavez-DeRemer	Lori Chavez-DeRemer
+Candidate	Manny Guerra	Manny Guerra
+Candidate	Marc W Koller	Marc W Koller
+Candidate	Margaret Doherty	Margaret Doherty
+Candidate	Mark Callahan	Mark Callahan
+Candidate	Mark F Herbert	Mark F Herbert
+Candidate	Mark Karnowski	Mark Karnowski
+Candidate	Mark Meek	Mark Meek
+Candidate	Mark R Roberts	Mark R Roberts
+Candidate	Martha Sherwood	Martha Sherwood
+Candidate	Marty Heyen	Marty Heyen
+Candidate	Marvin Sandnes	Marvin Sandnes
+Candidate	Megan Salter	Megan Salter
+Candidate	Michael Marsh	Michael Marsh
+Candidate	Michael Ngo	Michael Ngo
+Candidate	Michelle Blum Atkinson	Michelle Blum Atkinson
+Candidate	Mike Ellison	Mike Ellison
+Candidate	Mike McLane	Mike McLane
+Candidate	Mitch Greenlick	Mitch Greenlick
+Candidate	NA Davis	NA Davis
+Candidate	NA NA	NA NA
+Candidate	Nathan K Boddie	Nathan K Boddie
+Candidate	Nick Chen	Nick Chen
+Candidate	Patrick Starnes	Patrick Starnes
+Candidate	Peter Courtney	Peter Courtney
+Candidate	Randell Carlson	Randell Carlson
+Candidate	Ray Biggs	Ray Biggs
+Candidate	Renee Windsor-White	Renee Windsor-White
+Candidate	Rich Vial	Rich Vial
+Candidate	Richard R Jacobson	Richard R Jacobson
+Candidate	Rob Wagner	Rob Wagner
+Candidate	Robert Schwartz	Robert Schwartz
+Candidate	Sara A Gelser	Sara A Gelser
+Candidate	Sarah Grider	Sarah Grider
+Candidate	Scott Rohter	Scott Rohter
+Candidate	Shannon Souza	Shannon Souza
+Candidate	Sheri Malstrom	Sheri Malstrom
+Candidate	Skye Farnam	Skye Farnam
+Candidate	Sonny Yellott	Sonny Yellott
+Candidate	Susan McLain	Susan McLain
+Candidate	Taylor Tupper	Taylor Tupper
+Candidate	Teri Grier	Teri Grier
+Candidate	Thomas M Donohue	Thomas M Donohue
+Candidate	Tiffiny K Mitchell	Tiffiny K Mitchell
+Candidate	Tom Harrison	Tom Harrison
+Candidate	Vineeta Lower	Vineeta Lower
+Candidate	William A Namestnik	William A Namestnik
+Party	Constitution Party	constitution
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Pacific Green Party	pacific green
+Party	Republican Party	republican
+Party	Working Families Party	working families
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	Oregon;Baker County	Oregon;Baker
+ReportingUnit	Oregon;Benton County	Oregon;Benton
+ReportingUnit	Oregon;Clackamas County	Oregon;Clackamas
+ReportingUnit	Oregon;Clatsop County	Oregon;Clatsop
+ReportingUnit	Oregon;Columbia County	Oregon;Columbia
+ReportingUnit	Oregon;Coos County	Oregon;Coos
+ReportingUnit	Oregon;Crook County	Oregon;Crook
+ReportingUnit	Oregon;Curry County	Oregon;Curry
+ReportingUnit	Oregon;Deschutes County	Oregon;Deschutes
+ReportingUnit	Oregon;Douglas County	Oregon;Douglas
+ReportingUnit	Oregon;Gilliam County	Oregon;Gilliam
+ReportingUnit	Oregon;Grant County	Oregon;Grant
+ReportingUnit	Oregon;Harney County	Oregon;Harney
+ReportingUnit	Oregon;Hood River County	Oregon;Hood River
+ReportingUnit	Oregon;Jackson County	Oregon;Jackson
+ReportingUnit	Oregon;Jefferson County	Oregon;Jefferson
+ReportingUnit	Oregon;Josephine County	Oregon;Josephine
+ReportingUnit	Oregon;Klamath County	Oregon;Klamath
+ReportingUnit	Oregon;Lake County	Oregon;Lake
+ReportingUnit	Oregon;Lane County	Oregon;Lane
+ReportingUnit	Oregon;Lincoln County	Oregon;Lincoln
+ReportingUnit	Oregon;Linn County	Oregon;Linn
+ReportingUnit	Oregon;Malheur County	Oregon;Malheur
+ReportingUnit	Oregon;Marion County	Oregon;Marion
+ReportingUnit	Oregon;Morrow County	Oregon;Morrow
+ReportingUnit	Oregon;Multnomah County	Oregon;Multnomah
+ReportingUnit	Oregon;Polk County	Oregon;Polk
+ReportingUnit	Oregon;Sherman County	Oregon;Sherman
+ReportingUnit	Oregon;Tillamook County	Oregon;Tillamook
+ReportingUnit	Oregon;Umatilla County	Oregon;Umatilla
+ReportingUnit	Oregon;Union County	Oregon;Union
+ReportingUnit	Oregon;Wallowa County	Oregon;Wallowa
+ReportingUnit	Oregon;Wasco County	Oregon;Wasco
+ReportingUnit	Oregon;Washington County	Oregon;Washington
+ReportingUnit	Oregon;Wheeler County	Oregon;Wheeler
+ReportingUnit	Oregon;Yamhill County	Oregon;Yamhill
+CandidateContest	OR Attorney General	OR;Attorney General;statewide

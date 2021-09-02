@@ -144,3 +144,6 @@ WV Auditor	West Virginia
 WV Treasurer	West Virginia
 WV Commissioner of Agriculture	West Virginia
 WV Secretary of State	West Virginia
+WV Justice of The Supreme Court of Appeals - Division 1	West Virginia;WV Justice of The Supreme Court of Appeals - Division 1
+WV Justice of The Supreme Court of Appeals - Division 2	West Virginia;WV Justice of The Supreme Court of Appeals - Division 2
+

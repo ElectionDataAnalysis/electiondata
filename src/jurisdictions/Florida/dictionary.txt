@@ -9,7 +9,6 @@ BallotMeasureSelection	Yes	For Bonds
 BallotMeasureSelection	Yes	YES
 BallotMeasureSelection	Yes	Yes for Approval
 Candidate	'Lou' Luis Delgado	'Lou' Luis Delgado
-Candidate	A J 'Tony' Smith	"A J ""Tony"" Smith"
 Candidate	A J 'Tony' Smith	A J 'Tony' Smith
 Candidate	A. Michael Bross	A. Michael Bross
 Candidate	A. Munju	A. Munju
@@ -27,7 +26,6 @@ Candidate	Adam Hattersley	Adam Hattersley
 Candidate	Adam Morley	Adam Morley
 Candidate	Adam Myron	Adam Myron
 Candidate	Addison Gray Davis	Addison Gray Davis
-Candidate	Adrian 'A.D.' Kinsey	"Adrian ""A.D."" Kinsey"
 Candidate	Adrian 'A.D.' Kinsey	Adrian 'A.D.' Kinsey
 Candidate	Adrian H Cline	Adrian H Cline
 Candidate	Adrian McCray	Adrian McCray
@@ -35,7 +33,7 @@ Candidate	Against Bonds	Against Bonds
 Candidate	Akin Akinyemi	Akin Akinyemi
 Candidate	Al Bouie	Al Bouie
 Candidate	Al Duffy	Al Duffy
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Al Jacquet	Al Jacquet
 Candidate	Al Lawson	Al Lawson
 Candidate	Al Ron Gonzalez	Al Ron Gonzalez
@@ -71,11 +69,9 @@ Candidate	Alex Heeren	Alex Heeren
 Candidate	Alex Perez	Alex Perez
 Candidate	Alex Rizo	Alex Rizo
 Candidate	Alex Rodriguez	Alex Rodriguez
-Candidate	Alexandra 'Alex' Miller	"Alexandra ""Alex"" Miller"
 Candidate	Alexandra 'Alex' Miller	Alexandra 'Alex' Miller
 Candidate	Alexandria Suarez	Alexandria Suarez
 Candidate	Alexis Carter	Alexis Carter
-Candidate	Alfred 'Mike' N Lawrence	"Alfred ""Mike"" N Lawrence"
 Candidate	Alfred 'Mike' N Lawrence	Alfred 'Mike' N Lawrence
 Candidate	Alfred D. Marten	Alfred D. Marten
 Candidate	Alicia Bays	Alicia Bays
@@ -89,7 +85,6 @@ Candidate	Allison Gilman	Allison Gilman
 Candidate	Allison Tant	Allison Tant
 Candidate	Alston Kelley	Alston Kelley
 Candidate	Althea Penny Sutton	Althea Penny Sutton
-Candidate	Alton K 'Buddy' Williams III	"Alton K ""Buddy"" Williams III"
 Candidate	Alton K 'Buddy' Williams III	Alton K 'Buddy' Williams III
 Candidate	Alva Striplin	Alva Striplin
 Candidate	Amanda Fuchswanz	Amanda Fuchswanz
@@ -165,7 +160,6 @@ Candidate	Annie Mae Murphy	Annie Mae Murphy
 Candidate	Annisa Karim	Annisa Karim
 Candidate	Anselm Weber	Anselm Weber
 Candidate	Anthony 'Tony' Eldon	Anthony 'Tony' Eldon
-Candidate	Anthony 'Tony' Giordano	"Anthony ""Tony"" Giordano"
 Candidate	Anthony 'Tony' Giordano	Anthony 'Tony' Giordano
 Candidate	Anthony 'Tony' Joseph Valdivia	Anthony 'Tony' Joseph Valdivia
 Candidate	Anthony C. Woodruff	Anthony C. Woodruff
@@ -188,7 +182,6 @@ Candidate	Armando Ramirez	Armando Ramirez
 Candidate	Arnaldo Miguel Aponte	Arnaldo Miguel Aponte
 Candidate	Arnitta Jane Grice-Walker	Arnitta Jane Grice-Walker
 Candidate	Arnold Klinsky	Arnold Klinsky
-Candidate	Arthur 'AJ' Green	"Arthur ""AJ"" Green"
 Candidate	Arthur 'AJ' Green	Arthur 'AJ' Green
 Candidate	Artie Lurie	Artie Lurie
 Candidate	Ashira A. Mohammed	Ashira A. Mohammed
@@ -204,7 +197,7 @@ Candidate	Audrey Asciutto	Audrey Asciutto
 Candidate	Augustin 'Gus' Martinez	Augustin 'Gus' Martinez
 Candidate	Aynne McAvoy	Aynne McAvoy
 Candidate	Balser Danielle	Balser Danielle
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara Ann Cady	Barbara Ann Cady
 Candidate	Barbara Byram	Barbara Byram
 Candidate	Barbara Cady	Barbara Cady
@@ -226,7 +219,6 @@ Candidate	Barry Horvath	Barry Horvath
 Candidate	Basil Anthony Piazza	Basil Anthony Piazza
 Candidate	Basil E. Dalack	Basil E. Dalack
 Candidate	Becky Troutman	Becky Troutman
-Candidate	Belita 'B' Grassel	"Belita ""B"" Grassel"
 Candidate	Belita 'B' Grassel	Belita 'B' Grassel
 Candidate	Belvin Perry	Belvin Perry
 Candidate	Ben Albritton	Ben Albritton
@@ -238,7 +230,6 @@ Candidate	Benell English	Benell English
 Candidate	Benjamin Alexander Thaddeus John Horbowy	Benjamin Alexander Thaddeus John Horbowy
 Candidate	Benjamin Hash	Benjamin Hash
 Candidate	Benny Valentin	Benny Valentin
-Candidate	Bernard 'Bernie' Fensterwald	"Bernard ""Bernie"" Fensterwald"
 Candidate	Bernard 'Bernie' Fensterwald	Bernard 'Bernie' Fensterwald
 Candidate	Bernard Parker	Bernard Parker
 Candidate	Bernie Sanders	Sanders, Bernie
@@ -383,7 +374,6 @@ Candidate	Burt Saunders	Burt Saunders
 Candidate	Butch Hendrick	Butch Hendrick
 Candidate	Byron Donalds	Byron Donalds
 Candidate	C.P. Miller	C.P. Miller
-Candidate	Calvin 'Bucky' Starlin	"Calvin ""Bucky"" Starlin"
 Candidate	Calvin 'Bucky' Starlin	Calvin 'Bucky' Starlin
 Candidate	Calvin Cone	Calvin Cone
 Candidate	Calvin Paul	Calvin Paul
@@ -411,7 +401,6 @@ Candidate	Carlos L. Irizarry	Carlos L. Irizarry
 Candidate	Carlos Trujillo	Carlos Trujillo
 Candidate	Carmen Cabarga	Carmen Cabarga
 Candidate	Carmen D. Smith	Carmen D. Smith
-Candidate	Carol 'Jodie' Breece	"Carol ""Jodie"" Breece"
 Candidate	Carol 'Jodie' Breece	Carol 'Jodie' Breece
 Candidate	Carol A. Batchelor	Carol A. Batchelor
 Candidate	Carol Castagnero	Carol Castagnero
@@ -426,7 +415,6 @@ Candidate	Caryn Siperstein	Caryn Siperstein
 Candidate	Casey Askar	Casey Askar
 Candidate	Casey Cane	Casey Cane
 Candidate	Casey Griffin	Casey Griffin
-Candidate	Catherine 'Cathy' Powers	"Catherine ""Cathy"" Powers"
 Candidate	Catherine 'Cathy' Powers	Catherine 'Cathy' Powers
 Candidate	Catherine F. Arnaez	Catherine F. Arnaez
 Candidate	Catherine Price	Catherine Price
@@ -446,11 +434,8 @@ Candidate	Chad Chronister	Chad Chronister
 Candidate	Chad Farnsworth	Chad Farnsworth
 Candidate	Chanda Nicole Holsey	Chanda Nicole Holsey
 Candidate	Channing R Dobbs	Channing R Dobbs
-Candidate	Charles 'Boo' Morris	"Charles ""Boo"" Morris"
 Candidate	Charles 'Boo' Morris	Charles 'Boo' Morris
-Candidate	Charles 'Chuck' Broadway	"Charles ""Chuck"" Broadway"
 Candidate	Charles 'Chuck' Broadway	Charles 'Chuck' Broadway
-Candidate	Charles 'Eddie' Brock	"Charles ""Eddie"" Brock"
 Candidate	Charles 'Eddie' Brock	Charles 'Eddie' Brock
 Candidate	Charles B Hewett Jr	Charles B Hewett Jr
 Candidate	Charles C. Messina	Charles C. Messina
@@ -462,7 +447,6 @@ Candidate	Charles Frederick Tolbert	Charles Frederick Tolbert
 Candidate	Charles H. Vaughan	Charles H. Vaughan
 Candidate	Charles Oates	Charles Oates
 Candidate	Charles Parker	Charles Parker
-Candidate	Charles S. 'Chuck' Chestnut	"Charles S. ""Chuck"" Chestnut"
 Candidate	Charles S. 'Chuck' Chestnut	Charles S. 'Chuck' Chestnut
 Candidate	Charles Schmitz	Charles Schmitz
 Candidate	Charles Weidner	Charles Weidner
@@ -612,7 +596,6 @@ Candidate	Dane Eagle	Dane Eagle
 Candidate	Daniel A. Bowers Jr	Daniel A. Bowers Jr
 Candidate	Daniel A. Perez	Daniel A. Perez
 Candidate	Daniel Anthony Perez	Daniel Anthony Perez
-Candidate	Daniel C. 'Danny' Green	"Daniel C. ""Danny"" Green"
 Candidate	Daniel C. 'Danny' Green	Daniel C. 'Danny' Green
 Candidate	Daniel D. Powers	Daniel D. Powers
 Candidate	Daniel D. Raulerson	Daniel D. Raulerson
@@ -658,7 +641,6 @@ Candidate	Darryl Jones	Darryl Jones
 Candidate	Darryl Willie	Darryl Willie
 Candidate	Daryll Gunter	Daryll Gunter
 Candidate	Dava J. Tunis	Dava J. Tunis
-Candidate	Dave 'Watchdog' Miner	"Dave ""Watchdog"" Miner"
 Candidate	Dave 'Watchdog' Miner	Dave 'Watchdog' Miner
 Candidate	Dave Chauncey	Dave Chauncey
 Candidate	Dave Ellis	Dave Ellis
@@ -767,7 +749,6 @@ Candidate	Deidre Heindl	Deidre Heindl
 Candidate	Delarian Wiggins	Delarian Wiggins
 Candidate	Delia Ramirez	Delia Ramirez
 Candidate	Della Davis	Della Davis
-Candidate	Delores 'Dee' McFarland	"Delores ""Dee"" McFarland"
 Candidate	Delores 'Dee' McFarland	Delores 'Dee' McFarland
 Candidate	Delores Hogan Johnson	Delores Hogan Johnson
 Candidate	Delores J Linscott	Delores J Linscott
@@ -801,7 +782,6 @@ Candidate	Derrick Orberg	Derrick Orberg
 Candidate	Derrick Smoke Gainer	Derrick Smoke Gainer
 Candidate	Deval Patrick	Patrick, Deval
 Candidate	Devin Carver	Devin Carver
-Candidate	Dewayne 'Bubba' Branch	"Dewayne ""Bubba"" Branch"
 Candidate	Dewayne 'Bubba' Branch	Dewayne 'Bubba' Branch
 Candidate	Dewey A. Tyler	Dewey A. Tyler
 Candidate	Dewey H. Hatcher Sr.	Dewey H. Hatcher
@@ -817,11 +797,9 @@ Candidate	Diane Spencer	Diane Spencer
 Candidate	Diane Zigrossi	Diane Zigrossi
 Candidate	Diann Cucinella	Diann Cucinella
 Candidate	Dianna Liebnitzky	Dianna Liebnitzky
-Candidate	Dianne 'Ms Dee' Hart	"Dianne ""Ms Dee"" Hart"
 Candidate	Dianne 'Ms Dee' Hart	Dianne 'Ms Dee' Hart
 Candidate	Dianne Krumel	Dianne Krumel
 Candidate	Dianne Westcott	Dianne Westcott
-Candidate	Dick 'Cowboy' Locke	"Dick ""Cowboy"" Locke"
 Candidate	Dick 'Cowboy' Locke	Dick 'Cowboy' Locke
 Candidate	Dimitri A. Delgado	Dimitri A. Delgado
 Candidate	Dimitrie Denis	Dimitrie Denis
@@ -833,13 +811,12 @@ Candidate	Don Endriss	Don Endriss
 Candidate	Don H Armstrong	Don H Armstrong
 Candidate	Don Peters	Don Peters
 Candidate	Don Salter	Don Salter
-Candidate	Donald 'Don' Robinson	"Donald ""Don"" Robinson"
 Candidate	Donald 'Don' Robinson	Donald 'Don' Robinson
 Candidate	Donald E Strenth	Donald E Strenth
 Candidate	Donald E. Hickman	Donald E. Hickman
 Candidate	Donald Edward Tate	Donald Edward Tate
 Candidate	Donald H. Noble	Donald H. Noble
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Trump / Pence
 Candidate	Donald J. Trump	Trump, Donald J.
@@ -954,8 +931,8 @@ Candidate	Ernest A Armstrong	Ernest A Armstrong
 Candidate	Ernst Otto Ruppert	Ernst Otto Ruppert
 Candidate	Eugene Feinour	Eugene Feinour
 Candidate	Eugene J Rado	Eugene J Rado
-Candidate	"Eugene Skip"" Carney"	"Eugene ""Skip"" Carney"
-Candidate	"Eugene Skip"" Carney"	"Eugene Skip"" Carney"""
+Candidate	Eugene Skip' Carney	Eugene 'Skip' Carney
+Candidate	Eugene Skip' Carney	Eugene Skip' Carney'
 Candidate	Eugene W Clark	Eugene W Clark
 Candidate	Eva Vergos	Eva Vergos
 Candidate	Eva Webb	Eva Webb
@@ -969,7 +946,6 @@ Candidate	Felicia Simone Robinson	Felicia Simone Robinson
 Candidate	Fentrice Driskell	Fentrice Driskell
 Candidate	Fernando A. Romero	Fernando A. Romero
 Candidate	Fiona McFarland	Fiona McFarland
-Candidate	Flora 'Tonya' Stewart	"Flora ""Tonya"" Stewart"
 Candidate	Flora 'Tonya' Stewart	Flora 'Tonya' Stewart
 Candidate	Florence Fruehan	Florence Fruehan
 Candidate	Florence Taylor Barner	Florence Taylor Barner
@@ -1001,7 +977,6 @@ Candidate	Frank Russell	Frank Russell
 Candidate	Frank T La Rosa	Frank T La Rosa
 Candidate	Frank W Liles	Frank W Liles
 Candidate	Frank White	Frank White
-Candidate	Franklin 'Jay' Brooks	"Franklin ""Jay"" Brooks"
 Candidate	Franklin 'Jay' Brooks	Franklin 'Jay' Brooks
 Candidate	Franklin Ayetin	Franklin Ayetin
 Candidate	Franklin L Stephens	Franklin L Stephens
@@ -1015,7 +990,6 @@ Candidate	Fred Hawkins Jr.	Fred Hawkins Jr.
 Candidate	Fred Mittmann	Fred Mittmann
 Candidate	Fred S. Martin	Fred S. Martin
 Candidate	Fred Segal	Fred Segal
-Candidate	Fredd 'Glossie' Atkins	"Fredd ""Glossie"" Atkins"
 Candidate	Fredd 'Glossie' Atkins	Fredd 'Glossie' Atkins
 Candidate	Freddie Whitfield	Freddie Whitfield
 Candidate	Frederica Wilson	Frederica Wilson
@@ -1051,7 +1025,6 @@ Candidate	Gene Morgan	Gene Morgan
 Candidate	Gene T Bolton	Gene T Bolton
 Candidate	Gene Wright	Gene Wright
 Candidate	Geoff Kendrick	Geoff Kendrick
-Candidate	George 'Ges' Selmont	"George ""Ges"" Selmont"
 Candidate	George 'Ges' Selmont	George 'Ges' Selmont
 Candidate	George Allen Cowart	George Allen Cowart
 Candidate	George B. Gainer	George B. Gainer
@@ -1071,7 +1044,7 @@ Candidate	George Moraitis	George Moraitis
 Candidate	George Navarini	George Navarini
 Candidate	George Odom	George Odom
 Candidate	George Smallwood	George Smallwood
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	Georges Bossous	Georges Bossous
 Candidate	Gerald (Jerry) Ferlisi	Gerald (Jerry) Ferlisi
 Candidate	Gerald Cruz	Gerald Cruz
@@ -1114,7 +1087,6 @@ Candidate	Gus Guadagnino	Gus Guadagnino
 Candidate	Gus Michael Bilirakis	Gus Michael Bilirakis
 Candidate	Gwen Marshall	Gwen Marshall
 Candidate	Gwendolyn T. Hubbard	Gwendolyn T. Hubbard
-Candidate	Gwynetta 'Gwyn' Gittens	"Gwynetta ""Gwyn"" Gittens"
 Candidate	Gwynetta 'Gwyn' Gittens	Gwynetta 'Gwyn' Gittens
 Candidate	H. Alan Burton	H. Alan Burton
 Candidate	H. Alexander Duncan	H. Alexander Duncan
@@ -1143,16 +1115,15 @@ Candidate	Hector Ortiz	Hector Ortiz
 Candidate	Hector Rivera	Hector Rivera
 Candidate	Helene Daniel	Helene Daniel
 Candidate	Henrietta M Larson	Henrietta M Larson
-Candidate	Henry 'Shake' Washington	"Henry ""Shake"" Washington"
 Candidate	Henry 'Shake' Washington	Henry 'Shake' Washington
 Candidate	Henry McCray	Henry McCray
 Candidate	Henry Quinn Johnson	Henry Quinn Johnson
 Candidate	Herb Sennett	Herb Sennett
 Candidate	Herman W. Moore	Herman W. Moore
-Candidate	Hillary Clinton	HILLARY CLINTON
-Candidate	Hillary R. Clinton	Clinton / Kaine
-Candidate	Hillary R. Clinton	Hillary R. Clinton
-Candidate	Hillary R. Clinton	Hillary Rodham Clinton
+Candidate	Hillary Clinton	Clinton / Kaine
+Candidate	Hillary Clinton	Hillary R. Clinton
+Candidate	Hillary Clinton	Hillary Rodham Clinton
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Holly Raschein	Holly Raschein
 Candidate	Hope Brisette	Hope Brisette
 Candidate	Horng Andrew Jeng	Horng Andrew Jeng
@@ -1162,7 +1133,6 @@ Candidate	Howard Kessler	Howard Kessler
 Candidate	Howard Knepper	Howard Knepper
 Candidate	Howard W. Sechler	Howard W. Sechler
 Candidate	Howie Hawkins	Hawkins / Walker
-Candidate	Hubert 'Joe' Snodgrass	"Hubert ""Joe"" Snodgrass"
 Candidate	Hubert 'Joe' Snodgrass	Hubert 'Joe' Snodgrass
 Candidate	Hugh C Black	Hugh C Black
 Candidate	Hunt Berryman	Hunt Berryman
@@ -1183,7 +1153,6 @@ Candidate	Ivan A Rivera	Ivan A Rivera
 Candidate	Ivette Gonzalez Petkovich	Ivette Gonzalez Petkovich
 Candidate	Ivey McClain	Ivey McClain
 Candidate	J. Mark Barfield	J. Mark Barfield
-Candidate	J.K. 'Jess' Irby	"J.K. ""Jess"" Irby"
 Candidate	J.K. 'Jess' Irby	J.K. 'Jess' Irby
 Candidate	J.R. 'Nick' Yagnik	J.R. 'Nick' Yagnik
 Candidate	J.R. Rebecky	J.R. Rebecky
@@ -1207,15 +1176,12 @@ Candidate	Jackie Rock	Jackie Rock
 Candidate	Jackie Toledo	Jackie Toledo
 Candidate	Jacob Curnow	Jacob Curnow
 Candidate	Jacob Hensley	Jacob Hensley
-Candidate	Jacqueline 'Jackie' Rosario	"Jacqueline ""Jackie"" Rosario"
 Candidate	Jacqueline 'Jackie' Rosario	Jacqueline 'Jackie' Rosario
 Candidate	Jada Woods Williams	Jada Woods Williams
 Candidate	Jade Simmons	Simmons / Nixon
 Candidate	Jaime D. Perkins	Jaime D. Perkins
 Candidate	Jaimie Goodman	Jaimie Goodman
-Candidate	James 'Jamie' Clemons	"James ""Jamie"" Clemons"
 Candidate	James 'Jamie' Clemons	James 'Jamie' Clemons
-Candidate	James 'Jim' Jaquess	"James ""Jim"" Jaquess"
 Candidate	James 'Jim' Jaquess	James 'Jim' Jaquess
 Candidate	James 'Jim' Pruden	James 'Jim' Pruden
 Candidate	James 'Jim' Vernon Mooney	James 'Jim' Vernon Mooney
@@ -1256,7 +1222,6 @@ Candidate	James P Murphy	James P Murphy
 Candidate	James Potter	James Potter
 Candidate	James R Carlino	James R Carlino
 Candidate	James R. Carlino	James R. Carlino
-Candidate	James S. 'Jamie' Chester	"James S. ""Jamie"" Chester"
 Candidate	James S. 'Jamie' Chester	James S. 'Jamie' Chester
 Candidate	James St. George	James St. George
 Candidate	James T. Crabtree	James T. Crabtree
@@ -1321,7 +1286,6 @@ Candidate	Jean L. Enright	Jean L. Enright
 Candidate	Jean-Pierre Bado	Jean-Pierre Bado
 Candidate	Jeanette M. Nunez	Jeanette M. Nunez
 Candidate	Jeanette M. NuÃÂÃÂÃÂÃÂ±ez	Jeanette M. NuÃÂÃÂÃÂÃÂ±ez
-Candidate	Jeanne 'Jeannie' Mathis	"Jeanne ""Jeannie"" Mathis"
 Candidate	Jeanne 'Jeannie' Mathis	Jeanne 'Jeannie' Mathis
 Candidate	Jeanne S Dozier	Jeanne S Dozier
 Candidate	Jed Suhl	Jed Suhl
@@ -1342,7 +1306,6 @@ Candidate	Jeff Page	Jeff Page
 Candidate	Jeff Riley	Jeff Riley
 Candidate	Jeff Rivera	Jeff Rivera
 Candidate	Jeff Zampitella	Jeff Zampitella
-Candidate	Jeffrey 'Mr. V' Veilleux	"Jeffrey ""Mr. V"" Veilleux"
 Candidate	Jeffrey 'Mr. V' Veilleux	Jeffrey 'Mr. V' Veilleux
 Candidate	Jeffrey Brodzinski	Jeffrey Brodzinski
 Candidate	Jeffrey David Jones	Jeffrey David Jones
@@ -1488,11 +1451,11 @@ Candidate	John J Magee	John J Magee
 Candidate	John J Martino	John J Martino
 Candidate	John J. Picarelli	John J. Picarelli
 Candidate	John Johnson	John Johnson
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John M Hill	John M Hill
 Candidate	John M. Drew	John M. Drew
 Candidate	John Manners Houman	John Manners Houman
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John Mica	John Mica
 Candidate	John Michael Rothenberger	John Michael Rothenberger
 Candidate	John Mills	John Mills
@@ -1532,7 +1495,6 @@ Candidate	Jon C Detzel	Jon C Detzel
 Candidate	Jon Kinney	Jon Kinney
 Candidate	Jon M. Smallegan	Jon M. Smallegan
 Candidate	Jon Sidney Larkin	Jon Sidney Larkin
-Candidate	Jonathan 'J.P.' Parker	"Jonathan ""J.P."" Parker"
 Candidate	Jonathan 'J.P.' Parker	Jonathan 'J.P.' Parker
 Candidate	Jonathan H. Parker	Jonathan H. Parker
 Candidate	Jonathan Michael Tallman	Jonathan Michael Tallman
@@ -1540,7 +1502,6 @@ Candidate	Jonathan Schuman	Jonathan Schuman
 Candidate	Joni Martin	Joni Martin
 Candidate	Jorge A Arce	Jorge A Arce
 Candidate	Jorge Mercado	Jorge Mercado
-Candidate	Jose 'Joe' Lopez	"Jose ""Joe"" Lopez"
 Candidate	Jose 'Joe' Lopez	Jose 'Joe' Lopez
 Candidate	Jose Castillo	Jose Castillo
 Candidate	Jose Felix Diaz	Jose Felix Diaz
@@ -1549,13 +1510,9 @@ Candidate	Jose N. Vazquez Figueroa	Jose N. Vazquez Figueroa
 Candidate	Jose Oliva	Jose Oliva
 Candidate	Jose Peixoto	Jose Peixoto
 Candidate	Jose R. Farigua	Jose R. Farigua
-Candidate	Joseph 'Joe' Hannoush	"Joseph ""Joe"" Hannoush"
 Candidate	Joseph 'Joe' Hannoush	Joseph 'Joe' Hannoush
-Candidate	Joseph 'Joe' Kaufman	"Joseph ""Joe"" Kaufman"
 Candidate	Joseph 'Joe' Kaufman	Joseph 'Joe' Kaufman
-Candidate	Joseph 'Joe' Schmitt	"Joseph ""Joe"" Schmitt"
 Candidate	Joseph 'Joe' Schmitt	Joseph 'Joe' Schmitt
-Candidate	Joseph 'Smokey' Parrish	"Joseph ""Smokey"" Parrish"
 Candidate	Joseph 'Smokey' Parrish	Joseph 'Smokey' Parrish
 Candidate	Joseph A. Casello	Joseph A. Casello
 Candidate	Joseph A. McGee	Joseph A. McGee
@@ -1566,7 +1523,6 @@ Candidate	Joseph B. Klosky	Joseph B. Klosky
 Candidate	Joseph Cascio	Joseph Cascio
 Candidate	Joseph Charles Makray	Joseph Charles Makray
 Candidate	Joseph Di Bartolomeo	Joseph Di Bartolomeo
-Candidate	Joseph E. 'Joe' Smith	"Joseph E. ""Joe"" Smith"
 Candidate	Joseph E. 'Joe' Smith	Joseph E. 'Joe' Smith
 Candidate	Joseph Harris	Joseph Harris
 Candidate	Joseph Haynes Davis	Joseph Haynes Davis
@@ -1599,7 +1555,6 @@ Candidate	Joy Goff-Marcil	Joy Goff-Marcil
 Candidate	Joyce Jacobs Botchford	Joyce Jacobs Botchford
 Candidate	Joyce Sandy	Joyce Sandy
 Candidate	Juan A. Rosa	Juan A. Rosa
-Candidate	Juan Carlos 'John' Solis	"Juan Carlos ""John"" Solis"
 Candidate	Juan Carlos 'John' Solis	Juan Carlos 'John' Solis
 Candidate	Juan Carlos Solis	Juan Carlos Solis
 Candidate	Juan Fernandez-Barquin	Juan Fernandez-Barquin
@@ -1654,7 +1609,6 @@ Candidate	Katherine Fernandez Rundle	Katherine Fernandez Rundle
 Candidate	Katherine Norman	Katherine Norman
 Candidate	Katherine Perkins	Katherine Perkins
 Candidate	Kathie D Shepard	Kathie D Shepard
-Candidate	Kathleen 'Katie' Tripp	"Kathleen ""Katie"" Tripp"
 Candidate	Kathleen 'Katie' Tripp	Kathleen 'Katie' Tripp
 Candidate	Kathleen Coppola	Kathleen Coppola
 Candidate	Kathleen Flaherty	Kathleen Flaherty
@@ -1697,7 +1651,6 @@ Candidate	Kelly Ann Marechal	Kelly Ann Marechal
 Candidate	Kelly Ayers	Kelly Ayers
 Candidate	Kelly Damerow	Kelly Damerow
 Candidate	Kelly Edenfield King	Kelly Edenfield King
-Candidate	Kelly J 'Shakey' Blaske	"Kelly J ""Shakey"" Blaske"
 Candidate	Kelly J 'Shakey' Blaske	Kelly J 'Shakey' Blaske
 Candidate	Kelly Johnson	Kelly Johnson
 Candidate	Kelly McCormack Ingram	Kelly McCormack Ingram
@@ -1712,7 +1665,6 @@ Candidate	Ken Keechl	Ken Keechl
 Candidate	Ken Organes	Ken Organes
 Candidate	Ken Spalthoff	Ken Spalthoff
 Candidate	Ken Willey	Ken Willey
-Candidate	Kenneth 'Ken' McGurn	"Kenneth ""Ken"" McGurn"
 Candidate	Kenneth 'Ken' McGurn	Kenneth 'Ken' McGurn
 Candidate	Kenneth B. Lieberman	Kenneth B. Lieberman
 Candidate	Kenneth C Diaz	Kenneth C Diaz
@@ -1731,7 +1683,6 @@ Candidate	Kevin Morenski	Kevin Morenski
 Candidate	Kevin O'Bryan	Kevin O'Bryan
 Candidate	Kevin Rambosk	Kevin Rambosk
 Candidate	Kevin T. Connelly	Kevin T. Connelly
-Candidate	Kim 'KLARC' O'Connor	"Kim ""KLARC"" O'Connor"
 Candidate	Kim 'KLARC' O'Connor	Kim 'KLARC' O'Connor
 Candidate	Kim O' Connor	Kim O' Connor
 Candidate	Kim O'Connor	Kim O'Connor
@@ -1806,7 +1757,6 @@ Candidate	Leo Marlowe	Leo Marlowe
 Candidate	Leo Valentin	Leo Valentin
 Candidate	Leo Valentín	Leo Valentín
 Candidate	Leon Dale McClellan	Leon Dale McClellan
-Candidate	Leonard 'Len' Rucker	"Leonard ""Len"" Rucker"
 Candidate	Leonard 'Len' Rucker	Leonard 'Len' Rucker
 Candidate	Leonardo Montes	Leonardo Montes
 Candidate	Leroy Anthony Edwards	Leroy Anthony Edwards
@@ -1889,7 +1839,6 @@ Candidate	Mac Martin	Mac Martin
 Candidate	Madeline T DiComo	Madeline T DiComo
 Candidate	Maggi Honda	Maggi Honda
 Candidate	Maggie B. Lewis-Butler	Maggie B. Lewis-Butler
-Candidate	Maikel 'Mike' Lopez	"Maikel ""Mike"" Lopez"
 Candidate	Maikel 'Mike' Lopez	Maikel 'Mike' Lopez
 Candidate	Malcolm S. Jones Sr.	Malcolm S. Jones Sr.
 Candidate	Malcolm Thomas	Malcolm Thomas
@@ -1918,7 +1867,6 @@ Candidate	Maria Elvira Salazar	Maria Elvira Salazar
 Candidate	Maria Lepage	Maria Lepage
 Candidate	Maria Markhasin-Weekes	Maria Markhasin-Weekes
 Candidate	Maria P Barbosa	Maria P Barbosa
-Candidate	Maria Teresa 'Mari Tere' Rojas	"Maria Teresa ""Mari Tere"" Rojas"
 Candidate	Maria Teresa 'Mari Tere' Rojas	Maria Teresa 'Mari Tere' Rojas
 Candidate	Marianne Arbulu	Marianne Arbulu
 Candidate	Marianne Williamson	Williamson, Marianne
@@ -1951,13 +1899,11 @@ Candidate	Mark Van Valkenburgh	Mark Van Valkenburgh
 Candidate	Marla Coradi	Marla Coradi
 Candidate	Martha F. Carter	Martha F. Carter
 Candidate	Marva Harris Preston	Marva Harris Preston
-Candidate	Marvin 'Merv' Mattair	"Marvin ""Merv"" Mattair"
 Candidate	Marvin 'Merv' Mattair	Marvin 'Merv' Mattair
 Candidate	Mary Ann Lindley	Mary Ann Lindley
 Candidate	Mary Barzee Flores	Mary Barzee Flores
 Candidate	Mary Carol Murdock	Mary Carol Murdock
 Candidate	Mary Carol Stanley	Mary Carol Stanley
-Candidate	Mary Jeanne 'Gigi' Gibson	"Mary Jeanne ""Gigi"" Gibson"
 Candidate	Mary Jeanne 'Gigi' Gibson	Mary Jeanne 'Gigi' Gibson
 Candidate	Mary Lou Berger	Mary Lou Berger
 Candidate	Mary Lynn Magar	Mary Lynn Magar
@@ -1980,7 +1926,6 @@ Candidate	Matt Susin	Matt Susin
 Candidate	Matt Theobald	Matt Theobald
 Candidate	Matt Tito	Matt Tito
 Candidate	Matt Willhite	Matt Willhite
-Candidate	Matthew 'Matt' Erpenbeck	"Matthew ""Matt"" Erpenbeck"
 Candidate	Matthew 'Matt' Erpenbeck	Matthew 'Matt' Erpenbeck
 Candidate	Matthew Bymaster	Matthew Bymaster
 Candidate	Matthew Dahir	Matthew Dahir
@@ -2006,7 +1951,6 @@ Candidate	Mel Ponder	Mel Ponder
 Candidate	Melanie Nipper	Melanie Nipper
 Candidate	Melba V. Pearson	Melba V. Pearson
 Candidate	Melisa W Giovannelli	Melisa W Giovannelli
-Candidate	Melissa 'Mel' Martin	"Melissa ""Mel"" Martin"
 Candidate	Melissa 'Mel' Martin	Melissa 'Mel' Martin
 Candidate	Melissa Dortch	Melissa Dortch
 Candidate	Melissa Gravitt	Melissa Gravitt
@@ -2050,7 +1994,6 @@ Candidate	Michael Hegarty	Michael Hegarty
 Candidate	Michael Hepburn	Michael Hepburn
 Candidate	Michael J DeBrino Jr	Michael J DeBrino Jr
 Candidate	Michael J Doyle	Michael J Doyle
-Candidate	Michael J. 'Mike' Welch	"Michael J. ""Mike"" Welch"
 Candidate	Michael J. 'Mike' Welch	Michael J. 'Mike' Welch
 Candidate	Michael J. Arminio	Michael J. Arminio
 Candidate	Michael J. McNicholas	Michael J. McNicholas
@@ -2129,9 +2072,8 @@ Candidate	Mirza Ahmad	Mirza Ahmad
 Candidate	Misty Belford	Misty Belford
 Candidate	Misty Servia	Misty Servia
 Candidate	Mitchell Wills	Mitchell Wills
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Mo Yasin	Mo Yasin
-Candidate	Modesto 'Mo' Abety	"Modesto ""Mo"" Abety"
 Candidate	Modesto 'Mo' Abety	Modesto 'Mo' Abety
 Candidate	Mona Dixon	Mona Dixon
 Candidate	Monique Worrell	Monique Worrell
@@ -2139,7 +2081,6 @@ Candidate	Morey Wright	Morey Wright
 Candidate	Morris A. Young	Morris A. Young
 Candidate	Myra Middleton Valentine	Myra Middleton Valentine
 Candidate	Myron Kirkeby	Myron Kirkeby
-Candidate	NO	NO
 Candidate	Nadia K Daughtrey	Nadia K Daughtrey
 Candidate	Nan H Rich	Nan H Rich
 Candidate	Nancy Benita Corbin	Nancy Benita Corbin
@@ -2177,7 +2118,6 @@ Candidate	Nick Vessio	Nick Vessio
 Candidate	Nicolas Aquilizan	Nicolas Aquilizan
 Candidate	Nicolas Kimaz	Nicolas Kimaz
 Candidate	Nicolas Perez	Nicolas Perez
-Candidate	Nicole 'Nikki' Fried	"Nicole ""Nikki"" Fried"
 Candidate	Nicole 'Nikki' Fried	Nicole 'Nikki' Fried
 Candidate	Nicole Carr	Nicole Carr
 Candidate	Nicole Decker-McHale	Nicole Decker-McHale
@@ -2208,7 +2148,7 @@ Candidate	Oren L. Miller	Oren L. Miller
 Candidate	Oscar A. Hotusing	Oscar A. Hotusing
 Candidate	Oscar Ganem	Oscar Ganem
 Candidate	Oscar Rodriguez-Fonts	Oscar Rodriguez-Fonts
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	Otis L. Brown	Otis L. Brown
 Candidate	Oz Vazquez	Oz Vazquez
 Candidate	P. A. DeFrenza	P. A. DeFrenza
@@ -2223,9 +2163,7 @@ Candidate	Pasha Baker	Pasha Baker
 Candidate	Pat Frank	Pat Frank
 Candidate	Pat Patterson	Pat Patterson
 Candidate	Pat Wayman	Pat Wayman
-Candidate	Patricia 'Pat' Edmonson	"Patricia ""Pat"" Edmonson"
 Candidate	Patricia 'Pat' Edmonson	Patricia 'Pat' Edmonson
-Candidate	Patricia 'Pat' Kemp	"Patricia ""Pat"" Kemp"
 Candidate	Patricia 'Pat' Kemp	Patricia 'Pat' Kemp
 Candidate	Patricia A. Francis	Patricia A. Francis
 Candidate	Patricia Ann Sunday	Patricia Ann Sunday
@@ -2308,7 +2246,7 @@ Candidate	Ralph E. Massullo	Ralph E. Massullo
 Candidate	Ralph J. DeFranzo	Ralph J. DeFranzo
 Candidate	Ralph Massullo	Ralph Massullo
 Candidate	Ralph Massullo Jr	Ralph Massullo Jr
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Ralph Thomas	Ralph Thomas
 Candidate	Ramon Alexander	Ramon Alexander
 Candidate	Ramon E Chao	Ramon E Chao
@@ -2348,7 +2286,6 @@ Candidate	Reginald Cunningham	Reginald Cunningham
 Candidate	Reid Schwabach	Reid Schwabach
 Candidate	Reinaldo Daniel Diaz	Reinaldo Daniel Diaz
 Candidate	Rena Frazier	Rena Frazier
-Candidate	Rene 'Coach P' Plasencia	"Rene ""Coach P"" Plasencia"
 Candidate	Rene 'Coach P' Plasencia	Rene 'Coach P' Plasencia
 Candidate	Rene Coach P Plasencia	Rene Coach P Plasencia
 Candidate	Rene Garcia	Rene Garcia
@@ -2367,9 +2304,7 @@ Candidate	Ricardo De La Fuente	Ricardo De La Fuente
 Candidate	Ricardo Rangel	Ricardo Rangel
 Candidate	Rich Knaub	Rich Knaub
 Candidate	Rich Peterson	Rich Peterson
-Candidate	Richard 'Rick' A. Shirley	"Richard ""Rick"" A. Shirley"
 Candidate	Richard 'Rick' A. Shirley	Richard 'Rick' A. Shirley
-Candidate	Richard 'Rick' Stark	"Richard ""Rick"" Stark"
 Candidate	Richard 'Rick' Stark	Richard 'Rick' Stark
 Candidate	Richard A. DeBrosse	Richard A. DeBrosse
 Candidate	Richard A. Dombrowski	Richard A. Dombrowski
@@ -2445,13 +2380,9 @@ Candidate	Rita Pritchett	Rita Pritchett
 Candidate	Rizwan Ahmed	Rizwan Ahmed
 Candidate	Rob Lapham	Rob Lapham
 Candidate	Rob Long	Rob Long
-Candidate	Robert 'Bob' Meadows	"Robert ""Bob"" Meadows"
 Candidate	Robert 'Bob' Meadows	Robert 'Bob' Meadows
-Candidate	Robert 'Bobby O' Olszewski	"Robert ""Bobby O"" Olszewski"
 Candidate	Robert 'Bobby O' Olszewski	Robert 'Bobby O' Olszewski
-Candidate	Robert 'Hutch' Hutchinson	"Robert ""Hutch"" Hutchinson"
 Candidate	Robert 'Hutch' Hutchinson	Robert 'Hutch' Hutchinson
-Candidate	Robert 'Rob' Griffin	"Robert ""Rob"" Griffin"
 Candidate	Robert 'Rob' Griffin	Robert 'Rob' Griffin
 Candidate	Robert (Bob) Sturgess	Robert (Bob) Sturgess
 Candidate	Robert A Fletcher	Robert A Fletcher
@@ -2516,9 +2447,8 @@ Candidate	Rollin E. Rathbun, III	Rollin E. Rathbun, III
 Candidate	Rollin Rathbun	Rollin Rathbun
 Candidate	Roman Gomez	Roman Gomez
 Candidate	Ron Berman	Ron Berman
-Candidate	Ron Desantis	DeSantis / NuÃÂÃÂÃÂÃÂ±ez
-Candidate	Ron Desantis	Ron DeSantis
-Candidate	Ron Desantis	Ron Desantis
+Candidate	Ron DeSantis	Ron DeSantis
+Candidate	Ron DeSantis	Ron Desantis
 Candidate	Ron French	Ron French
 Candidate	Ron Howland	Ron Howland
 Candidate	Ron Oakley	Ron Oakley
@@ -2547,7 +2477,6 @@ Candidate	Roque De La Fuente	De La Fuente / Steinberg
 Candidate	Roque De La Fuente	De La Fuente, Roque 'Rocky'
 Candidate	Roque De La Fuente	Roque (Rocky) De La Fuente
 Candidate	Roque De La Fuente	Roque De La Fuente
-Candidate	"Rosa Maria ""Rosy"" Palomino"	"Rosa Maria ""Rosy"" Palomino"
 Candidate	Rosa Maria 'Rosy' Palomino	Rosa Maria 'Rosy' Palomino
 Candidate	Rosemary Rendueles	Rosemary Rendueles
 Candidate	Ross Elde Hancock	Ross Elde Hancock
@@ -2591,7 +2520,6 @@ Candidate	Sam Watson	Sam Watson
 Candidate	Samson LeBeau Kpadenou	Samson LeBeau Kpadenou
 Candidate	Samuel Vilchez Santiago	Samuel Vilchez Santiago
 Candidate	Sandi Wells Moore	Sandi Wells Moore
-Candidate	Sandra 'Sandy' Applefield	"Sandra ""Sandy"" Applefield"
 Candidate	Sandra 'Sandy' Applefield	Sandra 'Sandy' Applefield
 Candidate	Sandra L. Atkinson	Sandra L. Atkinson
 Candidate	Sandra L. Murman	Sandra L. Murman
@@ -2707,7 +2635,6 @@ Candidate	Stephanie Meyer	Stephanie Meyer
 Candidate	Stephanie Murphy	Stephanie Murphy
 Candidate	Stephanie N. Blankenship	Stephanie N. Blankenship
 Candidate	Stephanie Thomason	Stephanie Thomason
-Candidate	Stephen 'Steve' R Bowen	"Stephen ""Steve"" R Bowen"
 Candidate	Stephen 'Steve' R Bowen	Stephen 'Steve' R Bowen
 Candidate	Stephen DeWhite	Stephen DeWhite
 Candidate	Stephen Doty	Stephen Doty
@@ -2725,7 +2652,6 @@ Candidate	Stephen Stark	Stephen Stark
 Candidate	Stephen V. Brown	Stephen V. Brown
 Candidate	Stephen Z. Grossman	Stephen Z. Grossman
 Candidate	Stevan Novakovic	Stevan Novakovic
-Candidate	Steve 'Kahuna' Cates	"Steve ""Kahuna"" Cates"
 Candidate	Steve 'Kahuna' Cates	Steve 'Kahuna' Cates
 Candidate	Steve Bova	Steve Bova
 Candidate	Steve Champion	Steve Champion
@@ -2744,7 +2670,6 @@ Candidate	Steve Picklesimer	Steve Picklesimer
 Candidate	Steve Pochis	Steve Pochis
 Candidate	Steve Roberts	Steve Roberts
 Candidate	Steve Whidden	Steve Whidden
-Candidate	Steven A 'Steve' Geller	"Steven A ""Steve"" Geller"
 Candidate	Steven A 'Steve' Geller	Steven A 'Steve' Geller
 Candidate	Steven Hancz	Steven Hancz
 Candidate	Steven J. Bova	Steven J. Bova
@@ -2811,7 +2736,6 @@ Candidate	Thad Altman	Thad Altman
 Candidate	Theodore 'Pink Tie' Murray	Theodore 'Pink Tie' Murray
 Candidate	Theodore Pink Tie Murray	Theodore Pink Tie Murray
 Candidate	Theodore R Schindler II	Theodore R Schindler II
-Candidate	Thomas 'Tommy' Hardee	"Thomas ""Tommy"" Hardee"
 Candidate	Thomas 'Tommy' Hardee	Thomas 'Tommy' Hardee
 Candidate	Thomas Cartwright	Thomas Cartwright
 Candidate	Thomas D Castelucci	Thomas D Castelucci
@@ -2840,7 +2764,6 @@ Candidate	Tim Nargi	Tim Nargi
 Candidate	Tim Schock	Tim Schock
 Candidate	Tim Smith	Tim Smith
 Candidate	Tim Spangler	Tim Spangler
-Candidate	Timothy A. 'Tim' Canova	"Timothy A. ""Tim"" Canova"
 Candidate	Timothy A. 'Tim' Canova	Timothy A. 'Tim' Canova
 Candidate	Timothy Fowler	Timothy Fowler
 Candidate	Timothy John Rossano	Timothy John Rossano
@@ -2861,7 +2784,6 @@ Candidate	Todd Chase	Todd Chase
 Candidate	Todd Donovan Jones	Todd Donovan Jones
 Candidate	Todd Gray	Todd Gray
 Candidate	Todd Marks	Todd Marks
-Candidate	Tom 'Steve' McQueen	"Tom ""Steve"" McQueen"
 Candidate	Tom 'Steve' McQueen	Tom 'Steve' McQueen
 Candidate	Tom Bexley	Tom Bexley
 Candidate	Tom Burt	Tom Burt
@@ -2958,12 +2880,10 @@ Candidate	Vincent Amarante	Vincent Amarante
 Candidate	Vincent Falcone	Vincent Falcone
 Candidate	Vincent Vinny Parlatore	Vincent Vinny Parlatore
 Candidate	Vinson Usher	Vinson Usher
-Candidate	Viorel 'Mr. Vio' Mocuta	"Viorel ""Mr. Vio"" Mocuta"
 Candidate	Viorel 'Mr. Vio' Mocuta	Viorel 'Mr. Vio' Mocuta
 Candidate	Virginia Fuller	Virginia Fuller
 Candidate	Vivianne del Rio	Vivianne del Rio
 Candidate	Voloria Manning	Voloria Manning
-Candidate	W Michael 'Mike' Trout	"W Michael ""Mike"" Trout"
 Candidate	W Michael 'Mike' Trout	W Michael 'Mike' Trout
 Candidate	W. Paul McCarthy	W. Paul McCarthy
 Candidate	Wade Eugene Higginbotham	Wade Eugene Higginbotham
@@ -2985,7 +2905,6 @@ Candidate	Wendy Joy DePaul	Wendy Joy DePaul
 Candidate	Wendy Krauss	Wendy Krauss
 Candidate	Wendy Villanueva	Wendy Villanueva
 Candidate	Wendy Williams	Wendy Williams
-Candidate	Wengay 'Newt' Newton	"Wengay ""Newt"" Newton"
 Candidate	Wengay 'Newt' Newton	Wengay 'Newt' Newton
 Candidate	Wes Hatcher	Wes Hatcher
 Candidate	Wesley Anne Beggs	Wesley Anne Beggs
@@ -2993,22 +2912,16 @@ Candidate	Wesley Scott Griffin	Wesley Scott Griffin
 Candidate	Wesley Wayne Wilson Jr.	Wesley Wayne Wilson Jr.
 Candidate	Weston Basil Harvey	Weston Basil Harvey
 Candidate	Weston Q. Funcheon	Weston Q. Funcheon
-Candidate	Wilbert T. 'Tee' Holloway	"Wilbert T. ""Tee"" Holloway"
 Candidate	Wilbert T. 'Tee' Holloway	Wilbert T. 'Tee' Holloway
 Candidate	Wilbur Harbin	Wilbur Harbin
 Candidate	Wilburn Baker	Wilburn Baker
 Candidate	Will Henry	Will Henry
 Candidate	Will Robinson	Will Robinson
 Candidate	Will Simmons	Will Simmons
-Candidate	William 'Bill' Chapman	"William ""Bill"" Chapman"
 Candidate	William 'Bill' Chapman	William 'Bill' Chapman
-Candidate	William 'Bill' DeHart	"William ""Bill"" DeHart"
 Candidate	William 'Bill' DeHart	William 'Bill' DeHart
-Candidate	William 'Bill' Wallace	"William ""Bill"" Wallace"
 Candidate	William 'Bill' Wallace	William 'Bill' Wallace
-Candidate	William 'Billy' Vale	"William ""Billy"" Vale"
 Candidate	William 'Billy' Vale	William 'Billy' Vale
-Candidate	William 'Eddie' Dalton	"William ""Eddie"" Dalton"
 Candidate	William 'Eddie' Dalton	William 'Eddie' Dalton
 Candidate	William (Bill) McCullough	William (Bill) McCullough
 Candidate	William A Guy	William A Guy
@@ -14553,3 +14466,224 @@ ReportingUnit	Florida;Washington County;Precinct 6	Washington;Precinct 6
 ReportingUnit	Florida;Washington County;Precinct 7	Washington;Precinct 7
 ReportingUnit	Florida;Washington County;Precinct 8	Washington;Precinct 8
 ReportingUnit	Florida;Washington County;Precinct 9	Washington;Precinct 9
+CandidateContest	FL Attorney General	FL;Attorney General
+CandidateContest	FL Chief Financial officer	FL;Chief Financial officer;statewide
+CandidateContest	FL Commissioner of Agriculture	FL;Commissioner of Agriculture;statewide
+CandidateContest	FL Governor	FL;Governor;statewide
+CandidateContest	FL House District 10	FL;State Representative;District 10
+CandidateContest	FL House District 21	FL;State Representative;District 21
+CandidateContest	FL Senate District 8	FL;State Senator;District 8
+CandidateContest	US House FL District 3	FL;US Representative;District 3
+CandidateContest	US Senate FL	FL;US Senator;statewide
+CandidateContest	US House FL District 5	FL;US Representative;District 5
+CandidateContest	FL House District 6	FL;State Representative;District 6
+CandidateContest	FL Senate District 2	FL;State Senator;District 2
+CandidateContest	US House FL District 2	FL;US Representative;District 2
+CandidateContest	FL House District 19	FL;State Representative;District 19
+CandidateContest	FL House District 50	FL;State Representative;District 50
+CandidateContest	FL House District 51	FL;State Representative;District 51
+CandidateContest	FL House District 52	FL;State Representative;District 52
+CandidateContest	FL House District 53	FL;State Representative;District 53
+CandidateContest	FL Senate District 14	FL;State Senator;District 14
+CandidateContest	US House FL District 8	FL;US Representative;District 8
+CandidateContest	FL House District 103	FL;State Representative;District 103
+CandidateContest	FL House District 105	FL;State Representative;District 105
+CandidateContest	FL House District 93	FL;State Representative;District 93
+CandidateContest	FL House District 98	FL;State Representative;District 98
+CandidateContest	FL Senate District 34	FL;State Senator;District 34
+CandidateContest	US House FL District 20	FL;US Representative;District 20
+CandidateContest	US House FL District 22	FL;US Representative;District 22
+CandidateContest	US House FL District 23	FL;US Representative;District 23
+CandidateContest	FL State Attorney District 20	FL;State Attorney;District 20
+CandidateContest	FL Senate District 23	FL;State Senator;District 23
+CandidateContest	FL Senate District 26	FL;State Senator;District 26
+CandidateContest	US House FL District 17	FL;US Representative;District 17
+CandidateContest	FL House District 34	FL;State Representative;District 34
+CandidateContest	FL Senate District 10	FL;State Senator;District 10
+CandidateContest	US House FL District 11	FL;US Representative;District 11
+CandidateContest	FL House District 106	FL;State Representative;District 106
+CandidateContest	FL House District 80	FL;State Representative;District 80
+CandidateContest	FL Senate District 28	FL;State Senator;District 28
+CandidateContest	US House FL District 19	FL;US Representative;District 19
+CandidateContest	US House FL District 25	FL;US Representative;District 25
+CandidateContest	FL House District 56	FL;State Representative;District 56
+CandidateContest	FL House District 11	FL;State Representative;District 11
+CandidateContest	FL House District 12	FL;State Representative;District 12
+CandidateContest	FL House District 15	FL;State Representative;District 15
+CandidateContest	FL House District 16	FL;State Representative;District 16
+CandidateContest	FL Senate District 4	FL;State Senator;District 4
+CandidateContest	US House FL District 4	FL;US Representative;District 4
+CandidateContest	FL House District 1	FL;State Representative;District 1
+CandidateContest	US House FL District 1	FL;US Representative;District 1
+CandidateContest	FL House District 24	FL;State Representative;District 24
+CandidateContest	US House FL District 6	FL;US Representative;District 6
+CandidateContest	FL House District 55	FL;State Representative;District 55
+CandidateContest	FL House District 35	FL;State Representative;District 35
+CandidateContest	FL House District 57	FL;State Representative;District 57
+CandidateContest	FL House District 58	FL;State Representative;District 58
+CandidateContest	FL House District 59	FL;State Representative;District 59
+CandidateContest	FL House District 60	FL;State Representative;District 60
+CandidateContest	FL House District 61	FL;State Representative;District 61
+CandidateContest	FL House District 63	FL;State Representative;District 63
+CandidateContest	FL House District 64	FL;State Representative;District 64
+CandidateContest	FL Senate District 18	FL;State Senator;District 18
+CandidateContest	FL Senate District 20	FL;State Senator;District 20
+CandidateContest	US House FL District 12	FL;US Representative;District 12
+CandidateContest	US House FL District 15	FL;US Representative;District 15
+CandidateContest	US House FL District 16	FL;US Representative;District 16
+CandidateContest	FL House District 54	FL;State Representative;District 54
+CandidateContest	FL House District 31	FL;State Representative;District 31
+CandidateContest	FL House District 32	FL;State Representative;District 32
+CandidateContest	FL House District 33	FL;State Representative;District 33
+CandidateContest	FL Senate District 12	FL;State Senator;District 12
+CandidateContest	FL Senate District 22	FL;State Senator;District 22
+CandidateContest	FL House District 76	FL;State Representative;District 76
+CandidateContest	FL House District 77	FL;State Representative;District 77
+CandidateContest	FL House District 78	FL;State Representative;District 78
+CandidateContest	FL House District 79	FL;State Representative;District 79
+CandidateContest	FL House District 22	FL;State Representative;District 22
+CandidateContest	FL House District 71	FL;State Representative;District 71
+CandidateContest	FL House District 73	FL;State Representative;District 73
+CandidateContest	FL House District 23	FL;State Representative;District 23
+CandidateContest	FL House District 82	FL;State Representative;District 82
+CandidateContest	FL House District 83	FL;State Representative;District 83
+CandidateContest	FL Senate District 25	FL;State Senator;District 25
+CandidateContest	US House FL District 18	FL;US Representative;District 18
+CandidateContest	FL House District 108	FL;State Representative;District 108
+CandidateContest	FL House District 111	FL;State Representative;District 111
+CandidateContest	FL House District 112	FL;State Representative;District 112
+CandidateContest	FL House District 113	FL;State Representative;District 113
+CandidateContest	FL House District 114	FL;State Representative;District 114
+CandidateContest	FL House District 115	FL;State Representative;District 115
+CandidateContest	FL House District 116	FL;State Representative;District 116
+CandidateContest	FL House District 118	FL;State Representative;District 118
+CandidateContest	FL House District 119	FL;State Representative;District 119
+CandidateContest	FL House District 120	FL;State Representative;District 120
+CandidateContest	FL Senate District 36	FL;State Senator;District 36
+CandidateContest	FL Senate District 40	FL;State Senator;District 40
+CandidateContest	US House FL District 26	FL;US Representative;District 26
+CandidateContest	US House FL District 27	FL;US Representative;District 27
+CandidateContest	FL House District 3	FL;State Representative;District 3
+CandidateContest	FL House District 4	FL;State Representative;District 4
+CandidateContest	FL House District 30	FL;State Representative;District 30
+CandidateContest	FL House District 44	FL;State Representative;District 44
+CandidateContest	FL House District 47	FL;State Representative;District 47
+CandidateContest	FL House District 48	FL;State Representative;District 48
+CandidateContest	FL House District 49	FL;State Representative;District 49
+CandidateContest	US House FL District 7	FL;US Representative;District 7
+CandidateContest	US House FL District 9	FL;US Representative;District 9
+CandidateContest	FL House District 39	FL;State Representative;District 39
+CandidateContest	FL House District 42	FL;State Representative;District 42
+CandidateContest	FL House District 85	FL;State Representative;District 85
+CandidateContest	FL House District 86	FL;State Representative;District 86
+CandidateContest	FL House District 87	FL;State Representative;District 87
+CandidateContest	FL House District 89	FL;State Representative;District 89
+CandidateContest	FL Senate District 30	FL;State Senator;District 30
+CandidateContest	FL House District 36	FL;State Representative;District 36
+CandidateContest	FL House District 37	FL;State Representative;District 37
+CandidateContest	FL House District 38	FL;State Representative;District 38
+CandidateContest	FL Senate District 16	FL;State Senator;District 16
+CandidateContest	FL House District 65	FL;State Representative;District 65
+CandidateContest	FL House District 66	FL;State Representative;District 66
+CandidateContest	FL House District 67	FL;State Representative;District 67
+CandidateContest	FL House District 69	FL;State Representative;District 69
+CandidateContest	FL Senate District 24	FL;State Senator;District 24
+CandidateContest	US House FL District 13	FL;US Representative;District 13
+CandidateContest	FL House District 40	FL;State Representative;District 40
+CandidateContest	FL House District 72	FL;State Representative;District 72
+CandidateContest	FL House District 74	FL;State Representative;District 74
+CandidateContest	FL House District 28	FL;State Representative;District 28
+CandidateContest	FL House District 29	FL;State Representative;District 29
+CandidateContest	FL House District 17	FL;State Representative;District 17
+CandidateContest	FL House District 84	FL;State Representative;District 84
+CandidateContest	FL House District 25	FL;State Representative;District 25
+CandidateContest	FL House District 26	FL;State Representative;District 26
+CandidateContest	FL House District 27	FL;State Representative;District 27
+Party	Democratic Party	democrat
+Party	Green Party Party	green party
+Party	Libertarian Party Of Florida Party	libertarian party of florida
+Party	none or unknown	no party affiliation
+Party	Reform Party Of Florida Party	reform party of florida
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+ReportingUnit	Florida;Alachua County	Florida;Alachua
+ReportingUnit	Florida;Baker County	Florida;Baker
+ReportingUnit	Florida;Bay County	Florida;Bay
+ReportingUnit	Florida;Bradford County	Florida;Bradford
+ReportingUnit	Florida;Brevard County	Florida;Brevard
+ReportingUnit	Florida;Broward County	Florida;Broward
+ReportingUnit	Florida;Calhoun County	Florida;Calhoun
+ReportingUnit	Florida;Charlotte County	Florida;Charlotte
+ReportingUnit	Florida;Citrus County	Florida;Citrus
+ReportingUnit	Florida;Clay County	Florida;Clay
+ReportingUnit	Florida;Collier County	Florida;Collier
+ReportingUnit	Florida;Columbia County	Florida;Columbia
+ReportingUnit	Florida;DeSoto County	Florida;Desoto
+ReportingUnit	Florida;Dixie County	Florida;Dixie
+ReportingUnit	Florida;Duval County	Florida;Duval
+ReportingUnit	Florida;Escambia County	Florida;Escambia
+ReportingUnit	Florida;Flagler County	Florida;Flagler
+ReportingUnit	Florida;Franklin County	Florida;Franklin
+ReportingUnit	Florida;Gadsden County	Florida;Gadsden
+ReportingUnit	Florida;Gilchrist County	Florida;Gilchrist
+ReportingUnit	Florida;Glades County	Florida;Glades
+ReportingUnit	Florida;Gulf County	Florida;Gulf
+ReportingUnit	Florida;Hamilton County	Florida;Hamilton
+ReportingUnit	Florida;Hardee County	Florida;Hardee
+ReportingUnit	Florida;Hendry County	Florida;Hendry
+ReportingUnit	Florida;Hernando County	Florida;Hernando
+ReportingUnit	Florida;Highlands County	Florida;Highlands
+ReportingUnit	Florida;Hillsborough County	Florida;Hillsborough
+ReportingUnit	Florida;Holmes County	Florida;Holmes
+ReportingUnit	Florida;Indian River County	Florida;Indian River
+ReportingUnit	Florida;Jackson County	Florida;Jackson
+ReportingUnit	Florida;Jefferson County	Florida;Jefferson
+ReportingUnit	Florida;Lafayette County	Florida;Lafayette
+ReportingUnit	Florida;Lake County	Florida;Lake
+ReportingUnit	Florida;Lee County	Florida;Lee
+ReportingUnit	Florida;Leon County	Florida;Leon
+ReportingUnit	Florida;Levy County	Florida;Levy
+ReportingUnit	Florida;Liberty County	Florida;Liberty
+ReportingUnit	Florida;Madison County	Florida;Madison
+ReportingUnit	Florida;Manatee County	Florida;Manatee
+ReportingUnit	Florida;Marion County	Florida;Marion
+ReportingUnit	Florida;Martin County	Florida;Martin
+ReportingUnit	Florida;Miami-Dade County	Florida;Miami-Dade
+ReportingUnit	Florida;Monroe County	Florida;Monroe
+ReportingUnit	Florida;Nassau County	Florida;Nassau
+ReportingUnit	Florida;Okaloosa County	Florida;Okaloosa
+ReportingUnit	Florida;Okeechobee County	Florida;Okeechobee
+ReportingUnit	Florida;Orange County	Florida;Orange
+ReportingUnit	Florida;Osceola County	Florida;Osceola
+ReportingUnit	Florida;Palm Beach County	Florida;Palm Beach
+ReportingUnit	Florida;Pasco County	Florida;Pasco
+ReportingUnit	Florida;Pinellas County	Florida;Pinellas
+ReportingUnit	Florida;Polk County	Florida;Polk
+ReportingUnit	Florida;Putnam County	Florida;Putnam
+ReportingUnit	Florida;Santa Rosa County	Florida;Santa Rosa
+ReportingUnit	Florida;Sarasota County	Florida;Sarasota
+ReportingUnit	Florida;Seminole County	Florida;Seminole
+ReportingUnit	Florida;St. Johns County	Florida;St. Johns
+ReportingUnit	Florida;St. Lucie County	Florida;St. Lucie
+ReportingUnit	Florida;Sumter County	Florida;Sumter
+ReportingUnit	Florida;Suwannee County	Florida;Suwannee
+ReportingUnit	Florida;Taylor County	Florida;Taylor
+ReportingUnit	Florida;Union County	Florida;Union
+ReportingUnit	Florida;Volusia County	Florida;Volusia
+ReportingUnit	Florida;Wakulla County	Florida;Wakulla
+ReportingUnit	Florida;Walton County	Florida;Walton
+ReportingUnit	Florida;Washington County	Florida;Washington
+CandidateContest	FL Attorney General	FL;Attorney General;statewide

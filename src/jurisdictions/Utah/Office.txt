@@ -1,4 +1,11 @@
 Name	ElectionDistrict
+UT State Board of Education District 14	Utah;UT State Board of Education District 14
+UT State Board of Education District 1	Utah;UT State Board of Education District 1
+UT State Board of Education District 5	Utah;UT State Board of Education District 5
+UT State Board of Education District 3	Utah;UT State Board of Education District 3
+UT State Board of Education District 6	Utah;UT State Board of Education District 6
+UT State Board of Education District 9	Utah;UT State Board of Education District 9
+UT State Board of Education District 2	Utah;UT State Board of Education District 2
 UT House District 1	Utah;UT House District 1
 UT House District 2	Utah;UT House District 2
 UT House District 3	Utah;UT House District 3

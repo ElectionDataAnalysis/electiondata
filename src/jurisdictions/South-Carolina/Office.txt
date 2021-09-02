@@ -182,7 +182,7 @@ SC Secretary of State	South Carolina
 US Senate SC	South Carolina
 SC Attorney General	South Carolina
 SC Lieutenant Governor	South Carolina
-SC Treasurer	South Carolina
+SC State Treasurer	South Carolina
 SC Adjutant General	South Carolina
 SC Commissioner of Agriculture	South Carolina
 SC State Superintendent of Education	South Carolina

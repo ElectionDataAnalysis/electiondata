@@ -1,4 +1,11 @@
 Name	ReportingUnitType
+Utah;UT State Board of Education District 14	state-education-board-district
+Utah;UT State Board of Education District 1	state-education-board-district
+Utah;UT State Board of Education District 5	state-education-board-district
+Utah;UT State Board of Education District 3	state-education-board-district
+Utah;UT State Board of Education District 6	state-education-board-district
+Utah;UT State Board of Education District 9	state-education-board-district
+Utah;UT State Board of Education District 2	state-education-board-district
 Utah;US House UT District 1	congressional
 Utah;US House UT District 2	congressional
 Utah;US House UT District 3	congressional

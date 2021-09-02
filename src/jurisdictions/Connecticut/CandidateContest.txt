@@ -197,4 +197,5 @@ US Senate CT	1	US Senate CT
 CT Attorney General	1	CT Attorney General	
 CT Lieutenant Governor	1	CT Lieutenant Governor	
 CT Treasurer	1	CT Treasurer	
-CT Secretary of State	1	CT Secretary of State	
+CT Comptroller	1	CT Comptroller
+CT Secretary of the State	1	CT Secretary of the State

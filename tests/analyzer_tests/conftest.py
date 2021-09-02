@@ -1,32 +1,51 @@
 import pytest
 import os
+import datetime
 from pathlib import Path
-from electiondata import data_exists, external_data_exists
+from electiondata import DataLoader
 
 
 def pytest_addoption(parser):
     parser.addoption(
-        "--runtime",
+        "--param_file",
         action="store",
         default=os.path.join(Path(__file__).parents[1].absolute(), "run_time.ini"),
     )
 
 
-def pytest_generate_tests(metafunc):
-    # This is called for every test. Only get/set command line arguments
-    # if the argument is specified in the list of test "fixturenames".
-    option_value = metafunc.config.option.runtime
-    if "runtime" in metafunc.fixturenames and option_value is not None:
-        metafunc.parametrize("runtime", [option_value])
+# set up fixtures so tests can call them as arguments
+@pytest.fixture(scope="session")
+def param_file(request):
+    return request.config.getoption("--param_file")
 
 
 @pytest.fixture(scope="session")
-def ok(runtime):
-    return {
-        "ga16g": data_exists("2016 General", "Georgia", p_path=runtime),
-        "ga18g": data_exists("2018 General", "Georgia", p_path=runtime),
-        "ga20p": data_exists("2020 Primary", "Georgia", p_path=runtime),
-        "nc18g": data_exists("2018 General", "North Carolina", p_path=runtime),
-        "ak16g": data_exists("2016 General", "Alaska", p_path=runtime),
-        "ga18census": external_data_exists("2018 General", "Georgia", p_path=runtime),
-    }
+def analyzer(param_file):
+    # NB: don't create temp db yet -- it will be created in test_load_test_data
+    dl = DataLoader(param_file=param_file)
+
+    # name new db
+    ts = datetime.datetime.now().strftime("%m%d_%H%M")
+    new_dbname = f"pytest_{ts}"
+
+    # Now load test data
+    tests_path = os.path.join(Path(dl.d["repository_content_root"]).parent, "tests")
+    db_dump = os.path.join(
+        tests_path, "000_data_for_pytest", "postgres_test_db_dump.tar"
+    )
+    err_str = dl.load_data_from_db_dump(
+        dbname=new_dbname, dump_file=db_dump, delete_existing=True
+    )
+
+    # point dl to new db
+    dl.change_db(new_db_name=new_dbname, db_param_file=param_file, db_params=None)
+    yield dl.analyzer
+    dl.close_and_erase()
+
+
+tests_path = Path(__file__).parents[1].absolute()
+
+
+@pytest.fixture(scope="session")
+def tests_path():
+    return Path(__file__).parents[1].absolute()

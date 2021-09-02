@@ -96,52 +96,63 @@ Nebraska;Webster County	county
 Nebraska;Wheeler County	county
 Nebraska;York County	county
 Nebraska	state
-Nebraska;NE House District 1	state-house
-Nebraska;NE House District 10	state-house
-Nebraska;NE House District 11	state-house
-Nebraska;NE House District 12	state-house
-Nebraska;NE House District 13	state-house
-Nebraska;NE House District 14	state-house
-Nebraska;NE House District 15	state-house
-Nebraska;NE House District 16	state-house
-Nebraska;NE House District 17	state-house
-Nebraska;NE House District 18	state-house
-Nebraska;NE House District 19	state-house
-Nebraska;NE House District 2	state-house
-Nebraska;NE House District 20	state-house
-Nebraska;NE House District 21	state-house
-Nebraska;NE House District 22	state-house
-Nebraska;NE House District 23	state-house
-Nebraska;NE House District 24	state-house
-Nebraska;NE House District 25	state-house
-Nebraska;NE House District 26	state-house
-Nebraska;NE House District 27	state-house
-Nebraska;NE House District 28	state-house
-Nebraska;NE House District 29	state-house
-Nebraska;NE House District 3	state-house
-Nebraska;NE House District 30	state-house
-Nebraska;NE House District 31	state-house
-Nebraska;NE House District 32	state-house
-Nebraska;NE House District 33	state-house
-Nebraska;NE House District 34	state-house
-Nebraska;NE House District 35	state-house
-Nebraska;NE House District 36	state-house
-Nebraska;NE House District 37	state-house
-Nebraska;NE House District 38	state-house
-Nebraska;NE House District 39	state-house
-Nebraska;NE House District 4	state-house
-Nebraska;NE House District 40	state-house
-Nebraska;NE House District 41	state-house
-Nebraska;NE House District 42	state-house
-Nebraska;NE House District 43	state-house
-Nebraska;NE House District 44	state-house
-Nebraska;NE House District 45	state-house
-Nebraska;NE House District 46	state-house
-Nebraska;NE House District 47	state-house
-Nebraska;NE House District 48	state-house
-Nebraska;NE House District 49	state-house
-Nebraska;NE House District 5	state-house
-Nebraska;NE House District 6	state-house
-Nebraska;NE House District 7	state-house
-Nebraska;NE House District 8	state-house
-Nebraska;NE House District 9	state-house
+Nebraska;NE Senate District 1	state-senate
+Nebraska;NE Senate District 10	state-senate
+Nebraska;NE Senate District 11	state-senate
+Nebraska;NE Senate District 12	state-senate
+Nebraska;NE Senate District 13	state-senate
+Nebraska;NE Senate District 14	state-senate
+Nebraska;NE Senate District 15	state-senate
+Nebraska;NE Senate District 16	state-senate
+Nebraska;NE Senate District 17	state-senate
+Nebraska;NE Senate District 18	state-senate
+Nebraska;NE Senate District 19	state-senate
+Nebraska;NE Senate District 2	state-senate
+Nebraska;NE Senate District 20	state-senate
+Nebraska;NE Senate District 21	state-senate
+Nebraska;NE Senate District 22	state-senate
+Nebraska;NE Senate District 23	state-senate
+Nebraska;NE Senate District 24	state-senate
+Nebraska;NE Senate District 25	state-senate
+Nebraska;NE Senate District 26	state-senate
+Nebraska;NE Senate District 27	state-senate
+Nebraska;NE Senate District 28	state-senate
+Nebraska;NE Senate District 29	state-senate
+Nebraska;NE Senate District 3	state-senate
+Nebraska;NE Senate District 30	state-senate
+Nebraska;NE Senate District 31	state-senate
+Nebraska;NE Senate District 32	state-senate
+Nebraska;NE Senate District 33	state-senate
+Nebraska;NE Senate District 34	state-senate
+Nebraska;NE Senate District 35	state-senate
+Nebraska;NE Senate District 36	state-senate
+Nebraska;NE Senate District 37	state-senate
+Nebraska;NE Senate District 38	state-senate
+Nebraska;NE Senate District 39	state-senate
+Nebraska;NE Senate District 4	state-senate
+Nebraska;NE Senate District 40	state-senate
+Nebraska;NE Senate District 41	state-senate
+Nebraska;NE Senate District 42	state-senate
+Nebraska;NE Senate District 43	state-senate
+Nebraska;NE Senate District 44	state-senate
+Nebraska;NE Senate District 45	state-senate
+Nebraska;NE Senate District 46	state-senate
+Nebraska;NE Senate District 47	state-senate
+Nebraska;NE Senate District 48	state-senate
+Nebraska;NE Senate District 49	state-senate
+Nebraska;NE Senate District 5	state-senate
+Nebraska;NE Senate District 6	state-senate
+Nebraska;NE Senate District 7	state-senate
+Nebraska;NE Senate District 8	state-senate
+Nebraska;NE Senate District 9	state-senate
+Nebraska;NE Member of the State Board of Education District 6	education-board-district
+Nebraska;NE Member of the State Board of Education District 7	education-board-district
+Nebraska;NE Member of the Board of Regents University of Nebraska District 3	regent-district
+Nebraska;NE Member of the Board of Regents University of Nebraska District 5	regent-district
+Nebraska;NE Member of the State Board of Education District 5	education-board-district
+Nebraska;NE Public Service Commissioner District 1	public-service-district
+Nebraska;NE Public Service Commissioner District 3	public-service-district
+Nebraska;NE Member of the Board of Regents University of Nebraska District 4	regent-district
+Nebraska;NE Member of the Board of Regents University of Nebraska District 8	regent-district
+Nebraska;NE Member of the State Board of Education District 8	education-board-district
+

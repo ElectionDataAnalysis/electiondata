@@ -3826,3 +3826,773 @@ ReportingUnit	Pennsylvania;Wyoming County	WYOMING
 ReportingUnit	Pennsylvania;Wyoming County	fips42131
 ReportingUnit	Pennsylvania;York County	YORK
 ReportingUnit	Pennsylvania;York County	fips42133
+CandidateContest	PA Governor	PA;Governor;statewide
+CandidateContest	PA House District 193	PA;State Representative;District 193
+CandidateContest	PA House District 91	PA;State Representative;District 91
+CandidateContest	US House PA District 13	PA;US Representative;District 13
+CandidateContest	US Senate PA	PA;US Senator;statewide
+CandidateContest	PA House District 16	PA;State Representative;District 16
+CandidateContest	PA House District 19	PA;State Representative;District 19
+CandidateContest	PA House District 20	PA;State Representative;District 20
+CandidateContest	PA House District 21	PA;State Representative;District 21
+CandidateContest	PA House District 23	PA;State Representative;District 23
+CandidateContest	PA House District 24	PA;State Representative;District 24
+CandidateContest	PA House District 25	PA;State Representative;District 25
+CandidateContest	PA House District 27	PA;State Representative;District 27
+CandidateContest	PA House District 28	PA;State Representative;District 28
+CandidateContest	PA House District 30	PA;State Representative;District 30
+CandidateContest	PA House District 32	PA;State Representative;District 32
+CandidateContest	PA House District 33	PA;State Representative;District 33
+CandidateContest	PA House District 34	PA;State Representative;District 34
+CandidateContest	PA House District 35	PA;State Representative;District 35
+CandidateContest	PA House District 36	PA;State Representative;District 36
+CandidateContest	PA House District 38	PA;State Representative;District 38
+CandidateContest	PA House District 39	PA;State Representative;District 39
+CandidateContest	PA House District 40	PA;State Representative;District 40
+CandidateContest	PA House District 42	PA;State Representative;District 42
+CandidateContest	PA House District 44	PA;State Representative;District 44
+CandidateContest	PA House District 45	PA;State Representative;District 45
+CandidateContest	PA House District 46	PA;State Representative;District 46
+CandidateContest	PA House District 54	PA;State Representative;District 54
+CandidateContest	PA Senate District 38	PA;State Senator;District 38
+CandidateContest	PA Senate District 42	PA;State Senator;District 42
+CandidateContest	US House PA District 17	PA;US Representative;District 17
+CandidateContest	US House PA District 18	PA;US Representative;District 18
+CandidateContest	PA House District 55	PA;State Representative;District 55
+CandidateContest	PA House District 60	PA;State Representative;District 60
+CandidateContest	PA House District 63	PA;State Representative;District 63
+CandidateContest	US House PA District 15	PA;US Representative;District 15
+CandidateContest	PA House District 10	PA;State Representative;District 10
+CandidateContest	PA House District 14	PA;State Representative;District 14
+CandidateContest	PA House District 15	PA;State Representative;District 15
+CandidateContest	PA Senate District 46	PA;State Senator;District 46
+CandidateContest	PA House District 69	PA;State Representative;District 69
+CandidateContest	PA House District 78	PA;State Representative;District 78
+CandidateContest	PA House District 124	PA;State Representative;District 124
+CandidateContest	PA House District 126	PA;State Representative;District 126
+CandidateContest	PA House District 127	PA;State Representative;District 127
+CandidateContest	PA House District 128	PA;State Representative;District 128
+CandidateContest	PA House District 129	PA;State Representative;District 129
+CandidateContest	PA House District 130	PA;State Representative;District 130
+CandidateContest	PA House District 134	PA;State Representative;District 134
+CandidateContest	PA House District 187	PA;State Representative;District 187
+CandidateContest	PA House District 5	PA;State Representative;District 5
+CandidateContest	PA Senate District 24	PA;State Senator;District 24
+CandidateContest	PA Senate District 44	PA;State Senator;District 44
+CandidateContest	US House PA District 4	PA;US Representative;District 4
+CandidateContest	US House PA District 6	PA;US Representative;District 6
+CandidateContest	US House PA District 9	PA;US Representative;District 9
+CandidateContest	PA House District 79	PA;State Representative;District 79
+CandidateContest	PA House District 80	PA;State Representative;District 80
+CandidateContest	PA Senate District 30	PA;State Senator;District 30
+CandidateContest	PA House District 110	PA;State Representative;District 110
+CandidateContest	PA House District 68	PA;State Representative;District 68
+CandidateContest	US House PA District 12	PA;US Representative;District 12
+CandidateContest	PA House District 140	PA;State Representative;District 140
+CandidateContest	PA House District 141	PA;State Representative;District 141
+CandidateContest	PA House District 142	PA;State Representative;District 142
+CandidateContest	PA House District 143	PA;State Representative;District 143
+CandidateContest	PA House District 144	PA;State Representative;District 144
+CandidateContest	PA House District 145	PA;State Representative;District 145
+CandidateContest	PA House District 178	PA;State Representative;District 178
+CandidateContest	PA House District 18	PA;State Representative;District 18
+CandidateContest	PA House District 29	PA;State Representative;District 29
+CandidateContest	PA House District 31	PA;State Representative;District 31
+CandidateContest	PA Senate District 10	PA;State Senator;District 10
+CandidateContest	PA Senate District 12	PA;State Senator;District 12
+CandidateContest	PA Senate District 6	PA;State Senator;District 6
+CandidateContest	US House PA District 1	PA;US Representative;District 1
+CandidateContest	PA House District 11	PA;State Representative;District 11
+CandidateContest	PA House District 12	PA;State Representative;District 12
+CandidateContest	PA House District 64	PA;State Representative;District 64
+CandidateContest	PA House District 8	PA;State Representative;District 8
+CandidateContest	US House PA District 16	PA;US Representative;District 16
+CandidateContest	PA House District 71	PA;State Representative;District 71
+CandidateContest	PA House District 72	PA;State Representative;District 72
+CandidateContest	PA House District 73	PA;State Representative;District 73
+CandidateContest	PA House District 67	PA;State Representative;District 67
+CandidateContest	PA House District 122	PA;State Representative;District 122
+CandidateContest	PA Senate District 14	PA;State Senator;District 14
+CandidateContest	PA House District 171	PA;State Representative;District 171
+CandidateContest	PA House District 76	PA;State Representative;District 76
+CandidateContest	PA House District 77	PA;State Representative;District 77
+CandidateContest	PA House District 81	PA;State Representative;District 81
+CandidateContest	PA Senate District 34	PA;State Senator;District 34
+CandidateContest	PA House District 13	PA;State Representative;District 13
+CandidateContest	PA House District 155	PA;State Representative;District 155
+CandidateContest	PA House District 156	PA;State Representative;District 156
+CandidateContest	PA House District 157	PA;State Representative;District 157
+CandidateContest	PA House District 158	PA;State Representative;District 158
+CandidateContest	PA House District 160	PA;State Representative;District 160
+CandidateContest	PA House District 167	PA;State Representative;District 167
+CandidateContest	PA House District 26	PA;State Representative;District 26
+CandidateContest	PA House District 74	PA;State Representative;District 74
+CandidateContest	PA Senate District 26	PA;State Senator;District 26
+CandidateContest	US House PA District 5	PA;US Representative;District 5
+CandidateContest	PA House District 75	PA;State Representative;District 75
+CandidateContest	PA House District 107	PA;State Representative;District 107
+CandidateContest	PA House District 109	PA;State Representative;District 109
+CandidateContest	PA House District 17	PA;State Representative;District 17
+CandidateContest	PA House District 6	PA;State Representative;District 6
+CandidateContest	PA House District 65	PA;State Representative;District 65
+CandidateContest	PA Senate District 50	PA;State Senator;District 50
+CandidateContest	PA House District 199	PA;State Representative;District 199
+CandidateContest	PA House District 86	PA;State Representative;District 86
+CandidateContest	PA House District 87	PA;State Representative;District 87
+CandidateContest	PA House District 88	PA;State Representative;District 88
+CandidateContest	PA House District 92	PA;State Representative;District 92
+CandidateContest	US House PA District 10	PA;US Representative;District 10
+CandidateContest	PA House District 103	PA;State Representative;District 103
+CandidateContest	PA House District 104	PA;State Representative;District 104
+CandidateContest	PA House District 105	PA;State Representative;District 105
+CandidateContest	PA House District 106	PA;State Representative;District 106
+CandidateContest	PA House District 125	PA;State Representative;District 125
+CandidateContest	PA House District 98	PA;State Representative;District 98
+CandidateContest	PA Senate District 48	PA;State Senator;District 48
+CandidateContest	PA House District 159	PA;State Representative;District 159
+CandidateContest	PA House District 161	PA;State Representative;District 161
+CandidateContest	PA House District 162	PA;State Representative;District 162
+CandidateContest	PA House District 163	PA;State Representative;District 163
+CandidateContest	PA House District 164	PA;State Representative;District 164
+CandidateContest	PA House District 165	PA;State Representative;District 165
+CandidateContest	PA House District 166	PA;State Representative;District 166
+CandidateContest	PA House District 168	PA;State Representative;District 168
+CandidateContest	PA House District 185	PA;State Representative;District 185
+CandidateContest	PA House District 191	PA;State Representative;District 191
+CandidateContest	PA Senate District 8	PA;State Senator;District 8
+CandidateContest	PA House District 1	PA;State Representative;District 1
+CandidateContest	PA House District 2	PA;State Representative;District 2
+CandidateContest	PA House District 3	PA;State Representative;District 3
+CandidateContest	PA House District 4	PA;State Representative;District 4
+CandidateContest	PA House District 49	PA;State Representative;District 49
+CandidateContest	PA House District 50	PA;State Representative;District 50
+CandidateContest	PA House District 51	PA;State Representative;District 51
+CandidateContest	PA House District 52	PA;State Representative;District 52
+CandidateContest	PA Senate District 32	PA;State Senator;District 32
+CandidateContest	US House PA District 14	PA;US Representative;District 14
+CandidateContest	PA House District 82	PA;State Representative;District 82
+CandidateContest	PA House District 89	PA;State Representative;District 89
+CandidateContest	PA House District 90	PA;State Representative;District 90
+CandidateContest	PA House District 62	PA;State Representative;District 62
+CandidateContest	PA House District 66	PA;State Representative;District 66
+CandidateContest	PA House District 112	PA;State Representative;District 112
+CandidateContest	PA House District 113	PA;State Representative;District 113
+CandidateContest	PA House District 114	PA;State Representative;District 114
+CandidateContest	PA House District 117	PA;State Representative;District 117
+CandidateContest	PA House District 118	PA;State Representative;District 118
+CandidateContest	PA Senate District 22	PA;State Senator;District 22
+CandidateContest	US House PA District 8	PA;US Representative;District 8
+CandidateContest	PA House District 100	PA;State Representative;District 100
+CandidateContest	PA House District 37	PA;State Representative;District 37
+CandidateContest	PA House District 41	PA;State Representative;District 41
+CandidateContest	PA House District 43	PA;State Representative;District 43
+CandidateContest	PA House District 96	PA;State Representative;District 96
+CandidateContest	PA House District 97	PA;State Representative;District 97
+CandidateContest	PA House District 99	PA;State Representative;District 99
+CandidateContest	PA Senate District 36	PA;State Senator;District 36
+CandidateContest	US House PA District 11	PA;US Representative;District 11
+CandidateContest	PA House District 9	PA;State Representative;District 9
+CandidateContest	PA House District 101	PA;State Representative;District 101
+CandidateContest	PA House District 102	PA;State Representative;District 102
+CandidateContest	PA House District 131	PA;State Representative;District 131
+CandidateContest	PA House District 132	PA;State Representative;District 132
+CandidateContest	PA House District 133	PA;State Representative;District 133
+CandidateContest	PA House District 183	PA;State Representative;District 183
+CandidateContest	PA House District 22	PA;State Representative;District 22
+CandidateContest	PA Senate District 16	PA;State Senator;District 16
+CandidateContest	PA Senate District 18	PA;State Senator;District 18
+CandidateContest	US House PA District 7	PA;US Representative;District 7
+CandidateContest	PA House District 116	PA;State Representative;District 116
+CandidateContest	PA House District 119	PA;State Representative;District 119
+CandidateContest	PA House District 120	PA;State Representative;District 120
+CandidateContest	PA House District 121	PA;State Representative;District 121
+CandidateContest	PA Senate District 20	PA;State Senator;District 20
+CandidateContest	PA House District 83	PA;State Representative;District 83
+CandidateContest	PA House District 84	PA;State Representative;District 84
+CandidateContest	PA House District 7	PA;State Representative;District 7
+CandidateContest	PA House District 115	PA;State Representative;District 115
+CandidateContest	PA House District 176	PA;State Representative;District 176
+CandidateContest	PA House District 189	PA;State Representative;District 189
+CandidateContest	PA Senate District 40	PA;State Senator;District 40
+CandidateContest	PA House District 146	PA;State Representative;District 146
+CandidateContest	PA House District 147	PA;State Representative;District 147
+CandidateContest	PA House District 148	PA;State Representative;District 148
+CandidateContest	PA House District 149	PA;State Representative;District 149
+CandidateContest	PA House District 150	PA;State Representative;District 150
+CandidateContest	PA House District 151	PA;State Representative;District 151
+CandidateContest	PA House District 152	PA;State Representative;District 152
+CandidateContest	PA House District 153	PA;State Representative;District 153
+CandidateContest	PA House District 154	PA;State Representative;District 154
+CandidateContest	PA House District 172	PA;State Representative;District 172
+CandidateContest	PA House District 194	PA;State Representative;District 194
+CandidateContest	PA House District 53	PA;State Representative;District 53
+CandidateContest	PA House District 61	PA;State Representative;District 61
+CandidateContest	PA House District 70	PA;State Representative;District 70
+CandidateContest	PA Senate District 4	PA;State Senator;District 4
+CandidateContest	PA House District 135	PA;State Representative;District 135
+CandidateContest	PA House District 136	PA;State Representative;District 136
+CandidateContest	PA House District 137	PA;State Representative;District 137
+CandidateContest	PA House District 138	PA;State Representative;District 138
+CandidateContest	PA House District 108	PA;State Representative;District 108
+CandidateContest	PA House District 170	PA;State Representative;District 170
+CandidateContest	PA House District 173	PA;State Representative;District 173
+CandidateContest	PA House District 174	PA;State Representative;District 174
+CandidateContest	PA House District 175	PA;State Representative;District 175
+CandidateContest	PA House District 177	PA;State Representative;District 177
+CandidateContest	PA House District 179	PA;State Representative;District 179
+CandidateContest	PA House District 180	PA;State Representative;District 180
+CandidateContest	PA House District 181	PA;State Representative;District 181
+CandidateContest	PA House District 182	PA;State Representative;District 182
+CandidateContest	PA House District 184	PA;State Representative;District 184
+CandidateContest	PA House District 186	PA;State Representative;District 186
+CandidateContest	PA House District 188	PA;State Representative;District 188
+CandidateContest	PA House District 190	PA;State Representative;District 190
+CandidateContest	PA House District 192	PA;State Representative;District 192
+CandidateContest	PA House District 195	PA;State Representative;District 195
+CandidateContest	PA House District 197	PA;State Representative;District 197
+CandidateContest	PA House District 198	PA;State Representative;District 198
+CandidateContest	PA House District 200	PA;State Representative;District 200
+CandidateContest	PA House District 201	PA;State Representative;District 201
+CandidateContest	PA House District 202	PA;State Representative;District 202
+CandidateContest	PA House District 203	PA;State Representative;District 203
+CandidateContest	PA Senate District 2	PA;State Senator;District 2
+CandidateContest	US House PA District 2	PA;US Representative;District 2
+CandidateContest	US House PA District 3	PA;US Representative;District 3
+CandidateContest	PA House District 139	PA;State Representative;District 139
+CandidateContest	PA House District 123	PA;State Representative;District 123
+CandidateContest	PA House District 85	PA;State Representative;District 85
+CandidateContest	PA House District 59	PA;State Representative;District 59
+CandidateContest	PA House District 111	PA;State Representative;District 111
+CandidateContest	PA House District 48	PA;State Representative;District 48
+CandidateContest	PA House District 56	PA;State Representative;District 56
+CandidateContest	PA House District 57	PA;State Representative;District 57
+CandidateContest	PA House District 58	PA;State Representative;District 58
+CandidateContest	PA House District 169	PA;State Representative;District 169
+CandidateContest	PA House District 196	PA;State Representative;District 196
+CandidateContest	PA House District 47	PA;State Representative;District 47
+CandidateContest	PA House District 93	PA;State Representative;District 93
+CandidateContest	PA House District 94	PA;State Representative;District 94
+CandidateContest	PA House District 95	PA;State Representative;District 95
+CandidateContest	PA Senate District 28	PA;State Senator;District 28
+Candidate	Aaron D. Kaufer	Aaron D. Kaufer
+Candidate	Aaron Joseph Bernstine	Aaron Joseph Bernstine
+Candidate	Adam Anthony Rodriguez	Adam Anthony Rodriguez
+Candidate	Adam J Ravenstahl	Adam J Ravenstahl
+Candidate	Adam Reinhardt	Adam Reinhardt
+Candidate	Airneezer J Page-Delahaye	Airneezer J Page-Delahaye
+Candidate	Alexander T Charlton	Alexander T Charlton
+Candidate	Amber Little Turner	Amber Little Turner
+Candidate	Amy Cozze	Amy Cozze
+Candidate	Amy Fazio	Amy Fazio
+Candidate	Andrew Franklin Dixon	Andrew Franklin Dixon
+Candidate	Andrew Lewis	Andrew Lewis
+Candidate	Andrew Scott Lee	Andrew Scott Lee
+Candidate	Angel Cruz	Angel Cruz
+Candidate	Anita Astorino Kulik	Anita Astorino Kulik
+Candidate	Anthony M Deluca	Anthony M Deluca
+Candidate	Anthony Sposato	Anthony Sposato
+Candidate	Anthony Thomas Harrell	Anthony Thomas Harrell
+Candidate	AnthonyH Williams	AnthonyH Williams
+Candidate	Anton Andrew	Anton Andrew
+Candidate	Arthur L Haywood III	Arthur L Haywood III
+Candidate	Austin Davis	Austin Davis
+Candidate	Baltazar Edson Rubio	Baltazar Edson Rubio
+Candidate	Barbara J Gleim	Barbara J Gleim
+Candidate	Barry J Jozwiak	Barry J Jozwiak
+Candidate	Ben Sanchez	Ben Sanchez
+Candidate	Bibiana Boerio	Bibiana Boerio
+Candidate	Bradley T Roae	Bradley T Roae
+Candidate	Brandon J Markosek	Brandon J Markosek
+Candidate	Brendan F Boyle	Brendan F Boyle
+Candidate	Brent M Ottaway	Brent M Ottaway
+Candidate	Brett R Miller	Brett R Miller
+Candidate	Brian J Kirkland	Brian J Kirkland
+Candidate	Brian K Fitzpatrick	Brian K Fitzpatrick
+Candidate	Brian K Sims	Brian K Sims
+Candidate	Brian Kline	Brian Kline
+Candidate	Brian L Ellis	Brian L Ellis
+Candidate	Bryan D Cutler	Bryan D Cutler
+Candidate	Bryan E Barbin	Bryan E Barbin
+Candidate	Bryan E Leib	Bryan E Leib
+Candidate	Byron Flavin Timmins	Byron Flavin Timmins
+Candidate	Camera C Bartolotta	Camera C Bartolotta
+Candidate	Carl Walker Metzgar	Carl Walker Metzgar
+Candidate	Carol Delores Hill-Evans	Carol Delores Hill-Evans
+Candidate	Carolyn Comitta	Carolyn Comitta
+Candidate	Carrie L Heath	Carrie L Heath
+Candidate	Catherine M Harper	Catherine M Harper
+Candidate	Cesar F Liriano	Cesar F Liriano
+Candidate	Charles M Boust	Charles M Boust
+Candidate	Christina Jampoler Houlahan	Christina Jampoler Houlahan
+Candidate	ChristinaD Sappey	ChristinaD Sappey
+Candidate	Christine M Tartaglione	Christine M Tartaglione
+Candidate	Christopher B Quinn	Christopher B Quinn
+Candidate	Christopher Mundiath	Christopher Mundiath
+Candidate	Christopher Rabb	Christopher Rabb
+Candidate	Christopher Sainato	Christopher Sainato
+Candidate	Clare Helen Dooley	Clare Helen Dooley
+Candidate	Clark Alexander Mitchell Jr	Clark Alexander Mitchell Jr
+Candidate	Claudette Williams	Claudette Williams
+Candidate	Clinton Dennis Owlett	Clinton Dennis Owlett
+Candidate	Collin Warren	Collin Warren
+Candidate	Conor James Lamb	Conor James Lamb
+Candidate	Conrad Warner	Conrad Warner
+Candidate	CraigT Staats	CraigT Staats
+Candidate	Cris E Dush	Cris E Dush
+Candidate	Curtis G Sonney	Curtis G Sonney
+Candidate	Dale Allen Hamby	Dale Allen Hamby
+Candidate	Dale R Kerns Jr	Dale R Kerns Jr
+Candidate	Dan B. Frankel	Dan B. Frankel
+Candidate	Dan K Williams	Dan K Williams
+Candidate	Dana Hamp Gulick	Dana Hamp Gulick
+Candidate	Daniel Burton Smith Jr	Daniel Burton Smith Jr
+Candidate	Daniel David	Daniel David
+Candidate	Daniel J Deasy	Daniel J Deasy
+Candidate	Daniel L Miller	Daniel L Miller
+Candidate	Daniel Meuser	Daniel Meuser
+Candidate	Daniel P Moul	Daniel P Moul
+Candidate	Danielle Friel Otten	Danielle Friel Otten
+Candidate	DaniloR. Burgos	DaniloR. Burgos
+Candidate	Darcelle L Slappy	Darcelle L Slappy
+Candidate	Daryl D Metcalfe	Daryl D Metcalfe
+Candidate	Daryl Kirk Boling	Daryl Kirk Boling
+Candidate	David C Parker	David C Parker
+Candidate	David H Zimmerman	David H Zimmerman
+Candidate	David M Delloso	David M Delloso
+Candidate	David M Maloney Sr	David M Maloney Sr
+Candidate	David R Millard	David R Millard
+Candidate	David S Hickernell	David S Hickernell
+Candidate	David Torres	David Torres
+Candidate	Dawn Wetzel Keefer	Dawn Wetzel Keefer
+Candidate	Dean Donaher	Dean Donaher
+Candidate	Deborah Turner Baughman	Deborah Turner Baughman
+Candidate	Delma Rivera-Lytle	Delma Rivera-Lytle
+Candidate	Dennis Wolff	Dennis Wolff
+Candidate	Dominic J Pirocchi	Dominic J Pirocchi
+Candidate	Donald Cook	Donald Cook
+Candidate	Donna Bullock	Donna Bullock
+Candidate	Donna Iannone	Donna Iannone
+Candidate	Donna R Oberlander	Donna R Oberlander
+Candidate	Douglas B Metcalfe	Douglas B Metcalfe
+Candidate	Douglas D Hunt	Douglas D Hunt
+Candidate	Douglas M Beaver Jr	Douglas M Beaver Jr
+Candidate	Doyle M Heffley	Doyle M Heffley
+Candidate	Duane D Milne	Duane D Milne
+Candidate	Dwight Evans	Dwight Evans
+Candidate	Ebert G Bill Beeman	Ebert G Bill Beeman
+Candidate	Ed Neilson	Ed Neilson
+Candidate	Ed Reagan	Ed Reagan
+Candidate	Edward C Gainey	Edward C Gainey
+Candidate	Edward Thomas Sanders III	Edward Thomas Sanders III
+Candidate	Edwin A Pashinski	Edwin A Pashinski
+Candidate	Elisabeth J Baker	Elisabeth J Baker
+Candidate	Elizabeth Fiedler	Elizabeth Fiedler
+Candidate	Elizabeth L Rohanna McClure	Elizabeth L Rohanna McClure
+Candidate	Elizabeth Malarkey	Elizabeth Malarkey
+Candidate	Elizabeth Monroe	Elizabeth Monroe
+Candidate	Elizabeth S Book	Elizabeth S Book
+Candidate	Emily Garbuny Best	Emily Garbuny Best
+Candidate	Emily S Skopov	Emily S Skopov
+Candidate	Eric J Epstein	Eric J Epstein
+Candidate	Eric Mark Roe	Eric Mark Roe
+Candidate	Eric R Nelson	Eric R Nelson
+Candidate	ErinCondo McCracken	ErinCondo McCracken
+Candidate	Ernest Dominic Lemoncelli	Ernest Dominic Lemoncelli
+Candidate	Ethan Earl Keedy	Ethan Earl Keedy
+Candidate	Ezra J Nanes	Ezra J Nanes
+Candidate	F Todd Polinchock	F Todd Polinchock
+Candidate	Francis J Dermody	Francis J Dermody
+Candidate	Francis X Ryan	Francis X Ryan
+Candidate	Frank Anthony Farry III	Frank Anthony Farry III
+Candidate	Frank Burns	Frank Burns
+Candidate	Frank J Scavo III	Frank J Scavo III
+Candidate	Frederick B Keller	Frederick B Keller
+Candidate	Garth David Everett	Garth David Everett
+Candidate	Gary W Day	Gary W Day
+Candidate	Gene Digirolamo	Gene Digirolamo
+Candidate	George Andrew Szekely II	George Andrew Szekely II
+Candidate	George B Scott	George B Scott
+Candidate	George J Kelly Jr	George J Kelly Jr
+Candidate	GeorgeS Dunbar	GeorgeS Dunbar
+Candidate	Gerald J Mullery	Gerald J Mullery
+Candidate	Gerald S Carnicella	Gerald S Carnicella
+Candidate	Glenn William Thompson Jr	Glenn William Thompson Jr
+Candidate	Gregory E Michalek	Gregory E Michalek
+Candidate	Gregory Michael McCauley Sr	Gregory Michael McCauley Sr
+Candidate	Gregory S Vitali	Gregory S Vitali
+Candidate	Guy L Reschenthaler	Guy L Reschenthaler
+Candidate	H Scott Conklin	H Scott Conklin
+Candidate	Harry A Readshaw III	Harry A Readshaw III
+Candidate	Helen D Tai	Helen D Tai
+Candidate	Henry Scott Wallace	Henry Scott Wallace
+Candidate	Inderjit Bains	Inderjit Bains
+Candidate	Isabella Fitzgerald	Isabella Fitzgerald
+Candidate	Jack B Rader Jr	Jack B Rader Jr
+Candidate	Jacob D Corman III	Jacob D Corman III
+Candidate	Jake Towne	Jake Towne
+Candidate	Jake Wheatley	Jake Wheatley
+Candidate	James A Cox Jr	James A Cox Jr
+Candidate	James E Marshall	James E Marshall
+Candidate	James John Lamb III	James John Lamb III
+Candidate	James M McDevitt	James M McDevitt
+Candidate	James M Miller	James M Miller
+Candidate	James Patrick Rigby	James Patrick Rigby
+Candidate	James R Craig	James R Craig
+Candidate	James R Roebuck	James R Roebuck
+Candidate	James Santora	James Santora
+Candidate	James V Gregory	James V Gregory
+Candidate	JamesBruno Struzzi II	JamesBruno Struzzi II
+Candidate	Jared G Solomon	Jared G Solomon
+Candidate	Jason A Ortitay	Jason A Ortitay
+Candidate	Jason Ruff	Jason Ruff
+Candidate	Jason T Dawkins	Jason T Dawkins
+Candidate	Jay Ting Walker	Jay Ting Walker
+Candidate	JeanMarie Vargas Foschi	JeanMarie Vargas Foschi
+Candidate	Jeanne McNeill	Jeanne McNeill
+Candidate	Jeff C Wheeland	Jeff C Wheeland
+Candidate	Jeff Cole	Jeff Cole
+Candidate	Jeffrey Paul Pyle	Jeffrey Paul Pyle
+Candidate	Jennie Elaine Porter	Jennie Elaine Porter
+Candidate	Jennifer M Omara	Jennifer M Omara
+Candidate	Jennifer Renee Rager-Kay	Jennifer Renee Rager-Kay
+Candidate	Jeremy Kevin Shaffer	Jeremy Kevin Shaffer
+Candidate	Jerome P Knowles	Jerome P Knowles
+Candidate	Jesse Wills Topper	Jesse Wills Topper
+Candidate	Jessica King	Jessica King
+Candidate	Jill Linta	Jill Linta
+Candidate	Joanna E McClinton	Joanna E McClinton
+Candidate	John Adda Lawrence	John Adda Lawrence
+Candidate	John C Rafferty Jr	John C Rafferty Jr
+Candidate	John J Sweeney	John J Sweeney
+Candidate	John Joyce	John Joyce
+Candidate	John Kluck	John Kluck
+Candidate	John M Waldenberger	John M Waldenberger
+Candidate	John P Blake	John P Blake
+Candidate	John Robert Chrin	John Robert Chrin
+Candidate	John T Galloway	John T Galloway
+Candidate	John T Yudichak	John T Yudichak
+Candidate	Johnathan Dean Hershey	Johnathan Dean Hershey
+Candidate	Jonathan A. Fritz	Jonathan A. Fritz
+Candidate	Jonathan Paul McCabe	Jonathan Paul McCabe
+Candidate	Jordan A Harris	Jordan A Harris
+Candidate	Joseph A Petrarca	Joseph A Petrarca
+Candidate	Joseph C Hohenstein	Joseph C Hohenstein
+Candidate	Joseph G. Phd Webster	Joseph G. Phd Webster
+Candidate	Joseph P Ciresi	Joseph P Ciresi
+Candidate	Joseph P Soloski	Joseph P Soloski
+Candidate	Joseph Patrick Flood	Joseph Patrick Flood
+Candidate	Joseph Sherwood McGinnis Jr	Joseph Sherwood McGinnis Jr
+Candidate	Joseph T Emrick	Joseph T Emrick
+Candidate	Joshua Daniel Kail	Joshua Daniel Kail
+Candidate	Joshua Harris Camson	Joshua Harris Camson
+Candidate	Joshua Richard Nulph	Joshua Richard Nulph
+Candidate	Judith F Ward	Judith F Ward
+Candidate	JudithA McCormick Higgins	JudithA McCormick Higgins
+Candidate	Justin J Simmons	Justin J Simmons
+Candidate	JustinM. Walsh	JustinM. Walsh
+Candidate	JustinV Behrens	JustinV Behrens
+Candidate	Kara M Scott	Kara M Scott
+Candidate	Karen Ann Anderson	Karen Ann Anderson
+Candidate	Karen Boback	Karen Boback
+Candidate	Kate Anne Klunk	Kate Anne Klunk
+Candidate	Kathleen E Bowers	Kathleen E Bowers
+Candidate	Kathy L Rapp	Kathy L Rapp
+Candidate	Katie J Muth	Katie J Muth
+Candidate	Keith J Gillespie	Keith J Gillespie
+Candidate	Keith James Greiner	Keith James Greiner
+Candidate	Keith Rothfus	Keith Rothfus
+Candidate	Kenneth V Krawchuk	Kenneth V Krawchuk
+Candidate	Kerith Strano Taylor	Kerith Strano Taylor
+Candidate	Kerry Albert Benninghoff	Kerry Albert Benninghoff
+Candidate	Kevin J Boyle	Kevin J Boyle
+Candidate	Kristin Lee Phillips-Hill	Kristin Lee Phillips-Hill
+Candidate	Kristin Seale	Kristin Seale
+Candidate	Kristine C Howard	Kristine C Howard
+Candidate	Kurt A Masser	Kurt A Masser
+Candidate	Kyle J Mullins	Kyle J Mullins
+Candidate	Laura Burke	Laura Burke
+Candidate	LauraElizabeth Frances Hanbidge	LauraElizabeth Frances Hanbidge
+Candidate	Leanne T Krueger-Braneky	Leanne T Krueger-Braneky
+Candidate	Linda Fields	Linda Fields
+Candidate	Linda Kay Sosniak	Linda Kay Sosniak
+Candidate	Lindsey Marie Williams	Lindsey Marie Williams
+Candidate	Lisa K Boeving-Learned	Lisa K Boeving-Learned
+Candidate	Lisa M Boscola	Lisa M Boscola
+Candidate	Lloyd K Smucker	Lloyd K Smucker
+Candidate	Logan Sheriff Dellafiora	Logan Sheriff Dellafiora
+Candidate	Lois K Herr	Lois K Herr
+Candidate	Lori A Mizgorski	Lori A Mizgorski
+Candidate	Lou Jasikoff	Lou Jasikoff
+Candidate	Louis C. Schmitt Jr	Louis C. Schmitt Jr
+Candidate	Louis J. Barletta	Louis J. Barletta
+Candidate	Lynda J Schlegel Culver	Lynda J Schlegel Culver
+Candidate	Malcolm Kenyatta	Malcolm Kenyatta
+Candidate	Malinda Lauren Lareau	Malinda Lauren Lareau
+Candidate	Marc Bozzacco	Marc Bozzacco
+Candidate	Marc Friedenberg	Marc Friedenberg
+Candidate	Marcia M Hahn	Marcia M Hahn
+Candidate	Marcy L Toepel	Marcy L Toepel
+Candidate	Margo Lomax Davidson	Margo Lomax Davidson
+Candidate	Marguerite C Quinn	Marguerite C Quinn
+Candidate	Maria Collett	Maria Collett
+Candidate	Maria P Donatucci	Maria P Donatucci
+Candidate	Mario M Scavello	Mario M Scavello
+Candidate	Mark Alfred Longietti	Mark Alfred Longietti
+Candidate	Mark K Keller	Mark K Keller
+Candidate	Mark Lucio Rozzi	Mark Lucio Rozzi
+Candidate	Mark M Gillen	Mark M Gillen
+Candidate	Mark Pinsley	Mark Pinsley
+Candidate	Martin B Flynn	Martin B Flynn
+Candidate	Martin T Causer	Martin T Causer
+Candidate	Martin W Nothstein	Martin W Nothstein
+Candidate	Martina A White	Martina A White
+Candidate	Marty Qually	Marty Qually
+Candidate	Mary Auker-Endres	Mary Auker-Endres
+Candidate	Mary E Popovich	Mary E Popovich
+Candidate	Mary Gay Scanlon	Mary Gay Scanlon
+Candidate	Mary Hopper	Mary Hopper
+Candidate	Maryanne Cole	Maryanne Cole
+Candidate	MaryJosephine Daley	MaryJosephine Daley
+Candidate	Marylouise Isaacson	Marylouise Isaacson
+Candidate	Matthew Alton Cartwright	Matthew Alton Cartwright
+Candidate	Matthew D Bradford	Matthew D Bradford
+Candidate	Matthew David Dowling	Matthew David Dowling
+Candidate	Matthew M Gabler	Matthew M Gabler
+Candidate	Matthew P Nelson	Matthew P Nelson
+Candidate	Matthew Ryan Baltsar	Matthew Ryan Baltsar
+Candidate	Maureen E Madden	Maureen E Madden
+Candidate	Meghan Schroeder	Meghan Schroeder
+Candidate	Melinda S Fee	Melinda S Fee
+Candidate	Melissa Shusterman	Melissa Shusterman
+Candidate	Meredith Jean Buck	Meredith Jean Buck
+Candidate	Michael B Carroll	Michael B Carroll
+Candidate	Michael Blichar Jr	Michael Blichar Jr
+Candidate	Michael C Turzai	Michael C Turzai
+Candidate	Michael F Doyle Jr	Michael F Doyle Jr
+Candidate	Michael Francis Doyle Jr	Michael Francis Doyle Jr
+Candidate	Michael G Kavulich	Michael G Kavulich
+Candidate	Michael G Tobash	Michael G Tobash
+Candidate	Michael H Schlossberg	Michael H Schlossberg
+Candidate	Michael J Driscoll	Michael J Driscoll
+Candidate	Michael J Folmer	Michael J Folmer
+Candidate	Michael J Puskaric	Michael J Puskaric
+Candidate	Michael J Wascovich	Michael J Wascovich
+Candidate	Michael P Reese	Michael P Reese
+Candidate	Michael Patrick Zabel	Michael Patrick Zabel
+Candidate	Michael T Peifer	Michael T Peifer
+Candidate	MichaelKelly Hanna Jr	MichaelKelly Hanna Jr
+Candidate	Michele Brooks	Michele Brooks
+Candidate	Michele D Wherley	Michele D Wherley
+Candidate	Michele Knoll	Michele Knoll
+Candidate	Morgan Cephas	Morgan Cephas
+Candidate	Neal P Goodman	Neal P Goodman
+Candidate	Neal Taylor Gale	Neal Taylor Gale
+Candidate	Nicholas Deminski	Nicholas Deminski
+Candidate	Nicholas Fountain	Nicholas Fountain
+Candidate	Orlando D Marrero	Orlando D Marrero
+Candidate	Pamela A Hacker	Pamela A Hacker
+Candidate	Pamela Ann Delissio	Pamela Ann Delissio
+Candidate	Pamela Gerard	Pamela Gerard
+Candidate	Pamela Snyder	Pamela Snyder
+Candidate	Parke H Wentling	Parke H Wentling
+Candidate	Patricia Ann Smith	Patricia Ann Smith
+Candidate	Patrick J Harkins	Patrick J Harkins
+Candidate	Patrick J. Stefano	Patrick J. Stefano
+Candidate	Patrick M Browne	Patrick M Browne
+Candidate	Patti Rodgers Morrisette	Patti Rodgers Morrisette
+Candidate	Patty H Kim	Patty H Kim
+Candidate	Patty Pat Kozlowski	Patty Pat Kozlowski
+Candidate	Paul Glover	Paul Glover
+Candidate	Paul Michael Jones	Paul Michael Jones
+Candidate	Paul Thomas Schemel	Paul Thomas Schemel
+Candidate	Pearl Kim	Pearl Kim
+Candidate	Perry S Warren Jr	Perry S Warren Jr
+Candidate	Peter George Schweyer	Peter George Schweyer
+Candidate	Peter Michael Sturla	Peter Michael Sturla
+Candidate	R Lee James	R Lee James
+Candidate	Rebecca L Kinney	Rebecca L Kinney
+Candidate	Rebecca P Corbin	Rebecca P Corbin
+Candidate	Richard James Rogers Sr	Richard James Rogers Sr
+Candidate	Richard S. Irvin	Richard S. Irvin
+Candidate	Robert Bruce Mensch	Robert Bruce Mensch
+Candidate	Robert E Merski	Robert E Merski
+Candidate	Robert E Rhoderick Jr	Robert E Rhoderick Jr
+Candidate	Robert F Matzie	Robert F Matzie
+Candidate	Robert Freeman	Robert Freeman
+Candidate	Robert J Brooks	Robert J Brooks
+Candidate	Robert M Tomlinson	Robert M Tomlinson
+Candidate	Robert P Casey Jr	Robert P Casey Jr
+Candidate	Robert W Kauffman	Robert W Kauffman
+Candidate	Ronald A Dinicola	Ronald A Dinicola
+Candidate	Ronald F Holt	Ronald F Holt
+Candidate	Rosemary Brown	Rosemary Brown
+Candidate	Rosita C Youngblood	Rosita C Youngblood
+Candidate	Russ Diamond	Russ Diamond
+Candidate	Ruth Moton	Ruth Moton
+Candidate	Ryan A Bizzarro	Ryan A Bizzarro
+Candidate	Ryan E Mackenzie	Ryan E Mackenzie
+Candidate	Ryan James Warner	Ryan James Warner
+Candidate	Ryan W Gallagher	Ryan W Gallagher
+Candidate	RyanPatrick Aument	RyanPatrick Aument
+Candidate	Samuel Doctor	Samuel Doctor
+Candidate	Sara G Innamorato	Sara G Innamorato
+Candidate	Sara Joanne Johnson Rothman	Sara Joanne Johnson Rothman
+Candidate	Sarah Donnelly	Sarah Donnelly
+Candidate	Sarah Elizabeth Hammond	Sarah Elizabeth Hammond
+Candidate	Scott G Perry	Scott G Perry
+Candidate	Scott R Wagner	Scott R Wagner
+Candidate	Sean Patrick Quinlan	Sean Patrick Quinlan
+Candidate	Sean Patrick Stevens	Sean Patrick Stevens
+Candidate	Seth Michael Grove	Seth Michael Grove
+Candidate	Shanna Leigh Danielson	Shanna Leigh Danielson
+Candidate	SharonM. Guidi	SharonM. Guidi
+Candidate	Sheryl M Delozier	Sheryl M Delozier
+Candidate	Stanley E Saylor	Stanley E Saylor
+Candidate	Stephanie Paige Borowicz	Stephanie Paige Borowicz
+Candidate	Stephen C McCarter	Stephen C McCarter
+Candidate	Stephen David Schlauch	Stephen David Schlauch
+Candidate	Stephen E. Barrar	Stephen E. Barrar
+Candidate	Stephen Kinsey	Stephen Kinsey
+Candidate	Stephen P Samuelson	Stephen P Samuelson
+Candidate	Stephen Richard Snell	Stephen Richard Snell
+Candidate	Steven Curtis Mentzer	Steven Curtis Mentzer
+Candidate	Steven J Santarsiero	Steven J Santarsiero
+Candidate	Steven Matthew Toprani	Steven Matthew Toprani
+Candidate	Steven Richard Malagari	Steven Richard Malagari
+Candidate	Stewart Greenleaf Jr	Stewart Greenleaf Jr
+Candidate	Sue Ann Mulvey	Sue Ann Mulvey
+Candidate	Summer L Lee	Summer L Lee
+Candidate	Susan Boser	Susan Boser
+Candidate	Susan C Helm	Susan C Helm
+Candidate	Susan Ellis Wild	Susan Ellis Wild
+Candidate	Susan Henry	Susan Henry
+Candidate	Susannah L Walker	Susannah L Walker
+Candidate	Suzanne M Delahunt	Suzanne M Delahunt
+Candidate	Tarah C Toohil	Tarah C Toohil
+Candidate	Tarah Dorothea Probst	Tarah Dorothea Probst
+Candidate	Tedd Nesbit	Tedd Nesbit
+Candidate	Terri Mitko	Terri Mitko
+Candidate	Thomas A Marino	Thomas A Marino
+Candidate	Thomas J McGarrigle Sr	Thomas J McGarrigle Sr
+Candidate	Thomas J Quigley	Thomas J Quigley
+Candidate	Thomas L Mehaffie III	Thomas L Mehaffie III
+Candidate	Thomas Lee Applebach	Thomas Lee Applebach
+Candidate	Thomas M Street	Thomas M Street
+Candidate	Thomas Paul Murt	Thomas Paul Murt
+Candidate	Thomas R Caltagirone	Thomas R Caltagirone
+Candidate	Thomas R Sankey III	Thomas R Sankey III
+Candidate	Thomas W Wolf	Thomas W Wolf
+Candidate	Tim Silfies	Tim Silfies
+Candidate	Timothy F Hennessey	Timothy F Hennessey
+Candidate	Timothy Jon O'Neal	Timothy Jon O'Neal
+Candidate	Timothy P Kearney	Timothy P Kearney
+Candidate	Timothy P Kuzma	Timothy P Kuzma
+Candidate	Timothy Patrick Briggs	Timothy Patrick Briggs
+Candidate	Timothy S Mahoney	Timothy S Mahoney
+Candidate	Tina Davis	Tina Davis
+Candidate	Tina Pickett	Tina Pickett
+Candidate	Torren C Ecker	Torren C Ecker
+Candidate	Tricia L Wertz	Tricia L Wertz
+Candidate	Valerie S Gaydos	Valerie S Gaydos
+Candidate	Vanessa L Brown	Vanessa L Brown
+Candidate	Vincent D Gagliardo Jr	Vincent D Gagliardo Jr
+Candidate	Warren E Kampf	Warren E Kampf
+Candidate	Wayne D Fontana	Wayne D Fontana
+Candidate	Wendi Thomas	Wendi Thomas
+Candidate	Wendy Ullman	Wendy Ullman
+Candidate	William C Kortz II	William C Kortz II
+Candidate	William Gregory Rothman	William Gregory Rothman
+Candidate	William N Troutman Jr	William N Troutman Jr
+Candidate	William Todd Stephens	William Todd Stephens
+Candidate	Zachary Mako	Zachary Mako
+Party	Democratic Party	democrat
+Party	Democratic / Republican Party	democratic / republican
+Party	Green Party	green
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	No Affiliation Party	no affiliation
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+ReportingUnit	Pennsylvania;Adams County	Pennsylvania;Adams
+ReportingUnit	Pennsylvania;Allegheny County	Pennsylvania;Allegheny
+ReportingUnit	Pennsylvania;Armstrong County	Pennsylvania;Armstrong
+ReportingUnit	Pennsylvania;Beaver County	Pennsylvania;Beaver
+ReportingUnit	Pennsylvania;Bedford County	Pennsylvania;Bedford
+ReportingUnit	Pennsylvania;Berks County	Pennsylvania;Berks
+ReportingUnit	Pennsylvania;Blair County	Pennsylvania;Blair
+ReportingUnit	Pennsylvania;Bradford County	Pennsylvania;Bradford
+ReportingUnit	Pennsylvania;Bucks County	Pennsylvania;Bucks
+ReportingUnit	Pennsylvania;Butler County	Pennsylvania;Butler
+ReportingUnit	Pennsylvania;Cambria County	Pennsylvania;Cambria
+ReportingUnit	Pennsylvania;Cameron County	Pennsylvania;Cameron
+ReportingUnit	Pennsylvania;Carbon County	Pennsylvania;Carbon
+ReportingUnit	Pennsylvania;Centre County	Pennsylvania;Centre
+ReportingUnit	Pennsylvania;Chester County	Pennsylvania;Chester
+ReportingUnit	Pennsylvania;Clarion County	Pennsylvania;Clarion
+ReportingUnit	Pennsylvania;Clearfield County	Pennsylvania;Clearfield
+ReportingUnit	Pennsylvania;Clinton County	Pennsylvania;Clinton
+ReportingUnit	Pennsylvania;Columbia County	Pennsylvania;Columbia
+ReportingUnit	Pennsylvania;Crawford County	Pennsylvania;Crawford
+ReportingUnit	Pennsylvania;Cumberland County	Pennsylvania;Cumberland
+ReportingUnit	Pennsylvania;Dauphin County	Pennsylvania;Dauphin
+ReportingUnit	Pennsylvania;Delaware County	Pennsylvania;Delaware
+ReportingUnit	Pennsylvania;Elk County	Pennsylvania;Elk
+ReportingUnit	Pennsylvania;Erie County	Pennsylvania;Erie
+ReportingUnit	Pennsylvania;Fayette County	Pennsylvania;Fayette
+ReportingUnit	Pennsylvania;Forest County	Pennsylvania;Forest
+ReportingUnit	Pennsylvania;Franklin County	Pennsylvania;Franklin
+ReportingUnit	Pennsylvania;Fulton County	Pennsylvania;Fulton
+ReportingUnit	Pennsylvania;Greene County	Pennsylvania;Greene
+ReportingUnit	Pennsylvania;Huntingdon County	Pennsylvania;Huntingdon
+ReportingUnit	Pennsylvania;Indiana County	Pennsylvania;Indiana
+ReportingUnit	Pennsylvania;Jefferson County	Pennsylvania;Jefferson
+ReportingUnit	Pennsylvania;Juniata County	Pennsylvania;Juniata
+ReportingUnit	Pennsylvania;Lackawanna County	Pennsylvania;Lackawanna
+ReportingUnit	Pennsylvania;Lancaster County	Pennsylvania;Lancaster
+ReportingUnit	Pennsylvania;Lawrence County	Pennsylvania;Lawrence
+ReportingUnit	Pennsylvania;Lebanon County	Pennsylvania;Lebanon
+ReportingUnit	Pennsylvania;Lehigh County	Pennsylvania;Lehigh
+ReportingUnit	Pennsylvania;Luzerne County	Pennsylvania;Luzerne
+ReportingUnit	Pennsylvania;Lycoming County	Pennsylvania;Lycoming
+ReportingUnit	Pennsylvania;McKean County	Pennsylvania;McKean
+ReportingUnit	Pennsylvania;Mercer County	Pennsylvania;Mercer
+ReportingUnit	Pennsylvania;Mifflin County	Pennsylvania;Mifflin
+ReportingUnit	Pennsylvania;Monroe County	Pennsylvania;Monroe
+ReportingUnit	Pennsylvania;Montgomery County	Pennsylvania;Montgomery
+ReportingUnit	Pennsylvania;Montour County	Pennsylvania;Montour
+ReportingUnit	Pennsylvania;Northampton County	Pennsylvania;Northampton
+ReportingUnit	Pennsylvania;Northumberland County	Pennsylvania;Northumberland
+ReportingUnit	Pennsylvania;Perry County	Pennsylvania;Perry
+ReportingUnit	Pennsylvania;Philadelphia County	Pennsylvania;Philadelphia
+ReportingUnit	Pennsylvania;Pike County	Pennsylvania;Pike
+ReportingUnit	Pennsylvania;Potter County	Pennsylvania;Potter
+ReportingUnit	Pennsylvania;Schuylkill County	Pennsylvania;Schuylkill
+ReportingUnit	Pennsylvania;Snyder County	Pennsylvania;Snyder
+ReportingUnit	Pennsylvania;Somerset County	Pennsylvania;Somerset
+ReportingUnit	Pennsylvania;Sullivan County	Pennsylvania;Sullivan
+ReportingUnit	Pennsylvania;Susquehanna County	Pennsylvania;Susquehanna
+ReportingUnit	Pennsylvania;Tioga County	Pennsylvania;Tioga
+ReportingUnit	Pennsylvania;Union County	Pennsylvania;Union
+ReportingUnit	Pennsylvania;Venango County	Pennsylvania;Venango
+ReportingUnit	Pennsylvania;Warren County	Pennsylvania;Warren
+ReportingUnit	Pennsylvania;Washington County	Pennsylvania;Washington
+ReportingUnit	Pennsylvania;Wayne County	Pennsylvania;Wayne
+ReportingUnit	Pennsylvania;Westmoreland County	Pennsylvania;Westmoreland
+ReportingUnit	Pennsylvania;Wyoming County	Pennsylvania;Wyoming
+ReportingUnit	Pennsylvania;York County	Pennsylvania;York
+Candidate	NatalieNicole Mihalek Stuck	NatalieNicole Mihalek Stuck
+Candidate	Madeleine Dean Cunnane	Madeleine Dean Cunnane
+CandidateContest	PA Attorney General	PA;Attorney General;statewide

@@ -591,3 +591,4 @@ AR State Treasurer (Libertarian Party)	1	AR State Treasurer	Libertarian Party
 AR Secretary of State (Libertarian Party)	1	AR Secretary of State	Libertarian Party
 AR Commissioner of State Lands (Libertarian Party)	1	AR Commissioner of State Lands	Libertarian Party
 AR Auditor of State (Libertarian Party)	1	AR Auditor of State	Libertarian Party
+AR State Supreme Court Associate Justice Position 3	1	AR State Supreme Court Associate Justice Position 3

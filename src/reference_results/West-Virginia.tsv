@@ -1,0 +1,12 @@
+Jurisdiction	Election	Contest	ReportingUnit	VoteType	Count	Status	Source	Note
+West Virginia	2020 General	US President (WV)	West Virginia	total	794652	official-final		
+West Virginia	2020 General	US House WV District 1	West Virginia	total	261665	official-final		
+West Virginia	2020 General	WV Senate District 1	West Virginia	total	44981	official-final		
+West Virginia	2020 General	WV House District 2	West Virginia	total	7442	official-final		
+West Virginia	2020 General	US President (WV)	West Virginia;Boone County	total	9012	official-final		
+West Virginia	2020 General	US President (WV)	West Virginia	election-day	794652	official-final		
+West Virginia	2000 General	US President (WV)	West Virginia	total	648124	official-final	https://doi.org/10.7910/DVN/VOQCHQ	
+West Virginia	2004 General	US President (WV)	West Virginia	total	755659	official-final	https://doi.org/10.7910/DVN/VOQCHQ	
+West Virginia	2008 General	US President (WV)	West Virginia	total	713451	official-final	https://doi.org/10.7910/DVN/VOQCHQ	
+West Virginia	2012 General	US President (WV)	West Virginia	total	670440	official-final	https://doi.org/10.7910/DVN/VOQCHQ	
+West Virginia	2016 General	US President (WV)	West Virginia	total	713051	official-final	https://doi.org/10.7910/DVN/VOQCHQ	

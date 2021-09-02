@@ -17,11 +17,6 @@ CandidateContest	MP Attorney General	MP Attorney General
 CandidateContest	MP Lieutenant Governor	MP Lieutenant Governor
 CandidateContest	MP Treasurer	MP Treasurer
 CandidateContest	MP Secretary of State	MP Secretary of State
-Election	2020 General Runoff	2020 General Runoff
-Election	2020 General	2020 General
-Election	2020 Primary	2020 Primary
-Election	2018 General	2018 General
-Election	2016 General	2016 General
 Party	Democratic Party	Democratic Party
 Party	Republican Party	Republican Party
 Party	Green Party	Green Party
@@ -38,3 +33,14 @@ ReportingUnit	Northern Mariana Islands;MP Senate District 2	Northern Mariana Isl
 ReportingUnit	Northern Mariana Islands;MP Senate District 3	Northern Mariana Islands;MP Senate District 3
 ReportingUnit	Northern Mariana Islands;US House MP District 1	Northern Mariana Islands;US House MP District 1
 ReportingUnit	Northern Mariana Islands	Northern Mariana Islands
+CountItemType	absentee	absentee
+CountItemType	absentee-fwab	absentee-fwab
+CountItemType	absentee-in-person	absentee-in-person
+CountItemType	absentee-mail	absentee-mail
+CountItemType	early	early
+CountItemType	election-day	election-day
+CountItemType	provisional	provisional
+CountItemType	seats	seats
+CountItemType	total	total
+CountItemType	uocava	uocava
+CountItemType	write-in	write-in

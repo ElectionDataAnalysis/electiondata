@@ -2937,3 +2937,9 @@ US Senate CO (America's Party)	1	US Senate CO	America's Party
 CO Attorney General (America's Party)	1	CO Attorney General	America's Party
 CO State Treasurer (America's Party)	1	CO State Treasurer	America's Party
 CO Secretary of State (America's Party)	1	CO Secretary of State	America's Party
+CO Regent of the University of Colorado	1	CO Regent of the University of Colorado	
+CO State Board of Education Member District 4	1	CO State Board of Education Member District 4	
+CO Regent of the University of Colorado District 3	1	CO Regent of the University of Colorado District 3	
+CO State Board of Education Member District 2	1	CO State Board of Education Member District 2	
+CO Regent of the University of Colorado District 5	1	CO Regent of the University of Colorado District 5	
+

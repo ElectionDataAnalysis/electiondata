@@ -113,5 +113,7 @@ SD Public Utilities Commissioner	South Dakota
 US Senate SD	South Dakota
 SD Attorney General	South Dakota
 SD Lieutenant Governor	South Dakota
-SD Treasurer	South Dakota
 SD Secretary of State	South Dakota
+SD Commissioner School Public Lands	South Dakota
+SD State Auditor	South Dakota
+SD State Treasurer	South Dakota

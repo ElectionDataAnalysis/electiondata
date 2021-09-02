@@ -211,7 +211,7 @@ VT Senate District Chittenden 8-1	Vermont;VT Senate District Chittenden 8-1
 VT Senate District Windham-Bennington-Windsor	Vermont;VT Senate District Windham-Bennington-Windsor
 VT Senate District Rutland 5-3	Vermont;VT Senate District Rutland 5-3
 VT Senate District Orange 1	Vermont;VT Senate District Orange 1
-VT Senate District Chittenden-1	Vermont;VT Senate District Chittenden-1
+VT Senate District Chittenden 1	Vermont;VT Senate District Chittenden 1
 VT Senate District Windham 4	Vermont;VT Senate District Windham 4
 VT Senate District Chittenden 7-1	Vermont;VT Senate District Chittenden 7-1
 VT Senate District Grand Isle-Chittenden	Vermont;VT Senate District Grand Isle-Chittenden
@@ -219,13 +219,13 @@ VT Senate District Windham 6	Vermont;VT Senate District Windham 6
 VT Senate District Washington 4	Vermont;VT Senate District Washington 4
 VT Senate District Lamoille	Vermont;VT Senate District Lamoille
 VT Senate District Rutland-Windsor 2	Vermont;VT Senate District Rutland-Windsor 2
-VT Senate District Caledonia-1	Vermont;VT Senate District Caledonia-1
+VT Senate District Caledonia 1	Vermont;VT Senate District Caledonia 1
 VT Senate District Chittenden 5-2	Vermont;VT Senate District Chittenden 5-2
 VT Senate District Windham 2-2	Vermont;VT Senate District Windham 2-2
 VT Senate District Rutland-Windsor 1	Vermont;VT Senate District Rutland-Windsor 1
 VT Senate District Rutland 5-1	Vermont;VT Senate District Rutland 5-1
 VT Senate District Bennington-Rutland	Vermont;VT Senate District Bennington-Rutland
-VT Senate District Chittenden-3	Vermont;VT Senate District Chittenden-3
+VT Senate District Chittenden 3	Vermont;VT Senate District Chittenden 3
 VT Senate District Orange-Washington-Addison	Vermont;VT Senate District Orange-Washington-Addison
 VT Senate District Chittenden	Vermont;VT Senate District Chittenden
 VT Senate District Chittenden 6-4	Vermont;VT Senate District Chittenden 6-4
@@ -268,11 +268,11 @@ VT Senate District Windsor-Rutland	Vermont;VT Senate District Windsor-Rutland
 VT Senate District Windsor 4-2	Vermont;VT Senate District Windsor 4-2
 VT Senate District Lamoille 2	Vermont;VT Senate District Lamoille 2
 VT Senate District Franklin 3-1	Vermont;VT Senate District Franklin 3-1
-VT Senate District Caledonia-2	Vermont;VT Senate District Caledonia-2
+VT Senate District Caledonia 2	Vermont;VT Senate District Caledonia 2
 VT Senate District Addison 4	Vermont;VT Senate District Addison 4
 VT Senate District Windham 2-1	Vermont;VT Senate District Windham 2-1
 VT Senate District Windsor 4-1	Vermont;VT Senate District Windsor 4-1
-VT Senate District Chittenden-2	Vermont;VT Senate District Chittenden-2
+VT Senate District Chittenden 2	Vermont;VT Senate District Chittenden 2
 VT Senate District Washington 2	Vermont;VT Senate District Washington 2
 VT Senate District Caledonia-Washington	Vermont;VT Senate District Caledonia-Washington
 VT Senate District Franklin 1	Vermont;VT Senate District Franklin 1
@@ -283,7 +283,7 @@ VT Senate District Chittenden 9-2	Vermont;VT Senate District Chittenden 9-2
 VT Senate District Chittenden 7-3	Vermont;VT Senate District Chittenden 7-3
 VT Senate District Windham 1	Vermont;VT Senate District Windham 1
 VT Senate District Rutland	Vermont;VT Senate District Rutland
-VT Senate District Caledonia-3	Vermont;VT Senate District Caledonia-3
+VT Senate District Caledonia 3	Vermont;VT Senate District Caledonia 3
 VT Senate District Chittenden 8-2	Vermont;VT Senate District Chittenden 8-2
 VT Senate District Washington	Vermont;VT Senate District Washington
 VT Senate District Rutland 5-2	Vermont;VT Senate District Rutland 5-2
@@ -302,7 +302,7 @@ VT Senate District Chittenden 4-1	Vermont;VT Senate District Chittenden 4-1
 VT Senate District Chittenden 5-1	Vermont;VT Senate District Chittenden 5-1
 VT Senate District Bennington 4	Vermont;VT Senate District Bennington 4
 VT Senate District Windsor-Orange 1	Vermont;VT Senate District Windsor-Orange 1
-VT Senate District Caledonia-4	Vermont;VT Senate District Caledonia-4
+VT Senate District Caledonia 4	Vermont;VT Senate District Caledonia 4
 VT Senate District Orleans 2	Vermont;VT Senate District Orleans 2
 VT Senate District Rutland 5-4	Vermont;VT Senate District Rutland 5-4
 VT Senate District Essex-Orleans	Vermont;VT Senate District Essex-Orleans
@@ -327,20 +327,20 @@ VT House District Chittenden 8-1	Vermont;VT House District Chittenden 8-1
 VT House District Windham-Bennington-Windsor	Vermont;VT House District Windham-Bennington-Windsor
 VT House District Rutland 5-3	Vermont;VT House District Rutland 5-3
 VT House District Orange 1	Vermont;VT House District Orange 1
-VT House District Chittenden-1	Vermont;VT House District Chittenden-1
+VT House District Chittenden 1	Vermont;VT House District Chittenden 1
 VT House District Windham 4	Vermont;VT House District Windham 4
 VT House District Chittenden 7-1	Vermont;VT House District Chittenden 7-1
 VT House District Grand Isle-Chittenden	Vermont;VT House District Grand Isle-Chittenden
 VT House District Windham 6	Vermont;VT House District Windham 6
 VT House District Washington 4	Vermont;VT House District Washington 4
 VT House District Rutland-Windsor 2	Vermont;VT House District Rutland-Windsor 2
-VT House District Caledonia-1	Vermont;VT House District Caledonia-1
+VT House District Caledonia 1	Vermont;VT House District Caledonia 1
 VT House District Chittenden 5-2	Vermont;VT House District Chittenden 5-2
 VT House District Windham 2-2	Vermont;VT House District Windham 2-2
 VT House District Rutland-Windsor 1	Vermont;VT House District Rutland-Windsor 1
 VT House District Rutland 5-1	Vermont;VT House District Rutland 5-1
 VT House District Bennington-Rutland	Vermont;VT House District Bennington-Rutland
-VT House District Chittenden-3	Vermont;VT House District Chittenden-3
+VT House District Chittenden 3	Vermont;VT House District Chittenden 3
 VT House District Orange-Washington-Addison	Vermont;VT House District Orange-Washington-Addison
 VT House District Chittenden 6-4	Vermont;VT House District Chittenden 6-4
 VT House District Orange-Caledonia	Vermont;VT House District Orange-Caledonia
@@ -379,11 +379,11 @@ VT House District Windsor-Rutland	Vermont;VT House District Windsor-Rutland
 VT House District Windsor 4-2	Vermont;VT House District Windsor 4-2
 VT House District Lamoille 2	Vermont;VT House District Lamoille 2
 VT House District Franklin 3-1	Vermont;VT House District Franklin 3-1
-VT House District Caledonia-2	Vermont;VT House District Caledonia-2
+VT House District Caledonia 2	Vermont;VT House District Caledonia 2
 VT House District Addison 4	Vermont;VT House District Addison 4
 VT House District Windham 2-1	Vermont;VT House District Windham 2-1
 VT House District Windsor 4-1	Vermont;VT House District Windsor 4-1
-VT House District Chittenden-2	Vermont;VT House District Chittenden-2
+VT House District Chittenden 2	Vermont;VT House District Chittenden 2
 VT House District Washington 2	Vermont;VT House District Washington 2
 VT House District Caledonia-Washington	Vermont;VT House District Caledonia-Washington
 VT House District Franklin 1	Vermont;VT House District Franklin 1
@@ -392,7 +392,7 @@ VT House District Windham 5	Vermont;VT House District Windham 5
 VT House District Chittenden 9-2	Vermont;VT House District Chittenden 9-2
 VT House District Chittenden 7-3	Vermont;VT House District Chittenden 7-3
 VT House District Windham 1	Vermont;VT House District Windham 1
-VT House District Caledonia-3	Vermont;VT House District Caledonia-3
+VT House District Caledonia 3	Vermont;VT House District Caledonia 3
 VT House District Chittenden 8-2	Vermont;VT House District Chittenden 8-2
 VT House District Rutland 5-2	Vermont;VT House District Rutland 5-2
 VT House District Orleans-Lamoille	Vermont;VT House District Orleans-Lamoille
@@ -407,7 +407,7 @@ VT House District Chittenden 4-1	Vermont;VT House District Chittenden 4-1
 VT House District Chittenden 5-1	Vermont;VT House District Chittenden 5-1
 VT House District Bennington 4	Vermont;VT House District Bennington 4
 VT House District Windsor-Orange 1	Vermont;VT House District Windsor-Orange 1
-VT House District Caledonia-4	Vermont;VT House District Caledonia-4
+VT House District Caledonia 4	Vermont;VT House District Caledonia 4
 VT House District Orleans 2	Vermont;VT House District Orleans 2
 VT House District Rutland 5-4	Vermont;VT House District Rutland 5-4
 VT House District Lamoille-Washington	Vermont;VT House District Lamoille-Washington

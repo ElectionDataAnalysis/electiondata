@@ -1,5 +1,84 @@
 BallotName
 Write-Ins
+William (Bill) Pownall
+Wendy Davis Schuler
+Tyler Lindholm
+Traci Ciepiel
+Tom James
+Timothy P. Hallinan
+Thomas D. Crank
+Ted L. Barney
+Stephan A. Pappas
+Sean Castaneda
+Scott Clem
+Ryan Lindsey
+Roxie Jackson Hensley
+Richard L. Tass
+Rex 'T-Rex' Rammell
+R J Kost
+Paul Fees
+Paul E. Johnson
+Ogden Driskill
+Mitch Guthrie
+Mike Specht
+Mike Gierau
+Mary A. Throne
+Marti Halverson
+Mark Gordon
+Mark Calhoun
+Marci Shaver
+Lynn Hutchings
+Lorraine Saulino-Klein
+Lee Ann Stephenson
+Laurie L Longtine
+Larry Hicks
+Kristi Racines
+Kit Carson III
+Kate Mead
+Juliet Daniels
+Joseph Porambo
+John M. Hastert
+John L. Freeman
+John Barrasso
+Joan Brinkley
+JoAnn Dayton
+Jim Roscoe
+Jim Allen
+Jillian Balow
+Jenefer Pasqua
+Jeff Wasserburger
+Jeff Dockter
+James W. Byrd
+Howie Samelson
+Hollis Hackman
+Greg Hunter
+Gary Trauner
+Garry Piiparinen
+Edward Buchanan
+Drew Perkins
+Debbie Bovee
+David R Miller
+David Northrup
+Dave Hardesty
+Daniel Clyde Cummings
+Dan R. Kirkbride
+Curt Meier
+Clarence L. Styvar
+Chris Schock
+Chris Rothfuss
+Chris Lowry
+Cheri E. Steinmetz
+Charles F. Pelkey
+Chad M Trebby
+Calob Taylor
+Cale Case
+Bunky Loucks
+Bo Biteman
+Bill Landen
+Bill Haley
+Barbara Allen
+Andrea Clifford
+Alex Muromcew
 Richard Brubaker
 Merav Ben David
 Lynnette Grey Bull
@@ -127,3 +206,6 @@ Other
 Ralph Nader
 John MCCain
 John McCain
+Lawrence Gerard Struempf
+Over Votes
+Sergio A. Maldonado, Sr.

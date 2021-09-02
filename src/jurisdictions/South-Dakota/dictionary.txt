@@ -511,3 +511,314 @@ ReportingUnit	South Dakota;Yankton County	Yankton (Vote Center)
 ReportingUnit	South Dakota;Yankton County	fips46135
 ReportingUnit	South Dakota;Ziebach County	Ziebach
 ReportingUnit	South Dakota;Ziebach County	fips46137
+CandidateContest	SD Attorney General	SD;Attorney General
+CandidateContest	SD Commissioner School Public Lands	SD;Commissioner School Public Lands;statewide
+CandidateContest	SD Governor	SD;Governor and Lieutenant Governor;statewide
+CandidateContest	SD Public Utilities Commissioner	SD;Public Utilities Commissioner;statewide
+CandidateContest	SD Secretary of State	SD;Secretary of State;statewide
+CandidateContest	SD State Auditor	SD;State Auditor;statewide
+CandidateContest	SD House District 20	SD;State Representative;District 20
+CandidateContest	SD Senate District 20	SD;State Senator;District 20
+CandidateContest	SD State Treasurer	SD;State Treasurer;statewide
+CandidateContest	US House SD District 1	SD;US Representative;District 0
+CandidateContest	SD House District 22	SD;State Representative;District 22
+CandidateContest	SD Senate District 22	SD;State Senator;District 22
+CandidateContest	SD House District 27	SD;State Representative;District 27
+CandidateContest	SD Senate District 27	SD;State Senator;District 27
+CandidateContest	SD House District 19	SD;State Representative;District 19
+CandidateContest	SD House District 21	SD;State Representative;District 21
+CandidateContest	SD Senate District 19	SD;State Senator;District 19
+CandidateContest	SD Senate District 21	SD;State Senator;District 21
+CandidateContest	SD House District 4	SD;State Representative;District 4
+CandidateContest	SD House District 7	SD;State Representative;District 7
+CandidateContest	SD Senate District 4	SD;State Senator;District 4
+CandidateContest	SD Senate District 7	SD;State Senator;District 7
+CandidateContest	SD House District 1	SD;State Representative;District 1
+CandidateContest	SD House District 2	SD;State Representative;District 2
+CandidateContest	SD House District 3	SD;State Representative;District 3
+CandidateContest	SD Senate District 1	SD;State Senator;District 1
+CandidateContest	SD Senate District 2	SD;State Senator;District 2
+CandidateContest	SD Senate District 3	SD;State Senator;District 3
+CandidateContest	SD House District 26B	SD;State Representative;District 26B
+CandidateContest	SD Senate District 26	SD;State Senator;District 26
+CandidateContest	SD House District 28B	SD;State Representative;District 28B
+CandidateContest	SD House District 29	SD;State Representative;District 29
+CandidateContest	SD Senate District 28	SD;State Senator;District 28
+CandidateContest	SD Senate District 29	SD;State Senator;District 29
+CandidateContest	SD House District 23	SD;State Representative;District 23
+CandidateContest	SD Senate District 23	SD;State Senator;District 23
+CandidateContest	SD House District 17	SD;State Representative;District 17
+CandidateContest	SD Senate District 17	SD;State Senator;District 17
+CandidateContest	SD House District 5	SD;State Representative;District 5
+CandidateContest	SD Senate District 5	SD;State Senator;District 5
+CandidateContest	SD House District 28A	SD;State Representative;District 28A
+CandidateContest	SD House District 30	SD;State Representative;District 30
+CandidateContest	SD House District 24	SD;State Representative;District 24
+CandidateContest	SD Senate District 24	SD;State Senator;District 24
+CandidateContest	SD House District 8	SD;State Representative;District 8
+CandidateContest	SD Senate District 8	SD;State Senator;District 8
+CandidateContest	SD House District 31	SD;State Representative;District 31
+CandidateContest	SD House District 12	SD;State Representative;District 12
+CandidateContest	SD House District 13	SD;State Representative;District 13
+CandidateContest	SD House District 16	SD;State Representative;District 16
+CandidateContest	SD House District 6	SD;State Representative;District 6
+CandidateContest	SD Senate District 12	SD;State Senator;District 12
+CandidateContest	SD Senate District 13	SD;State Senator;District 13
+CandidateContest	SD Senate District 16	SD;State Senator;District 16
+CandidateContest	SD Senate District 6	SD;State Senator;District 6
+CandidateContest	SD House District 33	SD;State Representative;District 33
+CandidateContest	SD House District 26A	SD;State Representative;District 26A
+CandidateContest	SD House District 10	SD;State Representative;District 10
+CandidateContest	SD House District 11	SD;State Representative;District 11
+CandidateContest	SD House District 14	SD;State Representative;District 14
+CandidateContest	SD House District 15	SD;State Representative;District 15
+CandidateContest	SD House District 25	SD;State Representative;District 25
+CandidateContest	SD House District 9	SD;State Representative;District 9
+CandidateContest	SD Senate District 10	SD;State Senator;District 10
+CandidateContest	SD Senate District 11	SD;State Senator;District 11
+CandidateContest	SD Senate District 14	SD;State Senator;District 14
+CandidateContest	SD Senate District 15	SD;State Senator;District 15
+CandidateContest	SD Senate District 25	SD;State Senator;District 25
+CandidateContest	SD Senate District 9	SD;State Senator;District 9
+CandidateContest	SD House District 32	SD;State Representative;District 32
+CandidateContest	SD House District 34	SD;State Representative;District 34
+CandidateContest	SD House District 35	SD;State Representative;District 35
+CandidateContest	SD House District 18	SD;State Representative;District 18
+CandidateContest	SD Senate District 18	SD;State Senator;District 18
+Candidate	Aaron Matson	Aaron Matson
+Candidate	Alan Solano	Alan Solano
+Candidate	Alexandra Frederick	Alexandra Frederick
+Candidate	Alison Bowers	Alison Bowers
+Candidate	Alli Moran	Alli Moran
+Candidate	Anna Kerner Andersson	Anna Kerner Andersson
+Candidate	Ardon Wek	Ardon Wek
+Candidate	Ayla Rodriguez	Ayla Rodriguez
+Candidate	Barbara Saxton	Barbara Saxton
+Candidate	Bill Hines	Bill Hines
+Candidate	Bill Knight	Bill Knight
+Candidate	Billie Sutton and Michelle Lavallee	Billie Sutton and Michelle Lavallee
+Candidate	Bj Motley	Bj Motley
+Candidate	Bo Sistak	Bo Sistak
+Candidate	Bob Ewing	Bob Ewing
+Candidate	Bob Glanzer	Bob Glanzer
+Candidate	Brett Ries	Brett Ries
+Candidate	Brian Davis	Brian Davis
+Candidate	Brian Watterson	Brian Watterson
+Candidate	Brian Wirth	Brian Wirth
+Candidate	Brooks Briscoe	Brooks Briscoe
+Candidate	Chad Skiles	Chad Skiles
+Candidate	Charles M. Turbiville	Charles M. Turbiville
+Candidate	Chris Francis	Chris Francis
+Candidate	Cory Allen Heidelberger	Cory Allen Heidelberger
+Candidate	Cory Ann Ellis	Cory Ann Ellis
+Candidate	Craig Kennedy	Craig Kennedy
+Candidate	Dan Miller	Dan Miller
+Candidate	Daryl Lamar Root	Daryl Lamar Root
+Candidate	Dean Kurtz	Dean Kurtz
+Candidate	Deb Peters	Deb Peters
+Candidate	Deb Soholt	Deb Soholt
+Candidate	Debra Smith	Debra Smith
+Candidate	Dennis Evenson	Dennis Evenson
+Candidate	Diana Hane	Diana Hane
+Candidate	Doug Post	Doug Post
+Candidate	Dustin 'Dusty' Johnson	"Dustin ""Dusty"" Johnson"
+Candidate	Dwight W. 'Bill' Adamson	"Dwight W. ""Bill"" Adamson"
+Candidate	Eleanor Iverson	Eleanor Iverson
+Candidate	Elizabeth May	Elizabeth May
+Candidate	Elizabeth Merrigan	Elizabeth Merrigan
+Candidate	Eric Bliss	Eric Bliss
+Candidate	Faith Spotted Eagle	Faith Spotted Eagle
+Candidate	George D. Hendrickson	George D. Hendrickson
+Candidate	George J. Nelson	George J. Nelson
+Candidate	H. Paul Dennert	H. Paul Dennert
+Candidate	Howard Grinager	Howard Grinager
+Candidate	Ione Klinger	Ione Klinger
+Candidate	Isaac Latterell	Isaac Latterell
+Candidate	James Schorzmann	James Schorzmann
+Candidate	James White	James White
+Candidate	Jason D. Hill	Jason D. Hill
+Candidate	Jason Ravnsborg	Jason Ravnsborg
+Candidate	Jason Unger	Jason Unger
+Candidate	Jean M. Hunhoff	Jean M. Hunhoff
+Candidate	Jeff Hayward	Jeff Hayward
+Candidate	Jeff Monroe	Jeff Monroe
+Candidate	Jeff Partridge	Jeff Partridge
+Candidate	Jenae Hansen	Jenae Hansen
+Candidate	Jim Chilson	Jim Chilson
+Candidate	Joe Yracheta	Joe Yracheta
+Candidate	John A. Gors	John A. Gors
+Candidate	John A. Lake	John A. Lake
+Candidate	John C. Koch	John C. Koch
+Candidate	Jordan Youngberg	Jordan Youngberg
+Candidate	Josh Haeder	Josh Haeder
+Candidate	Julie Bartling	Julie Bartling
+Candidate	Justin R. Cronin	Justin R. Cronin
+Candidate	Justyn Hauck	Justyn Hauck
+Candidate	Karen McGregor	Karen McGregor
+Candidate	Kasey Oliver	Kasey Oliver
+Candidate	Kathy Tyler	Kathy Tyler
+Candidate	Kelly Sullivan	Kelly Sullivan
+Candidate	Kevin Elsing	Kevin Elsing
+Candidate	Kirk Chaffee	Kirk Chaffee
+Candidate	Kris K. Langer	Kris K. Langer
+Candidate	Kristi Noem and Larry Rhoden	Kristi Noem and Larry Rhoden
+Candidate	Kristie Fiegen	Kristie Fiegen
+Candidate	Kristine Ina Winter	Kristine Ina Winter
+Candidate	Kurt Evans and Richard Shelatz	Kurt Evans and Richard Shelatz
+Candidate	Kyle Boese	Kyle Boese
+Candidate	Lana J. Greenfield	Lana J. Greenfield
+Candidate	Lance Steven Russell	Lance Steven Russell
+Candidate	Laura Swier	Laura Swier
+Candidate	Lee Qualm	Lee Qualm
+Candidate	Lilias Jarding	Lilias Jarding
+Candidate	Lynne DiSanto	Lynne DiSanto
+Candidate	Manny Steele	Manny Steele
+Candidate	Margaret Ann Walsh	Margaret Ann Walsh
+Candidate	Margaret Kuipers	Margaret Kuipers
+Candidate	Margaret Ross	Margaret Ross
+Candidate	Margaret Sutton	Margaret Sutton
+Candidate	Mark K. Willadsen	Mark K. Willadsen
+Candidate	Mary J. Perpich	Mary J. Perpich
+Candidate	Matt Kammerer	Matt Kammerer
+Candidate	Max L. Farver	Max L. Farver
+Candidate	Melissa Hiatt	Melissa Hiatt
+Candidate	Michael Clark	Michael Clark
+Candidate	Michael G. Diedrich	Michael G. Diedrich
+Candidate	Michael S. McManus	Michael S. McManus
+Candidate	Michael T. Hanson	Michael T. Hanson
+Candidate	Mike McHugh	Mike McHugh
+Candidate	Mike Steinbrecher	Mike Steinbrecher
+Candidate	Nancy Rasmusen	Nancy Rasmusen
+Candidate	Naveen Malik	Naveen Malik
+Candidate	Nick Reid	Nick Reid
+Candidate	Oren Lesmeister	Oren Lesmeister
+Candidate	Paul R. Miskimins	Paul R. Miskimins
+Candidate	Paul Register	Paul Register
+Candidate	Peter Klebanoff	Peter Klebanoff
+Candidate	R. Blake Curd	R. Blake Curd
+Candidate	Rachel Willson	Rachel Willson
+Candidate	Randy Seiler	Randy Seiler
+Candidate	Ray Ring	Ray Ring
+Candidate	Rebecca Reimer	Rebecca Reimer
+Candidate	Rex Rolfing	Rex Rolfing
+Candidate	Rich Sattgast	Rich Sattgast
+Candidate	Rocky Dale Blare	Rocky Dale Blare
+Candidate	Roger Hofer	Roger Hofer
+Candidate	Roger Meyer	Roger Meyer
+Candidate	Ron Wieczorek	Ron Wieczorek
+Candidate	Ryan Brunner	Ryan Brunner
+Candidate	Scott C. Petersen	Scott C. Petersen
+Candidate	Scott Parsley	Scott Parsley
+Candidate	Scyller J. Borglum	Scyller J. Borglum
+Candidate	Sherry Bea Smith	Sherry Bea Smith
+Candidate	Sheryl L. Johnson	Sheryl L. Johnson
+Candidate	Stace Nelson	Stace Nelson
+Candidate	Steve Barnett	Steve Barnett
+Candidate	Steve Livermont	Steve Livermont
+Candidate	Susan Kelts	Susan Kelts
+Candidate	Susan M. Wismer	Susan M. Wismer
+Candidate	Tamara St John	Tamara St John
+Candidate	Teresa Ann Robbins	Teresa Ann Robbins
+Candidate	Terry Crandall	Terry Crandall
+Candidate	Terry Keller	Terry Keller
+Candidate	Thomas J. Brunner	Thomas J. Brunner
+Candidate	Tim Bjorkman	Tim Bjorkman
+Candidate	Tim Reed	Tim Reed
+Candidate	Tim Rounds	Tim Rounds
+Candidate	Timothy Ray Goodwin	Timothy Ray Goodwin
+Candidate	Tina L Mulally	Tina L Mulally
+Candidate	Tyler B. Volesky	Tyler B. Volesky
+Candidate	V.J. Smith	V.J. Smith
+Candidate	Valerie Loudenback	Valerie Loudenback
+Candidate	Wayne Frederick	Wayne Frederick
+Candidate	Whitney Raver	Whitney Raver
+Candidate	Woody Houser	Woody Houser
+Candidate	Wyatt Osthus	Wyatt Osthus
+Candidate	Zach VanWyk	Zach VanWyk
+Candidate	Zachary Kovach	Zachary Kovach
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	South Dakota;Aurora County	South Dakota;Aurora
+ReportingUnit	South Dakota;Beadle County	South Dakota;Beadle
+ReportingUnit	South Dakota;Bennett County	South Dakota;Bennett
+ReportingUnit	South Dakota;Bon Homme County	South Dakota;Bon Homme
+ReportingUnit	South Dakota;Brookings County	South Dakota;Brookings
+ReportingUnit	South Dakota;Brown County	South Dakota;Brown
+ReportingUnit	South Dakota;Brule County	South Dakota;Brule
+ReportingUnit	South Dakota;Buffalo County	South Dakota;Buffalo
+ReportingUnit	South Dakota;Butte County	South Dakota;Butte
+ReportingUnit	South Dakota;Campbell County	South Dakota;Campbell
+ReportingUnit	South Dakota;Charles Mix County	South Dakota;Charles Mix
+ReportingUnit	South Dakota;Clark County	South Dakota;Clark
+ReportingUnit	South Dakota;Clay County	South Dakota;Clay
+ReportingUnit	South Dakota;Codington County	South Dakota;Codington
+ReportingUnit	South Dakota;Corson County	South Dakota;Corson
+ReportingUnit	South Dakota;Custer County	South Dakota;Custer
+ReportingUnit	South Dakota;Davison County	South Dakota;Davison
+ReportingUnit	South Dakota;Day County	South Dakota;Day
+ReportingUnit	South Dakota;Deuel County	South Dakota;Deuel
+ReportingUnit	South Dakota;Dewey County	South Dakota;Dewey
+ReportingUnit	South Dakota;Douglas County	South Dakota;Douglas
+ReportingUnit	South Dakota;Edmunds County	South Dakota;Edmunds
+ReportingUnit	South Dakota;Fall River County	South Dakota;Fall River
+ReportingUnit	South Dakota;Faulk County	South Dakota;Faulk
+ReportingUnit	South Dakota;Grant County	South Dakota;Grant
+ReportingUnit	South Dakota;Gregory County	South Dakota;Gregory
+ReportingUnit	South Dakota;Haakon County	South Dakota;Haakon
+ReportingUnit	South Dakota;Hamlin County	South Dakota;Hamlin
+ReportingUnit	South Dakota;Hand County	South Dakota;Hand
+ReportingUnit	South Dakota;Hanson County	South Dakota;Hanson
+ReportingUnit	South Dakota;Harding County	South Dakota;Harding
+ReportingUnit	South Dakota;Hughes County	South Dakota;Hughes
+ReportingUnit	South Dakota;Hutchinson County	South Dakota;Hutchinson
+ReportingUnit	South Dakota;Hyde County	South Dakota;Hyde
+ReportingUnit	South Dakota;Jackson County	South Dakota;Jackson
+ReportingUnit	South Dakota;Jerauld County	South Dakota;Jerauld
+ReportingUnit	South Dakota;Jones County	South Dakota;Jones
+ReportingUnit	South Dakota;Kingsbury County	South Dakota;Kingsbury
+ReportingUnit	South Dakota;Lake County	South Dakota;Lake
+ReportingUnit	South Dakota;Lawrence County	South Dakota;Lawrence
+ReportingUnit	South Dakota;Lincoln County	South Dakota;Lincoln
+ReportingUnit	South Dakota;Lyman County	South Dakota;Lyman
+ReportingUnit	South Dakota;Marshall County	South Dakota;Marshall
+ReportingUnit	South Dakota;McCook County	South Dakota;McCook
+ReportingUnit	South Dakota;McPherson County	South Dakota;McPherson
+ReportingUnit	South Dakota;Meade County	South Dakota;Meade
+ReportingUnit	South Dakota;Mellette County	South Dakota;Mellette
+ReportingUnit	South Dakota;Miner County	South Dakota;Miner
+ReportingUnit	South Dakota;Minnehaha County	South Dakota;Minnehaha
+ReportingUnit	South Dakota;Moody County	South Dakota;Moody
+ReportingUnit	South Dakota;Oglala Lakota County	South Dakota;Oglala Lakota
+ReportingUnit	South Dakota;Pennington County	South Dakota;Pennington
+ReportingUnit	South Dakota;Perkins County	South Dakota;Perkins
+ReportingUnit	South Dakota;Potter County	South Dakota;Potter
+ReportingUnit	South Dakota;Roberts County	South Dakota;Roberts
+ReportingUnit	South Dakota;Sanborn County	South Dakota;Sanborn
+ReportingUnit	South Dakota;Spink County	South Dakota;Spink
+ReportingUnit	South Dakota;Stanley County	South Dakota;Stanley
+ReportingUnit	South Dakota;Sully County	South Dakota;Sully
+ReportingUnit	South Dakota;Todd County	South Dakota;Todd
+ReportingUnit	South Dakota;Tripp County	South Dakota;Tripp
+ReportingUnit	South Dakota;Turner County	South Dakota;Turner
+ReportingUnit	South Dakota;Union County	South Dakota;Union
+ReportingUnit	South Dakota;Walworth County	South Dakota;Walworth
+ReportingUnit	South Dakota;Yankton County	South Dakota;Yankton
+ReportingUnit	South Dakota;Ziebach County	South Dakota;Ziebach
+CandidateContest	SD Attorney General	SD;Attorney General;statewide

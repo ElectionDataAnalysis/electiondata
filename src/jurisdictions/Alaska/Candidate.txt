@@ -32,7 +32,6 @@ Cronk, Mike
 Cumings, Chris C.
 Dahlstrom, Nancy A.
 Darden, Dustin
-De La Fuente, Roque
 Deacon, Darren M.
 Dimond, Chris
 Dodge, Kathryn E.
@@ -367,7 +366,6 @@ Edgmon Bryce
 Eastman David
 Eads Evan A.
 Drummond Harriet A.
-Rocque 'Rocky' De La Fuente
 Dale Paul D.
 Cronk Mike
 Cooper Kelly
@@ -401,9 +399,9 @@ Barack Obama
 George W. Bush
 Hillary Clinton
 John Kerry
-John Mccain
 Mitt Romney
 Other
 Ralph Nader
-John MCCain
 John McCain
+
+

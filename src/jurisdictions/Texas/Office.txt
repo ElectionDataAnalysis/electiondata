@@ -227,3 +227,17 @@ TX Commissioner of the General Land Office	Texas
 TX Commissioner of Agriculture	Texas
 TX Treasurer	Texas
 TX Secretary of State	Texas
+TX Commissioner of the General Land office	Texas
+TX Judge Court of Criminal Appeals Place 7	Texas
+TX Judge Court of Criminal Appeals Place 8	Texas
+TX Justice Supreme Court Place 2	Texas
+TX Justice Supreme Court Place 4	Texas
+TX Justice Supreme Court Place 6	Texas
+TX Presiding Judge Court of Criminal Appeals	Texas
+TX Railroad Commissioner	Texas
+TX Member State Board of Education District 12	Texas;TX Member State Board of Education District 12
+TX Member State Board of Education District 11	Texas;TX Member State Board of Education District 11
+TX Member State Board of Education District 13	Texas;TX Member State Board of Education District 13
+TX Member State Board of Education District 7	Texas;TX Member State Board of Education District 7
+TX Member State Board of Education District 2	Texas;TX Member State Board of Education District 2
+

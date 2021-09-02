@@ -1750,3 +1750,669 @@ ReportingUnit	Kentucky;Wolfe County	Wolfe
 ReportingUnit	Kentucky;Wolfe County	fips21237
 ReportingUnit	Kentucky;Woodford County	Woodford
 ReportingUnit	Kentucky;Woodford County	fips21239
+CandidateContest	KY House District 51	KY;State Representative;District 51
+CandidateContest	KY Senate District 16	KY;State Senator;District 16
+CandidateContest	US House KY District 1	KY;US Representative;District 1
+CandidateContest	KY House District 22	KY;State Representative;District 22
+CandidateContest	KY House District 53	KY;State Representative;District 53
+CandidateContest	US House KY District 6	KY;US Representative;District 6
+CandidateContest	KY House District 1	KY;State Representative;District 1
+CandidateContest	KY Senate District 2	KY;State Senator;District 2
+CandidateContest	KY House District 23	KY;State Representative;District 23
+CandidateContest	US House KY District 2	KY;US Representative;District 2
+CandidateContest	KY House District 72	KY;State Representative;District 72
+CandidateContest	KY House District 87	KY;State Representative;District 87
+CandidateContest	KY Senate District 30	KY;State Senator;District 30
+CandidateContest	US House KY District 5	KY;US Representative;District 5
+CandidateContest	KY House District 60	KY;State Representative;District 60
+CandidateContest	KY House District 61	KY;State Representative;District 61
+CandidateContest	KY House District 63	KY;State Representative;District 63
+CandidateContest	KY House District 66	KY;State Representative;District 66
+CandidateContest	KY House District 69	KY;State Representative;District 69
+CandidateContest	US House KY District 4	KY;US Representative;District 4
+CandidateContest	KY House District 100	KY;State Representative;District 100
+CandidateContest	KY House District 98	KY;State Representative;District 98
+CandidateContest	KY Senate District 18	KY;State Senator;District 18
+CandidateContest	KY House District 54	KY;State Representative;District 54
+CandidateContest	KY House District 70	KY;State Representative;District 70
+CandidateContest	KY Senate District 24	KY;State Senator;District 24
+CandidateContest	KY House District 91	KY;State Representative;District 91
+CandidateContest	KY House District 10	KY;State Representative;District 10
+CandidateContest	KY House District 26	KY;State Representative;District 26
+CandidateContest	KY House District 49	KY;State Representative;District 49
+CandidateContest	KY Senate District 38	KY;State Senator;District 38
+CandidateContest	KY House District 17	KY;State Representative;District 17
+CandidateContest	KY Senate District 6	KY;State Senator;District 6
+CandidateContest	KY House District 4	KY;State Representative;District 4
+CandidateContest	KY Senate District 4	KY;State Senator;District 4
+CandidateContest	KY House District 5	KY;State Representative;District 5
+CandidateContest	KY House District 64	KY;State Representative;District 64
+CandidateContest	KY House District 67	KY;State Representative;District 67
+CandidateContest	KY House District 68	KY;State Representative;District 68
+CandidateContest	KY House District 47	KY;State Representative;District 47
+CandidateContest	KY Senate District 20	KY;State Senator;District 20
+CandidateContest	KY House District 96	KY;State Representative;District 96
+CandidateContest	KY Senate District 14	KY;State Senator;District 14
+CandidateContest	KY House District 8	KY;State Representative;District 8
+CandidateContest	KY House District 9	KY;State Representative;District 9
+CandidateContest	KY House District 73	KY;State Representative;District 73
+CandidateContest	KY Senate District 28	KY;State Senator;District 28
+CandidateContest	KY House District 90	KY;State Representative;District 90
+CandidateContest	KY House District 83	KY;State Representative;District 83
+CandidateContest	KY House District 11	KY;State Representative;District 11
+CandidateContest	KY House District 12	KY;State Representative;District 12
+CandidateContest	KY House District 13	KY;State Representative;District 13
+CandidateContest	KY House District 14	KY;State Representative;District 14
+CandidateContest	KY House District 7	KY;State Representative;District 7
+CandidateContest	KY Senate District 8	KY;State Senator;District 8
+CandidateContest	KY House District 19	KY;State Representative;District 19
+CandidateContest	KY House District 99	KY;State Representative;District 99
+CandidateContest	KY House District 39	KY;State Representative;District 39
+CandidateContest	KY House District 45	KY;State Representative;District 45
+CandidateContest	KY House District 56	KY;State Representative;District 56
+CandidateContest	KY House District 62	KY;State Representative;District 62
+CandidateContest	KY House District 75	KY;State Representative;District 75
+CandidateContest	KY House District 76	KY;State Representative;District 76
+CandidateContest	KY House District 77	KY;State Representative;District 77
+CandidateContest	KY House District 79	KY;State Representative;District 79
+CandidateContest	KY House District 88	KY;State Representative;District 88
+CandidateContest	KY Senate District 12	KY;State Senator;District 12
+CandidateContest	KY Senate District 22	KY;State Senator;District 22
+CandidateContest	KY Senate District 34	KY;State Senator;District 34
+CandidateContest	KY House District 95	KY;State Representative;District 95
+CandidateContest	KY House District 57	KY;State Representative;District 57
+CandidateContest	KY House District 71	KY;State Representative;District 71
+CandidateContest	KY House District 2	KY;State Representative;District 2
+CandidateContest	KY House District 18	KY;State Representative;District 18
+CandidateContest	KY House District 24	KY;State Representative;District 24
+CandidateContest	KY House District 21	KY;State Representative;District 21
+CandidateContest	KY House District 25	KY;State Representative;District 25
+CandidateContest	KY House District 27	KY;State Representative;District 27
+CandidateContest	KY Senate District 10	KY;State Senator;District 10
+CandidateContest	KY House District 84	KY;State Representative;District 84
+CandidateContest	KY House District 78	KY;State Representative;District 78
+CandidateContest	KY House District 15	KY;State Representative;District 15
+CandidateContest	KY House District 89	KY;State Representative;District 89
+CandidateContest	KY House District 28	KY;State Representative;District 28
+CandidateContest	KY House District 29	KY;State Representative;District 29
+CandidateContest	KY House District 30	KY;State Representative;District 30
+CandidateContest	KY House District 31	KY;State Representative;District 31
+CandidateContest	KY House District 32	KY;State Representative;District 32
+CandidateContest	KY House District 33	KY;State Representative;District 33
+CandidateContest	KY House District 34	KY;State Representative;District 34
+CandidateContest	KY House District 35	KY;State Representative;District 35
+CandidateContest	KY House District 36	KY;State Representative;District 36
+CandidateContest	KY House District 37	KY;State Representative;District 37
+CandidateContest	KY House District 38	KY;State Representative;District 38
+CandidateContest	KY House District 40	KY;State Representative;District 40
+CandidateContest	KY House District 41	KY;State Representative;District 41
+CandidateContest	KY House District 42	KY;State Representative;District 42
+CandidateContest	KY House District 43	KY;State Representative;District 43
+CandidateContest	KY House District 44	KY;State Representative;District 44
+CandidateContest	KY House District 46	KY;State Representative;District 46
+CandidateContest	KY House District 48	KY;State Representative;District 48
+CandidateContest	KY Senate District 26	KY;State Senator;District 26
+CandidateContest	KY Senate District 36	KY;State Senator;District 36
+CandidateContest	US House KY District 3	KY;US Representative;District 3
+CandidateContest	KY House District 55	KY;State Representative;District 55
+CandidateContest	KY House District 97	KY;State Representative;District 97
+CandidateContest	KY House District 65	KY;State Representative;District 65
+CandidateContest	KY House District 92	KY;State Representative;District 92
+CandidateContest	KY House District 86	KY;State Representative;District 86
+CandidateContest	KY House District 82	KY;State Representative;District 82
+CandidateContest	KY House District 85	KY;State Representative;District 85
+CandidateContest	KY House District 94	KY;State Representative;District 94
+CandidateContest	KY House District 80	KY;State Representative;District 80
+CandidateContest	KY House District 16	KY;State Representative;District 16
+CandidateContest	KY House District 6	KY;State Representative;District 6
+CandidateContest	KY House District 81	KY;State Representative;District 81
+CandidateContest	KY House District 93	KY;State Representative;District 93
+CandidateContest	KY House District 3	KY;State Representative;District 3
+CandidateContest	KY House District 52	KY;State Representative;District 52
+CandidateContest	KY House District 74	KY;State Representative;District 74
+CandidateContest	KY House District 50	KY;State Representative;District 50
+CandidateContest	KY House District 59	KY;State Representative;District 59
+CandidateContest	KY House District 58	KY;State Representative;District 58
+CandidateContest	KY House District 20	KY;State Representative;District 20
+CandidateContest	KY Senate District 32	KY;State Senator;District 32
+Candidate	Abigail C. Barnes	Abigail C. Barnes
+Candidate	Adam Bowling	Adam Bowling
+Candidate	Adam Koenig	Adam Koenig
+Candidate	Alan 'Al' Gentry	"Alan ""Al"" Gentry"
+Candidate	Alice Forgy Kerr	Alice Forgy Kerr
+Candidate	Alyssa Dara McDowell	Alyssa Dara McDowell
+Candidate	Amy McGrath	Amy McGrath
+Candidate	Andy Barr	Andy Barr
+Candidate	Angie Hatton	Angie Hatton
+Candidate	Ann Cormican	Ann Cormican
+Candidate	Ashley Tackett Laferty	Ashley Tackett Laferty
+Candidate	Attica Woodson Scott	Attica Woodson Scott
+Candidate	Bart Rowland	Bart Rowland
+Candidate	Benjamin T. Lawson	Benjamin T. Lawson
+Candidate	Bill Farmer Jr.	Bill Farmer Jr.
+Candidate	Bob Glenn	Bob Glenn
+Candidate	Bob Schrage	Bob Schrage
+Candidate	Bobby Lacer	Bobby Lacer
+Candidate	Bobby W. McCool	Bobby W. McCool
+Candidate	Brandon Reed	Brandon Reed
+Candidate	Brandon Smith	Brandon Smith
+Candidate	Brenda Sue 'Susie' Board	"Brenda Sue ""Susie"" Board"
+Candidate	Brent Yonts	Brent Yonts
+Candidate	Brian 'Tiger' Gann	"Brian ""Tiger"" Gann"
+Candidate	Brian Clark	Brian Clark
+Candidate	Bruce Kunze	Bruce Kunze
+Candidate	C. B. Embry Jr.	C. B. Embry Jr.
+Candidate	C. Ed Massey	C. Ed Massey
+Candidate	Calen R. Studler	Calen R. Studler
+Candidate	Carolyn DuPont	Carolyn DuPont
+Candidate	Cathy Carter	Cathy Carter
+Candidate	Charles 'Buddy' Wheatley	"Charles ""Buddy"" Wheatley"
+Candidate	Charles Booker	Charles Booker
+Candidate	Charles W. Miller	Charles W. Miller
+Candidate	Charlotte Goddard	Charlotte Goddard
+Candidate	Cherlynn Stevenson	Cherlynn Stevenson
+Candidate	Chris Freeland	Chris Freeland
+Candidate	Chris Fugate	Chris Fugate
+Candidate	Chris Harris	Chris Harris
+Candidate	Christina O'Connor	Christina O'Connor
+Candidate	Cluster Howard	Cluster Howard
+Candidate	Col Owens	Col Owens
+Candidate	Craig London	Craig London
+Candidate	Crystal Chappell	Crystal Chappell
+Candidate	D J Johnson	D J Johnson
+Candidate	D. Chad McCoy	D. Chad McCoy
+Candidate	Dan Malano Seum	Dan Malano Seum
+Candidate	Daniel A. Fister	Daniel A. Fister
+Candidate	Daniel B. Elliott	Daniel B. Elliott
+Candidate	Danielle M. Lovell	Danielle M. Lovell
+Candidate	Danny Carroll	Danny Carroll
+Candidate	Danny R. Bentley	Danny R. Bentley
+Candidate	Darrell L. Link	Darrell L. Link
+Candidate	Dave Suetholz	Dave Suetholz
+Candidate	David Hale	David Hale
+Candidate	David Meade	David Meade
+Candidate	David Ramey	David Ramey
+Candidate	David W. Osborne	David W. Osborne
+Candidate	Dean Schamore	Dean Schamore
+Candidate	Dean Sumpter	Dean Sumpter
+Candidate	Deanna L. Frazier	Deanna L. Frazier
+Candidate	Debra Ferguson Payne	Debra Ferguson Payne
+Candidate	Denise Gray	Denise Gray
+Candidate	Dennis Keene	Dennis Keene
+Candidate	Dennis L. Parrett	Dennis L. Parrett
+Candidate	Derek Lewis	Derek Lewis
+Candidate	Derrick W. Graham	Derrick W. Graham
+Candidate	Desiree Owen	Desiree Owen
+Candidate	Diane Seaman	Diane Seaman
+Candidate	Diane St. Onge	Diane St. Onge
+Candidate	Donna D. Lawlor	Donna D. Lawlor
+Candidate	Dustin Allen	Dustin Allen
+Candidate	Dustin Burley	Dustin Burley
+Candidate	Elizabeth M. Belcher	Elizabeth M. Belcher
+Candidate	Emily Ferguson	Emily Ferguson
+Candidate	Ernie Harris	Ernie Harris
+Candidate	Everett C. Corley	Everett C. Corley
+Candidate	Frank Harris	Frank Harris
+Candidate	Gary 'Toby' Herald	"Gary ""Toby"" Herald"
+Candidate	George A. Brown Jr.	George A. Brown Jr.
+Candidate	George Maxwell 'Max' Wise	"George Maxwell ""Max"" Wise"
+Candidate	Gregory Boles	Gregory Boles
+Candidate	Gregory E. J. Coulson	Gregory E. J. Coulson
+Candidate	Hank Linderman	Hank Linderman
+Candidate	Harold 'Hal' Rogers	"Harold ""Hal"" Rogers"
+Candidate	J. Dorsey Ridley	J. Dorsey Ridley
+Candidate	James A. Tipton	James A. Tipton
+Candidate	James Buckmaster	James Buckmaster
+Candidate	James DeWeese	James DeWeese
+Candidate	James E. Davis	James E. Davis
+Candidate	James R. Comer	James R. Comer
+Candidate	James Stansbury	James Stansbury
+Candidate	Jared K. Carpenter	Jared K. Carpenter
+Candidate	Jarrett Cox	Jarrett Cox
+Candidate	Jason Kilmer	Jason Kilmer
+Candidate	Jason Michael Nemes	Jason Michael Nemes
+Candidate	Jason Petrie	Jason Petrie
+Candidate	Jeanie Smith	Jeanie Smith
+Candidate	Jeff Greer	Jeff Greer
+Candidate	Jeff Hoover	Jeff Hoover
+Candidate	Jeffery Martni Donohue	Jeffery Martni Donohue
+Candidate	Jeffery R. Taylor	Jeffery R. Taylor
+Candidate	Jennifer Urie	Jennifer Urie
+Candidate	Jerry T. Miller	Jerry T. Miller
+Candidate	Jesse Parks	Jesse Parks
+Candidate	Jill York	Jill York
+Candidate	Jim DuPlessis	Jim DuPlessis
+Candidate	Jim Glenn	Jim Glenn
+Candidate	Jim Gooch Jr.	Jim Gooch Jr.
+Candidate	Jim Stewart	Jim Stewart
+Candidate	Jimmy Higdon	Jimmy Higdon
+Candidate	Jody Hurt	Jody Hurt
+Candidate	Joe Graviss	Joe Graviss
+Candidate	John 'Bam' Carney	"John ""Bam"" Carney"
+Candidate	John A. Yarmuth	John A. Yarmuth
+Candidate	John C. Blanton	John C. Blanton
+Candidate	John Hicks	John Hicks
+Candidate	John Sims Jr.	John Sims Jr.
+Candidate	Joni Jenkins	Joni Jenkins
+Candidate	Jordan Huizenga	Jordan Huizenga
+Candidate	Joseph M. Fischer	Joseph M. Fischer
+Candidate	Josh Blair	Josh Blair
+Candidate	Josh Calloway	Josh Calloway
+Candidate	Josh Hicks	Josh Hicks
+Candidate	Joshua Irvin	Joshua Irvin
+Candidate	Joshua Neubert	Joshua Neubert
+Candidate	Josie Raymond	Josie Raymond
+Candidate	Joy Gray	Joy Gray
+Candidate	Judy Martin Stallard	Judy Martin Stallard
+Candidate	Julie Raque Adams	Julie Raque Adams
+Candidate	Julie Tennyson	Julie Tennyson
+Candidate	Karen Berg	Karen Berg
+Candidate	Kari Licht	Kari Licht
+Candidate	Katharaine Sweeton-Windsor	Katharaine Sweeton-Windsor
+Candidate	Kathy L. Hinkle	Kathy L. Hinkle
+Candidate	Kelly Flood	Kelly Flood
+Candidate	Kelly Smith	Kelly Smith
+Candidate	Ken Fleming	Ken Fleming
+Candidate	Ken Upchurch	Ken Upchurch
+Candidate	Kenneth S. Stepp	Kenneth S. Stepp
+Candidate	Kevin D. Bratcher	Kevin D. Bratcher
+Candidate	Kim King	Kim King
+Candidate	Kimberly Poore Moser	Kimberly Poore Moser
+Candidate	Larry D. Brown	Larry D. Brown
+Candidate	Larry Elkins	Larry Elkins
+Candidate	Larry Varney	Larry Varney
+Candidate	LaToya Drake	LaToya Drake
+Candidate	Leigh Boland Jones	Leigh Boland Jones
+Candidate	Les Yates	Les Yates
+Candidate	Lex Hannan	Lex Hannan
+Candidate	Linda H. Belcher	Linda H. Belcher
+Candidate	Linda Story Edwards	Linda Story Edwards
+Candidate	Lisa Willner	Lisa Willner
+Candidate	Lynn Bechler	Lynn Bechler
+Candidate	Malcolm Cherry	Malcolm Cherry
+Candidate	Margaret Adkins	Margaret Adkins
+Candidate	Maria Sorolis	Maria Sorolis
+Candidate	Marianne Weiss	Marianne Weiss
+Candidate	Mark A. Gilkison	Mark A. Gilkison
+Candidate	Mark Hart	Mark Hart
+Candidate	Martha B. Emmons	Martha B. Emmons
+Candidate	Mary J. Renfro	Mary J. Renfro
+Candidate	Mary Lou Marzian	Mary Lou Marzian
+Candidate	Matt Castlen	Matt Castlen
+Candidate	Matthew R. Koch	Matthew R. Koch
+Candidate	Maurice M. Sweeney	Maurice M. Sweeney
+Candidate	McKenzie Cantrell	McKenzie Cantrell
+Candidate	Melinda Gibbons Prunty	Melinda Gibbons Prunty
+Candidate	Michael Lee Meredith	Michael Lee Meredith
+Candidate	Mike Moffett	Mike Moffett
+Candidate	Mike Wilson	Mike Wilson
+Candidate	Morgan H. Eaves	Morgan H. Eaves
+Candidate	Myron B. Dossett	Myron B. Dossett
+Candidate	Nancy J. Tate	Nancy J. Tate
+Candidate	Nima Kulkarni	Nima Kulkarni
+Candidate	Norma Kirk McCormick	Norma Kirk McCormick
+Candidate	Pat Banks	Pat Banks
+Candidate	Patti Minter	Patti Minter
+Candidate	Paul R. Hornback	Paul R. Hornback
+Candidate	Paul Walker	Paul Walker
+Candidate	Paula Clemons-Combs	Paula Clemons-Combs
+Candidate	Paula Setser-Kissick	Paula Setser-Kissick
+Candidate	Phil Moffett	Phil Moffett
+Candidate	Phillip R. Pratt	Phillip R. Pratt
+Candidate	R. B. McKenzie	R. B. McKenzie
+Candidate	R. Travis Brenda	R. Travis Brenda
+Candidate	Rachel Roberts	Rachel Roberts
+Candidate	Ralph Alvarado	Ralph Alvarado
+Candidate	Randy Bridges	Randy Bridges
+Candidate	Regina Bunch Huff	Regina Bunch Huff
+Candidate	Reginald K. Meeks	Reginald K. Meeks
+Candidate	Richard Heath	Richard Heath
+Candidate	Richard Marrs	Richard Marrs
+Candidate	Rick W. Rand	Rick W. Rand
+Candidate	Rikka L. Wallin	Rikka L. Wallin
+Candidate	Rob Rothenburger	Rob Rothenburger
+Candidate	Rob Walker	Rob Walker
+Candidate	Robert 'Rob' Wiederstein	"Robert ""Rob"" Wiederstein"
+Candidate	Robert Goforth	Robert Goforth
+Candidate	Robert James Douglas	Robert James Douglas
+Candidate	Robert M. 'Robby' Mills	"Robert M. ""Robby"" Mills"
+Candidate	Roberto Henriquez	Roberto Henriquez
+Candidate	Robin L. Webb	Robin L. Webb
+Candidate	Rocky Adkins	Rocky Adkins
+Candidate	Ronel A. Brown	Ronel A. Brown
+Candidate	Russ Meyer	Russ Meyer
+Candidate	Russell Webber	Russell Webber
+Candidate	Ruth Ann Palumbo	Ruth Ann Palumbo
+Candidate	Ryan D. Mosley	Ryan D. Mosley
+Candidate	S. Brett Guthrie	S. Brett Guthrie
+Candidate	Sal Santoro	Sal Santoro
+Candidate	Samantha Nicole Gerges	Samantha Nicole Gerges
+Candidate	Savannah Maddox	Savannah Maddox
+Candidate	Scott L. Sharp	Scott L. Sharp
+Candidate	Scott Lewis	Scott Lewis
+Candidate	Seth Hall	Seth Hall
+Candidate	Sheri A. Donahue	Sheri A. Donahue
+Candidate	Stacie Early	Stacie Early
+Candidate	Stan Lee	Stan Lee
+Candidate	Stefanie J. E. Kingsley	Stefanie J. E. Kingsley
+Candidate	Stephanie Compton	Stephanie Compton
+Candidate	Steve Riley	Steve Riley
+Candidate	Steve Sheldon	Steve Sheldon
+Candidate	Steven Jack Rudy	Steven Jack Rudy
+Candidate	Susan Byrne Haddix	Susan Byrne Haddix
+Candidate	Susan Westrom	Susan Westrom
+Candidate	Suzanne Miles	Suzanne Miles
+Candidate	Terri Branham Clark	Terri Branham Clark
+Candidate	Terry Mills	Terry Mills
+Candidate	Thomas A. Loecken	Thomas A. Loecken
+Candidate	Thomas Huff	Thomas Huff
+Candidate	Thomas Massie	Thomas Massie
+Candidate	Tim Moore	Tim Moore
+Candidate	Tina Bojanowski	Tina Bojanowski
+Candidate	Tom Buford	Tom Buford
+Candidate	Tom Burch	Tom Burch
+Candidate	Tom R. Pope	Tom R. Pope
+Candidate	Tom Williamson	Tom Williamson
+Candidate	Tommy Turner	Tommy Turner
+Candidate	Vickie Yates B. Glisson	Vickie Yates B. Glisson
+Candidate	Walker Wood Thomas	Walker Wood Thomas
+Candidate	Will Schroder	Will Schroder
+Candidate	William 'Bill' Fishback	"William ""Bill"" Fishback"
+Candidate	William Coleman	William Coleman
+Candidate	Wilson Stone	Wilson Stone
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	Kentucky;Adair County	Kentucky;Adair
+ReportingUnit	Kentucky;Allen County	Kentucky;Allen
+ReportingUnit	Kentucky;Anderson County	Kentucky;Anderson
+ReportingUnit	Kentucky;Ballard County	Kentucky;Ballard
+ReportingUnit	Kentucky;Barren County	Kentucky;Barren
+ReportingUnit	Kentucky;Bath County	Kentucky;Bath
+ReportingUnit	Kentucky;Bell County	Kentucky;Bell
+ReportingUnit	Kentucky;Boone County	Kentucky;Boone
+ReportingUnit	Kentucky;Bourbon County	Kentucky;Bourbon
+ReportingUnit	Kentucky;Boyd County	Kentucky;Boyd
+ReportingUnit	Kentucky;Boyle County	Kentucky;Boyle
+ReportingUnit	Kentucky;Bracken County	Kentucky;Bracken
+ReportingUnit	Kentucky;Breathitt County	Kentucky;Breathitt
+ReportingUnit	Kentucky;Breckinridge County	Kentucky;Breckinridge
+ReportingUnit	Kentucky;Bullitt County	Kentucky;Bullitt
+ReportingUnit	Kentucky;Butler County	Kentucky;Butler
+ReportingUnit	Kentucky;Caldwell County	Kentucky;Caldwell
+ReportingUnit	Kentucky;Calloway County	Kentucky;Calloway
+ReportingUnit	Kentucky;Campbell County	Kentucky;Campbell
+ReportingUnit	Kentucky;Carlisle County	Kentucky;Carlisle
+ReportingUnit	Kentucky;Carroll County	Kentucky;Carroll
+ReportingUnit	Kentucky;Carter County	Kentucky;Carter
+ReportingUnit	Kentucky;Casey County	Kentucky;Casey
+ReportingUnit	Kentucky;Christian County	Kentucky;Christian
+ReportingUnit	Kentucky;Clark County	Kentucky;Clark
+ReportingUnit	Kentucky;Clay County	Kentucky;Clay
+ReportingUnit	Kentucky;Clinton County	Kentucky;Clinton
+ReportingUnit	Kentucky;Crittenden County	Kentucky;Crittenden
+ReportingUnit	Kentucky;Cumberland County	Kentucky;Cumberland
+ReportingUnit	Kentucky;Daviess County	Kentucky;Daviess
+ReportingUnit	Kentucky;Edmonson County	Kentucky;Edmonson
+ReportingUnit	Kentucky;Elliott County	Kentucky;Elliott
+ReportingUnit	Kentucky;Estill County	Kentucky;Estill
+ReportingUnit	Kentucky;Fayette County	Kentucky;Fayette
+ReportingUnit	Kentucky;Fleming County	Kentucky;Fleming
+ReportingUnit	Kentucky;Floyd County	Kentucky;Floyd
+ReportingUnit	Kentucky;Franklin County	Kentucky;Franklin
+ReportingUnit	Kentucky;Fulton County	Kentucky;Fulton
+ReportingUnit	Kentucky;Gallatin County	Kentucky;Gallatin
+ReportingUnit	Kentucky;Garrard County	Kentucky;Garrard
+ReportingUnit	Kentucky;Grant County	Kentucky;Grant
+ReportingUnit	Kentucky;Graves County	Kentucky;Graves
+ReportingUnit	Kentucky;Grayson County	Kentucky;Grayson
+ReportingUnit	Kentucky;Green County	Kentucky;Green
+ReportingUnit	Kentucky;Greenup County	Kentucky;Greenup
+ReportingUnit	Kentucky;Hancock County	Kentucky;Hancock
+ReportingUnit	Kentucky;Hardin County	Kentucky;Hardin
+ReportingUnit	Kentucky;Harlan County	Kentucky;Harlan
+ReportingUnit	Kentucky;Harrison County	Kentucky;Harrison
+ReportingUnit	Kentucky;Hart County	Kentucky;Hart
+ReportingUnit	Kentucky;Henderson County	Kentucky;Henderson
+ReportingUnit	Kentucky;Henry County	Kentucky;Henry
+ReportingUnit	Kentucky;Hickman County	Kentucky;Hickman
+ReportingUnit	Kentucky;Hopkins County	Kentucky;Hopkins
+ReportingUnit	Kentucky;Jackson County	Kentucky;Jackson
+ReportingUnit	Kentucky;Jefferson County	Kentucky;Jefferson
+ReportingUnit	Kentucky;Jessamine County	Kentucky;Jessamine
+ReportingUnit	Kentucky;Johnson County	Kentucky;Johnson
+ReportingUnit	Kentucky;Kenton County	Kentucky;Kenton
+ReportingUnit	Kentucky;Knott County	Kentucky;Knott
+ReportingUnit	Kentucky;Knox County	Kentucky;Knox
+ReportingUnit	Kentucky;Larue County	Kentucky;Larue
+ReportingUnit	Kentucky;Laurel County	Kentucky;Laurel
+ReportingUnit	Kentucky;Lawrence County	Kentucky;Lawrence
+ReportingUnit	Kentucky;Lee County	Kentucky;Lee
+ReportingUnit	Kentucky;Leslie County	Kentucky;Leslie
+ReportingUnit	Kentucky;Letcher County	Kentucky;Letcher
+ReportingUnit	Kentucky;Lewis County	Kentucky;Lewis
+ReportingUnit	Kentucky;Lincoln County	Kentucky;Lincoln
+ReportingUnit	Kentucky;Livingston County	Kentucky;Livingston
+ReportingUnit	Kentucky;Logan County	Kentucky;Logan
+ReportingUnit	Kentucky;Lyon County	Kentucky;Lyon
+ReportingUnit	Kentucky;Madison County	Kentucky;Madison
+ReportingUnit	Kentucky;Magoffin County	Kentucky;Magoffin
+ReportingUnit	Kentucky;Marion County	Kentucky;Marion
+ReportingUnit	Kentucky;Marshall County	Kentucky;Marshall
+ReportingUnit	Kentucky;Martin County	Kentucky;Martin
+ReportingUnit	Kentucky;Mason County	Kentucky;Mason
+ReportingUnit	Kentucky;McCracken County	Kentucky;McCracken
+ReportingUnit	Kentucky;McCreary County	Kentucky;McCreary
+ReportingUnit	Kentucky;McLean County	Kentucky;McLean
+ReportingUnit	Kentucky;Meade County	Kentucky;Meade
+ReportingUnit	Kentucky;Menifee County	Kentucky;Menifee
+ReportingUnit	Kentucky;Mercer County	Kentucky;Mercer
+ReportingUnit	Kentucky;Metcalfe County	Kentucky;Metcalfe
+ReportingUnit	Kentucky;Monroe County	Kentucky;Monroe
+ReportingUnit	Kentucky;Montgomery County	Kentucky;Montgomery
+ReportingUnit	Kentucky;Morgan County	Kentucky;Morgan
+ReportingUnit	Kentucky;Muhlenberg County	Kentucky;Muhlenberg
+ReportingUnit	Kentucky;Nelson County	Kentucky;Nelson
+ReportingUnit	Kentucky;Nicholas County	Kentucky;Nicholas
+ReportingUnit	Kentucky;Ohio County	Kentucky;Ohio
+ReportingUnit	Kentucky;Oldham County	Kentucky;Oldham
+ReportingUnit	Kentucky;Owen County	Kentucky;Owen
+ReportingUnit	Kentucky;Owsley County	Kentucky;Owsley
+ReportingUnit	Kentucky;Pendleton County	Kentucky;Pendleton
+ReportingUnit	Kentucky;Perry County	Kentucky;Perry
+ReportingUnit	Kentucky;Pike County	Kentucky;Pike
+ReportingUnit	Kentucky;Powell County	Kentucky;Powell
+ReportingUnit	Kentucky;Pulaski County	Kentucky;Pulaski
+ReportingUnit	Kentucky;Robertson County	Kentucky;Robertson
+ReportingUnit	Kentucky;Rockcastle County	Kentucky;Rockcastle
+ReportingUnit	Kentucky;Rowan County	Kentucky;Rowan
+ReportingUnit	Kentucky;Russell County	Kentucky;Russell
+ReportingUnit	Kentucky;Scott County	Kentucky;Scott
+ReportingUnit	Kentucky;Shelby County	Kentucky;Shelby
+ReportingUnit	Kentucky;Simpson County	Kentucky;Simpson
+ReportingUnit	Kentucky;Spencer County	Kentucky;Spencer
+ReportingUnit	Kentucky;Taylor County	Kentucky;Taylor
+ReportingUnit	Kentucky;Todd County	Kentucky;Todd
+ReportingUnit	Kentucky;Trigg County	Kentucky;Trigg
+ReportingUnit	Kentucky;Trimble County	Kentucky;Trimble
+ReportingUnit	Kentucky;Union County	Kentucky;Union
+ReportingUnit	Kentucky;Warren County	Kentucky;Warren
+ReportingUnit	Kentucky;Washington County	Kentucky;Washington
+ReportingUnit	Kentucky;Wayne County	Kentucky;Wayne
+ReportingUnit	Kentucky;Webster County	Kentucky;Webster
+ReportingUnit	Kentucky;Whitley County	Kentucky;Whitley
+ReportingUnit	Kentucky;Wolfe County	Kentucky;Wolfe
+ReportingUnit	Kentucky;Woodford County	Kentucky;Woodford
+CandidateContest	KY Attorney General	KY;Attorney General;statewide
+CandidateContest	US Senate KY	US Senate KY
+CandidateContest	US President (KY)	US President (KY)
+CandidateContest	US House KY District 6	US House KY District 6
+CandidateContest	US House KY District 5	US House KY District 5
+CandidateContest	US House KY District 4	US House KY District 4
+CandidateContest	US House KY District 3	US House KY District 3
+CandidateContest	US House KY District 2	US House KY District 2
+CandidateContest	US House KY District 1	US House KY District 1
+Candidate	Tom HOEFLING	Tom HOEFLING / Andy PRIOR
+Candidate	Timothy Allen STEVENS	Timothy Allen STEVENS / Susan Congleton FLETCHER
+Candidate	Shawn HOWARD	Shawn HOWARD / Alyssa HOWARD
+Candidate	Randall Lee TEEGARDEN	Randall Lee TEEGARDEN
+Candidate	President R19 BODDIE	President R19 BODDIE / Eric C. STONEHAM
+Candidate	Poet J. TRIBBLE	Poet J. TRIBBLE
+Candidate	Paul John FRANGEDAKIS	Paul John FRANGEDAKIS
+Candidate	Mary Ruth Caro SIMMONS	Mary Ruth Caro SIMMONS / Sherri DOW
+Candidate	Mark CHARLES	Mark CHARLES / Adrian WALLACE
+Candidate	Kasey W ELLS	Kasey W ELLS / Rachel WELLS
+Candidate	Jade SIMMONS	Jade SIMMONS / Claudeliah J. ROZE
+Candidate	Howie HAWKINS	Howie HAWKINS / Angela WALKER
+Candidate	Harold H. FITZPATRICK	Harold H. FITZPATRICK
+Candidate	Gloria LA RIVA	Gloria LA RIVA / Sunil FREEMAN
+Candidate	Demetra WYSINGER	Demetra WYSINGER
+Candidate	Daniel COBBLE	Daniel COBBLE
+Candidate	Brian CARROLL	Brian CARROLL / Amar PATEL
+Party	Populist Party	Populist Party
+CandidateContest	KY House District 99	KY House District 99
+CandidateContest	KY House District 98	KY House District 98
+CandidateContest	KY House District 97	KY House District 97
+CandidateContest	KY House District 96	KY House District 96
+CandidateContest	KY House District 95	KY House District 95
+CandidateContest	KY House District 94	KY House District 94
+CandidateContest	KY House District 93	KY House District 93
+CandidateContest	KY House District 92	KY House District 92
+CandidateContest	KY House District 91	KY House District 91
+CandidateContest	KY House District 90	KY House District 90
+CandidateContest	KY House District 9	KY House District 9
+CandidateContest	KY House District 89	KY House District 89
+CandidateContest	KY House District 88	KY House District 88
+CandidateContest	KY House District 87	KY House District 87
+CandidateContest	KY House District 86	KY House District 86
+CandidateContest	KY House District 85	KY House District 85
+CandidateContest	KY House District 84	KY House District 84
+CandidateContest	KY House District 83	KY House District 83
+CandidateContest	KY House District 82	KY House District 82
+CandidateContest	KY House District 81	KY House District 81
+CandidateContest	KY House District 80	KY House District 80
+CandidateContest	KY House District 8	KY House District 8
+CandidateContest	KY House District 79	KY House District 79
+CandidateContest	KY House District 78	KY House District 78
+CandidateContest	KY House District 77	KY House District 77
+CandidateContest	KY House District 76	KY House District 76
+CandidateContest	KY House District 75	KY House District 75
+CandidateContest	KY House District 74	KY House District 74
+CandidateContest	KY House District 73	KY House District 73
+CandidateContest	KY House District 72	KY House District 72
+CandidateContest	KY House District 71	KY House District 71
+CandidateContest	KY House District 70	KY House District 70
+CandidateContest	KY House District 7	KY House District 7
+CandidateContest	KY House District 69	KY House District 69
+CandidateContest	KY House District 68	KY House District 68
+CandidateContest	KY House District 67	KY House District 67
+CandidateContest	KY House District 66	KY House District 66
+CandidateContest	KY House District 65	KY House District 65
+CandidateContest	KY House District 64	KY House District 64
+CandidateContest	KY House District 63	KY House District 63
+CandidateContest	KY House District 62	KY House District 62
+CandidateContest	KY House District 61	KY House District 61
+CandidateContest	KY House District 60	KY House District 60
+CandidateContest	KY House District 6	KY House District 6
+CandidateContest	KY House District 59	KY House District 59
+CandidateContest	KY House District 58	KY House District 58
+CandidateContest	KY House District 57	KY House District 57
+CandidateContest	KY House District 56	KY House District 56
+CandidateContest	KY House District 55	KY House District 55
+CandidateContest	KY House District 54	KY House District 54
+CandidateContest	KY House District 53	KY House District 53
+CandidateContest	KY House District 52	KY House District 52
+CandidateContest	KY House District 51	KY House District 51
+CandidateContest	KY House District 50	KY House District 50
+CandidateContest	KY House District 5	KY House District 5
+CandidateContest	KY House District 49	KY House District 49
+CandidateContest	KY House District 48	KY House District 48
+CandidateContest	KY House District 47	KY House District 47
+CandidateContest	KY House District 46	KY House District 46
+CandidateContest	KY House District 45	KY House District 45
+CandidateContest	KY House District 44	KY House District 44
+CandidateContest	KY House District 43	KY House District 43
+CandidateContest	KY House District 42	KY House District 42
+CandidateContest	KY House District 41	KY House District 41
+CandidateContest	KY House District 40	KY House District 40
+CandidateContest	KY House District 4	KY House District 4
+CandidateContest	KY House District 39	KY House District 39
+CandidateContest	KY House District 38	KY House District 38
+CandidateContest	KY House District 37	KY House District 37
+CandidateContest	KY House District 36	KY House District 36
+CandidateContest	KY House District 35	KY House District 35
+CandidateContest	KY House District 34	KY House District 34
+CandidateContest	KY House District 33	KY House District 33
+CandidateContest	KY House District 32	KY House District 32
+CandidateContest	KY House District 31	KY House District 31
+CandidateContest	KY House District 30	KY House District 30
+CandidateContest	KY House District 3	KY House District 3
+CandidateContest	KY House District 29	KY House District 29
+CandidateContest	KY House District 28	KY House District 28
+CandidateContest	KY House District 27	KY House District 27
+CandidateContest	KY House District 26	KY House District 26
+CandidateContest	KY House District 25	KY House District 25
+CandidateContest	KY House District 24	KY House District 24
+CandidateContest	KY House District 23	KY House District 23
+CandidateContest	KY House District 22	KY House District 22
+CandidateContest	KY House District 21	KY House District 21
+CandidateContest	KY House District 20	KY House District 20
+CandidateContest	KY House District 2	KY House District 2
+CandidateContest	KY House District 19	KY House District 19
+CandidateContest	KY House District 18	KY House District 18
+CandidateContest	KY House District 17	KY House District 17
+CandidateContest	KY House District 16	KY House District 16
+CandidateContest	KY House District 15	KY House District 15
+CandidateContest	KY House District 14	KY House District 14
+CandidateContest	KY House District 13	KY House District 13
+CandidateContest	KY House District 12	KY House District 12
+CandidateContest	KY House District 11	KY House District 11
+CandidateContest	KY House District 100	KY House District 100
+CandidateContest	KY House District 10	KY House District 10
+CandidateContest	KY House District 1	KY House District 1
+CandidateContest	KY Senate District 9	KY Senate District 9
+CandidateContest	KY Senate District 7	KY Senate District 7
+CandidateContest	KY Senate District 5	KY Senate District 5
+CandidateContest	KY Senate District 37	KY Senate District 37
+CandidateContest	KY Senate District 35	KY Senate District 35
+CandidateContest	KY Senate District 33	KY Senate District 33
+CandidateContest	KY Senate District 31	KY Senate District 31
+CandidateContest	KY Senate District 3	KY Senate District 3
+CandidateContest	KY Senate District 29	KY Senate District 29
+CandidateContest	KY Senate District 27	KY Senate District 27
+CandidateContest	KY Senate District 25	KY Senate District 25
+CandidateContest	KY Senate District 23	KY Senate District 23
+CandidateContest	KY Senate District 21	KY Senate District 21
+CandidateContest	KY Senate District 19	KY Senate District 19
+CandidateContest	KY Senate District 17	KY Senate District 17
+CandidateContest	KY Senate District 15	KY Senate District 15
+CandidateContest	KY Senate District 13	KY Senate District 13
+CandidateContest	KY Senate District 11	KY Senate District 11
+CandidateContest	KY Senate District 1	KY Senate District 1
+Candidate	Stacy C. ABNER	Stacy C. ABNER
+Candidate	Philip Eric ROBINSON	Philip Eric ROBINSON
+Candidate	Mark SCHROER	Mark SCHROER
+Candidate	Jada BRADY	Jada BRADY
+Candidate	Dylan FRANZ	Dylan FRANZ
+Candidate	Debby Lucas ANGEL	Debby Lucas ANGEL
+Candidate	Yvonne BALDWIN	Yvonne BALDWIN
+Candidate	Walter TREBOLO III	Walter TREBOLO III
+Candidate	Matt E. MINIARD	Matt E. MINIARD
+Candidate	Gene Barry DETHERAGE JR.	Gene Barry DETHERAGE JR.
+Candidate	Brian PEDIGO	Brian PEDIGO

@@ -168,3 +168,6 @@ MI Attorney General	Michigan
 MI Lieutenant Governor	Michigan
 MI Treasurer	Michigan
 MI Secretary of State	Michigan
+MI Member of the State Board of Education	Michigan
+MI Regent of the University of Michigan	Michigan
+MI Justice of Supreme Court	Michigan

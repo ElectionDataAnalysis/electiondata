@@ -201,4 +201,41 @@ US Senate MD	1	US Senate MD
 MD Attorney General	1	MD Attorney General	
 MD Lieutenant Governor	1	MD Lieutenant Governor	
 MD Treasurer	1	MD Treasurer	
-MD Secretary of State	1	MD Secretary of State	
+MD Secretary of State	1	MD Secretary of State
+MD Comptroller	1	MD Comptroller
+MD House District 1A	1	MD House District 1A
+MD House District 1B	1	MD House District 1B	
+MD House District 1C	1	MD House District 1C	
+MD House District 23A	1	MD House District 23A	
+MD House District 23B	1	MD House District 23B	
+MD House District 27A	1	MD House District 27A	
+MD House District 27B	1	MD House District 27B	
+MD House District 27C	1	MD House District 27C	
+MD House District 29A	1	MD House District 29A	
+MD House District 29B	1	MD House District 29B	
+MD House District 29C	1	MD House District 29C	
+MD House District 2A	1	MD House District 2A	
+MD House District 2B	1	MD House District 2B	
+MD House District 30A	1	MD House District 30A	
+MD House District 30B	1	MD House District 30B	
+MD House District 31A	1	MD House District 31A	
+MD House District 31B	1	MD House District 31B	
+MD House District 34A	1	MD House District 34A	
+MD House District 34B	1	MD House District 34B	
+MD House District 35A	1	MD House District 35A	
+MD House District 35B	1	MD House District 35B	
+MD House District 37A	1	MD House District 37A	
+MD House District 37B	1	MD House District 37B	
+MD House District 38A	1	MD House District 38A	
+MD House District 38B	1	MD House District 38B	
+MD House District 38C	1	MD House District 38C	
+MD House District 3A	1	MD House District 3A	
+MD House District 3B	1	MD House District 3B	
+MD House District 42A	1	MD House District 42A	
+MD House District 42B	1	MD House District 42B	
+MD House District 44A	1	MD House District 44A	
+MD House District 44B	1	MD House District 44B	
+MD House District 47A	1	MD House District 47A	
+MD House District 47B	1	MD House District 47B	
+MD House District 9A	1	MD House District 9A	
+MD House District 9B	1	MD House District 9B	

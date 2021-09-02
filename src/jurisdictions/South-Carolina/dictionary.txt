@@ -6434,3 +6434,163 @@ ReportingUnit	South Carolina;Williamsburg County	Williamsburg
 ReportingUnit	South Carolina;Williamsburg County	fips45089
 ReportingUnit	South Carolina;York County	York
 ReportingUnit	South Carolina;York County	fips45091
+CandidateContest	SC Attorney General	SC;Attorney General
+CandidateContest	SC Commissioner of Agriculture	SC;Commissioner of Agriculture;statewide
+CandidateContest	SC Comptroller General	SC;Comptroller General;statewide
+CandidateContest	SC Governor	SC;Governor and Lieutenant Governor;statewide
+CandidateContest	SC Secretary of State	SC;Secretary of State;statewide
+CandidateContest	SC House District 11	SC;State Representative;District 11
+CandidateContest	SC House District 7	SC;State Representative;District 7
+CandidateContest	SC State Superintendent of Education	SC;State Superintendent of Education;statewide
+CandidateContest	SC State Treasurer	SC;State Treasurer;statewide
+CandidateContest	US House SC District 3	SC;US Representative;District 3
+CandidateContest	US House SC District 2	SC;US Representative;District 2
+CandidateContest	US House SC District 6	SC;US Representative;District 6
+CandidateContest	SC House District 10	SC;State Representative;District 10
+CandidateContest	SC House District 6	SC;State Representative;District 6
+CandidateContest	SC House District 8	SC;State Representative;District 8
+CandidateContest	SC House District 9	SC;State Representative;District 9
+CandidateContest	US House SC District 1	SC;US Representative;District 1
+CandidateContest	SC House District 15	SC;State Representative;District 15
+CandidateContest	SC House District 29	SC;State Representative;District 29
+CandidateContest	SC House District 30	SC;State Representative;District 30
+CandidateContest	US House SC District 5	SC;US Representative;District 5
+CandidateContest	SC House District 41	SC;State Representative;District 41
+CandidateContest	SC House District 43	SC;State Representative;District 43
+CandidateContest	SC House District 53	SC;State Representative;District 53
+CandidateContest	SC House District 54	SC;State Representative;District 54
+CandidateContest	SC House District 65	SC;State Representative;District 65
+CandidateContest	US House SC District 7	SC;US Representative;District 7
+CandidateContest	SC House District 64	SC;State Representative;District 64
+CandidateContest	SC House District 55	SC;State Representative;District 55
+CandidateContest	SC House District 59	SC;State Representative;District 59
+CandidateContest	SC House District 60	SC;State Representative;District 60
+CandidateContest	SC House District 62	SC;State Representative;District 62
+CandidateContest	SC House District 57	SC;State Representative;District 57
+CandidateContest	SC House District 61	SC;State Representative;District 61
+CandidateContest	SC House District 63	SC;State Representative;District 63
+CandidateContest	SC House District 16	SC;State Representative;District 16
+CandidateContest	SC House District 17	SC;State Representative;District 17
+CandidateContest	SC House District 18	SC;State Representative;District 18
+CandidateContest	SC House District 19	SC;State Representative;District 19
+CandidateContest	SC House District 20	SC;State Representative;District 20
+CandidateContest	SC House District 21	SC;State Representative;District 21
+CandidateContest	SC House District 22	SC;State Representative;District 22
+CandidateContest	SC House District 23	SC;State Representative;District 23
+CandidateContest	SC House District 24	SC;State Representative;District 24
+CandidateContest	SC House District 25	SC;State Representative;District 25
+CandidateContest	SC House District 27	SC;State Representative;District 27
+CandidateContest	SC House District 28	SC;State Representative;District 28
+CandidateContest	SC House District 35	SC;State Representative;District 35
+CandidateContest	SC House District 36	SC;State Representative;District 36
+CandidateContest	US House SC District 4	SC;US Representative;District 4
+CandidateContest	SC House District 12	SC;State Representative;District 12
+CandidateContest	SC House District 13	SC;State Representative;District 13
+CandidateContest	SC House District 14	SC;State Representative;District 14
+CandidateContest	SC House District 56	SC;State Representative;District 56
+CandidateContest	SC House District 58	SC;State Representative;District 58
+CandidateContest	SC House District 68	SC;State Representative;District 68
+CandidateContest	SC House District 50	SC;State Representative;District 50
+CandidateContest	SC House District 52	SC;State Representative;District 52
+CandidateContest	SC House District 44	SC;State Representative;District 44
+CandidateContest	SC House District 45	SC;State Representative;District 45
+CandidateContest	SC House District 42	SC;State Representative;District 42
+CandidateContest	SC House District 39	SC;State Representative;District 39
+CandidateContest	SC House District 69	SC;State Representative;District 69
+CandidateContest	SC House District 71	SC;State Representative;District 71
+CandidateContest	SC Senate District 20	SC;State Senate;District 20
+CandidateContest	SC House District 40	SC;State Representative;District 40
+CandidateContest	SC House District 1	SC;State Representative;District 1
+CandidateContest	SC House District 2	SC;State Representative;District 2
+CandidateContest	SC House District 66	SC;State Representative;District 66
+CandidateContest	SC House District 3	SC;State Representative;District 3
+CandidateContest	SC House District 4	SC;State Representative;District 4
+CandidateContest	SC House District 5	SC;State Representative;District 5
+CandidateContest	SC House District 70	SC;State Representative;District 70
+CandidateContest	SC House District 72	SC;State Representative;District 72
+CandidateContest	SC House District 73	SC;State Representative;District 73
+CandidateContest	SC House District 74	SC;State Representative;District 74
+CandidateContest	SC House District 31	SC;State Representative;District 31
+CandidateContest	SC House District 32	SC;State Representative;District 32
+CandidateContest	SC House District 33	SC;State Representative;District 33
+CandidateContest	SC House District 34	SC;State Representative;District 34
+CandidateContest	SC House District 37	SC;State Representative;District 37
+CandidateContest	SC House District 38	SC;State Representative;District 38
+CandidateContest	SC House District 51	SC;State Representative;District 51
+CandidateContest	SC House District 67	SC;State Representative;District 67
+CandidateContest	SC House District 26	SC;State Representative;District 26
+CandidateContest	SC House District 46	SC;State Representative;District 46
+CandidateContest	SC House District 47	SC;State Representative;District 47
+CandidateContest	SC House District 48	SC;State Representative;District 48
+CandidateContest	SC House District 49	SC;State Representative;District 49
+Party	American Party	american
+Party	Constitution Party	constitution
+Party	Democratic Party	democrat
+Party	Green Party	green
+Party	Independence Party	independence
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+Party	United Citizens Party	united citizens
+Party	Working Families Party	working families
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+CountItemType	total	total
+ReportingUnit	South Carolina;Abbeville County	South Carolina;Abbeville
+ReportingUnit	South Carolina;Aiken County	South Carolina;Aiken
+ReportingUnit	South Carolina;Allendale County	South Carolina;Allendale
+ReportingUnit	South Carolina;Anderson County	South Carolina;Anderson
+ReportingUnit	South Carolina;Bamberg County	South Carolina;Bamberg
+ReportingUnit	South Carolina;Barnwell County	South Carolina;Barnwell
+ReportingUnit	South Carolina;Beaufort County	South Carolina;Beaufort
+ReportingUnit	South Carolina;Berkeley County	South Carolina;Berkeley
+ReportingUnit	South Carolina;Calhoun County	South Carolina;Calhoun
+ReportingUnit	South Carolina;Charleston County	South Carolina;Charleston
+ReportingUnit	South Carolina;Cherokee County	South Carolina;Cherokee
+ReportingUnit	South Carolina;Chester County	South Carolina;Chester
+ReportingUnit	South Carolina;Chesterfield County	South Carolina;Chesterfield
+ReportingUnit	South Carolina;Clarendon County	South Carolina;Clarendon
+ReportingUnit	South Carolina;Colleton County	South Carolina;Colleton
+ReportingUnit	South Carolina;Darlington County	South Carolina;Darlington
+ReportingUnit	South Carolina;Dillon County	South Carolina;Dillon
+ReportingUnit	South Carolina;Dorchester County	South Carolina;Dorchester
+ReportingUnit	South Carolina;Edgefield County	South Carolina;Edgefield
+ReportingUnit	South Carolina;Fairfield County	South Carolina;Fairfield
+ReportingUnit	South Carolina;Florence County	South Carolina;Florence
+ReportingUnit	South Carolina;Georgetown County	South Carolina;Georgetown
+ReportingUnit	South Carolina;Greenville County	South Carolina;Greenville
+ReportingUnit	South Carolina;Greenwood County	South Carolina;Greenwood
+ReportingUnit	South Carolina;Hampton County	South Carolina;Hampton
+ReportingUnit	South Carolina;Horry County	South Carolina;Horry
+ReportingUnit	South Carolina;Jasper County	South Carolina;Jasper
+ReportingUnit	South Carolina;Kershaw County	South Carolina;Kershaw
+ReportingUnit	South Carolina;Lancaster County	South Carolina;Lancaster
+ReportingUnit	South Carolina;Laurens County	South Carolina;Laurens
+ReportingUnit	South Carolina;Lee County	South Carolina;Lee
+ReportingUnit	South Carolina;Lexington County	South Carolina;Lexington
+ReportingUnit	South Carolina;Marion County	South Carolina;Marion
+ReportingUnit	South Carolina;Marlboro County	South Carolina;Marlboro
+ReportingUnit	South Carolina;McCormick County	South Carolina;McCormick
+ReportingUnit	South Carolina;Newberry County	South Carolina;Newberry
+ReportingUnit	South Carolina;Oconee County	South Carolina;Oconee
+ReportingUnit	South Carolina;Orangeburg County	South Carolina;Orangeburg
+ReportingUnit	South Carolina;Pickens County	South Carolina;Pickens
+ReportingUnit	South Carolina;Richland County	South Carolina;Richland
+ReportingUnit	South Carolina;Saluda County	South Carolina;Saluda
+ReportingUnit	South Carolina;Spartanburg County	South Carolina;Spartanburg
+ReportingUnit	South Carolina;Sumter County	South Carolina;Sumter
+ReportingUnit	South Carolina;Union County	South Carolina;Union
+ReportingUnit	South Carolina;Williamsburg County	South Carolina;Williamsburg
+ReportingUnit	South Carolina;York County	South Carolina;York
+CandidateContest	SC Attorney General	SC;Attorney General;statewide

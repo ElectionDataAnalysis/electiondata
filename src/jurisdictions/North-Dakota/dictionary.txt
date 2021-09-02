@@ -645,6 +645,7 @@ Candidate	Randy McClaflin	Randy McClaflin
 Candidate	Ransom County Gazette	Ransom County Gazette
 Candidate	Ray Holmberg	Ray Holmberg
 Candidate	Rebecca Ferderer	Rebecca Ferderer
+Candidate	Rebecca Ferderer	Rebecca Ferderer independent
 Candidate	Rebecca Flanders	Rebecca Flanders
 Candidate	Rebecca Forness	Rebecca Forness
 Candidate	Rebecca Phillips	Rebecca Phillips
@@ -992,7 +993,6 @@ CountItemType	total	total
 Party	Democratic Party	DEMOCRAT
 Party	Democratic Party	Democratic-NPL
 Party	Green Party	GREEN
-Party	Independent Party	independent nomination
 Party	Libertarian Party	LIBERTARIAN
 Party	Libertarian Party	Libertarian
 Party	Republican Party	REPUBLICAN
@@ -1104,3 +1104,129 @@ ReportingUnit	North Dakota;Wells County	Wells
 ReportingUnit	North Dakota;Wells County	fips38103
 ReportingUnit	North Dakota;Williams County	Williams
 ReportingUnit	North Dakota;Williams County	fips38105
+CandidateContest	ND Agriculture Commissioner	ND;Agriculture Commissioner;statewide
+CandidateContest	ND Attorney General	ND;Attorney General
+CandidateContest	ND Justice of the Supreme Court	ND;Justice of the Supreme Court;statewide
+CandidateContest	ND Secretary of State	ND;Secretary of State;statewide
+CandidateContest	ND House District 39	ND;State Representative;District 39
+CandidateContest	ND Senate District 39	ND;State Senator;District 39
+CandidateContest	US House ND District 1	ND;US Representative;District 0
+CandidateContest	US Senate ND	ND;US Senator;statewide
+CandidateContest	ND House District 23	ND;State Representative;District 23
+CandidateContest	ND Senate District 23	ND;State Senator;District 23
+CandidateContest	ND House District 35	ND;State Representative;District 35
+CandidateContest	ND House District 47	ND;State Representative;District 47
+CandidateContest	ND House District 7	ND;State Representative;District 7
+CandidateContest	ND Senate District 35	ND;State Senator;District 35
+CandidateContest	ND Senate District 47	ND;State Senator;District 47
+CandidateContest	ND Senate District 7	ND;State Senator;District 7
+CandidateContest	ND House District 11	ND;State Representative;District 11
+CandidateContest	ND House District 13	ND;State Representative;District 13
+CandidateContest	ND House District 21	ND;State Representative;District 21
+CandidateContest	ND House District 25	ND;State Representative;District 25
+CandidateContest	ND House District 27	ND;State Representative;District 27
+CandidateContest	ND House District 41	ND;State Representative;District 41
+CandidateContest	ND House District 45	ND;State Representative;District 45
+CandidateContest	ND Senate District 11	ND;State Senator;District 11
+CandidateContest	ND Senate District 13	ND;State Senator;District 13
+CandidateContest	ND Senate District 21	ND;State Senator;District 21
+CandidateContest	ND Senate District 25	ND;State Senator;District 25
+CandidateContest	ND Senate District 27	ND;State Senator;District 27
+CandidateContest	ND Senate District 41	ND;State Senator;District 41
+CandidateContest	ND Senate District 45	ND;State Senator;District 45
+CandidateContest	ND House District 29	ND;State Representative;District 29
+CandidateContest	ND Senate District 29	ND;State Senator;District 29
+CandidateContest	ND House District 17	ND;State Representative;District 17
+CandidateContest	ND House District 19	ND;State Representative;District 19
+CandidateContest	ND House District 43	ND;State Representative;District 43
+CandidateContest	ND Senate District 17	ND;State Senator;District 17
+CandidateContest	ND Senate District 19	ND;State Senator;District 19
+CandidateContest	ND Senate District 43	ND;State Senator;District 43
+CandidateContest	ND House District 31	ND;State Representative;District 31
+CandidateContest	ND Senate District 31	ND;State Senator;District 31
+CandidateContest	ND House District 33	ND;State Representative;District 33
+CandidateContest	ND Senate District 33	ND;State Senator;District 33
+CandidateContest	ND House District 15	ND;State Representative;District 15
+CandidateContest	ND Senate District 15	ND;State Senator;District 15
+CandidateContest	ND House District 9	ND;State Representative;District 9
+CandidateContest	ND Senate District 9	ND;State Senator;District 9
+CandidateContest	ND House District 37	ND;State Representative;District 37
+CandidateContest	ND Senate District 37	ND;State Senator;District 37
+CandidateContest	ND House District 3	ND;State Representative;District 3
+CandidateContest	ND House District 5	ND;State Representative;District 5
+CandidateContest	ND Senate District 3	ND;State Senator;District 3
+CandidateContest	ND Senate District 5	ND;State Senator;District 5
+CandidateContest	ND House District 1	ND;State Representative;District 1
+CandidateContest	ND Senate District 1	ND;State Senator;District 1
+Party	Democratic-Npl Party	democratic-npl
+Party	Independent Nomination Party	independent nomination
+Party	Nonpartisan Party	nonpartisan
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+ReportingUnit	North Dakota;Adams County	North Dakota;Adams
+ReportingUnit	North Dakota;Barnes County	North Dakota;Barnes
+ReportingUnit	North Dakota;Benson County	North Dakota;Benson
+ReportingUnit	North Dakota;Billings County	North Dakota;Billings
+ReportingUnit	North Dakota;Bottineau County	North Dakota;Bottineau
+ReportingUnit	North Dakota;Bowman County	North Dakota;Bowman
+ReportingUnit	North Dakota;Burke County	North Dakota;Burke
+ReportingUnit	North Dakota;Burleigh County	North Dakota;Burleigh
+ReportingUnit	North Dakota;Cass County	North Dakota;Cass
+ReportingUnit	North Dakota;Cavalier County	North Dakota;Cavalier
+ReportingUnit	North Dakota;Dickey County	North Dakota;Dickey
+ReportingUnit	North Dakota;Divide County	North Dakota;Divide
+ReportingUnit	North Dakota;Dunn County	North Dakota;Dunn
+ReportingUnit	North Dakota;Eddy County	North Dakota;Eddy
+ReportingUnit	North Dakota;Emmons County	North Dakota;Emmons
+ReportingUnit	North Dakota;Foster County	North Dakota;Foster
+ReportingUnit	North Dakota;Golden Valley County	North Dakota;Golden Valley
+ReportingUnit	North Dakota;Grand Forks County	North Dakota;Grand Forks
+ReportingUnit	North Dakota;Grant County	North Dakota;Grant
+ReportingUnit	North Dakota;Griggs County	North Dakota;Griggs
+ReportingUnit	North Dakota;Hettinger County	North Dakota;Hettinger
+ReportingUnit	North Dakota;Kidder County	North Dakota;Kidder
+ReportingUnit	North Dakota;LaMoure County	North Dakota;LaMoure
+ReportingUnit	North Dakota;Logan County	North Dakota;Logan
+ReportingUnit	North Dakota;McHenry County	North Dakota;McHenry
+ReportingUnit	North Dakota;McIntosh County	North Dakota;McIntosh
+ReportingUnit	North Dakota;McKenzie County	North Dakota;McKenzie
+ReportingUnit	North Dakota;McLean County	North Dakota;McLean
+ReportingUnit	North Dakota;Mercer County	North Dakota;Mercer
+ReportingUnit	North Dakota;Morton County	North Dakota;Morton
+ReportingUnit	North Dakota;Mountrail County	North Dakota;Mountrail
+ReportingUnit	North Dakota;Nelson County	North Dakota;Nelson
+ReportingUnit	North Dakota;Oliver County	North Dakota;Oliver
+ReportingUnit	North Dakota;Pembina County	North Dakota;Pembina
+ReportingUnit	North Dakota;Pierce County	North Dakota;Pierce
+ReportingUnit	North Dakota;Ramsey County	North Dakota;Ramsey
+ReportingUnit	North Dakota;Ransom County	North Dakota;Ransom
+ReportingUnit	North Dakota;Renville County	North Dakota;Renville
+ReportingUnit	North Dakota;Richland County	North Dakota;Richland
+ReportingUnit	North Dakota;Rolette County	North Dakota;Rolette
+ReportingUnit	North Dakota;Sargent County	North Dakota;Sargent
+ReportingUnit	North Dakota;Sheridan County	North Dakota;Sheridan
+ReportingUnit	North Dakota;Sioux County	North Dakota;Sioux
+ReportingUnit	North Dakota;Slope County	North Dakota;Slope
+ReportingUnit	North Dakota;Stark County	North Dakota;Stark
+ReportingUnit	North Dakota;Steele County	North Dakota;Steele
+ReportingUnit	North Dakota;Stutsman County	North Dakota;Stutsman
+ReportingUnit	North Dakota;Towner County	North Dakota;Towner
+ReportingUnit	North Dakota;Traill County	North Dakota;Traill
+ReportingUnit	North Dakota;Walsh County	North Dakota;Walsh
+ReportingUnit	North Dakota;Ward County	North Dakota;Ward
+ReportingUnit	North Dakota;Wells County	North Dakota;Wells
+ReportingUnit	North Dakota;Williams County	North Dakota;Williams
+CandidateContest	ND Attorney General	ND;Attorney General;statewide

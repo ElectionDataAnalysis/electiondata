@@ -121,3 +121,8 @@ NM Attorney General	New Mexico
 NM Lieutenant Governor	New Mexico
 NM Treasurer	New Mexico
 NM Secretary of State	New Mexico
+NM Commissioner of Public Lands	New Mexico
+NM Justice of the Supreme Court	New Mexico
+NM State Auditor	New Mexico
+NM State Treasurer	New Mexico
+

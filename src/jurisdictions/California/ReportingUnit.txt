@@ -231,3 +231,8 @@ California;CA Senate District 6	state-senate
 California;CA Senate District 7	state-senate
 California;CA Senate District 8	state-senate
 California;CA Senate District 9	state-senate
+California;CA Board of Equalization Member District 2	board-of-equalization-district
+California;CA Board of Equalization Member District 1	board-of-equalization-district
+California;CA Board of Equalization Member District 4	board-of-equalization-district
+California;CA Board of Equalization Member District 3	board-of-equalization-district
+

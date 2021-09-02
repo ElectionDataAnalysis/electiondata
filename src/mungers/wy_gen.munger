@@ -58,6 +58,7 @@ CandidateContest=<count_header_0>
 [ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
 Candidate=Overvotes,Undervotes
+ReportingUnit=Total
 
 # Lookup formula sections #
 ## Required when foreign keys are used in munge formulas and    ##

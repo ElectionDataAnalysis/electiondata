@@ -30,13 +30,13 @@ Candidate	Aicha Davis	Aicha Davis
 Candidate	Aiesha Redmond	Aiesha Redmond
 Candidate	Aimee Garza Lopez	Aimee Garza Lopez
 Candidate	Akilah Bacy	Akilah Bacy
-Candidate	Al Gore	AL GORE
+Candidate	Al Gore	Al Gore
 Candidate	Al Green	Al Green
 Candidate	Al Green	Al Green (I)
 Candidate	Al Scoggins	Al Scoggins
 Candidate	Alan Nash	Alan Nash
 Candidate	Albert Amado	Albert Amado
-Candidate	Albert D. 'Pat' Pattillo Iii	"Albert D. ""Pat"" Pattillo Iii"
+Candidate	Albert D. 'Pat' Pattillo Iii	Albert D. 'Pat' Pattillo Iii
 Candidate	Albert G. McDaniel	Albert G. McDaniel
 Candidate	Albert John Roberts	Albert John Roberts
 Candidate	Albert M. McCaig, Jr.	Albert M. McCaig, Jr.
@@ -88,7 +88,7 @@ Candidate	Ana Martinez	Ana Martinez
 Candidate	Ana-Maria Ramos	Ana-Maria Ramos
 Candidate	Ana-Maria Ramos	Ana-Maria Ramos (I)
 Candidate	Anastasia Wilford	Anastasia Wilford
-Candidate	Andrea 'Andi' St. Leger	"Andrea ""Andi"" St. Leger"
+Candidate	Andrea 'Andi' St. Leger	Andrea 'Andi' St. Leger
 Candidate	Andrea Bouressa	Andrea Bouressa
 Candidate	Andrea Martin	Andrea Martin
 Candidate	Andrea Plumlee	Andrea Plumlee
@@ -120,28 +120,23 @@ Candidate	Angie Juarez Barill	Angie Juarez Barill
 Candidate	Anita Kegley	Anita Kegley
 Candidate	Ann Johnson	Ann Johnson
 Candidate	Anna Eastman	Anna Eastman
-Candidate	Annabell 'Anna' Perez	"Annabell ""Anna"" Perez"
+Candidate	Annabell 'Anna' Perez	Annabell 'Anna' Perez
 Candidate	Anne B. Darring	Anne B. Darring
 Candidate	Anne Pickle	Anne Pickle
 Candidate	Annie 'Mamá' Garcia	Annie 'Mamá' Garcia
 Candidate	Annie 'Mamá' Garcia	Annie 'Mamã' Garcia
 Candidate	Annie 'MamãÂ' Garcia	Annie 'MamãÂ' Garcia
-Candidate	Annie 'MamãÂÃÂ' Garcia	"Annie ""MamãÂÃÂ"" Garcia"
+Candidate	Annie 'MamãÂÃÂ' Garcia	Annie 'MamãÂÃÂ' Garcia
 Candidate	Anthony Aguero	Anthony Aguero
 Candidate	Anthony Cristo	Anthony Cristo
 Candidate	Anthony Holan	Anthony Holan
 Candidate	Anthony Lo	Anthony Lo
-Candidate	Antonia 'Toni' Arteaga	"Antonia ""Toni"" Arteaga"
-Candidate	Antonio 'Tony' Diaz	"Antonio ""Tony"" Diaz"
+Candidate	Antonia 'Toni' Arteaga	Antonia 'Toni' Arteaga
+Candidate	Antonio 'Tony' Diaz	Antonio 'Tony' Diaz
 Candidate	Antonio Padron	Antonio Padron
-Candidate	Arcelia TreviÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±o	Arcelia TreviÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±o
-Candidate	Arcelia TreviãÂÃÂO	Arcelia TreviãÂÃÂO
 Candidate	Arlene Hecht	Arlene Hecht
 Candidate	Armando 'Mando&Quot; Martinez	Armando 'Mando&Quot; Martinez (I)
-Candidate	Armando 'Mando' Martinez	"Armando 'Mando"" Martinez"
-Candidate	Armando 'Mando' Martinez	Armando 'Mando' Martinez
-Candidate	Armando 'Mando' Martínez	"Armando ""Mando"" Martinez"
-Candidate	Armando 'Mando' Martínez	"Armando ""Mando"" MartÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­nez"
+Candidate	Armando 'Mando' Martínez	Armando 'Mando' Martinez
 Candidate	Armando 'Mando' Martínez	Armando 'Mando' Martínez
 Candidate	Armando Gamboa	Armando Gamboa
 Candidate	Armando Lucio Walle	Armando Lucio Walle
@@ -168,10 +163,10 @@ Candidate	Aurora Martinez Jones	Aurora Martinez Jones
 Candidate	Austin Reeve Jackson	Austin Reeve Jackson
 Candidate	Austin Talley	Austin Talley
 Candidate	Ava Reynero Pate	Ava Reynero Pate
-Candidate	B. Michael 'Mike' Chitty	"B. Michael ""Mike"" Chitty"
-Candidate	Baldemar 'Balde' Garza	"Baldemar ""Balde"" Garza"
+Candidate	B. Michael 'Mike' Chitty	B. Michael 'Mike' Chitty
+Candidate	Baldemar 'Balde' Garza	Baldemar 'Balde' Garza
 Candidate	Bangar Reddy	Bangar Reddy
-Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barack Obama	Barack Obama
 Candidate	Barbara Cargill	Barbara Cargill
 Candidate	Barbara Gardner	Barbara Gardner
 Candidate	Barbara Gervin-Hawkins	Barbara Gervin-Hawkins
@@ -318,7 +313,7 @@ Candidate	Bruce Williams	Bruce Williams
 Candidate	Bryan Acklin	Bryan Acklin
 Candidate	Bryan Chu	Bryan Chu
 Candidate	Bryan David Denham	Bryan David Denham
-Candidate	Bryan F. 'Rusty' Russ, Jr.	"Bryan F. ""Rusty"" Russ, Jr."
+Candidate	Bryan F. 'Rusty' Russ, Jr.	Bryan F. 'Rusty' Russ, Jr.
 Candidate	Bryan Goertz	Bryan Goertz
 Candidate	Bryan Hughes	Bryan Hughes
 Candidate	Bryan Hughes	Bryan Hughes (I)
@@ -342,7 +337,7 @@ Candidate	Carl O. Sherman Sr	Carl O. Sherman Sr
 Candidate	Carl O. Sherman Sr	Carl O. Sherman Sr (I)
 Candidate	Carl Sherman	Carl Sherman
 Candidate	Carla Morton	Carla Morton
-Candidate	Carlos 'Charlie' Garza	"Carlos ""Charlie"" Garza"
+Candidate	Carlos 'Charlie' Garza	Carlos 'Charlie' Garza
 Candidate	Carlos Antonio Raymond	Carlos Antonio Raymond
 Candidate	Carlos I. Uresti	Carlos I. Uresti
 Candidate	Carlos Omar Garcia	Carlos Omar Garcia
@@ -363,17 +358,15 @@ Candidate	Casey Blair	Casey Blair
 Candidate	Casey Gray	Casey Gray
 Candidate	Casey Littlejohn	Casey Littlejohn
 Candidate	Casey Polhemus	Casey Polhemus
-Candidate	Catherine 'I Swear' Carr	"Catherine ""I Swear"" Carr"
 Candidate	Catherine 'I Swear' Carr	Catherine 'I Swear' Carr
 Candidate	Catherine A Mauzy	Catherine A Mauzy
 Candidate	Catherine Evans	Catherine Evans
 Candidate	Catherine Krantz	Catherine Krantz
 Candidate	Catherine Torres-Stahl	Catherine Torres-Stahl
 Candidate	Catherine Torrres-Stahl	Catherine Torrres-Stahl
-Candidate	Cathleen 'Cathy' Stryker	"Cathleen ""Cathy"" Stryker"
-Candidate	Cc 'Sonny' Phillips	"Cc ""Sonny"" Phillips"
+Candidate	Cathleen 'Cathy' Stryker	Cathleen 'Cathy' Stryker
+Candidate	Cc 'Sonny' Phillips	Cc 'Sonny' Phillips
 Candidate	Ceasar Ruiz	Ceasar Ruiz
-Candidate	Cecil B. 'Burt' Jones	"Cecil B. ""Burt"" Jones"
 Candidate	Cecil B. 'Burt' Jones	Cecil B. 'Burt' Jones
 Candidate	Cecil Bell	Cecil Bell
 Candidate	Cecil Bell Jr	Cecil Bell Jr
@@ -393,9 +386,8 @@ Candidate	Chantal Melissa Eldridge	Chantal Melissa Eldridge
 Candidate	Chap Cain	Chap Cain
 Candidate	Chari Kelly	Chari Kelly
 Candidate	Charles &Quot;Doc&Quot; Anderson	Charles &Quot;Doc&Quot; Anderson (I)
-Candidate	Charles 'Doc' Anderson	"Charles ""Doc"" Anderson"
 Candidate	Charles 'Doc' Anderson	Charles 'Doc' Anderson
-Candidate	Charles 'Tad' Hasse	"Charles ""Tad"" Hasse"
+Candidate	Charles 'Tad' Hasse	Charles 'Tad' Hasse
 Candidate	Charles A. Kreger	Charles A. Kreger
 Candidate	Charles Allan Meyer	Charles Allan Meyer
 Candidate	Charles Craig Bailey	Charles Craig Bailey
@@ -457,7 +449,7 @@ Candidate	Christopher Wall	Christopher Wall
 Candidate	Christy Albano	Christy Albano
 Candidate	Christy Mowrey Peterson	Christy Mowrey Peterson
 Candidate	Chrysta CastaãÂÃÂEda	Chrysta CastaãÂÃÂEda
-Candidate	Chuck 'Charles B' Meyer	"Chuck ""Charles B"" Meyer"
+Candidate	Chuck 'Charles B' Meyer	Chuck 'Charles B' Meyer
 Candidate	Chuck Richter	Chuck Richter
 Candidate	Chuck Silverman	Chuck Silverman
 Candidate	Cindy Bennett Smith	Cindy Bennett Smith
@@ -477,7 +469,7 @@ Candidate	Clif Deuvall	Clif Deuvall
 Candidate	Cliff Brown	Cliff Brown
 Candidate	Cliff Vacek	Cliff Vacek
 Candidate	Clint Lawson	Clint Lawson
-Candidate	Clinton 'Chip' Wells	"Clinton ""Chip"" Wells"
+Candidate	Clinton 'Chip' Wells	Clinton 'Chip' Wells
 Candidate	Cody Harris	Cody Harris
 Candidate	Cody Harris	Cody Harris (I)
 Candidate	Cody Johnson	Cody Johnson
@@ -522,7 +514,6 @@ Candidate	César J Blanco	CãSar J Blanco
 Candidate	César J Blanco	César J Blanco
 Candidate	D. Allen Miller	D. Allen Miller
 Candidate	D. R. Hunter	D. R. Hunter
-Candidate	D.F. 'Rick' Miller	"D.F. ""Rick"" Miller"
 Candidate	D.F. 'Rick' Miller	D.F. 'Rick' Miller
 Candidate	DaSean Jones	DaSean Jones
 Candidate	Dabney Bassel	Dabney Bassel
@@ -559,7 +550,7 @@ Candidate	Daniel J. Kindred	Daniel J. Kindred
 Candidate	Daniel Lee	Daniel Lee
 Candidate	Daniel R. Correa	Daniel R. Correa
 Candidate	Daniel Tinus	Daniel Tinus
-Candidate	Danilo 'Danny' Lacayo	"Danilo ""Danny"" Lacayo"
+Candidate	Danilo 'Danny' Lacayo	Danilo 'Danny' Lacayo
 Candidate	Danny Anderson	Danny Anderson
 Candidate	Danny Buck Davidson	Danny Buck Davidson
 Candidate	Danny J. Kindred	Danny J. Kindred
@@ -653,7 +644,7 @@ Candidate	Diane Knowlton	Diane Knowlton
 Candidate	Diane Navarrete	Diane Navarrete
 Candidate	Diane Rosaura Navarrete	Diane Rosaura Navarrete
 Candidate	Dib Waldrip	Dib Waldrip
-Candidate	Dibrell 'Dib' Waldrip	"Dibrell ""Dib"" Waldrip"
+Candidate	Dibrell 'Dib' Waldrip	Dibrell 'Dib' Waldrip
 Candidate	Dick Illyes	Dick Illyes
 Candidate	Diego Bernal	Diego Bernal
 Candidate	Diego Bernal	Diego Bernal (I)
@@ -671,12 +662,12 @@ Candidate	Don Huffines	Don Huffines
 Candidate	Don Schnebly	Don Schnebly
 Candidate	Don Self	Don Self
 Candidate	Don Zimmerman	Don Zimmerman
-Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald Trump
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Donald J. Trump / Mike Pence
 Candidate	Donald J. Trump	Donald J. Trump/Michael R. Pence
 Candidate	Donald J. Trump	Donald J. Trump/Michael R. Pence (I)
-Candidate	Donald L. 'Don' Kraemer	"Donald L. ""Don"" Kraemer"
+Candidate	Donald L. 'Don' Kraemer	Donald L. 'Don' Kraemer
 Candidate	Donna Bahorich	Donna Bahorich
 Candidate	Donna Campbell	Donna Campbell
 Candidate	Donna Gordon Kaspar	Donna Gordon Kaspar
@@ -705,7 +696,6 @@ Candidate	Dustin Burrows	Dustin Burrows
 Candidate	Dustin Burrows	Dustin Burrows (I)
 Candidate	Dusty Boyd	Dusty Boyd
 Candidate	Dusty Gallivan	Dusty Gallivan
-Candidate	Dwayne 'Doc' Collins	"Dwayne ""Doc"" Collins"
 Candidate	Dwayne 'Doc' Collins	Dwayne 'Doc' Collins
 Candidate	Dwayne Bohac	Dwayne Bohac
 Candidate	Dwayne Stovall	Dwayne Stovall
@@ -741,9 +731,7 @@ Candidate	Eli Garza	Eli Garza
 Candidate	Elia Cornejo Lopez	Elia Cornejo Lopez
 Candidate	Elianor Vessali	Elianor Vessali
 Candidate	Elisa Tamayo	Elisa Tamayo
-Candidate	Elizabeth 'Eliz' Markowitz	"Elizabeth ""Eliz"" Markowitz"
 Candidate	Elizabeth 'Eliz' Markowitz	Elizabeth 'Eliz' Markowitz
-Candidate	Elizabeth 'Liz' Campos	"Elizabeth ""Liz"" Campos"
 Candidate	Elizabeth 'Liz' Campos	Elizabeth 'Liz' Campos
 Candidate	Elizabeth Beach	Elizabeth Beach
 Candidate	Elizabeth Beck	Elizabeth Beck
@@ -801,7 +789,6 @@ Candidate	Evan Clay Stubbs	Evan Clay Stubbs
 Candidate	Evan McMullin	Evan McMullin / Nathan Johnson
 Candidate	Evan Nagel	Evan Nagel
 Candidate	Evan Stone	Evan Stone
-Candidate	Evelina 'Lina' Ortega	"Evelina ""Lina"" Ortega"
 Candidate	Evelina 'Lina' Ortega	Evelina 'Lina' Ortega
 Candidate	Evelina (Lina) Ortega	Evelina (Lina) Ortega
 Candidate	Evelina (Lina) Ortega	Evelina (Lina) Ortega (I)
@@ -814,7 +801,7 @@ Candidate	Fancy H. Jezek	Fancy H. Jezek
 Candidate	Felix Klein	Felix Klein
 Candidate	Fernando Mancias	Fernando Mancias
 Candidate	Fernando Padron	Fernando Padron
-Candidate	Fidel 'TwoBears' Castillo	"Fidel ""TwoBears"" Castillo"
+Candidate	Fidel 'TwoBears' Castillo	Fidel 'TwoBears' Castillo
 Candidate	Filemon B. Vela	Filemon B. Vela
 Candidate	Filemon B. Vela	Filemon B. Vela (I)
 Candidate	Finnigan Jones	Finnigan Jones
@@ -868,7 +855,7 @@ Candidate	Gene Wu	Gene Wu (I)
 Candidate	Genevieve Collins	Genevieve Collins
 Candidate	Geoffrey Puryear	Geoffrey Puryear
 Candidate	George B. Garza	George B. Garza
-Candidate	George D. 'Jody' Gilles	"George D. ""Jody"" Gilles"
+Candidate	George D. 'Jody' Gilles	George D. 'Jody' Gilles
 Candidate	George Flint	George Flint
 Candidate	George Gallagher	George Gallagher
 Candidate	George J. Wise	George J. Wise
@@ -876,14 +863,13 @@ Candidate	George Lindsey	George Lindsey
 Candidate	George Mitcham	George Mitcham
 Candidate	George P. Bush	George P. Bush
 Candidate	George Powell	George Powell
-Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	George W. Bush	George W. Bush
 Candidate	George W. Hindman	George W. Hindman
 Candidate	Georgina Perez	Georgina Perez
 Candidate	Germaine Tanner	Germaine Tanner
 Candidate	Gerson Hernandez	Gerson Hernandez
 Candidate	Gilbert Pena	Gilbert Pena
-Candidate	Gilberto 'Gil' Velasquez Jr.	"Gilberto ""Gil"" Velasquez Jr."
-Candidate	Gilberto 'Gil' Velasquez, Jr.	"Gilberto ""Gil"" Velasquez, Jr."
+Candidate	Gilberto 'Gil' Velasquez Jr.	Gilberto 'Gil' Velasquez Jr.
 Candidate	Gilberto 'Gil' Velasquez, Jr.	Gilberto 'Gil' Velasquez, Jr.
 Candidate	Gina Benavides	Gina Benavides
 Candidate	Gina Calanni	Gina Calanni
@@ -931,7 +917,7 @@ Candidate	Gus Trujillo	Gus Trujillo
 Candidate	Guy Williams	Guy Williams
 Candidate	Gwenn Burud	Gwenn Burud
 Candidate	H. Todd J. Moore	H. Todd J. Moore
-Candidate	H.F. 'Rusty' Tomlinson	"H.F. ""Rusty"" Tomlinson"
+Candidate	H.F. 'Rusty' Tomlinson	H.F. 'Rusty' Tomlinson
 Candidate	Hal J. Ridley Jr	Hal J. Ridley Jr
 Candidate	Hal J. Ridley Jr.	Hal J. Ridley Jr.
 Candidate	Hal R. Ridley	Hal R. Ridley
@@ -957,7 +943,7 @@ Candidate	Herb Ritchie	Herb Ritchie
 Candidate	Hilary Unger	Hilary Unger
 Candidate	Hilda Garza De Shazo	Hilda Garza De Shazo
 Candidate	Hilda Garza DeShazo	Hilda Garza DeShazo
-Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Hillary Clinton	Hillary Clinton / Tim Kaine
 Candidate	Hollis Horton	Hollis Horton
 Candidate	Hope L. Knight	Hope L. Knight
@@ -983,7 +969,7 @@ Candidate	J. Brett Smith	J. Brett Smith
 Candidate	J. Clay Gossett	J. Clay Gossett
 Candidate	J. K. Stephenson	J. K. Stephenson
 Candidate	J. Kevin Dutton	J. Kevin Dutton
-Candidate	J. R. 'Bobby' Flores	"J. R. ""Bobby"" Flores"
+Candidate	J. R. 'Bobby' Flores	J. R. 'Bobby' Flores
 Candidate	J.A. Trey Didway	J.A. Trey Didway
 Candidate	J.D. Faircloth	J.D. Faircloth
 Candidate	J.D. Sheffield	J.D. Sheffield
@@ -1010,7 +996,7 @@ Candidate	Jaclanel Mcfarland	Jaclanel Mcfarland
 Candidate	Jacob Leddy	Jacob Leddy
 Candidate	Jacob Putman	Jacob Putman
 Candidate	Jacorion Randle	Jacorion Randle
-Candidate	Jacqueline 'Jackie' ValdãÂÃÂZ	"Jacqueline ""Jackie"" ValdãÂÃÂZ"
+Candidate	Jacqueline 'Jackie' ValdãÂÃÂZ	Jacqueline 'Jackie' ValdãÂÃÂZ
 Candidate	Jacqueline Phillips Ott	Jacqueline Phillips Ott
 Candidate	Jaime Arriola Jr	Jaime Arriola Jr
 Candidate	Jaime Escuder	Jaime Escuder
@@ -1019,7 +1005,7 @@ Candidate	Jaime O. Perez	Jaime O. Perez
 Candidate	Jaime Tijerina	Jaime Tijerina
 Candidate	Jaimy Z. Blanco	Jaimy Z. Blanco
 Candidate	Jake Ellzey	Jake Ellzey
-Candidate	James 'Jim' Wright	"James ""Jim"" Wright"
+Candidate	James 'Jim' Wright	James 'Jim' Wright
 Candidate	James A. (Jim) Payne, Jr.	James A. (Jim) Payne, Jr.
 Candidate	James Allen	James Allen
 Candidate	James Armstrong Iii	James Armstrong Iii
@@ -1034,7 +1020,7 @@ Candidate	James Cargas	James Cargas
 Candidate	James Duerr	James Duerr
 Candidate	James Eidson	James Eidson
 Candidate	James Frank	James Frank
-Candidate	James H. 'Jim' Shoemake	"James H. ""Jim"" Shoemake"
+Candidate	James H. 'Jim' Shoemake	James H. 'Jim' Shoemake
 Candidate	James Harren	James Harren
 Candidate	James Hernandez	James Hernandez
 Candidate	James Hicks	James Hicks
@@ -1204,7 +1190,6 @@ Candidate	Jim Worthen	Jim Worthen
 Candidate	Jimmie L Brown Jr	Jimmie L Brown Jr
 Candidate	Jimmy Blacklock	Jimmy Blacklock
 Candidate	Jj Campbell	Jj Campbell
-Candidate	Jo Jorgensen	"Jo Jorgensen/Jeremy ""Spike"" Cohen"
 Candidate	Jo Jorgensen	Jo Jorgensen/Jeremy 'Spike' Cohen
 Candidate	Jo-Anne Valdivia	Jo-Anne Valdivia
 Candidate	Joan Huffman	Joan Huffman
@@ -1236,11 +1221,11 @@ Candidate	Joe Straus	Joe Straus
 Candidate	Joe Walsh	Joe Walsh
 Candidate	Joe Walz	Joe Walz
 Candidate	Joey Cardenas Iii	Joey Cardenas Iii
-Candidate	John 'Hawk' Hawkins	"John ""Hawk"" Hawkins"
-Candidate	John 'Johnny' B. Stevens Jr.	"John ""Johnny"" B. Stevens Jr."
+Candidate	John 'Hawk' Hawkins	John 'Hawk' Hawkins
+Candidate	John 'Johnny' B. Stevens Jr.	John 'Johnny' B. Stevens Jr.
 Candidate	John (Doc) Robert Guerra	John (Doc) Robert Guerra
 Candidate	John (Trey) McClendon	John (Trey) McClendon
-Candidate	John A. 'Trey' Didway	"John A. ""Trey"" Didway"
+Candidate	John A. 'Trey' Didway	John A. 'Trey' Didway
 Candidate	John A. Clark	John A. Clark
 Candidate	John Anthony Castro	John Anthony Castro
 Candidate	John B. Board	John B. Board
@@ -1277,13 +1262,13 @@ Candidate	John H. Best	John H. Best
 Candidate	John H. Bucy Iii	John H. Bucy Iii
 Candidate	John H. Bucy Iii	John H. Bucy Iii (I)
 Candidate	John K. Delaney	John K. Delaney
-Candidate	John Kerry	JOHN KERRY
+Candidate	John Kerry	John Kerry
 Candidate	John Kuempel	John Kuempel
 Candidate	John Kuempel	John Kuempel (I)
 Candidate	John L. Pool	John L. Pool
 Candidate	John Lujan	John Lujan
 Candidate	John Maher	John Maher
-Candidate	John McCain	JOHN MCCAIN
+Candidate	John McCain	John Mccain
 Candidate	John P. Chupp	John P. Chupp
 Candidate	John P. Cyrier	John P. Cyrier
 Candidate	John P. Cyrier	John P. Cyrier (I)
@@ -1333,7 +1318,7 @@ Candidate	Jose Longoria	Jose Longoria
 Candidate	Jose Luis Garza	Jose Luis Garza
 Candidate	Jose Menendez	Jose Menendez
 Candidate	Jose R. Sosa	Jose R. Sosa
-Candidate	Joseph 'Tad' Halbach	"Joseph ""Tad"" Halbach"
+Candidate	Joseph 'Tad' Halbach	Joseph 'Tad' Halbach
 Candidate	Joseph C. Pickett	Joseph C. Pickett
 Candidate	Joseph Kopser	Joseph Kopser
 Candidate	Joseph Leblanc Jr	Joseph Leblanc Jr
@@ -1361,10 +1346,8 @@ Candidate	JosÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© Ro
 Candidate	JosãÂÃÂ Garza	JosãÂÃÂ Garza
 Candidate	José Menéndez	José Menéndez
 Candidate	Joy Dawson-Thomas	Joy Dawson-Thomas
-Candidate	Juan 'Chuy' Hinojosa	'Juan ''Chuy'' Hinojosa'
-Candidate	Juan 'Chuy' Hinojosa	"Juan ""Chuy"" Hinojosa"
-Candidate	Juan 'Chuy' Hinojosa	Juan &Quot;Chuy&Quot; Hinojosa (I)
 Candidate	Juan 'Chuy' Hinojosa	Juan 'Chuy' Hinojosa
+Candidate	Juan 'Chuy' Hinojosa	Juan &Quot;Chuy&Quot; Hinojosa (I)
 Candidate	Juan A. Magallanes	Juan A. Magallanes
 Candidate	Judith Sanders-Castro	Judith Sanders-Castro
 Candidate	Judith Wells	Judith Wells
@@ -1465,7 +1448,6 @@ Candidate	Kenny E Marchant	Kenny E Marchant
 Candidate	Kenny E. Marchant	Kenny E. Marchant
 Candidate	Keno Vasquez	Keno Vasquez
 Candidate	Keno Vasquez Jr	Keno Vasquez Jr
-Candidate	Kent 'Bud' Wymore	"Kent ""Bud"" Wymore"
 Candidate	Kent 'Bud' Wymore	Kent 'Bud' Wymore
 Candidate	Kerry Douglas McKennon	Kerry Douglas McKennon
 Candidate	Kerry Douglas Mckennon	Kerry Douglas Mckennon
@@ -1515,8 +1497,7 @@ Candidate	Kyle Kacal	Kyle Kacal
 Candidate	Kyle Kacal	Kyle Kacal (I)
 Candidate	Kyle Kemp	Kyle Kemp
 Candidate	Kyle Preston	Kyle Preston
-Candidate	L. 'Sarah' DeMerchant	"L. ""Sarah"" DeMerchant"
-Candidate	L. 'Sarah' Demerchant	"L. ""Sarah"" Demerchant"
+Candidate	L. 'Sarah' DeMerchant	L. 'Sarah' DeMerchant
 Candidate	L. 'Sarah' Demerchant	L. 'Sarah' Demerchant
 Candidate	L. Sarah Demerchant	L. Sarah Demerchant
 Candidate	Lacey Hull	Lacey Hull
@@ -1554,7 +1535,7 @@ Candidate	Laurence Kotlikoff	Laurence Kotlikoff / Edward Leamer
 Candidate	Lauri Blake	Lauri Blake
 Candidate	Laurie Godfrey Mcreynolds	Laurie Godfrey Mcreynolds
 Candidate	Laurie K. English	Laurie K. English
-Candidate	Lawrence 'Larry' Meyers	"Lawrence ""Larry"" Meyers"
+Candidate	Lawrence 'Larry' Meyers	Lawrence 'Larry' Meyers
 Candidate	Lawrence Allen Jr	Lawrence Allen Jr
 Candidate	Lawrence Allen Jr.	Lawrence Allen Jr.
 Candidate	Lawrence Johnson	Lawrence Johnson
@@ -1586,7 +1567,6 @@ Candidate	Letti Bresnahan	Letti Bresnahan
 Candidate	Letty Lopez	Letty Lopez
 Candidate	Levi J. Benton	Levi J. Benton
 Candidate	Libby Wiedermann	Libby Wiedermann
-Candidate	Likeithia 'Keke' Williams	"Likeithia ""Keke"" Williams"
 Candidate	Likeithia 'Keke' Williams	Likeithia 'Keke' Williams
 Candidate	Liliana Posada	Liliana Posada
 Candidate	Lily Truong	Lily Truong
@@ -1672,7 +1652,7 @@ Candidate	Marc M. Meyer	Marc M. Meyer
 Candidate	Marc Veasey	Marc Veasey
 Candidate	Marc Veasey	Marc Veasey (I)
 Candidate	Marcos Lizarraga	Marcos Lizarraga
-Candidate	Margaret 'Meg' Poissant	"Margaret ""Meg"" Poissant"
+Candidate	Margaret 'Meg' Poissant	Margaret 'Meg' Poissant
 Candidate	Margaret E Barnes	Margaret E Barnes
 Candidate	Margaret Moore	Margaret Moore
 Candidate	Margarita Ruiz Johnson	Margarita Ruiz Johnson
@@ -1687,7 +1667,7 @@ Candidate	Marianne Arnold	Marianne Arnold
 Candidate	Marianne Williamson	Marianne Williamson
 Candidate	Maribel Cruz	Maribel Cruz
 Candidate	Maribel Flores	Maribel Flores
-Candidate	Maricela 'Mari' De Leon	"Maricela ""Mari"" De Leon"
+Candidate	Maricela 'Mari' De Leon	Maricela 'Mari' De Leon
 Candidate	Maricela Moore	Maricela Moore
 Candidate	Maricela Sanchez Chibli	Maricela Sanchez Chibli
 Candidate	Marilynn Mayse	Marilynn Mayse
@@ -1736,7 +1716,6 @@ Candidate	Martina Salinas	Martina Salinas
 Candidate	Marty Jo Taylor	Marty Jo Taylor
 Candidate	Marty Rowley	Marty Rowley
 Candidate	Marty Schexnayder	Marty Schexnayder
-Candidate	Mary 'Mj' Hegar	"Mary ""Mj"" Hegar"
 Candidate	Mary 'Mj' Hegar	Mary 'Mj' Hegar
 Candidate	Mary Ann Perez	Mary Ann Perez
 Candidate	Mary Ann Perez	Mary Ann Perez (I)
@@ -1747,7 +1726,6 @@ Candidate	Mary E. Gonzalez	Mary E. Gonzalez (I)
 Candidate	Mary E. GonzÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡lez	Mary E. GonzÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡lez
 Candidate	Mary E. Williams	Mary E. Williams
 Candidate	Mary Huffman	Mary Huffman
-Candidate	Mary Jennings 'MJ' Hegar	"Mary Jennings ""MJ"" Hegar"
 Candidate	Mary Jennings 'MJ' Hegar	Mary Jennings 'MJ' Hegar
 Candidate	Mary L. Gourdoux	Mary L. Gourdoux
 Candidate	Mary Lou Alvarez	Mary Lou Alvarez
@@ -1799,8 +1777,8 @@ Candidate	Meredith Kennedy	Meredith Kennedy
 Candidate	Merrilee Rosene Beazley	Merrilee Rosene Beazley
 Candidate	Mica J. Ringo	Mica J. Ringo
 Candidate	Micah M. Verlander	Micah M. Verlander
-Candidate	Michael 'Mike' Bagley	"Michael ""Mike"" Bagley"
-Candidate	Michael 'Mike' Schneider	"Michael ""Mike"" Schneider"
+Candidate	Michael 'Mike' Bagley	Michael 'Mike' Bagley
+Candidate	Michael 'Mike' Schneider	Michael 'Mike' Schneider
 Candidate	Michael A. Maturen	Michael A. Maturen / Juan A. Munoz
 Candidate	Michael Allen	Michael Allen
 Candidate	Michael Antalan	Michael Antalan
@@ -1878,7 +1856,7 @@ Candidate	Missy Medary	Missy Medary
 Candidate	Mitch Adams	Mitch Adams
 Candidate	Mitch Templeton	Mitch Templeton
 Candidate	Mitch Thames	Mitch Thames
-Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mitt Romney	Mitt Romney
 Candidate	Mollee Westfall	Mollee Westfall
 Candidate	Molly Francis	Molly Francis
 Candidate	Monica De La Cruz-Hernandez	Monica De La Cruz-Hernandez
@@ -1897,7 +1875,7 @@ Candidate	Nancy Cline	Nancy Cline
 Candidate	Nancy Kennedy	Nancy Kennedy
 Candidate	Nanette Hasette	Nanette Hasette
 Candidate	Natali Hurtado	Natali Hurtado
-Candidate	Natalia 'Nata' Cornelio	"Natalia ""Nata"" Cornelio"
+Candidate	Natalia 'Nata' Cornelio	Natalia 'Nata' Cornelio
 Candidate	Natalia Oakes	Natalia Oakes
 Candidate	Natasha Ruiz	Natasha Ruiz
 Candidate	Nathan Hecht	Nathan Hecht
@@ -1920,7 +1898,7 @@ Candidate	Nicole Garza	Nicole Garza
 Candidate	Nicole Griffin	Nicole Griffin
 Candidate	Nicole Lostracco	Nicole Lostracco
 Candidate	Nicole Short Bishop	Nicole Short Bishop
-Candidate	Nikita 'Niki' Harmon	"Nikita ""Niki"" Harmon"
+Candidate	Nikita 'Niki' Harmon	Nikita 'Niki' Harmon
 Candidate	Nile Copeland	Nile Copeland
 Candidate	Noble D. Walker Jr	Noble D. Walker Jr
 Candidate	Noble D. Walker, Jr.	Noble D. Walker, Jr.
@@ -1935,12 +1913,12 @@ Candidate	Olyn Poole	Olyn Poole
 Candidate	Omar Escobar	Omar Escobar
 Candidate	Ori Tucker White	Ori Tucker White
 Candidate	Osbert Rodriguez Haro Iii	Osbert Rodriguez Haro Iii
-Candidate	Oscar 'O.J.' Hale Jr	"Oscar ""O.J."" Hale Jr"
-Candidate	Oscar 'O.J.' Hale, Jr.	"Oscar ""O.J."" Hale, Jr."
+Candidate	Oscar 'O.J.' Hale Jr	Oscar 'O.J.' Hale Jr
+Candidate	Oscar 'O.J.' Hale, Jr.	Oscar 'O.J.' Hale, Jr.
 Candidate	Oscar Longoria	Oscar Longoria
 Candidate	Oscar Longoria	Oscar Longoria (I)
 Candidate	Oscar M. Telfair Iii	Oscar M. Telfair Iii
-Candidate	Other	OTHER
+Candidate	Other	Other
 Candidate	P. David Wahlberg	P. David Wahlberg
 Candidate	Paige Dixon	Paige Dixon
 Candidate	Pam Foster Fletcher	Pam Foster Fletcher
@@ -1955,11 +1933,11 @@ Candidate	Pat Phelan	Pat Phelan
 Candidate	Pat Pirtle	Pat Pirtle
 Candidate	Pat Sebesta	Pat Sebesta
 Candidate	Pat Simmons	Pat Simmons
-Candidate	Patricia 'Pat' Hardy	"Patricia ""Pat"" Hardy"
+Candidate	Patricia 'Pat' Hardy	Patricia 'Pat' Hardy
 Candidate	Patricia Baca Bennett	Patricia Baca Bennett
 Candidate	Patricia Grady	Patricia Grady
 Candidate	Patricia O'Connell Alvarez	Patricia O'Connell Alvarez
-Candidate	Patrick 'Pat' Simmons	"Patrick ""Pat"" Simmons"
+Candidate	Patrick 'Pat' Simmons	Patrick 'Pat' Simmons
 Candidate	Patrick Ballantyne	Patrick Ballantyne
 Candidate	Patrick Bramblett	Patrick Bramblett
 Candidate	Patrick Bulanek	Patrick Bulanek
@@ -1997,8 +1975,6 @@ Candidate	Peter Churchman	Peter Churchman
 Candidate	Peter Kelly	Peter Kelly
 Candidate	Peter M. Kelly	Peter M. Kelly
 Candidate	Peter P. &Quot;Pete&Quot; Flores	Peter P. &Quot;Pete&Quot; Flores (I)
-Candidate	Peter P. 'Pete' Flores	'Peter P. ''Pete'' Flores'
-Candidate	Peter P. 'Pete' Flores	"Peter P. ""Pete"" Flores"
 Candidate	Peter P. 'Pete' Flores	Peter P. 'Pete' Flores
 Candidate	Peter P. Flores	Peter P. Flores
 Candidate	Peter Sakai	Peter Sakai
@@ -2037,14 +2013,14 @@ Candidate	R. Scott Mckee	R. Scott Mckee
 Candidate	R. Wesley Tidwell	R. Wesley Tidwell
 Candidate	R.H. Wallace, Jr.	R.H. Wallace, Jr.
 Candidate	R.K. Sandill	R.K. Sandill
-Candidate	R.N. 'Bobby' Bland	"R.N. ""Bobby"" Bland"
+Candidate	R.N. 'Bobby' Bland	R.N. 'Bobby' Bland
 Candidate	Rabeea Collier	Rabeea Collier
 Candidate	Rachel Wester	Rachel Wester
 Candidate	Rafael Alcoser Iii	Rafael Alcoser Iii
 Candidate	Rafael M. Anchia	Rafael M. Anchia
 Candidate	Rafael M. Anchia	Rafael M. Anchia (I)
 Candidate	Ralph K. Burgess	Ralph K. Burgess
-Candidate	Ralph Nader	RALPH NADER
+Candidate	Ralph Nader	Ralph Nader
 Candidate	Ralph T. Strother	Ralph T. Strother
 Candidate	Ralph Walton	Ralph Walton
 Candidate	Ramon Romero	Ramon Romero
@@ -2067,7 +2043,7 @@ Candidate	Randy Shelton	Randy Shelton
 Candidate	Randy Weber	Randy Weber
 Candidate	Randy Weber	Randy Weber (I)
 Candidate	Randy Wilson	Randy Wilson
-Candidate	Raquel 'Rocky' Jones	"Raquel ""Rocky"" Jones"
+Candidate	Raquel 'Rocky' Jones	Raquel 'Rocky' Jones
 Candidate	Raquel West	Raquel West
 Candidate	Rashad Lewis	Rashad Lewis
 Candidate	Raul (Roy) Barrera	Raul (Roy) Barrera
@@ -2078,7 +2054,7 @@ Candidate	Ray J. Olivarri	Ray J. Olivarri
 Candidate	Ray Lopez	Ray Lopez
 Candidate	Ray Lopez	Ray Lopez (I)
 Candidate	Ray Wheless	Ray Wheless
-Candidate	Rayburn M. 'Rim' Nall	"Rayburn M. ""Rim"" Nall"
+Candidate	Rayburn M. 'Rim' Nall	Rayburn M. 'Rim' Nall
 Candidate	Raza Rahman	Raza Rahman
 Candidate	Rebeca Martinez	Rebeca Martinez
 Candidate	Rebecca Bell-Metereau	Rebecca Bell-Metereau
@@ -2092,7 +2068,7 @@ Candidate	Rene De Coss	Rene De Coss
 Candidate	Rene M. Pena	Rene M. Pena
 Candidate	Rene O. Oliveira	Rene O. Oliveira
 Candidate	Rene Welton	Rene Welton
-Candidate	Renee 'Rena' Rodriguez-Betancourt	"Renee ""Rena"" Rodriguez-Betancourt"
+Candidate	Renee 'Rena' Rodriguez-Betancourt	Renee 'Rena' Rodriguez-Betancourt
 Candidate	Renee Culler	Renee Culler
 Candidate	Renee Magee	Renee Magee
 Candidate	Renee Rodriguez-Betancourt	Renee Rodriguez-Betancourt
@@ -2113,7 +2089,6 @@ Candidate	Rhetta Andrews Bowers	Rhetta Andrews Bowers
 Candidate	Rhetta Andrews Bowers	Rhetta Andrews Bowers (I)
 Candidate	Rhonda Hurley	Rhonda Hurley
 Candidate	Rhonda Seth	Rhonda Seth
-Candidate	Ricardo 'Rick' De La Fuente	"Ricardo ""Rick"" De La Fuente"
 Candidate	Ricardo 'Rick' De La Fuente	Ricardo 'Rick' De La Fuente
 Candidate	Ricardo (Rick) Rios	Ricardo (Rick) Rios
 Candidate	Ricardo M. Adobbati	Ricardo M. Adobbati
@@ -2156,18 +2131,16 @@ Candidate	Rob Lassmann	Rob Lassmann
 Candidate	Robb Catalano	Robb Catalano
 Candidate	Robbie Partida-Kipness	Robbie Partida-Kipness
 Candidate	Robby Wells	Robby Wells
-Candidate	Robert 'Bobby' Kasprzak	"Robert ""Bobby"" Kasprzak"
-Candidate	Robert 'Puga' Thomas	"Robert ""Puga"" Thomas"
+Candidate	Robert 'Bobby' Kasprzak	Robert 'Bobby' Kasprzak
 Candidate	Robert 'Puga' Thomas	Robert 'Puga' Thomas
-Candidate	Robert 'Zack' Rader	"Robert ""Zack"" Rader"
 Candidate	Robert 'Zack' Rader	Robert 'Zack' Rader
 Candidate	Robert Bob Inselmann	Robert Bob Inselmann
 Candidate	Robert Boettcher	Robert Boettcher
 Candidate	Robert Bohmfalk	Robert Bohmfalk
 Candidate	Robert Burns	Robert Burns
-Candidate	Robert C. 'Rob' Lassmann	"Robert C. ""Rob"" Lassmann"
+Candidate	Robert C. 'Rob' Lassmann	Robert C. 'Rob' Lassmann
 Candidate	Robert C. Hoskins	Robert C. Hoskins
-Candidate	Robert E. 'Bobby' Bell	"Robert E. ""Bobby"" Bell"
+Candidate	Robert E. 'Bobby' Bell	Robert E. 'Bobby' Bell
 Candidate	Robert E. Cadena	Robert E. Cadena
 Candidate	Robert Garza	Robert Garza
 Candidate	Robert H. Trapp	Robert H. Trapp
@@ -2183,7 +2156,7 @@ Candidate	Robert Morrow	Robert Morrow
 Candidate	Robert Morrow	Robert Morrow / Todd Sanders
 Candidate	Robert Morrow	Robert Morrow/Anne Beckett
 Candidate	Robert Nichols	Robert Nichols
-Candidate	Robert R. 'Rob' Hofmann	"Robert R. ""Rob"" Hofmann"
+Candidate	Robert R. 'Rob' Hofmann	Robert R. 'Rob' Hofmann
 Candidate	Robert Reynolds	Robert Reynolds
 Candidate	Robert Rolston	Robert Rolston
 Candidate	Robert S. Morales	Robert S. Morales
@@ -2192,7 +2165,7 @@ Candidate	Robert Sullivan	Robert Sullivan
 Candidate	Robert Tucker	Robert Tucker
 Candidate	Robert Vick	Robert Vick
 Candidate	Robert Wilson	Robert Wilson
-Candidate	Roberto R. 'Beto' Alonzo	"Roberto R. ""Beto"" Alonzo"
+Candidate	Roberto R. 'Beto' Alonzo	Roberto R. 'Beto' Alonzo
 Candidate	Roberto R. Alonzo	Roberto R. Alonzo
 Candidate	Roberto Serna	Roberto Serna
 Candidate	Robin Hayter	Robin Hayter
@@ -2219,11 +2192,8 @@ Candidate	Ron Wright	Ron Wright
 Candidate	Ron Wright	Ron Wright (I)
 Candidate	Ronald Payne	Ronald Payne
 Candidate	Ronny Jackson	Ronny Jackson
-Candidate	Roque 'Rocky' De La Fuente	"Roque ""Rocky"" De La Fuente"
 Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
-Candidate	Roque 'Rocky' De La Fuente Guerra	"Roque ""Rocky"" De La Fuente Guerra"
 Candidate	Roque 'Rocky' De La Fuente Guerra	Roque 'Rocky' De La Fuente Guerra
-Candidate	Rosalinda 'Rosey' Ramos Abuabara	"Rosalinda ""Rosey"" Ramos Abuabara"
 Candidate	Rosalinda 'Rosey' Ramos Abuabara	Rosalinda 'Rosey' Ramos Abuabara
 Candidate	Rose Guerra Reyna	Rose Guerra Reyna
 Candidate	Rosie Alvarado	Rosie Alvarado
@@ -2298,7 +2268,7 @@ Candidate	Sarah Fox	Sarah Fox
 Candidate	Sarahjane Swanson	Sarahjane Swanson
 Candidate	Savannah Robinson	Savannah Robinson
 Candidate	Schell Hammel	Schell Hammel
-Candidate	Scot 'dolli' Dollinger	"Scot ""dolli"" Dollinger"
+Candidate	Scot 'dolli' Dollinger	Scot 'dolli' Dollinger
 Candidate	Scott Ballard	Scott Ballard
 Candidate	Scott Bland	Scott Bland
 Candidate	Scott Coleman	Scott Coleman
@@ -2363,7 +2333,6 @@ Candidate	Sheila Jackson Lee	Sheila Jackson Lee
 Candidate	Sheila Jackson Lee	Sheila Jackson Lee (I)
 Candidate	Shelby Slawson	Shelby Slawson
 Candidate	Shelton Gibbs Iv	Shelton Gibbs Iv
-Candidate	Shenita 'Shae' Cleveland	"Shenita ""Shae"" Cleveland"
 Candidate	Shenita 'Shae' Cleveland	Shenita 'Shae' Cleveland
 Candidate	Sheri Y. Dean	Sheri Y. Dean
 Candidate	Sherri Tibbe	Sherri Tibbe
@@ -2451,7 +2420,7 @@ Candidate	Sylvia R. Garcia	Sylvia R. Garcia
 Candidate	T.C. Manning	T.C. Manning
 Candidate	Tamara Needles	Tamara Needles
 Candidate	Tameika Carter	Tameika Carter
-Candidate	Tamika 'Tami' Craft	"Tamika ""Tami"" Craft"
+Candidate	Tamika 'Tami' Craft	Tamika 'Tami' Craft
 Candidate	Tammy J. Thomas	Tammy J. Thomas
 Candidate	Tammy K. Orta	Tammy K. Orta
 Candidate	Tammy Kemp	Tammy Kemp
@@ -2488,7 +2457,6 @@ Candidate	Thomas M Wheeler	Thomas M Wheeler
 Candidate	Thomas Wang	Thomas Wang
 Candidate	Thomas West	Thomas West
 Candidate	Thomas Wheeler	Thomas Wheeler
-Candidate	Thresa 'Terry' Meza	"Thresa ""Terry"" Meza"
 Candidate	Thresa 'Terry' Meza	Thresa 'Terry' Meza
 Candidate	Tiffany Haertling	Tiffany Haertling
 Candidate	Tim Brandenburg	Tim Brandenburg
@@ -2504,7 +2472,7 @@ Candidate	Tina Clinton	Tina Clinton
 Candidate	Tina Torres	Tina Torres
 Candidate	Tina Yoo Clinton	Tina Yoo Clinton
 Candidate	Titus Benton	Titus Benton
-Candidate	Todd A. 'Tadeo' Durden	"Todd A. ""Tadeo"" Durden"
+Candidate	Todd A. 'Tadeo' Durden	Todd A. 'Tadeo' Durden
 Candidate	Todd Cella	Todd Cella/Tim Cella
 Candidate	Todd Hunter	Todd Hunter
 Candidate	Todd Hunter	Todd Hunter (I)
@@ -2612,7 +2580,7 @@ Candidate	Vikki Goodwin	Vikki Goodwin (I)
 Candidate	Vince Duncan	Vince Duncan
 Candidate	Vince Santini	Vince Santini
 Candidate	Virgil Bierschwale	Virgil Bierschwale
-Candidate	Virginia 'Jennie Lou' Leeder	"Virginia ""Jennie Lou"" Leeder"
+Candidate	Virginia 'Jennie Lou' Leeder	Virginia 'Jennie Lou' Leeder
 Candidate	W. Kent Walston	W. Kent Walston
 Candidate	W. Stacy Trotter	W. Stacy Trotter
 Candidate	Wacey Alpha Cody	Wacey Alpha Cody
@@ -2638,7 +2606,7 @@ Candidate	Wesley Ward	Wesley Ward
 Candidate	Whitney Bilyeu	Whitney Bilyeu
 Candidate	Whitney Thompson Smith	Whitney Thompson Smith
 Candidate	Wiley (Sonny) McAfee	Wiley (Sonny) McAfee
-Candidate	Wiley B. 'Sonny' Mcafee	"Wiley B. ""Sonny"" Mcafee"
+Candidate	Wiley B. 'Sonny' Mcafee	Wiley B. 'Sonny' Mcafee
 Candidate	Will Archer	Will Archer
 Candidate	Will Biard	Will Biard
 Candidate	Will Douglas	Will Douglas
@@ -2649,7 +2617,7 @@ Candidate	Will Metcalf	Will Metcalf
 Candidate	Will Metcalf	Will Metcalf (I)
 Candidate	Will Ramsay	Will Ramsay
 Candidate	Will Thompson	Will Thompson
-Candidate	William 'Will' Dixon	"William ""Will"" Dixon"
+Candidate	William 'Will' Dixon	William 'Will' Dixon
 Candidate	William (Doug) Wallace	William (Doug) Wallace
 Candidate	William Bryan Strange III	William Bryan Strange III
 Candidate	William Bryan Strange, III	William Bryan Strange, III
@@ -2674,7 +2642,7 @@ Candidate	Yvonne Rosales	Yvonne Rosales
 Candidate	Zack Parks	Zack Parks
 Candidate	Zeffen Hardin	Zeffen Hardin
 Candidate	Zoltan G. Istvan	Zoltan G. Istvan
-Candidate	katija 'kat' gruene	"katija ""kat"" gruene"
+Candidate	katija 'kat' gruene	katija 'kat' gruene
 CandidateContest	Railroad Commissioner	Railroad Commissioner
 CandidateContest	Railroad Commissioner (Democratic Party)	Railroad Commissioner (DEM)
 CandidateContest	Railroad Commissioner (Democratic Party)	Railroad Commissioner (DEMOCRATIC)
@@ -7170,3 +7138,452 @@ ReportingUnit	Texas;Zapata County	ZAPATA
 ReportingUnit	Texas;Zapata County	fips48505
 ReportingUnit	Texas;Zavala County	ZAVALA
 ReportingUnit	Texas;Zavala County	fips48507
+CandidateContest	TX Attorney General	TX;Attorney General
+CandidateContest	TX Commissioner of Agriculture	TX;Commissioner of Agriculture;statewide
+CandidateContest	TX Commissioner of the General Land office	TX;Commissioner of the General Land office;statewide
+CandidateContest	TX Comptroller of Public Accounts	TX;Comptroller of Public Accounts;statewide
+CandidateContest	TX Governor	TX;Governor;statewide
+CandidateContest	TX Judge Court of Criminal Appeals Place 7	TX;Judge, Court of Criminal Appeals Place 7;statewide
+CandidateContest	TX Judge Court of Criminal Appeals Place 8	TX;Judge, Court of Criminal Appeals Place 8;statewide
+CandidateContest	TX Justice Supreme Court Place 2	TX;Justice, Supreme Court, Place 2;statewide
+CandidateContest	TX Justice Supreme Court Place 4	TX;Justice, Supreme Court, Place 4;statewide
+CandidateContest	TX Justice Supreme Court Place 6	TX;Justice, Supreme Court, Place 6;statewide
+CandidateContest	TX Lieutenant Governor	TX;Lieutenant Governor;statewide
+CandidateContest	TX Presiding Judge Court of Criminal Appeals	TX;Presiding Judge, Court of Criminal Appeals;statewide
+CandidateContest	TX Railroad Commissioner	TX;Railroad Commissioner;statewide
+CandidateContest	TX House District 8	TX;State Representative;District 8
+CandidateContest	TX Senate District 3	TX;State Senator;District 3
+CandidateContest	US House TX District 5	TX;US Representative;District 5
+CandidateContest	US Senate TX	TX;US Senator;statewide
+CandidateContest	TX House District 81	TX;State Representative;District 81
+CandidateContest	TX Senate District 31	TX;State Senator;District 31
+CandidateContest	US House TX District 11	TX;US Representative;District 11
+CandidateContest	TX House District 57	TX;State Representative;District 57
+CandidateContest	US House TX District 1	TX;US Representative;District 1
+CandidateContest	TX Member State Board of Education District 2	TX;Member, State Board of Education;District 2
+CandidateContest	TX House District 30	TX;State Representative;District 30
+CandidateContest	US House TX District 27	TX;US Representative;District 27
+CandidateContest	TX Senate District 30	TX;State Senator;District 30
+CandidateContest	US House TX District 13	TX;US Representative;District 13
+CandidateContest	TX House District 88	TX;State Representative;District 88
+CandidateContest	US House TX District 28	TX;US Representative;District 28
+CandidateContest	TX House District 13	TX;State Representative;District 13
+CandidateContest	US House TX District 10	TX;US Representative;District 10
+CandidateContest	US House TX District 19	TX;US Representative;District 19
+CandidateContest	TX House District 53	TX;State Representative;District 53
+CandidateContest	US House TX District 21	TX;US Representative;District 21
+CandidateContest	TX House District 17	TX;State Representative;District 17
+CandidateContest	TX Senate District 14	TX;State Senator;District 14
+CandidateContest	US House TX District 17	TX;US Representative;District 17
+CandidateContest	TX House District 43	TX;State Representative;District 43
+CandidateContest	US House TX District 34	TX;US Representative;District 34
+CandidateContest	TX House District 54	TX;State Representative;District 54
+CandidateContest	US House TX District 25	TX;US Representative;District 25
+CandidateContest	US House TX District 31	TX;US Representative;District 31
+CandidateContest	TX House District 116	TX;State Representative;District 116
+CandidateContest	TX House District 117	TX;State Representative;District 117
+CandidateContest	TX House District 118	TX;State Representative;District 118
+CandidateContest	TX House District 120	TX;State Representative;District 120
+CandidateContest	TX House District 121	TX;State Representative;District 121
+CandidateContest	TX House District 122	TX;State Representative;District 122
+CandidateContest	TX House District 124	TX;State Representative;District 124
+CandidateContest	TX House District 125	TX;State Representative;District 125
+CandidateContest	TX Senate District 25	TX;State Senator;District 25
+CandidateContest	US House TX District 20	TX;US Representative;District 20
+CandidateContest	US House TX District 23	TX;US Representative;District 23
+CandidateContest	US House TX District 35	TX;US Representative;District 35
+CandidateContest	TX House District 45	TX;State Representative;District 45
+CandidateContest	TX House District 83	TX;State Representative;District 83
+CandidateContest	US House TX District 4	TX;US Representative;District 4
+CandidateContest	TX Member State Board of Education District 7	TX;Member, State Board of Education;District 7
+CandidateContest	TX House District 29	TX;State Representative;District 29
+CandidateContest	TX Senate District 17	TX;State Senator;District 17
+CandidateContest	US House TX District 14	TX;US Representative;District 14
+CandidateContest	US House TX District 22	TX;US Representative;District 22
+CandidateContest	TX House District 12	TX;State Representative;District 12
+CandidateContest	TX House District 14	TX;State Representative;District 14
+CandidateContest	TX Senate District 5	TX;State Senator;District 5
+CandidateContest	US House TX District 15	TX;US Representative;District 15
+CandidateContest	TX House District 20	TX;State Representative;District 20
+CandidateContest	TX House District 5	TX;State Representative;District 5
+CandidateContest	TX House District 23	TX;State Representative;District 23
+CandidateContest	US House TX District 36	TX;US Representative;District 36
+CandidateContest	TX House District 11	TX;State Representative;District 11
+CandidateContest	TX Member State Board of Education District 12	TX;Member, State Board of Education;District 12
+CandidateContest	TX House District 33	TX;State Representative;District 33
+CandidateContest	TX House District 66	TX;State Representative;District 66
+CandidateContest	TX House District 67	TX;State Representative;District 67
+CandidateContest	TX House District 70	TX;State Representative;District 70
+CandidateContest	TX House District 89	TX;State Representative;District 89
+CandidateContest	TX Senate District 8	TX;State Senator;District 8
+CandidateContest	US House TX District 3	TX;US Representative;District 3
+CandidateContest	US House TX District 32	TX;US Representative;District 32
+CandidateContest	TX House District 73	TX;State Representative;District 73
+CandidateContest	TX House District 82	TX;State Representative;District 82
+CandidateContest	TX House District 86	TX;State Representative;District 86
+CandidateContest	TX Member State Board of Education District 11	TX;Member, State Board of Education;District 11
+CandidateContest	TX Member State Board of Education District 13	TX;Member, State Board of Education;District 13
+CandidateContest	TX House District 102	TX;State Representative;District 102
+CandidateContest	TX House District 103	TX;State Representative;District 103
+CandidateContest	TX House District 105	TX;State Representative;District 105
+CandidateContest	TX House District 107	TX;State Representative;District 107
+CandidateContest	TX House District 108	TX;State Representative;District 108
+CandidateContest	TX House District 112	TX;State Representative;District 112
+CandidateContest	TX House District 113	TX;State Representative;District 113
+CandidateContest	TX House District 114	TX;State Representative;District 114
+CandidateContest	TX House District 115	TX;State Representative;District 115
+CandidateContest	TX Senate District 16	TX;State Senator;District 16
+CandidateContest	TX Senate District 2	TX;State Senator;District 2
+CandidateContest	TX Senate District 9	TX;State Senator;District 9
+CandidateContest	US House TX District 24	TX;US Representative;District 24
+CandidateContest	US House TX District 26	TX;US Representative;District 26
+CandidateContest	US House TX District 30	TX;US Representative;District 30
+CandidateContest	US House TX District 33	TX;US Representative;District 33
+CandidateContest	TX House District 62	TX;State Representative;District 62
+CandidateContest	TX House District 106	TX;State Representative;District 106
+CandidateContest	TX House District 63	TX;State Representative;District 63
+CandidateContest	TX House District 64	TX;State Representative;District 64
+CandidateContest	TX House District 65	TX;State Representative;District 65
+CandidateContest	TX House District 78	TX;State Representative;District 78
+CandidateContest	US House TX District 16	TX;US Representative;District 16
+CandidateContest	TX House District 10	TX;State Representative;District 10
+CandidateContest	US House TX District 6	TX;US Representative;District 6
+CandidateContest	TX House District 26	TX;State Representative;District 26
+CandidateContest	TX House District 28	TX;State Representative;District 28
+CandidateContest	TX House District 85	TX;State Representative;District 85
+CandidateContest	US House TX District 9	TX;US Representative;District 9
+CandidateContest	TX House District 24	TX;State Representative;District 24
+CandidateContest	US House TX District 8	TX;US Representative;District 8
+CandidateContest	TX House District 44	TX;State Representative;District 44
+CandidateContest	TX House District 19	TX;State Representative;District 19
+CandidateContest	TX House District 126	TX;State Representative;District 126
+CandidateContest	TX House District 127	TX;State Representative;District 127
+CandidateContest	TX House District 129	TX;State Representative;District 129
+CandidateContest	TX House District 130	TX;State Representative;District 130
+CandidateContest	TX House District 131	TX;State Representative;District 131
+CandidateContest	TX House District 132	TX;State Representative;District 132
+CandidateContest	TX House District 133	TX;State Representative;District 133
+CandidateContest	TX House District 134	TX;State Representative;District 134
+CandidateContest	TX House District 135	TX;State Representative;District 135
+CandidateContest	TX House District 137	TX;State Representative;District 137
+CandidateContest	TX House District 138	TX;State Representative;District 138
+CandidateContest	TX House District 139	TX;State Representative;District 139
+CandidateContest	TX House District 144	TX;State Representative;District 144
+CandidateContest	TX House District 145	TX;State Representative;District 145
+CandidateContest	TX House District 146	TX;State Representative;District 146
+CandidateContest	TX House District 147	TX;State Representative;District 147
+CandidateContest	TX House District 148	TX;State Representative;District 148
+CandidateContest	TX House District 149	TX;State Representative;District 149
+CandidateContest	TX House District 150	TX;State Representative;District 150
+CandidateContest	TX Senate District 15	TX;State Senator;District 15
+CandidateContest	TX Senate District 7	TX;State Senator;District 7
+CandidateContest	US House TX District 18	TX;US Representative;District 18
+CandidateContest	US House TX District 2	TX;US Representative;District 2
+CandidateContest	US House TX District 29	TX;US Representative;District 29
+CandidateContest	US House TX District 7	TX;US Representative;District 7
+CandidateContest	TX House District 4	TX;State Representative;District 4
+CandidateContest	TX House District 41	TX;State Representative;District 41
+CandidateContest	TX House District 2	TX;State Representative;District 2
+CandidateContest	TX House District 71	TX;State Representative;District 71
+CandidateContest	TX House District 18	TX;State Representative;District 18
+CandidateContest	TX House District 84	TX;State Representative;District 84
+CandidateContest	TX House District 56	TX;State Representative;District 56
+CandidateContest	TX House District 15	TX;State Representative;District 15
+CandidateContest	TX House District 16	TX;State Representative;District 16
+CandidateContest	TX House District 3	TX;State Representative;District 3
+CandidateContest	TX House District 34	TX;State Representative;District 34
+CandidateContest	US House TX District 12	TX;US Representative;District 12
+CandidateContest	TX House District 6	TX;State Representative;District 6
+CandidateContest	TX House District 101	TX;State Representative;District 101
+CandidateContest	TX House District 91	TX;State Representative;District 91
+CandidateContest	TX House District 92	TX;State Representative;District 92
+CandidateContest	TX House District 93	TX;State Representative;District 93
+CandidateContest	TX House District 94	TX;State Representative;District 94
+CandidateContest	TX House District 95	TX;State Representative;District 95
+CandidateContest	TX House District 96	TX;State Representative;District 96
+CandidateContest	TX House District 97	TX;State Representative;District 97
+CandidateContest	TX House District 98	TX;State Representative;District 98
+CandidateContest	TX House District 99	TX;State Representative;District 99
+CandidateContest	TX Senate District 10	TX;State Senator;District 10
+CandidateContest	TX House District 46	TX;State Representative;District 46
+CandidateContest	TX House District 47	TX;State Representative;District 47
+CandidateContest	TX House District 49	TX;State Representative;District 49
+CandidateContest	TX House District 42	TX;State Representative;District 42
+CandidateContest	TX House District 136	TX;State Representative;District 136
+CandidateContest	TX House District 52	TX;State Representative;District 52
+Candidate	L. Sarah DeMerchant	L. Sarah DeMerchant
+Candidate	Suzanne Smith	Suzanne Smith
+Party	Democratic Party	democrat
+Party	Independent Party	independent
+Party	Libertarian Party	libertarian
+Party	Republican Party	republican
+CountItemType	absentee	absentee
+CountItemType	absentee-mail	absentee by mail
+CountItemType	absentee-mail	absentee mail
+CountItemType	absentee or early	absentee/early vote
+CountItemType	early	advance in person
+CountItemType	early	early
+CountItemType	early	early vote
+CountItemType	election-day	election
+CountItemType	election-day	election day
+CountItemType	election-day	electon day
+CountItemType	election-day	machine
+CountItemType	absentee-mail	mail ballots
+CountItemType	early	one stop
+CountItemType	provisional	provisional
+ReportingUnit	Texas;Anderson County	Texas;Anderson
+ReportingUnit	Texas;Andrews County	Texas;Andrews
+ReportingUnit	Texas;Angelina County	Texas;Angelina
+ReportingUnit	Texas;Aransas County	Texas;Aransas
+ReportingUnit	Texas;Archer County	Texas;Archer
+ReportingUnit	Texas;Armstrong County	Texas;Armstrong
+ReportingUnit	Texas;Atascosa County	Texas;Atascosa
+ReportingUnit	Texas;Austin County	Texas;Austin
+ReportingUnit	Texas;Bailey County	Texas;Bailey
+ReportingUnit	Texas;Bandera County	Texas;Bandera
+ReportingUnit	Texas;Bastrop County	Texas;Bastrop
+ReportingUnit	Texas;Baylor County	Texas;Baylor
+ReportingUnit	Texas;Bee County	Texas;Bee
+ReportingUnit	Texas;Bell County	Texas;Bell
+ReportingUnit	Texas;Bexar County	Texas;Bexar
+ReportingUnit	Texas;Blanco County	Texas;Blanco
+ReportingUnit	Texas;Borden County	Texas;Borden
+ReportingUnit	Texas;Bosque County	Texas;Bosque
+ReportingUnit	Texas;Bowie County	Texas;Bowie
+ReportingUnit	Texas;Brazoria County	Texas;Brazoria
+ReportingUnit	Texas;Brazos County	Texas;Brazos
+ReportingUnit	Texas;Brewster County	Texas;Brewster
+ReportingUnit	Texas;Briscoe County	Texas;Briscoe
+ReportingUnit	Texas;Brooks County	Texas;Brooks
+ReportingUnit	Texas;Brown County	Texas;Brown
+ReportingUnit	Texas;Burleson County	Texas;Burleson
+ReportingUnit	Texas;Burnet County	Texas;Burnet
+ReportingUnit	Texas;Caldwell County	Texas;Caldwell
+ReportingUnit	Texas;Calhoun County	Texas;Calhoun
+ReportingUnit	Texas;Callahan County	Texas;Callahan
+ReportingUnit	Texas;Cameron County	Texas;Cameron
+ReportingUnit	Texas;Camp County	Texas;Camp
+ReportingUnit	Texas;Carson County	Texas;Carson
+ReportingUnit	Texas;Cass County	Texas;Cass
+ReportingUnit	Texas;Castro County	Texas;Castro
+ReportingUnit	Texas;Chambers County	Texas;Chambers
+ReportingUnit	Texas;Cherokee County	Texas;Cherokee
+ReportingUnit	Texas;Childress County	Texas;Childress
+ReportingUnit	Texas;Clay County	Texas;Clay
+ReportingUnit	Texas;Cochran County	Texas;Cochran
+ReportingUnit	Texas;Coke County	Texas;Coke
+ReportingUnit	Texas;Coleman County	Texas;Coleman
+ReportingUnit	Texas;Collin County	Texas;Collin
+ReportingUnit	Texas;Collingsworth County	Texas;Collingsworth
+ReportingUnit	Texas;Colorado County	Texas;Colorado
+ReportingUnit	Texas;Comal County	Texas;Comal
+ReportingUnit	Texas;Comanche County	Texas;Comanche
+ReportingUnit	Texas;Concho County	Texas;Concho
+ReportingUnit	Texas;Cooke County	Texas;Cooke
+ReportingUnit	Texas;Coryell County	Texas;Coryell
+ReportingUnit	Texas;Cottle County	Texas;Cottle
+ReportingUnit	Texas;Crane County	Texas;Crane
+ReportingUnit	Texas;Crockett County	Texas;Crockett
+ReportingUnit	Texas;Crosby County	Texas;Crosby
+ReportingUnit	Texas;Culberson County	Texas;Culberson
+ReportingUnit	Texas;Dallam County	Texas;Dallam
+ReportingUnit	Texas;Dallas County	Texas;Dallas
+ReportingUnit	Texas;Dawson County	Texas;Dawson
+ReportingUnit	Texas;DeWitt County	Texas;De Witt
+ReportingUnit	Texas;Deaf Smith County	Texas;Deaf Smith
+ReportingUnit	Texas;Delta County	Texas;Delta
+ReportingUnit	Texas;Denton County	Texas;Denton
+ReportingUnit	Texas;Dickens County	Texas;Dickens
+ReportingUnit	Texas;Dimmit County	Texas;Dimmit
+ReportingUnit	Texas;Donley County	Texas;Donley
+ReportingUnit	Texas;Duval County	Texas;Duval
+ReportingUnit	Texas;Eastland County	Texas;Eastland
+ReportingUnit	Texas;Ector County	Texas;Ector
+ReportingUnit	Texas;Edwards County	Texas;Edwards
+ReportingUnit	Texas;El Paso County	Texas;El Paso
+ReportingUnit	Texas;Ellis County	Texas;Ellis
+ReportingUnit	Texas;Erath County	Texas;Erath
+ReportingUnit	Texas;Falls County	Texas;Falls
+ReportingUnit	Texas;Fannin County	Texas;Fannin
+ReportingUnit	Texas;Fayette County	Texas;Fayette
+ReportingUnit	Texas;Fisher County	Texas;Fisher
+ReportingUnit	Texas;Floyd County	Texas;Floyd
+ReportingUnit	Texas;Foard County	Texas;Foard
+ReportingUnit	Texas;Fort Bend County	Texas;Fort Bend
+ReportingUnit	Texas;Franklin County	Texas;Franklin
+ReportingUnit	Texas;Freestone County	Texas;Freestone
+ReportingUnit	Texas;Frio County	Texas;Frio
+ReportingUnit	Texas;Gaines County	Texas;Gaines
+ReportingUnit	Texas;Galveston County	Texas;Galveston
+ReportingUnit	Texas;Garza County	Texas;Garza
+ReportingUnit	Texas;Gillespie County	Texas;Gillespie
+ReportingUnit	Texas;Glasscock County	Texas;Glasscock
+ReportingUnit	Texas;Goliad County	Texas;Goliad
+ReportingUnit	Texas;Gonzales County	Texas;Gonzales
+ReportingUnit	Texas;Gray County	Texas;Gray
+ReportingUnit	Texas;Grayson County	Texas;Grayson
+ReportingUnit	Texas;Gregg County	Texas;Gregg
+ReportingUnit	Texas;Grimes County	Texas;Grimes
+ReportingUnit	Texas;Guadalupe County	Texas;Guadalupe
+ReportingUnit	Texas;Hale County	Texas;Hale
+ReportingUnit	Texas;Hall County	Texas;Hall
+ReportingUnit	Texas;Hamilton County	Texas;Hamilton
+ReportingUnit	Texas;Hansford County	Texas;Hansford
+ReportingUnit	Texas;Hardeman County	Texas;Hardeman
+ReportingUnit	Texas;Hardin County	Texas;Hardin
+ReportingUnit	Texas;Harris County	Texas;Harris
+ReportingUnit	Texas;Harrison County	Texas;Harrison
+ReportingUnit	Texas;Hartley County	Texas;Hartley
+ReportingUnit	Texas;Haskell County	Texas;Haskell
+ReportingUnit	Texas;Hays County	Texas;Hays
+ReportingUnit	Texas;Hemphill County	Texas;Hemphill
+ReportingUnit	Texas;Henderson County	Texas;Henderson
+ReportingUnit	Texas;Hidalgo County	Texas;Hidalgo
+ReportingUnit	Texas;Hill County	Texas;Hill
+ReportingUnit	Texas;Hockley County	Texas;Hockley
+ReportingUnit	Texas;Hood County	Texas;Hood
+ReportingUnit	Texas;Hopkins County	Texas;Hopkins
+ReportingUnit	Texas;Houston County	Texas;Houston
+ReportingUnit	Texas;Howard County	Texas;Howard
+ReportingUnit	Texas;Hudspeth County	Texas;Hudspeth
+ReportingUnit	Texas;Hunt County	Texas;Hunt
+ReportingUnit	Texas;Hutchinson County	Texas;Hutchinson
+ReportingUnit	Texas;Irion County	Texas;Irion
+ReportingUnit	Texas;Jack County	Texas;Jack
+ReportingUnit	Texas;Jackson County	Texas;Jackson
+ReportingUnit	Texas;Jasper County	Texas;Jasper
+ReportingUnit	Texas;Jeff Davis County	Texas;Jeff Davis
+ReportingUnit	Texas;Jefferson County	Texas;Jefferson
+ReportingUnit	Texas;Jim Hogg County	Texas;Jim Hogg
+ReportingUnit	Texas;Jim Wells County	Texas;Jim Wells
+ReportingUnit	Texas;Johnson County	Texas;Johnson
+ReportingUnit	Texas;Jones County	Texas;Jones
+ReportingUnit	Texas;Karnes County	Texas;Karnes
+ReportingUnit	Texas;Kaufman County	Texas;Kaufman
+ReportingUnit	Texas;Kendall County	Texas;Kendall
+ReportingUnit	Texas;Kenedy County	Texas;Kenedy
+ReportingUnit	Texas;Kent County	Texas;Kent
+ReportingUnit	Texas;Kerr County	Texas;Kerr
+ReportingUnit	Texas;Kimble County	Texas;Kimble
+ReportingUnit	Texas;King County	Texas;King
+ReportingUnit	Texas;Kinney County	Texas;Kinney
+ReportingUnit	Texas;Kleberg County	Texas;Kleberg
+ReportingUnit	Texas;Knox County	Texas;Knox
+ReportingUnit	Texas;La Salle County	Texas;La Salle
+ReportingUnit	Texas;Lamar County	Texas;Lamar
+ReportingUnit	Texas;Lamb County	Texas;Lamb
+ReportingUnit	Texas;Lampasas County	Texas;Lampasas
+ReportingUnit	Texas;Lavaca County	Texas;Lavaca
+ReportingUnit	Texas;Lee County	Texas;Lee
+ReportingUnit	Texas;Leon County	Texas;Leon
+ReportingUnit	Texas;Liberty County	Texas;Liberty
+ReportingUnit	Texas;Limestone County	Texas;Limestone
+ReportingUnit	Texas;Lipscomb County	Texas;Lipscomb
+ReportingUnit	Texas;Live Oak County	Texas;Live Oak
+ReportingUnit	Texas;Llano County	Texas;Llano
+ReportingUnit	Texas;Loving County	Texas;Loving
+ReportingUnit	Texas;Lubbock County	Texas;Lubbock
+ReportingUnit	Texas;Lynn County	Texas;Lynn
+ReportingUnit	Texas;Madison County	Texas;Madison
+ReportingUnit	Texas;Marion County	Texas;Marion
+ReportingUnit	Texas;Martin County	Texas;Martin
+ReportingUnit	Texas;Mason County	Texas;Mason
+ReportingUnit	Texas;Matagorda County	Texas;Matagorda
+ReportingUnit	Texas;Maverick County	Texas;Maverick
+ReportingUnit	Texas;McCulloch County	Texas;McCulloch
+ReportingUnit	Texas;McLennan County	Texas;McLennan
+ReportingUnit	Texas;McMullen County	Texas;McMullen
+ReportingUnit	Texas;Medina County	Texas;Medina
+ReportingUnit	Texas;Menard County	Texas;Menard
+ReportingUnit	Texas;Midland County	Texas;Midland
+ReportingUnit	Texas;Milam County	Texas;Milam
+ReportingUnit	Texas;Mills County	Texas;Mills
+ReportingUnit	Texas;Mitchell County	Texas;Mitchell
+ReportingUnit	Texas;Montague County	Texas;Montague
+ReportingUnit	Texas;Montgomery County	Texas;Montgomery
+ReportingUnit	Texas;Moore County	Texas;Moore
+ReportingUnit	Texas;Morris County	Texas;Morris
+ReportingUnit	Texas;Motley County	Texas;Motley
+ReportingUnit	Texas;Nacogdoches County	Texas;Nacogdoches
+ReportingUnit	Texas;Navarro County	Texas;Navarro
+ReportingUnit	Texas;Newton County	Texas;Newton
+ReportingUnit	Texas;Nolan County	Texas;Nolan
+ReportingUnit	Texas;Nueces County	Texas;Nueces
+ReportingUnit	Texas;Ochiltree County	Texas;Ochiltree
+ReportingUnit	Texas;Oldham County	Texas;Oldham
+ReportingUnit	Texas;Orange County	Texas;Orange
+ReportingUnit	Texas;Palo Pinto County	Texas;Palo Pinto
+ReportingUnit	Texas;Panola County	Texas;Panola
+ReportingUnit	Texas;Parker County	Texas;Parker
+ReportingUnit	Texas;Parmer County	Texas;Parmer
+ReportingUnit	Texas;Pecos County	Texas;Pecos
+ReportingUnit	Texas;Polk County	Texas;Polk
+ReportingUnit	Texas;Potter County	Texas;Potter
+ReportingUnit	Texas;Presidio County	Texas;Presidio
+ReportingUnit	Texas;Rains County	Texas;Rains
+ReportingUnit	Texas;Randall County	Texas;Randall
+ReportingUnit	Texas;Reagan County	Texas;Reagan
+ReportingUnit	Texas;Real County	Texas;Real
+ReportingUnit	Texas;Red River County	Texas;Red River
+ReportingUnit	Texas;Reeves County	Texas;Reeves
+ReportingUnit	Texas;Refugio County	Texas;Refugio
+ReportingUnit	Texas;Roberts County	Texas;Roberts
+ReportingUnit	Texas;Robertson County	Texas;Robertson
+ReportingUnit	Texas;Rockwall County	Texas;Rockwall
+ReportingUnit	Texas;Runnels County	Texas;Runnels
+ReportingUnit	Texas;Rusk County	Texas;Rusk
+ReportingUnit	Texas;Sabine County	Texas;Sabine
+ReportingUnit	Texas;San Augustine County	Texas;San Augustine
+ReportingUnit	Texas;San Jacinto County	Texas;San Jacinto
+ReportingUnit	Texas;San Patricio County	Texas;San Patricio
+ReportingUnit	Texas;San Saba County	Texas;San Saba
+ReportingUnit	Texas;Schleicher County	Texas;Schleicher
+ReportingUnit	Texas;Scurry County	Texas;Scurry
+ReportingUnit	Texas;Shackelford County	Texas;Shackelford
+ReportingUnit	Texas;Shelby County	Texas;Shelby
+ReportingUnit	Texas;Sherman County	Texas;Sherman
+ReportingUnit	Texas;Smith County	Texas;Smith
+ReportingUnit	Texas;Somervell County	Texas;Somervell
+ReportingUnit	Texas;Starr County	Texas;Starr
+ReportingUnit	Texas;Stephens County	Texas;Stephens
+ReportingUnit	Texas;Sterling County	Texas;Sterling
+ReportingUnit	Texas;Stonewall County	Texas;Stonewall
+ReportingUnit	Texas;Sutton County	Texas;Sutton
+ReportingUnit	Texas;Swisher County	Texas;Swisher
+ReportingUnit	Texas;Tarrant County	Texas;Tarrant
+ReportingUnit	Texas;Taylor County	Texas;Taylor
+ReportingUnit	Texas;Terrell County	Texas;Terrell
+ReportingUnit	Texas;Terry County	Texas;Terry
+ReportingUnit	Texas;Throckmorton County	Texas;Throckmorton
+ReportingUnit	Texas;Titus County	Texas;Titus
+ReportingUnit	Texas;Tom Green County	Texas;Tom Green
+ReportingUnit	Texas;Travis County	Texas;Travis
+ReportingUnit	Texas;Trinity County	Texas;Trinity
+ReportingUnit	Texas;Tyler County	Texas;Tyler
+ReportingUnit	Texas;Upshur County	Texas;Upshur
+ReportingUnit	Texas;Upton County	Texas;Upton
+ReportingUnit	Texas;Uvalde County	Texas;Uvalde
+ReportingUnit	Texas;Val Verde County	Texas;Val Verde
+ReportingUnit	Texas;Van Zandt County	Texas;Van Zandt
+ReportingUnit	Texas;Victoria County	Texas;Victoria
+ReportingUnit	Texas;Walker County	Texas;Walker
+ReportingUnit	Texas;Waller County	Texas;Waller
+ReportingUnit	Texas;Ward County	Texas;Ward
+ReportingUnit	Texas;Washington County	Texas;Washington
+ReportingUnit	Texas;Webb County	Texas;Webb
+ReportingUnit	Texas;Wharton County	Texas;Wharton
+ReportingUnit	Texas;Wheeler County	Texas;Wheeler
+ReportingUnit	Texas;Wichita County	Texas;Wichita
+ReportingUnit	Texas;Wilbarger County	Texas;Wilbarger
+ReportingUnit	Texas;Willacy County	Texas;Willacy
+ReportingUnit	Texas;Williamson County	Texas;Williamson
+ReportingUnit	Texas;Wilson County	Texas;Wilson
+ReportingUnit	Texas;Winkler County	Texas;Winkler
+ReportingUnit	Texas;Wise County	Texas;Wise
+ReportingUnit	Texas;Wood County	Texas;Wood
+ReportingUnit	Texas;Yoakum County	Texas;Yoakum
+ReportingUnit	Texas;Young County	Texas;Young
+ReportingUnit	Texas;Zapata County	Texas;Zapata
+ReportingUnit	Texas;Zavala County	Texas;Zavala
+Candidate	Richard Peï¿½a Raymond	Richard Peï¿½a Raymond
+CandidateContest	TX Attorney General	TX;Attorney General;statewide

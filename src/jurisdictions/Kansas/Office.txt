@@ -173,5 +173,6 @@ KS Governor	Kansas
 US Senate KS	Kansas
 KS Attorney General	Kansas
 KS Lieutenant Governor	Kansas
-KS Treasurer	Kansas
+KS State Treasurer	Kansas
 KS Secretary of State	Kansas
+KS Commissioner of Insurance	Kansas
