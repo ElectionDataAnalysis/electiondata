@@ -23,11 +23,11 @@ def pytest_generate_tests(metafunc):
 @pytest.fixture(scope="session")
 def ok(param_file):
     return {
-        "ga16g": data_exists("2016 General", "Georgia",param_file=param_file),
-        "ga18g": data_exists("2018 General", "Georgia",param_file=param_file),
-        "ga20p": data_exists("2020 Primary", "Georgia",param_file=param_file),
-        "nc18g": data_exists("2018 General", "North Carolina",param_file=param_file),
-        "ak16g": data_exists("2016 General", "Alaska",param_file=param_file),
+        "ga16g": data_exists("2016 General", "Georgia", param_file=param_file),
+        "ga18g": data_exists("2018 General", "Georgia", param_file=param_file),
+        "ga20p": data_exists("2020 Primary", "Georgia", param_file=param_file),
+        "nc18g": data_exists("2018 General", "North Carolina", param_file=param_file),
+        "ak16g": data_exists("2016 General", "Alaska", param_file=param_file),
         "ga18census": external_data_exists(
             "2018 General", "Georgia", param_file=param_file
         ),

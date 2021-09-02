@@ -561,7 +561,7 @@ def create_bar(
             0
         ]
         y_party_abbr = create_party_abbreviation(y_party)
-        jurisdiction = db.name_from_id_cursor(cursor, "ReportingUnit",jurisdiction_id)
+        jurisdiction = db.name_from_id_cursor(cursor, "ReportingUnit", jurisdiction_id)
 
         pivot_df = pd.pivot_table(
             temp_df, values="Count", index=["Name"], columns="Selection", fill_value=0
@@ -597,7 +597,7 @@ def create_bar(
             acted = "widened"
         results["votes_at_stake"] = f"Outlier {acted} margin by ~ {votes_at_stake}"
         results["margin"] = human_readable_numbers(results["margin_raw"])
-        results["preliminary"] = db.is_preliminary(cursor,election_id,jurisdiction_id)
+        results["preliminary"] = db.is_preliminary(cursor, election_id, jurisdiction_id)
 
         # display ballot info
         if multiple_ballot_types:
@@ -615,8 +615,8 @@ def create_bar(
         results[
             "title"
         ] = f"""{results["count_item_type"].replace("-", " ").title()} Ballots Reported"""
-        download_date = db.data_file_download(cursor,election_id,jurisdiction_id)
-        if db.is_preliminary(cursor,election_id,jurisdiction_id) and download_date:
+        download_date = db.data_file_download(cursor, election_id, jurisdiction_id)
+        if db.is_preliminary(cursor, election_id, jurisdiction_id) and download_date:
             results[
                 "title"
             ] = f"""{results["title"]} as of {download_date} (preliminary)"""
@@ -946,7 +946,9 @@ def create_candidate_contests(df: pd.DataFrame, columns: List[str]) -> pd.DataFr
     return contest_df
 
 
-def create_ballot_measure_contests(df: pd.DataFrame, columns: List[str]) -> pd.DataFrame:
+def create_ballot_measure_contests(
+    df: pd.DataFrame, columns: List[str]
+) -> pd.DataFrame:
     ballotmeasure_df = (
         df["ContestSelectionJoin"]
         .merge(
@@ -994,7 +996,7 @@ def human_readable_numbers(value: float) -> str:
         return "{:,}".format(round(value, -3))
 
 
-def sort_pivot_by_margins(df:pd.DataFrame) -> pd.DataFrame:
+def sort_pivot_by_margins(df: pd.DataFrame) -> pd.DataFrame:
     """grab the row with the highest anomaly score, then sort the remainder by
     margin. The sorting order depends on whether the anomalous row is >50% or <50%"""
 

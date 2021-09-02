@@ -294,10 +294,10 @@ class DataLoader:
         return super().__new__(cls)
 
     def __init__(
-            self,
-            param_file: Optional[str] = None,
-            dbname: Optional[str] = None,
-            major_subdivision_file: Optional[str] = None,
+        self,
+        param_file: Optional[str] = None,
+        dbname: Optional[str] = None,
+        major_subdivision_file: Optional[str] = None,
     ):
         """
         Inputs:
@@ -340,7 +340,9 @@ class DataLoader:
 
         # create analyzer with same db
         self.analyzer = Analyzer(
-            dbname=dbname, param_file=param_file, major_subdivision_file=major_subdivision_file
+            dbname=dbname,
+            param_file=param_file,
+            major_subdivision_file=major_subdivision_file,
         )
 
     def connect_to_db(
@@ -406,12 +408,21 @@ class DataLoader:
             Optional[dict], error dictionary
         """
         err = None
+        if not db_params:
+            # get db_params from current session, but with new database name
+            db_params = {
+                "host": self.db_engine.url.host,
+                "port": self.db_engine.url.port,
+                "user": self.db_engine.url.username,
+                "password": self.db_engine.url.password,
+                "dbname": new_db_name,
+            }
 
         # disconnect from current db and connect to new db, updating self.session and self.dbname
         self.session.close()
         # # nb: next command updates self.session
         new_err = self.connect_to_db(
-            dbname=new_db_name, db_param_file=db_param_file, db_params=db_params
+            db_params=db_params,
         )
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
@@ -541,7 +552,7 @@ class DataLoader:
                     err,
                     "warn-file",
                     "major_subjurisdiction_types.txt",
-                    f"Rollup cannot be done because no major subdivision found for {sdl.d['jurisdiction']}"
+                    f"Rollup cannot be done because no major subdivision found for {sdl.d['jurisdiction']}",
                 )
 
         else:
@@ -1009,7 +1020,9 @@ class DataLoader:
                 )
         return err
 
-    def load_data_from_db_dump(self, dbname: str, dump_file: str) -> Optional[str]:
+    def load_data_from_db_dump(
+        self, dbname: str, dump_file: str, delete_existing: bool = False
+    ) -> Optional[str]:
         """
         Inputs:
             dbname: str, name for database to be created and loaded with data
@@ -1024,7 +1037,7 @@ class DataLoader:
         connection = self.session.bind.raw_connection()
         cursor = connection.cursor()
         err_str = db.create_database(
-            connection, cursor, dbname=dbname, delete_existing=False
+            connection, cursor, dbname=dbname, delete_existing=delete_existing
         )
 
         cursor.close()
@@ -2531,7 +2544,9 @@ class Analyzer:
                 f"\nNo data found",
             )
         if not self.check_totals_match_vote_types(
-            election, juris_true_name, sub_unit_type=self.major_subdivision_type[juris_true_name]
+            election,
+            juris_true_name,
+            sub_unit_type=self.major_subdivision_type[juris_true_name],
         ):
             err = ui.add_new_error(
                 err,
@@ -2835,9 +2850,9 @@ class Analyzer:
         Required inputs:
             jurisdiction: str,
             for horizontal axis of scatter plot:
-                h_election: str, election parameter 
+                h_election: str, election parameter
                 h_category: str, category parameter (e.g., Population by Race or Candidate total)
-                h_count: str,  count label parameter (e.g., "Black" or "Joseph R. Biden", depending on category) 
+                h_count: str,  count label parameter (e.g., "Black" or "Joseph R. Biden", depending on category)
             for vertical axis of scatter plot (same definitions as for horizontal):
                 v_election: str,
                 v_category: str,
@@ -2923,7 +2938,7 @@ class Analyzer:
             self.major_subdivision_type[jurisdiction],
             contest_district_type=contest_type,
             contest_or_contest_group=contest,
-            for_export = False,
+            for_export=False,
         )
         if fig_type and agg_results:
             for agg_result in agg_results:
@@ -2991,7 +3006,9 @@ class Analyzer:
         return err
 
     def export_nist(
-        self, election: str, jurisdiction,
+        self,
+        election: str,
+        jurisdiction,
     ) -> Union[str, Dict[str, Any]]:
         """picks either version 1.0 (json) or version 2.0 (xml) based on value of constants.nist_version"""
         if electiondata.constants.nist_version == "1.0":
@@ -3069,10 +3086,10 @@ class Analyzer:
         """
         Required inputs:
             target_file: str, path to file
-            election: str, 
+            election: str,
         Optional inputs:
-            jurisdiction: Optional[str] = None, 
-            
+            jurisdiction: Optional[str] = None,
+
         Exports all election results from <self.session>'s database for the election <election> (and the jurisdiction
             <jurisdiction>, if given) to the <target_file>. Columns exported are:  "Election",
             "Contest", "Selection", "Party", "ReportingUnit", "VoteType", "Count", "Preliminary"
@@ -3443,7 +3460,7 @@ class Analyzer:
     def pres_counts_by_vote_type_and_major_subdiv(
         self, jurisdiction: str
     ) -> pd.DataFrame:
-        """Not ready for prime time """
+        """Not ready for prime time"""
         # TODO return dataframe with columns jurisdiction, subdivision, year, CountItemType,
         #  total votes for pres in general election
         group_cols = [
@@ -3778,7 +3795,7 @@ def data_exists(
         bool, True if database specified by parameters in <param_file> (or database named <dbname>, if given) has
             any election results data for the given <election> and <jurisdiction>. Otherwise false.
     """
-    analyzer = Analyzer(param_file=param_file,dbname=dbname)
+    analyzer = Analyzer(param_file=param_file, dbname=dbname)
     return analyzer.data_exists(election, jurisdiction)
 
 
@@ -3800,7 +3817,7 @@ def external_data_exists(
         bool, True if database specified by parameters in <param_file> (or database named <dbname>, if given) has
             any external dataset content for the given election and jurisdiction. Otherwise false.
     """
-    an = Analyzer(param_file=param_file,dbname=dbname)
+    an = Analyzer(param_file=param_file, dbname=dbname)
     if not an:
         return False
 
@@ -4504,11 +4521,11 @@ def check_major_subdivisions(
         for jurisdiction_id in db.jurisdiction_id_list(session):
             # make sure jurisdiction has subdivision type
             juris_name = db.name_from_id(session, "ReportingUnit", jurisdiction_id)
-        if (
-            juris_name not in major_subdiv_dict.keys()
-            or major_subdiv_dict[juris_name] is None
-        ):
-            bad_jurisdictions.update({juris_name})
+            if (
+                juris_name not in major_subdiv_dict.keys()
+                or major_subdiv_dict[juris_name] is None
+            ):
+                bad_jurisdictions.update({juris_name})
     if bad_jurisdictions:
         err_string = f"No Analyzer created, because no major subdivisions were found for these jurisdictions:\n"
         f"{sorted(list(bad_jurisdictions))}"

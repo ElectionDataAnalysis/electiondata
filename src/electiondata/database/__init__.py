@@ -251,7 +251,7 @@ def test_connection_and_tables(
 
     # look for database
     db_df = get_database_names(con)
-    if not db_params["dbname"] in db_df.datname:
+    if not db_params["dbname"] in db_df.datname.unique():
         # NB: this is not really an error, just leads to returning False.
         return False, err
 
