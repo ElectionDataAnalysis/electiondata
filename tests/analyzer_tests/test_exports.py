@@ -39,4 +39,4 @@ def test_nist_v1(analyzer, tests_path):
     new_str_v1 = f"{analyzer.export_nist_v1_json('2020 General', 'Wyoming')}"
     correct_str_v1 = open(nist_v1_reference_file, "r").read()
 
-    assert  len(correct_str_v1) == len(new_str_v1)
+    assert len(correct_str_v1) == len(new_str_v1)

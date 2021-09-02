@@ -928,7 +928,10 @@ def get_contest_type_display(item: str) -> str:
 
 
 def get_filtered_input_options(
-    session: Session, menu_type: str, filters: List[str], major_subdivision_type: Dict[str, str]
+    session: Session,
+    menu_type: str,
+    filters: List[str],
+    major_subdivision_type: Dict[str, str],
 ) -> List[Dict[str, Any]]:
     """Display dropdown menu options for menu <menu_type>, limited to any strings in <filters>
     (unless <filters> is None, in which case all are displayed. Sort as necessary"""

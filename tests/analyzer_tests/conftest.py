@@ -12,6 +12,7 @@ def pytest_addoption(parser):
         default=os.path.join(Path(__file__).parents[1].absolute(), "run_time.ini"),
     )
 
+
 # set up fixtures so tests can call them as arguments
 @pytest.fixture(scope="session")
 def param_file(request):
@@ -43,6 +44,7 @@ def analyzer(param_file):
 
 
 tests_path = Path(__file__).parents[1].absolute()
+
 
 @pytest.fixture(scope="session")
 def tests_path():

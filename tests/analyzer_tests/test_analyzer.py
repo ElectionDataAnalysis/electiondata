@@ -2,7 +2,6 @@ import results
 from typing import Dict, Any, List, Optional
 
 
-
 # some lists of dictionaries need to be sorted by a particular key
 def dict_sort(
     list_of_dicts: List[Dict[str, Any]],
@@ -35,6 +34,7 @@ def test_election_data_exists(analyzer):
     has_data = [(e, j) for (e, j) in ej_pairs if analyzer.data_exists(e, j)]
     assert set(has_data) == set(ej_pairs)
 
+
 def test_contest_updatelabels_display(analyzer):
     new = dict_sort(
         analyzer.display_options(
@@ -47,6 +47,7 @@ def test_contest_updatelabels_display(analyzer):
         results.ga_2018_congressional_contests_state_senate, sort_key="order_by"
     )
     assert new == correct
+
 
 # should be non-null on DB with any data
 def test_election_display(analyzer):
