@@ -1979,7 +1979,8 @@ def to_standard_count_frame(
             )
 
         # loop through dataframes in list
-        standard[sheet] = pd.DataFrame()
+        # create list of standard-form dataframes from dataframes in list
+        standard_list = list()
         for n in range(len(df_list)):
             raw = df_list[n]
             working = raw.copy()
@@ -2050,9 +2051,12 @@ def to_standard_count_frame(
             # clean Unnamed:... out of any values
             working = blank_out(working, constants.pandas_default_pattern)
 
-            # append data from the nth dataframe to the standard-form dataframe
+            # append standard-forme data from the nth dataframe to the list
             ## NB: if df_list[n] fails it should not reach this statement
-            standard[sheet] = pd.concat([standard[sheet], working])
+            standard_list.append(working)
+
+        # put all the good standard-form dataframes together into one
+        standard[sheet] = pd.concat(standard_list)
 
         # if even one df lacks a fatal error, consider all errors non-fatal for this sheet
         non_fatal_dfs = [
