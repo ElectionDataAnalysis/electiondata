@@ -5,7 +5,7 @@ from pathlib import Path
 import datetime
 
 
-def test_nist_v2(analyzer, tests_path):
+def test_nist_xml(analyzer, tests_path):
     """Tests whether length of nist v2 export string matches the standard.
     (Would be better to test that xml is equivalent, but that's harder.)"""
     # TODO restore test of nist v1 export
