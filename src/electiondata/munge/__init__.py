@@ -691,8 +691,8 @@ def add_contest_id(
             working, new_err = replace_raw_with_internal_ids(
                 working,
                 juris_true_name,
-                file_name,
                 munger_name,
+                file_name,
                 df_for_type[c_type],
                 f"{c_type}Contest",
                 "Name",
@@ -741,7 +741,8 @@ def add_contest_id(
     # fail if fatal errors or no contests recognized (in reverse order, just for fun
     if working_temp.empty:
         err = ui.add_new_error(
-            err, "jurisdiction", juris_true_name, f"No contests recognized."
+            err, "jurisdiction", juris_true_name,
+            f"No contests recognized from file {file_name} with munger {munger_name}."
         )
     else:
         working = working_temp

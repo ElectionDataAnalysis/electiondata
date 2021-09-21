@@ -3716,7 +3716,7 @@ class Analyzer:
                 )
             if not not_found_in_db.empty:
                 nfid_str = (
-                    f"\nSome expected constests not found. For details, see {sub_dir}"
+                    f"\nSome expected contests not found. For details, see {sub_dir}"
                 )
                 err = ui.add_new_error(
                     err,
@@ -3925,7 +3925,7 @@ def load_results_df(
             err,
             "jurisdiction",
             juris_true_name,
-            f"No contest-selection pairs recognized via munger {munger_name}",
+            f"No contest-selection pairs recognized in file {file_name} via munger {munger_name}",
         )
         return err
 
