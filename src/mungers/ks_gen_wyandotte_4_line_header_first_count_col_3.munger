@@ -60,7 +60,7 @@ Party={<count_header_2>,^(\w\w\w) .*$}
 [ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
 ReportingUnit=WYANDOTTE;Totals,Wyandotte;Totals,WYANDOTTE;
-Candidate=Write-in Totals
+Candidate=Write-in Totals,Vote For 1
 
 # Lookup formula sections #
 ## Required when foreign keys are used in munge formulas and    ##

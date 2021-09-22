@@ -125,15 +125,12 @@ Rick Kloos
 Rachel Willis
 Brenda S. Dietrich
 Anthony Hensley
-Under Votes
-Over Votes
 Laura McConwell
 Ethan Corson
 Diana Whittington
 Cindy Holscher
 Vail Fruechting
 Ty Masterson
-Total Votes Cast
 Timothy Don Fry II
 Mary Ware
 Dan Kerschen
@@ -356,3 +353,6 @@ Vic (T-Bone) Miller
 Vicki Schmidt
 Virgil Weigel
 Wendy Bingesser
+Jordan Michael Mackey
+Greg Conchola
+Rick Parsons

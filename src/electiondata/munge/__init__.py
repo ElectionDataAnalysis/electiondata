@@ -624,6 +624,8 @@ def melt_to_one_count_column(
         if "in_count_headers" in p["munge_field_types"]:
             # split header_0 column into separate columns
             # # get header_rows
+            # TODO: the following throws PerformanceError for Kansas House of Representatives 2020g. Rather than
+            #  assigning values, need to use melted = pd.concat([melted, <new_columns>])
             melted[
                 [f"count_header_{idx}" for idx in p["count_header_row_numbers"]]
             ] = pd.DataFrame(melted["header_0"].str.split(";:;", expand=True).values)[
