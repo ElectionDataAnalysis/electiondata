@@ -5,7 +5,7 @@ from pathlib import Path
 import datetime
 
 
-def test_nist_v2(analyzer, tests_path):
+def test_nist_xml(analyzer, tests_path):
     """Tests whether length of nist v2 export string matches the standard.
     (Would be better to test that xml is equivalent, but that's harder.)"""
     # TODO restore test of nist v1 export
@@ -15,11 +15,11 @@ def test_nist_v2(analyzer, tests_path):
     )
 
     # test nist v2 export against sample file
-    new_str_v2 = analyzer.export_nist_v2("2020 General", "Wyoming")
+    new_str_v2 = analyzer.export_nist_xml_as_string("2020 General","Wyoming")
     correct_str_v2 = open(nist_v2_reference_file, "r").read()
 
     # test nist v1 export against sample file
-    # new_str_v1 = f"{analyzer.export_nist_v1_json('2020 General', 'Wyoming')}"
+    # new_str_v1 = f"{analyzer.export_nist_json('2020 General', 'Wyoming')}"
     # correct_str_v1 = open(nist_v1_reference_file, "r").read()
 
     assert len(correct_str_v2) == len(
@@ -36,7 +36,7 @@ def test_nist_v1(analyzer, tests_path):
     )
 
     # test nist v1 export against sample file
-    new_str_v1 = f"{analyzer.export_nist_v1_json('2020 General', 'Wyoming')}"
+    new_str_v1 = f"{analyzer.export_nist_json('2020 General','Wyoming')}"
     correct_str_v1 = open(nist_v1_reference_file, "r").read()
 
     assert len(correct_str_v1) == len(new_str_v1)

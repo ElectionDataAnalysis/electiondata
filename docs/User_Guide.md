@@ -34,7 +34,7 @@ If the munger for the format of your results file doesn't already exist:
  
 ### \[format\]
  There are two required format parameters: `file_type` and `count_location`. 
- The `file_type` parameter controls which function from the python `pandas` module reads the file contents. Related optional and required parameters must be given under the `[format]` header.
+ The `file_type` parameter controls which function from the python `pandas` module reads the file contents. Related optional and required parameters must be given under the `[format]` header. Acceptable values are 'flat_text', 'excel', 'xml', 'json-nested'. The `count_location` parameter indicates where the vote counts are to be found. For 'flat_text' or 'excel' file types, either `count_location=by_name:<list of names of columns containing vote counts>` or `count_location=by_number:<list of positions of columns containing vote counts`. 
   * 'flat_text': Any tab-, comma-, or other-separated table in a plain tabular text file.
     * (required) a field delimiter `flat_text_delimiter` to be specified (usually `flat_text_delimiter=,` for csv or `flat_text_delimiter=tab` for .txt)
       
@@ -47,6 +47,10 @@ If the munger for the format of your results file doesn't already exist:
     * (required if `count_location=by_name`) specify location of field names for count columns. with integer `count_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
     * (required):
         * Either `all_rows=data` or designate row containing column names for the candidate, reporting unit, etc. with the `noncount_header_row` parameter. (NB: top row not skipped is 0, next row is 1, etc.)
+    
+  *  'xml'
+
+  * 'json-nested'
 
    Available if appropriate for any file type, under the `[format]` header:
    * (required if any munging information needs to be read from the `<results>.ini` file) `constant_over_file`, a comma-separated list of elements to be read, e.g., `constant_over_file=CandidateContest,CountItemType`.
@@ -398,22 +402,24 @@ analyzer.export_election_to_tsv("tabular_results.tsv", "2020 General", "South Ca
 
 This code will produce all South Carolina data from the 2018 general election, grouped by contest, county, and vote type (total, early, absentee, etc).
 
-### NIST Common Data Format
-This package also provides functionality to export the data to xml according to the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd). This is as simple as identifying an election and jurisdiction of interest:
+### NIST Common Data Format Export
+This package provides functionality to export the data to xml or json according to the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd). 
+
+This is as simple as identifying an election and jurisdiction of interest. For xml:
 ```
 import electiondata as ea
 analyzer = ea.Analyzer()
-election_report = analyzer.export_nist_v2("2020 General", "Georgia")
+election_report = analyzer.export_nist_xml_as_string("2020 General", "Georgia")
 ```
 The output is a string, the contents of the xml file.
 
-There is also an export in the NIST V1 json format:
+And for json:
 ```
 analyzer = ea.Analyzer()
-analyzer.export_nist_v1_json("2020 General","Georgia")
+analyzer.export_nist_json_as_string("2020 General","Georgia")
 ```
 The output is a string, the contents of the json file.
-Both of these can take an optional `major_subdivision` parameter to control the level to which results are rolled up. The default is to roll up to the subdivision type indicated in the [`000_major_subjurisdiction_type.txt file](../jurisdictions/000_major_subjurisdiction_types.txt).
+The subdivision type for the roll-up is determined by the [`000_major_subjurisdiction_type.txt file](../jurisdictions/000_major_subjurisdiction_types.txt).
 
 
 ## Unload and reload data with `reload_juris_election()`
@@ -518,7 +524,9 @@ If there are hidden columns in an Excel file, you may need to omit the hidden co
 ### NIST Common Data Format imports
 To import results from a file that is valid NIST V2 xml -- that can be formally validated against the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd) -- use the file_type 'nist_v2_xml'
 
-Some xml files (e.g., Ohio 2020 General) use the older Version 1 common data format. Our convention is that if the munger name contains "nist" and the file_type is xml, then the system will look for a namespace declaration.
+Some xml files (e.g., Ohio 2020 General) use the older Version 1 common data format. For these files use the
+
+Our convention is that if the munger name contains "nist" and the file_type is xml, then the system will look for a namespace declaration.
 
 ### Difference-in-Difference calculations
 The system provides a way to calculate difference-in-difference statistics. For any particular election, `Analyzer.diff_in_diff_dem_vs_rep` produces a dataframe of values for any county with results by vote type, with Democratic or Republican candidates, and any comparable pair of contests both on some ballots in the county. Contests are considered "comparable" if their districts are of the same geographical district type -- e.g., both statewide, or both state-house, etc. The method also returns a list of jurisdictions for which vote counts were zero or missing.

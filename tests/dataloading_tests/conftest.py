@@ -30,7 +30,7 @@ def test_data_url(request):
     return request.config.getoption("--test_data_url")
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="function")
 def dataloader(param_file):
     ts = datetime.datetime.now().strftime("%m%d_%H%M")
     dbname = f"test_{ts}"

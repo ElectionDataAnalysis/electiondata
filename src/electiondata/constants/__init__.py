@@ -602,7 +602,7 @@ if 1:
 
 # constants dictated by NIST
 if 1:
-    nist_version = "1.0"
+    default_nist_format = "json"  # other option is "xml"
     default_issuer = (
         "unspecified user of code base at github.com/ElectionDataAnalysis/electiondata"
     )

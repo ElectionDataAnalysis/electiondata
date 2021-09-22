@@ -624,6 +624,8 @@ def melt_to_one_count_column(
         if "in_count_headers" in p["munge_field_types"]:
             # split header_0 column into separate columns
             # # get header_rows
+            # TODO: the following throws PerformanceError for Kansas House of Representatives 2020g. Rather than
+            #  assigning values, need to use melted = pd.concat([melted, <new_columns>])
             melted[
                 [f"count_header_{idx}" for idx in p["count_header_row_numbers"]]
             ] = pd.DataFrame(melted["header_0"].str.split(";:;", expand=True).values)[
@@ -691,8 +693,8 @@ def add_contest_id(
             working, new_err = replace_raw_with_internal_ids(
                 working,
                 juris_true_name,
-                file_name,
                 munger_name,
+                file_name,
                 df_for_type[c_type],
                 f"{c_type}Contest",
                 "Name",
@@ -741,7 +743,8 @@ def add_contest_id(
     # fail if fatal errors or no contests recognized (in reverse order, just for fun
     if working_temp.empty:
         err = ui.add_new_error(
-            err, "jurisdiction", juris_true_name, f"No contests recognized."
+            err, "jurisdiction", juris_true_name,
+            f"No contests recognized from file {file_name} with munger {munger_name}."
         )
     else:
         working = working_temp
@@ -1979,7 +1982,8 @@ def to_standard_count_frame(
             )
 
         # loop through dataframes in list
-        standard[sheet] = pd.DataFrame()
+        # create list of standard-form dataframes from dataframes in list
+        standard_list = list()
         for n in range(len(df_list)):
             raw = df_list[n]
             working = raw.copy()
@@ -2050,9 +2054,12 @@ def to_standard_count_frame(
             # clean Unnamed:... out of any values
             working = blank_out(working, constants.pandas_default_pattern)
 
-            # append data from the nth dataframe to the standard-form dataframe
+            # append standard-forme data from the nth dataframe to the list
             ## NB: if df_list[n] fails it should not reach this statement
-            standard[sheet] = pd.concat([standard[sheet], working])
+            standard_list.append(working)
+
+        # put all the good standard-form dataframes together into one
+        standard[sheet] = pd.concat(standard_list)
 
         # if even one df lacks a fatal error, consider all errors non-fatal for this sheet
         non_fatal_dfs = [

@@ -167,7 +167,6 @@ Candidate	Molly Baumgardner	Baumgardner, Molly
 Candidate	Monica Murnan	Murnan, Monica
 Candidate	Nancy J. Ingle	Ingle, Nancy J.
 Candidate	Other	Other
-Candidate	Over Votes	Over Votes
 Candidate	Pat Pettey	Pat Pettey
 Candidate	Pat Proctor	Proctor, Pat
 Candidate	Patrick Penn	Penn, Patrick
@@ -224,13 +223,11 @@ Candidate	Todd Maddox	Maddox, Todd
 Candidate	Tom Hawk	Hawk, Tom
 Candidate	Tom Holland	Holland, Tom
 Candidate	Tory Marie Arnberger	Arnberger, Tory Marie
-Candidate	Total Votes Cast	Total Votes Cast
 Candidate	Tracey Mann	Mann, Tracey
 Candidate	Trevor Jacobs	Jacobs, Trevor
 Candidate	Troy L. Waymaster	Waymaster, Troy L.
 Candidate	Ty Masterson	Masterson, Ty
 Candidate	Ty Masterson	Ty Masterson
-Candidate	Under Votes	Under Votes
 Candidate	Vail Fruechting	Vail Fruechting
 Candidate	Virgil Peck	Peck, Virgil
 Candidate	W. Michael Shimeall	Shimeall, W. Michael
@@ -6761,3 +6758,6 @@ ReportingUnit	Kansas;Wilson County	Kansas;Wilson
 ReportingUnit	Kansas;Woodson County	Kansas;Woodson
 ReportingUnit	Kansas;Wyandotte County	Kansas;Wyandotte
 CandidateContest	KS Attorney General	KS;Attorney General;statewide
+Candidate	Jordan Michael Mackey	Jordan Michael Mackey
+Candidate	Greg Conchola	Greg Conchola
+Candidate	Rick Parsons	Rick Parsons

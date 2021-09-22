@@ -3010,15 +3010,15 @@ class Analyzer:
         election: str,
         jurisdiction,
     ) -> Union[str, Dict[str, Any]]:
-        """picks either version 1.0 (json) or version 2.0 (xml) based on value of constants.nist_version"""
-        if electiondata.constants.nist_version == "1.0":
-            return self.export_nist_v1_json(election, jurisdiction)
-        elif electiondata.constants.nist_version == "2.0":
-            return self.export_nist_v2(election, jurisdiction)
+        """picks either json or xml based on value of constants.nist_version"""
+        if electiondata.constants.default_nist_format == "json":
+            return self.export_nist_json(election,jurisdiction)
+        elif electiondata.constants.default_nist_format == "xml":
+            return self.export_nist_xml_as_string(election,jurisdiction)
         else:
             return ""
 
-    def export_nist_v1_json(self, election: str, jurisdiction: str) -> Dict[str, Any]:
+    def export_nist_json(self,election: str,jurisdiction: str) -> Dict[str,Any]:
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
 
@@ -3045,16 +3045,16 @@ class Analyzer:
 
         return election_report
 
-    def export_nist_v1(
+    def export_nist_json_as_string(
         self,
         election: str,
         jurisdiction: str,
     ) -> str:
-        """exports NIST v1 json string"""
-        json_string = json.dumps(self.export_nist_v1_json(election, jurisdiction))
+        """exports NIST v2 json string"""
+        json_string = json.dumps(self.export_nist_json(election,jurisdiction))
         return json_string
 
-    def export_nist_v2(
+    def export_nist_xml_as_string(
         self,
         election: str,
         jurisdiction: str,
@@ -3716,7 +3716,7 @@ class Analyzer:
                 )
             if not not_found_in_db.empty:
                 nfid_str = (
-                    f"\nSome expected constests not found. For details, see {sub_dir}"
+                    f"\nSome expected contests not found. For details, see {sub_dir}"
                 )
                 err = ui.add_new_error(
                     err,
@@ -3925,7 +3925,7 @@ def load_results_df(
             err,
             "jurisdiction",
             juris_true_name,
-            f"No contest-selection pairs recognized via munger {munger_name}",
+            f"No contest-selection pairs recognized in file {file_name} via munger {munger_name}",
         )
         return err
 
