@@ -31,7 +31,7 @@ The software package includes:
    - The system provides detailed messaging and error handling to support the user creating the parameters for a new file format or jurisdiction.
 - Detailed jurisdiction-specific information for all 56 major United States jurisdictions and munging parameters sufficient to process county-level election results from the raw files published by the 56 Boards of Election. Except for the few jurisdictions where only pdf or html files are available, this processing is entirely automatic.
 - Testing of election results in database against reference contest totals.
-- Exports to NIST Common Data Formats V1 [@wack_election_2016] and V2 [@wack_election_2019], as well as exports to tab-separated flat text file.
+- Exports to json and xml NIST Common Data Formats V2 [@wack_election_2019], as well as exports to tab-separated flat text file.
 - Scatter plot functionality by major subdivision (typically county) for comparing various vote counts and census or other external data. See for example \autoref{fig:NC_Cumberland_scatter}.
 
 ![Sample scatter plot comparing absentee ballot counts for two candidates in different contests.\label{fig:NC_Cumberland_scatter}](Newby_vs_Forest_abs.png)
