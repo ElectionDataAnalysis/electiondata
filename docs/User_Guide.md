@@ -1,13 +1,15 @@
 # How to Use the System
 ## Environment
-You will need `python3.9`. If you use the alias `python`, make sure it points to `python3.9`.
+You will need:
+ * `python3.9`. 
+ * `postgresql`. You do *not* need to create a database; you just need to make sure a `postgresql` is installed, and you need to have the hostname, port and login credentials with default permissions. 
+   
+For more detail, see the [Installation Instructions](./install.md).
 
-The system runs out of the box with a postgresql database; to use other varieties of SQL, you will need to modify the routines in the `database` module. 
+To use other varieties of SQL, you would need to modify the routines in the `database` module. 
 
 ## Installation
-From the root folder of your repository run `python3 setup.py install` (or if `python` is an alias for `python3` on your system, `python setup.py install`).
-
-## Setting up
+The one-line version: From the root folder of your repository run `python3 setup.py install`. For more detail, see the [Installation Instructions](./install.md).
 
 ### Main parameter file
 You will need a main parameter file to specify paths and database connection information specific to your local computing environment. This file is necessary for the three main classes:
