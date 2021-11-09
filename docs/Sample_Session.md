@@ -46,22 +46,30 @@ count_of_us_house_districts=14
 ```
 
 ### Contents of `GA_detail_20201120_1237.xml`
-Copy the file of the same name in the repository: [tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml)
+Copy the file of the same name in the repository: 000_template.mungerGA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml)
+
+## Create a munger file (optional)
+If you wish to practice creating  munger file, follow the steps below. Otherwise skip to the next section.
+
+Your munger file should live in the folder [src/mungers](../src/mungers), and its name needs to have the extension `.munger`. 
+
+1. Make a copy of [src/mungers/000_template.munger](../src/mungers/000_template.munger) named `my_Georgia_test.munger`, inside the same folder.. (You can use any file name you like, as long as the extension is `.munger` and the `munger_list` parameter in the initialization file for the results file references the name you chose.) 
+2. Fill in required parameter values to specify the organization of the results file `000_template.munger`
+  * `file_type=xml` because it's an xml file
+  * `count_location=ElectionResult/Contest/Choice/VoteType/County.votes`
+  * Note that the file contains a variety of contests, candidates, parties, vote types (a.k.a. CountItemTypes) and geographies (a.k.a. ReportingUnits). In other words, there is no need to use the `constant_over_file` parameter.
 
 ## Create an initialization file for the results file (optional)
 If you wish to practice creating an initialization file for results, follow the steps below. Otherwise skip to the next section.
 
-Because your `results_directory` folder has a subfolder `Georgia`, the dataloading routines will look to the folder [src/ini_files_for_results/Georgia](src/ini_files_for_results/Georgia) for information about any files in `working_directory/results_directory/Georgia`. 
-
-## Create a munger file (optional)
-You can use the munger file 
+Because your `results_directory` folder has a subfolder `Georgia`, the dataloading routines will look to the folder [src/ini_files_for_results/Georgia](../src/ini_files_for_results/Georgia) for information about any results files in `working_directory/results_directory/Georgia`. 
 
 ## Create Georgia jurisdiction files (optional)
 If you wish to practice creating jurisdiction files, follow the steps below. Otherwise, skip to the next section.
 
-Because the `results_directory` folder has a subfolder `Georgia`, the dataloading routines will look for information specific to Georgia in the repository folder [src/jurisdictions/Georgia](src/jurisdictions/Georgia). 
+Because the `results_directory` folder has a subfolder `Georgia`, the dataloading routines will look for information specific to Georgia in the repository folder [src/jurisdictions/Georgia](../src/jurisdictions/Georgia). 
 
-1. Delete the folder [src/jurisdictions/Georgia](src/jurisdictions/Georgia).
+1. Delete the folder [src/jurisdictions/Georgia](../src/jurisdictions/Georgia).
 2. Navigate to the folder `working_directory`.
 3. From within `python3.9`:
 ```
