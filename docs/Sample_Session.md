@@ -54,7 +54,7 @@ If you wish to practice creating  munger file, follow the steps below. Otherwise
 Your munger file should live in the folder [src/mungers](../src/mungers), and its name needs to have the extension `.munger`. 
 
 1. (Optional) Delete the munger file [ga_xml.munger](../src/mungers/ga_xml.munger) from your local copy of the repository. This step is not strictly necessary, but will help ensure that you don't accidentally use the existing munger.
-1. Make a copy of [src/mungers/000_template.munger](../src/mungers/000_template.munger) named `my_Georgia_test.munger`, inside the same folder.. (You can use any file name you like, as long as the extension is `.munger` and the `munger_list` parameter in the initialization file for the results file references the name you chose.) 
+1. Make a copy of [src/mungers/000_template.munger](../src/mungers/000_template.munger) named `my_Georgia_test.munger`, inside the same folder.  
 2. Fill in required parameter values to specify the organization of the results file `000_template.munger`
   * `file_type=xml` indicates that the file is in xml format.
   * `count_location=ElectionResult/Contest/Choice/VoteType/County.votes` indicates where the vote counts are to be found within the xml nesting structure.
@@ -82,6 +82,21 @@ Because your `results_directory` folder has a subfolder `Georgia`, the dataloadi
 
 1. Delete [ga20g_20201120_1237.ini](../src/ini_files_for_results/Georgia/ga20g_20201120_1237.ini) from the repository.
 2. Copy [src/ini_files_for_results/single_election_jurisdiction_template.ini](../src/ini_files_for_results/single_election_jurisdiction_template.ini) to a file with extension `.ini` in the folder [src/ini_files_for_results/Georgia](../src/ini_files_for_results/Georgia).
+3. Define the parameters in the `[election_results]` section. 
+  * If you did not create a new munger file, use `munger_list=ga_xml` instead of `munger_list=my_Georgia_test`
+  * Use the actual download date instead of `2021-11-09`
+```
+[election_results]
+results_file=Georgia/GA_detail_20201120_1237.xml
+munger_list=my_Georgia_test
+jurisdiction=Georgia
+election=2020 General
+results_short_name=any_alphanumeric_string
+results_download_date=2021-11-09
+results_source=electiondata repository
+results_note=
+is_preliminary=False
+```
 
 ## Create Georgia jurisdiction files (optional)
 If you wish to practice creating jurisdiction files, follow the steps below. Otherwise, skip to the next section.
