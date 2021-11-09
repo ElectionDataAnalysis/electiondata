@@ -157,6 +157,8 @@ Sometimes it is necessary to use regular expressions to extract information from
 
 The system will report (in the `.warnings` files) any strings that did not match the regex. 
 
+For an interactive sandbox for learning python regex, try `RegularExpression101.com`.
+
 ### \[\<foreign key\> lookup\]
 
 If any of the munge formulas depend on information from other files, munger must specify lookup information. For each foreign key, there must be a separate section with corresponding header (foreign key, plus " lookup", e.g. `[CANDIDATE NAME lookup]` if the results file has a `CANDIDATE NAME` field. This section needs:

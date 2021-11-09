@@ -53,16 +53,35 @@ If you wish to practice creating  munger file, follow the steps below. Otherwise
 
 Your munger file should live in the folder [src/mungers](../src/mungers), and its name needs to have the extension `.munger`. 
 
+1. (Optional) Delete the munger file [ga_xml.munger](../src/mungers/ga_xml.munger) from your local copy of the repository. This step is not strictly necessary, but will help ensure that you don't accidentally use the existing munger.
 1. Make a copy of [src/mungers/000_template.munger](../src/mungers/000_template.munger) named `my_Georgia_test.munger`, inside the same folder.. (You can use any file name you like, as long as the extension is `.munger` and the `munger_list` parameter in the initialization file for the results file references the name you chose.) 
 2. Fill in required parameter values to specify the organization of the results file `000_template.munger`
-  * `file_type=xml` because it's an xml file
-  * `count_location=ElectionResult/Contest/Choice/VoteType/County.votes`
-  * Note that the file contains a variety of contests, candidates, parties, vote types (a.k.a. CountItemTypes) and geographies (a.k.a. ReportingUnits). In other words, there is no need to use the `constant_over_file` parameter.
+  * `file_type=xml` indicates that the file is in xml format.
+  * `count_location=ElectionResult/Contest/Choice/VoteType/County.votes` indicates where the vote counts are to be found within the xml nesting structure.
+  *  Specify the location of the info defining each vote count. Each location must start with one of the nodes in `count_location`
+    * Because the file contains a variety of contests, candidates, parties, vote types (a.k.a. CountItemTypes) and geographies (a.k.a. ReportingUnits), there is no need to use the `constant_over_file` parameter.
+    * In the `[munge formulas]` section, specify where the other information is found. While the ReportingUnit, CandidateContest and CountItemType can be read simply from quoted strings in the file, (`ReportingUnit` is in `County.name`, `CandidateContest` is in `Contest.text` and `CountItemType` is in `VoteType.name`), the `Candidate` and `Party` must both be read out of `Choice.text` with python's regular expression ("regex") syntax. In the package syntax, the location of the string in the file is enclosed in angle brackets `<>`, and if a regular expression is needed, the location and the regular expression are given as a pair within braces `{}`.
+     
+```
+[format]
+file_type=xml
+count_location=ElectionResult/Contest/Choice/VoteType/County.votes
+
+[munge formulas]
+ReportingUnit=<County.name>
+Party={<Choice.text>,^.* \((.*)\)$}
+CandidateContest=<Contest.text>
+Candidate={<Choice.text>,^(.*) \(.*\)$}
+CountItemType=<VoteType.name>
+```
 
 ## Create an initialization file for the results file (optional)
 If you wish to practice creating an initialization file for results, follow the steps below. Otherwise skip to the next section.
 
 Because your `results_directory` folder has a subfolder `Georgia`, the dataloading routines will look to the folder [src/ini_files_for_results/Georgia](../src/ini_files_for_results/Georgia) for information about any results files in `working_directory/results_directory/Georgia`. 
+
+1. Delete [ga20g_20201120_1237.ini](../src/ini_files_for_results/Georgia/ga20g_20201120_1237.ini) from the repository.
+2. Copy [src/ini_files_for_results/single_election_jurisdiction_template.ini](../src/ini_files_for_results/single_election_jurisdiction_template.ini) to a file with extension `.ini` in the folder [src/ini_files_for_results/Georgia](../src/ini_files_for_results/Georgia).
 
 ## Create Georgia jurisdiction files (optional)
 If you wish to practice creating jurisdiction files, follow the steps below. Otherwise, skip to the next section.
@@ -86,3 +105,6 @@ The starter dictionary is placed in the working folder because in our experience
 4. (Optional) Take a look at the newly created folder [src/jurisdictions/Georgia](src/jurisdictions/Georgia) in the repository and the newly created file `GA_starter_dictionary.txt` in your working directory. 
 5. 
 
+## Clean up
+You may want to restore the repository to its original state 
+TODO how?
