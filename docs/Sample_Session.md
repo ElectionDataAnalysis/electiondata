@@ -76,7 +76,7 @@ CountItemType=<VoteType.name>
 ```
 
 ## Create an initialization file for the results file (optional)
-If you wish to practice creating an initialization file for results, follow the steps below. Otherwise skip to the next section.
+If you wish to practice creating an initialization file for results, follow the steps below. Otherwise skip to the next section; in this case the system will use the initialization file [ga20g_20201120_1237.ini](../src/ini_files_for_results/Georgia/ga20g_20201120_1237.ini).
 
 Because your `results_directory` folder has a subfolder `Georgia`, the dataloading routines will look to the folder [src/ini_files_for_results/Georgia](../src/ini_files_for_results/Georgia) for information about any results files in `working_directory/results_directory/Georgia`. 
 
@@ -131,14 +131,85 @@ Jurisdiction errors written to reports_and_plots_directory/load_or_reload_all_11
 ```
 Take a look at the file(s) indicated, which should give you a good idea of what needs to be fixed. (If it doesn't please report the unhelpful message(s) and your question as an [issue on GitHub](https://github.com/ElectionDataAnalysis/electiondata/issues)). Repeat this step -- loading and looking at errors -- as often as necessary! (In rare cases, you may want to start over with a new database, either by erasing the existing `electiondata_Georgia_test` from your postgres instance, or changing the value of `dbname` in the `run_time.ini` file.)
 
-### Sample errors and warnings while building jurisdiction files
+### Sample errors and warnings while building jurisdiction files (optional)
 * If no contests were recognized, or no candidates were recognized, the system reports an error:
 ```
 Jurisdiction errors (Georgia):
 Could not add totals for 2020 General because no data was found
 No contest-selection pairs recognized via munger my_Georgia_test.munger
 ```
-Look in the `.errors` and `.warnings` files. 
+Focus one contest, and one candidate in that contest. Look in the `.errors` and `.warnings` files. If the name of the contest or the candidate appears, the file will tell you what went wrong. If the name of the contest or the candidate does not appear in the `.errors` or `.munger` file, then there is an issue with the munger named in the results initialization file.
+
+* Contests that were parsed from the file but not recognized in the dictionary will be listed in a `.warnings` file, e.g.:
+```
+CandidateContests (found with munger my_Georgia_test) not found in dictionary.txt :
+US Senate (Perdue)
+US Senate (Loeffler) - Special
+Statewide Referendum A
+State Senate District 39 - Special Democratic Primary
+State Senate Dist 9/Senador Estatal Dist 9
+```
+You may very well choose to omit certain contests (such as Statewide Referendum A and the Special Democratic Primary). For the other contests, you will need to make an entry in `dictionary.txt` -- and maybe `CandidateContest.txt` and `Office.txt` as well.
+    * 'State Senate Dist 9/Senador Estatal Dist 9': if you see this after following the instructions in this sample session, the corresponding Office and CandidateContest 'GA Senate District 9' should already exist, so simply add another line to the `dictionary.txt` file: `CandidateContest	GA Senate District 9	State Senate Dist 9/Senador Estatal Dist 9`. (It may save time to add this version of all the GA Senate districts at this point.)
+    * 'US Senate (Perdue)' and 'US Senate (Loeffler) - Special': Be sure to disambiguate these, either by creating two separate Offices and corresponding CandidateContests for the two US Senate positions, or by creating two separate CandidateContests corresponding to the single office 'US Senate GA'. We choose the latter, adding a row to  `CandidateContest.txt` (`US Senate GA (partial term)	1	US Senate GA	`) and two rows to `dictionary.txt`:
+```
+CandidateContest	US Senate GA (partial term)	US Senate (Loeffler) - Special
+CandidateContest	GA Attorney General	GA Attorney General
+```
+
+* Candidates not found in the dictionary will be listed in a `.warnings` file. Copy and paste these names into the `Candidate.txt` file as a single BallotName column:
+```
+BallotName
+Zulma Lopez
+Zachary Perry
+Yasmin Neal
+```
+and add corresponding rows to `dictionary.txt`:
+```
+Candidate	Zulma Lopez	Zulma Lopez
+Candidate	Zachary Perry	Zachary Perry
+Candidate	Yasmin Neal	Yasmin Neal
+```
+You are free to choose another convention for the candidate names in the database, as long as you specify the mapping in the dictionary. E.g., you could instead have
+```
+BallotName
+Lopez, Zulma
+Perry, Zachary
+Neal, Yasmin
+```
+if your dictionary has
+```
+Candidate	Lopez, Zulma	Zulma Lopez
+Candidate	Perry, Zachary	Zachary Perry
+Candidate	Neal, Yasmin	Yasmin Neal
+```
+
+* Parties not recognized will also be listed in the `.warnings` file, e.g.:
+```Partys (found with munger my_Georgia_test.munger) not found in dictionary.txt :
+Rep
+Lib
+Ind
+Grn
+Dem
+```
+All these should be mapped in `dictionary.txt`
+```
+Party	Republican Party	Rep
+Party	Libertarian Party	Lib
+Party	Independent Party	Ind
+Party	Green Party	Grn
+Party	Democratic Party	Dem
+```
+to your chosen internal database names which should be in the name column of `Party.txt`:
+```
+Name
+Democratic Party
+Republican Party
+Libertarian Party
+Green Party
+Independent Party
+```
+Note: Some of the routines in the `analyze` submodule assume that every party name ends with ' Party'.
 
 ## Clean up
 You may want to restore the repository to its original state 

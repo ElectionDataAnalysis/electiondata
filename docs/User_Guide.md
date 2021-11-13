@@ -218,8 +218,8 @@ It's easiest to use the JurisdictionPrepper() object to create or update jurisdi
 
  (1) From the directory containing `jurisdiction_prep.ini`, open a python interpreter. Import the package and initialize a JurisdictionPrepper(), e.g.:
 ```
->>> import electiondata as ea
->>> jp = ea.JurisdictionPrepper()
+>>> import electiondata as ed
+>>> jp = ed.JurisdictionPrepper()
 ```
  (2) Call new_juris_files(), which will create the necessary files in the jurisdiction directory, as well as a starter dictionary file (`XX_starter_dictionary.txt`) in the current directory.
 ```
@@ -362,9 +362,8 @@ Each results file to be loaded must be designated in a `*.ini` file inside its j
 The DataLoader class allows batch uploading of all data in the directory indicated by the `results_dir` parameter in the main parameter file. The subdirectories of this file should be named for the jurisdictions (with hyphens replacing spaces, as in 'US-Virgin-Islands'. The `DataLoader.load_all()` method will upload every result file that appears, as long as its path (relative to the `results_dir`) is the `results_file` parameter for some `*.ini` file in `ini_files_for_results`. 
 
 ```
-import electiondata as ea
-dl = ea.DataLoader()
-dl.load_all()
+import electiondata as ed
+ed.load_or_reload_all()
 ```
 
 Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.ini` file for that results file has `munger_list` set to a comma-separated list of mungers, then all those mungers will be run on that one file.
@@ -377,7 +376,7 @@ All errors and warnings will be reported to the a subdirectory named by the data
 Even when the upload has worked, there may be warnings about lines not loaded. The system will ignore lines that cannot be munged. For example, the only contests whose results are uploaded will be those in the `CandidateContest.txt` or `BallotMeasureContest.txt` files that are correctly described in `dictionary.txt`.
 
 If there are no errors, the results files will be moved to a subdirectory of the directory specified by the `archive_dir` parameter in the main parameter file. 
-[TODO check ^^]
+
 
 
 ## Exporting Data
@@ -389,13 +388,13 @@ The Analyzer class takes two optional parameters:
 
 To get an instance of an analyzer, you can call the Analyzer class directly:
 ```
-import electiondata as ea
-analyzer = ea.Analyzer(param_file=param_file, dbname=dbname)
+import electiondata as ed
+analyzer = ed.Analyzer(param_file=param_file, dbname=dbname)
 ```
 or, since every instance of the DataLoader class creates its own analyzer:
 ```
-import electiondata as ea
-dl = ea.DataLoader(param_file=param_file, dbname=dbname)
+import electiondata as ed
+dl = ed.DataLoader(param_file=param_file, dbname=dbname)
 analyzer = dl.analyzer
 ```
 
@@ -416,15 +415,15 @@ This package provides functionality to export the data to xml or json according 
 
 This is as simple as identifying an election and jurisdiction of interest. For xml:
 ```
-import electiondata as ea
-analyzer = ea.Analyzer()
+import electiondata as ed
+analyzer = ed.Analyzer()
 election_report = analyzer.export_nist_xml_as_string("2020 General", "Georgia")
 ```
 The output is a string, the contents of the xml file.
 
 And for json:
 ```
-analyzer = ea.Analyzer()
+analyzer = ed.Analyzer()
 analyzer.export_nist_json_as_string("2020 General","Georgia")
 ```
 The output is a string, the contents of the json file.
@@ -433,7 +432,7 @@ The subdivision type for the roll-up is determined by the [`000_major_subjurisdi
 
 ## Unload and reload data with `reload_juris_election()`
 To unload existing data for a given jurisdiction and a given election you can use the routine 
-```ea.reload_juris_election(jurisdiction, election, report_dir)```
+```ed.reload_juris_election(jurisdiction, election, report_dir)```
 This function takes optional arguments:
  * rollup (defaults to  false), if true, rolls up results within the to the major subdivision
  * dbname, name of database if given; otherwise database name taken from parameter file

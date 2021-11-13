@@ -252,7 +252,8 @@ US House GA District 14	1	US House GA District 14
 US President (GA)	1	US President (GA)	
 GA Governor	1	GA Governor	
 US Senate GA	1	US Senate GA	
-GA Attorney General	1	GA Attorney General	
+US Senate GA (partial term)	1	US Senate GA
+GA Attorney General	1	GA Attorney General
 GA Lieutenant Governor	1	GA Lieutenant Governor	
 GA Treasurer	1	GA Treasurer	
 GA Secretary of State	1	GA Secretary of State	
