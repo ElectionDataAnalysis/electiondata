@@ -1,0 +1,685 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	GA House District 1	State House District 1
+CandidateContest	GA House District 2	State House District 2
+CandidateContest	GA House District 3	State House District 3
+CandidateContest	GA House District 4	State House District 4
+CandidateContest	GA House District 5	State House District 5
+CandidateContest	GA House District 6	State House District 6
+CandidateContest	GA House District 7	State House District 7
+CandidateContest	GA House District 8	State House District 8
+CandidateContest	GA House District 9	State House District 9
+CandidateContest	GA House District 10	State House District 10
+CandidateContest	GA House District 11	State House District 11
+CandidateContest	GA House District 12	State House District 12
+CandidateContest	GA House District 13	State House District 13
+CandidateContest	GA House District 14	State House District 14
+CandidateContest	GA House District 15	State House District 15
+CandidateContest	GA House District 16	State House District 16
+CandidateContest	GA House District 17	State House District 17
+CandidateContest	GA House District 18	State House District 18
+CandidateContest	GA House District 19	State House District 19
+CandidateContest	GA House District 20	State House District 20
+CandidateContest	GA House District 21	State House District 21
+CandidateContest	GA House District 22	State House District 22
+CandidateContest	GA House District 23	State House District 23
+CandidateContest	GA House District 24	State House District 24
+CandidateContest	GA House District 25	State House District 25
+CandidateContest	GA House District 26	State House District 26
+CandidateContest	GA House District 27	State House District 27
+CandidateContest	GA House District 28	State House District 28
+CandidateContest	GA House District 29	State House District 29
+CandidateContest	GA House District 30	State House District 30
+CandidateContest	GA House District 31	State House District 31
+CandidateContest	GA House District 32	State House District 32
+CandidateContest	GA House District 33	State House District 33
+CandidateContest	GA House District 34	State House District 34
+CandidateContest	GA House District 35	State House District 35
+CandidateContest	GA House District 36	State House District 36
+CandidateContest	GA House District 37	State House District 37
+CandidateContest	GA House District 38	State House District 38
+CandidateContest	GA House District 39	State House District 39
+CandidateContest	GA House District 40	State House District 40
+CandidateContest	GA House District 41	State House District 41
+CandidateContest	GA House District 42	State House District 42
+CandidateContest	GA House District 43	State House District 43
+CandidateContest	GA House District 44	State House District 44
+CandidateContest	GA House District 45	State House District 45
+CandidateContest	GA House District 46	State House District 46
+CandidateContest	GA House District 47	State House District 47
+CandidateContest	GA House District 48	State House District 48
+CandidateContest	GA House District 49	State House District 49
+CandidateContest	GA House District 50	State House District 50
+CandidateContest	GA House District 51	State House District 51
+CandidateContest	GA House District 52	State House District 52
+CandidateContest	GA House District 53	State House District 53
+CandidateContest	GA House District 54	State House District 54
+CandidateContest	GA House District 55	State House District 55
+CandidateContest	GA House District 56	State House District 56
+CandidateContest	GA House District 57	State House District 57
+CandidateContest	GA House District 58	State House District 58
+CandidateContest	GA House District 59	State House District 59
+CandidateContest	GA House District 60	State House District 60
+CandidateContest	GA House District 61	State House District 61
+CandidateContest	GA House District 62	State House District 62
+CandidateContest	GA House District 63	State House District 63
+CandidateContest	GA House District 64	State House District 64
+CandidateContest	GA House District 65	State House District 65
+CandidateContest	GA House District 66	State House District 66
+CandidateContest	GA House District 67	State House District 67
+CandidateContest	GA House District 68	State House District 68
+CandidateContest	GA House District 69	State House District 69
+CandidateContest	GA House District 70	State House District 70
+CandidateContest	GA House District 71	State House District 71
+CandidateContest	GA House District 72	State House District 72
+CandidateContest	GA House District 73	State House District 73
+CandidateContest	GA House District 74	State House District 74
+CandidateContest	GA House District 75	State House District 75
+CandidateContest	GA House District 76	State House District 76
+CandidateContest	GA House District 77	State House District 77
+CandidateContest	GA House District 78	State House District 78
+CandidateContest	GA House District 79	State House District 79
+CandidateContest	GA House District 80	State House District 80
+CandidateContest	GA House District 81	State House District 81
+CandidateContest	GA House District 82	State House District 82
+CandidateContest	GA House District 83	State House District 83
+CandidateContest	GA House District 84	State House District 84
+CandidateContest	GA House District 85	State House District 85
+CandidateContest	GA House District 86	State House District 86
+CandidateContest	GA House District 87	State House District 87
+CandidateContest	GA House District 88	State House District 88
+CandidateContest	GA House District 89	State House District 89
+CandidateContest	GA House District 90	State House District 90
+CandidateContest	GA House District 91	State House District 91
+CandidateContest	GA House District 92	State House District 92
+CandidateContest	GA House District 93	State House District 93
+CandidateContest	GA House District 94	State House District 94
+CandidateContest	GA House District 95	State House District 95
+CandidateContest	GA House District 96	State House District 96
+CandidateContest	GA House District 97	State House District 97
+CandidateContest	GA House District 98	State House District 98
+CandidateContest	GA House District 99	State House District 99
+CandidateContest	GA House District 100	State House District 100
+CandidateContest	GA House District 101	State House District 101
+CandidateContest	GA House District 102	State House District 102
+CandidateContest	GA House District 103	State House District 103
+CandidateContest	GA House District 104	State House District 104
+CandidateContest	GA House District 105	State House District 105
+CandidateContest	GA House District 106	State House District 106
+CandidateContest	GA House District 107	State House District 107
+CandidateContest	GA House District 108	State House District 108
+CandidateContest	GA House District 109	State House District 109
+CandidateContest	GA House District 110	State House District 110
+CandidateContest	GA House District 111	State House District 111
+CandidateContest	GA House District 112	State House District 112
+CandidateContest	GA House District 113	State House District 113
+CandidateContest	GA House District 114	State House District 114
+CandidateContest	GA House District 115	State House District 115
+CandidateContest	GA House District 116	State House District 116
+CandidateContest	GA House District 117	State House District 117
+CandidateContest	GA House District 118	State House District 118
+CandidateContest	GA House District 119	State House District 119
+CandidateContest	GA House District 120	State House District 120
+CandidateContest	GA House District 121	State House District 121
+CandidateContest	GA House District 122	State House District 122
+CandidateContest	GA House District 123	State House District 123
+CandidateContest	GA House District 124	State House District 124
+CandidateContest	GA House District 125	State House District 125
+CandidateContest	GA House District 126	State House District 126
+CandidateContest	GA House District 127	State House District 127
+CandidateContest	GA House District 128	State House District 128
+CandidateContest	GA House District 129	State House District 129
+CandidateContest	GA House District 130	State House District 130
+CandidateContest	GA House District 131	State House District 131
+CandidateContest	GA House District 132	State House District 132
+CandidateContest	GA House District 133	State House District 133
+CandidateContest	GA House District 134	State House District 134
+CandidateContest	GA House District 135	State House District 135
+CandidateContest	GA House District 136	State House District 136
+CandidateContest	GA House District 137	State House District 137
+CandidateContest	GA House District 138	State House District 138
+CandidateContest	GA House District 139	State House District 139
+CandidateContest	GA House District 140	State House District 140
+CandidateContest	GA House District 141	State House District 141
+CandidateContest	GA House District 142	State House District 142
+CandidateContest	GA House District 143	State House District 143
+CandidateContest	GA House District 144	State House District 144
+CandidateContest	GA House District 145	State House District 145
+CandidateContest	GA House District 146	State House District 146
+CandidateContest	GA House District 147	State House District 147
+CandidateContest	GA House District 148	State House District 148
+CandidateContest	GA House District 149	State House District 149
+CandidateContest	GA House District 150	State House District 150
+CandidateContest	GA House District 151	State House District 151
+CandidateContest	GA House District 152	State House District 152
+CandidateContest	GA House District 153	State House District 153
+CandidateContest	GA House District 154	State House District 154
+CandidateContest	GA House District 155	State House District 155
+CandidateContest	GA House District 156	State House District 156
+CandidateContest	GA House District 157	State House District 157
+CandidateContest	GA House District 158	State House District 158
+CandidateContest	GA House District 159	State House District 159
+CandidateContest	GA House District 160	State House District 160
+CandidateContest	GA House District 161	State House District 161
+CandidateContest	GA House District 162	State House District 162
+CandidateContest	GA House District 163	State House District 163
+CandidateContest	GA House District 164	State House District 164
+CandidateContest	GA House District 165	State House District 165
+CandidateContest	GA House District 166	State House District 166
+CandidateContest	GA House District 167	State House District 167
+CandidateContest	GA House District 168	State House District 168
+CandidateContest	GA House District 169	State House District 169
+CandidateContest	GA House District 170	State House District 170
+CandidateContest	GA House District 171	State House District 171
+CandidateContest	GA House District 172	State House District 172
+CandidateContest	GA House District 173	State House District 173
+CandidateContest	GA House District 174	State House District 174
+CandidateContest	GA House District 175	State House District 175
+CandidateContest	GA House District 176	State House District 176
+CandidateContest	GA House District 177	State House District 177
+CandidateContest	GA House District 178	State House District 178
+CandidateContest	GA House District 179	State House District 179
+CandidateContest	GA House District 180	State House District 180
+CandidateContest	GA Senate District 1	State Senate District 1
+CandidateContest	GA Senate District 2	State Senate District 2
+CandidateContest	GA Senate District 3	State Senate District 3
+CandidateContest	GA Senate District 4	State Senate District 4
+CandidateContest	GA Senate District 5	State Senate District 5
+CandidateContest	GA Senate District 6	State Senate District 6
+CandidateContest	GA Senate District 7	State Senate District 7
+CandidateContest	GA Senate District 8	State Senate District 8
+CandidateContest	GA Senate District 9	State Senate District 9
+CandidateContest	GA Senate District 10	State Senate District 10
+CandidateContest	GA Senate District 11	State Senate District 11
+CandidateContest	GA Senate District 12	State Senate District 12
+CandidateContest	GA Senate District 13	State Senate District 13
+CandidateContest	GA Senate District 14	State Senate District 14
+CandidateContest	GA Senate District 15	State Senate District 15
+CandidateContest	GA Senate District 16	State Senate District 16
+CandidateContest	GA Senate District 17	State Senate District 17
+CandidateContest	GA Senate District 18	State Senate District 18
+CandidateContest	GA Senate District 19	State Senate District 19
+CandidateContest	GA Senate District 20	State Senate District 20
+CandidateContest	GA Senate District 21	State Senate District 21
+CandidateContest	GA Senate District 22	State Senate District 22
+CandidateContest	GA Senate District 23	State Senate District 23
+CandidateContest	GA Senate District 24	State Senate District 24
+CandidateContest	GA Senate District 25	State Senate District 25
+CandidateContest	GA Senate District 26	State Senate District 26
+CandidateContest	GA Senate District 27	State Senate District 27
+CandidateContest	GA Senate District 28	State Senate District 28
+CandidateContest	GA Senate District 29	State Senate District 29
+CandidateContest	GA Senate District 30	State Senate District 30
+CandidateContest	GA Senate District 31	State Senate District 31
+CandidateContest	GA Senate District 32	State Senate District 32
+CandidateContest	GA Senate District 33	State Senate District 33
+CandidateContest	GA Senate District 34	State Senate District 34
+CandidateContest	GA Senate District 35	State Senate District 35
+CandidateContest	GA Senate District 36	State Senate District 36
+CandidateContest	GA Senate District 37	State Senate District 37
+CandidateContest	GA Senate District 38	State Senate District 38
+CandidateContest	GA Senate District 39	State Senate District 39
+CandidateContest	GA Senate District 40	State Senate District 40
+CandidateContest	GA Senate District 41	State Senate District 41
+CandidateContest	GA Senate District 42	State Senate District 42
+CandidateContest	GA Senate District 43	State Senate District 43
+CandidateContest	GA Senate District 44	State Senate District 44
+CandidateContest	GA Senate District 45	State Senate District 45
+CandidateContest	GA Senate District 46	State Senate District 46
+CandidateContest	GA Senate District 47	State Senate District 47
+CandidateContest	GA Senate District 48	State Senate District 48
+CandidateContest	GA Senate District 49	State Senate District 49
+CandidateContest	GA Senate District 50	State Senate District 50
+CandidateContest	GA Senate District 51	State Senate District 51
+CandidateContest	GA Senate District 52	State Senate District 52
+CandidateContest	GA Senate District 53	State Senate District 53
+CandidateContest	GA Senate District 54	State Senate District 54
+CandidateContest	GA Senate District 55	State Senate District 55
+CandidateContest	GA Senate District 56	State Senate District 56
+CandidateContest	US House GA District 1	US House District 1
+CandidateContest	US House GA District 2	US House District 2
+CandidateContest	US House GA District 3	US House District 3
+CandidateContest	US House GA District 4	US House District 4
+CandidateContest	US House GA District 5	US House District 5
+CandidateContest	US House GA District 6	US House District 6
+CandidateContest	US House GA District 7	US House District 7
+CandidateContest	US House GA District 8	US House District 8
+CandidateContest	US House GA District 9	US House District 9
+CandidateContest	US House GA District 10	US House District 10
+CandidateContest	US House GA District 11	US House District 11
+CandidateContest	US House GA District 12	US House District 12
+CandidateContest	US House GA District 13	US House District 13
+CandidateContest	US House GA District 14	US House District 14
+CandidateContest	US President (GA)	President of the United States
+CandidateContest	GA Governor	GA Governor
+CandidateContest	US Senate GA	US Senate GA
+CandidateContest	GA Attorney General	GA Attorney General
+CandidateContest	GA Lieutenant Governor	GA Lieutenant Governor
+CandidateContest	GA Treasurer	GA Treasurer
+CandidateContest	GA Secretary of State	GA Secretary of State
+Party	Democratic Party	Democratic Party
+Party	Republican Party	Republican Party
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+ReportingUnit	Georgia;GA House District 1	Georgia;GA House District 1
+ReportingUnit	Georgia;GA House District 2	Georgia;GA House District 2
+ReportingUnit	Georgia;GA House District 3	Georgia;GA House District 3
+ReportingUnit	Georgia;GA House District 4	Georgia;GA House District 4
+ReportingUnit	Georgia;GA House District 5	Georgia;GA House District 5
+ReportingUnit	Georgia;GA House District 6	Georgia;GA House District 6
+ReportingUnit	Georgia;GA House District 7	Georgia;GA House District 7
+ReportingUnit	Georgia;GA House District 8	Georgia;GA House District 8
+ReportingUnit	Georgia;GA House District 9	Georgia;GA House District 9
+ReportingUnit	Georgia;GA House District 10	Georgia;GA House District 10
+ReportingUnit	Georgia;GA House District 11	Georgia;GA House District 11
+ReportingUnit	Georgia;GA House District 12	Georgia;GA House District 12
+ReportingUnit	Georgia;GA House District 13	Georgia;GA House District 13
+ReportingUnit	Georgia;GA House District 14	Georgia;GA House District 14
+ReportingUnit	Georgia;GA House District 15	Georgia;GA House District 15
+ReportingUnit	Georgia;GA House District 16	Georgia;GA House District 16
+ReportingUnit	Georgia;GA House District 17	Georgia;GA House District 17
+ReportingUnit	Georgia;GA House District 18	Georgia;GA House District 18
+ReportingUnit	Georgia;GA House District 19	Georgia;GA House District 19
+ReportingUnit	Georgia;GA House District 20	Georgia;GA House District 20
+ReportingUnit	Georgia;GA House District 21	Georgia;GA House District 21
+ReportingUnit	Georgia;GA House District 22	Georgia;GA House District 22
+ReportingUnit	Georgia;GA House District 23	Georgia;GA House District 23
+ReportingUnit	Georgia;GA House District 24	Georgia;GA House District 24
+ReportingUnit	Georgia;GA House District 25	Georgia;GA House District 25
+ReportingUnit	Georgia;GA House District 26	Georgia;GA House District 26
+ReportingUnit	Georgia;GA House District 27	Georgia;GA House District 27
+ReportingUnit	Georgia;GA House District 28	Georgia;GA House District 28
+ReportingUnit	Georgia;GA House District 29	Georgia;GA House District 29
+ReportingUnit	Georgia;GA House District 30	Georgia;GA House District 30
+ReportingUnit	Georgia;GA House District 31	Georgia;GA House District 31
+ReportingUnit	Georgia;GA House District 32	Georgia;GA House District 32
+ReportingUnit	Georgia;GA House District 33	Georgia;GA House District 33
+ReportingUnit	Georgia;GA House District 34	Georgia;GA House District 34
+ReportingUnit	Georgia;GA House District 35	Georgia;GA House District 35
+ReportingUnit	Georgia;GA House District 36	Georgia;GA House District 36
+ReportingUnit	Georgia;GA House District 37	Georgia;GA House District 37
+ReportingUnit	Georgia;GA House District 38	Georgia;GA House District 38
+ReportingUnit	Georgia;GA House District 39	Georgia;GA House District 39
+ReportingUnit	Georgia;GA House District 40	Georgia;GA House District 40
+ReportingUnit	Georgia;GA House District 41	Georgia;GA House District 41
+ReportingUnit	Georgia;GA House District 42	Georgia;GA House District 42
+ReportingUnit	Georgia;GA House District 43	Georgia;GA House District 43
+ReportingUnit	Georgia;GA House District 44	Georgia;GA House District 44
+ReportingUnit	Georgia;GA House District 45	Georgia;GA House District 45
+ReportingUnit	Georgia;GA House District 46	Georgia;GA House District 46
+ReportingUnit	Georgia;GA House District 47	Georgia;GA House District 47
+ReportingUnit	Georgia;GA House District 48	Georgia;GA House District 48
+ReportingUnit	Georgia;GA House District 49	Georgia;GA House District 49
+ReportingUnit	Georgia;GA House District 50	Georgia;GA House District 50
+ReportingUnit	Georgia;GA House District 51	Georgia;GA House District 51
+ReportingUnit	Georgia;GA House District 52	Georgia;GA House District 52
+ReportingUnit	Georgia;GA House District 53	Georgia;GA House District 53
+ReportingUnit	Georgia;GA House District 54	Georgia;GA House District 54
+ReportingUnit	Georgia;GA House District 55	Georgia;GA House District 55
+ReportingUnit	Georgia;GA House District 56	Georgia;GA House District 56
+ReportingUnit	Georgia;GA House District 57	Georgia;GA House District 57
+ReportingUnit	Georgia;GA House District 58	Georgia;GA House District 58
+ReportingUnit	Georgia;GA House District 59	Georgia;GA House District 59
+ReportingUnit	Georgia;GA House District 60	Georgia;GA House District 60
+ReportingUnit	Georgia;GA House District 61	Georgia;GA House District 61
+ReportingUnit	Georgia;GA House District 62	Georgia;GA House District 62
+ReportingUnit	Georgia;GA House District 63	Georgia;GA House District 63
+ReportingUnit	Georgia;GA House District 64	Georgia;GA House District 64
+ReportingUnit	Georgia;GA House District 65	Georgia;GA House District 65
+ReportingUnit	Georgia;GA House District 66	Georgia;GA House District 66
+ReportingUnit	Georgia;GA House District 67	Georgia;GA House District 67
+ReportingUnit	Georgia;GA House District 68	Georgia;GA House District 68
+ReportingUnit	Georgia;GA House District 69	Georgia;GA House District 69
+ReportingUnit	Georgia;GA House District 70	Georgia;GA House District 70
+ReportingUnit	Georgia;GA House District 71	Georgia;GA House District 71
+ReportingUnit	Georgia;GA House District 72	Georgia;GA House District 72
+ReportingUnit	Georgia;GA House District 73	Georgia;GA House District 73
+ReportingUnit	Georgia;GA House District 74	Georgia;GA House District 74
+ReportingUnit	Georgia;GA House District 75	Georgia;GA House District 75
+ReportingUnit	Georgia;GA House District 76	Georgia;GA House District 76
+ReportingUnit	Georgia;GA House District 77	Georgia;GA House District 77
+ReportingUnit	Georgia;GA House District 78	Georgia;GA House District 78
+ReportingUnit	Georgia;GA House District 79	Georgia;GA House District 79
+ReportingUnit	Georgia;GA House District 80	Georgia;GA House District 80
+ReportingUnit	Georgia;GA House District 81	Georgia;GA House District 81
+ReportingUnit	Georgia;GA House District 82	Georgia;GA House District 82
+ReportingUnit	Georgia;GA House District 83	Georgia;GA House District 83
+ReportingUnit	Georgia;GA House District 84	Georgia;GA House District 84
+ReportingUnit	Georgia;GA House District 85	Georgia;GA House District 85
+ReportingUnit	Georgia;GA House District 86	Georgia;GA House District 86
+ReportingUnit	Georgia;GA House District 87	Georgia;GA House District 87
+ReportingUnit	Georgia;GA House District 88	Georgia;GA House District 88
+ReportingUnit	Georgia;GA House District 89	Georgia;GA House District 89
+ReportingUnit	Georgia;GA House District 90	Georgia;GA House District 90
+ReportingUnit	Georgia;GA House District 91	Georgia;GA House District 91
+ReportingUnit	Georgia;GA House District 92	Georgia;GA House District 92
+ReportingUnit	Georgia;GA House District 93	Georgia;GA House District 93
+ReportingUnit	Georgia;GA House District 94	Georgia;GA House District 94
+ReportingUnit	Georgia;GA House District 95	Georgia;GA House District 95
+ReportingUnit	Georgia;GA House District 96	Georgia;GA House District 96
+ReportingUnit	Georgia;GA House District 97	Georgia;GA House District 97
+ReportingUnit	Georgia;GA House District 98	Georgia;GA House District 98
+ReportingUnit	Georgia;GA House District 99	Georgia;GA House District 99
+ReportingUnit	Georgia;GA House District 100	Georgia;GA House District 100
+ReportingUnit	Georgia;GA House District 101	Georgia;GA House District 101
+ReportingUnit	Georgia;GA House District 102	Georgia;GA House District 102
+ReportingUnit	Georgia;GA House District 103	Georgia;GA House District 103
+ReportingUnit	Georgia;GA House District 104	Georgia;GA House District 104
+ReportingUnit	Georgia;GA House District 105	Georgia;GA House District 105
+ReportingUnit	Georgia;GA House District 106	Georgia;GA House District 106
+ReportingUnit	Georgia;GA House District 107	Georgia;GA House District 107
+ReportingUnit	Georgia;GA House District 108	Georgia;GA House District 108
+ReportingUnit	Georgia;GA House District 109	Georgia;GA House District 109
+ReportingUnit	Georgia;GA House District 110	Georgia;GA House District 110
+ReportingUnit	Georgia;GA House District 111	Georgia;GA House District 111
+ReportingUnit	Georgia;GA House District 112	Georgia;GA House District 112
+ReportingUnit	Georgia;GA House District 113	Georgia;GA House District 113
+ReportingUnit	Georgia;GA House District 114	Georgia;GA House District 114
+ReportingUnit	Georgia;GA House District 115	Georgia;GA House District 115
+ReportingUnit	Georgia;GA House District 116	Georgia;GA House District 116
+ReportingUnit	Georgia;GA House District 117	Georgia;GA House District 117
+ReportingUnit	Georgia;GA House District 118	Georgia;GA House District 118
+ReportingUnit	Georgia;GA House District 119	Georgia;GA House District 119
+ReportingUnit	Georgia;GA House District 120	Georgia;GA House District 120
+ReportingUnit	Georgia;GA House District 121	Georgia;GA House District 121
+ReportingUnit	Georgia;GA House District 122	Georgia;GA House District 122
+ReportingUnit	Georgia;GA House District 123	Georgia;GA House District 123
+ReportingUnit	Georgia;GA House District 124	Georgia;GA House District 124
+ReportingUnit	Georgia;GA House District 125	Georgia;GA House District 125
+ReportingUnit	Georgia;GA House District 126	Georgia;GA House District 126
+ReportingUnit	Georgia;GA House District 127	Georgia;GA House District 127
+ReportingUnit	Georgia;GA House District 128	Georgia;GA House District 128
+ReportingUnit	Georgia;GA House District 129	Georgia;GA House District 129
+ReportingUnit	Georgia;GA House District 130	Georgia;GA House District 130
+ReportingUnit	Georgia;GA House District 131	Georgia;GA House District 131
+ReportingUnit	Georgia;GA House District 132	Georgia;GA House District 132
+ReportingUnit	Georgia;GA House District 133	Georgia;GA House District 133
+ReportingUnit	Georgia;GA House District 134	Georgia;GA House District 134
+ReportingUnit	Georgia;GA House District 135	Georgia;GA House District 135
+ReportingUnit	Georgia;GA House District 136	Georgia;GA House District 136
+ReportingUnit	Georgia;GA House District 137	Georgia;GA House District 137
+ReportingUnit	Georgia;GA House District 138	Georgia;GA House District 138
+ReportingUnit	Georgia;GA House District 139	Georgia;GA House District 139
+ReportingUnit	Georgia;GA House District 140	Georgia;GA House District 140
+ReportingUnit	Georgia;GA House District 141	Georgia;GA House District 141
+ReportingUnit	Georgia;GA House District 142	Georgia;GA House District 142
+ReportingUnit	Georgia;GA House District 143	Georgia;GA House District 143
+ReportingUnit	Georgia;GA House District 144	Georgia;GA House District 144
+ReportingUnit	Georgia;GA House District 145	Georgia;GA House District 145
+ReportingUnit	Georgia;GA House District 146	Georgia;GA House District 146
+ReportingUnit	Georgia;GA House District 147	Georgia;GA House District 147
+ReportingUnit	Georgia;GA House District 148	Georgia;GA House District 148
+ReportingUnit	Georgia;GA House District 149	Georgia;GA House District 149
+ReportingUnit	Georgia;GA House District 150	Georgia;GA House District 150
+ReportingUnit	Georgia;GA House District 151	Georgia;GA House District 151
+ReportingUnit	Georgia;GA House District 152	Georgia;GA House District 152
+ReportingUnit	Georgia;GA House District 153	Georgia;GA House District 153
+ReportingUnit	Georgia;GA House District 154	Georgia;GA House District 154
+ReportingUnit	Georgia;GA House District 155	Georgia;GA House District 155
+ReportingUnit	Georgia;GA House District 156	Georgia;GA House District 156
+ReportingUnit	Georgia;GA House District 157	Georgia;GA House District 157
+ReportingUnit	Georgia;GA House District 158	Georgia;GA House District 158
+ReportingUnit	Georgia;GA House District 159	Georgia;GA House District 159
+ReportingUnit	Georgia;GA House District 160	Georgia;GA House District 160
+ReportingUnit	Georgia;GA House District 161	Georgia;GA House District 161
+ReportingUnit	Georgia;GA House District 162	Georgia;GA House District 162
+ReportingUnit	Georgia;GA House District 163	Georgia;GA House District 163
+ReportingUnit	Georgia;GA House District 164	Georgia;GA House District 164
+ReportingUnit	Georgia;GA House District 165	Georgia;GA House District 165
+ReportingUnit	Georgia;GA House District 166	Georgia;GA House District 166
+ReportingUnit	Georgia;GA House District 167	Georgia;GA House District 167
+ReportingUnit	Georgia;GA House District 168	Georgia;GA House District 168
+ReportingUnit	Georgia;GA House District 169	Georgia;GA House District 169
+ReportingUnit	Georgia;GA House District 170	Georgia;GA House District 170
+ReportingUnit	Georgia;GA House District 171	Georgia;GA House District 171
+ReportingUnit	Georgia;GA House District 172	Georgia;GA House District 172
+ReportingUnit	Georgia;GA House District 173	Georgia;GA House District 173
+ReportingUnit	Georgia;GA House District 174	Georgia;GA House District 174
+ReportingUnit	Georgia;GA House District 175	Georgia;GA House District 175
+ReportingUnit	Georgia;GA House District 176	Georgia;GA House District 176
+ReportingUnit	Georgia;GA House District 177	Georgia;GA House District 177
+ReportingUnit	Georgia;GA House District 178	Georgia;GA House District 178
+ReportingUnit	Georgia;GA House District 179	Georgia;GA House District 179
+ReportingUnit	Georgia;GA House District 180	Georgia;GA House District 180
+ReportingUnit	Georgia;GA Senate District 1	Georgia;GA Senate District 1
+ReportingUnit	Georgia;GA Senate District 2	Georgia;GA Senate District 2
+ReportingUnit	Georgia;GA Senate District 3	Georgia;GA Senate District 3
+ReportingUnit	Georgia;GA Senate District 4	Georgia;GA Senate District 4
+ReportingUnit	Georgia;GA Senate District 5	Georgia;GA Senate District 5
+ReportingUnit	Georgia;GA Senate District 6	Georgia;GA Senate District 6
+ReportingUnit	Georgia;GA Senate District 7	Georgia;GA Senate District 7
+ReportingUnit	Georgia;GA Senate District 8	Georgia;GA Senate District 8
+ReportingUnit	Georgia;GA Senate District 9	Georgia;GA Senate District 9
+ReportingUnit	Georgia;GA Senate District 10	Georgia;GA Senate District 10
+ReportingUnit	Georgia;GA Senate District 11	Georgia;GA Senate District 11
+ReportingUnit	Georgia;GA Senate District 12	Georgia;GA Senate District 12
+ReportingUnit	Georgia;GA Senate District 13	Georgia;GA Senate District 13
+ReportingUnit	Georgia;GA Senate District 14	Georgia;GA Senate District 14
+ReportingUnit	Georgia;GA Senate District 15	Georgia;GA Senate District 15
+ReportingUnit	Georgia;GA Senate District 16	Georgia;GA Senate District 16
+ReportingUnit	Georgia;GA Senate District 17	Georgia;GA Senate District 17
+ReportingUnit	Georgia;GA Senate District 18	Georgia;GA Senate District 18
+ReportingUnit	Georgia;GA Senate District 19	Georgia;GA Senate District 19
+ReportingUnit	Georgia;GA Senate District 20	Georgia;GA Senate District 20
+ReportingUnit	Georgia;GA Senate District 21	Georgia;GA Senate District 21
+ReportingUnit	Georgia;GA Senate District 22	Georgia;GA Senate District 22
+ReportingUnit	Georgia;GA Senate District 23	Georgia;GA Senate District 23
+ReportingUnit	Georgia;GA Senate District 24	Georgia;GA Senate District 24
+ReportingUnit	Georgia;GA Senate District 25	Georgia;GA Senate District 25
+ReportingUnit	Georgia;GA Senate District 26	Georgia;GA Senate District 26
+ReportingUnit	Georgia;GA Senate District 27	Georgia;GA Senate District 27
+ReportingUnit	Georgia;GA Senate District 28	Georgia;GA Senate District 28
+ReportingUnit	Georgia;GA Senate District 29	Georgia;GA Senate District 29
+ReportingUnit	Georgia;GA Senate District 30	Georgia;GA Senate District 30
+ReportingUnit	Georgia;GA Senate District 31	Georgia;GA Senate District 31
+ReportingUnit	Georgia;GA Senate District 32	Georgia;GA Senate District 32
+ReportingUnit	Georgia;GA Senate District 33	Georgia;GA Senate District 33
+ReportingUnit	Georgia;GA Senate District 34	Georgia;GA Senate District 34
+ReportingUnit	Georgia;GA Senate District 35	Georgia;GA Senate District 35
+ReportingUnit	Georgia;GA Senate District 36	Georgia;GA Senate District 36
+ReportingUnit	Georgia;GA Senate District 37	Georgia;GA Senate District 37
+ReportingUnit	Georgia;GA Senate District 38	Georgia;GA Senate District 38
+ReportingUnit	Georgia;GA Senate District 39	Georgia;GA Senate District 39
+ReportingUnit	Georgia;GA Senate District 40	Georgia;GA Senate District 40
+ReportingUnit	Georgia;GA Senate District 41	Georgia;GA Senate District 41
+ReportingUnit	Georgia;GA Senate District 42	Georgia;GA Senate District 42
+ReportingUnit	Georgia;GA Senate District 43	Georgia;GA Senate District 43
+ReportingUnit	Georgia;GA Senate District 44	Georgia;GA Senate District 44
+ReportingUnit	Georgia;GA Senate District 45	Georgia;GA Senate District 45
+ReportingUnit	Georgia;GA Senate District 46	Georgia;GA Senate District 46
+ReportingUnit	Georgia;GA Senate District 47	Georgia;GA Senate District 47
+ReportingUnit	Georgia;GA Senate District 48	Georgia;GA Senate District 48
+ReportingUnit	Georgia;GA Senate District 49	Georgia;GA Senate District 49
+ReportingUnit	Georgia;GA Senate District 50	Georgia;GA Senate District 50
+ReportingUnit	Georgia;GA Senate District 51	Georgia;GA Senate District 51
+ReportingUnit	Georgia;GA Senate District 52	Georgia;GA Senate District 52
+ReportingUnit	Georgia;GA Senate District 53	Georgia;GA Senate District 53
+ReportingUnit	Georgia;GA Senate District 54	Georgia;GA Senate District 54
+ReportingUnit	Georgia;GA Senate District 55	Georgia;GA Senate District 55
+ReportingUnit	Georgia;GA Senate District 56	Georgia;GA Senate District 56
+ReportingUnit	Georgia;US House GA District 1	Georgia;US House GA District 1
+ReportingUnit	Georgia;US House GA District 2	Georgia;US House GA District 2
+ReportingUnit	Georgia;US House GA District 3	Georgia;US House GA District 3
+ReportingUnit	Georgia;US House GA District 4	Georgia;US House GA District 4
+ReportingUnit	Georgia;US House GA District 5	Georgia;US House GA District 5
+ReportingUnit	Georgia;US House GA District 6	Georgia;US House GA District 6
+ReportingUnit	Georgia;US House GA District 7	Georgia;US House GA District 7
+ReportingUnit	Georgia;US House GA District 8	Georgia;US House GA District 8
+ReportingUnit	Georgia;US House GA District 9	Georgia;US House GA District 9
+ReportingUnit	Georgia;US House GA District 10	Georgia;US House GA District 10
+ReportingUnit	Georgia;US House GA District 11	Georgia;US House GA District 11
+ReportingUnit	Georgia;US House GA District 12	Georgia;US House GA District 12
+ReportingUnit	Georgia;US House GA District 13	Georgia;US House GA District 13
+ReportingUnit	Georgia;US House GA District 14	Georgia;US House GA District 14
+ReportingUnit	Georgia	Georgia
+CountItemType	absentee	absentee
+CountItemType	absentee-fwab	absentee-fwab
+CountItemType	absentee-in-person	absentee-in-person
+CountItemType	absentee-mail	Absentee by Mail Votes
+CountItemType	early	Advanced Voting Votes
+CountItemType	election-day	Election Day Votes
+CountItemType	provisional	Provisional Votes
+CountItemType	seats	seats
+CountItemType	total	total
+CountItemType	uocava	uocava
+CountItemType	write-in	write-in
+ReportingUnit	Georgia;Appling County	Appling
+ReportingUnit	Georgia;Atkinson County	Atkinson
+ReportingUnit	Georgia;Bacon County	Bacon
+ReportingUnit	Georgia;Baker County	Baker
+ReportingUnit	Georgia;Baldwin County	Baldwin
+ReportingUnit	Georgia;Banks County	Banks
+ReportingUnit	Georgia;Barrow County	Barrow
+ReportingUnit	Georgia;Bartow County	Bartow
+ReportingUnit	Georgia;Ben Hill County	Ben Hill
+ReportingUnit	Georgia;Berrien County	Berrien
+ReportingUnit	Georgia;Bibb County	Bibb
+ReportingUnit	Georgia;Bleckley County	Bleckley
+ReportingUnit	Georgia;Brantley County	Brantley
+ReportingUnit	Georgia;Brooks County	Brooks
+ReportingUnit	Georgia;Bryan County	Bryan
+ReportingUnit	Georgia;Bulloch County	Bulloch
+ReportingUnit	Georgia;Burke County	Burke
+ReportingUnit	Georgia;Butts County	Butts
+ReportingUnit	Georgia;Calhoun County	Calhoun
+ReportingUnit	Georgia;Camden County	Camden
+ReportingUnit	Georgia;Candler County	Candler
+ReportingUnit	Georgia;Carroll County	Carroll
+ReportingUnit	Georgia;Catoosa County	Catoosa
+ReportingUnit	Georgia;Charlton County	Charlton
+ReportingUnit	Georgia;Chatham County	Chatham
+ReportingUnit	Georgia;Chattahoochee County	Chattahoochee
+ReportingUnit	Georgia;Chattooga County	Chattooga
+ReportingUnit	Georgia;Cherokee County	Cherokee
+ReportingUnit	Georgia;Clarke County	Clarke
+ReportingUnit	Georgia;Clay County	Clay
+ReportingUnit	Georgia;Clayton County	Clayton
+ReportingUnit	Georgia;Clinch County	Clinch
+ReportingUnit	Georgia;Cobb County	Cobb
+ReportingUnit	Georgia;Coffee County	Coffee
+ReportingUnit	Georgia;Colquitt County	Colquitt
+ReportingUnit	Georgia;Columbia County	Columbia
+ReportingUnit	Georgia;Cook County	Cook
+ReportingUnit	Georgia;Coweta County	Coweta
+ReportingUnit	Georgia;Crawford County	Crawford
+ReportingUnit	Georgia;Crisp County	Crisp
+ReportingUnit	Georgia;Dade County	Dade
+ReportingUnit	Georgia;Dawson County	Dawson
+ReportingUnit	Georgia;Decatur County	Decatur
+ReportingUnit	Georgia;DeKalb County	DeKalb
+ReportingUnit	Georgia;Dodge County	Dodge
+ReportingUnit	Georgia;Dooly County	Dooly
+ReportingUnit	Georgia;Dougherty County	Dougherty
+ReportingUnit	Georgia;Douglas County	Douglas
+ReportingUnit	Georgia;Early County	Early
+ReportingUnit	Georgia;Echols County	Echols
+ReportingUnit	Georgia;Effingham County	Effingham
+ReportingUnit	Georgia;Elbert County	Elbert
+ReportingUnit	Georgia;Emanuel County	Emanuel
+ReportingUnit	Georgia;Evans County	Evans
+ReportingUnit	Georgia;Fannin County	Fannin
+ReportingUnit	Georgia;Fayette County	Fayette
+ReportingUnit	Georgia;Floyd County	Floyd
+ReportingUnit	Georgia;Forsyth County	Forsyth
+ReportingUnit	Georgia;Franklin County	Franklin
+ReportingUnit	Georgia;Fulton County	Fulton
+ReportingUnit	Georgia;Gilmer County	Gilmer
+ReportingUnit	Georgia;Glascock County	Glascock
+ReportingUnit	Georgia;Glynn County	Glynn
+ReportingUnit	Georgia;Gordon County	Gordon
+ReportingUnit	Georgia;Grady County	Grady
+ReportingUnit	Georgia;Greene County	Greene
+ReportingUnit	Georgia;Gwinnett County	Gwinnett
+ReportingUnit	Georgia;Habersham County	Habersham
+ReportingUnit	Georgia;Hall County	Hall
+ReportingUnit	Georgia;Hancock County	Hancock
+ReportingUnit	Georgia;Haralson County	Haralson
+ReportingUnit	Georgia;Harris County	Harris
+ReportingUnit	Georgia;Hart County	Hart
+ReportingUnit	Georgia;Heard County	Heard
+ReportingUnit	Georgia;Henry County	Henry
+ReportingUnit	Georgia;Houston County	Houston
+ReportingUnit	Georgia;Irwin County	Irwin
+ReportingUnit	Georgia;Jackson County	Jackson
+ReportingUnit	Georgia;Jasper County	Jasper
+ReportingUnit	Georgia;Jeff Davis County	Jeff Davis
+ReportingUnit	Georgia;Jefferson County	Jefferson
+ReportingUnit	Georgia;Jenkins County	Jenkins
+ReportingUnit	Georgia;Johnson County	Johnson
+ReportingUnit	Georgia;Jones County	Jones
+ReportingUnit	Georgia;Lamar County	Lamar
+ReportingUnit	Georgia;Lanier County	Lanier
+ReportingUnit	Georgia;Laurens County	Laurens
+ReportingUnit	Georgia;Lee County	Lee
+ReportingUnit	Georgia;Liberty County	Liberty
+ReportingUnit	Georgia;Lincoln County	Lincoln
+ReportingUnit	Georgia;Long County	Long
+ReportingUnit	Georgia;Lowndes County	Lowndes
+ReportingUnit	Georgia;Lumpkin County	Lumpkin
+ReportingUnit	Georgia;Macon County	Macon
+ReportingUnit	Georgia;Madison County	Madison
+ReportingUnit	Georgia;Marion County	Marion
+ReportingUnit	Georgia;McDuffie County	McDuffie
+ReportingUnit	Georgia;McIntosh County	McIntosh
+ReportingUnit	Georgia;Meriwether County	Meriwether
+ReportingUnit	Georgia;Miller County	Miller
+ReportingUnit	Georgia;Mitchell County	Mitchell
+ReportingUnit	Georgia;Monroe County	Monroe
+ReportingUnit	Georgia;Montgomery County	Montgomery
+ReportingUnit	Georgia;Morgan County	Morgan
+ReportingUnit	Georgia;Murray County	Murray
+ReportingUnit	Georgia;Muscogee County	Muscogee
+ReportingUnit	Georgia;Newton County	Newton
+ReportingUnit	Georgia;Oconee County	Oconee
+ReportingUnit	Georgia;Oglethorpe County	Oglethorpe
+ReportingUnit	Georgia;Paulding County	Paulding
+ReportingUnit	Georgia;Peach County	Peach
+ReportingUnit	Georgia;Pickens County	Pickens
+ReportingUnit	Georgia;Pierce County	Pierce
+ReportingUnit	Georgia;Pike County	Pike
+ReportingUnit	Georgia;Polk County	Polk
+ReportingUnit	Georgia;Pulaski County	Pulaski
+ReportingUnit	Georgia;Putnam County	Putnam
+ReportingUnit	Georgia;Quitman County	Quitman
+ReportingUnit	Georgia;Rabun County	Rabun
+ReportingUnit	Georgia;Randolph County	Randolph
+ReportingUnit	Georgia;Richmond County	Richmond
+ReportingUnit	Georgia;Rockdale County	Rockdale
+ReportingUnit	Georgia;Schley County	Schley
+ReportingUnit	Georgia;Screven County	Screven
+ReportingUnit	Georgia;Seminole County	Seminole
+ReportingUnit	Georgia;Spalding County	Spalding
+ReportingUnit	Georgia;Stephens County	Stephens
+ReportingUnit	Georgia;Stewart County	Stewart
+ReportingUnit	Georgia;Sumter County	Sumter
+ReportingUnit	Georgia;Talbot County	Talbot
+ReportingUnit	Georgia;Taliaferro County	Taliaferro
+ReportingUnit	Georgia;Tattnall County	Tattnall
+ReportingUnit	Georgia;Taylor County	Taylor
+ReportingUnit	Georgia;Telfair County	Telfair
+ReportingUnit	Georgia;Terrell County	Terrell
+ReportingUnit	Georgia;Thomas County	Thomas
+ReportingUnit	Georgia;Tift County	Tift
+ReportingUnit	Georgia;Toombs County	Toombs
+ReportingUnit	Georgia;Towns County	Towns
+ReportingUnit	Georgia;Treutlen County	Treutlen
+ReportingUnit	Georgia;Troup County	Troup
+ReportingUnit	Georgia;Turner County	Turner
+ReportingUnit	Georgia;Twiggs County	Twiggs
+ReportingUnit	Georgia;Union County	Union
+ReportingUnit	Georgia;Upson County	Upson
+ReportingUnit	Georgia;Walker County	Walker
+ReportingUnit	Georgia;Walton County	Walton
+ReportingUnit	Georgia;Ware County	Ware
+ReportingUnit	Georgia;Warren County	Warren
+ReportingUnit	Georgia;Washington County	Washington
+ReportingUnit	Georgia;Wayne County	Wayne
+ReportingUnit	Georgia;Webster County	Webster
+ReportingUnit	Georgia;Wheeler County	Wheeler
+ReportingUnit	Georgia;White County	White
+ReportingUnit	Georgia;Whitfield County	Whitfield
+ReportingUnit	Georgia;Wilcox County	Wilcox
+ReportingUnit	Georgia;Wilkes County	Wilkes
+ReportingUnit	Georgia;Wilkinson County	Wilkinson
+ReportingUnit	Georgia;Worth County	Worth
+BallotMeasureContest	Constitutional Amendment #1	Constitutional Amendment #1
+

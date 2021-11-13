@@ -105,20 +105,40 @@ Because the `results_directory` folder has a subfolder `Georgia`, the dataloadin
 
 1. Delete the folder [src/jurisdictions/Georgia](../src/jurisdictions/Georgia).
 2. Navigate to the folder `working_directory`.
-3. From within `python3.9`:
+5. Follow the instructions in the "Create or Improve a Jurisdiction" section of the [User_Guide](User_Guide.md). As you work through them, the following examples may be helpful.
+  * Sample county lines in `Reporting.txt`:
 ```
->>> import electiondata as ed
->>> jp = ed.JurisdictionPrepper()
->>> jp.new_juris_files()
+Georgia;Appling County	county
+Georgia;Atkinson County	county
+Georgia;Bacon County	county
+```
+  * Sample county lines in `GA_starter_dictionary.txt` (or `dictionary.txt`):
+```
+ReportingUnit	Georgia;Appling County	Appling
+ReportingUnit	Georgia;Atkinson County	Atkinson
+ReportingUnit	Georgia;Bacon County	Bacon
+```
 
-Starting new_juris_files
-Directory created: <path/to/src>/jurisdictions/Georgia
-Starter dictionary created in current directory (not in jurisdiction directory):
-GA_starter_dictionary.txt
+4. Load your results!
 ```
-The starter dictionary is placed in the working folder because in our experience it has sometimes been helpful to avoid overwriting an existing `dictionary.txt` file.
-4. (Optional) Take a look at the newly created folder [src/jurisdictions/Georgia](src/jurisdictions/Georgia) in the repository and the newly created file `GA_starter_dictionary.txt` in your working directory. 
-5. 
+>>> ed.load_or_reload_all()
+```
+Errors and warnings are par for the course, so don't be discouraged if the result is something like this:
+```
+Jurisdiction Georgia did not load. See .error file.
+Jurisdiction errors written to reports_and_plots_directory/load_or_reload_all_1113_0757/_jurisdiction_Georgia.errors
+>>> 
+```
+Take a look at the file(s) indicated, which should give you a good idea of what needs to be fixed. (If it doesn't please report the unhelpful message(s) and your question as an [issue on GitHub](https://github.com/ElectionDataAnalysis/electiondata/issues)). Repeat this step -- loading and looking at errors -- as often as necessary! (In rare cases, you may want to start over with a new database, either by erasing the existing `electiondata_Georgia_test` from your postgres instance, or changing the value of `dbname` in the `run_time.ini` file.)
+
+### Sample errors and warnings while building jurisdiction files
+* If no contests were recognized, or no candidates were recognized, the system reports an error:
+```
+Jurisdiction errors (Georgia):
+Could not add totals for 2020 General because no data was found
+No contest-selection pairs recognized via munger my_Georgia_test.munger
+```
+Look in the `.errors` and `.warnings` files. 
 
 ## Clean up
 You may want to restore the repository to its original state 
