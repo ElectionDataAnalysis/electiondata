@@ -119,7 +119,7 @@ ReportingUnit	Georgia;Atkinson County	Atkinson
 ReportingUnit	Georgia;Bacon County	Bacon
 ```
 
-4. Load your results!
+4. Try loading your results!
 ```
 >>> ed.load_or_reload_all()
 ```
@@ -132,7 +132,8 @@ Jurisdiction errors written to reports_and_plots_directory/load_or_reload_all_11
 Take a look at the file(s) indicated, which should give you a good idea of what needs to be fixed. (If it doesn't please report the unhelpful message(s) and your question as an [issue on GitHub](https://github.com/ElectionDataAnalysis/electiondata/issues)). Repeat this step -- loading and looking at errors -- as often as necessary! (In rare cases, you may want to start over with a new database, either by erasing the existing `electiondata_Georgia_test` from your postgres instance, or changing the value of `dbname` in the `run_time.ini` file.)
 
 ### Sample errors and warnings while building jurisdiction files (optional)
-* If no contests were recognized, or no candidates were recognized, the system reports an error:
+#### Contests
+If no contests were recognized, or no candidates were recognized, the system reports an error:
 ```
 Jurisdiction errors (Georgia):
 Could not add totals for 2020 General because no data was found
@@ -140,7 +141,7 @@ No contest-selection pairs recognized via munger my_Georgia_test.munger
 ```
 Focus one contest, and one candidate in that contest. Look in the `.errors` and `.warnings` files. If the name of the contest or the candidate appears, the file will tell you what went wrong. If the name of the contest or the candidate does not appear in the `.errors` or `.munger` file, then there is an issue with the munger named in the results initialization file.
 
-* Contests that were parsed from the file but not recognized in the dictionary will be listed in a `.warnings` file, e.g.:
+Contests that were parsed from the file but not recognized in the dictionary will be listed in a `.warnings` file, e.g.:
 ```
 CandidateContests (found with munger my_Georgia_test) not found in dictionary.txt :
 US Senate (Perdue)
@@ -157,7 +158,8 @@ CandidateContest	US Senate GA (partial term)	US Senate (Loeffler) - Special
 CandidateContest	GA Attorney General	GA Attorney General
 ```
 
-* Candidates not found in the dictionary will be listed in a `.warnings` file. Copy and paste these names into the `Candidate.txt` file as a single BallotName column:
+#### Candidates
+Candidates not found in the dictionary will be listed in a `.warnings` file. Copy and paste these names into the `Candidate.txt` file as a single BallotName column:
 ```
 BallotName
 Zulma Lopez
@@ -184,7 +186,8 @@ Candidate	Perry, Zachary	Zachary Perry
 Candidate	Neal, Yasmin	Yasmin Neal
 ```
 
-* Parties not recognized will also be listed in the `.warnings` file, e.g.:
+#### Parties
+Parties not recognized will also be listed in the `.warnings` file, e.g.:
 ```Partys (found with munger my_Georgia_test.munger) not found in dictionary.txt :
 Rep
 Lib
@@ -210,6 +213,12 @@ Green Party
 Independent Party
 ```
 Note: Some of the routines in the `analyze` submodule assume that every party name ends with ' Party'.
+
+## Loading Data
+
+## Export results
+
+## Draw graphs
 
 ## Clean up
 You may want to restore the repository to its original state 
