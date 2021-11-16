@@ -48,6 +48,9 @@ count_of_us_house_districts=14
 ### Contents of `GA_detail_20201120_1237.xml`
 Copy the file of the same name in the repository: 000_template.mungerGA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml)
 
+## Specify contests totals for data quality check (optional)
+The data loading process includes checking contest totals against reference totals in [src/reference_results/Georgia.tsv](../src/reference_results/Georgia.tsv). You may wish to add some reference totals to this file.
+
 ## Create a munger file (optional)
 If you wish to practice creating  munger file, follow the steps below. Otherwise skip to the next section.
 
@@ -121,7 +124,7 @@ ReportingUnit	Georgia;Bacon County	Bacon
 
 4. Try loading your results!
 ```
->>> ed.load_or_reload_all()
+>>> ed.load_or_reload_all(move_files=False)
 ```
 Errors and warnings are par for the course, so don't be discouraged if the result is something like this:
 ```
@@ -214,7 +217,7 @@ Independent Party
 ```
 Note: Some of the routines in the `analyze` submodule assume that every party name ends with ' Party'.
 
-## Loading Data
+## Load Data
 
 ## Export results
 
