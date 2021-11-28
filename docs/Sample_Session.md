@@ -3,7 +3,7 @@
 This document walks the reader through a simple example, from setting up project directories, through loading data and performing analyses. We assume that the package has been installed in an environment with all the necessary components (as described in [Installation.md](Installation.md). As an example, we will load the xml results file from Georgia in the repository at [tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml).
 
 ## Directory and File Structure
-The package offers a fair amount of flexibility in the directory structures used. For this sample session, we assume the user will call the program from a particular working directory with the following structure and files:
+The package offers a fair amount of flexibility in the directory structures used. For this sample session, we assume the user will call the program from a working directory with the following structure and files:
 
 * `working_directory`
   * `jurisdiction_prep.ini`
@@ -14,7 +14,7 @@ The package offers a fair amount of flexibility in the directory structures used
   * `archive_directory`
   * `reports_and_plots_directory`  
     
-Note that during processing the package uses information from the repository. In other words, the repository contains not only the code necessary to compile the package, but also files called by the package as it functions. So the user will need to know the absolute path to the repository content root `src`. Below we will call this path `<path/to/src>`.
+Note that during processing the package uses information from the repository. In other words, the repository contains not only the code necessary to compile the package, but also files called by the package as it functions -- files with information about jurisdictions, mungers, results and result files. So the user will need to know the absolute path to the repository content root `src`. Below we will call this path `<path/to/src>`.
 
 ### Contents of `run_time.ini`
 ```
@@ -122,10 +122,12 @@ ReportingUnit	Georgia;Atkinson County	Atkinson
 ReportingUnit	Georgia;Bacon County	Bacon
 ```
 
-4. Try loading your results!
+4. Try loading your results! 
 ```
+>>> import electiondata as ed
 >>> ed.load_or_reload_all(move_files=False)
 ```
+It is useful to prevent the system from archiving files while you are dealing with warnings with the `move_files=False` option.
 Errors and warnings are par for the course, so don't be discouraged if the result is something like this:
 ```
 Jurisdiction Georgia did not load. See .error file.
@@ -218,6 +220,11 @@ Independent Party
 Note: Some of the routines in the `analyze` submodule assume that every party name ends with ' Party'.
 
 ## Load Data
+For this sample session you may wish to ensure that the system will create a fresh database for the data loading by making sure there is no database in your postgres instance whose name matches the value of `dbname` given in `run_time.ini`. (Unless you went off script above, that name is `electiondata_Georgia_test`). 
+```
+>>> import electiondata as ed
+>>> ed.load_or_reload_all()
+```
 
 ## Export results
 
