@@ -4,15 +4,16 @@ This document walks the reader through a simple example, from setting up project
 
 ## Directory and File Structure
 The package offers a fair amount of flexibility in the directory structures used. For this sample session, we assume the user will call the program from a working directory with the following structure and files:
-
-* `working_directory`
-  * `jurisdiction_prep.ini`
-  * `run_time.ini`
-  * `results_directory`
-    * `Georgia`
-      * `GA_detail_20201120_1237.xml`
-  * `archive_directory`
-  * `reports_and_plots_directory`  
+```
+.
++-- jurisdiction_prep.ini
++-- run_time.ini
++-- results_directory
+|   +-- Georgia
+|   |   +-- GA_detail_20201120_1237.xml
++-- archive_directory
++-- reports_and_plots_directory
+```
     
 Note that during processing the package uses information from the repository. In other words, the repository contains not only the code necessary to compile the package, but also files called by the package as it functions -- files with information about jurisdictions, mungers, results and result files. So the user will need to know the absolute path to the repository content root `src`. Below we will call this path `<path/to/src>`.
 
@@ -220,16 +221,56 @@ Independent Party
 Note: Some of the routines in the `analyze` submodule assume that every party name ends with ' Party'.
 
 ## Load Data
-For this sample session you may wish to ensure that the system will create a fresh database for the data loading by making sure there is no database in your postgres instance whose name matches the value of `dbname` given in `run_time.ini`. (Unless you went off script above, that name is `electiondata_Georgia_test`). 
 ```
 >>> import electiondata as ed
 >>> ed.load_or_reload_all()
 ```
+After this command executes successfully, you will see a database in your postgres instance whose name matches the value of `dbname` given in `run_time.ini`. (Unless you went off script above, that name is `electiondata_Georgia_test`). The `Georgia` results folder will be moved to the archive directory, with a date stamp from the date of the results file. There will be a summary of the results of the comparison with the reference results in the `reports_and_plots_dir`.
+* `working_directory`
+  * `jurisdiction_prep.ini`
+  * `run_time.ini`
+  * `results_directory`
+  * `archive_directory`
+    * `Georgia_2020-11-20`
+      * `GA_detail_20201120_1237.xml`
+  * `reports_and_plots_directory`
+    * `compare_to_Georgia_xxxx_xxxx`
+      * `_parameters.txt`
+      * `not_found_in_db.tsv`
+      * `ok.tsv`
+      * `wrong.tsv`
+  
+
+## Reading data from the database
+To pull data out, you will need to use the Analyzer class:
+```
+>>> an = ed.Analyzer()
+```
 
 ## Export results
+You can export results in tabular form:
+```
+>>> export_election_to_tsv("results.tsv", "2020 General")
+```
+The results file, tab-separated, will be created in the `reports_and_plots` directory:
+* `working_directory`
+  * `jurisdiction_prep.ini`
+  * `run_time.ini`
+  * `results_directory`
+  * `archive_directory`
+    * `Georgia`
+      * `GA_detail_20201120_1237.xml`
+  * `reports_and_plots_directory`
+    * `results.tsv`
+    
+The program can also produce a string of data in the NIST Common Data Format Version 2.0, in either json or xml format:
+```
+>>> results_string_xml = an.export_nist_xml_as_string("2020 General", "Georgia")
+>>> results_string_json = an.export_nist_json_as_string("2020 General", "Georgia")
+```
 
 ## Draw graphs
 
 ## Clean up
-You may want to restore the repository to its original state 
+You may want to restore the repository and/or your postgres instance to its original state 
 TODO how?
