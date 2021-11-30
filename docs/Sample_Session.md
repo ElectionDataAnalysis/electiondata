@@ -6,12 +6,12 @@ This document walks the reader through a simple example, from setting up project
 The package offers a fair amount of flexibility in the directory structures used. For this sample session, we assume the user will call the program from a working directory with the following structure and files:
 ```
 .
-+-- run_time.ini
 +-- input_directory
 |   +-- Georgia
 |   |   +-- GA_detail_20201120_1237.xml
 +-- archive_directory
 +-- reports_and_plots_directory
++-- run_time.ini
 ```
     
 Note that during processing the package uses information from the repository. In other words, the repository contains not only the code necessary to compile the package, but also files called by the package as it functions -- files with information about jurisdictions, mungers, results and result files. So the user will need to know the absolute path to the repository content root `src`. Below we will call this path `<path/to/src>`.
@@ -41,22 +41,26 @@ Copy the file of the same name in the repository: 000_template.mungerGA_detail_2
 >>> import electiondata as ed
 >>> ed.load_or_reload_all()
 ```
-After this command executes successfully, you will see a database in your postgres instance whose name matches the value of `dbname` given in `run_time.ini`. The `Georgia` results folder will be moved to the archive directory, with a date stamp from the date of the results file. There will be a summary of the results of the comparison with the reference results in the `reports_and_plots_dir`.
+After this command executes successfully, you will see a database in your postgres instance whose name matches the value of `dbname` given in `run_time.ini`. The file structure will now be:
 ```
 .
-+-- run_time.ini
-+-- input_directory
 +-- archive_directory
 |   +-- Georgia_2020-11-10
 |   |   +-- GA_detail_20201120_1237.xml
++-- input_directory
 +-- reports_and_plots_directory
 |   +-- compare_to_Georgia_xxxx_xxxx
 |   |   +-- parameters.txt
 |   |   +-- not_found_in_db.tsv
 |   |   +-- ok.tsv
 |   |   +-- wrong.tsv
+|   +-- load_or_reload_all_xxxx_xxxx
+|   |   +-- Georgia_jurisdiction_dictionary.txt.warnings
++-- run_time.ini
 ```
- 
+ Note that the `Georgia` results folder has been moved to the archive directory, with a date stamp from the date of the results file. The `reports_and_plots_directory` contains:
+ * a subdirectory `compare_to_Georgia_xxxx_xxxx` with the results of the comparison to the [reference results](../src/reference_results/Georgia.tsv)
+ * a subdirectory `load_or_reload_all_xxxx_xxxx` with warnings from the data uploading. You may wish to look at the file `Georgia_jurisdiction_dictionary.txt.warnings`, which lists the contests present in the xml results file that were not recognized during processing. If these contests and their candidates had been added to the Georgia-specific information in the repository (see "Creating Jurisdiction files" below, or in the [User Guide](User_Guide.md)), these warnings would not appear.
 
 ## Reading data from the database
 To pull data out, you will need to use the Analyzer class:
@@ -69,24 +73,26 @@ You can export results in tabular form:
 ```
 >>> an.export_election_to_tsv("GA_results.tsv", "2020 General")
 ```
-The  file `GA_results.txv` containing the tab-separated results will be created in the working directory:
+The  file `GA_results.tsv` containing the tab-separated results will be created in the working directory:
 ```
 .
 +-- archive_directory
-|   +-- Georgia
+|   +-- Georgia_2020-11-10
 |   |   +-- GA_detail_20201120_1237.xml
-|   GA_results.tsv 
++-- GA_results.tsv
++-- input_directory
 +-- reports_and_plots_directory
 |   +-- compare_to_Georgia_xxxx_xxxx
 |   |   +-- parameters.txt
 |   |   +-- not_found_in_db.tsv
 |   |   +-- ok.tsv
 |   |   +-- wrong.tsv
-+-- input_directory
+|   +-- load_or_reload_all_xxxx_xxxx
+|   |   +-- Georgia_jurisdiction_dictionary.txt.warnings
 +-- run_time.ini
 ```
 
-The program can also produce a string of data in the NIST Common Data Format Version 2.0, in either json or xml format:
+The program (v.2.0.1 and higher) can also produce a string of data in the NIST Common Data Format Version 2.0, in either json or xml format:
 ```
 >>> results_string_xml = an.export_nist_xml_as_string("2020 General", "Georgia")
 >>> results_string_json = an.export_nist_json_as_string("2020 General", "Georgia")
@@ -198,7 +204,7 @@ results_note=
 is_preliminary=False
 ```
 
-### Create jurisdiction files from scratch
+### Creating jurisdiction files from scratch
 If you choose to create your Georgia jurisdiction files from scratch (rather than using the ones provided in the repository) you will need to specify various information about Georgia in a file called `jurisdiction_prep.ini` in your working directory. The working directory will have this structure:
 ```
 .
