@@ -6,7 +6,6 @@ This document walks the reader through a simple example, from setting up project
 The package offers a fair amount of flexibility in the directory structures used. For this sample session, we assume the user will call the program from a working directory with the following structure and files:
 ```
 .
-+-- jurisdiction_prep.ini
 +-- run_time.ini
 +-- results_directory
 |   +-- Georgia
@@ -34,25 +33,96 @@ password=
 ```
 You may wish to check that these postgresql credentials will work on your system via the command `psql -h localhost -p 5432 -U postgres postgres`. If this command fails, or if it prompts you for a password, you will need to find the correct connection parameters specific to your postgresql instance.  (Note that the `dbname` parameter is arbitrary, and determines only the name of the postgresql database created by the package.)
 
-### Contents of `jurisdiction_prep.ini` (optional)
-If you choose to create your Georgia jurisdiction files from scratch (rather than using the ones provided in the repository) you will need to specify various information about Georgia in `jurisdiction_prep.ini`:
-```
-[electiondata]
-name=Georgia
-reporting_unit_type=state
-abbreviated_name=GA
-count_of_state_house_districts=180
-count_of_state_senate_districts=56
-count_of_us_house_districts=14
-```
-
 ### Contents of `GA_detail_20201120_1237.xml`
 Copy the file of the same name in the repository: 000_template.mungerGA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml)
 
-## Specify contests totals for data quality check (optional)
+## Create Georgia jurisdiction files (optional)
+If you wish to practice creating jurisdiction files, follow the steps below. Otherwise, skip to the next section.
+
+## Load Data
+```
+>>> import electiondata as ed
+>>> ed.load_or_reload_all()
+```
+After this command executes successfully, you will see a database in your postgres instance whose name matches the value of `dbname` given in `run_time.ini`. The `Georgia` results folder will be moved to the archive directory, with a date stamp from the date of the results file. There will be a summary of the results of the comparison with the reference results in the `reports_and_plots_dir`.
+```
+.
++-- run_time.ini
++-- results_directory
++-- archive_directory
+|   +-- Georgia
+|   |   +-- GA_detail_20201120_1237.xml
++-- reports_and_plots_directory
+|   +-- compare_to_Georgia_xxxx_xxxx
+|   |   +-- parameters.txt
+|   |   +-- not_found_in_db.tsv
+|   |   +-- ok.tsv
+|   |   +-- wrong.tsv
+```
+ 
+
+## Reading data from the database
+To pull data out, you will need to use the Analyzer class:
+```
+>>> an = ed.Analyzer()
+```
+
+## Export results
+You can export results in tabular form:
+```
+>>> an.export_election_to_tsv("GA_results.tsv", "2020 General")
+```
+The  file `GA_results.txv` containing the tab-separated results will be created in the working directory:
+```
+.
++-- archive_directory
+|   +-- Georgia
+|   |   +-- GA_detail_20201120_1237.xml
+|   GA_results.tsv 
++-- reports_and_plots_directory
+|   +-- compare_to_Georgia_xxxx_xxxx
+|   |   +-- parameters.txt
+|   |   +-- not_found_in_db.tsv
+|   |   +-- ok.tsv
+|   |   +-- wrong.tsv
++-- results_directory
++-- run_time.ini
+```
+
+The program can also produce a string of data in the NIST Common Data Format Version 2.0, in either json or xml format:
+```
+>>> results_string_xml = an.export_nist_xml_as_string("2020 General", "Georgia")
+>>> results_string_json = an.export_nist_json_as_string("2020 General", "Georgia")
+```
+
+## Analysis and Plots
+To draw pictures automatically, you will need [`orca` installed on your system](https://github.com/plotly/orca). If `orca` is not installed, you can still pull the information necessary to make plots 
+
+### Scatter plots
+You can create scatter plots of results by county. For example, create a jpeg comparing Biden's vote totals to Trump's vote totals with:
+```
+>>> biden_v_trump = an.scatter("Georgia","2020 General","Candidate total","Joseph R. Biden","2020 General","Candidate total","Donald J. Trump",fig_type="jpeg")
+```
+Or compare Biden's votes on election day with votes on absentee mail ballots:
+```
+>>> biden_eday_v_abs = an.scatter("Georgia","2020 General","Candidate election-day","Joseph R. Biden","2020 General","Candidate absentee-mail","Joseph R. Biden",fig_type="jpeg")
+```
+In each case the value returned is a string with all the information necessary to draw the plot in a string (following the python dictionary format). To return such a string without calling `orca`, simply omit the `fig_type`, e.g., 
+```
+>>> biden_eday_v_abs = an.scatter("Georgia","2020 General","Candidate election-day","Joseph R. Biden","2020 General","Candidate absentee-mail","Joseph R. Biden")
+```
+
+## Clean up
+You may want to restore the repository and/or your postgres instance to its original state 
+TODO how?
+
+## Optional steps
+The sample session above uses the information already in the repository about Georgia and the particular results file. If you wish to create these files yourself from scratch, follow thses optional steps.
+
+### Specify contests totals for data quality check
 The data loading process includes checking contest totals against reference totals in [src/reference_results/Georgia.tsv](../src/reference_results/Georgia.tsv). You may wish to add some reference totals to this file.
 
-## Create a munger file (optional)
+### Create a munger file
 If you wish to practice creating  munger file, follow the steps below. Otherwise skip to the next section.
 
 Your munger file should live in the folder [src/mungers](../src/mungers), and its name needs to have the extension `.munger`. 
@@ -79,7 +149,7 @@ Candidate={<Choice.text>,^(.*) \(.*\)$}
 CountItemType=<VoteType.name>
 ```
 
-## Create an initialization file for the results file (optional)
+### Create an initialization file for the results file (optional)
 If you wish to practice creating an initialization file for results, follow the steps below. Otherwise skip to the next section; in this case the system will use the initialization file [ga20g_20201120_1237.ini](../src/ini_files_for_results/Georgia/ga20g_20201120_1237.ini).
 
 Because your `results_directory` folder has a subfolder `Georgia`, the dataloading routines will look to the folder [src/ini_files_for_results/Georgia](../src/ini_files_for_results/Georgia) for information about any results files in `working_directory/results_directory/Georgia`. 
@@ -102,9 +172,28 @@ results_note=
 is_preliminary=False
 ```
 
-## Create Georgia jurisdiction files (optional)
-If you wish to practice creating jurisdiction files, follow the steps below. Otherwise, skip to the next section.
-
+### Create jurisdiction files from scratch
+If you choose to create your Georgia jurisdiction files from scratch (rather than using the ones provided in the repository) you will need to specify various information about Georgia in a file called `jurisdiction_prep.ini` in your working directory. The working directory will have this structure:
+```
+.
++-- jurisdiction_prep.ini
++-- run_time.ini
++-- results_directory
+|   +-- Georgia
+|   |   +-- GA_detail_20201120_1237.xml
++-- archive_directory
++-- reports_and_plots_directory
+```
+and the contents of `jurisdiction_prep.ini` will be:
+```
+[electiondata]
+name=Georgia
+reporting_unit_type=state
+abbreviated_name=GA
+count_of_state_house_districts=180
+count_of_state_senate_districts=56
+count_of_us_house_districts=14
+```
 Because the `results_directory` folder has a subfolder `Georgia`, the dataloading routines will look for information specific to Georgia in the repository folder [src/jurisdictions/Georgia](../src/jurisdictions/Georgia). 
 
 1. Delete the folder [src/jurisdictions/Georgia](../src/jurisdictions/Georgia).
@@ -137,7 +226,7 @@ Jurisdiction errors written to reports_and_plots_directory/load_or_reload_all_11
 ```
 Take a look at the file(s) indicated, which should give you a good idea of what needs to be fixed. (If it doesn't please report the unhelpful message(s) and your question as an [issue on GitHub](https://github.com/ElectionDataAnalysis/electiondata/issues)). Repeat this step -- loading and looking at errors -- as often as necessary! (In rare cases, you may want to start over with a new database, either by erasing the existing `electiondata_Georgia_test` from your postgres instance, or changing the value of `dbname` in the `run_time.ini` file.)
 
-### Sample errors and warnings while building jurisdiction files (optional)
+### Sample errors and warnings while building jurisdiction files
 #### Contests
 If no contests were recognized, or no candidates were recognized, the system reports an error:
 ```
@@ -220,57 +309,4 @@ Independent Party
 ```
 Note: Some of the routines in the `analyze` submodule assume that every party name ends with ' Party'.
 
-## Load Data
-```
->>> import electiondata as ed
->>> ed.load_or_reload_all()
-```
-After this command executes successfully, you will see a database in your postgres instance whose name matches the value of `dbname` given in `run_time.ini`. (Unless you went off script above, that name is `electiondata_Georgia_test`). The `Georgia` results folder will be moved to the archive directory, with a date stamp from the date of the results file. There will be a summary of the results of the comparison with the reference results in the `reports_and_plots_dir`.
-* `working_directory`
-  * `jurisdiction_prep.ini`
-  * `run_time.ini`
-  * `results_directory`
-  * `archive_directory`
-    * `Georgia_2020-11-20`
-      * `GA_detail_20201120_1237.xml`
-  * `reports_and_plots_directory`
-    * `compare_to_Georgia_xxxx_xxxx`
-      * `_parameters.txt`
-      * `not_found_in_db.tsv`
-      * `ok.tsv`
-      * `wrong.tsv`
-  
 
-## Reading data from the database
-To pull data out, you will need to use the Analyzer class:
-```
->>> an = ed.Analyzer()
-```
-
-## Export results
-You can export results in tabular form:
-```
->>> export_election_to_tsv("results.tsv", "2020 General")
-```
-The results file, tab-separated, will be created in the `reports_and_plots` directory:
-* `working_directory`
-  * `jurisdiction_prep.ini`
-  * `run_time.ini`
-  * `results_directory`
-  * `archive_directory`
-    * `Georgia`
-      * `GA_detail_20201120_1237.xml`
-  * `reports_and_plots_directory`
-    * `results.tsv`
-    
-The program can also produce a string of data in the NIST Common Data Format Version 2.0, in either json or xml format:
-```
->>> results_string_xml = an.export_nist_xml_as_string("2020 General", "Georgia")
->>> results_string_json = an.export_nist_json_as_string("2020 General", "Georgia")
-```
-
-## Draw graphs
-
-## Clean up
-You may want to restore the repository and/or your postgres instance to its original state 
-TODO how?
