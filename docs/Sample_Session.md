@@ -94,8 +94,8 @@ The  file `GA_results.tsv` containing the tab-separated results will be created 
 
 The program (v.2.0.1 and higher) can also produce a string of data in the NIST Common Data Format Version 2.0, in either json or xml format:
 ```
->>> results_string_xml = an.export_nist_xml_as_string("2020 General", "Georgia")
->>> results_string_json = an.export_nist_json_as_string("2020 General", "Georgia")
+>>> an.export_nist_xml_as_string("2020 General", "Georgia")
+>>> an.export_nist_json_as_string("2020 General", "Georgia")
 ```
 
 ## Analysis and Plots
@@ -147,6 +147,13 @@ Use any category name in place of "Party absentee-mail" to see counts available 
 
 Categories starting with "Contest" give number of votes tallied in that contest in each county, lumping all candidates together. Categories starting with "Party" give number of votes tallied for members of that party in a particular contest type (e.g., "Libertarian congressional"). 
 
+### Analysis
+The program offers difference-in-difference analysis where results are available by vote type, following [Herron's analysis of congressional contests](https://www.liebertpub.com/doi/full/10.1089/elj.2019.0544). The following code will create a tab-separated file `GA_diffs.tsv` in the working directory:
+```
+>>> (did_frame, missing) = an.diff_in_diff_dem_vs_rep("2020 General")
+>>> did_frame.to_csv("GA_diff_in_diff.tsv","\t")
+```
+(Note: the variable `missing` is a list of diff-in-diff comparisons that failed.)
 
 ## Optional steps
 The sample session above uses the information already in the repository about Georgia and the particular results file. If you wish to create these files yourself from scratch, follow thses optional steps.
