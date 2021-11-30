@@ -47,7 +47,7 @@ After this command executes successfully, you will see a database in your postgr
 +-- run_time.ini
 +-- input_directory
 +-- archive_directory
-|   +-- Georgia
+|   +-- Georgia_2020-11-10
 |   |   +-- GA_detail_20201120_1237.xml
 +-- reports_and_plots_directory
 |   +-- compare_to_Georgia_xxxx_xxxx
