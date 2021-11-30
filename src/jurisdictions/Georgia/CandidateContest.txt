@@ -251,9 +251,540 @@ US House GA District 13	1	US House GA District 13
 US House GA District 14	1	US House GA District 14	
 US President (GA)	1	US President (GA)	
 GA Governor	1	GA Governor	
+US Senate GA (runoff)	1	US Senate GA	
+US Senate GA (partial term runoff)	1	US Senate GA
 US Senate GA	1	US Senate GA	
 US Senate GA (partial term)	1	US Senate GA
 GA Attorney General	1	GA Attorney General
 GA Lieutenant Governor	1	GA Lieutenant Governor	
 GA Treasurer	1	GA Treasurer	
 GA Secretary of State	1	GA Secretary of State	
+GA State School Superintendent	1	GA State School Superintendent	
+GA Commissioner of Agriculture	1	GA Commissioner of Agriculture	
+GA Commissioner of Labor	1	GA Commissioner of Labor	
+GA Commissioner of Insurance	1	GA Commissioner of Insurance	
+GA House District 1 (Democratic Party)	1	GA House District 1	Democratic Party
+GA House District 2 (Democratic Party)	1	GA House District 2	Democratic Party
+GA House District 3 (Democratic Party)	1	GA House District 3	Democratic Party
+GA House District 4 (Democratic Party)	1	GA House District 4	Democratic Party
+GA House District 5 (Democratic Party)	1	GA House District 5	Democratic Party
+GA House District 6 (Democratic Party)	1	GA House District 6	Democratic Party
+GA House District 7 (Democratic Party)	1	GA House District 7	Democratic Party
+GA House District 8 (Democratic Party)	1	GA House District 8	Democratic Party
+GA House District 9 (Democratic Party)	1	GA House District 9	Democratic Party
+GA House District 10 (Democratic Party)	1	GA House District 10	Democratic Party
+GA House District 11 (Democratic Party)	1	GA House District 11	Democratic Party
+GA House District 12 (Democratic Party)	1	GA House District 12	Democratic Party
+GA House District 13 (Democratic Party)	1	GA House District 13	Democratic Party
+GA House District 14 (Democratic Party)	1	GA House District 14	Democratic Party
+GA House District 15 (Democratic Party)	1	GA House District 15	Democratic Party
+GA House District 16 (Democratic Party)	1	GA House District 16	Democratic Party
+GA House District 17 (Democratic Party)	1	GA House District 17	Democratic Party
+GA House District 18 (Democratic Party)	1	GA House District 18	Democratic Party
+GA House District 19 (Democratic Party)	1	GA House District 19	Democratic Party
+GA House District 20 (Democratic Party)	1	GA House District 20	Democratic Party
+GA House District 21 (Democratic Party)	1	GA House District 21	Democratic Party
+GA House District 22 (Democratic Party)	1	GA House District 22	Democratic Party
+GA House District 23 (Democratic Party)	1	GA House District 23	Democratic Party
+GA House District 24 (Democratic Party)	1	GA House District 24	Democratic Party
+GA House District 25 (Democratic Party)	1	GA House District 25	Democratic Party
+GA House District 26 (Democratic Party)	1	GA House District 26	Democratic Party
+GA House District 27 (Democratic Party)	1	GA House District 27	Democratic Party
+GA House District 28 (Democratic Party)	1	GA House District 28	Democratic Party
+GA House District 29 (Democratic Party)	1	GA House District 29	Democratic Party
+GA House District 30 (Democratic Party)	1	GA House District 30	Democratic Party
+GA House District 31 (Democratic Party)	1	GA House District 31	Democratic Party
+GA House District 32 (Democratic Party)	1	GA House District 32	Democratic Party
+GA House District 33 (Democratic Party)	1	GA House District 33	Democratic Party
+GA House District 34 (Democratic Party)	1	GA House District 34	Democratic Party
+GA House District 35 (Democratic Party)	1	GA House District 35	Democratic Party
+GA House District 36 (Democratic Party)	1	GA House District 36	Democratic Party
+GA House District 37 (Democratic Party)	1	GA House District 37	Democratic Party
+GA House District 38 (Democratic Party)	1	GA House District 38	Democratic Party
+GA House District 39 (Democratic Party)	1	GA House District 39	Democratic Party
+GA House District 40 (Democratic Party)	1	GA House District 40	Democratic Party
+GA House District 41 (Democratic Party)	1	GA House District 41	Democratic Party
+GA House District 42 (Democratic Party)	1	GA House District 42	Democratic Party
+GA House District 43 (Democratic Party)	1	GA House District 43	Democratic Party
+GA House District 44 (Democratic Party)	1	GA House District 44	Democratic Party
+GA House District 45 (Democratic Party)	1	GA House District 45	Democratic Party
+GA House District 46 (Democratic Party)	1	GA House District 46	Democratic Party
+GA House District 47 (Democratic Party)	1	GA House District 47	Democratic Party
+GA House District 48 (Democratic Party)	1	GA House District 48	Democratic Party
+GA House District 49 (Democratic Party)	1	GA House District 49	Democratic Party
+GA House District 50 (Democratic Party)	1	GA House District 50	Democratic Party
+GA House District 51 (Democratic Party)	1	GA House District 51	Democratic Party
+GA House District 52 (Democratic Party)	1	GA House District 52	Democratic Party
+GA House District 53 (Democratic Party)	1	GA House District 53	Democratic Party
+GA House District 54 (Democratic Party)	1	GA House District 54	Democratic Party
+GA House District 55 (Democratic Party)	1	GA House District 55	Democratic Party
+GA House District 56 (Democratic Party)	1	GA House District 56	Democratic Party
+GA House District 57 (Democratic Party)	1	GA House District 57	Democratic Party
+GA House District 58 (Democratic Party)	1	GA House District 58	Democratic Party
+GA House District 59 (Democratic Party)	1	GA House District 59	Democratic Party
+GA House District 60 (Democratic Party)	1	GA House District 60	Democratic Party
+GA House District 61 (Democratic Party)	1	GA House District 61	Democratic Party
+GA House District 62 (Democratic Party)	1	GA House District 62	Democratic Party
+GA House District 63 (Democratic Party)	1	GA House District 63	Democratic Party
+GA House District 64 (Democratic Party)	1	GA House District 64	Democratic Party
+GA House District 65 (Democratic Party)	1	GA House District 65	Democratic Party
+GA House District 66 (Democratic Party)	1	GA House District 66	Democratic Party
+GA House District 67 (Democratic Party)	1	GA House District 67	Democratic Party
+GA House District 68 (Democratic Party)	1	GA House District 68	Democratic Party
+GA House District 69 (Democratic Party)	1	GA House District 69	Democratic Party
+GA House District 70 (Democratic Party)	1	GA House District 70	Democratic Party
+GA House District 71 (Democratic Party)	1	GA House District 71	Democratic Party
+GA House District 72 (Democratic Party)	1	GA House District 72	Democratic Party
+GA House District 73 (Democratic Party)	1	GA House District 73	Democratic Party
+GA House District 74 (Democratic Party)	1	GA House District 74	Democratic Party
+GA House District 75 (Democratic Party)	1	GA House District 75	Democratic Party
+GA House District 76 (Democratic Party)	1	GA House District 76	Democratic Party
+GA House District 77 (Democratic Party)	1	GA House District 77	Democratic Party
+GA House District 78 (Democratic Party)	1	GA House District 78	Democratic Party
+GA House District 79 (Democratic Party)	1	GA House District 79	Democratic Party
+GA House District 80 (Democratic Party)	1	GA House District 80	Democratic Party
+GA House District 81 (Democratic Party)	1	GA House District 81	Democratic Party
+GA House District 82 (Democratic Party)	1	GA House District 82	Democratic Party
+GA House District 83 (Democratic Party)	1	GA House District 83	Democratic Party
+GA House District 84 (Democratic Party)	1	GA House District 84	Democratic Party
+GA House District 85 (Democratic Party)	1	GA House District 85	Democratic Party
+GA House District 86 (Democratic Party)	1	GA House District 86	Democratic Party
+GA House District 87 (Democratic Party)	1	GA House District 87	Democratic Party
+GA House District 88 (Democratic Party)	1	GA House District 88	Democratic Party
+GA House District 89 (Democratic Party)	1	GA House District 89	Democratic Party
+GA House District 90 (Democratic Party)	1	GA House District 90	Democratic Party
+GA House District 91 (Democratic Party)	1	GA House District 91	Democratic Party
+GA House District 92 (Democratic Party)	1	GA House District 92	Democratic Party
+GA House District 93 (Democratic Party)	1	GA House District 93	Democratic Party
+GA House District 94 (Democratic Party)	1	GA House District 94	Democratic Party
+GA House District 95 (Democratic Party)	1	GA House District 95	Democratic Party
+GA House District 96 (Democratic Party)	1	GA House District 96	Democratic Party
+GA House District 97 (Democratic Party)	1	GA House District 97	Democratic Party
+GA House District 98 (Democratic Party)	1	GA House District 98	Democratic Party
+GA House District 99 (Democratic Party)	1	GA House District 99	Democratic Party
+GA House District 100 (Democratic Party)	1	GA House District 100	Democratic Party
+GA House District 101 (Democratic Party)	1	GA House District 101	Democratic Party
+GA House District 102 (Democratic Party)	1	GA House District 102	Democratic Party
+GA House District 103 (Democratic Party)	1	GA House District 103	Democratic Party
+GA House District 104 (Democratic Party)	1	GA House District 104	Democratic Party
+GA House District 105 (Democratic Party)	1	GA House District 105	Democratic Party
+GA House District 106 (Democratic Party)	1	GA House District 106	Democratic Party
+GA House District 107 (Democratic Party)	1	GA House District 107	Democratic Party
+GA House District 108 (Democratic Party)	1	GA House District 108	Democratic Party
+GA House District 109 (Democratic Party)	1	GA House District 109	Democratic Party
+GA House District 110 (Democratic Party)	1	GA House District 110	Democratic Party
+GA House District 111 (Democratic Party)	1	GA House District 111	Democratic Party
+GA House District 112 (Democratic Party)	1	GA House District 112	Democratic Party
+GA House District 113 (Democratic Party)	1	GA House District 113	Democratic Party
+GA House District 114 (Democratic Party)	1	GA House District 114	Democratic Party
+GA House District 115 (Democratic Party)	1	GA House District 115	Democratic Party
+GA House District 116 (Democratic Party)	1	GA House District 116	Democratic Party
+GA House District 117 (Democratic Party)	1	GA House District 117	Democratic Party
+GA House District 118 (Democratic Party)	1	GA House District 118	Democratic Party
+GA House District 119 (Democratic Party)	1	GA House District 119	Democratic Party
+GA House District 120 (Democratic Party)	1	GA House District 120	Democratic Party
+GA House District 121 (Democratic Party)	1	GA House District 121	Democratic Party
+GA House District 122 (Democratic Party)	1	GA House District 122	Democratic Party
+GA House District 123 (Democratic Party)	1	GA House District 123	Democratic Party
+GA House District 124 (Democratic Party)	1	GA House District 124	Democratic Party
+GA House District 125 (Democratic Party)	1	GA House District 125	Democratic Party
+GA House District 126 (Democratic Party)	1	GA House District 126	Democratic Party
+GA House District 127 (Democratic Party)	1	GA House District 127	Democratic Party
+GA House District 128 (Democratic Party)	1	GA House District 128	Democratic Party
+GA House District 129 (Democratic Party)	1	GA House District 129	Democratic Party
+GA House District 130 (Democratic Party)	1	GA House District 130	Democratic Party
+GA House District 131 (Democratic Party)	1	GA House District 131	Democratic Party
+GA House District 132 (Democratic Party)	1	GA House District 132	Democratic Party
+GA House District 133 (Democratic Party)	1	GA House District 133	Democratic Party
+GA House District 134 (Democratic Party)	1	GA House District 134	Democratic Party
+GA House District 135 (Democratic Party)	1	GA House District 135	Democratic Party
+GA House District 136 (Democratic Party)	1	GA House District 136	Democratic Party
+GA House District 137 (Democratic Party)	1	GA House District 137	Democratic Party
+GA House District 138 (Democratic Party)	1	GA House District 138	Democratic Party
+GA House District 139 (Democratic Party)	1	GA House District 139	Democratic Party
+GA House District 140 (Democratic Party)	1	GA House District 140	Democratic Party
+GA House District 141 (Democratic Party)	1	GA House District 141	Democratic Party
+GA House District 142 (Democratic Party)	1	GA House District 142	Democratic Party
+GA House District 143 (Democratic Party)	1	GA House District 143	Democratic Party
+GA House District 144 (Democratic Party)	1	GA House District 144	Democratic Party
+GA House District 145 (Democratic Party)	1	GA House District 145	Democratic Party
+GA House District 146 (Democratic Party)	1	GA House District 146	Democratic Party
+GA House District 147 (Democratic Party)	1	GA House District 147	Democratic Party
+GA House District 148 (Democratic Party)	1	GA House District 148	Democratic Party
+GA House District 149 (Democratic Party)	1	GA House District 149	Democratic Party
+GA House District 150 (Democratic Party)	1	GA House District 150	Democratic Party
+GA House District 151 (Democratic Party)	1	GA House District 151	Democratic Party
+GA House District 152 (Democratic Party)	1	GA House District 152	Democratic Party
+GA House District 153 (Democratic Party)	1	GA House District 153	Democratic Party
+GA House District 154 (Democratic Party)	1	GA House District 154	Democratic Party
+GA House District 155 (Democratic Party)	1	GA House District 155	Democratic Party
+GA House District 156 (Democratic Party)	1	GA House District 156	Democratic Party
+GA House District 157 (Democratic Party)	1	GA House District 157	Democratic Party
+GA House District 158 (Democratic Party)	1	GA House District 158	Democratic Party
+GA House District 159 (Democratic Party)	1	GA House District 159	Democratic Party
+GA House District 160 (Democratic Party)	1	GA House District 160	Democratic Party
+GA House District 161 (Democratic Party)	1	GA House District 161	Democratic Party
+GA House District 162 (Democratic Party)	1	GA House District 162	Democratic Party
+GA House District 163 (Democratic Party)	1	GA House District 163	Democratic Party
+GA House District 164 (Democratic Party)	1	GA House District 164	Democratic Party
+GA House District 165 (Democratic Party)	1	GA House District 165	Democratic Party
+GA House District 166 (Democratic Party)	1	GA House District 166	Democratic Party
+GA House District 167 (Democratic Party)	1	GA House District 167	Democratic Party
+GA House District 168 (Democratic Party)	1	GA House District 168	Democratic Party
+GA House District 169 (Democratic Party)	1	GA House District 169	Democratic Party
+GA House District 170 (Democratic Party)	1	GA House District 170	Democratic Party
+GA House District 171 (Democratic Party)	1	GA House District 171	Democratic Party
+GA House District 172 (Democratic Party)	1	GA House District 172	Democratic Party
+GA House District 173 (Democratic Party)	1	GA House District 173	Democratic Party
+GA House District 174 (Democratic Party)	1	GA House District 174	Democratic Party
+GA House District 175 (Democratic Party)	1	GA House District 175	Democratic Party
+GA House District 176 (Democratic Party)	1	GA House District 176	Democratic Party
+GA House District 177 (Democratic Party)	1	GA House District 177	Democratic Party
+GA House District 178 (Democratic Party)	1	GA House District 178	Democratic Party
+GA House District 179 (Democratic Party)	1	GA House District 179	Democratic Party
+GA House District 180 (Democratic Party)	1	GA House District 180	Democratic Party
+GA Senate District 1 (Democratic Party)	1	GA Senate District 1	Democratic Party
+GA Senate District 2 (Democratic Party)	1	GA Senate District 2	Democratic Party
+GA Senate District 3 (Democratic Party)	1	GA Senate District 3	Democratic Party
+GA Senate District 4 (Democratic Party)	1	GA Senate District 4	Democratic Party
+GA Senate District 5 (Democratic Party)	1	GA Senate District 5	Democratic Party
+GA Senate District 6 (Democratic Party)	1	GA Senate District 6	Democratic Party
+GA Senate District 7 (Democratic Party)	1	GA Senate District 7	Democratic Party
+GA Senate District 8 (Democratic Party)	1	GA Senate District 8	Democratic Party
+GA Senate District 9 (Democratic Party)	1	GA Senate District 9	Democratic Party
+GA Senate District 10 (Democratic Party)	1	GA Senate District 10	Democratic Party
+GA Senate District 11 (Democratic Party)	1	GA Senate District 11	Democratic Party
+GA Senate District 12 (Democratic Party)	1	GA Senate District 12	Democratic Party
+GA Senate District 13 (Democratic Party)	1	GA Senate District 13	Democratic Party
+GA Senate District 14 (Democratic Party)	1	GA Senate District 14	Democratic Party
+GA Senate District 15 (Democratic Party)	1	GA Senate District 15	Democratic Party
+GA Senate District 16 (Democratic Party)	1	GA Senate District 16	Democratic Party
+GA Senate District 17 (Democratic Party)	1	GA Senate District 17	Democratic Party
+GA Senate District 18 (Democratic Party)	1	GA Senate District 18	Democratic Party
+GA Senate District 19 (Democratic Party)	1	GA Senate District 19	Democratic Party
+GA Senate District 20 (Democratic Party)	1	GA Senate District 20	Democratic Party
+GA Senate District 21 (Democratic Party)	1	GA Senate District 21	Democratic Party
+GA Senate District 22 (Democratic Party)	1	GA Senate District 22	Democratic Party
+GA Senate District 23 (Democratic Party)	1	GA Senate District 23	Democratic Party
+GA Senate District 24 (Democratic Party)	1	GA Senate District 24	Democratic Party
+GA Senate District 25 (Democratic Party)	1	GA Senate District 25	Democratic Party
+GA Senate District 26 (Democratic Party)	1	GA Senate District 26	Democratic Party
+GA Senate District 27 (Democratic Party)	1	GA Senate District 27	Democratic Party
+GA Senate District 28 (Democratic Party)	1	GA Senate District 28	Democratic Party
+GA Senate District 29 (Democratic Party)	1	GA Senate District 29	Democratic Party
+GA Senate District 30 (Democratic Party)	1	GA Senate District 30	Democratic Party
+GA Senate District 31 (Democratic Party)	1	GA Senate District 31	Democratic Party
+GA Senate District 32 (Democratic Party)	1	GA Senate District 32	Democratic Party
+GA Senate District 33 (Democratic Party)	1	GA Senate District 33	Democratic Party
+GA Senate District 34 (Democratic Party)	1	GA Senate District 34	Democratic Party
+GA Senate District 35 (Democratic Party)	1	GA Senate District 35	Democratic Party
+GA Senate District 36 (Democratic Party)	1	GA Senate District 36	Democratic Party
+GA Senate District 37 (Democratic Party)	1	GA Senate District 37	Democratic Party
+GA Senate District 38 (Democratic Party)	1	GA Senate District 38	Democratic Party
+GA Senate District 39 (Democratic Party)	1	GA Senate District 39	Democratic Party
+GA Senate District 40 (Democratic Party)	1	GA Senate District 40	Democratic Party
+GA Senate District 41 (Democratic Party)	1	GA Senate District 41	Democratic Party
+GA Senate District 42 (Democratic Party)	1	GA Senate District 42	Democratic Party
+GA Senate District 43 (Democratic Party)	1	GA Senate District 43	Democratic Party
+GA Senate District 44 (Democratic Party)	1	GA Senate District 44	Democratic Party
+GA Senate District 45 (Democratic Party)	1	GA Senate District 45	Democratic Party
+GA Senate District 46 (Democratic Party)	1	GA Senate District 46	Democratic Party
+GA Senate District 47 (Democratic Party)	1	GA Senate District 47	Democratic Party
+GA Senate District 48 (Democratic Party)	1	GA Senate District 48	Democratic Party
+GA Senate District 49 (Democratic Party)	1	GA Senate District 49	Democratic Party
+GA Senate District 50 (Democratic Party)	1	GA Senate District 50	Democratic Party
+GA Senate District 51 (Democratic Party)	1	GA Senate District 51	Democratic Party
+GA Senate District 52 (Democratic Party)	1	GA Senate District 52	Democratic Party
+GA Senate District 53 (Democratic Party)	1	GA Senate District 53	Democratic Party
+GA Senate District 54 (Democratic Party)	1	GA Senate District 54	Democratic Party
+GA Senate District 55 (Democratic Party)	1	GA Senate District 55	Democratic Party
+GA Senate District 56 (Democratic Party)	1	GA Senate District 56	Democratic Party
+US House GA District 1 (Democratic Party)	1	US House GA District 1	Democratic Party
+US House GA District 2 (Democratic Party)	1	US House GA District 2	Democratic Party
+US House GA District 3 (Democratic Party)	1	US House GA District 3	Democratic Party
+US House GA District 4 (Democratic Party)	1	US House GA District 4	Democratic Party
+US House GA District 5 (Democratic Party)	1	US House GA District 5	Democratic Party
+US House GA District 6 (Democratic Party)	1	US House GA District 6	Democratic Party
+US House GA District 7 (Democratic Party)	1	US House GA District 7	Democratic Party
+US House GA District 8 (Democratic Party)	1	US House GA District 8	Democratic Party
+US House GA District 9 (Democratic Party)	1	US House GA District 9	Democratic Party
+US House GA District 10 (Democratic Party)	1	US House GA District 10	Democratic Party
+US House GA District 11 (Democratic Party)	1	US House GA District 11	Democratic Party
+US House GA District 12 (Democratic Party)	1	US House GA District 12	Democratic Party
+US House GA District 13 (Democratic Party)	1	US House GA District 13	Democratic Party
+US House GA District 14 (Democratic Party)	1	US House GA District 14	Democratic Party
+US President (GA) (Democratic Party)	1	US President (GA)	Democratic Party
+GA Governor (Democratic Party)	1	GA Governor	Democratic Party
+US Senate GA (Democratic Party)	1	US Senate GA	Democratic Party
+GA Attorney General (Democratic Party)	1	GA Attorney General	Democratic Party
+GA Lieutenant Governor (Democratic Party)	1	GA Lieutenant Governor	Democratic Party
+GA Treasurer (Democratic Party)	1	GA Treasurer	Democratic Party
+GA Secretary of State (Democratic Party)	1	GA Secretary of State	Democratic Party
+GA State School Superintendent (Democratic Party)	1	GA State School Superintendent	Democratic Party
+GA Commissioner of Agriculture (Democratic Party)	1	GA Commissioner of Agriculture	Democratic Party
+GA Commissioner of Labor (Democratic Party)	1	GA Commissioner of Labor	Democratic Party
+GA Commissioner of Insurance (Democratic Party)	1	GA Commissioner of Insurance	Democratic Party
+GA House District 1 (Republican Party)	1	GA House District 1	Republican Party
+GA House District 2 (Republican Party)	1	GA House District 2	Republican Party
+GA House District 3 (Republican Party)	1	GA House District 3	Republican Party
+GA House District 4 (Republican Party)	1	GA House District 4	Republican Party
+GA House District 5 (Republican Party)	1	GA House District 5	Republican Party
+GA House District 6 (Republican Party)	1	GA House District 6	Republican Party
+GA House District 7 (Republican Party)	1	GA House District 7	Republican Party
+GA House District 8 (Republican Party)	1	GA House District 8	Republican Party
+GA House District 9 (Republican Party)	1	GA House District 9	Republican Party
+GA House District 10 (Republican Party)	1	GA House District 10	Republican Party
+GA House District 11 (Republican Party)	1	GA House District 11	Republican Party
+GA House District 12 (Republican Party)	1	GA House District 12	Republican Party
+GA House District 13 (Republican Party)	1	GA House District 13	Republican Party
+GA House District 14 (Republican Party)	1	GA House District 14	Republican Party
+GA House District 15 (Republican Party)	1	GA House District 15	Republican Party
+GA House District 16 (Republican Party)	1	GA House District 16	Republican Party
+GA House District 17 (Republican Party)	1	GA House District 17	Republican Party
+GA House District 18 (Republican Party)	1	GA House District 18	Republican Party
+GA House District 19 (Republican Party)	1	GA House District 19	Republican Party
+GA House District 20 (Republican Party)	1	GA House District 20	Republican Party
+GA House District 21 (Republican Party)	1	GA House District 21	Republican Party
+GA House District 22 (Republican Party)	1	GA House District 22	Republican Party
+GA House District 23 (Republican Party)	1	GA House District 23	Republican Party
+GA House District 24 (Republican Party)	1	GA House District 24	Republican Party
+GA House District 25 (Republican Party)	1	GA House District 25	Republican Party
+GA House District 26 (Republican Party)	1	GA House District 26	Republican Party
+GA House District 27 (Republican Party)	1	GA House District 27	Republican Party
+GA House District 28 (Republican Party)	1	GA House District 28	Republican Party
+GA House District 29 (Republican Party)	1	GA House District 29	Republican Party
+GA House District 30 (Republican Party)	1	GA House District 30	Republican Party
+GA House District 31 (Republican Party)	1	GA House District 31	Republican Party
+GA House District 32 (Republican Party)	1	GA House District 32	Republican Party
+GA House District 33 (Republican Party)	1	GA House District 33	Republican Party
+GA House District 34 (Republican Party)	1	GA House District 34	Republican Party
+GA House District 35 (Republican Party)	1	GA House District 35	Republican Party
+GA House District 36 (Republican Party)	1	GA House District 36	Republican Party
+GA House District 37 (Republican Party)	1	GA House District 37	Republican Party
+GA House District 38 (Republican Party)	1	GA House District 38	Republican Party
+GA House District 39 (Republican Party)	1	GA House District 39	Republican Party
+GA House District 40 (Republican Party)	1	GA House District 40	Republican Party
+GA House District 41 (Republican Party)	1	GA House District 41	Republican Party
+GA House District 42 (Republican Party)	1	GA House District 42	Republican Party
+GA House District 43 (Republican Party)	1	GA House District 43	Republican Party
+GA House District 44 (Republican Party)	1	GA House District 44	Republican Party
+GA House District 45 (Republican Party)	1	GA House District 45	Republican Party
+GA House District 46 (Republican Party)	1	GA House District 46	Republican Party
+GA House District 47 (Republican Party)	1	GA House District 47	Republican Party
+GA House District 48 (Republican Party)	1	GA House District 48	Republican Party
+GA House District 49 (Republican Party)	1	GA House District 49	Republican Party
+GA House District 50 (Republican Party)	1	GA House District 50	Republican Party
+GA House District 51 (Republican Party)	1	GA House District 51	Republican Party
+GA House District 52 (Republican Party)	1	GA House District 52	Republican Party
+GA House District 53 (Republican Party)	1	GA House District 53	Republican Party
+GA House District 54 (Republican Party)	1	GA House District 54	Republican Party
+GA House District 55 (Republican Party)	1	GA House District 55	Republican Party
+GA House District 56 (Republican Party)	1	GA House District 56	Republican Party
+GA House District 57 (Republican Party)	1	GA House District 57	Republican Party
+GA House District 58 (Republican Party)	1	GA House District 58	Republican Party
+GA House District 59 (Republican Party)	1	GA House District 59	Republican Party
+GA House District 60 (Republican Party)	1	GA House District 60	Republican Party
+GA House District 61 (Republican Party)	1	GA House District 61	Republican Party
+GA House District 62 (Republican Party)	1	GA House District 62	Republican Party
+GA House District 63 (Republican Party)	1	GA House District 63	Republican Party
+GA House District 64 (Republican Party)	1	GA House District 64	Republican Party
+GA House District 65 (Republican Party)	1	GA House District 65	Republican Party
+GA House District 66 (Republican Party)	1	GA House District 66	Republican Party
+GA House District 67 (Republican Party)	1	GA House District 67	Republican Party
+GA House District 68 (Republican Party)	1	GA House District 68	Republican Party
+GA House District 69 (Republican Party)	1	GA House District 69	Republican Party
+GA House District 70 (Republican Party)	1	GA House District 70	Republican Party
+GA House District 71 (Republican Party)	1	GA House District 71	Republican Party
+GA House District 72 (Republican Party)	1	GA House District 72	Republican Party
+GA House District 73 (Republican Party)	1	GA House District 73	Republican Party
+GA House District 74 (Republican Party)	1	GA House District 74	Republican Party
+GA House District 75 (Republican Party)	1	GA House District 75	Republican Party
+GA House District 76 (Republican Party)	1	GA House District 76	Republican Party
+GA House District 77 (Republican Party)	1	GA House District 77	Republican Party
+GA House District 78 (Republican Party)	1	GA House District 78	Republican Party
+GA House District 79 (Republican Party)	1	GA House District 79	Republican Party
+GA House District 80 (Republican Party)	1	GA House District 80	Republican Party
+GA House District 81 (Republican Party)	1	GA House District 81	Republican Party
+GA House District 82 (Republican Party)	1	GA House District 82	Republican Party
+GA House District 83 (Republican Party)	1	GA House District 83	Republican Party
+GA House District 84 (Republican Party)	1	GA House District 84	Republican Party
+GA House District 85 (Republican Party)	1	GA House District 85	Republican Party
+GA House District 86 (Republican Party)	1	GA House District 86	Republican Party
+GA House District 87 (Republican Party)	1	GA House District 87	Republican Party
+GA House District 88 (Republican Party)	1	GA House District 88	Republican Party
+GA House District 89 (Republican Party)	1	GA House District 89	Republican Party
+GA House District 90 (Republican Party)	1	GA House District 90	Republican Party
+GA House District 91 (Republican Party)	1	GA House District 91	Republican Party
+GA House District 92 (Republican Party)	1	GA House District 92	Republican Party
+GA House District 93 (Republican Party)	1	GA House District 93	Republican Party
+GA House District 94 (Republican Party)	1	GA House District 94	Republican Party
+GA House District 95 (Republican Party)	1	GA House District 95	Republican Party
+GA House District 96 (Republican Party)	1	GA House District 96	Republican Party
+GA House District 97 (Republican Party)	1	GA House District 97	Republican Party
+GA House District 98 (Republican Party)	1	GA House District 98	Republican Party
+GA House District 99 (Republican Party)	1	GA House District 99	Republican Party
+GA House District 100 (Republican Party)	1	GA House District 100	Republican Party
+GA House District 101 (Republican Party)	1	GA House District 101	Republican Party
+GA House District 102 (Republican Party)	1	GA House District 102	Republican Party
+GA House District 103 (Republican Party)	1	GA House District 103	Republican Party
+GA House District 104 (Republican Party)	1	GA House District 104	Republican Party
+GA House District 105 (Republican Party)	1	GA House District 105	Republican Party
+GA House District 106 (Republican Party)	1	GA House District 106	Republican Party
+GA House District 107 (Republican Party)	1	GA House District 107	Republican Party
+GA House District 108 (Republican Party)	1	GA House District 108	Republican Party
+GA House District 109 (Republican Party)	1	GA House District 109	Republican Party
+GA House District 110 (Republican Party)	1	GA House District 110	Republican Party
+GA House District 111 (Republican Party)	1	GA House District 111	Republican Party
+GA House District 112 (Republican Party)	1	GA House District 112	Republican Party
+GA House District 113 (Republican Party)	1	GA House District 113	Republican Party
+GA House District 114 (Republican Party)	1	GA House District 114	Republican Party
+GA House District 115 (Republican Party)	1	GA House District 115	Republican Party
+GA House District 116 (Republican Party)	1	GA House District 116	Republican Party
+GA House District 117 (Republican Party)	1	GA House District 117	Republican Party
+GA House District 118 (Republican Party)	1	GA House District 118	Republican Party
+GA House District 119 (Republican Party)	1	GA House District 119	Republican Party
+GA House District 120 (Republican Party)	1	GA House District 120	Republican Party
+GA House District 121 (Republican Party)	1	GA House District 121	Republican Party
+GA House District 122 (Republican Party)	1	GA House District 122	Republican Party
+GA House District 123 (Republican Party)	1	GA House District 123	Republican Party
+GA House District 124 (Republican Party)	1	GA House District 124	Republican Party
+GA House District 125 (Republican Party)	1	GA House District 125	Republican Party
+GA House District 126 (Republican Party)	1	GA House District 126	Republican Party
+GA House District 127 (Republican Party)	1	GA House District 127	Republican Party
+GA House District 128 (Republican Party)	1	GA House District 128	Republican Party
+GA House District 129 (Republican Party)	1	GA House District 129	Republican Party
+GA House District 130 (Republican Party)	1	GA House District 130	Republican Party
+GA House District 131 (Republican Party)	1	GA House District 131	Republican Party
+GA House District 132 (Republican Party)	1	GA House District 132	Republican Party
+GA House District 133 (Republican Party)	1	GA House District 133	Republican Party
+GA House District 134 (Republican Party)	1	GA House District 134	Republican Party
+GA House District 135 (Republican Party)	1	GA House District 135	Republican Party
+GA House District 136 (Republican Party)	1	GA House District 136	Republican Party
+GA House District 137 (Republican Party)	1	GA House District 137	Republican Party
+GA House District 138 (Republican Party)	1	GA House District 138	Republican Party
+GA House District 139 (Republican Party)	1	GA House District 139	Republican Party
+GA House District 140 (Republican Party)	1	GA House District 140	Republican Party
+GA House District 141 (Republican Party)	1	GA House District 141	Republican Party
+GA House District 142 (Republican Party)	1	GA House District 142	Republican Party
+GA House District 143 (Republican Party)	1	GA House District 143	Republican Party
+GA House District 144 (Republican Party)	1	GA House District 144	Republican Party
+GA House District 145 (Republican Party)	1	GA House District 145	Republican Party
+GA House District 146 (Republican Party)	1	GA House District 146	Republican Party
+GA House District 147 (Republican Party)	1	GA House District 147	Republican Party
+GA House District 148 (Republican Party)	1	GA House District 148	Republican Party
+GA House District 149 (Republican Party)	1	GA House District 149	Republican Party
+GA House District 150 (Republican Party)	1	GA House District 150	Republican Party
+GA House District 151 (Republican Party)	1	GA House District 151	Republican Party
+GA House District 152 (Republican Party)	1	GA House District 152	Republican Party
+GA House District 153 (Republican Party)	1	GA House District 153	Republican Party
+GA House District 154 (Republican Party)	1	GA House District 154	Republican Party
+GA House District 155 (Republican Party)	1	GA House District 155	Republican Party
+GA House District 156 (Republican Party)	1	GA House District 156	Republican Party
+GA House District 157 (Republican Party)	1	GA House District 157	Republican Party
+GA House District 158 (Republican Party)	1	GA House District 158	Republican Party
+GA House District 159 (Republican Party)	1	GA House District 159	Republican Party
+GA House District 160 (Republican Party)	1	GA House District 160	Republican Party
+GA House District 161 (Republican Party)	1	GA House District 161	Republican Party
+GA House District 162 (Republican Party)	1	GA House District 162	Republican Party
+GA House District 163 (Republican Party)	1	GA House District 163	Republican Party
+GA House District 164 (Republican Party)	1	GA House District 164	Republican Party
+GA House District 165 (Republican Party)	1	GA House District 165	Republican Party
+GA House District 166 (Republican Party)	1	GA House District 166	Republican Party
+GA House District 167 (Republican Party)	1	GA House District 167	Republican Party
+GA House District 168 (Republican Party)	1	GA House District 168	Republican Party
+GA House District 169 (Republican Party)	1	GA House District 169	Republican Party
+GA House District 170 (Republican Party)	1	GA House District 170	Republican Party
+GA House District 171 (Republican Party)	1	GA House District 171	Republican Party
+GA House District 172 (Republican Party)	1	GA House District 172	Republican Party
+GA House District 173 (Republican Party)	1	GA House District 173	Republican Party
+GA House District 174 (Republican Party)	1	GA House District 174	Republican Party
+GA House District 175 (Republican Party)	1	GA House District 175	Republican Party
+GA House District 176 (Republican Party)	1	GA House District 176	Republican Party
+GA House District 177 (Republican Party)	1	GA House District 177	Republican Party
+GA House District 178 (Republican Party)	1	GA House District 178	Republican Party
+GA House District 179 (Republican Party)	1	GA House District 179	Republican Party
+GA House District 180 (Republican Party)	1	GA House District 180	Republican Party
+GA Senate District 1 (Republican Party)	1	GA Senate District 1	Republican Party
+GA Senate District 2 (Republican Party)	1	GA Senate District 2	Republican Party
+GA Senate District 3 (Republican Party)	1	GA Senate District 3	Republican Party
+GA Senate District 4 (Republican Party)	1	GA Senate District 4	Republican Party
+GA Senate District 5 (Republican Party)	1	GA Senate District 5	Republican Party
+GA Senate District 6 (Republican Party)	1	GA Senate District 6	Republican Party
+GA Senate District 7 (Republican Party)	1	GA Senate District 7	Republican Party
+GA Senate District 8 (Republican Party)	1	GA Senate District 8	Republican Party
+GA Senate District 9 (Republican Party)	1	GA Senate District 9	Republican Party
+GA Senate District 10 (Republican Party)	1	GA Senate District 10	Republican Party
+GA Senate District 11 (Republican Party)	1	GA Senate District 11	Republican Party
+GA Senate District 12 (Republican Party)	1	GA Senate District 12	Republican Party
+GA Senate District 13 (Republican Party)	1	GA Senate District 13	Republican Party
+GA Senate District 14 (Republican Party)	1	GA Senate District 14	Republican Party
+GA Senate District 15 (Republican Party)	1	GA Senate District 15	Republican Party
+GA Senate District 16 (Republican Party)	1	GA Senate District 16	Republican Party
+GA Senate District 17 (Republican Party)	1	GA Senate District 17	Republican Party
+GA Senate District 18 (Republican Party)	1	GA Senate District 18	Republican Party
+GA Senate District 19 (Republican Party)	1	GA Senate District 19	Republican Party
+GA Senate District 20 (Republican Party)	1	GA Senate District 20	Republican Party
+GA Senate District 21 (Republican Party)	1	GA Senate District 21	Republican Party
+GA Senate District 22 (Republican Party)	1	GA Senate District 22	Republican Party
+GA Senate District 23 (Republican Party)	1	GA Senate District 23	Republican Party
+GA Senate District 24 (Republican Party)	1	GA Senate District 24	Republican Party
+GA Senate District 25 (Republican Party)	1	GA Senate District 25	Republican Party
+GA Senate District 26 (Republican Party)	1	GA Senate District 26	Republican Party
+GA Senate District 27 (Republican Party)	1	GA Senate District 27	Republican Party
+GA Senate District 28 (Republican Party)	1	GA Senate District 28	Republican Party
+GA Senate District 29 (Republican Party)	1	GA Senate District 29	Republican Party
+GA Senate District 30 (Republican Party)	1	GA Senate District 30	Republican Party
+GA Senate District 31 (Republican Party)	1	GA Senate District 31	Republican Party
+GA Senate District 32 (Republican Party)	1	GA Senate District 32	Republican Party
+GA Senate District 33 (Republican Party)	1	GA Senate District 33	Republican Party
+GA Senate District 34 (Republican Party)	1	GA Senate District 34	Republican Party
+GA Senate District 35 (Republican Party)	1	GA Senate District 35	Republican Party
+GA Senate District 36 (Republican Party)	1	GA Senate District 36	Republican Party
+GA Senate District 37 (Republican Party)	1	GA Senate District 37	Republican Party
+GA Senate District 38 (Republican Party)	1	GA Senate District 38	Republican Party
+GA Senate District 39 (Republican Party)	1	GA Senate District 39	Republican Party
+GA Senate District 40 (Republican Party)	1	GA Senate District 40	Republican Party
+GA Senate District 41 (Republican Party)	1	GA Senate District 41	Republican Party
+GA Senate District 42 (Republican Party)	1	GA Senate District 42	Republican Party
+GA Senate District 43 (Republican Party)	1	GA Senate District 43	Republican Party
+GA Senate District 44 (Republican Party)	1	GA Senate District 44	Republican Party
+GA Senate District 45 (Republican Party)	1	GA Senate District 45	Republican Party
+GA Senate District 46 (Republican Party)	1	GA Senate District 46	Republican Party
+GA Senate District 47 (Republican Party)	1	GA Senate District 47	Republican Party
+GA Senate District 48 (Republican Party)	1	GA Senate District 48	Republican Party
+GA Senate District 49 (Republican Party)	1	GA Senate District 49	Republican Party
+GA Senate District 50 (Republican Party)	1	GA Senate District 50	Republican Party
+GA Senate District 51 (Republican Party)	1	GA Senate District 51	Republican Party
+GA Senate District 52 (Republican Party)	1	GA Senate District 52	Republican Party
+GA Senate District 53 (Republican Party)	1	GA Senate District 53	Republican Party
+GA Senate District 54 (Republican Party)	1	GA Senate District 54	Republican Party
+GA Senate District 55 (Republican Party)	1	GA Senate District 55	Republican Party
+GA Senate District 56 (Republican Party)	1	GA Senate District 56	Republican Party
+US House GA District 1 (Republican Party)	1	US House GA District 1	Republican Party
+US House GA District 2 (Republican Party)	1	US House GA District 2	Republican Party
+US House GA District 3 (Republican Party)	1	US House GA District 3	Republican Party
+US House GA District 4 (Republican Party)	1	US House GA District 4	Republican Party
+US House GA District 5 (Republican Party)	1	US House GA District 5	Republican Party
+US House GA District 6 (Republican Party)	1	US House GA District 6	Republican Party
+US House GA District 7 (Republican Party)	1	US House GA District 7	Republican Party
+US House GA District 8 (Republican Party)	1	US House GA District 8	Republican Party
+US House GA District 9 (Republican Party)	1	US House GA District 9	Republican Party
+US House GA District 10 (Republican Party)	1	US House GA District 10	Republican Party
+US House GA District 11 (Republican Party)	1	US House GA District 11	Republican Party
+US House GA District 12 (Republican Party)	1	US House GA District 12	Republican Party
+US House GA District 13 (Republican Party)	1	US House GA District 13	Republican Party
+US House GA District 14 (Republican Party)	1	US House GA District 14	Republican Party
+US President (GA) (Republican Party)	1	US President (GA)	Republican Party
+GA Governor (Republican Party)	1	GA Governor	Republican Party
+US Senate GA (Republican Party)	1	US Senate GA	Republican Party
+GA Attorney General (Republican Party)	1	GA Attorney General	Republican Party
+GA Lieutenant Governor (Republican Party)	1	GA Lieutenant Governor	Republican Party
+GA Treasurer (Republican Party)	1	GA Treasurer	Republican Party
+GA Secretary of State (Republican Party)	1	GA Secretary of State	Republican Party
+GA State School Superintendent (Republican Party)	1	GA State School Superintendent	Republican Party
+GA Commissioner of Agriculture (Republican Party)	1	GA Commissioner of Agriculture	Republican Party
+GA Commissioner of Labor (Republican Party)	1	GA Commissioner of Labor	Republican Party
+GA Commissioner of Insurance (Republican Party)	1	GA Commissioner of Insurance	Republican Party
+GA Public Service Commission, District 3 - Metro-Atlanta	1	GA Public Service Commission, District 3 - Metro-Atlanta
+GA Public Service Commission, District 5 - Western	1	GA Public Service Commission, District 5 - Western
+

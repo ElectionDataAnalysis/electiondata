@@ -256,3 +256,9 @@ GA Attorney General	Georgia
 GA Lieutenant Governor	Georgia
 GA Treasurer	Georgia
 GA Secretary of State	Georgia
+GA State School Superintendent	Georgia
+GA Commissioner of Agriculture	Georgia
+GA Commissioner of Labor	Georgia
+GA Commissioner of Insurance	Georgia
+GA Public Service Commission, District 3 - Metro-Atlanta	Georgia;GA Public Service Commission, District 3 - Metro-Atlanta
+GA Public Service Commission, District 5 - Western	Georgia;GA Public Service Commission, District 5 - Western
