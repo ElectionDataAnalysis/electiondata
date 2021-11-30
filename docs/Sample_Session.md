@@ -7,7 +7,7 @@ The package offers a fair amount of flexibility in the directory structures used
 ```
 .
 +-- run_time.ini
-+-- results_directory
++-- input_directory
 |   +-- Georgia
 |   |   +-- GA_detail_20201120_1237.xml
 +-- archive_directory
@@ -19,7 +19,7 @@ Note that during processing the package uses information from the repository. In
 ### Contents of `run_time.ini`
 ```
 [electiondata]
-results_dir=results_directory
+results_dir=input_directory
 archive_dir=archive_directory
 repository_content_root=<path/to/src>
 reports_and_plots_dir=reports_and_plots_directory
@@ -27,7 +27,7 @@ reports_and_plots_dir=reports_and_plots_directory
 [postgresql]
 host=localhost
 port=5432
-dbname=electiondata_Georgia_test
+dbname=ga_test
 user=postgres
 password=
 ```
@@ -35,9 +35,6 @@ You may wish to check that these postgresql credentials will work on your system
 
 ### Contents of `GA_detail_20201120_1237.xml`
 Copy the file of the same name in the repository: 000_template.mungerGA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml)
-
-## Create Georgia jurisdiction files (optional)
-If you wish to practice creating jurisdiction files, follow the steps below. Otherwise, skip to the next section.
 
 ## Load Data
 ```
@@ -48,7 +45,7 @@ After this command executes successfully, you will see a database in your postgr
 ```
 .
 +-- run_time.ini
-+-- results_directory
++-- input_directory
 +-- archive_directory
 |   +-- Georgia
 |   |   +-- GA_detail_20201120_1237.xml
@@ -85,7 +82,7 @@ The  file `GA_results.txv` containing the tab-separated results will be created 
 |   |   +-- not_found_in_db.tsv
 |   |   +-- ok.tsv
 |   |   +-- wrong.tsv
-+-- results_directory
++-- input_directory
 +-- run_time.ini
 ```
 
@@ -181,7 +178,7 @@ CountItemType=<VoteType.name>
 ### Create an initialization file for the results file (optional)
 If you wish to practice creating an initialization file for results, follow the steps below. Otherwise the system will use the initialization file [ga20g_20201120_1237.ini](../src/ini_files_for_results/Georgia/ga20g_20201120_1237.ini).
 
-Because your `results_directory` folder has a subfolder `Georgia`, the dataloading routines will look to the folder [src/ini_files_for_results/Georgia](../src/ini_files_for_results/Georgia) for information about any results files in `results_directory/Georgia` in your working directory. 
+Because your `input_directory` folder has a subfolder `Georgia`, the dataloading routines will look to the folder [src/ini_files_for_results/Georgia](../src/ini_files_for_results/Georgia) for information about any results files in `input_directory/Georgia` in your working directory. 
 
 1. Delete [ga20g_20201120_1237.ini](../src/ini_files_for_results/Georgia/ga20g_20201120_1237.ini) from the repository.
 2. Copy [src/ini_files_for_results/single_election_jurisdiction_template.ini](../src/ini_files_for_results/single_election_jurisdiction_template.ini) to a file with extension `.ini` in the folder [src/ini_files_for_results/Georgia](../src/ini_files_for_results/Georgia).
@@ -207,7 +204,7 @@ If you choose to create your Georgia jurisdiction files from scratch (rather tha
 .
 +-- jurisdiction_prep.ini
 +-- run_time.ini
-+-- results_directory
++-- input_directory
 |   +-- Georgia
 |   |   +-- GA_detail_20201120_1237.xml
 +-- archive_directory
@@ -223,7 +220,7 @@ count_of_state_house_districts=180
 count_of_state_senate_districts=56
 count_of_us_house_districts=14
 ```
-Because the `results_directory` folder has a subfolder `Georgia`, the dataloading routines will look for information specific to Georgia in the repository folder [src/jurisdictions/Georgia](../src/jurisdictions/Georgia). 
+Because the `input_directory` folder has a subfolder `Georgia`, the dataloading routines will look for information specific to Georgia in the repository folder [src/jurisdictions/Georgia](../src/jurisdictions/Georgia). 
 
 1. Delete the folder [src/jurisdictions/Georgia](../src/jurisdictions/Georgia).
 2. Navigate to your working directory.
@@ -253,7 +250,7 @@ Jurisdiction Georgia did not load. See .error file.
 Jurisdiction errors written to reports_and_plots_directory/load_or_reload_all_1113_0757/_jurisdiction_Georgia.errors
 >>> 
 ```
-Take a look at the file(s) indicated, which should give you a good idea of what needs to be fixed. (If it doesn't please report the unhelpful message(s) and your question as an [issue on GitHub](https://github.com/ElectionDataAnalysis/electiondata/issues)). Repeat this step -- loading and looking at errors -- as often as necessary! (In rare cases, you may want to start over with a new database, either by erasing the existing `electiondata_Georgia_test` from your postgres instance, or changing the value of `dbname` in the `run_time.ini` file.)
+Take a look at the file(s) indicated, which should give you a good idea of what needs to be fixed. (If it doesn't please report the unhelpful message(s) and your question as an [issue on GitHub](https://github.com/ElectionDataAnalysis/electiondata/issues)). Repeat this step -- loading and looking at errors -- as often as necessary! (In rare cases, you may want to start over with a new database, either by erasing the existing `ga_test` from your postgres instance, or changing the value of `dbname` in the `run_time.ini` file.)
 
 ### Sample errors and warnings while building jurisdiction files
 #### Contests
