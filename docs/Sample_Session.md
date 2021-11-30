@@ -112,6 +112,39 @@ In each case the value returned is a string with all the information necessary t
 >>> biden_eday_v_abs = an.scatter("Georgia","2020 General","Candidate election-day","Joseph R. Biden","2020 General","Candidate absentee-mail","Joseph R. Biden")
 ```
 
+The arguments (in order) are:
+* the jurisdiction ("Georgia")
+* three items to define the horizontal-axis count:
+  * the election ("2020 General")
+  * the count category, one of:
+    ```Candidate absentee-mail
+        Candidate early
+        Candidate election-day
+        Candidate provisional
+        Candidate total
+        Contest absentee-mail
+        Contest early
+        Contest election-day
+        Contest provisional
+        Contest total
+        Party absentee-mail
+        Party early
+        Party election-day
+        Party provisional
+        Party total
+        ```
+  * the specific count within the category
+* three items to define the vertical-axis count (same as for horizontal) 
+
+Note that once the category has been chosen, e.g., "Party absentee-mail", the list of possibilities for the specific count can be obtained from this line of code:
+```
+>>> [entry["name"] for entry in an.display_options("count",["2020 General","Georgia","Party absentee-mail"])]
+```
+Use any category name in place of "Party absentee-mail" to see counts available for that category.
+
+Categories starting with "Contest" give number of votes tallied in that contest in each county, lumping all candidates together. Categories starting with "Party" give number of votes tallied for members of that party in a particular contest type (e.g., "Libertarian congressional"). 
+
+
 ## Optional steps
 The sample session above uses the information already in the repository about Georgia and the particular results file. If you wish to create these files yourself from scratch, follow thses optional steps.
 
