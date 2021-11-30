@@ -112,10 +112,6 @@ In each case the value returned is a string with all the information necessary t
 >>> biden_eday_v_abs = an.scatter("Georgia","2020 General","Candidate election-day","Joseph R. Biden","2020 General","Candidate absentee-mail","Joseph R. Biden")
 ```
 
-## Clean up
-You may want to restore the repository and/or your postgres instance to its original state 
-TODO how?
-
 ## Optional steps
 The sample session above uses the information already in the repository about Georgia and the particular results file. If you wish to create these files yourself from scratch, follow thses optional steps.
 
@@ -123,7 +119,7 @@ The sample session above uses the information already in the repository about Ge
 The data loading process includes checking contest totals against reference totals in [src/reference_results/Georgia.tsv](../src/reference_results/Georgia.tsv). You may wish to add some reference totals to this file.
 
 ### Create a munger file
-If you wish to practice creating  munger file, follow the steps below. Otherwise skip to the next section.
+If you wish to practice creating  munger file, follow the steps below. 
 
 Your munger file should live in the folder [src/mungers](../src/mungers), and its name needs to have the extension `.munger`. 
 
@@ -150,9 +146,9 @@ CountItemType=<VoteType.name>
 ```
 
 ### Create an initialization file for the results file (optional)
-If you wish to practice creating an initialization file for results, follow the steps below. Otherwise skip to the next section; in this case the system will use the initialization file [ga20g_20201120_1237.ini](../src/ini_files_for_results/Georgia/ga20g_20201120_1237.ini).
+If you wish to practice creating an initialization file for results, follow the steps below. Otherwise the system will use the initialization file [ga20g_20201120_1237.ini](../src/ini_files_for_results/Georgia/ga20g_20201120_1237.ini).
 
-Because your `results_directory` folder has a subfolder `Georgia`, the dataloading routines will look to the folder [src/ini_files_for_results/Georgia](../src/ini_files_for_results/Georgia) for information about any results files in `working_directory/results_directory/Georgia`. 
+Because your `results_directory` folder has a subfolder `Georgia`, the dataloading routines will look to the folder [src/ini_files_for_results/Georgia](../src/ini_files_for_results/Georgia) for information about any results files in `results_directory/Georgia` in your working directory. 
 
 1. Delete [ga20g_20201120_1237.ini](../src/ini_files_for_results/Georgia/ga20g_20201120_1237.ini) from the repository.
 2. Copy [src/ini_files_for_results/single_election_jurisdiction_template.ini](../src/ini_files_for_results/single_election_jurisdiction_template.ini) to a file with extension `.ini` in the folder [src/ini_files_for_results/Georgia](../src/ini_files_for_results/Georgia).
@@ -197,7 +193,7 @@ count_of_us_house_districts=14
 Because the `results_directory` folder has a subfolder `Georgia`, the dataloading routines will look for information specific to Georgia in the repository folder [src/jurisdictions/Georgia](../src/jurisdictions/Georgia). 
 
 1. Delete the folder [src/jurisdictions/Georgia](../src/jurisdictions/Georgia).
-2. Navigate to the folder `working_directory`.
+2. Navigate to your working directory.
 5. Follow the instructions in the "Create or Improve a Jurisdiction" section of the [User_Guide](User_Guide.md). As you work through them, the following examples may be helpful.
   * Sample county lines in `Reporting.txt`:
 ```
