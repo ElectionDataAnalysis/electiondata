@@ -10,7 +10,7 @@ def pytest_addoption(parser):
     parser.addoption(
         "--param_file",
         action="store",
-        default=os.path.join(Path(__file__).parents[1].absolute(), "run_time.ini"),
+        default="run_time.ini",
     )
     parser.addoption(
         "--test_data_url",

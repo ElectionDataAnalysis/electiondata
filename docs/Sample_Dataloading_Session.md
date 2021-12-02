@@ -19,10 +19,10 @@ Note that during processing the package uses information from the repository. In
 ### Contents of `run_time.ini`
 ```
 [electiondata]
-results_dir=input_directory
+results_dir=input_results
 archive_dir=archive_directory
 repository_content_root=<path/to/src>
-reports_and_plots_dir=reports_and_plots_directory
+reports_and_plots_dir=reports_and_plots
 
 [postgresql]
 host=localhost
