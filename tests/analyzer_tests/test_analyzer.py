@@ -70,7 +70,7 @@ def test_contest_type_display(analyzer):
         analyzer.display_options("contest_type", filters=["2018 General", "Georgia"]),
         sort_key="order_by",
     )
-    expected = dict_sort(results.ga_2018_contest_types,sort_key="order_by")
+    expected = dict_sort(results.ga_2018_contest_types, sort_key="order_by")
     assert new == expected
 
 
@@ -80,16 +80,16 @@ def test_contest_display(analyzer):
         filters=["2018 General", "Georgia", "Congressional"],
     )
     new = dict_sort(contests, sort_key="order_by")
-    expected = dict_sort(results.ga_2018_congressional_contests,sort_key="order_by")
+    expected = dict_sort(results.ga_2018_congressional_contests, sort_key="order_by")
     assert new == expected
 
 
 def test_bar_congressional(analyzer):
     assert (
-            analyzer.bar(
+        analyzer.bar(
             "2018 General", "Georgia", "Congressional", "US House GA District 3"
         )
-            == results.ga_2018_bar_congressional
+        == results.ga_2018_bar_congressional
     )
 
 
@@ -111,17 +111,17 @@ def test_bar_congressional(analyzer):
 
 def test_bar_all_state(analyzer):
     assert (
-            analyzer.bar("2018 General", "North Carolina", "State House", "All State House")
-            == results.nc_2018_bar_statehouse
+        analyzer.bar("2018 General", "North Carolina", "State House", "All State House")
+        == results.nc_2018_bar_statehouse
     )
 
 
 def test_bar_all_congressional(analyzer):
     assert (
-            analyzer.bar(
+        analyzer.bar(
             "2018 General", "North Carolina", "Congressional", "All Congressional"
         )
-            == results.nc_2018_bar_congressional
+        == results.nc_2018_bar_congressional
     )
 
 
@@ -133,7 +133,7 @@ def test_category_display(analyzer):
         ),
         sort_key="order_by",
     )
-    expected = dict_sort(results.nc_2018_category,sort_key="order_by")
+    expected = dict_sort(results.nc_2018_category, sort_key="order_by")
     assert new == expected
 
 
@@ -145,13 +145,13 @@ def test_count_display(analyzer):
         ),
         sort_key="order_by",
     )
-    expected = dict_sort(results.ga_2018_count,sort_key="order_by")
+    expected = dict_sort(results.ga_2018_count, sort_key="order_by")
     assert new == expected
 
 
 def test_scatter_candidates(analyzer):
     assert (
-            analyzer.scatter(
+        analyzer.scatter(
             "Georgia",
             "2018 General",
             "Candidate total",
@@ -160,13 +160,13 @@ def test_scatter_candidates(analyzer):
             "Candidate total",
             "Charlie Bailey",
         )
-            == results.ga_2018_scatter_candidates
+        == results.ga_2018_scatter_candidates
     )
 
 
 def test_scatter_candidates_longname(analyzer):
     assert (
-            analyzer.scatter(
+        analyzer.scatter(
             "Georgia",
             "2018 General",
             "Candidate total",
@@ -175,13 +175,13 @@ def test_scatter_candidates_longname(analyzer):
             "Candidate total",
             "Charlie Bailey - D - GAAttGen",
         )
-            == results.ga_2018_scatter_candidates
+        == results.ga_2018_scatter_candidates
     )
 
 
 def test_scatter_candidates_votetype(analyzer):
     assert (
-            analyzer.scatter(
+        analyzer.scatter(
             "Georgia",
             "2018 General",
             "Candidate absentee-mail",
@@ -190,13 +190,13 @@ def test_scatter_candidates_votetype(analyzer):
             "Candidate election-day",
             "Stacey Abrams",
         )
-            == results.ga_2018_scatter_candidates_votetype
+        == results.ga_2018_scatter_candidates_votetype
     )
 
 
 def test_scatter_multi_election(analyzer):
     assert (
-            analyzer.scatter(
+        analyzer.scatter(
             "Georgia",
             "2018 General",
             "Contest total",
@@ -205,13 +205,13 @@ def test_scatter_multi_election(analyzer):
             "Contest total",
             "US House GA District 14",
         )
-            == results.ga_multi_election
+        == results.ga_multi_election
     )
 
 
 def test_scatter_party(analyzer):
     assert (
-            analyzer.scatter(
+        analyzer.scatter(
             "Georgia",
             "2018 General",
             "Party total",
@@ -220,13 +220,13 @@ def test_scatter_party(analyzer):
             "Party total",
             "Democratic State House",
         )
-            == results.ga_2018_scatter_party
+        == results.ga_2018_scatter_party
     )
 
 
 def test_scatter_party_votetype(analyzer):
     assert (
-            analyzer.scatter(
+        analyzer.scatter(
             "Georgia",
             "2018 General",
             "Party absentee-mail",
@@ -235,14 +235,14 @@ def test_scatter_party_votetype(analyzer):
             "Candidate absentee-mail",
             "Stacey Abrams",
         )
-            == results.ga_2018_scatter_party_votetype
+        == results.ga_2018_scatter_party_votetype
     )
 
 
 # check that rollup_dataframe to county level works correctly
 def test_scatter_county_rollup(analyzer):
     assert (
-            analyzer.scatter(
+        analyzer.scatter(
             "North Carolina",
             "2018 General",
             "Candidate total",
@@ -251,7 +251,7 @@ def test_scatter_county_rollup(analyzer):
             "Candidate total",
             "Dan McCready - D - USHouse9",
         )
-            == results.nc_2018_scatter_county_rollup
+        == results.nc_2018_scatter_county_rollup
     )
 
 
@@ -264,7 +264,7 @@ def test_candidate_search_display(analyzer):
         ),
         sort_key="order_by",
     )
-    expected = dict_sort(results.ga_2018_candidate_search_display,sort_key="order_by")
+    expected = dict_sort(results.ga_2018_candidate_search_display, sort_key="order_by")
     assert new == expected
 
 
@@ -276,7 +276,7 @@ def test_count_contest_display(analyzer):
         ),
         sort_key="order_by",
     )
-    expected = dict_sort(results.ga_2018_count_contest,sort_key="order_by")
+    expected = dict_sort(results.ga_2018_count_contest, sort_key="order_by")
     assert new == expected
 
 

@@ -743,8 +743,10 @@ def add_contest_id(
     # fail if fatal errors or no contests recognized (in reverse order, just for fun
     if working_temp.empty:
         err = ui.add_new_error(
-            err, "jurisdiction", juris_true_name,
-            f"No contests recognized from file {file_name} with munger {munger_name}."
+            err,
+            "jurisdiction",
+            juris_true_name,
+            f"No contests recognized from file {file_name} with munger {munger_name}.",
         )
     else:
         working = working_temp
