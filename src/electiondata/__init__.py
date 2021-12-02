@@ -3012,13 +3012,13 @@ class Analyzer:
     ) -> Union[str, Dict[str, Any]]:
         """picks either json or xml based on value of constants.nist_version"""
         if electiondata.constants.default_nist_format == "json":
-            return self.export_nist_json(election,jurisdiction)
+            return self.export_nist_json(election, jurisdiction)
         elif electiondata.constants.default_nist_format == "xml":
-            return self.export_nist_xml_as_string(election,jurisdiction)
+            return self.export_nist_xml_as_string(election, jurisdiction)
         else:
             return ""
 
-    def export_nist_json(self,election: str,jurisdiction: str) -> Dict[str,Any]:
+    def export_nist_json(self, election: str, jurisdiction: str) -> Dict[str, Any]:
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
 
@@ -3051,7 +3051,7 @@ class Analyzer:
         jurisdiction: str,
     ) -> str:
         """exports NIST v2 json string"""
-        json_string = json.dumps(self.export_nist_json(election,jurisdiction))
+        json_string = json.dumps(self.export_nist_json(election, jurisdiction))
         return json_string
 
     def export_nist_xml_as_string(
