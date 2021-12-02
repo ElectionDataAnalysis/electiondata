@@ -15,7 +15,7 @@ def test_nist_xml(analyzer, tests_path):
     )
 
     # test nist v2 export against sample file
-    new_str_v2 = analyzer.export_nist_xml_as_string("2020 General","Wyoming")
+    new_str_v2 = analyzer.export_nist_xml_as_string("2020 General", "Wyoming")
     correct_str_v2 = open(nist_v2_reference_file, "r").read()
 
     # test nist v1 export against sample file
