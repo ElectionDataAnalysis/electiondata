@@ -10,13 +10,13 @@ This repository provides tools for consolidation and analysis of raw election re
    * json (following NIST Election Results Reporting Common Data Format V2)
  * Analysis: 
    * Curates one-county outliers of interest
-   * Calculates difference-in-difference for reaults available by vote type
+   * Calculates difference-in-difference for results available by vote type
  * Visualization: 
    * Scatter plots
    * Bar charts
 
 # Target Audience
-This system is intended to be of use to candidates and campaigns, election officials, students of politics and elections, and anyone else who is interested in assembling and understanding election results.
+This system is intended to be of use to news media, campaigns, election officials, students of politics and elections, and anyone else who is interested in assembling and understanding election results.
 
 # How to Contribute Code
 Please contribute code that works in python 3.9, with the package versions specified in [requirements.txt](requirements.txt). We follow the [black](https://pypi.org/project/black/) format.
@@ -36,9 +36,15 @@ If you are a potential end user -- an election official, political scientist or 
 If you are interested in contributing, or just staying updated on the progress of this project, please [contact Stephanie Singer](http://symmetrysinger.com/index.php?id=contact). 
 
 # How to use the app
-Detailed instructions can be found [here](docs/User_Guide.md).
-  
-
+See [documentation directory](docs), which includes
+ * for users
+   * [Installation instructions](docs/Installation.md)
+   * Instructions for a [sample dataloading session](docs/Sample_Dataloading_Session.md)
+   * Detailed [User Guide](docs/User_Guide.md)
+ * for developers
+   * [Information about the code](docs/About_the_Code.md)
+   * [Information about the tests](docs/Testing_Code_with_pytest.md)
+   
 # Contributors
  * [Stephanie Singer](http://campaignscientific.com/), Hatfield School of Government (Portland State University), former Chair, Philadelphia County Board of Elections
  * Janaki Raghuram Srungavarapu, Hatfield School of Government (Portland State University)
@@ -48,7 +54,7 @@ Detailed instructions can be found [here](docs/User_Guide.md).
  * Elliot Meyerson
 
 # Funding
-Funding provided October 2019 - September 2021 by the National Science Foundation
+Funding provided October 2019 - November 2021 by the National Science Foundation
  * Award #1936809, "EAGER: Data Science for Election Verification" 
  * Award #2027089, "RAPID: Election Result Anomaly Detection for 2020"
 Data collection and consolidation for the 2020 US General Election funded in part by the Verified Voting Foundation.

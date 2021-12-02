@@ -268,8 +268,8 @@ def package_results(data, jurisdiction, x, y, restrict=None) -> dict:
         if total == 0:
             x_pct = y_pct = 0
         else:
-            x_pct = row[x] / total
-            y_pct = row[y] / total
+            x_pct = round(row[x] / total, 3)
+            y_pct = round(row[y] / total, 3)
         results["counts"].append(
             {
                 "name": row["Name"],

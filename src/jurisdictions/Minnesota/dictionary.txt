@@ -13020,34 +13020,28 @@ Party	Constitution Party	CP
 Party	Democratic Party	DEMOCRAT
 Party	Democratic Party	Democratic Party
 Party	Democratic-Farmer-Labor Party	DFL
-Party	Grassroots - Legalize Cannabis	GLC
+Party	Grassroots-Legalize Cannabis Party	GLC
 Party	Green Party	GP
 Party	Green Party	GREEN
 Party	Green Party	Green Party
 Party	Green Party	MGP
-Party	I	I
-Party	IA	IA
-Party	IND	IND
-Party	Independence	IP
-Party	Independent - Judicial Reform	IJR
-Party	Independent - unaffiliated	IU
-Party	Independent Progressive Liberal	IPL
-Party	Legal Marijuana Now	LMN
+Party	Independent Party	I
+Party	Independent Party	IA
+Party	Independent Party	IND
+Party	Independent Party	IP
+Party	Independent - Judicial Reform Party	IJR
+Party	Independent Progressive Liberal Party	IPL
+Party	Legal Marijuana Now Party	LMN
 Party	Libertarian Party	LIB
 Party	Libertarian Party	LIBERTARIAN
 Party	Libertarian Party	LP
 Party	Libertarian Party	Libertarian Party
-Party	Nonpartisan	NP
 Party	Republican Party	R
 Party	Republican Party	REPUBLICAN
 Party	Republican Party	Republican Party
-Party	SLP	SLP
+Party	SLP Party	SLP
 Party	Socialist Workers Party	SWP
-Party	Unaffiliated	UA
-Party	VPM	VPM
-Party	Write-In	WI
-Party	none or unknown	N P
-Party	none or unknown	OTHER
+Party	VPM Party	VPM
 ReportingUnit	Minnesota	Minnesota
 ReportingUnit	Minnesota;Aitkin County	01
 ReportingUnit	Minnesota;Aitkin County	1
@@ -13622,7 +13616,6 @@ Party	Libertarian Party	libertarian
 Party	Minnesota Green Party	minnesota green
 Party	Nonpartisan Party	nonpartisan
 Party	Republican Party	republican
-Party	none or unknown	unaffiliated
 CountItemType	absentee	absentee
 CountItemType	absentee-mail	absentee by mail
 CountItemType	absentee-mail	absentee mail

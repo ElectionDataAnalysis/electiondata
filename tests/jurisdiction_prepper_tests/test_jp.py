@@ -8,7 +8,7 @@ def test_new_files():
     prep_file = os.path.join(
         tests_dir, "jurisdiction_prepper_tests", "jurisdiction_prep.ini_for_test"
     )
-    run_time_file = os.path.join(tests_dir, "run_time.ini")
+    run_time_file = "run_time.ini"
     temp_dir = os.path.join(tests_dir, "000_data_for_pytest", "Temp")
     ref_dir = os.path.join(
         tests_dir, "000_data_for_pytest", "JurisdictionPrepper_reference_files"

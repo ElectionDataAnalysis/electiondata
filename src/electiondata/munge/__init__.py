@@ -2354,6 +2354,7 @@ def file_to_raw_df(
     extra_formula_keys: Optional[List[str]] = None,
 ) -> (pd.DataFrame, Optional[dict]):
     err = None
+    munger_name = Path(munger_path).stem
 
     # read data into standard count format dataframe
     #  append "_SOURCE" to all non-Count column names
@@ -2373,7 +2374,7 @@ def file_to_raw_df(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while converting data to standard form: {exc}",
+            f"Exception while converting data to standard form from file {f_path} with munger {munger_name}:\n{exc}",
         )
         return pd.DataFrame(), err
     # clean non-count columns
