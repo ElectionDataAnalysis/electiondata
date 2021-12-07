@@ -704,7 +704,7 @@ def report(
                         output_location, f"{file_prefix}_{et}_{nk_name}.errors"
                     )
                     with open(out_path, "a") as f:
-                        f.write(out_str)
+                        f.write(out_str, encoding=constants.default_encoding)
                     print(f"{et.title()} errors{and_warns} written to {out_path}")
 
             # process name keys with only warnings (unless warnings suppressed)
@@ -726,7 +726,7 @@ def report(
                         output_location, f"{file_prefix}_{et}_{nk_name}.warnings"
                     )
                     with open(out_path, "a") as f:
-                        f.write(out_str)
+                        f.write(out_str, encoding=constants.default_encoding)
                     print(f"{et.title()} warnings written to {out_path}")
 
         # define return dictionary with reported keys set to {} and other keys preserved
