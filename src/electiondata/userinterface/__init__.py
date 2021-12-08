@@ -8,21 +8,22 @@ from configparser import (
 from electiondata import (
     database as db,
     munge as m,
-    juris as jm,
     nist as nist,
     constants,
 )
+
+from slugify import slugify
 import pandas as pd
 from pandas.errors import ParserError
-import os
+from os import walk, listdir
+from os.path import join, isdir, isfile
 from pathlib import Path
 from typing import Optional, Dict, Any, List
-import datetime
-import csv
-import numpy as np
-import inspect
-import xml.etree.ElementTree as et
-import json
+from csv import QUOTE_MINIMAL
+from numpy import where 
+from inspect import currentframe
+from xml.etree.ElementTree import parse
+from json import loads
 import shutil
 import xlrd
 
@@ -191,7 +192,7 @@ def read_single_datafile(
         kwargs = tabular_kwargs(p, kwargs, aux=aux)
         if p["multi_block"] == "yes":
             kwargs["header"] = None
-        kwargs["quoting"] = csv.QUOTE_MINIMAL
+        kwargs["quoting"] = QUOTE_MINIMAL
         if p["flat_text_delimiter"] in ["tab", "\\t"]:
             kwargs["sep"] = "\t"
         else:
@@ -207,7 +208,7 @@ def read_single_datafile(
             else:
                 driver = nist.xml_count_parse_info(p, ignore_namespace=True)
             xml_path_info = nist.xml_string_path_info(p["munge_fields"], p["namespace"])
-            tree = et.parse(f_path)
+            tree = parse(f_path)
             df, err = nist.df_from_tree(
                 tree,
                 xml_path_info=xml_path_info,
@@ -221,7 +222,7 @@ def read_single_datafile(
         elif p["file_type"] in ["json-nested"]:
             # TODO what if json-nested is a lookup?
             with open(f_path, "r") as f:
-                data = json.loads(f.read())
+                data = loads(f.read())
             df = pd.json_normalize(data, **kwargs)
             if not fatal_error(err):
                 df.rename(columns=rename, inplace=True)
@@ -273,7 +274,7 @@ def read_single_datafile(
                     err = add_new_error(
                         err,
                         "system",
-                        f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                        f"{Path(__file__).absolute().parents[0].name}.{currentframe().f_code.co_name}",
                         f"Unexpected error setting and filling headers after padding file {file_name}",
                     )
 
@@ -366,7 +367,7 @@ def excel_to_dict(
         err = add_new_error(
             err,
             "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"{Path(__file__).absolute().parents[0].name}.{currentframe().f_code.co_name}",
             f"Unexpected exception while getting row-constant keyword arguments for \n"
             f"rows_to_read: {rows_to_read}\n"
             f"kwargs: {kwargs}.\n"
@@ -455,15 +456,15 @@ def copy_directory_with_backup(
     <backup_suffix>"""
     err = None
     # if the original to be copied is actually a directory
-    if os.path.isdir(original_path):
+    if isdir(original_path):
         if backup_suffix:
             # make backup of anything with existing name
-            if os.path.isdir(copy_path):
+            if isdir(copy_path):
                 shutil.move(copy_path, f"{copy_path}{backup_suffix}")
                 print(f"Moved {copy_path} to {copy_path}{backup_suffix}")
-            elif os.path.isfile(copy_path):
+            elif isfile(copy_path):
                 old_stem = Path(copy_path).stem
-                backup_path = os.path.join(
+                backup_path = join(
                     Path(copy_path).parent,
                     f"{old_stem}{backup_suffix}.{Path(copy_path).suffix}",
                 )
@@ -483,7 +484,7 @@ def copy_directory_with_backup(
         err = add_new_error(
             err,
             "warn-system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"{Path(__file__).absolute().parents[0].name}.{currentframe().f_code.co_name}",
             f"No such directory: {original_path}",
         )
     return err
@@ -494,11 +495,11 @@ def copy_with_err_handling(
 ) -> Optional[dict]:
     err = None
     Path(copy_path).mkdir(parents=True, exist_ok=True)
-    for root, dirs, files in os.walk(original_path, topdown=True):
+    for root, dirs, files in walk(original_path, topdown=True):
         new_root = root.replace(original_path, copy_path)
         for f in files:
-            old = os.path.join(root, f)
-            new = os.path.join(new_root, f)
+            old = join(root, f)
+            new = join(new_root, f)
             try:
                 shutil.copy(old, new)
                 print(f"Copied {old} to {new}")
@@ -507,11 +508,11 @@ def copy_with_err_handling(
                     err = add_new_error(
                         err,
                         "warn-file",
-                        f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                        f"{Path(__file__).absolute().parents[0].name}.{currentframe().f_code.co_name}",
                         f"Error while copying {old} to {new}:\n{she}",
                     )
         for d in dirs:
-            Path(os.path.join(new_root, d)).mkdir(parents=True, exist_ok=True)
+            Path(join(new_root, d)).mkdir(parents=True, exist_ok=True)
     return err
 
 
@@ -644,12 +645,12 @@ def report(
 
     if err_warn and [k for k in err_warn.keys() if err_warn[k]]:
         # create reporting directory if it does not exist
-        if os.path.isfile(output_location):
+        if isfile(output_location):
             print(
                 "Target directory for errors and warnings exists as a file. Nothing will be reported."
             )
             return None
-        elif not os.path.isdir(output_location):
+        elif not isdir(output_location):
             Path(output_location).mkdir(parents=True, exist_ok=True)
 
         if not key_list:
@@ -700,8 +701,10 @@ def report(
                     out_str = f"\n{et.title()} errors ({nk_name}):\n{msg[(et, nk)]}\n\n{warn_str}"
 
                     # write info to a .errors or .errors file named for the name_key <nk>
-                    out_path = os.path.join(
-                        output_location, f"{file_prefix}_{et}_{nk_name}.errors"
+                    out_path = join(
+                        output_location, slugify(
+                            f"{file_prefix}_{et}_{nk_name}.errors",regex_pattern=r'[^ A-z0-9-_]+', lowercase=False
+                        )
                     )
                     with open(out_path, "a") as f:
                         f.write(out_str)
@@ -722,8 +725,10 @@ def report(
                     # write output
                     # write info to a .warnings file named for the error-type and name_key
 
-                    out_path = os.path.join(
-                        output_location, f"{file_prefix}_{et}_{nk_name}.warnings"
+                    out_path = join(
+                        output_location, slugify(
+                            f"{file_prefix}_{et}_{nk_name}.warnings",regex_pattern=r'[^ A-z0-9-_]+', lowercase=False
+                        )
                     )
                     with open(out_path, "a") as f:
                         f.write(out_str)
@@ -770,7 +775,7 @@ def add_new_error(
         err = add_new_error(
             err,
             "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"{Path(__file__).absolute().parents[0].name}.{currentframe().f_code.co_name}",
             f"Unrecognized key ({err_type}) for message {msg}",
         )
         return err
@@ -824,8 +829,8 @@ def confirm_essential_info(
     the given directory; False otherwise"""
 
     # loop through files
-    for f in [f for f in os.listdir(directory) if f[-4:] == ".ini"]:
-        p_path = os.path.join(directory, f)
+    for f in [f for f in listdir(directory) if f[-4:] == ".ini"]:
+        p_path = join(directory, f)
         file_confirmed = False
         while not file_confirmed:
             param_dict, err = get_parameters(
@@ -873,10 +878,10 @@ def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> li
     for ini files whose results files are in the results_path directory
     """
     ej_set = set()
-    for subdir, dirs, files in os.walk(ini_path):
+    for subdir, dirs, files in walk(ini_path):
         for f in files:
             if (f.endswith(".ini")) and (not f.endswith("template.ini")):
-                full_path = os.path.join(subdir, f)
+                full_path = join(subdir, f)
                 d, err = get_parameters(
                     param_file=full_path,
                     header="election_results",
@@ -887,7 +892,7 @@ def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> li
                     # if we're not checking against results directory, or if we are and the ini file
                     #  points to a file in or below the results directory
                     if (not results_path) or (
-                        os.path.isfile(os.path.join(results_path, d["results_file"]))
+                        isfile(join(results_path, d["results_file"]))
                     ):
                         # include the pair in the output
                         ej_set.update({(d["election"], d["jurisdiction"])})
@@ -1142,7 +1147,7 @@ def clean_candidate_names(df):
     extra_df = df[extra_cols]
     df = df[df_cols]
     df["party"] = df["type"].str.split(" ")
-    df["party"] = np.where(
+    df["party"] = where(
         df["party"].str.contains("party", case=False),
         df["party"]
         .map(lambda x: x[0:-1])
@@ -1175,12 +1180,12 @@ def clean_candidate_names(df):
     df["chamber"] = df["chamber"].fillna("unknown")
     df["district"] = df["contest"].str.extract(r"(\d+)")
     df["contest_short"] = ""
-    df["contest_short"] = np.where(
+    df["contest_short"] = where(
         df["chamber"] != "unknown",
         df[df.columns[5:]].apply(lambda x: "".join(x.dropna().astype(str)), axis=1),
         df["contest_short"],
     )
-    df["contest_short"] = np.where(
+    df["contest_short"] = where(
         df["chamber"] == "unknown",
         df["contest"]
         .str.split(" ")
@@ -1188,7 +1193,7 @@ def clean_candidate_names(df):
         df["contest_short"],
     )
     # Handle GA 2020 runoff senate elections
-    df["contest_short"] = np.where(
+    df["contest_short"] = where(
         df["parent"].str.contains("runoff"),
         df["contest_short"] + "Runoff",
         df["contest_short"],
