@@ -13,7 +13,7 @@ from electiondata import (
 )
 
 from slugify import slugify
-import pandas as pd
+from pandas import DataFrame, ExcelFile, json_normalize, read_csv, MultiIndex, read_excel, concat
 from pandas.errors import ParserError
 from os import walk, listdir
 from os.path import join, isdir, isfile
@@ -24,15 +24,9 @@ from numpy import where
 from inspect import currentframe
 from xml.etree.ElementTree import parse
 from json import loads
-import shutil
-import xlrd
-
-# may need for certain excel imports: import openpyxl
+from shutil import move, copy
+from xlrd import open_workbook
 from sqlalchemy.orm import Session
-
-
-# mapping from internal database reportingunit types to the user-facing contest types
-# (contests are categorized by the reporting unit type of their corresponding districts)
 
 
 def find_dupes(df):
@@ -60,9 +54,9 @@ def json_kwargs(
         else:
             json_rename[path_list[-1]] = mf
     meta = list(list(t) for t in meta_set)
-    json_kwargs = {"meta": meta, "record_path": record_path, "errors": "ignore"}
+    j_kwargs = {"meta": meta, "record_path": record_path, "errors": "ignore"}
 
-    return json_kwargs, json_rename
+    return j_kwargs, json_rename
 
 
 def tabular_kwargs(
@@ -134,14 +128,14 @@ def list_desired_excel_sheets(f_path: str, p: dict) -> (Optional[list], Optional
         try:
             # read an xlsx file
             # # nb: the following fails on VT 2020 files
-            xl = pd.ExcelFile(f_path)
+            xl = ExcelFile(f_path)
             all_sheets = xl.sheet_names
             # xlsx = openpyxl.load_workbook(f_path)
             # all_sheets = xlsx.get_sheet_names()
-        except Exception as exc:
+        except Exception:
             try:
                 # read xls file
-                xls = xlrd.open_workbook(f_path, on_demand=True)
+                xls = open_workbook(f_path, on_demand=True)
                 all_sheets = xls.sheet_names()
             except Exception as exc:
                 err = add_new_error(
@@ -170,7 +164,7 @@ def read_single_datafile(
     aux: bool = False,
     driving_path: Optional[str] = None,
     lookup_id: Optional[str] = None,
-) -> (Dict[str, pd.DataFrame], Dict[str, Dict[int, Any]], Optional[dict]):
+) -> (Dict[str, DataFrame], Dict[str, Dict[int, Any]], Optional[dict]):
     """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel.
     Auxiliary files have different parameters (e.g., no count locations)"""
     err = None
@@ -223,7 +217,7 @@ def read_single_datafile(
             # TODO what if json-nested is a lookup?
             with open(f_path, "r") as f:
                 data = loads(f.read())
-            df = pd.json_normalize(data, **kwargs)
+            df = json_normalize(data, **kwargs)
             if not fatal_error(err):
                 df.rename(columns=rename, inplace=True)
                 df_dict = {"Sheet1": df}
@@ -245,7 +239,7 @@ def read_single_datafile(
                 df_dict = dict()
         elif p["file_type"] == "flat_text":
             try:
-                df = pd.read_csv(f_path, **kwargs)
+                df = read_csv(f_path, **kwargs)
             except ValueError as ve:
                 print(
                     f"ValueError (while reading flat text file), possibly from uneven record lengths: {ve}\n "
@@ -256,7 +250,7 @@ def read_single_datafile(
                 kwargs_pad = kwargs
                 kwargs_pad["index_col"] = None
                 kwargs_pad["header"] = None
-                df = pd.read_csv(f_path, **kwargs_pad).fillna("")
+                df = read_csv(f_path, **kwargs_pad).fillna("")
                 # set headers per munger
                 header_int_or_list = tabular_kwargs(p, dict())["header"]
                 if isinstance(
@@ -284,7 +278,7 @@ def read_single_datafile(
                 row_constant_kwargs = get_row_constant_kwargs(
                     kwargs, p["rows_with_constants"]
                 )
-                row_df = pd.read_csv(f_path, **row_constant_kwargs)
+                row_df = read_csv(f_path, **row_constant_kwargs)
                 row_constants["Sheet1"], new_err = build_row_constants_from_df(
                     row_df, p["rows_with_constants"], file_name, "Sheet1"
                 )
@@ -299,7 +293,7 @@ def read_single_datafile(
         else:
             # strip whitespace from column names # TODO handle same for multi-index columns
             for k in df_dict.keys():
-                if not isinstance(df_dict[k].columns, pd.MultiIndex):
+                if not isinstance(df_dict[k].columns, MultiIndex):
                     df_dict[k].columns = [
                         (c.strip() if isinstance(c, str) else c)
                         for c in df_dict[k].columns
@@ -349,7 +343,7 @@ def excel_to_dict(
     kwargs: Dict[str, Any],
     sheet_list: Optional[List[str]],
     rows_to_read: List[int],
-) -> (Dict[str, pd.DataFrame], Dict[str, Dict[str, Any]], Optional[dict]):
+) -> (Dict[str, DataFrame], Dict[str, Dict[str, Any]], Optional[dict]):
     """Returns dictionary of dataframes (one for each sheet), dictionary of dictionaries of constant values
     (one dictionary for each sheet) and error."""
     kwargs["index_col"] = None
@@ -375,7 +369,7 @@ def excel_to_dict(
         )
     for sheet in sheet_list:
         try:
-            df_dict[sheet] = pd.read_excel(f_path, **kwargs, sheet_name=sheet)
+            df_dict[sheet] = read_excel(f_path, **kwargs, sheet_name=sheet)
             # ignore any empty sheet
             if df_dict[sheet].empty:
                 df_dict.pop(sheet)
@@ -383,7 +377,7 @@ def excel_to_dict(
                     err, "file", file_name, f"No data read from sheet {sheet}"
                 )
         except Exception as exc:
-            df_dict[sheet] = pd.DataFrame()
+            df_dict[sheet] = DataFrame()
             err = add_new_error(
                 err,
                 "warn-file",
@@ -393,7 +387,7 @@ def excel_to_dict(
 
         try:
             if rows_to_read:
-                row_constant_df = pd.read_excel(
+                row_constant_df = read_excel(
                     f_path, **row_constant_kwargs, sheet_name=sheet
                 )
                 row_constants[sheet], new_err = build_row_constants_from_df(
@@ -415,7 +409,7 @@ def excel_to_dict(
 
 
 def build_row_constants_from_df(
-    df: pd.DataFrame, rows_to_read: List[int], file_name: str, sheet: str
+    df: DataFrame, rows_to_read: List[int], file_name: str, sheet: str
 ) -> (Dict[int, Any], Optional[dict]):
     """Returns first entries in rows corresponding to row_list
     (as a dictionary with rows in row_list as keys)"""
@@ -460,7 +454,7 @@ def copy_directory_with_backup(
         if backup_suffix:
             # make backup of anything with existing name
             if isdir(copy_path):
-                shutil.move(copy_path, f"{copy_path}{backup_suffix}")
+                move(copy_path, f"{copy_path}{backup_suffix}")
                 print(f"Moved {copy_path} to {copy_path}{backup_suffix}")
             elif isfile(copy_path):
                 old_stem = Path(copy_path).stem
@@ -501,7 +495,7 @@ def copy_with_err_handling(
             old = join(root, f)
             new = join(new_root, f)
             try:
-                shutil.copy(old, new)
+                copy(old, new)
                 print(f"Copied {old} to {new}")
             except Exception as she:
                 if report_error:
@@ -951,7 +945,7 @@ def get_filtered_input_options(
                 "name": elections,
                 "type": [None for election in elections],
             }
-            df = pd.DataFrame(data=dropdown_options)
+            df = DataFrame(data=dropdown_options)
             df["year"] = df["name"].str[:4]
             df["election_type"] = df["name"].str[5:]
             df.sort_values(
@@ -973,7 +967,7 @@ def get_filtered_input_options(
             "name": contest_types,
             "type": [None for contest_type in contest_types],
         }
-        df = pd.DataFrame(data=dropdown_options)
+        df = DataFrame(data=dropdown_options)
     elif menu_type == "contest":
         contest_type = list(set(constants.contest_types_model) & set(filters))[0]
 
@@ -986,7 +980,7 @@ def get_filtered_input_options(
         connection.close()
 
         # define input option for all contests of the given type
-        contest_type_df = pd.DataFrame(
+        contest_type_df = DataFrame(
             [
                 {
                     "parent": reporting_unit,
@@ -1000,7 +994,7 @@ def get_filtered_input_options(
         contest_df = contest_df[contest_df["type"].isin(filters)].sort_values(
             by=["parent", "type", "name"]
         )
-        df = pd.concat([contest_type_df, contest_df])
+        df = concat([contest_type_df, contest_df])
     elif menu_type == "category":
         election_id = db.list_to_id(session, "Election", filters)
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
@@ -1043,7 +1037,7 @@ def get_filtered_input_options(
             + [None for count_type in count_types]
             + [None for c in population],
         }
-        df = pd.DataFrame(data=dropdown_options)
+        df = DataFrame(data=dropdown_options)
     # check if it's looking for a count of contests
     elif menu_type == "count" and bool([f for f in filters if f.startswith("Contest")]):
         election_id = db.list_to_id(session, "Election", filters)
@@ -1122,7 +1116,7 @@ def get_filtered_input_options(
     return package_display_results(df)
 
 
-def package_display_results(data: pd.DataFrame) -> List[Dict[str, Any]]:
+def package_display_results(data: DataFrame) -> List[Dict[str, Any]]:
     """takes a result set and packages into JSON to return.
     Result set should already be ordered as desired for display
     with display order controlled by "order_by" key"""
@@ -1208,10 +1202,10 @@ def clean_candidate_names(df):
 
 
 def disambiguate_empty_cols(
-    df_in: pd.DataFrame,
+    df_in: DataFrame,
     drop_empties: bool,
     start: int = 0,
-) -> pd.DataFrame:
+) -> DataFrame:
     """Returns new df with empties dropped, or kept with non-blank placeholder info"""
     original_number_of_columns = df_in.shape[1]
     # set row index to default
@@ -1234,14 +1228,14 @@ def disambiguate_empty_cols(
 
 
 def set_and_fill_headers(
-    df_in: pd.DataFrame,
+    df_in: DataFrame,
     header_list: Optional[list],
     merged_cells: bool,
     drop_empties: bool = True,
-) -> pd.DataFrame:
+) -> DataFrame:
     # standardize the index  to 0, 1, 2, ...
     df = df_in.reset_index(drop=True)
-    # rename all blank header entries to match convention of pd.read_excel
+    # rename all blank header entries to match convention of read_excel
     #
     #
     if header_list:
