@@ -13,4 +13,7 @@ requests==2.25.1
 openpyxl==3.0.6
 dicttoxml==1.7.4
 lxml==4.6.3
-slugify=5.0.3
+python-slugify~=5.0.2
+electiondata~=2.0
+configparser~=5.0.2
+setuptools~=59.0.1
