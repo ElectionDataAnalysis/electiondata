@@ -9,7 +9,7 @@ from inspect import currentframe
 import json
 from numpy import where
 from os import walk, listdir
-import os.path 
+import os.path
 import pandas as pd
 from pathlib import Path
 import shutil
