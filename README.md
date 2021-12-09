@@ -19,7 +19,7 @@ This repository provides tools for consolidation and analysis of raw election re
 This system is intended to be of use to news media, campaigns, election officials, students of politics and elections, and anyone else who is interested in assembling and understanding election results.
 
 # How to Contribute Code
-Please contribute code that works in python 3.9, with the package versions specified in [requirements.txt](requirements.txt). We follow the [black](https://pypi.org/project/black/) format.
+See [CONTRIBUTING.MD](CONTRIBUTING.md).
 
 # How to Help in Other Ways
 If you have skills to contribute to building the system, we can definitely use your help:
@@ -33,7 +33,7 @@ If you have skills to contribute to building the system, we can definitely use y
  
 If you are a potential end user -- an election official, political scientist or campaign consultant, for instance -- let us know what you want to from this system.
  
-If you are interested in contributing, or just staying updated on the progress of this project, please [contact Stephanie Singer](http://symmetrysinger.com/index.php?id=contact). 
+If you are interested in contributing, or just staying updated on the progress of this project, please [contact us](CONTACT_US.md).
 
 # How to use the app
 See [documentation directory](docs), which includes
@@ -41,10 +41,7 @@ See [documentation directory](docs), which includes
    * [Installation instructions](docs/Installation.md)
    * Instructions for a [sample dataloading session](docs/Sample_Session.md)
    * Detailed [User Guide](docs/User_Guide.md)
- * for developers
-   * [Information about the code](docs/About_the_Code.md)
-   * [Information about the tests](docs/Testing_Code_with_pytest.md)
-   
+ 
 # Contributors
  * [Stephanie Singer](http://campaignscientific.com/), Hatfield School of Government (Portland State University), former Chair, Philadelphia County Board of Elections
  * Janaki Raghuram Srungavarapu, Hatfield School of Government (Portland State University)
