@@ -9,7 +9,7 @@ from inspect import currentframe
 import json
 from numpy import where
 from os import walk, listdir
-from os.path import join, isdir, isfile
+import os.path 
 import pandas as pd
 from pathlib import Path
 import shutil
@@ -449,15 +449,15 @@ def copy_directory_with_backup(
     <backup_suffix>"""
     err = None
     # if the original to be copied is actually a directory
-    if isdir(original_path):
+    if os.path.isdir(original_path):
         if backup_suffix:
             # make backup of anything with existing name
-            if isdir(copy_path):
+            if os.path.isdir(copy_path):
                 shutil.move(copy_path, f"{copy_path}{backup_suffix}")
                 print(f"Moved {copy_path} to {copy_path}{backup_suffix}")
-            elif isfile(copy_path):
+            elif os.path.isfile(copy_path):
                 old_stem = Path(copy_path).stem
-                backup_path = join(
+                backup_path = os.path.join(
                     Path(copy_path).parent,
                     f"{old_stem}{backup_suffix}.{Path(copy_path).suffix}",
                 )
@@ -491,8 +491,8 @@ def copy_with_err_handling(
     for root, dirs, files in walk(original_path, topdown=True):
         new_root = root.replace(original_path, copy_path)
         for f in files:
-            old = join(root, f)
-            new = join(new_root, f)
+            old = os.path.join(root, f)
+            new = os.path.join(new_root, f)
             try:
                 shutil.copy(old, new)
                 print(f"Copied {old} to {new}")
@@ -505,7 +505,7 @@ def copy_with_err_handling(
                         f"Error while copying {old} to {new}:\n{she}",
                     )
         for d in dirs:
-            Path(join(new_root, d)).mkdir(parents=True, exist_ok=True)
+            Path(os.path.join(new_root, d)).mkdir(parents=True, exist_ok=True)
     return err
 
 
@@ -638,12 +638,12 @@ def report(
 
     if err_warn and [k for k in err_warn.keys() if err_warn[k]]:
         # create reporting directory if it does not exist
-        if isfile(output_location):
+        if os.path.isfile(output_location):
             print(
                 "Target directory for errors and warnings exists as a file. Nothing will be reported."
             )
             return None
-        elif not isdir(output_location):
+        elif not os.path.isdir(output_location):
             Path(output_location).mkdir(parents=True, exist_ok=True)
 
         if not key_list:
@@ -694,7 +694,7 @@ def report(
                     out_str = f"\n{et.title()} errors ({nk_name}):\n{msg[(et, nk)]}\n\n{warn_str}"
 
                     # write info to a .errors or .errors file named for the name_key <nk>
-                    out_path = join(
+                    out_path = os.path.join(
                         output_location,
                         slugify(
                             f"{file_prefix}_{et}_{nk_name}.errors",
@@ -721,7 +721,7 @@ def report(
                     # write output
                     # write info to a .warnings file named for the error-type and name_key
 
-                    out_path = join(
+                    out_path = os.path.join(
                         output_location,
                         slugify(
                             f"{file_prefix}_{et}_{nk_name}.warnings",
@@ -829,7 +829,7 @@ def confirm_essential_info(
 
     # loop through files
     for f in [f for f in listdir(directory) if f[-4:] == ".ini"]:
-        p_path = join(directory, f)
+        p_path = os.path.join(directory, f)
         file_confirmed = False
         while not file_confirmed:
             param_dict, err = get_parameters(
@@ -880,7 +880,7 @@ def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> li
     for subdir, dirs, files in walk(ini_path):
         for f in files:
             if (f.endswith(".ini")) and (not f.endswith("template.ini")):
-                full_path = join(subdir, f)
+                full_path = os.path.join(subdir, f)
                 d, err = get_parameters(
                     param_file=full_path,
                     header="election_results",
@@ -891,7 +891,7 @@ def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> li
                     # if we're not checking against results directory, or if we are and the ini file
                     #  points to a file in or below the results directory
                     if (not results_path) or (
-                        isfile(join(results_path, d["results_file"]))
+                        os.path.isfile(os.path.join(results_path, d["results_file"]))
                     ):
                         # include the pair in the output
                         ej_set.update({(d["election"], d["jurisdiction"])})
