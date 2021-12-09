@@ -702,8 +702,8 @@ def report(
                             lowercase=False,
                         ),
                     )
-                    with open(out_path, "a") as f:
-                        f.write(out_str, encoding=constants.default_encoding)
+                    with open(out_path, "a", encoding=constants.default_encoding) as f:
+                        f.write(out_str)
                     print(f"{et.title()} errors{and_warns} written to {out_path}")
 
             # process name keys with only warnings (unless warnings suppressed)
@@ -729,8 +729,8 @@ def report(
                             lowercase=False,
                         ),
                     )
-                    with open(out_path, "a") as f:
-                        f.write(out_str, encoding=constants.default_encoding)
+                    with open(out_path, "a", encoding=constants.default_encoding) as f:
+                        f.write(out_str)
                     print(f"{et.title()} warnings written to {out_path}")
 
         # define return dictionary with reported keys set to {} and other keys preserved
