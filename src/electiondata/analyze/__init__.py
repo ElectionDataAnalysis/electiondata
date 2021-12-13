@@ -465,6 +465,7 @@ def create_bar(
             group of contests, e.g., "All congressional"
         for_export: bool = True,
 
+
     Returns:
         List[dict], list of dictionaries, where each dictionary contains information to create a bar
             chart. The bar charts in the list are chosen via an algorithm favoring charts with a single outlier

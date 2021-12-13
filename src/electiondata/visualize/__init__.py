@@ -1,6 +1,7 @@
 import plotly.graph_objects as go
 import os
 import pathlib
+from slugify import slugify
 
 
 def plot(plot_type, data, fig_type, target_dir):
@@ -42,9 +43,11 @@ def plot(plot_type, data, fig_type, target_dir):
             font=dict(family="Courier New, monospace", size=14),
         )
     image_dir = os.path.join(target_dir, "images")
-    x_clean = data["x"].replace(" ", "-").replace("/", "")
-    y_clean = data["y"].replace(" ", "-").replace("/", "")
-    file_name = f"{x_clean}_{y_clean}.{fig_type}"
+    file_stem = slugify(f"{data['x']}_{data['y']}_{data['count_item_type']}_{data['contest']}",
+                      regex_pattern=r"[^A-z0-9-_]+",
+                            lowercase=False,
+                      )
+    file_name = f"{file_stem}.{fig_type}"
     file_path = os.path.join(image_dir, file_name)
 
     if not os.path.isdir(image_dir):

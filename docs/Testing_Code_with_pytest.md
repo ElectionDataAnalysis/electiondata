@@ -20,7 +20,7 @@ The dataloading tests rely on having some raw results data to load. And the resu
 +-- reports_and_plots
 +-- run_time.ini
 ```
-The file `run_time.ini` can be the same as in the [Sample Dataloading Session](Sample_Dataloading_Session.md). 
+The file `run_time.ini` can be the same as in the [Sample Dataloading Session](Sample_Session.md). 
 
 ## Note on dataloading tests
 The tests in [test_dataloading_by_ej.py](../tests/dataloading_tests/test_dataloading_by_ej.py) will attempt to load all raw results files in `input_results` that are specified by some file in the [`ini_file_for_results` directory](../src/ini_files_for_results). You can check which jurisdictions had files loaded:

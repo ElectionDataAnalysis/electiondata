@@ -146,7 +146,17 @@ Use any category name in place of "Party absentee-mail" to see counts available 
 
 Categories starting with "Contest" give number of votes tallied in that contest in each county, lumping all candidates together. Categories starting with "Party" give number of votes tallied for members of that party in a particular contest type (e.g., "Libertarian congressional"). 
 
-### Analysis
+### Curated One-County Outliers
+
+The system attempts to find interesting one-county outliers within the election results. For example:
+```
+>>> outliers = an.bar("2020 General","Georgia",contest_type="congressional",fig_type="png")
+```
+This will export up to three bar charts (to `reports_and_plots_directory`) showing a pair of candidates for which the vote shares in one county, for some type of ballot, differs significantly from the vote shares in other counties in the same district. The output of the command above includes: a chart showing how Clarke County differs from other Georgia counties in the 9th US House District. 
+[Chart showing Pandy outperforming Clyde in Clarke County GA on early ballots, while results in all other counties favor Clyde](images/Andrew-Clyde-R-_Devin-Pandy-D-_early_US-House-GA-District-9.png)
+The output variable `outliers` contains even more information, including the contest margin and an estimate of the votes at stake if the outlier were brought in line with the other counties.
+
+### Difference-in-Difference Analysis
 The program offers difference-in-difference analysis where results are available by vote type, following [Herron's analysis of congressional contests](https://www.liebertpub.com/doi/full/10.1089/elj.2019.0544). The following code will create a tab-separated file `GA_diffs.tsv` in the working directory:
 ```
 >>> (did_frame, missing) = an.diff_in_diff_dem_vs_rep("2020 General")
