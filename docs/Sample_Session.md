@@ -62,7 +62,7 @@ After this command executes successfully, you will see a database in your postgr
  * a subdirectory `compare_to_Georgia_xxxx_xxxx` with the results of the comparison to the [reference results](../src/reference_results/Georgia.tsv)
  * a subdirectory `load_or_reload_all_xxxx_xxxx` with warnings from the data uploading. You may wish to look at the file `Georgia_jurisdiction_dictionary.txt.warnings`, which lists the contests present in the xml results file that were not recognized during processing. If these contests and their candidates had been added to the Georgia-specific information in the repository (see "Creating Jurisdiction files" below, or in the [User Guide](User_Guide.md)), these warnings would not appear.
 
-## Exporting and analyzing data
+## Export and analyze data
 To pull data out, you will need to use the Analyzer class:
 ```
 >>> an = ed.Analyzer()
@@ -99,7 +99,9 @@ The program (v.2.0.1 and higher) can also produce a string of data in the NIST C
 ```
 
 ### Plots
-To draw pictures automatically, you will need [`orca` installed on your system](https://github.com/plotly/orca). If `orca` is not installed, you can still pull the information necessary to make plots. Plots will be exported to the `reports_and_plots_directory` and may also appear in a browser window.
+To draw pictures automatically, you will need [`orca` installed on your system](https://github.com/plotly/orca). Plots will be exported to the `reports_and_plots_directory` and may also appear in a browser window.
+
+If `orca` is not installed, the system will not automatically create pictures. Note that in any case the routines return text information sufficient to create plots in any system you may wish to use. 
 
 #### Scatter Plots
 You can create scatter plots of results by county. For example, create a jpeg comparing Biden's vote totals to Trump's vote totals with:
