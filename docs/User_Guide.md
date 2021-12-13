@@ -529,13 +529,6 @@ If not all rows are data, and some string fields to be munged have blank headers
 
 If there are hidden columns in an Excel file, you may need to omit the hidden columns from various counts.
 
-### NIST Common Data Format imports
-To import results from a file that is valid NIST V2 xml -- that can be formally validated against the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd) -- use the file_type 'nist_v2_xml'
-
-Some xml files (e.g., Ohio 2020 General) use the older Version 1 common data format. For these files use the
-
-Our convention is that if the munger name contains "nist" and the file_type is xml, then the system will look for a namespace declaration.
-
 ### Difference-in-Difference calculations
 The system provides a way to calculate difference-in-difference statistics. For any particular election, `Analyzer.diff_in_diff_dem_vs_rep` produces a dataframe of values for any county with results by vote type, with Democratic or Republican candidates, and any comparable pair of contests both on some ballots in the county. Contests are considered "comparable" if their districts are of the same geographical district type -- e.g., both statewide, or both state-house, etc. The method also returns a list of jurisdictions for which vote counts were zero or missing.
 ```
