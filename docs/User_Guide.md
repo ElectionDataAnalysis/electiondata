@@ -143,7 +143,7 @@ ALAMANCE	11/06/2018	064	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, 
 ALAMANCE	11/06/2018	03N	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, Sr.	LIB	1	59	38	1	0	98	Y
 ALAMANCE	11/06/2018	03S	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, Sr.	LIB	1	106	108	0	3	217	Y
 ```
-Here the CountItemType value ('Election Day','One Stop' a.k.a. early voting, 'Absentee by Mail','Provisional' must be read from the column headers, i.e., the information in row 0 of the file. For the first data row, the formula `CountItemType=<count_header_0>` would yield CountItemType 'Election Day' for the VoteCount of 59, 'One Stop' for the vote count of 65, etc.
+Here the CountItemType value ('Election Day','One Stop' a.k.a. early voting, 'Absentee by Mail','Provisional') must be read from the column headers, i.e., the information in row 0 of the file. For the first data row, the formula `CountItemType=<count_header_0>` would yield CountItemType 'Election Day' for the VoteCount of 59, 'One Stop' for the vote count of 65, etc.
 
 #### excel and multi_block=yes
 To be read automatically, information that is constant over a sheet (or block) must be read either from the sheet name (using `<sheet_name>`) or from the left-most, non-blank entry in a row of the sheet using `<row_j>`, where `j` is the row number. Row numbers start with `0` after skipping the number of rows given in `rows_to_skip`.
@@ -161,7 +161,7 @@ For an interactive sandbox for learning python regex, try `regex101.com`.
 
 ### \[\<foreign key\> lookup\]
 
-If any of the munge formulas depend on information from other files, munger must specify lookup information. For each foreign key, there must be a separate section with corresponding header (foreign key, plus " lookup", e.g. `[CANDIDATE NAME lookup]` if the results file has a `CANDIDATE NAME` field. This section needs:
+If any of the munge formulas depend on information from other files, munger must specify lookup information. For each foreign key, there must be a separate section with corresponding header (foreign key, plus " lookup", e.g. `[CANDIDATE NAME lookup]`) if the results file has a `CANDIDATE NAME` field. This section needs:
   * `lookup_id` is the single field name holding the key to the lookup table. (If there are no headers in the lookup source file, use, e.g., `column_0`)
   * `source_file` the path to the source file, relative to the results directory given in `run_time.ini`
   * all the usual format parameters except `count_location`

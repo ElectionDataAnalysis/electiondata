@@ -1,6 +1,6 @@
 # Sample Dataloading Session
 
-This document walks the reader through a simple example, from setting up project directories, through loading data and performing analyses. We assume that the package has been installed in an environment with all the necessary components (as described in [Installation.md](Installation.md). As an example, we will load the xml results file from Georgia in the repository at [tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml).
+This document walks the reader through a simple example, from setting up project directories, through loading data and performing analyses. We assume that the package has been installed in an environment with all the necessary components (as described in [Installation.md](Installation.md)). As an example, we will load the xml results file from Georgia in the repository at [tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml).
 
 ## Directory and File Structure
 The package offers a fair amount of flexibility in the directory structures used. For this sample session, we assume the user will call the program from a working directory with the following structure and files:
@@ -34,7 +34,7 @@ password=
 You may wish to check that these postgresql credentials will work on your system via the command `psql -h localhost -p 5432 -U postgres postgres`. If this command fails, or if it prompts you for a password, you will need to find the correct connection parameters specific to your postgresql instance.  (Note that the `dbname` parameter is arbitrary, and determines only the name of the postgresql database created by the package.)
 
 ### Contents of `GA_detail_20201120_1237.xml`
-Copy the file of the same name in the repository: 000_template.mungerGA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml)
+Copy the file of the same name in the repository: [000_template.mungerGA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml)
 
 ## Load Data
 ```
@@ -170,7 +170,7 @@ The program offers difference-in-difference analysis where results are available
 (Note: the variable `missing` is a list of diff-in-diff comparisons that failed.)
 
 ## Optional steps
-The sample session above uses the information already in the repository about Georgia and the particular results file. If you wish to create these files yourself from scratch, follow thses optional steps.
+The sample session above uses the information already in the repository about Georgia and the particular results file. If you wish to create these files yourself from scratch, follow these optional steps.
 
 ### Specify contests totals for data quality check
 The data loading process includes checking contest totals against reference totals in [src/reference_results/Georgia.tsv](../src/reference_results/Georgia.tsv). You may wish to add some reference totals to this file.
