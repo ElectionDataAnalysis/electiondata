@@ -62,13 +62,13 @@ After this command executes successfully, you will see a database in your postgr
  * a subdirectory `compare_to_Georgia_xxxx_xxxx` with the results of the comparison to the [reference results](../src/reference_results/Georgia.tsv)
  * a subdirectory `load_or_reload_all_xxxx_xxxx` with warnings from the data uploading. You may wish to look at the file `Georgia_jurisdiction_dictionary.txt.warnings`, which lists the contests present in the xml results file that were not recognized during processing. If these contests and their candidates had been added to the Georgia-specific information in the repository (see "Creating Jurisdiction files" below, or in the [User Guide](User_Guide.md)), these warnings would not appear.
 
-## Reading data from the database
+## Exporting and analyzing data
 To pull data out, you will need to use the Analyzer class:
 ```
 >>> an = ed.Analyzer()
 ```
 
-## Export results
+### Export
 You can export results in tabular form:
 ```
 >>> an.export_election_to_tsv("GA_results.tsv", "2020 General")
@@ -98,10 +98,9 @@ The program (v.2.0.1 and higher) can also produce a string of data in the NIST C
 >>> an.export_nist_json_as_string("2020 General", "Georgia")
 ```
 
-## Analysis and Plots
+### Scatter Plots
 To draw pictures automatically, you will need [`orca` installed on your system](https://github.com/plotly/orca). If `orca` is not installed, you can still pull the information necessary to make plots 
 
-### Scatter plots
 You can create scatter plots of results by county. For example, create a jpeg comparing Biden's vote totals to Trump's vote totals with:
 ```
 >>> biden_v_trump = an.scatter("Georgia","2020 General","Candidate total","Joseph R. Biden","2020 General","Candidate total","Donald J. Trump",fig_type="jpeg")
