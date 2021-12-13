@@ -163,7 +163,10 @@ This will export up to three bar charts (to `reports_and_plots_directory`) showi
 
 The output variable `outliers` contains even more information, including the contest margin and an estimate of the votes at stake if the outlier were brought in line with the other counties.
 
-### Difference-in-Difference Analysis
+Options for `contest_type` for this data set are: `congressional`, `state` (for statewide contests), `state-house` and `state-senate`. 
+
+
+#### Difference-in-Difference Analysis
 The program offers difference-in-difference analysis where results are available by vote type, following [Herron's analysis of congressional contests](https://www.liebertpub.com/doi/full/10.1089/elj.2019.0544). The following code will create a tab-separated file `GA_diffs.tsv` in the working directory:
 ```
 >>> (did_frame, missing) = an.diff_in_diff_dem_vs_rep("2020 General")
