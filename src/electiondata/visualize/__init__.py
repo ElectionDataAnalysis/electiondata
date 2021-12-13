@@ -22,6 +22,10 @@ def plot(plot_type, data, fig_type, target_dir):
             yaxis_title=data["y"],
             font=dict(family="Courier New, monospace", size=18),
         )
+        file_stem = slugify(f"scatter_{data['x-title']}_{data['y-title']}",
+                            regex_pattern=r"[^A-z0-9-_]+",
+                            lowercase=False,
+                            )
     elif plot_type == "bar":
         total = [x + y for x, y in zip(x, y)]
         x_pct = [x / ttl for x, ttl in zip(x, total)]
@@ -42,11 +46,11 @@ def plot(plot_type, data, fig_type, target_dir):
             barmode="group",
             font=dict(family="Courier New, monospace", size=14),
         )
-    image_dir = os.path.join(target_dir, "images")
-    file_stem = slugify(f"{data['x']}_{data['y']}_{data['count_item_type']}_{data['contest']}",
-                      regex_pattern=r"[^A-z0-9-_]+",
+        file_stem = slugify(f"bar_{data['x']}_{data['y']}_{data['count_item_type']}_{data['contest']}",
+                            regex_pattern=r"[^A-z0-9-_]+",
                             lowercase=False,
-                      )
+                            )
+    image_dir = os.path.join(target_dir, "images")
     file_name = f"{file_stem}.{fig_type}"
     file_path = os.path.join(image_dir, file_name)
 

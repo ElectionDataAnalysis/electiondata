@@ -98,13 +98,16 @@ The program (v.2.0.1 and higher) can also produce a string of data in the NIST C
 >>> an.export_nist_json_as_string("2020 General", "Georgia")
 ```
 
-### Scatter Plots
-To draw pictures automatically, you will need [`orca` installed on your system](https://github.com/plotly/orca). If `orca` is not installed, you can still pull the information necessary to make plots 
+### Plots
+To draw pictures automatically, you will need [`orca` installed on your system](https://github.com/plotly/orca). If `orca` is not installed, you can still pull the information necessary to make plots. Plots will be exported to the `reports_and_plots_directory` and may also appear in a browser window.
 
+#### Scatter Plots
 You can create scatter plots of results by county. For example, create a jpeg comparing Biden's vote totals to Trump's vote totals with:
 ```
 >>> biden_v_trump = an.scatter("Georgia","2020 General","Candidate total","Joseph R. Biden","2020 General","Candidate total","Donald J. Trump",fig_type="jpeg")
 ```
+![Biden vs. Trump scatter plot of total votes by county for Georgia, 2020 General Election](images/scatter_Joseph-R-Biden-2020-General-US-President-GA-_Donald-J-Trump-2020-General-US-President-GA.jpeg)
+
 Or compare Biden's votes on election day with votes on absentee mail ballots:
 ```
 >>> biden_eday_v_abs = an.scatter("Georgia","2020 General","Candidate election-day","Joseph R. Biden","2020 General","Candidate absentee-mail","Joseph R. Biden",fig_type="jpeg")
@@ -146,14 +149,16 @@ Use any category name in place of "Party absentee-mail" to see counts available 
 
 Categories starting with "Contest" give number of votes tallied in that contest in each county, lumping all candidates together. Categories starting with "Party" give number of votes tallied for members of that party in a particular contest type (e.g., "Libertarian congressional"). 
 
-### Curated One-County Outliers
+#### Curated One-County Outlier Bar Charts
 
 The system attempts to find interesting one-county outliers within the election results. For example:
 ```
 >>> outliers = an.bar("2020 General","Georgia",contest_type="congressional",fig_type="png")
 ```
 This will export up to three bar charts (to `reports_and_plots_directory`) showing a pair of candidates for which the vote shares in one county, for some type of ballot, differs significantly from the vote shares in other counties in the same district. The output of the command above includes: a chart showing how Clarke County differs from other Georgia counties in the 9th US House District. 
-[Chart showing Pandy outperforming Clyde in Clarke County GA on early ballots, while results in all other counties favor Clyde](images/Andrew-Clyde-R-_Devin-Pandy-D-_early_US-House-GA-District-9.png)
+
+![Chart showing Pandy outperforming Clyde in Clarke County GA on early ballots, while results in all other counties favor Clyde](images/Andrew-Clyde-R-_Devin-Pandy-D-_early_US-House-GA-District-9.png)
+
 The output variable `outliers` contains even more information, including the contest margin and an estimate of the votes at stake if the outlier were brought in line with the other counties.
 
 ### Difference-in-Difference Analysis
