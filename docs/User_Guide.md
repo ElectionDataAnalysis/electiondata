@@ -5,12 +5,12 @@ You will need:
  * `postgresql`. You do *not* need to create a database; you just need to make sure a `postgresql` is installed, and you need to have the hostname, port and login credentials with default permissions. 
  * all required python packages: run `python3.9 -m pip install -r requirements.txt` from the root folder of the repository.
    
-For more detail, see the [Installation Instructions](./install.md).
+For more detail, see the [Installation Instructions](./Installation.md).
 
 To use other varieties of SQL, you would need to modify the routines in the `database` module.
 
 ## Installation
-The one-line version: From the root folder of your repository run `python3 setup.py install`. For more detail, see the [Installation Instructions](./install.md).
+The one-line version: From the root folder of your repository run `python3 setup.py install`. For more detail, see the [Installation Instructions](./Installation.md).
 
 ### Main parameter file
 You will need a main parameter file to specify paths and database connection information specific to your local computing environment. This file is necessary for the three main classes:
@@ -20,7 +20,7 @@ You will need a main parameter file to specify paths and database connection inf
 See the [template file](../src/parameter_file_templates/run_time.ini.template) for required parameters. Avoid percent signs and line breaks in the parameter values.
    
 ### Other recommended files
-To avoid the overhead of deriving the major subdivision type for each jurisdiction from the database, make sure that your repository has a [000_major_subjurisdiction_types.txt](../src/jurisdictions/000_for_all_jurisdictions/000_major_subjurisdiction_types.txt) in the [jurisdictions directory](../src/jurisdictions/). This file allows the user to specify other major subdivisions. For example, it may make sense to consider towns as the major subdivisions in Connecticut rather than counties. Or a user may wish to use congressional districts as the major subdivision -- though such a user should not assume that the nesting relationships (say, of precincts within congressional districts) have been coded in the [`ReportingUnit.txt` file](../src/jurisdictions/Connecticut/ReportingUnit.txt) or the database.
+To avoid the overhead of deriving the major subdivision type for each jurisdiction from the database, make sure that your repository has a [000_major_subjurisdiction_types.txt](../src/jurisdictions/000_for_all_jurisdictions/major_subjurisdiction_types.txt) in the [jurisdictions directory](../src/jurisdictions/). This file allows the user to specify other major subdivisions. For example, it may make sense to consider towns as the major subdivisions in Connecticut rather than counties. Or a user may wish to use congressional districts as the major subdivision -- though such a user should not assume that the nesting relationships (say, of precincts within congressional districts) have been coded in the [`ReportingUnit.txt` file](../src/jurisdictions/Connecticut/ReportingUnit.txt) or the database.
 
 ## Determining a Munger
 Election result data comes in a variety of file formats. Even when the basic format is the same, file columns may have different interpretations. The code is built to ease -- as much as possible -- the chore of processing and interpreting each format. Following the [Jargon File](http://catb.org/jargon/html/M/munge.html), which gives one meaning of "munge" as "modify data in some way the speaker doesn't need to go into right now or cannot describe succinctly," we call each set of basic information about interpreting an election result file a "munger". 
@@ -60,7 +60,7 @@ If the munger for the format of your results file doesn't already exist:
    * (optional) `thousands_separator`. In the US the separator is almost always ',' if it is used. Watch out for Excel files which may show a comma when you look at them in Excel -- there may not be a comma in the underlying data.
    * (optional) `encoding` (If not specified or recognized, a default encoding will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
 
-   Available for flat_text and excel file types:
+   Available for flat_text and Excel file types:
    * (optional - use only for multi-block) `rows_to_skip` An integer giving the number of rows to skip at the top before processing blocks.
    * (optional) `all_rows` If the file has no column headers but only data rows with counts, set this parameter to 'data'
    * (optional) `multi_block` if there are multiple blocks of data per page, each with its own headers, set this parameter to 'yes'. For multi-block sheets, munge parameters refer to the blocks (and must be the same for all blocks).
@@ -427,7 +427,7 @@ analyzer = ed.Analyzer()
 analyzer.export_nist_json_as_string("2020 General","Georgia")
 ```
 The output is a string, the contents of the json file.
-The subdivision type for the roll-up is determined by the [`000_major_subjurisdiction_type.txt file](../jurisdictions/000_major_subjurisdiction_types.txt).
+The subdivision type for the roll-up is determined by the [`000_major_subjurisdiction_type.txt file](../src/jurisdictions/000_for_all_jurisdictions/major_subjurisdiction_types.txt).
 
 
 ## Unload and reload data with `reload_juris_election()`
@@ -485,7 +485,7 @@ The jurisdiction files in this repository follow certain conventions. Many of th
         * `Constitution Party` (regardless of state or other jurisdiction)
         
 ### Beware of:
- - hyphens in formal names of jurisdictions or elections -- this may break the testing (since pytest options with spaces are problematic, all hypens are replaced by spaces in [test_results.py](../tests/dataloading_tests/test_results.py)))
+ - hyphens in formal names of jurisdictions or elections -- this may break the testing.
  - Different names for same contest in different counties (if munging from a batch of county-level files)
  - Different names for candidates, especially candidates with name suffixes or middle/maiden names
  - Different "party" names for candidates without a party affiliation 
