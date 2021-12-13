@@ -399,7 +399,7 @@ If not all rows are data, and some string fields to be munged have blank headers
 
 If there are hidden columns in an Excel file, you may need to omit the hidden columns from various counts.
 
-# Load Data
+# Loading Data
 Each results file to be loaded must be designated in a `*.ini` file inside its jurisdiction's corresponding subfolder of `ini_files_for_results` in the repository. The `*.ini` files currrently in this repository correspond to [official raw data files for the US 2020 General Election](https://doi.org/10.7910/DVN/0GKBGT). These should load directly with the munger and jurisdiction files from the `electiondata` repository. (Note, however, that due to Excel corruption issues, Vermont and Wisconsin files may fail to load; Connecticut, Maryland and Pennsylvania will load but may fail some of the tests because of inconsistencies within their official agencies' materials.)
  
 The DataLoader class allows batch uploading of all data in the directory indicated by the `results_dir` parameter in the main parameter file. The subdirectories of this file should be named for the jurisdictions (with hyphens replacing spaces, as in 'US-Virgin-Islands'. The `DataLoader.load_all()` method will upload every result file that appears, as long as its path (relative to the `results_dir`) is the `results_file` parameter for some `*.ini` file in `ini_files_for_results`. 
