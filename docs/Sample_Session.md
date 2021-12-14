@@ -153,7 +153,9 @@ Categories starting with "Contest" give number of votes tallied in that contest 
 
 #### Curated One-County Outlier Bar Charts
 
-The system attempts to find interesting one-county outliers within the election results. For example:
+The system attempts to find interesting one-county outliers within the election results. The specific algorithm is described in [an article by Singer, Srungavarapu & Tsai in _MAA Focus_, Feb/March 2021, pp. 10-13](http://digitaleditions.walsworthprintgroup.com/publication/?m=7656&i=694516&p=10&ver=html5)
+
+For example:
 ```
 >>> outliers = an.bar("2020 General","Georgia",contest_type="congressional",fig_type="png")
 ```
