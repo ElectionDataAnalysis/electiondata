@@ -1,6 +1,6 @@
 # Sample Dataloading Session
 
-This document walks the reader through a simple example, from setting up project directories, through loading data and performing analyses. We assume that the package has been installed in an environment with all the necessary components (as described in [Installation.md](Installation.md). As an example, we will load the xml results file from Georgia in the repository at [tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml).
+This document walks the reader through a simple example, from setting up project directories, through loading data and performing analyses. We assume that the package has been installed in an environment with all the necessary components (as described in [Installation.md](Installation.md)). As an example, we will load the xml results file from Georgia in the repository at [tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml).
 
 ## Directory and File Structure
 The package offers a fair amount of flexibility in the directory structures used. For this sample session, we assume the user will call the program from a working directory with the following structure and files:
@@ -34,7 +34,7 @@ password=
 You may wish to check that these postgresql credentials will work on your system via the command `psql -h localhost -p 5432 -U postgres postgres`. If this command fails, or if it prompts you for a password, you will need to find the correct connection parameters specific to your postgresql instance.  (Note that the `dbname` parameter is arbitrary, and determines only the name of the postgresql database created by the package.)
 
 ### Contents of `GA_detail_20201120_1237.xml`
-Copy the file of the same name in the repository: 000_template.mungerGA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml)
+Copy the file of the same name in the repository: [000_template.mungerGA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml)
 
 ## Load Data
 ```
@@ -62,7 +62,7 @@ After this command executes successfully, you will see a database in your postgr
  * a subdirectory `compare_to_Georgia_xxxx_xxxx` with the results of the comparison to the [reference results](../src/reference_results/Georgia.tsv)
  * a subdirectory `load_or_reload_all_xxxx_xxxx` with warnings from the data uploading. You may wish to look at the file `Georgia_jurisdiction_dictionary.txt.warnings`, which lists the contests present in the xml results file that were not recognized during processing. If these contests and their candidates had been added to the Georgia-specific information in the repository (see "Creating Jurisdiction files" below, or in the [User Guide](User_Guide.md)), these warnings would not appear.
 
-## Exporting and analyzing data
+## Export and analyze data
 To pull data out, you will need to use the Analyzer class:
 ```
 >>> an = ed.Analyzer()
@@ -98,13 +98,18 @@ The program (v.2.0.1 and higher) can also produce a string of data in the NIST C
 >>> an.export_nist_json_as_string("2020 General", "Georgia")
 ```
 
-### Scatter Plots
-To draw pictures automatically, you will need [`orca` installed on your system](https://github.com/plotly/orca). If `orca` is not installed, you can still pull the information necessary to make plots 
+### Plots
+To draw pictures automatically, you will need [`orca` installed on your system](https://github.com/plotly/orca). Plots will be exported to the `reports_and_plots_directory` and may also appear in a browser window.
 
+If `orca` is not installed, the system will not automatically create pictures. Note that in any case the routines return text information sufficient to create plots in any system you may wish to use. 
+
+#### Scatter Plots
 You can create scatter plots of results by county. For example, create a jpeg comparing Biden's vote totals to Trump's vote totals with:
 ```
 >>> biden_v_trump = an.scatter("Georgia","2020 General","Candidate total","Joseph R. Biden","2020 General","Candidate total","Donald J. Trump",fig_type="jpeg")
 ```
+![Biden vs. Trump scatter plot of total votes by county for Georgia, 2020 General Election](images/scatter_Joseph-R-Biden-2020-General-US-President-GA-_Donald-J-Trump-2020-General-US-President-GA.jpeg)
+
 Or compare Biden's votes on election day with votes on absentee mail ballots:
 ```
 >>> biden_eday_v_abs = an.scatter("Georgia","2020 General","Candidate election-day","Joseph R. Biden","2020 General","Candidate absentee-mail","Joseph R. Biden",fig_type="jpeg")
@@ -146,7 +151,24 @@ Use any category name in place of "Party absentee-mail" to see counts available 
 
 Categories starting with "Contest" give number of votes tallied in that contest in each county, lumping all candidates together. Categories starting with "Party" give number of votes tallied for members of that party in a particular contest type (e.g., "Libertarian congressional"). 
 
-### Analysis
+#### Curated One-County Outlier Bar Charts
+
+The system attempts to find interesting one-county outliers within the election results. The specific algorithm is described in [an article by Singer, Srungavarapu & Tsai in _MAA Focus_, Feb/March 2021, pp. 10-13](http://digitaleditions.walsworthprintgroup.com/publication/?m=7656&i=694516&p=10&ver=html5)
+
+For example:
+```
+>>> outliers = an.bar("2020 General","Georgia",contest_type="congressional",fig_type="png")
+```
+This will export up to three bar charts (to `reports_and_plots_directory`) showing a pair of candidates for which the vote shares in one county, for some type of ballot, differs significantly from the vote shares in other counties in the same district. The output of the command above includes: a chart showing how Clarke County differs from other Georgia counties in the 9th US House District. 
+
+![Chart showing Pandy outperforming Clyde in Clarke County GA on early ballots, while results in all other counties favor Clyde](images/Andrew-Clyde-R-_Devin-Pandy-D-_early_US-House-GA-District-9.png)
+
+The output variable `outliers` contains even more information, including the contest margin and an estimate of the votes at stake if the outlier were brought in line with the other counties.
+
+Options for `contest_type` for this data set are: `congressional`, `state` (for statewide contests), `state-house` and `state-senate`. 
+
+
+#### Difference-in-Difference Analysis
 The program offers difference-in-difference analysis where results are available by vote type, following [Herron's analysis of congressional contests](https://www.liebertpub.com/doi/full/10.1089/elj.2019.0544). The following code will create a tab-separated file `GA_diffs.tsv` in the working directory:
 ```
 >>> (did_frame, missing) = an.diff_in_diff_dem_vs_rep("2020 General")
@@ -155,7 +177,7 @@ The program offers difference-in-difference analysis where results are available
 (Note: the variable `missing` is a list of diff-in-diff comparisons that failed.)
 
 ## Optional steps
-The sample session above uses the information already in the repository about Georgia and the particular results file. If you wish to create these files yourself from scratch, follow thses optional steps.
+The sample session above uses the information already in the repository about Georgia and the particular results file. If you wish to create these files yourself from scratch, follow these optional steps.
 
 ### Specify contests totals for data quality check
 The data loading process includes checking contest totals against reference totals in [src/reference_results/Georgia.tsv](../src/reference_results/Georgia.tsv). You may wish to add some reference totals to this file.

@@ -2920,17 +2920,15 @@ class Analyzer:
                 html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need
                 plotly-orca installed as well.
 
-        If <fig_type> is given and points for scatter are found, creates a scatter plot
-            in the self.reports_and_plots_dir directory with file extension and format determined by fig_type.
+        If <fig_type> is given and algorithm identifies one-county outliers that might be of interest,
+            bar charts are exported to the self.reports_and_plots_dir directory with
+            file extension and format determined by fig_type.
 
         Returns:
             List[dict],
         """
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        # for now, bar charts can only handle jurisdictions where major subdivision type is one level
-        # down from the jurisdiction
-        # TODO is this still true? ^^
         agg_results = an.create_bar(
             self.session,
             election_id,

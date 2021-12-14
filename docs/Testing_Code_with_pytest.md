@@ -20,7 +20,7 @@ The dataloading tests rely on having some raw results data to load. And the resu
 +-- reports_and_plots
 +-- run_time.ini
 ```
-The file `run_time.ini` can be the same as in the [Sample Dataloading Session](Sample_Dataloading_Session.md). 
+The file `run_time.ini` can be the same as in the [Sample Dataloading Session](Sample_Session.md). 
 
 ## Note on dataloading tests
 The tests in [test_dataloading_by_ej.py](../tests/dataloading_tests/test_dataloading_by_ej.py) will attempt to load all raw results files in `input_results` that are specified by some file in the [`ini_file_for_results` directory](../src/ini_files_for_results). You can check which jurisdictions had files loaded:
@@ -28,7 +28,7 @@ The tests in [test_dataloading_by_ej.py](../tests/dataloading_tests/test_dataloa
  * if the test fails, look in the output from the test.
 
 ## Running the tests
-You will need pytest to be installed on your system (see [pytest installation instructions](https://docs.pytest.org/en/6.2.x/getting-started.html) if necessary). Commands are run from the shell
- * dataloading routines: `pytest ~/PycharmProjects/electiondata/tests/dataloading_tests`
- * jurisdiction prep routines: `pytest ~/PycharmProjects/electiondata/tests/jurisdiction_prepper_tests/`
- * analysis routines: `pytest ~/PycharmProjects/electiondata/tests/analyzer_tests/  `
+You will need pytest to be installed on your system (see [pytest installation instructions](https://docs.pytest.org/en/6.2.x/getting-started.html) if necessary). Commands are run from the shell, referencing the local path to the repository
+ * dataloading routines: `pytest path/to/repo/tests/dataloading_tests`
+ * jurisdiction prep routines: `pytest path/to/repo/tests/jurisdiction_prepper_tests/`
+ * analysis routines: `pytest path/to/repo/tests/analyzer_tests/  `

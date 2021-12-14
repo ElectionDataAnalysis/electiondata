@@ -39,7 +39,7 @@ If you are interested in contributing, or just staying updated on the progress o
 See [documentation directory](docs), which includes
  * for users
    * [Installation instructions](docs/Installation.md)
-   * Instructions for a [sample dataloading session](docs/Sample_Dataloading_Session.md)
+   * Instructions for a [sample dataloading session](docs/Sample_Session.md)
    * Detailed [User Guide](docs/User_Guide.md)
  * for developers
    * [Information about the code](docs/About_the_Code.md)
