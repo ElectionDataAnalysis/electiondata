@@ -1,18 +1,12 @@
-# Contributing to electiondata development
-
-The goal of this guide is to help you get up and contributing to electiondata as 
-quickly as possible. The guide is divided into two main pieces:
-
-1. Filing a bug report or feature request in an issue.
-1. Suggesting a change via a pull request.
-
 Please note that electiondata is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). 
 By contributing to this project, 
 you agree to abide by its terms.
 
-## Issues
+# Contributing to electiondata development
 
-When filing an issue, the most important thing is to include a minimal 
+## Report a Problem
+
+To report a problem, [file an issue on GitHub](https://github.com/ElectionDataAnalysis/electiondata/issues). When filing an issue, the most important thing is to include a minimal 
 reproducible example so that we can quickly verify the problem, and then figure 
 out how to fix it. Please include
 
@@ -32,7 +26,7 @@ You can check you have actually made a reproducible example by:
 1. if files or folders were moved by the system to the archive directory, move them back to the input directory, removing any timestamps from directory names.
 1. navigating to the working directory, calling python, and producing the behavior in question.
 
-## Pull requests
+## Revise the Code
 
 To contribute a change to `electiondata` follow these steps:
 
