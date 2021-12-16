@@ -898,7 +898,16 @@ def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> li
     return list(ej_set)
 
 
-def get_contest_type_mappings(filters: list) -> Optional[list]:
+def get_contest_type_mappings(filters: List[str]) -> Optional[List[str]]:
+    """
+
+    :param filters: list of specifications, possibly including
+        election names, jurisdiction names, ReportingUnitTypes of district (e.g. "congressional")
+        or user-facing version as specified in `constants.contest_type_mappings` (e.g., "Congressional")
+    :return: same list of specifications, with user-facing versions of contest types mapped to
+        internal ReportingUnitTypes per `constants.contest_type_mappings`
+    """
+
     """get mappings for a list to the contest type database labels"""
     if not filters:
         return None
@@ -912,7 +921,15 @@ def get_contest_type_mappings(filters: list) -> Optional[list]:
 
 
 def get_contest_type_mapping(item: str) -> str:
-    """get mappings for a string to the contest type database labels"""
+    """
+    :param item: string
+    :return:
+        if <item> is in the list of user-facing district types (e.g., "Congressional", "Statewide"),
+            return corresponding ReportingUnitType for those districts (e.g., "congressional", "state"),
+            according to the correspondence in constants.contest_type_mappings.
+            (N.B.: in case of ambiguity, first found is returned)
+        otherwise, return <item>.
+    """
     contest_types = constants.contest_type_mappings.items()
     for contest_type in contest_types:
         if contest_type[1] in item:

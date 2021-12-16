@@ -1,151 +1,79 @@
-import os.path
-from typing import Optional, List
-from sqlalchemy.orm import Session
-import psycopg2
-import pandas as pd
 import inspect
+import json
+import numpy as np
+import pandas as pd
+from pathlib import Path
+import psycopg2
+from scipy import stats
+import scipy.spatial.distance as dist
+from sqlalchemy.orm import Session
+from typing import Any, Dict, Optional, List
+
 from electiondata import (
     userinterface as ui,
     munge as m,
     database as db,
     constants,
 )
-import datetime
-import os
-import numpy as np
-from pathlib import Path
-import scipy.spatial.distance as dist
-from scipy import stats
-import json
-
-
-def child_rus_by_id(session, parents, ru_type: str = None):
-    """Given a list <parents> of parent ids (or just a single parent_id), return
-    list containing all children of those parents.
-    (By convention, a ReportingUnit counts as one of its own 'parents',)
-    If  <rutype> is given,
-    restrict children to that ReportingUnitType"""
-    cruj = pd.read_sql_table("ComposingReportingUnitJoin", session.bind)
-    children = list(
-        cruj[cruj.ParentReportingUnit_Id.isin(parents)].ChildReportingUnit_Id.unique()
-    )
-    if ru_type:
-        assert len(ru_type) == 2, f"argument {ru_type} does not have exactly 2 elements"
-        ru = pd.read_sql_table("ReportingUnit", session.bind, index_col="Id")
-        right_type_ru = ru[(ru.ReportingUnitType == ru_type)]
-        children = [x for x in children if x in right_type_ru.index]
-    return children
-
-
-def export_rollup(
-    session,
-    target_dir: str,
-    jurisdiction_id: int,
-    sub_rutype: str,
-    election_id: int,
-    datafile_list: list = None,
-    by: str = "Id",
-    by_vote_type: bool = False,
-) -> str:
-    """<target_dir> is the directory where the resulting rollup_dataframe will be stored.
-    <election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
-    <top_ru_id> is the internal cdf name of the ReportingUnit whose results will be reported
-    <sub_rutype> identifies the ReportingUnitType
-    of the ReportingUnits used in each line of the results file
-    created by the routine. (E.g., county or ward)
-    <datafile_list> is a list of files, with entries from field <by> in _datafile table.
-    If no <datafile_list> is given, return all results for the given election.
-    """
-
-    connection = session.bind.raw_connection()
-    cursor = connection.cursor()
-    if not datafile_list:
-        datafile_list, e = db.data_file_list_cursor(cursor, election_id, by="Id")
-        if e:
-            return e
-        by = "Id"
-        if len(datafile_list) == 0:
-            return f"No datafiles found for Election_Id {election_id}"
-    # set exclude_redundant_total
-    vote_type_list, err_str = db.vote_type_list(cursor, datafile_list, by=by)
-    if err_str:
-        return err_str
-    elif len(vote_type_list) == 0:
-        return f"No vote types found for datafiles with {by} in {datafile_list} "
-
-    if len(vote_type_list) > 1 and "total" in vote_type_list:
-        exclude_redundant_total = True
-    else:
-        exclude_redundant_total = False
-
-    # get names from ids (and sub_rutype othertext if appropriate)
-    top_ru = db.name_from_id_cursor(cursor, "ReportingUnit", jurisdiction_id)
-    election = db.name_from_id_cursor(cursor, "Election", election_id)
-
-    # create path to export directory
-    leaf_dir = os.path.join(target_dir, election, top_ru, f"by_{sub_rutype}")
-    Path(leaf_dir).mkdir(parents=True, exist_ok=True)
-
-    # prepare inventory
-    inventory_file = os.path.join(target_dir, "inventory.txt")
-    inv_exists = os.path.isfile(inventory_file)
-    if inv_exists:
-        inv_df = pd.read_csv(inventory_file, sep="\t")
-    else:
-        inv_df = pd.DataFrame()
-    inventory = {
-        "Election": election,
-        "ReportingUnitType": sub_rutype,
-        "source_db_url": cursor.connection.dsn,
-        "timestamp": datetime.date.today(),
-    }
-
-    for contest_type in ["BallotMeasure", "Candidate"]:
-        # export data
-        rollup_file = f"{cursor.connection.info.dbname}_{contest_type}_results.txt"
-        while os.path.isfile(os.path.join(leaf_dir, rollup_file)):
-            rollup_file = input(
-                f"There is already a file called {rollup_file}. Pick another name.\n"
-            )
-
-        df, err_str = db.export_rollup_from_db(
-            session,
-            top_ru=top_ru,
-            election=election,
-            sub_unit_type=sub_rutype,
-            contest_type=contest_type,
-            datafile_list=datafile_list,
-            by=by,
-            exclude_redundant_total=exclude_redundant_total,
-            by_vote_type=by_vote_type,
-        )
-        if not err_str:
-            # create record for inventory.txt
-            inv_df = inv_df.append(inventory, ignore_index=True).fillna("")
-            err_str = None
-            df.to_csv(os.path.join(leaf_dir, rollup_file), index=False, sep="\t")
-
-    # export to inventory file
-    inv_df.to_csv(inventory_file, index=False, sep="\t")
-    cursor.close()
-    return err_str
 
 
 def create_scatter(
-    session,
-    jurisdiction_id,
-    subdivision_type,
-    h_election_id,
-    h_category,
-    h_count,
-    h_type,
-    h_runoff,
-    v_election_id,
-    v_category,
-    v_count,
-    v_type,
-    v_runoff,
+    session: Session,
+    jurisdiction_id: int,
+    subdivision_type: str,
+    h_election_id: int,
+    h_category: str,
+    h_count: str,
+    h_type: str,
+    h_runoff: bool,
+    v_election_id: int,
+    v_category: str,
+    v_count: str,
+    v_type: str,
+    v_runoff: str,
 ) -> Optional[dict]:
+    """
+    :param session: sqlalchemy database session
+    :param jurisdiction_id: integer Id of jurisdiction in ReportingUnit database table
+    :param subdivision_type: string, name of subdivision type
+    :param h_election_id: for horizontal axis, integer Id of election in Election database table
+    :param h_category: for horizontal axis string, name of count category, validation depends on h_type
+        for h_type starting with "Population", count category is, e.g., "by Race" so that together
+            h_type and h_category specify the vlue of the ExternalDataSet.Category field.
+        otherwise, count category is interpreted as a CountItemType following conventions of the database
+            VoteCount.CountItemType field, e.g., "total", "election-day"
+    :param h_count: for horizontal axis, string describing:
+        for h_type "Population", the population category, e.g., "White"
+        for h_type "candidates", the candidate name
+        for h_type "contests", the contest name
+        for h_type "parties", the contest type, in language of either keys or values
+            of constants.contest_type_mappings ("congressional" or "Congressional"; "state" or "Statewide")
+    :param h_type: for horizontal axis, string describing type of count
+        ("Population", "candidates", "contests" or "parties")
+    :param h_runoff: for horizontal axis, True if contest is a run-off; otherwise False
+    :param v_election_id: as above, but for vertical axis
+    :param v_category: as above, but for vertical axis
+    :param v_count: as above, but for vertical axis
+    :param v_type: as above, but for vertical axis
+    :param v_runoff: as above, but for vertical axis
+    :return:
+        if no data found, returns nothing
+        if data found, returns dictionary of information for plotting:
+            "jurisdiction": string, formal name of jurisdiction
+            "subdivision_type:" string, type of geographic unit each point represents, typically "county"
+            "x-title": string, horizontal axis title specifying the count category
+                for vote counts, all but vote type
+                for "Population" counts, all but ExternalDataSet.Label from database
+            "y-title": same as above, for vertical axis
+            "x-count_item_type": other info to specify count for horizonal axis
+                for vote counts, the vote type
+                for "Population" counts, the ExternalDataSet.Label
+            "x-count_item_type": same as above, for vertical axis
+            "x-election": string, name of horizontal axis election
+            "y-election": string, name of vertical axis election
+            "x": string, shorthand identifier for horizontal data
+            "y": string, shorthand identifier for vertical axis
+    """
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
 
@@ -259,7 +187,36 @@ def create_scatter(
     return results
 
 
-def package_results(data, jurisdiction, x, y, restrict=None) -> dict:
+def package_results(
+        data: pd.DataFrame,
+        jurisdiction: str,
+        x: str,
+        y: str,
+        restrict: Optional[int] = None,
+) -> Dict[str,Any]:
+    """
+    :param data: dataframe
+        if "x" not equal "y", columns are "Name" (values are reporting units within the
+            jurisdiction), "x" and "y" (values are vote counts)
+        if "x" equals "y", columns are "Name" and a single columns of counts
+    :param jurisdiction: string, formal name of jurisdiction
+    :param x: string, shorthand name for first count column
+    :param y: string, shorthand name for second count column
+    :param restrict: (optional) integer, if given forces return of data for at most
+        <restrict> subdivisions, along with data for the average of all other subdivisions
+    :return: dictionary
+        "jurisdiction": string, name of jurisdiction
+        "x": string, shorthand name for "x" counts
+        "y": string, shorthand name for "y" counts
+        "counts: dictionary
+            "name": string, name of geographical subdivision
+            "x": number, value of "x" count
+            "y": number, value of "y" count
+            "x_pct": number (divide "x" count by sum of "x" and "y" counts if that sum is not 0,
+                otherwise 0)
+            "y_pct": number (divide "y" count by sum of "x" and "y" counts if that sum is not 0,
+                otherwise 0)
+    """
     results = {"jurisdiction": jurisdiction, "x": x, "y": y, "counts": []}
     if restrict and len(data.index) > restrict:
         data = get_remaining_averages(data, restrict)
@@ -283,15 +240,26 @@ def package_results(data, jurisdiction, x, y, restrict=None) -> dict:
 
 
 def get_data_for_scatter(
-    session,
-    jurisdiction_id,
-    subdivision_type,
-    election_id,
-    count_item_type,
+    session: Session,
+    jurisdiction_id: int,
+    subdivision_type: str,
+    election_id: int,
+    count_item_type: str,
     filter_str,
     count_type,
     is_runoff,
 ):
+    """
+    :param session: sqlalchemy database session
+    :param jurisdiction_id: integer Id of jurisdiction in database ReportingUnit table
+    :param subdivision_type: string ReportingUnitType characterizing subdivisions for points in scatter
+    :param election_id: integer Id of election in database Election table
+    :param count_item_type: CountItemType characterizing vote counts
+    :param filter_str:
+    :param count_type:
+    :param is_runoff:
+    :return:
+    """
     if count_type.startswith("Population"):
         return get_external_data(
             session,
@@ -372,7 +340,19 @@ def get_votecount_data(
     filter_str: str,
     count_type: str,
     is_runoff: bool,
-):
+) -> pd.DataFrame:
+    """
+    :param session: sqlalchemy database session
+    :param jurisdiction_id: integer Id for the jurisdiction in the database ReportingUnit table
+    :param subdivision_type: string ReportingUnitType
+    :param election_id: integer Id for the election in the database Election table
+    :param count_item_type: count item type for the vote count ("total", "absentee-mail", etc.)
+    :param filter_str: string, "All contests" or "All candidates" or a contest name or a candidate name
+    :param count_type: "candidates" or "parties" or "contests"
+    :param is_runoff: True if contest is a run-off; otherwise False
+    :return: dataframe of vote counts by subdivision, with columns specifying ReportingUnit, Contest,
+        Selection, VoteCountType along with various database Ids
+    """
     unsummed = db.unsummed_vote_counts_with_rollup_subdivision_id(
         session,
         election_id,
@@ -439,9 +419,9 @@ def get_votecount_data(
         cursor.close()
 
     columns = list(unsummed.drop(columns="Count").columns)
-    unsummed = unsummed.groupby(columns)["Count"].sum().reset_index()
+    summed = unsummed.groupby(columns)["Count"].sum().reset_index()
 
-    return unsummed
+    return summed
 
 
 def create_bar(
@@ -453,26 +433,23 @@ def create_bar(
     contest_or_contest_group: Optional[str] = None,
     for_export: bool = True,
 ) -> Optional[List[dict]]:
+
     """
-    Required inputs:
-        session: Session, sqlalchemy session
-        election_id: int,
-        jurisdiction_id: int,
-        subdivision_type: str,
-    Optional inputs:
-        contest_district_type: Optional[str] = None,
-        contest_or_contest_group: Optional[str] = None, from user-facing menu, either the name of a contest or of a
+    :param session: sqlalchemy database session
+    :param election_id: integer Id for the election in the database Election table
+    :param jurisdiction_id: integer Id for the jurisdiction in the database ReportingUnit table
+    :param subdivision_type: string ReportingUnitType
+    :param contest_district_type: (optional string)
+    :param contest_or_contest_group: (optional string) from user-facing menu, either the name of a contest or of a
             group of contests, e.g., "All congressional"
-        for_export: bool = True,
-
-
-    Returns:
-        List[dict], list of dictionaries, where each dictionary contains information to create a bar
+    :param for_export: (optional)
+    :return: List of dictionaries, where each dictionary contains information to create a bar
             chart. The bar charts in the list are chosen via an algorithm favoring charts with a single outlier
-            county whose impact on the margin is large.
-            # TODO document algorithm details in assign_anomaly_score(unsummed)
-            Bar charts are restricted to results for the <contest_or_contest_group> , if given,and also
-            from the contests with districts of type <contest_district_type>, if given
+            county whose impact on the margin is large. Bar charts are restricted to results for the
+            <contest_or_contest_group> , if given,and also from the contests with districts of type
+            <contest_district_type>, if given. Details of algorithm given in an article by Singer,
+            Srungavarapu & Tsai in _MAA Focus_, Feb/March 2021, pp. 10-13.
+            See http://digitaleditions.walsworthprintgroup.com/publication/?m=7656&i=694516&p=10&ver=html5
     """
     # connect to db via psycopg2
     connection = session.bind.raw_connection()
