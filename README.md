@@ -1,6 +1,5 @@
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/4078/badge)](https://bestpractices.coreinfrastructure.org/projects/4078)
 
-
 # Overview
 This repository provides tools for consolidation and analysis of raw election results from the most reliable sources -- the election agencies themselves. 
  * Consolidation: take as input election results files from a wide variety of sources and load the data into a relational database
@@ -16,24 +15,7 @@ This repository provides tools for consolidation and analysis of raw election re
    * Bar charts
 
 # Target Audience
-This system is intended to be of use to news media, campaigns, election officials, students of politics and elections, and anyone else who is interested in assembling and understanding election results.
-
-# How to Contribute Code
-Please contribute code that works in python 3.9, with the package versions specified in [requirements.txt](requirements.txt). We follow the [black](https://pypi.org/project/black/) format.
-
-# How to Help in Other Ways
-If you have skills to contribute to building the system, we can definitely use your help:
- * Creating visualizations
- * Preparing for intake of specific states' results files
- * Managing collection of data files in real time
- * Writing documentation
- * Merging other data sets of interest (e.g., demographics)
- * Building our open source community
- * What else? Let us know!
- 
-If you are a potential end user -- an election official, political scientist or campaign consultant, for instance -- let us know what you want to from this system.
- 
-If you are interested in contributing, or just staying updated on the progress of this project, please [contact Stephanie Singer](http://symmetrysinger.com/index.php?id=contact). 
+This system is intended to be of use to news media, campaigns, election officials, students of politics and elections, and anyone else who is interested in assembling and understanding election results. If you have ideas for using this system or if you would like to stay updated on the progress of this project, [we'd like to hear from you](CONTACT_US.md). 
 
 # How to use the app
 See [documentation directory](docs), which includes
@@ -41,10 +23,10 @@ See [documentation directory](docs), which includes
    * [Installation instructions](docs/Installation.md)
    * Instructions for a [sample dataloading session](docs/Sample_Session.md)
    * Detailed [User Guide](docs/User_Guide.md)
- * for developers
-   * [Information about the code](docs/About_the_Code.md)
-   * [Information about the tests](docs/Testing_Code_with_pytest.md)
-   
+ 
+# How to Contribute Code
+See [CONTRIBUTING.MD](CONTRIBUTING.md).
+
 # Contributors
  * [Stephanie Singer](http://campaignscientific.com/), Hatfield School of Government (Portland State University), former Chair, Philadelphia County Board of Elections
  * Janaki Raghuram Srungavarapu, Hatfield School of Government (Portland State University)
