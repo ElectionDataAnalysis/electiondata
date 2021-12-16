@@ -702,7 +702,7 @@ def report(
                             lowercase=False,
                         ),
                     )
-                    with open(out_path, "a") as f:
+                    with open(out_path, "a", encoding=constants.default_encoding) as f:
                         f.write(out_str)
                     print(f"{et.title()} errors{and_warns} written to {out_path}")
 
@@ -729,7 +729,7 @@ def report(
                             lowercase=False,
                         ),
                     )
-                    with open(out_path, "a") as f:
+                    with open(out_path, "a", encoding=constants.default_encoding) as f:
                         f.write(out_str)
                     print(f"{et.title()} warnings written to {out_path}")
 
