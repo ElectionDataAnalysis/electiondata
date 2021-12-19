@@ -13,7 +13,6 @@ from typing import Optional, Dict, Any, List
 import numpy as np
 from pathlib import Path
 import inspect
-import psycopg2
 from sqlalchemy.orm import Session
 
 
@@ -773,13 +772,12 @@ def load_or_update_contests(
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
-    except psycopg2.InternalError as ie:
+    except Exception as ie:
         err = ui.add_new_error(
             err,
             "jurisdiction",
             juris_true_name,
-            f"Contests not loaded to database (sql error {ie}). "
-            f"Check CandidateContest.txt or BallotMeasureContest.txt for errors.",
+            f"Contests not loaded to database (sql error {ie}). ",
         )
     return err
 
