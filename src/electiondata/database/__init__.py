@@ -921,32 +921,6 @@ def add_records_to_selection_table(engine: sqlalchemy.engine, n: int) -> List[in
     return id_list
 
 
-def vote_type_list(
-    cursor: psycopg2.extensions.cursor,
-    datafile_list: List[pd.DataFrame],
-    by: str = "Id",
-) -> (List[str], str):
-    if len(datafile_list) == 0:
-        return list(), "No vote types found because no datafiles listed"
-
-    q = sql.SQL(
-        """
-        SELECT distinct VC."CountItemType"
-        FROM "VoteCount" VC
-        LEFT JOIN _datafile d on VC."_datafile_Id" = d."Id"
-        WHERE d.{by} in %s
-    """
-    ).format(by=sql.Identifier(by))
-    try:
-        cursor.execute(q, [tuple(datafile_list)])
-        vt_list = [x for (x,) in cursor.fetchall()]
-        err_str = None
-    except Exception as exc:
-        err_str = f"Database error pulling list of vote types: {exc}"
-        vt_list = None
-    return vt_list, err_str
-
-
 def jurisdiction_id_list(session: Session) -> List[int]:
     """
     Required inputs:
