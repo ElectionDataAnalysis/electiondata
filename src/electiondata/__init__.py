@@ -3804,7 +3804,7 @@ def external_data_exists(
 
     connection = an.session.bind.raw_connection()
     cursor = connection.cursor()
-    df = db.read_external(cursor, election_id, jurisdiction_id, ["Label"])
+    df = db.read_external_cursor(cursor,election_id,jurisdiction_id,["Label"])
     cursor.close()
 
     # if no data found

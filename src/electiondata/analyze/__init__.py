@@ -3,7 +3,6 @@ import json
 import numpy as np
 import pandas as pd
 from pathlib import Path
-import psycopg2
 from scipy import stats
 import scipy.spatial.distance as dist
 from sqlalchemy.orm import Session
@@ -74,8 +73,6 @@ def create_scatter(
             "x": string, shorthand identifier for horizontal data
             "y": string, shorthand identifier for vertical axis
     """
-    connection = session.bind.raw_connection()
-    cursor = connection.cursor()
 
     # get the mappings back to the DB labels
     h_count = ui.get_contest_type_mapping(h_count)
@@ -102,11 +99,10 @@ def create_scatter(
         v_runoff,
     )
     if dfh.empty or dfv.empty:
-        connection.close()
         return None
 
     unsummed = pd.concat([dfh, dfv])
-    jurisdiction = db.name_from_id_cursor(cursor, "ReportingUnit", jurisdiction_id)
+    jurisdiction = db.name_from_id(session, "ReportingUnit", jurisdiction_id)
 
     # check if there is only 1 candidate selection (with multiple count types)
     single_selection = len(unsummed["Selection"].unique()) == 1
@@ -127,7 +123,6 @@ def create_scatter(
     pivot_df = pivot_df.dropna()
     pivot_df.columns = pivot_df.columns.map(str)
     if pivot_df.empty:
-        connection.close()
         return None
 
     # package up results
@@ -148,27 +143,27 @@ def create_scatter(
         results["y"] = v_count
     else:  # neither is runoff; not single_selection
         results = package_results(pivot_df, jurisdiction, h_count, v_count)
-    results["x-election"] = db.name_from_id_cursor(cursor, "Election", h_election_id)
-    results["y-election"] = db.name_from_id_cursor(cursor, "Election", v_election_id)
+    results["x-election"] = db.name_from_id(session, "Election", h_election_id)
+    results["y-election"] = db.name_from_id(session, "Election", v_election_id)
     results["subdivision_type"] = subdivision_type
     results["x-count_item_type"] = h_category
     results["y-count_item_type"] = v_category
     results["x-title"] = scatter_axis_title(
-        cursor,
+        session,
         results["x"],
         results["x-election"],
         dfh.iloc[0]["Contest"],
         jurisdiction_id,
     )
     results["y-title"] = scatter_axis_title(
-        cursor,
+        session,
         results["y"],
         results["y-election"],
         dfv.iloc[0]["Contest"],
         jurisdiction_id,
     )
-    h_preliminary = db.is_preliminary(cursor, h_election_id, jurisdiction_id)
-    v_preliminary = db.is_preliminary(cursor, v_election_id, jurisdiction_id)
+    h_preliminary = db.is_preliminary(session,h_election_id,jurisdiction_id)
+    v_preliminary = db.is_preliminary(session,v_election_id,jurisdiction_id)
     results["preliminary"] = h_preliminary or v_preliminary
 
     # only keep the ones where there are an (x, y) to graph
@@ -179,11 +174,9 @@ def create_scatter(
         if len(result) == 5:
             to_keep.append(result)
     if not to_keep:
-        connection.close()
         return None
 
     results["counts"] = to_keep
-    connection.close()
     return results
 
 
@@ -291,10 +284,8 @@ def get_external_data(
     subdivision_type,
 ):
     # get the census data
-    connection = session.bind.raw_connection()
-    cursor = connection.cursor()
     census_df = db.read_external(
-        cursor,
+        session,
         election_id,
         jurisdiction_id,
         ["Name", "Category", "Label", "Value", "Source"],
@@ -302,7 +293,6 @@ def get_external_data(
         restrict_by_category=category,
         subdivision_type=subdivision_type,
     )
-    cursor.close()
 
     # reshape data so it can be unioned with other results
     if not census_df.empty:
@@ -414,9 +404,7 @@ def get_votecount_data(
 
     if count_type == "contests" and not keep_all:
         connection = session.bind.raw_connection()
-        cursor = connection.cursor()
         unsummed["Selection"] = filter_str
-        cursor.close()
 
     columns = list(unsummed.drop(columns="Count").columns)
     summed = unsummed.groupby(columns)["Count"].sum().reset_index()
@@ -451,10 +439,6 @@ def create_bar(
             Srungavarapu & Tsai in _MAA Focus_, Feb/March 2021, pp. 10-13.
             See http://digitaleditions.walsworthprintgroup.com/publication/?m=7656&i=694516&p=10&ver=html5
     """
-    # connect to db via psycopg2
-    connection = session.bind.raw_connection()
-    cursor = connection.cursor()
-
     unsummed = db.unsummed_vote_counts_with_rollup_subdivision_id(
         session, election_id, jurisdiction_id, subdivision_type
     )
@@ -497,10 +481,8 @@ def create_bar(
         else:
             top_ranked = votes_at_stake
     except Exception:
-        connection.close()
         return None
     if top_ranked.empty:
-        connection.close()
         return None
 
     # package into list of dictionary
@@ -529,8 +511,8 @@ def create_bar(
         )
 
         candidates = temp_df["Candidate_Id"].unique()
-        x = db.name_from_id_cursor(cursor, "Candidate", int(candidates[0]))
-        y = db.name_from_id_cursor(cursor, "Candidate", int(candidates[1]))
+        x = db.name_from_id(session, "Candidate", int(candidates[0]))
+        y = db.name_from_id(session, "Candidate", int(candidates[1]))
         x_party = unsummed.loc[unsummed["Candidate_Id"] == candidates[0], "Party"].iloc[
             0
         ]
@@ -539,7 +521,7 @@ def create_bar(
             0
         ]
         y_party_abbr = create_party_abbreviation(y_party)
-        jurisdiction = db.name_from_id_cursor(cursor, "ReportingUnit", jurisdiction_id)
+        jurisdiction = db.name_from_id(session, "ReportingUnit", jurisdiction_id)
 
         pivot_df = pd.pivot_table(
             temp_df, values="Count", index=["Name"], columns="Selection", fill_value=0
@@ -554,9 +536,9 @@ def create_bar(
             results = package_results(pivot_df, jurisdiction, x, y)
         else:
             results = package_results(pivot_df, jurisdiction, x, y, restrict=8)
-        results["election"] = db.name_from_id_cursor(cursor, "Election", election_id)
-        results["contest"] = db.name_from_id_cursor(
-            cursor, "Contest", int(temp_df.iloc[0]["Contest_Id"])
+        results["election"] = db.name_from_id(session, "Election", election_id)
+        results["contest"] = db.name_from_id(
+            session, "Contest", int(temp_df.iloc[0]["Contest_Id"])
         )
         results["subdivision_type"] = subdivision_type
         results["count_item_type"] = temp_df.iloc[0]["CountItemType"]
@@ -575,7 +557,7 @@ def create_bar(
             acted = "widened"
         results["votes_at_stake"] = f"Outlier {acted} margin by ~ {votes_at_stake}"
         results["margin"] = human_readable_numbers(results["margin_raw"])
-        results["preliminary"] = db.is_preliminary(cursor, election_id, jurisdiction_id)
+        results["preliminary"] = db.is_preliminary(session,election_id,jurisdiction_id)
 
         # display ballot info
         if multiple_ballot_types:
@@ -593,14 +575,13 @@ def create_bar(
         results[
             "title"
         ] = f"""{results["count_item_type"].replace("-", " ").title()} Ballots Reported"""
-        download_date = db.data_file_download(cursor, election_id, jurisdiction_id)
-        if db.is_preliminary(cursor, election_id, jurisdiction_id) and download_date:
+        download_date = db.data_file_download(session,election_id,jurisdiction_id)
+        if db.is_preliminary(session,election_id,jurisdiction_id) and download_date:
             results[
                 "title"
             ] = f"""{results["title"]} as of {download_date} (preliminary)"""
 
         result_list.append(results)
-    connection.close()
     return result_list
 
 
@@ -1028,17 +1009,17 @@ def dedupe_scatter_title(category, election, contest):
 
 
 def scatter_axis_title(
-    cursor: psycopg2.extensions.cursor,
+    session: Session,
     label: str,
     election: str,
     contest_or_external_category: str,
     jurisdiction_id: int,
 ) -> str:
     if contest_or_external_category.startswith("Population"):
-        election_id = db.name_to_id_cursor(cursor, "Election", election)
+        election_id = db.name_to_id(session, "Election", election)
         # get the actual year of data and source of data
         df = db.read_external(
-            cursor,
+            session,
             election_id,
             jurisdiction_id,
             ["Year", "Source"],
@@ -1238,6 +1219,7 @@ def rollup_dataframe(
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unexpected error while merging dataframes to capture nesting relationships of ReportingUnits: {ke}",
         )
+        return pd.DataFrame(), err
 
     # if no parent is found (e.g., for reporting unit that is whole state), keep the original
     mask = new_working.parent_id.isnull()

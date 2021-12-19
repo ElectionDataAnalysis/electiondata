@@ -1686,8 +1686,40 @@ def list_to_id(session: Session, element: str, names: List[str]) -> Optional[int
 
 
 def data_file_download(
-    cursor: psycopg2.extensions.cursor, election_id: int, reporting_unit_id: int
-) -> Optional[int]:
+        session: Session, election_id: int, jurisdiction_id: int,
+) -> Optional[str]:
+    """
+    :param session: sqlalchemy database session
+    :param election_id: integer Id from database Election table
+    :param jurisdiction_id: integer Id from database ReportingUnit table
+    :return: latest download date (string yyyy-mm-dd) for any datafile associated to given election and jurisdiction if found,
+        otherwise return nothing
+    """
+    # connect to db via psycopg2
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+
+    date_str = data_file_download_cursor(cursor, election_id, jurisdiction_id)
+
+    if cursor:
+        cursor.close()
+    if connection:
+        connection.close()
+    return date_str
+
+
+
+def data_file_download_cursor(
+    cursor: psycopg2.extensions.cursor, election_id: int, jurisdiction_id: int
+) -> Optional[str]:
+    """
+    :param cursor: psycopg2 database cursor
+    :param election_id: integer Id from database Election table
+    :param jurisdiction_id: integer Id from database ReportingUnit table
+    :return: latest download date (string yyyy-mm-dd) for any datafile associated to given election and jurisdiction if found,
+        otherwise return nothing
+    """
+
     q = sql.SQL(
         """
         SELECT  MAX(download_date)::text as download_date
@@ -1697,26 +1729,29 @@ def data_file_download(
     """
     )
     try:
-        cursor.execute(q, [election_id, reporting_unit_id])
+        cursor.execute(q,[election_id,jurisdiction_id])
         return cursor.fetchall()[0][0]
     except Exception as exc:
         return None
 
 
-def is_preliminary(
+def is_preliminary_cursor(
     cursor: psycopg2.extensions.cursor, election_id: int, jurisdiction_id: int
 ) -> bool:
-    """get the preliminary flag from the _datafile table.
-    Since this flag doesn't exist yet, parsing the election name for
-    2020 because we expect all data for 2020 to be preliminary for awhile."""
+    """
+    :param cursor: psycopg2 cursor
+    :param election_id: integer, database Id for election
+    :param jurisdiction_id: integer, database Id for jurisdiction
+    :return: True if the _datafile table indicates any preliminary datafiles
+        for the given election and jurisdiction, or if query fails; otherwise False.
+    """
+
     q = sql.SQL(
         """
-        SELECT  DISTINCT is_preliminary
+        SELECT  bool_or(is_preliminary) 
         FROM    _datafile
         WHERE   "Election_Id" = %s
                 AND "ReportingUnit_Id" = %s
-        ORDER BY is_preliminary
-        LIMIT   1
     """
     )
     try:
@@ -1724,25 +1759,102 @@ def is_preliminary(
         results = cursor.fetchall()
         return results[0][0]
     except Exception as exc:
-        election = name_from_id_cursor(cursor, "Election", election_id)
-        if election.startswith("2020 General"):
-            return True
-        return False
+        return True
+
+
+def is_preliminary(
+        session: Session,
+        election_id: int,
+        jurisdiction_id: int
+) -> bool:
+    """
+    :param session: sqlalchemy database session
+    :param election_id: integer, database Id for election
+    :param jurisdiction_id: integer, database Id for jurisdiction
+    :return: True if the _datafile table indicates any preliminary datafiles
+        for the given election and jurisdiction, or if query fails; otherwise False.
+    """
+
+    # connect to db via psycopg2
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+
+    b = is_preliminary_cursor(cursor, election_id, jurisdiction_id)
+    if cursor:
+        cursor.close()
+    if connection:
+        connection.close()
+    return b
 
 
 def read_external(
-    cursor: psycopg2.extensions.cursor,
+    session: Session,
     election_id: int,
     jurisdiction_id: int,
-    fields: list,
+    fields: List[str],
     restrict_by_label: Optional[Any] = None,
     restrict_by_category: Optional[Any] = None,
     subdivision_type: Optional[str] = None,
 ) -> pd.DataFrame:
-    """returns a dataframe with columns <fields>,
-    where each field is in the ExternalDataSet table.
-    If <subdivision_type> is given, returns only reporting units of that subdivision_type
-    (typically counties)"""
+    """
+    :param session: sqlalchemy database session
+    :param election_id: integer Id from database Election table
+    :param jurisdiction_id: integer Id from database ReportingUnit table
+    :param fields: list of strings specifying column names
+    :param restrict_by_label: (optional) string specifying restriction for database ExternalDataSet.Label field
+    :param restrict_by_category: (optional) string specifying restriction for database
+        ExternalDataSet.Category field
+    :param subdivision_type: (optional) string specifying restriction to certain subdivision type
+        in ReportingUnit.ReportingUnitType
+    :return: dataframe with columns given by <fields>, where each field is in one of these database tables:
+        ExternalDataSet (generic information about each available external dataset)
+        ExternalData (specific values of external datasets for particular ReportingUnits)
+        ReportingUnit
+    """
+    # connect to db via psycopg2
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    df = read_external(
+        cursor,
+        election_id,
+        jurisdiction_id,
+        fields,
+        restrict_by_label=restrict_by_label,
+        restrict_by_category=restrict_by_category,
+        subdivision_type=subdivision_type,
+    )
+    if cursor:
+        cursor.close()
+    if connection:
+        connection.close()
+    return df
+
+
+def read_external_cursor(
+    cursor: psycopg2.extensions.cursor,
+    election_id: int,
+    jurisdiction_id: int,
+    fields: List[str],
+    restrict_by_label: Optional[Any] = None,
+    restrict_by_category: Optional[Any] = None,
+    subdivision_type: Optional[str] = None,
+) -> pd.DataFrame:
+    """
+    :param cursor: pyscopg2 database cursor
+    :param election_id: integer Id from database Election table
+    :param jurisdiction_id: integer Id from database ReportingUnit table
+    :param fields: list of strings specifying column names
+    :param restrict_by_label: (optional) string specifying restriction for database ExternalDataSet.Label field
+    :param restrict_by_category: (optional) string specifying restriction for database
+        ExternalDataSet.Category field
+    :param subdivision_type: (optional) string specifying restriction to certain subdivision type
+        in ReportingUnit.ReportingUnitType
+    :return: dataframe with columns given by <fields>, where each field is in one of these database tables:
+        ExternalDataSet (generic information about each available external dataset)
+        ExternalData (specific values of external datasets for particular ReportingUnits)
+        ReportingUnit
+    """
+
     if restrict_by_label:
         label_restriction = f""" AND "Label" = '{restrict_by_label}'"""
     else:

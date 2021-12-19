@@ -1026,7 +1026,7 @@ def get_filtered_input_options(
         cursor = connection.cursor()
 
         # TODO filter by major subdivision of jurisdiction
-        population_df = db.read_external(
+        population_df = db.read_external_cursor(
             cursor, election_id, jurisdiction_id, ["Category"]
         )
         cursor.close()
@@ -1095,7 +1095,7 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
-        df_unfiltered = db.read_external(
+        df_unfiltered = db.read_external_cursor(
             cursor,
             election_id,
             jurisdiction_id,
