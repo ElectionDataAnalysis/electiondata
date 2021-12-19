@@ -1,5 +1,5 @@
 # Results files for dataloading tests
-The dataloading tests rely on having some raw results data to load. And the results data should be various enough to test the various components of the data-loading code. In other words, effective testing requires a reasonable variety of input files. The repository does not contain sufficient results data for testing. A test set is available in a separate repository, [***TODO](***TODO). If [test_dataloading_by_ej.py](../tests/dataloading_tests/test_dataloading_by_ej.py) does not find results data, it will default to downloading the files from that repository.
+The dataloading tests rely on having some raw results data to load. And the results data should be various enough to test the various components of the data-loading code. In other words, effective testing requires a reasonable variety of input files. The repository does not contain sufficient results data for testing. A test set is available in a separate repository, [TestingData](https://github.com/ElectionDataAnalysis/TestingData). If [test_dataloading_by_ej.py](../tests/dataloading_tests/test_dataloading_by_ej.py) does not find results data, it will default to downloading the files from that repository.
 
 # Sample Testing Session
 
