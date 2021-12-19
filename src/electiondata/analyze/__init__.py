@@ -238,20 +238,33 @@ def get_data_for_scatter(
     subdivision_type: str,
     election_id: int,
     count_item_type: str,
-    filter_str,
-    count_type,
-    is_runoff,
-):
+    filter_str: str,
+    count_type: str,
+    is_runoff: bool,
+) -> pd.DataFrame:
     """
     :param session: sqlalchemy database session
     :param jurisdiction_id: integer Id of jurisdiction in database ReportingUnit table
-    :param subdivision_type: string ReportingUnitType characterizing subdivisions for points in scatter
+    :param subdivision_type: string ReportingUnitType
     :param election_id: integer Id of election in database Election table
     :param count_item_type: CountItemType characterizing vote counts
-    :param filter_str:
-    :param count_type:
-    :param is_runoff:
-    :return:
+    :param filter_str: string used to filter data
+        for vote counts: "All contests" or "All candidates" or a value for Contest.Name or Candidate.BallotName
+        for other datasets: value for ExternalDataSet.Label
+    :param count_type: string used to filter data:
+        for vote counts: "candidates" or "parties" or "contests"
+        for other datasets: value for ExternalDataSet.Category
+    :param is_runoff: True for a run-off contest associated to the election, otherwise False
+
+    :return: dataframe of results rolled up to ReportingUnits of <subdivision> ReportingUnitType,restricted by <count_item_type>, <filter_str> and <count_type>. Columns:
+        "Election_Id"
+        "Name" (ReportingUnit name)
+        "Selection"
+        "Contest_Id"
+        "Candidate_Id"
+        "Contest"
+        "CountItemType"
+        "Count"
     """
     if count_type.startswith("Population"):
         return get_external_data(
@@ -282,7 +295,38 @@ def get_external_data(
     category,
     label,
     subdivision_type,
-):
+) -> pd.DataFrame:
+    """
+    :param session: sqlalchemy database session
+    :param jurisdiction_id: integer Id of jurisdiction in database ReportingUnit table
+    :param subdivision_type: string ReportingUnitType characterizing subdivisions for points in scatter
+    :param category: value for ExternalDataSet.Category
+    :param label: value for ExternalDataSet.Label
+    :param subdivision_type: value for ReportingUnit.ReportingUnitType
+    :return: dataframe of results rolled up to ReportingUnits of <subdivision> ReportingUnitType
+        restricted by <category> and <label>. Format is designed to match votecount format
+        Columns are:
+                "Election_Id",
+                "Name", (name of ReportingUnit)
+                "Selection", (set to <label>)
+                "Contest_Id", dummy set to 0
+                "Candidate_Id", dummy set to 0
+                "Contest", (set to <category>)
+                "CountItemType", (set to "total")
+                "Count",
+    """
+    # specify output columns
+    cols = [
+                "Election_Id",
+                "Name",
+                "Selection",
+                "Contest_Id",
+                "Candidate_Id",
+                "Contest",
+                "CountItemType",
+                "Count",
+            ]
+
     # get the census data
     census_df = db.read_external(
         session,
@@ -305,20 +349,9 @@ def get_external_data(
             columns={"Label": "Selection", "Value": "Count"},
             inplace=True,
         )
-        census_df = census_df[
-            [
-                "Election_Id",
-                "Name",
-                "Selection",
-                "Contest_Id",
-                "Candidate_Id",
-                "Contest",
-                "CountItemType",
-                "Count",
-            ]
-        ]
+        census_df = census_df[cols]
         return census_df
-    return pd.DataFrame()
+    return pd.DataFrame(columns=cols)
 
 
 def get_votecount_data(
@@ -339,8 +372,9 @@ def get_votecount_data(
     :param count_item_type: count item type for the vote count ("total", "absentee-mail", etc.)
     :param filter_str: string, "All contests" or "All candidates" or a contest name or a candidate name
     :param count_type: "candidates" or "parties" or "contests"
-    :param is_runoff: True if contest is a run-off; otherwise False
-    :return: dataframe of vote counts by subdivision, with columns specifying ReportingUnit, Contest,
+    :param is_runoff: True if contest name must contain "runoff" to be included; otherwise False
+    :return: dataframe of vote counts rolled up to ReportingUnits of type <subdivision>
+        (or larger, if that's all that's available), Contest,
         Selection, VoteCountType along with various database Ids
     """
     unsummed = db.unsummed_vote_counts_with_rollup_subdivision_id(
@@ -546,8 +580,8 @@ def create_bar(
         # display votes at stake, margin info
         results["votes_at_stake_raw"] = temp_df.iloc[0]["votes_at_stake"]
         results["margin_raw"] = (
-            temp_df[temp_df["rank"] == 1].iloc[0]["ind_total"]
-            - temp_df[temp_df["rank"] != 1].iloc[0]["ind_total"]
+            temp_df[temp_df["rank"] == 1].iloc[0]["selection_total"]
+            - temp_df[temp_df["rank"] != 1].iloc[0]["selection_total"]
         )
         votes_at_stake = human_readable_numbers(results["votes_at_stake_raw"])
         if votes_at_stake[0] == "-":
@@ -586,14 +620,56 @@ def create_bar(
 
 
 def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
-    """adds a new column called score between 0 and 1; 1 is more anomalous.
-    Also adds a `unit_id` column which assigns a score to each unit of analysis
-    that is considered. For example, we may decide to look at anomalies across each
-    distinct combination of contest, reporting unit type, and vote type. Each
-    combination of those would get assigned an ID. This means rows may get added
-    to the dataframe if needed."""
+    """
+
+    :param data: dataframe with required columns:
+        "ReportingUnitType",
+        "ParentReportingUnit_Id",
+        "ParentName",
+        "ParentReportingUnitType",
+        "Candidate_Id",
+        "CountItemType",
+        "Contest_Id",
+        "Contest",
+        "Selection",
+        "Selection_Id",
+        "contest_type",
+        "contest_district_type",
+        "Count",
+
+    and possibly other columns, such as:
+        "Party",
+
+    :return: dataframe obtained by appending columns to <data>:
+        "score": value between  0 and 1; 1 is more anomalous
+        "unit_id": identifies the set of vote counts within which the anomaly score of the single vote count was
+            calculated. A single vote count's anomaly score depends on the set of vote counts within which it is
+            considered.
+        "reporting_unit_total": total votes for all selections in given contest for given reporting unit
+        "selection_total": total votes for given selection in given contest in entire jurisdiction
+        "rank": 1 for contest winner, 2 for second place, etc.
+        "contest_total": total votes cast in the contest in entire jurisdiction
+        "index": integer internal id denoting the set over which the anomaly score is calculated
+        "unit_id_tmp": artifact from calculation
+
+    and preserving columns
+        "ReportingUnit_Id" (renamed from "ParentReportingUnit_Id")
+        "Name", (renamed from "ParentName", the name of the ReportingUnit)
+        "ReportingUnitType", (renamed from "ParentReportingUnitType")
+        "Candidate_Id",
+        "CountItemType",
+        "Contest_Id",
+        "Contest",
+        "Selection",
+        "contest_type",
+        "contest_district_type",
+        "Count",
+        "Selection_Id",
+     """
 
     # Assign a ranking for each candidate by votes for each contest
+
+    # # create <total_data> dataframe with "total" CountItemType only
     if "total" not in data["CountItemType"].unique():
         groupby_cols = list(data.columns)
         groupby_cols.remove("Count")
@@ -601,6 +677,12 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
     else:
         total_data = data[data["CountItemType"] == "total"]
 
+    # # create <ranked_df> of contest-candidate pairs,
+    # column "rank": winners 1, second-place 2, etc. (tied candidates get same rank);
+    # column "selection_total" with total votes for candidate;
+    # column "contest_total" with total votes in contest
+
+    # # # Append total votes for selection
     ranked_df = (
         total_data.groupby(["Contest_Id", "Selection", "Selection_Id"], as_index=False)[
             "Count"
@@ -608,14 +690,15 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
         .sum()
         .sort_values(["Contest_Id", "Count"], ascending=False)
     )
+    # # # Append rank
     ranked_df["rank"] = ranked_df.groupby("Contest_Id")["Count"].rank(
         "dense", ascending=False
     )
-    ranked_df.rename(columns={"Count": "ind_total"}, inplace=True)
+    ranked_df.rename(columns={"Count": "selection_total"}, inplace=True)
 
-    # Now get the total votes for the entire contest
-    contest_df = ranked_df.groupby("Contest_Id")["ind_total"].sum().reset_index()
-    contest_df.rename(columns={"ind_total": "contest_total"}, inplace=True)
+    # # # Append total votes for the entire contest
+    contest_df = ranked_df.groupby("Contest_Id")["selection_total"].sum().reset_index()
+    contest_df.rename(columns={"selection_total": "contest_total"}, inplace=True)
     ranked_df = ranked_df.merge(contest_df, how="inner", on="Contest_Id")
 
     # Group data by parent info. This works because each child is also its own
@@ -667,8 +750,8 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
     # loop through each unit ID and assign anomaly scores
     # also update the "real" unit_id which takes into account pairing of candidates
     unit_ids_tmp = df_with_units["unit_id_tmp"].unique()
-    unit_id = 0
-    df = pd.DataFrame()
+    unit_id = 0 # increments on each pass through for loop
+    df = pd.DataFrame() # collects records on each pass through for loop
     # for each unit ID
     for unit_id_tmp in unit_ids_tmp:
         # grab all the data there
@@ -722,7 +805,38 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
 
 
 def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
-    """Gets n contest, with 2 from largest votes at stake ratio
+    """
+    :param data: dataframe with columns:
+        "ReportingUnit_Id": 
+        "Name": (name of reporting unit)
+        "ReportingUnitType": 
+        "Candidate_Id",
+        "CountItemType":
+        "Contest_Id": 
+        "Contest": 
+        "Selection": 
+        "contest_type": "BallotMeasure" or "Candidate"
+        "contest_district_type": ReportingUnitType for contest district
+        "Count": 
+        "Selection_Id": 
+        "selection_total": total votes for given selection in given contest in entire jurisdiction
+        "rank": candidate rank within contest
+        "contest_total": number of votes for all candidates in the given contest, over entire district
+        "index": 
+        "unit_id_tmp": artifact from calculation
+        "unit_id": internal integer id identifying the set of points within which the anomaly score was calculated
+        "reporting_unit_total": number of votes for all candidates in the given contest and reporting unit
+        "score": anomaly z-score (higher is more anomalous)
+        "margins_pct": 
+        "votes_at_stake": number of votes that would change if anomaly were brought in line with nearest point (see http://digitaleditions.walsworthprintgroup.com/publication/?m=7656&i=694516&p=10&ver=html5)
+       "margin_ratio": number of votes at stakedivided by overall contest margin between the two candidates
+
+    :param n: integer, number of anomalous datasets to return
+
+    :return:
+    """
+
+    """Gets n contests, with 2 from largest votes at stake ratio
     and 1 with largest score. If 2 from votes at stake cannot be found
     (bc of threshold for score) then we fill in the top n from scores"""
     # filter out very small votes at stake margins
@@ -792,6 +906,22 @@ def euclidean_zscore(li: List[List[float]]) -> List[float]:
 
 
 def calculate_votes_at_stake(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    :param data: dataframe with required columns
+        "ReportingUnit_Id": 
+        "Count" 
+        "selection_total" 
+        "unit_id" (records with same unit_id belong to a single bar chart)
+        "score"
+        "Selection"
+        "margins_pct"
+        "reporting_unit_total"
+        "rank"
+
+    :return: dataframe with all records from <data> (row order not necessarily preserved), with additional
+        column "votes_at_stake" # TODO
+    """
+
     """Move the most anomalous pairing to the equivalent of the second-most anomalous
     and calculate the differences in votes that would be returned"""
     df = pd.DataFrame()
@@ -867,8 +997,8 @@ def calculate_votes_at_stake(data: pd.DataFrame) -> pd.DataFrame:
 
             # calculate margins by raw numbers for the entire contest
             contest_margin_ttl = (
-                anomalous_df[anomalous_df["rank"] == 1].iloc[0]["ind_total"]
-                - anomalous_df[anomalous_df["rank"] != 1].iloc[0]["ind_total"]
+                anomalous_df[anomalous_df["rank"] == 1].iloc[0]["selection_total"]
+                - anomalous_df[anomalous_df["rank"] != 1].iloc[0]["selection_total"]
             )
             temp_df["votes_at_stake"] = contest_margin - adj_contest_margin
             temp_df["margin_ratio"] = temp_df["votes_at_stake"] / contest_margin_ttl
@@ -935,8 +1065,18 @@ def create_ballot_measure_contests(
 
 
 def get_unit_by_column(data: pd.DataFrame, column: str) -> List[int]:
-    """Given a dataframe of results, return a list of unique unit_ids
-    that are sorted in desc order by the column's value"""
+    """
+    Given a dataframe of results, return a list of unique unit_ids
+    that are sorted in desc order by the column's value
+    :param data: dataframe with required columns "unit_id" and <column>
+    :param column: name of a column
+    :return: list of unique unit_ids values sorted in descending order by max of <column>'s value
+        among all rows with the given unit_id. I.e., first item in list will be the unit_id of
+        the row of <data> with the highest value of <column>; second will be the unit_id of the
+        row of <data> with the highest value (among all rows with a unit_id different from the first item)
+         of <column>.
+    """
+
     data = data[["unit_id", column]]
     data = data.groupby("unit_id").max(column).sort_values(by=column, ascending=False)
     data = data.reset_index()
@@ -956,9 +1096,13 @@ def human_readable_numbers(value: float) -> str:
 
 
 def sort_pivot_by_margins(df: pd.DataFrame) -> pd.DataFrame:
-    """grab the row with the highest anomaly score, then sort the remainder by
-    margin. The sorting order depends on whether the anomalous row is >50% or <50%"""
-
+    """
+    :param df: Dataframe with required columns "score" and "margins_pct"
+    :return: dataframe whose first row is a row of <df> with the maximum value of "score",
+        and whose other rows are the remaining rows of <df>, sorted by the value of "margins_pct" follows:
+            if the "margins_pct" value for the first row is less than max of the others', ascending order
+            otherwise, in descending order
+    """
     # create an DF of just the most anomalous row
     i = df.index[df["score"] == df["score"].max()][0]
     anomalous_df = df.iloc[i, :].to_frame().transpose().reset_index(drop=True)
@@ -977,7 +1121,15 @@ def sort_pivot_by_margins(df: pd.DataFrame) -> pd.DataFrame:
     return pd.concat([anomalous_df, remainder_df])
 
 
-def get_remaining_averages(df, restrict):
+def get_remaining_averages(df: pd.DataFrame, restrict: int) -> pd.DataFrame:
+    """
+    :param df: dataframe, required column "Name", all other columns must be interpretable as numeric
+    :param restrict: number of rows to preserve as is
+    :return: dataframe whose first <restrict> rows match <df>'s, and with one other row
+        with "Name" value "Average of all others", with each numeric column containing the average of
+        the corresponding values in the omitted rows.
+    """
+
     """Take a dataframe and keep a number of the rows as-is up to the restrict
     number. The remaining rows get aggregated, either summed by the vote counts
     or averaged for the other metrics."""
@@ -1001,7 +1153,14 @@ def create_party_abbreviation(party):
         return (party.strip())[0].upper()
 
 
-def dedupe_scatter_title(category, election, contest):
+def dedupe_scatter_title(category: str, election: str, contest:str):
+    """
+    :param category:
+    :param election:
+    :param contest:
+    :return: title string combining <category>, <election> and <contest>, removing any redundancy.
+    """
+
     title = f"{category} - {election}"
     if category != contest:
         title = f"{title} - {contest}"
@@ -1163,7 +1322,7 @@ def nist_office(session, election_id, jurisdiction_id):
     return json.loads(result)
 
 
-def nist_candidate(session, election_id, jurisdiction_id):
+def nist_candidate(session: Session, election_id: int, jurisdiction_id: int):
     df = db.read_vote_count(
         session,
         election_id=election_id,
@@ -1176,25 +1335,37 @@ def nist_candidate(session, election_id, jurisdiction_id):
 
 
 def rollup_dataframe(
-    session,
+    session: Session,
     df: pd.DataFrame,
     count_col: str,
     ru_id_column: str,
     new_ru_id_column: str,
     rollup_rut: str = constants.default_subdivision_type,
-    ignore: Optional[List] = None,
+    ignore: Optional[List[str]] = None,
 ) -> (pd.DataFrame(), Optional[dict]):
-    """Returns datafrome of results rolled up to the reporting unit type <rollup_rut>.
-    For reporting units without parents of the given type (e.g., sometimes absentee votes
-    are reported by state), preserve the record"""
+    """
+    :param session: sqlalchemy database session
+    :param df: dataframe of results
+    :param count_col: string, name of column with counts
+    :param ru_id_column: string, name of column with database Ids of ReportingUnits
+    :param new_ru_id_column: string, name of column in returned dataframe with database Ids
+        of newly rolled-up ReportingUnits
+    :param rollup_rut: string, ReportingUnitType to roll up to (e.g., "county")
+    :param ignore: (optional) list of names of columns to drop from <df>
+    :return:
+        dataframe of results rolled up to the given ReportingUnitType (NB: for reporting units without
+        parents of the given type (e.g., sometimes absentee votes are reported by state), preserve the reporting unit
+        dictionary of errors and warnings
+    """
 
-    err = None  # TODO error handling
+    err = None
 
     # drop from dataframe any columns in <ignore>
     if ignore:
         working = df.copy().drop(ignore, axis=1)
     else:
         working = df.copy()
+
     group_cols = [c for c in working.columns if (c not in (ru_id_column, count_col))]
     parents, err_str = db.parents(
         session, df[ru_id_column].unique(), subunit_type=rollup_rut
@@ -1206,6 +1377,7 @@ def rollup_dataframe(
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unable to read parents reporting unit info from column {ru_id_column}",
         )
+        return pd.DataFrame(), err
     try:
         new_working = (
             working.reset_index()
