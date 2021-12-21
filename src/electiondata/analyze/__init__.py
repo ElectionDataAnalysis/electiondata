@@ -521,9 +521,9 @@ def create_bar(
 
     # package into list of dictionary
     result_list = []
-    ids = top_ranked["unit_id"].unique()
+    ids = top_ranked["bar_chart_id"].unique()
     for idx in ids:
-        temp_df = top_ranked[top_ranked["unit_id"] == idx]
+        temp_df = top_ranked[top_ranked["bar_chart_id"] == idx]
         # some cleaning here to make the pivoting work
         scores_df = temp_df[temp_df["rank"] != 1]
         scores_df = scores_df[["ReportingUnit_Id", "score", "margins_pct"]]
@@ -642,7 +642,7 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
 
     :return: dataframe obtained by appending columns to <data>:
         "score": value between  0 and 1; 1 is more anomalous
-        "unit_id": identifies the set of vote counts within which the anomaly score of the single vote count was
+        "bar_chart_id": identifies the set of vote counts within which the anomaly score of the single vote count was
             calculated. A single vote count's anomaly score depends on the set of vote counts within which it is
             considered.
         "reporting_unit_total": total votes for all selections in given contest for given reporting unit
@@ -650,7 +650,7 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
         "rank": 1 for contest winner, 2 for second place, etc.
         "contest_total": total votes cast in the contest in entire jurisdiction
         "index": integer internal id denoting the set over which the anomaly score is calculated
-        "unit_id_tmp": artifact from calculation
+        "bar_chart_id_tmp": artifact from calculation
 
     and preserving columns
         "ReportingUnit_Id" (renamed from "ParentReportingUnit_Id")
@@ -735,31 +735,31 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
         ranked_df, how="inner", on=["Contest_Id", "Selection"]
     )
 
-    # assign temporary unit_ids to unique combination of contest,
+    # assign temporary bar_chart_ids to unique combination of contest,
     # ru_type, and count type. These will be updated later to account
     # for 2 candidate pairings
     df_unit = grouped_df[
         ["Contest_Id", "ReportingUnitType", "CountItemType"]
     ].drop_duplicates()
     df_unit = df_unit.reset_index()
-    df_unit["unit_id_tmp"] = df_unit.index
+    df_unit["bar_chart_id_tmp"] = df_unit.index
     df_with_units = grouped_df.merge(
         df_unit, how="left", on=["Contest_Id", "ReportingUnitType", "CountItemType"]
     )
 
     # loop through each unit ID and assign anomaly scores
-    # also update the "real" unit_id which takes into account pairing of candidates
-    unit_ids_tmp = df_with_units["unit_id_tmp"].unique()
-    unit_id = 0 # increments on each pass through for loop
+    # also update the "real" bar_chart_id which takes into account pairing of candidates
+    bar_chart_ids_tmp = df_with_units["bar_chart_id_tmp"].unique()
+    bar_chart_id = 0 # increments on each pass through for loop
     df = pd.DataFrame() # collects records on each pass through for loop
     # for each unit ID
-    for unit_id_tmp in unit_ids_tmp:
+    for bar_chart_id_tmp in bar_chart_ids_tmp:
         # grab all the data there
-        temp_df = df_with_units[df_with_units["unit_id_tmp"] == unit_id_tmp]
+        temp_df = df_with_units[df_with_units["bar_chart_id_tmp"] == bar_chart_id_tmp]
         for i in range(2, int(temp_df["rank"].max()) + 1):
             selection_df = temp_df[temp_df["rank"].isin([1, i])].copy()
-            selection_df["unit_id"] = unit_id
-            unit_id += 1
+            selection_df["bar_chart_id"] = bar_chart_id
+            bar_chart_id += 1
             total = (
                 selection_df.groupby("ReportingUnit_Id")["Count"].sum().reset_index()
             )
@@ -823,8 +823,8 @@ def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
         "rank": candidate rank within contest
         "contest_total": number of votes for all candidates in the given contest, over entire district
         "index": 
-        "unit_id_tmp": artifact from calculation
-        "unit_id": internal integer id identifying the set of points within which the anomaly score was calculated
+        "bar_chart_id_tmp": artifact from calculation
+        "bar_chart_id": internal integer id identifying the set of points within which the anomaly score was calculated
         "reporting_unit_total": number of votes for all candidates in the given contest and reporting unit
         "score": anomaly z-score (higher is more anomalous)
         "margins_pct": 
@@ -847,11 +847,11 @@ def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
     unit_by_margin = get_unit_by_column(margin_data, "margin_ratio")
     # grab data by highest z-score (magnitude)
     unit_by_score = get_unit_by_column(data, "score")
-    # get data for n deduped unit_ids, with n-1 from margin data, filling
+    # get data for n deduped bar_chart_ids, with n-1 from margin data, filling
     # in from score data if margin data is unavailable
-    unit_ids_all = unit_by_margin[0 : n - 1] + unit_by_score
-    unit_ids = list(dict.fromkeys(unit_ids_all).keys())[0:n]
-    data = data[data["unit_id"].isin(unit_ids)]
+    bar_chart_ids_all = unit_by_margin[0 : n - 1] + unit_by_score
+    bar_chart_ids = list(dict.fromkeys(bar_chart_ids_all).keys())[0:n]
+    data = data[data["bar_chart_id"].isin(bar_chart_ids)]
 
     zeros_df = data[
         [
@@ -882,10 +882,10 @@ def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
     )
 
     # now we get the top 8 reporting unit IDs, in terms of anomaly score, of the winner and most anomalous
-    ids = data["unit_id"].unique()
+    ids = data["bar_chart_id"].unique()
     df = pd.DataFrame()
     for idx in ids:
-        temp_df = data[data["unit_id"] == idx]
+        temp_df = data[data["bar_chart_id"] == idx]
         max_score = temp_df["score"].max()
         if max_score > 0:
             rank = temp_df[temp_df["score"] == max_score].iloc[0]["rank"]
@@ -911,7 +911,7 @@ def calculate_votes_at_stake(data: pd.DataFrame) -> pd.DataFrame:
         "ReportingUnit_Id": 
         "Count" 
         "selection_total" 
-        "unit_id" (records with same unit_id belong to a single bar chart)
+        "bar_chart_id" (records with same bar_chart_id belong to a single bar chart plot)
         "score"
         "Selection"
         "margins_pct"
@@ -925,9 +925,9 @@ def calculate_votes_at_stake(data: pd.DataFrame) -> pd.DataFrame:
     """Move the most anomalous pairing to the equivalent of the second-most anomalous
     and calculate the differences in votes that would be returned"""
     df = pd.DataFrame()
-    unit_ids = data["unit_id"].unique()
-    for unit_id in unit_ids:
-        temp_df = data[data["unit_id"] == unit_id].copy()
+    bar_chart_ids = data["bar_chart_id"].unique()
+    for bar_chart_id in bar_chart_ids:
+        temp_df = data[data["bar_chart_id"] == bar_chart_id].copy()
         try:
             # get a df of the most anomalous pairing
             max_score = temp_df["score"].max()
@@ -1066,21 +1066,21 @@ def create_ballot_measure_contests(
 
 def get_unit_by_column(data: pd.DataFrame, column: str) -> List[int]:
     """
-    Given a dataframe of results, return a list of unique unit_ids
+    Given a dataframe of results, return a list of unique bar_chart_ids
     that are sorted in desc order by the column's value
-    :param data: dataframe with required columns "unit_id" and <column>
+    :param data: dataframe with required columns "bar_chart_id" and <column>
     :param column: name of a column
-    :return: list of unique unit_ids values sorted in descending order by max of <column>'s value
-        among all rows with the given unit_id. I.e., first item in list will be the unit_id of
-        the row of <data> with the highest value of <column>; second will be the unit_id of the
-        row of <data> with the highest value (among all rows with a unit_id different from the first item)
+    :return: list of unique bar_chart_ids values sorted in descending order by max of <column>'s value
+        among all rows with the given bar_chart_id. I.e., first item in list will be the bar_chart_id of
+        the row of <data> with the highest value of <column>; second will be the bar_chart_id of the
+        row of <data> with the highest value (among all rows with a bar_chart_id different from the first item)
          of <column>.
     """
 
-    data = data[["unit_id", column]]
-    data = data.groupby("unit_id").max(column).sort_values(by=column, ascending=False)
+    data = data[["bar_chart_id", column]]
+    data = data.groupby("bar_chart_id").max(column).sort_values(by=column, ascending=False)
     data = data.reset_index()
-    return list(data["unit_id"].unique())
+    return list(data["bar_chart_id"].unique())
 
 
 def human_readable_numbers(value: float) -> str:
