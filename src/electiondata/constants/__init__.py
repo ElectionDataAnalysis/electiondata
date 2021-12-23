@@ -150,7 +150,13 @@ if 1:
 
 # analysis parameters
 if 1:
+    # z-scores below this value are considered not particularly anomalous by
+    # outlier-curating algorithm
     outlier_zscore_cutoff = 2.3
+    # max number of different reporting units to show in each bar chart.
+    # If there are more in the contest district, least interesting ones
+    # will be averaged into the last set of bars in the bar chart.
+    max_rus_per_bar_chart = 8
 
 # display information
 if 1:

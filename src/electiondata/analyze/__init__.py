@@ -569,7 +569,8 @@ def create_bar(
         if for_export:
             results = package_results(pivot_df, jurisdiction, x, y)
         else:
-            results = package_results(pivot_df, jurisdiction, x, y, restrict=8)
+            results = package_results(
+                pivot_df, jurisdiction, x, y, restrict=constants.max_rus_per_bar_chart)
         results["election"] = db.name_from_id(session, "Election", election_id)
         results["contest"] = db.name_from_id(
             session, "Contest", int(temp_df.iloc[0]["Contest_Id"])
@@ -806,22 +807,23 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
 def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
     """
     :param data: dataframe with required columns:
-        "margin_ratio": number of votes at stakedivided by overall contest margin between the two candidates
-        "score": anomaly z-score (higher is more anomalous) # TODO of chart or county?
-
-
-        "ReportingUnit_Id": 
-        "Name": (name of reporting unit)
-        "ReportingUnitType": 
-        "Candidate_Id",
+        "margin_ratio": number of votes at stake divided by overall contest margin between the two candidates
+        "score": anomaly z-score for the given ReportingUnit_Id within the given bar chart
+            (specified by bar_chart_id)
+        "Contest_Id":
+        "ReportingUnit_Id":
+        "ReportingUnitType":
         "CountItemType":
-        "Contest_Id": 
-        "Contest": 
+        "Count":
+
+
+        "Name": (name of reporting unit)
+        "Candidate_Id",
+        "Contest":
         "Selection": 
         "contest_type": "BallotMeasure" or "Candidate"
         "contest_district_type": ReportingUnitType for contest district
-        "Count": 
-        "Selection_Id": 
+        "Selection_Id":
         "selection_total": total votes for given selection in given contest in entire jurisdiction
         "rank": candidate rank within contest
         "contest_total": number of votes for all candidates in the given contest, over entire district
@@ -834,7 +836,7 @@ def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
 
     :param n: integer, number of anomalous datasets to return
 
-    :return:
+    :return: dataframe
     """
 
     """Gets n contests, with <n>-1 from largest votes at stake ratio
@@ -856,6 +858,7 @@ def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
     bar_chart_ids = list(dict.fromkeys(bar_chart_ids_all).keys())[0:n]
     data = data[data["bar_chart_id"].isin(bar_chart_ids)]
 
+    # Drop from <data> any rows corresponding to contest-reportingunit-countitemtype tuples with no votes
     zeros_df = data[
         [
             "Contest_Id",
@@ -884,7 +887,7 @@ def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
         inplace=True,
     )
 
-    # now we get the top 8 reporting unit IDs, in terms of anomaly score, of the winner and most anomalous
+    # now we get the top reporting unit IDs, in terms of anomaly score, of the winner and most anomalous (number of reportingunit IDs is constants.max_rus_per_bar_chart
     ids = data["bar_chart_id"].unique()
     df = pd.DataFrame()
     for idx in ids:
