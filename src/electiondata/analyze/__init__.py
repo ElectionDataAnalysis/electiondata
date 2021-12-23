@@ -636,12 +636,12 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
         "contest_type",
         "contest_district_type",
         "Count",
-
-    and possibly other columns, such as:
-        "Party",
+        and possibly other columns, such as: "Party"
 
     :return: dataframe obtained by appending columns to <data>:
-        "score": value between  0 and 1; 1 is more anomalous
+        "score": value between 0 and 1 (1 is more anomalous) indicating, among all reporting units for the Contest,
+            how anomalous the vote share is between the Selection and the contest winner. Note that winner always
+            scores 0, as vote share of a selection with itself is always (.5,.5)
         "bar_chart_id": identifies the set of vote counts within which the anomaly score of the single vote count was
             calculated. A single vote count's anomaly score depends on the set of vote counts within which it is
             considered.
@@ -651,7 +651,6 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
         "contest_total": total votes cast in the contest in entire jurisdiction
         "index": integer internal id denoting the set over which the anomaly score is calculated
         "bar_chart_id_tmp": artifact from calculation
-
     and preserving columns
         "ReportingUnit_Id" (renamed from "ParentReportingUnit_Id")
         "Name", (renamed from "ParentName", the name of the ReportingUnit)
@@ -806,7 +805,11 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
 
 def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
     """
-    :param data: dataframe with columns:
+    :param data: dataframe with required columns:
+        "margin_ratio": number of votes at stakedivided by overall contest margin between the two candidates
+        "score": anomaly z-score (higher is more anomalous) # TODO of chart or county?
+
+
         "ReportingUnit_Id": 
         "Name": (name of reporting unit)
         "ReportingUnitType": 
@@ -826,30 +829,30 @@ def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
         "bar_chart_id_tmp": artifact from calculation
         "bar_chart_id": internal integer id identifying the set of points within which the anomaly score was calculated
         "reporting_unit_total": number of votes for all candidates in the given contest and reporting unit
-        "score": anomaly z-score (higher is more anomalous)
-        "margins_pct": 
+        "margins_pct":
         "votes_at_stake": number of votes that would change if anomaly were brought in line with nearest point (see http://digitaleditions.walsworthprintgroup.com/publication/?m=7656&i=694516&p=10&ver=html5)
-       "margin_ratio": number of votes at stakedivided by overall contest margin between the two candidates
 
     :param n: integer, number of anomalous datasets to return
 
     :return:
     """
 
-    """Gets n contests, with 2 from largest votes at stake ratio
-    and 1 with largest score. If 2 from votes at stake cannot be found
+    """Gets n contests, with <n>-1 from largest votes at stake ratio
+    and 1 with largest score. If <n>-1 from votes at stake cannot be found
     (bc of threshold for score) then we fill in the top n from scores"""
-    # filter out very small votes at stake margins
+    # filter out very small votes at stake (relative to total contest margin)
     data = data[(data["margin_ratio"] > 0.01) | (data["margin_ratio"] < -0.01)]
 
-    # grab data by highest votes at stake margin (magnitude)
-    margin_data = data[data["score"] > 2.3]
-    unit_by_margin = get_unit_by_column(margin_data, "margin_ratio")
-    # grab data by highest z-score (magnitude)
-    unit_by_score = get_unit_by_column(data, "score")
-    # get data for n deduped bar_chart_ids, with n-1 from margin data, filling
-    # in from score data if margin data is unavailable
-    bar_chart_ids_all = unit_by_margin[0 : n - 1] + unit_by_score
+    # identify bar charts with significant outliers (z-score above constants.outlier_zscore_cutoff)
+    # get ordering of sufficiently anomalous bar charts (descending by votes-at-stake-to-margin ratio)
+    # and ordering by descending z-score
+    margin_data = data[data["score"] > constants.outlier_zscore_cutoff]
+    bar_charts_by_margin = bar_chart_ids_by_column_value(margin_data,"margin_ratio")
+    bar_charts_by_score = bar_chart_ids_by_column_value(data,"score")
+
+    # pick top n bar charts: up to n-1 from margin data if there are enough, and the rest
+    #  from z-score
+    bar_chart_ids_all = bar_charts_by_margin[0 : n - 1] + bar_charts_by_score
     bar_chart_ids = list(dict.fromkeys(bar_chart_ids_all).keys())[0:n]
     data = data[data["bar_chart_id"].isin(bar_chart_ids)]
 
@@ -911,7 +914,8 @@ def calculate_votes_at_stake(data: pd.DataFrame) -> pd.DataFrame:
         "ReportingUnit_Id": 
         "Count" 
         "selection_total" 
-        "bar_chart_id" (records with same bar_chart_id belong to a single bar chart plot)
+        "bar_chart_id" (records with same bar_chart_id belong to a single bar chart plot, i.e., one pair of
+            candidates and one vote type)
         "score"
         "Selection"
         "margins_pct"
@@ -919,68 +923,80 @@ def calculate_votes_at_stake(data: pd.DataFrame) -> pd.DataFrame:
         "rank"
 
     :return: dataframe with all records from <data> (row order not necessarily preserved), with additional
-        column "votes_at_stake" # TODO
+        columns (constant over all records with same bar_chart_id):
+         "votes_at_stake": # of votes that would change if the outlier ReportingUnit behaved like its nearest neighbor
+         "margin_ratio": ratio of votes_at_stake to overall contest margin between the two selections in the bar chart
     """
-
-    """Move the most anomalous pairing to the equivalent of the second-most anomalous
-    and calculate the differences in votes that would be returned"""
     df = pd.DataFrame()
     bar_chart_ids = data["bar_chart_id"].unique()
     for bar_chart_id in bar_chart_ids:
-        temp_df = data[data["bar_chart_id"] == bar_chart_id].copy()
+        # create dataframe of data from that one bar chart
+        one_chart_df = data[data["bar_chart_id"] == bar_chart_id].copy()
         try:
-            # get a df of the most anomalous pairing
-            max_score = temp_df["score"].max()
-            index = temp_df.index[temp_df["score"] == max_score][0]
-            reporting_unit_id = temp_df.loc[index, "ReportingUnit_Id"]
-            selection = temp_df.loc[index, "Selection"]
-            margin_pct = temp_df.loc[index, "margins_pct"]
-            reporting_unit_total = temp_df.loc[index, "reporting_unit_total"]
-            anomalous_df = (
-                temp_df[
-                    (temp_df["ReportingUnit_Id"] == reporting_unit_id)
+            # get a df of the most anomalous reporting_unit/candidate combination
+            # # find index of a record with maximum score. Note that
+            # # contest winners always have score 0,
+            # # and others' scores are relative to the winner, so non-winners
+            # # always score higher than winners (in one-winner contests, anyway).
+            max_score = one_chart_df["score"].max()
+            index = one_chart_df.index[one_chart_df["score"] == max_score][0]
+
+            # # define outlier by restricting to 2 records:
+            # # the one with the max score, and the winner, both with same (outlier) ReportingUnit
+            reporting_unit_id = one_chart_df.loc[index, "ReportingUnit_Id"]
+            selection = one_chart_df.loc[index, "Selection"]
+            margin_pct = one_chart_df.loc[index, "margins_pct"]
+            reporting_unit_total = one_chart_df.loc[index, "reporting_unit_total"]
+            outlier_df = (
+                one_chart_df[
+                    (one_chart_df["ReportingUnit_Id"] == reporting_unit_id)
                     & (
-                        (temp_df["score"] == max_score)
-                        | (temp_df["rank"] == 1)
-                        & (temp_df["reporting_unit_total"] == reporting_unit_total)
+                        (one_chart_df["score"] == max_score)
+                        | (one_chart_df["rank"] == 1) # note OR here
+                        & (one_chart_df["reporting_unit_total"] == reporting_unit_total)
                     )
                 ]
                 .sort_values("rank", ascending=False)
                 .drop_duplicates()
             )
 
-            # Identify the next closest RU in terms of margins
-            filtered_df = temp_df[
-                (temp_df["ReportingUnit_Id"] != reporting_unit_id)
-                & (temp_df["Selection"] == selection)
+            # Create dataframe with records for the ReportingUnit closest to the outlier in terms of margins
+            # ("closest neighbor")
+            # # rule out the outlier reporting unit
+            filtered_df = one_chart_df[
+                (one_chart_df["ReportingUnit_Id"] != reporting_unit_id)
+                & (one_chart_df["Selection"] == selection)
             ]
-            # this finds the closest margin on either side (+/-)
+            # find index of the closest margin on either side (+/-)
             next_index = filtered_df.iloc[
                 (filtered_df["margins_pct"] - margin_pct).abs().argsort()[:1]
             ].index[0]
-            next_reporting_unit_id = temp_df.loc[next_index, "ReportingUnit_Id"]
-            next_margin_pct = temp_df.loc[next_index, "margins_pct"]
-            next_reporting_unit_total = temp_df.loc[next_index, "reporting_unit_total"]
+            next_reporting_unit_id = one_chart_df.loc[next_index, "ReportingUnit_Id"]
+            next_margin_pct = one_chart_df.loc[next_index, "margins_pct"]
+            next_reporting_unit_total = one_chart_df.loc[next_index, "reporting_unit_total"]
             next_anomalous_df = (
-                temp_df[
-                    (temp_df["ReportingUnit_Id"] == next_reporting_unit_id)
+                one_chart_df[
+                    (one_chart_df["ReportingUnit_Id"] == next_reporting_unit_id)
                     & (
-                        (temp_df["margins_pct"] == next_margin_pct)
-                        | (temp_df["rank"] == 1)
-                        & (temp_df["reporting_unit_total"] == next_reporting_unit_total)
+                        (one_chart_df["margins_pct"] == next_margin_pct)
+                        | (one_chart_df["rank"] == 1)
+                        & (one_chart_df["reporting_unit_total"] == next_reporting_unit_total)
                     )
                 ]
                 .sort_values("rank", ascending=False)
                 .drop_duplicates()
             )
 
-            # move the most anomalous to the closest and calculate what the
-            # change to the Contest margin would be
-            winner_bucket_total = int(anomalous_df[anomalous_df["rank"] == 1]["Count"])
+            # move the outlier pct vote share to the closest neighbor's pct vote share,
+            # holding constant the number of votes in the neighbor reporting unit,
+            # calculate what the (signed) change to the Contest margin would be,
+            # store that change in a new column called "votes_at_stake"
+            # and store the ratio of votes at stake to the margin in new "margin_ratio" column
+            winner_bucket_total = int(outlier_df[outlier_df["rank"] == 1]["Count"])
             not_winner_bucket_total = int(
-                anomalous_df[anomalous_df["rank"] != 1]["Count"]
+                outlier_df[outlier_df["rank"] != 1]["Count"]
             )
-            reported_bucket_total = int(anomalous_df["Count"].sum())
+            reported_bucket_total = int(outlier_df["Count"].sum())
             next_bucket_total = int(next_anomalous_df["Count"].sum())
             adj_margin = (
                 next_anomalous_df[next_anomalous_df["rank"] != 1].iloc[0]["Count"]
@@ -991,21 +1007,21 @@ def calculate_votes_at_stake(data: pd.DataFrame) -> pd.DataFrame:
                 reported_bucket_total - not_winner_adj_bucket_total
             )
 
-            # calculate margins by raw numbers for the bucket
+            # # calculate margins by raw numbers for the bucket
             contest_margin = winner_bucket_total - not_winner_bucket_total
             adj_contest_margin = winner_adj_bucket_total - not_winner_adj_bucket_total
 
-            # calculate margins by raw numbers for the entire contest
+            # # calculate margins by raw numbers for the entire contest
             contest_margin_ttl = (
-                anomalous_df[anomalous_df["rank"] == 1].iloc[0]["selection_total"]
-                - anomalous_df[anomalous_df["rank"] != 1].iloc[0]["selection_total"]
+                outlier_df[outlier_df["rank"] == 1].iloc[0]["selection_total"]
+                - outlier_df[outlier_df["rank"] != 1].iloc[0]["selection_total"]
             )
-            temp_df["votes_at_stake"] = contest_margin - adj_contest_margin
-            temp_df["margin_ratio"] = temp_df["votes_at_stake"] / contest_margin_ttl
+            one_chart_df["votes_at_stake"] = contest_margin - adj_contest_margin
+            one_chart_df["margin_ratio"] = one_chart_df["votes_at_stake"] / contest_margin_ttl
         except Exception:
-            temp_df["margin_ratio"] = 0
-            temp_df["votes_at_stake"] = 0
-        df = pd.concat([df, temp_df])
+            one_chart_df["margin_ratio"] = 0
+            one_chart_df["votes_at_stake"] = 0
+        df = pd.concat([df, one_chart_df])
     return df
 
 
@@ -1064,7 +1080,7 @@ def create_ballot_measure_contests(
     return ballotmeasure_df
 
 
-def get_unit_by_column(data: pd.DataFrame, column: str) -> List[int]:
+def bar_chart_ids_by_column_value(data: pd.DataFrame,column: str) -> List[int]:
     """
     Given a dataframe of results, return a list of unique bar_chart_ids
     that are sorted in desc order by the column's value

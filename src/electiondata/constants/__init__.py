@@ -130,26 +130,27 @@ if 1:
         "000_for_all_jurisdictions",
         "major_subjurisdiction_types.txt",
     )
+    def jurisdiction_wide_contests(abbr: str) -> List[str]:
+        """
+        Inputs:
+            abbr: str, abbreviation for jurisdiction (e.g., TX)
 
+        Returns:
+            List[str], standard list of jurisdiction-wide contets
+        """
+        return [
+            f"US President ({abbr})",
+            f"{abbr} Governor",
+            f"US Senate {abbr}",
+            f"{abbr} Attorney General",
+            f"{abbr} Lieutenant Governor",
+            f"{abbr} Treasurer",
+            f"{abbr} Secretary of State",
+        ]
 
-def jurisdiction_wide_contests(abbr: str) -> List[str]:
-    """
-    Inputs:
-        abbr: str, abbreviation for jurisdiction (e.g., TX)
-
-    Returns:
-        List[str], standard list of jurisdiction-wide contets
-    """
-    return [
-        f"US President ({abbr})",
-        f"{abbr} Governor",
-        f"US Senate {abbr}",
-        f"{abbr} Attorney General",
-        f"{abbr} Lieutenant Governor",
-        f"{abbr} Treasurer",
-        f"{abbr} Secretary of State",
-    ]
-
+# analysis parameters
+if 1:
+    outlier_zscore_cutoff = 2.3
 
 # display information
 if 1:
