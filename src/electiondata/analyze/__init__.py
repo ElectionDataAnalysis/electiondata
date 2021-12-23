@@ -633,7 +633,6 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
     """
 
     :param data: dataframe with required columns:
-        "ReportingUnitType",
         "ParentReportingUnit_Id",
         "ParentName",
         "ParentReportingUnitType",
@@ -642,11 +641,10 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
         "Contest_Id",
         "Contest",
         "Selection",
-        "Selection_Id",
         "contest_type",
         "contest_district_type",
         "Count",
-        and possibly other columns, such as: "Party"
+        "Selection_Id",
 
     :return: dataframe obtained by appending columns to <data>:
         "score": value between 0 and 1 (1 is more anomalous) indicating, among all reporting units for the Contest,
