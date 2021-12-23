@@ -162,8 +162,8 @@ def create_scatter(
         dfv.iloc[0]["Contest"],
         jurisdiction_id,
     )
-    h_preliminary = db.is_preliminary(session,h_election_id,jurisdiction_id)
-    v_preliminary = db.is_preliminary(session,v_election_id,jurisdiction_id)
+    h_preliminary = db.is_preliminary(session, h_election_id, jurisdiction_id)
+    v_preliminary = db.is_preliminary(session, v_election_id, jurisdiction_id)
     results["preliminary"] = h_preliminary or v_preliminary
 
     # only keep the ones where there are an (x, y) to graph
@@ -181,12 +181,12 @@ def create_scatter(
 
 
 def package_results(
-        data: pd.DataFrame,
-        jurisdiction: str,
-        x: str,
-        y: str,
-        restrict: Optional[int] = None,
-) -> Dict[str,Any]:
+    data: pd.DataFrame,
+    jurisdiction: str,
+    x: str,
+    y: str,
+    restrict: Optional[int] = None,
+) -> Dict[str, Any]:
     """
     :param data: dataframe
         if "x" not equal "y", columns are "Name" (values are reporting units within the
@@ -317,15 +317,15 @@ def get_external_data(
     """
     # specify output columns
     cols = [
-                "Election_Id",
-                "Name",
-                "Selection",
-                "Contest_Id",
-                "Candidate_Id",
-                "Contest",
-                "CountItemType",
-                "Count",
-            ]
+        "Election_Id",
+        "Name",
+        "Selection",
+        "Contest_Id",
+        "Candidate_Id",
+        "Contest",
+        "CountItemType",
+        "Count",
+    ]
 
     # get the census data
     census_df = db.read_external(
@@ -464,8 +464,8 @@ def create_bar(
     :param contest_district_type: (optional string)
     :param contest_or_contest_group: (optional string) from user-facing menu, either the name of a contest or of a
             group of contests, e.g., "All congressional"
-    :param for_export: (optional)
-    :return: List of dictionaries, where each dictionary contains information to create a bar
+    :param for_export: (optional) if True, returns data for all bar charts, not just the "most interesting" ones
+    :return: Nothing (if no interesting anomalous bar charts found) ,or List of dictionaries, where each dictionary contains information to create a bar
             chart. The bar charts in the list are chosen via an algorithm favoring charts with a single outlier
             county whose impact on the margin is large. Bar charts are restricted to results for the
             <contest_or_contest_group> , if given,and also from the contests with districts of type
@@ -510,10 +510,16 @@ def create_bar(
         ranked["margins_pct"] = ranked["Count"] / ranked["reporting_unit_total"]
         ranked_margin = ranked
         votes_at_stake = calculate_votes_at_stake(ranked_margin)
-        if not for_export:
-            top_ranked = get_most_anomalous(votes_at_stake, 3)
-        else:
+        # if for export
+        if for_export:
+            # return all data
             top_ranked = votes_at_stake
+        else:
+            # otherwise return the "most interesting"
+            top_ranked = get_most_interesting(
+                votes_at_stake, constants.number_of_charts
+            )
+
     except Exception:
         return None
     if top_ranked.empty:
@@ -570,7 +576,8 @@ def create_bar(
             results = package_results(pivot_df, jurisdiction, x, y)
         else:
             results = package_results(
-                pivot_df, jurisdiction, x, y, restrict=constants.max_rus_per_bar_chart)
+                pivot_df, jurisdiction, x, y, restrict=constants.max_rus_per_bar_chart
+            )
         results["election"] = db.name_from_id(session, "Election", election_id)
         results["contest"] = db.name_from_id(
             session, "Contest", int(temp_df.iloc[0]["Contest_Id"])
@@ -592,7 +599,9 @@ def create_bar(
             acted = "widened"
         results["votes_at_stake"] = f"Outlier {acted} margin by ~ {votes_at_stake}"
         results["margin"] = human_readable_numbers(results["margin_raw"])
-        results["preliminary"] = db.is_preliminary(session,election_id,jurisdiction_id)
+        results["preliminary"] = db.is_preliminary(
+            session, election_id, jurisdiction_id
+        )
 
         # display ballot info
         if multiple_ballot_types:
@@ -610,8 +619,8 @@ def create_bar(
         results[
             "title"
         ] = f"""{results["count_item_type"].replace("-", " ").title()} Ballots Reported"""
-        download_date = db.data_file_download(session,election_id,jurisdiction_id)
-        if db.is_preliminary(session,election_id,jurisdiction_id) and download_date:
+        download_date = db.data_file_download(session, election_id, jurisdiction_id)
+        if db.is_preliminary(session, election_id, jurisdiction_id) and download_date:
             results[
                 "title"
             ] = f"""{results["title"]} as of {download_date} (preliminary)"""
@@ -665,7 +674,7 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
         "contest_district_type",
         "Count",
         "Selection_Id",
-     """
+    """
 
     # Assign a ranking for each candidate by votes for each contest
 
@@ -750,8 +759,8 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
     # loop through each unit ID and assign anomaly scores
     # also update the "real" bar_chart_id which takes into account pairing of candidates
     bar_chart_ids_tmp = df_with_units["bar_chart_id_tmp"].unique()
-    bar_chart_id = 0 # increments on each pass through for loop
-    df = pd.DataFrame() # collects records on each pass through for loop
+    bar_chart_id = 0  # increments on each pass through for loop
+    df = pd.DataFrame()  # collects records on each pass through for loop
     # for each unit ID
     for bar_chart_id_tmp in bar_chart_ids_tmp:
         # grab all the data there
@@ -804,9 +813,13 @@ def assign_anomaly_score(data: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
+def get_most_interesting(data: pd.DataFrame, n: int) -> pd.DataFrame:
     """
+    Returns data for <n> bar charts, with <n>-1 from largest votes at stake ratio
+    and 1 with largest score. If <n>-1 from votes at stake cannot be found
+    (because of outlier_zscore_cutoff) then we fill in the top n from scores
     :param data: dataframe with required columns:
+        "bar_chart_id": integer id in code identifying the set of points within which the anomaly score was calculated
         "margin_ratio": number of votes at stake divided by overall contest margin between the two candidates
         "score": anomaly z-score for the given ReportingUnit_Id within the given bar chart
             (specified by bar_chart_id)
@@ -815,33 +828,15 @@ def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
         "ReportingUnitType":
         "CountItemType":
         "Count":
-
-
-        "Name": (name of reporting unit)
-        "Candidate_Id",
-        "Contest":
-        "Selection": 
-        "contest_type": "BallotMeasure" or "Candidate"
-        "contest_district_type": ReportingUnitType for contest district
-        "Selection_Id":
-        "selection_total": total votes for given selection in given contest in entire jurisdiction
         "rank": candidate rank within contest
-        "contest_total": number of votes for all candidates in the given contest, over entire district
-        "index": 
-        "bar_chart_id_tmp": artifact from calculation
-        "bar_chart_id": internal integer id identifying the set of points within which the anomaly score was calculated
-        "reporting_unit_total": number of votes for all candidates in the given contest and reporting unit
-        "margins_pct":
-        "votes_at_stake": number of votes that would change if anomaly were brought in line with nearest point (see http://digitaleditions.walsworthprintgroup.com/publication/?m=7656&i=694516&p=10&ver=html5)
+        "Name": (name of reporting unit)
+        "Selection":
 
     :param n: integer, number of anomalous datasets to return
 
-    :return: dataframe
+    :return: dataframe with data for only the <n> "most interesting" bar charts
     """
 
-    """Gets n contests, with <n>-1 from largest votes at stake ratio
-    and 1 with largest score. If <n>-1 from votes at stake cannot be found
-    (bc of threshold for score) then we fill in the top n from scores"""
     # filter out very small votes at stake (relative to total contest margin)
     data = data[(data["margin_ratio"] > 0.01) | (data["margin_ratio"] < -0.01)]
 
@@ -849,8 +844,8 @@ def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
     # get ordering of sufficiently anomalous bar charts (descending by votes-at-stake-to-margin ratio)
     # and ordering by descending z-score
     margin_data = data[data["score"] > constants.outlier_zscore_cutoff]
-    bar_charts_by_margin = bar_chart_ids_by_column_value(margin_data,"margin_ratio")
-    bar_charts_by_score = bar_chart_ids_by_column_value(data,"score")
+    bar_charts_by_margin = bar_chart_ids_by_column_value(margin_data, "margin_ratio")
+    bar_charts_by_score = bar_chart_ids_by_column_value(data, "score")
 
     # pick top n bar charts: up to n-1 from margin data if there are enough, and the rest
     #  from z-score
@@ -887,14 +882,19 @@ def get_most_anomalous(data: pd.DataFrame, n: int) -> pd.DataFrame:
         inplace=True,
     )
 
-    # now we get the top reporting unit IDs, in terms of anomaly score, of the winner and most anomalous (number of reportingunit IDs is constants.max_rus_per_bar_chart
+    # now we get the top reporting unit IDs, in terms of anomaly score, of the winner and most anomalous
     ids = data["bar_chart_id"].unique()
     df = pd.DataFrame()
     for idx in ids:
         temp_df = data[data["bar_chart_id"] == idx]
         max_score = temp_df["score"].max()
         if max_score > 0:
+            # calculate contest rank of candidate with highest anomaly score
             rank = temp_df[temp_df["score"] == max_score].iloc[0]["rank"]
+            # TODO what if two candidates have matching max anomaly scores?
+
+            # throw away information from any lower-ranked candidates in the contest
+            # TODO why?
             temp_df = temp_df[temp_df["rank"].isin([1, rank])]
             df = pd.concat([df, temp_df])
     return df
@@ -914,9 +914,9 @@ def euclidean_zscore(li: List[List[float]]) -> List[float]:
 def calculate_votes_at_stake(data: pd.DataFrame) -> pd.DataFrame:
     """
     :param data: dataframe with required columns
-        "ReportingUnit_Id": 
-        "Count" 
-        "selection_total" 
+        "ReportingUnit_Id":
+        "Count"
+        "selection_total"
         "bar_chart_id" (records with same bar_chart_id belong to a single bar chart plot, i.e., one pair of
             candidates and one vote type)
         "score"
@@ -955,7 +955,7 @@ def calculate_votes_at_stake(data: pd.DataFrame) -> pd.DataFrame:
                     (one_chart_df["ReportingUnit_Id"] == reporting_unit_id)
                     & (
                         (one_chart_df["score"] == max_score)
-                        | (one_chart_df["rank"] == 1) # note OR here
+                        | (one_chart_df["rank"] == 1)  # note OR here
                         & (one_chart_df["reporting_unit_total"] == reporting_unit_total)
                     )
                 ]
@@ -976,14 +976,19 @@ def calculate_votes_at_stake(data: pd.DataFrame) -> pd.DataFrame:
             ].index[0]
             next_reporting_unit_id = one_chart_df.loc[next_index, "ReportingUnit_Id"]
             next_margin_pct = one_chart_df.loc[next_index, "margins_pct"]
-            next_reporting_unit_total = one_chart_df.loc[next_index, "reporting_unit_total"]
+            next_reporting_unit_total = one_chart_df.loc[
+                next_index, "reporting_unit_total"
+            ]
             next_anomalous_df = (
                 one_chart_df[
                     (one_chart_df["ReportingUnit_Id"] == next_reporting_unit_id)
                     & (
                         (one_chart_df["margins_pct"] == next_margin_pct)
                         | (one_chart_df["rank"] == 1)
-                        & (one_chart_df["reporting_unit_total"] == next_reporting_unit_total)
+                        & (
+                            one_chart_df["reporting_unit_total"]
+                            == next_reporting_unit_total
+                        )
                     )
                 ]
                 .sort_values("rank", ascending=False)
@@ -996,9 +1001,7 @@ def calculate_votes_at_stake(data: pd.DataFrame) -> pd.DataFrame:
             # store that change in a new column called "votes_at_stake"
             # and store the ratio of votes at stake to the margin in new "margin_ratio" column
             winner_bucket_total = int(outlier_df[outlier_df["rank"] == 1]["Count"])
-            not_winner_bucket_total = int(
-                outlier_df[outlier_df["rank"] != 1]["Count"]
-            )
+            not_winner_bucket_total = int(outlier_df[outlier_df["rank"] != 1]["Count"])
             reported_bucket_total = int(outlier_df["Count"].sum())
             next_bucket_total = int(next_anomalous_df["Count"].sum())
             adj_margin = (
@@ -1020,7 +1023,9 @@ def calculate_votes_at_stake(data: pd.DataFrame) -> pd.DataFrame:
                 - outlier_df[outlier_df["rank"] != 1].iloc[0]["selection_total"]
             )
             one_chart_df["votes_at_stake"] = contest_margin - adj_contest_margin
-            one_chart_df["margin_ratio"] = one_chart_df["votes_at_stake"] / contest_margin_ttl
+            one_chart_df["margin_ratio"] = (
+                one_chart_df["votes_at_stake"] / contest_margin_ttl
+            )
         except Exception:
             one_chart_df["margin_ratio"] = 0
             one_chart_df["votes_at_stake"] = 0
@@ -1083,7 +1088,7 @@ def create_ballot_measure_contests(
     return ballotmeasure_df
 
 
-def bar_chart_ids_by_column_value(data: pd.DataFrame,column: str) -> List[int]:
+def bar_chart_ids_by_column_value(data: pd.DataFrame, column: str) -> List[int]:
     """
     Given a dataframe of results, return a list of unique bar_chart_ids
     that are sorted in desc order by the column's value
@@ -1097,7 +1102,9 @@ def bar_chart_ids_by_column_value(data: pd.DataFrame,column: str) -> List[int]:
     """
 
     data = data[["bar_chart_id", column]]
-    data = data.groupby("bar_chart_id").max(column).sort_values(by=column, ascending=False)
+    data = (
+        data.groupby("bar_chart_id").max(column).sort_values(by=column, ascending=False)
+    )
     data = data.reset_index()
     return list(data["bar_chart_id"].unique())
 
@@ -1172,7 +1179,7 @@ def create_party_abbreviation(party):
         return (party.strip())[0].upper()
 
 
-def dedupe_scatter_title(category: str, election: str, contest:str):
+def dedupe_scatter_title(category: str, election: str, contest: str):
     """
     :param category:
     :param election:

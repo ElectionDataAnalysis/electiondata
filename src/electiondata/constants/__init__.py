@@ -130,6 +130,7 @@ if 1:
         "000_for_all_jurisdictions",
         "major_subjurisdiction_types.txt",
     )
+
     def jurisdiction_wide_contests(abbr: str) -> List[str]:
         """
         Inputs:
@@ -148,6 +149,7 @@ if 1:
             f"{abbr} Secretary of State",
         ]
 
+
 # analysis parameters
 if 1:
     # z-scores below this value are considered not particularly anomalous by
@@ -157,6 +159,8 @@ if 1:
     # If there are more in the contest district, least interesting ones
     # will be averaged into the last set of bars in the bar chart.
     max_rus_per_bar_chart = 8
+    # max number of bar charts to return when curating bar charts
+    number_of_charts = 3
 
 # display information
 if 1:

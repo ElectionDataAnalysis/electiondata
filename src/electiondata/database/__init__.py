@@ -1660,7 +1660,9 @@ def list_to_id(session: Session, element: str, names: List[str]) -> Optional[int
 
 
 def data_file_download(
-        session: Session, election_id: int, jurisdiction_id: int,
+    session: Session,
+    election_id: int,
+    jurisdiction_id: int,
 ) -> Optional[str]:
     """
     :param session: sqlalchemy database session
@@ -1680,7 +1682,6 @@ def data_file_download(
     if connection:
         connection.close()
     return date_str
-
 
 
 def data_file_download_cursor(
@@ -1703,7 +1704,7 @@ def data_file_download_cursor(
     """
     )
     try:
-        cursor.execute(q,[election_id,jurisdiction_id])
+        cursor.execute(q, [election_id, jurisdiction_id])
         return cursor.fetchall()[0][0]
     except Exception as exc:
         return None
@@ -1736,11 +1737,7 @@ def is_preliminary_cursor(
         return True
 
 
-def is_preliminary(
-        session: Session,
-        election_id: int,
-        jurisdiction_id: int
-) -> bool:
+def is_preliminary(session: Session, election_id: int, jurisdiction_id: int) -> bool:
     """
     :param session: sqlalchemy database session
     :param election_id: integer, database Id for election
