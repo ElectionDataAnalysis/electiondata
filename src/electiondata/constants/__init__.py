@@ -131,25 +131,36 @@ if 1:
         "major_subjurisdiction_types.txt",
     )
 
+    def jurisdiction_wide_contests(abbr: str) -> List[str]:
+        """
+        Inputs:
+            abbr: str, abbreviation for jurisdiction (e.g., TX)
 
-def jurisdiction_wide_contests(abbr: str) -> List[str]:
-    """
-    Inputs:
-        abbr: str, abbreviation for jurisdiction (e.g., TX)
+        Returns:
+            List[str], standard list of jurisdiction-wide contets
+        """
+        return [
+            f"US President ({abbr})",
+            f"{abbr} Governor",
+            f"US Senate {abbr}",
+            f"{abbr} Attorney General",
+            f"{abbr} Lieutenant Governor",
+            f"{abbr} Treasurer",
+            f"{abbr} Secretary of State",
+        ]
 
-    Returns:
-        List[str], standard list of jurisdiction-wide contets
-    """
-    return [
-        f"US President ({abbr})",
-        f"{abbr} Governor",
-        f"US Senate {abbr}",
-        f"{abbr} Attorney General",
-        f"{abbr} Lieutenant Governor",
-        f"{abbr} Treasurer",
-        f"{abbr} Secretary of State",
-    ]
 
+# analysis parameters
+if 1:
+    # z-scores below this value are considered not particularly anomalous by
+    # outlier-curating algorithm
+    outlier_zscore_cutoff = 2.3
+    # max number of different reporting units to show in each bar chart.
+    # If there are more in the contest district, least interesting ones
+    # will be averaged into the last set of bars in the bar chart.
+    max_rus_per_bar_chart = 8
+    # max number of bar charts to return when curating bar charts
+    number_of_charts = 3
 
 # display information
 if 1:

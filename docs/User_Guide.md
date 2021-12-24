@@ -471,7 +471,7 @@ analyzer = dl.analyzer
 ```
 
 ## Tabular Export
-The Analyzer class has a number of functions that allow you to aggregate the data for analysis purposes. For example, running the `.top_counts()` function exports files into your rollup_dataframe directory which with counts summed up at a particular reporting unit level. This function expects 4 arguments: the election, the jurisdiction, the reporting unit level at which the aggregation will occur, and a boolean variable indicating whether you would like the data aggregated by vote count type. For example, to export all 2020 General results in your database to a tab-separated file `tabular_results.tsv`:
+The Analyzer class has a number of functions that allow you to aggregate the data for analysis purposes. For example, to export all 2020 General results in your database to a tab-separated file `tabular_results.tsv`:
 ```
 analyzer.export_election_to_tsv("tabular_results.tsv", "2020 General")
 ```

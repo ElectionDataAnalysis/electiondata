@@ -898,7 +898,16 @@ def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> li
     return list(ej_set)
 
 
-def get_contest_type_mappings(filters: list) -> Optional[list]:
+def get_contest_type_mappings(filters: List[str]) -> Optional[List[str]]:
+    """
+
+    :param filters: list of specifications, possibly including
+        election names, jurisdiction names, ReportingUnitTypes of district (e.g. "congressional")
+        or user-facing version as specified in `constants.contest_type_mappings` (e.g., "Congressional")
+    :return: same list of specifications, with user-facing versions of contest types mapped to
+        internal ReportingUnitTypes per `constants.contest_type_mappings`
+    """
+
     """get mappings for a list to the contest type database labels"""
     if not filters:
         return None
@@ -912,7 +921,15 @@ def get_contest_type_mappings(filters: list) -> Optional[list]:
 
 
 def get_contest_type_mapping(item: str) -> str:
-    """get mappings for a string to the contest type database labels"""
+    """
+    :param item: string
+    :return:
+        if <item> is in the list of user-facing district types (e.g., "Congressional", "Statewide"),
+            return corresponding ReportingUnitType for those districts (e.g., "congressional", "state"),
+            according to the correspondence in constants.contest_type_mappings.
+            (N.B.: in case of ambiguity, first found is returned)
+        otherwise, return <item>.
+    """
     contest_types = constants.contest_type_mappings.items()
     for contest_type in contest_types:
         if contest_type[1] in item:
@@ -1009,7 +1026,7 @@ def get_filtered_input_options(
         cursor = connection.cursor()
 
         # TODO filter by major subdivision of jurisdiction
-        population_df = db.read_external(
+        population_df = db.read_external_cursor(
             cursor, election_id, jurisdiction_id, ["Category"]
         )
         cursor.close()
@@ -1078,7 +1095,7 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
-        df_unfiltered = db.read_external(
+        df_unfiltered = db.read_external_cursor(
             cursor,
             election_id,
             jurisdiction_id,

@@ -2978,31 +2978,6 @@ class Analyzer:
         )
         return agg_results
 
-    def top_counts(
-        self, election: str, jurisdiction: str, sub_rutype: str, by_vote_type: bool
-    ) -> Optional[str]:
-        """
-        Inputs:
-            election: str,
-            jurisdiction: str,
-            sub_rutype: str, ReportingUnitType (e.g., 'county') to which the results should be rolled up
-            by_vote_type: bool, if true, results will be reported by vote type. If false, only totals will be reported
-
-        Puts file with results into a subdirectory (labeled by election and jurisdiction name)
-            of the reports_and_plots_dir specified in the Analyzer's param_file.
-        """
-        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        election_id = db.name_to_id(self.session, "Election", election)
-        err = an.export_rollup(
-            self.session,
-            self.reports_and_plots_dir,
-            jurisdiction_id=jurisdiction_id,
-            sub_rutype=sub_rutype,
-            election_id=election_id,
-            by_vote_type=by_vote_type,
-        )
-        return err
-
     def export_nist(
         self,
         election: str,
@@ -3829,7 +3804,7 @@ def external_data_exists(
 
     connection = an.session.bind.raw_connection()
     cursor = connection.cursor()
-    df = db.read_external(cursor, election_id, jurisdiction_id, ["Label"])
+    df = db.read_external_cursor(cursor, election_id, jurisdiction_id, ["Label"])
     cursor.close()
 
     # if no data found
