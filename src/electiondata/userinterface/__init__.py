@@ -4,34 +4,28 @@ from configparser import (
     DuplicateOptionError,
     ParsingError,
 )
+from csv import QUOTE_MINIMAL
+from inspect import currentframe
+import json
+from numpy import where
+from os import walk, listdir
+import os.path
+import pandas as pd
+from pathlib import Path
+import shutil
+from slugify import slugify
+from sqlalchemy.orm import Session
+from typing import Optional, Dict, Any, List
+import xlrd
+import xml.etree.ElementTree
 
+# local imports
 from electiondata import (
     database as db,
     munge as m,
-    juris as jm,
     nist as nist,
     constants,
 )
-import pandas as pd
-from pandas.errors import ParserError
-import os
-from pathlib import Path
-from typing import Optional, Dict, Any, List
-import datetime
-import csv
-import numpy as np
-import inspect
-import xml.etree.ElementTree as et
-import json
-import shutil
-import xlrd
-
-# may need for certain excel imports: import openpyxl
-from sqlalchemy.orm import Session
-
-
-# mapping from internal database reportingunit types to the user-facing contest types
-# (contests are categorized by the reporting unit type of their corresponding districts)
 
 
 def find_dupes(df):
@@ -59,9 +53,9 @@ def json_kwargs(
         else:
             json_rename[path_list[-1]] = mf
     meta = list(list(t) for t in meta_set)
-    json_kwargs = {"meta": meta, "record_path": record_path, "errors": "ignore"}
+    j_kwargs = {"meta": meta, "record_path": record_path, "errors": "ignore"}
 
-    return json_kwargs, json_rename
+    return j_kwargs, json_rename
 
 
 def tabular_kwargs(
@@ -137,7 +131,7 @@ def list_desired_excel_sheets(f_path: str, p: dict) -> (Optional[list], Optional
             all_sheets = xl.sheet_names
             # xlsx = openpyxl.load_workbook(f_path)
             # all_sheets = xlsx.get_sheet_names()
-        except Exception as exc:
+        except Exception:
             try:
                 # read xls file
                 xls = xlrd.open_workbook(f_path, on_demand=True)
@@ -191,7 +185,7 @@ def read_single_datafile(
         kwargs = tabular_kwargs(p, kwargs, aux=aux)
         if p["multi_block"] == "yes":
             kwargs["header"] = None
-        kwargs["quoting"] = csv.QUOTE_MINIMAL
+        kwargs["quoting"] = QUOTE_MINIMAL
         if p["flat_text_delimiter"] in ["tab", "\\t"]:
             kwargs["sep"] = "\t"
         else:
@@ -207,7 +201,7 @@ def read_single_datafile(
             else:
                 driver = nist.xml_count_parse_info(p, ignore_namespace=True)
             xml_path_info = nist.xml_string_path_info(p["munge_fields"], p["namespace"])
-            tree = et.parse(f_path)
+            tree = xml.etree.ElementTree.parse(f_path)
             df, err = nist.df_from_tree(
                 tree,
                 xml_path_info=xml_path_info,
@@ -273,7 +267,7 @@ def read_single_datafile(
                     err = add_new_error(
                         err,
                         "system",
-                        f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                        f"{Path(__file__).absolute().parents[0].name}.{currentframe().f_code.co_name}",
                         f"Unexpected error setting and filling headers after padding file {file_name}",
                     )
 
@@ -310,7 +304,7 @@ def read_single_datafile(
     except UnicodeDecodeError as ude:
         err_str = f"Encoding error. Datafile not read completely.\n\t{ude}"
         err = add_new_error(err, "file", file_name, err_str)
-    except ParserError as pe:
+    except pd.errors.ParserError as pe:
         # DFs have trouble comparing against None. So we return an empty DF and
         # check for emptiness below as an indication of an error.
         err_str = f"Error parsing results file.\n{pe}"
@@ -366,7 +360,7 @@ def excel_to_dict(
         err = add_new_error(
             err,
             "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"{Path(__file__).absolute().parents[0].name}.{currentframe().f_code.co_name}",
             f"Unexpected exception while getting row-constant keyword arguments for \n"
             f"rows_to_read: {rows_to_read}\n"
             f"kwargs: {kwargs}.\n"
@@ -483,7 +477,7 @@ def copy_directory_with_backup(
         err = add_new_error(
             err,
             "warn-system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"{Path(__file__).absolute().parents[0].name}.{currentframe().f_code.co_name}",
             f"No such directory: {original_path}",
         )
     return err
@@ -494,7 +488,7 @@ def copy_with_err_handling(
 ) -> Optional[dict]:
     err = None
     Path(copy_path).mkdir(parents=True, exist_ok=True)
-    for root, dirs, files in os.walk(original_path, topdown=True):
+    for root, dirs, files in walk(original_path, topdown=True):
         new_root = root.replace(original_path, copy_path)
         for f in files:
             old = os.path.join(root, f)
@@ -507,7 +501,7 @@ def copy_with_err_handling(
                     err = add_new_error(
                         err,
                         "warn-file",
-                        f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                        f"{Path(__file__).absolute().parents[0].name}.{currentframe().f_code.co_name}",
                         f"Error while copying {old} to {new}:\n{she}",
                     )
         for d in dirs:
@@ -701,9 +695,14 @@ def report(
 
                     # write info to a .errors or .errors file named for the name_key <nk>
                     out_path = os.path.join(
-                        output_location, f"{file_prefix}_{et}_{nk_name}.errors"
+                        output_location,
+                        slugify(
+                            f"{file_prefix}_{et}_{nk_name}.errors",
+                            regex_pattern=r"[^ A-z0-9-_]+",
+                            lowercase=False,
+                        ),
                     )
-                    with open(out_path, "a") as f:
+                    with open(out_path, "a", encoding=constants.default_encoding) as f:
                         f.write(out_str)
                     print(f"{et.title()} errors{and_warns} written to {out_path}")
 
@@ -723,9 +722,14 @@ def report(
                     # write info to a .warnings file named for the error-type and name_key
 
                     out_path = os.path.join(
-                        output_location, f"{file_prefix}_{et}_{nk_name}.warnings"
+                        output_location,
+                        slugify(
+                            f"{file_prefix}_{et}_{nk_name}.warnings",
+                            regex_pattern=r"[^ A-z0-9-_]+",
+                            lowercase=False,
+                        ),
                     )
-                    with open(out_path, "a") as f:
+                    with open(out_path, "a", encoding=constants.default_encoding) as f:
                         f.write(out_str)
                     print(f"{et.title()} warnings written to {out_path}")
 
@@ -770,7 +774,7 @@ def add_new_error(
         err = add_new_error(
             err,
             "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"{Path(__file__).absolute().parents[0].name}.{currentframe().f_code.co_name}",
             f"Unrecognized key ({err_type}) for message {msg}",
         )
         return err
@@ -824,7 +828,7 @@ def confirm_essential_info(
     the given directory; False otherwise"""
 
     # loop through files
-    for f in [f for f in os.listdir(directory) if f[-4:] == ".ini"]:
+    for f in [f for f in listdir(directory) if f[-4:] == ".ini"]:
         p_path = os.path.join(directory, f)
         file_confirmed = False
         while not file_confirmed:
@@ -873,7 +877,7 @@ def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> li
     for ini files whose results files are in the results_path directory
     """
     ej_set = set()
-    for subdir, dirs, files in os.walk(ini_path):
+    for subdir, dirs, files in walk(ini_path):
         for f in files:
             if (f.endswith(".ini")) and (not f.endswith("template.ini")):
                 full_path = os.path.join(subdir, f)
@@ -894,7 +898,16 @@ def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> li
     return list(ej_set)
 
 
-def get_contest_type_mappings(filters: list) -> Optional[list]:
+def get_contest_type_mappings(filters: List[str]) -> Optional[List[str]]:
+    """
+
+    :param filters: list of specifications, possibly including
+        election names, jurisdiction names, ReportingUnitTypes of district (e.g. "congressional")
+        or user-facing version as specified in `constants.contest_type_mappings` (e.g., "Congressional")
+    :return: same list of specifications, with user-facing versions of contest types mapped to
+        internal ReportingUnitTypes per `constants.contest_type_mappings`
+    """
+
     """get mappings for a list to the contest type database labels"""
     if not filters:
         return None
@@ -908,7 +921,15 @@ def get_contest_type_mappings(filters: list) -> Optional[list]:
 
 
 def get_contest_type_mapping(item: str) -> str:
-    """get mappings for a string to the contest type database labels"""
+    """
+    :param item: string
+    :return:
+        if <item> is in the list of user-facing district types (e.g., "Congressional", "Statewide"),
+            return corresponding ReportingUnitType for those districts (e.g., "congressional", "state"),
+            according to the correspondence in constants.contest_type_mappings.
+            (N.B.: in case of ambiguity, first found is returned)
+        otherwise, return <item>.
+    """
     contest_types = constants.contest_type_mappings.items()
     for contest_type in contest_types:
         if contest_type[1] in item:
@@ -1005,7 +1026,7 @@ def get_filtered_input_options(
         cursor = connection.cursor()
 
         # TODO filter by major subdivision of jurisdiction
-        population_df = db.read_external(
+        population_df = db.read_external_cursor(
             cursor, election_id, jurisdiction_id, ["Category"]
         )
         cursor.close()
@@ -1074,7 +1095,7 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
-        df_unfiltered = db.read_external(
+        df_unfiltered = db.read_external_cursor(
             cursor,
             election_id,
             jurisdiction_id,
@@ -1142,7 +1163,7 @@ def clean_candidate_names(df):
     extra_df = df[extra_cols]
     df = df[df_cols]
     df["party"] = df["type"].str.split(" ")
-    df["party"] = np.where(
+    df["party"] = where(
         df["party"].str.contains("party", case=False),
         df["party"]
         .map(lambda x: x[0:-1])
@@ -1175,12 +1196,12 @@ def clean_candidate_names(df):
     df["chamber"] = df["chamber"].fillna("unknown")
     df["district"] = df["contest"].str.extract(r"(\d+)")
     df["contest_short"] = ""
-    df["contest_short"] = np.where(
+    df["contest_short"] = where(
         df["chamber"] != "unknown",
         df[df.columns[5:]].apply(lambda x: "".join(x.dropna().astype(str)), axis=1),
         df["contest_short"],
     )
-    df["contest_short"] = np.where(
+    df["contest_short"] = where(
         df["chamber"] == "unknown",
         df["contest"]
         .str.split(" ")
@@ -1188,7 +1209,7 @@ def clean_candidate_names(df):
         df["contest_short"],
     )
     # Handle GA 2020 runoff senate elections
-    df["contest_short"] = np.where(
+    df["contest_short"] = where(
         df["parent"].str.contains("runoff"),
         df["contest_short"] + "Runoff",
         df["contest_short"],
@@ -1213,7 +1234,7 @@ def disambiguate_empty_cols(
     df = df_in.reset_index(drop=True)
 
     # put dummy info into the tops of the bad columns
-    # in order to meet MultiIndex uniqueness criteria
+    # in order to meet pd.MultiIndex uniqueness criteria
     mask = df.eq("").loc[start:].all()
     bad_column_numbers = [j for j in range(original_number_of_columns) if mask[j]]
     for j in bad_column_numbers:

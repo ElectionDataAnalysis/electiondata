@@ -2920,17 +2920,15 @@ class Analyzer:
                 html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need
                 plotly-orca installed as well.
 
-        If <fig_type> is given and points for scatter are found, creates a scatter plot
-            in the self.reports_and_plots_dir directory with file extension and format determined by fig_type.
+        If <fig_type> is given and algorithm identifies one-county outliers that might be of interest,
+            bar charts are exported to the self.reports_and_plots_dir directory with
+            file extension and format determined by fig_type.
 
         Returns:
             List[dict],
         """
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        # for now, bar charts can only handle jurisdictions where major subdivision type is one level
-        # down from the jurisdiction
-        # TODO is this still true? ^^
         agg_results = an.create_bar(
             self.session,
             election_id,
@@ -2980,45 +2978,20 @@ class Analyzer:
         )
         return agg_results
 
-    def top_counts(
-        self, election: str, jurisdiction: str, sub_rutype: str, by_vote_type: bool
-    ) -> Optional[str]:
-        """
-        Inputs:
-            election: str,
-            jurisdiction: str,
-            sub_rutype: str, ReportingUnitType (e.g., 'county') to which the results should be rolled up
-            by_vote_type: bool, if true, results will be reported by vote type. If false, only totals will be reported
-
-        Puts file with results into a subdirectory (labeled by election and jurisdiction name)
-            of the reports_and_plots_dir specified in the Analyzer's param_file.
-        """
-        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        election_id = db.name_to_id(self.session, "Election", election)
-        err = an.export_rollup(
-            self.session,
-            self.reports_and_plots_dir,
-            jurisdiction_id=jurisdiction_id,
-            sub_rutype=sub_rutype,
-            election_id=election_id,
-            by_vote_type=by_vote_type,
-        )
-        return err
-
     def export_nist(
         self,
         election: str,
         jurisdiction,
     ) -> Union[str, Dict[str, Any]]:
-        """picks either version 1.0 (json) or version 2.0 (xml) based on value of constants.nist_version"""
-        if electiondata.constants.nist_version == "1.0":
-            return self.export_nist_v1_json(election, jurisdiction)
-        elif electiondata.constants.nist_version == "2.0":
-            return self.export_nist_v2(election, jurisdiction)
+        """picks either json or xml based on value of constants.nist_version"""
+        if electiondata.constants.default_nist_format == "json":
+            return self.export_nist_json(election, jurisdiction)
+        elif electiondata.constants.default_nist_format == "xml":
+            return self.export_nist_xml_as_string(election, jurisdiction)
         else:
             return ""
 
-    def export_nist_v1_json(self, election: str, jurisdiction: str) -> Dict[str, Any]:
+    def export_nist_json(self, election: str, jurisdiction: str) -> Dict[str, Any]:
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
 
@@ -3045,16 +3018,16 @@ class Analyzer:
 
         return election_report
 
-    def export_nist_v1(
+    def export_nist_json_as_string(
         self,
         election: str,
         jurisdiction: str,
     ) -> str:
-        """exports NIST v1 json string"""
-        json_string = json.dumps(self.export_nist_v1_json(election, jurisdiction))
+        """exports NIST v2 json string"""
+        json_string = json.dumps(self.export_nist_json(election, jurisdiction))
         return json_string
 
-    def export_nist_v2(
+    def export_nist_xml_as_string(
         self,
         election: str,
         jurisdiction: str,
@@ -3716,7 +3689,7 @@ class Analyzer:
                 )
             if not not_found_in_db.empty:
                 nfid_str = (
-                    f"\nSome expected constests not found. For details, see {sub_dir}"
+                    f"\nSome expected contests not found. For details, see {sub_dir}"
                 )
                 err = ui.add_new_error(
                     err,
@@ -3831,7 +3804,7 @@ def external_data_exists(
 
     connection = an.session.bind.raw_connection()
     cursor = connection.cursor()
-    df = db.read_external(cursor, election_id, jurisdiction_id, ["Label"])
+    df = db.read_external_cursor(cursor, election_id, jurisdiction_id, ["Label"])
     cursor.close()
 
     # if no data found
@@ -3925,7 +3898,7 @@ def load_results_df(
             err,
             "jurisdiction",
             juris_true_name,
-            f"No contest-selection pairs recognized via munger {munger_name}",
+            f"No contest-selection pairs recognized in file {file_name} via munger {munger_name}",
         )
         return err
 

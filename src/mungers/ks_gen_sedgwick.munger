@@ -62,7 +62,7 @@ Party={<count_header_3>,^(\w\w\w) .*$}
 # Values to ignore (optional) #
 [ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
-Candidate=Write-in Totals,Totals
+Candidate=Write-in Totals,Totals,Total Votes Cast
 ReportingUnit=SEDGWICK;Totals,Sedgwick;Totals
 
 # Lookup formula sections #

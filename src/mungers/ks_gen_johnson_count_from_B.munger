@@ -49,14 +49,11 @@ CandidateContest=<count_header_0>
 Party=<count_header_2>
 
 
-
-
-
-
 # Values to ignore (optional) #
 [ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
 ReportingUnit=JOHNSON;COUNTY TOTALS,Johnson;COUNTY TOTALS
+Candidate=Write-in,Under Votes,Over Votes
 
 # Lookup formula sections #
 ## Required when foreign keys are used in munge formulas and    ##
