@@ -27,7 +27,7 @@ bibliography: paper.bib
 The software package includes:
 
 - Process for munging election results from a large variety of files into a single consolidated database. 
-  - File types include csv, excel, json, xml (but not pdf). Internal structure choices (e.g., xml tags, or column, row, blank line and header choices for flat files). Users do not need to know Python (other than the basics for installing and calling the package).
+  - File types include csv, excel, json, xml (but not pdf), with arbitrary internal structure choices (e.g., xml tags, or column, row, blank line and header choices for flat files). Users do not need to know Python (other than the basics for installing and calling the package).
    - The system provides detailed messaging and error handling to support the user creating the parameters for a new file format or jurisdiction.
 - Detailed jurisdiction-specific information for all 56 major United States jurisdictions and munging parameters sufficient to process county-level election results from the raw files published by the 56 Boards of Election. Except for the few jurisdictions where only pdf or html files are available, this processing is entirely automatic.
 - Testing of election results in database against reference contest totals.
