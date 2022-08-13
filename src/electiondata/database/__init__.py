@@ -2,6 +2,7 @@
 # database/__init__.py
 
 import psycopg2
+import mysql
 import sqlalchemy
 import sqlalchemy as sa
 import sqlalchemy.orm
@@ -35,6 +36,7 @@ import pandas as pd
 from electiondata import munge as m, analyze as an, constants, userinterface as ui
 import re
 import os
+
 
 # sqlalchemy imports below are necessary, even if syntax-checker doesn't think so!
 
@@ -425,9 +427,21 @@ def create_or_reset_db(
 
 def get_params_from_various(
     db_params: Optional[Dict[str, str]] = None,
-    db_param_file: Optional[str] = None,
+    db_param_file: Optional[os.PathLike] = None,
     dbname: Optional[str] = None,
+    header: str = "postgresql",
 ) -> (Optional[dict], Optional[dict]):
+    """
+    :param db_params: dictionary of database parameters "host", "port", "dbname", "user", "password" (or None)
+    :param db_param_file: path to file with database parameters (or None)
+    :param dbname: database name (or None)
+    :param header: name of database type ("postgresql" or "mysql")
+    :return:
+        dictionary of database parameters -- the ones passed in <db_params>, if any; otherwise the ones found
+            in <db_param_file>, if given; otherwise the ones found in "run_time.ini" under the header <header>.
+            In any case, if <dbname> is given then that database name will override whatever else was found.
+        error dictionary
+    """
     # use explicit db params if given
     if db_params:
         params = db_params
@@ -437,12 +451,12 @@ def get_params_from_various(
         if db_param_file is None:
             db_param_file = "run_time.ini"
         params, err = ui.get_parameters(
-            required_keys=db_pars, param_file=db_param_file, header="postgresql"
+            required_keys=db_pars, param_file=db_param_file, header=header
         )
         if err:
             return None, err
 
-    # if dbname was given, use it instead of name in paramfile
+    # if dbname was given, use it, overriding any other specified dbname
     if dbname:
         params["dbname"] = dbname
     return params, err
@@ -2167,7 +2181,10 @@ def read_vote_count_nist(
     return results_df
 
 
-def create_common_data_format_tables(session, dirpath="CDF_schema_def_info/"):
+def create_common_data_format_tables(
+        session: Session,
+        dirpath: os.PathLike="CDF_schema_def_info/"
+):
     """schema example: 'cdf'; Creates cdf tables in the given schema
     (or directly in the db if schema == None)
     """
@@ -2266,7 +2283,8 @@ def create_common_data_format_tables(session, dirpath="CDF_schema_def_info/"):
 
 
 def create_table(
-    metadata, id_seq, name, table_type, dirpath, create_indices: list = None
+    metadata, id_seq, name, table_type,
+        dirpath: os.PathLike, create_indices: list = None
 ):
     """Each element of the list <create_indices>, should be a list of
     columns on which an index should be created."""
@@ -2431,7 +2449,7 @@ def create_table(
 
 
 def add_standard_records(
-    content_root: str,
+    content_root: os.PathLike,
     session: Session,
 ) -> Optional[dict]:
     """Add standard records to database"""
@@ -2540,7 +2558,9 @@ def add_standard_records(
     return err
 
 
-def reset_db(session, dirpath):
+def reset_db(
+        session: Session,
+        dirpath: os.PathLike):
     """Resets DB to a clean state with no tables/sequences.
     Used if a DB is created for a user but not populated, for example."""
 
@@ -2562,3 +2582,4 @@ def reset_db(session, dirpath):
         conn.execute(f'DROP TABLE IF EXISTS "{table}" CASCADE;')
         session.commit()
     conn.close()
+    return

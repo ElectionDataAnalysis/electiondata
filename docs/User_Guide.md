@@ -1,7 +1,7 @@
 # Environment
 You will need:
  * `python3.9`. 
- * `postgresql`. You do *not* need to create a database; you just need to make sure a `postgresql` is installed, and you need to have the hostname, port and login credentials with default permissions. 
+ * Either `postgresql` or `mysql`. You do *not* need to create a database; you just need to make sure either `postgresql` or `mysql` is installed, and you need to have the hostname, port and login credentials with default permissions. 
  * all required python packages: run `python3.9 -m pip install -r requirements.txt` from the root folder of the repository.
    
 For more detail, see the [Installation Instructions](./Installation.md).

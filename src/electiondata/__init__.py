@@ -2381,6 +2381,7 @@ class Analyzer:
         param_file: str = None,
         dbname: str = None,
         major_subdivision_file: str = None,
+        sql_flavor: str = "postgresql"
     ):
         """
         Optional inputs:
@@ -2400,7 +2401,7 @@ class Analyzer:
             db_params, postgres_param_err = ui.get_parameters(
                 required_keys=["dbname", "host", "port", "user", "password"],
                 param_file=param_file,
-                header="postgresql",
+                header=sql_flavor,
             )
             d, eda_err = ui.get_parameters(
                 required_keys=["reports_and_plots_dir", "repository_content_root"],

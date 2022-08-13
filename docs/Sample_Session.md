@@ -31,7 +31,17 @@ dbname=ga_test
 user=postgres
 password=
 ```
-You may wish to check that these postgresql credentials will work on your system via the command `psql -h localhost -p 5432 -U postgres postgres`. If this command fails, or if it prompts you for a password, you will need to find the correct connection parameters specific to your postgresql instance.  (Note that the `dbname` parameter is arbitrary, and determines only the name of the postgresql database created by the package.)
+If you are using `mysql` instead of `postgresql`, replace the `[postgresql]` section with 
+```
+[mysql]
+host=localhost
+port=3306
+dbname=ga_test
+user=root
+password=
+```
+
+You may wish to check that the database credentials will work on your system (e.g., via the command `psql -h localhost -p 5432 -U postgres postgres` or `mysql -h localhost -u root -p mysql`). If this command fails, or if it prompts you for a password, you will need to find the correct connection parameters specific to your database instance.  (Note that the `dbname` parameter is arbitrary, and determines only the name of the postgresql database created to store the election data.)
 
 ### Contents of `GA_detail_20201120_1237.xml`
 Copy the file of the same name in the repository: [000_template.mungerGA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml)
@@ -41,7 +51,7 @@ Copy the file of the same name in the repository: [000_template.mungerGA_detail_
 >>> import electiondata as ed
 >>> ed.load_or_reload_all()
 ```
-After this command executes successfully, you will see a database in your postgres instance whose name matches the value of `dbname` given in `run_time.ini`. The file structure will now be:
+After this command executes successfully, you will see a database in your postgresql or mysql instance whose name matches the value of `dbname` given in `run_time.ini`. The file structure will now be:
 ```
 .
 +-- archive_directory
@@ -284,7 +294,7 @@ Jurisdiction Georgia did not load. See .error file.
 Jurisdiction errors written to reports_and_plots_directory/load_or_reload_all_1113_0757/_jurisdiction_Georgia.errors
 >>> 
 ```
-Take a look at the file(s) indicated, which should give you a good idea of what needs to be fixed. (If it doesn't please report the unhelpful message(s) and your question as an [issue on GitHub](https://github.com/ElectionDataAnalysis/electiondata/issues)). Repeat this step -- loading and looking at errors -- as often as necessary! (In rare cases, you may want to start over with a new database, either by erasing the existing `ga_test` from your postgres instance, or changing the value of `dbname` in the `run_time.ini` file.)
+Take a look at the file(s) indicated, which should give you a good idea of what needs to be fixed. (If it doesn't please report the unhelpful message(s) and your question as an [issue on GitHub](https://github.com/ElectionDataAnalysis/electiondata/issues)). Repeat this step -- loading and looking at errors -- as often as necessary! (In rare cases, you may want to start over with a new database, either by erasing the existing `ga_test` from your database instance, or changing the value of `dbname` in the `run_time.ini` file.)
 
 ### Sample errors and warnings while building jurisdiction files
 #### Contests
