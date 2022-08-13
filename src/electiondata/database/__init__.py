@@ -18,6 +18,7 @@ from sqlalchemy import (
     String,
     UniqueConstraint,
 )
+# sqlalchemy imports below are necessary, even if syntax-checker doesn't think so!
 from sqlalchemy import (
     Date,
     TIMESTAMP,
@@ -37,20 +38,29 @@ from electiondata import munge as m, analyze as an, constants, userinterface as 
 import re
 import os
 
-
-# sqlalchemy imports below are necessary, even if syntax-checker doesn't think so!
-
 from typing import Optional, List, Dict, Any, Set
 
-
-# these form the universe of jurisdictions that can be displayed via the display_jurisdictions function.
 
 db_pars = ["host", "port", "dbname", "user", "password"]
 
 
-def get_database_names(con: psycopg2.extensions.connection):
-    """Return dataframe with one column called `datname`"""
-    names = pd.read_sql("SELECT datname FROM pg_database", con)
+def get_database_names(
+        con: sqlalchemy.engine.Connection,
+        sql_flavor: str = "postgresql"
+) -> Optional[pd.DataFrame]:
+    """
+
+    :param con: a database connection
+    :param sql_flavor: "postgresql" or "mysql"
+    :return:
+        one-column dataframe of names of databases
+    """
+    if sql_flavor == "postgres":
+        names = pd.read_sql("SELECT datname FROM pg_database", con)
+    elif sql_flavor == "mysql":
+        names = pd.read_sql("SHOW DATABASES",con)
+    else:
+        names = None
     return names
 
 
@@ -222,6 +232,7 @@ def test_connection_and_tables(
     db_params: Optional[Dict[str, str]] = None,
     db_param_file: Optional[str] = None,
     dbname: Optional[str] = None,
+    sql_flavor: str = "postgresql", # TODO trace up
 ) -> (bool, Optional[dict]):
     """Check for DB and relevant tables; if they don't exist, return
     error message"""
@@ -252,7 +263,7 @@ def test_connection_and_tables(
         return False, err
 
     # look for database
-    db_df = get_database_names(con)
+    db_df = get_database_names(con, sql_flavor)
     if not db_params["dbname"] in db_df.datname.unique():
         # NB: this is not really an error, just leads to returning False.
         return False, err
@@ -293,8 +304,6 @@ def test_connection_and_tables(
 
 
 # TODO move to more appropriate module?
-
-
 def append_to_composing_reporting_unit_join(
     engine: sqlalchemy.engine, ru: pd.DataFrame, error_type, error_name
 ) -> Optional[dict]:
@@ -364,6 +373,7 @@ def create_or_reset_db(
     db_param_file: Optional[str] = None,
     db_params: Optional[Dict[str, str]] = None,
     dbname: Optional[str] = None,
+    sql_flavor: str = "postgresql",
 ) -> Optional[dict]:
     """if no dbname is given, name will be taken from db_params, db_param_file or db_params."""
 
@@ -391,7 +401,7 @@ def create_or_reset_db(
         con = None  # to keep syntax-checker happy
 
     cur = con.cursor()
-    db_df = get_database_names(con)
+    db_df = get_database_names(con, sql_flavor)
 
     # if dbname already exists.
     if dbname in db_df.datname.unique():
@@ -423,43 +433,6 @@ def create_or_reset_db(
     err = ui.consolidate_errors([err, new_err])
     con.close()
     return err
-
-
-def get_params_from_various(
-    db_params: Optional[Dict[str, str]] = None,
-    db_param_file: Optional[os.PathLike] = None,
-    dbname: Optional[str] = None,
-    header: str = "postgresql",
-) -> (Optional[dict], Optional[dict]):
-    """
-    :param db_params: dictionary of database parameters "host", "port", "dbname", "user", "password" (or None)
-    :param db_param_file: path to file with database parameters (or None)
-    :param dbname: database name (or None)
-    :param header: name of database type ("postgresql" or "mysql")
-    :return:
-        dictionary of database parameters -- the ones passed in <db_params>, if any; otherwise the ones found
-            in <db_param_file>, if given; otherwise the ones found in "run_time.ini" under the header <header>.
-            In any case, if <dbname> is given then that database name will override whatever else was found.
-        error dictionary
-    """
-    # use explicit db params if given
-    if db_params:
-        params = db_params
-        err = None
-    # otherwise look in given file, or in default parameter file
-    else:
-        if db_param_file is None:
-            db_param_file = "run_time.ini"
-        params, err = ui.get_parameters(
-            required_keys=db_pars, param_file=db_param_file, header=header
-        )
-        if err:
-            return None, err
-
-    # if dbname was given, use it, overriding any other specified dbname
-    if dbname:
-        params["dbname"] = dbname
-    return params, err
 
 
 def sql_alchemy_connect(
@@ -500,6 +473,7 @@ def create_db_if_not_ok(
     dbname: Optional[str] = None,
     db_param_file: Optional[str] = None,
     db_params: Optional[Dict[str, str]] = None,
+    sql_flavor: str = "postgresql",  # TODO trace up
 ) -> Optional[dict]:
     # create db if it does not already exist and have right tables
     ok, err = test_connection_and_tables(
@@ -511,6 +485,7 @@ def create_db_if_not_ok(
             dbname=dbname,
             db_params=db_params,
             db_param_file=db_param_file,
+            sql_flavor=sql_flavor,
         )
         err = ui.consolidate_errors([err, new_err])
     return err
@@ -2583,3 +2558,43 @@ def reset_db(
         session.commit()
     conn.close()
     return
+
+
+# routines below upgraded to handle mysql or postgresql
+def get_params_from_various(
+    db_params: Optional[Dict[str, str]] = None,
+    db_param_file: Optional[os.PathLike] = None,
+    dbname: Optional[str] = None,
+    header: str = "postgresql",
+) -> (Optional[dict], Optional[dict]):
+    """
+    :param db_params: dictionary of database parameters "host", "port", "dbname", "user", "password" (or None)
+    :param db_param_file: path to file with database parameters (or None)
+    :param dbname: database name (or None)
+    :param header: name of database type ("postgresql" or "mysql")
+    :return:
+        dictionary of database parameters -- the ones passed in <db_params>, if any; otherwise the ones found
+            in <db_param_file>, if given; otherwise the ones found in "run_time.ini" under the header <header>.
+            In any case, if <dbname> is given then that database name will override whatever else was found.
+        error dictionary
+    """
+    # use explicit db params if given
+    if db_params:
+        params = db_params
+        err = None
+    # otherwise look in given file, or in default parameter file
+    else:
+        if db_param_file is None:
+            db_param_file = "run_time.ini"
+        params, err = ui.get_parameters(
+            required_keys=db_pars, param_file=db_param_file, header=header
+        )
+        if err:
+            return None, err
+
+    # if dbname was given, use it, overriding any other specified dbname
+    if dbname:
+        params["dbname"] = dbname
+    return params, err
+
+
