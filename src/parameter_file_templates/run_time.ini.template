@@ -4,7 +4,8 @@ archive_dir=</path/to/folder/for/archiving/uploaded/files>
 repository_content_root=<path/to/folder/containing/code/and/mungers/and/jurisdictions/and/ini_files_for_results>
 reports_and_plots_dir=</path/to/folder/for/analysis/output>
 
-[postgresql]
+[database]
+sql_flavor=<postgresql or mysql>
 host=<url for your postgresql server>
 port=<port for your postgresql server>
 dbname=<name of your election data database>

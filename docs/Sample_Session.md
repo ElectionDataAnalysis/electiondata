@@ -24,16 +24,18 @@ archive_dir=archive_directory
 repository_content_root=<path/to/src>
 reports_and_plots_dir=reports_and_plots
 
-[postgresql]
+[database]
+sql_flavor=postgresql
 host=localhost
 port=5432
 dbname=ga_test
 user=postgres
 password=
 ```
-If you are using `mysql` instead of `postgresql`, replace the `[postgresql]` section with 
+The system will also accept `mysql`
 ```
-[mysql]
+[database]
+sql_flavor=mysql
 host=localhost
 port=3306
 dbname=ga_test
@@ -41,7 +43,7 @@ user=root
 password=
 ```
 
-You may wish to check that the database credentials will work on your system (e.g., via the command `psql -h localhost -p 5432 -U postgres postgres` or `mysql -h localhost -u root -p mysql`). If this command fails, or if it prompts you for a password, you will need to find the correct connection parameters specific to your database instance.  (Note that the `dbname` parameter is arbitrary, and determines only the name of the postgresql database created to store the election data.)
+You may wish to check that the database credentials will work on your system (e.g., via the command `psql -h localhost -p 5432 -U postgres postgres` or `mysql -h localhost -u root -p mysql`). If this command fails, or if it prompts you for a password, you will need to find the correct connection parameters specific to your database instance.  (Note that the `dbname` parameter is arbitrary, and determines only the name of the postgresql database created to store the election data. Warning: if the database already exists, it will be overwritten.)
 
 ### Contents of `GA_detail_20201120_1237.xml`
 Copy the file of the same name in the repository: [000_template.mungerGA_detail_20201120_1237.xml](../tests/000_data_for_pytest/2020-General/Georgia/GA_detail_20201120_1237.xml)

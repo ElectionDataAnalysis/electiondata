@@ -29,7 +29,7 @@ import csv
 import inspect
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from pathlib import Path
-from psycopg2 import sql
+from psycopg2 import sql,connection
 import datetime
 from configparser import MissingSectionHeaderError
 import pandas as pd
@@ -38,14 +38,13 @@ from electiondata import munge as m, analyze as an, constants, userinterface as 
 import re
 import os
 
-from typing import Optional, List, Dict, Any, Set
-
+from typing import Optional,List,Dict,Any,Set,Union
 
 db_pars = ["host", "port", "dbname", "user", "password"]
 
 
 def get_database_names(
-        con: sqlalchemy.engine.Connection,
+        con: Optional[sqlalchemy.engine.Connection],
         sql_flavor: str = "postgresql"
 ) -> Optional[pd.DataFrame]:
     """
@@ -55,7 +54,10 @@ def get_database_names(
     :return:
         one-column dataframe of names of databases
     """
-    if sql_flavor == "postgres":
+    if con is None:
+        # need this to keep syntax checker happy in other routines
+        names = None
+    elif sql_flavor == "postgres":
         names = pd.read_sql("SELECT datname FROM pg_database", con)
     elif sql_flavor == "mysql":
         names = pd.read_sql("SHOW DATABASES",con)
@@ -229,10 +231,9 @@ def append_to_composing_reporting_unit_join(
 
 
 def test_connection_and_tables(
-    db_params: Optional[Dict[str, str]] = None,
+    db_params: Optional[Dict[str,str]] = None,
     db_param_file: Optional[str] = None,
     dbname: Optional[str] = None,
-    sql_flavor: str = "postgresql", # TODO trace up
 ) -> (bool, Optional[dict]):
     """Check for DB and relevant tables; if they don't exist, return
     error message"""
@@ -241,18 +242,18 @@ def test_connection_and_tables(
     err = None
 
     # use db_params if given; otherwise get them from db_param_file if given, otherwise from "run_time.ini"
-    db_params, new_err = get_params_from_various(
+    params, new_err = get_params_from_various(
         db_params=db_params, db_param_file=db_param_file, dbname=dbname
     )
     err = ui.consolidate_errors([err, new_err])
     if ui.fatal_error(new_err):
         return False, err
 
-    # check connection to postgres
-    postgres_params = db_params.copy()
-    postgres_params["dbname"] = "postgres"
+    # check connection to database
+    temp_params = params.copy()
+    temp_params["dbname"] = params["sql_flavor"]
     try:
-        con = psycopg2.connect(**postgres_params)
+        con = psycopg2.connect(**temp_params)   # TODO connect to postgresql or mysql, using sqlalchemy
     except psycopg2.OperationalError as e:
         err = ui.add_new_error(
             err,
@@ -263,8 +264,8 @@ def test_connection_and_tables(
         return False, err
 
     # look for database
-    db_df = get_database_names(con, sql_flavor)
-    if not db_params["dbname"] in db_df.datname.unique():
+    db_df = get_database_names(con, params["sql_flavor"])
+    if not params["dbname"] in db_df.datname.unique():
         # NB: this is not really an error, just leads to returning False.
         return False, err
 
@@ -274,7 +275,7 @@ def test_connection_and_tables(
     # Look for tables
     try:
         engine, new_err = sql_alchemy_connect(
-            db_params=db_params, db_param_file=db_param_file, dbname=dbname
+            db_params=params, db_param_file=db_param_file, dbname=dbname
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
@@ -373,7 +374,6 @@ def create_or_reset_db(
     db_param_file: Optional[str] = None,
     db_params: Optional[Dict[str, str]] = None,
     dbname: Optional[str] = None,
-    sql_flavor: str = "postgresql",
 ) -> Optional[dict]:
     """if no dbname is given, name will be taken from db_params, db_param_file or db_params."""
 
@@ -392,16 +392,16 @@ def create_or_reset_db(
     try:
         postgres_params = params
         postgres_params["dbname"] = "postgres"
-        con = psycopg2.connect(**postgres_params)
+        con: Optional[sqlalchemy.engine.Connection]= psycopg2.connect(**postgres_params)
     except Exception as e:
-        # Can't connect to the default postgres database, so there
+        # Can't connect to the default database, so there
         # seems to be something wrong with connection. Fail here.
         print(f"Error connecting to database. Exiting.")
         quit()
         con = None  # to keep syntax-checker happy
 
     cur = con.cursor()
-    db_df = get_database_names(con, sql_flavor)
+    db_df = get_database_names(con, params["sql_flavor"])
 
     # if dbname already exists.
     if dbname in db_df.datname.unique():
@@ -473,7 +473,6 @@ def create_db_if_not_ok(
     dbname: Optional[str] = None,
     db_param_file: Optional[str] = None,
     db_params: Optional[Dict[str, str]] = None,
-    sql_flavor: str = "postgresql",  # TODO trace up
 ) -> Optional[dict]:
     # create db if it does not already exist and have right tables
     ok, err = test_connection_and_tables(
@@ -485,7 +484,6 @@ def create_db_if_not_ok(
             dbname=dbname,
             db_params=db_params,
             db_param_file=db_param_file,
-            sql_flavor=sql_flavor,
         )
         err = ui.consolidate_errors([err, new_err])
     return err
@@ -2565,10 +2563,9 @@ def get_params_from_various(
     db_params: Optional[Dict[str, str]] = None,
     db_param_file: Optional[os.PathLike] = None,
     dbname: Optional[str] = None,
-    header: str = "postgresql",
 ) -> (Optional[dict], Optional[dict]):
     """
-    :param db_params: dictionary of database parameters "host", "port", "dbname", "user", "password" (or None)
+    :param db_params: dictionary of database parameters "sql_flavor", "host", "port", "dbname", "user", "password" (or None)
     :param db_param_file: path to file with database parameters (or None)
     :param dbname: database name (or None)
     :param header: name of database type ("postgresql" or "mysql")
@@ -2587,7 +2584,7 @@ def get_params_from_various(
         if db_param_file is None:
             db_param_file = "run_time.ini"
         params, err = ui.get_parameters(
-            required_keys=db_pars, param_file=db_param_file, header=header
+            required_keys=db_pars, param_file=db_param_file, header="database"
         )
         if err:
             return None, err

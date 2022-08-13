@@ -2381,7 +2381,6 @@ class Analyzer:
         param_file: str = None,
         dbname: str = None,
         major_subdivision_file: str = None,
-        sql_flavor: str = "postgresql"
     ):
         """
         Optional inputs:
@@ -2398,10 +2397,10 @@ class Analyzer:
         try:
             if not param_file:
                 param_file = "run_time.ini"
-            db_params, postgres_param_err = ui.get_parameters(
-                required_keys=["dbname", "host", "port", "user", "password"],
+            db_params, db_param_err = ui.get_parameters(
+                required_keys=["dbname", "host", "port", "user", "password","sql_flavor"],
                 param_file=param_file,
-                header=sql_flavor,
+                header="database",
             )
             d, eda_err = ui.get_parameters(
                 required_keys=["reports_and_plots_dir", "repository_content_root"],
@@ -2418,9 +2417,9 @@ class Analyzer:
             )
             return None
 
-        if postgres_param_err or eda_err:
+        if db_param_err or eda_err:
             print(f"Parameter file {param_file} missing requirements.")
-            print(f"postgres: {postgres_param_err}")
+            print(f"database: {db_param_err}")
             print(f"elections: {eda_err}")
             print("Analyzer object not created.")
             return None
