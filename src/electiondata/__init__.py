@@ -362,7 +362,7 @@ class DataLoader:
                 to a newly-opened session on that engine
         """
         try:
-            self.db_engine, err = db.sql_alchemy_connect(
+            self.db_engine, meta, err = db.sql_alchemy_connect(
                 db_param_file=db_param_file, dbname=dbname, db_params=db_params
             )
             Session = sessionmaker(bind=self.db_engine)
@@ -2426,7 +2426,7 @@ class Analyzer:
 
         # test connection to db
         try:
-            db_engine, err = db.sql_alchemy_connect(db_params=db_params, dbname=dbname)
+            db_engine, meta, err = db.sql_alchemy_connect(db_params=db_params, dbname=dbname)
             Session = sessionmaker(bind=db_engine)
             session = Session()
             # if error is fatal
@@ -2497,7 +2497,7 @@ class Analyzer:
         self.repository_content_root = d["repository_content_root"]
 
         # create session
-        eng, err = db.sql_alchemy_connect(db_param_file=param_file, dbname=dbname)
+        eng, meta, err = db.sql_alchemy_connect(db_param_file=param_file, dbname=dbname)
         Session = sessionmaker(bind=eng)
         self.session = Session()
 

@@ -40,7 +40,7 @@ import os
 
 from typing import Optional,List,Dict,Any,Set,Union
 
-db_pars = ["host", "port", "dbname", "user", "password"]
+db_pars = ["sql_flavor", "host", "port", "dbname", "user", "password"]
 
 
 def get_database_names(
@@ -68,25 +68,21 @@ def get_database_names(
 
 def remove_database(
     db_params: Optional[Dict[str, str]] = None,
-    db_param_file: Optional[str] = None,
+    db_param_file: Optional[os.PathLike] = None,
     dbname: Optional[str] = None,
 ) -> Optional[dict]:
     # initialize error dictionary
     db_err = None
 
     # if no db_params are given, use those in the param_file;
-    if not db_params:
-        # if no param_file given,try "run_time.ini"
-        if not db_param_file:
-            db_param_file = "run_time.ini"
-        db_params, param_err = ui.get_parameters(
-            required_keys=db_pars, param_file=db_param_file, header="postgresql"
-        )
-        if param_err:
-            db_err = ui.consolidate_errors([db_err, param_err])
+    db_params,param_err = get_params_from_various(
+        db_params=db_params,
+        db_param_file=db_param_file,
+        dbname=dbname,
+    )
+    if param_err:
+        db_err = ui.consolidate_errors([db_err,param_err])
 
-    if dbname:
-        db_params["dbname"] = dbname
     # connect to postgres, not to the target database
     postgres_params = db_params.copy()
     postgres_params["dbname"] = "postgres"
@@ -274,7 +270,7 @@ def test_connection_and_tables(
 
     # Look for tables
     try:
-        engine, new_err = sql_alchemy_connect(
+        engine, meta, new_err = sql_alchemy_connect(
             db_params=params, db_param_file=db_param_file, dbname=dbname
         )
         if new_err:
@@ -406,7 +402,7 @@ def create_or_reset_db(
     # if dbname already exists.
     if dbname in db_df.datname.unique():
         # reset DB to blank
-        eng_new, err = sql_alchemy_connect(
+        eng_new, meta, err = sql_alchemy_connect(
             db_params=db_params, db_param_file=db_param_file, dbname=dbname
         )
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
@@ -417,7 +413,7 @@ def create_or_reset_db(
         )
     else:
         create_database(con, cur, dbname)
-        eng_new, err = sql_alchemy_connect(
+        eng_new, meta, err = sql_alchemy_connect(
             db_params=db_params, db_param_file=db_param_file, dbname=dbname
         )
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
@@ -439,7 +435,7 @@ def sql_alchemy_connect(
     db_params: Optional[Dict[str, str]] = None,
     db_param_file: Optional[str] = None,
     dbname: Optional[str] = None,
-) -> (sqlalchemy.engine, Optional[dict]):
+) -> (sqlalchemy.engine, sqlalchemy.MetaData, Optional[dict]):
     """
     Inputs:
         db_params: Optional[Dict[str, str]],
@@ -447,8 +443,9 @@ def sql_alchemy_connect(
         dbname: Optional[str] = None,
 
     Returns:
-        sqlalchemy.engine, uses parameters in <db_params> if given, otherwise uses <db_param_file>,
+        sqlalchemy.Engine, uses parameters in <db_params> if given, otherwise uses <db_param_file>,
             otherwise defaults to run_time.ini parameter file
+        sqlalchemy.MetaData, information about database schema (e.g., table names, structure)
         Optional[dict], error dictionary
     """
     params, err = get_params_from_various(
@@ -465,7 +462,10 @@ def sql_alchemy_connect(
     engine = sa.create_engine(
         url, client_encoding=constants.default_encoding, pool_size=20, max_overflow=40
     )
-    return engine, err
+
+    # get the metadata (e.g., table names, structure, etc)
+    metadata = MetaData(bind=engine, reflect=True)
+    return engine, metadata, err
 
 
 def create_db_if_not_ok(
