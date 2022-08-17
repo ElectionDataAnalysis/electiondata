@@ -513,7 +513,6 @@ def get_parameters(
     required_keys: List[str],
     param_file: str,
     header: str,
-    err: Optional[Dict] = None,
     optional_keys: Optional[List[str]] = None,
 ) -> (Dict[str, str], Optional[Dict[str, dict]]):
     """Collects the values of the parameters corresponding to the <required_keys>

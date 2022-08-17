@@ -1402,7 +1402,6 @@ def get_and_check_munger_params(
         optional_keys=list(constants.opt_munger_data_types.keys()),
         param_file=munger_path,
         header="format",
-        err=None,
     )
     if ui.fatal_error(err):
         return dict(), err
