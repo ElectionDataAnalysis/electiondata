@@ -266,7 +266,8 @@ class SingleDataLoader:
 class DataLoader:
     def __new__(cls, param_file: Optional[str] = None, dbname: Optional[str] = None):
         """Checks if parameter file exists and is correct. If not, does
-        not create DataLoader object."""
+        not create DataLoader object. Checks ability to connect to database server and,
+        if necessary, creates the database to receive the election data."""
 
         # default param_file is run_time.ini in current directory
         if not param_file:
@@ -297,13 +298,13 @@ class DataLoader:
         self,
         param_file: Optional[str] = None,
         dbname: Optional[str] = None,
-        major_subdivision_file: Optional[str] = None,
+        major_subdivision_file: Optional[os.PathLike] = None,
     ):
         """
         Inputs:
             param_file: Optional[str] = None, path to file of necessary parameters (defaults to `run_time.ini`)
             dbname: Optional[str] = None, name of database (defaults to name specified in param_file)
-            major_subdivision_file: str = None, path to file with columns
+            major_subdivision_file: Optional[os.PathLike] = None, path to file with columns
                 'jurisdiction', 'major_subjurisdiction_type'
 
         Returns DataLoader instance with attributes:
@@ -359,7 +360,9 @@ class DataLoader:
 
             Sets engine attribute to an open connection with the database specified by
                 dname and/or db_params and/or db_param_file, and sets session attribute
-                to a newly-opened session on that engine
+                to a newly-opened session on that engine.
+
+            On failure, quits, with printed error message.
         """
         try:
             self.db_engine, meta, err = db.sql_alchemy_connect(
@@ -411,6 +414,7 @@ class DataLoader:
         if not db_params:
             # get db_params from current session, but with new database name
             db_params = {
+                "sql_flavor": self.db_engine.name,
                 "host": self.db_engine.url.host,
                 "port": self.db_engine.url.port,
                 "user": self.db_engine.url.username,
@@ -421,12 +425,7 @@ class DataLoader:
         # disconnect from current db and connect to new db, updating self.session and self.dbname
         self.session.close()
         # # nb: next command updates self.session
-        new_err = self.connect_to_db(
-            db_params=db_params,
-        )
-        err = ui.consolidate_errors([err, new_err])
-        if ui.fatal_error(new_err):
-            return err
+        self.connect_to_db(db_params=db_params)
         self.d["dbname"] = new_db_name
 
         # create new electiondata database if necessary
@@ -1036,7 +1035,7 @@ class DataLoader:
         """
         connection = self.session.bind.raw_connection()
         cursor = connection.cursor()
-        err_str = db.create_database(
+        err_str = db.create_database_postgres(
             connection, cursor, dbname=dbname, delete_existing=delete_existing
         )
 

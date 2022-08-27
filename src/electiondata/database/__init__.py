@@ -29,7 +29,7 @@ import csv
 import inspect
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from pathlib import Path
-from psycopg2 import sql,connection
+from psycopg2 import sql
 import datetime
 from configparser import MissingSectionHeaderError
 import pandas as pd
@@ -116,7 +116,7 @@ def remove_database(
     return db_err
 
 
-def create_database(
+def create_database_postgres(
     con: psycopg2.extensions.connection,
     cur: psycopg2.extensions.cursor,
     dbname: str,
@@ -380,10 +380,6 @@ def create_or_reset_db(
     if err:
         return err
 
-    # use dbname from param_file, unless another dbname was given
-    if dbname is None:
-        dbname = params["dbname"]
-
     # get connection to default postgres DB to create new DB
     try:
         postgres_params = params
@@ -399,25 +395,16 @@ def create_or_reset_db(
     cur = con.cursor()
     db_df = get_database_names(con, params["sql_flavor"])
 
-    # if dbname already exists.
+    # if dbname already exists, delete it
     if dbname in db_df.datname.unique():
-        # reset DB to blank
-        eng_new, meta, err = sql_alchemy_connect(
-            db_params=db_params, db_param_file=db_param_file, dbname=dbname
-        )
-        Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
-        sess_new = Session_new()
-        reset_db(
-            sess_new,
-            os.path.join(content_root, "electiondata", "CDF_schema_def_info"),
-        )
-    else:
-        create_database(con, cur, dbname)
-        eng_new, meta, err = sql_alchemy_connect(
-            db_params=db_params, db_param_file=db_param_file, dbname=dbname
-        )
-        Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
-        sess_new = Session_new()
+        remove_database(db_params=db_params)
+    # create new
+    create_database_postgres(con,cur,dbname)
+    eng_new, meta, err = sql_alchemy_connect(
+        db_params=db_params, db_param_file=db_param_file, dbname=dbname
+    )
+    Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
+    sess_new = Session_new()
 
     # TODO tech debt: does reset duplicate work here?
     # load cdf tables
@@ -442,6 +429,8 @@ def sql_alchemy_connect(
         db_param_file: Optional[str] = None,
         dbname: Optional[str] = None,
 
+    Note: can use any kind of sql as long as there is a connection url of the form
+        "{sql_flavor}://{user}:{password}@{host}:{port}/{dbname}"
     Returns:
         sqlalchemy.Engine, uses parameters in <db_params> if given, otherwise uses <db_param_file>,
             otherwise defaults to run_time.ini parameter file
@@ -454,9 +443,8 @@ def sql_alchemy_connect(
     if params is None:
         return None, err
 
-    # We connect with the help of the PostgreSQL URL
-    url = "postgresql://{user}:{password}@{host}:{port}/{dbname}"
-    url = url.format(**params)
+    # We connect with the help of a URL
+    url = "{sql_flavor}://{user}:{password}@{host}:{port}/{dbname}".format(**params)
 
     # The return value of create_engine() is our connection object
     engine = sa.create_engine(
@@ -2531,33 +2519,6 @@ def add_standard_records(
     return err
 
 
-def reset_db(
-        session: Session,
-        dirpath: os.PathLike):
-    """Resets DB to a clean state with no tables/sequences.
-    Used if a DB is created for a user but not populated, for example."""
-
-    eng = session.bind
-    conn = eng.connect()
-    conn.execute("DROP SEQUENCE IF EXISTS id_seq CASCADE;")
-    session.commit()
-
-    element_path = os.path.join(dirpath, "elements")
-    elements_to_process = [f for f in os.listdir(element_path) if f[0] != "."]
-    # dynamic list of elements whose tables haven't been created yet
-    for table in elements_to_process:
-        conn.execute(f'DROP TABLE IF EXISTS "{table}" CASCADE;')
-        session.commit()
-
-    join_path = os.path.join(dirpath, "Joins")
-    joins_to_process = [f for f in os.listdir(join_path) if f[0] != "."]
-    for table in joins_to_process:
-        conn.execute(f'DROP TABLE IF EXISTS "{table}" CASCADE;')
-        session.commit()
-    conn.close()
-    return
-
-
 # routines below upgraded to handle mysql or postgresql
 def get_params_from_various(
     db_params: Optional[Dict[str, str]] = None,
@@ -2587,7 +2548,16 @@ def get_params_from_various(
             required_keys=db_pars, param_file=db_param_file, header="database"
         )
         if err:
-            return None, err
+            if err["ini"][db_param_file] != ["Missing header: 'database'"]:
+                return None, err
+            # if database header is missing, try [postgresql] header, for backwards compatibility
+            else:
+                db_pars.remove("sql_flavor")
+                params, err = ui.get_parameters(
+                    required_keys=db_pars,param_file=db_param_file,header="postgresql"
+                )
+                params["sql_flavor"] = "postgresql"
+                return params, err
 
     # if dbname was given, use it, overriding any other specified dbname
     if dbname:
