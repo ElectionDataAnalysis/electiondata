@@ -35,6 +35,9 @@ See [CONTRIBUTING.MD](CONTRIBUTING.md).
  * Jon Wolgamott
  * Elliot Meyerson
 
+# Copyright
+Copyright (c) Portland State University 2021
+
 # Funding
 Funding provided October 2019 - November 2021 by the National Science Foundation
  * Award #1936809, "EAGER: Data Science for Election Verification" 
