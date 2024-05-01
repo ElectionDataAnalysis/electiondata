@@ -31,6 +31,7 @@ See [CONTRIBUTING.MD](CONTRIBUTING.md).
  * [Stephanie Singer](http://campaignscientific.com/), Hatfield School of Government (Portland State University), former Chair, Philadelphia County Board of Elections
  * Janaki Raghuram Srungavarapu, Hatfield School of Government (Portland State University)
  * Eric Tsai, Hatfield School of Government (Portland State University)
+ * Todd Graham, Hatfield School of Government (Portland State University)
  * Bryan Loy
  * Jon Wolgamott
  * Elliot Meyerson
